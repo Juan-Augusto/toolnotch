@@ -1,0 +1,22 @@
+[
+  {
+    "q": "Is my image uploaded to a server?",
+    "a": "No. Everything runs entirely in your browser using the Canvas API. Your images never leave your device — 100% private."
+  },
+  {
+    "q": "What image formats are supported?",
+    "a": "You can compress or convert between JPG, PNG, WebP, and AVIF. Input accepts any image format your browser supports, including GIF, BMP, and HEIC on compatible devices."
+  },
+  {
+    "q": "How much can I compress an image?",
+    "a": "Typically 50–90% without visible quality loss for photos at 75–85% quality. PNG files with gradients may compress less. Preview the result before downloading."
+  },
+  {
+    "q": "Is there a file size limit?",
+    "a": "We recommend files under 20MB for best performance. Larger files may be slow to process depending on your device and browser."
+  },
+  {
+    "q": "Can I resize the image while compressing?",
+    "a": "Yes — enter a max width in pixels and the image will be scaled down proportionally before compression. Leave it blank to keep the original dimensions."
+  }
+]

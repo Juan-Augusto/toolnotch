@@ -1,0 +1,53 @@
+PROJECT: Image Compressor / Converter
+STATUS: Ready to Deploy
+LAST UPDATED: 2026-03-07
+
+════════════════════════════════════════
+CURRENT PHASE: Group 3 — QA & Launch
+════════════════════════════════════════
+
+COMPLETED
+─────────
+[x] Orchestrator: scaffold Next.js project (Next.js 16, TS, Tailwind, App Router)
+[x] Install browser-image-compression
+[x] Define ImageJob and ConversionResult interfaces in /lib/imageTypes.ts
+[x] Define conversionPages.ts config array (8 slugs with unique h1/meta/faq)
+[x] Agent: Core Logic — convertFormat() + compressImage() + formatBytes() in /lib/imageConversion.ts
+[x] Agent: UI Components — DropZone, FormatSelector, ComparisonView, DownloadButton
+[x] Agent: SEO & Pages — main page + 8 programmatic pages via generateStaticParams()
+[x] Agent: Content — FAQ JSON + per-page FAQ in conversionPages.ts
+[x] Agent: Integration — ImageCompressorClient wiring all components + main page.tsx
+[x] Agent: DevOps — vercel.json, next.config.ts (CSP headers), .github/workflows/ci.yml
+[x] sitemap.xml — all 9 image tool routes with lastmod (app/sitemap.ts)
+[x] robots.txt — allow all, disallow /api/ (app/robots.ts)
+[x] AdSense AdUnit component + placeholders on all pages (above fold + below tool)
+[x] Production build passing (15 static pages, 0 TypeScript errors)
+
+IN PROGRESS
+───────────
+(nothing)
+
+NEXT STEPS
+──────────
+[ ] QA: run npm run dev, test drag-drop + compress + download in browser
+[ ] QA: validate JSON-LD at https://search.google.com/test/rich-results
+[ ] QA: run Lighthouse on /tools/image/image-compressor (target LCP < 1.5s)
+[ ] Deploy: push to GitHub → connect Vercel project → set NEXT_PUBLIC_BASE_URL env var
+[ ] Post-deploy: submit sitemap to Google Search Console
+[ ] AdSense: apply at https://adsense.google.com, set NEXT_PUBLIC_ADSENSE_CLIENT env var
+[ ] Consider adding batch compression (multiple files)
+
+BLOCKERS
+────────
+(none)
+
+NOTES
+─────
+- Plan: C:\Users\juana\Documents\Obsidian\prod-space\01 - Image Compressor Converter.md
+- Domain path: yoursite.com/tools/image/
+- No backend needed — 100% client-side
+- Priority: HIGH (highest traffic potential of no-backend tools)
+- Build cmd: npm run build | Dev: npm run dev (localhost:3000)
+- Home (/) redirects to /tools/image/image-compressor
+- browser-image-compression installed but Canvas API used for all conversions in MVP
+- AVIF support depends on browser (canvas.toBlob image/avif) — may silently fall back
