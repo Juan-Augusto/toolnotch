@@ -4,6 +4,7 @@ import Script from 'next/script'
 import './globals.css'
 
 const GA_ID = 'G-S4FLQ2B972'
+const ADSENSE_ID = 'ca-pub-6392082764157185'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -33,6 +34,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
+        <Script
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"
