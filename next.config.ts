@@ -15,7 +15,7 @@ const securityHeaders = [
       "img-src 'self' blob: data: https://www.google-analytics.com https:",
       "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net",
       "worker-src 'self' blob:",
-      "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com",
+      "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://pagead2.googlesyndication.com",
       "font-src 'self' https://fonts.gstatic.com",
     ].join('; '),
   },
