@@ -1,27 +1,43 @@
-PROJECT: Image Compressor / Converter
-STATUS: Ready to Deploy
+PROJECT: ToolNotch — Monorepo (toolnotch.com)
+STATUS: Active Development
 LAST UPDATED: 2026-03-07
 
 ════════════════════════════════════════
-CURRENT PHASE: Group 3 — QA & Launch
+CURRENT PHASE: Image tools done, PDF tools merged in — ready to deploy unified project
 ════════════════════════════════════════
 
 COMPLETED
 ─────────
-[x] Orchestrator: scaffold Next.js project (Next.js 16, TS, Tailwind, App Router)
-[x] Install browser-image-compression
-[x] Define ImageJob and ConversionResult interfaces in /lib/imageTypes.ts
-[x] Define conversionPages.ts config array (8 slugs with unique h1/meta/faq)
-[x] Agent: Core Logic — convertFormat() + compressImage() + formatBytes() in /lib/imageConversion.ts
-[x] Agent: UI Components — DropZone, FormatSelector, ComparisonView, DownloadButton
-[x] Agent: SEO & Pages — main page + 8 programmatic pages via generateStaticParams()
-[x] Agent: Content — FAQ JSON + per-page FAQ in conversionPages.ts
-[x] Agent: Integration — ImageCompressorClient wiring all components + main page.tsx
-[x] Agent: DevOps — vercel.json, next.config.ts (CSP headers), .github/workflows/ci.yml
-[x] sitemap.xml — all 9 image tool routes with lastmod (app/sitemap.ts)
-[x] robots.txt — allow all, disallow /api/ (app/robots.ts)
-[x] AdSense AdUnit component + placeholders on all pages (above fold + below tool)
-[x] Production build passing (15 static pages, 0 TypeScript errors)
+[x] Scaffold Next.js 16, TS, Tailwind, App Router
+[x] GA4 + AdSense in layout.tsx (env-var driven)
+[x] .env.local with GA_ID, ADSENSE_CLIENT, BASE_URL
+[x] package.json renamed to "toolnotch", all deps merged
+[x] npm install — 0 vulnerabilities
+[x] npm run build — passes (15 static routes)
+
+IMAGE TOOLS (project 01):
+[x] /lib/imageConversion.ts — convertFormat() + compressImage() + formatBytes()
+[x] /lib/imageTypes.ts — ImageJob, ConversionResult interfaces
+[x] /data/conversionPages.ts — 8 programmatic slugs with h1/meta/faq
+[x] /components/image/ — DropZone, FormatSelector, ComparisonView, DownloadButton
+[x] /app/tools/image/image-compressor/ — main tool page
+[x] /app/tools/image/[slug]/ — 8 programmatic SEO pages
+[x] sitemap.ts — image routes included
+[x] robots.ts — allow all, disallow /api/
+
+PDF TOOLS (merged from project 02):
+[x] /lib/pdfMerge.ts, pdfSplit.ts, pdfCompress.ts, pdfToImage.ts, imageToPdf.ts, pdfTypes.ts
+[x] /components/ToolWrapper.tsx, FaqSection.tsx, AdUnit.tsx (shared)
+[x] /public/pdf.worker.min.mjs — pdfjs-dist worker
+[x] /app/tools/pdf/merge-pdf/ — MergeTool with DnD reorder
+[x] /app/tools/pdf/split-pdf/ — SplitTool with page range input
+[x] /app/tools/pdf/compress-pdf/ — CompressTool with before/after size
+[x] /app/tools/pdf/pdf-to-jpg/ — PdfToJpgTool with pdfjs-dist rendering
+[x] /app/tools/pdf/jpg-to-pdf/ — JpgToPdfTool with image ordering
+[x] sitemap.ts — PDF routes added
+
+HOMEPAGE:
+[x] /app/page.tsx — tools hub with image + PDF categories
 
 IN PROGRESS
 ───────────
@@ -29,13 +45,26 @@ IN PROGRESS
 
 NEXT STEPS
 ──────────
-[ ] QA: run npm run dev, test drag-drop + compress + download in browser
-[ ] QA: validate JSON-LD at https://search.google.com/test/rich-results
-[ ] QA: run Lighthouse on /tools/image/image-compressor (target LCP < 1.5s)
-[ ] Deploy: push to GitHub → connect Vercel project → set NEXT_PUBLIC_BASE_URL env var
-[ ] Post-deploy: submit sitemap to Google Search Console
-[ ] AdSense: apply at https://adsense.google.com, set NEXT_PUBLIC_ADSENSE_CLIENT env var
-[ ] Consider adding batch compression (multiple files)
+DEPLOY:
+[ ] Push monorepo to GitHub (single repo — rename from 01-image-compressor if needed)
+[ ] Connect toolnotch.com domain to this Vercel project (transfer from old project)
+[ ] Set env vars in Vercel: NEXT_PUBLIC_GA_ID, NEXT_PUBLIC_ADSENSE_CLIENT, NEXT_PUBLIC_BASE_URL
+[ ] Submit sitemap to Google Search Console
+
+QA (before deploy):
+[ ] npm run dev → test image compress + all PDF tools in browser
+[ ] Test drag-to-reorder on merge-pdf tool
+[ ] Validate JSON-LD: https://search.google.com/test/rich-results
+[ ] Lighthouse on /tools/image/image-compressor and /tools/pdf/merge-pdf
+
+POST-DEPLOY:
+[ ] AdSense: apply / confirm site URL updated to toolnotch.com
+[ ] Add ad slot IDs (replace "1234567890" placeholders in PDF tools)
+[ ] Add PDF programmatic SEO synonym pages (/tools/pdf/[slug]/)
+
+NEXT TOOL TO BUILD (project 04 — Unit/Currency Converter):
+[ ] Create /app/tools/convert/ routes inside this repo
+[ ] Follow pattern: server page.tsx + client *Tool.tsx + ToolWrapper
 
 BLOCKERS
 ────────
@@ -43,11 +72,9 @@ BLOCKERS
 
 NOTES
 ─────
-- Plan: C:\Users\juana\Documents\Obsidian\prod-space\01 - Image Compressor Converter.md
-- Domain path: yoursite.com/tools/image/
-- No backend needed — 100% client-side
-- Priority: HIGH (highest traffic potential of no-backend tools)
+- Repo is the master monorepo for all toolnotch.com tools
+- Old 02-pdf-tools repo is now DEPRECATED — all code merged here
+- Pattern for all new tools: server page.tsx + client *Tool.tsx + @/components/ToolWrapper
+- GA: G-S4FLQ2B972 (one property for entire domain)
+- AdSense: ca-pub-6392082764157185 (one account for entire domain)
 - Build cmd: npm run build | Dev: npm run dev (localhost:3000)
-- Home (/) redirects to /tools/image/image-compressor
-- browser-image-compression installed but Canvas API used for all conversions in MVP
-- AVIF support depends on browser (canvas.toBlob image/avif) — may silently fall back
