@@ -1,5 +1,6 @@
 'use client'
 import { useState, useRef } from 'react'
+import { motion, AnimatePresence, useAnimate } from 'framer-motion'
 import confetti from 'canvas-confetti'
 import { pickRandom } from '@/lib/random'
 
@@ -13,12 +14,12 @@ export default function NamePicker() {
   const [remaining, setRemaining] = useState<string[] | null>(null)
   const [removeOnPick, setRemoveOnPick] = useState(false)
   const [isAnimating, setIsAnimating] = useState(false)
-  const [displayName, setDisplayName] = useState('')
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const [reelNames, setReelNames] = useState<string[]>([])
+  const [reelScope, animateReel] = useAnimate()
 
   const getNames = () => namesText.split('\n').map(n => n.trim()).filter(n => n.length > 0)
 
-  const pick = () => {
+  const pick = async () => {
     if (isAnimating) return
     const pool = removeOnPick ? (remaining ?? getNames()) : getNames()
     if (pool.length === 0) return
@@ -32,29 +33,44 @@ export default function NamePicker() {
       return
     }
 
+    // Build reel sequence: random names cycling then landing on winner
+    const all = getNames()
+    const cycles = 18
+    const sequence = Array.from({ length: cycles }, (_, i) => {
+      if (i === cycles - 1) return picked
+      return all[Math.floor(Math.random() * all.length)] || picked
+    })
+    setReelNames(sequence)
     setIsAnimating(true)
-    let count = 0
-    intervalRef.current = setInterval(() => {
-      const [rand] = pickRandom(pool)
-      setDisplayName(rand)
-      count++
-      if (count > 20) {
-        clearInterval(intervalRef.current!)
-        setDisplayName(picked)
-        setWinner(picked)
-        setHistory(h => [picked, ...h].slice(0, 5))
-        if (removeOnPick) setRemaining(pool.filter(n => n !== picked))
-        setIsAnimating(false)
-        confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } })
-      }
-    }, 60)
+    setWinner(null)
+
+    // Animate reel: scroll through names with decreasing speed
+    const ITEM_HEIGHT = 64
+    const total = sequence.length * ITEM_HEIGHT
+
+    await animateReel(reelScope.current, { y: -total + ITEM_HEIGHT }, {
+      duration: 1.6,
+      ease: [0.25, 0.1, 0.05, 1], // custom ease-out: fast then very slow
+    })
+
+    setIsAnimating(false)
+    setWinner(picked)
+    setHistory(h => [picked, ...h].slice(0, 5))
+    if (removeOnPick) setRemaining(pool.filter(n => n !== picked))
+
+    confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } })
+
+    // Reset reel position instantly (hidden while not animating)
+    if (reelScope.current) {
+      reelScope.current.style.transform = 'translateY(0px)'
+    }
   }
 
   const reset = () => {
     setRemaining(null)
     setWinner(null)
     setHistory([])
-    setDisplayName('')
+    setReelNames([])
   }
 
   const pool = removeOnPick ? (remaining ?? getNames()) : getNames()
@@ -87,26 +103,59 @@ export default function NamePicker() {
           disabled={isAnimating || pool.length === 0}
           className="flex-1 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 disabled:opacity-50 transition-colors"
         >
-          {isAnimating ? 'Picking...' : pool.length === 0 ? 'No names left' : 'Pick!'}
+          {isAnimating ? 'Picking…' : pool.length === 0 ? 'No names left' : 'Pick!'}
         </button>
         {removeOnPick && history.length > 0 && (
           <button onClick={reset} className="px-4 py-3 border border-gray-300 rounded-lg text-sm text-gray-600 hover:bg-gray-50">Reset</button>
         )}
       </div>
 
-      {(winner || isAnimating) && (
-        <div className="bg-blue-50 rounded-xl p-6 text-center">
-          <div className="text-xs text-gray-500 mb-1">Winner!</div>
-          <div className="text-3xl font-bold text-blue-700">{isAnimating ? displayName : winner}</div>
+      {/* Slot machine reel */}
+      {isAnimating && reelNames.length > 0 && (
+        <div className="bg-slate-900 rounded-xl overflow-hidden" style={{ height: 64 }}>
+          <div ref={reelScope} className="will-change-transform">
+            {reelNames.map((name, i) => (
+              <div
+                key={i}
+                className="flex items-center justify-center font-bold text-xl text-white"
+                style={{ height: 64 }}
+              >
+                {name}
+              </div>
+            ))}
+          </div>
         </div>
       )}
+
+      {/* Winner reveal */}
+      <AnimatePresence>
+        {winner && !isAnimating && (
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+            className="bg-blue-50 rounded-xl p-6 text-center"
+          >
+            <div className="text-xs text-gray-500 mb-1">Winner!</div>
+            <div className="text-3xl font-bold text-blue-700">{winner}</div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {history.length > 0 && (
         <div>
           <p className="text-sm text-gray-500 mb-2">Recent picks:</p>
           <div className="flex flex-wrap gap-2">
             {history.map((name, i) => (
-              <span key={i} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">{name}</span>
+              <motion.span
+                key={`${name}-${i}`}
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+              >
+                {name}
+              </motion.span>
             ))}
           </div>
         </div>

@@ -1,5 +1,8 @@
 'use client'
 import { useState, useReducer } from 'react'
+import dynamic from 'next/dynamic'
+
+const CoinFlip3D = dynamic(() => import('./CoinFlip3D'), { ssr: false })
 
 type Side = 'heads' | 'tails'
 
@@ -7,12 +10,11 @@ interface State {
   result: Side | null
   isFlipping: boolean
   history: Side[]
-  rotation: number
 }
 
 type Action =
   | { type: 'FLIP_START' }
-  | { type: 'FLIP_END'; result: Side; rotation: number }
+  | { type: 'FLIP_END'; result: Side }
 
 function reducer(state: State, action: Action): State {
   switch (action.type) {
@@ -23,7 +25,6 @@ function reducer(state: State, action: Action): State {
         ...state,
         isFlipping: false,
         result: action.result,
-        rotation: action.rotation,
         history: [action.result, ...state.history].slice(0, 10),
       }
     default:
@@ -31,76 +32,58 @@ function reducer(state: State, action: Action): State {
   }
 }
 
-const prefersReducedMotion = () =>
-  typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
-
 export default function CoinFlip() {
   const [state, dispatch] = useReducer(reducer, {
-    result: null, isFlipping: false, history: [], rotation: 0,
+    result: null, isFlipping: false, history: [],
   })
+
+  // pending result — determined before animation starts
+  const [pendingResult, setPendingResult] = useState<Side>('heads')
 
   const flip = () => {
     if (state.isFlipping) return
     const result: Side = Math.random() < 0.5 ? 'heads' : 'tails'
-
-    if (prefersReducedMotion()) {
-      dispatch({ type: 'FLIP_START' })
-      setTimeout(() => {
-        const finalRotation = result === 'heads' ? 0 : 180
-        dispatch({ type: 'FLIP_END', result, rotation: finalRotation })
-      }, 50)
-    } else {
-      dispatch({ type: 'FLIP_START' })
-      const extraSpins = (Math.floor(Math.random() * 3) + 2) * 360
-      const finalRotation = state.rotation + extraSpins + (result === 'heads' ? 0 : 180)
-      setTimeout(() => {
-        dispatch({ type: 'FLIP_END', result, rotation: finalRotation })
-      }, 700)
-    }
+    setPendingResult(result)
+    dispatch({ type: 'FLIP_START' })
   }
 
+  const handleAnimationDone = () => {
+    dispatch({ type: 'FLIP_END', result: pendingResult })
+  }
+
+  // The 3D scene always shows the pending or settled result
+  const displaySide = state.isFlipping ? pendingResult : (state.result ?? 'heads')
+
   return (
-    <div className="flex flex-col items-center gap-6">
-      {/* Coin */}
-      <div className="w-40 h-40 perspective-1000" style={{ perspective: '1000px' }}>
-        <div
-          className="w-full h-full relative transition-transform duration-700"
-          style={{
-            transformStyle: 'preserve-3d',
-            transform: `rotateY(${state.rotation}deg)`,
-          }}
-        >
-          {/* Heads */}
-          <div
-            className="absolute inset-0 rounded-full flex items-center justify-center text-4xl font-bold text-yellow-900 bg-gradient-to-br from-yellow-300 to-yellow-500 border-4 border-yellow-600 shadow-lg"
-            style={{ backfaceVisibility: 'hidden' }}
-          >
-            H
-          </div>
-          {/* Tails */}
-          <div
-            className="absolute inset-0 rounded-full flex items-center justify-center text-4xl font-bold text-gray-700 bg-gradient-to-br from-gray-300 to-gray-400 border-4 border-gray-500 shadow-lg"
-            style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
-          >
-            T
-          </div>
-        </div>
+    <div className="flex flex-col items-center gap-5">
+      {/* 3D coin */}
+      <div className="w-full max-w-xs">
+        <CoinFlip3D
+          side={displaySide}
+          flipping={state.isFlipping}
+          onDone={handleAnimationDone}
+        />
       </div>
 
+      {/* Result label */}
       {state.result && !state.isFlipping && (
-        <div className="text-2xl font-bold text-gray-800 capitalize">{state.result}!</div>
+        <div className="text-2xl font-bold text-gray-800 capitalize">
+          {state.result}!
+        </div>
       )}
 
+      {/* Flip button */}
       <button
         onClick={flip}
         disabled={state.isFlipping}
         className="px-8 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 disabled:opacity-50 transition-all"
       >
-        {state.isFlipping ? 'Flipping...' : 'Flip Coin'}
+        {state.isFlipping ? 'Flipping…' : 'Flip Coin'}
       </button>
 
+      {/* History */}
       {state.history.length > 0 && (
-        <div className="w-full">
+        <div className="w-full max-w-xs">
           <p className="text-sm text-gray-500 mb-2">History (last {state.history.length}):</p>
           <div className="flex flex-wrap gap-2">
             {state.history.map((side, i) => (

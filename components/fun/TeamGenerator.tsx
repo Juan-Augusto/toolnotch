@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { shuffleArray } from '@/lib/random'
 
 export default function TeamGenerator() {
@@ -7,6 +8,7 @@ export default function TeamGenerator() {
   const [teamCount, setTeamCount] = useState(2)
   const [teams, setTeams] = useState<string[][]>([])
   const [copied, setCopied] = useState(false)
+  const [key, setKey] = useState(0)
 
   const generate = () => {
     const names = namesText.split('\n').map(n => n.trim()).filter(n => n.length > 0)
@@ -15,6 +17,7 @@ export default function TeamGenerator() {
     const result: string[][] = Array.from({ length: teamCount }, () => [])
     shuffled.forEach((name, i) => result[i % teamCount].push(name))
     setTeams(result)
+    setKey(k => k + 1) // retrigger animation on re-generate
   }
 
   const copy = async () => {
@@ -24,7 +27,34 @@ export default function TeamGenerator() {
     setTimeout(() => setCopied(false), 2000)
   }
 
-  const COLORS = ['bg-blue-100 border-blue-200', 'bg-green-100 border-green-200', 'bg-purple-100 border-purple-200', 'bg-orange-100 border-orange-200', 'bg-pink-100 border-pink-200', 'bg-teal-100 border-teal-200', 'bg-red-100 border-red-200', 'bg-yellow-100 border-yellow-200', 'bg-indigo-100 border-indigo-200', 'bg-gray-100 border-gray-200']
+  const COLORS = [
+    'bg-blue-100 border-blue-200',
+    'bg-green-100 border-green-200',
+    'bg-purple-100 border-purple-200',
+    'bg-orange-100 border-orange-200',
+    'bg-pink-100 border-pink-200',
+    'bg-teal-100 border-teal-200',
+    'bg-red-100 border-red-200',
+    'bg-yellow-100 border-yellow-200',
+    'bg-indigo-100 border-indigo-200',
+    'bg-gray-100 border-gray-200',
+  ]
+
+  const containerVariants = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.12 } },
+  }
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.85, y: 16 },
+    visible: { opacity: 1, scale: 1, y: 0, transition: { type: 'spring' as const, stiffness: 280, damping: 22 } },
+    exit: { opacity: 0, scale: 0.85, y: -12, transition: { duration: 0.15 } },
+  }
+
+  const nameVariants = {
+    hidden: { opacity: 0, x: -8 },
+    visible: { opacity: 1, x: 0 },
+  }
 
   return (
     <div className="space-y-4">
@@ -59,28 +89,39 @@ export default function TeamGenerator() {
         </button>
       </div>
 
-      {teams.length > 0 && (
-        <div className="space-y-3">
-          <div className="flex justify-between items-center">
-            <h3 className="font-semibold text-gray-700">Results</h3>
-            <button onClick={copy} className="text-sm text-blue-600 hover:underline">
-              {copied ? 'Copied!' : 'Copy all'}
-            </button>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {teams.map((team, i) => (
-              <div key={i} className={`rounded-lg border p-3 ${COLORS[i % COLORS.length]}`}>
-                <div className="font-semibold text-gray-800 mb-2">Team {i + 1}</div>
-                <ul className="space-y-1">
-                  {team.map(name => (
-                    <li key={name} className="text-sm text-gray-700">{name}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+      <AnimatePresence mode="wait">
+        {teams.length > 0 && (
+          <motion.div key={key} initial="hidden" animate="visible" exit="exit" variants={containerVariants}>
+            <div className="flex justify-between items-center mb-3">
+              <h3 className="font-semibold text-gray-700">Results</h3>
+              <button onClick={copy} className="text-sm text-blue-600 hover:underline">
+                {copied ? 'Copied!' : 'Copy all'}
+              </button>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {teams.map((team, i) => (
+                <motion.div
+                  key={i}
+                  variants={cardVariants}
+                  className={`rounded-lg border p-3 ${COLORS[i % COLORS.length]}`}
+                >
+                  <div className="font-semibold text-gray-800 mb-2">Team {i + 1}</div>
+                  <motion.ul
+                    variants={{ visible: { transition: { staggerChildren: 0.06, delayChildren: 0.1 } } }}
+                    className="space-y-1"
+                  >
+                    {team.map(name => (
+                      <motion.li key={name} variants={nameVariants} className="text-sm text-gray-700">
+                        {name}
+                      </motion.li>
+                    ))}
+                  </motion.ul>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
