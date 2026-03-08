@@ -6,6 +6,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com'
 
 const ALL_ROUTES = [
   // PDF tools
+  '/tools/pdf',
   '/tools/pdf/merge-pdf',
   '/tools/pdf/split-pdf',
   '/tools/pdf/compress-pdf',
@@ -16,18 +17,19 @@ const ALL_ROUTES = [
   '/tools/convert/unit-converter',
   '/tools/convert/currency-converter',
   // Text tools
+  '/tools/text',
   '/tools/text/word-counter',
   '/tools/text/character-counter',
   '/tools/text/sentence-counter',
   '/tools/text/readability-checker',
   '/tools/text/reading-time-calculator',
   '/tools/text/word-frequency-counter',
+  '/tools/text/keyword-density-checker',
   '/tools/text/paraphraser',
   '/tools/text/summarizer',
   '/tools/text/plagiarism-checker',
-  // Resume
-  '/tools/resume/resume-builder',
   // Finance — calculators
+  '/tools/finance',
   '/tools/finance/loan-calculator',
   '/tools/finance/mortgage-calculator',
   '/tools/finance/car-loan-calculator',
@@ -42,14 +44,16 @@ const ALL_ROUTES = [
   '/tools/finance/fha-loan-calculator',
   '/tools/finance/va-loan-calculator',
   '/tools/finance/debt-payoff-calculator',
-  // Finance — invoice
+  // Finance — invoice & receipt
   '/tools/finance/invoice-generator',
   '/tools/finance/invoice-generator-uk',
   '/tools/finance/invoice-generator-canada',
   '/tools/finance/invoice-generator-australia',
   '/tools/finance/invoice-generator-for-freelancers',
+  '/tools/finance/receipt-generator',
   '/tools/finance/crypto-portfolio-tracker',
   // Fun tools
+  '/tools/fun',
   '/tools/fun/spin-the-wheel',
   '/tools/fun/wheel-of-names',
   '/tools/fun/random-name-picker',
@@ -58,6 +62,8 @@ const ALL_ROUTES = [
   '/tools/fun/coin-flip',
   '/tools/fun/dice-roller',
   '/tools/fun/random-number-generator',
+  '/tools/fun/giveaway-picker',
+  '/tools/fun/classroom-name-picker',
   '/tools/fun/typing-test',
   // Quizzes
   '/quizzes',
@@ -72,35 +78,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()
 
   return [
-    // Homepage
     {
       url: BASE_URL,
       lastModified,
       changeFrequency: 'weekly',
       priority: 1.0,
     },
-    // Image tools
     {
       url: `${BASE_URL}/tools/image/image-compressor`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
-    // Image conversion programmatic pages
     ...conversionPages.map((page) => ({
       url: `${BASE_URL}/tools/image/${page.slug}`,
       lastModified,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     })),
-    // Unit converter programmatic pages (76 pairs)
     ...COMMON_PAIRS.map((pair) => ({
       url: `${BASE_URL}/tools/convert/${pair.slug}`,
       lastModified,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     })),
-    // All static routes
     ...ALL_ROUTES.map((path) => ({
       url: `${BASE_URL}${path}`,
       lastModified,
