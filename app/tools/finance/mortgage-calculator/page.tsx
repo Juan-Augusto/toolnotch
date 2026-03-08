@@ -1,17 +1,28 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
+import ToolWrapper from '@/components/ToolWrapper'
+import LoanCalculator from '@/components/finance/calculator/LoanCalculator'
+import { CALCULATOR_VARIANTS } from '@/data/calculatorVariants'
+
+const variant = CALCULATOR_VARIANTS.find(v => v.slug === 'mortgage-calculator')!
 
 export const metadata: Metadata = {
-  title: 'Mortgage Calculator — Monthly Payment Estimator',
-  description: 'Free mortgage calculator. Estimate your monthly mortgage payment, total interest paid, and full amortization schedule.',
+  title: variant.metaTitle,
+  description: variant.metaDescription,
 }
 
 export default function MortgageCalculatorPage() {
   return (
-    <main className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Mortgage Calculator</h1>
-        <p className="text-gray-500">Coming soon</p>
-      </div>
-    </main>
+    <ToolWrapper
+      title={variant.title}
+      description={variant.description}
+      breadcrumbLabel="Mortgage Calculator"
+      faqs={variant.faqs}
+      adSlot="1234567890"
+    >
+      <Suspense>
+        <LoanCalculator variant={variant} />
+      </Suspense>
+    </ToolWrapper>
   )
 }

@@ -1,17 +1,29 @@
 import type { Metadata } from 'next'
+import ToolWrapper from '@/components/ToolWrapper'
+import CurrencyConverterClient from './CurrencyConverterClient'
 
 export const metadata: Metadata = {
-  title: 'Currency Converter — Live Exchange Rates',
-  description: 'Free currency converter with live exchange rates. Convert between 150+ currencies including USD, EUR, GBP, JPY, and more.',
+  title: 'Currency Converter — Live Exchange Rates | ToolNotch',
+  description: 'Free live currency converter. Convert between 150+ currencies with real-time exchange rates. Rates cached for 1 hour. No sign-up required.',
 }
+
+const faqs = [
+  { question: 'Where do the exchange rates come from?', answer: 'Exchange rates are fetched from open.er-api.com, a free public API. Rates are refreshed hourly.' },
+  { question: 'How current are the rates?', answer: 'Rates are updated approximately every hour and cached in your browser. A warning is shown if cached rates may be stale.' },
+  { question: 'How many currencies are supported?', answer: 'Over 150 currencies from around the world, including all major currencies and many emerging market currencies.' },
+  { question: 'Can I use this for financial decisions?', answer: 'This tool is for reference only. For financial transactions, always use your bank or broker\'s official rates, which include fees and spreads.' },
+]
 
 export default function CurrencyConverterPage() {
   return (
-    <main className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Currency Converter</h1>
-        <p className="text-gray-500">Coming soon</p>
-      </div>
-    </main>
+    <ToolWrapper
+      title="Currency Converter"
+      description="Convert between 150+ currencies with live exchange rates. Rates updated hourly."
+      breadcrumbLabel="Currency Converter"
+      faqs={faqs}
+      adSlot="1234567890"
+    >
+      <CurrencyConverterClient />
+    </ToolWrapper>
   )
 }

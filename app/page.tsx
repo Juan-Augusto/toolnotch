@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'ToolNotch — Free Online Tools',
   description:
-    'Free online tools: compress images, merge PDFs, convert units, and more. No signup, no upload, 100% private.',
+    'Free online tools: compress images, merge PDFs, convert units, calculate loans, generate invoices, and more. No signup, no upload, 100% private.',
 }
 
 const TOOLS = [
@@ -27,16 +27,87 @@ const TOOLS = [
       { href: '/tools/pdf/jpg-to-pdf', label: 'JPG to PDF', desc: 'Convert images to PDF' },
     ],
   },
+  {
+    category: 'Converter Tools',
+    color: 'indigo',
+    items: [
+      { href: '/tools/convert/unit-converter', label: 'Unit Converter', desc: 'Length, weight, temperature & 200+ more' },
+      { href: '/tools/convert/currency-converter', label: 'Currency Converter', desc: 'Live rates for 150+ currencies' },
+      { href: '/tools/convert/meters-to-feet', label: 'Meters to Feet', desc: 'Quick length conversion' },
+      { href: '/tools/convert/celsius-to-fahrenheit', label: 'Celsius to Fahrenheit', desc: 'Quick temperature conversion' },
+      { href: '/tools/convert/kilograms-to-pounds', label: 'Kg to Pounds', desc: 'Quick weight conversion' },
+    ],
+  },
+  {
+    category: 'Text Tools',
+    color: 'purple',
+    items: [
+      { href: '/tools/text/word-counter', label: 'Word Counter', desc: 'Count words, characters & readability' },
+      { href: '/tools/text/character-counter', label: 'Character Counter', desc: 'Count characters with/without spaces' },
+      { href: '/tools/text/readability-checker', label: 'Readability Checker', desc: 'Flesch, Kincaid & Gunning Fog scores' },
+      { href: '/tools/text/reading-time-calculator', label: 'Reading Time Calculator', desc: 'Estimate reading & speaking time' },
+      { href: '/tools/text/word-frequency-counter', label: 'Word Frequency Counter', desc: 'Find most-used keywords in text' },
+    ],
+  },
+  {
+    category: 'Finance Tools',
+    color: 'green',
+    items: [
+      { href: '/tools/finance/loan-calculator', label: 'Loan Calculator', desc: 'Monthly payment & amortization schedule' },
+      { href: '/tools/finance/mortgage-calculator', label: 'Mortgage Calculator', desc: 'Calculate mortgage payments' },
+      { href: '/tools/finance/car-loan-calculator', label: 'Car Loan Calculator', desc: 'Auto loan monthly payment' },
+      { href: '/tools/finance/invoice-generator', label: 'Invoice Generator', desc: 'Free professional invoices — PDF ready' },
+      { href: '/tools/finance/invoice-generator-uk', label: 'UK Invoice Generator', desc: 'GBP invoices with VAT pre-set' },
+      { href: '/tools/finance/home-affordability-calculator', label: 'Home Affordability', desc: 'How much house can you afford?' },
+      { href: '/tools/finance/amortization-calculator', label: 'Amortization Calculator', desc: 'Full payment schedule breakdown' },
+      { href: '/tools/finance/student-loan-calculator', label: 'Student Loan Calculator', desc: 'Student loan repayment calculator' },
+    ],
+  },
+  {
+    category: 'Fun & Random',
+    color: 'orange',
+    items: [
+      { href: '/tools/fun/spin-the-wheel', label: 'Spin the Wheel', desc: 'Random decision maker — add your options' },
+      { href: '/tools/fun/random-name-picker', label: 'Random Name Picker', desc: 'Pick a winner from your list' },
+      { href: '/tools/fun/random-team-generator', label: 'Team Generator', desc: 'Split names into balanced teams' },
+      { href: '/tools/fun/coin-flip', label: 'Coin Flip', desc: 'Virtual heads or tails' },
+      { href: '/tools/fun/dice-roller', label: 'Dice Roller', desc: 'Roll d6, d20, 3d6+5 and more' },
+      { href: '/tools/fun/random-number-generator', label: 'Number Generator', desc: 'Random numbers in any range' },
+      { href: '/tools/fun/yes-or-no-wheel', label: 'Yes or No Wheel', desc: 'Let the wheel decide' },
+      { href: '/tools/fun/wheel-of-names', label: 'Wheel of Names', desc: 'Free Wheel of Names alternative' },
+    ],
+  },
+  {
+    category: 'Quizzes',
+    color: 'pink',
+    items: [
+      { href: '/quizzes', label: 'All Quizzes', desc: 'Browse all personality quizzes' },
+      { href: '/quiz/which-programming-language-are-you', label: 'Which Programming Language Are You?', desc: 'Python, JavaScript, Rust, Go, or Java?' },
+      { href: '/quiz/am-i-introverted-or-extroverted', label: 'Introvert or Extrovert?', desc: 'Find out where you fall on the spectrum' },
+      { href: '/quiz/what-career-suits-you', label: 'What Career Suits You?', desc: 'Discover your ideal career path' },
+      { href: '/quiz/what-type-of-traveler-are-you', label: 'What Type of Traveler Are You?', desc: 'Adventurer, explorer, beach lover?' },
+    ],
+  },
 ]
 
 const colorMap: Record<string, string> = {
-  blue: 'bg-blue-50 border-blue-200 text-blue-700',
-  red: 'bg-red-50 border-red-200 text-red-700',
+  blue:   'bg-blue-50 border-blue-200 text-blue-700',
+  red:    'bg-red-50 border-red-200 text-red-700',
+  indigo: 'bg-indigo-50 border-indigo-200 text-indigo-700',
+  purple: 'bg-purple-50 border-purple-200 text-purple-700',
+  green:  'bg-green-50 border-green-200 text-green-700',
+  orange: 'bg-orange-50 border-orange-200 text-orange-700',
+  pink:   'bg-pink-50 border-pink-200 text-pink-700',
 }
 
 const badgeMap: Record<string, string> = {
-  blue: 'bg-blue-100 text-blue-600',
-  red: 'bg-red-100 text-red-600',
+  blue:   'bg-blue-100 text-blue-600',
+  red:    'bg-red-100 text-red-600',
+  indigo: 'bg-indigo-100 text-indigo-600',
+  purple: 'bg-purple-100 text-purple-600',
+  green:  'bg-green-100 text-green-600',
+  orange: 'bg-orange-100 text-orange-600',
+  pink:   'bg-pink-100 text-pink-600',
 }
 
 export default function HomePage() {
@@ -66,7 +137,7 @@ export default function HomePage() {
                     className="block bg-white border border-gray-200 rounded-xl p-4 hover:border-gray-300 hover:shadow-sm transition-all group"
                   >
                     <div className="flex items-start gap-3">
-                      <span className={`text-xs font-medium px-2 py-0.5 rounded-full mt-0.5 ${badgeMap[group.color]}`}>
+                      <span className={`text-xs font-medium px-2 py-0.5 rounded-full mt-0.5 flex-shrink-0 ${badgeMap[group.color]}`}>
                         Free
                       </span>
                       <div>

@@ -1,0 +1,120 @@
+{
+  "id": "which-decade-do-you-belong-in",
+  "title": "Which Decade Do You Belong In?",
+  "description": "Were you born in the wrong era? Answer these 10 questions to discover which decade truly suits your soul.",
+  "image": "/images/quizzes/which-decade-do-you-belong-in-cover.jpg",
+  "questions": [
+    { "id": "q1", "text": "Your ideal music sounds like:", "options": [
+      { "id": "q1a", "text": "Rock, funk, and soul with raw energy", "scores": { "1970s": 3 } },
+      { "id": "q1b", "text": "Synth-pop and new wave with big hair", "scores": { "1980s": 3 } },
+      { "id": "q1c", "text": "Grunge, alternative rock, and hip-hop", "scores": { "1990s": 3 } },
+      { "id": "q1d", "text": "Pop-punk, emo, and indie with auto-tune", "scores": { "2000s": 3 } },
+      { "id": "q1e", "text": "Lo-fi, bedroom pop, and viral TikTok sounds", "scores": { "2010s": 3 } }
+    ]},
+    { "id": "q2", "text": "Your fashion sense:", "options": [
+      { "id": "q2a", "text": "Bell-bottoms, earth tones, and free-spirited layers", "scores": { "1970s": 3 } },
+      { "id": "q2b", "text": "Power shoulders, neon, and statement accessories", "scores": { "1980s": 3 } },
+      { "id": "q2c", "text": "Flannel, combat boots, and effortless cool", "scores": { "1990s": 3 } },
+      { "id": "q2d", "text": "Low-rise jeans, Von Dutch hats, and Juicy tracksuits", "scores": { "2000s": 3 } },
+      { "id": "q2e", "text": "Athleisure, streetwear, and minimalist aesthetics", "scores": { "2010s": 3 } }
+    ]},
+    { "id": "q3", "text": "How do you connect with friends?", "options": [
+      { "id": "q3a", "text": "In person at parties, rallies, and community events", "scores": { "1970s": 3 } },
+      { "id": "q3b", "text": "By phone (the landline, obviously)", "scores": { "1980s": 3 } },
+      { "id": "q3c", "text": "AIM, email chains, and three-way calling", "scores": { "1990s": 3 } },
+      { "id": "q3d", "text": "MySpace, early Facebook, and BBM", "scores": { "2000s": 3 } },
+      { "id": "q3e", "text": "Instagram, group chats, and voice messages", "scores": { "2010s": 3 } }
+    ]},
+    { "id": "q4", "text": "Your ideal weekend activity:", "options": [
+      { "id": "q4a", "text": "A music festival or outdoor commune", "scores": { "1970s": 3 } },
+      { "id": "q4b", "text": "Roller disco or a blockbuster movie night", "scores": { "1980s": 3 } },
+      { "id": "q4c", "text": "A coffee shop, a zine, and a used record store", "scores": { "1990s": 3 } },
+      { "id": "q4d", "text": "A movie marathon or mall hangout", "scores": { "2000s": 3 } },
+      { "id": "q4e", "text": "Brunch, content creation, or a pop-up event", "scores": { "2010s": 3 } }
+    ]},
+    { "id": "q5", "text": "Which movie era speaks to you?", "options": [
+      { "id": "q5a", "text": "The Godfather, Star Wars, and gritty cinema", "scores": { "1970s": 3 } },
+      { "id": "q5b", "text": "ET, Back to the Future, and Ghostbusters", "scores": { "1980s": 3 } },
+      { "id": "q5c", "text": "Pulp Fiction, Clueless, and Reality Bites", "scores": { "1990s": 3 } },
+      { "id": "q5d", "text": "Mean Girls, Harry Potter, and superhero origin stories", "scores": { "2000s": 3 } },
+      { "id": "q5e", "text": "Marvel cinematic universe, indie films, and A24", "scores": { "2010s": 3 } }
+    ]},
+    { "id": "q6", "text": "Your values center on:", "options": [
+      { "id": "q6a", "text": "Peace, freedom, and collective consciousness", "scores": { "1970s": 3 } },
+      { "id": "q6b", "text": "Ambition, individuality, and material success", "scores": { "1980s": 3 } },
+      { "id": "q6c", "text": "Authenticity, anti-establishment, and culture", "scores": { "1990s": 3 } },
+      { "id": "q6d", "text": "Fun, optimism, and early awareness of global issues", "scores": { "2000s": 3 } },
+      { "id": "q6e", "text": "Social justice, authenticity, and self-expression", "scores": { "2010s": 3 } }
+    ]},
+    { "id": "q7", "text": "Pick your ideal communication medium:", "options": [
+      { "id": "q7a", "text": "A handwritten letter or a protest sign", "scores": { "1970s": 3 } },
+      { "id": "q7b", "text": "A phone call or a fax", "scores": { "1980s": 3 } },
+      { "id": "q7c", "text": "An email or a zine", "scores": { "1990s": 3 } },
+      { "id": "q7d", "text": "A text message or a MySpace post", "scores": { "2000s": 3 } },
+      { "id": "q7e", "text": "An Instagram story or a thread", "scores": { "2010s": 3 } }
+    ]},
+    { "id": "q8", "text": "Your relationship with technology:", "options": [
+      { "id": "q8a", "text": "Skeptical — I prefer nature and human connection", "scores": { "1970s": 3 } },
+      { "id": "q8b", "text": "Excited by early computers and home gaming systems", "scores": { "1980s": 3 } },
+      { "id": "q8c", "text": "Fascinated by the early internet and Napster", "scores": { "1990s": 3 } },
+      { "id": "q8d", "text": "Addicted to MySpace customization and downloading songs", "scores": { "2000s": 3 } },
+      { "id": "q8e", "text": "Can't imagine life without a smartphone", "scores": { "2010s": 3 } }
+    ]},
+    { "id": "q9", "text": "Your definition of success:", "options": [
+      { "id": "q9a", "text": "Living freely and in tune with your values", "scores": { "1970s": 3 } },
+      { "id": "q9b", "text": "A corner office and a Mercedes", "scores": { "1980s": 3 } },
+      { "id": "q9c", "text": "Creating something authentic that lasts", "scores": { "1990s": 3 } },
+      { "id": "q9d", "text": "Having fun while staying true to yourself", "scores": { "2000s": 3 } },
+      { "id": "q9e", "text": "Building a personal brand and a platform", "scores": { "2010s": 3 } }
+    ]},
+    { "id": "q10", "text": "Your spirit animal is:", "options": [
+      { "id": "q10a", "text": "A free-roaming bison", "scores": { "1970s": 3 } },
+      { "id": "q10b", "text": "A power-suited executive", "scores": { "1980s": 3 } },
+      { "id": "q10c", "text": "A flannel-wearing wolf", "scores": { "1990s": 3 } },
+      { "id": "q10d", "text": "A bedazzled pop star", "scores": { "2000s": 3 } },
+      { "id": "q10e", "text": "A curated, aesthetic-having fox", "scores": { "2010s": 3 } }
+    ]}
+  ],
+  "results": [
+    {
+      "id": "1970s",
+      "title": "The 1970s",
+      "description": "You belong in the 1970s — the decade of bell-bottoms, vinyl records, and a radical belief that the world could be made better through community, music, and consciousness. The 70s were raw, political, and brimming with cultural energy. You have a soul that craves authenticity over polish, community over competition, and freedom over security. You would have been front and center at Woodstock (or at least have strong opinions about it), had a record collection that defined your personality, and worn your values on your sleeve — sometimes literally. The 70s gave us punk rock, disco, the environmental movement, and some of the greatest films ever made. They were messy, genuine, and unforgettable. Just like you.",
+      "image": "/images/results/1970s.jpg",
+      "traits": ["Free-spirited", "Authentic", "Political", "Community-driven"],
+      "shareText": "I belong in the 1970s! I took the Which Decade Do You Belong In quiz on ToolNotch."
+    },
+    {
+      "id": "1980s",
+      "title": "The 1980s",
+      "description": "You belong in the 1980s — the decade that gave us personal computers, MTV, and the unashamed belief that bigger is always better. You have ambition in your DNA, a flair for the dramatic, and a wardrobe that doesn't believe in playing it safe. The 80s were a time of bold choices, neon excess, and an infectious optimism that the future was going to be spectacular. You would have thrived in the era of power lunches, mix tapes, and video arcades. The 80s gave the world the Walkman, blockbuster films, and the beginning of the digital revolution — all of which you would have embraced with both arms and excellent shoulder pads.",
+      "image": "/images/results/1980s.jpg",
+      "traits": ["Ambitious", "Bold", "Optimistic", "Expressive"],
+      "shareText": "I belong in the 1980s! I took the Which Decade Do You Belong In quiz on ToolNotch."
+    },
+    {
+      "id": "1990s",
+      "title": "The 1990s",
+      "description": "You belong in the 1990s — the decade of flannel, Nirvana, and a healthy skepticism about everything mainstream. The 90s were the last great pre-internet era — a time when subcultures were genuinely underground and authenticity was the highest currency. You have taste that refuses to be dictated by trends, a deep appreciation for things that are slightly weird and completely genuine, and probably a strong opinion about which Nirvana album is the best. The 90s gave us indie film, alternative rock, the early web, and some of the most iconic fashion ever to be ironically re-adopted by the next generation. You were ahead of your time — and the 90s were ahead of theirs.",
+      "image": "/images/results/1990s.jpg",
+      "traits": ["Authentic", "Counter-cultural", "Creative", "Ironic"],
+      "shareText": "I belong in the 1990s! I took the Which Decade Do You Belong In quiz on ToolNotch."
+    },
+    {
+      "id": "2000s",
+      "title": "The 2000s",
+      "description": "You belong in the 2000s — the decade of flip phones, peak pop culture, and an era that was simultaneously optimistic and completely unaware of what was coming. The 2000s were fun, chaotic, and brimming with personality. You have an infectious enthusiasm for life, a genuine sense of fun, and an ability to be fully present in the moment without overthinking it. You would have had the best MySpace page in your friend group, known every word to every Destiny's Child song, and owned at least one Von Dutch hat. The 2000s gave us the iPod, reality television, and a cultural moment that will be nostalgically revived for decades. You were part of it — and it was a good time.",
+      "image": "/images/results/2000s.jpg",
+      "traits": ["Fun", "Optimistic", "Social", "Pop-culture fluent"],
+      "shareText": "I belong in the 2000s! I took the Which Decade Do You Belong In quiz on ToolNotch."
+    },
+    {
+      "id": "2010s",
+      "title": "The 2010s",
+      "description": "You belong in the 2010s — the decade that invented the influencer, the streaming binge, and the deeply sincere belief that brunch is a lifestyle. The 2010s were a remarkable decade of technological acceleration, social awakening, and unprecedented self-expression. You are comfortable with your identity, thoughtful about your impact on the world, and you understand the power of a curated aesthetic. You would have been an early adopter of Instagram, have strong feelings about avocado toast, and have participated in at least one Twitter discourse that mattered. The 2010s were complicated and fascinating — just like you.",
+      "image": "/images/results/2010s.jpg",
+      "traits": ["Self-aware", "Digital-native", "Progressive", "Aesthetic-driven"],
+      "shareText": "I belong in the 2010s! I took the Which Decade Do You Belong In quiz on ToolNotch."
+    }
+  ]
+}

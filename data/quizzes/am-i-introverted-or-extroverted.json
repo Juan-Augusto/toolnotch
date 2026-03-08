@@ -1,0 +1,94 @@
+{
+  "id": "am-i-introverted-or-extroverted",
+  "title": "Am I Introverted or Extroverted?",
+  "description": "Discover where you fall on the introvert-extrovert spectrum with this 10-question personality quiz.",
+  "image": "/images/quizzes/am-i-introverted-or-extroverted-cover.jpg",
+  "questions": [
+    { "id": "q1", "text": "After a long social event, you feel:", "options": [
+      { "id": "q1a", "text": "Energized and wanting more socializing", "scores": { "extrovert": 3 } },
+      { "id": "q1b", "text": "Fine, but ready for some quiet time", "scores": { "ambivert": 2, "introvert": 1 } },
+      { "id": "q1c", "text": "Drained and in need of alone time to recharge", "scores": { "introvert": 3 } },
+      { "id": "q1d", "text": "It depends entirely on the event and people", "scores": { "ambivert": 3 } }
+    ]},
+    { "id": "q2", "text": "At a party where you know no one, you:", "options": [
+      { "id": "q2a", "text": "Love it — a room full of potential new friends!", "scores": { "extrovert": 3 } },
+      { "id": "q2b", "text": "Find one or two people and stick with them", "scores": { "ambivert": 2, "introvert": 1 } },
+      { "id": "q2c", "text": "Wish you could leave after an hour", "scores": { "introvert": 3 } },
+      { "id": "q2d", "text": "Adapt based on the vibe of the room", "scores": { "ambivert": 3 } }
+    ]},
+    { "id": "q3", "text": "Your ideal Saturday looks like:", "options": [
+      { "id": "q3a", "text": "Packed with plans and seeing lots of people", "scores": { "extrovert": 3 } },
+      { "id": "q3b", "text": "A mix of social time and personal time", "scores": { "ambivert": 3 } },
+      { "id": "q3c", "text": "A quiet day at home doing what I love", "scores": { "introvert": 3 } },
+      { "id": "q3d", "text": "Spontaneous — I see how I feel when I wake up", "scores": { "ambivert": 2, "extrovert": 1 } }
+    ]},
+    { "id": "q4", "text": "How do you process difficult decisions?", "options": [
+      { "id": "q4a", "text": "Talk it through with as many people as possible", "scores": { "extrovert": 3 } },
+      { "id": "q4b", "text": "Think it through alone first, then maybe discuss", "scores": { "introvert": 3 } },
+      { "id": "q4c", "text": "Write it out or think through it quietly", "scores": { "introvert": 2, "ambivert": 1 } },
+      { "id": "q4d", "text": "Both — depending on the decision", "scores": { "ambivert": 3 } }
+    ]},
+    { "id": "q5", "text": "In group conversations, you tend to:", "options": [
+      { "id": "q5a", "text": "Lead and direct the conversation naturally", "scores": { "extrovert": 3 } },
+      { "id": "q5b", "text": "Listen more than talk, and speak when I have something valuable to say", "scores": { "introvert": 3 } },
+      { "id": "q5c", "text": "Contribute comfortably without needing to lead", "scores": { "ambivert": 3 } },
+      { "id": "q5d", "text": "Varies depending on who's in the group", "scores": { "ambivert": 2, "introvert": 1 } }
+    ]},
+    { "id": "q6", "text": "Your closest friend group is:", "options": [
+      { "id": "q6a", "text": "Large — I have many close friends", "scores": { "extrovert": 3 } },
+      { "id": "q6b", "text": "Small and tight-knit — a few deep friendships", "scores": { "introvert": 3 } },
+      { "id": "q6c", "text": "Medium — a comfortable circle I genuinely enjoy", "scores": { "ambivert": 3 } },
+      { "id": "q6d", "text": "I maintain different groups for different aspects of life", "scores": { "ambivert": 2, "extrovert": 1 } }
+    ]},
+    { "id": "q7", "text": "When something exciting happens, you:", "options": [
+      { "id": "q7a", "text": "Immediately want to call or text someone to share it", "scores": { "extrovert": 3 } },
+      { "id": "q7b", "text": "Sit with it privately for a while first", "scores": { "introvert": 3 } },
+      { "id": "q7c", "text": "Tell one specific person who you know will appreciate it", "scores": { "introvert": 2, "ambivert": 1 } },
+      { "id": "q7d", "text": "Post it somewhere — sharing is how I process things", "scores": { "extrovert": 2, "ambivert": 1 } }
+    ]},
+    { "id": "q8", "text": "Working from home vs office:", "options": [
+      { "id": "q8a", "text": "Office, always — I love being around people", "scores": { "extrovert": 3 } },
+      { "id": "q8b", "text": "Home — I'm so much more productive without interruptions", "scores": { "introvert": 3 } },
+      { "id": "q8c", "text": "Hybrid — the best of both worlds", "scores": { "ambivert": 3 } },
+      { "id": "q8d", "text": "Depends on the task and my mood", "scores": { "ambivert": 2, "introvert": 1 } }
+    ]},
+    { "id": "q9", "text": "Small talk with strangers:", "options": [
+      { "id": "q9a", "text": "Love it! It's how friendships start", "scores": { "extrovert": 3 } },
+      { "id": "q9b", "text": "Tolerate it when necessary but it drains me", "scores": { "introvert": 3 } },
+      { "id": "q9c", "text": "Fine in small doses — I can do it without issue", "scores": { "ambivert": 3 } },
+      { "id": "q9d", "text": "Prefer to skip straight to meaningful conversation", "scores": { "introvert": 2, "ambivert": 1 } }
+    ]},
+    { "id": "q10", "text": "If you could design your perfect day of work:", "options": [
+      { "id": "q10a", "text": "Back-to-back meetings, brainstorming, collaboration", "scores": { "extrovert": 3 } },
+      { "id": "q10b", "text": "Deep focus time alone, no interruptions", "scores": { "introvert": 3 } },
+      { "id": "q10c", "text": "Morning meetings, afternoon solo focus time", "scores": { "ambivert": 3 } },
+      { "id": "q10d", "text": "Small team collaboration throughout the day", "scores": { "ambivert": 2, "extrovert": 1 } }
+    ]}
+  ],
+  "results": [
+    {
+      "id": "introvert",
+      "title": "Introvert",
+      "description": "You are a true introvert — and that's something to embrace, not apologize for. Introverts are some of the most thoughtful, creative, and perceptive people in the world. You draw your energy from within, not from the crowd around you. Solitude isn't loneliness for you — it's where you do your best thinking, create your best work, and recharge for the world ahead. You form deep, meaningful connections rather than broad, shallow ones. You listen more than you speak, which means when you do speak, people pay attention. Your inner world is rich and complex. You notice things others miss. You process ideas deeply before sharing them. Famous introverts include Einstein, J.K. Rowling, Warren Buffett, and Barack Obama — not because introversion made them great, but because they used their natural gifts. Your quiet confidence is a superpower. Own it.",
+      "image": "/images/results/introvert.jpg",
+      "traits": ["Thoughtful", "Deep listener", "Independent", "Creative"],
+      "shareText": "I'm an Introvert! I took the Am I Introverted or Extroverted quiz on ToolNotch."
+    },
+    {
+      "id": "extrovert",
+      "title": "Extrovert",
+      "description": "You are an extrovert — and the world is your stage. You gain energy from people, conversations, and new experiences. You think out loud, which means your ideas get refined through dialogue and debate. You're the one who makes events come alive, who draws out the quieter people in the room, and who seems to know everyone within an hour of arriving. You're direct, enthusiastic, and you embrace change and variety. Social connections fuel you rather than drain you — a quiet weekend alone might feel more like a punishment than a reward. Famous extroverts include Oprah Winfrey, Winston Churchill, and Richard Branson. You excel in roles that require communication, leadership, and motivating others. Your energy is contagious, your enthusiasm is inspiring, and your openness makes people feel welcome. The world needs your spark.",
+      "image": "/images/results/extrovert.jpg",
+      "traits": ["Energetic", "Social", "Direct", "Enthusiastic"],
+      "shareText": "I'm an Extrovert! I took the Am I Introverted or Extroverted quiz on ToolNotch."
+    },
+    {
+      "id": "ambivert",
+      "title": "Ambivert",
+      "description": "You are an ambivert — the rarest and most adaptable personality type on the spectrum. You sit comfortably in the middle, able to draw energy from both solitude and social interaction depending on your needs and circumstances. You can be the life of the party on Friday and deeply content reading alone on Saturday. You adapt your communication style to the person in front of you — more reserved with quieter people, more energetic with high-energy ones. Research suggests ambiverts make the most effective salespeople, leaders, and communicators precisely because they can flex. You know when to listen and when to speak. You know when to be bold and when to step back. You're not 'neither introvert nor extrovert' — you're both, and you can choose which mode serves you best. That flexibility is genuinely rare and genuinely powerful.",
+      "image": "/images/results/ambivert.jpg",
+      "traits": ["Flexible", "Adaptable", "Balanced", "Context-aware"],
+      "shareText": "I'm an Ambivert! I took the Am I Introverted or Extroverted quiz on ToolNotch."
+    }
+  ]
+}

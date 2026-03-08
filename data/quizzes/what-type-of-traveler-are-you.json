@@ -1,0 +1,102 @@
+{
+  "id": "what-type-of-traveler-are-you",
+  "title": "What Type of Traveler Are You?",
+  "description": "Find out your travel personality — from adrenaline-seeking adventurer to culture-obsessed explorer.",
+  "image": "/images/quizzes/what-type-of-traveler-are-you-cover.jpg",
+  "questions": [
+    { "id": "q1", "text": "How do you plan a trip?", "options": [
+      { "id": "q1a", "text": "Book everything months in advance with a detailed itinerary", "scores": { "cultural": 2, "city": 1 } },
+      { "id": "q1b", "text": "Just book flights and figure out the rest when I get there", "scores": { "adventurer": 3, "beach": 1 } },
+      { "id": "q1c", "text": "Research every museum, restaurant, and landmark", "scores": { "cultural": 3 } },
+      { "id": "q1d", "text": "Find a great resort and let them handle everything", "scores": { "beach": 3, "city": 1 } }
+    ]},
+    { "id": "q2", "text": "Your dream accommodation:", "options": [
+      { "id": "q2a", "text": "A tent in the wilderness or a basic hostel", "scores": { "adventurer": 3 } },
+      { "id": "q2b", "text": "A boutique hotel near the cultural heart of the city", "scores": { "cultural": 3, "city": 1 } },
+      { "id": "q2c", "text": "A beachfront villa or all-inclusive resort", "scores": { "beach": 3 } },
+      { "id": "q2d", "text": "A trendy apartment in a walkable neighborhood", "scores": { "city": 3, "cultural": 1 } }
+    ]},
+    { "id": "q3", "text": "The best souvenir is:", "options": [
+      { "id": "q3a", "text": "A story about something unexpected that happened", "scores": { "adventurer": 3 } },
+      { "id": "q3b", "text": "An artifact or book from a local museum", "scores": { "cultural": 3 } },
+      { "id": "q3c", "text": "A tan and a week of memories on the beach", "scores": { "beach": 3 } },
+      { "id": "q3d", "text": "A photo in front of an iconic city landmark", "scores": { "city": 3 } }
+    ]},
+    { "id": "q4", "text": "Your travel playlist sounds like:", "options": [
+      { "id": "q4a", "text": "High-energy pump-up music", "scores": { "adventurer": 3 } },
+      { "id": "q4b", "text": "World music and local artists from the destination", "scores": { "cultural": 3 } },
+      { "id": "q4c", "text": "Chill vibes and acoustic songs", "scores": { "beach": 3 } },
+      { "id": "q4d", "text": "Podcasts about the city's history and food scene", "scores": { "city": 2, "cultural": 1 } }
+    ]},
+    { "id": "q5", "text": "The best meal on a trip:", "options": [
+      { "id": "q5a", "text": "Whatever I can cook over a campfire", "scores": { "adventurer": 3 } },
+      { "id": "q5b", "text": "Authentic local food at a family-run restaurant", "scores": { "cultural": 3, "city": 1 } },
+      { "id": "q5c", "text": "Fresh seafood right on the beach", "scores": { "beach": 3 } },
+      { "id": "q5d", "text": "A hyped restaurant with a celebrity chef", "scores": { "city": 3 } }
+    ]},
+    { "id": "q6", "text": "An ideal travel day includes:", "options": [
+      { "id": "q6a", "text": "Hiking, kayaking, or another physical challenge", "scores": { "adventurer": 3 } },
+      { "id": "q6b", "text": "Museums, historical sites, and local tours", "scores": { "cultural": 3 } },
+      { "id": "q6c", "text": "Beach, pool, book, repeat", "scores": { "beach": 3 } },
+      { "id": "q6d", "text": "Exploring neighborhoods, markets, and rooftop bars", "scores": { "city": 3 } }
+    ]},
+    { "id": "q7", "text": "You'd most regret leaving a destination without:", "options": [
+      { "id": "q7a", "text": "Doing something slightly dangerous or extreme", "scores": { "adventurer": 3 } },
+      { "id": "q7b", "text": "Visiting the most important historical site", "scores": { "cultural": 3 } },
+      { "id": "q7c", "text": "Finding the perfect sunset beach spot", "scores": { "beach": 3 } },
+      { "id": "q7d", "text": "Finding the coolest hidden local bar or café", "scores": { "city": 3 } }
+    ]},
+    { "id": "q8", "text": "The worst travel experience would be:", "options": [
+      { "id": "q8a", "text": "Being stuck in a resort with nothing to explore", "scores": { "adventurer": 2, "cultural": 1 } },
+      { "id": "q8b", "text": "Missing a once-in-a-lifetime museum or historical site", "scores": { "cultural": 3 } },
+      { "id": "q8c", "text": "Cold, rainy weather ruining a beach holiday", "scores": { "beach": 3 } },
+      { "id": "q8d", "text": "Getting stuck in the suburbs with no city access", "scores": { "city": 3 } }
+    ]},
+    { "id": "q9", "text": "Your travel style in one word:", "options": [
+      { "id": "q9a", "text": "Spontaneous", "scores": { "adventurer": 3 } },
+      { "id": "q9b", "text": "Intentional", "scores": { "cultural": 3 } },
+      { "id": "q9c", "text": "Relaxed", "scores": { "beach": 3 } },
+      { "id": "q9d", "text": "Curious", "scores": { "city": 2, "cultural": 1 } }
+    ]},
+    { "id": "q10", "text": "Your next destination would be:", "options": [
+      { "id": "q10a", "text": "Patagonia or the Himalayas", "scores": { "adventurer": 3 } },
+      { "id": "q10b", "text": "Rome, Athens, or Kyoto", "scores": { "cultural": 3 } },
+      { "id": "q10c", "text": "Maldives, Bali, or the Greek Islands", "scores": { "beach": 3 } },
+      { "id": "q10d", "text": "Tokyo, New York, or London", "scores": { "city": 3 } }
+    ]}
+  ],
+  "results": [
+    {
+      "id": "adventurer",
+      "title": "The Adventurer",
+      "description": "You travel to push your limits. You are the Adventurer — someone who measures a great trip by how many times your heart raced, how far off the beaten path you wandered, and how many new things you tried for the first time. You're not interested in tourist traps or pre-packaged experiences. You want the raw, unfiltered version of a destination — the hiking trails, the local villages, the border crossings, the moments that can't be photographed because you were too busy living them. You pack light, adapt quickly, and thrive in uncertainty. Other travelers might look at your itinerary and think it's chaos; you look at theirs and think it's a missed opportunity. Your stories are the ones people lean in to hear at dinner parties — and you have many of them. The world is your playground, and you intend to use all of it.",
+      "image": "/images/results/adventurer.jpg",
+      "traits": ["Spontaneous", "Fearless", "Physical", "Authentic"],
+      "shareText": "I'm The Adventurer traveler type! I took the travel quiz on ToolNotch."
+    },
+    {
+      "id": "cultural",
+      "title": "The Cultural Explorer",
+      "description": "You travel to understand. You are the Cultural Explorer — someone who books museum tickets before booking restaurants, who reads three books about a destination before arriving, and who considers a trip incomplete without a genuine conversation with a local. You are drawn to history, art, language, food traditions, and the invisible threads that connect a people to their place. You don't want to just see a place — you want to understand it at a level that changes how you see the world. You take notes, you save ticket stubs, you sketch details in notebooks. You return from trips not just with photos but with perspectives. You are a deeply respectful and thoughtful traveler, and destinations are richer for having been visited by someone who truly pays attention. Your travel transforms you, and that's exactly the point.",
+      "image": "/images/results/cultural-explorer.jpg",
+      "traits": ["Curious", "Intentional", "Historical", "Respectful"],
+      "shareText": "I'm The Cultural Explorer traveler type! I took the travel quiz on ToolNotch."
+    },
+    {
+      "id": "beach",
+      "title": "The Beach Lover",
+      "description": "You travel to exhale. You are the Beach Lover — and absolutely unashamed of it. While others rush from monument to museum, you've found the secret that most people take a lifetime to learn: the best version of travel sometimes means doing almost nothing, beautifully. You understand that rest is productive, that a perfect sunset is worth more than a packed itinerary, and that the sound of waves is its own kind of education. You know the difference between a good beach and a great one. You know which hour of light makes the ocean look like glass. You know which cocktail is best enjoyed with sand between your toes. You come home restored in a way that no city break can match. Travel, for you, is an act of self-care — and you do it with style.",
+      "image": "/images/results/beach-lover.jpg",
+      "traits": ["Relaxed", "Restorative", "Sun-seeking", "Intentional"],
+      "shareText": "I'm The Beach Lover traveler type! I took the travel quiz on ToolNotch."
+    },
+    {
+      "id": "city",
+      "title": "The City Hopper",
+      "description": "You travel to feel the pulse. You are the City Hopper — someone who feels most alive in a new city, navigating unfamiliar streets, discovering neighborhoods off the tourist trail, and absorbing the unique energy that no two cities share. You travel for the restaurants, the rooftops, the street art, the nightlife, and the endlessly fascinating variety of how humans have chosen to organize themselves into urban communities. You research neighborhoods obsessively before arrival and arrive with a list of recommendations longer than most people's entire trip. You can read a city's personality within hours of landing. You know that the best travel experiences happen when you get slightly lost, stumble into something unexpected, and say yes to the invitation you didn't plan for. Cities are your element, and you are fluent in them.",
+      "image": "/images/results/city-hopper.jpg",
+      "traits": ["Urban", "Curious", "Foodie", "Energetic"],
+      "shareText": "I'm The City Hopper traveler type! I took the travel quiz on ToolNotch."
+    }
+  ]
+}

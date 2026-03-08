@@ -1,0 +1,34 @@
+[
+  {
+    "question": "How does the word counter count words?",
+    "answer": "Words are counted by splitting text on whitespace (spaces, tabs, newlines) and filtering out empty strings. Hyphenated words like 'well-being' count as one word."
+  },
+  {
+    "question": "What does the Flesch Reading Ease score mean?",
+    "answer": "The Flesch Reading Ease score rates text on a 0–100 scale. Higher scores indicate easier reading. A score of 60–70 is considered standard (suitable for most audiences). Scores below 30 are very difficult (academic or legal text). Hemingway's novels typically score around 65."
+  },
+  {
+    "question": "How is reading time calculated?",
+    "answer": "Reading time is calculated at 238 words per minute (the average adult reading speed). Speaking time uses 130 words per minute. Both are shown in minutes, rounded up."
+  },
+  {
+    "question": "Is my text stored anywhere?",
+    "answer": "No. All analysis happens entirely in your browser using JavaScript. Your text never leaves your device and is never sent to any server. We cannot see your content."
+  },
+  {
+    "question": "How accurate is syllable counting?",
+    "answer": "Syllable counting uses a heuristic algorithm based on vowel groups, which is approximately 85–90% accurate on standard English text. Unusual words, proper nouns, and acronyms may be counted differently than expected. Professional publishing tools use similar heuristics."
+  },
+  {
+    "question": "What is the Gunning Fog Index?",
+    "answer": "The Gunning Fog Index estimates the years of formal education needed to understand a text on the first reading. A score of 12 means a high school graduate should understand it. Most popular novels score 6–8. Legal documents often score 20+."
+  },
+  {
+    "question": "What are 'top words' and which words are excluded?",
+    "answer": "Top words shows the most frequently used content words in your text. Common words like 'the', 'a', 'and', 'is' (called stopwords) are excluded so you see meaningful keywords instead."
+  },
+  {
+    "question": "Can I use this for social media character limits?",
+    "answer": "Yes — the character count shows the exact number of characters including spaces. Twitter/X posts allow 280 characters, LinkedIn posts allow 3,000 characters, and Instagram captions allow 2,200 characters."
+  }
+]

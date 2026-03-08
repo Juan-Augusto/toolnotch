@@ -1,0 +1,102 @@
+{
+  "id": "what-career-suits-you",
+  "title": "What Career Suits You?",
+  "description": "Answer 10 questions about your strengths and values to discover which career path aligns with your true personality.",
+  "image": "/images/quizzes/what-career-suits-you-cover.jpg",
+  "questions": [
+    { "id": "q1", "text": "What motivates you most at work?", "options": [
+      { "id": "q1a", "text": "Creating something beautiful or expressive", "scores": { "creative": 3 } },
+      { "id": "q1b", "text": "Solving complex, logical problems", "scores": { "analytical": 3 } },
+      { "id": "q1c", "text": "Leading a team toward a shared goal", "scores": { "leadership": 3 } },
+      { "id": "q1d", "text": "Helping people through difficult moments", "scores": { "social": 3 } }
+    ]},
+    { "id": "q2", "text": "Your ideal workday:", "options": [
+      { "id": "q2a", "text": "Open-ended with creative freedom and variety", "scores": { "creative": 3 } },
+      { "id": "q2b", "text": "Deep focus on a challenging technical problem", "scores": { "analytical": 3 } },
+      { "id": "q2c", "text": "Back-to-back meetings, decisions, and strategy", "scores": { "leadership": 3 } },
+      { "id": "q2d", "text": "One-on-one conversations that make a difference", "scores": { "social": 3 } }
+    ]},
+    { "id": "q3", "text": "When you were a kid, you loved:", "options": [
+      { "id": "q3a", "text": "Drawing, music, writing, or building things", "scores": { "creative": 3 } },
+      { "id": "q3b", "text": "Science kits, puzzles, and figuring out how things work", "scores": { "analytical": 3 } },
+      { "id": "q3c", "text": "Organizing games and telling other kids what to do (in a good way)", "scores": { "leadership": 3 } },
+      { "id": "q3d", "text": "Helping friends with their problems and being the listener", "scores": { "social": 3 } }
+    ]},
+    { "id": "q4", "text": "Your greatest strength:", "options": [
+      { "id": "q4a", "text": "Imagination and originality", "scores": { "creative": 3 } },
+      { "id": "q4b", "text": "Critical thinking and attention to detail", "scores": { "analytical": 3 } },
+      { "id": "q4c", "text": "Vision and the ability to inspire others", "scores": { "leadership": 3 } },
+      { "id": "q4d", "text": "Empathy and communication", "scores": { "social": 3 } }
+    ]},
+    { "id": "q5", "text": "You prefer work that:", "options": [
+      { "id": "q5a", "text": "Results in something you can show or share", "scores": { "creative": 3 } },
+      { "id": "q5b", "text": "Has a clear right and wrong answer", "scores": { "analytical": 3 } },
+      { "id": "q5c", "text": "Has a measurable impact on an organization", "scores": { "leadership": 3 } },
+      { "id": "q5d", "text": "Directly improves someone's life", "scores": { "social": 3 } }
+    ]},
+    { "id": "q6", "text": "A project goes badly. You:", "options": [
+      { "id": "q6a", "text": "Redesign the whole approach with a fresh creative vision", "scores": { "creative": 3 } },
+      { "id": "q6b", "text": "Analyze what went wrong step by step", "scores": { "analytical": 3 } },
+      { "id": "q6c", "text": "Rally the team, pivot strategy, and push forward", "scores": { "leadership": 3 } },
+      { "id": "q6d", "text": "Make sure everyone on the team feels supported first", "scores": { "social": 3 } }
+    ]},
+    { "id": "q7", "text": "Which environment do you thrive in?", "options": [
+      { "id": "q7a", "text": "A studio, lab, or open creative space", "scores": { "creative": 3 } },
+      { "id": "q7b", "text": "A focused, quiet environment with complex tools", "scores": { "analytical": 3 } },
+      { "id": "q7c", "text": "A boardroom or fast-paced startup", "scores": { "leadership": 3 } },
+      { "id": "q7d", "text": "A clinic, classroom, or community space", "scores": { "social": 3 } }
+    ]},
+    { "id": "q8", "text": "Your friends come to you when they need:", "options": [
+      { "id": "q8a", "text": "A creative idea or fresh perspective", "scores": { "creative": 3 } },
+      { "id": "q8b", "text": "Help understanding something complicated", "scores": { "analytical": 3 } },
+      { "id": "q8c", "text": "Advice on a big life decision", "scores": { "leadership": 3 } },
+      { "id": "q8d", "text": "Someone to listen without judgment", "scores": { "social": 3 } }
+    ]},
+    { "id": "q9", "text": "Money vs meaning:", "options": [
+      { "id": "q9a", "text": "Meaning — I need to love what I make", "scores": { "creative": 2, "social": 1 } },
+      { "id": "q9b", "text": "Both — I want to be well-compensated for expertise", "scores": { "analytical": 3 } },
+      { "id": "q9c", "text": "Ambition — I want to build something significant", "scores": { "leadership": 3 } },
+      { "id": "q9d", "text": "Purpose — money is secondary to impact", "scores": { "social": 3 } }
+    ]},
+    { "id": "q10", "text": "In five years, you want to be:", "options": [
+      { "id": "q10a", "text": "Known for creating something people love", "scores": { "creative": 3 } },
+      { "id": "q10b", "text": "An expert others come to for answers", "scores": { "analytical": 3 } },
+      { "id": "q10c", "text": "Running a team or company", "scores": { "leadership": 3 } },
+      { "id": "q10d", "text": "Making a real difference in people's lives", "scores": { "social": 3 } }
+    ]}
+  ],
+  "results": [
+    {
+      "id": "creative",
+      "title": "Creative Career",
+      "description": "Your results point strongly toward a creative career. You are someone who needs to make things — whether that's writing, designing, building, filming, or performing. You feel most alive when you're translating something internal into something that exists in the world. The best careers for you include graphic design, UX/UI design, writing and journalism, film and video production, architecture, game design, music, photography, marketing, and brand strategy. You thrive in environments that give you creative latitude and value originality. You may struggle in overly rigid corporate environments where creativity is an afterthought rather than the point. The key for you is finding work that produces something you can be proud of — work where your fingerprints are on the final result. Creative careers can be competitive, but they attract people who couldn't imagine doing anything else. If that's you, that's your edge.",
+      "image": "/images/results/creative.jpg",
+      "traits": ["Imaginative", "Original", "Expressive", "Visionary"],
+      "shareText": "I'm suited for a Creative Career! I took the career quiz on ToolNotch."
+    },
+    {
+      "id": "analytical",
+      "title": "Analytical Career",
+      "description": "Your results suggest a career in analytical or technical fields will bring you the most satisfaction. You're someone who loves depth — diving into complex problems, understanding systems, finding patterns in data, and arriving at precise answers. The best careers for you include software engineering, data science, finance and investment, research, medicine, law, engineering, and architecture. You're at your best when you have a real challenge in front of you — something that takes sustained intellectual effort to crack. You may find careers with ambiguous success metrics frustrating. You value expertise and respect competence deeply. The good news is that analytical skills are among the most highly compensated in the modern economy — and you probably already knew that, because you looked it up.",
+      "image": "/images/results/analytical.jpg",
+      "traits": ["Logical", "Precise", "Expert", "Systematic"],
+      "shareText": "I'm suited for an Analytical Career! I took the career quiz on ToolNotch."
+    },
+    {
+      "id": "leadership",
+      "title": "Leadership Career",
+      "description": "Your results point to a leadership career. You are someone who sees the big picture, energizes others with your vision, and naturally steps into responsibility. You're not just good at managing people — you're drawn to it. You think in terms of strategy and long-term impact. The best careers for you include management, entrepreneurship, product management, consulting, politics and public service, executive roles, and organizational leadership. You may struggle in roles where you're not given ownership or agency. You need to be making real decisions, not just executing other people's plans. The caveat with leadership careers is that they often require years of doing other things first — but those who stay patient and deliberate build careers of remarkable impact. Your time is coming.",
+      "image": "/images/results/leadership.jpg",
+      "traits": ["Strategic", "Decisive", "Inspiring", "Accountable"],
+      "shareText": "I'm suited for a Leadership Career! I took the career quiz on ToolNotch."
+    },
+    {
+      "id": "social",
+      "title": "Social Impact Career",
+      "description": "Your results point to a career centered on people and social impact. You are someone who measures success by the difference you make in someone's life — and no other metric comes close. The best careers for you include social work, teaching, nursing and medicine, counseling and therapy, nonprofit leadership, community organizing, public health, HR and people operations, and coaching. You are extraordinarily good at listening, at holding space for others, and at helping people find their way through difficulty. This is not a soft skill — it is among the rarest and most valuable capacities a person can have. Social impact careers are often under-compensated relative to their importance, but people who build them rarely regret the choice. They tend to be the most satisfied workers in study after study. Because meaning, it turns out, matters more than salary.",
+      "image": "/images/results/social.jpg",
+      "traits": ["Empathetic", "Communicative", "Purpose-driven", "Caring"],
+      "shareText": "I'm suited for a Social Impact Career! I took the career quiz on ToolNotch."
+    }
+  ]
+}

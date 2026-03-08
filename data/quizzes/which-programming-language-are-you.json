@@ -1,0 +1,150 @@
+{
+  "id": "which-programming-language-are-you",
+  "title": "Which Programming Language Are You?",
+  "description": "Answer 10 questions about your personality and problem-solving style to discover which programming language matches your inner coder.",
+  "image": "/images/quizzes/which-programming-language-are-you-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "How do you approach a new problem?",
+      "options": [
+        { "id": "q1a", "text": "Jump in and experiment — figure it out as I go", "scores": { "python": 3, "javascript": 2 } },
+        { "id": "q1b", "text": "Plan every detail before writing a single line", "scores": { "rust": 3, "go": 2 } },
+        { "id": "q1c", "text": "Look for a pattern I've seen before and adapt it", "scores": { "java": 3, "python": 1 } },
+        { "id": "q1d", "text": "Start from first principles and build up carefully", "scores": { "rust": 2, "java": 2 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "What's your relationship with errors?",
+      "options": [
+        { "id": "q2a", "text": "They're teachers — I learn from every mistake", "scores": { "python": 3, "javascript": 1 } },
+        { "id": "q2b", "text": "I prefer catching them before runtime if possible", "scores": { "rust": 3, "java": 2 } },
+        { "id": "q2c", "text": "I handle them when they come up — no big deal", "scores": { "javascript": 3, "go": 1 } },
+        { "id": "q2d", "text": "I eliminate them systematically through process", "scores": { "go": 3, "java": 2 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Choose your ideal work environment:",
+      "options": [
+        { "id": "q3a", "text": "Flexible startup — wear many hats", "scores": { "javascript": 3, "python": 2 } },
+        { "id": "q3b", "text": "Large tech company with clear processes", "scores": { "java": 3, "go": 2 } },
+        { "id": "q3c", "text": "Systems programming or infrastructure team", "scores": { "rust": 3, "go": 2 } },
+        { "id": "q3d", "text": "Research lab or data science team", "scores": { "python": 3, "rust": 1 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "How do you feel about rules and constraints?",
+      "options": [
+        { "id": "q4a", "text": "Rules stifle creativity — I prefer freedom", "scores": { "javascript": 3, "python": 2 } },
+        { "id": "q4b", "text": "Strong rules lead to better outcomes", "scores": { "rust": 3, "java": 2 } },
+        { "id": "q4c", "text": "A few clear rules is the sweet spot", "scores": { "go": 3, "python": 1 } },
+        { "id": "q4d", "text": "Rules are fine if I understand the reason", "scores": { "java": 2, "rust": 2 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "Your friends would describe you as:",
+      "options": [
+        { "id": "q5a", "text": "Creative and versatile", "scores": { "python": 2, "javascript": 3 } },
+        { "id": "q5b", "text": "Methodical and dependable", "scores": { "java": 3, "go": 2 } },
+        { "id": "q5c", "text": "Intense and principled", "scores": { "rust": 3 } },
+        { "id": "q5d", "text": "Practical and efficient", "scores": { "go": 3, "python": 1 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "When you see someone else's messy code, you:",
+      "options": [
+        { "id": "q6a", "text": "Immediately want to refactor everything", "scores": { "rust": 2, "java": 3 } },
+        { "id": "q6b", "text": "Accept it — it works, that's what matters", "scores": { "javascript": 3, "python": 1 } },
+        { "id": "q6c", "text": "Run it through a formatter and move on", "scores": { "go": 3, "python": 1 } },
+        { "id": "q6d", "text": "Add documentation and call it done", "scores": { "python": 3, "java": 1 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "What matters most in software?",
+      "options": [
+        { "id": "q7a", "text": "Speed of development", "scores": { "python": 3, "javascript": 2 } },
+        { "id": "q7b", "text": "Runtime performance", "scores": { "rust": 3, "go": 2 } },
+        { "id": "q7c", "text": "Reliability and predictability", "scores": { "java": 3, "go": 2 } },
+        { "id": "q7d", "text": "Interactivity and user experience", "scores": { "javascript": 3, "python": 1 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "Your dream project is:",
+      "options": [
+        { "id": "q8a", "text": "A machine learning model that predicts something useful", "scores": { "python": 3, "rust": 1 } },
+        { "id": "q8b", "text": "A real-time web app with millions of users", "scores": { "javascript": 3, "go": 1 } },
+        { "id": "q8c", "text": "An OS kernel or game engine from scratch", "scores": { "rust": 3, "go": 1 } },
+        { "id": "q8d", "text": "An enterprise system that runs a business", "scores": { "java": 3, "go": 2 } }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "Memory management is:",
+      "options": [
+        { "id": "q9a", "text": "Something I trust the runtime to handle", "scores": { "python": 3, "java": 2 } },
+        { "id": "q9b", "text": "Something I want full control over", "scores": { "rust": 3 } },
+        { "id": "q9c", "text": "The compiler's job — that's what GC is for", "scores": { "go": 3, "java": 2 } },
+        { "id": "q9d", "text": "Honestly… I don't think about it much", "scores": { "javascript": 3, "python": 1 } }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "Choose a weekend activity:",
+      "options": [
+        { "id": "q10a", "text": "Tinkering with a new tool or API", "scores": { "python": 2, "javascript": 3 } },
+        { "id": "q10b", "text": "Reading technical papers or language specs", "scores": { "rust": 3, "java": 1 } },
+        { "id": "q10c", "text": "Optimizing a system to squeeze out performance", "scores": { "rust": 2, "go": 3 } },
+        { "id": "q10d", "text": "Building something that will outlast the weekend", "scores": { "java": 3, "python": 1 } }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "python",
+      "title": "Python",
+      "description": "You are Python — the friendly, versatile, and endlessly adaptable language that has conquered everything from web development to machine learning. Like Python, you value clarity and readability over cleverness. You believe that code should be easy to understand, and you'd rather write something obvious than impressive. You have a broad set of interests and adapt easily to new domains — today you're analyzing data, tomorrow you're building a web scraper, and next week you might be training a neural network. You're the person everyone goes to when they need something done quickly and reliably. You value a large, supportive community and love the feeling of finding the perfect library for any problem. Your motto: 'There should be one obvious way to do it.' You make difficult things feel simple, and that's a rare and valuable gift.",
+      "image": "/images/results/python.jpg",
+      "traits": ["Readable", "Versatile", "Community-driven", "Practical"],
+      "shareText": "I got Python on the Which Programming Language Are You quiz on ToolNotch!"
+    },
+    {
+      "id": "javascript",
+      "title": "JavaScript",
+      "description": "You are JavaScript — everywhere, for better or worse, and absolutely indispensable. Like JavaScript, you are adaptable to the point of being unpredictable, endlessly creative, and you have a remarkable ability to do things you probably shouldn't. You thrive in fast-moving environments, love building things people can see and interact with, and you're never afraid to ship something imperfect and iterate quickly. You have strong opinions about how things should be done — but you also respect that there are many ways to get there. You embrace the messy, dynamic nature of the real world and you find a way to make things work regardless of constraints. Sometimes you move so fast you break things, but you fix them just as quickly. The web wouldn't exist without you, and neither would half the world's apps.",
+      "image": "/images/results/javascript.jpg",
+      "traits": ["Ubiquitous", "Creative", "Fast-moving", "Adaptable"],
+      "shareText": "I got JavaScript on the Which Programming Language Are You quiz on ToolNotch!"
+    },
+    {
+      "id": "rust",
+      "title": "Rust",
+      "description": "You are Rust — the principled, performance-obsessed, 'if it compiles it works' language that refuses to let you get away with anything sloppy. Like Rust, you have high standards for yourself and others, and you're not afraid to push back when something is done wrong. You believe that catching problems early is always worth the extra effort, even if it slows you down initially. You care deeply about doing things right — not just getting them done. You are reliable, safe, and precise, and people who work with you come to appreciate your exacting nature even if it takes some adjustment. You have a growing following of passionate advocates who see you as the future. You are not the easiest to work with at first, but those who invest the time discover something genuinely exceptional.",
+      "image": "/images/results/rust.jpg",
+      "traits": ["Safe", "Performant", "Principled", "Precise"],
+      "shareText": "I got Rust on the Which Programming Language Are You quiz on ToolNotch!"
+    },
+    {
+      "id": "go",
+      "title": "Go",
+      "description": "You are Go — practical, opinionated, and refreshingly boring in the best possible way. Like Go, you don't chase trends or try to be clever. You value simplicity, consistency, and getting things done efficiently without unnecessary ceremony. You have strong opinions about how a codebase should look — and you're perfectly happy to let a formatter make those decisions so you don't have to argue about them. You build things that scale, that are easy for teams to maintain, and that just work in production. You are the colleague everyone wants on their infrastructure or backend team because you bring calm clarity to complex systems. You have no time for complexity theater — if something can be expressed simply, it should be.",
+      "image": "/images/results/go.jpg",
+      "traits": ["Simple", "Efficient", "Opinionated", "Scalable"],
+      "shareText": "I got Go on the Which Programming Language Are You quiz on ToolNotch!"
+    },
+    {
+      "id": "java",
+      "title": "Java",
+      "description": "You are Java — the foundation of enterprise software, the backbone of Android, and the language that proves verbose doesn't mean wrong. Like Java, you value structure, predictability, and long-term maintainability over quick wins. You write code that could be read and modified by a team of 50 people five years from now, and you consider that a feature, not a limitation. You have strong typing in your personality — you like knowing exactly what type of person or situation you're dealing with before committing. You may have been the subject of jokes over the years, but you outlast your critics. You're the person who's still there when everyone else has moved on, because you built something that actually lasts.",
+      "image": "/images/results/java.jpg",
+      "traits": ["Structured", "Reliable", "Enterprise-ready", "Maintainable"],
+      "shareText": "I got Java on the Which Programming Language Are You quiz on ToolNotch!"
+    }
+  ]
+}
