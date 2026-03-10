@@ -1,4 +1,5 @@
 'use client'
+import { useTranslations } from 'next-intl'
 import { TextStats } from '@/lib/textTypes'
 
 interface StatCardProps {
@@ -28,16 +29,17 @@ interface StatsGridProps {
 }
 
 export default function StatsGrid({ stats, primaryStat = 'words' }: StatsGridProps) {
+  const t = useTranslations('text.stats')
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-      <StatCard label="Words" value={stats.words.toLocaleString()} highlighted={primaryStat === 'words'} />
-      <StatCard label="Characters" value={stats.characters.toLocaleString()} highlighted={primaryStat === 'characters'} />
-      <StatCard label="Characters (no spaces)" value={stats.charactersNoSpaces.toLocaleString()} />
-      <StatCard label="Sentences" value={stats.sentences.toLocaleString()} highlighted={primaryStat === 'sentences'} />
-      <StatCard label="Paragraphs" value={stats.paragraphs.toLocaleString()} />
-      <StatCard label="Reading Time" value={formatTime(stats.readingTime)} highlighted={primaryStat === 'readingTime'} />
-      <StatCard label="Speaking Time" value={formatTime(stats.speakingTime)} />
-      <StatCard label="Avg Words/Sentence" value={stats.avgWordsPerSentence} />
+      <StatCard label={t('words')} value={stats.words.toLocaleString()} highlighted={primaryStat === 'words'} />
+      <StatCard label={t('characters')} value={stats.characters.toLocaleString()} highlighted={primaryStat === 'characters'} />
+      <StatCard label={t('charactersNoSpaces')} value={stats.charactersNoSpaces.toLocaleString()} />
+      <StatCard label={t('sentences')} value={stats.sentences.toLocaleString()} highlighted={primaryStat === 'sentences'} />
+      <StatCard label={t('paragraphs')} value={stats.paragraphs.toLocaleString()} />
+      <StatCard label={t('readingTime')} value={formatTime(stats.readingTime)} highlighted={primaryStat === 'readingTime'} />
+      <StatCard label={t('speakingTime')} value={formatTime(stats.speakingTime)} />
+      <StatCard label={t('avgWordsPerSentence')} value={stats.avgWordsPerSentence} />
     </div>
   )
 }

@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect, useMemo } from 'react'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import { calculateLoan } from '@/lib/loanMath'
 import { LoanResult } from '@/lib/loanTypes'
 import { CalculatorVariant } from '@/data/calculatorVariants'
@@ -18,6 +19,7 @@ interface LoanCalculatorProps {
 }
 
 export default function LoanCalculator({ variant }: LoanCalculatorProps) {
+  const t = useTranslations('finance.shared')
   const searchParams = useSearchParams()
   const router = useRouter()
   const pathname = usePathname()
@@ -56,7 +58,7 @@ export default function LoanCalculator({ variant }: LoanCalculatorProps) {
       <div className="grid grid-cols-1 gap-4">
         <CurrencyInput
           id="principal"
-          label="Loan Amount"
+          label={t('principal')}
           value={principal}
           onChange={setPrincipal}
           min={1}
@@ -64,7 +66,7 @@ export default function LoanCalculator({ variant }: LoanCalculatorProps) {
         />
         <PercentInput
           id="rate"
-          label="Annual Interest Rate"
+          label={t('annualRate')}
           value={annualRate}
           onChange={setAnnualRate}
         />

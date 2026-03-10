@@ -1,9 +1,9 @@
 PROJECT: ToolNotch — Monorepo (toolnotch.com)
 STATUS: Active Development
-LAST UPDATED: 2026-03-07
+LAST UPDATED: 2026-03-10
 
 ════════════════════════════════════════
-CURRENT PHASE: Image tools done, PDF tools merged in — ready to deploy unified project
+CURRENT PHASE: i18n COMPLETE — ready for QA and deploy
 ════════════════════════════════════════
 
 COMPLETED
@@ -13,58 +13,91 @@ COMPLETED
 [x] .env.local with GA_ID, ADSENSE_CLIENT, BASE_URL
 [x] package.json renamed to "toolnotch", all deps merged
 [x] npm install — 0 vulnerabilities
-[x] npm run build — passes (15 static routes)
+[x] npm run build — passes (510 static pages)
 
-IMAGE TOOLS (project 01):
+IMAGE TOOLS (project 01) — fully i18n migrated:
 [x] /lib/imageConversion.ts — convertFormat() + compressImage() + formatBytes()
 [x] /lib/imageTypes.ts — ImageJob, ConversionResult interfaces
-[x] /data/conversionPages.ts — 8 programmatic slugs with h1/meta/faq
-[x] /components/image/ — DropZone, FormatSelector, ComparisonView, DownloadButton
-[x] /app/tools/image/image-compressor/ — main tool page
-[x] /app/tools/image/[slug]/ — 8 programmatic SEO pages
-[x] sitemap.ts — image routes included
-[x] robots.ts — allow all, disallow /api/
+[x] /data/conversionPages.ts — 8 programmatic slugs
+[x] /components/image/ — DropZone, FormatSelector, ComparisonView, DownloadButton (useTranslations)
+[x] /app/[locale]/tools/image/image-compressor/ — locale params, buildAlternates, translated metadata
+[x] /app/[locale]/tools/image/[slug]/ — 8×3=24 static params, locale-aware JSON-LD
 
-PDF TOOLS (merged from project 02):
+PDF TOOLS (project 02) — fully i18n migrated:
 [x] /lib/pdfMerge.ts, pdfSplit.ts, pdfCompress.ts, pdfToImage.ts, imageToPdf.ts, pdfTypes.ts
-[x] /components/ToolWrapper.tsx, FaqSection.tsx, AdUnit.tsx (shared)
-[x] /public/pdf.worker.min.mjs — pdfjs-dist worker
-[x] /app/tools/pdf/merge-pdf/ — MergeTool with DnD reorder
-[x] /app/tools/pdf/split-pdf/ — SplitTool with page range input
-[x] /app/tools/pdf/compress-pdf/ — CompressTool with before/after size
-[x] /app/tools/pdf/pdf-to-jpg/ — PdfToJpgTool with pdfjs-dist rendering
-[x] /app/tools/pdf/jpg-to-pdf/ — JpgToPdfTool with image ordering
-[x] sitemap.ts — PDF routes added
+[x] /app/[locale]/tools/pdf/ — merge, split, compress, pdf-to-jpg, jpg-to-pdf
+[x] All PDF Tool client components use useTranslations(); inline faqs removed
 
-HOMEPAGE:
-[x] /app/page.tsx — tools hub with image + PDF categories
+CONVERTER TOOLS (project 04) — fully i18n migrated:
+[x] /app/[locale]/tools/convert/unit-converter/ — page + UnitConverterClient
+[x] /app/[locale]/tools/convert/currency-converter/ — page + CurrencyConverterClient
+[x] /app/[locale]/tools/convert/[slug]/ — 76×3=228 static params, ICU interpolation
+[x] /components/converter/ConversionWidget.tsx — useTranslations('convert.shared')
+
+TEXT TOOLS (project 06) — fully i18n migrated:
+[x] word-counter, character-counter, sentence-counter, readability-checker,
+    reading-time-calculator, word-frequency-counter, keyword-density-checker
+[x] /components/text-counter/ — StatsGrid, ReadabilityPanel, TopWordsChart (useTranslations)
+
+FINANCE TOOLS (project 10+12) — fully i18n migrated:
+[x] 14 calculator pages — locale params, finance.variants.{slug} namespace
+[x] data/calculatorVariants.ts — prose removed, structural data only
+[x] 6 invoice pages — invoice-generator, uk, canada, australia, freelancers, receipt
+[x] /components/finance/calculator/ — LoanCalculator, ResultCard, AmortizationTable, TermSelector
+
+FUN & RANDOM TOOLS (project 14) — fully i18n migrated:
+[x] All 11 tools — spin-the-wheel, wheel-of-names, random-name-picker, random-team-generator,
+    yes-or-no-wheel, coin-flip, dice-roller, random-number-generator, giveaway-picker,
+    classroom-name-picker, typing-test
+[x] Inline faqs removed from all client components; pulled via t.raw('faqs')
+
+QUIZ SITE (project 13) — fully i18n migrated:
+[x] /app/[locale]/quiz/[slug]/ — 5×3=15 static params
+[x] /app/[locale]/quizzes/ — translated metadata + buildAlternates
+[x] QuizPlayer, QuestionCard, ResultCard — useTranslations('quiz')
+[x] Quiz content English-only with lang="en" on container (V1 decision)
+
+i18n INFRASTRUCTURE:
+[x] next-intl v4.8.3 installed
+[x] i18n.ts + proxy.ts (middleware) — localePrefix: 'as-needed'
+[x] next.config.ts — withNextIntl
+[x] app/[locale]/ structure — all routes migrated
+[x] messages/en.json — fully populated (~77KB, all namespaces)
+[x] messages/pt.json — full pt-BR translations (1277 lines)
+[x] messages/es.json — full es-LA translations (1277 lines)
+[x] lib/i18nMeta.ts — buildAlternates() hreflang helper
+[x] app/sitemap.ts — alternates.languages on every route
+[x] lib/schema.ts — locale param + buildLocalizedUrl() + inLanguage
+[x] components/ToolWrapper.tsx — getTranslations (breadcrumb, allTools, privacyBadge)
+[x] components/FaqSection.tsx — useTranslations (heading)
+[x] app/[locale]/page.tsx — getTranslations('home'), all tool cards translated
+[x] npm run build — PASSES, 510 pages, 0 TypeScript errors
 
 IN PROGRESS
 ───────────
 (nothing)
 
-NEXT STEPS
+NEXT STEPS (QA)
 ──────────
-DEPLOY:
-[ ] Push monorepo to GitHub (single repo — rename from 01-image-compressor if needed)
-[ ] Connect toolnotch.com domain to this Vercel project (transfer from old project)
-[ ] Set env vars in Vercel: NEXT_PUBLIC_GA_ID, NEXT_PUBLIC_ADSENSE_CLIENT, NEXT_PUBLIC_BASE_URL
-[ ] Submit sitemap to Google Search Console
-
-QA (before deploy):
-[ ] npm run dev → test image compress + all PDF tools in browser
-[ ] Test drag-to-reorder on merge-pdf tool
+[ ] npm run dev → visit /pt/tools/image/image-compressor — verify Portuguese UI
+[ ] npm run dev → visit /es/tools/pdf/merge-pdf — verify Spanish UI
+[ ] npm run dev → verify English routes unchanged (no /en/ prefix)
+[ ] Validate hreflang: https://www.siteliner.com or Google Search Console
 [ ] Validate JSON-LD: https://search.google.com/test/rich-results
 [ ] Lighthouse on /tools/image/image-compressor and /tools/pdf/merge-pdf
 
+NEXT STEPS (deploy)
+──────────
+[ ] Push monorepo to GitHub
+[ ] Connect toolnotch.com domain to Vercel project
+[ ] Set env vars in Vercel: NEXT_PUBLIC_GA_ID, NEXT_PUBLIC_ADSENSE_CLIENT, NEXT_PUBLIC_BASE_URL
+[ ] Submit sitemap to Google Search Console
+[ ] Submit /pt/ and /es/ sitemaps to Google Search Console
+
 POST-DEPLOY:
 [ ] AdSense: apply / confirm site URL updated to toolnotch.com
-[ ] Add ad slot IDs (replace "1234567890" placeholders in PDF tools)
-[ ] Add PDF programmatic SEO synonym pages (/tools/pdf/[slug]/)
-
-NEXT TOOL TO BUILD (project 04 — Unit/Currency Converter):
-[ ] Create /app/tools/convert/ routes inside this repo
-[ ] Follow pattern: server page.tsx + client *Tool.tsx + ToolWrapper
+[ ] Add ad slot IDs (replace "1234567890" placeholders)
+[ ] Consider full quiz translation (pt/es) — V1 kept content English-only
 
 BLOCKERS
 ────────
@@ -74,7 +107,7 @@ NOTES
 ─────
 - Repo is the master monorepo for all toolnotch.com tools
 - Old 02-pdf-tools repo is now DEPRECATED — all code merged here
-- Pattern for all new tools: server page.tsx + client *Tool.tsx + @/components/ToolWrapper
-- GA: G-S4FLQ2B972 (one property for entire domain)
-- AdSense: ca-pub-6392082764157185 (one account for entire domain)
+- i18n pattern: server page.tsx (getTranslations) + client *Tool.tsx (useTranslations) + props
+- English URLs unchanged (no /en/ prefix) — PT gets /pt/, ES gets /es/
+- GA: G-S4FLQ2B972 | AdSense: ca-pub-6392082764157185
 - Build cmd: npm run build | Dev: npm run dev (localhost:3000)

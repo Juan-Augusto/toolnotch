@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState, useRef, useCallback } from 'react'
+import { useTranslations } from 'next-intl'
 import type { ConversionResult } from '@/lib/imageTypes'
 import { formatBytes } from '@/lib/imageConversion'
 
@@ -10,6 +11,7 @@ interface Props {
 }
 
 export default function ComparisonView({ original, result }: Props) {
+  const t = useTranslations('image.shared')
   const [originalUrl, setOriginalUrl] = useState<string | null>(null)
   const [compressedUrl, setCompressedUrl] = useState<string | null>(null)
   const [sliderPct, setSliderPct] = useState(50)
@@ -69,7 +71,7 @@ export default function ComparisonView({ original, result }: Props) {
           {/* Compressed (bottom layer — full width) */}
           <img
             src={compressedUrl}
-            alt="Compressed"
+            alt={t('compare.compressed')}
             className="w-full object-contain block"
             style={{ maxHeight: 300, userSelect: 'none', pointerEvents: 'none' }}
             draggable={false}
@@ -82,7 +84,7 @@ export default function ComparisonView({ original, result }: Props) {
           >
             <img
               src={originalUrl}
-              alt="Original"
+              alt={t('compare.original')}
               className="w-full object-contain block"
               style={{ maxHeight: 300, userSelect: 'none', pointerEvents: 'none' }}
               draggable={false}
@@ -101,7 +103,7 @@ export default function ComparisonView({ original, result }: Props) {
             aria-valuenow={Math.round(sliderPct)}
             aria-valuemin={0}
             aria-valuemax={100}
-            aria-label="Comparison slider"
+            aria-label={t('compare.sliderAriaLabel')}
             tabIndex={0}
             onKeyDown={onKeyDown}
             className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-white rounded-full shadow-lg border-2 border-gray-300 flex items-center justify-center cursor-col-resize focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -114,10 +116,10 @@ export default function ComparisonView({ original, result }: Props) {
 
           {/* Labels */}
           <div className="absolute top-2 left-2 px-2 py-0.5 bg-black/50 text-white text-xs rounded font-medium pointer-events-none">
-            Original
+            {t('compare.original')}
           </div>
           <div className="absolute top-2 right-2 px-2 py-0.5 bg-black/50 text-white text-xs rounded font-medium pointer-events-none">
-            Compressed
+            {t('compare.compressed')}
           </div>
         </div>
       )}
@@ -125,11 +127,11 @@ export default function ComparisonView({ original, result }: Props) {
       {/* Stats row */}
       <div className="grid grid-cols-2 gap-3 text-sm">
         <div className="bg-zinc-50 rounded-lg px-3 py-2">
-          <span className="text-zinc-400 text-xs uppercase tracking-wide block">Original</span>
+          <span className="text-zinc-400 text-xs uppercase tracking-wide block">{t('compare.original')}</span>
           <span className="font-semibold text-zinc-700">{formatBytes(result.originalSize)}</span>
         </div>
         <div className="bg-zinc-50 rounded-lg px-3 py-2">
-          <span className="text-zinc-400 text-xs uppercase tracking-wide block">Compressed</span>
+          <span className="text-zinc-400 text-xs uppercase tracking-wide block">{t('compare.compressed')}</span>
           <span className="font-semibold text-zinc-700">{formatBytes(result.compressedSize)}</span>
         </div>
       </div>
@@ -143,11 +145,11 @@ export default function ComparisonView({ original, result }: Props) {
         }`}
       >
         {result.savings > 0
-          ? `${result.savings}% smaller — saved ${formatBytes(result.originalSize - result.compressedSize)}`
-          : 'File size unchanged or increased — try a lower quality or different format'}
+          ? t('compare.savings', { pct: result.savings, bytes: formatBytes(result.originalSize - result.compressedSize) })
+          : t('compare.noSavings')}
       </div>
 
-      <p className="text-xs text-zinc-400 text-center">Drag the handle to compare original vs compressed</p>
+      <p className="text-xs text-zinc-400 text-center">{t('compare.dragHint')}</p>
     </div>
   )
 }

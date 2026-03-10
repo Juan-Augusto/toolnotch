@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export interface FaqItem {
   question: string;
@@ -10,10 +11,11 @@ export interface FaqItem {
 
 export default function FaqSection({ faqs }: { faqs: FaqItem[] }) {
   const [open, setOpen] = useState<number | null>(null);
+  const t = useTranslations("faqSection");
 
   return (
     <section className="mt-12 max-w-2xl mx-auto">
-      <h2 className="text-xl font-semibold mb-4 text-gray-800">Frequently Asked Questions</h2>
+      <h2 className="text-xl font-semibold mb-4 text-gray-800">{t("heading")}</h2>
       <div className="space-y-2">
         {faqs.map((faq, i) => (
           <div key={i} className="border border-gray-200 rounded-lg overflow-hidden">

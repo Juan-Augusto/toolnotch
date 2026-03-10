@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback } from 'react'
+import { useTranslations } from 'next-intl'
 import type { SupportedFormat } from '@/lib/imageTypes'
 
 interface Props {
@@ -10,6 +11,8 @@ interface Props {
 }
 
 export default function DownloadButton({ blob, originalName, format }: Props) {
+  const t = useTranslations('image.shared')
+
   const handleDownload = useCallback(() => {
     const baseName = originalName.replace(/\.[^.]+$/, '')
     const url = URL.createObjectURL(blob)
@@ -25,7 +28,7 @@ export default function DownloadButton({ blob, originalName, format }: Props) {
       onClick={handleDownload}
       className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
     >
-      Download Compressed Image
+      {t('download.label')}
     </button>
   )
 }

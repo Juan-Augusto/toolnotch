@@ -1,5 +1,6 @@
 'use client'
 import { useState, useMemo } from 'react'
+import { useTranslations } from 'next-intl'
 import { convert, formatResult } from '@/lib/units'
 import { UnitCategory } from '@/lib/unitTypes'
 import { UNITS, UNIT_LABELS } from '@/data/units'
@@ -23,6 +24,7 @@ function getDefaultUnits(category: UnitCategory): [string, string] {
 }
 
 export default function ConversionWidget({ category, defaultFrom, defaultTo }: ConversionWidgetProps) {
+  const t = useTranslations('convert.shared')
   const units = getUnitsForCategory(category)
   const [defaults] = useState(() => getDefaultUnits(category))
   const [from, setFrom] = useState(defaultFrom ?? defaults[0])
@@ -45,7 +47,7 @@ export default function ConversionWidget({ category, defaultFrom, defaultTo }: C
     <div className="space-y-4">
       <div className="flex gap-2 items-end">
         <div className="flex-1">
-          <label className="block text-xs text-gray-500 mb-1">From</label>
+          <label className="block text-xs text-gray-500 mb-1">{t('from')}</label>
           <select value={from} onChange={e => setFrom(e.target.value)}
             className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2">
             {units.map(u => <option key={u} value={u}>{UNIT_LABELS[u] ?? u}</option>)}
@@ -55,16 +57,16 @@ export default function ConversionWidget({ category, defaultFrom, defaultTo }: C
             value={inputValue}
             onChange={e => setInputValue(e.target.value)}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg font-mono focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Enter value"
+            placeholder={t('enterValue')}
           />
         </div>
 
-        <button onClick={swap} className="mb-0 p-3 rounded-full border border-gray-300 hover:bg-gray-50 text-gray-600 transition-colors flex-shrink-0" title="Swap">
+        <button onClick={swap} className="mb-0 p-3 rounded-full border border-gray-300 hover:bg-gray-50 text-gray-600 transition-colors flex-shrink-0" title={t('swap')}>
           ⇄
         </button>
 
         <div className="flex-1">
-          <label className="block text-xs text-gray-500 mb-1">To</label>
+          <label className="block text-xs text-gray-500 mb-1">{t('to')}</label>
           <select value={to} onChange={e => setTo(e.target.value)}
             className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2">
             {units.map(u => <option key={u} value={u}>{UNIT_LABELS[u] ?? u}</option>)}

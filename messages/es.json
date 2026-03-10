@@ -1,0 +1,1386 @@
+{
+  "site": {
+    "title": "ToolNotch — Herramientas Gratuitas en Línea",
+    "description": "Herramientas gratuitas en línea: comprime imágenes, combina PDFs, convierte unidades, calcula préstamos y mucho más. Sin registro, sin subida, 100% privado."
+  },
+  "common": {
+    "privacyBadge": "Los archivos se procesan en tu navegador — nunca se suben a nuestros servidores",
+    "free": "Gratis"
+  },
+  "toolWrapper": {
+    "breadcrumb": { "home": "Inicio" },
+    "allTools": "Todas las herramientas"
+  },
+  "faqSection": { "heading": "Preguntas frecuentes" },
+  "image": {
+    "compressor": {
+      "metaTitle": "Comprimir Imagen Gratis en Línea — Sin Registro",
+      "metaDescription": "Reduce el tamaño de tus imágenes hasta un 90% al instante en tu navegador. Compatible con JPG, PNG, WebP, AVIF. Sin subida al servidor — 100% privado.",
+      "title": "Comprimir Imagen Gratis en Línea",
+      "description": "Sin subida al servidor. Se ejecuta completamente en tu navegador — 100% privado.",
+      "button": {
+        "compress": "Comprimir imagen",
+        "compressing": "Comprimiendo...",
+        "download": "Descargar"
+      },
+      "faqs": [
+        {
+          "question": "¿Mi imagen se sube a algún servidor?",
+          "answer": "No. Todo se ejecuta en tu navegador usando la API Canvas. Tus imágenes nunca salen de tu dispositivo — 100% privado."
+        },
+        {
+          "question": "¿Qué formatos de imagen son compatibles?",
+          "answer": "Puedes comprimir o convertir entre JPG, PNG, WebP y AVIF. La entrada acepta cualquier formato que soporte tu navegador, incluyendo GIF, BMP y HEIC en dispositivos compatibles."
+        },
+        {
+          "question": "¿Cuánto puedo comprimir una imagen?",
+          "answer": "Normalmente entre un 50 y un 90% sin pérdida de calidad visible en fotos con calidad del 75 al 85%. Los archivos PNG con degradados pueden comprimirse menos. Previsualiza el resultado antes de descargar."
+        },
+        {
+          "question": "¿Hay un límite de tamaño de archivo?",
+          "answer": "Recomendamos archivos de menos de 20 MB para obtener el mejor rendimiento. Los archivos más grandes pueden procesarse lentamente según tu dispositivo y navegador."
+        },
+        {
+          "question": "¿Puedo cambiar el tamaño de la imagen al comprimir?",
+          "answer": "Sí — ingresa un ancho máximo en píxeles y la imagen se reducirá proporcionalmente antes de la compresión. Déjalo en blanco para mantener las dimensiones originales."
+        }
+      ]
+    },
+    "shared": {
+      "dropZone": {
+        "label": "Arrastra tu imagen aquí",
+        "hint": "o haz clic para explorar · Compatible con JPG, PNG, WebP, AVIF",
+        "replace": "Haz clic o arrastra para reemplazar"
+      },
+      "format": { "label": "Formato de salida" },
+      "quality": {
+        "label": "Calidad",
+        "smaller": "Archivo más pequeño",
+        "better": "Mejor calidad"
+      },
+      "maxWidth": {
+        "label": "Ancho máximo",
+        "unit": "px, opcional",
+        "placeholder": "Mantener tamaño original"
+      },
+      "compare": {
+        "label": "Comparar",
+        "original": "Original",
+        "compressed": "Comprimido",
+        "sliderAriaLabel": "Control deslizante de comparación",
+        "savings": "{pct}% más pequeño — ahorró {bytes}",
+        "noSavings": "El tamaño del archivo no se redujo — prueba con menor calidad o diferente formato",
+        "dragHint": "Arrastra el control para comparar original vs comprimido"
+      },
+      "download": { "label": "Descargar imagen comprimida" }
+    }
+  },
+  "pdf": {
+    "merge": {
+      "metaTitle": "Combinar PDF Gratis — Unir PDFs en Línea | ToolNotch",
+      "metaDescription": "Combina varios archivos PDF en un solo documento en línea. Gratis, sin subida, se ejecuta completamente en tu navegador. Arrastra para reordenar páginas.",
+      "title": "Combinar PDF Gratis",
+      "description": "Combina varios PDFs en uno. Arrastra para reordenar páginas. Sin subida requerida.",
+      "dropZone": {
+        "label": "Haz clic o arrastra archivos PDF aquí",
+        "hint": "Se admiten varios archivos"
+      },
+      "button": {
+        "merge": "Combinar PDFs",
+        "merging": "Combinando…"
+      },
+      "errors": {
+        "tooFewFiles": "Agrega al menos 2 archivos PDF para combinar.",
+        "mergeFailed": "Error al combinar."
+      },
+      "success": "¡PDF combinado descargado!",
+      "faqs": [
+        {
+          "question": "¿Cómo combino archivos PDF?",
+          "answer": "Sube tus archivos PDF con el botón o arrástralos, reordénalos según necesites y haz clic en Combinar PDFs. El archivo combinado se descarga de inmediato."
+        },
+        {
+          "question": "¿Mis archivos se suben a algún servidor?",
+          "answer": "No. Todo el proceso ocurre en tu navegador usando JavaScript. Tus archivos nunca salen de tu dispositivo."
+        },
+        {
+          "question": "¿Hay un límite de tamaño o de páginas?",
+          "answer": "No hay un límite estricto, pero los PDFs muy grandes (de cientos de MB) pueden ser lentos según tu dispositivo."
+        },
+        {
+          "question": "¿Puedo combinar PDFs protegidos con contraseña?",
+          "answer": "Los PDFs protegidos con contraseña no se pueden combinar. Primero elimina la protección con tu visor de PDF."
+        }
+      ]
+    },
+    "split": {
+      "metaTitle": "Dividir PDF Gratis en Línea — Extraer Páginas | ToolNotch",
+      "metaDescription": "Divide un PDF en varios archivos por rango de páginas. Gratis, sin subida, se ejecuta completamente en tu navegador.",
+      "title": "Dividir PDF Gratis en Línea",
+      "description": "Extrae páginas o divide un PDF en varios archivos. Sin subida requerida.",
+      "dropZone": {
+        "label": "Haz clic o arrastra un PDF aquí",
+        "hint": "Un solo archivo PDF"
+      },
+      "pageRanges": {
+        "label": "Rangos de páginas",
+        "hint": "(p. ej. 1-3, 4-6, 7)",
+        "placeholder": "1-3, 4-6, 7",
+        "blankHint": "Déjalo en blanco para extraer todas las páginas individualmente."
+      },
+      "button": {
+        "split": "Dividir PDF",
+        "splitting": "Dividiendo…"
+      },
+      "errors": {
+        "noFile": "Por favor selecciona un archivo PDF.",
+        "splitFailed": "Error al dividir."
+      },
+      "success": "¡PDF(s) dividido(s) descargado(s)!",
+      "faqs": [
+        {
+          "question": "¿Cómo divido un PDF?",
+          "answer": "Sube tu PDF, ingresa los rangos de páginas que deseas (p. ej. 1-3, 4-6) y haz clic en Dividir PDF. Cada rango se descarga como un PDF separado dentro de un archivo ZIP."
+        },
+        {
+          "question": "¿Puedo extraer una sola página?",
+          "answer": "Sí — ingresa el mismo número de página como inicio y fin, por ejemplo 5-5."
+        },
+        {
+          "question": "¿Mis archivos se envían a algún servidor?",
+          "answer": "No. Todo se ejecuta en tu navegador. Tus archivos permanecen en tu dispositivo."
+        },
+        {
+          "question": "¿Cómo sé cuántas páginas tiene mi PDF?",
+          "answer": "Abre el PDF en cualquier visor (como tu navegador o Adobe Reader) para ver el número total de páginas."
+        }
+      ]
+    },
+    "compress": {
+      "metaTitle": "Comprimir PDF Gratis en Línea — Reducir Tamaño | ToolNotch",
+      "metaDescription": "Reduce el tamaño de un PDF sin pérdida de calidad. Se ejecuta completamente en tu navegador — sin subida requerida.",
+      "title": "Comprimir PDF Gratis en Línea",
+      "description": "Reduce el tamaño del PDF sin pérdida de calidad. Se ejecuta en tu navegador.",
+      "dropZone": {
+        "label": "Haz clic o arrastra un PDF aquí",
+        "hint": "Un solo archivo PDF"
+      },
+      "button": {
+        "compress": "Comprimir PDF",
+        "compressing": "Comprimiendo…",
+        "download": "Descargar PDF comprimido"
+      },
+      "result": {
+        "originalSize": "Tamaño original",
+        "compressedSize": "Tamaño comprimido",
+        "reduction": "Reducción",
+        "noReduction": "Sin reducción",
+        "smaller": "{savings}% más pequeño"
+      },
+      "errors": {
+        "noFile": "Por favor selecciona un archivo PDF.",
+        "compressionFailed": "Error al comprimir."
+      },
+      "faqs": [
+        {
+          "question": "¿Cómo funciona la compresión de PDF?",
+          "answer": "Recodificamos la estructura del PDF usando compresión de flujos de objetos. Esto reduce el tamaño en muchos PDFs, especialmente los que tienen metadatos redundantes o flujos de objetos no optimizados."
+        },
+        {
+          "question": "¿Se afecta la calidad de las imágenes?",
+          "answer": "Esta herramienta comprime la estructura del PDF, no las imágenes incrustadas. La calidad de las imágenes se conserva."
+        },
+        {
+          "question": "Mi archivo no se redujo — ¿por qué?",
+          "answer": "Algunos PDFs ya están bien optimizados. Si las imágenes son el principal contribuyente al tamaño, reducirlo más requeriría recomprimir las imágenes con pérdida de calidad."
+        },
+        {
+          "question": "¿Mi archivo se sube a algún lugar?",
+          "answer": "No. La compresión se ejecuta completamente en tu navegador. Tu archivo nunca sale de tu dispositivo."
+        }
+      ]
+    },
+    "pdfToJpg": {
+      "metaTitle": "PDF a JPG — Convertir Páginas de PDF a Imágenes Gratis | ToolNotch",
+      "metaDescription": "Convierte cada página de un PDF en una imagen JPEG de alta calidad. Gratis, sin subida, se ejecuta completamente en tu navegador.",
+      "title": "PDF a JPG — Convertir Páginas de PDF a Imágenes",
+      "description": "Convierte cada página de un PDF en una imagen JPEG de alta calidad. Sin subida requerida.",
+      "dropZone": {
+        "label": "Haz clic o arrastra un PDF aquí",
+        "hint": "Un solo archivo PDF"
+      },
+      "button": {
+        "convert": "Convertir a JPG",
+        "converting": "Convirtiendo…",
+        "downloadAll": "Descargar las {count} imágenes",
+        "downloadOne": "Descargar imagen"
+      },
+      "progress": {
+        "loading": "Cargando PDF…",
+        "converted": "{count} página(s) convertida(s)"
+      },
+      "errors": {
+        "noFile": "Por favor selecciona un archivo PDF.",
+        "conversionFailed": "Error al convertir."
+      },
+      "faqs": [
+        {
+          "question": "¿A qué formato se convierten las páginas?",
+          "answer": "Las páginas se convierten a imágenes JPEG de alta calidad con resolución 2x."
+        },
+        {
+          "question": "¿Mis archivos se suben a algún lugar?",
+          "answer": "No. La conversión se ejecuta completamente en tu navegador usando PDF.js. Tus archivos nunca salen de tu dispositivo."
+        },
+        {
+          "question": "¿Puedo convertir solo páginas específicas?",
+          "answer": "Por ahora se convierten todas las páginas. Luego puedes conservar solo las imágenes que necesites del ZIP descargado."
+        },
+        {
+          "question": "¿Cómo abro el archivo ZIP?",
+          "answer": "En Windows, haz clic derecho en el ZIP y elige Extraer todo. En Mac, haz doble clic. Cada página es un JPEG independiente."
+        }
+      ]
+    },
+    "jpgToPdf": {
+      "metaTitle": "JPG a PDF — Convertir Imágenes a PDF Gratis | ToolNotch",
+      "metaDescription": "Convierte imágenes JPEG o PNG en un PDF. Arrastra para reordenar páginas. Gratis, sin subida, se ejecuta completamente en tu navegador.",
+      "title": "JPG a PDF — Convertir Imágenes a PDF",
+      "description": "Convierte imágenes JPEG o PNG en un PDF. Arrastra para reordenar. Sin subida requerida.",
+      "dropZone": {
+        "label": "Haz clic o arrastra imágenes aquí",
+        "hint": "JPEG o PNG — se admiten varios archivos"
+      },
+      "button": {
+        "convert": "Convertir a PDF",
+        "converting": "Convirtiendo…"
+      },
+      "errors": {
+        "noImages": "Agrega al menos una imagen.",
+        "conversionFailed": "Error al convertir."
+      },
+      "success": "¡PDF descargado!",
+      "faqs": [
+        {
+          "question": "¿Qué formatos de imagen son compatibles?",
+          "answer": "Se admiten imágenes JPEG y PNG. Cada imagen se convierte en una página del PDF."
+        },
+        {
+          "question": "¿Puedo controlar el orden de las páginas?",
+          "answer": "Sí — arrastra las imágenes para reordenarlas antes de convertir."
+        },
+        {
+          "question": "¿Mis archivos se suben a algún lugar?",
+          "answer": "No. Todo se ejecuta en tu navegador. Tus imágenes nunca salen de tu dispositivo."
+        },
+        {
+          "question": "¿Qué tamaño tendrán las páginas del PDF?",
+          "answer": "Cada página tiene las dimensiones de la imagen correspondiente, por lo que tus imágenes nunca se escalan ni se recortan."
+        }
+      ]
+    }
+  },
+  "convert": {
+    "unit": {
+      "metaTitle": "Conversor de Unidades — Longitud, Peso, Temperatura y Más | ToolNotch",
+      "metaDescription": "Conversor de unidades gratuito en línea. Convierte longitud, peso, temperatura, área, volumen, velocidad, tiempo, almacenamiento digital y presión. Más de 200 unidades en 9 categorías.",
+      "title": "Conversor de Unidades",
+      "description": "Convierte entre más de 200 unidades en 9 categorías. Instantáneo, preciso, sin registro.",
+      "faqs": [
+        {
+          "question": "¿Cuántas unidades son compatibles?",
+          "answer": "Más de 200 unidades en 9 categorías: longitud, peso, temperatura, área, volumen, velocidad, tiempo, almacenamiento digital y presión."
+        },
+        {
+          "question": "¿Qué tan precisas son las conversiones?",
+          "answer": "Las conversiones usan aritmética de factores precisos con hasta 8 cifras significativas. Los resultados se redondean solo para su visualización."
+        },
+        {
+          "question": "¿Por qué la temperatura es diferente de las otras categorías?",
+          "answer": "La temperatura usa fórmulas basadas en desplazamientos (°F = °C × 9/5 + 32), no simples factores de multiplicación. Requiere una lógica de conversión especial."
+        },
+        {
+          "question": "¿Funciona sin conexión a internet?",
+          "answer": "Sí — todas las conversiones de unidades funcionan sin internet. Solo el conversor de divisas necesita conexión para obtener tasas en tiempo real."
+        },
+        {
+          "question": "¿Cómo convierto metros a pies?",
+          "answer": "Multiplica los metros por 3.28084. Por ejemplo, 5 metros = 5 × 3.28084 = 16.4042 pies. Selecciona la categoría Longitud y configura De: Metro, A: Pie."
+        }
+      ]
+    },
+    "currency": {
+      "metaTitle": "Conversor de Divisas — Tasas de Cambio en Tiempo Real | ToolNotch",
+      "metaDescription": "Conversor de divisas gratuito con tasas en tiempo real. Convierte entre más de 150 monedas. Tasas actualizadas cada hora. Sin registro.",
+      "title": "Conversor de Divisas",
+      "description": "Convierte entre más de 150 monedas con tasas de cambio en tiempo real. Tasas actualizadas cada hora.",
+      "staleWarning": "⚠️ Mostrando tasas en caché — no se pudieron obtener las tasas más recientes. Las tasas pueden estar desactualizadas.",
+      "errorFetching": "No se pudieron obtener las tasas de cambio. Comprueba tu conexión e inténtalo de nuevo.",
+      "amountPlaceholder": "Cantidad",
+      "loading": "Cargando...",
+      "ratesFooter": "Tasas de open.er-api.com · Caché de 1 hora · Solo de referencia",
+      "faqs": [
+        {
+          "question": "¿De dónde provienen las tasas de cambio?",
+          "answer": "Las tasas de cambio se obtienen de open.er-api.com, una API pública gratuita. Las tasas se actualizan aproximadamente cada hora."
+        },
+        {
+          "question": "¿Qué tan actualizadas están las tasas?",
+          "answer": "Las tasas se actualizan aproximadamente cada hora y se guardan en caché en tu navegador por 1 hora. Se muestra una advertencia si las tasas en caché podrían estar desactualizadas."
+        },
+        {
+          "question": "¿Cuántas monedas son compatibles?",
+          "answer": "Más de 150 monedas de todo el mundo, incluyendo todas las principales divisas y muchas de mercados emergentes."
+        },
+        {
+          "question": "¿Puedo usar esto para transacciones financieras?",
+          "answer": "Esta herramienta es solo de referencia. Para transacciones financieras, usa siempre las tasas oficiales de tu banco o bróker, que incluyen comisiones y diferenciales."
+        }
+      ]
+    },
+    "shared": {
+      "from": "De",
+      "to": "A",
+      "swap": "Intercambiar",
+      "result": "Resultado",
+      "enterValue": "Ingresa el valor"
+    },
+    "slugPages": {
+      "faqs": {
+        "howMany": "¿Cuántos {to} hay en un {from}?",
+        "howTo": "¿Cómo convierto {from} a {to}?",
+        "accurate": "¿Qué tan preciso es este conversor?",
+        "accurateAnswer": "Las conversiones usan aritmética de factores precisos con hasta 8 cifras significativas. Los resultados se redondean solo para su visualización.",
+        "offline": "¿Funciona sin conexión?",
+        "offlineAnswer": "Sí — todas las conversiones de unidades funcionan completamente en tu navegador sin necesidad de conexión a internet."
+      }
+    }
+  },
+  "text": {
+    "wordCounter": {
+      "metaTitle": "Contador de Palabras — Palabras, Caracteres y Legibilidad | ToolNotch",
+      "metaDescription": "Contador de palabras gratuito en línea. Cuenta palabras, caracteres, oraciones y obtén puntuaciones de legibilidad Flesch en tiempo real. Sin registro.",
+      "title": "Contador de Palabras",
+      "description": "Cuenta palabras, caracteres y oraciones, y comprueba la legibilidad en tiempo real. Pega tu texto abajo.",
+      "placeholder": "Pega o escribe tu texto aquí…",
+      "faqs": [
+        {
+          "question": "¿Cómo cuenta palabras el contador?",
+          "answer": "Las palabras se cuentan dividiendo el texto por espacios en blanco (espacios, tabulaciones, saltos de línea) y filtrando las cadenas vacías. Las palabras con guion, como 'bienestar', cuentan como una sola palabra."
+        },
+        {
+          "question": "¿Qué significa la puntuación de Facilidad de Lectura Flesch?",
+          "answer": "La puntuación Flesch de Facilidad de Lectura evalúa el texto en una escala de 0 a 100. Las puntuaciones más altas indican mayor facilidad de lectura. Una puntuación de 60–70 se considera estándar (adecuada para la mayoría de los lectores). Las puntuaciones por debajo de 30 son muy difíciles (textos académicos o legales). Las novelas de Hemingway suelen tener alrededor de 65."
+        },
+        {
+          "question": "¿Cómo se calcula el tiempo de lectura?",
+          "answer": "El tiempo de lectura se calcula a 238 palabras por minuto (la velocidad de lectura promedio de un adulto). El tiempo de habla usa 130 palabras por minuto. Ambos se muestran en minutos, redondeados hacia arriba."
+        },
+        {
+          "question": "¿Mi texto se guarda en algún lugar?",
+          "answer": "No. Todo el análisis ocurre completamente en tu navegador usando JavaScript. Tu texto nunca sale de tu dispositivo y nunca se envía a ningún servidor. No podemos ver tu contenido."
+        },
+        {
+          "question": "¿Qué tan preciso es el conteo de sílabas?",
+          "answer": "El conteo de sílabas usa un algoritmo heurístico basado en grupos de vocales, con una precisión aproximada del 85–90% en textos en inglés estándar. Las palabras inusuales, nombres propios y acrónimos pueden contarse de forma diferente. Las herramientas de publicación profesional usan heurísticas similares."
+        },
+        {
+          "question": "¿Qué es el Índice Niebla de Gunning?",
+          "answer": "El Índice Niebla de Gunning estima los años de educación formal necesarios para comprender un texto en la primera lectura. Una puntuación de 12 significa que un bachiller debería entenderlo. La mayoría de las novelas populares tienen entre 6 y 8. Los documentos legales suelen superar 20."
+        },
+        {
+          "question": "¿Qué son las 'palabras más frecuentes' y cuáles se excluyen?",
+          "answer": "Las palabras más frecuentes muestra las palabras de contenido más usadas en tu texto. Las palabras comunes como 'el', 'un', 'y', 'es' (llamadas palabras vacías) se excluyen para mostrar solo las palabras clave con significado."
+        },
+        {
+          "question": "¿Puedo usar esto para los límites de caracteres en redes sociales?",
+          "answer": "Sí — el recuento de caracteres muestra el número exacto incluyendo espacios. Las publicaciones en Twitter/X permiten 280 caracteres, las de LinkedIn permiten 3.000 caracteres y los pies de foto de Instagram permiten 2.200 caracteres."
+        }
+      ]
+    },
+    "characterCounter": {
+      "metaTitle": "Contador de Caracteres — Con y Sin Espacios | ToolNotch",
+      "metaDescription": "Contador de caracteres gratuito en línea. Cuenta caracteres con y sin espacios, útil para Twitter, LinkedIn, Instagram y otras plataformas con límites de caracteres.",
+      "title": "Contador de Caracteres",
+      "description": "Cuenta caracteres con y sin espacios. Ideal para publicaciones en Twitter, meta descripciones y cualquier texto con límite de caracteres.",
+      "faqs": [
+        {
+          "question": "¿Cuántos caracteres permite Twitter?",
+          "answer": "Twitter/X permite 280 caracteres por publicación. Los mensajes SMS suelen tener un límite de 160 caracteres. Las publicaciones de LinkedIn permiten hasta 3.000 caracteres."
+        },
+        {
+          "question": "¿El contador incluye los espacios?",
+          "answer": "Sí — el dato 'Caracteres' incluye los espacios. 'Caracteres (sin espacios)' muestra el recuento con todos los espacios eliminados."
+        },
+        {
+          "question": "¿Mi texto se guarda en algún lugar?",
+          "answer": "No. El conteo de caracteres ocurre en tu navegador. Tu texto nunca sale de tu dispositivo."
+        },
+        {
+          "question": "¿Cuál es el límite de caracteres para una meta descripción?",
+          "answer": "Google normalmente muestra entre 155 y 160 caracteres de una meta descripción en los resultados de búsqueda. Mantenlas entre 140 y 155 caracteres para mejores resultados."
+        }
+      ]
+    },
+    "sentenceCounter": {
+      "metaTitle": "Contador de Oraciones — Contar Oraciones en Línea | ToolNotch",
+      "metaDescription": "Contador de oraciones gratuito en línea. Cuenta al instante el número de oraciones en tu texto, junto con palabras, caracteres y puntuaciones de legibilidad.",
+      "title": "Contador de Oraciones",
+      "description": "Cuenta oraciones en tu texto al instante. También muestra palabras, caracteres y puntuaciones de legibilidad.",
+      "faqs": [
+        {
+          "question": "¿Cómo detecta el contador las oraciones?",
+          "answer": "Las oraciones se detectan dividiendo el texto en signos de puntuación final (. ! ?) seguidos de un espacio o el fin del texto. Las abreviaturas y los números decimales pueden ocasionar pequeñas imprecisiones."
+        },
+        {
+          "question": "¿Cuántas oraciones debe tener un párrafo?",
+          "answer": "La mayoría de las guías de estilo recomienda entre 3 y 5 oraciones por párrafo para mayor legibilidad. La escritura académica puede usar párrafos más largos, mientras que la escritura web se beneficia de párrafos más cortos (2–3 oraciones)."
+        },
+        {
+          "question": "¿Cuál es el promedio de palabras por oración para una lectura fácil?",
+          "answer": "La fórmula de legibilidad Flesch usa las palabras por oración como métrica clave. Apunta a entre 15 y 20 palabras por oración para el público general. Las oraciones de más de 30 palabras se consideran difíciles."
+        }
+      ]
+    },
+    "readabilityChecker": {
+      "metaTitle": "Comprobador de Legibilidad — Puntuación Flesch y Nivel de Lectura | ToolNotch",
+      "metaDescription": "Comprobador de legibilidad gratuito. Obtén la puntuación Flesch de Facilidad de Lectura, el Nivel de Grado Flesch-Kincaid y el Índice Niebla de Gunning para cualquier texto.",
+      "title": "Comprobador de Legibilidad",
+      "description": "Comprueba el nivel de lectura de tu texto con las puntuaciones de Facilidad de Lectura Flesch, Grado Flesch-Kincaid e Índice Niebla de Gunning.",
+      "faqs": [
+        {
+          "question": "¿Qué es una buena puntuación de Facilidad de Lectura Flesch?",
+          "answer": "Las puntuaciones entre 60 y 70 se consideran estándar y adecuadas para la mayoría de los lectores. Las puntuaciones por encima de 70 son fáciles de leer. Las puntuaciones por debajo de 30 son muy difíciles, típicas de textos académicos o legales. La mayoría de las novelas populares tienen entre 60 y 80."
+        },
+        {
+          "question": "¿Qué es el Nivel de Grado Flesch-Kincaid?",
+          "answer": "El Nivel de Grado Flesch-Kincaid estima el grado escolar estadounidense necesario para comprender un texto. Una puntuación de 8 significa que un alumno de 8.º grado puede leerlo. Apunta a entre 6 y 8 para el público general."
+        },
+        {
+          "question": "¿Qué es el Índice Niebla de Gunning?",
+          "answer": "El Índice Niebla de Gunning estima los años de educación formal necesarios para entender un texto en la primera lectura. Las puntuaciones por encima de 17 se consideran muy difíciles. La mayoría de los periódicos apuntan a una puntuación de entre 11 y 14."
+        },
+        {
+          "question": "¿Cómo mejoro mi puntuación de legibilidad?",
+          "answer": "Usa oraciones más cortas (apunta a un promedio de 15–20 palabras), prefiere palabras comunes sobre términos complejos, divide los párrafos largos en otros más breves y usa la voz activa en lugar de la pasiva."
+        }
+      ]
+    },
+    "readingTime": {
+      "metaTitle": "Calculadora de Tiempo de Lectura — Estima el Tiempo de Lectura y Habla | ToolNotch",
+      "metaDescription": "Calcula el tiempo de lectura de cualquier texto. Estima tanto el tiempo de lectura (238 ppm) como el de habla (130 ppm). Útil para artículos de blog, discursos y presentaciones.",
+      "title": "Calculadora de Tiempo de Lectura",
+      "description": "Calcula cuánto tiempo tardarás en leer o hablar tu texto. Pega tu contenido abajo para una estimación instantánea.",
+      "faqs": [
+        {
+          "question": "¿Cuánto tarda en leerse 1000 palabras?",
+          "answer": "A una velocidad de lectura promedio de 238 palabras por minuto, 1000 palabras tardan aproximadamente 4 minutos en leerse. A un ritmo de habla de 130 palabras por minuto, se tardan unos 8 minutos en pronunciarlas."
+        },
+        {
+          "question": "¿Cuánto tarda en leerse 500 palabras?",
+          "answer": "500 palabras tardan aproximadamente 2 minutos en leerse en silencio y unos 4 minutos en hablarse en voz alta a un ritmo natural de presentación."
+        },
+        {
+          "question": "¿Cuál es la velocidad de lectura promedio?",
+          "answer": "El adulto promedio lee aproximadamente 238 palabras por minuto para textos de no ficción, y ligeramente más rápido para la ficción. Los lectores veloces pueden alcanzar entre 400 y 700 ppm, aunque la comprensión puede disminuir."
+        },
+        {
+          "question": "¿Cuánto debe durar un discurso de 5 minutos?",
+          "answer": "Un discurso de 5 minutos tiene aproximadamente entre 650 y 750 palabras a un ritmo natural de habla de 130–150 palabras por minuto. Un discurso de 10 minutos tiene entre 1.300 y 1.500 palabras."
+        }
+      ]
+    },
+    "wordFrequency": {
+      "metaTitle": "Contador de Frecuencia de Palabras — Palabras Más Usadas | ToolNotch",
+      "metaDescription": "Encuentra las palabras más frecuentes en cualquier texto. Útil para análisis de palabras clave SEO, estudio de estilo de escritura e identificación de palabras sobreusadas.",
+      "title": "Contador de Frecuencia de Palabras",
+      "description": "Encuentra las palabras más frecuentes en tu texto. Las palabras comunes (el, y, es) se excluyen para mostrar solo palabras clave con significado.",
+      "faqs": [
+        {
+          "question": "¿Qué palabras se excluyen del recuento de frecuencia?",
+          "answer": "Se excluyen las palabras vacías comunes del inglés — palabras como 'the', 'a', 'and', 'is', 'it' que aparecen con frecuencia pero aportan poco significado. Así se muestran las palabras clave reales de tu contenido."
+        },
+        {
+          "question": "¿Cómo se calcula la densidad de palabras clave?",
+          "answer": "La densidad de palabras clave es la frecuencia de una palabra dividida entre el recuento total de palabras, expresada como porcentaje. Una densidad del 1–3% se considera generalmente saludable para el SEO."
+        },
+        {
+          "question": "¿Cuántas palabras principales se muestran?",
+          "answer": "La herramienta muestra las 10 palabras de contenido más frecuentes en tu texto, ordenadas por recuento."
+        }
+      ]
+    },
+    "keywordDensity": {
+      "metaTitle": "Comprobador de Densidad de Palabras Clave — Análisis SEO | ToolNotch",
+      "metaDescription": "Comprobador de densidad de palabras clave gratuito. Pega tu contenido y ve las palabras clave más frecuentes como porcentaje del total de palabras. Útil para optimización de contenido SEO.",
+      "title": "Comprobador de Densidad de Palabras Clave",
+      "description": "Pega tu contenido para ver las palabras clave más frecuentes y su porcentaje de densidad. Útil para la optimización de contenido SEO.",
+      "faqs": [
+        {
+          "question": "¿Qué es la densidad de palabras clave?",
+          "answer": "La densidad de palabras clave es la frecuencia con que una palabra clave aparece en tu texto como porcentaje del total de palabras. Una palabra clave que aparece 10 veces en un artículo de 1000 palabras tiene una densidad del 1%."
+        },
+        {
+          "question": "¿Cuál es la densidad de palabras clave ideal para el SEO?",
+          "answer": "La mayoría de los expertos en SEO recomiendan una densidad del 1–3%. Un exceso de optimización (relleno de palabras clave) por encima del 5% puede activar penalizaciones de Google. Enfócate en escribir de forma natural y útil en lugar de apuntar a un porcentaje específico."
+        },
+        {
+          "question": "¿Cómo se calcula la densidad de palabras clave?",
+          "answer": "Densidad de palabras clave (%) = (Número de veces que aparece la palabra clave ÷ Total de palabras) × 100. Por ejemplo, una palabra que aparece 15 veces en un artículo de 500 palabras tiene una densidad del 3%."
+        },
+        {
+          "question": "¿Qué palabras se excluyen del análisis?",
+          "answer": "Las palabras vacías comunes (the, a, and, is, it, etc.) se excluyen automáticamente para que solo veas las palabras clave de contenido con significado."
+        }
+      ]
+    },
+    "sampleText": "The quick brown fox jumps over the lazy dog. This sentence has been used for decades as a pangram — a phrase containing every letter of the alphabet. It is commonly used to demonstrate fonts, test typewriters, and practice typing.\n\nReadability is an important consideration in writing. Clear, concise sentences help readers understand your message quickly. Long, convoluted sentences with complex vocabulary can make text difficult to parse, especially for readers who are not specialists in the subject matter at hand.\n\nGood writing balances clarity with depth. Professional writers aim for a Flesch Reading Ease score between 60 and 70 for most audiences.",
+    "buttons": {
+      "sampleText": "Texto de ejemplo",
+      "clear": "Limpiar"
+    },
+    "stats": {
+      "words": "Palabras",
+      "characters": "Caracteres",
+      "charactersNoSpaces": "Caracteres (sin espacios)",
+      "sentences": "Oraciones",
+      "paragraphs": "Párrafos",
+      "readingTime": "Tiempo de lectura",
+      "speakingTime": "Tiempo de habla",
+      "fleschEase": "Facilidad de Lectura Flesch",
+      "fleschGrade": "Grado Flesch-Kincaid",
+      "gunningFog": "Índice Niebla de Gunning",
+      "avgWordsPerSentence": "Prom. palabras/oración",
+      "topWords": "Palabras principales",
+      "readabilityScores": "Puntuaciones de legibilidad",
+      "gradeLevel": "Nivel escolar",
+      "gradeEquivalent": "Equivalente al grado escolar de EE.UU.",
+      "yearsEducation": "Años de educación",
+      "higherEasier": "Mayor = más fácil de leer",
+      "lowerAccessible": "Menor = más accesible",
+      "syllableNote": "El conteo de sílabas es una aproximación heurística. Las puntuaciones pueden variar ligeramente respecto a otras herramientas."
+    }
+  },
+  "finance": {
+    "shared": {
+      "principal": "Monto del préstamo",
+      "annualRate": "Tasa de interés anual (%)",
+      "termMonths": "Plazo (meses)",
+      "calculate": "Calcular",
+      "monthlyPayment": "Pago mensual",
+      "totalInterest": "Interés total",
+      "totalCost": "Costo total",
+      "amortizationSchedule": "Tabla de amortización",
+      "month": "Mes",
+      "payment": "Pago",
+      "principal_col": "Capital",
+      "interest": "Interés",
+      "balance": "Saldo"
+    },
+    "variants": {
+      "loan-calculator": {
+        "metaTitle": "Calculadora de Préstamos — Pago Mensual y Amortización",
+        "metaDescription": "Calculadora de préstamos gratuita. Calcula pagos mensuales, interés total y consulta una tabla de amortización completa para cualquier préstamo.",
+        "title": "Calculadora de Préstamos",
+        "description": "Calcula tu pago mensual, interés total y tabla de amortización completa para cualquier préstamo.",
+        "faqs": [
+          {
+            "question": "¿Cómo se calcula el pago mensual?",
+            "answer": "El pago mensual se calcula con la fórmula estándar de amortización: M = P × r(1+r)ⁿ / ((1+r)ⁿ - 1), donde P es el capital, r es la tasa de interés mensual y n es el número de pagos."
+          },
+          {
+            "question": "¿Qué es una tabla de amortización?",
+            "answer": "Una tabla de amortización muestra cada pago mensual desglosado en las partes de capital e interés, junto con el saldo restante después de cada pago."
+          },
+          {
+            "question": "¿Esta calculadora incluye impuestos y seguros?",
+            "answer": "No, esta calculadora solo muestra capital e intereses. Para hipotecas, agrega el impuesto predial y el seguro del hogar para obtener tu costo mensual total de vivienda."
+          },
+          {
+            "question": "¿Cómo puedo reducir el interés total pagado?",
+            "answer": "Puedes reducir el interés total haciendo un pago inicial mayor, eligiendo un plazo más corto o realizando pagos adicionales al capital cuando sea posible."
+          }
+        ]
+      },
+      "mortgage-calculator": {
+        "metaTitle": "Calculadora de Hipoteca — Pago Mensual y Costo Total",
+        "metaDescription": "Calculadora de hipoteca gratuita. Calcula tu pago mensual, el costo total en intereses y consulta una tabla de amortización completa.",
+        "title": "Calculadora de Hipoteca",
+        "description": "Calcula tu pago hipotecario, interés total y tabla de amortización completa.",
+        "faqs": [
+          {
+            "question": "¿Cuál es una buena tasa de interés hipotecaria?",
+            "answer": "Las tasas hipotecarias cambian a diario según las condiciones económicas. Entre 2024 y 2025, las tasas fijas a 30 años han estado entre el 6% y el 8%. Consulta LendingTree o Bankrate para conocer las tasas actuales."
+          },
+          {
+            "question": "¿Debo elegir una hipoteca a 15 o a 30 años?",
+            "answer": "Una hipoteca a 15 años tiene pagos mensuales más altos pero genera mucho menos interés total. Una hipoteca a 30 años tiene pagos más bajos y más flexibilidad, aunque pagas significativamente más interés a lo largo de la vida del préstamo."
+          },
+          {
+            "question": "¿Qué es el PMI?",
+            "answer": "El Seguro Hipotecario Privado (PMI, por sus siglas en inglés) generalmente se requiere cuando el pago inicial es inferior al 20% del precio de la vivienda. Agrega entre el 0.5% y el 1.5% al costo anual."
+          },
+          {
+            "question": "¿Cómo ayuda un pago inicial mayor?",
+            "answer": "Un pago inicial mayor reduce el monto del préstamo (lo que baja los pagos mensuales y el interés total), puede eliminar el PMI y te da capital inmediato en tu vivienda."
+          }
+        ]
+      },
+      "car-loan-calculator": {
+        "metaTitle": "Calculadora de Préstamo Vehicular — Pago Mensual de Auto",
+        "metaDescription": "Calculadora de préstamo de auto gratuita. Calcula tu pago mensual, interés total y evalúa si financiar o pagar en efectivo es mejor opción.",
+        "title": "Calculadora de Préstamo Vehicular",
+        "description": "Calcula el pago mensual de tu préstamo de auto y el costo total del financiamiento.",
+        "faqs": [
+          {
+            "question": "¿Cuál es una buena tasa de interés para un préstamo de auto?",
+            "answer": "Las tasas de préstamos de auto varían según el puntaje crediticio y el plazo. Las tasas suelen oscilar entre el 5% y el 15%. Un crédito excelente (720+) puede calificar para tasas menores al 6%."
+          },
+          {
+            "question": "¿Debo elegir un préstamo de auto a 48, 60 o 72 meses?",
+            "answer": "Los plazos más cortos implican pagos mensuales más altos pero menos interés total. Los plazos más largos reducen tu pago, pero pagas más en total y corres el riesgo de deber más de lo que vale el auto."
+          },
+          {
+            "question": "¿Puedo pagar mi préstamo de auto antes de tiempo?",
+            "answer": "La mayoría de los préstamos de auto permiten el pago anticipado sin penalización. Realizar pagos adicionales reduce directamente tu capital y te ahorra en intereses."
+          },
+          {
+            "question": "¿Cuánto auto me puedo permitir?",
+            "answer": "Una regla común es que el pago total de tu auto no debe superar el 15% de tu salario neto mensual. Incluye el seguro, la gasolina y el mantenimiento en tu presupuesto."
+          }
+        ]
+      },
+      "personal-loan-calculator": {
+        "metaTitle": "Calculadora de Préstamo Personal — Calcula tu Pago Mensual",
+        "metaDescription": "Calcula los pagos de un préstamo personal al instante. Encuentra tu pago mensual, el interés total y compara plazos para encontrar la mejor opción.",
+        "title": "Calculadora de Préstamo Personal",
+        "description": "Calcula los pagos mensuales y el costo total de préstamos personales y consolidación de deudas.",
+        "faqs": [
+          {
+            "question": "¿Qué puntaje crediticio necesito para un préstamo personal?",
+            "answer": "La mayoría de los prestamistas requieren un puntaje crediticio mínimo de 580–640 para préstamos personales. Las mejores tasas se reservan para puntajes superiores a 720."
+          },
+          {
+            "question": "¿Puedo usar un préstamo personal para consolidar deudas?",
+            "answer": "Sí, la consolidación de deudas es uno de los usos más comunes de los préstamos personales. Si la tasa del préstamo personal es menor que la de tus deudas actuales, puedes ahorrar dinero."
+          },
+          {
+            "question": "¿Los préstamos personales tienen tasa fija o variable?",
+            "answer": "La mayoría de los préstamos personales tienen tasas de interés fijas, lo que significa que tu pago se mantiene igual durante toda la vida del préstamo. Algunos prestamistas ofrecen tasas variables que pueden cambiar."
+          },
+          {
+            "question": "¿Cuánto tiempo tarda la aprobación de un préstamo personal?",
+            "answer": "Los prestamistas en línea suelen aprobar y desembolsar préstamos personales en 1–3 días hábiles. Los bancos tradicionales pueden tardar entre 1 y 2 semanas."
+          }
+        ]
+      },
+      "amortization-calculator": {
+        "metaTitle": "Calculadora de Amortización — Tabla de Pagos Completa",
+        "metaDescription": "Calculadora de amortización gratuita. Genera una tabla de pagos completa que muestra capital, interés y saldo para cada pago mensual.",
+        "title": "Calculadora de Amortización",
+        "description": "Consulta la tabla de amortización completa de tu préstamo con cada pago desglosado en capital e intereses.",
+        "faqs": [
+          {
+            "question": "¿Qué es la amortización?",
+            "answer": "La amortización es el proceso de distribuir los pagos del préstamo a lo largo del tiempo. Los pagos iniciales son principalmente intereses; los pagos posteriores son principalmente capital."
+          },
+          {
+            "question": "¿Por qué pago más intereses al inicio del préstamo?",
+            "answer": "El pago de intereses se calcula sobre el saldo restante. Al principio, tu saldo es alto, por lo que una mayor parte de cada pago se destina a intereses. A medida que el saldo disminuye, más se aplica al capital."
+          },
+          {
+            "question": "¿Cómo afectan los pagos adicionales a la amortización?",
+            "answer": "Los pagos adicionales reducen directamente tu saldo de capital, lo que acorta el plazo del préstamo y reduce el interés total que pagas."
+          },
+          {
+            "question": "¿Puedo descargar mi tabla de amortización?",
+            "answer": "Usa la función de impresión de tu navegador para imprimir o guardar la tabla como PDF. La tabla muestra todos los pagos mensuales con un desglose completo."
+          }
+        ]
+      },
+      "home-affordability-calculator": {
+        "metaTitle": "Calculadora de Asequibilidad de Vivienda — ¿Cuánto Puedo Gastar en una Casa?",
+        "metaDescription": "Calcula cuánto puedes gastar en una vivienda según tus ingresos, deudas mensuales y pago inicial. Usa la regla de deuda 28/36.",
+        "title": "Calculadora de Asequibilidad de Vivienda",
+        "description": "Descubre cuánto puedes gastar en una vivienda según tus ingresos, deudas y pago inicial.",
+        "faqs": [
+          {
+            "question": "¿Qué es la regla 28/36?",
+            "answer": "La regla 28/36 indica que tus costos de vivienda no deben superar el 28% de tus ingresos brutos mensuales, y el total de pagos de deudas (incluyendo vivienda) no debe superar el 36%."
+          },
+          {
+            "question": "¿Qué se considera deuda mensual?",
+            "answer": "Las deudas mensuales incluyen pagos de auto, préstamos estudiantiles, pagos mínimos de tarjetas de crédito y otros préstamos a plazos. No incluyas servicios públicos ni alimentos."
+          },
+          {
+            "question": "¿Cuánto pago inicial necesito?",
+            "answer": "Los préstamos convencionales suelen requerir entre el 3% y el 20% de pago inicial. Los préstamos FHA requieren el 3.5%. Un pago inicial del 20% evita el PMI y resulta en pagos mensuales más bajos."
+          },
+          {
+            "question": "¿Debo pedir prestado el monto máximo para el que califico?",
+            "answer": "No necesariamente. El hecho de que califiques para un préstamo grande no significa que debas tomarlo. Considera tus metas de ahorro, estabilidad laboral y estilo de vida al elegir el precio de tu vivienda."
+          }
+        ]
+      },
+      "refinance-calculator": {
+        "metaTitle": "Calculadora de Refinanciamiento — ¿Debo Refinanciar Mi Hipoteca?",
+        "metaDescription": "Descubre si refinanciar tu hipoteca tiene sentido financiero. Compara tu préstamo actual con nuevas tasas y calcula tu punto de equilibrio.",
+        "title": "Calculadora de Refinanciamiento",
+        "description": "Calcula si refinanciar tu hipoteca tiene sentido comparando tu préstamo actual con los nuevos términos.",
+        "faqs": [
+          {
+            "question": "¿Cuándo tiene sentido refinanciar?",
+            "answer": "Por lo general, refinanciar tiene sentido cuando puedes reducir tu tasa al menos un 0.5–1%, planeas quedarte en la vivienda el tiempo suficiente para recuperar los costos de cierre y tienes buen crédito."
+          },
+          {
+            "question": "¿Cuáles son los costos de cierre al refinanciar?",
+            "answer": "Los costos de cierre del refinanciamiento suelen ser del 2–5% del monto del préstamo. Inclúyelos en el cálculo de tu punto de equilibrio."
+          },
+          {
+            "question": "¿Qué es el punto de equilibrio?",
+            "answer": "El punto de equilibrio es el número de meses que tarda el ahorro mensual en superar los costos de cierre. Divide los costos de cierre entre el ahorro mensual."
+          },
+          {
+            "question": "¿Puedo refinanciar a un plazo más corto?",
+            "answer": "Sí, refinanciar de una hipoteca a 30 años a una de 15 años frecuentemente ofrece una tasa más baja y mucho menos interés total, aunque tu pago mensual será más alto."
+          }
+        ]
+      },
+      "student-loan-calculator": {
+        "metaTitle": "Calculadora de Préstamo Estudiantil — Pago Mensual y Devolución",
+        "metaDescription": "Calcula el pago mensual de tu préstamo estudiantil, el interés total y el plazo de liquidación. Compara planes de pago para encontrar la opción más económica.",
+        "title": "Calculadora de Préstamo Estudiantil",
+        "description": "Calcula los pagos mensuales del préstamo estudiantil y el costo total de devolución.",
+        "faqs": [
+          {
+            "question": "¿Cuál es el plazo de pago estándar de un préstamo estudiantil?",
+            "answer": "Los préstamos estudiantiles federales tienen un plazo de devolución predeterminado de 10 años (120 meses). Los planes de pago basados en ingresos pueden extenderlo a 20–25 años."
+          },
+          {
+            "question": "¿Cuál es la diferencia entre préstamos subsidiados y no subsidiados?",
+            "answer": "Los préstamos subsidiados no generan intereses mientras estudias. Los préstamos no subsidiados acumulan intereses desde el día en que se desembolsan."
+          },
+          {
+            "question": "¿Debo hacer pagos adicionales al préstamo estudiantil?",
+            "answer": "Los pagos adicionales reducen tu saldo y el interés total. Para préstamos federales, verifica si aplica la condonación por ingresos — los pagos adicionales no siempre son la opción más conveniente."
+          },
+          {
+            "question": "¿Qué es el refinanciamiento de préstamos estudiantiles?",
+            "answer": "El refinanciamiento reemplaza préstamos federales o privados con un nuevo préstamo privado, posiblemente con una tasa más baja. Ten en cuenta que refinanciar préstamos federales a préstamos privados implica perder beneficios federales como los planes de pago basados en ingresos."
+          }
+        ]
+      },
+      "interest-calculator": {
+        "metaTitle": "Calculadora de Intereses — Interés Simple y Compuesto",
+        "metaDescription": "Calculadora de intereses gratuita. Calcula interés simple o compuesto sobre cualquier monto. Ideal para metas de ahorro o estimaciones del costo de préstamos.",
+        "title": "Calculadora de Intereses",
+        "description": "Calcula el interés simple y compuesto sobre ahorros o préstamos.",
+        "faqs": [
+          {
+            "question": "¿Cuál es la diferencia entre interés simple y compuesto?",
+            "answer": "El interés simple se calcula solo sobre el capital original. El interés compuesto se calcula sobre el capital más los intereses ya generados, lo que produce un crecimiento más rápido a lo largo del tiempo."
+          },
+          {
+            "question": "¿Con qué frecuencia se capitaliza el interés?",
+            "answer": "El interés puede capitalizarse diariamente, mensualmente, trimestralmente o anualmente. Una capitalización más frecuente genera más interés ganado (o adeudado)."
+          },
+          {
+            "question": "¿Qué es el APY frente al APR?",
+            "answer": "El APR (Tasa de Porcentaje Anual) es la tasa nominal. El APY (Rendimiento de Porcentaje Anual) incluye la capitalización y representa el costo o rendimiento real anual."
+          },
+          {
+            "question": "¿Cómo puedo usar el interés compuesto para hacer crecer mis ahorros?",
+            "answer": "Empieza a ahorrar pronto y deja que el interés compuesto actúe con el tiempo. Incluso cantidades pequeñas crecen de forma significativa en 20–30 años en una cuenta de ahorros de alto rendimiento o una cuenta de inversión."
+          }
+        ]
+      },
+      "30-year-mortgage-calculator": {
+        "metaTitle": "Calculadora de Hipoteca a 30 Años — Pago Mensual a Tasa Fija",
+        "metaDescription": "Calcula el pago de tu hipoteca fija a 30 años. Consulta el pago mensual, el interés total pagado y la tabla de amortización completa.",
+        "title": "Calculadora de Hipoteca a 30 Años",
+        "description": "Calcula tu pago mensual de una hipoteca fija a 30 años.",
+        "faqs": [
+          {
+            "question": "¿Cuál es la tasa hipotecaria actual a 30 años?",
+            "answer": "Las tasas hipotecarias cambian a diario. En 2025, las tasas fijas a 30 años han estado entre el 6% y el 7.5%. Consulta LendingTree o Bankrate para conocer las tasas actuales."
+          },
+          {
+            "question": "¿Cuánto es el pago mensual de una hipoteca de $300,000 al 6.5%?",
+            "answer": "Una hipoteca de $300,000 al 6.5% a 30 años tiene un pago mensual de $1,896.20. El interés total pagado en 30 años es de $382,632."
+          },
+          {
+            "question": "¿Es adecuada para mí una hipoteca a 30 años?",
+            "answer": "Una hipoteca a 30 años ofrece el pago mensual más bajo. Es ideal si valoras la flexibilidad de flujo de caja. La contrapartida es pagar significativamente más interés en comparación con una hipoteca a 15 años."
+          },
+          {
+            "question": "¿Puedo pagar antes una hipoteca a 30 años?",
+            "answer": "Sí, la mayoría de las hipotecas a 30 años permiten pagos adicionales. Incluso $100 al mes de más pueden recortar años de tu préstamo y ahorrarte decenas de miles en intereses."
+          }
+        ]
+      },
+      "15-year-mortgage-calculator": {
+        "metaTitle": "Calculadora de Hipoteca a 15 Años — Pago Mensual a Tasa Fija",
+        "metaDescription": "Calcula el pago de tu hipoteca fija a 15 años. Compara con la hipoteca a 30 años para ver cuánto interés ahorras con un plazo más corto.",
+        "title": "Calculadora de Hipoteca a 15 Años",
+        "description": "Calcula tu pago mensual de una hipoteca fija a 15 años.",
+        "faqs": [
+          {
+            "question": "¿Cuánto más alto es el pago a 15 años frente al de 30 años?",
+            "answer": "El pago de una hipoteca a 15 años es típicamente entre un 30% y un 50% más alto que el de una a 30 años, pero pagas aproximadamente la mitad del interés total durante la vida del préstamo."
+          },
+          {
+            "question": "¿Las hipotecas a 15 años tienen tasas más bajas?",
+            "answer": "Sí, las hipotecas a 15 años suelen tener tasas entre 0.5% y 0.75% más bajas que las de 30 años, lo que ahorra aún más en intereses."
+          },
+          {
+            "question": "¿Cuánto es el pago mensual de una hipoteca de $200,000 a 15 años al 5.75%?",
+            "answer": "Una hipoteca de $200,000 al 5% a 15 años tiene un pago mensual de aproximadamente $1,581.59. Tu monto exacto depende de tu tasa."
+          },
+          {
+            "question": "¿Vale la pena una hipoteca a 15 años?",
+            "answer": "Si puedes pagar cómodamente el pago más alto, una hipoteca a 15 años te ahorra una cantidad significativa en intereses y genera capital mucho más rápido."
+          }
+        ]
+      },
+      "fha-loan-calculator": {
+        "metaTitle": "Calculadora de Préstamo FHA — Pago Mensual con MIP",
+        "metaDescription": "Calcula los pagos mensuales de un préstamo FHA incluyendo la prima de seguro hipotecario (MIP). Los préstamos FHA permiten pagos iniciales tan bajos como el 3.5%.",
+        "title": "Calculadora de Préstamo FHA",
+        "description": "Calcula los pagos de un préstamo FHA incluyendo el MIP (Prima de Seguro Hipotecario).",
+        "faqs": [
+          {
+            "question": "¿Qué es un préstamo FHA?",
+            "answer": "Los préstamos FHA son hipotecas aseguradas por la Administración Federal de Vivienda. Solo requieren un pago inicial del 3.5% con un puntaje crediticio de 580 o más, y permiten puntajes más bajos que los préstamos convencionales."
+          },
+          {
+            "question": "¿Qué es el MIP del FHA?",
+            "answer": "El MIP (Prima de Seguro Hipotecario) es obligatorio en todos los préstamos FHA. Incluye una prima inicial (1.75% del monto del préstamo) y una prima anual (0.55–1.05% según el tamaño y plazo del préstamo)."
+          },
+          {
+            "question": "¿Cuándo puedo eliminar el MIP del FHA?",
+            "answer": "Para préstamos FHA originados después de 2013 con menos del 10% de pago inicial, el MIP es obligatorio durante toda la vida del préstamo. Para eliminarlo, debes refinanciar a un préstamo convencional."
+          },
+          {
+            "question": "Préstamo FHA vs préstamo convencional — ¿cuál es mejor?",
+            "answer": "El FHA es mejor para prestatarios con puntajes crediticios más bajos o pagos iniciales pequeños. Los préstamos convencionales son mejores si tienes el 20% de pago inicial (evita el MIP) y un puntaje crediticio por encima de 680."
+          }
+        ]
+      },
+      "va-loan-calculator": {
+        "metaTitle": "Calculadora de Préstamo VA — Pago de Préstamo Hipotecario para Veteranos",
+        "metaDescription": "Calcula los pagos mensuales de un préstamo VA. Los préstamos VA ofrecen $0 de pago inicial, sin PMI y tasas competitivas para veteranos elegibles y militares en servicio activo.",
+        "title": "Calculadora de Préstamo VA",
+        "description": "Calcula los pagos de un préstamo VA sin requisito de PMI para veteranos y miembros del servicio elegibles.",
+        "faqs": [
+          {
+            "question": "¿Quién califica para un préstamo VA?",
+            "answer": "Los préstamos VA están disponibles para veteranos, miembros del servicio activo, miembros de la Guardia Nacional, reservistas y cónyuges sobrevivientes que cumplan los requisitos de servicio."
+          },
+          {
+            "question": "¿Qué es la cuota de financiamiento VA?",
+            "answer": "La cuota de financiamiento VA oscila entre el 1.25% y el 3.3% del monto del préstamo, según tu servicio, el pago inicial y si es tu primer préstamo VA. Algunos veteranos están exentos."
+          },
+          {
+            "question": "¿Los préstamos VA requieren pago inicial?",
+            "answer": "No, los préstamos VA permiten un financiamiento del 100% (sin pago inicial) para prestatarios elegibles. Tampoco hay requisito de PMI, lo que los convierte en uno de los mejores programas de préstamos disponibles."
+          },
+          {
+            "question": "¿Cuál es el límite del préstamo VA?",
+            "answer": "Desde 2020, no hay límite de préstamo VA para prestatarios con derecho completo. Los prestatarios con derecho parcial pueden tener límites según el condado."
+          }
+        ]
+      },
+      "debt-payoff-calculator": {
+        "metaTitle": "Calculadora para Pagar Deudas — Liquida tus Deudas Más Rápido",
+        "metaDescription": "Calcula el tiempo para liquidar tu deuda. Descubre cómo los pagos mensuales adicionales aceleran el pago y reducen el interés total en cualquier préstamo o tarjeta de crédito.",
+        "title": "Calculadora para Pagar Deudas",
+        "description": "Calcula cuánto tiempo tardarás en pagar tus deudas y cuánto pagarás en intereses.",
+        "faqs": [
+          {
+            "question": "¿Qué es el método de avalancha de deudas?",
+            "answer": "Paga el mínimo en todas las deudas y destina el dinero extra a la deuda con mayor interés primero. Este método minimiza el interés total pagado."
+          },
+          {
+            "question": "¿Qué es el método bola de nieve de deudas?",
+            "answer": "Paga el mínimo en todas las deudas y destina el dinero extra al saldo más pequeño primero. Este método proporciona victorias psicológicas para mantenerse motivado."
+          },
+          {
+            "question": "¿Cuánto más rápido puedo pagar mis deudas con pagos adicionales?",
+            "answer": "Incluso $50–$100 adicionales al mes pueden reducir años en tu plazo de pago de deudas. Usa esta calculadora para ver exactamente cuánto ahorrarías."
+          },
+          {
+            "question": "¿Debo pagar deudas o invertir?",
+            "answer": "Si la tasa de interés de tu deuda es mayor que el rendimiento esperado de las inversiones (generalmente del 7–10%), paga la deuda primero. Para deudas con tasa baja, por debajo del 4%, invertir puede tener más sentido."
+          }
+        ]
+      }
+    },
+    "invoiceGenerator": {
+      "metaTitle": "Generador de Facturas Gratis — Crea y Descarga Facturas PDF | ToolNotch",
+      "metaDescription": "Crea facturas profesionales gratis. Agrega líneas, impuesto, logo y descarga en PDF. Compatible con 30+ monedas. Sin registro. Los datos se quedan en tu navegador.",
+      "title": "Generador de Facturas Gratis",
+      "description": "Crea facturas profesionales al instante. Sin registro. Sin marcas de agua. Los datos permanecen en tu navegador.",
+      "faqs": [
+        { "question": "¿Mis datos de factura se almacenan en sus servidores?", "answer": "No. Todo es 100% del lado del cliente. Los datos de tu factura solo se guardan en el localStorage de tu navegador y nunca se envían a ningún servidor." },
+        { "question": "¿Cómo descargo la factura como PDF?", "answer": "Haz clic en 'Descargar / Imprimir PDF' para abrir el diálogo de impresión. Selecciona 'Guardar como PDF' en el destino para guardarla." },
+        { "question": "¿Puedo agregar mi logo?", "answer": "Sí — haz clic en el botón 'Logo' en la sección De para subir una imagen. Aparecerá en la parte superior de la vista previa de la factura." },
+        { "question": "¿Cómo cambio la moneda?", "answer": "Selecciona tu moneda en el menú desplegable de la sección Detalles de la factura. La vista previa se actualiza al instante." },
+        { "question": "¿Mis facturas se guardan automáticamente?", "answer": "Sí — el borrador actual de tu factura se guarda automáticamente en el localStorage de tu navegador mientras escribes. Estará ahí cuando regreses." },
+        { "question": "¿Qué monedas son compatibles?", "answer": "Más de 30 monedas, incluyendo USD, EUR, GBP, JPY, CAD, AUD, CHF, INR y más." },
+        { "question": "¿Puedo usar esto para facturas con IVA?", "answer": "Sí — usa el campo Impuesto % para el IVA. Para facturas del Reino Unido con IVA preconfigurado, prueba nuestra herramienta Generador de Facturas UK." },
+        { "question": "¿Hay marca de agua en la factura?", "answer": "Sin marca de agua, nunca. Esta es una herramienta completamente gratuita sin tarifas ocultas, sin registro y sin marcas de agua en tus facturas." }
+      ],
+      "invoiceUk": {
+        "metaTitle": "Generador de Facturas UK — Plantilla de Factura con IVA Gratis | ToolNotch",
+        "metaDescription": "Generador de facturas del Reino Unido con IVA preconfigurado al 20%. Crea facturas profesionales en GBP con IVA. Descarga como PDF. Sin registro.",
+        "title": "Generador de Facturas UK",
+        "description": "Generador de facturas del Reino Unido con IVA preconfigurado. Moneda GBP, 20% IVA. Descarga como PDF.",
+        "faqs": [
+          { "question": "¿Está el IVA preconfigurado para facturas del Reino Unido?", "answer": "Sí — la plantilla del Reino Unido configura automáticamente el 20% de IVA y la moneda GBP." },
+          { "question": "¿Necesito un número de IVA en mi factura?", "answer": "Si estás registrado en el IVA, sí. Agrega tu número de registro de IVA en el campo 'ID Fiscal' en la sección De." },
+          { "question": "¿Es adecuado para Making Tax Digital (MTD)?", "answer": "Esta herramienta solo genera facturas en PDF. Para cumplimiento total con MTD, necesitarás software de contabilidad compatible." },
+          { "question": "¿Puedo cambiar la tasa de IVA?", "answer": "Sí — edita el campo Impuesto %. La tasa estándar de IVA del Reino Unido es del 20%, pero se aplican tasas reducidas (5%, 0%) a algunos bienes y servicios." }
+        ]
+      },
+      "invoiceCanada": {
+        "metaTitle": "Generador de Facturas Canadiense — Plantilla de Factura con GST Gratis | ToolNotch",
+        "metaDescription": "Generador de facturas canadiense con GST preconfigurado al 5%. Crea facturas profesionales en CAD. Descarga como PDF. Sin registro.",
+        "title": "Generador de Facturas Canadiense",
+        "description": "Generador de facturas canadiense con GST preconfigurado. Moneda CAD, 5% GST. Descarga como PDF.",
+        "faqs": [
+          { "question": "¿Está el GST preconfigurado?", "answer": "Sí — la plantilla canadiense configura automáticamente el 5% de GST y la moneda CAD." },
+          { "question": "¿Debo cobrar HST o GST?", "answer": "Depende de tu provincia. Ontario, Nuevo Brunswick y otras usan HST. Alberta y BC usan GST/PST por separado. Ajusta la tasa de impuesto según corresponda." },
+          { "question": "¿Necesito un número de registro GST/HST?", "answer": "Si tus ingresos anuales superan los $30,000 CAD, debes registrarte para GST/HST. Agrega tu número en el campo ID Fiscal." }
+        ]
+      },
+      "invoiceAustralia": {
+        "metaTitle": "Generador de Facturas Australiano — Plantilla de Factura con GST Gratis | ToolNotch",
+        "metaDescription": "Generador de facturas australiano con GST preconfigurado al 10%. Crea facturas profesionales en AUD. Descarga como PDF. Sin registro.",
+        "title": "Generador de Facturas Australiano",
+        "description": "Generador de facturas australiano con GST preconfigurado. Moneda AUD, 10% GST. Descarga como PDF.",
+        "faqs": [
+          { "question": "¿Está el GST preconfigurado para Australia?", "answer": "Sí — la plantilla australiana configura automáticamente el 10% de GST y la moneda AUD." },
+          { "question": "¿Quién debe registrarse para el GST en Australia?", "answer": "Las empresas con facturación anual de $75,000 AUD o más (o $150,000 para organizaciones sin fines de lucro) deben registrarse para el GST." },
+          { "question": "¿Qué debe incluir una factura fiscal australiana?", "answer": "Las facturas conformes con la ATO deben incluir: las palabras 'Tax Invoice', tu ABN, fecha, descripción de bienes/servicios, precio y monto del GST." }
+        ]
+      },
+      "invoiceFreelancers": {
+        "metaTitle": "Generador de Facturas para Freelancers — Factura Profesional Gratis | ToolNotch",
+        "metaDescription": "Generador de facturas gratis para freelancers. Crea facturas profesionales, descarga como PDF. Sin marcas de agua, sin suscripciones.",
+        "title": "Generador de Facturas para Freelancers",
+        "description": "Crea facturas profesionales para freelancers gratis. Sin marcas de agua, sin suscripciones. Descarga como PDF al instante.",
+        "faqs": [
+          { "question": "¿Es gratis para freelancers?", "answer": "Sí — completamente gratis. Sin suscripción, sin marca de agua, sin cuenta requerida." },
+          { "question": "¿Cómo registro qué facturas se han pagado?", "answer": "Usa el campo Estado (borrador/enviada/pagada) en cada factura. Tu navegador guarda el borrador automáticamente." },
+          { "question": "¿Qué debo incluir en una factura de freelancer?", "answer": "Incluye tu nombre, nombre del cliente, número de factura, fecha, fecha de vencimiento, líneas detalladas, términos de pago y método de pago preferido." },
+          { "question": "¿Cómo me pagan más rápido?", "answer": "Indica claramente tus términos de pago, ofrece múltiples opciones de pago y da seguimiento amablemente si el pago está vencido. Los términos a 14 días suelen resultar en pagos más rápidos que a 30 días." }
+        ]
+      },
+      "receiptGenerator": {
+        "metaTitle": "Generador de Recibos Gratis — Crea y Descarga Recibos PDF | ToolNotch",
+        "metaDescription": "Genera recibos profesionales gratis. Agrega artículos, impuesto y descarga como PDF. Sin registro. Los datos se quedan en tu navegador.",
+        "title": "Generador de Recibos Gratis",
+        "description": "Crea recibos profesionales al instante. Descarga como PDF. Sin registro, sin marcas de agua.",
+        "faqs": [
+          { "question": "¿Cuál es la diferencia entre un recibo y una factura?", "answer": "Una factura se envía antes del pago como solicitud de cobro. Un recibo se emite después del pago como prueba de que se recibió." },
+          { "question": "¿Mis datos de recibo se almacenan en sus servidores?", "answer": "No. Todos los datos del recibo se guardan solo en el localStorage de tu navegador. Nada se envía a ningún servidor." },
+          { "question": "¿Cómo descargo el recibo como PDF?", "answer": "Haz clic en 'Descargar / Imprimir PDF' y elige 'Guardar como PDF' en el diálogo de impresión de tu navegador." },
+          { "question": "¿Puedo agregar el logo de mi empresa?", "answer": "Sí — haz clic en el botón Logo para subir el logo de tu empresa. Aparece en la parte superior del recibo." }
+        ]
+      },
+      "fields": {
+        "from": "De",
+        "to": "Facturar a",
+        "invoiceNumber": "Factura #",
+        "date": "Fecha",
+        "dueDate": "Fecha de vencimiento",
+        "items": "Artículos",
+        "description": "Descripción",
+        "qty": "Cant.",
+        "price": "Precio",
+        "total": "Total",
+        "tax": "Impuesto (%)",
+        "subtotal": "Subtotal",
+        "notes": "Notas"
+      },
+      "button": {
+        "generate": "Generar factura",
+        "download": "Descargar PDF",
+        "addItem": "Agregar artículo"
+      }
+    }
+  },
+  "fun": {
+    "spinWheel": {
+      "metaTitle": "Girar la Ruleta — Decisiones Aleatorias Gratis | ToolNotch",
+      "metaDescription": "Ruleta personalizable gratuita. Agrega tus opciones y gira para tomar decisiones aleatorias. Compartible por URL. Ideal para clases, equipos y juegos.",
+      "title": "Girar la Ruleta",
+      "description": "Agrega tus opciones y gira para tomar una decisión al azar. Tus elementos se guardan en la URL para compartirla fácilmente.",
+      "button": {
+        "spin": "Girar",
+        "spinning": "Girando…"
+      },
+      "editLabel": "Editar elementos (uno por línea, mín. 2)",
+      "itemCount": "{count} elementos · La URL de compartir incluye tu lista",
+      "lastResult": "Último resultado:",
+      "faqs": [
+        {
+          "question": "¿Puedo guardar mi ruleta?",
+          "answer": "Sí — tus elementos se guardan en la URL. Copia y guarda la URL como favorito para conservar tu ruleta o compartirla con otros."
+        },
+        {
+          "question": "¿El giro es verdaderamente aleatorio?",
+          "answer": "Sí, el ganador se determina con Math.random() antes de que comience la animación. La animación de giro es solo para divertirse — el resultado ya está decidido."
+        },
+        {
+          "question": "¿Cuántos elementos puedo agregar?",
+          "answer": "Puedes agregar tantos elementos como quieras, aunque la ruleta se vuelve difícil de leer con más de 20 elementos."
+        },
+        {
+          "question": "¿Puedo usarla en el aula?",
+          "answer": "¡Claro que sí! Los docentes adoran la ruleta para elegir estudiantes, asignar temas y tomar decisiones aleatorias de forma justa."
+        },
+        {
+          "question": "¿En qué se diferencia de Wheel of Names?",
+          "answer": "Nuestra ruleta es completamente gratuita, no requiere cuenta, guarda tus elementos en la URL para compartirlos fácilmente y funciona en cualquier dispositivo, incluso sin conexión."
+        }
+      ]
+    },
+    "wheelOfNames": {
+      "metaTitle": "Alternativa a Wheel of Names — Ruleta Gratuita en Línea | ToolNotch",
+      "metaDescription": "¿Buscas una alternativa a Wheel of Names? Nuestra ruleta gratuita es personalizable, compartible por URL y funciona sin registro. Agrega nombres y gira al instante.",
+      "title": "Wheel of Names — Ruleta Gratuita",
+      "description": "Alternativa gratuita a Wheel of Names. Agrega tus nombres, gira y comparte por URL. Sin registro.",
+      "faqs": [
+        {
+          "question": "¿En qué se diferencia de Wheel of Names?",
+          "answer": "Nuestra ruleta es completamente gratuita, no requiere cuenta, guarda tus elementos en la URL para compartirlos fácilmente y funciona en cualquier dispositivo sin necesidad de registrarse."
+        },
+        {
+          "question": "¿Puedo compartir mi ruleta con otros?",
+          "answer": "Sí — tus elementos están codificados en la URL. Copia la URL para compartir tu configuración exacta de ruleta con cualquier persona."
+        },
+        {
+          "question": "¿Funciona en dispositivos móviles?",
+          "answer": "Sí — totalmente adaptable al tamaño de pantalla y con soporte táctil en teléfonos y tabletas."
+        },
+        {
+          "question": "¿Hay un límite de nombres?",
+          "answer": "No hay un límite estricto. Puedes agregar tantos nombres como necesites, aunque la legibilidad es mejor con 20 o menos."
+        },
+        {
+          "question": "¿El resultado del giro es verdaderamente aleatorio?",
+          "answer": "Sí — el ganador se selecciona con Math.random() antes de que comience la animación. Cada elemento tiene igual probabilidad de ser elegido."
+        }
+      ]
+    },
+    "namePicker": {
+      "metaTitle": "Selector de Nombres Aleatorio — Elige un Nombre de una Lista | ToolNotch",
+      "metaDescription": "Selector de nombres aleatorio gratuito. Pega tu lista de nombres, haz clic en Elegir y obtén un ganador al instante. Compatible con selección sin reemplazo para rifas y sorteos.",
+      "title": "Selector de Nombres Aleatorio",
+      "description": "Pega tu lista de nombres y elige un ganador al azar. Activa 'eliminar al elegir' para rifas sin repeticiones.",
+      "placeholder": "Ingresa nombres aquí, uno por línea…",
+      "button": {
+        "pick": "Elegir",
+        "pickAgain": "Elegir de nuevo"
+      },
+      "faqs": [
+        {
+          "question": "¿Qué es 'elegir sin reemplazo'?",
+          "answer": "Cuando está activado, cada nombre elegido se elimina del grupo para que no pueda seleccionarse de nuevo. Ideal para rifas donde cada participante tiene una oportunidad única e igual."
+        },
+        {
+          "question": "¿La selección es verdaderamente aleatoria?",
+          "answer": "Sí. Los nombres se seleccionan con Math.random(), que produce un resultado impredecible cada vez."
+        },
+        {
+          "question": "¿Puedo usar esto para actividades en el aula?",
+          "answer": "Por supuesto. Pega tu lista de estudiantes, activa 'eliminar al elegir' para que ningún alumno sea llamado dos veces y úsalo para preguntas o asignación de tareas al azar."
+        },
+        {
+          "question": "¿Cuántos nombres puedo agregar?",
+          "answer": "No hay un límite estricto. La herramienta funciona con listas de cualquier tamaño, desde 2 hasta cientos de nombres."
+        }
+      ]
+    },
+    "teamGenerator": {
+      "metaTitle": "Generador de Equipos Aleatorios — Divide Nombres en Equipos Justos | ToolNotch",
+      "metaDescription": "Generador de equipos aleatorios gratuito. Pega una lista de nombres, elige cuántos equipos quieres y obtén equipos distribuidos de forma justa al instante. Ideal para deportes, clases y trabajo.",
+      "title": "Generador de Equipos Aleatorios",
+      "description": "Pega los nombres, elige el número de equipos y obtén grupos balanceados al azar al instante.",
+      "faqs": [
+        {
+          "question": "¿Cómo se balancean los equipos?",
+          "answer": "Los nombres se mezclan aleatoriamente con el algoritmo Fisher-Yates y luego se asignan a los equipos de forma rotatoria. Los equipos diferirán en como máximo un integrante."
+        },
+        {
+          "question": "¿Puedo elegir cuántos equipos quiero?",
+          "answer": "Sí — elige entre 2 y 10 equipos. Puedes regenerarlos las veces que quieras para obtener agrupaciones diferentes."
+        },
+        {
+          "question": "¿Es verdaderamente aleatorio?",
+          "answer": "Sí — la mezcla es diferente cada vez que haces clic en Generar. Ningún nombre tiene preferencia ni es excluido."
+        },
+        {
+          "question": "¿Puedo copiar los resultados?",
+          "answer": "Sí — haz clic en 'Copiar todo' para copiar las asignaciones completas de equipos al portapapeles en formato de texto."
+        }
+      ]
+    },
+    "yesNoWheel": {
+      "metaTitle": "Ruleta de Sí o No — Que la Ruleta Decida | ToolNotch",
+      "metaDescription": "Gira la ruleta de Sí o No para tomar una decisión al azar. Incluye segmento opcional 'Tal vez'. Gratis, instantáneo, sin registro.",
+      "title": "Ruleta de Sí o No",
+      "description": "Gira para obtener una respuesta aleatoria de Sí o No. Agrega Tal vez como tercera opción.",
+      "faqs": [
+        {
+          "question": "¿El resultado es verdaderamente aleatorio?",
+          "answer": "Sí — el resultado se decide con Math.random() antes de la animación, dando igual probabilidad a cada segmento."
+        },
+        {
+          "question": "¿Puedo agregar la opción 'Tal vez'?",
+          "answer": "Sí — activa 'Incluir Tal vez' debajo de la ruleta para agregar un tercer segmento amarillo."
+        },
+        {
+          "question": "¿Para qué sirve esto?",
+          "answer": "Para tomar decisiones cuando estás indeciso, resolver debates amistosos o simplemente añadir un toque de diversión a cualquier elección."
+        },
+        {
+          "question": "¿Puedo girar de nuevo?",
+          "answer": "Sí — haz clic en Girar nuevamente para obtener un resultado aleatorio diferente cada vez."
+        }
+      ]
+    },
+    "coinFlip": {
+      "metaTitle": "Lanzar Moneda — Cara o Cruz Virtual en Línea | ToolNotch",
+      "metaDescription": "Lanza una moneda virtual para obtener cara o cruz al azar. Incluye animación y historial. Gratis, instantáneo, sin registro.",
+      "title": "Lanzar Moneda",
+      "description": "Haz clic para lanzar una moneda virtual y obtener cara o cruz al azar.",
+      "button": {
+        "flip": "Lanzar moneda"
+      },
+      "heads": "Cara",
+      "tails": "Cruz",
+      "faqs": [
+        {
+          "question": "¿El lanzamiento de moneda es verdaderamente justo?",
+          "answer": "Sí. Cada lanzamiento se determina con Math.random(), dando a cara y cruz una probabilidad igual del 50%."
+        },
+        {
+          "question": "¿Puedo lanzar varias veces?",
+          "answer": "Sí — haz clic en Lanzar moneda de nuevo. Tus últimos 10 lanzamientos se muestran en el historial debajo de la moneda."
+        },
+        {
+          "question": "¿Cuál es la probabilidad de obtener cara 10 veces seguidas?",
+          "answer": "La probabilidad de obtener cara 10 veces seguidas es (0.5)^10 = 1/1024, o aproximadamente el 0.1%. Cada lanzamiento es independiente — los resultados anteriores no afectan los futuros."
+        },
+        {
+          "question": "¿Funciona sin conexión a internet?",
+          "answer": "Sí. Una vez que la página está cargada, el lanzamiento de moneda funciona 100% sin conexión."
+        }
+      ]
+    },
+    "diceRoller": {
+      "metaTitle": "Lanzador de Dados — Lanza Cualquier Dado en Línea (d6, d20, d100) | ToolNotch",
+      "metaDescription": "Lanzador de dados gratuito en línea. Lanza d4, d6, d8, d10, d12, d20, d100 o cualquier dado personalizado con notación como 3d6+5. Ideal para D&D, RPGs y juegos de mesa.",
+      "title": "Lanzador de Dados",
+      "description": "Lanza cualquier dado con notación estándar (1d6, 2d10+5, 3d20). Compatible con todos los dados estándar de RPG.",
+      "placeholder": "p. ej. 2d6+3",
+      "button": {
+        "roll": "Lanzar"
+      },
+      "faqs": [
+        {
+          "question": "¿Qué notación de dados es compatible?",
+          "answer": "Notación estándar: NdX+M donde N=cantidad, X=caras, M=modificador. Ejemplos: 'd6' (un dado de seis caras), '2d10' (dos dados de diez caras), '3d6+5' (tres dados de seis caras más 5)."
+        },
+        {
+          "question": "¿Qué es un d20?",
+          "answer": "Un d20 es un dado de 20 caras usado en D&D y otros juegos de rol de mesa. Se usa para tiradas de ataque, tiradas de salvación y pruebas de habilidad."
+        },
+        {
+          "question": "¿Puedo lanzar varios dados a la vez?",
+          "answer": "Sí — usa notación como '5d6' para lanzar cinco dados de seis caras simultáneamente. El resultado muestra cada dado individualmente más el total."
+        },
+        {
+          "question": "¿Los lanzamientos son verdaderamente aleatorios?",
+          "answer": "Sí, cada dado se lanza de forma independiente con Math.random(), lo que proporciona una distribución uniforme en todas las caras."
+        },
+        {
+          "question": "¿Qué dados se usan en D&D?",
+          "answer": "D&D usa siete dados: d4, d6, d8, d10, d12, d20 y d100 (dado percentil). El d20 es el más usado para pruebas de habilidad y ataques."
+        }
+      ]
+    },
+    "numberGenerator": {
+      "metaTitle": "Generador de Números Aleatorios — Genera Números en Cualquier Rango | ToolNotch",
+      "metaDescription": "Generador de números aleatorios gratuito. Genera uno o varios números aleatorios en cualquier rango. Compatible con números únicos, ordenamiento y generación en lote de hasta 1000.",
+      "title": "Generador de Números Aleatorios",
+      "description": "Genera números aleatorios en cualquier rango. Compatible con generación en lote y números únicos.",
+      "faqs": [
+        {
+          "question": "¿Qué tan aleatorios son los números?",
+          "answer": "Los números se generan con Math.random() de JavaScript, que produce un resultado distribuido de forma uniforme. Para números aleatorios criptográficamente seguros, usa una herramienta de seguridad dedicada."
+        },
+        {
+          "question": "¿Puedo generar varios números a la vez?",
+          "answer": "Sí — establece Cantidad en cualquier número entre 1 y 1000 para generar varios resultados al mismo tiempo."
+        },
+        {
+          "question": "¿Qué significa 'números únicos'?",
+          "answer": "Cuando 'permitir duplicados' está desactivado, cada número aparece como máximo una vez en los resultados. Útil para sorteos de lotería o muestreo aleatorio sin reemplazo."
+        },
+        {
+          "question": "¿Cómo genero un número aleatorio entre 1 y 10?",
+          "answer": "Establece Mín en 1, Máx en 10, Cantidad en 1 y haz clic en Generar. El resultado será un número entero aleatorio del 1 al 10 inclusive."
+        },
+        {
+          "question": "¿Puedo generar números de lotería?",
+          "answer": "Sí — establece Mín: 1, Máx: 49 (o el rango de tu lotería), Cantidad: 6 y desactiva los duplicados. Haz clic en Generar para obtener 6 números únicos al azar."
+        }
+      ]
+    },
+    "giveawayPicker": {
+      "metaTitle": "Selector de Ganador de Sorteo — Elige un Ganador al Azar | ToolNotch",
+      "metaDescription": "Selector de ganadores de sorteo gratuito. Pega tu lista de participantes, haz clic en Elegir y obtén un ganador al instante. Sin registro. Justo y transparente.",
+      "title": "Selector de Ganador de Sorteo",
+      "description": "Pega tu lista de participantes y elige un ganador al azar. Justo, transparente y gratuito — sin registro.",
+      "faqs": [
+        {
+          "question": "¿Cómo elijo un ganador al azar para un sorteo?",
+          "answer": "Pega tu lista de participantes (uno por línea), haz clic en Elegir y la herramienta selecciona al azar un ganador con Math.random() para un resultado justo e imparcial."
+        },
+        {
+          "question": "¿La selección es verdaderamente aleatoria y justa?",
+          "answer": "Sí. Los ganadores se seleccionan con Math.random() de JavaScript, que da a cada nombre igual probabilidad de ser elegido."
+        },
+        {
+          "question": "¿Puedo elegir varios ganadores?",
+          "answer": "Sí — activa 'Eliminar al elegir' y haz clic en Elegir varias veces. Cada ganador se elimina del grupo para que no pueda ganar dos veces."
+        },
+        {
+          "question": "¿Cómo demuestro que el resultado es justo?",
+          "answer": "Toma una captura de pantalla de la pantalla de resultados mostrando el nombre del ganador y compártela con tu audiencia. La aleatoriedad es transparente."
+        },
+        {
+          "question": "¿Puedo usar esto para sorteos de Instagram o YouTube?",
+          "answer": "Sí — copia manualmente los nombres de tus comentaristas en el cuadro de texto y usa el selector para elegir un ganador al azar."
+        }
+      ]
+    },
+    "classroomNamePicker": {
+      "metaTitle": "Selector de Nombres para el Aula — Elegir Estudiante al Azar | ToolNotch",
+      "metaDescription": "Selector de nombres aleatorio para docentes. Pega tu lista de estudiantes y elige un nombre al azar. Sin registro, funciona en iPad y Chromebook.",
+      "title": "Selector de Nombres para el Aula",
+      "description": "Elige nombres de estudiantes al azar para preguntas, tareas o grupos. Funciona en iPad, Chromebook y cualquier navegador. Sin registro.",
+      "faqs": [
+        {
+          "question": "¿Cómo usan los docentes un selector de nombres aleatorio?",
+          "answer": "Pega tu lista de alumnos (un nombre por línea), activa 'Eliminar al elegir' para que ningún estudiante sea llamado dos veces y haz clic en Elegir cada vez que quieras seleccionar un alumno para una pregunta o tarea."
+        },
+        {
+          "question": "¿Funciona en un iPad o Chromebook?",
+          "answer": "Sí — funciona en cualquier dispositivo con un navegador web, incluyendo iPads, Chromebooks y tabletas Android. No se requiere descargar ninguna aplicación."
+        },
+        {
+          "question": "¿Puedo guardar mi lista de estudiantes?",
+          "answer": "Tu lista no se guarda entre sesiones por razones de privacidad. Pégala al inicio de la clase. Para guardado permanente, guarda como favorito la página Girar la Ruleta, que almacena los elementos en la URL."
+        },
+        {
+          "question": "¿Puedo asegurarme de que todos los estudiantes sean llamados?",
+          "answer": "Sí — activa 'Eliminar al elegir'. Cada estudiante elegido se elimina del grupo para que la herramienta recorra toda la clase sin repeticiones."
+        },
+        {
+          "question": "¿Es gratuito para docentes?",
+          "answer": "Sí, completamente gratuito. Sin registro, sin cuenta, sin tarjeta de crédito. Solo abre la página y empieza a usarlo."
+        }
+      ]
+    },
+    "typingTest": {
+      "metaTitle": "Prueba de Velocidad de Escritura — Comprueba tus PPM Gratis | ToolNotch",
+      "metaDescription": "Prueba de velocidad de escritura gratuita. Mide tus PPM y precisión. Compatible con modos de 15s, 30s, 60s y 120s. Registra tus mejores marcas personales.",
+      "title": "Prueba de Velocidad de Escritura",
+      "description": "Pon a prueba tu velocidad y precisión de escritura. Elige un tiempo límite y comienza a escribir.",
+      "faqs": [
+        {
+          "question": "¿Cómo se calculan las PPM?",
+          "answer": "Las PPM (Palabras Por Minuto) se calculan como el número de palabras escritas correctamente dividido entre el tiempo transcurrido en minutos. Una 'palabra' se estandariza como 5 caracteres."
+        },
+        {
+          "question": "¿Cuál es una buena velocidad de escritura?",
+          "answer": "La velocidad de escritura promedio es de 40–60 PPM. Los mecanógrafos profesionales suelen alcanzar entre 70 y 90 PPM. Los usuarios que escriben al tacto sin mirar el teclado frecuentemente superan las 80 PPM."
+        },
+        {
+          "question": "¿Cómo puedo mejorar mi velocidad de escritura?",
+          "answer": "Practica regularmente usando todos los dedos, aprende a escribir al tacto sin mirar el teclado y enfócate en la precisión antes que en la velocidad. Una precisión superior al 95% es más importante que la velocidad bruta."
+        },
+        {
+          "question": "¿Qué significa precisión?",
+          "answer": "La precisión es el porcentaje de caracteres escritos correctamente. Una precisión del 98% significa que 2 de cada 100 caracteres tuvieron un error."
+        }
+      ]
+    }
+  },
+  "quiz": {
+    "start": "Iniciar cuestionario",
+    "next": "Siguiente",
+    "results": "Tus resultados",
+    "restart": "Intentar de nuevo",
+    "share": "Compartir",
+    "question": "Pregunta {current} de {total}"
+  },
+  "home": {
+    "heading": "ToolNotch",
+    "subheading": "Herramientas gratuitas en línea — sin registro, sin subida, 100% privado",
+    "moreComingSoon": "Más herramientas próximamente",
+    "categories": {
+      "imageTools": "Herramientas de imagen",
+      "pdfTools": "Herramientas PDF",
+      "converterTools": "Herramientas de conversión",
+      "textTools": "Herramientas de texto",
+      "financeTools": "Herramientas financieras",
+      "funAndRandom": "Diversión y azar",
+      "quizzes": "Cuestionarios"
+    },
+    "tools": {
+      "imageCompressor": { "label": "Compresor de imágenes", "desc": "Comprime JPG, PNG, WebP, AVIF" },
+      "imageConverter": { "label": "Convertidor de imágenes", "desc": "Convierte entre formatos" },
+      "mergePdf": { "label": "Combinar PDF", "desc": "Une varios PDFs en uno" },
+      "splitPdf": { "label": "Dividir PDF", "desc": "Divide PDF por rango de páginas" },
+      "compressPdf": { "label": "Comprimir PDF", "desc": "Reduce el tamaño del archivo PDF" },
+      "pdfToJpg": { "label": "PDF a JPG", "desc": "Convierte páginas de PDF a imágenes" },
+      "jpgToPdf": { "label": "JPG a PDF", "desc": "Convierte imágenes a PDF" },
+      "unitConverter": { "label": "Conversor de unidades", "desc": "Longitud, peso, temperatura y más de 200 unidades" },
+      "currencyConverter": { "label": "Conversor de divisas", "desc": "Tasas en tiempo real para más de 150 monedas" },
+      "metersToFeet": { "label": "Metros a Pies", "desc": "Conversión rápida de longitud" },
+      "celsiusToFahrenheit": { "label": "Celsius a Fahrenheit", "desc": "Conversión rápida de temperatura" },
+      "kgToPounds": { "label": "Kg a Libras", "desc": "Conversión rápida de peso" },
+      "wordCounter": { "label": "Contador de palabras", "desc": "Cuenta palabras, caracteres y legibilidad" },
+      "characterCounter": { "label": "Contador de caracteres", "desc": "Cuenta caracteres con/sin espacios" },
+      "readabilityChecker": { "label": "Comprobador de legibilidad", "desc": "Puntuaciones Flesch, Kincaid e Índice Niebla" },
+      "readingTimeCalculator": { "label": "Calculadora de tiempo de lectura", "desc": "Estima el tiempo de lectura y habla" },
+      "wordFrequencyCounter": { "label": "Contador de frecuencia de palabras", "desc": "Encuentra las palabras clave más usadas" },
+      "loanCalculator": { "label": "Calculadora de préstamos", "desc": "Pago mensual y tabla de amortización" },
+      "mortgageCalculator": { "label": "Calculadora de hipoteca", "desc": "Calcula los pagos hipotecarios" },
+      "carLoanCalculator": { "label": "Calculadora de préstamo vehicular", "desc": "Pago mensual de préstamo de auto" },
+      "invoiceGenerator": { "label": "Generador de facturas", "desc": "Facturas profesionales gratuitas — listas para PDF" },
+      "invoiceGeneratorUk": { "label": "Generador de facturas UK", "desc": "Facturas en GBP con IVA preconfigurado" },
+      "homeAffordability": { "label": "Asequibilidad de vivienda", "desc": "¿Cuánto puedes gastar en una casa?" },
+      "amortizationCalculator": { "label": "Calculadora de amortización", "desc": "Desglose completo de la tabla de pagos" },
+      "studentLoanCalculator": { "label": "Calculadora de préstamo estudiantil", "desc": "Calculadora de devolución de préstamo estudiantil" },
+      "spinTheWheel": { "label": "Girar la ruleta", "desc": "Decisor aleatorio — agrega tus opciones" },
+      "randomNamePicker": { "label": "Selector de nombres aleatorio", "desc": "Elige un ganador de tu lista" },
+      "teamGenerator": { "label": "Generador de equipos", "desc": "Divide nombres en equipos balanceados" },
+      "coinFlip": { "label": "Lanzar moneda", "desc": "Cara o cruz virtual" },
+      "diceRoller": { "label": "Lanzador de dados", "desc": "Lanza d6, d20, 3d6+5 y más" },
+      "numberGenerator": { "label": "Generador de números", "desc": "Números aleatorios en cualquier rango" },
+      "yesOrNoWheel": { "label": "Ruleta de Sí o No", "desc": "Que la ruleta decida" },
+      "wheelOfNames": { "label": "Wheel of Names", "desc": "Alternativa gratuita a Wheel of Names" },
+      "allQuizzes": { "label": "Todos los cuestionarios", "desc": "Explora todos los cuestionarios de personalidad" },
+      "programmingLanguageQuiz": { "label": "¿Qué lenguaje de programación eres?", "desc": "¿Python, JavaScript, Rust, Go o Java?" },
+      "introvertExtrovertQuiz": { "label": "¿Introvertido o extrovertido?", "desc": "Descubre dónde te ubicas en el espectro" },
+      "careerQuiz": { "label": "¿Qué carrera te conviene?", "desc": "Descubre tu camino profesional ideal" },
+      "travelerQuiz": { "label": "¿Qué tipo de viajero eres?", "desc": "¿Aventurero, explorador o amante de la playa?" }
+    }
+  }
+}

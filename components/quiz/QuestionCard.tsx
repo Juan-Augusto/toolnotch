@@ -1,4 +1,5 @@
 'use client'
+import { useTranslations } from 'next-intl'
 import { Question } from '@/lib/quizTypes'
 
 interface QuestionCardProps {
@@ -10,9 +11,10 @@ interface QuestionCardProps {
 }
 
 export default function QuestionCard({ question, selectedOption, onAnswer, questionNumber, total }: QuestionCardProps) {
+  const t = useTranslations('quiz')
   return (
     <div className="space-y-4">
-      <div className="text-xs text-gray-400 font-medium">Question {questionNumber} of {total}</div>
+      <div className="text-xs text-gray-400 font-medium">{t('question', { current: questionNumber, total })}</div>
       <h2 className="text-xl font-semibold text-gray-900 leading-snug">{question.text}</h2>
       <div className="space-y-2">
         {question.options.map((option) => (

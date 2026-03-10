@@ -5,12 +5,36 @@ export interface FaqItem {
   answer: string
 }
 
-export function webAppSchema(name: string, url: string, description: string, category = 'UtilitiesApplication') {
+/**
+ * Builds a fully-qualified URL for the given path, prefixed with the locale
+ * when it is not the default English locale.
+ * English has no URL prefix (localePrefix: 'as-needed').
+ */
+export function buildLocalizedUrl(path: string, locale: string): string {
+  const prefix = locale === 'en' ? '' : `/${locale}`
+  return `${BASE_URL}${prefix}${path}`
+}
+
+/** Maps next-intl locale codes to BCP-47 language tags for JSON-LD inLanguage. */
+const LANG_MAP: Record<string, string> = {
+  en: 'en',
+  pt: 'pt-BR',
+  es: 'es',
+}
+
+export function webAppSchema(
+  name: string,
+  url: string,
+  description: string,
+  locale = 'en',
+  category = 'UtilitiesApplication'
+) {
   return {
     '@type': 'WebApplication',
     name,
-    url: `${BASE_URL}${url}`,
+    url: buildLocalizedUrl(url, locale),
     description,
+    inLanguage: LANG_MAP[locale] ?? locale,
     applicationCategory: category,
     operatingSystem: 'Any',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

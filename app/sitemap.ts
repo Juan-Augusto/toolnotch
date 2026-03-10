@@ -74,39 +74,48 @@ const ALL_ROUTES = [
   '/quiz/which-decade-do-you-belong-in',
 ]
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date()
+/**
+ * Builds a sitemap entry with locale alternates for hreflang.
+ * English has no URL prefix (localePrefix: 'as-needed').
+ */
+function urlWithAlternates(path: string, priority = 0.8) {
+  return {
+    url: `${BASE_URL}${path}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority,
+    alternates: {
+      languages: {
+        en: `${BASE_URL}${path}`,
+        pt: `${BASE_URL}/pt${path}`,
+        es: `${BASE_URL}/es${path}`,
+      },
+    },
+  }
+}
 
+export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: BASE_URL,
-      lastModified,
+      lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1.0,
+      alternates: {
+        languages: {
+          en: BASE_URL,
+          pt: `${BASE_URL}/pt`,
+          es: `${BASE_URL}/es`,
+        },
+      },
     },
-    {
-      url: `${BASE_URL}/tools/image/image-compressor`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    ...conversionPages.map((page) => ({
-      url: `${BASE_URL}/tools/image/${page.slug}`,
-      lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    })),
-    ...COMMON_PAIRS.map((pair) => ({
-      url: `${BASE_URL}/tools/convert/${pair.slug}`,
-      lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    })),
-    ...ALL_ROUTES.map((path) => ({
-      url: `${BASE_URL}${path}`,
-      lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    })),
+    urlWithAlternates('/tools/image/image-compressor', 0.9),
+    ...conversionPages.map((page) =>
+      urlWithAlternates(`/tools/image/${page.slug}`)
+    ),
+    ...COMMON_PAIRS.map((pair) =>
+      urlWithAlternates(`/tools/convert/${pair.slug}`)
+    ),
+    ...ALL_ROUTES.map((path) => urlWithAlternates(path)),
   ]
 }

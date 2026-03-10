@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useCallback, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 
 interface Props {
   onFile: (file: File) => void
@@ -8,6 +9,7 @@ interface Props {
 }
 
 export default function DropZone({ onFile, currentFile }: Props) {
+  const t = useTranslations('image.shared.dropZone')
   const [isDragging, setIsDragging] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
 
@@ -57,16 +59,14 @@ export default function DropZone({ onFile, currentFile }: Props) {
         <div className="space-y-1">
           <p className="font-medium text-zinc-800">{currentFile.name}</p>
           <p className="text-sm text-zinc-500">
-            {(currentFile.size / 1024).toFixed(1)} KB · Click or drop to replace
+            {(currentFile.size / 1024).toFixed(1)} KB · {t('replace')}
           </p>
         </div>
       ) : (
         <div className="space-y-2">
           <div className="text-4xl text-zinc-300">↑</div>
-          <p className="text-lg font-medium text-zinc-700">Drop your image here</p>
-          <p className="text-sm text-zinc-500">
-            or click to browse · JPG, PNG, WebP, AVIF supported
-          </p>
+          <p className="text-lg font-medium text-zinc-700">{t('label')}</p>
+          <p className="text-sm text-zinc-500">{t('hint')}</p>
         </div>
       )}
     </div>

@@ -1,6 +1,7 @@
 'use client'
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { QuizResult, Quiz } from '@/lib/quizTypes'
 import confetti from 'canvas-confetti'
 
@@ -11,6 +12,7 @@ interface ResultCardProps {
 }
 
 export default function ResultCard({ result, quiz, onRetake }: ResultCardProps) {
+  const t = useTranslations('quiz')
   useEffect(() => {
     // Respect prefers-reduced-motion
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -45,7 +47,7 @@ export default function ResultCard({ result, quiz, onRetake }: ResultCardProps) 
       className="space-y-6 text-center"
     >
       <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8">
-        <div className="text-sm text-gray-500 mb-2">Your result:</div>
+        <div className="text-sm text-gray-500 mb-2">{t('results')}:</div>
         <motion.h2
           initial={{ scale: 0.85 }}
           animate={{ scale: 1 }}
@@ -79,7 +81,7 @@ export default function ResultCard({ result, quiz, onRetake }: ResultCardProps) 
       )}
 
       <div>
-        <p className="text-sm text-gray-500 mb-2">Share your result:</p>
+        <p className="text-sm text-gray-500 mb-2">{t('share')}:</p>
         <div className="flex justify-center gap-2 flex-wrap">
           <a
             href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`}
@@ -110,7 +112,7 @@ export default function ResultCard({ result, quiz, onRetake }: ResultCardProps) 
         onClick={onRetake}
         className="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-xl font-semibold hover:bg-gray-50 transition-colors"
       >
-        Retake Quiz
+        {t('restart')}
       </button>
 
       <p className="text-xs text-gray-400">

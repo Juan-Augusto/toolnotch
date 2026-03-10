@@ -1,4 +1,5 @@
 'use client'
+import { useTranslations } from 'next-intl'
 
 const PRESETS = [
   { label: '5yr', months: 60 },
@@ -14,12 +15,13 @@ interface TermSelectorProps {
 }
 
 export default function TermSelector({ value, onChange }: TermSelectorProps) {
+  const t = useTranslations('finance.shared')
   const years = Math.floor(value / 12)
   const months = value % 12
 
   return (
     <div>
-      <label className="block text-sm font-medium text-gray-700 mb-1">Loan Term</label>
+      <label className="block text-sm font-medium text-gray-700 mb-1">{t('termMonths')}</label>
       <div className="flex gap-2 mb-2">
         {PRESETS.map((p) => (
           <button

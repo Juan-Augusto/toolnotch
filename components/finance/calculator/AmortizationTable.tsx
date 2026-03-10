@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { AmortizationRow } from '@/lib/loanTypes'
 import { formatCurrency } from '@/lib/loanMath'
 
@@ -10,6 +11,7 @@ interface AmortizationTableProps {
 const PAGE_SIZE = 12
 
 export default function AmortizationTable({ amortization }: AmortizationTableProps) {
+  const t = useTranslations('finance.shared')
   const [page, setPage] = useState(0)
   const [showAll, setShowAll] = useState(false)
 
@@ -21,7 +23,7 @@ export default function AmortizationTable({ amortization }: AmortizationTablePro
   return (
     <div className="mt-6">
       <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-semibold text-gray-700">Amortization Schedule</h3>
+        <h3 className="text-sm font-semibold text-gray-700">{t('amortizationSchedule')}</h3>
         <button
           onClick={() => { setShowAll(!showAll); setPage(0) }}
           className="text-xs text-blue-600 hover:underline"
@@ -33,11 +35,11 @@ export default function AmortizationTable({ amortization }: AmortizationTablePro
         <table className="w-full text-xs">
           <thead>
             <tr className="bg-gray-50 text-gray-500">
-              <th className="py-2 px-3 text-left">Mo.</th>
-              <th className="py-2 px-3 text-right">Payment</th>
-              <th className="py-2 px-3 text-right">Principal</th>
-              <th className="py-2 px-3 text-right">Interest</th>
-              <th className="py-2 px-3 text-right">Balance</th>
+              <th className="py-2 px-3 text-left">{t('month')}</th>
+              <th className="py-2 px-3 text-right">{t('payment')}</th>
+              <th className="py-2 px-3 text-right">{t('principal_col')}</th>
+              <th className="py-2 px-3 text-right">{t('interest')}</th>
+              <th className="py-2 px-3 text-right">{t('balance')}</th>
             </tr>
           </thead>
           <tbody>

@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import type { SupportedFormat } from '@/lib/imageTypes'
 
 interface Props {
@@ -26,10 +27,12 @@ export default function FormatSelector({
   onQualityChange,
   onMaxWidthChange,
 }: Props) {
+  const t = useTranslations('image.shared')
+
   return (
     <div className="bg-white border border-zinc-200 rounded-xl p-5 space-y-5">
       <div>
-        <label className="block text-sm font-medium text-zinc-700 mb-2">Output Format</label>
+        <label className="block text-sm font-medium text-zinc-700 mb-2">{t('format.label')}</label>
         <div className="flex gap-2">
           {FORMATS.map((f) => (
             <button
@@ -49,7 +52,7 @@ export default function FormatSelector({
 
       <div>
         <label className="block text-sm font-medium text-zinc-700 mb-2">
-          Quality: <span className="text-blue-600">{quality}%</span>
+          {t('quality.label')}: <span className="text-blue-600">{quality}%</span>
         </label>
         <input
           type="range"
@@ -60,19 +63,19 @@ export default function FormatSelector({
           className="w-full accent-blue-600"
         />
         <div className="flex justify-between text-xs text-zinc-400 mt-1">
-          <span>Smaller file</span>
-          <span>Better quality</span>
+          <span>{t('quality.smaller')}</span>
+          <span>{t('quality.better')}</span>
         </div>
       </div>
 
       <div>
         <label className="block text-sm font-medium text-zinc-700 mb-2">
-          Max Width <span className="text-zinc-400 font-normal">(px, optional)</span>
+          {t('maxWidth.label')} <span className="text-zinc-400 font-normal">({t('maxWidth.unit')})</span>
         </label>
         <input
           type="number"
           min={1}
-          placeholder="Keep original size"
+          placeholder={t('maxWidth.placeholder')}
           value={maxWidth ?? ''}
           onChange={(e) =>
             onMaxWidthChange(e.target.value ? Number(e.target.value) : undefined)
