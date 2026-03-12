@@ -1340,7 +1340,8 @@
       "textTools": "Text Tools",
       "financeTools": "Finance Tools",
       "funAndRandom": "Fun & Random",
-      "quizzes": "Quizzes"
+      "quizzes": "Quizzes",
+      "agileTools": "Agile & Scrum Tools"
     },
     "tools": {
       "imageCompressor": { "label": "Image Compressor", "desc": "Compress JPG, PNG, WebP, AVIF" },
@@ -1380,7 +1381,53 @@
       "programmingLanguageQuiz": { "label": "Which Programming Language Are You?", "desc": "Python, JavaScript, Rust, Go, or Java?" },
       "introvertExtrovertQuiz": { "label": "Introvert or Extrovert?", "desc": "Find out where you fall on the spectrum" },
       "careerQuiz": { "label": "What Career Suits You?", "desc": "Discover your ideal career path" },
-      "travelerQuiz": { "label": "What Type of Traveler Are You?", "desc": "Adventurer, explorer, beach lover?" }
+      "travelerQuiz": { "label": "What Type of Traveler Are You?", "desc": "Adventurer, explorer, beach lover?" },
+      "retroBoard": { "label": "Retrospective Board", "desc": "Went Well · To Improve · Action Items" }
+    }
+  },
+  "agile": {
+    "retroBoard": {
+      "metaTitle": "Free Online Retrospective Board — Sprint Retro Tool | ToolNotch",
+      "metaDescription": "Run your sprint retrospective online for free. Add sticky notes to Went Well, To Improve, and Action Items columns. No login required.",
+      "title": "Sprint Retrospective Board",
+      "description": "Add sticky notes, vote on items, and export your retro as Markdown. No login, no signup — runs entirely in your browser.",
+      "columns": {
+        "wentWell": "Went Well",
+        "toImprove": "To Improve",
+        "actionItems": "Action Items"
+      },
+      "placeholder": "Add a note…",
+      "addButton": "Add",
+      "voteAriaLabel": "Vote for this item",
+      "deleteAriaLabel": "Delete this note",
+      "exportButton": "Export as Markdown",
+      "clearButton": "Clear Board",
+      "clearConfirm": "Clear the entire board? This cannot be undone.",
+      "emptyHint": "No notes yet — type above and press Enter or click Add",
+      "exportHeading": "Sprint Retrospective",
+      "copiedToast": "Copied to clipboard!",
+      "faqs": [
+        {
+          "question": "Is my retro data stored anywhere?",
+          "answer": "No. All data lives entirely in your browser's memory. Nothing is sent to any server. Refresh the page and the board resets."
+        },
+        {
+          "question": "How do I export the retrospective?",
+          "answer": "Click 'Export as Markdown' to copy the full board as formatted Markdown text. Paste it into Notion, Confluence, Slack, or any text editor."
+        },
+        {
+          "question": "Can I use this for remote teams?",
+          "answer": "This tool is designed for single-user facilitation — to take notes during a ceremony. For real-time collaboration, each person would need to open their own board and the facilitator can consolidate notes."
+        },
+        {
+          "question": "What are the three columns for?",
+          "answer": "'Went Well' captures wins and positives. 'To Improve' captures friction, blockers, and frustrations. 'Action Items' captures concrete next steps the team commits to."
+        },
+        {
+          "question": "Can I vote on items?",
+          "answer": "Yes — click the thumbs-up icon on any note to vote for it. Voting helps the team dot-vote and prioritize which topics to discuss first."
+        }
+      ]
     }
   }
 }

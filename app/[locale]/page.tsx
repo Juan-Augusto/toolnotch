@@ -23,6 +23,7 @@ const colorMap: Record<string, string> = {
   green:  'bg-green-50 border-green-200 text-green-700',
   orange: 'bg-orange-50 border-orange-200 text-orange-700',
   pink:   'bg-pink-50 border-pink-200 text-pink-700',
+  violet: 'bg-violet-50 border-violet-200 text-violet-700',
 }
 
 const badgeMap: Record<string, string> = {
@@ -33,6 +34,7 @@ const badgeMap: Record<string, string> = {
   green:  'bg-green-100 text-green-600',
   orange: 'bg-orange-100 text-orange-600',
   pink:   'bg-pink-100 text-pink-600',
+  violet: 'bg-violet-100 text-violet-600',
 }
 
 export default async function HomePage({ params }: Props) {
@@ -108,6 +110,13 @@ export default async function HomePage({ params }: Props) {
         { href: '/tools/fun/random-number-generator', label: t('tools.numberGenerator.label'), desc: t('tools.numberGenerator.desc') },
         { href: '/tools/fun/yes-or-no-wheel', label: t('tools.yesOrNoWheel.label'), desc: t('tools.yesOrNoWheel.desc') },
         { href: '/tools/fun/wheel-of-names', label: t('tools.wheelOfNames.label'), desc: t('tools.wheelOfNames.desc') },
+      ],
+    },
+    {
+      category: t('categories.agileTools'),
+      color: 'violet',
+      items: [
+        { href: '/tools/agile/retro-board', label: t('tools.retroBoard.label'), desc: t('tools.retroBoard.desc') },
       ],
     },
     {

@@ -1340,7 +1340,8 @@
       "textTools": "Herramientas de texto",
       "financeTools": "Herramientas financieras",
       "funAndRandom": "Diversión y azar",
-      "quizzes": "Cuestionarios"
+      "quizzes": "Cuestionarios",
+      "agileTools": "Herramientas Ágiles & Scrum"
     },
     "tools": {
       "imageCompressor": { "label": "Compresor de imágenes", "desc": "Comprime JPG, PNG, WebP, AVIF" },
@@ -1380,7 +1381,53 @@
       "programmingLanguageQuiz": { "label": "¿Qué lenguaje de programación eres?", "desc": "¿Python, JavaScript, Rust, Go o Java?" },
       "introvertExtrovertQuiz": { "label": "¿Introvertido o extrovertido?", "desc": "Descubre dónde te ubicas en el espectro" },
       "careerQuiz": { "label": "¿Qué carrera te conviene?", "desc": "Descubre tu camino profesional ideal" },
-      "travelerQuiz": { "label": "¿Qué tipo de viajero eres?", "desc": "¿Aventurero, explorador o amante de la playa?" }
+      "travelerQuiz": { "label": "¿Qué tipo de viajero eres?", "desc": "¿Aventurero, explorador o amante de la playa?" },
+      "retroBoard": { "label": "Tablero de Retrospectiva", "desc": "Funcionó Bien · A Mejorar · Puntos de Acción" }
+    }
+  },
+  "agile": {
+    "retroBoard": {
+      "metaTitle": "Tablero de Retrospectiva Gratuito — Herramienta Sprint Retro | ToolNotch",
+      "metaDescription": "Realiza tu retrospectiva de sprint en línea gratis. Agrega notas en Funcionó Bien, A Mejorar y Puntos de Acción. Sin registro.",
+      "title": "Tablero de Retrospectiva de Sprint",
+      "description": "Agrega notas, vota los puntos y exporta tu retro como Markdown. Sin login, sin registro — funciona en tu navegador.",
+      "columns": {
+        "wentWell": "Funcionó Bien",
+        "toImprove": "A Mejorar",
+        "actionItems": "Puntos de Acción"
+      },
+      "placeholder": "Agregar nota…",
+      "addButton": "Agregar",
+      "voteAriaLabel": "Votar por este punto",
+      "deleteAriaLabel": "Eliminar esta nota",
+      "exportButton": "Exportar como Markdown",
+      "clearButton": "Limpiar Tablero",
+      "clearConfirm": "¿Limpiar todo el tablero? Esta acción no se puede deshacer.",
+      "emptyHint": "Sin notas — escribe arriba y presiona Enter o haz clic en Agregar",
+      "exportHeading": "Retrospectiva de Sprint",
+      "copiedToast": "¡Copiado al portapapeles!",
+      "faqs": [
+        {
+          "question": "¿Mis datos de retro se guardan en algún lugar?",
+          "answer": "No. Todos los datos viven solo en la memoria de tu navegador. Nada se envía a ningún servidor. Recarga la página y el tablero se reinicia."
+        },
+        {
+          "question": "¿Cómo exporto la retrospectiva?",
+          "answer": "Haz clic en 'Exportar como Markdown' para copiar el tablero completo como texto Markdown formateado. Pégalo en Notion, Confluence, Slack o cualquier editor de texto."
+        },
+        {
+          "question": "¿Puedo usarlo para equipos remotos?",
+          "answer": "Esta herramienta está diseñada para facilitación individual — para tomar notas durante una ceremonia. Para colaboración en tiempo real, cada persona necesitaría abrir su propio tablero."
+        },
+        {
+          "question": "¿Para qué sirven las tres columnas?",
+          "answer": "'Funcionó Bien' captura logros y positivos. 'A Mejorar' captura fricciones y bloqueos. 'Puntos de Acción' captura próximos pasos concretos."
+        },
+        {
+          "question": "¿Puedo votar los puntos?",
+          "answer": "Sí — haz clic en el ícono de pulgar arriba en cualquier nota para votar. Votar ayuda al equipo a priorizar qué temas discutir primero."
+        }
+      ]
     }
   }
 }

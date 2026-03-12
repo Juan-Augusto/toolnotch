@@ -5,6 +5,8 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { locales } from '@/i18n'
+import ThemeProvider from '@/components/ThemeProvider'
+import DarkModeToggle from '@/components/DarkModeToggle'
 import '../globals.css'
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? ''
@@ -69,10 +71,10 @@ export default async function LocaleLayout({
   if (!locales.includes(locale as typeof locales[number])) notFound()
   const messages = await getMessages()
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#2563eb" />
-        <link rel="preconnect" href="https://open.er-api.com" />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
         <script
           type="application/ld+json"
@@ -80,9 +82,12 @@ export default async function LocaleLayout({
         />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+          <DarkModeToggle />
+        </ThemeProvider>
         {ADSENSE_ID && (
           <Script
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}

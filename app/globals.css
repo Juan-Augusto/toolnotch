@@ -24,3 +24,67 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Force explicit colours on form controls so they never inherit unexpected values */
+input, textarea, select {
+  color: inherit;
+  background-color: transparent;
+}
+
+/* Dark mode — override Tailwind v4 CSS color variables on the .dark class.
+   All utility classes (bg-white, text-gray-900, border-gray-200, etc.) read
+   from these variables, so every component flips automatically. */
+.dark {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+
+  /* Gray scale — roughly inverted */
+  --color-white: oklch(0.15 0 0);
+  --color-gray-50:  oklch(0.13 0 0);
+  --color-gray-100: oklch(0.19 0 0);
+  --color-gray-200: oklch(0.26 0 0);
+  --color-gray-300: oklch(0.34 0 0);
+  --color-gray-400: oklch(0.48 0 0);
+  --color-gray-500: oklch(0.56 0 0);
+  --color-gray-600: oklch(0.66 0 0);
+  --color-gray-700: oklch(0.75 0 0);
+  --color-gray-800: oklch(0.84 0 0);
+  --color-gray-900: oklch(0.91 0 0);
+  --color-gray-950: oklch(0.96 0 0);
+
+  /* Colored light surfaces → dark tinted surfaces */
+  --color-blue-50:    oklch(0.20 0.04 265);
+  --color-indigo-50:  oklch(0.20 0.04 275);
+  --color-purple-50:  oklch(0.20 0.04 300);
+  --color-violet-50:  oklch(0.20 0.04 290);
+  --color-green-50:   oklch(0.20 0.04 145);
+  --color-emerald-50: oklch(0.20 0.04 162);
+  --color-amber-50:   oklch(0.20 0.04  80);
+  --color-orange-50:  oklch(0.20 0.04  55);
+  --color-red-50:     oklch(0.20 0.04  25);
+  --color-pink-50:    oklch(0.20 0.04 355);
+  --color-zinc-100:   oklch(0.19 0 0);
+
+  /* Colored border shades */
+  --color-blue-200:    oklch(0.36 0.06 265);
+  --color-indigo-200:  oklch(0.36 0.06 275);
+  --color-purple-200:  oklch(0.36 0.06 300);
+  --color-violet-200:  oklch(0.36 0.06 290);
+  --color-green-200:   oklch(0.36 0.06 145);
+  --color-emerald-200: oklch(0.36 0.06 162);
+  --color-amber-200:   oklch(0.36 0.06  80);
+  --color-orange-200:  oklch(0.36 0.06  55);
+  --color-red-200:     oklch(0.36 0.06  25);
+
+  /* Colored text — lighten for readability on dark surfaces */
+  --color-blue-700:    oklch(0.70 0.15 265);
+  --color-indigo-700:  oklch(0.70 0.15 275);
+  --color-purple-700:  oklch(0.70 0.15 300);
+  --color-violet-700:  oklch(0.70 0.15 290);
+  --color-green-700:   oklch(0.70 0.15 145);
+  --color-emerald-700: oklch(0.70 0.15 162);
+  --color-amber-700:   oklch(0.70 0.15  80);
+  --color-orange-700:  oklch(0.70 0.15  55);
+  --color-red-700:     oklch(0.70 0.15  25);
+  --color-pink-700:    oklch(0.70 0.15 355);
+}

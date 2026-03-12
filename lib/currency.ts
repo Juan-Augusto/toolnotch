@@ -26,16 +26,33 @@ export async function getRates(baseCurrency: string): Promise<{ rates: Record<st
     }
   } catch { /* ignore */ }
 
-  // Fetch fresh rates
-  try {
-    const res = await fetch(`https://open.er-api.com/v6/latest/${baseCurrency}`)
-    if (!res.ok) throw new Error('Fetch failed')
-    const data = await res.json()
-    if (data.result !== 'success') throw new Error('API error')
+  // Fetch fresh rates — primary CDN, fallback to Cloudflare Pages mirror
+  const base = baseCurrency.toLowerCase()
+  const urls = [
+    `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${base}.min.json`,
+    `https://latest.currency-api.pages.dev/v1/currencies/${base}.min.json`,
+  ]
 
-    const entry: CacheEntry = { rates: data.rates, ts: Date.now(), base: baseCurrency }
+  try {
+    let data: Record<string, unknown> | null = null
+    for (const url of urls) {
+      try {
+        const res = await fetch(url)
+        if (res.ok) { data = await res.json(); break }
+      } catch { /* try next */ }
+    }
+    if (!data) throw new Error('All sources failed')
+
+    const raw = data[base] as Record<string, number>
+    if (!raw) throw new Error('Unexpected response shape')
+
+    // Normalise keys to uppercase to match the rest of the app
+    const rates: Record<string, number> = {}
+    for (const [k, v] of Object.entries(raw)) rates[k.toUpperCase()] = v
+
+    const entry: CacheEntry = { rates, ts: Date.now(), base: baseCurrency }
     localStorage.setItem(getCacheKey(baseCurrency), JSON.stringify(entry))
-    return { rates: data.rates, stale: false }
+    return { rates, stale: false }
   } catch {
     // Return cached rates as stale if available
     try {

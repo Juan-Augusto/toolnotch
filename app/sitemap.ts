@@ -65,6 +65,9 @@ const ALL_ROUTES = [
   '/tools/fun/giveaway-picker',
   '/tools/fun/classroom-name-picker',
   '/tools/fun/typing-test',
+  // Agile tools
+  '/tools/agile',
+  '/tools/agile/retro-board',
   // Quizzes
   '/quizzes',
   '/quiz/what-career-suits-you',

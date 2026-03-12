@@ -1340,7 +1340,8 @@
       "textTools": "Ferramentas de Texto",
       "financeTools": "Ferramentas Financeiras",
       "funAndRandom": "Diversão e Aleatoriedade",
-      "quizzes": "Quizzes"
+      "quizzes": "Quizzes",
+      "agileTools": "Ferramentas Ágeis & Scrum"
     },
     "tools": {
       "imageCompressor": { "label": "Compressor de Imagem", "desc": "Comprimir JPG, PNG, WebP, AVIF" },
@@ -1380,7 +1381,53 @@
       "programmingLanguageQuiz": { "label": "Qual Linguagem de Programação Você É?", "desc": "Python, JavaScript, Rust, Go ou Java?" },
       "introvertExtrovertQuiz": { "label": "Introvertido ou Extrovertido?", "desc": "Descubra onde você se encaixa no espectro" },
       "careerQuiz": { "label": "Qual Carreira Combina com Você?", "desc": "Descubra seu caminho de carreira ideal" },
-      "travelerQuiz": { "label": "Que Tipo de Viajante Você É?", "desc": "Aventureiro, explorador, amante de praia?" }
+      "travelerQuiz": { "label": "Que Tipo de Viajante Você É?", "desc": "Aventureiro, explorador, amante de praia?" },
+      "retroBoard": { "label": "Quadro de Retrospectiva", "desc": "Funcionou Bem · A Melhorar · Itens de Ação" }
+    }
+  },
+  "agile": {
+    "retroBoard": {
+      "metaTitle": "Quadro de Retrospectiva Gratuito — Ferramenta de Sprint Retro | ToolNotch",
+      "metaDescription": "Execute sua retrospectiva de sprint online gratuitamente. Adicione notas em Funcionou Bem, A Melhorar e Itens de Ação. Sem login.",
+      "title": "Quadro de Retrospectiva de Sprint",
+      "description": "Adicione notas, vote nos itens e exporte sua retro como Markdown. Sem login, sem cadastro — funciona no seu navegador.",
+      "columns": {
+        "wentWell": "Funcionou Bem",
+        "toImprove": "A Melhorar",
+        "actionItems": "Itens de Ação"
+      },
+      "placeholder": "Adicionar nota…",
+      "addButton": "Adicionar",
+      "voteAriaLabel": "Votar neste item",
+      "deleteAriaLabel": "Excluir esta nota",
+      "exportButton": "Exportar como Markdown",
+      "clearButton": "Limpar Quadro",
+      "clearConfirm": "Limpar o quadro inteiro? Esta ação não pode ser desfeita.",
+      "emptyHint": "Sem notas — escreva acima e pressione Enter ou clique em Adicionar",
+      "exportHeading": "Retrospectiva de Sprint",
+      "copiedToast": "Copiado para a área de transferência!",
+      "faqs": [
+        {
+          "question": "Meus dados da retro são armazenados em algum lugar?",
+          "answer": "Não. Todos os dados ficam apenas na memória do seu navegador. Nada é enviado a nenhum servidor. Atualize a página e o quadro é reiniciado."
+        },
+        {
+          "question": "Como exporto a retrospectiva?",
+          "answer": "Clique em 'Exportar como Markdown' para copiar o quadro completo como texto Markdown formatado. Cole no Notion, Confluence, Slack ou qualquer editor de texto."
+        },
+        {
+          "question": "Posso usar para equipes remotas?",
+          "answer": "Esta ferramenta é projetada para facilitação individual — para anotar durante uma cerimônia. Para colaboração em tempo real, cada pessoa precisaria abrir seu próprio quadro."
+        },
+        {
+          "question": "Para que servem as três colunas?",
+          "answer": "'Funcionou Bem' captura conquistas e pontos positivos. 'A Melhorar' captura atritos e bloqueios. 'Itens de Ação' captura próximas etapas concretas."
+        },
+        {
+          "question": "Posso votar nos itens?",
+          "answer": "Sim — clique no ícone de positivo em qualquer nota para votar. Votar ajuda a equipe a priorizar quais tópicos discutir primeiro."
+        }
+      ]
     }
   }
 }
