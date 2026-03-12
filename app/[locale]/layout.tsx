@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation'
 import { locales } from '@/i18n'
 import ThemeProvider from '@/components/ThemeProvider'
 import DarkModeToggle from '@/components/DarkModeToggle'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
 import '../globals.css'
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? ''
@@ -86,7 +87,10 @@ export default async function LocaleLayout({
           <NextIntlClientProvider messages={messages}>
             {children}
           </NextIntlClientProvider>
-          <DarkModeToggle />
+          <div className="fixed bottom-5 right-5 z-50 flex items-center gap-2">
+            <LanguageSwitcher />
+            <DarkModeToggle />
+          </div>
         </ThemeProvider>
         {ADSENSE_ID && (
           <Script
