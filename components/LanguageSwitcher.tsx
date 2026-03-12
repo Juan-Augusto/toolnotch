@@ -1,6 +1,5 @@
 'use client'
 
-import { useLocale } from 'next-intl'
 import { usePathname, useRouter } from 'next/navigation'
 import { useState, useRef, useEffect } from 'react'
 import { Languages } from 'lucide-react'
@@ -11,16 +10,21 @@ const LANGS = [
   { code: 'es', label: 'Español',   short: 'ES' },
 ]
 
+const LOCALE_PREFIXES = ['pt', 'es']
+
+function getLocaleFromPath(pathname: string): string {
+  const segment = pathname.split('/')[1]
+  return LOCALE_PREFIXES.includes(segment) ? segment : 'en'
+}
+
 function buildLocalePath(pathname: string, from: string, to: string): string {
-  // Strip current locale prefix (EN has none; PT/ES have /{locale})
   const base = from !== 'en' ? pathname.replace(`/${from}`, '') || '/' : pathname
-  // Add target locale prefix
   return to !== 'en' ? `/${to}${base}` : base
 }
 
 export default function LanguageSwitcher() {
-  const locale = useLocale()
   const pathname = usePathname()
+  const locale = getLocaleFromPath(pathname)
   const router = useRouter()
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
