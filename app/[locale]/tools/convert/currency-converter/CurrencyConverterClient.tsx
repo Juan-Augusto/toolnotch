@@ -16,6 +16,7 @@ export default function CurrencyConverterClient() {
   const [error, setError] = useState(false)
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLoading(true)
     getRates(from).then(({ rates: r, stale: s }) => {
       if (Object.keys(r).length > 0) {

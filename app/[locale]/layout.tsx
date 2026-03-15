@@ -75,6 +75,7 @@ export default async function LocaleLayout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#2563eb" />
+        {ADSENSE_ID && <meta name="google-adsense-account" content={ADSENSE_ID} />}
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
         <script
@@ -86,11 +87,11 @@ export default async function LocaleLayout({
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
             {children}
+            <div className="fixed bottom-5 right-5 z-50 flex items-center gap-2">
+              <LanguageSwitcher />
+              <DarkModeToggle />
+            </div>
           </NextIntlClientProvider>
-          <div className="fixed bottom-5 right-5 z-50 flex items-center gap-2">
-            <LanguageSwitcher />
-            <DarkModeToggle />
-          </div>
         </ThemeProvider>
         {ADSENSE_ID && (
           <Script

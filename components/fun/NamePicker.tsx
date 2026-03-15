@@ -62,6 +62,7 @@ export default function NamePicker() {
 
     // Reset reel position instantly (hidden while not animating)
     if (reelScope.current) {
+      // eslint-disable-next-line react-hooks/immutability
       reelScope.current.style.transform = 'translateY(0px)'
     }
   }

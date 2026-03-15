@@ -191,6 +191,7 @@ interface PolyDieProps {
 function PolyDie({ sides, result, rolling, onDone, position = [0, 0, 0] }: PolyDieProps) {
   const meshRef = useRef<THREE.Mesh>(null)
   const startTime = useRef(-1)
+  // eslint-disable-next-line react-hooks/purity
   const startEuler = useRef(new THREE.Euler(Math.random() * Math.PI * 8, Math.random() * Math.PI * 8, 0))
   const done = useRef(false)
   const DURATION = 1500

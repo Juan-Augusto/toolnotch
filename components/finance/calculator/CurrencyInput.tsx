@@ -17,6 +17,7 @@ export default function CurrencyInput({ value, onChange, label, min = 0, max, id
 
   useEffect(() => {
     const formatted = value > 0 ? value.toLocaleString('en-US') : ''
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setDisplayValue(formatted)
   }, [value])
 

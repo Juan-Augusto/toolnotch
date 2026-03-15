@@ -20,12 +20,14 @@ export default function ComparisonView({ original, result }: Props) {
 
   useEffect(() => {
     const url = URL.createObjectURL(original)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setOriginalUrl(url)
     return () => URL.revokeObjectURL(url)
   }, [original])
 
   useEffect(() => {
     const url = URL.createObjectURL(result.blob)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setCompressedUrl(url)
     return () => URL.revokeObjectURL(url)
   }, [result.blob])

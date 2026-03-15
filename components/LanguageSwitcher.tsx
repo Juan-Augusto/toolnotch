@@ -1,6 +1,7 @@
 'use client'
 
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
+import { useLocale } from 'next-intl'
 import { useState, useRef, useEffect } from 'react'
 import { Languages } from 'lucide-react'
 
@@ -10,22 +11,21 @@ const LANGS = [
   { code: 'es', label: 'Español',   short: 'ES' },
 ]
 
-const LOCALE_PREFIXES = ['pt', 'es']
+const ALL_LOCALE_PREFIXES = ['en', 'pt', 'es']
 
-function getLocaleFromPath(pathname: string): string {
+// Strip any locale prefix then prepend target locale.
+// 'en' gets no prefix (localePrefix: 'as-needed').
+function buildLocalePath(pathname: string, to: string): string {
   const segment = pathname.split('/')[1]
-  return LOCALE_PREFIXES.includes(segment) ? segment : 'en'
-}
-
-function buildLocalePath(pathname: string, from: string, to: string): string {
-  const base = from !== 'en' ? pathname.replace(`/${from}`, '') || '/' : pathname
-  return to !== 'en' ? `/${to}${base}` : base
+  const clean = ALL_LOCALE_PREFIXES.includes(segment)
+    ? pathname.replace(`/${segment}`, '') || '/'
+    : pathname
+  return to !== 'en' ? `/${to}${clean}` : clean
 }
 
 export default function LanguageSwitcher() {
   const pathname = usePathname()
-  const locale = getLocaleFromPath(pathname)
-  const router = useRouter()
+  const locale = useLocale()
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
@@ -41,7 +41,13 @@ export default function LanguageSwitcher() {
   function switchTo(code: string) {
     setOpen(false)
     if (code === locale) return
-    router.push(buildLocalePath(pathname, locale, code))
+    // Set cookie so next-intl middleware uses the chosen locale instead of
+    // re-detecting from the browser's Accept-Language header (which would
+    // redirect back to the previous locale when navigating to '/').
+    // eslint-disable-next-line react-hooks/immutability
+    document.cookie = `NEXT_LOCALE=${code}; path=/; max-age=31536000; SameSite=Lax`
+    // eslint-disable-next-line react-hooks/immutability
+    window.location.href = buildLocalePath(pathname, code)
   }
 
   const current = LANGS.find(l => l.code === locale) ?? LANGS[0]

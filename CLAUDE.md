@@ -18,10 +18,22 @@ One Vercel project, one domain, one deployment. Do NOT create separate repos for
 
 ## Key Commands
 ```bash
-npm run dev       # localhost:3000
-npm run build     # production build — run before every deploy
+npm run dev                          # localhost:3000
+npm run build                        # production build — run before every deploy
 npm run lint
+npm run test                         # all unit + integration tests (Jest)
+npm run test:unit                    # unit tests only
+npm run test:integration             # integration tests only
+npm run test:e2e                     # E2E tests (Playwright — requires dev server)
+npm run test:e2e:update-snapshots    # regenerate visual regression baselines
 ```
+
+## Testing Infrastructure
+- **Unit / Integration**: Jest + `@swc/jest` + `@testing-library/react` — runs in `tests/unit/` and `tests/integration/`
+- **E2E**: Playwright — runs in `tests/e2e/`; Playwright spins up `npm run dev` automatically
+- **Pre-commit hook** (husky): runs `lint → test:unit → test:integration` on every commit. E2E is CI-only (too slow for pre-commit).
+- **Test setup**: `tests/setup.ts` — imports `@testing-library/jest-dom` and clears `localStorage`/`sessionStorage` before each test. All tests inherit this automatically.
+- **Parallelism**: Jest runs test files in parallel workers by default. Playwright uses `fullyParallel: true` with isolated browser contexts per worker (no localStorage conflicts).
 
 ## Environment Variables
 ```
