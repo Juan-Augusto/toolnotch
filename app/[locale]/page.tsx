@@ -178,6 +178,12 @@ export default async function HomePage({ params }: Props) {
         <p className="text-center text-xs text-gray-400 mt-16">
           {t('moreComingSoon')}
         </p>
+
+        <div className="text-center mt-6">
+          <Link href="/privacy" className="text-xs text-gray-400 hover:text-gray-600 hover:underline">
+            Privacy Policy
+          </Link>
+        </div>
       </div>
     </main>
   )

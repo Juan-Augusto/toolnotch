@@ -5,6 +5,8 @@ import { COMMON_PAIRS } from '@/data/conversionPairs'
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com'
 
 const ALL_ROUTES = [
+  // Legal
+  '/privacy',
   // PDF tools
   '/tools/pdf',
   '/tools/pdf/merge-pdf',
