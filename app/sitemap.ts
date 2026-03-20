@@ -67,9 +67,15 @@ const ALL_ROUTES = [
   '/tools/fun/giveaway-picker',
   '/tools/fun/classroom-name-picker',
   '/tools/fun/typing-test',
+  // Convert tools — calculators
+  '/tools/convert/percentage-calculator',
   // Agile tools
   '/tools/agile',
   '/tools/agile/retro-board',
+  '/tools/agile/standup-generator',
+  '/tools/agile/planning-poker',
+  '/tools/agile/user-story-writer',
+  '/tools/agile/sprint-date-calculator',
   // Quizzes
   '/quizzes',
   '/quiz/what-career-suits-you',

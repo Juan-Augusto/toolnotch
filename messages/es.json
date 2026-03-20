@@ -1382,7 +1382,12 @@
       "introvertExtrovertQuiz": { "label": "¿Introvertido o extrovertido?", "desc": "Descubre dónde te ubicas en el espectro" },
       "careerQuiz": { "label": "¿Qué carrera te conviene?", "desc": "Descubre tu camino profesional ideal" },
       "travelerQuiz": { "label": "¿Qué tipo de viajero eres?", "desc": "¿Aventurero, explorador o amante de la playa?" },
-      "retroBoard": { "label": "Tablero de Retrospectiva", "desc": "Funcionó Bien · A Mejorar · Puntos de Acción" }
+      "retroBoard": { "label": "Tablero de Retrospectiva", "desc": "Funcionó Bien · A Mejorar · Puntos de Acción" },
+      "standupGenerator": { "label": "Generador de Standup", "desc": "Ayer · Hoy · Bloqueos → resumen listo para pegar" },
+      "planningPoker": { "label": "Planning Poker", "desc": "Estimaciones Fibonacci — revelar todo a la vez" },
+      "userStoryWriter": { "label": "Escritor de User Story", "desc": "Como [rol], quiero [funcionalidad], para que [beneficio]" },
+      "sprintDateCalculator": { "label": "Calculadora de Sprint", "desc": "Fecha de inicio + duración → todas las fechas de ceremonias" },
+      "percentageCalculator": { "label": "Calculadora de Porcentaje", "desc": "% de, qué % es y variación % — tres calculadoras en una" }
     }
   },
   "agile": {
@@ -1428,6 +1433,234 @@
           "answer": "Sí — haz clic en el ícono de pulgar arriba en cualquier nota para votar. Votar ayuda al equipo a priorizar qué temas discutir primero."
         }
       ]
+    },
+    "standupGenerator": {
+      "metaTitle": "Generador de Standup Diario — Formato Ayer/Hoy/Bloqueos | ToolNotch",
+      "metaDescription": "Generador de standup gratuito. Escribe lo que hiciste ayer, lo que harás hoy y cualquier bloqueo — obtén un resumen formateado listo para pegar en cualquier lugar.",
+      "title": "Generador de Standup Diario",
+      "description": "Formatea tu standup diario en segundos. Completa ayer, hoy y bloqueos — obtén un resumen listo para pegar.",
+      "labels": {
+        "yesterday": "Ayer",
+        "yesterdayPlaceholder": "¿Qué completaste ayer?",
+        "today": "Hoy",
+        "todayPlaceholder": "¿En qué estás trabajando hoy?",
+        "blockers": "Bloqueos",
+        "blockersPlaceholder": "¿Algún bloqueo o impedimento? (opcional)",
+        "noBlockers": "Ninguno",
+        "generateButton": "Generar Standup",
+        "copyButton": "Copiar al Portapapeles",
+        "copiedButton": "¡Copiado!",
+        "clearButton": "Limpiar",
+        "outputHeading": "Tu Standup",
+        "yesterdayHeading": "Ayer",
+        "todayHeading": "Hoy",
+        "blockersHeading": "Bloqueos"
+      },
+      "faqs": [
+        {
+          "question": "¿Qué es un standup diario?",
+          "answer": "Un standup diario es una ceremonia corta de 15 minutos donde cada miembro del equipo responde tres preguntas: qué hizo ayer, qué planea hacer hoy y si hay algún bloqueo."
+        },
+        {
+          "question": "¿Dónde puedo pegar el standup generado?",
+          "answer": "La salida formateada es texto plano — pégala en Slack, Microsoft Teams, Jira, correo o cualquier herramienta de comunicación de tu equipo."
+        },
+        {
+          "question": "¿Los datos del standup se almacenan en algún lugar?",
+          "answer": "No. Todo lo que escribes queda solo en tu navegador. Nada se envía a ningún servidor."
+        },
+        {
+          "question": "¿Puedo guardar mi standup para después?",
+          "answer": "Usa el botón Copiar para pegarlo donde quieras — una app de notas, el chat del equipo o un diario personal."
+        },
+        {
+          "question": "¿Qué debo poner en el campo Bloqueos?",
+          "answer": "Cualquier cosa que impida tu progreso: esperando una revisión de código, una dependencia no lista, requisitos poco claros o una API externa caída. Si no hay bloqueos, déjalo vacío — el generador escribirá 'Ninguno' automáticamente."
+        }
+      ]
+    },
+    "planningPoker": {
+      "metaTitle": "Planning Poker — Herramienta Gratuita de Estimación Ágil | ToolNotch",
+      "metaDescription": "Planning poker gratuito para equipos ágiles. Elige los valores Fibonacci, revela las estimaciones simultáneamente y construye consenso sobre story points. Sin login.",
+      "title": "Planning Poker",
+      "description": "Estima historias de usuario con cartas Fibonacci. Elige tu carta y revélalas todas a la vez para evitar el sesgo de anclaje.",
+      "labels": {
+        "storyLabel": "Historia / Tarea",
+        "storyPlaceholder": "Describe la historia o tarea a estimar…",
+        "pickCardHeading": "Elige tu carta",
+        "yourPickLabel": "Tu elección",
+        "notPickedLabel": "No elegido",
+        "revealButton": "Revelar Cartas",
+        "resetButton": "Nueva Ronda",
+        "consensusLabel": "Consenso",
+        "averageLabel": "Promedio",
+        "spreadLabel": "Variación",
+        "noConsensusLabel": "Discutir"
+      },
+      "faqs": [
+        {
+          "question": "¿Qué es el Planning Poker?",
+          "answer": "El Planning Poker es una técnica de estimación ágil donde todos los miembros del equipo revelan simultáneamente sus estimaciones para una historia, evitando el sesgo de anclaje."
+        },
+        {
+          "question": "¿Por qué números Fibonacci?",
+          "answer": "Los números Fibonacci reflejan la incertidumbre natural en la estimación — cuanto mayor la tarea, menos precisa la estimativa. Los intervalos crecientes obligan al equipo a reconocer esa incertidumbre."
+        },
+        {
+          "question": "¿Qué significa la carta ??",
+          "answer": "La carta ? significa 'No tengo suficiente información para estimar.' Indica que la historia necesita más aclaración antes de asignarle un valor."
+        },
+        {
+          "question": "¿Qué significa ∞?",
+          "answer": "∞ significa que la historia es demasiado grande o vaga para estimarla tal como está. Debe dividirse en historias más pequeñas antes del próximo sprint."
+        },
+        {
+          "question": "¿Es esta herramienta multijugador?",
+          "answer": "Esta versión es de un solo jugador — útil para que el facilitador recoja votos verbalmente o en una sesión de pantalla compartida."
+        }
+      ]
+    },
+    "userStoryWriter": {
+      "metaTitle": "Escritor de User Story — Como [Rol] Quiero [Funcionalidad] | ToolNotch",
+      "metaDescription": "Generador gratuito de user stories. Completa rol, funcionalidad y beneficio para generar una user story Agile formateada con criterios de aceptación. Sin login.",
+      "title": "Escritor de User Story",
+      "description": "Genera user stories correctamente formateadas con criterios de aceptación en segundos.",
+      "labels": {
+        "roleLabel": "Rol / Persona",
+        "rolePlaceholder": "ej: usuario registrado, administrador, visitante",
+        "featureLabel": "Funcionalidad / Acción",
+        "featurePlaceholder": "ej: restablecer mi contraseña por correo",
+        "benefitLabel": "Beneficio / Objetivo",
+        "benefitPlaceholder": "ej: recuperar el acceso a mi cuenta sin contactar al soporte",
+        "criteriaLabel": "Criterios de Aceptación",
+        "criteriaPlaceholder": "Un criterio por línea, ej:\nDado que estoy en la página de login\nCuando hago clic en Olvidé mi Contraseña\nEntonces recibo un correo en menos de 1 minuto",
+        "generateButton": "Generar Historia",
+        "copyButton": "Copiar al Portapapeles",
+        "copiedButton": "¡Copiado!",
+        "clearButton": "Limpiar",
+        "outputHeading": "User Story",
+        "storyLabel": "Historia",
+        "acceptanceCriteriaLabel": "Criterios de Aceptación"
+      },
+      "faqs": [
+        {
+          "question": "¿Qué es una user story?",
+          "answer": "Una user story es una descripción corta de una funcionalidad desde la perspectiva del usuario final. El formato estándar es: Como [rol], quiero [funcionalidad], para que [beneficio]."
+        },
+        {
+          "question": "¿Qué son los criterios de aceptación?",
+          "answer": "Los criterios de aceptación definen las condiciones específicas que deben cumplirse para que una historia se considere completada. Normalmente se escriben en formato Dado/Cuando/Entonces."
+        },
+        {
+          "question": "¿Dónde puedo usar esta salida?",
+          "answer": "Pega las historias generadas directamente en Jira, Linear, GitHub Issues, Trello, Azure DevOps o cualquier herramienta de gestión de proyectos."
+        },
+        {
+          "question": "¿Los datos se almacenan en algún lugar?",
+          "answer": "No. Todo queda en tu navegador. Nada se envía a ningún servidor."
+        },
+        {
+          "question": "¿Puedo generar varias historias a la vez?",
+          "answer": "Genera una historia a la vez, cópiala, luego limpia el formulario y genera la siguiente."
+        }
+      ]
+    },
+    "sprintDateCalculator": {
+      "metaTitle": "Calculadora de Fechas de Sprint — Planifica Todas las Ceremonias | ToolNotch",
+      "metaDescription": "Calculadora gratuita de fechas de sprint. Ingresa la fecha de inicio y la duración del sprint para obtener todas las fechas de las ceremonias: planificación, revisión y retrospectiva.",
+      "title": "Calculadora de Fechas de Sprint",
+      "description": "Ingresa la fecha de inicio y la duración del sprint — obtén todas las fechas de las ceremonias al instante.",
+      "labels": {
+        "startDateLabel": "Fecha de Inicio del Sprint",
+        "sprintLengthLabel": "Duración del Sprint",
+        "twoWeeks": "2 semanas",
+        "threeWeeks": "3 semanas",
+        "fourWeeks": "4 semanas",
+        "calculateButton": "Calcular Fechas",
+        "copyButton": "Copiar al Portapapeles",
+        "copiedButton": "¡Copiado!",
+        "sprintNumber": "Sprint",
+        "planningLabel": "Sprint Planning",
+        "reviewLabel": "Sprint Review",
+        "retroLabel": "Sprint Retrospective",
+        "sprintEndLabel": "Fin del Sprint",
+        "dailyStandupsLabel": "Standups Diarios",
+        "weekdaysOnlyNote": "Solo días hábiles (Lun–Vie)"
+      },
+      "faqs": [
+        {
+          "question": "¿Qué ceremonias calcula?",
+          "answer": "Sprint Planning (día 1), Sprint Review (último día), Sprint Retrospective (último día, después de la revisión) y la lista completa de standups diarios (solo días hábiles)."
+        },
+        {
+          "question": "¿Tiene en cuenta los fines de semana?",
+          "answer": "Sí. Las fechas de standup diario omiten sábados y domingos."
+        },
+        {
+          "question": "¿Tiene en cuenta los días festivos?",
+          "answer": "No — los festivos varían por país y región. Revisa las fechas generadas y ajústalas manualmente según la ubicación de tu equipo."
+        },
+        {
+          "question": "¿Puedo exportar las fechas?",
+          "answer": "Haz clic en 'Copiar al Portapapeles' para obtener un resumen formateado que puedes pegar en Confluence, Notion, Slack o en una invitación de calendario."
+        },
+        {
+          "question": "¿Qué duraciones de sprint están disponibles?",
+          "answer": "Sprints de 2, 3 y 4 semanas — las tres cadencias más comunes en equipos Scrum y Kanban."
+        }
+      ]
     }
+  },
+  "percentage": {
+    "metaTitle": "Calculadora de Porcentaje — Calcula %, Qué % es, Variación % | ToolNotch",
+    "metaDescription": "Calculadora de porcentaje gratuita. Calcula qué porcentaje de un número es, encuentra la variación porcentual entre dos valores o calcula un valor a partir de un porcentaje.",
+    "title": "Calculadora de Porcentaje",
+    "description": "Tres calculadoras de porcentaje en una: qué es X% de Y, X es qué % de Y y variación porcentual.",
+    "tabs": {
+      "percentOf": "% de un Número",
+      "whatPercent": "Qué % es",
+      "percentChange": "Variación %"
+    },
+    "percentOf": {
+      "label1": "¿Cuánto es",
+      "label2": "% de",
+      "resultPrefix": "Resultado:"
+    },
+    "whatPercent": {
+      "label1": "¿Qué porcentaje es",
+      "label2": "de",
+      "resultPrefix": "Resultado:"
+    },
+    "percentChange": {
+      "label1": "De",
+      "label2": "A",
+      "resultPrefix": "Variación:",
+      "increase": "aumento",
+      "decrease": "reducción"
+    },
+    "calculate": "Calcular",
+    "clear": "Limpiar",
+    "faqs": [
+      {
+        "question": "¿Cómo calculo X% de un número?",
+        "answer": "Multiplica el número por X y divídelo entre 100. Por ejemplo, 15% de 200 = 200 × 15 ÷ 100 = 30."
+      },
+      {
+        "question": "¿Cómo averiguo qué porcentaje representa un número de otro?",
+        "answer": "Divide el primer número entre el segundo y multiplica por 100. Por ejemplo, 30 es qué % de 200? 30 ÷ 200 × 100 = 15%."
+      },
+      {
+        "question": "¿Cómo calculo la variación porcentual?",
+        "answer": "Resta el valor antiguo al nuevo, divide entre el valor antiguo y multiplica por 100. Fórmula: ((nuevo - antiguo) / antiguo) × 100."
+      },
+      {
+        "question": "¿Cuál es la diferencia entre aumento y reducción porcentual?",
+        "answer": "Un resultado positivo significa que el valor aumentó (aumento porcentual). Un resultado negativo significa que el valor disminuyó (reducción porcentual)."
+      },
+      {
+        "question": "¿Puedo usar decimales?",
+        "answer": "Sí — las tres calculadoras aceptan entradas decimales como 12,5 o 0,75."
+      }
+    ]
   }
 }

@@ -1382,7 +1382,12 @@
       "introvertExtrovertQuiz": { "label": "Introvert or Extrovert?", "desc": "Find out where you fall on the spectrum" },
       "careerQuiz": { "label": "What Career Suits You?", "desc": "Discover your ideal career path" },
       "travelerQuiz": { "label": "What Type of Traveler Are You?", "desc": "Adventurer, explorer, beach lover?" },
-      "retroBoard": { "label": "Retrospective Board", "desc": "Went Well · To Improve · Action Items" }
+      "retroBoard": { "label": "Retrospective Board", "desc": "Went Well · To Improve · Action Items" },
+      "standupGenerator": { "label": "Standup Generator", "desc": "Yesterday · Today · Blockers → ready-to-paste summary" },
+      "planningPoker": { "label": "Planning Poker", "desc": "Fibonacci estimations — reveal all at once" },
+      "userStoryWriter": { "label": "User Story Writer", "desc": "As a [role], I want [feature], so that [benefit]" },
+      "sprintDateCalculator": { "label": "Sprint Date Calculator", "desc": "Start date + sprint length → all ceremony dates" },
+      "percentageCalculator": { "label": "Percentage Calculator", "desc": "% of, what % is, and % change — three calculators in one" }
     }
   },
   "agile": {
@@ -1428,6 +1433,234 @@
           "answer": "Yes — click the thumbs-up icon on any note to vote for it. Voting helps the team dot-vote and prioritize which topics to discuss first."
         }
       ]
+    },
+    "standupGenerator": {
+      "metaTitle": "Daily Standup Generator — Format Yesterday/Today/Blockers | ToolNotch",
+      "metaDescription": "Free standup generator. Enter what you did yesterday, what you're doing today, and any blockers — get a clean, formatted standup summary to paste anywhere.",
+      "title": "Daily Standup Generator",
+      "description": "Format your daily standup in seconds. Fill in yesterday, today, and blockers — get a ready-to-paste summary.",
+      "labels": {
+        "yesterday": "Yesterday",
+        "yesterdayPlaceholder": "What did you complete yesterday?",
+        "today": "Today",
+        "todayPlaceholder": "What are you working on today?",
+        "blockers": "Blockers",
+        "blockersPlaceholder": "Any blockers or impediments? (optional)",
+        "noBlockers": "None",
+        "generateButton": "Generate Standup",
+        "copyButton": "Copy to Clipboard",
+        "copiedButton": "Copied!",
+        "clearButton": "Clear",
+        "outputHeading": "Your Standup",
+        "yesterdayHeading": "Yesterday",
+        "todayHeading": "Today",
+        "blockersHeading": "Blockers"
+      },
+      "faqs": [
+        {
+          "question": "What is a daily standup?",
+          "answer": "A daily standup (or daily scrum) is a short 15-minute ceremony where each team member answers three questions: what they did yesterday, what they plan to do today, and whether there are any blockers."
+        },
+        {
+          "question": "Where can I paste the generated standup?",
+          "answer": "The formatted output is plain text — paste it into Slack, Microsoft Teams, Jira, email, or any communication tool your team uses."
+        },
+        {
+          "question": "Is my standup data stored anywhere?",
+          "answer": "No. Everything you type stays in your browser only. Nothing is sent to any server."
+        },
+        {
+          "question": "Can I save my standup for later?",
+          "answer": "Use the Copy button to paste it anywhere you like — a notes app, your team chat, or a personal journal."
+        },
+        {
+          "question": "What should I put in the Blockers field?",
+          "answer": "Anything preventing you from making progress: waiting on a code review, a dependency that's not ready, unclear requirements, or an external API being down. If there are no blockers, leave it empty — the generator will write 'None' automatically."
+        }
+      ]
+    },
+    "planningPoker": {
+      "metaTitle": "Planning Poker — Free Online Agile Estimation Tool | ToolNotch",
+      "metaDescription": "Free planning poker for agile teams. Choose Fibonacci card values, reveal estimates simultaneously, and build consensus on story points. No login required.",
+      "title": "Planning Poker",
+      "description": "Estimate user stories with Fibonacci cards. Pick your card, then reveal all at once to avoid anchoring bias.",
+      "labels": {
+        "storyLabel": "Story / Task",
+        "storyPlaceholder": "Describe the story or task to estimate…",
+        "pickCardHeading": "Pick your card",
+        "yourPickLabel": "Your pick",
+        "notPickedLabel": "Not picked",
+        "revealButton": "Reveal Cards",
+        "resetButton": "New Round",
+        "consensusLabel": "Consensus",
+        "averageLabel": "Average",
+        "spreadLabel": "Spread",
+        "noConsensusLabel": "Discuss"
+      },
+      "faqs": [
+        {
+          "question": "What is Planning Poker?",
+          "answer": "Planning Poker (or Scrum Poker) is an agile estimation technique where all team members simultaneously reveal their estimate for a story, preventing anchoring bias from early influencers."
+        },
+        {
+          "question": "Why Fibonacci numbers?",
+          "answer": "Fibonacci numbers (1, 2, 3, 5, 8, 13…) reflect the natural uncertainty in estimation — the larger a task, the less precise the estimate. The growing gaps force the team to acknowledge uncertainty."
+        },
+        {
+          "question": "What does the ? card mean?",
+          "answer": "The ? card means 'I don't have enough information to estimate.' It signals that the story needs clarification before the team can commit to a point value."
+        },
+        {
+          "question": "What does ∞ mean?",
+          "answer": "∞ (infinity) means the story is too large or too vague to estimate as-is. It should be broken down into smaller stories before the next sprint."
+        },
+        {
+          "question": "Is this a multiplayer tool?",
+          "answer": "This version is single-player — useful for a facilitator to collect votes verbally or in a shared screen session. Each team member picks their card, the facilitator records the consensus."
+        }
+      ]
+    },
+    "userStoryWriter": {
+      "metaTitle": "User Story Writer — As a [Role] I Want [Feature] | ToolNotch",
+      "metaDescription": "Free user story generator. Fill in role, feature, and benefit to generate a properly formatted Agile user story with acceptance criteria. No login required.",
+      "title": "User Story Writer",
+      "description": "Generate properly formatted user stories with acceptance criteria in seconds.",
+      "labels": {
+        "roleLabel": "Role / Persona",
+        "rolePlaceholder": "e.g. logged-in user, admin, guest",
+        "featureLabel": "Feature / Action",
+        "featurePlaceholder": "e.g. reset my password via email",
+        "benefitLabel": "Benefit / Goal",
+        "benefitPlaceholder": "e.g. regain access to my account without contacting support",
+        "criteriaLabel": "Acceptance Criteria",
+        "criteriaPlaceholder": "One criterion per line, e.g.\nGiven I am on the login page\nWhen I click Forgot Password\nThen I receive an email within 1 minute",
+        "generateButton": "Generate Story",
+        "copyButton": "Copy to Clipboard",
+        "copiedButton": "Copied!",
+        "clearButton": "Clear",
+        "outputHeading": "User Story",
+        "storyLabel": "Story",
+        "acceptanceCriteriaLabel": "Acceptance Criteria"
+      },
+      "faqs": [
+        {
+          "question": "What is a user story?",
+          "answer": "A user story is a short, plain-language description of a feature from the perspective of the end user. The standard format is: As a [role], I want [feature], so that [benefit]."
+        },
+        {
+          "question": "What are acceptance criteria?",
+          "answer": "Acceptance criteria define the specific conditions that must be met for a story to be considered done. They're usually written in Given/When/Then format (Gherkin) or as a simple bulleted list."
+        },
+        {
+          "question": "Where can I use this output?",
+          "answer": "Paste generated stories directly into Jira, Linear, GitHub Issues, Trello, Azure DevOps, or any project management tool."
+        },
+        {
+          "question": "Is the data stored anywhere?",
+          "answer": "No. Everything stays in your browser. Nothing is sent to any server."
+        },
+        {
+          "question": "Can I generate multiple stories at once?",
+          "answer": "Generate one story at a time, copy it, then clear the form and generate the next. Each story gets its own clean output."
+        }
+      ]
+    },
+    "sprintDateCalculator": {
+      "metaTitle": "Sprint Date Calculator — Plan All Ceremony Dates | ToolNotch",
+      "metaDescription": "Free sprint date calculator. Enter sprint start date and length to instantly get all ceremony dates: planning, daily standups, review, and retrospective.",
+      "title": "Sprint Date Calculator",
+      "description": "Enter your sprint start date and length — get all ceremony dates instantly.",
+      "labels": {
+        "startDateLabel": "Sprint Start Date",
+        "sprintLengthLabel": "Sprint Length",
+        "twoWeeks": "2 weeks",
+        "threeWeeks": "3 weeks",
+        "fourWeeks": "4 weeks",
+        "calculateButton": "Calculate Dates",
+        "copyButton": "Copy to Clipboard",
+        "copiedButton": "Copied!",
+        "sprintNumber": "Sprint",
+        "planningLabel": "Sprint Planning",
+        "reviewLabel": "Sprint Review",
+        "retroLabel": "Sprint Retrospective",
+        "sprintEndLabel": "Sprint End",
+        "dailyStandupsLabel": "Daily Standups",
+        "weekdaysOnlyNote": "Weekdays only (Mon–Fri)"
+      },
+      "faqs": [
+        {
+          "question": "What ceremonies does this calculate?",
+          "answer": "Sprint Planning (day 1), Sprint Review (last day), Sprint Retrospective (last day, after review), and the full list of daily standup dates (weekdays only)."
+        },
+        {
+          "question": "Does it account for weekends?",
+          "answer": "Yes. Daily standup dates skip Saturdays and Sundays. Sprint start is whatever date you choose — if you pick a weekend, the first standup will be the following Monday."
+        },
+        {
+          "question": "Does it account for public holidays?",
+          "answer": "No — holidays vary by country and region. Review the generated dates and adjust manually for your team's location."
+        },
+        {
+          "question": "Can I export the dates?",
+          "answer": "Click 'Copy to Clipboard' to get a formatted text summary you can paste into Confluence, Notion, Slack, or a calendar invite."
+        },
+        {
+          "question": "What sprint lengths are supported?",
+          "answer": "2-week, 3-week, and 4-week sprints — the three most common cadences in Scrum and Kanban teams."
+        }
+      ]
     }
+  },
+  "percentage": {
+    "metaTitle": "Percentage Calculator — Find %, What % of, % Change | ToolNotch",
+    "metaDescription": "Free percentage calculator. Calculate what percent of a number is, find the percentage change between two values, or work out a value from a percentage.",
+    "title": "Percentage Calculator",
+    "description": "Three percentage calculators in one: what is X% of Y, X is what % of Y, and percentage change.",
+    "tabs": {
+      "percentOf": "% of Number",
+      "whatPercent": "What % is",
+      "percentChange": "% Change"
+    },
+    "percentOf": {
+      "label1": "What is",
+      "label2": "% of",
+      "resultPrefix": "Result:"
+    },
+    "whatPercent": {
+      "label1": "What percent is",
+      "label2": "of",
+      "resultPrefix": "Result:"
+    },
+    "percentChange": {
+      "label1": "From",
+      "label2": "To",
+      "resultPrefix": "Change:",
+      "increase": "increase",
+      "decrease": "decrease"
+    },
+    "calculate": "Calculate",
+    "clear": "Clear",
+    "faqs": [
+      {
+        "question": "How do I calculate X% of a number?",
+        "answer": "Multiply the number by X and divide by 100. For example, 15% of 200 = 200 × 15 ÷ 100 = 30."
+      },
+      {
+        "question": "How do I find what percentage one number is of another?",
+        "answer": "Divide the first number by the second, then multiply by 100. For example, 30 is what percent of 200? 30 ÷ 200 × 100 = 15%."
+      },
+      {
+        "question": "How do I calculate percentage change?",
+        "answer": "Subtract the old value from the new value, divide by the old value, and multiply by 100. Formula: ((new - old) / old) × 100."
+      },
+      {
+        "question": "What is the difference between percentage increase and decrease?",
+        "answer": "A positive result means the value increased (percentage increase). A negative result means the value decreased (percentage decrease)."
+      },
+      {
+        "question": "Can I use decimals?",
+        "answer": "Yes — all three calculators accept decimal inputs like 12.5 or 0.75."
+      }
+    ]
   }
 }

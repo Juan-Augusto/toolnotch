@@ -17,14 +17,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const TOOLS = [
   { href: '/tools/agile/retro-board', label: 'Retrospective Board', desc: '3-column sprint retro board — Went Well, To Improve, Action Items.' },
+  { href: '/tools/agile/standup-generator', label: 'Standup Generator', desc: 'Yesterday / Today / Blockers → formatted summary ready to paste.' },
+  { href: '/tools/agile/planning-poker', label: 'Planning Poker', desc: 'Fibonacci card estimations — pick your card, reveal all at once.' },
+  { href: '/tools/agile/user-story-writer', label: 'User Story Writer', desc: 'As a [role], I want [feature], so that [benefit] — with acceptance criteria.' },
+  { href: '/tools/agile/sprint-date-calculator', label: 'Sprint Date Calculator', desc: 'Input start date + sprint length → all ceremony dates.' },
 ]
 
-const COMING_SOON = [
-  { label: 'Planning Poker', desc: 'Fibonacci card estimations — reveal all at once.' },
-  { label: 'User Story Writer', desc: 'As a [role], I want [feature], so that [benefit].' },
-  { label: 'Sprint Date Calculator', desc: 'Input start date + sprint length → all ceremony dates.' },
-  { label: 'Standup Generator', desc: 'Yesterday / Today / Blockers → formatted summary.' },
-]
+const COMING_SOON: { label: string; desc: string }[] = []
 
 export default async function AgileToolsHubPage({ params }: Props) {
   await params
@@ -48,18 +47,20 @@ export default async function AgileToolsHubPage({ params }: Props) {
           ))}
         </div>
 
-        <div className="mt-8">
-          <h2 className="text-lg font-semibold text-gray-500 mb-4 uppercase tracking-wide text-sm">Coming soon</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {COMING_SOON.map(tool => (
-              <div key={tool.label}
-                className="bg-white rounded-xl border border-dashed border-gray-200 p-5 opacity-60">
-                <h2 className="font-bold text-gray-700 mb-1">{tool.label}</h2>
-                <p className="text-sm text-gray-400">{tool.desc}</p>
-              </div>
-            ))}
+        {COMING_SOON.length > 0 && (
+          <div className="mt-8">
+            <h2 className="text-lg font-semibold text-gray-500 mb-4 uppercase tracking-wide text-sm">Coming soon</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {COMING_SOON.map(tool => (
+                <div key={tool.label}
+                  className="bg-white rounded-xl border border-dashed border-gray-200 p-5 opacity-60">
+                  <h2 className="font-bold text-gray-700 mb-1">{tool.label}</h2>
+                  <p className="text-sm text-gray-400">{tool.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </main>
   )

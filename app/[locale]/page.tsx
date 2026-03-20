@@ -68,6 +68,7 @@ export default async function HomePage({ params }: Props) {
       items: [
         { href: '/tools/convert/unit-converter', label: t('tools.unitConverter.label'), desc: t('tools.unitConverter.desc') },
         { href: '/tools/convert/currency-converter', label: t('tools.currencyConverter.label'), desc: t('tools.currencyConverter.desc') },
+        { href: '/tools/convert/percentage-calculator', label: t('tools.percentageCalculator.label'), desc: t('tools.percentageCalculator.desc') },
         { href: '/tools/convert/meters-to-feet', label: t('tools.metersToFeet.label'), desc: t('tools.metersToFeet.desc') },
         { href: '/tools/convert/celsius-to-fahrenheit', label: t('tools.celsiusToFahrenheit.label'), desc: t('tools.celsiusToFahrenheit.desc') },
         { href: '/tools/convert/kilograms-to-pounds', label: t('tools.kgToPounds.label'), desc: t('tools.kgToPounds.desc') },
@@ -117,6 +118,10 @@ export default async function HomePage({ params }: Props) {
       color: 'violet',
       items: [
         { href: '/tools/agile/retro-board', label: t('tools.retroBoard.label'), desc: t('tools.retroBoard.desc') },
+        { href: '/tools/agile/standup-generator', label: t('tools.standupGenerator.label'), desc: t('tools.standupGenerator.desc') },
+        { href: '/tools/agile/planning-poker', label: t('tools.planningPoker.label'), desc: t('tools.planningPoker.desc') },
+        { href: '/tools/agile/user-story-writer', label: t('tools.userStoryWriter.label'), desc: t('tools.userStoryWriter.desc') },
+        { href: '/tools/agile/sprint-date-calculator', label: t('tools.sprintDateCalculator.label'), desc: t('tools.sprintDateCalculator.desc') },
       ],
     },
     {
