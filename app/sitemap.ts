@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { conversionPages } from '@/data/conversionPages'
 import { COMMON_PAIRS } from '@/data/conversionPairs'
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com'
+const BASE_URL = (process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com').trim()
 
 const ALL_ROUTES = [
   // Legal
