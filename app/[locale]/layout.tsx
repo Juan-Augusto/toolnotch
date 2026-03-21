@@ -51,6 +51,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: { default: t('title'), template: '%s | ToolNotch' },
     description: t('description'),
     metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com'),
+    verification: {
+      google: 'KZPRFQz0pmw9A9PZwfQAY28HraEVlFVLOasRo26sD9k',
+    },
     openGraph: {
       siteName: 'ToolNotch',
       type: 'website',
