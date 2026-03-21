@@ -8,10 +8,14 @@
     "free": "Free"
   },
   "toolWrapper": {
-    "breadcrumb": { "home": "Home" },
+    "breadcrumb": {
+      "home": "Home"
+    },
     "allTools": "All tools"
   },
-  "faqSection": { "heading": "Frequently Asked Questions" },
+  "faqSection": {
+    "heading": "Frequently Asked Questions"
+  },
   "image": {
     "compressor": {
       "metaTitle": "Compress Image Online Free — No Signup Required",
@@ -43,6 +47,34 @@
         {
           "question": "Can I resize the image while compressing?",
           "answer": "Yes — enter a max width in pixels and the image will be scaled down proportionally before compression. Leave it blank to keep the original dimensions."
+        },
+        {
+          "question": "What image formats can I compress?",
+          "answer": "You can compress and convert between JPG, PNG, WebP, and AVIF. The tool accepts any image format your browser supports as input, including GIF and BMP."
+        },
+        {
+          "question": "How much will my image be compressed?",
+          "answer": "Most JPEG and WebP photos compress by 50–90% at a quality setting of 75–85 without visible quality loss. PNG files with flat colours or transparency may compress less. Always preview the result before downloading."
+        },
+        {
+          "question": "Will compression affect image quality?",
+          "answer": "At quality settings of 75–85%, compression is typically imperceptible to the human eye for photos. Use the before/after slider to compare the original and compressed versions side by side before deciding to download."
+        },
+        {
+          "question": "What is lossy vs lossless compression?",
+          "answer": "Lossy compression (used by JPEG and WebP) permanently removes some image data to achieve smaller file sizes, but the reduction is usually invisible at moderate quality settings. Lossless compression (used by PNG) reduces file size without discarding any data, but typically achieves less size reduction on photos."
+        },
+        {
+          "question": "Can I compress multiple images at once?",
+          "answer": "Currently the tool compresses one image at a time. Compress the first image, download it, then load the next one. This keeps processing fast and ensures you can preview each result."
+        },
+        {
+          "question": "What's the maximum file size supported?",
+          "answer": "We recommend images under 20MB for best performance. Larger images may be slow to process depending on your device and browser. The tool imposes no strict server-side limit since all processing is local."
+        },
+        {
+          "question": "Is my image uploaded to a server?",
+          "answer": "No. All image processing happens entirely in your browser using the Canvas API. Your images never leave your device and are not stored or transmitted anywhere."
         }
       ]
     },
@@ -52,7 +84,9 @@
         "hint": "or click to browse · JPG, PNG, WebP, AVIF supported",
         "replace": "Click or drop to replace"
       },
-      "format": { "label": "Output Format" },
+      "format": {
+        "label": "Output Format"
+      },
       "quality": {
         "label": "Quality",
         "smaller": "Smaller file",
@@ -72,7 +106,9 @@
         "noSavings": "File size unchanged or increased — try a lower quality or different format",
         "dragHint": "Drag the handle to compare original vs compressed"
       },
-      "download": { "label": "Download Compressed Image" }
+      "download": {
+        "label": "Download Compressed Image"
+      }
     }
   },
   "pdf": {
@@ -80,7 +116,7 @@
       "metaTitle": "Merge PDF Files Free — Combine PDFs Online | ToolNotch",
       "metaDescription": "Merge multiple PDF files into one document online. Free, no upload, runs entirely in your browser. Drag to reorder pages.",
       "title": "Merge PDF Files Free",
-      "description": "Combine multiple PDFs into one. Drag to reorder pages. No upload required.",
+      "description": "Combine multiple PDFs into one. Drag to reorder pages. No upload required. Perfect for combining reports, contracts, or presentation slides into a single shareable file.",
       "dropZone": {
         "label": "Click or drag PDF files here",
         "hint": "Multiple files supported"
@@ -110,6 +146,26 @@
         {
           "question": "Can I merge password-protected PDFs?",
           "answer": "Password-protected PDFs cannot be merged. Remove the password protection first using your PDF viewer."
+        },
+        {
+          "question": "Does merging PDFs reduce quality?",
+          "answer": "No. This tool combines PDFs at the structural level, so images, fonts, and formatting are preserved exactly as they were in the original files."
+        },
+        {
+          "question": "Can I reorder pages before merging?",
+          "answer": "Yes — drag the file cards into the order you want before clicking Merge. The merged PDF will follow exactly the order you set."
+        },
+        {
+          "question": "What browsers support this tool?",
+          "answer": "The merge tool works in all modern browsers including Chrome, Firefox, Safari, and Edge on both desktop and mobile devices."
+        },
+        {
+          "question": "Is my data private when using this tool?",
+          "answer": "Yes. All merging happens entirely in your browser using JavaScript. Your PDF files are never sent to any server and are deleted from memory as soon as you close or refresh the page."
+        },
+        {
+          "question": "How many files can I merge at once?",
+          "answer": "There is no hard limit on the number of files. You can merge two files or twenty — though very large combinations may be slower depending on your device's memory."
         }
       ]
     },
@@ -117,7 +173,7 @@
       "metaTitle": "Split PDF Online Free — Extract Pages | ToolNotch",
       "metaDescription": "Split a PDF into multiple files by page range. Free, no upload, runs entirely in your browser.",
       "title": "Split PDF Online Free",
-      "description": "Extract pages or split a PDF into multiple files. No upload needed.",
+      "description": "Extract pages or split a PDF into multiple files. No upload needed. Ideal for extracting specific chapters, invoices, or pages from a large document.",
       "dropZone": {
         "label": "Click or drag a PDF here",
         "hint": "Single PDF file"
@@ -153,6 +209,30 @@
         {
           "question": "How do I know how many pages my PDF has?",
           "answer": "Open the PDF in any viewer (like your browser or Adobe Reader) to see the total page count."
+        },
+        {
+          "question": "Can I split by page ranges?",
+          "answer": "Yes — enter your ranges in the page ranges field (e.g. 1-3, 4-6, 7) and each range will be saved as a separate PDF file inside a ZIP archive."
+        },
+        {
+          "question": "What happens to the original file?",
+          "answer": "Your original file is not modified. The tool reads it to create new split files, and your original PDF remains unchanged on your device."
+        },
+        {
+          "question": "How many pages can I split at once?",
+          "answer": "There is no page limit. You can split a 2-page or a 500-page PDF — though larger files may take a few seconds to process."
+        },
+        {
+          "question": "Can I split a password-protected PDF?",
+          "answer": "No. Password-protected PDFs cannot be read by the tool. Remove the password protection first in your PDF viewer, then split the unlocked file."
+        },
+        {
+          "question": "Will splitting reduce image quality?",
+          "answer": "No. Splitting only reorganises the pages into separate files. Images, text, and formatting within each page are completely preserved."
+        },
+        {
+          "question": "Is this tool free forever?",
+          "answer": "Yes. ToolNotch is entirely free with no subscriptions, no usage limits, and no watermarks on your output files."
         }
       ]
     },
@@ -160,7 +240,7 @@
       "metaTitle": "Compress PDF Online Free — Reduce File Size | ToolNotch",
       "metaDescription": "Reduce PDF file size without quality loss. Runs entirely in your browser — no upload required.",
       "title": "Compress PDF Online Free",
-      "description": "Reduce PDF file size without quality loss. Runs in your browser.",
+      "description": "Reduce PDF file size without quality loss. Runs in your browser. Great for reducing PDF file sizes before emailing, uploading to portals, or storing in the cloud.",
       "dropZone": {
         "label": "Click or drag a PDF here",
         "hint": "Single PDF file"
@@ -197,6 +277,30 @@
         {
           "question": "Is my file uploaded anywhere?",
           "answer": "No. Compression runs entirely in your browser. Your file never leaves your device."
+        },
+        {
+          "question": "How much can I reduce a PDF file size?",
+          "answer": "Results vary depending on the PDF. Files with lots of redundant metadata or unoptimised object streams can shrink by 20–50%. Already-optimised PDFs may see little or no reduction."
+        },
+        {
+          "question": "Will compression affect text quality?",
+          "answer": "No. This tool compresses the PDF document structure, not the text or fonts embedded inside it. All text remains fully readable and searchable after compression."
+        },
+        {
+          "question": "What causes PDFs to be large?",
+          "answer": "The most common causes are high-resolution embedded images, unoptimised object streams, embedded fonts, and redundant metadata. Image-heavy PDFs tend to have the most room for size reduction."
+        },
+        {
+          "question": "Is there a maximum file size?",
+          "answer": "There is no strict limit, but very large files (100MB+) may be slow to process depending on your browser and device memory. We recommend files under 50MB for best performance."
+        },
+        {
+          "question": "Can I compress multiple PDFs at once?",
+          "answer": "Currently the tool compresses one file at a time. Compress the first file, download it, then upload the next one."
+        },
+        {
+          "question": "How is this different from zipping a file?",
+          "answer": "Zipping creates a compressed archive container but does not reduce the internal size of the PDF itself. PDF compression reduces the size of the file's internal structure, so the resulting PDF is smaller even without a ZIP wrapper — making it easier to email directly."
         }
       ]
     },
@@ -204,7 +308,7 @@
       "metaTitle": "PDF to JPG — Convert PDF Pages to Images Free | ToolNotch",
       "metaDescription": "Convert each PDF page to a high-quality JPEG image. Free, no upload, runs entirely in your browser.",
       "title": "PDF to JPG — Convert PDF Pages to Images",
-      "description": "Convert each PDF page to a high-quality JPEG image. No upload needed.",
+      "description": "Convert each PDF page to a high-quality JPEG image. No upload needed. Useful for creating image previews of documents, sharing pages on social media, or embedding PDF content in presentations.",
       "dropZone": {
         "label": "Click or drag a PDF here",
         "hint": "Single PDF file"
@@ -239,6 +343,30 @@
         {
           "question": "How do I open the ZIP file?",
           "answer": "On Windows, right-click the ZIP and choose Extract All. On Mac, double-click it. Each page is a separate JPEG."
+        },
+        {
+          "question": "What image resolution will the JPGs be?",
+          "answer": "Pages are rendered at 2x resolution using PDF.js, which produces sharp, high-quality images suitable for screen viewing and presentations. The exact pixel dimensions depend on the original page size."
+        },
+        {
+          "question": "Can I convert specific pages only?",
+          "answer": "Currently all pages are converted and delivered in a ZIP file. You can then keep only the individual page images you need and discard the rest."
+        },
+        {
+          "question": "Will text remain readable in the JPG?",
+          "answer": "Yes. Pages are rendered at 2x resolution, so text remains sharp and legible in the output images. For very small font sizes, zooming in on the JPG will show the text clearly."
+        },
+        {
+          "question": "Is JPG the best format for PDF conversion?",
+          "answer": "JPG is the best format for PDFs that contain photos or complex graphics. For PDFs with mostly text or diagrams on a white background, PNG would give sharper edges — but JPG is the most universally compatible choice."
+        },
+        {
+          "question": "How large will the output files be?",
+          "answer": "Each converted page is typically 200KB–1MB as a JPEG, depending on page complexity and image content. A 10-page PDF would typically produce a ZIP of 2–10MB."
+        },
+        {
+          "question": "Can I convert a scanned PDF to JPG?",
+          "answer": "Yes. Scanned PDFs are essentially images embedded in a PDF container, and they convert to JPG just like any other PDF page. The output quality matches the resolution of the original scan."
         }
       ]
     },
@@ -246,7 +374,7 @@
       "metaTitle": "JPG to PDF — Convert Images to PDF Free | ToolNotch",
       "metaDescription": "Turn JPEG or PNG images into a PDF. Drag to reorder pages. Free, no upload, runs entirely in your browser.",
       "title": "JPG to PDF — Convert Images to PDF",
-      "description": "Turn JPEG or PNG images into a PDF. Drag to reorder. No upload needed.",
+      "description": "Turn JPEG or PNG images into a PDF. Drag to reorder. No upload needed. Perfect for scanning physical documents, creating photo albums, or packaging images for professional sharing.",
       "dropZone": {
         "label": "Click or drag images here",
         "hint": "JPEG or PNG — multiple files supported"
@@ -276,6 +404,30 @@
         {
           "question": "What size will the PDF pages be?",
           "answer": "Each page matches the dimensions of the corresponding image, so your images are never scaled or cropped."
+        },
+        {
+          "question": "What image formats are supported?",
+          "answer": "JPEG and PNG are fully supported. Each image becomes one page in the resulting PDF, and the page dimensions match the original image size."
+        },
+        {
+          "question": "Can I set the page size?",
+          "answer": "Page dimensions are automatically set to match each image. This ensures images are never scaled, stretched, or cropped — every pixel of your original image is preserved."
+        },
+        {
+          "question": "Will the image quality be preserved?",
+          "answer": "Yes. The tool embeds your original image data directly into the PDF without re-encoding, so there is no quality loss during the conversion process."
+        },
+        {
+          "question": "Can I add multiple images to one PDF?",
+          "answer": "Yes — that is the primary use case. Add as many images as you like and each one will become its own page in the final PDF document."
+        },
+        {
+          "question": "How do I reorder images before converting?",
+          "answer": "Drag the image thumbnails into the order you want before clicking Convert. The PDF pages will follow the exact order you set."
+        },
+        {
+          "question": "Is there a limit on number of images?",
+          "answer": "There is no hard limit. You can combine two images or fifty into a single PDF. Very large batches may take a few extra seconds depending on your device."
         }
       ]
     }
@@ -288,12 +440,28 @@
       "description": "Convert between 200+ units across 9 categories. Instant, accurate, no sign-up.",
       "faqs": [
         {
-          "question": "How many units are supported?",
-          "answer": "Over 200 units across 9 categories: length, weight, temperature, area, volume, speed, time, digital storage, and pressure."
+          "question": "What unit categories are supported?",
+          "answer": "The unit converter supports 9 categories: length (millimetres to light-years), weight/mass (milligrams to metric tonnes), temperature (Celsius, Fahrenheit, Kelvin, Rankine), area (square millimetres to square miles), volume (millilitres to cubic metres and gallons), speed (metres per second to knots and light speed), time (milliseconds to years), digital storage (bits to petabytes), and pressure (pascals to atmospheres and psi)."
         },
         {
           "question": "How accurate are the conversions?",
-          "answer": "Conversions use precise factor-based math with up to 8 significant figures of precision. Results are rounded for display only."
+          "answer": "All conversions use precise factor-based mathematics derived from official SI definitions. Results are calculated with up to 8 significant figures of precision and rounded only for display. For everyday use, the accuracy is equivalent to professional scientific calculators."
+        },
+        {
+          "question": "Can I convert temperature from Fahrenheit to Celsius?",
+          "answer": "Yes — select the Temperature category, set From to Fahrenheit and To to Celsius, then enter your value. The formula used is °C = (°F − 32) × 5/9. For example, 98.6°F = 37°C. You can also convert to Kelvin (K = °C + 273.15) or Rankine from the same screen."
+        },
+        {
+          "question": "What is the difference between fluid ounces and ounces?",
+          "answer": "Fluid ounces (fl oz) measure volume and are used for liquids — for example, a can of soda contains 12 fl oz. Ounces (oz) measure weight or mass. The two units are in different categories: fluid ounces are under Volume and ounces are under Weight. One fluid ounce of water weighs approximately 1.043 ounces, but this varies by the density of the liquid being measured."
+        },
+        {
+          "question": "Does the converter support scientific notation?",
+          "answer": "You can enter standard decimal numbers and the tool will handle very large or very small values correctly. Results for very large or very small conversions are displayed in standard decimal form where practical. For values in scientific notation, enter the equivalent decimal value (e.g. enter 0.000001 for 1×10⁻⁶)."
+        },
+        {
+          "question": "How many units are supported?",
+          "answer": "Over 200 units across 9 categories: length, weight, temperature, area, volume, speed, time, digital storage, and pressure."
         },
         {
           "question": "Why is temperature different from other categories?",
@@ -321,16 +489,36 @@
       "ratesFooter": "Rates from open.er-api.com · Cached for 1 hour · For reference only",
       "faqs": [
         {
+          "question": "How often are exchange rates updated?",
+          "answer": "Exchange rates are fetched from open.er-api.com, a public currency data API. The API updates rates approximately every hour. Your browser also caches the most recently fetched rates for up to 1 hour, so the rates you see are refreshed at least once per hour when you are online. A warning banner is displayed if fresh rates could not be retrieved."
+        },
+        {
+          "question": "What currencies are supported?",
+          "answer": "The converter supports over 150 world currencies, including all major currencies (USD, EUR, GBP, JPY, AUD, CAD, CHF, CNY, INR, MXN) as well as a broad range of emerging market and smaller national currencies. The full list is available in the currency dropdown."
+        },
+        {
+          "question": "Can I use historical exchange rates?",
+          "answer": "This converter shows current live rates only and does not currently provide access to historical exchange rate data. For historical rates, resources such as OANDA, XE.com, or the European Central Bank's Statistical Data Warehouse provide free historical exchange rate databases."
+        },
+        {
+          "question": "Why do currency rates fluctuate?",
+          "answer": "Exchange rates fluctuate continuously based on supply and demand in global foreign exchange (forex) markets, which trade over $7 trillion per day. Key drivers include interest rate decisions by central banks, inflation data, economic growth indicators, trade balances, and geopolitical events. Major rate announcements — such as US Federal Reserve or European Central Bank decisions — can cause significant short-term fluctuations."
+        },
+        {
+          "question": "Is there a fee for using this currency converter?",
+          "answer": "No — this tool is completely free with no subscription, no sign-up, and no per-use charges. The exchange rates shown are mid-market reference rates. When you exchange money at a bank, bureau de change, or payment service, they will typically apply a spread or fee on top of the mid-market rate."
+        },
+        {
+          "question": "How accurate are the exchange rates?",
+          "answer": "The rates are mid-market rates sourced from open.er-api.com and are suitable for reference and estimation purposes. They do not include bank spreads, transaction fees, or the rates offered by specific financial institutions. For actual currency exchange or international money transfers, always confirm the rate and total cost with your bank or exchange service."
+        },
+        {
           "question": "Where do the exchange rates come from?",
           "answer": "Exchange rates are fetched from open.er-api.com, a free public API. Rates are refreshed approximately every hour."
         },
         {
           "question": "How current are the rates?",
           "answer": "Rates are updated approximately every hour and cached in your browser for 1 hour. A warning is shown if cached rates may be stale."
-        },
-        {
-          "question": "How many currencies are supported?",
-          "answer": "Over 150 currencies from around the world, including all major currencies and many emerging market currencies."
         },
         {
           "question": "Can I use this for financial transactions?",
@@ -361,12 +549,40 @@
       "metaTitle": "Word Counter — Count Words, Characters & Readability | ToolNotch",
       "metaDescription": "Free online word counter. Count words, characters, sentences, and get Flesch readability scores in real time. No sign-up required.",
       "title": "Word Counter",
-      "description": "Count words, characters, sentences, and check readability in real time. Paste your text below.",
+      "description": "Count words, characters, sentences, and check readability in real time. Paste your text below — results update instantly as you type.",
       "placeholder": "Paste or type your text here…",
       "faqs": [
         {
           "question": "How does the word counter count words?",
           "answer": "Words are counted by splitting text on whitespace (spaces, tabs, newlines) and filtering out empty strings. Hyphenated words like 'well-being' count as one word."
+        },
+        {
+          "question": "Does this tool count spaces?",
+          "answer": "The word counter does not count spaces as words — it counts words by splitting on whitespace. The character counter provides two separate counts: one including spaces and one excluding them, so you can use whichever figure is relevant to your use case."
+        },
+        {
+          "question": "Can I count words in multiple languages?",
+          "answer": "Yes — the word counter works with any language that uses spaces to separate words, including Spanish, French, German, Portuguese, and most European languages. For languages that do not use spaces (such as Chinese, Japanese, or Thai), word boundaries differ and the count may not reflect traditional word counts for those scripts."
+        },
+        {
+          "question": "What is the ideal word count for a blog post?",
+          "answer": "Most SEO research suggests that long-form blog posts of 1,500–2,500 words tend to rank better in search results because they cover topics in greater depth. However, the right length depends on your topic and audience — a quick how-to guide may only need 600–800 words, while a comprehensive guide might exceed 3,000 words. Quality and relevance matter more than hitting an arbitrary word count target."
+        },
+        {
+          "question": "Does the word counter include headings?",
+          "answer": "Yes — the word counter counts all text you paste or type, including headings, subheadings, and titles. If you want to count only the body text, paste just that portion of your content without the headings."
+        },
+        {
+          "question": "How is word count different from character count?",
+          "answer": "Word count measures the number of distinct words separated by spaces or line breaks, treating 'running' and 'run' as two different words of one count each. Character count measures every individual character — letters, numbers, punctuation marks, and spaces — making it the relevant metric for platforms that impose character limits rather than word limits."
+        },
+        {
+          "question": "Can I paste text directly into the word counter?",
+          "answer": "Yes — simply click inside the text area and paste your content using Ctrl+V (Windows) or Cmd+V (Mac). The counts update instantly as soon as text appears. You can also type directly into the box or use the Sample Text button to load example content."
+        },
+        {
+          "question": "Does punctuation affect the word count?",
+          "answer": "Punctuation marks attached to words (such as commas, periods, or quotation marks) do not create extra word counts — they are treated as part of the surrounding word. Standalone punctuation characters or symbols separated by spaces would be counted as a token, but this is uncommon in normal writing."
         },
         {
           "question": "What does the Flesch Reading Ease score mean?",
@@ -405,12 +621,28 @@
       "description": "Count characters with and without spaces. Perfect for Twitter posts, meta descriptions, and any text with character limits.",
       "faqs": [
         {
-          "question": "How many characters does Twitter allow?",
-          "answer": "Twitter/X allows 280 characters per post. SMS messages are typically limited to 160 characters. LinkedIn posts allow up to 3,000 characters."
+          "question": "Does the character counter include spaces?",
+          "answer": "Yes — the 'Characters' stat includes spaces. 'Characters (no spaces)' shows the count with all spaces removed. Both figures are shown side by side so you can use whichever is relevant to your platform."
         },
         {
-          "question": "Does the character counter include spaces?",
-          "answer": "Yes — the 'Characters' stat includes spaces. 'Characters (no spaces)' shows the count with all spaces removed."
+          "question": "What is the character limit for Twitter/X?",
+          "answer": "Twitter/X allows 280 characters per post for standard accounts. SMS messages are typically limited to 160 characters per segment. LinkedIn posts allow up to 3,000 characters, and Instagram captions allow up to 2,200 characters."
+        },
+        {
+          "question": "Why does character count matter for SEO meta descriptions?",
+          "answer": "Google typically displays 155–160 characters of a meta description in search results before truncating with an ellipsis. A meta description that is cut off mid-sentence looks unprofessional and reduces click-through rates. Keeping your meta description between 140 and 155 characters ensures it displays in full on both desktop and mobile search results."
+        },
+        {
+          "question": "What is the difference between character count and byte count?",
+          "answer": "Character count measures how many characters (letters, numbers, symbols, spaces) are in a string. Byte count measures how many bytes are needed to store the string in memory, which can differ for multi-byte characters. For standard ASCII English text, one character equals one byte. For characters outside the basic Latin alphabet — such as accented letters, Chinese characters, or emoji — each character may require 2 to 4 bytes in UTF-8 encoding. Most social media platforms and databases enforce byte-based limits, not character-based ones."
+        },
+        {
+          "question": "How do emojis affect character count?",
+          "answer": "Most emoji count as one or two characters in terms of Unicode code points, but their byte representation in UTF-8 is typically 4 bytes each. On platforms like Twitter/X, most emoji count as 2 characters toward the 280-character limit due to how the platform handles UTF-16 encoding. When writing emoji-heavy content, always paste your text into the character counter and verify the total before publishing."
+        },
+        {
+          "question": "How many characters does a tweet allow?",
+          "answer": "Twitter/X allows 280 characters per post. URLs in tweets are automatically shortened to 23 characters regardless of their actual length, and most emoji count as 2 characters."
         },
         {
           "question": "Is my text stored anywhere?",
@@ -419,6 +651,10 @@
         {
           "question": "What is the character limit for a meta description?",
           "answer": "Google typically displays 155–160 characters of a meta description in search results. Keep them between 140–155 characters for best results."
+        },
+        {
+          "question": "What character limit should I use for email subject lines?",
+          "answer": "Most email clients display 40–60 characters of a subject line before truncating on desktop, and as few as 30–40 characters on mobile devices. Keeping subject lines under 50 characters ensures they display in full across most email clients and devices, improving open rates."
         }
       ]
     },
@@ -446,8 +682,36 @@
       "metaTitle": "Readability Checker — Flesch Score & Reading Level | ToolNotch",
       "metaDescription": "Free readability checker. Get Flesch Reading Ease score, Flesch-Kincaid Grade Level, and Gunning Fog Index for any text. Improve your writing clarity.",
       "title": "Readability Checker",
-      "description": "Check your text's reading level with Flesch Reading Ease, Flesch-Kincaid Grade, and Gunning Fog scores.",
+      "description": "Check your text's reading level with Flesch Reading Ease, Flesch-Kincaid Grade, and Gunning Fog scores. Paste your text below and get instant readability analysis.",
       "faqs": [
+        {
+          "question": "What is the Flesch-Kincaid readability score?",
+          "answer": "The Flesch-Kincaid formula actually produces two related scores: the Flesch Reading Ease score (0–100 scale, where higher means easier) and the Flesch-Kincaid Grade Level (US school grade equivalent). Both are calculated using average sentence length and average number of syllables per word. They were developed by Rudolf Flesch and J. Peter Kincaid and are among the most widely used readability metrics in academic research, publishing, and content marketing."
+        },
+        {
+          "question": "What is a good readability score for a blog?",
+          "answer": "For most blog content targeting a general adult audience, aim for a Flesch Reading Ease score between 60 and 70 and a Flesch-Kincaid Grade Level of 7–9. These ranges correspond to content that a high school student can read comfortably. If your blog targets a professional or academic audience, a lower Flesch score (more complex) may be appropriate. For content aimed at children or broad consumer audiences, target a score above 70."
+        },
+        {
+          "question": "How does sentence length affect readability?",
+          "answer": "Sentence length is one of the two primary factors in the Flesch readability formulas. Shorter sentences are easier to follow because readers can hold the entire thought in working memory without losing track. The Flesch formula rewards sentences averaging 15–20 words. Sentences exceeding 30 words significantly lower your readability score and increase cognitive load on the reader. Breaking long sentences at natural conjunction or clause boundaries is one of the fastest ways to improve your score."
+        },
+        {
+          "question": "What reading level should I target for my audience?",
+          "answer": "Match your reading level to your audience's background and expectations. General news and blog content typically targets grade 7–9 (Flesch-Kincaid). Academic papers and technical documentation may sit at grade 12–16. Marketing copy and e-commerce product descriptions benefit from being at grade 6–8 to maximise accessibility. Children's content should target grade 1–5 depending on age group. If in doubt, aim lower — simpler writing is almost always more effective."
+        },
+        {
+          "question": "How can I improve my readability score?",
+          "answer": "The most effective improvements are: shorten long sentences by splitting at conjunctions (and, but, so, because), replace multi-syllable words with shorter synonyms where meaning is preserved, break large paragraphs into 2–3 sentence blocks, use active voice instead of passive constructions, and avoid unnecessary jargon or nominalizations (e.g. use 'decide' instead of 'make a decision'). Running the checker after each revision helps you track incremental improvements."
+        },
+        {
+          "question": "What is the Gunning Fog Index?",
+          "answer": "The Gunning Fog Index estimates the years of formal education a reader needs to understand a piece of text on first reading. It is calculated from average sentence length and the percentage of 'complex' words (three or more syllables). A score of 8 is appropriate for most general audiences. Scores above 12 indicate college-level text, and scores above 17 are considered very difficult. Most newspapers and popular magazines target a Fog score of 11–14."
+        },
+        {
+          "question": "Does readability affect SEO?",
+          "answer": "Readability is not a direct Google ranking factor, but it has indirect effects on SEO performance. Content that is easy to read tends to have lower bounce rates, longer time-on-page, and higher engagement — all of which are signals that search engines use to assess content quality. Readable content is also more likely to be shared, linked to, and recommended, which builds the backlink authority that directly influences rankings. Aiming for a Flesch Reading Ease score of 60+ is a good practice for SEO-oriented content."
+        },
         {
           "question": "What is a good Flesch Reading Ease score?",
           "answer": "Scores of 60–70 are considered standard and suitable for most audiences. Scores above 70 are easy to read. Scores below 30 are very difficult, typical of academic or legal text. Most popular novels score 60–80."
@@ -455,10 +719,6 @@
         {
           "question": "What is the Flesch-Kincaid Grade Level?",
           "answer": "The Flesch-Kincaid Grade Level estimates the US school grade needed to understand a text. A score of 8 means an 8th grader can read it. Aim for 6–8 for general audiences."
-        },
-        {
-          "question": "What is the Gunning Fog Index?",
-          "answer": "The Gunning Fog Index estimates the years of formal education needed to understand a text on first reading. Scores above 17 are considered very hard. Most newspapers target a score of 11–14."
         },
         {
           "question": "How do I improve my readability score?",
@@ -472,6 +732,26 @@
       "title": "Reading Time Calculator",
       "description": "Calculate how long it takes to read or speak your text. Paste your content below for an instant estimate.",
       "faqs": [
+        {
+          "question": "How is reading time calculated?",
+          "answer": "Reading time is estimated by dividing the total word count by the average adult silent reading speed of 238 words per minute. The result is rounded up to the nearest minute. Speaking time uses a slower pace of 130 words per minute, which reflects a natural, clear presentation cadence. Both figures are displayed as soon as you paste your text."
+        },
+        {
+          "question": "What is the average adult reading speed?",
+          "answer": "Research puts the average adult silent reading speed for non-fiction at approximately 238 words per minute, with comprehension maintained. Reading speed varies with text complexity — technical or unfamiliar content is read more slowly, while light fiction is read faster. Speed readers using skimming techniques can reach 400–700 wpm, but with reduced comprehension at higher rates."
+        },
+        {
+          "question": "Does reading time include code blocks?",
+          "answer": "The calculator counts all words in your pasted text, including code. If your article contains large code snippets that readers are likely to skim rather than read word-by-word, your displayed reading time may be slightly overestimated. For more accuracy, you can paste only the prose portions of your content."
+        },
+        {
+          "question": "Why does reading time matter for blog posts?",
+          "answer": "Displaying an estimated reading time at the top of a blog post sets reader expectations and reduces bounce rates — readers are less likely to leave immediately if they know the article is a 3-minute rather than a 15-minute read. Reading time also serves as a proxy for content depth: longer reading times signal comprehensive coverage, which tends to correlate with better search rankings and more social shares."
+        },
+        {
+          "question": "How does reading time differ for different age groups?",
+          "answer": "Children read significantly more slowly than adults. An average 8-year-old reads at roughly 115–150 wpm, a 12-year-old at around 150–180 wpm, and high school students approach adult speeds of 200–250 wpm. Older adults may read at speeds similar to younger adults but sometimes slower for complex material. The 238 wpm figure used by this calculator reflects a typical adult non-fiction reading rate."
+        },
         {
           "question": "How long does it take to read 1000 words?",
           "answer": "At an average reading speed of 238 words per minute, 1000 words takes approximately 4 minutes to read. At a speaking pace of 130 words per minute, it takes about 8 minutes to deliver."
@@ -582,23 +862,47 @@
         "metaTitle": "Loan Calculator — Monthly Payment & Amortization",
         "metaDescription": "Free loan calculator. Calculate monthly payments, total interest, and see a full amortization schedule for any loan.",
         "title": "Loan Calculator",
-        "description": "Calculate your monthly payment, total interest, and full amortization schedule for any loan.",
+        "description": "Calculate your monthly payment, total interest, and full amortization schedule for any loan. Enter your loan amount, interest rate, and loan term to instantly see your estimated monthly payment and total interest paid.",
         "faqs": [
           {
             "question": "How is monthly payment calculated?",
-            "answer": "Monthly payment is calculated using the standard amortization formula: M = P × r(1+r)ⁿ / ((1+r)ⁿ - 1), where P is the principal, r is the monthly interest rate, and n is the number of payments."
+            "answer": "Monthly payment is calculated using the standard amortization formula: M = P x r(1+r)^n / ((1+r)^n - 1), where P is the principal, r is the monthly interest rate, and n is the number of payments."
+          },
+          {
+            "question": "What is a personal loan calculator?",
+            "answer": "A personal loan calculator lets you estimate your monthly payment and total interest cost before you apply for a loan. You enter the loan amount, annual interest rate, and repayment term, and the calculator does the math instantly."
+          },
+          {
+            "question": "What factors affect my loan payment?",
+            "answer": "The three main factors are loan amount (principal), interest rate, and loan term. A higher principal or higher interest rate increases your payment, while a longer term spreads payments out and lowers each one — though you pay more interest overall."
+          },
+          {
+            "question": "What is a good interest rate for a personal loan?",
+            "answer": "Personal loan rates vary widely based on your credit score, income, and lender. Borrowers with excellent credit (720+) may qualify for rates below 10%, while those with fair credit may see rates of 15-25% or higher. Comparing offers from multiple lenders is the best way to find a competitive rate."
+          },
+          {
+            "question": "How does loan term affect my payment?",
+            "answer": "A longer loan term lowers your monthly payment by spreading the balance over more months, but it also means you pay interest for longer, increasing your total cost. A shorter term results in a higher monthly payment but less total interest paid."
+          },
+          {
+            "question": "Can I use this calculator for car loans?",
+            "answer": "Yes. This calculator works for any installment loan — personal loans, auto loans, student loans, and more. Simply enter the loan amount, interest rate, and term in months to see your payment and full amortization schedule."
+          },
+          {
+            "question": "What is the difference between APR and interest rate?",
+            "answer": "The interest rate is the annual cost of borrowing the principal. APR (Annual Percentage Rate) includes the interest rate plus most lender fees, giving a more complete picture of the true cost. When comparing loan offers, APR is the better number to use."
+          },
+          {
+            "question": "How do I lower my monthly payment?",
+            "answer": "You can lower your monthly payment by reducing the loan amount (making a larger down payment), securing a lower interest rate (by improving your credit score or shopping lenders), or choosing a longer loan term. Keep in mind that a longer term increases your total interest cost."
+          },
+          {
+            "question": "Is a shorter or longer loan term better?",
+            "answer": "It depends on your priorities. A shorter term saves significant money on interest and gets you debt-free sooner, but requires higher monthly payments. A longer term frees up cash each month but costs more overall. Use the calculator to compare both scenarios side by side."
           },
           {
             "question": "What is an amortization schedule?",
             "answer": "An amortization schedule shows each monthly payment broken down into principal and interest portions, along with the remaining balance after each payment."
-          },
-          {
-            "question": "Does this calculator include taxes and insurance?",
-            "answer": "No, this calculator shows principal and interest only. For mortgages, add property taxes and homeowner's insurance for your total monthly housing cost."
-          },
-          {
-            "question": "How can I reduce my total interest paid?",
-            "answer": "You can reduce total interest by making a larger down payment, choosing a shorter loan term, or making extra principal payments when possible."
           }
         ]
       },
@@ -606,19 +910,43 @@
         "metaTitle": "Mortgage Calculator — Monthly Payment & Total Cost",
         "metaDescription": "Free mortgage calculator. Find your monthly mortgage payment, see total interest cost, and view a complete amortization schedule.",
         "title": "Mortgage Calculator",
-        "description": "Calculate your mortgage payment, total interest, and full amortization schedule.",
+        "description": "Calculate your mortgage payment, total interest, and full amortization schedule. Enter your home price, down payment, interest rate, and loan term to instantly see your estimated monthly mortgage payment and total interest paid.",
         "faqs": [
           {
+            "question": "What does a mortgage calculator estimate?",
+            "answer": "A mortgage calculator estimates your monthly principal and interest payment based on the loan amount, interest rate, and loan term. It also shows total interest paid over the life of the loan and can display a full amortization schedule."
+          },
+          {
+            "question": "Does this include property taxes and insurance?",
+            "answer": "This calculator shows principal and interest only. To estimate your full monthly housing cost, add property taxes, homeowner insurance, and — if your down payment is under 20% — Private Mortgage Insurance (PMI) to the payment shown."
+          },
+          {
             "question": "What is a good mortgage interest rate?",
-            "answer": "Mortgage rates change daily based on economic conditions. As of 2024–2025, rates have been in the 6–8% range for 30-year fixed mortgages. Compare current rates at LendingTree or Bankrate."
+            "answer": "Mortgage rates change daily based on economic conditions. As of 2024-2025, rates have been in the 6-8% range for 30-year fixed mortgages. Compare current rates at LendingTree or Bankrate for the most up-to-date figures."
+          },
+          {
+            "question": "How does my down payment affect my mortgage?",
+            "answer": "A larger down payment reduces your loan amount, lowering both your monthly payment and total interest. Putting down 20% or more also eliminates the need for PMI, which can save you hundreds of dollars per month."
+          },
+          {
+            "question": "What is PMI and when do I need it?",
+            "answer": "Private Mortgage Insurance (PMI) is typically required when your down payment is less than 20% of the home price. It protects the lender if you default and usually adds 0.5-1.5% of the loan amount to your annual cost. PMI can be removed once you reach 20% equity."
+          },
+          {
+            "question": "How much house can I afford?",
+            "answer": "A widely used guideline is the 28/36 rule: spend no more than 28% of your gross monthly income on housing costs and no more than 36% on all debt combined. Use our Home Affordability Calculator for a more detailed estimate based on your specific income and debts."
+          },
+          {
+            "question": "What is the difference between a 15 and 30 year mortgage?",
+            "answer": "A 15-year mortgage has higher monthly payments but you pay far less total interest and build equity much faster. A 30-year mortgage has lower monthly payments, offering more budget flexibility, but the total interest paid over the life of the loan is significantly higher."
           },
           {
             "question": "Should I choose a 15-year or 30-year mortgage?",
             "answer": "A 15-year mortgage has higher monthly payments but much less total interest. A 30-year mortgage has lower payments and more flexibility, but you pay significantly more interest over the life of the loan."
           },
           {
-            "question": "What is PMI?",
-            "answer": "Private Mortgage Insurance (PMI) is typically required when your down payment is less than 20% of the home price. It adds 0.5–1.5% to your annual cost."
+            "question": "How accurate is this mortgage calculator?",
+            "answer": "This calculator provides a reliable estimate of your principal and interest payment. Actual lender quotes may differ slightly due to how interest is compounded, rounding, and any loan-specific fees. Always confirm the final numbers with your lender before committing."
           },
           {
             "question": "How does a larger down payment help?",
@@ -633,16 +961,40 @@
         "description": "Calculate your auto loan monthly payment and total cost of financing.",
         "faqs": [
           {
-            "question": "What is a good car loan interest rate?",
-            "answer": "Auto loan rates vary by credit score and loan term. Rates typically range from 5–15%. Excellent credit (720+) can qualify for rates under 6%."
+            "question": "How does a car loan calculator work?",
+            "answer": "A car loan calculator uses your loan amount, interest rate, and loan term to compute your monthly payment using the standard amortization formula. It also shows total interest paid, helping you understand the true cost of financing a vehicle."
+          },
+          {
+            "question": "What is a good interest rate for a car loan?",
+            "answer": "Auto loan rates vary by credit score and loan term. Rates typically range from 5-15%. Excellent credit (720+) can qualify for rates under 6%."
+          },
+          {
+            "question": "How much should I put down on a car?",
+            "answer": "Most financial advisors recommend a down payment of at least 10-20% of the vehicle purchase price. A larger down payment reduces your loan amount, lowers your monthly payment, and reduces the risk of being underwater on the loan — owing more than the car is worth."
+          },
+          {
+            "question": "Should I finance or pay cash for a car?",
+            "answer": "Paying cash avoids interest charges entirely, but if you can invest that cash at a higher return than your loan interest rate, financing may make financial sense. Compare the total cost of financing against what your money could earn elsewhere before deciding."
+          },
+          {
+            "question": "How does loan term length affect my car payment?",
+            "answer": "A shorter term (e.g., 36 or 48 months) means higher monthly payments but less total interest and faster payoff. A longer term (e.g., 72 or 84 months) lowers your monthly payment but significantly increases total interest and the risk of negative equity as the car depreciates."
+          },
+          {
+            "question": "What other costs should I consider when buying a car?",
+            "answer": "Beyond the loan payment, budget for car insurance, registration and taxes, routine maintenance, fuel, and any dealer fees. These costs can add hundreds of dollars per month on top of your loan payment."
+          },
+          {
+            "question": "Can I use this for used car loans?",
+            "answer": "Yes. The calculator works for any auto loan — new or used. Note that used car loans often carry higher interest rates than new car loans, so make sure you enter the actual rate your lender quotes you."
+          },
+          {
+            "question": "How do I get a lower car loan interest rate?",
+            "answer": "Improving your credit score before applying, making a larger down payment, choosing a shorter loan term, and shopping multiple lenders (including credit unions) can all help you secure a lower rate. Getting pre-approved before visiting a dealership also strengthens your negotiating position."
           },
           {
             "question": "Should I choose a 48, 60, or 72-month auto loan?",
-            "answer": "Shorter terms mean higher monthly payments but less total interest. Longer terms lower your payment but you pay more overall and risk being 'underwater' on the loan."
-          },
-          {
-            "question": "Can I pay off my car loan early?",
-            "answer": "Most auto loans allow early payoff without penalty. Making extra payments directly reduces your principal and saves on interest."
+            "answer": "Shorter terms mean higher monthly payments but less total interest. Longer terms lower your payment but you pay more overall and risk being underwater on the loan."
           },
           {
             "question": "How much car can I afford?",
@@ -681,8 +1033,16 @@
         "description": "View your complete loan amortization schedule showing every payment broken into principal and interest.",
         "faqs": [
           {
+            "question": "What is an amortization schedule?",
+            "answer": "An amortization schedule is a complete table of every loan payment, showing how much goes to interest, how much reduces the principal, and what the remaining balance is after each payment. It lets you see exactly how your debt decreases over time."
+          },
+          {
             "question": "What is amortization?",
             "answer": "Amortization is the process of spreading loan payments over time. Early payments are mostly interest; later payments are mostly principal."
+          },
+          {
+            "question": "Why do early payments go mostly to interest?",
+            "answer": "Interest is calculated on the remaining loan balance. At the start of a loan, the balance is at its highest, so the interest portion of each payment is largest. As you pay down the principal, the balance drops, interest charges shrink, and more of each payment goes to principal."
           },
           {
             "question": "Why do I pay more interest at the start of my loan?",
@@ -690,11 +1050,27 @@
           },
           {
             "question": "How does making extra payments affect amortization?",
-            "answer": "Extra payments reduce your principal balance directly, shortening your loan term and reducing the total interest you pay."
+            "answer": "Extra payments go directly toward your principal balance, which reduces future interest charges. This shortens your loan term and can save a substantial amount in total interest, especially if extra payments are made early in the loan when the balance is highest."
           },
           {
-            "question": "Can I download my amortization schedule?",
-            "answer": "Use your browser's print function to print or save the schedule as a PDF. The table shows all monthly payments with a full breakdown."
+            "question": "What is negative amortization?",
+            "answer": "Negative amortization occurs when your monthly payment is less than the interest owed, causing your loan balance to grow rather than shrink. This can happen with certain adjustable-rate mortgages or income-based repayment plans. Standard fixed-rate loans do not have negative amortization."
+          },
+          {
+            "question": "How do I read an amortization table?",
+            "answer": "Each row represents one payment period. The columns typically show the payment number, total payment amount, the portion applied to interest, the portion applied to principal, and the remaining balance. Reading down the table shows how your balance steadily decreases with each payment."
+          },
+          {
+            "question": "Can I use this for mortgages and auto loans?",
+            "answer": "Yes. The amortization calculator works for any fixed-rate installment loan — mortgages, auto loans, personal loans, student loans, and more. Just enter the loan amount, annual interest rate, and term in months."
+          },
+          {
+            "question": "What is the difference between amortization and depreciation?",
+            "answer": "Amortization refers to the scheduled repayment of a loan over time. Depreciation is an accounting concept that spreads the cost of a physical asset (like a car or equipment) over its useful life. Though the words sound similar, they apply to very different situations."
+          },
+          {
+            "question": "How do I calculate total interest paid over the life of a loan?",
+            "answer": "Multiply your monthly payment by the total number of payments, then subtract the original loan principal. The difference is your total interest cost. The amortization calculator does this automatically and displays the total in the summary above the schedule."
           }
         ]
       },
@@ -921,14 +1297,38 @@
       "title": "Free Invoice Generator",
       "description": "Create professional invoices instantly. No sign-up. No watermarks. Data stays in your browser.",
       "faqs": [
-        { "question": "Is my invoice data stored on your servers?", "answer": "No. Everything is 100% client-side. Your invoice data is stored only in your browser's localStorage and never sent to any server." },
-        { "question": "How do I download the invoice as a PDF?", "answer": "Click 'Download / Print PDF' to open the print dialog. Choose 'Save as PDF' in the destination dropdown to save it as a PDF file." },
-        { "question": "Can I add my logo?", "answer": "Yes — click the 'Logo' button in the From section to upload an image. It will appear at the top of the invoice preview." },
-        { "question": "How do I change the currency?", "answer": "Select your currency from the dropdown in the Invoice Details section. The invoice preview updates instantly." },
-        { "question": "Are my invoices saved automatically?", "answer": "Yes — your current invoice draft is automatically saved to your browser's localStorage as you type. It will be there when you return." },
-        { "question": "What currencies are supported?", "answer": "Over 30 currencies including USD, EUR, GBP, JPY, CAD, AUD, CHF, INR, and more." },
-        { "question": "Can I use this for VAT invoices?", "answer": "Yes — use the Tax % field for VAT. For UK-specific invoices with VAT pre-configured, try our Invoice Generator UK tool." },
-        { "question": "Is there a watermark on the invoice?", "answer": "No watermark, ever. This is a completely free tool with no hidden fees, no signup, and no watermarks on your invoices." }
+        {
+          "question": "Is my invoice data stored on your servers?",
+          "answer": "No. Everything is 100% client-side. Your invoice data is stored only in your browser's localStorage and never sent to any server."
+        },
+        {
+          "question": "How do I download the invoice as a PDF?",
+          "answer": "Click 'Download / Print PDF' to open the print dialog. Choose 'Save as PDF' in the destination dropdown to save it as a PDF file."
+        },
+        {
+          "question": "Can I add my logo?",
+          "answer": "Yes — click the 'Logo' button in the From section to upload an image. It will appear at the top of the invoice preview."
+        },
+        {
+          "question": "How do I change the currency?",
+          "answer": "Select your currency from the dropdown in the Invoice Details section. The invoice preview updates instantly."
+        },
+        {
+          "question": "Are my invoices saved automatically?",
+          "answer": "Yes — your current invoice draft is automatically saved to your browser's localStorage as you type. It will be there when you return."
+        },
+        {
+          "question": "What currencies are supported?",
+          "answer": "Over 30 currencies including USD, EUR, GBP, JPY, CAD, AUD, CHF, INR, and more."
+        },
+        {
+          "question": "Can I use this for VAT invoices?",
+          "answer": "Yes — use the Tax % field for VAT. For UK-specific invoices with VAT pre-configured, try our Invoice Generator UK tool."
+        },
+        {
+          "question": "Is there a watermark on the invoice?",
+          "answer": "No watermark, ever. This is a completely free tool with no hidden fees, no signup, and no watermarks on your invoices."
+        }
       ],
       "invoiceUk": {
         "metaTitle": "UK Invoice Generator — Free VAT Invoice Template | ToolNotch",
@@ -936,10 +1336,22 @@
         "title": "UK Invoice Generator",
         "description": "Free UK invoice generator with VAT pre-configured. GBP currency, 20% VAT. Download as PDF.",
         "faqs": [
-          { "question": "Is VAT pre-configured for UK invoices?", "answer": "Yes — the UK template pre-sets 20% VAT and GBP currency automatically." },
-          { "question": "Do I need a VAT number on my invoice?", "answer": "If you are VAT-registered, yes. Add your VAT registration number in the 'Tax ID' field in the From section." },
-          { "question": "Is this suitable for Making Tax Digital (MTD)?", "answer": "This tool generates PDF invoices only. For full MTD compliance, you'll need compatible accounting software." },
-          { "question": "Can I change the VAT rate?", "answer": "Yes — edit the Tax % field. The standard UK VAT rate is 20%, but reduced rates (5%, 0%) apply to some goods and services." }
+          {
+            "question": "Is VAT pre-configured for UK invoices?",
+            "answer": "Yes — the UK template pre-sets 20% VAT and GBP currency automatically."
+          },
+          {
+            "question": "Do I need a VAT number on my invoice?",
+            "answer": "If you are VAT-registered, yes. Add your VAT registration number in the 'Tax ID' field in the From section."
+          },
+          {
+            "question": "Is this suitable for Making Tax Digital (MTD)?",
+            "answer": "This tool generates PDF invoices only. For full MTD compliance, you'll need compatible accounting software."
+          },
+          {
+            "question": "Can I change the VAT rate?",
+            "answer": "Yes — edit the Tax % field. The standard UK VAT rate is 20%, but reduced rates (5%, 0%) apply to some goods and services."
+          }
         ]
       },
       "invoiceCanada": {
@@ -948,9 +1360,18 @@
         "title": "Canadian Invoice Generator",
         "description": "Free Canadian invoice generator with GST pre-configured. CAD currency, 5% GST. Download as PDF.",
         "faqs": [
-          { "question": "Is GST pre-configured?", "answer": "Yes — the Canadian template pre-sets 5% GST and CAD currency." },
-          { "question": "Should I charge HST or GST?", "answer": "It depends on your province. Ontario, New Brunswick, and others use HST. Alberta and BC use separate GST/PST. Adjust the tax rate accordingly." },
-          { "question": "Do I need a GST/HST registration number?", "answer": "If your annual revenues exceed $30,000 CAD, you must register for GST/HST. Add your number in the Tax ID field." }
+          {
+            "question": "Is GST pre-configured?",
+            "answer": "Yes — the Canadian template pre-sets 5% GST and CAD currency."
+          },
+          {
+            "question": "Should I charge HST or GST?",
+            "answer": "It depends on your province. Ontario, New Brunswick, and others use HST. Alberta and BC use separate GST/PST. Adjust the tax rate accordingly."
+          },
+          {
+            "question": "Do I need a GST/HST registration number?",
+            "answer": "If your annual revenues exceed $30,000 CAD, you must register for GST/HST. Add your number in the Tax ID field."
+          }
         ]
       },
       "invoiceAustralia": {
@@ -959,9 +1380,18 @@
         "title": "Australian Invoice Generator",
         "description": "Free Australian invoice generator with GST pre-configured. AUD currency, 10% GST. Download as PDF.",
         "faqs": [
-          { "question": "Is GST pre-configured for Australia?", "answer": "Yes — the Australian template pre-sets 10% GST and AUD currency." },
-          { "question": "Who needs to register for GST in Australia?", "answer": "Businesses with annual turnover of $75,000 AUD or more (or $150,000 for non-profit organizations) must register for GST." },
-          { "question": "What should an Australian tax invoice include?", "answer": "ATO-compliant invoices should include: the words 'Tax Invoice', your ABN, date, description of goods/services, price, and GST amount." }
+          {
+            "question": "Is GST pre-configured for Australia?",
+            "answer": "Yes — the Australian template pre-sets 10% GST and AUD currency."
+          },
+          {
+            "question": "Who needs to register for GST in Australia?",
+            "answer": "Businesses with annual turnover of $75,000 AUD or more (or $150,000 for non-profit organizations) must register for GST."
+          },
+          {
+            "question": "What should an Australian tax invoice include?",
+            "answer": "ATO-compliant invoices should include: the words 'Tax Invoice', your ABN, date, description of goods/services, price, and GST amount."
+          }
         ]
       },
       "invoiceFreelancers": {
@@ -970,10 +1400,22 @@
         "title": "Invoice Generator for Freelancers",
         "description": "Create professional freelance invoices for free. No watermarks, no subscriptions. Download as PDF instantly.",
         "faqs": [
-          { "question": "Is this free for freelancers?", "answer": "Yes — completely free. No subscription, no watermark, no account required." },
-          { "question": "How do I track which invoices have been paid?", "answer": "Use the Status field (draft/sent/paid) on each invoice. Your browser saves your draft automatically." },
-          { "question": "What should I include on a freelance invoice?", "answer": "Include your name, client name, invoice number, date, due date, detailed line items, payment terms, and preferred payment method." },
-          { "question": "How do I get paid faster?", "answer": "Include your payment terms clearly, offer multiple payment options, and follow up politely if payment is overdue. Net 14 terms often result in faster payment than Net 30." }
+          {
+            "question": "Is this free for freelancers?",
+            "answer": "Yes — completely free. No subscription, no watermark, no account required."
+          },
+          {
+            "question": "How do I track which invoices have been paid?",
+            "answer": "Use the Status field (draft/sent/paid) on each invoice. Your browser saves your draft automatically."
+          },
+          {
+            "question": "What should I include on a freelance invoice?",
+            "answer": "Include your name, client name, invoice number, date, due date, detailed line items, payment terms, and preferred payment method."
+          },
+          {
+            "question": "How do I get paid faster?",
+            "answer": "Include your payment terms clearly, offer multiple payment options, and follow up politely if payment is overdue. Net 14 terms often result in faster payment than Net 30."
+          }
         ]
       },
       "receiptGenerator": {
@@ -982,10 +1424,22 @@
         "title": "Free Receipt Generator",
         "description": "Create professional receipts instantly. Download as PDF. No signup, no watermarks.",
         "faqs": [
-          { "question": "What is the difference between a receipt and an invoice?", "answer": "An invoice is sent before payment as a request for payment. A receipt is issued after payment as proof that payment was received." },
-          { "question": "Is my receipt data stored on your servers?", "answer": "No. All receipt data is stored only in your browser's localStorage. Nothing is sent to any server." },
-          { "question": "How do I download the receipt as a PDF?", "answer": "Click 'Download / Print PDF' and choose 'Save as PDF' in your browser's print dialog." },
-          { "question": "Can I add my business logo?", "answer": "Yes — click the Logo button to upload your business logo. It appears at the top of the receipt." }
+          {
+            "question": "What is the difference between a receipt and an invoice?",
+            "answer": "An invoice is sent before payment as a request for payment. A receipt is issued after payment as proof that payment was received."
+          },
+          {
+            "question": "Is my receipt data stored on your servers?",
+            "answer": "No. All receipt data is stored only in your browser's localStorage. Nothing is sent to any server."
+          },
+          {
+            "question": "How do I download the receipt as a PDF?",
+            "answer": "Click 'Download / Print PDF' and choose 'Save as PDF' in your browser's print dialog."
+          },
+          {
+            "question": "Can I add my business logo?",
+            "answer": "Yes — click the Logo button to upload your business logo. It appears at the top of the receipt."
+          }
         ]
       },
       "fields": {
@@ -1043,6 +1497,26 @@
         {
           "question": "How is this different from Wheel of Names?",
           "answer": "Our spin wheel is completely free, requires no account, saves your items in the URL for easy sharing, and works on any device including offline."
+        },
+        {
+          "question": "Can I add custom options to the wheel?",
+          "answer": "Yes — type your options into the edit box, one per line. You can add anything: names, tasks, topics, colours, or prizes. The wheel updates instantly as you type."
+        },
+        {
+          "question": "Can I use this for classroom activities?",
+          "answer": "Absolutely. Paste your student names into the edit box and spin to call on students randomly. It is a favourite tool for teachers who want to keep participation fair and fun without any appearance of favouritism."
+        },
+        {
+          "question": "Can I save my wheel configuration?",
+          "answer": "Yes. Your items are automatically encoded into the page URL. Copy the URL from your browser's address bar to bookmark or share your exact wheel setup — anyone who opens the link will see the same options."
+        },
+        {
+          "question": "What happens if I spin it and get the same result twice?",
+          "answer": "Each spin is independent, so getting the same result twice is possible by chance. If you want to avoid repeats, use the Random Name Picker tool instead, which supports pick-without-replacement so each item can only be selected once."
+        },
+        {
+          "question": "Can I use this for giveaways?",
+          "answer": "Yes — add your entrant names to the wheel and spin to pick a winner live in front of your audience. For larger giveaway lists, the dedicated Giveaway Picker tool handles longer lists more easily."
         }
       ]
     },
@@ -1100,6 +1574,22 @@
         {
           "question": "How many names can I add?",
           "answer": "There's no hard limit. The tool works with lists of any size, from 2 to hundreds of names."
+        },
+        {
+          "question": "Can I add custom names to the picker?",
+          "answer": "Yes — paste any list of names into the text box, one per line. You can use first names, full names, usernames, or any labels you want to pick from."
+        },
+        {
+          "question": "Can I remove a name after it has been picked?",
+          "answer": "Yes. Enable the 'Remove on pick' toggle and each selected name is automatically removed from the pool. This ensures every name is picked at most once, which is ideal for raffles and classroom activities."
+        },
+        {
+          "question": "Can teachers use this for classroom activities?",
+          "answer": "Yes — it is one of the most popular uses. Paste your class roster, enable 'remove on pick', and work through every student without repeats. It keeps the process fair and students engaged because anyone could be next."
+        },
+        {
+          "question": "Can I save my name list?",
+          "answer": "The name list is not automatically saved between page loads. For a persistent list you can bookmark and share, try the Spin the Wheel tool, which encodes your items directly into the page URL."
         }
       ]
     },
@@ -1177,6 +1667,30 @@
         {
           "question": "Does it work without an internet connection?",
           "answer": "Yes. Once the page is loaded, the coin flip works 100% offline."
+        },
+        {
+          "question": "Is the coin flip truly random?",
+          "answer": "Yes. The result is determined by JavaScript's Math.random() function before the animation plays, giving heads and tails an exactly equal 50% probability on every flip."
+        },
+        {
+          "question": "Can I flip multiple coins at once?",
+          "answer": "The standard coin flip tool flips one coin at a time. If you need multiple independent results simultaneously, flip several times in sequence — each result is independent of the last."
+        },
+        {
+          "question": "Why use a digital coin flip instead of a real coin?",
+          "answer": "A physical coin can be slightly biased by weight distribution, tossing technique, or surface texture. A digital coin flip uses a mathematically uniform random function, making it as fair as any tool can be. It is also always available, even when you don't have a coin handy."
+        },
+        {
+          "question": "Is this fair for making decisions?",
+          "answer": "Yes. Both outcomes have exactly 50% probability on every flip, making it a perfectly fair way to resolve a two-option decision. It is widely used for settling disputes, choosing who goes first in a game, or making quick binary choices."
+        },
+        {
+          "question": "Can I use this for sports?",
+          "answer": "Yes — many sports use a coin toss to decide starting positions, first serve, or field side. A digital coin flip is just as valid as a physical one for informal matches and practice games."
+        },
+        {
+          "question": "How is randomness generated?",
+          "answer": "The flip uses JavaScript's built-in Math.random() function, which generates a pseudo-random floating-point number between 0 and 1. If the result is below 0.5 it is heads; 0.5 or above is tails. This gives both outcomes an equal 50% chance."
         }
       ]
     },
@@ -1209,6 +1723,26 @@
         {
           "question": "What dice are used in D&D?",
           "answer": "D&D uses seven dice: d4, d6, d8, d10, d12, d20, and d100 (percentile die). The d20 is used most frequently for skill checks and attacks."
+        },
+        {
+          "question": "What types of dice are supported?",
+          "answer": "The roller supports any die with a positive integer number of sides. This includes all standard RPG dice — d4, d6, d8, d10, d12, d20, d100 — as well as custom dice like d3, d7, or d30 using the standard NdX notation."
+        },
+        {
+          "question": "Is the dice roll truly random?",
+          "answer": "Yes. Each individual die is rolled using JavaScript's Math.random(), which produces a uniformly distributed result. Every face of the die has an equal probability of appearing on each roll."
+        },
+        {
+          "question": "Can I use this for Dungeons and Dragons?",
+          "answer": "Absolutely. The roller supports all seven dice used in D&D (d4, d6, d8, d10, d12, d20, d100) and accepts modifier notation like 1d20+5 for attack rolls or 4d6 for ability score generation. It is a convenient backup when you don't have physical dice available."
+        },
+        {
+          "question": "What is the probability of rolling a 6 on a standard die?",
+          "answer": "The probability of rolling any specific number on a standard six-sided die is 1/6, or approximately 16.67%. Each face has an equal chance of appearing because each roll is an independent, uniform random event."
+        },
+        {
+          "question": "Can I set a custom number of sides?",
+          "answer": "Yes. Simply type any die notation into the input field, such as d13 or d50. The roller accepts any positive integer as the number of sides, so you are not limited to standard die sizes."
         }
       ]
     },
@@ -1344,50 +1878,182 @@
       "agileTools": "Agile & Scrum Tools"
     },
     "tools": {
-      "imageCompressor": { "label": "Image Compressor", "desc": "Compress JPG, PNG, WebP, AVIF" },
-      "imageConverter": { "label": "Image Converter", "desc": "Convert between formats" },
-      "mergePdf": { "label": "Merge PDF", "desc": "Combine multiple PDFs into one" },
-      "splitPdf": { "label": "Split PDF", "desc": "Split PDF by page range" },
-      "compressPdf": { "label": "Compress PDF", "desc": "Reduce PDF file size" },
-      "pdfToJpg": { "label": "PDF to JPG", "desc": "Convert PDF pages to images" },
-      "jpgToPdf": { "label": "JPG to PDF", "desc": "Convert images to PDF" },
-      "unitConverter": { "label": "Unit Converter", "desc": "Length, weight, temperature & 200+ more" },
-      "currencyConverter": { "label": "Currency Converter", "desc": "Live rates for 150+ currencies" },
-      "metersToFeet": { "label": "Meters to Feet", "desc": "Quick length conversion" },
-      "celsiusToFahrenheit": { "label": "Celsius to Fahrenheit", "desc": "Quick temperature conversion" },
-      "kgToPounds": { "label": "Kg to Pounds", "desc": "Quick weight conversion" },
-      "wordCounter": { "label": "Word Counter", "desc": "Count words, characters & readability" },
-      "characterCounter": { "label": "Character Counter", "desc": "Count characters with/without spaces" },
-      "readabilityChecker": { "label": "Readability Checker", "desc": "Flesch, Kincaid & Gunning Fog scores" },
-      "readingTimeCalculator": { "label": "Reading Time Calculator", "desc": "Estimate reading & speaking time" },
-      "wordFrequencyCounter": { "label": "Word Frequency Counter", "desc": "Find most-used keywords in text" },
-      "loanCalculator": { "label": "Loan Calculator", "desc": "Monthly payment & amortization schedule" },
-      "mortgageCalculator": { "label": "Mortgage Calculator", "desc": "Calculate mortgage payments" },
-      "carLoanCalculator": { "label": "Car Loan Calculator", "desc": "Auto loan monthly payment" },
-      "invoiceGenerator": { "label": "Invoice Generator", "desc": "Free professional invoices — PDF ready" },
-      "invoiceGeneratorUk": { "label": "UK Invoice Generator", "desc": "GBP invoices with VAT pre-set" },
-      "homeAffordability": { "label": "Home Affordability", "desc": "How much house can you afford?" },
-      "amortizationCalculator": { "label": "Amortization Calculator", "desc": "Full payment schedule breakdown" },
-      "studentLoanCalculator": { "label": "Student Loan Calculator", "desc": "Student loan repayment calculator" },
-      "spinTheWheel": { "label": "Spin the Wheel", "desc": "Random decision maker — add your options" },
-      "randomNamePicker": { "label": "Random Name Picker", "desc": "Pick a winner from your list" },
-      "teamGenerator": { "label": "Team Generator", "desc": "Split names into balanced teams" },
-      "coinFlip": { "label": "Coin Flip", "desc": "Virtual heads or tails" },
-      "diceRoller": { "label": "Dice Roller", "desc": "Roll d6, d20, 3d6+5 and more" },
-      "numberGenerator": { "label": "Number Generator", "desc": "Random numbers in any range" },
-      "yesOrNoWheel": { "label": "Yes or No Wheel", "desc": "Let the wheel decide" },
-      "wheelOfNames": { "label": "Wheel of Names", "desc": "Free Wheel of Names alternative" },
-      "allQuizzes": { "label": "All Quizzes", "desc": "Browse all personality quizzes" },
-      "programmingLanguageQuiz": { "label": "Which Programming Language Are You?", "desc": "Python, JavaScript, Rust, Go, or Java?" },
-      "introvertExtrovertQuiz": { "label": "Introvert or Extrovert?", "desc": "Find out where you fall on the spectrum" },
-      "careerQuiz": { "label": "What Career Suits You?", "desc": "Discover your ideal career path" },
-      "travelerQuiz": { "label": "What Type of Traveler Are You?", "desc": "Adventurer, explorer, beach lover?" },
-      "retroBoard": { "label": "Retrospective Board", "desc": "Went Well · To Improve · Action Items" },
-      "standupGenerator": { "label": "Standup Generator", "desc": "Yesterday · Today · Blockers → ready-to-paste summary" },
-      "planningPoker": { "label": "Planning Poker", "desc": "Fibonacci estimations — reveal all at once" },
-      "userStoryWriter": { "label": "User Story Writer", "desc": "As a [role], I want [feature], so that [benefit]" },
-      "sprintDateCalculator": { "label": "Sprint Date Calculator", "desc": "Start date + sprint length → all ceremony dates" },
-      "percentageCalculator": { "label": "Percentage Calculator", "desc": "% of, what % is, and % change — three calculators in one" }
+      "imageCompressor": {
+        "label": "Image Compressor",
+        "desc": "Compress JPG, PNG, WebP, AVIF"
+      },
+      "imageConverter": {
+        "label": "Image Converter",
+        "desc": "Convert between formats"
+      },
+      "mergePdf": {
+        "label": "Merge PDF",
+        "desc": "Combine multiple PDFs into one"
+      },
+      "splitPdf": {
+        "label": "Split PDF",
+        "desc": "Split PDF by page range"
+      },
+      "compressPdf": {
+        "label": "Compress PDF",
+        "desc": "Reduce PDF file size"
+      },
+      "pdfToJpg": {
+        "label": "PDF to JPG",
+        "desc": "Convert PDF pages to images"
+      },
+      "jpgToPdf": {
+        "label": "JPG to PDF",
+        "desc": "Convert images to PDF"
+      },
+      "unitConverter": {
+        "label": "Unit Converter",
+        "desc": "Length, weight, temperature & 200+ more"
+      },
+      "currencyConverter": {
+        "label": "Currency Converter",
+        "desc": "Live rates for 150+ currencies"
+      },
+      "metersToFeet": {
+        "label": "Meters to Feet",
+        "desc": "Quick length conversion"
+      },
+      "celsiusToFahrenheit": {
+        "label": "Celsius to Fahrenheit",
+        "desc": "Quick temperature conversion"
+      },
+      "kgToPounds": {
+        "label": "Kg to Pounds",
+        "desc": "Quick weight conversion"
+      },
+      "wordCounter": {
+        "label": "Word Counter",
+        "desc": "Count words, characters & readability"
+      },
+      "characterCounter": {
+        "label": "Character Counter",
+        "desc": "Count characters with/without spaces"
+      },
+      "readabilityChecker": {
+        "label": "Readability Checker",
+        "desc": "Flesch, Kincaid & Gunning Fog scores"
+      },
+      "readingTimeCalculator": {
+        "label": "Reading Time Calculator",
+        "desc": "Estimate reading & speaking time"
+      },
+      "wordFrequencyCounter": {
+        "label": "Word Frequency Counter",
+        "desc": "Find most-used keywords in text"
+      },
+      "loanCalculator": {
+        "label": "Loan Calculator",
+        "desc": "Monthly payment & amortization schedule"
+      },
+      "mortgageCalculator": {
+        "label": "Mortgage Calculator",
+        "desc": "Calculate mortgage payments"
+      },
+      "carLoanCalculator": {
+        "label": "Car Loan Calculator",
+        "desc": "Auto loan monthly payment"
+      },
+      "invoiceGenerator": {
+        "label": "Invoice Generator",
+        "desc": "Free professional invoices — PDF ready"
+      },
+      "invoiceGeneratorUk": {
+        "label": "UK Invoice Generator",
+        "desc": "GBP invoices with VAT pre-set"
+      },
+      "homeAffordability": {
+        "label": "Home Affordability",
+        "desc": "How much house can you afford?"
+      },
+      "amortizationCalculator": {
+        "label": "Amortization Calculator",
+        "desc": "Full payment schedule breakdown"
+      },
+      "studentLoanCalculator": {
+        "label": "Student Loan Calculator",
+        "desc": "Student loan repayment calculator"
+      },
+      "spinTheWheel": {
+        "label": "Spin the Wheel",
+        "desc": "Random decision maker — add your options"
+      },
+      "randomNamePicker": {
+        "label": "Random Name Picker",
+        "desc": "Pick a winner from your list"
+      },
+      "teamGenerator": {
+        "label": "Team Generator",
+        "desc": "Split names into balanced teams"
+      },
+      "coinFlip": {
+        "label": "Coin Flip",
+        "desc": "Virtual heads or tails"
+      },
+      "diceRoller": {
+        "label": "Dice Roller",
+        "desc": "Roll d6, d20, 3d6+5 and more"
+      },
+      "numberGenerator": {
+        "label": "Number Generator",
+        "desc": "Random numbers in any range"
+      },
+      "yesOrNoWheel": {
+        "label": "Yes or No Wheel",
+        "desc": "Let the wheel decide"
+      },
+      "wheelOfNames": {
+        "label": "Wheel of Names",
+        "desc": "Free Wheel of Names alternative"
+      },
+      "allQuizzes": {
+        "label": "All Quizzes",
+        "desc": "Browse all personality quizzes"
+      },
+      "programmingLanguageQuiz": {
+        "label": "Which Programming Language Are You?",
+        "desc": "Python, JavaScript, Rust, Go, or Java?"
+      },
+      "introvertExtrovertQuiz": {
+        "label": "Introvert or Extrovert?",
+        "desc": "Find out where you fall on the spectrum"
+      },
+      "careerQuiz": {
+        "label": "What Career Suits You?",
+        "desc": "Discover your ideal career path"
+      },
+      "travelerQuiz": {
+        "label": "What Type of Traveler Are You?",
+        "desc": "Adventurer, explorer, beach lover?"
+      },
+      "retroBoard": {
+        "label": "Retrospective Board",
+        "desc": "Went Well · To Improve · Action Items"
+      },
+      "standupGenerator": {
+        "label": "Standup Generator",
+        "desc": "Yesterday · Today · Blockers → ready-to-paste summary"
+      },
+      "planningPoker": {
+        "label": "Planning Poker",
+        "desc": "Fibonacci estimations — reveal all at once"
+      },
+      "userStoryWriter": {
+        "label": "User Story Writer",
+        "desc": "As a [role], I want [feature], so that [benefit]"
+      },
+      "sprintDateCalculator": {
+        "label": "Sprint Date Calculator",
+        "desc": "Start date + sprint length → all ceremony dates"
+      },
+      "percentageCalculator": {
+        "label": "Percentage Calculator",
+        "desc": "% of, what % is, and % change — three calculators in one"
+      }
     }
   },
   "agile": {
@@ -1431,6 +2097,26 @@
         {
           "question": "Can I vote on items?",
           "answer": "Yes — click the thumbs-up icon on any note to vote for it. Voting helps the team dot-vote and prioritize which topics to discuss first."
+        },
+        {
+          "question": "What is a sprint retrospective?",
+          "answer": "A sprint retrospective is an agile ceremony held at the end of each sprint where the team reflects on how they worked together — not what they built, but how they built it. The goal is to identify concrete improvements to carry into the next sprint."
+        },
+        {
+          "question": "How often should a team run a retrospective?",
+          "answer": "In Scrum, a retrospective is run once per sprint — so every one to four weeks depending on your sprint length. Most teams find a two-week cadence gives enough time to implement changes before the next retro."
+        },
+        {
+          "question": "Can multiple team members use this at once?",
+          "answer": "This tool runs entirely in your browser without a backend, so it does not support real-time multi-user collaboration. The recommended approach is for the facilitator to run the board on a shared screen during the ceremony and type notes as the team discusses each item."
+        },
+        {
+          "question": "How do I export the retrospective notes?",
+          "answer": "Click the 'Export as Markdown' button to copy the full board as formatted Markdown. You can then paste it into Confluence, Notion, a GitHub issue, Slack, or any tool that renders Markdown so the notes are preserved for future reference."
+        },
+        {
+          "question": "What is the best retrospective format for remote teams?",
+          "answer": "The three-column format (Went Well / To Improve / Action Items) is the most widely used and works well for remote teams because it is simple, focused, and easy to explain to new members. For variety, some teams alternate with formats like Start / Stop / Continue or the 4Ls (Liked, Learned, Lacked, Longed For)."
         }
       ]
     },
@@ -1476,6 +2162,30 @@
         {
           "question": "What should I put in the Blockers field?",
           "answer": "Anything preventing you from making progress: waiting on a code review, a dependency that's not ready, unclear requirements, or an external API being down. If there are no blockers, leave it empty — the generator will write 'None' automatically."
+        },
+        {
+          "question": "What are the three standup questions?",
+          "answer": "The three classic standup questions are: (1) What did I complete yesterday? (2) What am I working on today? (3) Are there any blockers or impediments stopping my progress? These questions keep the meeting focused and time-boxed."
+        },
+        {
+          "question": "How long should a standup meeting last?",
+          "answer": "Standups are time-boxed to 15 minutes in Scrum. In practice, well-run standups for teams of 5 to 8 typically take 10 minutes or less. If your standup regularly runs longer, it is usually a sign that problem-solving discussions should be moved to a separate meeting."
+        },
+        {
+          "question": "Why do some teams skip standups?",
+          "answer": "Teams sometimes skip standups when they feel the meeting adds no value — often because it has drifted into a status report to management rather than a team synchronization. Keeping standups short, focused, and peer-to-peer rather than top-down restores their value."
+        },
+        {
+          "question": "Can I customize the standup template?",
+          "answer": "The generator uses the standard three-question format. Once you copy the output, you can freely edit it before pasting it into your team channel or tool to suit your team's specific format or preferences."
+        },
+        {
+          "question": "What is the difference between a standup and a status update?",
+          "answer": "A standup is a peer-to-peer synchronization between teammates — the purpose is coordination and surfacing blockers. A status update is a report from an individual to a manager or stakeholder. Conflating the two is a common anti-pattern that makes standups feel like surveillance and reduces their effectiveness."
+        },
+        {
+          "question": "When should I use async standups?",
+          "answer": "Async standups work well for distributed teams across multiple time zones where scheduling a synchronous meeting is impractical. Team members post their Yesterday / Today / Blockers update in a shared channel at their own start-of-day time. This generator is perfect for formatting async standup messages."
         }
       ]
     },
@@ -1517,6 +2227,26 @@
         {
           "question": "Is this a multiplayer tool?",
           "answer": "This version is single-player — useful for a facilitator to collect votes verbally or in a shared screen session. Each team member picks their card, the facilitator records the consensus."
+        },
+        {
+          "question": "What do the Fibonacci numbers represent in planning poker?",
+          "answer": "The Fibonacci sequence (1, 2, 3, 5, 8, 13, 21…) represents story points — a relative measure of effort, complexity, and uncertainty rather than hours. Larger numbers have larger gaps to reflect the inherent imprecision of estimating bigger pieces of work."
+        },
+        {
+          "question": "How does planning poker prevent anchoring bias?",
+          "answer": "All team members select their estimate privately and reveal their cards simultaneously. This prevents the first person to speak from anchoring everyone else's judgment. When estimates differ widely, it opens a productive discussion rather than a groupthink consensus."
+        },
+        {
+          "question": "How many people can participate in a planning poker session?",
+          "answer": "Planning poker works best with 3 to 8 participants — typically the development team plus the scrum master. Larger groups can participate but the discussion after revealing divergent estimates becomes harder to manage efficiently."
+        },
+        {
+          "question": "What should I do when team members give very different estimates?",
+          "answer": "Wide divergence is valuable — it signals a difference in understanding or approach. Ask the highest and lowest estimators to explain their reasoning. Often this surfaces a missing requirement, a technical concern, or a simpler implementation that neither side had considered."
+        },
+        {
+          "question": "Is planning poker only for software teams?",
+          "answer": "No — any team that needs to estimate relative effort for tasks can use planning poker. Content teams, marketing teams, and operations groups all use it to size projects and prioritize backlogs, even without a formal software development context."
         }
       ]
     },

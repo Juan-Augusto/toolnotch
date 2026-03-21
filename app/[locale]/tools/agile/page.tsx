@@ -37,6 +37,40 @@ export default async function AgileToolsHubPage({ params }: Props) {
           </p>
         </div>
 
+        <div className="bg-white rounded-xl border border-gray-200 p-6 mb-10 space-y-4">
+          <p className="text-gray-700 leading-relaxed">
+            Agile methodology is an approach to software development built around short, iterative cycles called
+            sprints, typically one to four weeks long. Instead of planning a full project upfront and delivering
+            everything at the end, agile teams work in focused increments, reviewing their progress at the end of
+            each sprint and continuously improving how they work together. Core to this approach are regular
+            ceremonies — structured meetings with a specific purpose — that keep the team aligned, surface
+            problems early, and give everyone a voice in how the product evolves. The result is a working process
+            that adapts to change rather than resisting it.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            The teams that benefit most from purpose-built agile tools are those who need to run ceremonies
+            efficiently without overhead. Software development teams use retrospective boards and standup generators
+            to keep their daily rhythms consistent even when working remotely across time zones. Product managers
+            and scrum masters use planning poker and user story writers to produce well-formed backlog items that
+            developers can pick up and implement without ambiguity. Distributed and remote teams in particular find
+            that having a shared, browser-based tool — no login, no account, nothing to install — removes friction
+            from ceremonies that can otherwise feel forced or disorganized when working outside a physical office.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            This collection covers the five most essential agile ceremony tools. The{' '}
+            <strong>Retrospective Board</strong> provides the classic three-column format — Went Well, To Improve,
+            and Action Items — with sticky notes, voting, and one-click Markdown export. The{' '}
+            <strong>Planning Poker</strong> tool presents Fibonacci estimation cards so each team member can select
+            their estimate privately before all cards are revealed simultaneously, preventing anchoring bias. The{' '}
+            <strong>Standup Generator</strong> formats a standard Yesterday / Today / Blockers standup into a
+            clean, ready-to-paste summary for Slack or Teams. The <strong>User Story Writer</strong> scaffolds the
+            &ldquo;As a [role], I want [feature], so that [benefit]&rdquo; format with acceptance criteria so your
+            stories are Jira-ready from the start. Finally, the <strong>Sprint Date Calculator</strong> takes a
+            start date and sprint length and instantly generates all ceremony dates for the full sprint — planning,
+            daily standups, review, and retro.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
           {TOOLS.map(tool => (
             <Link key={tool.href} href={tool.href}
@@ -61,6 +95,32 @@ export default async function AgileToolsHubPage({ params }: Props) {
             </div>
           </div>
         )}
+
+        <div className="bg-white rounded-xl border border-gray-200 p-6 mt-4">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Why Run Agile Ceremonies Properly?</h2>
+          <ul className="space-y-3 text-gray-700">
+            <li className="flex gap-2">
+              <span className="text-violet-500 font-bold mt-0.5">&#8226;</span>
+              <span><strong>Team alignment:</strong> Regular standups and planning sessions ensure every team member knows what everyone else is working on, preventing duplicated effort and keeping the sprint goal front of mind throughout the iteration.</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-violet-500 font-bold mt-0.5">&#8226;</span>
+              <span><strong>Surfacing blockers early:</strong> A well-run daily standup is one of the fastest ways to identify an impediment before it silently derails progress for days. Naming a blocker out loud — even asynchronously — triggers the team to resolve it together rather than leaving one person stuck alone.</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-violet-500 font-bold mt-0.5">&#8226;</span>
+              <span><strong>Better sprint planning:</strong> Using planning poker and well-written user stories prevents the two most common sprint failures — overcommitment from optimistic estimates and unclear requirements that cause rework. Good ceremonies create realistic, achievable sprint goals.</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-violet-500 font-bold mt-0.5">&#8226;</span>
+              <span><strong>Accountability and follow-through:</strong> Retrospective action items recorded in a shared board are far more likely to be completed than verbal promises. The act of writing them down and exporting them to a project management tool creates a visible commitment the whole team can track.</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-violet-500 font-bold mt-0.5">&#8226;</span>
+              <span><strong>Team morale and psychological safety:</strong> A safe retrospective where every team member can voice frustrations and celebrate wins — without blame — builds the trust that high-performing teams depend on. Teams that skip retros consistently report lower morale and higher turnover over time.</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </main>
   )
