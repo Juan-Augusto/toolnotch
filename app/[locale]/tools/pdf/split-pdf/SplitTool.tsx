@@ -73,17 +73,17 @@ export default function SplitTool({ title, description, faqs }: Props) {
       adSlot="1234567891"
     >
       <div
-        className="border-2 border-dashed border-blue-300 rounded-lg p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-4"
+        className="border-2 border-dashed border-blue-300 rounded-xl p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-4 dark:border-blue-700 dark:hover:bg-blue-900/20"
         onClick={() => document.getElementById("split-file-input")?.click()}
         onDragOver={(e) => e.preventDefault()}
         onDrop={(e) => { e.preventDefault(); const f = e.dataTransfer.files[0]; if (f?.type === "application/pdf") { setFile(f); setDone(false); setError(null); } }}
       >
         {file ? (
-          <p className="text-gray-700 font-medium">{file.name}</p>
+          <p className="text-gray-700 font-medium dark:text-gray-200">{file.name}</p>
         ) : (
           <>
-            <p className="text-blue-600 font-medium">{t("dropZone.label")}</p>
-            <p className="text-gray-400 text-sm mt-1">{t("dropZone.hint")}</p>
+            <p className="text-blue-600 font-medium dark:text-blue-400">{t("dropZone.label")}</p>
+            <p className="text-gray-400 text-sm mt-1 dark:text-gray-500">{t("dropZone.hint")}</p>
           </>
         )}
         <input
@@ -96,26 +96,26 @@ export default function SplitTool({ title, description, faqs }: Props) {
       </div>
 
       <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700 mb-1">
-          {t("pageRanges.label")} <span className="text-gray-400 font-normal">({t("pageRanges.hint")})</span>
+        <label className="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">
+          {t("pageRanges.label")} <span className="text-gray-400 font-normal dark:text-gray-500">({t("pageRanges.hint")})</span>
         </label>
         <input
           type="text"
           value={rangeInput}
           onChange={(e) => setRangeInput(e.target.value)}
           placeholder={t("pageRanges.placeholder")}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white dark:bg-gray-800 dark:border-gray-600 text-gray-900 dark:text-gray-100"
         />
-        <p className="text-xs text-gray-400 mt-1">{t("pageRanges.blankHint")}</p>
+        <p className="text-xs text-gray-400 mt-1 dark:text-gray-500">{t("pageRanges.blankHint")}</p>
       </div>
 
-      {error && <p className="text-red-600 text-sm mb-3">{error}</p>}
-      {done && <p className="text-green-600 text-sm mb-3">{t("success")}</p>}
+      {error && <p className="text-red-600 text-sm mb-3 dark:text-red-400">{error}</p>}
+      {done && <p className="text-green-600 text-sm mb-3 dark:text-green-400">{t("success")}</p>}
 
       <button
         onClick={handleSplit}
         disabled={loading || !file}
-        className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold py-3 rounded-lg transition-colors"
+        className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 disabled:bg-gray-300 disabled:bg-none text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
       >
         {loading ? t("button.splitting") : t("button.split")}
       </button>

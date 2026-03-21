@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Plus_Jakarta_Sans } from 'next/font/google'
 import Script from 'next/script'
+import { cookies } from 'next/headers'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
@@ -13,14 +14,11 @@ import '../globals.css'
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? ''
 const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? ''
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: '--font-sans',
   subsets: ['latin'],
-})
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
 })
 
 const siteSchema = {
@@ -74,9 +72,28 @@ export default async function LocaleLayout({
   const { locale } = await params
   if (!locales.includes(locale as typeof locales[number])) notFound()
   const messages = await getMessages()
+  const cookieStore = await cookies()
+  const isDark = cookieStore.get('theme')?.value === 'dark'
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} className={isDark ? 'dark' : ''} suppressHydrationWarning>
       <head>
+        {/* Blocking script: reads localStorage before first paint to prevent theme flash on navigation */}
+        <script dangerouslySetInnerHTML={{ __html: `
+          try {
+            var t = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var isDark = t === 'dark' || (!t && prefersDark);
+            if (isDark) {
+              document.documentElement.classList.add('dark');
+            } else {
+              document.documentElement.classList.remove('dark');
+            }
+            // Sync cookie so server renders correct class on next navigation
+            if (!document.cookie.includes('theme=')) {
+              document.cookie = 'theme=' + (isDark ? 'dark' : 'light') + '; path=/; max-age=31536000; SameSite=Lax';
+            }
+          } catch(e) {}
+        ` }} />
         <meta name="theme-color" content="#2563eb" />
         {ADSENSE_ID && <meta name="google-adsense-account" content={ADSENSE_ID} />}
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -86,7 +103,7 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${plusJakartaSans.variable} antialiased`}>
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
             {children}

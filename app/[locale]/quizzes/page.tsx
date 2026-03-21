@@ -43,11 +43,11 @@ export default async function QuizzesHubPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <main className="min-h-screen bg-gray-50">
+      <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 py-12">
           <div className="text-center mb-10">
-            <h1 className="text-4xl font-bold text-gray-900 mb-3">Personality Quizzes</h1>
-            <p className="text-gray-600 max-w-xl mx-auto">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">Personality Quizzes</h1>
+            <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
               Free, fun personality quizzes to discover more about yourself. Take a quiz and share your result.
             </p>
           </div>
@@ -57,17 +57,17 @@ export default async function QuizzesHubPage({ params }: Props) {
               <Link
                 key={quiz.id}
                 href={`/quiz/${quiz.id}`}
-                className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 hover:shadow-md transition-shadow hover:border-blue-300 group"
+                className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 hover:shadow-md transition-shadow hover:border-blue-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-blue-700 group"
               >
-                <h2 className="font-bold text-gray-900 text-lg leading-tight group-hover:text-blue-600 transition-colors mb-2">
+                <h2 className="font-bold text-gray-900 text-lg leading-tight group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400 mb-2">
                   {quiz.title}
                 </h2>
-                <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                <p className="text-gray-500 text-sm leading-relaxed dark:text-gray-400 mb-4">
                   {quiz.description}
                 </p>
-                <div className="flex items-center justify-between text-xs text-gray-400">
+                <div className="flex items-center justify-between text-xs text-gray-400 dark:text-gray-500">
                   <span>{quiz.questions.length} questions</span>
-                  <span className="text-blue-600 font-medium group-hover:underline">Take quiz →</span>
+                  <span className="text-blue-600 font-medium group-hover:underline dark:text-blue-400">Take quiz →</span>
                 </div>
               </Link>
             ))}

@@ -52,20 +52,20 @@ function SortableItem({ id, name, onRemove }: SortableItemProps) {
     <div
       ref={setNodeRef}
       style={style}
-      className="flex items-center gap-3 p-3 bg-gray-50 border border-gray-200 rounded-lg"
+      className="flex items-center gap-3 p-3 bg-gray-50 border border-gray-200 rounded-xl dark:bg-gray-800 dark:border-gray-700"
     >
       <button
         {...attributes}
         {...listeners}
-        className="text-gray-400 hover:text-gray-600 cursor-grab active:cursor-grabbing"
+        className="text-gray-400 hover:text-gray-600 cursor-grab active:cursor-grabbing dark:text-gray-600 dark:hover:text-gray-400"
         aria-label="Drag to reorder"
       >
         <GripVertical size={16} />
       </button>
-      <span className="flex-1 text-sm text-gray-700 truncate">{name}</span>
+      <span className="flex-1 text-sm text-gray-700 truncate dark:text-gray-300">{name}</span>
       <button
         onClick={() => onRemove(id)}
-        className="text-gray-400 hover:text-red-500"
+        className="text-gray-400 hover:text-red-500 dark:text-gray-600"
         aria-label="Remove file"
       >
         <X size={16} />
@@ -137,13 +137,13 @@ export default function MergeTool({ title, description, faqs }: Props) {
     >
       {/* Drop Zone */}
       <div
-        className="border-2 border-dashed border-blue-300 rounded-lg p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-4"
+        className="border-2 border-dashed border-blue-300 rounded-xl p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-4 dark:border-blue-700 dark:hover:bg-blue-900/20"
         onClick={() => document.getElementById("merge-file-input")?.click()}
         onDragOver={(e) => e.preventDefault()}
         onDrop={(e) => { e.preventDefault(); addFiles(e.dataTransfer.files); }}
       >
-        <p className="text-blue-600 font-medium">{t("dropZone.label")}</p>
-        <p className="text-gray-400 text-sm mt-1">{t("dropZone.hint")}</p>
+        <p className="text-blue-600 font-medium dark:text-blue-400">{t("dropZone.label")}</p>
+        <p className="text-gray-400 text-sm mt-1 dark:text-gray-500">{t("dropZone.hint")}</p>
         <input
           id="merge-file-input"
           type="file"
@@ -167,13 +167,13 @@ export default function MergeTool({ title, description, faqs }: Props) {
         </DndContext>
       )}
 
-      {error && <p className="text-red-600 text-sm mb-3">{error}</p>}
-      {done && <p className="text-green-600 text-sm mb-3">{t("success")}</p>}
+      {error && <p className="text-red-600 text-sm mb-3 dark:text-red-400">{error}</p>}
+      {done && <p className="text-green-600 text-sm mb-3 dark:text-green-400">{t("success")}</p>}
 
       <button
         onClick={handleMerge}
         disabled={loading || jobs.length < 2}
-        className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold py-3 rounded-lg transition-colors"
+        className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 disabled:bg-gray-300 disabled:bg-none text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
       >
         {loading ? t("button.merging") : t("button.merge")}
       </button>

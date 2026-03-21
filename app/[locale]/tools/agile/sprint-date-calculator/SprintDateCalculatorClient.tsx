@@ -95,7 +95,7 @@ export default function SprintDateCalculatorClient({ title, description, faqs, l
             <select
               value={sprintWeeks}
               onChange={e => setSprintWeeks(Number(e.target.value))}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500 bg-white"
+              className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
             >
               <option value={2}>{labels.twoWeeks}</option>
               <option value={3}>{labels.threeWeeks}</option>

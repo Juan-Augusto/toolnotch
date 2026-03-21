@@ -42,10 +42,10 @@ export default function DropZone({ onFile, currentFile }: Props) {
       onDragLeave={() => setIsDragging(false)}
       onDrop={handleDrop}
       onClick={() => inputRef.current?.click()}
-      className={`border-2 border-dashed rounded-xl p-10 text-center cursor-pointer transition-colors ${
+      className={`border-2 border-dashed rounded-2xl p-10 text-center cursor-pointer transition-colors transition-transform duration-200 ${
         isDragging
-          ? 'border-blue-500 bg-blue-50'
-          : 'border-zinc-300 hover:border-zinc-400 bg-zinc-50'
+          ? 'border-blue-500 bg-blue-50 scale-[1.01] dark:border-blue-400 dark:bg-blue-900/20'
+          : 'border-zinc-300 hover:border-zinc-400 bg-zinc-50 dark:border-zinc-600 dark:hover:border-zinc-500 dark:bg-zinc-800'
       }`}
     >
       <input
@@ -57,16 +57,16 @@ export default function DropZone({ onFile, currentFile }: Props) {
       />
       {currentFile ? (
         <div className="space-y-1">
-          <p className="font-medium text-zinc-800">{currentFile.name}</p>
-          <p className="text-sm text-zinc-500">
+          <p className="font-medium text-zinc-800 dark:text-zinc-200">{currentFile.name}</p>
+          <p className="text-sm text-zinc-500 dark:text-zinc-400">
             {(currentFile.size / 1024).toFixed(1)} KB · {t('replace')}
           </p>
         </div>
       ) : (
         <div className="space-y-2">
-          <div className="text-4xl text-zinc-300">↑</div>
-          <p className="text-lg font-medium text-zinc-700">{t('label')}</p>
-          <p className="text-sm text-zinc-500">{t('hint')}</p>
+          <div className="text-4xl text-zinc-300 dark:text-zinc-600">↑</div>
+          <p className="text-lg font-medium text-zinc-700 dark:text-zinc-300">{t('label')}</p>
+          <p className="text-sm text-zinc-500 dark:text-zinc-400">{t('hint')}</p>
         </div>
       )}
     </div>

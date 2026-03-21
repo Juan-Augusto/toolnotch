@@ -17,9 +17,9 @@ export default function QuizPlayer({ quiz }: QuizPlayerProps) {
   if (state === 'idle') {
     return (
       <div className="text-center space-y-6 py-8" lang="en">
-        <h1 className="text-3xl font-bold text-gray-900">{quiz.title}</h1>
-        <p className="text-gray-600 max-w-lg mx-auto">{quiz.description}</p>
-        <div className="text-sm text-gray-400">{quiz.questions.length} questions · Takes about 2 minutes</div>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">{quiz.title}</h1>
+        <p className="text-gray-600 dark:text-gray-400 max-w-lg mx-auto">{quiz.description}</p>
+        <div className="text-sm text-gray-400 dark:text-gray-500">{quiz.questions.length} questions · Takes about 2 minutes</div>
         <button
           onClick={start}
           className="px-10 py-4 bg-blue-600 text-white rounded-xl font-bold text-lg hover:bg-blue-700 transition-colors"
@@ -39,7 +39,7 @@ export default function QuizPlayer({ quiz }: QuizPlayerProps) {
 
   return (
     <div className="space-y-6">
-      <div className="w-full bg-gray-100 rounded-full h-2">
+      <div className="w-full bg-gray-100 dark:bg-gray-700 rounded-full h-2">
         <div
           className="bg-blue-600 h-2 rounded-full transition-all duration-300"
           style={{ width: `${progress}%` }}

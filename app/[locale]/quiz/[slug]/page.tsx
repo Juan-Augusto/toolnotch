@@ -34,9 +34,9 @@ export default async function QuizPage({ params }: { params: Promise<{ locale: s
   if (!quiz) notFound()
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <div className="max-w-2xl mx-auto px-4 py-10">
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-8">
           <QuizPlayer quiz={quiz} locale={locale} />
         </div>
       </div>

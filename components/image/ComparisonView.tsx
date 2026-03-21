@@ -63,7 +63,7 @@ export default function ComparisonView({ original, result }: Props) {
       {originalUrl && compressedUrl && (
         <div
           ref={containerRef}
-          className="relative rounded-xl overflow-hidden select-none cursor-col-resize bg-zinc-100"
+          className="relative rounded-xl overflow-hidden select-none cursor-col-resize bg-zinc-100 dark:bg-zinc-800"
           style={{ maxHeight: 300 }}
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
@@ -95,7 +95,7 @@ export default function ComparisonView({ original, result }: Props) {
 
           {/* Divider line */}
           <div
-            className="absolute top-0 bottom-0 w-0.5 bg-white shadow-lg pointer-events-none"
+            className="absolute top-0 bottom-0 w-0.5 bg-white dark:bg-zinc-400 shadow-lg pointer-events-none"
             style={{ left: `${sliderPct}%` }}
           />
 
@@ -108,7 +108,7 @@ export default function ComparisonView({ original, result }: Props) {
             aria-label={t('compare.sliderAriaLabel')}
             tabIndex={0}
             onKeyDown={onKeyDown}
-            className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-white rounded-full shadow-lg border-2 border-gray-300 flex items-center justify-center cursor-col-resize focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-white rounded-full shadow-lg border-2 border-gray-300 flex items-center justify-center cursor-col-resize focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600"
             style={{ left: `${sliderPct}%` }}
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -128,13 +128,13 @@ export default function ComparisonView({ original, result }: Props) {
 
       {/* Stats row */}
       <div className="grid grid-cols-2 gap-3 text-sm">
-        <div className="bg-zinc-50 rounded-lg px-3 py-2">
+        <div className="bg-zinc-50 rounded-lg px-3 py-2 dark:bg-zinc-700">
           <span className="text-zinc-400 text-xs uppercase tracking-wide block">{t('compare.original')}</span>
-          <span className="font-semibold text-zinc-700">{formatBytes(result.originalSize)}</span>
+          <span className="font-semibold text-zinc-700 dark:text-zinc-200">{formatBytes(result.originalSize)}</span>
         </div>
-        <div className="bg-zinc-50 rounded-lg px-3 py-2">
+        <div className="bg-zinc-50 rounded-lg px-3 py-2 dark:bg-zinc-700">
           <span className="text-zinc-400 text-xs uppercase tracking-wide block">{t('compare.compressed')}</span>
-          <span className="font-semibold text-zinc-700">{formatBytes(result.compressedSize)}</span>
+          <span className="font-semibold text-zinc-700 dark:text-zinc-200">{formatBytes(result.compressedSize)}</span>
         </div>
       </div>
 
@@ -142,8 +142,8 @@ export default function ComparisonView({ original, result }: Props) {
       <div
         className={`text-center py-3 rounded-lg font-semibold text-sm ${
           result.savings > 0
-            ? 'bg-green-50 text-green-700 border border-green-100'
-            : 'bg-yellow-50 text-yellow-700 border border-yellow-100'
+            ? 'bg-green-50 text-green-700 border border-green-100 dark:bg-green-900/30 dark:text-green-400 dark:border-green-800'
+            : 'bg-yellow-50 text-yellow-700 border border-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400 dark:border-yellow-800'
         }`}
       >
         {result.savings > 0
@@ -151,7 +151,7 @@ export default function ComparisonView({ original, result }: Props) {
           : t('compare.noSavings')}
       </div>
 
-      <p className="text-xs text-zinc-400 text-center">{t('compare.dragHint')}</p>
+      <p className="text-xs text-zinc-400 dark:text-zinc-500 text-center">{t('compare.dragHint')}</p>
     </div>
   )
 }

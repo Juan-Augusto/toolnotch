@@ -16,25 +16,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const colorMap: Record<string, string> = {
-  blue:   'bg-blue-50 border-blue-200 text-blue-700',
-  red:    'bg-red-50 border-red-200 text-red-700',
-  indigo: 'bg-indigo-50 border-indigo-200 text-indigo-700',
-  purple: 'bg-purple-50 border-purple-200 text-purple-700',
-  green:  'bg-green-50 border-green-200 text-green-700',
-  orange: 'bg-orange-50 border-orange-200 text-orange-700',
-  pink:   'bg-pink-50 border-pink-200 text-pink-700',
-  violet: 'bg-violet-50 border-violet-200 text-violet-700',
+  blue:   'bg-blue-50 border-blue-200 text-blue-700 dark:bg-blue-900/30 dark:border-blue-800 dark:text-blue-400',
+  red:    'bg-red-50 border-red-200 text-red-700 dark:bg-red-900/30 dark:border-red-800 dark:text-red-400',
+  indigo: 'bg-indigo-50 border-indigo-200 text-indigo-700 dark:bg-indigo-900/30 dark:border-indigo-800 dark:text-indigo-400',
+  purple: 'bg-purple-50 border-purple-200 text-purple-700 dark:bg-purple-900/30 dark:border-purple-800 dark:text-purple-400',
+  green:  'bg-green-50 border-green-200 text-green-700 dark:bg-green-900/30 dark:border-green-800 dark:text-green-400',
+  orange: 'bg-orange-50 border-orange-200 text-orange-700 dark:bg-orange-900/30 dark:border-orange-800 dark:text-orange-400',
+  pink:   'bg-pink-50 border-pink-200 text-pink-700 dark:bg-pink-900/30 dark:border-pink-800 dark:text-pink-400',
+  violet: 'bg-violet-50 border-violet-200 text-violet-700 dark:bg-violet-900/30 dark:border-violet-800 dark:text-violet-400',
 }
 
 const badgeMap: Record<string, string> = {
-  blue:   'bg-blue-100 text-blue-600',
-  red:    'bg-red-100 text-red-600',
-  indigo: 'bg-indigo-100 text-indigo-600',
-  purple: 'bg-purple-100 text-purple-600',
-  green:  'bg-green-100 text-green-600',
-  orange: 'bg-orange-100 text-orange-600',
-  pink:   'bg-pink-100 text-pink-600',
-  violet: 'bg-violet-100 text-violet-600',
+  blue:   'bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400',
+  red:    'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400',
+  indigo: 'bg-indigo-100 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400',
+  purple: 'bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400',
+  green:  'bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400',
+  orange: 'bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400',
+  pink:   'bg-pink-100 text-pink-600 dark:bg-pink-900/30 dark:text-pink-400',
+  violet: 'bg-violet-100 text-violet-600 dark:bg-violet-900/30 dark:text-violet-400',
 }
 
 export default async function HomePage({ params }: Props) {
@@ -138,11 +138,11 @@ export default async function HomePage({ params }: Props) {
   ]
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <div className="text-center mb-14">
-          <h1 className="text-4xl font-bold text-gray-900 mb-3">{t('heading')}</h1>
-          <p className="text-lg text-gray-500">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">{t('heading')}</h1>
+          <p className="text-lg text-gray-500 dark:text-gray-400">
             {t('subheading')}
           </p>
         </div>
@@ -160,17 +160,17 @@ export default async function HomePage({ params }: Props) {
                   <Link
                     key={tool.href}
                     href={tool.href}
-                    className="block bg-white border border-gray-200 rounded-xl p-4 hover:border-gray-300 hover:shadow-sm transition-all group"
+                    className="block bg-white border border-gray-200 rounded-xl p-4 hover:border-gray-300 hover:shadow-sm transition-all group dark:bg-gray-800 dark:border-gray-700 dark:hover:border-gray-600"
                   >
                     <div className="flex items-start gap-3">
                       <span className={`text-xs font-medium px-2 py-0.5 rounded-full mt-0.5 flex-shrink-0 ${badgeMap[group.color]}`}>
                         {tc('free')}
                       </span>
                       <div>
-                        <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm">
+                        <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm dark:text-white dark:group-hover:text-blue-400">
                           {tool.label}
                         </p>
-                        <p className="text-xs text-gray-500 mt-0.5">{tool.desc}</p>
+                        <p className="text-xs text-gray-500 mt-0.5 dark:text-gray-400">{tool.desc}</p>
                       </div>
                     </div>
                   </Link>
@@ -180,12 +180,12 @@ export default async function HomePage({ params }: Props) {
           ))}
         </div>
 
-        <p className="text-center text-xs text-gray-400 mt-16">
+        <p className="text-center text-xs text-gray-400 mt-16 dark:text-gray-600">
           {t('moreComingSoon')}
         </p>
 
         <div className="text-center mt-6">
-          <Link href="/privacy" className="text-xs text-gray-400 hover:text-gray-600 hover:underline">
+          <Link href="/privacy" className="text-xs text-gray-400 hover:text-gray-600 hover:underline dark:text-gray-600 dark:hover:text-gray-400">
             Privacy Policy
           </Link>
         </div>

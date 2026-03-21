@@ -46,17 +46,17 @@ export default function ResultCard({ result, quiz, onRetake }: ResultCardProps) 
       transition={{ duration: 0.4, ease: 'easeOut' }}
       className="space-y-6 text-center"
     >
-      <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8">
-        <div className="text-sm text-gray-500 mb-2">{t('results')}:</div>
+      <div className="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-2xl p-8">
+        <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">{t('results')}:</div>
         <motion.h2
           initial={{ scale: 0.85 }}
           animate={{ scale: 1 }}
           transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.1 }}
-          className="text-3xl font-bold text-gray-900 mb-4"
+          className="text-3xl font-bold text-gray-900 dark:text-white mb-4"
         >
           {result.title}
         </motion.h2>
-        <p className="text-gray-600 text-sm leading-relaxed text-left max-w-prose mx-auto">
+        <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed text-left max-w-prose mx-auto">
           {result.description}
         </p>
       </div>
@@ -72,7 +72,7 @@ export default function ResultCard({ result, quiz, onRetake }: ResultCardProps) 
             <motion.span
               key={trait}
               variants={{ hidden: { opacity: 0, scale: 0.7 }, visible: { opacity: 1, scale: 1 } }}
-              className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium"
+              className="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400 rounded-full text-sm font-medium"
             >
               {trait}
             </motion.span>
@@ -81,7 +81,7 @@ export default function ResultCard({ result, quiz, onRetake }: ResultCardProps) 
       )}
 
       <div>
-        <p className="text-sm text-gray-500 mb-2">{t('share')}:</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">{t('share')}:</p>
         <div className="flex justify-center gap-2 flex-wrap">
           <a
             href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`}
@@ -101,7 +101,7 @@ export default function ResultCard({ result, quiz, onRetake }: ResultCardProps) 
           </a>
           <button
             onClick={copyLink}
-            className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors"
+            className="px-4 py-2 bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors"
           >
             Copy Link
           </button>
@@ -110,12 +110,12 @@ export default function ResultCard({ result, quiz, onRetake }: ResultCardProps) 
 
       <button
         onClick={onRetake}
-        className="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-xl font-semibold hover:bg-gray-50 transition-colors"
+        className="px-8 py-3 border-2 border-gray-300 text-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800 rounded-xl font-semibold hover:bg-gray-50 transition-colors"
       >
         {t('restart')}
       </button>
 
-      <p className="text-xs text-gray-400">
+      <p className="text-xs text-gray-400 dark:text-gray-500">
         Quiz: {quiz.title} on ToolNotch.com
       </p>
     </motion.div>

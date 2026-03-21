@@ -46,7 +46,7 @@ function SortableImageItem({ id, name, preview, onRemove }: SortableImageItemPro
     <div
       ref={setNodeRef}
       style={style}
-      className="flex items-center gap-3 p-2 bg-gray-50 border border-gray-200 rounded-lg"
+      className="flex items-center gap-3 p-2 bg-gray-50 border border-gray-200 rounded-xl"
     >
       <button
         {...attributes}
@@ -153,7 +153,7 @@ export default function JpgToPdfTool({ title, description, faqs }: Props) {
       adSlot="1234567894"
     >
       <div
-        className="border-2 border-dashed border-blue-300 rounded-lg p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-4"
+        className="border-2 border-dashed border-blue-300 rounded-xl p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-4"
         onClick={() => document.getElementById("imgpdf-file-input")?.click()}
         onDragOver={(e) => e.preventDefault()}
         onDrop={(e) => { e.preventDefault(); addFiles(e.dataTransfer.files); }}
@@ -194,7 +194,7 @@ export default function JpgToPdfTool({ title, description, faqs }: Props) {
       <button
         onClick={handleConvert}
         disabled={loading || images.length === 0}
-        className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold py-3 rounded-lg transition-colors"
+        className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 disabled:bg-gray-300 disabled:bg-none text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
       >
         {loading ? t("button.converting") : t("button.convert")}
       </button>

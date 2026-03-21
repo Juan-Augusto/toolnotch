@@ -63,17 +63,17 @@ export default async function QuizResultPage({ params }: { params: Promise<{ slu
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <main className="min-h-screen bg-gray-50">
+      <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
         <div className="max-w-2xl mx-auto px-4 py-10">
           {/* Result detail — indexable content */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 mb-8">
-            <div className="text-sm text-gray-500 mb-1">{quiz.title}</div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">{result.title}</h1>
-            <p className="text-gray-600 leading-relaxed mb-6">{result.description}</p>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-8 mb-8">
+            <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">{quiz.title}</div>
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{result.title}</h1>
+            <p className="text-gray-600 leading-relaxed dark:text-gray-400 mb-6">{result.description}</p>
             {result.traits.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-6">
                 {result.traits.map(trait => (
-                  <span key={trait} className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
+                  <span key={trait} className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium dark:bg-purple-900/30 dark:text-purple-400">
                     {trait}
                   </span>
                 ))}
@@ -81,7 +81,7 @@ export default async function QuizResultPage({ params }: { params: Promise<{ slu
             )}
             <Link
               href={`/quiz/${slug}`}
-              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-colors"
+              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 dark:hover:bg-blue-500 transition-colors"
             >
               Take this quiz →
             </Link>
@@ -89,7 +89,7 @@ export default async function QuizResultPage({ params }: { params: Promise<{ slu
 
           {/* Other quizzes */}
           <div className="text-center">
-            <Link href="/quizzes" className="text-sm text-blue-600 hover:underline">
+            <Link href="/quizzes" className="text-sm text-blue-600 hover:underline dark:text-blue-400">
               Browse all personality quizzes →
             </Link>
           </div>

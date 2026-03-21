@@ -65,7 +65,7 @@ export default function CompressTool({ title, description, faqs }: Props) {
       adSlot="1234567892"
     >
       <div
-        className="border-2 border-dashed border-blue-300 rounded-lg p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-4"
+        className="border-2 border-dashed border-blue-300 rounded-xl p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-4 dark:border-blue-700 dark:hover:bg-blue-900/20"
         onClick={() => document.getElementById("compress-file-input")?.click()}
         onDragOver={(e) => e.preventDefault()}
         onDrop={(e) => {
@@ -75,11 +75,11 @@ export default function CompressTool({ title, description, faqs }: Props) {
         }}
       >
         {file ? (
-          <p className="text-gray-700 font-medium">{file.name} ({formatBytes(file.size)})</p>
+          <p className="text-gray-700 font-medium dark:text-gray-200">{file.name} ({formatBytes(file.size)})</p>
         ) : (
           <>
-            <p className="text-blue-600 font-medium">{t("dropZone.label")}</p>
-            <p className="text-gray-400 text-sm mt-1">{t("dropZone.hint")}</p>
+            <p className="text-blue-600 font-medium dark:text-blue-400">{t("dropZone.label")}</p>
+            <p className="text-gray-400 text-sm mt-1 dark:text-gray-500">{t("dropZone.hint")}</p>
           </>
         )}
         <input
@@ -91,20 +91,20 @@ export default function CompressTool({ title, description, faqs }: Props) {
         />
       </div>
 
-      {error && <p className="text-red-600 text-sm mb-3">{error}</p>}
+      {error && <p className="text-red-600 text-sm mb-3 dark:text-red-400">{error}</p>}
 
       {result && (
-        <div className="mb-4 p-4 bg-gray-50 rounded-lg border border-gray-200 text-sm space-y-1">
+        <div className="mb-4 p-4 bg-gray-50 rounded-xl border border-gray-200 text-sm space-y-1 dark:bg-gray-800 dark:border-gray-700">
           <div className="flex justify-between">
-            <span className="text-gray-500">{t("result.originalSize")}</span>
+            <span className="text-gray-500 dark:text-gray-400">{t("result.originalSize")}</span>
             <span className="font-medium">{formatBytes(result.originalSize)}</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-gray-500">{t("result.compressedSize")}</span>
+            <span className="text-gray-500 dark:text-gray-400">{t("result.compressedSize")}</span>
             <span className="font-medium">{formatBytes(result.compressedSize)}</span>
           </div>
-          <div className="flex justify-between border-t border-gray-200 pt-1 mt-1">
-            <span className="text-gray-500">{t("result.reduction")}</span>
+          <div className="flex justify-between border-t border-gray-200 pt-1 mt-1 dark:border-gray-700">
+            <span className="text-gray-500 dark:text-gray-400">{t("result.reduction")}</span>
             <span className={`font-semibold ${savings > 0 ? "text-green-600" : "text-gray-600"}`}>
               {savings > 0 ? t("result.smaller", { savings }) : t("result.noReduction")}
             </span>
@@ -115,7 +115,7 @@ export default function CompressTool({ title, description, faqs }: Props) {
       {result ? (
         <button
           onClick={handleDownload}
-          className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition-colors"
+          className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
         >
           {t("button.download")}
         </button>
@@ -123,7 +123,7 @@ export default function CompressTool({ title, description, faqs }: Props) {
         <button
           onClick={handleCompress}
           disabled={loading || !file}
-          className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold py-3 rounded-lg transition-colors"
+          className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 disabled:bg-gray-300 disabled:bg-none text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
         >
           {loading ? t("button.compressing") : t("button.compress")}
         </button>

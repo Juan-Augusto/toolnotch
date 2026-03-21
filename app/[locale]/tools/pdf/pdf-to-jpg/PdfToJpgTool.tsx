@@ -66,7 +66,7 @@ export default function PdfToJpgTool({ title, description, faqs }: Props) {
       adSlot="1234567893"
     >
       <div
-        className="border-2 border-dashed border-blue-300 rounded-lg p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-4"
+        className="border-2 border-dashed border-blue-300 rounded-xl p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-4"
         onClick={() => document.getElementById("pdfimg-file-input")?.click()}
         onDragOver={(e) => e.preventDefault()}
         onDrop={(e) => {
@@ -109,7 +109,7 @@ export default function PdfToJpgTool({ title, description, faqs }: Props) {
       {previews.length > 0 ? (
         <button
           onClick={handleDownloadAll}
-          className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition-colors"
+          className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
         >
           {previews.length === 1
             ? t("button.downloadOne")
@@ -119,7 +119,7 @@ export default function PdfToJpgTool({ title, description, faqs }: Props) {
         <button
           onClick={handleConvert}
           disabled={loading || !file}
-          className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold py-3 rounded-lg transition-colors"
+          className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 disabled:bg-gray-300 disabled:bg-none text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
         >
           {loading ? t("button.converting") : t("button.convert")}
         </button>
