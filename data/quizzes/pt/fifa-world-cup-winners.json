@@ -1,0 +1,260 @@
+{
+  "id": "fifa-world-cup-winners",
+  "type": "trivia",
+  "category": "sports",
+  "title": "Quiz: Campeões da Copa do Mundo FIFA",
+  "description": "Você acha que conhece a história da Copa do Mundo FIFA? Teste seus conhecimentos sobre campeões, recordistas e momentos icônicos de 1930 até 2022. Do primeiro título do Uruguai à glória da Argentina no Catar, este quiz de trivia de futebol cobre todos os campeões, artilheiros e finais inesquecíveis. Ideal para fãs de futebol que adoram um bom desafio. Quantas perguntas você consegue acertar?",
+  "image": "/images/quizzes/fifa-world-cup-winners-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Qual país venceu a primeira Copa do Mundo FIFA em 1930?",
+      "options": [
+        { "id": "q1a", "text": "Argentina" },
+        { "id": "q1b", "text": "Brasil" },
+        { "id": "q1c", "text": "Uruguai" },
+        { "id": "q1d", "text": "Itália" }
+      ],
+      "correctAnswerId": "q1c"
+    },
+    {
+      "id": "q2",
+      "text": "Qual país conquistou o maior número de títulos da Copa do Mundo FIFA?",
+      "options": [
+        { "id": "q2a", "text": "Alemanha" },
+        { "id": "q2b", "text": "Brasil" },
+        { "id": "q2c", "text": "Itália" },
+        { "id": "q2d", "text": "Argentina" }
+      ],
+      "correctAnswerId": "q2b"
+    },
+    {
+      "id": "q3",
+      "text": "Qual país sediou E venceu a Copa do Mundo FIFA de 1966?",
+      "options": [
+        { "id": "q3a", "text": "França" },
+        { "id": "q3b", "text": "Alemanha Ocidental" },
+        { "id": "q3c", "text": "Itália" },
+        { "id": "q3d", "text": "Inglaterra" }
+      ],
+      "correctAnswerId": "q3d"
+    },
+    {
+      "id": "q4",
+      "text": "Quem venceu a Copa do Mundo FIFA de 1998 realizada na França?",
+      "options": [
+        { "id": "q4a", "text": "França" },
+        { "id": "q4b", "text": "Brasil" },
+        { "id": "q4c", "text": "Itália" },
+        { "id": "q4d", "text": "Alemanha" }
+      ],
+      "correctAnswerId": "q4a"
+    },
+    {
+      "id": "q5",
+      "text": "Qual país venceu a Copa do Mundo FIFA de 2010 realizada na África do Sul?",
+      "options": [
+        { "id": "q5a", "text": "Holanda" },
+        { "id": "q5b", "text": "Alemanha" },
+        { "id": "q5c", "text": "Argentina" },
+        { "id": "q5d", "text": "Espanha" }
+      ],
+      "correctAnswerId": "q5d"
+    },
+    {
+      "id": "q6",
+      "text": "Qual país venceu a Copa do Mundo FIFA de 2018 realizada na Rússia?",
+      "options": [
+        { "id": "q6a", "text": "Croácia" },
+        { "id": "q6b", "text": "França" },
+        { "id": "q6c", "text": "Bélgica" },
+        { "id": "q6d", "text": "Inglaterra" }
+      ],
+      "correctAnswerId": "q6b"
+    },
+    {
+      "id": "q7",
+      "text": "Qual país venceu a Copa do Mundo FIFA de 2022 realizada no Catar?",
+      "options": [
+        { "id": "q7a", "text": "França" },
+        { "id": "q7b", "text": "Marrocos" },
+        { "id": "q7c", "text": "Argentina" },
+        { "id": "q7d", "text": "Brasil" }
+      ],
+      "correctAnswerId": "q7c"
+    },
+    {
+      "id": "q8",
+      "text": "Qual país venceu a Copa do Mundo FIFA de 1978 realizada na Argentina?",
+      "options": [
+        { "id": "q8a", "text": "Brasil" },
+        { "id": "q8b", "text": "Holanda" },
+        { "id": "q8c", "text": "Alemanha Ocidental" },
+        { "id": "q8d", "text": "Argentina" }
+      ],
+      "correctAnswerId": "q8d"
+    },
+    {
+      "id": "q9",
+      "text": "Qual país venceu a Copa do Mundo FIFA de 1954 realizada na Suíça?",
+      "options": [
+        { "id": "q9a", "text": "Hungria" },
+        { "id": "q9b", "text": "Alemanha Ocidental" },
+        { "id": "q9c", "text": "Áustria" },
+        { "id": "q9d", "text": "Uruguai" }
+      ],
+      "correctAnswerId": "q9b"
+    },
+    {
+      "id": "q10",
+      "text": "Qual país venceu a Copa do Mundo FIFA de 1970 realizada no México?",
+      "options": [
+        { "id": "q10a", "text": "Itália" },
+        { "id": "q10b", "text": "Uruguai" },
+        { "id": "q10c", "text": "Brasil" },
+        { "id": "q10d", "text": "Alemanha Ocidental" }
+      ],
+      "correctAnswerId": "q10c"
+    },
+    {
+      "id": "q11",
+      "text": "Quem foi o artilheiro da Copa do Mundo FIFA de 2022 no Catar, com 8 gols?",
+      "options": [
+        { "id": "q11a", "text": "Lionel Messi" },
+        { "id": "q11b", "text": "Olivier Giroud" },
+        { "id": "q11c", "text": "Kylian Mbappé" },
+        { "id": "q11d", "text": "Julián Álvarez" }
+      ],
+      "correctAnswerId": "q11c"
+    },
+    {
+      "id": "q12",
+      "text": "Na final da Copa de 2014, a Alemanha venceu a Argentina por 1 a 0. Em qual cidade foi disputada a final?",
+      "options": [
+        { "id": "q12a", "text": "São Paulo" },
+        { "id": "q12b", "text": "Rio de Janeiro" },
+        { "id": "q12c", "text": "Brasília" },
+        { "id": "q12d", "text": "Buenos Aires" }
+      ],
+      "correctAnswerId": "q12b"
+    },
+    {
+      "id": "q13",
+      "text": "Qual país venceu a Copa do Mundo FIFA consecutivamente em 1934 e 1938?",
+      "options": [
+        { "id": "q13a", "text": "Brasil" },
+        { "id": "q13b", "text": "Hungria" },
+        { "id": "q13c", "text": "Alemanha" },
+        { "id": "q13d", "text": "Itália" }
+      ],
+      "correctAnswerId": "q13d"
+    },
+    {
+      "id": "q14",
+      "text": "Quantos gols o lendário Ronaldo Nazário marcou ao longo de sua carreira em Copas do Mundo?",
+      "options": [
+        { "id": "q14a", "text": "12" },
+        { "id": "q14b", "text": "15" },
+        { "id": "q14c", "text": "14" },
+        { "id": "q14d", "text": "17" }
+      ],
+      "correctAnswerId": "q14b"
+    },
+    {
+      "id": "q15",
+      "text": "Qual país venceu a Copa do Mundo FIFA de 2006 realizada na Alemanha?",
+      "options": [
+        { "id": "q15a", "text": "França" },
+        { "id": "q15b", "text": "Portugal" },
+        { "id": "q15c", "text": "Itália" },
+        { "id": "q15d", "text": "Alemanha" }
+      ],
+      "correctAnswerId": "q15c"
+    },
+    {
+      "id": "q16",
+      "text": "Qual país venceu a Copa do Mundo FIFA de 1994 realizada nos EUA?",
+      "options": [
+        { "id": "q16a", "text": "Itália" },
+        { "id": "q16b", "text": "Brasil" },
+        { "id": "q16c", "text": "Suécia" },
+        { "id": "q16d", "text": "Argentina" }
+      ],
+      "correctAnswerId": "q16b"
+    },
+    {
+      "id": "q17",
+      "text": "Qual país venceu a Copa do Mundo FIFA de 1974 realizada na Alemanha Ocidental?",
+      "options": [
+        { "id": "q17a", "text": "Holanda" },
+        { "id": "q17b", "text": "Polônia" },
+        { "id": "q17c", "text": "Brasil" },
+        { "id": "q17d", "text": "Alemanha Ocidental" }
+      ],
+      "correctAnswerId": "q17d"
+    },
+    {
+      "id": "q18",
+      "text": "Quais dois países sediaram conjuntamente a Copa do Mundo FIFA de 2002?",
+      "options": [
+        { "id": "q18a", "text": "China e Japão" },
+        { "id": "q18b", "text": "Japão e Coreia do Sul" },
+        { "id": "q18c", "text": "Coreia do Sul e China" },
+        { "id": "q18d", "text": "Austrália e Japão" }
+      ],
+      "correctAnswerId": "q18b"
+    },
+    {
+      "id": "q19",
+      "text": "Qual país venceu a Copa do Mundo FIFA de 1986 realizada no México?",
+      "options": [
+        { "id": "q19a", "text": "Brasil" },
+        { "id": "q19b", "text": "Alemanha Ocidental" },
+        { "id": "q19c", "text": "França" },
+        { "id": "q19d", "text": "Argentina" }
+      ],
+      "correctAnswerId": "q19d"
+    },
+    {
+      "id": "q20",
+      "text": "Quem detém o recorde de maior artilheiro da história das Copas do Mundo FIFA, com 16 gols?",
+      "options": [
+        { "id": "q20a", "text": "Ronaldo Nazário" },
+        { "id": "q20b", "text": "Just Fontaine" },
+        { "id": "q20c", "text": "Miroslav Klose" },
+        { "id": "q20d", "text": "Gerd Müller" }
+      ],
+      "correctAnswerId": "q20c"
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "Lenda da Copa",
+      "description": "Incrível! Você é uma verdadeira lenda da Copa do Mundo FIFA. Seu conhecimento sobre a história do futebol é excepcional — do título pioneiro do Uruguai em 1930 à emocionante vitória da Argentina no Catar em 2022, você sabe tudo de cor. Artilheiros, finais históricas, campeões consecutivos: nenhum detalhe da Copa do Mundo escapa a você. Fãs como você mantêm vivo o rico patrimônio do futebol mundial. Com cinco títulos do Brasil e a maestria tática da Alemanha, a história deste torneio está em boas mãos. Continue representando o belo jogo!",
+      "shareText": "Acertei mais de 80% no Quiz dos Campeões da Copa do Mundo FIFA no ToolNotch! Será que você consegue me superar?"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Especialista",
+      "description": "Muito bem! Você é um verdadeiro especialista em futebol com um sólido conhecimento da Copa do Mundo FIFA. Você conhece os campeões, os momentos icônicos e os jogadores que moldaram o torneio. Alguns detalhes mais difíceis podem ter escapado, mas seu entendimento da história da Copa está bem acima da média. Do Maracanã ao Estádio Lusail, você acompanhou a trajetória do maior prêmio do futebol. Continue assistindo, continue aprendendo e, na próxima vez, estará cada vez mais perto do título de Lenda da Copa. O trivia de futebol não guarda segredos de um fã como você por muito tempo!",
+      "shareText": "Acertei mais de 60% no Quiz dos Campeões da Copa do Mundo FIFA no ToolNotch! Quanto você sabe sobre futebol?"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Fã",
+      "description": "Nada mal! Você é um fã dedicado do futebol com um bom entendimento da história da Copa do Mundo FIFA. Você conhece os grandes nomes e alguns campeões famosos, mas os detalhes mais aprofundados — como recordistas de gols, países co-anfitriões e campeões consecutivos — ainda estão um pouco nebulosos. A Copa do Mundo está repleta de histórias incríveis que cobrem quase um século de futebol, então há sempre mais para descobrir. Aprofunde-se na história do torneio, do debut de 1930 no Uruguai ao Catar 2022, e desafie-se novamente. Todo fã de futebol pode se tornar um especialista da Copa com um pouco mais de estudo!",
+      "shareText": "Acertei mais de 40% no Quiz dos Campeões da Copa do Mundo FIFA no ToolNotch! Acha que consegue ir melhor?"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "Iniciante",
+      "description": "Continue assim! Todos começam de algum lugar, e a história da Copa do Mundo FIFA é vasta e fascinante. Do primeiro título do Uruguai em 1930 ao drama da final de 2022 no Catar, há quase cem anos de histórias de futebol para explorar. Você sabia que o Brasil venceu a Copa do Mundo cinco vezes — mais do que qualquer outro país? Ou que Miroslav Klose detém o recorde de todos os tempos com 16 gols? Mergulhe na história do belo jogo, reveja as finais clássicas e volte para fazer este quiz de trivia de futebol novamente. Sua jornada na Copa do Mundo está apenas começando!",
+      "shareText": "Acabei de fazer o Quiz dos Campeões da Copa do Mundo FIFA no ToolNotch! Quanto você sabe sobre a história do futebol?"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 PROJECT: ToolNotch — Monorepo (toolnotch.com)
 STATUS: Active Development
-LAST UPDATED: 2026-03-10
+LAST UPDATED: 2026-03-26
 
 ════════════════════════════════════════
 CURRENT PHASE: i18n COMPLETE — ready for QA and deploy
@@ -56,6 +56,21 @@ QUIZ SITE (project 13) — fully i18n migrated:
 [x] /app/[locale]/quizzes/ — translated metadata + buildAlternates
 [x] QuizPlayer, QuestionCard, ResultCard — useTranslations('quiz')
 [x] Quiz content English-only with lang="en" on container (V1 decision)
+
+SPORTS QUIZZES (project 16) — COMPLETE (2026-03-26):
+[x] TriviaQuiz type + triviaEngine + useTriviaQuiz hook
+[x] TriviaPlayer.tsx + TriviaResultCard.tsx
+[x] quizRegistry.ts — replaces hardcoded quiz imports
+[x] 3 football quizzes × 3 locales (EN/PT/ES):
+    [x] FIFA World Cup Winners (trivia, 20Q)
+    [x] Which Football Club Are You? (personality, 10Q, 8 clubs incl. Flamengo + Boca Juniors)
+    [x] Champions League Trivia (trivia, 15Q)
+[x] Hub page category tabs (Sports | Personality)
+[x] Homepage + sitemap updated with new quizzes
+[x] Full SEO: metadata, hreflang, result tier pages, score tier descriptions
+[x] npm run build — PASSES: 591 pages, 0 TypeScript errors
+[ ] QA: play all 3 new quizzes end-to-end (EN, PT, ES)
+[ ] Deploy to Vercel + submit updated sitemap to Search Console
 
 i18n INFRASTRUCTURE:
 [x] next-intl v4.8.3 installed

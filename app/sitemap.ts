@@ -83,6 +83,10 @@ const ALL_ROUTES = [
   '/quiz/am-i-introverted-or-extroverted',
   '/quiz/what-type-of-traveler-are-you',
   '/quiz/which-decade-do-you-belong-in',
+  // Sports quizzes
+  '/quiz/fifa-world-cup-winners',
+  '/quiz/which-football-club-are-you',
+  '/quiz/champions-league-trivia',
 ]
 
 /**

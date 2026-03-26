@@ -1,0 +1,455 @@
+{
+  "id": "which-football-club-are-you",
+  "title": "Qual Time de Futebol Você É?",
+  "description": "Você é o campeão implacável do Real Madrid, a alma criativa do Barcelona ou o coração apaixonado do Liverpool? Responda 10 perguntas e descubra qual clube de futebol lendário combina perfeitamente com sua personalidade, seus valores e sua atitude. Da atmosfera elétrica do Muro Amarelo do Dortmund ao espírito carnavalesco do Flamengo, descubra onde você realmente pertence.",
+  "image": "/images/quizzes/which-football-club-are-you-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Como você enfrenta um grande desafio na sua vida?",
+      "options": [
+        {
+          "id": "q1a",
+          "text": "Estudo cada detalhe, crio um plano baseado em dados e executo com precisão.",
+          "scores": {
+            "manchester-city": 3,
+            "bayern-munich": 2
+          }
+        },
+        {
+          "id": "q1b",
+          "text": "Confio no instinto, me jogo de cabeça com toda a paixão e resolvo na raça.",
+          "scores": {
+            "flamengo": 3,
+            "boca-juniors": 2
+          }
+        },
+        {
+          "id": "q1c",
+          "text": "Fico calmo, me apoio na experiência e sei que vou sair por cima — sempre saio.",
+          "scores": {
+            "real-madrid": 3,
+            "liverpool": 1
+          }
+        },
+        {
+          "id": "q1d",
+          "text": "Reimagino o problema de forma criativa e encontro uma solução que ninguém pensou.",
+          "scores": {
+            "barcelona": 3,
+            "borussia-dortmund": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Em qual tipo de ambiente você performa melhor?",
+      "options": [
+        {
+          "id": "q2a",
+          "text": "Uma multidão barulhenta e elétrica que te impulsiona além dos seus limites.",
+          "scores": {
+            "borussia-dortmund": 3,
+            "liverpool": 2
+          }
+        },
+        {
+          "id": "q2b",
+          "text": "Um palco global — grandioso, prestigioso, com milhões de olhos voltados para você.",
+          "scores": {
+            "real-madrid": 3,
+            "manchester-city": 1
+          }
+        },
+        {
+          "id": "q2c",
+          "text": "Uma festa apaixonada, estilo carnaval, onde todo mundo é família.",
+          "scores": {
+            "flamengo": 3,
+            "boca-juniors": 2
+          }
+        },
+        {
+          "id": "q2d",
+          "text": "Um grupo seleto que aprecia a arte, o estilo e os detalhes sutis do jogo.",
+          "scores": {
+            "barcelona": 3,
+            "bayern-munich": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Como você descreve seu estilo de liderança?",
+      "options": [
+        {
+          "id": "q3a",
+          "text": "Lidero pelo exemplo — minha dedicação e intensidade inspiram todos ao meu redor.",
+          "scores": {
+            "liverpool": 3,
+            "boca-juniors": 2
+          }
+        },
+        {
+          "id": "q3b",
+          "text": "Uso sistemas e estrutura clara — cada um sabe exatamente o que precisa fazer.",
+          "scores": {
+            "bayern-munich": 3,
+            "manchester-city": 2
+          }
+        },
+        {
+          "id": "q3c",
+          "text": "Libero a criatividade — dou liberdade e confiança para os talentos brilharem.",
+          "scores": {
+            "barcelona": 3,
+            "borussia-dortmund": 2
+          }
+        },
+        {
+          "id": "q3d",
+          "text": "Exijo o máximo — mentalidade vencedora, padrões altos, sem desculpas.",
+          "scores": {
+            "real-madrid": 3,
+            "bayern-munich": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "Como você reage a uma derrota ou revés sério?",
+      "options": [
+        {
+          "id": "q4a",
+          "text": "Analiso o que deu errado, recalibro a estratégia e volto mais inteligente.",
+          "scores": {
+            "manchester-city": 3,
+            "barcelona": 2
+          }
+        },
+        {
+          "id": "q4b",
+          "text": "Uso a emoção pura como combustível — nada me motiva mais do que ser derrubado.",
+          "scores": {
+            "liverpool": 3,
+            "flamengo": 2
+          }
+        },
+        {
+          "id": "q4c",
+          "text": "Mergulho na tradição e no legado — a grandeza do passado me lembra quem sou.",
+          "scores": {
+            "real-madrid": 3,
+            "boca-juniors": 2
+          }
+        },
+        {
+          "id": "q4d",
+          "text": "Canalizo a energia de todos ao redor e lutamos juntos pela virada.",
+          "scores": {
+            "borussia-dortmund": 3,
+            "liverpool": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "O que mais importa para você em um time ou grupo?",
+      "options": [
+        {
+          "id": "q5a",
+          "text": "Identidade compartilhada e raízes profundas — sabemos quem somos e de onde viemos.",
+          "scores": {
+            "barcelona": 3,
+            "boca-juniors": 2
+          }
+        },
+        {
+          "id": "q5b",
+          "text": "Intensidade coletiva — quando estamos juntos, nada nos para.",
+          "scores": {
+            "liverpool": 3,
+            "borussia-dortmund": 2
+          }
+        },
+        {
+          "id": "q5c",
+          "text": "Talento de classe mundial — quero os melhores jogadores e os maiores nomes.",
+          "scores": {
+            "real-madrid": 3,
+            "manchester-city": 2
+          }
+        },
+        {
+          "id": "q5d",
+          "text": "Excelência tática — cada um cumpre seu papel e o sistema vence.",
+          "scores": {
+            "bayern-munich": 3,
+            "manchester-city": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "Como você vê a relação entre tradição e inovação?",
+      "options": [
+        {
+          "id": "q6a",
+          "text": "Tradição é tudo — legado, história e cultura definem quem você é.",
+          "scores": {
+            "real-madrid": 2,
+            "boca-juniors": 3
+          }
+        },
+        {
+          "id": "q6b",
+          "text": "Inovação vence — abraço novas ideias, tecnologia e abordagens modernas.",
+          "scores": {
+            "manchester-city": 3,
+            "borussia-dortmund": 1
+          }
+        },
+        {
+          "id": "q6c",
+          "text": "Equilíbrio — honro as raízes enquanto evoluo a filosofia ao longo do tempo.",
+          "scores": {
+            "barcelona": 3,
+            "liverpool": 2
+          }
+        },
+        {
+          "id": "q6d",
+          "text": "Construo sistemas duradouros — eficientes, confiáveis e consistentes por décadas.",
+          "scores": {
+            "bayern-munich": 3,
+            "real-madrid": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "Como você descreveria seu fim de semana ideal?",
+      "options": [
+        {
+          "id": "q7a",
+          "text": "Dançando, rodeado de amigos, música alta — a vida é uma festa.",
+          "scores": {
+            "flamengo": 3,
+            "boca-juniors": 1
+          }
+        },
+        {
+          "id": "q7b",
+          "text": "Focado em algum objetivo — treinando, estudando ou otimizando algo.",
+          "scores": {
+            "manchester-city": 3,
+            "bayern-munich": 2
+          }
+        },
+        {
+          "id": "q7c",
+          "text": "Em um evento cultural — arte, música, gastronomia — adoro beleza e criatividade.",
+          "scores": {
+            "barcelona": 3,
+            "flamengo": 1
+          }
+        },
+        {
+          "id": "q7d",
+          "text": "No meio da galera — barulhento, com energia, talvez um pouco caótico.",
+          "scores": {
+            "borussia-dortmund": 3,
+            "liverpool": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "Como é sua relação com seus rivais?",
+      "options": [
+        {
+          "id": "q8a",
+          "text": "Rivalidade é tudo — eu vivo para esses jogos. Nada supera essa intensidade.",
+          "scores": {
+            "boca-juniors": 3,
+            "real-madrid": 2
+          }
+        },
+        {
+          "id": "q8b",
+          "text": "Respeito os rivais, mas no fundo sei que estamos em outro patamar.",
+          "scores": {
+            "real-madrid": 2,
+            "bayern-munich": 2,
+            "manchester-city": 1
+          }
+        },
+        {
+          "id": "q8c",
+          "text": "A rivalidade alimenta nosso espírito — mas unidade e comunidade são mais importantes.",
+          "scores": {
+            "liverpool": 3,
+            "borussia-dortmund": 2
+          }
+        },
+        {
+          "id": "q8d",
+          "text": "Adoro provar que os céticos e rivais estão errados — com estilo e resultados.",
+          "scores": {
+            "barcelona": 3,
+            "flamengo": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "Como você comemora uma grande vitória?",
+      "options": [
+        {
+          "id": "q9a",
+          "text": "Com a cidade inteira — ruas, fogos de artifício, cantando até o amanhecer.",
+          "scores": {
+            "flamengo": 3,
+            "liverpool": 2
+          }
+        },
+        {
+          "id": "q9b",
+          "text": "Satisfeito em silêncio — já sabia que ia ganhar. Hora de preparar o próximo.",
+          "scores": {
+            "manchester-city": 3,
+            "real-madrid": 1
+          }
+        },
+        {
+          "id": "q9c",
+          "text": "Com emoção pura e descontrolada — gritos, abraços e lágrimas de alegria.",
+          "scores": {
+            "boca-juniors": 3,
+            "borussia-dortmund": 2
+          }
+        },
+        {
+          "id": "q9d",
+          "text": "Com orgulho profundo — mais um capítulo escrito na maior história do esporte.",
+          "scores": {
+            "real-madrid": 3,
+            "barcelona": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "Qual qualidade você mais valoriza em si mesmo?",
+      "options": [
+        {
+          "id": "q10a",
+          "text": "Resiliência — sempre encontro um caminho de volta, não importa o que aconteça.",
+          "scores": {
+            "liverpool": 3,
+            "borussia-dortmund": 2
+          }
+        },
+        {
+          "id": "q10b",
+          "text": "Brilhantismo — faço coisas que outros não conseguem e faço com beleza.",
+          "scores": {
+            "barcelona": 3,
+            "flamengo": 2
+          }
+        },
+        {
+          "id": "q10c",
+          "text": "Disciplina — supero a todos pelo trabalho, pela estrutura e pelo foco.",
+          "scores": {
+            "bayern-munich": 3,
+            "manchester-city": 2
+          }
+        },
+        {
+          "id": "q10d",
+          "text": "Grandeza — carrego o peso das expectativas e entrego sempre.",
+          "scores": {
+            "real-madrid": 3,
+            "boca-juniors": 1
+          }
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "real-madrid",
+      "title": "Real Madrid",
+      "description": "Você é o Real Madrid — o clube mais vitorioso da história do futebol e símbolo de uma grandeza que transcende gerações. Como os Merengues, você carrega uma confiança tranquila que beira a certeza absoluta: você não apenas espera vencer, acredita que é seu destino. Você é atraído pelos maiores palcos e se sente mais vivo quando a pressão está no máximo. Derrotas não te desanimam — elas alimentam um fogo que queima ainda mais forte, e você tem uma capacidade extraordinária de produzir magia exatamente quando o mundo duvida de você. As pessoas ao seu redor podem ver isso como arrogância, mas quem te conhece de verdade entende que é simplesmente a marca de alguém que internalizou a excelência como modo de vida. Legado importa profundamente para você. Você pensa de forma global, sonha em grande escala e raramente se contenta com o segundo lugar. O Santiago Bernabéu brama — e você também.",
+      "image": "/images/results/real-madrid.jpg",
+      "traits": ["Prestígio", "Mentalidade Campeã", "Visão Global", "Legado"],
+      "shareText": "Eu sou o Real Madrid no quiz Qual Time de Futebol Você É? no ToolNotch!"
+    },
+    {
+      "id": "barcelona",
+      "title": "FC Barcelona",
+      "description": "Você é o FC Barcelona — um clube que sempre acreditou que o futebol, e a vida, são formas de arte. Como o Barça, você é movido pela criatividade, pela filosofia e por um senso profundo de identidade. Você não quer apenas ter sucesso — quer ter sucesso de forma bela, de um jeito que reflita seus valores. Você tem um forte senso de quem é e de onde veio, e essa identidade molda cada decisão que toma. No trabalho, nos relacionamentos ou em projetos pessoais, você traz uma inteligência criativa que os outros admiram e às vezes têm dificuldade de compreender completamente. Você é colaborativo por natureza, acreditando que um coletivo perfeitamente coordenado é mais poderoso do que qualquer indivíduo isolado. O tiki-taka não é apenas uma filosofia de futebol para você — é uma metáfora de como você se relaciona com o mundo. Paciente, preciso e com propósito. Você acredita no poder do passe e na beleza de fazer as coisas do jeito certo.",
+      "image": "/images/results/barcelona.jpg",
+      "traits": ["Criatividade", "Identidade", "Inteligência Coletiva", "Arte"],
+      "shareText": "Eu sou o FC Barcelona no quiz Qual Time de Futebol Você É? no ToolNotch!"
+    },
+    {
+      "id": "liverpool",
+      "title": "Liverpool FC",
+      "description": "Você é o Liverpool FC — um clube construído sobre paixão, comunidade e a crença inabalável de que você nunca caminhará sozinho. Como os Reds, sua maior força é o coração. Você sente as coisas com profundidade, e sua conexão emocional com as pessoas e causas que te importam te dá uma capacidade sobre-humana de superar a adversidade. Você é o tipo de pessoa que escreve a história da virada, que encontra energia para um último esforço quando todos já desistiram. Comunidade é sua base: você prospera cercado de pessoas que compartilham o seu fogo, e devolve tanto quanto recebe. A atmosfera de Anfield não é apenas um cenário para você — é um estilo de vida, um lembrete de que a crença coletiva pode mover montanhas. Você é autêntico, leal e intensamente verdadeiro em tudo que faz. Você não performa para os outros; você simplesmente é, de forma plena e intensa. Esse ser emocional e honesto é o seu maior dom.",
+      "image": "/images/results/liverpool.jpg",
+      "traits": ["Paixão", "Resiliência", "Comunidade", "Atmosfera"],
+      "shareText": "Eu sou o Liverpool FC no quiz Qual Time de Futebol Você É? no ToolNotch!"
+    },
+    {
+      "id": "bayern-munich",
+      "title": "Bayern Munich",
+      "description": "Você é o Bayern Munich — o clube mais eficiente, dominante e sistematicamente excelente do futebol europeu. Como os bávaros, você acredita que com a estrutura certa, as pessoas certas e os processos certos, o sucesso se torna quase inevitável. Você não é impulsivo nem exibicionista — é metódico, consistente e implacavelmente focado na execução. Você planeja com cuidado, define objetivos claros e mantém os mais altos padrões para si mesmo e para os outros. Enquanto os outros dependem de inspiração, você depende de preparação. Isso não significa que você não tem paixão — muito pelo contrário — mas o seu fogo é frio e controlado, queimando de forma constante em vez de explosiva. Você é a pessoa na sala que já pensou três passos à frente, que cumpre o que promete com confiabilidade e sem drama. Você preza pela competência e detesta o desperdício. No fundo, acredita que a dominância é conquistada pela disciplina, não pela sorte — e seu histórico prova isso.",
+      "image": "/images/results/bayern-munich.jpg",
+      "traits": ["Eficiência", "Dominância", "Precisão", "Consistência"],
+      "shareText": "Eu sou o Bayern Munich no quiz Qual Time de Futebol Você É? no ToolNotch!"
+    },
+    {
+      "id": "manchester-city",
+      "title": "Manchester City",
+      "description": "Você é o Manchester City — o modelo moderno do futebol, onde dados, talento e genialidade tática se combinam para criar algo imparável. Como o City de Pep Guardiola, você é fascinado por sistemas, otimização e pela busca implacável pela melhoria. Você abraça ideias modernas com entusiasmo e nunca se intimida com a complexidade. Na verdade, encontra prazer em desembaraçar problemas difíceis e construir soluções melhores. Você é visionário: enquanto os outros olham para trás, você já está desenhando a próxima versão de si mesmo. Sua dedicação é silenciosa, mas intensa — você não precisa de aplausos para continuar trabalhando, porque o progresso interno já é sua própria recompensa. Você também é altamente adaptável, capaz de mudar de estratégia no meio do caminho sem perder a compostura. Alguns te veem como calculista, mas quem te conhece sabe que por trás das planilhas e táticas há alguém que genuinamente ama o jogo e quer jogá-lo no mais alto nível possível.",
+      "image": "/images/results/manchester-city.jpg",
+      "traits": ["Inteligência Tática", "Implacabilidade", "Pensamento Moderno", "Adaptabilidade"],
+      "shareText": "Eu sou o Manchester City no quiz Qual Time de Futebol Você É? no ToolNotch!"
+    },
+    {
+      "id": "flamengo",
+      "title": "Flamengo",
+      "description": "Você é o Flamengo — o coração do futebol brasileiro e o clube do povo. Como o Mengão, você carrega o espírito do carnaval em tudo que faz: vibrante, apaixonado, alegre e completamente, desculpe a expressão, vivo. Você não apenas participa da vida — você a celebra, em voz alta e com todo mundo ao seu redor. Sua energia é contagiante; as pessoas são naturalmente atraídas pelo seu entusiasmo, pelo seu calor humano e pela sua crença inabalável de que amanhã será ainda melhor que hoje. Para você, o futebol — e a vida — é uma festa coletiva, melhor compartilhada com muita gente, com música, com sentimento. Enquanto outros planejam e calculam, você confia no momento, no instinto e no poder elétrico da emoção coletiva. A adversidade não te quebra — pelo contrário, ela desperta o seu lado mais espetacular. Do subúrbio ao Maracanã, do Zico ao Gabigol, o Flamengo sempre pertenceu ao povo — e você também.",
+      "image": "/images/results/flamengo.jpg",
+      "traits": ["Alegria", "Paixão", "Orgulho Cultural", "Espírito Coletivo"],
+      "shareText": "Eu sou o Flamengo no quiz Qual Time de Futebol Você É? no ToolNotch!"
+    },
+    {
+      "id": "boca-juniors",
+      "title": "Boca Juniors",
+      "description": "Você é o Boca Juniors — fogo, intensidade e um vínculo inabalável com o povo. Como os Xeneizes da Bombonera, você sente tudo no volume máximo. Rivalidades não são ruído de fundo para você — são o centro da sua história, o combustível das suas maiores atuações. Você é ferozmente leal aos seus e igualmente feroz contra qualquer um que se coloque no seu caminho. Há uma crueza em você, uma autenticidade que não pode ser fabricada nem polida. Você usa o coração na manga e tem muito orgulho disso. O bairro de La Boca moldou esse clube, e você também foi moldado por onde veio — por lutas reais, pessoas reais e apostas reais. Você não se interessa por aparências ou glamour pelo glamour. O que importa é verdade, paixão e aquela sensação elétrica de um estádio transformado em algo primitivo e vivo. Quando o Boca vence, toda a Argentina sente — e quando você vence, todos ao seu redor sentem também.",
+      "image": "/images/results/boca-juniors.jpg",
+      "traits": ["Intensidade", "Lealdade", "Rivalidade", "Autenticidade"],
+      "shareText": "Eu sou o Boca Juniors no quiz Qual Time de Futebol Você É? no ToolNotch!"
+    },
+    {
+      "id": "borussia-dortmund",
+      "title": "Borussia Dortmund",
+      "description": "Você é o Borussia Dortmund — o Muro Amarelo, o azarão que nunca para de acreditar, o clube que transforma energia bruta em algo mágico. Como o BVB, você é jovem de espírito, cheio de eletricidade e movido por um otimismo quase irracional que faz o impossível parecer alcançável. Você não precisa do maior orçamento nem do nome mais famoso — você acredita no potencial, no desenvolvimento, em dar a jovens talentos a chance de se tornarem algo extraordinário. O Signal Iduna Park é o estádio mais barulhento da Europa porque os torcedores de lá não são espectadores — são participantes, coautores de cada vitória. Você também é assim: não assiste à vida de lado, você se joga de cabeça. Você é próximo das pessoas, firme e feroz — sabe o que é ser duvidado e usa esse conhecimento como combustível. Seu espírito é o Muro Amarelo: imenso, unido, ensurdecedor e absolutamente impossível de ignorar.",
+      "image": "/images/results/borussia-dortmund.jpg",
+      "traits": ["Energia Jovem", "Espírito de Azarão", "Paixão", "União"],
+      "shareText": "Eu sou o Borussia Dortmund no quiz Qual Time de Futebol Você É? no ToolNotch!"
+    }
+  ]
+}

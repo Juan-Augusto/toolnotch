@@ -1861,7 +1861,24 @@
     "results": "Your Results",
     "restart": "Take Again",
     "share": "Share",
-    "question": "Question {current} of {total}"
+    "question": "Question {current} of {total}",
+    "trivia": {
+      "correct": "Correct!",
+      "wrong": "Wrong",
+      "correctAnswer": "The correct answer is: {answer}",
+      "yourScore": "Your Score",
+      "outOf": "{score} out of {total}",
+      "percentage": "{percent}%",
+      "timeUp": "Time's up!",
+      "nextQuestion": "Next Question",
+      "seeResult": "See My Result",
+      "tiers": {
+        "legend": "Legend",
+        "expert": "Expert",
+        "fan": "Fan",
+        "rookie": "Rookie"
+      }
+    }
   },
   "home": {
     "heading": "ToolNotch",
@@ -1875,7 +1892,8 @@
       "financeTools": "Finance Tools",
       "funAndRandom": "Fun & Random",
       "quizzes": "Quizzes",
-      "agileTools": "Agile & Scrum Tools"
+      "agileTools": "Agile & Scrum Tools",
+      "sportsQuizzes": "Sports Quizzes"
     },
     "tools": {
       "imageCompressor": {
@@ -2012,7 +2030,7 @@
       },
       "allQuizzes": {
         "label": "All Quizzes",
-        "desc": "Browse all personality quizzes"
+        "desc": "Browse personality and sports trivia quizzes"
       },
       "programmingLanguageQuiz": {
         "label": "Which Programming Language Are You?",
@@ -2029,6 +2047,18 @@
       "travelerQuiz": {
         "label": "What Type of Traveler Are You?",
         "desc": "Adventurer, explorer, beach lover?"
+      },
+      "worldCupQuiz": {
+        "label": "FIFA World Cup Winners Quiz",
+        "desc": "Test your knowledge of every World Cup champion"
+      },
+      "footballClubQuiz": {
+        "label": "Which Football Club Are You?",
+        "desc": "Discover your perfect Premier League or La Liga match"
+      },
+      "championsLeagueQuiz": {
+        "label": "Champions League Trivia",
+        "desc": "How well do you know Europe's biggest club competition?"
       },
       "retroBoard": {
         "label": "Retrospective Board",

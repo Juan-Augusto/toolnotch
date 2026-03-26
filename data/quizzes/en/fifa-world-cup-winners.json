@@ -1,0 +1,260 @@
+{
+  "id": "fifa-world-cup-winners",
+  "type": "trivia",
+  "category": "sports",
+  "title": "FIFA World Cup Winners Quiz",
+  "description": "Think you know your FIFA World Cup history? Test your knowledge of World Cup winners, record-breakers, and iconic moments from 1930 to 2022. From Uruguay's first-ever triumph to Argentina's glory in Qatar, this football trivia quiz covers every champion, top scorer, and unforgettable final. Perfect for football fans who love a challenge. How many can you get right?",
+  "image": "/images/quizzes/fifa-world-cup-winners-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Which country won the very first FIFA World Cup in 1930?",
+      "options": [
+        { "id": "q1a", "text": "Argentina" },
+        { "id": "q1b", "text": "Brazil" },
+        { "id": "q1c", "text": "Uruguay" },
+        { "id": "q1d", "text": "Italy" }
+      ],
+      "correctAnswerId": "q1c"
+    },
+    {
+      "id": "q2",
+      "text": "Which country has won the most FIFA World Cup titles?",
+      "options": [
+        { "id": "q2a", "text": "Germany" },
+        { "id": "q2b", "text": "Brazil" },
+        { "id": "q2c", "text": "Italy" },
+        { "id": "q2d", "text": "Argentina" }
+      ],
+      "correctAnswerId": "q2b"
+    },
+    {
+      "id": "q3",
+      "text": "Which country hosted AND won the 1966 FIFA World Cup?",
+      "options": [
+        { "id": "q3a", "text": "France" },
+        { "id": "q3b", "text": "West Germany" },
+        { "id": "q3c", "text": "Italy" },
+        { "id": "q3d", "text": "England" }
+      ],
+      "correctAnswerId": "q3d"
+    },
+    {
+      "id": "q4",
+      "text": "Who won the 1998 FIFA World Cup held in France?",
+      "options": [
+        { "id": "q4a", "text": "France" },
+        { "id": "q4b", "text": "Brazil" },
+        { "id": "q4c", "text": "Italy" },
+        { "id": "q4d", "text": "Germany" }
+      ],
+      "correctAnswerId": "q4a"
+    },
+    {
+      "id": "q5",
+      "text": "Which country won the 2010 FIFA World Cup in South Africa?",
+      "options": [
+        { "id": "q5a", "text": "Netherlands" },
+        { "id": "q5b", "text": "Germany" },
+        { "id": "q5c", "text": "Argentina" },
+        { "id": "q5d", "text": "Spain" }
+      ],
+      "correctAnswerId": "q5d"
+    },
+    {
+      "id": "q6",
+      "text": "Which country won the 2018 FIFA World Cup in Russia?",
+      "options": [
+        { "id": "q6a", "text": "Croatia" },
+        { "id": "q6b", "text": "France" },
+        { "id": "q6c", "text": "Belgium" },
+        { "id": "q6d", "text": "England" }
+      ],
+      "correctAnswerId": "q6b"
+    },
+    {
+      "id": "q7",
+      "text": "Which country won the 2022 FIFA World Cup in Qatar?",
+      "options": [
+        { "id": "q7a", "text": "France" },
+        { "id": "q7b", "text": "Morocco" },
+        { "id": "q7c", "text": "Argentina" },
+        { "id": "q7d", "text": "Brazil" }
+      ],
+      "correctAnswerId": "q7c"
+    },
+    {
+      "id": "q8",
+      "text": "Which country won the 1978 FIFA World Cup held in Argentina?",
+      "options": [
+        { "id": "q8a", "text": "Brazil" },
+        { "id": "q8b", "text": "Netherlands" },
+        { "id": "q8c", "text": "West Germany" },
+        { "id": "q8d", "text": "Argentina" }
+      ],
+      "correctAnswerId": "q8d"
+    },
+    {
+      "id": "q9",
+      "text": "Which country won the 1954 FIFA World Cup held in Switzerland?",
+      "options": [
+        { "id": "q9a", "text": "Hungary" },
+        { "id": "q9b", "text": "West Germany" },
+        { "id": "q9c", "text": "Austria" },
+        { "id": "q9d", "text": "Uruguay" }
+      ],
+      "correctAnswerId": "q9b"
+    },
+    {
+      "id": "q10",
+      "text": "Which country won the 1970 FIFA World Cup held in Mexico?",
+      "options": [
+        { "id": "q10a", "text": "Italy" },
+        { "id": "q10b", "text": "Uruguay" },
+        { "id": "q10c", "text": "Brazil" },
+        { "id": "q10d", "text": "West Germany" }
+      ],
+      "correctAnswerId": "q10c"
+    },
+    {
+      "id": "q11",
+      "text": "Who was the top scorer at the 2022 FIFA World Cup in Qatar with 8 goals?",
+      "options": [
+        { "id": "q11a", "text": "Lionel Messi" },
+        { "id": "q11b", "text": "Olivier Giroud" },
+        { "id": "q11c", "text": "Kylian Mbappé" },
+        { "id": "q11d", "text": "Julián Álvarez" }
+      ],
+      "correctAnswerId": "q11c"
+    },
+    {
+      "id": "q12",
+      "text": "In the 2014 World Cup final, Germany beat Argentina 1-0. Where was the final played?",
+      "options": [
+        { "id": "q12a", "text": "São Paulo" },
+        { "id": "q12b", "text": "Rio de Janeiro" },
+        { "id": "q12c", "text": "Brasília" },
+        { "id": "q12d", "text": "Buenos Aires" }
+      ],
+      "correctAnswerId": "q12b"
+    },
+    {
+      "id": "q13",
+      "text": "Which country won back-to-back FIFA World Cups in 1934 and 1938?",
+      "options": [
+        { "id": "q13a", "text": "Brazil" },
+        { "id": "q13b", "text": "Hungary" },
+        { "id": "q13c", "text": "Germany" },
+        { "id": "q13d", "text": "Italy" }
+      ],
+      "correctAnswerId": "q13d"
+    },
+    {
+      "id": "q14",
+      "text": "Brazilian legend Ronaldo Nazário scored how many goals across his FIFA World Cup career?",
+      "options": [
+        { "id": "q14a", "text": "12" },
+        { "id": "q14b", "text": "15" },
+        { "id": "q14c", "text": "14" },
+        { "id": "q14d", "text": "17" }
+      ],
+      "correctAnswerId": "q14b"
+    },
+    {
+      "id": "q15",
+      "text": "Which country won the 2006 FIFA World Cup held in Germany?",
+      "options": [
+        { "id": "q15a", "text": "France" },
+        { "id": "q15b", "text": "Portugal" },
+        { "id": "q15c", "text": "Italy" },
+        { "id": "q15d", "text": "Germany" }
+      ],
+      "correctAnswerId": "q15c"
+    },
+    {
+      "id": "q16",
+      "text": "Which country won the 1994 FIFA World Cup held in the USA?",
+      "options": [
+        { "id": "q16a", "text": "Italy" },
+        { "id": "q16b", "text": "Brazil" },
+        { "id": "q16c", "text": "Sweden" },
+        { "id": "q16d", "text": "Argentina" }
+      ],
+      "correctAnswerId": "q16b"
+    },
+    {
+      "id": "q17",
+      "text": "Which country won the 1974 FIFA World Cup held in West Germany?",
+      "options": [
+        { "id": "q17a", "text": "Netherlands" },
+        { "id": "q17b", "text": "Poland" },
+        { "id": "q17c", "text": "Brazil" },
+        { "id": "q17d", "text": "West Germany" }
+      ],
+      "correctAnswerId": "q17d"
+    },
+    {
+      "id": "q18",
+      "text": "Which two countries jointly hosted the 2002 FIFA World Cup?",
+      "options": [
+        { "id": "q18a", "text": "China and Japan" },
+        { "id": "q18b", "text": "Japan and South Korea" },
+        { "id": "q18c", "text": "South Korea and China" },
+        { "id": "q18d", "text": "Australia and Japan" }
+      ],
+      "correctAnswerId": "q18b"
+    },
+    {
+      "id": "q19",
+      "text": "Which country won the 1986 FIFA World Cup held in Mexico?",
+      "options": [
+        { "id": "q19a", "text": "Brazil" },
+        { "id": "q19b", "text": "West Germany" },
+        { "id": "q19c", "text": "France" },
+        { "id": "q19d", "text": "Argentina" }
+      ],
+      "correctAnswerId": "q19d"
+    },
+    {
+      "id": "q20",
+      "text": "Who holds the record for the most goals scored in FIFA World Cup history with 16 goals?",
+      "options": [
+        { "id": "q20a", "text": "Ronaldo Nazário" },
+        { "id": "q20b", "text": "Just Fontaine" },
+        { "id": "q20c", "text": "Miroslav Klose" },
+        { "id": "q20d", "text": "Gerd Müller" }
+      ],
+      "correctAnswerId": "q20c"
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "World Cup Legend",
+      "description": "Outstanding! You're a true FIFA World Cup legend. Your knowledge of football history is exceptional — from Uruguay's pioneering triumph in 1930 to Argentina's emotional victory in Qatar 2022, you know it all. You can rattle off World Cup winners, top scorers, and historic finals with ease. Fans like you keep the beautiful game's rich heritage alive. Whether it's Brazil's record five titles, Germany's tactical masterclasses, or Italy's back-to-back glory, no World Cup trivia challenge can stop you. The beautiful game's history is in safe hands.",
+      "shareText": "I scored over 80% on the FIFA World Cup Winners Quiz on ToolNotch! Can you beat me?"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Football Expert",
+      "description": "Great work! You're a genuine football expert with solid FIFA World Cup knowledge. You know your champions, your iconic moments, and the players who shaped the tournament. A few tricky details may have slipped by, but your understanding of World Cup history is well above average. From the Maracanã to the Lusail Stadium, you've followed the journey of football's greatest prize. Keep watching, keep learning, and next time you'll be chasing that World Cup Legend title. The FIFA World Cup has no secrets it can hide from a fan like you for long.",
+      "shareText": "I scored over 60% on the FIFA World Cup Winners Quiz on ToolNotch! How well do you know your football?"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Football Fan",
+      "description": "Not bad! You're a dedicated football fan with a decent grasp of FIFA World Cup history. You know the big names and some famous winners, but the deeper trivia details — like record goal scorers, joint host nations, and back-to-back champions — are still a little hazy. The World Cup is packed with incredible stories spanning nearly a century of football, so there's always more to discover. Brush up on the tournament's history, from the 1930 debut in Uruguay to Qatar 2022, and challenge yourself again. Every football fan can become a World Cup expert with a little more study!",
+      "shareText": "I scored over 40% on the FIFA World Cup Winners Quiz on ToolNotch! Think you can do better?"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "World Cup Rookie",
+      "description": "Keep going! Everyone starts somewhere, and the FIFA World Cup's history is vast and fascinating. From Uruguay's first title in 1930 to the drama of the 2022 final in Qatar, there are nearly a hundred years of football stories to explore. Did you know Brazil has won the World Cup five times — more than any other nation? Or that Miroslav Klose holds the all-time scoring record with 16 goals? Dive into the history of the beautiful game, revisit the classic finals, and come back to take this football trivia quiz again. Your World Cup journey is just beginning!",
+      "shareText": "I just took the FIFA World Cup Winners Quiz on ToolNotch! How much do you know about football history?"
+    }
+  ]
+}

@@ -1327,7 +1327,24 @@
     "results": "Tus resultados",
     "restart": "Intentar de nuevo",
     "share": "Compartir",
-    "question": "Pregunta {current} de {total}"
+    "question": "Pregunta {current} de {total}",
+    "trivia": {
+      "correct": "¡Correcto!",
+      "wrong": "Incorrecto",
+      "correctAnswer": "La respuesta correcta es: {answer}",
+      "yourScore": "Tu Puntuación",
+      "outOf": "{score} de {total}",
+      "percentage": "{percent}%",
+      "timeUp": "¡Se acabó el tiempo!",
+      "nextQuestion": "Siguiente Pregunta",
+      "seeResult": "Ver Mi Resultado",
+      "tiers": {
+        "legend": "Leyenda",
+        "expert": "Experto",
+        "fan": "Fanático",
+        "rookie": "Novato"
+      }
+    }
   },
   "home": {
     "heading": "ToolNotch",
@@ -1341,7 +1358,8 @@
       "financeTools": "Herramientas financieras",
       "funAndRandom": "Diversión y azar",
       "quizzes": "Cuestionarios",
-      "agileTools": "Herramientas Ágiles & Scrum"
+      "agileTools": "Herramientas Ágiles & Scrum",
+      "sportsQuizzes": "Quiz Deportivo"
     },
     "tools": {
       "imageCompressor": { "label": "Compresor de imágenes", "desc": "Comprime JPG, PNG, WebP, AVIF" },
@@ -1377,11 +1395,14 @@
       "numberGenerator": { "label": "Generador de números", "desc": "Números aleatorios en cualquier rango" },
       "yesOrNoWheel": { "label": "Ruleta de Sí o No", "desc": "Que la ruleta decida" },
       "wheelOfNames": { "label": "Wheel of Names", "desc": "Alternativa gratuita a Wheel of Names" },
-      "allQuizzes": { "label": "Todos los cuestionarios", "desc": "Explora todos los cuestionarios de personalidad" },
+      "allQuizzes": { "label": "Todos los cuestionarios", "desc": "Explora quizzes de personalidad y deportes" },
       "programmingLanguageQuiz": { "label": "¿Qué lenguaje de programación eres?", "desc": "¿Python, JavaScript, Rust, Go o Java?" },
       "introvertExtrovertQuiz": { "label": "¿Introvertido o extrovertido?", "desc": "Descubre dónde te ubicas en el espectro" },
       "careerQuiz": { "label": "¿Qué carrera te conviene?", "desc": "Descubre tu camino profesional ideal" },
       "travelerQuiz": { "label": "¿Qué tipo de viajero eres?", "desc": "¿Aventurero, explorador o amante de la playa?" },
+      "worldCupQuiz": { "label": "Quiz: Campeones de la Copa del Mundo", "desc": "Pon a prueba tu conocimiento sobre cada campeón mundial" },
+      "footballClubQuiz": { "label": "¿Qué Equipo de Fútbol Eres?", "desc": "Descubre qué club se adapta a tu personalidad" },
+      "championsLeagueQuiz": { "label": "Trivia: Champions League", "desc": "¿Cuánto sabes sobre la mayor competición de clubes de Europa?" },
       "retroBoard": { "label": "Tablero de Retrospectiva", "desc": "Funcionó Bien · A Mejorar · Puntos de Acción" },
       "standupGenerator": { "label": "Generador de Standup", "desc": "Ayer · Hoy · Bloqueos → resumen listo para pegar" },
       "planningPoker": { "label": "Planning Poker", "desc": "Estimaciones Fibonacci — revelar todo a la vez" },

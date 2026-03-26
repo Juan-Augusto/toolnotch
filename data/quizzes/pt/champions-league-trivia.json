@@ -1,0 +1,205 @@
+{
+  "id": "champions-league-trivia",
+  "type": "trivia",
+  "category": "sports",
+  "title": "Quiz: Liga dos Campeões",
+  "description": "Você acha que conhece a história da Liga dos Campeões? Da primeira Copa dos Campeões em 1956 aos gigantes modernos da UCL, este quiz testa seu conhecimento sobre a maior competição de clubes do planeta. Finais icônicas, técnicos lendários, artilheiros recordistas e momentos inesquecíveis em 15 perguntas desafiadoras. Apenas os verdadeiros fãs do futebol europeu atingirão o topo.",
+  "image": "/images/quizzes/champions-league-trivia-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Qual clube venceu o maior número de títulos da UEFA Champions League / Copa dos Campeões Europeus?",
+      "options": [
+        { "id": "q1a", "text": "AC Milan" },
+        { "id": "q1b", "text": "Real Madrid" },
+        { "id": "q1c", "text": "Barcelona" },
+        { "id": "q1d", "text": "Bayern Munich" }
+      ],
+      "correctAnswerId": "q1b"
+    },
+    {
+      "id": "q2",
+      "text": "Qual clube protagonizou o famoso 'Milagre de Istambul' na final da Champions League de 2005?",
+      "options": [
+        { "id": "q2a", "text": "Manchester United" },
+        { "id": "q2b", "text": "AC Milan" },
+        { "id": "q2c", "text": "Liverpool" },
+        { "id": "q2d", "text": "Chelsea" }
+      ],
+      "correctAnswerId": "q2c"
+    },
+    {
+      "id": "q3",
+      "text": "Em que ano a Copa dos Campeões passou a se chamar UEFA Champions League?",
+      "options": [
+        { "id": "q3a", "text": "1988" },
+        { "id": "q3b", "text": "1990" },
+        { "id": "q3c", "text": "1992" },
+        { "id": "q3d", "text": "1995" }
+      ],
+      "correctAnswerId": "q3c"
+    },
+    {
+      "id": "q4",
+      "text": "Quem é o maior artilheiro de todos os tempos da UEFA Champions League?",
+      "options": [
+        { "id": "q4a", "text": "Lionel Messi" },
+        { "id": "q4b", "text": "Raúl" },
+        { "id": "q4c", "text": "Robert Lewandowski" },
+        { "id": "q4d", "text": "Cristiano Ronaldo" }
+      ],
+      "correctAnswerId": "q4d"
+    },
+    {
+      "id": "q5",
+      "text": "Qual clube venceu a primeira Copa dos Campeões Europeus em 1956?",
+      "options": [
+        { "id": "q5a", "text": "Juventus" },
+        { "id": "q5b", "text": "Real Madrid" },
+        { "id": "q5c", "text": "Benfica" },
+        { "id": "q5d", "text": "Inter Milan" }
+      ],
+      "correctAnswerId": "q5b"
+    },
+    {
+      "id": "q6",
+      "text": "Qual time venceu a final da Champions League de 2019, batendo o Tottenham Hotspur por 2 a 0?",
+      "options": [
+        { "id": "q6a", "text": "Barcelona" },
+        { "id": "q6b", "text": "Manchester City" },
+        { "id": "q6c", "text": "Ajax" },
+        { "id": "q6d", "text": "Liverpool" }
+      ],
+      "correctAnswerId": "q6d"
+    },
+    {
+      "id": "q7",
+      "text": "Em qual cidade foi realizada a final da UEFA Champions League de 2023?",
+      "options": [
+        { "id": "q7a", "text": "Paris" },
+        { "id": "q7b", "text": "Istambul" },
+        { "id": "q7c", "text": "Londres" },
+        { "id": "q7d", "text": "Lisboa" }
+      ],
+      "correctAnswerId": "q7b"
+    },
+    {
+      "id": "q8",
+      "text": "Qual clube venceu a final da Champions League de 2012 contra o Bayern Munich nos pênaltis?",
+      "options": [
+        { "id": "q8a", "text": "Chelsea" },
+        { "id": "q8b", "text": "Arsenal" },
+        { "id": "q8c", "text": "Manchester United" },
+        { "id": "q8d", "text": "Atletico Madrid" }
+      ],
+      "correctAnswerId": "q8a"
+    },
+    {
+      "id": "q9",
+      "text": "Qual clube conquistou a UEFA Champions League de 2020, derrotando o PSG na final?",
+      "options": [
+        { "id": "q9a", "text": "Real Madrid" },
+        { "id": "q9b", "text": "Juventus" },
+        { "id": "q9c", "text": "Bayern Munich" },
+        { "id": "q9d", "text": "Liverpool" }
+      ],
+      "correctAnswerId": "q9c"
+    },
+    {
+      "id": "q10",
+      "text": "Qual técnico comandou o Barcelona nas conquistas da Champions League em 2009 e 2011?",
+      "options": [
+        { "id": "q10a", "text": "Johan Cruyff" },
+        { "id": "q10b", "text": "Luis Enrique" },
+        { "id": "q10c", "text": "Frank Rijkaard" },
+        { "id": "q10d", "text": "Pep Guardiola" }
+      ],
+      "correctAnswerId": "q10d"
+    },
+    {
+      "id": "q11",
+      "text": "Qual clube venceu a UEFA Champions League consecutivamente em 2017 e 2018?",
+      "options": [
+        { "id": "q11a", "text": "Juventus" },
+        { "id": "q11b", "text": "Real Madrid" },
+        { "id": "q11c", "text": "Barcelona" },
+        { "id": "q11d", "text": "Atletico Madrid" }
+      ],
+      "correctAnswerId": "q11b"
+    },
+    {
+      "id": "q12",
+      "text": "Quem foi o artilheiro da temporada 2021-22 da Champions League, com 15 gols?",
+      "options": [
+        { "id": "q12a", "text": "Kylian Mbappé" },
+        { "id": "q12b", "text": "Robert Lewandowski" },
+        { "id": "q12c", "text": "Karim Benzema" },
+        { "id": "q12d", "text": "Cristiano Ronaldo" }
+      ],
+      "correctAnswerId": "q12c"
+    },
+    {
+      "id": "q13",
+      "text": "Qual clube venceu a final da Champions League de 2021, batendo o Manchester City por 1 a 0?",
+      "options": [
+        { "id": "q13a", "text": "Real Madrid" },
+        { "id": "q13b", "text": "PSG" },
+        { "id": "q13c", "text": "Inter Milan" },
+        { "id": "q13d", "text": "Chelsea" }
+      ],
+      "correctAnswerId": "q13d"
+    },
+    {
+      "id": "q14",
+      "text": "Em que ano o Manchester United conquistou seu título mais recente da UEFA Champions League?",
+      "options": [
+        { "id": "q14a", "text": "1999" },
+        { "id": "q14b", "text": "2003" },
+        { "id": "q14c", "text": "2008" },
+        { "id": "q14d", "text": "2011" }
+      ],
+      "correctAnswerId": "q14c"
+    },
+    {
+      "id": "q15",
+      "text": "Qual clube foi comandado por Zinedine Zidane para vencer três títulos consecutivos da Champions League entre 2016 e 2018?",
+      "options": [
+        { "id": "q15a", "text": "Juventus" },
+        { "id": "q15b", "text": "Real Madrid" },
+        { "id": "q15c", "text": "Barcelona" },
+        { "id": "q15d", "text": "Atletico Madrid" }
+      ],
+      "correctAnswerId": "q15b"
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "Lenda da UCL",
+      "description": "Você é a maior autoridade em Champions League. Seu conhecimento da principal competição de clubes da UEFA rivaliza com o dos maiores técnicos e analistas do futebol europeu. Desde as históricas edições da Copa dos Campeões em 1956 até os espetáculos modernos da UCL, você domina os fatos, as finais, os artilheiros e os treinadores. Você estaria perfeitamente à vontade no estúdio de transmissão nas noites mais importantes do Bernabéu, Anfield ou da Allianz Arena. A Champions League corre nas suas veias.",
+      "shareText": "Fui Lenda no Quiz da Liga dos Campeões! Topo da tabela de conhecimento da UCL. Você consegue me superar?"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Especialista",
+      "description": "Impressionante — você claramente acompanha a Champions League de perto e tem um bom domínio dos seus maiores momentos. Você conhece as finais icônicas, os jogadores recordistas e os clubes que dominaram o futebol europeu. Alguns detalhes escaparam, mas no geral seu conhecimento da UCL está bem acima da média. Continue assistindo às noites de terça e quarta-feira e você estará cada vez mais perto do nível Lenda. O futebol europeu é claramente sua paixão.",
+      "shareText": "Fui Especialista no Quiz da Liga dos Campeões! Sólido conhecimento de UCL. Acha que consegue ir melhor?"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Fã",
+      "description": "Você é um verdadeiro fã da Champions League que curte a emoção e o drama do futebol europeu. Você vivenciou alguns momentos memoráveis e conhece os grandes nomes, mas a história mais profunda e as estatísticas da UCL ainda estão um pouco nebulosas. Sem vergonha — a Champions League tem décadas de história incrível para explorar. Assista a mais finais clássicas, pesquise sobre os clubes icônicos e sua pontuação vai subir rapidamente. A paixão está claramente lá.",
+      "shareText": "Fui Fã no Quiz da Liga dos Campeões. Eu conheço meu futebol europeu! Como você vai se sair?"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "Iniciante",
+      "description": "Você está dando os primeiros passos na Champions League, mas todo mundo começa de algum lugar! A UCL é a competição de clubes mais prestigiada do mundo, reunindo os melhores times da Europa em busca da glória. Da recordista coleção de títulos do Real Madrid a finais inesquecíveis em Istambul, Lisboa e além, há uma rica história esperando para ser descoberta. Mergulhe em partidas clássicas, conheça os clubes mais vitoriosos e volte para encarar este quiz novamente. Sua jornada na UCL começa agora.",
+      "shareText": "Acabei de fazer o Quiz da Liga dos Campeões. Tenho muito a aprender — você consegue pontuar mais do que eu?"
+    }
+  ]
+}

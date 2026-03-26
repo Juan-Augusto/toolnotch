@@ -1,43 +1,85 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getTranslations } from 'next-intl/server'
 import { locales } from '@/i18n'
-import { Quiz } from '@/lib/quizTypes'
+import { AnyQuiz, isTriviaQuiz } from '@/lib/quizTypes'
+import { QUIZ_REGISTRY } from '@/lib/quizRegistry'
+import { buildAlternates } from '@/lib/i18nMeta'
 import QuizPlayer from '@/components/quiz/QuizPlayer'
+import TriviaPlayer from '@/components/quiz/TriviaPlayer'
+
+// ── Static imports for all quiz JSON files ────────────────────────────────────
+// Personality quizzes (English only)
 import careerQuizRaw from '@/data/quizzes/what-career-suits-you.json'
 import programmingQuizRaw from '@/data/quizzes/which-programming-language-are-you.json'
 import introvertQuizRaw from '@/data/quizzes/am-i-introverted-or-extroverted.json'
 import travelerQuizRaw from '@/data/quizzes/what-type-of-traveler-are-you.json'
 import decadeQuizRaw from '@/data/quizzes/which-decade-do-you-belong-in.json'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const ALL_QUIZZES = [careerQuizRaw, programmingQuizRaw, introvertQuizRaw, travelerQuizRaw, decadeQuizRaw] as any[] as Quiz[]
+// Sports — English
+import worldCupEnRaw from '@/data/quizzes/en/fifa-world-cup-winners.json'
+import clubEnRaw from '@/data/quizzes/en/which-football-club-are-you.json'
+import uclEnRaw from '@/data/quizzes/en/champions-league-trivia.json'
+// Sports — Portuguese
+import worldCupPtRaw from '@/data/quizzes/pt/fifa-world-cup-winners.json'
+import clubPtRaw from '@/data/quizzes/pt/which-football-club-are-you.json'
+import uclPtRaw from '@/data/quizzes/pt/champions-league-trivia.json'
+// Sports — Spanish
+import worldCupEsRaw from '@/data/quizzes/es/fifa-world-cup-winners.json'
+import clubEsRaw from '@/data/quizzes/es/which-football-club-are-you.json'
+import uclEsRaw from '@/data/quizzes/es/champions-league-trivia.json'
 
-export function generateStaticParams() {
-  return locales.flatMap(locale => ALL_QUIZZES.map(q => ({ locale, slug: q.id })))
+// ── Quiz map: slug → locale → raw data ────────────────────────────────────────
+const QUIZ_MAP: Record<string, Record<string, unknown>> = {
+  'what-career-suits-you':               { en: careerQuizRaw, pt: careerQuizRaw, es: careerQuizRaw },
+  'which-programming-language-are-you':  { en: programmingQuizRaw, pt: programmingQuizRaw, es: programmingQuizRaw },
+  'am-i-introverted-or-extroverted':     { en: introvertQuizRaw, pt: introvertQuizRaw, es: introvertQuizRaw },
+  'what-type-of-traveler-are-you':       { en: travelerQuizRaw, pt: travelerQuizRaw, es: travelerQuizRaw },
+  'which-decade-do-you-belong-in':       { en: decadeQuizRaw, pt: decadeQuizRaw, es: decadeQuizRaw },
+  'fifa-world-cup-winners':              { en: worldCupEnRaw, pt: worldCupPtRaw, es: worldCupEsRaw },
+  'which-football-club-are-you':         { en: clubEnRaw, pt: clubPtRaw, es: clubEsRaw },
+  'champions-league-trivia':             { en: uclEnRaw, pt: uclPtRaw, es: uclEsRaw },
 }
 
+function getQuiz(slug: string, locale: string): AnyQuiz | undefined {
+  const localeKey = ['pt', 'es'].includes(locale) ? locale : 'en'
+  return (QUIZ_MAP[slug]?.[localeKey] ?? QUIZ_MAP[slug]?.['en']) as AnyQuiz | undefined
+}
+
+// ── Static params ─────────────────────────────────────────────────────────────
+export function generateStaticParams() {
+  return QUIZ_REGISTRY.flatMap(q =>
+    locales.map(locale => ({ locale, slug: q.id }))
+  )
+}
+
+// ── Metadata ──────────────────────────────────────────────────────────────────
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
-  const { slug } = await params
-  const quiz = ALL_QUIZZES.find(q => q.id === slug)
+  const { locale, slug } = await params
+  const quiz = getQuiz(slug, locale)
   if (!quiz) return {}
   return {
     title: `${quiz.title} | ToolNotch`,
     description: quiz.description,
+    alternates: buildAlternates(`/quiz/${slug}`),
     openGraph: { title: quiz.title, description: quiz.description },
   }
 }
 
+// ── Page ──────────────────────────────────────────────────────────────────────
 export default async function QuizPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params
-  const quiz = ALL_QUIZZES.find(q => q.id === slug)
+  const quiz = getQuiz(slug, locale)
   if (!quiz) notFound()
 
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <div className="max-w-2xl mx-auto px-4 py-10">
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-8">
-          <QuizPlayer quiz={quiz} locale={locale} />
+          {isTriviaQuiz(quiz) ? (
+            <TriviaPlayer quiz={quiz} locale={locale} />
+          ) : (
+            <QuizPlayer quiz={quiz} locale={locale} />
+          )}
         </div>
       </div>
     </main>

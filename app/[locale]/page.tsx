@@ -133,6 +133,9 @@ export default async function HomePage({ params }: Props) {
         { href: '/quiz/am-i-introverted-or-extroverted', label: t('tools.introvertExtrovertQuiz.label'), desc: t('tools.introvertExtrovertQuiz.desc') },
         { href: '/quiz/what-career-suits-you', label: t('tools.careerQuiz.label'), desc: t('tools.careerQuiz.desc') },
         { href: '/quiz/what-type-of-traveler-are-you', label: t('tools.travelerQuiz.label'), desc: t('tools.travelerQuiz.desc') },
+        { href: '/quiz/fifa-world-cup-winners', label: t('tools.worldCupQuiz.label'), desc: t('tools.worldCupQuiz.desc') },
+        { href: '/quiz/which-football-club-are-you', label: t('tools.footballClubQuiz.label'), desc: t('tools.footballClubQuiz.desc') },
+        { href: '/quiz/champions-league-trivia', label: t('tools.championsLeagueQuiz.label'), desc: t('tools.championsLeagueQuiz.desc') },
       ],
     },
   ]
