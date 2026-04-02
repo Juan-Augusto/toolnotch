@@ -10,6 +10,9 @@ export const QUIZ_REGISTRY: QuizMeta[] = [
   { id: 'fifa-world-cup-winners',          type: 'trivia',      category: 'sports',      locales: ['en','pt','es'] },
   { id: 'which-football-club-are-you',     type: 'personality', category: 'sports',      locales: ['en','pt','es'] },
   { id: 'champions-league-trivia',         type: 'trivia',      category: 'sports',      locales: ['en','pt','es'] },
+  { id: 'what-is-your-love-language',       type: 'personality', category: 'personality', locales: ['en','pt','es'] },
+  { id: 'formula-1-trivia',                type: 'trivia',      category: 'sports',      locales: ['en','pt','es'] },
+  { id: 'which-f1-driver-are-you',         type: 'personality', category: 'sports',      locales: ['en','pt','es'] },
   // Personality (English only)
   { id: 'what-career-suits-you',           type: 'personality', category: 'personality', locales: ['en'] },
   { id: 'which-programming-language-are-you', type: 'personality', category: 'personality', locales: ['en'] },

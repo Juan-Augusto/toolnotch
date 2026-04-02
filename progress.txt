@@ -1,9 +1,9 @@
 PROJECT: ToolNotch — Monorepo (toolnotch.com)
 STATUS: Active Development
-LAST UPDATED: 2026-03-26
+LAST UPDATED: 2026-04-02
 
 ════════════════════════════════════════
-CURRENT PHASE: i18n COMPLETE — ready for QA and deploy
+CURRENT PHASE: Projects 17–24 COMPLETE — ready for QA and deploy
 ════════════════════════════════════════
 
 COMPLETED
@@ -13,7 +13,7 @@ COMPLETED
 [x] .env.local with GA_ID, ADSENSE_CLIENT, BASE_URL
 [x] package.json renamed to "toolnotch", all deps merged
 [x] npm install — 0 vulnerabilities
-[x] npm run build — passes (510 static pages)
+[x] npm run build — passes (639 static pages)
 
 IMAGE TOOLS (project 01) — fully i18n migrated:
 [x] /lib/imageConversion.ts — convertFormat() + compressImage() + formatBytes()
@@ -69,50 +69,102 @@ SPORTS QUIZZES (project 16) — COMPLETE (2026-03-26):
 [x] Homepage + sitemap updated with new quizzes
 [x] Full SEO: metadata, hreflang, result tier pages, score tier descriptions
 [x] npm run build — PASSES: 591 pages, 0 TypeScript errors
-[ ] QA: play all 3 new quizzes end-to-end (EN, PT, ES)
-[ ] Deploy to Vercel + submit updated sitemap to Search Console
+
+GPA & GRADE CALCULATORS (project 17) — COMPLETE (2026-04-02):
+[x] /lib/gpaMath.ts — calculateGpa(), calculateCumulative(), calculateGradeNeeded(), getGpaCategory()
+[x] /components/education/GpaCalculator.tsx — semester + cumulative modes, grade scale selector (US/PT/ES)
+[x] /components/education/GradeCalculator.tsx — "what grade do I need" calculator
+[x] /app/[locale]/tools/education/gpa-calculator/ — page + metadata + JSON-LD
+[x] /app/[locale]/tools/education/cumulative-gpa-calculator/ — page + metadata + JSON-LD
+[x] /app/[locale]/tools/education/grade-calculator/ — page + metadata + JSON-LD
+[x] i18n: gpaCalculator namespace in EN + PT + ES
+
+BMI & TDEE / CALORIE CALCULATORS (project 18) — COMPLETE (2026-04-02):
+[x] /lib/healthMath.ts — calculateBmi(), calculateTdee(), unit conversion helpers (Mifflin-St Jeor)
+[x] /components/health/BmiCalculator.tsx — metric/imperial toggle, color-coded BMI gauge, disclaimer
+[x] /components/health/TdeeCalculator.tsx — 5 activity levels, full calorie goal table, deficit mode
+[x] /app/[locale]/tools/health/bmi-calculator/ — page + metadata + JSON-LD
+[x] /app/[locale]/tools/health/tdee-calculator/ — page + metadata + JSON-LD
+[x] /app/[locale]/tools/health/calorie-deficit-calculator/ — TdeeCalculator in deficit mode
+[x] i18n: healthCalculator namespace in EN + PT + ES
+
+PERCENTAGE CALCULATOR (project 19) — COMPLETE (pre-existing):
+[x] /app/[locale]/tools/convert/percentage-calculator/ — 3 modes (% of, what %, % change)
+[x] i18n: percentage namespace in EN + PT + ES
+
+QR CODE GENERATOR (project 20) — COMPLETE (2026-04-02):
+[x] /components/utilities/QrCodeGenerator.tsx — URL/Text/Email/Phone/WiFi types, PNG+SVG download
+[x] /app/[locale]/tools/utilities/qr-code-generator/ — page + metadata + JSON-LD
+[x] i18n: qrGenerator namespace in EN + PT + ES
+
+LOVE LANGUAGE QUIZ (project 21) — COMPLETE (2026-04-02):
+[x] data/quizzes/{en,pt,es}/what-is-your-love-language.json — personality, 12Q, 5 results
+[x] quizRegistry.ts updated — { type: 'personality', category: 'personality', locales: ['en','pt','es'] }
+[x] quiz/[slug]/page.tsx — static imports + QUIZ_MAP entries added
+[x] Hub + homepage updated
+
+FORMULA 1 QUIZ EXPANSION (project 22) — COMPLETE (2026-04-02):
+[x] data/quizzes/{en,pt,es}/formula-1-trivia.json — trivia, 15Q, 4 tiers (Legend/Expert/Fan/Rookie)
+[x] data/quizzes/{en,pt,es}/which-f1-driver-are-you.json — personality, 10Q, 8 drivers
+    (Verstappen, Hamilton, Senna, Schumacher, Leclerc, Alonso, Piastri, Norris)
+[x] quizRegistry.ts updated — both quizzes, EN/PT/ES
+[x] quiz/[slug]/page.tsx — static imports + QUIZ_MAP entries added
+[x] Hub + homepage updated
+
+AGE CALCULATOR (project 23) — COMPLETE (2026-04-02):
+[x] /lib/ageMath.ts — calculateAge(), nextBirthday() (pure date arithmetic, no external deps)
+[x] /components/math/AgeCalculator.tsx — exact age, birthday countdown, future age section
+[x] /app/[locale]/tools/math/age-calculator/ — page + metadata + JSON-LD
+[x] i18n: ageCalculator namespace in EN + PT + ES
+
+CITATION GENERATOR (project 24) — COMPLETE (2026-04-02):
+[x] /lib/citationFormatter.ts — APA 7th, MLA 9th, Chicago 17th, ABNT × 5 source types
+    (website, book, journal article, YouTube, newspaper)
+[x] /components/education/CitationGenerator.tsx — format tabs, source selector, dynamic author
+    management, live output, clipboard copy; ABNT tab shown in PT locale only
+[x] /app/[locale]/tools/education/citation-generator/ — page + metadata + JSON-LD
+[x] i18n: citationGenerator namespace in EN + PT + ES (ABNT keys included)
 
 i18n INFRASTRUCTURE:
 [x] next-intl v4.8.3 installed
 [x] i18n.ts + proxy.ts (middleware) — localePrefix: 'as-needed'
 [x] next.config.ts — withNextIntl
 [x] app/[locale]/ structure — all routes migrated
-[x] messages/en.json — fully populated (~77KB, all namespaces)
-[x] messages/pt.json — full pt-BR translations (1277 lines)
-[x] messages/es.json — full es-LA translations (1277 lines)
+[x] messages/en.json — fully populated, all namespaces
+[x] messages/pt.json — full pt-BR translations
+[x] messages/es.json — full es-LA translations
 [x] lib/i18nMeta.ts — buildAlternates() hreflang helper
-[x] app/sitemap.ts — alternates.languages on every route
+[x] app/sitemap.ts — alternates.languages on every route (health, education, math, utilities, quizzes)
 [x] lib/schema.ts — locale param + buildLocalizedUrl() + inLanguage
 [x] components/ToolWrapper.tsx — getTranslations (breadcrumb, allTools, privacyBadge)
 [x] components/FaqSection.tsx — useTranslations (heading)
 [x] app/[locale]/page.tsx — getTranslations('home'), all tool cards translated
-[x] npm run build — PASSES, 510 pages, 0 TypeScript errors
+[x] npm run build — PASSES, 639 pages, 0 TypeScript errors
 
 IN PROGRESS
 ───────────
 (nothing)
 
-NEXT STEPS (QA)
-──────────
-[ ] npm run dev → visit /pt/tools/image/image-compressor — verify Portuguese UI
-[ ] npm run dev → visit /es/tools/pdf/merge-pdf — verify Spanish UI
-[ ] npm run dev → verify English routes unchanged (no /en/ prefix)
-[ ] Validate hreflang: https://www.siteliner.com or Google Search Console
+NEXT STEPS (QA + deploy)
+─────────────────────────
+[ ] npm run dev → QA all new tools (BMI, TDEE, GPA, grade, citation, age, QR)
+[ ] npm run dev → play all new quizzes end-to-end (love language, F1 trivia, F1 driver)
+[ ] npm run dev → verify EN/PT/ES for each new tool
+[ ] Validate hreflang: Google Search Console
 [ ] Validate JSON-LD: https://search.google.com/test/rich-results
-[ ] Lighthouse on /tools/image/image-compressor and /tools/pdf/merge-pdf
-
-NEXT STEPS (deploy)
-──────────
+[ ] Lighthouse on new tool pages
 [ ] Push monorepo to GitHub
 [ ] Connect toolnotch.com domain to Vercel project
 [ ] Set env vars in Vercel: NEXT_PUBLIC_GA_ID, NEXT_PUBLIC_ADSENSE_CLIENT, NEXT_PUBLIC_BASE_URL
 [ ] Submit sitemap to Google Search Console
-[ ] Submit /pt/ and /es/ sitemaps to Google Search Console
-
-POST-DEPLOY:
 [ ] AdSense: apply / confirm site URL updated to toolnotch.com
-[ ] Add ad slot IDs (replace "1234567890" placeholders)
-[ ] Consider full quiz translation (pt/es) — V1 kept content English-only
+[ ] Add real ad slot IDs (replace placeholder strings)
+
+════════════════════════════════════════
+ROADMAP — Next Projects
+════════════════════════════════════════
+
+(Projects 17–24 complete. Next batch TBD.)
 
 BLOCKERS
 ────────
@@ -126,3 +178,6 @@ NOTES
 - English URLs unchanged (no /en/ prefix) — PT gets /pt/, ES gets /es/
 - GA: G-S4FLQ2B972 | AdSense: ca-pub-6392082764157185
 - Build cmd: npm run build | Dev: npm run dev (localhost:3000)
+- ABNT citation format is PT-only (key differentiator for Brazilian students)
+- healthMath.ts uses Mifflin-St Jeor equation for BMR/TDEE
+- ageMath.ts uses pure JS Date arithmetic (no external deps)

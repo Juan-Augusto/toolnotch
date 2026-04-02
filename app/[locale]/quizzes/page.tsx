@@ -15,6 +15,9 @@ import decadeQuizRaw from '@/data/quizzes/which-decade-do-you-belong-in.json'
 import worldCupEnRaw from '@/data/quizzes/en/fifa-world-cup-winners.json'
 import clubEnRaw from '@/data/quizzes/en/which-football-club-are-you.json'
 import uclEnRaw from '@/data/quizzes/en/champions-league-trivia.json'
+import loveLangEnRaw from '@/data/quizzes/en/what-is-your-love-language.json'
+import f1TriviaEnRaw from '@/data/quizzes/en/formula-1-trivia.json'
+import f1DriverEnRaw from '@/data/quizzes/en/which-f1-driver-are-you.json'
 
 const PATH = '/quizzes'
 
@@ -28,6 +31,9 @@ const QUIZ_EN_MAP: Record<string, AnyQuiz> = {
   'fifa-world-cup-winners':              worldCupEnRaw as unknown as AnyQuiz,
   'which-football-club-are-you':         clubEnRaw as unknown as AnyQuiz,
   'champions-league-trivia':             uclEnRaw as unknown as AnyQuiz,
+  'what-is-your-love-language':          loveLangEnRaw as unknown as AnyQuiz,
+  'formula-1-trivia':                    f1TriviaEnRaw as unknown as AnyQuiz,
+  'which-f1-driver-are-you':             f1DriverEnRaw as unknown as AnyQuiz,
 }
 
 // Build card data from registry + English quiz data

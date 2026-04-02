@@ -1,0 +1,205 @@
+{
+  "id": "formula-1-trivia",
+  "type": "trivia",
+  "category": "sports",
+  "title": "Quiz de Fórmula 1",
+  "description": "¿Crees que conoces la historia de la Fórmula 1? Desde la brillantez de Senna hasta la dominancia de Schumacher, los cuatro títulos de Vettel hasta el reinado moderno de Verstappen — pon a prueba tu conocimiento del campeonato de automovilismo más grande del mundo. Circuitos, campeones, récords y momentos legendarios: ¿qué tan bien conoces realmente la F1?",
+  "image": "/images/quizzes/formula-1-trivia-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "¿Cuántos Campeonatos Mundiales de Fórmula 1 ha ganado Lewis Hamilton?",
+      "options": [
+        { "id": "q1a", "text": "5" },
+        { "id": "q1b", "text": "6" },
+        { "id": "q1c", "text": "7" },
+        { "id": "q1d", "text": "8" }
+      ],
+      "correctAnswerId": "q1c"
+    },
+    {
+      "id": "q2",
+      "text": "¿Qué equipo ganó el Campeonato de Constructores de F1 de 2010 a 2013?",
+      "options": [
+        { "id": "q2a", "text": "McLaren" },
+        { "id": "q2b", "text": "Red Bull" },
+        { "id": "q2c", "text": "Ferrari" },
+        { "id": "q2d", "text": "Mercedes" }
+      ],
+      "correctAnswerId": "q2b"
+    },
+    {
+      "id": "q3",
+      "text": "¿Quién se convirtió en el Campeón Mundial de F1 más joven en 2010?",
+      "options": [
+        { "id": "q3a", "text": "Kimi Räikkönen" },
+        { "id": "q3b", "text": "Fernando Alonso" },
+        { "id": "q3c", "text": "Sebastian Vettel" },
+        { "id": "q3d", "text": "Jenson Button" }
+      ],
+      "correctAnswerId": "q3c"
+    },
+    {
+      "id": "q4",
+      "text": "¿Qué circuito alberga el Gran Premio de Mónaco?",
+      "options": [
+        { "id": "q4a", "text": "Circuit de la Sarthe" },
+        { "id": "q4b", "text": "Circuit de Monaco" },
+        { "id": "q4c", "text": "Paul Ricard" },
+        { "id": "q4d", "text": "Silverstone" }
+      ],
+      "correctAnswerId": "q4b"
+    },
+    {
+      "id": "q5",
+      "text": "¿Cuántos Campeonatos Mundiales de Fórmula 1 ganó Michael Schumacher?",
+      "options": [
+        { "id": "q5a", "text": "5" },
+        { "id": "q5b", "text": "6" },
+        { "id": "q5c", "text": "7" },
+        { "id": "q5d", "text": "8" }
+      ],
+      "correctAnswerId": "q5c"
+    },
+    {
+      "id": "q6",
+      "text": "¿En qué año ganó Max Verstappen su primer Campeonato Mundial de F1?",
+      "options": [
+        { "id": "q6a", "text": "2020" },
+        { "id": "q6b", "text": "2021" },
+        { "id": "q6c", "text": "2022" },
+        { "id": "q6d", "text": "2023" }
+      ],
+      "correctAnswerId": "q6b"
+    },
+    {
+      "id": "q7",
+      "text": "¿Cuál era la nacionalidad de Ayrton Senna?",
+      "options": [
+        { "id": "q7a", "text": "Argentina" },
+        { "id": "q7b", "text": "Colombiana" },
+        { "id": "q7c", "text": "Brasileña" },
+        { "id": "q7d", "text": "Portuguesa" }
+      ],
+      "correctAnswerId": "q7c"
+    },
+    {
+      "id": "q8",
+      "text": "¿Qué significa la sigla DRS en la Fórmula 1?",
+      "options": [
+        { "id": "q8a", "text": "Driver Reaction System (Sistema de Reacción del Piloto)" },
+        { "id": "q8b", "text": "Drag Reduction System (Sistema de Reducción de Resistencia)" },
+        { "id": "q8c", "text": "Dynamic Racing Speed (Velocidad Dinámica de Carrera)" },
+        { "id": "q8d", "text": "Differential Rotation System (Sistema de Rotación Diferencial)" }
+      ],
+      "correctAnswerId": "q8b"
+    },
+    {
+      "id": "q9",
+      "text": "¿Con qué equipo ganó Fernando Alonso sus dos Campeonatos Mundiales de F1?",
+      "options": [
+        { "id": "q9a", "text": "Ferrari" },
+        { "id": "q9b", "text": "McLaren" },
+        { "id": "q9c", "text": "Renault" },
+        { "id": "q9d", "text": "Mercedes" }
+      ],
+      "correctAnswerId": "q9c"
+    },
+    {
+      "id": "q10",
+      "text": "El legendario Circuito de Spa-Francorchamps está ubicado en qué país?",
+      "options": [
+        { "id": "q10a", "text": "Francia" },
+        { "id": "q10b", "text": "Países Bajos" },
+        { "id": "q10c", "text": "Bélgica" },
+        { "id": "q10d", "text": "Luxemburgo" }
+      ],
+      "correctAnswerId": "q10c"
+    },
+    {
+      "id": "q11",
+      "text": "¿Cuántos Campeonatos Mundiales de F1 ganó Max Verstappen entre 2021 y 2024?",
+      "options": [
+        { "id": "q11a", "text": "2" },
+        { "id": "q11b", "text": "3" },
+        { "id": "q11c", "text": "4" },
+        { "id": "q11d", "text": "5" }
+      ],
+      "correctAnswerId": "q11c"
+    },
+    {
+      "id": "q12",
+      "text": "¿Qué equipo dominó la F1 de 2014 a 2020, ganando 7 Campeonatos de Constructores consecutivos?",
+      "options": [
+        { "id": "q12a", "text": "Red Bull" },
+        { "id": "q12b", "text": "Ferrari" },
+        { "id": "q12c", "text": "Mercedes" },
+        { "id": "q12d", "text": "McLaren" }
+      ],
+      "correctAnswerId": "q12c"
+    },
+    {
+      "id": "q13",
+      "text": "El Gran Premio de Italia se celebra en qué circuito?",
+      "options": [
+        { "id": "q13a", "text": "Mugello" },
+        { "id": "q13b", "text": "Imola" },
+        { "id": "q13c", "text": "Monza" },
+        { "id": "q13d", "text": "Fiorano" }
+      ],
+      "correctAnswerId": "q13c"
+    },
+    {
+      "id": "q14",
+      "text": "¿Cuántos Campeonatos Mundiales de F1 ganó Ayrton Senna durante su carrera?",
+      "options": [
+        { "id": "q14a", "text": "2" },
+        { "id": "q14b", "text": "3" },
+        { "id": "q14c", "text": "4" },
+        { "id": "q14d", "text": "5" }
+      ],
+      "correctAnswerId": "q14b"
+    },
+    {
+      "id": "q15",
+      "text": "¿Qué piloto ostenta el récord de más victorias en Grandes Premios hasta 2024?",
+      "options": [
+        { "id": "q15a", "text": "Michael Schumacher" },
+        { "id": "q15b", "text": "Ayrton Senna" },
+        { "id": "q15c", "text": "Max Verstappen" },
+        { "id": "q15d", "text": "Lewis Hamilton" }
+      ],
+      "correctAnswerId": "q15d"
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "Leyenda",
+      "description": "¡Eres una verdadera leyenda de la Fórmula 1! Tu conocimiento enciclopédico del deporte abarca décadas de historia del automovilismo — desde la brillantez de Senna hasta la dominancia de Schumacher y el reinado moderno de Verstappen. Conoces los circuitos, los campeones, los cambios de reglamento y los momentos legendarios que definen el deporte. Ya sea siguiendo cada carrera en vivo o estudiando los libros de historia, te has ganado el respeto de cada fan de la F1. Puedes nombrar al ganador de cada título de constructores, identificar un circuito por el nombre de sus curvas y recordar estadísticas que la mayoría de los fans hace tiempo que olvidaron. El paddock tendría suerte de tenerte en el garaje.",
+      "shareText": "Obtuve {percent}% en el Quiz de F\u00f3rmula 1 en ToolNotch! \u00bfPuedes superarme? \ud83c\udfce\ufe0f"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Experto",
+      "description": "¡Impresionante! Tienes el dominio de un experto en Fórmula 1 — conoces los grandes campeonatos, los pilotos icónicos y los principales reglamentos técnicos que dan forma al deporte. Algunos datos oscuros o detalles históricos se escaparon, pero tu conocimiento general está muy por encima de la media. Eres la persona a la que tus amigos acuden cuando quieren entender lo que está pasando en la parrilla, explicar una sanción o resolver una discusión sobre quién es el más grande de todos los tiempos. Con un poco más de estudio sobre la historia más profunda del deporte, estarás persiguiendo el título de Leyenda en poco tiempo.",
+      "shareText": "Obtuve {percent}% en el Quiz de F\u00f3rmula 1 en ToolNotch! \u00bfPuedes superarme? \ud83c\udfce\ufe0f"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Fanático",
+      "description": "Claramente amas la Fórmula 1 y conoces los grandes nombres y momentos que definen el deporte. Algunos detalles técnicos o históricos te sorprendieron, pero tu pasión por las carreras es innegable. Conoces a los pilotos superestrella, los circuitos legendarios y el panorama general del campeonato — y eso ya es más que la mayoría. Sigue viendo esas carreras, explora la rica historia del deporte a través de documentariales y onboards clásicos, y estarás escalando posiciones rápidamente. Todo experto en F1 fue fan primero. La puerta del garaje está abierta y el equipo está listo.",
+      "shareText": "Obtuve {percent}% en el Quiz de F\u00f3rmula 1 en ToolNotch! \u00bfPuedes superarme? \ud83c\udfce\ufe0f"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "Novato",
+      "description": "¡Todo campeón empieza en algún lugar! Puede que seas nuevo en la Fórmula 1 o simplemente que estés empezando a interesarte por el deporte, pero la pasión está claramente ahí. El mundo de la F1 está lleno de historias increíbles: las rivalidades legendarias entre Senna y Prost, la dinastía de los siete títulos de Schumacher, el reinado récord de Hamilton y la impresionante dominancia de Verstappen. Mira algunas carreras clásicas, explora las historias de los grandes equipos y aprende los circuitos que han dado forma al deporte durante más de 70 años. Vuelve y realiza el quiz de nuevo — con un poco más de conocimiento en la visera, pronto estarás saliendo de la clase novato.",
+      "shareText": "Obtuve {percent}% en el Quiz de F\u00f3rmula 1 en ToolNotch! \u00bfPuedes superarme? \ud83c\udfce\ufe0f"
+    }
+  ]
+}

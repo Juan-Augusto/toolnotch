@@ -87,6 +87,26 @@ const ALL_ROUTES = [
   '/quiz/fifa-world-cup-winners',
   '/quiz/which-football-club-are-you',
   '/quiz/champions-league-trivia',
+  '/quiz/what-is-your-love-language',
+  '/quiz/formula-1-trivia',
+  '/quiz/which-f1-driver-are-you',
+  // Health tools
+  '/tools/health',
+  '/tools/health/bmi-calculator',
+  '/tools/health/tdee-calculator',
+  '/tools/health/calorie-deficit-calculator',
+  // Education tools
+  '/tools/education',
+  '/tools/education/gpa-calculator',
+  '/tools/education/cumulative-gpa-calculator',
+  '/tools/education/grade-calculator',
+  '/tools/education/citation-generator',
+  // Math tools
+  '/tools/math',
+  '/tools/math/age-calculator',
+  // Utilities
+  '/tools/utilities',
+  '/tools/utilities/qr-code-generator',
 ]
 
 /**

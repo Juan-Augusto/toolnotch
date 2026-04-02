@@ -61,10 +61,24 @@ Same vars must be set in Vercel project settings → Environment Variables.
       /compress-pdf/                 # page.tsx + CompressTool.tsx
       /pdf-to-jpg/                   # page.tsx + PdfToJpgTool.tsx
       /jpg-to-pdf/                   # page.tsx + JpgToPdfTool.tsx
-    /convert/                        # ← NEXT: unit & currency converter (project 04)
-    /text/                           # ← NEXT: word counter, paraphraser, etc. (projects 06–09)
-    /finance/                        # ← NEXT: loan calculator, invoice, portfolio (projects 10–12)
-    /fun/                            # ← NEXT: typing test, random generators (projects 14–15)
+    /convert/                        # unit & currency converter (project 04)
+    /text/                           # word counter, paraphraser, etc. (projects 06–09)
+    /finance/                        # loan calculator, invoice, portfolio (projects 10–12)
+    /fun/                            # typing test, random generators (projects 14–15)
+    /education/                      # GPA calculator, grade calculator, citation generator (projects 17, 24)
+      /gpa-calculator/               # page.tsx + components/education/GpaCalculator.tsx
+      /cumulative-gpa-calculator/    # page.tsx
+      /grade-calculator/             # page.tsx + GradeCalculator.tsx
+      /citation-generator/           # page.tsx + CitationGenerator.tsx (APA/MLA/Chicago/ABNT)
+    /health/                         # BMI calculator, TDEE calculator (project 18)
+      /bmi-calculator/               # page.tsx + components/health/BmiCalculator.tsx
+      /tdee-calculator/              # page.tsx + TdeeCalculator.tsx
+      /calorie-deficit-calculator/   # page.tsx (TdeeCalculator in deficit mode)
+    /math/                           # Percentage calculator, age calculator (projects 19, 23)
+      /percentage-calculator/        # page.tsx + components/math/PercentageCalculator.tsx
+      /age-calculator/               # page.tsx + AgeCalculator.tsx
+    /utilities/                      # QR code generator (project 20)
+      /qr-code-generator/            # page.tsx + components/utilities/QrCodeGenerator.tsx
   /quiz/                             # Quiz player — /quiz/[slug]
   /quizzes/                          # Quiz hub — /quizzes (category tabs: Sports | Personality)
 
@@ -78,6 +92,27 @@ Same vars must be set in Vercel project settings → Environment Variables.
     ResultCard.tsx                   # Personality result + confetti + share
     TriviaPlayer.tsx                 # Trivia quiz UI (right/wrong feedback, score)
     TriviaResultCard.tsx             # Trivia result: score % + tier badge + share
+  /education/                        # Education tool components (projects 17, 24)
+    GpaCalculator.tsx                # GPA calculator — semester + cumulative modes
+    GradeCalculator.tsx              # "What grade do I need?" calculator
+    GradeScaleSelector.tsx           # US 4.0 / PT 0–20 / ES 0–10 toggle
+    CourseRow.tsx                    # Single course row: name + grade + credits
+    CitationGenerator.tsx            # Citation generator — APA/MLA/Chicago/ABNT
+    CitationForm.tsx                 # Dynamic form fields per source type
+    CitationOutput.tsx               # Formatted citation + copy button
+  /health/                           # Health tool components (project 18)
+    BmiCalculator.tsx                # BMI calculator with gauge visualization
+    TdeeCalculator.tsx               # TDEE + calorie goal table
+    UnitToggle.tsx                   # Metric ↔ Imperial toggle (converts values in place)
+    BmiGauge.tsx                     # Color-coded BMI range bar
+  /math/                             # Math tool components (projects 19, 23)
+    PercentageCalculator.tsx         # 3 modes: X% of Y, X is what % of Y, % change
+    AgeCalculator.tsx                # Exact age + birthday countdown + future age
+    AgeResultCard.tsx                # Age display card
+  /utilities/                        # Utility tool components (project 20)
+    QrCodeGenerator.tsx              # QR code generator shell
+    QrTypeSelector.tsx               # URL | Text | Email | Phone | WiFi tabs
+    QrPreview.tsx                    # Canvas preview + size selector + download
   /image/                            # Image-tool-specific components
     AdUnit.tsx                       # (legacy — prefer /components/AdUnit.tsx for new tools)
     ComparisonView.tsx
@@ -98,6 +133,18 @@ Same vars must be set in Vercel project settings → Environment Variables.
   /quizEngine.ts                     # calculateResult() for personality quizzes
   /triviaEngine.ts                   # calculateTriviaResult() → {score, total, percent, tier}
   /quizRegistry.ts                   # Central registry of all quizzes (type, category, locales)
+  /gpaTypes.ts                       # GradeScale, CourseEntry, GpaResult (project 17)
+  /gpaMath.ts                        # calculateGpa(), calculateCumulative(), calculateGradeNeeded()
+  /healthTypes.ts                    # BmiInput, BmiResult, TdeeInput, TdeeResult (project 18)
+  /healthMath.ts                     # calculateBmi(), calculateTdee(), convertUnits()
+  /percentTypes.ts                   # PercentResult, PercentChangeResult (project 19)
+  /percentMath.ts                    # percentOf(), whatPercent(), percentChange()
+  /qrTypes.ts                        # QrType, QrInput, QrConfig (project 20)
+  /qrGenerator.ts                    # buildQrString(), generateQrCanvas(), generateQrSvg()
+  /ageTypes.ts                       # AgeResult, BirthdayCountdown (project 23)
+  /ageMath.ts                        # calculateAge(), nextBirthday(), futureAge()
+  /citationTypes.ts                  # CitationFormat, SourceType, CitationInput (project 24)
+  /citationFormatter.ts              # formatApa(), formatMla(), formatChicago(), formatAbnt()
 
 /hooks
   /useQuiz.ts                        # State machine for personality quizzes
@@ -119,27 +166,53 @@ Same vars must be set in Vercel project settings → Environment Variables.
       fifa-world-cup-winners.json
       which-football-club-are-you.json
       champions-league-trivia.json
+      formula-1-trivia.json            # project 22
+      which-f1-driver-are-you.json     # project 22
+      what-is-your-love-language.json  # project 21
     /pt/
       fifa-world-cup-winners.json
       which-football-club-are-you.json
       champions-league-trivia.json
+      formula-1-trivia.json            # project 22
+      which-f1-driver-are-you.json     # project 22
+      what-is-your-love-language.json  # project 21
     /es/
       fifa-world-cup-winners.json
       which-football-club-are-you.json
       champions-league-trivia.json
+      formula-1-trivia.json            # project 22
+      which-f1-driver-are-you.json     # project 22
+      what-is-your-love-language.json  # project 21
 
 /public
   /pdf.worker.min.mjs                # pdfjs-dist worker (required for PDF rendering)
 ```
 
 ## Adding a New Tool — Checklist
-1. Create `/app/tools/[category]/[tool-name]/page.tsx` (server component — exports metadata)
-2. Create `/app/tools/[category]/[tool-name]/[ToolName]Tool.tsx` (client component — the UI)
-3. Add any lib logic to `/lib/`
-4. Use `<ToolWrapper>` from `@/components/ToolWrapper` for consistent layout
-5. Use `<AdUnit>` from `@/components/AdUnit` for ads
-6. Add the route to `/app/sitemap.ts`
-7. Update `progress.txt` in the relevant project folder under `C:\Users\juana\projects\`
+1. Create `/app/[locale]/tools/[category]/[tool-name]/page.tsx` (server component — exports metadata + `buildAlternates`)
+2. Create `/components/[category]/[ToolName].tsx` (client component — `'use client'`, all interactivity here)
+3. Add lib logic to `/lib/[toolName]Types.ts` + `/lib/[toolName]Math.ts` (or similar)
+4. Add i18n keys to `messages/en.json`, `messages/pt.json`, `messages/es.json` under a matching namespace
+5. Use `<ToolWrapper>` from `@/components/ToolWrapper` for consistent layout
+6. Use `<AdUnit>` from `@/components/AdUnit` for ads (above FAQ only — never mid-tool)
+7. Add the route to `/app/sitemap.ts` (with `alternates.languages` for hreflang)
+8. Update `progress.txt` in the relevant plan folder under `plans/`
+
+## New Tool Categories (Roadmap)
+| Category | Route prefix | Plan |
+|---|---|---|
+| Education | `/tools/education/` | plans/17-gpa-calculator/, plans/24-citation-generator/ |
+| Health | `/tools/health/` | plans/18-bmi-tdee-calculator/ |
+| Math | `/tools/math/` | plans/19-percentage-calculator/, plans/23-age-calculator/ |
+| Utilities | `/tools/utilities/` | plans/20-qr-code-generator/ |
+
+## i18n Agent Pattern (for new tools)
+Every new tool requires an **i18n Agent** that adds keys to all three message files simultaneously:
+- `messages/en.json` — English (primary)
+- `messages/pt.json` — Portuguese Brazil (pt-BR)
+- `messages/es.json` — Spanish Latin America (es-LA)
+Keys go under a namespace matching the tool category (e.g. `education.gpa`, `health.bmi`, `math.percentage`).
+The i18n Agent runs in **Batch 1** in parallel with the Math Engine and UI agents.
 
 ## Shared Components
 - `ToolWrapper` — wraps every tool page: breadcrumb, h1, description, privacy badge, top ad, tool content, FAQ
@@ -206,3 +279,7 @@ Every tool page uses this pattern to allow metadata export (server) while keepin
 - Do not modify existing `Quiz`, `Question`, `Option`, `QuizResult` interfaces — only extend alongside them
 - Do not show ads during the quiz question flow — only on hub page and result/tier pages
 - Do not hardcode quiz content in components — all content from JSON files
+- Do not add a tool without also adding i18n keys for EN + PT + ES
+- Do not use non-locale routes for new tools — all new tools go under `/app/[locale]/tools/`
+- Do not call external APIs for calculator tools — all math is pure TypeScript, client-side
+- Do not add ABNT citation format to EN or ES locales — ABNT is PT-only

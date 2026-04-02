@@ -1,0 +1,604 @@
+{
+  "id": "what-is-your-love-language",
+  "type": "personality",
+  "category": "personality",
+  "title": "¿Cuál es tu Lenguaje del Amor?",
+  "description": "Descubre cómo das y recibes amor. Basado en el marco de los cinco lenguajes del amor, este quiz revela si te mueven las palabras de afirmación, los actos de servicio, recibir regalos, el tiempo de calidad o el contacto físico. Responde 12 preguntas y descubre qué lenguaje del amor le habla a tu corazón.",
+  "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "¿Qué te hace sentir más amado/a en una relación?",
+      "options": [
+        {
+          "id": "q1a",
+          "text": "Cuando mi pareja me dice cuánto me ama y me aprecia.",
+          "scores": {
+            "words-of-affirmation": 3,
+            "quality-time": 1
+          }
+        },
+        {
+          "id": "q1b",
+          "text": "Cuando mi pareja hace algo útil sin que yo tenga que pedírselo.",
+          "scores": {
+            "acts-of-service": 3,
+            "receiving-gifts": 1
+          }
+        },
+        {
+          "id": "q1c",
+          "text": "Cuando mi pareja me da un regalo significativo y reflexivo.",
+          "scores": {
+            "receiving-gifts": 3,
+            "words-of-affirmation": 1
+          }
+        },
+        {
+          "id": "q1d",
+          "text": "Cuando mi pareja me presta atención total y sin distracciones.",
+          "scores": {
+            "quality-time": 3,
+            "acts-of-service": 1
+          }
+        },
+        {
+          "id": "q1e",
+          "text": "Cuando mi pareja me toma de la mano, me abraza o se sienta cerca de mí.",
+          "scores": {
+            "physical-touch": 3,
+            "quality-time": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Es tu cumpleaños. ¿Qué regalo te significa más?",
+      "options": [
+        {
+          "id": "q2a",
+          "text": "Una carta escrita a mano expresando cuánto significo para él/ella.",
+          "scores": {
+            "words-of-affirmation": 3,
+            "quality-time": 1
+          }
+        },
+        {
+          "id": "q2b",
+          "text": "Planificó todo un día solo para nosotros — con mucho cuidado.",
+          "scores": {
+            "quality-time": 3,
+            "acts-of-service": 1
+          }
+        },
+        {
+          "id": "q2c",
+          "text": "Un regalo físico y reflexivo que yo estaba deseando.",
+          "scores": {
+            "receiving-gifts": 3,
+            "words-of-affirmation": 1
+          }
+        },
+        {
+          "id": "q2d",
+          "text": "Cocinó mi comida favorita desde cero.",
+          "scores": {
+            "acts-of-service": 3,
+            "quality-time": 1
+          }
+        },
+        {
+          "id": "q2e",
+          "text": "Un abrazo largo y cálido y pasar todo el día acurrucados juntos.",
+          "scores": {
+            "physical-touch": 3,
+            "quality-time": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Después de un día difícil, ¿qué necesitas más de tu pareja?",
+      "options": [
+        {
+          "id": "q3a",
+          "text": "Escuchar que están orgullosos de mí o que puedo con esto.",
+          "scores": {
+            "words-of-affirmation": 3,
+            "quality-time": 1
+          }
+        },
+        {
+          "id": "q3b",
+          "text": "Que resuelva algo por mí — cocinar, limpiar o hacer una tarea.",
+          "scores": {
+            "acts-of-service": 3,
+            "receiving-gifts": 1
+          }
+        },
+        {
+          "id": "q3c",
+          "text": "Una pequeña sorpresa — incluso flores o mi snack favorito — para animarme.",
+          "scores": {
+            "receiving-gifts": 3,
+            "acts-of-service": 1
+          }
+        },
+        {
+          "id": "q3d",
+          "text": "Sentarnos juntos en silencio o hablar sin distracciones.",
+          "scores": {
+            "quality-time": 3,
+            "words-of-affirmation": 1
+          }
+        },
+        {
+          "id": "q3e",
+          "text": "Un abrazo largo o que me sostenga cerca sin decir nada.",
+          "scores": {
+            "physical-touch": 3,
+            "quality-time": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "Estás lejos de tu pareja por una semana. ¿Qué es lo que más extrañas?",
+      "options": [
+        {
+          "id": "q4a",
+          "text": "Su voz diciendo 'te quiero' o mensajes cariñosos y alentadores.",
+          "scores": {
+            "words-of-affirmation": 3,
+            "quality-time": 1
+          }
+        },
+        {
+          "id": "q4b",
+          "text": "Las pequeñas cosas que hace por mí todos los días sin que yo se lo pida.",
+          "scores": {
+            "acts-of-service": 3,
+            "physical-touch": 1
+          }
+        },
+        {
+          "id": "q4c",
+          "text": "Recibir una caja de regalos o un pequeño detalle por correo.",
+          "scores": {
+            "receiving-gifts": 3,
+            "words-of-affirmation": 1
+          }
+        },
+        {
+          "id": "q4d",
+          "text": "Estar en el mismo espacio que él/ella, haciendo cualquier cosa juntos.",
+          "scores": {
+            "quality-time": 3,
+            "physical-touch": 1
+          }
+        },
+        {
+          "id": "q4e",
+          "text": "Su presencia física — abrazos, contacto, simplemente estar cerca.",
+          "scores": {
+            "physical-touch": 3,
+            "quality-time": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "¿Cómo sueles mostrar amor a los demás?",
+      "options": [
+        {
+          "id": "q5a",
+          "text": "Les digo exactamente cuánto significan para mí con palabras.",
+          "scores": {
+            "words-of-affirmation": 3,
+            "quality-time": 1
+          }
+        },
+        {
+          "id": "q5b",
+          "text": "Los ayudo — tomo acción para hacer su vida más fácil.",
+          "scores": {
+            "acts-of-service": 3,
+            "receiving-gifts": 1
+          }
+        },
+        {
+          "id": "q5c",
+          "text": "Encuentro regalos reflexivos que me recuerdan a ellos.",
+          "scores": {
+            "receiving-gifts": 3,
+            "words-of-affirmation": 1
+          }
+        },
+        {
+          "id": "q5d",
+          "text": "Reservo tiempo dedicado y sin distracciones solo para ellos.",
+          "scores": {
+            "quality-time": 3,
+            "acts-of-service": 1
+          }
+        },
+        {
+          "id": "q5e",
+          "text": "Los abrazo, les tomo la mano o les ofrezco un toque reconfortante.",
+          "scores": {
+            "physical-touch": 3,
+            "quality-time": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "¿Qué pequeño gesto diario significa más para ti?",
+      "options": [
+        {
+          "id": "q6a",
+          "text": "Un mensaje de buenos días o un 'estoy pensando en ti' durante el día.",
+          "scores": {
+            "words-of-affirmation": 3,
+            "receiving-gifts": 1
+          }
+        },
+        {
+          "id": "q6b",
+          "text": "Mi pareja haciendo café, encargándose de una tarea o ayudando sin pedírselo.",
+          "scores": {
+            "acts-of-service": 3,
+            "quality-time": 1
+          }
+        },
+        {
+          "id": "q6c",
+          "text": "Una pequeña sorpresa — un chocolate, una flor o algo que trajeron para mí.",
+          "scores": {
+            "receiving-gifts": 3,
+            "acts-of-service": 1
+          }
+        },
+        {
+          "id": "q6d",
+          "text": "Cenar juntos sin teléfono — totalmente presentes.",
+          "scores": {
+            "quality-time": 3,
+            "physical-touch": 1
+          }
+        },
+        {
+          "id": "q6e",
+          "text": "Un abrazo espontáneo, un beso en la frente o una mano en el hombro.",
+          "scores": {
+            "physical-touch": 3,
+            "words-of-affirmation": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "Te sientes distante de tu pareja. ¿Qué te ayudaría más?",
+      "options": [
+        {
+          "id": "q7a",
+          "text": "Una conversación sincera donde él/ella exprese cómo se siente respecto a mí.",
+          "scores": {
+            "words-of-affirmation": 3,
+            "quality-time": 1
+          }
+        },
+        {
+          "id": "q7b",
+          "text": "Que haga algo reflexivo y práctico para mostrar que le importa.",
+          "scores": {
+            "acts-of-service": 3,
+            "receiving-gifts": 1
+          }
+        },
+        {
+          "id": "q7c",
+          "text": "Un regalo sorpresa — incluso pequeño — para recordarme que está pensando en mí.",
+          "scores": {
+            "receiving-gifts": 3,
+            "words-of-affirmation": 1
+          }
+        },
+        {
+          "id": "q7d",
+          "text": "Pasar tiempo de calidad juntos sin distracciones.",
+          "scores": {
+            "quality-time": 3,
+            "acts-of-service": 1
+          }
+        },
+        {
+          "id": "q7e",
+          "text": "Cercanía física — sentarse juntos, un abrazo o simplemente tomados de la mano.",
+          "scores": {
+            "physical-touch": 3,
+            "quality-time": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "Tu pareja te sorprende. ¿Qué sorpresa te parece mejor?",
+      "options": [
+        {
+          "id": "q8a",
+          "text": "Un mensaje de voz o tarjeta diciéndome exactamente por qué me ama.",
+          "scores": {
+            "words-of-affirmation": 3,
+            "receiving-gifts": 1
+          }
+        },
+        {
+          "id": "q8b",
+          "text": "Resolvió algo que me tenía estresado/a — una tarea o compromiso.",
+          "scores": {
+            "acts-of-service": 3,
+            "quality-time": 1
+          }
+        },
+        {
+          "id": "q8c",
+          "text": "Un regalo bellamente envuelto que eligió especialmente para mí.",
+          "scores": {
+            "receiving-gifts": 3,
+            "acts-of-service": 1
+          }
+        },
+        {
+          "id": "q8d",
+          "text": "Planificó un día especial — solo nosotros dos.",
+          "scores": {
+            "quality-time": 3,
+            "words-of-affirmation": 1
+          }
+        },
+        {
+          "id": "q8e",
+          "text": "Apareció solo para estar conmigo y sostenerme cerca.",
+          "scores": {
+            "physical-touch": 3,
+            "quality-time": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "En una discusión, ¿qué te ayuda a sentirte resuelto/a?",
+      "options": [
+        {
+          "id": "q9a",
+          "text": "Escuchar una disculpa sincera y que valora nuestra relación.",
+          "scores": {
+            "words-of-affirmation": 3,
+            "quality-time": 1
+          }
+        },
+        {
+          "id": "q9b",
+          "text": "Que haga algo concreto para mostrar que quiere arreglar las cosas.",
+          "scores": {
+            "acts-of-service": 3,
+            "receiving-gifts": 1
+          }
+        },
+        {
+          "id": "q9c",
+          "text": "Un gesto de reconciliación — algo pequeño para romper la tensión.",
+          "scores": {
+            "receiving-gifts": 3,
+            "words-of-affirmation": 1
+          }
+        },
+        {
+          "id": "q9d",
+          "text": "Sentarnos con calma y hablar, totalmente presentes el uno para el otro.",
+          "scores": {
+            "quality-time": 3,
+            "acts-of-service": 1
+          }
+        },
+        {
+          "id": "q9e",
+          "text": "Un abrazo genuino — reconexión física que dice que todo está bien.",
+          "scores": {
+            "physical-touch": 3,
+            "words-of-affirmation": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "¿Qué es lo que más desearías que tu pareja hiciera con más frecuencia?",
+      "options": [
+        {
+          "id": "q10a",
+          "text": "Decirme que me aprecia, me ama y está orgulloso/a de mí.",
+          "scores": {
+            "words-of-affirmation": 3,
+            "quality-time": 1
+          }
+        },
+        {
+          "id": "q10b",
+          "text": "Tomar la iniciativa y ayudar más sin que yo tenga que pedírselo.",
+          "scores": {
+            "acts-of-service": 3,
+            "physical-touch": 1
+          }
+        },
+        {
+          "id": "q10c",
+          "text": "Sorprenderme con pequeños regalos o gestos de cariño.",
+          "scores": {
+            "receiving-gifts": 3,
+            "acts-of-service": 1
+          }
+        },
+        {
+          "id": "q10d",
+          "text": "Dejar el teléfono y estar totalmente presente conmigo.",
+          "scores": {
+            "quality-time": 3,
+            "words-of-affirmation": 1
+          }
+        },
+        {
+          "id": "q10e",
+          "text": "Iniciar cariño físico — abrazos, besos, estar cerca.",
+          "scores": {
+            "physical-touch": 3,
+            "quality-time": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "text": "Te sientes verdaderamente visto/a cuando tu pareja...",
+      "options": [
+        {
+          "id": "q11a",
+          "text": "Me elogia, me alienta y dice que cree en mí.",
+          "scores": {
+            "words-of-affirmation": 3,
+            "quality-time": 1
+          }
+        },
+        {
+          "id": "q11b",
+          "text": "Se esfuerza por hacer mi día más fácil sin que yo se lo pida.",
+          "scores": {
+            "acts-of-service": 3,
+            "receiving-gifts": 1
+          }
+        },
+        {
+          "id": "q11c",
+          "text": "Recuerda algo que mencioné y me sorprende con un regalo reflexivo.",
+          "scores": {
+            "receiving-gifts": 3,
+            "words-of-affirmation": 1
+          }
+        },
+        {
+          "id": "q11d",
+          "text": "Apaga las distracciones y me da su atención completa y total.",
+          "scores": {
+            "quality-time": 3,
+            "acts-of-service": 1
+          }
+        },
+        {
+          "id": "q11e",
+          "text": "Busca mi mano o me acerca sin decir una palabra.",
+          "scores": {
+            "physical-touch": 3,
+            "quality-time": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "text": "Si pudieras tener más de una cosa en tu relación, sería...",
+      "options": [
+        {
+          "id": "q12a",
+          "text": "Más palabras de amor, apreciación y aliento verbal.",
+          "scores": {
+            "words-of-affirmation": 3,
+            "quality-time": 1
+          }
+        },
+        {
+          "id": "q12b",
+          "text": "Más ayuda y esfuerzo — mi pareja demostrando amor a través de acciones.",
+          "scores": {
+            "acts-of-service": 3,
+            "physical-touch": 1
+          }
+        },
+        {
+          "id": "q12c",
+          "text": "Más sorpresas reflexivas y gestos de cariño.",
+          "scores": {
+            "receiving-gifts": 3,
+            "words-of-affirmation": 1
+          }
+        },
+        {
+          "id": "q12d",
+          "text": "Más tiempo dedicado juntos sin distracciones.",
+          "scores": {
+            "quality-time": 3,
+            "acts-of-service": 1
+          }
+        },
+        {
+          "id": "q12e",
+          "text": "Más cariño físico — contacto, cercanía y calidez.",
+          "scores": {
+            "physical-touch": 3,
+            "quality-time": 1
+          }
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "words-of-affirmation",
+      "title": "Palabras de Afirmación",
+      "description": "Tu lenguaje del amor son las Palabras de Afirmación — te sientes más amado/a y valorado/a cuando las personas que te importan expresan sus sentimientos de forma abierta y verbal. Los cumplidos, el aliento, los mensajes cariñosos y escuchar 'te quiero' no son solo agradables de escuchar; para ti, son esenciales. Notas cuando las parejas se esfuerzan por articular sus sentimientos, y recuerdas esas palabras mucho después de que el momento haya pasado. El silencio o los elogios retenidos pueden parecer distancia, incluso cuando nada está mal. Probablemente eres un comunicador expresivo por naturaleza — alguien que naturalmente dice a los demás lo que ama de ellos y levanta a las personas a su alrededor con palabras sinceras y específicas. En las relaciones, floreces cuando tu pareja hace check-in verbalmente, deja notas, envía mensajes reflexivos o simplemente toma un momento para decir lo que significas para él/ella.",
+      "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
+      "traits": ["Expresivo", "Alentador", "Emocionalmente Articulado"],
+      "shareText": "\u00a1Mi lenguaje del amor es Palabras de Afirmaci\u00f3n! \u00bfCu\u00e1l es el tuyo? Haz el quiz en ToolNotch \ud83d\udcac"
+    },
+    {
+      "id": "acts-of-service",
+      "title": "Actos de Servicio",
+      "description": "Tu lenguaje del amor son los Actos de Servicio — te sientes más amado/a cuando las personas que amas se presentan por ti a través de acciones. Cuando alguien lava los platos sin que se lo pidan, se encarga de un recado que olvidaste o cuida de algo que te pesaba, eso es amor hecho tangible. Prestas mucha atención al esfuerzo y al seguimiento, y notas cuando las personas invierten su tiempo y energía para hacer tu vida mejor. Para ti, las acciones realmente hablan más fuerte que las palabras. Probablemente demuestras amor de la misma manera — arremangándote y haciendo cosas por las personas que te importan sin esperar crédito. En las relaciones, floreces cuando tu pareja es proactiva, atenta y dispuesta a contribuir prácticamente a la vida compartida.",
+      "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
+      "traits": ["Práctico", "Orientado a la Acción", "Solidario"],
+      "shareText": "\u00a1Mi lenguaje del amor es Actos de Servicio! \u00bfCu\u00e1l es el tuyo? Haz el quiz en ToolNotch \ud83d\ude4c"
+    },
+    {
+      "id": "receiving-gifts",
+      "title": "Recibir Regalos",
+      "description": "Tu lenguaje del amor es Recibir Regalos — y antes de pensar que se trata de materialismo, en realidad se trata de algo mucho más profundo: la reflexión y el cuidado. Cuando alguien te da un regalo, lo que te conmueve no es el precio — es el hecho de que estaban pensando en ti cuando no estabas. Una flor recogida en un paseo, un libro recomendado porque les recordó algo que dijiste, un pequeño detalle dejado en tu escritorio — estos gestos te dicen que eres visto/a, recordado/a y querido/a. Probablemente eres una persona muy sentimental que guarda recuerdos significativos y presta atención a lo que importa a los demás. En las relaciones, te sientes más amado/a cuando las parejas prestan atención a lo que mencionas y ocasionalmente te sorprenden con algo que dice, en silencio: hoy pensé en ti.",
+      "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
+      "traits": ["Reflexivo", "Apreciativo", "Sentimental"],
+      "shareText": "\u00a1Mi lenguaje del amor es Recibir Regalos! \u00bfCu\u00e1l es el tuyo? Haz el quiz en ToolNotch \ud83c\udf81"
+    },
+    {
+      "id": "quality-time",
+      "title": "Tiempo de Calidad",
+      "description": "Tu lenguaje del amor es el Tiempo de Calidad — te sientes más amado/a cuando alguien te da su atención total y presente. No simplemente estar en la misma habitación, sino realmente estar ahí: sin teléfonos, sin escuchar a medias, sin multitarea. Cuando alguien reserva tiempo específicamente para ti y trae toda su presencia al momento, te sientes profundamente valorado/a. Un largo paseo juntos, una cena sin distracciones o una tarde tranquila haciendo algo que ambos aman — estas son las cosas que llenan tu tanque emocional. En las relaciones, tu mayor necesidad es por una pareja que se presente completamente — que priorice el tiempo contigo y haga claro, a través de su atención, que te importas. La calidad siempre supera a la cantidad, pero para ti, ambas genuinamente importan.",
+      "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
+      "traits": ["Presente", "Profundo", "Enfocado en la Conexión"],
+      "shareText": "\u00a1Mi lenguaje del amor es Tiempo de Calidad! \u00bfCu\u00e1l es el tuyo? Haz el quiz en ToolNotch \u23f0"
+    },
+    {
+      "id": "physical-touch",
+      "title": "Contacto Físico",
+      "description": "Tu lenguaje del amor es el Contacto Físico — para ti, la presencia y la cercanía física son la expresión más directa de amor y seguridad. Una mano en tu hombro, un abrazo espontáneo, tomarse de las manos mientras caminas, o simplemente sentarse lo suficientemente cerca para tocarse — estos momentos te dicen, sin palabras, que eres amado/a y no estás solo/a. Probablemente eres una persona afectuosa por naturaleza, alguien que tiende la mano naturalmente cuando alguien que te importa está sufriendo o celebrando. La desconexión física puede sentirse como distancia emocional, incluso cuando todo lo demás parece estar bien. En las relaciones, floreces con una pareja que es físicamente cálida y afectuosa, que gravita hacia la cercanía y entiende que un abrazo es a veces la cosa más elocuente que pueden ofrecer.",
+      "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
+      "traits": ["Cálido", "Cariñoso", "Presente"],
+      "shareText": "\u00a1Mi lenguaje del amor es Contacto F\u00edsico! \u00bfCu\u00e1l es el tuyo? Haz el quiz en ToolNotch \ud83e\udd17"
+    }
+  ]
+}

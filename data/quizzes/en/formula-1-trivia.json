@@ -1,0 +1,205 @@
+{
+  "id": "formula-1-trivia",
+  "type": "trivia",
+  "category": "sports",
+  "title": "Formula 1 Trivia Quiz",
+  "description": "Think you know your Formula 1 history? From Senna's brilliance to Schumacher's dominance, Vettel's four titles to Verstappen's modern reign — test your knowledge of the greatest racing championship on earth. Circuits, champions, records, and legendary moments: how well do you really know F1?",
+  "image": "/images/quizzes/formula-1-trivia-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "How many Formula 1 World Championships has Lewis Hamilton won?",
+      "options": [
+        { "id": "q1a", "text": "5" },
+        { "id": "q1b", "text": "6" },
+        { "id": "q1c", "text": "7" },
+        { "id": "q1d", "text": "8" }
+      ],
+      "correctAnswerId": "q1c"
+    },
+    {
+      "id": "q2",
+      "text": "Which team won the F1 Constructors' Championship from 2010 to 2013?",
+      "options": [
+        { "id": "q2a", "text": "McLaren" },
+        { "id": "q2b", "text": "Red Bull" },
+        { "id": "q2c", "text": "Ferrari" },
+        { "id": "q2d", "text": "Mercedes" }
+      ],
+      "correctAnswerId": "q2b"
+    },
+    {
+      "id": "q3",
+      "text": "Who became the youngest F1 World Champion in 2010?",
+      "options": [
+        { "id": "q3a", "text": "Kimi Räikkönen" },
+        { "id": "q3b", "text": "Fernando Alonso" },
+        { "id": "q3c", "text": "Sebastian Vettel" },
+        { "id": "q3d", "text": "Jenson Button" }
+      ],
+      "correctAnswerId": "q3c"
+    },
+    {
+      "id": "q4",
+      "text": "Which circuit hosts the Monaco Grand Prix?",
+      "options": [
+        { "id": "q4a", "text": "Circuit de la Sarthe" },
+        { "id": "q4b", "text": "Circuit de Monaco" },
+        { "id": "q4c", "text": "Paul Ricard" },
+        { "id": "q4d", "text": "Silverstone" }
+      ],
+      "correctAnswerId": "q4b"
+    },
+    {
+      "id": "q5",
+      "text": "How many Formula 1 World Championships did Michael Schumacher win?",
+      "options": [
+        { "id": "q5a", "text": "5" },
+        { "id": "q5b", "text": "6" },
+        { "id": "q5c", "text": "7" },
+        { "id": "q5d", "text": "8" }
+      ],
+      "correctAnswerId": "q5c"
+    },
+    {
+      "id": "q6",
+      "text": "Max Verstappen won his first F1 World Championship in which year?",
+      "options": [
+        { "id": "q6a", "text": "2020" },
+        { "id": "q6b", "text": "2021" },
+        { "id": "q6c", "text": "2022" },
+        { "id": "q6d", "text": "2023" }
+      ],
+      "correctAnswerId": "q6b"
+    },
+    {
+      "id": "q7",
+      "text": "What nationality was Ayrton Senna?",
+      "options": [
+        { "id": "q7a", "text": "Argentine" },
+        { "id": "q7b", "text": "Colombian" },
+        { "id": "q7c", "text": "Brazilian" },
+        { "id": "q7d", "text": "Portuguese" }
+      ],
+      "correctAnswerId": "q7c"
+    },
+    {
+      "id": "q8",
+      "text": "What does DRS stand for in Formula 1?",
+      "options": [
+        { "id": "q8a", "text": "Driver Reaction System" },
+        { "id": "q8b", "text": "Drag Reduction System" },
+        { "id": "q8c", "text": "Dynamic Racing Speed" },
+        { "id": "q8d", "text": "Differential Rotation System" }
+      ],
+      "correctAnswerId": "q8b"
+    },
+    {
+      "id": "q9",
+      "text": "Which team did Fernando Alonso win his two F1 World Championships with?",
+      "options": [
+        { "id": "q9a", "text": "Ferrari" },
+        { "id": "q9b", "text": "McLaren" },
+        { "id": "q9c", "text": "Renault" },
+        { "id": "q9d", "text": "Mercedes" }
+      ],
+      "correctAnswerId": "q9c"
+    },
+    {
+      "id": "q10",
+      "text": "The legendary Circuit de Spa-Francorchamps is located in which country?",
+      "options": [
+        { "id": "q10a", "text": "France" },
+        { "id": "q10b", "text": "Netherlands" },
+        { "id": "q10c", "text": "Belgium" },
+        { "id": "q10d", "text": "Luxembourg" }
+      ],
+      "correctAnswerId": "q10c"
+    },
+    {
+      "id": "q11",
+      "text": "How many F1 World Championships did Max Verstappen win between 2021 and 2024?",
+      "options": [
+        { "id": "q11a", "text": "2" },
+        { "id": "q11b", "text": "3" },
+        { "id": "q11c", "text": "4" },
+        { "id": "q11d", "text": "5" }
+      ],
+      "correctAnswerId": "q11c"
+    },
+    {
+      "id": "q12",
+      "text": "Which team dominated F1 from 2014 to 2020, winning 7 consecutive Constructors' Championships?",
+      "options": [
+        { "id": "q12a", "text": "Red Bull" },
+        { "id": "q12b", "text": "Ferrari" },
+        { "id": "q12c", "text": "Mercedes" },
+        { "id": "q12d", "text": "McLaren" }
+      ],
+      "correctAnswerId": "q12c"
+    },
+    {
+      "id": "q13",
+      "text": "The Italian Grand Prix is held at which circuit?",
+      "options": [
+        { "id": "q13a", "text": "Mugello" },
+        { "id": "q13b", "text": "Imola" },
+        { "id": "q13c", "text": "Monza" },
+        { "id": "q13d", "text": "Fiorano" }
+      ],
+      "correctAnswerId": "q13c"
+    },
+    {
+      "id": "q14",
+      "text": "Ayrton Senna won how many F1 World Championships during his career?",
+      "options": [
+        { "id": "q14a", "text": "2" },
+        { "id": "q14b", "text": "3" },
+        { "id": "q14c", "text": "4" },
+        { "id": "q14d", "text": "5" }
+      ],
+      "correctAnswerId": "q14b"
+    },
+    {
+      "id": "q15",
+      "text": "Which driver holds the record for most Grand Prix wins as of 2024?",
+      "options": [
+        { "id": "q15a", "text": "Michael Schumacher" },
+        { "id": "q15b", "text": "Ayrton Senna" },
+        { "id": "q15c", "text": "Max Verstappen" },
+        { "id": "q15d", "text": "Lewis Hamilton" }
+      ],
+      "correctAnswerId": "q15d"
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "Legend",
+      "description": "You're a true Formula 1 legend! Your encyclopedic knowledge of the sport spans decades of racing history — from Senna's brilliance to Schumacher's dominance and Verstappen's modern mastery. You know the circuits, the champions, the rule changes, and the legendary moments that define the sport. Whether you follow every race live or study the history books, you've earned the respect of every F1 fan. You can name the winner of each constructors' title, identify a circuit by its corner names alone, and recall statistics that most fans have long forgotten. The paddock would be lucky to have you in the garage. Lights out, and away you go — at the very front of the grid.",
+      "shareText": "I scored {percent}% on the Formula 1 Trivia Quiz on ToolNotch! Can you beat me? \ud83c\udfce\ufe0f"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Expert",
+      "description": "Impressive! You have an expert's command of Formula 1 — you know the big championships, the iconic drivers, and the key technical regulations that shape the sport. A few obscure facts or historical details slipped by, but your overall knowledge is well above average. You're the person your friends turn to when they want to understand what's happening on the grid, explain a penalty decision, or settle an argument about who's the greatest of all time. You follow the championship closely and appreciate the nuance behind the headlines. With a little more study of the sport's deeper history, you'll be chasing that Legend title in no time.",
+      "shareText": "I scored {percent}% on the Formula 1 Trivia Quiz on ToolNotch! Can you beat me? \ud83c\udfce\ufe0f"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Fan",
+      "description": "You clearly love Formula 1 and know the big names and moments that define the sport. A few technical or historical details tripped you up, but your passion for racing is undeniable. You know the superstar drivers, the legendary circuits, and the broad shape of the championship — and that's already more than most. Keep watching those races, explore the sport's rich history through documentaries and classic onboards, and you'll be climbing the ranks fast. Every F1 expert was a fan first. The garage door is open and the team is ready — your Expert status is just a few more races away.",
+      "shareText": "I scored {percent}% on the Formula 1 Trivia Quiz on ToolNotch! Can you beat me? \ud83c\udfce\ufe0f"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "Rookie",
+      "description": "Every champion starts somewhere! You might be new to Formula 1 or just getting into the sport, but the passion is clearly there. The world of F1 is full of incredible stories: legendary rivalries between Senna and Prost, Schumacher's seven-title dynasty, Hamilton's record-breaking reign, and Verstappen's breathtaking dominance. Watch a few classic races, explore the histories of the great teams, and learn the tracks that have shaped the sport for over 70 years. Come back and take the quiz again — with a bit more knowledge in your visor, you'll be clearing the rookie class and setting your sights on Expert before long.",
+      "shareText": "I scored {percent}% on the Formula 1 Trivia Quiz on ToolNotch! Can you beat me? \ud83c\udfce\ufe0f"
+    }
+  ]
+}

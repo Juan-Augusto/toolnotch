@@ -19,14 +19,23 @@ import decadeQuizRaw from '@/data/quizzes/which-decade-do-you-belong-in.json'
 import worldCupEnRaw from '@/data/quizzes/en/fifa-world-cup-winners.json'
 import clubEnRaw from '@/data/quizzes/en/which-football-club-are-you.json'
 import uclEnRaw from '@/data/quizzes/en/champions-league-trivia.json'
+import loveLangEnRaw from '@/data/quizzes/en/what-is-your-love-language.json'
+import f1TriviaEnRaw from '@/data/quizzes/en/formula-1-trivia.json'
+import f1DriverEnRaw from '@/data/quizzes/en/which-f1-driver-are-you.json'
 // Sports — Portuguese
 import worldCupPtRaw from '@/data/quizzes/pt/fifa-world-cup-winners.json'
 import clubPtRaw from '@/data/quizzes/pt/which-football-club-are-you.json'
 import uclPtRaw from '@/data/quizzes/pt/champions-league-trivia.json'
+import loveLangPtRaw from '@/data/quizzes/pt/what-is-your-love-language.json'
+import f1TriviaPtRaw from '@/data/quizzes/pt/formula-1-trivia.json'
+import f1DriverPtRaw from '@/data/quizzes/pt/which-f1-driver-are-you.json'
 // Sports — Spanish
 import worldCupEsRaw from '@/data/quizzes/es/fifa-world-cup-winners.json'
 import clubEsRaw from '@/data/quizzes/es/which-football-club-are-you.json'
 import uclEsRaw from '@/data/quizzes/es/champions-league-trivia.json'
+import loveLangEsRaw from '@/data/quizzes/es/what-is-your-love-language.json'
+import f1TriviaEsRaw from '@/data/quizzes/es/formula-1-trivia.json'
+import f1DriverEsRaw from '@/data/quizzes/es/which-f1-driver-are-you.json'
 
 // ── Quiz map: slug → locale → raw data ────────────────────────────────────────
 const QUIZ_MAP: Record<string, Record<string, unknown>> = {
@@ -38,6 +47,9 @@ const QUIZ_MAP: Record<string, Record<string, unknown>> = {
   'fifa-world-cup-winners':              { en: worldCupEnRaw, pt: worldCupPtRaw, es: worldCupEsRaw },
   'which-football-club-are-you':         { en: clubEnRaw, pt: clubPtRaw, es: clubEsRaw },
   'champions-league-trivia':             { en: uclEnRaw, pt: uclPtRaw, es: uclEsRaw },
+  'what-is-your-love-language':          { en: loveLangEnRaw, pt: loveLangPtRaw, es: loveLangEsRaw },
+  'formula-1-trivia':                    { en: f1TriviaEnRaw, pt: f1TriviaPtRaw, es: f1TriviaEsRaw },
+  'which-f1-driver-are-you':             { en: f1DriverEnRaw, pt: f1DriverPtRaw, es: f1DriverEsRaw },
 }
 
 function getQuiz(slug: string, locale: string): AnyQuiz | undefined {

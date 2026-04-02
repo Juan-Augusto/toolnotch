@@ -136,6 +136,8 @@ export default async function HomePage({ params }: Props) {
         { href: '/quiz/fifa-world-cup-winners', label: t('tools.worldCupQuiz.label'), desc: t('tools.worldCupQuiz.desc') },
         { href: '/quiz/which-football-club-are-you', label: t('tools.footballClubQuiz.label'), desc: t('tools.footballClubQuiz.desc') },
         { href: '/quiz/champions-league-trivia', label: t('tools.championsLeagueQuiz.label'), desc: t('tools.championsLeagueQuiz.desc') },
+        { href: '/quiz/what-is-your-love-language', label: t('tools.loveLangaugeQuiz.label'), desc: t('tools.loveLangaugeQuiz.desc') },
+        { href: '/quiz/formula-1-trivia', label: t('tools.formula1TriviaQuiz.label'), desc: t('tools.formula1TriviaQuiz.desc') },
       ],
     },
   ]

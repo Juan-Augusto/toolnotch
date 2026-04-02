@@ -1,0 +1,572 @@
+{
+  "id": "which-f1-driver-are-you",
+  "type": "personality",
+  "category": "sports",
+  "title": "¿Qué Piloto de F1 Eres Tú?",
+  "description": "¿Eres la precisión implacable de Max Verstappen, la brillante compostura de Lewis Hamilton, o el alma apasionada de Charles Leclerc? Responde 10 preguntas sobre tu personalidad, estilo competitivo y enfoque de la vida — y descubre qué leyenda de la Fórmula 1 se corresponde con tu espíritu. Ocho pilotos icónicos, un resultado.",
+  "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "¿Cómo afrontas la competición?",
+      "options": [
+        {
+          "id": "q1a",
+          "text": "Enfocado/a implacablemente en ganar — todo lo demás es secundario.",
+          "scores": {
+            "max-verstappen": 3,
+            "michael-schumacher": 2
+          }
+        },
+        {
+          "id": "q1b",
+          "text": "Quiero ganar, pero el camino y lo que represento también importan.",
+          "scores": {
+            "lewis-hamilton": 3,
+            "ayrton-senna": 1
+          }
+        },
+        {
+          "id": "q1c",
+          "text": "Apasionado/a y emocional — lo doy todo y lo siento todo.",
+          "scores": {
+            "charles-leclerc": 3,
+            "ayrton-senna": 2
+          }
+        },
+        {
+          "id": "q1d",
+          "text": "Incansablemente determinado/a — nunca me rindo, sin importar las probabilidades.",
+          "scores": {
+            "fernando-alonso": 3,
+            "lewis-hamilton": 1
+          }
+        },
+        {
+          "id": "q1e",
+          "text": "Tranquilo/a, metódico/a y paciente — confío en el proceso y en los datos.",
+          "scores": {
+            "oscar-piastri": 3,
+            "michael-schumacher": 1
+          }
+        },
+        {
+          "id": "q1f",
+          "text": "Me encanta ganar, pero quiero disfrutar cada momento del camino.",
+          "scores": {
+            "lando-norris": 3,
+            "charles-leclerc": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Bajo presión extrema, tú...",
+      "options": [
+        {
+          "id": "q2a",
+          "text": "Te vuelves más agudo/a, más rápido/a y más enfocado/a — la presión saca lo mejor de mí.",
+          "scores": {
+            "max-verstappen": 3,
+            "michael-schumacher": 2
+          }
+        },
+        {
+          "id": "q2b",
+          "text": "Te mantienes calmado/a, procesas la situación y tomas decisiones inteligentes.",
+          "scores": {
+            "lewis-hamilton": 3,
+            "oscar-piastri": 2
+          }
+        },
+        {
+          "id": "q2c",
+          "text": "Dejas que la pasión y el instinto te guíen — el puro sentimiento toma el control.",
+          "scores": {
+            "ayrton-senna": 3,
+            "charles-leclerc": 2
+          }
+        },
+        {
+          "id": "q2d",
+          "text": "Confías en la experiencia y la estrategia — ya he estado aquí antes.",
+          "scores": {
+            "fernando-alonso": 3,
+            "michael-schumacher": 1
+          }
+        },
+        {
+          "id": "q2e",
+          "text": "Te mantienes relajado/a, positivo/a y confías en ti mismo/a para entregar.",
+          "scores": {
+            "lando-norris": 3,
+            "oscar-piastri": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Tu relación con tu equipo es...",
+      "options": [
+        {
+          "id": "q3a",
+          "text": "Exijo lo mejor de todos — altos estándares, sin excusas.",
+          "scores": {
+            "max-verstappen": 3,
+            "michael-schumacher": 2
+          }
+        },
+        {
+          "id": "q3b",
+          "text": "Colaborativa e inspiradora — nos elevamos juntos.",
+          "scores": {
+            "lewis-hamilton": 3,
+            "lando-norris": 1
+          }
+        },
+        {
+          "id": "q3c",
+          "text": "Intensa y apasionada — llevo al equipo con mi corazón.",
+          "scores": {
+            "charles-leclerc": 3,
+            "ayrton-senna": 2
+          }
+        },
+        {
+          "id": "q3d",
+          "text": "Puramente profesional — me enfoco en el rendimiento y los resultados.",
+          "scores": {
+            "fernando-alonso": 2,
+            "oscar-piastri": 2,
+            "michael-schumacher": 1
+          }
+        },
+        {
+          "id": "q3e",
+          "text": "Amigable y divertida — traigo buena energía al garaje.",
+          "scores": {
+            "lando-norris": 3,
+            "oscar-piastri": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "Cuando cometes un error, tú...",
+      "options": [
+        {
+          "id": "q4a",
+          "text": "Lo analizas fríamente, entiendes qué salió mal y sigues adelante inmediatamente.",
+          "scores": {
+            "max-verstappen": 3,
+            "michael-schumacher": 2,
+            "oscar-piastri": 2
+          }
+        },
+        {
+          "id": "q4b",
+          "text": "Te afecta mucho — pero canalizas esa frustración en motivación feroz.",
+          "scores": {
+            "charles-leclerc": 3,
+            "ayrton-senna": 2
+          }
+        },
+        {
+          "id": "q4c",
+          "text": "Aprendes con gracia y perspectiva — los errores son parte del crecimiento.",
+          "scores": {
+            "lewis-hamilton": 3,
+            "oscar-piastri": 1
+          }
+        },
+        {
+          "id": "q4d",
+          "text": "Lo usas como combustible para una remontada aún mayor a largo plazo.",
+          "scores": {
+            "fernando-alonso": 3,
+            "lewis-hamilton": 1
+          }
+        },
+        {
+          "id": "q4e",
+          "text": "Te ríes, reinicias rápidamente y mantienes el ánimo alto.",
+          "scores": {
+            "lando-norris": 3,
+            "charles-leclerc": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "¿Cómo manejas a un rival que te presiona fuerte?",
+      "options": [
+        {
+          "id": "q5a",
+          "text": "Presiono de vuelta aún más fuerte — solo hay un ganador y seré yo.",
+          "scores": {
+            "max-verstappen": 3,
+            "ayrton-senna": 2
+          }
+        },
+        {
+          "id": "q5b",
+          "text": "Me mantengo sereno/a, confío en el proceso y dejo que la consistencia gane.",
+          "scores": {
+            "lewis-hamilton": 3,
+            "oscar-piastri": 2
+          }
+        },
+        {
+          "id": "q5c",
+          "text": "Me elevo con la emoción del momento — las grandes batallas sacan lo mejor de mí.",
+          "scores": {
+            "ayrton-senna": 3,
+            "charles-leclerc": 2
+          }
+        },
+        {
+          "id": "q5d",
+          "text": "Los supero en el juego largo — la paciencia y la estrategia siempre ganan.",
+          "scores": {
+            "fernando-alonso": 3,
+            "michael-schumacher": 2
+          }
+        },
+        {
+          "id": "q5e",
+          "text": "Lo mantengo ligero y dejo que mi velocidad bruta hable por sí sola.",
+          "scores": {
+            "lando-norris": 3,
+            "oscar-piastri": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "Tu personalidad en redes sociales es...",
+      "options": [
+        {
+          "id": "q6a",
+          "text": "Reservado/a — prefiero dejar que mis resultados hablen por sí mismos.",
+          "scores": {
+            "max-verstappen": 3,
+            "michael-schumacher": 3
+          }
+        },
+        {
+          "id": "q6b",
+          "text": "Inspirador/a y positivo/a — uso mi plataforma para defender algo más grande.",
+          "scores": {
+            "lewis-hamilton": 3,
+            "ayrton-senna": 1
+          }
+        },
+        {
+          "id": "q6c",
+          "text": "Apasionado/a y auténtico/a — comparto los altos y los bajos.",
+          "scores": {
+            "charles-leclerc": 3,
+            "fernando-alonso": 1
+          }
+        },
+        {
+          "id": "q6d",
+          "text": "Tranquilo/a y reflexivo/a — publico con propósito, no solo ruido.",
+          "scores": {
+            "oscar-piastri": 3,
+            "lewis-hamilton": 1
+          }
+        },
+        {
+          "id": "q6e",
+          "text": "Gracioso/a, identificable y un poco caótico/a — simplemente soy yo mismo/a.",
+          "scores": {
+            "lando-norris": 3,
+            "charles-leclerc": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "¿Qué es lo que más te motiva?",
+      "options": [
+        {
+          "id": "q7a",
+          "text": "La velocidad pura y ser indiscutiblemente el mejor — eso es todo.",
+          "scores": {
+            "max-verstappen": 3,
+            "michael-schumacher": 2
+          }
+        },
+        {
+          "id": "q7b",
+          "text": "Hacer historia y dejar un legado que trascienda mi tiempo.",
+          "scores": {
+            "lewis-hamilton": 3,
+            "ayrton-senna": 2
+          }
+        },
+        {
+          "id": "q7c",
+          "text": "El puro amor por conducir — la sensación de estar vivo en el límite.",
+          "scores": {
+            "ayrton-senna": 3,
+            "charles-leclerc": 2
+          }
+        },
+        {
+          "id": "q7d",
+          "text": "Demostrar que todos los que dudaron de mí estaban equivocados.",
+          "scores": {
+            "fernando-alonso": 3,
+            "charles-leclerc": 1
+          }
+        },
+        {
+          "id": "q7e",
+          "text": "La mejora constante y medible — ser mejor cada día.",
+          "scores": {
+            "oscar-piastri": 3,
+            "lewis-hamilton": 1
+          }
+        },
+        {
+          "id": "q7f",
+          "text": "Ganar mientras disfruto genuinamente cada momento del camino.",
+          "scores": {
+            "lando-norris": 3,
+            "oscar-piastri": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "Tu preparación antes de un gran evento es...",
+      "options": [
+        {
+          "id": "q8a",
+          "text": "Obsesiva — cada detalle se verifica y re-verifica múltiples veces.",
+          "scores": {
+            "max-verstappen": 3,
+            "michael-schumacher": 2
+          }
+        },
+        {
+          "id": "q8b",
+          "text": "Enfocada y consciente — me centro mentalmente y confío en mi entrenamiento.",
+          "scores": {
+            "lewis-hamilton": 3,
+            "oscar-piastri": 2
+          }
+        },
+        {
+          "id": "q8c",
+          "text": "Emocional y profundamente personal — me conecto con algo más grande que el momento.",
+          "scores": {
+            "ayrton-senna": 3,
+            "charles-leclerc": 1
+          }
+        },
+        {
+          "id": "q8d",
+          "text": "Analítica y basada en datos — estudio cada variable hasta conocer la respuesta.",
+          "scores": {
+            "fernando-alonso": 2,
+            "michael-schumacher": 2,
+            "oscar-piastri": 2
+          }
+        },
+        {
+          "id": "q8e",
+          "text": "Relajada y confiada — sé que mi preparación está hecha, así que simplemente lo disfruto.",
+          "scores": {
+            "lando-norris": 3,
+            "oscar-piastri": 1
+          }
+        },
+        {
+          "id": "q8f",
+          "text": "Apasionada e intensa — canalizo la emoción bruta en preparación.",
+          "scores": {
+            "charles-leclerc": 3,
+            "ayrton-senna": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "Si enfrentas un gran revés a mitad de temporada, tú...",
+      "options": [
+        {
+          "id": "q9a",
+          "text": "Redoblas y encuentras más rendimiento — no acepto la derrota.",
+          "scores": {
+            "max-verstappen": 3,
+            "michael-schumacher": 1
+          }
+        },
+        {
+          "id": "q9b",
+          "text": "Lo usas como motivación para inspirar también a las personas a tu alrededor.",
+          "scores": {
+            "lewis-hamilton": 3,
+            "ayrton-senna": 1
+          }
+        },
+        {
+          "id": "q9c",
+          "text": "Contraatacas con emoción bruta y pura fuerza de voluntad.",
+          "scores": {
+            "charles-leclerc": 3,
+            "ayrton-senna": 2
+          }
+        },
+        {
+          "id": "q9d",
+          "text": "Planificas metódicamente una remontada a lo largo del resto de la temporada.",
+          "scores": {
+            "fernando-alonso": 3,
+            "michael-schumacher": 2
+          }
+        },
+        {
+          "id": "q9e",
+          "text": "Te mantienes paciente, confías en el proceso y sabes que tu momento llegará.",
+          "scores": {
+            "oscar-piastri": 3,
+            "lewis-hamilton": 1
+          }
+        },
+        {
+          "id": "q9f",
+          "text": "Mantienes el ánimo alto para todo el equipo y permaneces positivo/a.",
+          "scores": {
+            "lando-norris": 3,
+            "lewis-hamilton": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "Tu apetito por el riesgo es...",
+      "options": [
+        {
+          "id": "q10a",
+          "text": "Muy alto — solo encuentras el límite yendo más allá de él.",
+          "scores": {
+            "max-verstappen": 3,
+            "ayrton-senna": 3
+          }
+        },
+        {
+          "id": "q10b",
+          "text": "Calculado — siempre sopeso las probabilidades antes de comprometerme.",
+          "scores": {
+            "michael-schumacher": 3,
+            "oscar-piastri": 3,
+            "fernando-alonso": 2
+          }
+        },
+        {
+          "id": "q10c",
+          "text": "Moderado — asumo riesgos inteligentes, nunca imprudentes.",
+          "scores": {
+            "lewis-hamilton": 3,
+            "oscar-piastri": 1
+          }
+        },
+        {
+          "id": "q10d",
+          "text": "Emocional — cuando estoy inspirado/a en el momento, voy a por ello.",
+          "scores": {
+            "charles-leclerc": 3,
+            "ayrton-senna": 2
+          }
+        },
+        {
+          "id": "q10e",
+          "text": "Bajo a moderado — consistente y fiable es mi versión de rápido.",
+          "scores": {
+            "lando-norris": 2,
+            "oscar-piastri": 2
+          }
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "max-verstappen",
+      "title": "Max Verstappen",
+      "description": "Eres Max Verstappen — implacablemente rápido, ferozmente competitivo y sin disculparte por estar enfocado en ganar. No crees en las victorias morales: estás aquí para ser el primero, punto final. Bajo presión no te derrumbas — aceleras. Tienes una capacidad casi sobrenatural para bloquear todo excepto la tarea directamente frente a ti, y esa singularidad de enfoque es lo que te separa de todos los demás. Mantienes los estándares más altos posibles para ti mismo y para todos a tu alrededor, y no te disculpas por ello. Los resultados son todo, y tus resultados hablan más alto que cualquier palabra que puedas pronunciar.",
+      "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
+      "traits": ["Implacable", "Intrépido", "Preciso"],
+      "shareText": "\u00a1Soy Max Verstappen en el Quiz de Piloto de F1 en ToolNotch! \u00bfQu\u00e9 piloto eres t\u00fa? \ud83c\udfce\ufe0f"
+    },
+    {
+      "id": "lewis-hamilton",
+      "title": "Lewis Hamilton",
+      "description": "Eres Lewis Hamilton — sereno bajo la presión más intensa, un hacedor de historia que usa su plataforma para defender algo mucho más grande que la gloria personal. Combinas talento bruto con una extraordinaria fortaleza mental, y entiendes que la verdadera grandeza va más allá de los trofeos — se trata de legado, carácter y las vidas que tocas más allá de tu campo. Eres reflexivo/a, con principios y profundamente consciente de tu responsabilidad hacia el mundo que te rodea. Inspiras a personas que no creían que alguien como ellas podría alguna vez alcanzar la cima.",
+      "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
+      "traits": ["Icónico", "Sereno", "Pionero"],
+      "shareText": "\u00a1Soy Lewis Hamilton en el Quiz de Piloto de F1 en ToolNotch! \u00bfQu\u00e9 piloto eres t\u00fa? \ud83c\udfce\ufe0f"
+    },
+    {
+      "id": "ayrton-senna",
+      "title": "Ayrton Senna",
+      "description": "Eres Ayrton Senna — una de las figuras más trascendentes que el mundo del deporte ha visto jamás. No solo compites; existes en un plano diferente cuando haces lo que amas. Tienes una conexión espiritual con tu oficio que roza lo místico, y en tus mejores momentos sientes que algo más allá de la habilidad toma el control. La emoción bruta, el instinto puro y una intensidad casi aterradora te hacen capaz de actuaciones que dejan a los espectadores sin poder explicar lo que acaban de presenciar. Sientes todo profundamente — los éxitos alcanzan alturas que otros no pueden imaginar, y las derrotas duelen con la misma intensidad.",
+      "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
+      "traits": ["Legendario", "Apasionado", "Trascendente"],
+      "shareText": "\u00a1Soy Ayrton Senna en el Quiz de Piloto de F1 en ToolNotch! \u00bfQu\u00e9 piloto eres t\u00fa? \ud83c\udfce\ufe0f"
+    },
+    {
+      "id": "michael-schumacher",
+      "title": "Michael Schumacher",
+      "description": "Eres Michael Schumacher — metódico, fríamente brillante y totalmente dedicado a la perfección en todo lo que haces. Eres la máquina de preparación definitiva: no dejas nada al azar, estudias cada variable obsesivamente y llegas a cada desafío sabiendo ya que has hecho todo lo humanamente posible para ganar. Tu ética de trabajo es legendaria, y tu capacidad para repetir la excelencia de forma consistente a lo largo de un largo período te distingue de los simples campeones de una temporada. No eres llamativo ni expresivo — simplemente entregas, una y otra y otra vez.",
+      "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
+      "traits": ["Dedicado", "Metódico", "Dominante"],
+      "shareText": "\u00a1Soy Michael Schumacher en el Quiz de Piloto de F1 en ToolNotch! \u00bfQu\u00e9 piloto eres t\u00fa? \ud83c\udfce\ufe0f"
+    },
+    {
+      "id": "charles-leclerc",
+      "title": "Charles Leclerc",
+      "description": "Eres Charles Leclerc — talentoso/a, apasionado/a y movido/a por un amor puro por tu oficio que es tan hermoso como intenso. Sientes cada momento de la competición de forma visceral, y esa conexión emocional es tanto tu mayor fortaleza como lo que a veces te lleva al límite del control. Llevas el corazón en la manga y eres desafiadoramente tú mismo/a, incluso cuando la vulnerabilidad puede parecer debilidad. Tu talento es innegable y reconocido por todos en la sala — pero es tu autenticidad lo que hace que la gente realmente te apoye. El fuego en ti nunca se apaga del todo, y cuando estás en pleno elemento, eres impresionante de contemplar.",
+      "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
+      "traits": ["Apasionado", "Emocional", "Dotado"],
+      "shareText": "\u00a1Soy Charles Leclerc en el Quiz de Piloto de F1 en ToolNotch! \u00bfQu\u00e9 piloto eres t\u00fa? \ud83c\udfce\ufe0f"
+    },
+    {
+      "id": "fernando-alonso",
+      "title": "Fernando Alonso",
+      "description": "Eres Fernando Alonso — un genio estratégico con determinación de hierro y una negativa a rendirse que desafía la lógica, la edad y las circunstancias. Donde otros ven callejones sin salida, tú ves un juego más largo. Donde otros aceptan la derrota, tú la archivas como motivación para una remontada que puede tardar meses o años en ejecutarse. Tu experiencia e inteligencia táctica significan que casi siempre eres la persona más inteligente en la parrilla. Eres directo/a, honesto/a y completamente indiferente a lo que piensan los demás. Simplemente estás aquí para demostrar que estaban equivocados, y la historia sugiere que generalmente lo consigues.",
+      "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
+      "traits": ["Estratégico", "Determinado", "Implacable"],
+      "shareText": "\u00a1Soy Fernando Alonso en el Quiz de Piloto de F1 en ToolNotch! \u00bfQu\u00e9 piloto eres t\u00fa? \ud83c\udfce\ufe0f"
+    },
+    {
+      "id": "oscar-piastri",
+      "title": "Oscar Piastri",
+      "description": "Eres Oscar Piastri — tranquilo/a, preciso/a y ascendiendo constantemente hacia la cima de tu campo. No tienes prisa, no entras en pánico y no necesitas los focos para hacer un trabajo excepcional. Donde otros se derrumban bajo las expectativas, tú simplemente haces el trabajo: analíticamente, eficientemente, sin drama. Tienes un autoconocimiento y control emocional extraordinarios para alguien todavía al principio de su camino, y esa madurez es lo que hace que las personas a tu alrededor se paren y presten atención. No eres la voz más alta en la sala, pero frecuentemente eres la más confiable. Paciente, metódico/a y mejorando constantemente — eres la definición de un futuro campeón en proceso.",
+      "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
+      "traits": ["Tranquilo", "Preciso", "Estrella en Ascenso"],
+      "shareText": "\u00a1Soy Oscar Piastri en el Quiz de Piloto de F1 en ToolNotch! \u00bfQu\u00e9 piloto eres t\u00fa? \ud83c\udfce\ufe0f"
+    },
+    {
+      "id": "lando-norris",
+      "title": "Lando Norris",
+      "description": "Eres Lando Norris — rápido, divertido, profundamente identificable y prueba de que no tienes que sacrificar tu personalidad para ser genuinamente de talla mundial. Traes ligereza y buena energía a todo lo que haces, y las personas a tu alrededor están mejor por ello. Detrás del humor y la calidez, sin embargo, hay un piloto ferozmente competitivo que es más rápido que casi cualquier persona en el planeta y lo sabe. No necesitas ser la persona más intensa en la sala para ser la más efectiva — tu velocidad y talento naturales hacen el trabajo pesado mientras tu espíritu eleva a todos a tu alrededor. Has demostrado al mundo que la alegría y la ambición no son opuestas.",
+      "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
+      "traits": ["Divertido", "Rápido", "Identificable"],
+      "shareText": "\u00a1Soy Lando Norris en el Quiz de Piloto de F1 en ToolNotch! \u00bfQu\u00e9 piloto eres t\u00fa? \ud83c\udfce\ufe0f"
+    }
+  ]
+}
