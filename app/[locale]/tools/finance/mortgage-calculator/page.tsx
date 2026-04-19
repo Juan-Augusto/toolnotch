@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
+import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/schema'
@@ -7,6 +8,13 @@ import { CALCULATOR_VARIANTS } from '@/data/calculatorVariants'
 import type { FaqItem } from '@/components/FaqSection'
 import LoanCalculator from '@/components/finance/calculator/LoanCalculator'
 import ToolWrapper from '@/components/ToolWrapper'
+
+interface RichContent {
+  whatIs: string
+  howToUse: string[]
+  whyItMatters: string
+  proTip: string
+}
 
 const SLUG = 'mortgage-calculator'
 const PATH = `/tools/finance/${SLUG}`
@@ -28,6 +36,7 @@ export default async function MortgageCalculatorPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: `finance.variants.${SLUG}` })
   const faqs = t.raw('faqs') as FaqItem[]
+  const richContent = t.raw('richContent') as RichContent
 
   const jsonLd = buildJsonLd(
     webAppSchema(t('title'), PATH, t('metaDescription'), locale, 'FinanceApplication'),
@@ -42,7 +51,12 @@ export default async function MortgageCalculatorPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} adSlot="1234567890">
+      <ToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} adSlot="1234567890" richContent={richContent}>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+          <Link href="/blog/how-to-calculate-mortgage-payment" className="text-blue-600 hover:underline dark:text-blue-400">
+            Read: How to Calculate Your Mortgage Payment -&gt;
+          </Link>
+        </p>
         <Suspense><LoanCalculator variant={variant} /></Suspense>
       </ToolWrapper>
     </>

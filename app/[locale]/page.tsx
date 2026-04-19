@@ -125,6 +125,14 @@ export default async function HomePage({ params }: Props) {
       ],
     },
     {
+      category: t('categories.interviewPrep'),
+      color: 'blue',
+      items: [
+        { href: '/interview', label: t('tools.interviewHub.label'), desc: t('tools.interviewHub.desc') },
+        { href: '/interview/typescript', label: t('tools.typescriptQuiz.label'), desc: t('tools.typescriptQuiz.desc') },
+      ],
+    },
+    {
       category: t('categories.quizzes'),
       color: 'pink',
       items: [

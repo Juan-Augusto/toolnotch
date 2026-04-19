@@ -8,6 +8,13 @@ import CitationGenerator from '@/components/education/CitationGenerator'
 
 const PATH = '/tools/education/citation-generator'
 
+interface RichContent {
+  whatIs: string
+  howToUse: string[]
+  whyItMatters: string
+  proTip: string
+}
+
 interface Props { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -25,6 +32,7 @@ export default async function CitationGeneratorPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'citationGenerator' })
   const faqs = t.raw('faqs') as FaqItem[]
+  const richContent = t.raw('richContent') as RichContent
 
   const jsonLd = buildJsonLd(
     webAppSchema(t('title'), PATH, t('metaDescription'), locale),
@@ -45,6 +53,7 @@ export default async function CitationGeneratorPage({ params }: Props) {
         breadcrumbLabel={t('title')}
         faqs={faqs}
         adSlot="citation-generator"
+        richContent={richContent}
       >
         <CitationGenerator locale={locale} />
       </ToolWrapper>

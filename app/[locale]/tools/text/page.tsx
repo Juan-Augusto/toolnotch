@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const TOOLS = [
   { href: '/tools/text/word-counter', label: 'Word Counter', desc: 'Count words, characters, sentences, and check readability in real time.' },
-  { href: '/tools/text/character-counter', label: 'Character Counter', desc: 'Count characters with and without spaces. Great for Twitter, SMS, and meta descriptions.' },
+  { href: '/tools/text/character-counter', label: 'Character Counter', desc: 'Count characters with and without spaces. Great for X, SMS, and meta descriptions.' },
   { href: '/tools/text/sentence-counter', label: 'Sentence Counter', desc: 'Count sentences and paragraphs in any text.' },
   { href: '/tools/text/readability-checker', label: 'Readability Checker', desc: 'Get Flesch Reading Ease, Flesch-Kincaid Grade, and Gunning Fog scores.' },
   { href: '/tools/text/reading-time-calculator', label: 'Reading Time Calculator', desc: 'Estimate how long it takes to read or speak your text.' },
@@ -51,7 +51,7 @@ export default function TextToolsHubPage() {
             ToolNotch offers a complete suite of free writing tools, all of which run entirely in your browser with no data
             ever sent to a server. The <strong>Word Counter</strong> tallies words, characters, sentences, paragraphs, and
             estimated reading time in real time as you type. The <strong>Character Counter</strong> tracks characters with
-            and without spaces, making it ideal for Twitter/X posts, LinkedIn updates, SMS messages, and meta descriptions.
+            and without spaces, making it ideal for X posts, LinkedIn updates, SMS messages, and meta descriptions.
             The <strong>Readability Checker</strong> provides three industry-standard readability scores — Flesch Reading Ease,
             Flesch-Kincaid Grade Level, and Gunning Fog Index — alongside practical advice for improving each. The
             <strong> Reading Time Calculator</strong> estimates both silent reading time (at 238 words per minute) and speaking
@@ -90,7 +90,7 @@ export default function TextToolsHubPage() {
               audience. Aim for grade 6–8 for most web content.
             </li>
             <li>
-              <strong>Use character count for every platform-constrained piece.</strong> Twitter/X limits posts to 280
+              <strong>Use character count for every platform-constrained piece.</strong> X limits posts to 280
               characters, Google typically shows only 155–160 characters of a meta description, and SMS messages cap
               at 160 characters. Always run your text through the Character Counter before publishing to avoid truncation
               or awkward cut-offs that reduce click-through rates.

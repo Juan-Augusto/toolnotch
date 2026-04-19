@@ -8,6 +8,13 @@ import GradeCalculator from '@/components/education/GradeCalculator'
 
 const PATH = '/tools/education/grade-calculator'
 
+interface RichContent {
+  whatIs: string
+  howToUse: string[]
+  whyItMatters: string
+  proTip: string
+}
+
 interface Props { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -25,6 +32,7 @@ export default async function GradeCalculatorPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'gpaCalculator' })
   const faqs = t.raw('faqs') as FaqItem[]
+  const richContent = t.raw('gradeRichContent') as RichContent
 
   const jsonLd = buildJsonLd(
     webAppSchema(t('gradeTitle'), PATH, t('gradeMetaDescription'), locale),
@@ -45,6 +53,7 @@ export default async function GradeCalculatorPage({ params }: Props) {
         breadcrumbLabel={t('gradeTitle')}
         faqs={faqs}
         adSlot="grade-calculator"
+        richContent={richContent}
       >
         <GradeCalculator />
       </ToolWrapper>

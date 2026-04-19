@@ -50,3 +50,9 @@ input, textarea, select {
   --background: #0f172a;
   --foreground: #f1f5f9;
 }
+
+/* rehype-pretty-code dual theme: show dark theme when html has .dark class */
+[data-theme='light'] { display: block; }
+[data-theme='dark']  { display: none; }
+.dark [data-theme='light'] { display: none; }
+.dark [data-theme='dark']  { display: block; }

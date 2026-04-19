@@ -86,14 +86,6 @@ export default function TriviaResultCard({ result, quiz, onRetake }: TriviaResul
         <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">{t('share')}:</p>
         <div className="flex justify-center gap-2 flex-wrap">
           <a
-            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 bg-sky-500 text-white rounded-lg text-sm font-medium hover:bg-sky-600 transition-colors"
-          >
-            Twitter / X
-          </a>
-          <a
             href={`https://wa.me/?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`}
             target="_blank"
             rel="noopener noreferrer"

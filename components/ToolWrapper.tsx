@@ -5,6 +5,14 @@ import { ArrowLeft, ChevronRight, Home } from "lucide-react";
 import { useTranslations } from "next-intl";
 import AdUnit from "./AdUnit";
 import FaqSection, { FaqItem } from "./FaqSection";
+import { AD_SLOTS } from "@/lib/adSlots";
+
+interface RichContent {
+  whatIs: string;
+  howToUse: string[];
+  whyItMatters: string;
+  proTip: string;
+}
 
 interface ToolWrapperProps {
   title: string;
@@ -12,6 +20,7 @@ interface ToolWrapperProps {
   breadcrumbLabel: string;
   faqs: FaqItem[];
   adSlot?: string;
+  richContent?: RichContent;
   children: React.ReactNode;
 }
 
@@ -21,6 +30,7 @@ export default function ToolWrapper({
   breadcrumbLabel,
   faqs,
   adSlot,
+  richContent,
   children,
 }: ToolWrapperProps) {
   const t = useTranslations("toolWrapper");
@@ -59,16 +69,49 @@ export default function ToolWrapper({
         </div>
 
         {/* Top Ad */}
-        {adSlot && (
-          <div className="mb-6">
-            <AdUnit slot={adSlot} />
-          </div>
-        )}
+        <div className="mb-6">
+          <AdUnit slot={adSlot ?? AD_SLOTS.TOOL_TOP} />
+        </div>
 
         {/* Tool Content */}
         <div className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 p-6 dark:bg-gray-800 dark:border-gray-700">
           {children}
         </div>
+
+        {/* Rich Content */}
+        {richContent && (
+          <div className="mt-10 space-y-8 text-gray-700 dark:text-gray-300">
+            <section>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                What is {title}?
+              </h2>
+              <p className="leading-relaxed">{richContent.whatIs}</p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                How to use
+              </h2>
+              <ol className="list-decimal list-inside space-y-2">
+                {richContent.howToUse.map((step, i) => (
+                  <li key={i} className="leading-relaxed pl-1">{step}</li>
+                ))}
+              </ol>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                Why it matters
+              </h2>
+              <p className="leading-relaxed">{richContent.whyItMatters}</p>
+            </section>
+
+            <div className="rounded-xl border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-950 px-5 py-4">
+              <p className="text-sm font-semibold text-blue-700 dark:text-blue-300 mb-1">Pro tip</p>
+              <p className="text-sm leading-relaxed text-blue-800 dark:text-blue-200">{richContent.proTip}</p>
+            </div>
+          </div>
+        )}
 
         {/* FAQ */}
         <FaqSection faqs={faqs} />

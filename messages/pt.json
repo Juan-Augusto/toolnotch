@@ -363,6 +363,18 @@
       "title": "Contador de Palavras",
       "description": "Conte palavras, caracteres, frases e verifique a legibilidade em tempo real. Cole seu texto abaixo.",
       "placeholder": "Cole ou digite seu texto aqui…",
+      "richContent": {
+        "whatIs": "Um contador de palavras é uma ferramenta que mede instantaneamente o tamanho e a complexidade de qualquer texto. Ele conta palavras, caracteres, frases e parágrafos, e calcula pontuações de legibilidade em tempo real. Contadores de palavras são usados em redações acadêmicas (onde trabalhos frequentemente têm requisitos mínimos de palavras), na produção de conteúdo para SEO (onde o tamanho do texto influencia o posicionamento nos resultados de busca) e na criação de textos para redes sociais (onde os limites de caracteres das plataformas definem o que pode ser publicado). Blogueiros, estudantes, jornalistas e profissionais de marketing usam contadores de palavras para cumprir escopo, atingir metas e garantir que o texto tenha o tamanho adequado para o público e o canal pretendidos.",
+        "howToUse": [
+          "Cole ou digite seu texto na área de entrada — as contagens são atualizadas instantaneamente enquanto você digita.",
+          "Verifique a contagem de palavras, contagem de caracteres (com e sem espaços) e contagem de frases na barra de estatísticas.",
+          "Revise a pontuação Flesch Reading Ease para entender o quão acessível seu texto é para o público em geral.",
+          "Use o Flesch-Kincaid Grade Level para adequar sua escrita ao nível de escolaridade do seu leitor-alvo.",
+          "Clique em 'Texto de Exemplo' para carregar um exemplo, caso queira ver a ferramenta em ação antes de inserir seu próprio conteúdo."
+        ],
+        "whyItMatters": "A contagem de palavras influencia tudo, desde notas acadêmicas até posicionamentos no Google. A maioria dos posts de blog otimizados para SEO fica entre 1.500 e 2.500 palavras — longo o suficiente para cobrir um tema com profundidade, mas conciso o bastante para manter a leitura agradável. Trabalhos acadêmicos têm limites mínimos rigorosos, e as plataformas de redes sociais impõem limites fixos de caracteres. As pontuações de legibilidade adicionam outra camada: uma pontuação Flesch Reading Ease acima de 60 indica que o conteúdo é acessível para um público amplo, enquanto uma pontuação abaixo de 30 sugere que o texto é denso demais para leitores em geral. Monitorar tanto a contagem de palavras quanto a legibilidade ajuda a escrever com intencionalidade.",
+        "proTip": "Busque uma pontuação Flesch Reading Ease entre 60 e 70 para conteúdo de blog voltado ao público em geral. Se sua pontuação estiver abaixo de 50, tente dividir frases longas em conjunções (e, mas, porque) e substituir palavras com muitas sílabas por sinônimos mais curtos — essas duas mudanças por si só já elevam significativamente sua pontuação."
+      },
       "faqs": [
         {
           "question": "Como o contador de palavras conta as palavras?",
@@ -394,19 +406,19 @@
         },
         {
           "question": "Posso usar isso para limites de caracteres em redes sociais?",
-          "answer": "Sim — a contagem de caracteres mostra o número exato de caracteres incluindo espaços. Posts no Twitter/X permitem 280 caracteres, posts no LinkedIn permitem 3.000 caracteres e legendas do Instagram permitem 2.200 caracteres."
+          "answer": "Sim — a contagem de caracteres mostra o número exato de caracteres incluindo espaços. Posts no X permitem 280 caracteres, posts no LinkedIn permitem 3.000 caracteres e legendas do Instagram permitem 2.200 caracteres."
         }
       ]
     },
     "characterCounter": {
       "metaTitle": "Contador de Caracteres — Com e Sem Espaços | ToolNotch",
-      "metaDescription": "Contador de caracteres online gratuito. Conte caracteres com e sem espaços, útil para Twitter, LinkedIn, Instagram e outras plataformas com limite de caracteres.",
+      "metaDescription": "Contador de caracteres online gratuito. Conte caracteres com e sem espaços, útil para X, LinkedIn, Instagram e outras plataformas com limite de caracteres.",
       "title": "Contador de Caracteres",
-      "description": "Conte caracteres com e sem espaços. Perfeito para posts no Twitter, meta descrições e qualquer texto com limite de caracteres.",
+      "description": "Conte caracteres com e sem espaços. Perfeito para posts no X, meta descrições e qualquer texto com limite de caracteres.",
       "faqs": [
         {
-          "question": "Quantos caracteres o Twitter permite?",
-          "answer": "O Twitter/X permite 280 caracteres por post. Mensagens SMS geralmente têm limite de 160 caracteres. Posts no LinkedIn permitem até 3.000 caracteres."
+          "question": "Quantos caracteres o X permite?",
+          "answer": "O X permite 280 caracteres por post. Mensagens SMS geralmente têm limite de 160 caracteres. Posts no LinkedIn permitem até 3.000 caracteres."
         },
         {
           "question": "O contador de caracteres inclui espaços?",
@@ -447,6 +459,18 @@
       "metaDescription": "Verificador de legibilidade gratuito. Obtenha pontuação Flesch Reading Ease, Flesch-Kincaid Grade Level e Índice Gunning Fog para qualquer texto. Melhore a clareza da sua escrita.",
       "title": "Verificador de Legibilidade",
       "description": "Verifique o nível de leitura do seu texto com as pontuações Flesch Reading Ease, Flesch-Kincaid Grade e Gunning Fog.",
+      "richContent": {
+        "whatIs": "Um verificador de legibilidade analisa seu texto e atribui pontuações que indicam o quão fácil ele é de ler e compreender. A métrica mais utilizada é a fórmula de Flesch-Kincaid, que produz dois resultados: a pontuação Flesch Reading Ease (0–100, onde valores mais altos indicam maior facilidade) e o Flesch-Kincaid Grade Level (equivalente ao ano escolar americano necessário para entender o texto). Uma pontuação Flesch Reading Ease de 60–70 representa uma escrita padrão e acessível — adequada ao público em geral. Pontuações em torno de 30–50 indicam texto de nível universitário, enquanto valores abaixo de 30 são considerados muito difíceis. Vale lembrar que as fórmulas de Flesch-Kincaid foram desenvolvidas para o inglês, portanto os valores calculados para textos em português podem variar ligeiramente — use-os como referência comparativa, não como medição absoluta.",
+        "howToUse": [
+          "Cole seu texto na área de entrada — as pontuações de legibilidade são calculadas automaticamente.",
+          "Verifique a pontuação Flesch Reading Ease: busque 60–70 para públicos em geral, valores mais altos para leitores mais jovens.",
+          "Revise o Flesch-Kincaid Grade Level para saber qual nível de escolaridade seu texto exige.",
+          "Verifique o Índice Gunning Fog para uma segunda opinião — uma pontuação de 8–12 é adequada para a maioria dos conteúdos gerais.",
+          "Edite seu texto diretamente na caixa e acompanhe as pontuações se atualizando em tempo real conforme você revisa."
+        ],
+        "whyItMatters": "A legibilidade influencia diretamente se os leitores vão terminar de ler seu conteúdo ou abandoná-lo. Na internet, o leitor médio faz uma leitura diagonal — textos densos e complexos o perdem em segundos. Conteúdo escrito no nível 7–9 da escala Flesch-Kincaid supera consistentemente textos mais difíceis em tempo de permanência na página, engajamento e compartilhamento. Para SEO, embora a legibilidade não seja um fator de ranqueamento direto, taxas de rejeição menores e sessões mais longas — consequências naturais de uma escrita legível — são sinais indiretos fortes. Profissionais de marketing, estrategistas de conteúdo, educadores e redatores de UX usam pontuações de legibilidade para garantir que sua escrita corresponda às expectativas do público.",
+        "proTip": "Busque um Flesch-Kincaid Grade Level de 7–9 para a maioria dos conteúdos de blog e marketing. Se sua pontuação estiver acima de 12, comece encontrando suas três frases mais longas e dividindo cada uma em um ponto natural de pausa. Reduzir o tamanho das frases é a maneira mais rápida de melhorar a legibilidade sem alterar o significado do seu texto."
+      },
       "faqs": [
         {
           "question": "Qual é uma boa pontuação Flesch Reading Ease?",
@@ -631,6 +655,19 @@
         "metaDescription": "Calculadora de financiamento de carro gratuita. Calcule a parcela mensal, os juros totais e veja se financiar ou pagar à vista faz mais sentido.",
         "title": "Calculadora de Financiamento de Carro",
         "description": "Calcule a parcela mensal do seu financiamento de carro e o custo total do crédito.",
+        "richContent": {
+          "whatIs": "Uma calculadora de financiamento de carro ajuda a estimar a parcela mensal e o custo total real do crédito automotivo. Os veículos se desvalorizam rapidamente — muitos perdem cerca de 20% do valor no primeiro ano — por isso é fundamental entender como o saldo devedor se compara ao valor de mercado do veículo em queda. O financiamento direto com a concessionária pode parecer conveniente, mas muitas vezes embutem uma margem de juros como fonte de lucro. Bancos, cooperativas de crédito e fintechs frequentemente oferecem taxas 1–3% menores para o mesmo crédito. A calculadora permite comparar cenários: taxa de um banco vs. taxa da concessionária, ou prazo mais curto vs. prazo mais longo. O seguro prestamista também vale ser considerado — ele cobre a diferença entre o que você deve e o que o carro vale caso ele seja roubado ou destruído antes da quitação.",
+          "howToUse": [
+            "Insira o valor do veículo, incluindo taxas da concessionária, menos a entrada ou o valor do veículo usado dado como parte do pagamento.",
+            "Informe a taxa de juros anual — use a taxa pré-aprovada pelo seu banco ou a taxa cotada pela concessionária.",
+            "Escolha o prazo do financiamento em meses (36, 48, 60 ou 72 meses são os mais comuns).",
+            "Clique em Calcular para ver sua parcela mensal e o total de juros pagos durante a vida do contrato.",
+            "Compare cenários: rode o mesmo valor com a taxa do banco vs. a taxa da concessionária para ver a diferença em reais.",
+            "Acrescente seguro, IPVA, manutenção e combustível além da parcela para calcular o custo mensal real de transporte."
+          ],
+          "whyItMatters": "As taxas e os prazos do financiamento afetam significativamente o custo total do veículo. Um carro de R$ 60.000 financiado a 1,2% ao mês por 48 meses acumula muito menos juros do que o mesmo crédito a 1,8% em 72 meses — e no prazo mais longo você pode ficar devendo mais do que o carro vale por boa parte do período. Prazos longos (72–84 meses) são cada vez mais comuns, mas carregam risco real: você permanece com o saldo devedor acima do valor de mercado durante anos, dificultando a venda ou a troca sem carregar a dívida negativa para o próximo financiamento.",
+          "proTip": "Consulte seu banco ou uma fintech antes de visitar a concessionária. Ter uma taxa pré-aprovada em mãos é o seu melhor instrumento de negociação para avaliar a proposta de financiamento da loja. Negocie o preço do veículo separadamente das condições de financiamento — as concessionárias às vezes usam o valor da parcela para desviar a atenção do preço total e inflar o custo real da compra."
+        },
         "faqs": [
           {
             "question": "Qual é uma boa taxa de juros para financiamento de carro?",
@@ -655,6 +692,19 @@
         "metaDescription": "Calcule parcelas de empréstimo pessoal instantaneamente. Encontre sua parcela mensal, juros totais e compare prazos para encontrar a melhor opção.",
         "title": "Calculadora de Empréstimo Pessoal",
         "description": "Calcule parcelas mensais e custo total para empréstimos pessoais e consolidação de dívidas.",
+        "richContent": {
+          "whatIs": "Um empréstimo pessoal é um crédito sem garantia real, geralmente com taxa fixa e prazo determinado, utilizado para quitar dívidas, reformar a casa, cobrir despesas médicas ou realizar compras de valor elevado. Ao contrário dos cartões de crédito com taxas variáveis que frequentemente ultrapassam 20–29% ao mês, os empréstimos pessoais costumam ter taxas fixas menores e um prazo definido de pagamento, normalmente de 12 a 60 meses. Essa previsibilidade os torna uma ferramenta eficaz para sair do ciclo do rotativo do cartão. Ao consolidar vários saldos em dívida única com taxa menor, você paga uma única parcela mensal em vez de malabarear vários mínimos, e tem uma data certa de quitação. A calculadora mostra exatamente quanto de juros você economiza e quando estará livre da dívida.",
+          "howToUse": [
+            "Insira o valor do empréstimo — para consolidação de dívidas, some todos os saldos que pretende quitar.",
+            "Informe a taxa de juros anual (ou mensal) que lhe foi oferecida, ou use sua faixa de score para estimar uma taxa realista.",
+            "Escolha o prazo em meses (12, 24, 36, 48 ou 60 meses são os mais comuns em empréstimos pessoais).",
+            "Clique em Calcular para ver sua parcela mensal e o total de juros ao longo do contrato.",
+            "Compare o total de juros deste empréstimo com o que você pagaria mantendo os saldos atuais no cartão de crédito.",
+            "Ajuste o prazo para encontrar o equilíbrio ideal entre o tamanho da parcela e o custo total dos juros."
+          ],
+          "whyItMatters": "A dívida no cartão de crédito é cara. A taxa do rotativo no Brasil frequentemente ultrapassa 300% ao ano, e como os pagamentos mínimos cobrem apenas uma fração dos juros, os saldos podem persistir por anos com pouca redução do principal. Um empréstimo pessoal com taxa fixa menor e prazo definido rompe esse ciclo. Consolidar R$ 10.000 em rotativo de cartão num empréstimo pessoal a taxa menor pode economizar milhares de reais em juros e garantir uma data de quitação — desde que você não acumule novos saldos no cartão. A parcela fixa também facilita o planejamento do orçamento mensal.",
+          "proTip": "Fique atento ao Custo Efetivo Total (CET) — alguns bancos e fintechs cobram tarifas de cadastro, seguro prestamista e outras taxas que elevam o custo real acima da taxa de juros anunciada. Compare sempre o CET (não só a taxa de juros) entre as instituições. Inclua essas tarifas no cálculo do custo total antes de escolher a oferta, especialmente se a finalidade for consolidar dívidas, pois a tarifa pode neutralizar parte da economia de juros."
+        },
         "faqs": [
           {
             "question": "Qual pontuação de crédito preciso para um empréstimo pessoal?",
@@ -751,6 +801,19 @@
         "metaDescription": "Calcule a parcela mensal do seu empréstimo estudantil, os juros totais e o prazo de quitação. Compare planos de pagamento para encontrar a opção mais acessível.",
         "title": "Calculadora de Empréstimo Estudantil",
         "description": "Calcule parcelas mensais e custo total de quitação de empréstimos estudantis.",
+        "richContent": {
+          "whatIs": "Uma calculadora de empréstimo estudantil ajuda o estudante a estimar a parcela mensal e o custo total de pagamento com base no saldo devedor, na taxa de juros e no prazo. No Brasil, o principal programa de financiamento estudantil é o FIES (Fundo de Financiamento Estudantil), que oferece crédito com taxas subsidiadas para cursos de graduação em instituições privadas. No exterior, especialmente para quem estuda nos EUA, os empréstimos federais americanos dividem-se em subsidiados — em que o governo cobre os juros enquanto o estudante está matriculado pelo menos em meio período — e não subsidiados, que acumulam juros desde o desembolso, mesmo durante o período escolar. O plano de pagamento padrão para empréstimos federais dos EUA é de 10 anos, mas planos baseados em renda (IDR) como SAVE, IBR e PAYE limitam a parcela a uma porcentagem da renda e estendem o prazo para 20–25 anos.",
+          "howToUse": [
+            "Insira o saldo total do empréstimo estudantil — inclua todos os créditos federais e privados que deseja modelar.",
+            "Informe a taxa de juros média ponderada dos seus empréstimos, ou modele cada empréstimo separadamente para maior precisão.",
+            "Escolha o prazo de pagamento: 10 anos para o plano padrão, ou 20–25 anos para simular um plano baseado em renda.",
+            "Clique em Calcular para ver sua parcela mensal e o total de juros pagos durante todo o prazo.",
+            "Compare o plano padrão de 10 anos com um plano IDR de 20 anos para visualizar o equilíbrio entre o valor da parcela e o total de juros.",
+            "Se trabalha no setor público nos EUA, considere o PSLF, que cancela o saldo restante após 10 anos de pagamentos qualificados."
+          ],
+          "whyItMatters": "A diferença entre os planos de pagamento é substancial. Um empréstimo de R$ 50.000 (ou US$ 35.000) a 5,5% quitado em 10 anos acumula muito menos juros do que o mesmo empréstimo num plano de 25 anos — embora as parcelas sejam muito mais baixas. Para quem se qualifica ao PSLF nos EUA, o saldo perdoado pode tornar o plano IDR a decisão financeiramente correta. Entender o custo real de cada caminho antes de se comprometer é essencial. Mudar de plano depois é possível, mas os juros já acumulados não desaparecem, e o tempo no plano errado pode não contar para o perdão.",
+          "proTip": "Se você tem empréstimos não subsidiados e ainda está estudando ou no período de carência, fazer pequenos pagamentos de juros agora evita a capitalização — em que os juros não pagos são somados ao saldo principal, aumentando a base de cálculo de juros para todo o prazo restante. Mesmo R$ 100–R$ 200 por mês durante o curso pode evitar centenas de reais em juros capitalizados no início do pagamento."
+        },
         "faqs": [
           {
             "question": "Qual é o prazo padrão de pagamento de empréstimo estudantil?",
@@ -799,6 +862,19 @@
         "metaDescription": "Calcule sua parcela de financiamento imobiliário de 30 anos. Veja a parcela mensal, os juros totais pagos e a tabela completa de amortização.",
         "title": "Calculadora de Financiamento de 30 Anos",
         "description": "Calcule sua parcela mensal em um financiamento imobiliário de 30 anos com taxa fixa.",
+        "richContent": {
+          "whatIs": "O financiamento imobiliário de 30 anos com taxa fixa é o modelo de crédito habitacional mais longo disponível, distribuindo o pagamento em 360 parcelas mensais com taxa de juros travada. A principal vantagem é o menor compromisso mensal de caixa possível para um dado valor financiado, deixando mais margem no orçamento para poupança, investimentos e emergências. A contrapartida é o custo total: como os juros incidem sobre um saldo devedor maior por mais tempo, o total de juros pagos em 30 anos é muito mais elevado do que em prazos mais curtos. Num financiamento de R$ 300.000 a 9% ao ano, por exemplo, os juros acumulados ao longo de 30 anos podem superar o próprio valor financiado.",
+          "howToUse": [
+            "Insira o valor do imóvel ou o montante que pretende financiar após subtrair a entrada.",
+            "Informe a taxa de juros anual da proposta do banco ou use as taxas médias atuais de financiamento imobiliário como referência.",
+            "O prazo está fixo em 30 anos (360 meses); confirme que corresponde à estrutura do seu crédito.",
+            "Clique em Calcular para ver sua parcela estimada de principal e juros.",
+            "Analise o valor total de juros pagos — esse é o custo adicional real do financiamento além do preço do imóvel.",
+            "Compare esse resultado com a calculadora de financiamento de 15 anos para visualizar o equilíbrio entre parcela mensal e juros totais."
+          ],
+          "whyItMatters": "A parcela mais baixa do financiamento de 30 anos é uma alavanca financeira importante — pode ser a diferença entre se qualificar ou não para o crédito, ou entre um orçamento apertado e uma taxa de poupança saudável. Mas o longo prazo tem um custo oculto: como você paga juros sobre um saldo maior por mais tempo, a conta final de juros é enorme. Muitos compradores também se mudam ou refinanciam antes de concluir os 30 anos — o que significa que pagam principalmente juros nos primeiros anos, quando cada parcela é majoritariamente encargos e pouco amortização.",
+          "proTip": "Você não precisa ficar preso a 30 anos de parcelas só porque tomou um financiamento nesse prazo. Fazer um pagamento extra de principal por ano — equivalente a 13 parcelas em vez de 12 — pode reduzir cerca de 4–5 anos no prazo de quitação e economizar dezenas de milhares em juros, ao mesmo tempo em que preserva a flexibilidade da parcela menor nos meses de menor fluxo de caixa."
+        },
         "faqs": [
           {
             "question": "Qual é a taxa atual de financiamento de 30 anos?",
@@ -823,6 +899,19 @@
         "metaDescription": "Calcule sua parcela de financiamento imobiliário de 15 anos. Compare com o de 30 anos para ver quanto você economiza em juros com um prazo mais curto.",
         "title": "Calculadora de Financiamento de 15 Anos",
         "description": "Calcule sua parcela mensal em um financiamento imobiliário de 15 anos com taxa fixa.",
+        "richContent": {
+          "whatIs": "O financiamento imobiliário de 15 anos é um crédito habitacional quitado em metade do tempo de um financiamento tradicional de 30 anos. A escolha é clara: sua parcela mensal será 30–50% mais alta, mas você paga aproximadamente metade do total de juros ao longo do contrato. Os bancos também costumam oferecer taxas 0,5–0,75 ponto percentual menores nos financiamentos de 15 anos em relação aos de 30 anos, amplificando ainda mais a economia. Além da matemática dos juros, o financiamento de 15 anos constrói patrimônio imobiliário quase duas vezes mais rápido — o que significa que você é dono de uma fatia maior do imóvel mais cedo. Esse patrimônio é um ativo financeiro relevante caso precise vender, refinanciar ou contratar um crédito com garantia de imóvel no futuro. Para tomadores com renda estável e elevada, é um dos caminhos mais eficientes para construir riqueza de longo prazo com imóveis.",
+          "howToUse": [
+            "Insira o valor do imóvel ou o montante que pretende financiar após sua entrada.",
+            "Informe a taxa de juros anual da proposta do banco — ou use as médias atuais de financiamento de 15 anos como referência.",
+            "O prazo está fixo em 15 anos (180 meses); confirme que corresponde à sua proposta de crédito.",
+            "Clique em Calcular para ver sua parcela estimada de principal e juros.",
+            "Analise o total de juros pagos e compare com a calculadora de 30 anos para quantificar sua economia.",
+            "Ajuste o valor do imóvel ou a taxa de juros para simular diferentes cenários de compra antes de se comprometer."
+          ],
+          "whyItMatters": "A diferença entre um financiamento de 15 e 30 anos não é apenas sobre quitar antes — é sobre o total de reais que sairão do seu bolso. Num financiamento de R$ 300.000 a 9% ao ano, o prazo de 30 anos gera muito mais juros acumulados do que o de 15 anos — uma diferença que pode chegar a centenas de milhares de reais. Para quem consegue absorver a parcela mais alta, essa diferença é dinheiro que fica na família. O financiamento de 15 anos também elimina a dívida habitacional antes da aposentadoria para muitos compradores, removendo uma despesa fixa relevante exatamente quando a renda tende a diminuir.",
+          "proTip": "Antes de se comprometer com o prazo de 15 anos, teste seu orçamento contra a parcela mais alta e contra um eventual corte de renda. Monte uma reserva de emergência de 3–6 meses primeiro e confirme que a parcela não ultrapassa 28–30% da sua renda bruta mensal. Se o fluxo de caixa for incerto, considere o financiamento de 30 anos e faça amortizações extras voluntárias — você preserva a flexibilidade de pagamento sem abrir mão de toda a economia de juros."
+        },
         "faqs": [
           {
             "question": "Quanto maior é a parcela de 15 anos em comparação à de 30?",
@@ -847,6 +936,19 @@
         "metaDescription": "Calcule as parcelas mensais de empréstimos FHA incluindo o prêmio de seguro hipotecário (MIP). Empréstimos FHA permitem entradas a partir de 3,5%.",
         "title": "Calculadora de Empréstimo FHA",
         "description": "Calcule as parcelas de empréstimos FHA incluindo MIP (Prêmio de Seguro Hipotecário).",
+        "richContent": {
+          "whatIs": "O empréstimo FHA é um financiamento imobiliário segurado pela Federal Housing Administration (FHA), órgão vinculado ao Departamento de Habitação e Desenvolvimento Urbano dos Estados Unidos (HUD). Trata-se de um programa do governo americano voltado para compradores de primeira casa e tomadores com poupança limitada ou histórico de crédito imperfeito. A entrada mínima é de 3,5% com score de 580 ou mais — ou 10% de entrada com score entre 500 e 579. Ao contrário do PMI convencional (seguro hipotecário privado), que é cancelado automaticamente ao atingir 20% de patrimônio, o MIP (Mortgage Insurance Premium) do FHA funciona de forma diferente. Para empréstimos originados após junho de 2013 com menos de 10% de entrada, o MIP anual é exigido pelo prazo total do contrato. A única forma de eliminá-lo é refinanciar para um empréstimo convencional assim que o tomador construir patrimônio suficiente e se qualificar para melhores condições.",
+          "howToUse": [
+            "Insira o preço de compra do imóvel e a entrada planejada (mínimo de 3,5% para tomadores com score 580+).",
+            "O valor financiado é o preço de compra menos a entrada; o MIP inicial de 1,75% geralmente é incluído no valor financiado.",
+            "Informe a taxa de juros anual da proposta do credor ou use as médias atuais de empréstimos FHA.",
+            "Confira a parcela mensal estimada, que inclui principal, juros e o MIP anual dividido em 12 parcelas mensais.",
+            "Observe o custo total do MIP ao longo do contrato — esse é o número-chave para comparar com um empréstimo convencional com PMI.",
+            "Compare o custo total do FHA com um empréstimo convencional a 5% de entrada para determinar qual é mais vantajoso para seu perfil de crédito."
+          ],
+          "whyItMatters": "Os empréstimos FHA abrem as portas da casa própria para tomadores que não se qualificam para crédito convencional — especialmente aqueles com score abaixo de 680 ou entrada inferior a 10%. No entanto, o MIP acrescenta um custo de longo prazo relevante. O MIP anual num empréstimo FHA de US$ 250.000 gira em torno de US$ 115–175 por mês. Como o MIP persiste pelo prazo total na maioria dos contratos FHA, o custo acumulado pode superar US$ 25.000–40.000 em 30 anos. Entender isso antes de comprar ajuda a planejar uma estratégia de refinanciamento assim que o patrimônio e o crédito melhorem o suficiente para se qualificar para condições convencionais.",
+          "proTip": "Se seu score for 680 ou mais e você conseguir 5% de entrada, compare as propostas FHA e convencional lado a lado. Nesse perfil, o empréstimo convencional com PMI costuma ser mais barato no total — e o PMI convencional é cancelado automaticamente ao atingir 20% de patrimônio, ao contrário do MIP do FHA, que exige um refinanciamento completo para ser removido. O ponto de equilíbrio depende muito das taxas oferecidas e de quanto tempo você planeja ficar no imóvel."
+        },
         "faqs": [
           {
             "question": "O que é um empréstimo FHA?",
@@ -871,6 +973,19 @@
         "metaDescription": "Calcule as parcelas mensais de empréstimos VA. Empréstimos VA oferecem $0 de entrada, sem PMI e taxas competitivas para veteranos e militares ativos elegíveis.",
         "title": "Calculadora de Empréstimo VA",
         "description": "Calcule as parcelas de empréstimos VA sem exigência de PMI para veteranos e militares elegíveis.",
+        "richContent": {
+          "whatIs": "O empréstimo VA é um benefício habitacional disponível a veteranos elegíveis, militares em serviço ativo, membros da Guarda Nacional e da Reserva e cônjuges sobreviventes, garantido pelo Departamento de Assuntos de Veteranos dos Estados Unidos (VA). Este é um programa exclusivo do governo americano para quem serviu às Forças Armadas dos EUA. Os benefícios definidores do programa são: zero de entrada, sem seguro hipotecário privado (PMI) e taxas de juros competitivas. Essas vantagens podem representar dezenas de milhares de dólares a menos em comparação com empréstimos convencionais que exigem PMI. Há uma taxa de financiamento VA — uma cobrança única de 1,25% a 3,3% do valor do empréstimo, conforme o tipo de serviço, o percentual de entrada e se é o primeiro ou um uso subsequente do benefício. Veteranos com classificação de incapacidade relacionada ao serviço de 10% ou mais geralmente estão isentos dessa taxa.",
+          "howToUse": [
+            "Confirme a elegibilidade: veteranos, militares em serviço ativo (90+ dias em tempo de guerra ou 181+ dias em tempo de paz) e membros qualificados da Guarda Nacional ou da Reserva podem ser elegíveis.",
+            "Obtenha o Certificado de Elegibilidade (COE) junto ao VA ou por meio do seu credor — ele confirma o valor do seu direito ao benefício.",
+            "Insira o preço de compra do imóvel — nenhuma entrada é exigida, embora uma entrada voluntária reduza a taxa de financiamento.",
+            "Informe o valor do empréstimo e a taxa de juros VA que lhe foi cotada.",
+            "Confira sua parcela mensal — observe que não há linha de PMI, o que representa uma economia direta em relação a empréstimos convencionais.",
+            "Considere a taxa de financiamento VA, se aplicável: ela pode ser incluída no financiamento ou paga no fechamento."
+          ],
+          "whyItMatters": "A combinação de zero de entrada com ausência de PMI faz do empréstimo VA um dos programas hipotecários mais poderosos disponíveis nos Estados Unidos para quem se qualifica. Num imóvel de US$ 350.000, um comprador convencional que dá 5% de entrada paga PMI até atingir 20% de patrimônio — muitas vezes de 7 a 10 anos de US$ 100–200 por mês em custos extras. Um tomador VA não paga PMI algum, economizando US$ 10.000–20.000 no mesmo período, além de não precisar de US$ 17.500 de entrada. Para tomadores elegíveis, avaliar o financiamento VA antes de qualquer outra modalidade é quase sempre o primeiro passo certo.",
+          "proTip": "Se você tem uma classificação de incapacidade relacionada ao serviço de 10% ou mais, geralmente está isento da taxa de financiamento VA — uma economia de 1,4–3,3% do valor do empréstimo no fechamento. Os credores nem sempre verificam proativamente essa isenção, por isso confirme sua situação antes de assinar o contrato. Num empréstimo de US$ 300.000, a isenção da taxa de financiamento sozinha pode representar uma economia imediata de US$ 4.000–10.000."
+        },
         "faqs": [
           {
             "question": "Quem se qualifica para um empréstimo VA?",
@@ -1359,7 +1474,8 @@
       "funAndRandom": "Diversão e Aleatoriedade",
       "quizzes": "Quizzes",
       "agileTools": "Ferramentas Ágeis & Scrum",
-      "sportsQuizzes": "Quiz de Esportes"
+      "sportsQuizzes": "Quiz de Esportes",
+      "interviewPrep": "Preparação para Entrevistas"
     },
     "tools": {
       "imageCompressor": { "label": "Compressor de Imagem", "desc": "Comprimir JPG, PNG, WebP, AVIF" },
@@ -1411,7 +1527,9 @@
       "planningPoker": { "label": "Planning Poker", "desc": "Estimativas Fibonacci — revelar tudo ao mesmo tempo" },
       "userStoryWriter": { "label": "Escritor de User Story", "desc": "Como [papel], quero [funcionalidade], para que [benefício]" },
       "sprintDateCalculator": { "label": "Calculadora de Sprint", "desc": "Data de início + duração → todas as datas das cerimônias" },
-      "percentageCalculator": { "label": "Calculadora de Porcentagem", "desc": "% de, qual % é e variação % — três calculadoras em uma" }
+      "percentageCalculator": { "label": "Calculadora de Porcentagem", "desc": "% de, qual % é e variação % — três calculadoras em uma" },
+      "typescriptQuiz": { "label": "Quiz de TypeScript para Entrevistas", "desc": "30 perguntas: Iniciante → Intermediário → Avançado" },
+      "interviewHub": { "label": "Hub de Preparação para Entrevistas", "desc": "TypeScript, JS e mais — com explicações e boas práticas" }
     }
   },
   "agile": {
@@ -1783,7 +1901,46 @@
       { "question": "O que é TMB?", "answer": "A Taxa Metabólica Basal (TMB) é o número de calorias que seu corpo queima em repouso completo para manter funções básicas como respiração e circulação. Representa cerca de 60–75% do seu TDEE." },
       { "question": "Quantas calorias devo comer para emagrecer?", "answer": "Um déficit calórico seguro é de 250–500 calorias abaixo do seu TDEE por dia, resultando em aproximadamente 0,25–0,5 kg de perda de peso por semana." },
       { "question": "Qual fórmula esta calculadora usa?", "answer": "Esta calculadora usa a equação de Mifflin-St Jeor: TMB = 10 × peso(kg) + 6,25 × altura(cm) − 5 × idade + 5 (masculino) ou −161 (feminino)." }
-    ]
+    ],
+    "bmiRichContent": {
+      "whatIs": "O Índice de Massa Corporal (IMC) é um número calculado a partir do seu peso e altura que fornece um panorama rápido de se o seu peso corporal está dentro de uma faixa saudável. É amplamente utilizado por clínicos e pesquisadores como ferramenta de triagem de baixo custo para identificar potenciais riscos de saúde relacionados ao peso. No entanto, o IMC tem limitações reais: ele não distingue entre massa muscular e gordura, portanto um atleta musculoso pode ser classificado como \"sobrepeso\" mesmo tendo um percentual de gordura muito baixo. O IMC também não leva em conta a distribuição da gordura no corpo — a gordura abdominal apresenta riscos diferentes da gordura armazenada em outras partes. Para uma visão mais completa da composição corporal, considere combinar o IMC com a medição da circunferência da cintura, a relação cintura-quadril ou uma densitometria (DEXA).",
+      "howToUse": [
+        "Selecione o sistema de unidades — Métrico (kg, cm) ou Imperial (lbs, pés/pol).",
+        "Insira seu peso atual e sua altura nos campos disponíveis.",
+        "Clique em Calcular para ver instantaneamente sua pontuação de IMC.",
+        "Verifique sua categoria de IMC (Abaixo do Peso, Normal, Sobrepeso ou Obesidade) no indicador visual colorido.",
+        "Leia as orientações exibidas na tela para entender o que seu resultado significa para sua saúde.",
+        "Consulte um profissional de saúde se o seu IMC estiver fora da faixa Normal ou se você tiver dúvidas sobre sua composição corporal."
+      ],
+      "whyItMatters": "Manter um IMC saudável reduz o risco de diabetes tipo 2, doenças cardiovasculares, hipertensão, apneia do sono e alguns tipos de câncer. Mesmo uma perda de peso modesta de 5–10% do peso corporal em pessoas com sobrepeso pode reduzir significativamente a pressão arterial, melhorar a sensibilidade à insulina e diminuir a sobrecarga nas articulações. Acompanhar o IMC ao longo do tempo oferece um ponto de referência objetivo para monitorar o efeito das mudanças no estilo de vida.",
+      "proTip": "Se você pratica musculação ou treino de força regularmente, seu IMC pode superestimar seu percentual de gordura. Complemente o resultado do IMC com a medição da circunferência da cintura (busque menos de 94 cm para homens e menos de 80 cm para mulheres) para uma avaliação de saúde mais precisa."
+    },
+    "tdeeRichContent": {
+      "whatIs": "O Gasto Energético Total Diário (TDEE, na sigla em inglês) é o total de calorias que seu corpo queima ao longo de um dia — desde manter o coração batendo enquanto você dorme (sua Taxa Metabólica Basal, ou TMB) até caminhar, digerir alimentos e fazer exercícios. Sua TMB representa cerca de 60–75% do seu TDEE e é calculada aqui usando a equação de Mifflin-St Jeor, a fórmula mais validada para adultos não atletas. O gasto energético restante é multiplicado por um fator de atividade que varia de 1,2 (sedentário) a 1,9 (extremamente ativo). Conhecer seu TDEE permite definir metas calóricas com precisão real: coma no nível do TDEE para manter o peso, abaixo para perder ou acima para ganhar. Um aviso importante: o TDEE diminui conforme você perde peso, e a termogênese adaptativa (o metabolismo desacelerando em resposta ao déficit) significa que pode ser necessário reavaliar seus números a cada 4–6 semanas.",
+      "howToUse": [
+        "Insira sua idade, sexo biológico, peso e altura.",
+        "Escolha o sistema de unidades (Métrico ou Imperial).",
+        "Selecione seu nível de atividade com honestidade — a maioria das pessoas o superestima, então na dúvida, escolha um nível abaixo.",
+        "Clique em Calcular para ver sua TMB e seu TDEE.",
+        "Revise a tabela de metas calóricas para encontrar sua meta diária para manter, perder ou ganhar peso.",
+        "Reavalie seu TDEE a cada 4–6 semanas conforme seu peso muda, para manter suas metas precisas."
+      ],
+      "whyItMatters": "Comer em sincronia com seu TDEE é a base de qualquer estratégia nutricional baseada em evidências. Sem conhecer seu gasto energético, as metas calóricas se tornam tentativas e erros. Seja para perder gordura, ganhar massa muscular, melhorar a performance atlética ou simplesmente manter um peso estável, o TDEE oferece uma linha de base confiável para construir seu plano.",
+      "proTip": "Os multiplicadores de atividade nas calculadoras de TDEE se referem a todo o movimento ao longo do dia, não apenas aos treinos estruturados. Se você tem um trabalho de escritório mas vai à academia 4 dias por semana, 'Levemente ativo' costuma ser mais preciso do que 'Moderadamente ativo'. Superestimar seu nível de atividade é o motivo mais comum pelo qual as pessoas travam na dieta."
+    },
+    "deficitRichContent": {
+      "whatIs": "Um déficit calórico ocorre quando você consome menos calorias do que seu Gasto Energético Total Diário (TDEE), forçando seu corpo a recorrer à energia armazenada — principalmente gordura corporal — para compensar a diferença. Para a maioria dos adultos, um déficit moderado de 250–500 kcal por dia produz uma perda de gordura segura e sustentável de aproximadamente 0,25–0,5 kg por semana, sem provocar fome intensa ou perda muscular. A ingestão de proteínas torna-se especialmente importante durante um déficit — consumir ao menos 1,6–2,2 g de proteína por kg de peso corporal ajuda a preservar a massa muscular magra enquanto o corpo elimina gordura. Vale lembrar que, conforme você perde peso, seu TDEE diminui e a termogênese adaptativa pode desacelerar a perda ao longo do tempo.",
+      "howToUse": [
+        "Insira sua idade, sexo biológico, peso, altura e nível de atividade.",
+        "Clique em Calcular para ver seu TDEE (calorias de manutenção).",
+        "Revise a tabela de déficit: o déficit de 250 kcal/dia visa ~0,25 kg de perda por semana; o de 500 kcal/dia visa ~0,5 kg por semana.",
+        "Escolha o nível de déficit que se encaixa na sua agenda e que parece sustentável — mais rápido nem sempre é melhor.",
+        "Defina sua meta diária de calorias em um aplicativo de registro alimentar (MyFitnessPal, Cronometer etc.) e priorize a proteína.",
+        "Recalcule a cada 3–4 semanas conforme seu peso muda, para manter o déficit preciso."
+      ],
+      "whyItMatters": "Um déficit calórico muito agressivo leva à perda muscular, fadiga, deficiências nutricionais e recuperação de peso. Um déficit pequeno demais gera progresso frustrante e lento. Calcular seu déficit pessoal com base no seu TDEE real — em vez de seguir uma dieta genérica de 1.200 kcal — protege sua saúde metabólica e torna o processo sustentável a longo prazo.",
+      "proTip": "Nunca deixe suas calorias diárias caírem abaixo da sua TMB por períodos prolongados. Comer abaixo da TMB força o corpo a quebrar músculo para obter energia, reduz a função da tireoide e desacelera o metabolismo de formas que podem persistir muito depois de o regime terminar. Um déficit de 20% abaixo do TDEE é geralmente o máximo seguro para a maioria das pessoas."
+    }
   },
   "gpaCalculator": {
     "metaTitle": "Calculadora de GPA — Calcule sua Média Escolar Grátis | ToolNotch",
@@ -1821,6 +1978,30 @@
     "gradeNeeded": "Nota Necessária",
     "impossible": "Impossível — o máximo é 100%",
     "alreadyAchieved": "Você já atingiu sua meta!",
+    "richContent": {
+      "whatIs": "Uma calculadora de GPA (Grade Point Average) converte suas notas e cargas horárias em uma média ponderada única que representa seu desempenho acadêmico geral. No sistema americano de escala 4.0, cada letra corresponde a um valor numérico: A = 4.0, B = 3.0, C = 2.0, D = 1.0, F = 0.0. O valor da nota de cada disciplina é multiplicado pelos seus créditos, e a soma é dividida pelo total de créditos — dando mais peso às disciplinas com mais créditos. Esta calculadora também suporta a escala brasileira e portuguesa de 0–20 e a escala espanhola e latino-americana de 0–10. No Brasil, as universidades geralmente adotam a escala de 0 a 10 (com média mínima de 5 ou 6 para aprovação), enquanto o Vestibular e o ENEM usam sistemas de pontuação próprios — mas converter suas notas em um GPA ponderado ainda é útil para comparações e candidaturas internacionais.",
+      "howToUse": [
+        "Selecione sua escala de notas (EUA 4.0, Portugal/Brasil 0–20 ou Espanha/América Latina 0–10).",
+        "Insira o nome da disciplina (opcional), a nota e os créditos em cada linha.",
+        "Clique em 'Adicionar Disciplina' para inserir mais linhas conforme necessário.",
+        "Clique em 'Calcular GPA' para ver sua média ponderada e o total de créditos.",
+        "Use a aba GPA Acumulado para combinar seu histórico atual com os resultados de um novo semestre."
+      ],
+      "whyItMatters": "O GPA é um dos números mais importantes na vida acadêmica de um estudante. A maioria das universidades exige uma média mínima — frequentemente 2.0 na escala americana — para manter o status de matrícula regular, e muitos programas exigem 3.0 ou mais para continuidade. Comitês de bolsas, bancas de admissão em pós-graduações e muitos empregadores usam o GPA como critério de seleção. Entender exatamente onde você está — e como cada disciplina afeta sua média geral — permite tomar decisões estratégicas sobre sua carga horária e foco de estudos.",
+      "proTip": "Como o GPA é ponderado por créditos, disciplinas com maior carga horária têm um impacto desproporcional na sua média. Se você está com dificuldades em uma disciplina de 4 créditos, ela afeta seu GPA duas vezes mais do que uma optativa de 2 créditos. Priorize seu tempo de estudo de acordo — proteger a nota nas disciplinas obrigatórias de maior carga é a forma mais eficiente de manter ou elevar seu GPA."
+    },
+    "gradeRichContent": {
+      "whatIs": "A calculadora de notas ajuda você a trabalhar de forma inversa a partir de uma nota final desejada para determinar exatamente qual pontuação você precisa nas avaliações restantes ou na prova final. Em vez de adivinhar, você insere sua nota atual, o peso percentual do que já foi avaliado e a nota final desejada — e a calculadora retorna a pontuação precisa que você precisa no restante. Isso é muito útil ao final do semestre, quando os estudantes precisam decidir como distribuir o tempo de estudo entre várias provas finais.",
+      "howToUse": [
+        "Insira sua nota atual em porcentagem no campo 'Nota Atual'.",
+        "Insira quanto do peso total da nota já foi avaliado (por exemplo, 70 se 70% da nota já foi concluída).",
+        "Insira sua nota final desejada em porcentagem.",
+        "Clique em 'Calcular' para ver a pontuação exata que você precisa no trabalho restante.",
+        "Se o resultado mostrar 'Impossível', sua nota atual torna a meta matematicamente inatingível — ajuste a nota alvo e recalcule."
+      ],
+      "whyItMatters": "Saber exatamente qual nota você precisa elimina a ansiedade e a substitui por um objetivo concreto. Estudantes frequentemente superestimam ou subestimam o que é necessário para atingir a aprovação ou a distinção — esta calculadora fornece o número real para que você possa estudar com intencionalidade. Ela também revela quando a meta já foi alcançada ou é matematicamente impossível, ajudando a redirecionar o esforço para as matérias onde o tempo de estudo terá maior impacto.",
+      "proTip": "Se você precisa de uma nota muito alta na prova final para atingir sua meta, converse com seu professor antes da prova — não depois. A maioria dos docentes valoriza estudantes proativos, e pode haver oportunidades de trabalho extra, políticas de arredondamento de notas ou reenvios de atividades que você desconhecia. Chegar com sua nota atual e a pontuação que você precisa demonstra seriedade e iniciativa."
+    },
     "faqs": [
       { "question": "Como é calculado o GPA?", "answer": "O GPA é calculado multiplicando a nota de cada disciplina pela sua carga horária em créditos, somando todos os valores e dividindo pelo total de créditos. Na escala americana 4.0: A=4.0, B=3.0, C=2.0, D=1.0, F=0.0." },
       { "question": "Qual é um bom GPA?", "answer": "Na escala americana 4.0, um GPA acima de 3.5 é considerado excelente, de 3.0 a 3.5 é bom, e 2.0 é geralmente o mínimo para manter uma boa situação acadêmica." },
@@ -1853,6 +2034,55 @@
       { "question": "A calculadora considera anos bissextos?", "answer": "Sim — esta calculadora usa aritmética de datas precisa que considera corretamente anos bissextos, aniversários no dia 29 de fevereiro e meses com diferentes números de dias." },
       { "question": "Qual é minha idade se nasci em 1990?", "answer": "Se você nasceu em 1990, atualmente tem 35 ou 36 anos dependendo do seu mês de nascimento e da data de hoje. Insira sua data de nascimento completa acima para um resultado preciso." }
     ]
+  },
+  "about": {
+    "metaTitle": "Sobre o ToolNotch — Ferramentas Online Gratuitas para Desenvolvedores",
+    "metaDescription": "Saiba por que o ToolNotch foi criado, no que acreditamos e quem está por trás da plataforma. Ferramentas gratuitas sem cadastro, sem dados armazenados e sem cobranças.",
+    "title": "Sobre o ToolNotch",
+    "subtitle": "Ferramentas gratuitas. Sem contas. Sem complicação.",
+    "backHome": "Voltar ao ToolNotch",
+    "whyTitle": "Por que o ToolNotch existe",
+    "whyP1": "Todo desenvolvedor já passou por isso: você precisa rapidamente comprimir uma imagem, mesclar dois PDFs ou converter uma unidade, então pesquisa online e cai em um site cheio de pop-ups, paywalls e banners de \"Cadastre-se para continuar\". Você faz o upload do arquivo, aguarda um servidor processar e torce para o resultado ser utilizável. É uma experiência frustrante que mal mudou em uma década.",
+    "whyP2": "O ToolNotch foi construído por causa dessa frustração. O objetivo era simples: criar um conjunto de ferramentas instantâneas, gratuitas e completamente privadas. Cada ferramenta deste site roda inteiramente no seu navegador — seus arquivos nunca saem do seu dispositivo. Não há contas para criar, sem limites de uso e sem recursos bloqueados por assinatura.",
+    "whyP3": "O resultado é uma plataforma que respeita seu tempo e seus dados. Abra uma ferramenta, use-a, feche a aba. Só isso. Sem e-mails de confirmação, sem tutoriais de integração, sem avisos de \"faça upgrade para o Pro\". Apenas ferramentas que funcionam.",
+    "believeTitle": "No que acreditamos",
+    "believeP1": "A melhor ferramenta é aquela que não atrapalha. Acreditamos que softwares utilitários devem ser gratuitos, rápidos e privados por padrão. Você nunca deveria precisar fornecer seu e-mail, concordar com um período de teste ou aguardar um upload na nuvem só para redimensionar uma foto ou calcular uma parcela.",
+    "believeP2": "Todas as ferramentas do ToolNotch são client-side: seus dados são processados no navegador e nunca transmitidos para nossos servidores. O site funciona offline para a maioria das ferramentas após o carregamento inicial. Sem paywalls, sem planos diferenciados e sem contas — jamais.",
+    "whoTitle": "Quem construiu isso",
+    "whoP1": "O ToolNotch é construído e mantido por Juan Soares, um desenvolvedor de software que se cansou de indicar \"use esse site suspeito\" toda vez que alguém precisava de uma ferramenta online simples. Ele construiu a primeira versão em um fim de semana e continua adicionando ferramentas desde então.",
+    "toolsTitle": "Nossas ferramentas",
+    "toolsP1": "O ToolNotch oferece atualmente mais de 74 ferramentas gratuitas em sete categorias: utilitários PDF (mesclar, dividir, comprimir, converter), ferramentas de imagem (comprimir, converter entre formatos), calculadoras financeiras (calculadora de empréstimos, gerador de faturas, rastreador de portfólio), ferramentas de saúde (calculadora de IMC, calculadora de TDEE, planejador de déficit calórico), ferramentas de texto (contador de palavras, parafraseador, conversor de capitalização), ferramentas educacionais (calculadora de GPA, calculadora de notas, gerador de citações) e ferramentas divertidas (teste de digitação, geradores aleatórios).",
+    "toolsP2": "Novas ferramentas são adicionadas regularmente com base no que as pessoas realmente precisam. Se você quer sugerir uma ferramenta, o link do GitHub acima é o melhor lugar para isso."
+  },
+  "terms": {
+    "metaTitle": "Termos de Uso | ToolNotch",
+    "metaDescription": "Leia os Termos de Uso do ToolNotch — seus direitos, nossas isenções de responsabilidade e as regras que regem o uso de nossas ferramentas online gratuitas.",
+    "title": "Termos de Uso",
+    "lastUpdated": "Última atualização: 10 de abril de 2026",
+    "backHome": "Voltar para o ToolNotch",
+    "s1Title": "1. Aceitação dos Termos",
+    "s1P1": "Ao acessar ou utilizar o toolnotch.com (\"o Site\"), você concorda em cumprir estes Termos de Uso. Caso não concorde com qualquer parte destes termos, por favor, interrompa o uso do Site imediatamente.",
+    "s1P2": "Estes termos se aplicam a todos os visitantes, usuários e qualquer pessoa que acesse ou utilize os serviços do ToolNotch. Reservamo-nos o direito de atualizar estes termos a qualquer momento, e o uso continuado do Site após tais alterações constitui sua aceitação dos novos termos.",
+    "s2Title": "2. Uso das Ferramentas",
+    "s2P1": "Todas as ferramentas do ToolNotch são disponibilizadas gratuitamente para uso informativo e pessoal. Você pode utilizá-las sem criar uma conta ou fornecer quaisquer informações pessoais. A maioria das ferramentas funciona inteiramente no seu navegador — nenhum arquivo ou dado inserido é transmitido para nossos servidores.",
+    "s2P2": "Você concorda em não utilizar o Site para fins ilegais, não tentar fazer engenharia reversa ou raspar nossas ferramentas em grande escala, e não interferir no funcionamento normal do Site de nenhuma forma.",
+    "s3Title": "3. Sem Aconselhamento Financeiro",
+    "s3P1": "As ferramentas financeiras do ToolNotch — incluindo calculadoras de empréstimos, calculadoras de hipotecas, tabelas de amortização e instrumentos relacionados — são fornecidas apenas para fins de estimativa geral e educacional. Os resultados são baseados nos dados que você inseriu e em fórmulas matemáticas padrão; eles não levam em conta sua situação financeira pessoal, capacidade de crédito, regulamentações locais ou outros fatores individuais.",
+    "s3P2": "Nada neste Site constitui aconselhamento financeiro, de investimento, tributário ou jurídico. Você não deve tomar nenhuma decisão financeira com base exclusivamente nos resultados dessas ferramentas. Antes de tomar qualquer ação financeira significativa, consulte um assessor financeiro qualificado e licenciado.",
+    "s4Title": "4. Sem Aconselhamento Médico",
+    "s4P1": "As ferramentas de saúde do ToolNotch — incluindo a calculadora de IMC, calculadora de TDEE e calculadora de déficit calórico — são fornecidas apenas para fins de consciência geral sobre bem-estar e educação. Os resultados são estimativas baseadas em fórmulas amplamente utilizadas (como Mifflin-St Jeor) e não levam em conta seu histórico médico individual, condições, medicamentos ou outros fatores clínicos.",
+    "s4P2": "Nada neste Site constitui aconselhamento médico, diagnóstico ou tratamento. Não use essas ferramentas como substituto para cuidados médicos profissionais. Consulte sempre um profissional de saúde qualificado antes de fazer alterações em sua dieta, regime de exercícios ou rotina de saúde.",
+    "s5Title": "5. Sem Garantias",
+    "s5P1": "O ToolNotch e suas ferramentas são fornecidos \"no estado em que se encontram\" e \"conforme disponíveis\", sem garantias de qualquer tipo, expressas ou implícitas. Não fazemos representações ou garantias quanto à precisão, integralidade ou confiabilidade de qualquer resultado gerado pelas ferramentas. Os resultados calculados podem diferir dos valores fornecidos por instituições financeiras, profissionais de saúde ou outras fontes autorizadas.",
+    "s6Title": "6. Propriedade Intelectual",
+    "s6P1": "Todo o código das ferramentas, design, conteúdo escrito e marca do toolnotch.com são propriedade intelectual do ToolNotch e estão protegidos pelas leis de direitos autorais e marcas registradas aplicáveis. Você não pode reproduzir, redistribuir ou usar qualquer parte deste Site para fins comerciais sem nossa permissão prévia por escrito.",
+    "s7Title": "7. Limitação de Responsabilidade",
+    "s7P1": "Na máxima extensão permitida pela lei aplicável, o ToolNotch não será responsável por quaisquer danos diretos, indiretos, incidentais, especiais ou consequenciais decorrentes do uso ou da impossibilidade de uso de qualquer ferramenta ou conteúdo neste Site. Isso inclui, sem limitação, qualquer perda financeira, resultado de saúde ou outra decisão tomada com base nos resultados das ferramentas.",
+    "s8Title": "8. Alterações nos Termos",
+    "s8P1": "Podemos revisar estes Termos de Uso periodicamente. Os termos atualizados serão publicados nesta página com uma data de \"Última atualização\" revisada. O uso continuado do ToolNotch após tais alterações constitui sua aceitação vinculante dos termos atualizados.",
+    "s9Title": "9. Contato",
+    "s9P1": "Se você tiver dúvidas sobre estes Termos de Uso, entre em contato conosco através da nossa",
+    "s9ContactLink": "página de contato"
   },
   "citationGenerator": {
     "metaTitle": "Gerador de Citação ABNT — APA, MLA e ABNT Grátis | ToolNotch",
@@ -1894,6 +2124,18 @@
     "copy": "Copiar Citação",
     "copied": "Copiado!",
     "emptyState": "Preencha os campos acima para gerar sua referência bibliográfica",
+    "richContent": {
+      "whatIs": "Um gerador de citações formata referências bibliográficas de acordo com guias de estilo acadêmico estabelecidos — de forma automática e precisa. As citações servem a dois propósitos fundamentais: integridade acadêmica (dar o devido crédito aos autores originais e evitar o plágio) e credibilidade (permitir que os leitores verifiquem suas fontes e rastreiem a origem intelectual dos seus argumentos). A APA (American Psychological Association) é padrão nas ciências sociais e na psicologia, usando citações autor-data no texto. A MLA (Modern Language Association) é comum nas humanidades e na literatura, usando o formato autor-página. O estilo Chicago é preferido em história e algumas humanidades. No Brasil, a norma padrão para trabalhos acadêmicos é a ABNT NBR 6023, adotada pela grande maioria das universidades brasileiras — e esta ferramenta oferece suporte completo ao formato ABNT nesta versão em português.",
+      "howToUse": [
+        "Selecione seu formato de citação (ABNT, APA 7ª ed., MLA 9ª ed. ou Chicago 17ª ed.) usando as abas na parte superior.",
+        "Escolha o tipo de fonte — site, livro, artigo de periódico, vídeo do YouTube ou jornal.",
+        "Preencha os campos disponíveis: nomes dos autores, título, ano de publicação, URL e outros dados relevantes.",
+        "Sua referência formatada aparece instantaneamente na caixa de saída conforme você digita.",
+        "Clique em 'Copiar Citação' para copiar a referência formatada para sua área de transferência, pronta para colar na sua lista de referências."
+      ],
+      "whyItMatters": "Referências incorretas são um dos motivos mais comuns para trabalhos acadêmicos perderem pontos ou serem reprovados. Diferentes estilos de citação não são intercambiáveis — entregar um trabalho formatado em MLA para uma revista que exige ABNT sinaliza falta de atenção aos detalhes que os avaliadores notam imediatamente. Além do ambiente acadêmico, a atribuição correta é uma marca de honestidade intelectual no jornalismo, na pesquisa e na escrita profissional. Este gerador cuida das regras de formatação automaticamente — pontuação, itálico, formatação de edição e convenções de data de acesso — para que você possa se concentrar na sua escrita em vez de memorizar as regras dos manuais de estilo.",
+      "proTip": "A norma ABNT (NBR 6023) é o padrão acadêmico brasileiro obrigatório na maioria das universidades do país. Este gerador suporta ABNT integralmente nesta versão em português — incluindo as regras de maiúsculas no sobrenome dos autores, o formato de data de acesso e a pontuação específica da norma. Ao escrever trabalhos acadêmicos para instituições brasileiras, escolha ABNT para estar em conformidade com as diretrizes da sua universidade."
+    },
     "faqs": [
       { "question": "O que é a ABNT?", "answer": "A ABNT (NBR 6023) é a norma brasileira para referências bibliográficas. Formato básico para livros: SOBRENOME, Nome. *Título*. Edição. Local: Editora, Ano." },
       { "question": "Como fazer referência ABNT para site?", "answer": "SOBRENOME, Nome. *Título*. Ano. Disponível em: URL. Acesso em: dia mês. ano. Se não houver autor, o título entra em maiúsculas." },
@@ -1901,5 +2143,735 @@
       { "question": "Como citar vídeo do YouTube?", "answer": "Selecione 'YouTube', insira o título, nome do canal, data e URL. O gerador formatará conforme o estilo escolhido." },
       { "question": "O gerador é gratuito?", "answer": "Sim — completamente gratuito, sem cadastro, sem limites. As citações são geradas no seu navegador." }
     ]
+  },
+  "contact": {
+    "metaTitle": "Contato | ToolNotch",
+    "metaDescription": "Entre em contato com a equipe do ToolNotch. Reporte um bug, sugira uma ferramenta ou pergunte sobre parcerias.",
+    "backHome": "Voltar para o ToolNotch",
+    "heading": "Fale Conosco",
+    "intro": "Tem alguma dúvida, encontrou um bug ou quer sugerir uma ferramenta? Adoramos receber seu feedback.",
+    "emailLabel": "Envie um e-mail para",
+    "categories": {
+      "bugs": {
+        "title": "Relatório de Bugs",
+        "description": "Descreva a ferramenta, seu navegador e o que deu errado. Capturas de tela são sempre bem-vindas."
+      },
+      "features": {
+        "title": "Sugestões de Funcionalidades",
+        "description": "Qual ferramenta ou recurso seria útil para você? Conte-nos o que você está tentando fazer."
+      },
+      "business": {
+        "title": "Parcerias e Negócios",
+        "description": "Parcerias, conteúdo patrocinado e publicidade — entre em contato e retornaremos em breve."
+      }
+    },
+    "responseTime": "Geralmente respondemos em até 1 a 2 dias úteis."
+  },
+  "blog": {
+    "indexTitle": "Blog — Guias e Tutoriais de Calculadoras Gratuitas",
+    "indexDescription": "Aprenda a usar as ferramentas do ToolNotch com guias passo a passo, tutoriais de calculadoras e dicas práticas sobre finanças, saúde, educação e produtividade.",
+    "readArticle": "Ler artigo →",
+    "minRead": "{n} min de leitura",
+    "categories": {
+      "finance": "Finanças",
+      "health": "Saúde",
+      "text": "Texto",
+      "education": "Educação",
+      "productivity": "Produtividade",
+      "engineering": "Engenharia"
+    },
+    "breadcrumbBlog": "Blog",
+    "relatedTool": "Experimente o {toolName} gratuito →",
+    "posts": {
+      "how-to-calculate-mortgage-payment": {
+        "title": "Como Calcular a Parcela Mensal do Financiamento Imobiliário",
+        "description": "Aprenda a fórmula por trás das parcelas do financiamento, entenda a amortização e veja como taxa de juros e prazo afetam o que você paga por mês.",
+        "relatedToolName": "Calculadora de Financiamento",
+        "relatedToolPath": "/tools/finance/mortgage-calculator",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Comprar um imóvel é provavelmente a maior decisão financeira que a maioria de nós já tomará — e, ainda assim, a parcela mensal que aparece na proposta do banco pode parecer um número saído do nada. De onde vem esse valor? Por que uma diferença mínima na taxa de juros muda tanto o que você paga? E por que a parcela do banco é sempre maior do que a que você vê em uma calculadora de financiamento?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Este guia explica a matemática por trás da parcela do financiamento imobiliário, detalha cada fator que pode aumentar ou reduzir o seu custo mensal e ajuda você a identificar os erros mais comuns que pegam de surpresa quem está comprando o primeiro imóvel."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "A Fórmula Principal: Principal e Juros"
+          },
+          {
+            "type": "paragraph",
+            "text": "A parcela de um financiamento de taxa fixa é calculada por uma fórmula de amortização que distribui tanto o principal da dívida quanto os juros de forma igual ao longo de todos os meses do prazo. A fórmula é esta:"
+          },
+          {
+            "type": "callout",
+            "text": "M = P × [r(1+r)^n] / [(1+r)^n − 1]\n\nOnde: M = parcela mensal, P = valor principal do empréstimo, r = taxa de juros mensal (taxa anual ÷ 12), n = número total de parcelas (anos × 12)"
+          },
+          {
+            "type": "paragraph",
+            "text": "Veja um exemplo concreto. Suponha que você tome emprestado R$ 300.000 a uma taxa anual de 10,5% por 30 anos. Sua taxa mensal r é 10,5% ÷ 12 = 0,875%, ou 0,00875 na forma decimal. Seu n é 30 × 12 = 360 parcelas."
+          },
+          {
+            "type": "paragraph",
+            "text": "Aplicando na fórmula: M = 300.000 × [0,00875 × (1,00875)^360] / [(1,00875)^360 − 1]. O resultado é aproximadamente R$ 2.740 por mês — apenas de principal e juros. Esse número já pode parecer alto, mas ainda não é o valor completo da prestação."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "O Que Mais Compõe a Sua Parcela Mensal?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Os bancos geralmente agrupam custos adicionais em uma única prestação mensal, por isso o valor real é maior do que o que a fórmula de principal + juros indica. Os principais encargos extras são:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Seguro habitacional — Obrigatório nos financiamentos pelo SFH, cobre danos físicos ao imóvel e invalidez permanente ou morte do mutuário. Em geral adiciona de R$ 80 a R$ 300 por mês, dependendo do valor do imóvel e da idade do comprador.",
+              "Taxas administrativas — Cobradas mensalmente pela instituição financeira pela administração do contrato. Variam conforme o banco, mas costumam girar em torno de R$ 25 a R$ 50 por mês.",
+              "Seguro de prestação (MIP/DFI) — O MIP cobre morte e invalidez permanente; o DFI cobre danos físicos ao imóvel. Ambos são exigidos em financiamentos pelo SFH.",
+              "Taxa de condomínio e IPTU — Não fazem parte da parcela do financiamento, mas são custos reais de moradia que precisam entrar no seu planejamento mensal."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Quando todos esses encargos são incluídos, aqueles R$ 2.740 de principal + juros podem se tornar facilmente R$ 3.200 a R$ 3.500 por mês. Sempre solicite ao banco o CET (Custo Efetivo Total) — é ele que mostra o verdadeiro custo do financiamento, não apenas a taxa nominal."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Como a Taxa de Juros Afeta a Sua Parcela"
+          },
+          {
+            "type": "paragraph",
+            "text": "Muita gente subestima o impacto de meio ponto percentual na taxa de juros. Em um financiamento de R$ 300.000 por 30 anos, a diferença entre uma taxa de 10,0% e 10,5% ao ano pode representar mais de R$ 100 a mais por mês — e dezenas de milhares de reais ao longo do contrato. Por isso, pesquisar em diferentes bancos e melhorar seu relacionamento com a instituição antes de fechar o contrato pode fazer uma diferença enorme."
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "A 10,0% a.a.: parcela de principal+juros ≈ R$ 2.633",
+              "A 10,5% a.a.: parcela de principal+juros ≈ R$ 2.740",
+              "A 11,0% a.a.: parcela de principal+juros ≈ R$ 2.849"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Prazo: 30 Anos vs. 15 Anos"
+          },
+          {
+            "type": "paragraph",
+            "text": "Um financiamento de 15 anos tem uma parcela mensal bem maior do que o de 30 anos, mas o total de juros pago ao longo do contrato pode ser menos da metade. Usando R$ 300.000 a 10,0% a.a.:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "30 anos: ~R$ 2.633/mês, ~R$ 647.880 no total (juros de ~R$ 347.880)",
+              "15 anos: ~R$ 3.224/mês, ~R$ 580.320 no total (juros de ~R$ 280.320)"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "O prazo mais curto economiza uma quantia expressiva em juros, mas exige uma parcela mensal significativamente maior. A escolha certa depende do seu fluxo de caixa, da estabilidade profissional e do que mais você faria com esse dinheiro a cada mês."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Erros Comuns a Evitar"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Ignorar o seguro e as taxas administrativas — A fórmula de P+J é só o ponto de partida. Sempre calcule o custo total da moradia: principal, juros, seguros, taxas e condomínio/IPTU.",
+              "Comparar apenas a parcela mensal, não o custo total — Um prazo mais longo reduz a parcela, mas aumenta drasticamente o total pago em juros.",
+              "Não verificar o tipo de correção — Financiamentos corrigidos pelo IPCA podem ter parcelas menores no início, mas sobem com a inflação. Certifique-se de que consegue pagar nos cenários mais adversos.",
+              "Não analisar a tabela de amortização — Nos primeiros anos de um financiamento longo, a maior parte da parcela vai para juros, não para o principal. Entender isso ajuda a decidir se vale a pena fazer amortizações extras.",
+              "Esquecer os custos de cartório e impostos — ITBI, escritura e registro geralmente representam de 3% a 5% do valor do imóvel e precisam ser pagos à vista."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Simule os Seus Números"
+          },
+          {
+            "type": "paragraph",
+            "text": "A fórmula é importante para entender a lógica, mas não há necessidade de fazer essa conta na mão toda vez que quiser simular um cenário. Use nossa Calculadora de Financiamento gratuita para testar qualquer combinação de valor financiado, taxa de juros e prazo — e obter instantaneamente a parcela mensal, o total de juros e a tabela de amortização."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Calculadora de Financiamento",
+            "toolPath": "/tools/finance/mortgage-calculator"
+          },
+          {
+            "type": "paragraph",
+            "text": "Entender como a parcela do financiamento é formada dá a você real poder de negociação e planejamento. Você saberá por que travar uma taxa 0,25% menor vale a pena insistir, por que dar mais de entrada economiza muito além do seguro e por que aquele financiamento de taxa variável pode ser um risco que você não precisa correr. Simule os números, compare cenários e entre na compra do seu imóvel com os olhos bem abertos."
+          }
+        ]
+      },
+      "bmi-vs-body-fat-percentage": {
+        "title": "IMC vs Percentual de Gordura Corporal: Qual é a Diferença?",
+        "description": "IMC e percentual de gordura medem saúde de formas diferentes. Saiba qual métrica importa mais para seus objetivos e como interpretar seus resultados.",
+        "relatedToolName": "Calculadora de IMC",
+        "relatedToolPath": "/tools/health/bmi-calculator",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Se você já fez um check-up de rotina, seu médico provavelmente calculou o seu IMC. E se você frequenta academia, certamente já ouviu alguém dizer que o IMC não vale nada e que o percentual de gordura é o único número que importa. A verdade, como quase sempre, é mais complexa do que isso."
+          },
+          {
+            "type": "paragraph",
+            "text": "As duas métricas medem algo real — só que medem coisas diferentes. Entender o que cada uma realmente diz sobre você, e onde cada uma falha, ajuda a tomar decisões mais inteligentes sobre saúde sem se obcecar com um único número."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "O Que o IMC Mede (e o Que Ele Não Mede)"
+          },
+          {
+            "type": "paragraph",
+            "text": "O IMC, ou Índice de Massa Corporal, é calculado dividindo o seu peso em quilogramas pelo quadrado da sua altura em metros (kg/m²). É uma ferramenta de triagem populacional desenvolvida no século XIX pelo matemático belga Adolphe Quetelet — não por um médico, vale ressaltar. Ela foi criada para descrever as proporções corporais médias de homens europeus, não para diagnosticar a saúde de indivíduos."
+          },
+          {
+            "type": "paragraph",
+            "text": "As categorias padrão de IMC para adultos são:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Abaixo de 18,5 — Abaixo do peso",
+              "18,5–24,9 — Peso normal",
+              "25,0–29,9 — Sobrepeso",
+              "30,0 ou mais — Obesidade"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "O que o IMC faz bem: é gratuito, instantâneo, não exige equipamentos e, no nível populacional, correlaciona-se razoavelmente bem com riscos de saúde como diabetes tipo 2, doenças cardiovasculares e alguns tipos de câncer. Por isso continua sendo uma ferramenta padrão de triagem clínica."
+          },
+          {
+            "type": "paragraph",
+            "text": "O que o IMC não mede: composição corporal. O IMC não tem como saber se o seu peso vem de músculo, gordura, osso ou água. Um quilo de músculo e um quilo de gordura pesam exatamente igual — o IMC os trata de forma idêntica."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Quando o IMC Pode Enganar"
+          },
+          {
+            "type": "paragraph",
+            "text": "Existem grupos específicos para os quais o IMC é um indicador genuinamente ruim de saúde:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Atletas e pessoas muito musculosas — Um jogador de rúgbi competitivo ou um fisiculturista pode ter IMC na faixa de \"sobrepeso\" ou \"obesidade\" com percentual de gordura muito baixo e ótima saúde cardiovascular. O alto volume de massa muscular infla o IMC sem que haja os riscos de saúde associados.",
+              "Pessoas idosas — O envelhecimento tende a reduzir a massa muscular (sarcopenia) enquanto aumenta a gordura, muitas vezes sem grande variação no peso. Uma pessoa idosa pode ter IMC \"normal\" e, ao mesmo tempo, carregar uma proporção perigosamente alta de gordura corporal.",
+              "Diferentes etnias — Pesquisas mostram que, no mesmo IMC, pessoas de ascendência sul-asiática e do Leste Asiático tendem a carregar mais gordura e enfrentar maior risco metabólico. Algumas organizações de saúde já recomendam pontos de corte mais baixos para populações asiáticas.",
+              "Mulheres vs. homens — Mulheres naturalmente carregam mais gordura corporal do que homens com o mesmo IMC, devido a diferenças hormonais e reprodutivas. Duas pessoas com IMC idêntico podem ter percentuais de gordura significativamente diferentes."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "O Que o Percentual de Gordura Realmente Diz"
+          },
+          {
+            "type": "paragraph",
+            "text": "O percentual de gordura corporal é exatamente o que parece: a proporção do seu peso total que vem de tecido adiposo. O restante — músculos, ossos, órgãos, água — é chamado de massa magra ou massa livre de gordura."
+          },
+          {
+            "type": "paragraph",
+            "text": "As faixas saudáveis de gordura variam por sexo e idade, mas referências gerais para adultos são:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Mulheres: 20–35% é geralmente considerado saudável; atletas costumam ficar na faixa de 14–20%",
+              "Homens: 10–25% é geralmente saudável; atletas do sexo masculino costumam ficar entre 6–13%",
+              "Gordura essencial (mínimo necessário para o funcionamento dos órgãos): cerca de 3–5% para homens, 10–13% para mulheres"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Percentual elevado de gordura — especialmente a gordura visceral acumulada ao redor dos órgãos, e não a subcutânea sob a pele — está mais diretamente associado à resistência à insulina, inflamação crônica, doenças cardíacas e síndrome metabólica do que o IMC. Por isso, o percentual de gordura é considerado um marcador mais significativo da saúde cardiometabólica."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "O Problema: Medir Gordura Corporal é Difícil"
+          },
+          {
+            "type": "paragraph",
+            "text": "A principal razão pela qual o IMC não foi substituído pelo percentual de gordura em ambientes clínicos é que medir a gordura com precisão é muito mais difícil e caro. Os métodos mais precisos incluem densitometria óssea por dupla emissão de raios-X (DEXA), pesagem hidrostática (pesagem submerso em água) e Bod Pod por deslocamento de ar — nenhum deles disponível em uma consulta de rotina."
+          },
+          {
+            "type": "paragraph",
+            "text": "Ferramentas de consumo, como balanças de bioimpedância e aparelhos manuais, são convenientes, mas notoriamente inconsistentes — nível de hidratação, alimentação recente e horário do dia podem alterar os resultados em 3 a 5 pontos percentuais. A dobra cutânea com adipômetro, feita por um profissional treinado, é razoavelmente precisa, mas muito dependente da técnica do avaliador."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Usando as Duas Métricas em Conjunto"
+          },
+          {
+            "type": "paragraph",
+            "text": "A abordagem mais prática é tratar o IMC e o percentual de gordura como ferramentas complementares, não concorrentes:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Use o IMC como uma triagem inicial rápida e gratuita. Se o seu IMC está na faixa normal e você não tem outros fatores de risco, é um sinal tranquilizador — embora não conclusivo.",
+              "Use o percentual de gordura (ou a circunferência da cintura como proxy) quando o IMC parecer inconsistente com como você se sente ou parece, ou quando quiser acompanhar mudanças na composição corporal durante o treinamento.",
+              "Preste atenção à relação cintura-altura — manter a circunferência da cintura abaixo de metade da sua altura é um marcador simples e validado que captura melhor o risco de gordura visceral do que o IMC isoladamente."
+            ]
+          },
+          {
+            "type": "callout",
+            "text": "Nenhum número conta a história completa. Pressão arterial, glicemia, colesterol, qualidade do sono e condicionamento físico são marcadores de saúde igualmente importantes — o contexto sempre importa."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Calcule o Seu IMC Agora"
+          },
+          {
+            "type": "paragraph",
+            "text": "Quer saber onde você está? Use nossa Calculadora de IMC gratuita para obter o seu IMC instantaneamente, ver em qual categoria ele se enquadra e entender o que o número significa para a sua situação específica — incluindo os limites importantes dessa métrica."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Calculadora de IMC",
+            "toolPath": "/tools/health/bmi-calculator"
+          },
+          {
+            "type": "paragraph",
+            "text": "No fim das contas, o objetivo não é otimizar um número em um gráfico — é se sentir forte, ter energia e reduzir o risco de doenças crônicas no longo prazo. IMC e percentual de gordura são métricas imperfeitas para esse objetivo. Use-os como ponto de partida para uma conversa, não como veredictos."
+          }
+        ]
+      },
+      "how-to-cite-website-apa": {
+        "title": "Como Citar um Site no Formato APA (7ª Edição)",
+        "description": "Um guia claro e passo a passo para citar sites, artigos online e páginas da web no formato APA 7ª edição, com exemplos para cada tipo de fonte.",
+        "relatedToolName": "Gerador de Citações",
+        "relatedToolPath": "/tools/education/citation-generator",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Citar um site no formato APA é uma das maiores fontes de dúvida entre estudantes, mesmo os mais experientes. A 7ª edição (lançada em 2020 e ainda vigente em 2025) alterou várias regras em relação à 6ª edição — incluindo como tratar URLs, autores ausentes e datas de acesso. Se você aprendeu APA há alguns anos, há uma boa chance de que parte do que você sabe esteja desatualizada."
+          },
+          {
+            "type": "paragraph",
+            "text": "Se você estuda em uma instituição brasileira, é provável que a ABNT (Associação Brasileira de Normas Técnicas) seja o padrão exigido. No entanto, cursos com orientação internacional — especialmente na área de psicologia, ciências da saúde e ciências sociais — frequentemente adotam a APA. Nosso Gerador de Citações suporta tanto APA quanto ABNT, além de MLA e Chicago."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "O Modelo APA 7ª Edição para Sites"
+          },
+          {
+            "type": "paragraph",
+            "text": "A estrutura básica para uma página da web ou artigo online na APA 7ª edição é:"
+          },
+          {
+            "type": "callout",
+            "text": "Sobrenome do Autor, Inicial do Nome. (Ano, Mês Dia). Título da página. Nome do Site. URL"
+          },
+          {
+            "type": "paragraph",
+            "text": "Alguns detalhes importantes: o título da página é escrito em caixa sentença (apenas a primeira palavra e substantivos próprios em maiúsculo) e em itálico. O nome do site vem em seguida, em texto normal, e não há ponto após a URL."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Exemplo Passo a Passo"
+          },
+          {
+            "type": "paragraph",
+            "text": "Veja um exemplo real. Suponha que você queira citar um artigo com os seguintes dados — Autor: Flávia Oliveira. Data: 12 de março de 2024. Título: Pesquisadores descobrem sistema fluvial antigo sob a Antártida. Site: G1 Ciência."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Autor: Escreva o sobrenome, depois uma vírgula e a inicial do nome seguida de ponto. → Oliveira, F.",
+              "Data: Coloque o ano primeiro, depois mês e dia entre parênteses, seguido de ponto. → (2024, março 12).",
+              "Título: Escreva o título completo em caixa sentença e em itálico. → Pesquisadores descobrem sistema fluvial antigo sob a Antártida.",
+              "Nome do site: Escreva o nome do site em texto normal (sem itálico), seguido de ponto. → G1 Ciência.",
+              "URL: Cole a URL completa. Sem colchetes angulares, sem ponto no final."
+            ]
+          },
+          {
+            "type": "callout",
+            "text": "Oliveira, F. (2024, março 12). Pesquisadores descobrem sistema fluvial antigo sob a Antártida. G1 Ciência. https://g1.globo.com/ciencia"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "O Que Fazer Quando Não Há Autor"
+          },
+          {
+            "type": "paragraph",
+            "text": "Muitos sites não indicam um autor individual. Na APA 7ª edição, quando não há autor, o título assume a posição de autor. Mantenha o itálico e simplesmente omita o campo de autor."
+          },
+          {
+            "type": "callout",
+            "text": "Tipos de auxílio estudantil disponíveis. (2024, 10 de janeiro). Ministério da Educação. https://www.gov.br/mec/pt-br"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "O Que Fazer Quando Não Há Data"
+          },
+          {
+            "type": "paragraph",
+            "text": "Se uma página não tiver data de publicação ou atualização, use \"s.d.\" (sem data) na posição da data:"
+          },
+          {
+            "type": "callout",
+            "text": "Sobrenome do Autor, Inicial do Nome. (s.d.). Título da página. Nome do Site. URL"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "É Necessário Incluir a Data de Acesso?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Na APA 6ª edição, era comum incluir a data de acesso (\"Recuperado em 10 de março de 2024, de...\"). A APA 7ª edição eliminou essa exigência para a maioria das fontes. Você só precisa da data de acesso se o conteúdo for projetado para mudar ao longo do tempo e não houver arquivo — como entradas em bancos de dados dinâmicos ou páginas wiki atualizadas com frequência. Para artigos e páginas convencionais, dispense a data de acesso."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Erros Comuns nas Citações APA"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Capitalização errada no título — APA usa caixa sentença, não caixa título. \"Como Escrever uma Revisão de Literatura\" deve ser \"Como escrever uma revisão de literatura\" (exceto substantivos próprios).",
+              "Esquecer de colocar o título da página em itálico — O título da página vai em itálico; o nome do site, não.",
+              "Colocar ponto após a URL — A URL é o elemento final e não leva ponto.",
+              "Usar as regras da 6ª edição — A APA 7ª edição removeu a localidade do editor para livros e mudou a formatação de DOIs e URLs. Se o seu guia de estilo for anterior a 2020, revise-o.",
+              "Usar \"Anônimo\" para fontes sem autor — A APA 7ª edição não usa [Anônimo] como substituto de autor. Se não há autor, o título assume a posição de autor."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "APA vs. ABNT: Qual Usar?"
+          },
+          {
+            "type": "paragraph",
+            "text": "No Brasil, a ABNT é o padrão adotado pela maioria das instituições de ensino superior para trabalhos acadêmicos. Já a APA é amplamente utilizada internacionalmente, especialmente em psicologia, ciências da saúde e ciências sociais. Se o seu curso ou orientador exige um formato específico, use esse — eles não são intercambiáveis. Fique em dúvida? Consulte o manual da sua instituição ou pergunte ao professor."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Gere Suas Citações Automaticamente"
+          },
+          {
+            "type": "paragraph",
+            "text": "Quando o trabalho tem várias fontes, fazer cada referência manualmente consome muito tempo. Use nosso Gerador de Citações gratuito para criar citações formatadas corretamente em APA 7ª edição, ABNT, MLA e Chicago em segundos."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Gerador de Citações",
+            "toolPath": "/tools/education/citation-generator"
+          },
+          {
+            "type": "paragraph",
+            "text": "Fazer as referências corretamente importa — não apenas porque o professor vai verificar, mas porque a atribuição adequada é a base da honestidade acadêmica e dá ao leitor um caminho claro de volta às suas fontes. Dedique um minuto a mais para fazer isso direito."
+          }
+        ]
+      },
+      "word-count-guide": {
+        "title": "Guia de Contagem de Palavras: Quantas Palavras Deve Ter o Seu Texto?",
+        "description": "De posts de blog a redações e romances, descubra a contagem ideal de palavras para cada tipo de escrita e como atingir suas metas sem enrolação.",
+        "relatedToolName": "Contador de Palavras",
+        "relatedToolPath": "/tools/text/word-counter",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Pergunte a dez especialistas em conteúdo digital qual deve ser o tamanho ideal de um post de blog e você vai receber dez respostas diferentes. Alguns dirão que o mínimo é 1.500 palavras; outros vão citar pesquisas que mostram que conteúdos acima de 3.000 palavras dominam a primeira página do Google. Enquanto isso, seu professor de redação insiste em exatamente 1.000 palavras, e todos os guias de e-mail que você já leu dizem para não passar de 200."
+          },
+          {
+            "type": "paragraph",
+            "text": "A verdade, por mais frustrante que seja, é que todos podem estar certos — porque a contagem ideal de palavras depende inteiramente do que você está escrevendo, para quem você está escrevendo e o que você quer que aconteça quando o leitor terminar. Aqui está um guia prático para os tipos de conteúdo que as pessoas mais escrevem."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Posts de Blog e Artigos de Longa Extensão"
+          },
+          {
+            "type": "paragraph",
+            "text": "Para conteúdo focado em SEO, textos mais longos tendem a ter melhor desempenho — até certo ponto. Análises das páginas mais bem ranqueadas do Google mostram consistentemente que posts entre 1.500 e 2.500 palavras se saem bem em palavras-chave competitivas, e posts acima de 3.000 palavras conquistam mais backlinks em média, provavelmente por serem mais completos e, por isso, mais compartilháveis entre outros escritores."
+          },
+          {
+            "type": "paragraph",
+            "text": "Porém, textos mais longos só ajudam se as palavras extras agregarem valor real. O guia de conteúdo útil do Google penaliza explicitamente textos inflados para atingir uma meta de tamanho. Enrolação — repetir o mesmo ponto, adicionar seções de preenchimento, enterrar a resposta no quinto parágrafo — prejudica tanto o ranqueamento quanto a experiência do leitor."
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Notícia ou artigo de opinião: 400–800 palavras — diga o que precisa ser dito e pare",
+              "Tutorial ou guia passo a passo: 1.200–2.000 palavras — suficiente para detalhar cada etapa sem enrolação",
+              "Conteúdo pilar ou guia definitivo: 2.500–4.000 palavras — só se o tema realmente exigir essa profundidade",
+              "Listicle: 1.000–1.500 palavras — descrições curtas por item, fácil de escanear"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Redações e Trabalhos Acadêmicos"
+          },
+          {
+            "type": "paragraph",
+            "text": "A escrita acadêmica tem uma prioridade diferente da escrita para blog: demonstrar profundidade de argumento, não ranquear no Google. A maioria dos professores define contagens de palavras explícitas, e a abordagem certa é acertar a faixa — nem muito abaixo, nem muito acima."
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Resposta curta ou reflexão: 250–500 palavras",
+              "Redação de vestibular (ENEM): 7 linhas de rascunho até aproximadamente 30 linhas — ou 300 a 500 palavras de conteúdo",
+              "Trabalho de graduação padrão: 1.000–3.000 palavras",
+              "Artigo científico ou monografia: 5.000–15.000 palavras",
+              "Dissertação de mestrado ou tese de doutorado: 20.000–80.000 palavras dependendo da área e nível"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Uma regra subestimada na escrita acadêmica: nunca repita a introdução na conclusão. Retomar o que você acabou de dizer é a forma mais fácil de inflar a contagem de palavras, e leitores experientes sempre percebem. Se você está ficando consistentemente abaixo do mínimo, o seu argumento provavelmente precisa de mais evidências — não de mais resumo."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "E-mails"
+          },
+          {
+            "type": "paragraph",
+            "text": "O e-mail é o tipo de conteúdo em que mais curto é quase sempre melhor — e onde a maioria dos profissionais escreve de mais consistentemente. Pesquisas sobre taxas de resposta mostram que e-mails entre 50 e 125 palavras recebem as maiores taxas de retorno. Isso equivale a cerca de quatro a oito frases curtas."
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Solicitação rápida ou pergunta: 50–100 palavras",
+              "Proposta comercial ou e-mail de pitch: 150–250 palavras",
+              "Newsletter (tema único): 200–400 palavras",
+              "Newsletter (compilação com múltiplas seções): 500–800 palavras"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "O erro mais comum em e-mails é enterrar o pedido. Coloque o que você precisa logo na primeira frase. Se você quer que alguém revise um documento, diga isso na frase um — não depois de três parágrafos de contexto."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Posts em Redes Sociais"
+          },
+          {
+            "type": "paragraph",
+            "text": "Cada plataforma tem seu próprio ritmo, e contagens de palavras que funcionam em uma podem fracassar em outra:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "X / X: posts com 71–100 caracteres geram mais engajamento do que os de 280 caracteres — mais curto vence",
+              "LinkedIn: 1.300–2.000 caracteres para um post nativo que gera comentários (cerca de 200–300 palavras)",
+              "Instagram: os primeiros 138–150 caracteres são o que a maioria dos usuários lê; a legenda completa pode ser mais longa para hashtags",
+              "Facebook: 40–80 palavras para o maior engajamento em posts orgânicos"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Por Que a Legibilidade Importa Mais do Que a Contagem Bruta de Palavras"
+          },
+          {
+            "type": "paragraph",
+            "text": "Contagem de palavras é um indicador de esforço, não de qualidade. Um artigo de 500 palavras bem estruturado, com subtítulos claros e linguagem acessível, vai superar uma parede de texto de 2.000 palavras em qualquer cenário — tanto no ranqueamento quanto na satisfação do leitor."
+          },
+          {
+            "type": "paragraph",
+            "text": "Fatores que fazem um texto parecer mais longo ou mais curto do que realmente é:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Tamanho dos parágrafos — Parágrafos de duas frases são lidos mais rápido e parecem menos intimidantes do que blocos de oito frases",
+              "Tamanho das frases — Variar frases curtas e longas mantém o leitor engajado",
+              "Subtítulos — Permitem que leitores que escaneiam o texto decidam quais seções realmente querem ler",
+              "Voz passiva — Adiciona palavras sem adicionar significado: \"O relatório foi escrito pela equipe\" vs. \"A equipe escreveu o relatório\""
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Acompanhe Sua Contagem Enquanto Escreve"
+          },
+          {
+            "type": "paragraph",
+            "text": "Seja para atingir uma meta de palavras para SEO, ficar dentro do limite de um trabalho acadêmico ou evitar que um e-mail vire um ensaio, acompanhar a contagem de palavras enquanto você escreve é mais fácil do que cortar depois. Use nosso Contador de Palavras gratuito para obter em tempo real a contagem de palavras, caracteres, frases e parágrafos de qualquer texto."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Contador de Palavras",
+            "toolPath": "/tools/text/word-counter"
+          },
+          {
+            "type": "paragraph",
+            "text": "A melhor contagem de palavras para qualquer texto é o número mínimo de palavras necessário para servir o leitor completamente. Todo o resto é só enrolação."
+          }
+        ]
+      },
+      "average-typing-speed": {
+        "title": "Qual é a Velocidade Média de Digitação? (E Como Melhorar a Sua)",
+        "description": "A pessoa comum digita 40 PPM. Descubra o que é considerado rápido, como a velocidade de digitação é medida e dicas práticas para digitar mais rápido.",
+        "relatedToolName": "Teste de Digitação",
+        "relatedToolPath": "/tools/fun/typing-test",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "A maioria de nós passa várias horas por dia digitando — e-mails, documentos, mensagens, código — e, ainda assim, pouquíssimas pessoas já tentaram deliberadamente melhorar essa habilidade. A velocidade de digitação é uma daquelas competências que parece fixa, como a caligrafia, quando na realidade é altamente treinável. Algumas semanas de prática focada podem adicionar 20 a 30 PPM à sua velocidade, o que se acumula em horas economizadas ao longo do ano."
+          },
+          {
+            "type": "paragraph",
+            "text": "Antes de melhorar, é útil saber onde você está e o que significa ser \"rápido\" nos diferentes contextos profissionais e faixas etárias."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Qual é a Velocidade Média de Digitação?"
+          },
+          {
+            "type": "paragraph",
+            "text": "A velocidade média de digitação de um adulto é de aproximadamente 40 palavras por minuto (PPM) com cerca de 92% de precisão. Esse valor varia conforme a faixa etária, a profissão e a frequência com que a pessoa digita na rotina:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Adultos em geral: 38–44 PPM",
+              "Universitários: 40–50 PPM (mais digitação diária por conta dos estudos)",
+              "Funcionários de escritório e profissionais: 55–70 PPM",
+              "Programadores e desenvolvedores: 50–70 PPM (um pouco abaixo do esperado por causa de caracteres especiais e pausas de raciocínio)",
+              "Transcritores e especialistas em entrada de dados: 70–100+ PPM (exigência profissional)",
+              "Recordistas mundiais: 200–300+ PPM (pico em rajadas, não velocidade sustentada)"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Para a maioria dos profissionais do conhecimento, atingir 60–70 PPM com alta precisão é uma meta prática que reduz visivelmente o atrito no trabalho diário. Acima de 80 PPM, a digitação deixa de ser um gargalo para a maioria das tarefas — o raciocínio passa a ser o fator limitante, não os dedos."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Como a Velocidade de Digitação Afeta a Produtividade"
+          },
+          {
+            "type": "paragraph",
+            "text": "A 40 PPM, digitar 1.000 palavras leva cerca de 25 minutos. A 80 PPM, leva de 12 a 13 minutos. Ao longo de um dia de trabalho com muitas tarefas de escrita, essa diferença pode representar uma hora ou mais de tempo recuperado."
+          },
+          {
+            "type": "paragraph",
+            "text": "Mas a velocidade bruta não é tudo. A precisão é igualmente — e talvez mais — importante. Um digitador que atinge 80 PPM com 95% de precisão precisará parar e corrigir com frequência, o que quebra o foco e reduz a produção efetiva. Priorize a precisão primeiro; a velocidade virá naturalmente."
+          },
+          {
+            "type": "callout",
+            "text": "Uma boa meta: precisão acima de 98% na sua velocidade atual antes de tentar aumentar o ritmo. Forçar a velocidade antes de ter precisão só treina vícios de digitação."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "As Técnicas Que Realmente Funcionam"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "1. Adote a Posição Base"
+          },
+          {
+            "type": "paragraph",
+            "text": "A linha de base — ASDF na mão esquerda, JKL; na mão direita — é o fundamento da digitação por tato. Cada dedo tem uma posição inicial designada e um conjunto de teclas sob sua responsabilidade. Digitar sem esse sistema significa que você está procurando as teclas, o que limita sua velocidade em torno de 30–40 PPM permanentemente."
+          },
+          {
+            "type": "paragraph",
+            "text": "Se você ainda não digita sem olhar para o teclado, a transição vai parecer dolorosamente lenta por duas a quatro semanas. Você vai cair da sua velocidade atual para 15–20 PPM antes de subir de volta e superar o ponto de partida. Essa queda vale a pena — quem digita por tato atinge patamares muito mais altos do que quem \"cata milho\"."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "2. Pare de Olhar para o Teclado"
+          },
+          {
+            "type": "paragraph",
+            "text": "Olhar para as mãos enquanto digita obriga você a dividir a atenção entre a tela e o teclado, o que reduz a velocidade e aumenta os erros. Cobrir as mãos com um pano, usar um teclado sem marcações nas teclas ou simplesmente se forçar a manter os olhos na tela são técnicas que aceleram a formação da memória muscular."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "3. Pratique em Sessões Curtas, Não em Blocos Longos"
+          },
+          {
+            "type": "paragraph",
+            "text": "A repetição espaçada funciona para digitação assim como funciona para aprender idiomas. Três sessões focadas de 10 minutos ao longo do dia produzem melhoras mais rápidas do que um único bloco de 30 minutos, porque a memória motora se consolida entre as sessões. Isso torna a prática de digitação altamente compatível com uma rotina agitada — alguns minutos durante uma pausa para o café são genuinamente eficazes."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "4. Diminua a Velocidade Para Aumentar a Velocidade"
+          },
+          {
+            "type": "paragraph",
+            "text": "Parece contraditório, mas é verdade: a forma mais rápida de aumentar sua velocidade máxima é praticar em um ritmo ligeiramente abaixo do seu limite confortável e focar completamente na precisão. Tentar ganhar velocidade antes de ter precisão é o erro mais comum em quem pratica digitação por conta própria. O cérebro registra o que você repete — incluindo os erros."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "5. Identifique e Treine Suas Teclas Problemáticas"
+          },
+          {
+            "type": "paragraph",
+            "text": "A maioria das pessoas tem de cinco a dez combinações de teclas que consistentemente as fazem errar — combinações comuns incluem alcançar o \"b\" com o dedo errado, digitar \"qeu\" em vez de \"que\", ou tropeçar em pontos de interrogação e acentos. Praticar especificamente nos seus pontos fracos produz ganhos mais rápidos do que a prática geral."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Meça Onde Você Está Agora"
+          },
+          {
+            "type": "paragraph",
+            "text": "Você não consegue melhorar o que não mede. Use nosso Teste de Digitação gratuito para descobrir agora seu PPM exato e sua taxa de precisão — e use isso como referência enquanto pratica. O teste leva 60 segundos e dá uma leitura imediata de velocidade e precisão."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Teste de Digitação",
+            "toolPath": "/tools/fun/typing-test"
+          },
+          {
+            "type": "paragraph",
+            "text": "Digitação é uma habilidade, não uma característica fixa. Com 40 PPM, você está na média. Com 70 PPM, você é visivelmente mais rápido do que a maioria dos colegas. Com 90+ PPM, digitação simplesmente deixa de ser algo em que você precisa pensar. Adote a posição base, pare de olhar para o teclado e dedique algumas semanas de prática deliberada — a melhora vai te surpreender."
+          }
+        ]
+      }
+    }
   }
 }

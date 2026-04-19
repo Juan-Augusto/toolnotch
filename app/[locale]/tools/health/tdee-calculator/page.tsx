@@ -25,6 +25,7 @@ export default async function TdeeCalculatorPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'healthCalculator' })
   const faqs = t.raw('tdeeFaqs') as FaqItem[]
+  const richContentRaw = t.raw('tdeeRichContent') as { whatIs: string; howToUse: string[]; whyItMatters: string; proTip: string } | undefined
 
   const jsonLd = buildJsonLd(
     webAppSchema(t('tdeeTitle'), PATH, t('tdeeMetaDescription'), locale),
@@ -45,6 +46,7 @@ export default async function TdeeCalculatorPage({ params }: Props) {
         breadcrumbLabel={t('tdeeTitle')}
         faqs={faqs}
         adSlot="tdee-calculator"
+        richContent={richContentRaw}
       >
         <TdeeCalculator mode="maintain" locale={locale} />
       </ToolWrapper>

@@ -55,7 +55,7 @@ const jsonLd = buildJsonLd(
     { question: 'Are the sports trivia quizzes hard?', answer: 'The sports trivia quizzes range from straightforward to challenging. Each question has an explanation so you can learn even when you get something wrong.' },
     { question: 'Do I need to sign up to take a quiz?', answer: 'No. All quizzes are completely free with no account required. Just click and start answering.' },
     { question: 'Can I retake a quiz?', answer: 'Yes — click "Retake Quiz" on the result screen to start over with fresh answers.' },
-    { question: 'How do I share my result?', answer: 'Use the Twitter, WhatsApp, or Copy Link buttons on the result screen to share your result with friends.' },
+    { question: 'How do I share my result?', answer: 'Use the WhatsApp or Copy Link buttons on the result screen to share your result with friends.' },
   ]),
   breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Quizzes', url: '/quizzes' }]),
 )

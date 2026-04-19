@@ -1,12 +1,23 @@
 import type { MetadataRoute } from 'next'
 import { conversionPages } from '@/data/conversionPages'
 import { COMMON_PAIRS } from '@/data/conversionPairs'
+import { BLOG_POSTS } from '@/data/blog/index'
+import { getAllMdxBlogPosts } from '@/lib/blogContent'
 
 const BASE_URL = (process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com').trim()
 
-const ALL_ROUTES = [
-  // Legal
+const TRUST_ROUTES = [
+  '/about',
   '/privacy',
+  '/terms',
+  '/contact',
+]
+
+const ALL_ROUTES = [
+  // Interview prep
+  '/interview',
+  '/interview/typescript',
+  // Legal / info (moved to TRUST_ROUTES above — rendered at priority 0.6)
   // PDF tools
   '/tools/pdf',
   '/tools/pdf/merge-pdf',
@@ -107,6 +118,8 @@ const ALL_ROUTES = [
   // Utilities
   '/tools/utilities',
   '/tools/utilities/qr-code-generator',
+  // Blog
+  '/blog',
 ]
 
 /**
@@ -129,7 +142,24 @@ function urlWithAlternates(path: string, priority = 0.8) {
   }
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const mdxPosts = await getAllMdxBlogPosts()
+
+  const mdxBlogEntries: MetadataRoute.Sitemap = mdxPosts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt ?? post.publishedAt),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+    alternates: {
+      languages: {
+        en: `${BASE_URL}/blog/${post.slug}`,
+        pt: `${BASE_URL}/pt/blog/${post.slug}`,
+        es: `${BASE_URL}/es/blog/${post.slug}`,
+        'x-default': `${BASE_URL}/blog/${post.slug}`,
+      },
+    },
+  }))
+
   return [
     {
       url: BASE_URL,
@@ -151,6 +181,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...COMMON_PAIRS.map((pair) =>
       urlWithAlternates(`/tools/convert/${pair.slug}`)
     ),
+    ...TRUST_ROUTES.map((path) => urlWithAlternates(path, 0.6)),
     ...ALL_ROUTES.map((path) => urlWithAlternates(path)),
+    ...BLOG_POSTS.map((post) => urlWithAlternates(`/blog/${post.slug}`, 0.8)),
+    ...mdxBlogEntries,
   ]
 }

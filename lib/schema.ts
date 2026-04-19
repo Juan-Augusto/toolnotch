@@ -76,6 +76,18 @@ export function breadcrumbSchema(items: { name: string; url: string }[]) {
   }
 }
 
+export function authorSchema() {
+  return {
+    '@type': 'Person',
+    name: 'Juan Soares',
+    url: 'https://www.linkedin.com/in/juan--ximenes',
+    sameAs: [
+      'https://www.linkedin.com/in/juan--ximenes',
+      'https://github.com/Juan-Augusto',
+    ],
+  }
+}
+
 export function buildJsonLd(...schemas: object[]) {
   return {
     '@context': 'https://schema.org',

@@ -25,6 +25,7 @@ export default async function CalorieDeficitCalculatorPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'healthCalculator' })
   const faqs = t.raw('tdeeFaqs') as FaqItem[]
+  const richContentRaw = t.raw('deficitRichContent') as { whatIs: string; howToUse: string[]; whyItMatters: string; proTip: string } | undefined
 
   const jsonLd = buildJsonLd(
     webAppSchema(t('deficitTitle'), PATH, t('deficitMetaDescription'), locale),
@@ -45,6 +46,7 @@ export default async function CalorieDeficitCalculatorPage({ params }: Props) {
         breadcrumbLabel={t('deficitTitle')}
         faqs={faqs}
         adSlot="calorie-deficit-calculator"
+        richContent={richContentRaw}
       >
         <TdeeCalculator mode="deficit" locale={locale} />
       </ToolWrapper>

@@ -127,14 +127,6 @@ describe('ResultCard', () => {
   })
 
   describe('share controls', () => {
-    it('renders the Twitter / X share link', () => {
-      render(<ResultCard result={RESULT} quiz={QUIZ} onRetake={jest.fn()} />)
-
-      const twitterLink = screen.getByRole('link', { name: 'Twitter / X' })
-      expect(twitterLink).toBeInTheDocument()
-      expect(twitterLink).toHaveAttribute('href', expect.stringContaining('twitter.com'))
-    })
-
     it('renders the WhatsApp share link', () => {
       render(<ResultCard result={RESULT} quiz={QUIZ} onRetake={jest.fn()} />)
 

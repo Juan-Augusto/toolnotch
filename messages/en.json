@@ -551,6 +551,18 @@
       "title": "Word Counter",
       "description": "Count words, characters, sentences, and check readability in real time. Paste your text below — results update instantly as you type.",
       "placeholder": "Paste or type your text here…",
+      "richContent": {
+        "whatIs": "A word counter is a tool that instantly measures the length and complexity of any piece of writing. It counts words, characters, sentences, and paragraphs, and calculates readability scores in real time. Word counters are used across academic writing (where assignments often carry minimum word requirements), SEO content creation (where post length influences search rankings), and social media copywriting (where platform character limits dictate what you can publish). Bloggers, students, journalists, and marketing professionals rely on word counters to stay within scope, hit targets, and ensure their writing is the right length for its intended audience and channel.",
+        "howToUse": [
+          "Paste or type your text into the input area — counts update instantly as you type.",
+          "Check the word count, character count (with and without spaces), and sentence count in the stats bar.",
+          "Review the Flesch Reading Ease score to understand how accessible your text is to a general audience.",
+          "Use the Flesch-Kincaid Grade Level to match your writing to your target reader's education level.",
+          "Click 'Sample Text' to load an example if you want to see the tool in action before adding your own content."
+        ],
+        "whyItMatters": "Word count shapes everything from academic grades to Google rankings. Most SEO-optimised blog posts fall between 1,500 and 2,500 words — long enough to cover a topic thoroughly but short enough to remain readable. Academic essays carry strict minimum counts, and social media platforms impose hard character limits. Readability scores add another layer: a Flesch Reading Ease score above 60 signals that your content is accessible to a broad audience, while a score below 30 suggests the writing is too dense for general readers. Tracking both word count and readability together helps you write with intention.",
+        "proTip": "Aim for a Flesch Reading Ease score between 60 and 70 for blog content targeting a general audience. If your score is below 50, try splitting long sentences at conjunctions (and, but, because) and replacing multi-syllable words with shorter synonyms — these two changes alone can raise your score significantly."
+      },
       "faqs": [
         {
           "question": "How does the word counter count words?",
@@ -610,23 +622,23 @@
         },
         {
           "question": "Can I use this for social media character limits?",
-          "answer": "Yes — the character count shows the exact number of characters including spaces. Twitter/X posts allow 280 characters, LinkedIn posts allow 3,000 characters, and Instagram captions allow 2,200 characters."
+          "answer": "Yes — the character count shows the exact number of characters including spaces. X posts allow 280 characters, LinkedIn posts allow 3,000 characters, and Instagram captions allow 2,200 characters."
         }
       ]
     },
     "characterCounter": {
       "metaTitle": "Character Counter — Count Characters with & without Spaces | ToolNotch",
-      "metaDescription": "Free online character counter. Count characters with and without spaces, useful for Twitter, LinkedIn, Instagram, and other platforms with character limits.",
+      "metaDescription": "Free online character counter. Count characters with and without spaces, useful for X, LinkedIn, Instagram, and other platforms with character limits.",
       "title": "Character Counter",
-      "description": "Count characters with and without spaces. Perfect for Twitter posts, meta descriptions, and any text with character limits.",
+      "description": "Count characters with and without spaces. Perfect for X posts, meta descriptions, and any text with character limits.",
       "faqs": [
         {
           "question": "Does the character counter include spaces?",
           "answer": "Yes — the 'Characters' stat includes spaces. 'Characters (no spaces)' shows the count with all spaces removed. Both figures are shown side by side so you can use whichever is relevant to your platform."
         },
         {
-          "question": "What is the character limit for Twitter/X?",
-          "answer": "Twitter/X allows 280 characters per post for standard accounts. SMS messages are typically limited to 160 characters per segment. LinkedIn posts allow up to 3,000 characters, and Instagram captions allow up to 2,200 characters."
+          "question": "What is the character limit for X?",
+          "answer": "X allows 280 characters per post for standard accounts. SMS messages are typically limited to 160 characters per segment. LinkedIn posts allow up to 3,000 characters, and Instagram captions allow up to 2,200 characters."
         },
         {
           "question": "Why does character count matter for SEO meta descriptions?",
@@ -638,11 +650,11 @@
         },
         {
           "question": "How do emojis affect character count?",
-          "answer": "Most emoji count as one or two characters in terms of Unicode code points, but their byte representation in UTF-8 is typically 4 bytes each. On platforms like Twitter/X, most emoji count as 2 characters toward the 280-character limit due to how the platform handles UTF-16 encoding. When writing emoji-heavy content, always paste your text into the character counter and verify the total before publishing."
+          "answer": "Most emoji count as one or two characters in terms of Unicode code points, but their byte representation in UTF-8 is typically 4 bytes each. On platforms like X, most emoji count as 2 characters toward the 280-character limit due to how the platform handles UTF-16 encoding. When writing emoji-heavy content, always paste your text into the character counter and verify the total before publishing."
         },
         {
           "question": "How many characters does a tweet allow?",
-          "answer": "Twitter/X allows 280 characters per post. URLs in tweets are automatically shortened to 23 characters regardless of their actual length, and most emoji count as 2 characters."
+          "answer": "X allows 280 characters per post. URLs in tweets are automatically shortened to 23 characters regardless of their actual length, and most emoji count as 2 characters."
         },
         {
           "question": "Is my text stored anywhere?",
@@ -683,6 +695,18 @@
       "metaDescription": "Free readability checker. Get Flesch Reading Ease score, Flesch-Kincaid Grade Level, and Gunning Fog Index for any text. Improve your writing clarity.",
       "title": "Readability Checker",
       "description": "Check your text's reading level with Flesch Reading Ease, Flesch-Kincaid Grade, and Gunning Fog scores. Paste your text below and get instant readability analysis.",
+      "richContent": {
+        "whatIs": "A readability checker analyses your text and assigns scores that indicate how easy it is to read and understand. The most widely used metric is the Flesch-Kincaid formula, which produces two outputs: the Flesch Reading Ease score (0–100, where higher means easier) and the Flesch-Kincaid Grade Level (the US school grade equivalent of the text). A Flesch Reading Ease score of 60–70 represents standard, accessible writing — suitable for the general public. Scores around 30–50 indicate college-level text, while anything below 30 is considered very difficult. Grade 8 on the Flesch-Kincaid scale is a common target for consumer-facing content because it is comfortable for the vast majority of adult readers regardless of educational background.",
+        "howToUse": [
+          "Paste your text into the input area — readability scores calculate automatically.",
+          "Check the Flesch Reading Ease score: aim for 60–70 for general audiences, higher for younger readers.",
+          "Review the Flesch-Kincaid Grade Level to see what education level your text requires.",
+          "Check the Gunning Fog Index for a second opinion — a score of 8–12 suits most general content.",
+          "Edit your text directly in the box and watch the scores update in real time as you revise."
+        ],
+        "whyItMatters": "Readability directly affects whether readers finish your content or leave. Online, the average reader skims — dense, complex writing loses them within seconds. Content written at a Flesch-Kincaid Grade Level of 7–9 consistently outperforms harder text in time-on-page, engagement, and shareability. For SEO, while readability is not a direct ranking signal, lower bounce rates and longer session times — both consequences of readable writing — are strong indirect signals. Marketers, content strategists, educators, and UX writers all use readability scores to ensure their writing matches their audience's expectations and cognitive load.",
+        "proTip": "Target a Flesch-Kincaid Grade Level of 7–9 for most blog and marketing content. If your score is above 12, start by finding your three longest sentences and splitting each one at a natural pause. Reducing sentence length is the fastest single lever for improving readability without changing the meaning of your writing."
+      },
       "faqs": [
         {
           "question": "What is the Flesch-Kincaid readability score?",
@@ -959,6 +983,19 @@
         "metaDescription": "Free car loan calculator. Calculate your auto loan monthly payment, total interest, and see if financing or paying cash makes more sense.",
         "title": "Car Loan Calculator",
         "description": "Calculate your auto loan monthly payment and total cost of financing.",
+        "richContent": {
+          "whatIs": "A car loan calculator helps you estimate your monthly auto loan payment and the true total cost of vehicle financing. Cars depreciate rapidly — many lose 20% of their value within the first year — so understanding how your loan balance compares to the vehicle's declining market value is critical. Dealer financing can seem convenient, but dealers often mark up the interest rate as a profit center. Credit unions and online lenders frequently offer rates 1–3% lower on the same loan. The calculator lets you compare scenarios: a credit union rate vs. dealer financing, or a shorter loan term vs. a longer one. GAP insurance is worth factoring in too — it covers the difference between what you owe and what the car is worth if it is totaled or stolen before you pay it off.",
+          "howToUse": [
+            "Enter the vehicle price, including any dealer fees, minus your down payment or trade-in value.",
+            "Input the annual interest rate — use your pre-approved rate or the dealer's quoted rate.",
+            "Choose your loan term in months (36, 48, 60, or 72 months are most common).",
+            "Click Calculate to see your monthly payment and total interest paid over the life of the loan.",
+            "Compare scenarios: run the same loan amount at a credit union rate vs. dealer rate to see the dollar difference.",
+            "Factor in insurance, registration, and maintenance on top of the payment to get your true monthly transportation cost."
+          ],
+          "whyItMatters": "Auto loan rates and terms significantly affect the total cost of a vehicle. A $30,000 car financed at 4% over 48 months costs about $2,500 in interest. The same loan at 10% over 72 months costs over $10,000 in interest — and the car may be worth less than you owe for much of that period. Long loan terms (72–84 months) are increasingly common but carry real risk: you remain underwater — owing more than the market value — for years, making it difficult to sell or trade without rolling negative equity into your next loan.",
+          "proTip": "Get pre-approved by your bank or credit union before visiting a dealership. Knowing your rate gives you a benchmark to evaluate the dealer's financing offer. Also negotiate the vehicle price separately from financing — dealers sometimes use monthly payment framing to obscure the true purchase price and inflate total cost."
+        },
         "faqs": [
           {
             "question": "How does a car loan calculator work?",
@@ -1007,6 +1044,19 @@
         "metaDescription": "Calculate personal loan payments instantly. Find your monthly payment, total interest, and compare loan terms to find the best option.",
         "title": "Personal Loan Calculator",
         "description": "Calculate monthly payments and total cost for personal loans and debt consolidation.",
+        "richContent": {
+          "whatIs": "A personal loan is an unsecured, fixed-rate installment loan typically used for debt consolidation, home improvements, medical bills, or large purchases. Unlike credit cards with variable APRs that often exceed 20–29%, personal loans carry fixed rates — typically 7–20% — and a defined repayment term, usually 2 to 7 years. This predictability makes them a powerful tool for escaping revolving credit card debt. When you consolidate multiple high-rate balances into a single personal loan at a lower fixed rate, you pay one monthly amount instead of juggling minimums, and you have a clear payoff date. The calculator shows exactly how much interest you save and when you will be debt-free.",
+          "howToUse": [
+            "Enter the loan amount — for debt consolidation, total all balances you plan to pay off.",
+            "Input the annual interest rate you have been offered, or use your credit score range to estimate a realistic rate.",
+            "Choose the loan term in months (24, 36, 48, or 60 months are common for personal loans).",
+            "Click Calculate to see your monthly payment and total interest over the life of the loan.",
+            "Compare the total interest on this loan against what you would pay keeping your current credit card balances.",
+            "Adjust the term to find the right balance between monthly payment size and total interest cost."
+          ],
+          "whyItMatters": "Credit card debt is expensive. The average APR on revolving credit card balances exceeds 20%, and because minimum payments are often near interest-only, balances can persist for years with little principal reduction. A personal loan with a lower fixed rate and a set term breaks this cycle. Consolidating $10,000 at 22% APR into a personal loan at 10% over 36 months saves roughly $3,000 in interest and guarantees a payoff date — assuming you don't add new card balances. The fixed monthly payment also makes budgeting predictable.",
+          "proTip": "Watch for origination fees — some lenders charge 1–8% of the loan amount upfront, which effectively raises your true APR above the advertised rate. Always compare the APR (not just the interest rate) across lenders. Factor origination fees into your total cost calculation before selecting a loan, especially if you are consolidating debt where the fee offsets some of the interest savings."
+        },
         "faqs": [
           {
             "question": "What credit score do I need for a personal loan?",
@@ -1127,6 +1177,19 @@
         "metaDescription": "Calculate your student loan monthly payment, total interest, and payoff timeline. Compare repayment plans to find the most affordable option.",
         "title": "Student Loan Calculator",
         "description": "Calculate monthly student loan payments and total repayment cost.",
+        "richContent": {
+          "whatIs": "A student loan calculator helps borrowers estimate their monthly payment and total repayment cost based on loan balance, interest rate, and repayment term. Federal student loans come in two types: subsidized loans, where the government covers interest while you are enrolled at least half-time, and unsubsidized loans, which accrue interest from disbursement — even during school. Most federal loans default to a Standard 10-year repayment plan, but income-driven repayment (IDR) plans like SAVE, IBR, and PAYE cap monthly payments at a percentage of discretionary income and extend the term to 20–25 years. Forgiveness programs — including Public Service Loan Forgiveness (PSLF) — can cancel remaining balances after 10 years of qualifying payments for eligible borrowers in public or nonprofit roles.",
+          "howToUse": [
+            "Enter your total student loan balance — include all federal and private loans you want to model.",
+            "Input the weighted average interest rate across your loans, or model each loan separately for precision.",
+            "Choose a repayment term: 10 years for the Standard plan, or 20–25 years if modeling income-driven repayment.",
+            "Click Calculate to see your monthly payment and total interest paid over the full repayment term.",
+            "Compare the 10-year standard plan to a 20-year IDR plan to see the trade-off between payment size and total interest.",
+            "Factor in potential forgiveness if you work in public service — PSLF cancels remaining balances after 10 years of qualifying payments."
+          ],
+          "whyItMatters": "The difference between repayment plans is substantial. A $35,000 loan at 5.5% repaid over 10 years costs about $9,900 in interest. The same loan on a 25-year income-driven plan costs over $30,000 in interest — but if you qualify for PSLF, the forgiven balance may make the IDR plan the better financial decision. Understanding the true cost of each path before committing is essential. Switching plans later is possible, but interest already accrued does not disappear, and time spent in the wrong plan may not count toward forgiveness.",
+          "proTip": "If you have unsubsidized federal loans and are still in school or in your grace period, making even small interest payments now prevents capitalization — where unpaid interest is added to your principal balance, increasing the amount you pay interest on for the entire life of the loan. Even $25–$50 per month during school can prevent hundreds of dollars in capitalized interest at repayment."
+        },
         "faqs": [
           {
             "question": "What is the standard student loan repayment term?",
@@ -1175,6 +1238,19 @@
         "metaDescription": "Calculate your 30-year fixed mortgage payment. See monthly payment, total interest paid, and full amortization schedule.",
         "title": "30-Year Mortgage Calculator",
         "description": "Calculate your monthly payment on a 30-year fixed-rate mortgage.",
+        "richContent": {
+          "whatIs": "A 30-year fixed-rate mortgage is the most widely used home loan in the United States. It spreads repayment across 360 monthly payments at a locked interest rate, offering the lowest possible monthly payment for a given loan amount. The primary advantage is cash flow flexibility — a lower required payment leaves more room in your monthly budget for savings, investments, and emergencies. The trade-off is total cost: because interest accrues on a larger remaining balance for a longer time, the total interest paid over 30 years is dramatically higher than on a shorter-term loan. On a $300,000 mortgage at 6.5%, the interest alone over 30 years totals roughly $382,000 — more than the original purchase price.",
+          "howToUse": [
+            "Enter the home purchase price or loan amount after subtracting your down payment.",
+            "Input the annual interest rate from your lender quote or use current average 30-year fixed rates as a benchmark.",
+            "The term is fixed at 30 years (360 months); confirm this matches your loan structure.",
+            "Click Calculate to see your estimated monthly principal-and-interest payment.",
+            "Review the total interest paid figure — this is the full additional cost of the loan beyond the home price.",
+            "Compare this result against the 15-year mortgage calculator to see the monthly payment vs. lifetime interest trade-off."
+          ],
+          "whyItMatters": "The 30-year mortgage's lower monthly payment is a major financial lever — it can be the difference between qualifying for a home and not, or between a tight budget and a healthy savings rate. But the long timeline has a hidden cost: because you pay interest on a larger balance for longer, the total interest bill is enormous. Many borrowers also move or refinance before the 30-year term ends — meaning they pay primarily interest during the early years of their loan, when each payment is largely interest rather than principal reduction.",
+          "proTip": "You do not have to stay locked into 30 years of payments just because you take a 30-year loan. Making one extra principal payment per year — equivalent to 13 payments instead of 12 — can cut roughly 4–5 years off your payoff timeline and save tens of thousands in interest, while preserving the lower required payment in months when cash is tight."
+        },
         "faqs": [
           {
             "question": "What is the current 30-year mortgage rate?",
@@ -1199,6 +1275,19 @@
         "metaDescription": "Calculate your 15-year fixed mortgage payment. Compare to 30-year mortgage to see how much interest you save with a shorter term.",
         "title": "15-Year Mortgage Calculator",
         "description": "Calculate your monthly payment on a 15-year fixed-rate mortgage.",
+        "richContent": {
+          "whatIs": "A 15-year mortgage is a home loan you repay in half the time of a traditional 30-year mortgage. The trade-off is clear: your monthly payment will be 30–50% higher, but you pay roughly half the total interest over the life of the loan. Lenders also typically offer interest rates 0.5–0.75% lower on 15-year loans compared to 30-year loans, compounding the savings further. Beyond the interest math, a 15-year mortgage builds home equity at nearly twice the pace — meaning you own more of your home sooner. This equity is a significant financial asset if you ever need to sell, refinance, or access a home equity line of credit. For borrowers with stable, high incomes, it is one of the most efficient paths to building long-term wealth through real estate.",
+          "howToUse": [
+            "Enter the home purchase price or the amount you plan to borrow after your down payment.",
+            "Input the annual interest rate you have been quoted — or use current average 15-year rates as a benchmark.",
+            "The loan term is fixed at 15 years (180 months); confirm this matches your loan offer.",
+            "Click Calculate to see your estimated monthly principal-and-interest payment.",
+            "Review the total interest paid figure and compare it to the 30-year mortgage calculator to quantify your savings.",
+            "Adjust the home price or interest rate to model different purchase scenarios before committing."
+          ],
+          "whyItMatters": "The difference between a 15-year and 30-year mortgage is not just about paying off sooner — it is about the total dollars that leave your pocket. On a $300,000 loan at 6%, a 30-year mortgage costs roughly $347,000 in interest alone. The 15-year equivalent costs around $155,000 — a difference of nearly $192,000. For homeowners who can absorb the higher payment, that gap is money that stays in their household. A 15-year mortgage also eliminates housing debt before retirement for many buyers, removing a large fixed expense exactly when income may decrease.",
+          "proTip": "Before committing to a 15-year loan, stress-test your budget against both the higher payment and a potential income disruption. Build a 3–6 month emergency fund first, then confirm the payment does not exceed 28% of your gross monthly income. If cash flow is uncertain, consider a 30-year mortgage and make voluntary extra principal payments — you preserve payment flexibility without giving up all of the interest savings."
+        },
         "faqs": [
           {
             "question": "How much higher is a 15-year payment vs 30-year?",
@@ -1223,6 +1312,19 @@
         "metaDescription": "Calculate FHA loan monthly payments including mortgage insurance premium (MIP). FHA loans allow down payments as low as 3.5%.",
         "title": "FHA Loan Calculator",
         "description": "Calculate FHA loan payments including MIP (Mortgage Insurance Premium).",
+        "richContent": {
+          "whatIs": "An FHA loan is a mortgage insured by the Federal Housing Administration, part of the U.S. Department of Housing and Urban Development. FHA loans are designed for first-time buyers and borrowers with limited savings or imperfect credit. The minimum down payment is 3.5% with a credit score of 580 or higher — or 10% down if your score is between 500 and 579. Unlike conventional PMI (private mortgage insurance), which automatically cancels when you reach 20% equity, FHA MIP (Mortgage Insurance Premium) works differently. For loans originated after June 2013 with less than 10% down, the annual MIP is required for the life of the loan. The only way to remove it is to refinance into a conventional loan once you have built sufficient equity and qualify for better terms.",
+          "howToUse": [
+            "Enter the home purchase price and your planned down payment (minimum 3.5% for borrowers with a 580+ credit score).",
+            "The loan amount is the purchase price minus your down payment; the upfront MIP of 1.75% is typically financed into the loan.",
+            "Input the annual interest rate from your lender quote or use current FHA rate averages.",
+            "Review your estimated monthly payment, which includes principal, interest, and the annual MIP divided into monthly installments.",
+            "Note the total MIP cost over the life of the loan — this is the key number to compare against a conventional loan with PMI.",
+            "Compare the total FHA cost to a conventional loan at 5% down to determine which is more economical for your credit profile."
+          ],
+          "whyItMatters": "FHA loans open homeownership to borrowers who cannot qualify for conventional financing — particularly those with credit scores below 680 or down payments under 10%. However, MIP adds meaningful long-term cost. Annual MIP on a $250,000 FHA loan runs roughly $115–$175 per month. Because MIP persists for the life of the loan on most FHA mortgages, the total added cost can exceed $25,000–$40,000 over 30 years. Understanding this before you buy helps you plan a refinance strategy once your equity and credit improve enough to qualify for conventional terms.",
+          "proTip": "If your credit score is 680 or above and you can put 5% down, compare FHA and conventional loan estimates side by side. At those numbers, a conventional loan with PMI is often cheaper overall — and conventional PMI cancels automatically when you reach 20% equity, unlike FHA MIP, which requires a full refinance to remove. The break-even depends heavily on your rate offers and how long you plan to stay in the home."
+        },
         "faqs": [
           {
             "question": "What is an FHA loan?",
@@ -1247,6 +1349,19 @@
         "metaDescription": "Calculate VA loan monthly payments. VA loans offer $0 down payment, no PMI, and competitive rates for eligible veterans and active military.",
         "title": "VA Loan Calculator",
         "description": "Calculate VA loan payments with no PMI requirement for eligible veterans and service members.",
+        "richContent": {
+          "whatIs": "A VA loan is a mortgage benefit available to eligible veterans, active-duty service members, National Guard and Reserve members, and surviving spouses, backed by the U.S. Department of Veterans Affairs. The program's defining features are zero down payment required, no private mortgage insurance (PMI), and competitively low interest rates. These advantages can save tens of thousands of dollars compared to conventional loans requiring PMI. There is a VA funding fee — a one-time charge of 1.25% to 3.3% of the loan amount depending on service type, down payment, and whether it is a first or subsequent use of the benefit. Veterans with a service-connected disability rating of 10% or higher are typically exempt from the funding fee entirely.",
+          "howToUse": [
+            "Confirm eligibility: veterans, active-duty members (90+ days wartime or 181+ days peacetime), and qualifying National Guard or Reserve members may be eligible.",
+            "Obtain your Certificate of Eligibility (COE) from the VA or through your lender — this confirms your entitlement amount.",
+            "Enter the home purchase price — no down payment is required, though a voluntary down payment reduces the funding fee.",
+            "Input the loan amount and your quoted VA loan interest rate.",
+            "Review your monthly payment — note there is no PMI line item, which is a direct monthly saving vs. conventional loans.",
+            "Factor in the VA funding fee if applicable: it can be financed into the loan or paid at closing."
+          ],
+          "whyItMatters": "The combination of no down payment and no PMI makes the VA loan one of the most powerful mortgage programs available to any borrower in the U.S. On a $350,000 home, a conventional buyer putting 5% down pays PMI until reaching 20% equity — often 7–10 years of $100–$200 per month in extra costs. A VA borrower pays no PMI at all, saving $10,000–$20,000 over that same period, in addition to not needing $17,500 upfront. For eligible borrowers, evaluating VA financing before considering any other loan type is almost always the right first step.",
+          "proTip": "If you have a service-connected disability rating of 10% or higher, you are typically exempt from the VA funding fee — a saving of 1.4–3.3% of the loan amount at closing. Lenders do not always proactively verify this exemption, so confirm your status before closing. On a $300,000 loan, the funding fee exemption alone can be worth $4,000–$10,000 in immediate savings."
+        },
         "faqs": [
           {
             "question": "Who qualifies for a VA loan?",
@@ -1893,7 +2008,8 @@
       "funAndRandom": "Fun & Random",
       "quizzes": "Quizzes",
       "agileTools": "Agile & Scrum Tools",
-      "sportsQuizzes": "Sports Quizzes"
+      "sportsQuizzes": "Sports Quizzes",
+      "interviewPrep": "Interview Prep"
     },
     "tools": {
       "imageCompressor": {
@@ -2095,6 +2211,14 @@
       "percentageCalculator": {
         "label": "Percentage Calculator",
         "desc": "% of, what % is, and % change — three calculators in one"
+      },
+      "typescriptQuiz": {
+        "label": "TypeScript Interview Quiz",
+        "desc": "30 questions: Beginner → Intermediate → Advanced"
+      },
+      "interviewHub": {
+        "label": "Interview Prep Hub",
+        "desc": "TypeScript, JS & more — with explanations and best practices"
       }
     }
   },
@@ -2490,7 +2614,46 @@
       { "question": "What is BMR?", "answer": "Basal Metabolic Rate (BMR) is the number of calories your body burns at complete rest to maintain basic functions like breathing, circulation, and cell production. It represents about 60–75% of your TDEE." },
       { "question": "How many calories should I eat to lose weight?", "answer": "A safe calorie deficit is 250–500 calories below your TDEE per day, resulting in approximately 0.25–0.5 kg (0.5–1 lb) of weight loss per week. Avoid deficits larger than 1,000 calories without medical supervision." },
       { "question": "Which formula does this calculator use?", "answer": "This calculator uses the Mifflin-St Jeor equation, which is considered the most accurate for estimating BMR without laboratory measurements: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5 (male) or −161 (female)." }
-    ]
+    ],
+    "bmiRichContent": {
+      "whatIs": "Body Mass Index (BMI) is a number calculated from your weight and height that provides a quick snapshot of whether your body weight falls within a healthy range. It is widely used by clinicians and researchers as a low-cost screening tool to flag potential weight-related health risks. However, BMI has real limitations: it cannot distinguish between muscle mass and fat mass, so a muscular athlete may be classified as \"overweight\" despite having very low body fat. BMI also does not account for where fat is distributed on the body — abdominal fat carries different health risks than fat stored elsewhere. Researchers note that BMI thresholds developed from European populations may not apply equally across all ethnic groups. For a fuller picture of body composition, consider waist circumference, waist-to-hip ratio, or a DEXA scan alongside your BMI.",
+      "howToUse": [
+        "Select your preferred unit system — Metric (kg, cm) or Imperial (lbs, ft/in).",
+        "Enter your current weight and height in the fields provided.",
+        "Click Calculate to instantly see your BMI score.",
+        "Review your BMI category (Underweight, Normal, Overweight, or Obese) on the color-coded gauge.",
+        "Read the on-screen guidance to understand what your result means for your health.",
+        "Consult a healthcare professional if your BMI falls outside the Normal range or if you have concerns about body composition."
+      ],
+      "whyItMatters": "Maintaining a healthy BMI reduces the risk of type 2 diabetes, cardiovascular disease, hypertension, sleep apnea, and several cancers. Even modest weight loss of 5–10% of body weight in people who are overweight can meaningfully lower blood pressure, improve insulin sensitivity, and reduce joint strain. Tracking BMI over time gives you an objective reference point for monitoring the effect of lifestyle changes — independent of how you feel day to day.",
+      "proTip": "If you lift weights or do resistance training regularly, your BMI may overestimate your body fat. Pair your BMI result with a waist circumference measurement (aim for under 94 cm / 37 in for men, under 80 cm / 31.5 in for women) for a more accurate health picture."
+    },
+    "tdeeRichContent": {
+      "whatIs": "Total Daily Energy Expenditure (TDEE) is the total number of calories your body burns over the course of a day — everything from keeping your heart beating while you sleep (your Basal Metabolic Rate, or BMR) to walking to your car, digesting food, and intentional exercise. Your BMR accounts for roughly 60–75% of your TDEE and is calculated here using the Mifflin-St Jeor equation, the most validated formula for non-athlete adults. The remaining energy expenditure is multiplied by an activity factor ranging from 1.2 (sedentary) to 1.9 (extremely active). Knowing your TDEE means you can set calorie targets with real precision — eat at TDEE to maintain weight, eat below it to lose, or eat above it to gain. One important caveat: TDEE decreases as you lose weight, and adaptive thermogenesis (your metabolism slowing in response to a deficit) means you may need to reassess your numbers every 4–6 weeks.",
+      "howToUse": [
+        "Enter your age, biological sex, weight, and height.",
+        "Choose your unit system (Metric or Imperial).",
+        "Select your activity level honestly — most people overestimate theirs, so when in doubt, go one level lower.",
+        "Click Calculate to see your BMR and TDEE.",
+        "Review the calorie goal table to find your daily target for maintaining, losing, or gaining weight.",
+        "Reassess your TDEE every 4–6 weeks as your weight changes to keep your targets accurate."
+      ],
+      "whyItMatters": "Eating in sync with your TDEE is the foundation of any evidence-based nutrition strategy. Without knowing your energy expenditure, calorie goals become guesswork. Whether you are trying to lose fat, build muscle, improve athletic performance, or simply maintain a stable weight, TDEE gives you a reliable baseline to build from.",
+      "proTip": "Activity multipliers in TDEE calculators refer to all movement throughout the day, not just structured workouts. If you have a desk job but hit the gym 4 days a week, \"Lightly active\" is usually more accurate than \"Moderately active.\" Overestimating your activity level is the single most common reason people stall on a diet."
+    },
+    "deficitRichContent": {
+      "whatIs": "A calorie deficit occurs when you consume fewer calories than your Total Daily Energy Expenditure (TDEE), forcing your body to draw on stored energy — primarily body fat — to make up the shortfall. The widely cited rule that 3,500 calories equals one pound (about 0.45 kg) of fat loss is a useful approximation, but research shows the relationship is not perfectly linear: as you lose weight, your TDEE drops, your body adapts hormonally, and the rate of loss slows over time. For most adults, a moderate deficit of 250–500 kcal per day produces safe, sustainable fat loss of approximately 0.25–0.5 kg (0.5–1 lb) per week without triggering severe hunger or muscle loss. Protein intake becomes especially important during a deficit — eating at least 1.6–2.2 g of protein per kg of body weight helps preserve lean muscle mass while the body sheds fat.",
+      "howToUse": [
+        "Enter your age, biological sex, weight, height, and activity level.",
+        "Click Calculate to see your TDEE (maintenance calories).",
+        "Review the deficit table: the 250 kcal/day deficit targets ~0.25 kg loss per week; the 500 kcal/day deficit targets ~0.5 kg per week.",
+        "Pick the deficit level that fits your timeline and feels sustainable — faster is not always better.",
+        "Set your daily calorie goal in a food tracking app (MyFitnessPal, Cronometer, etc.) and prioritize protein.",
+        "Re-run the calculator every 3–4 weeks as your weight changes to keep the deficit accurate."
+      ],
+      "whyItMatters": "A calorie deficit that is too aggressive leads to muscle loss, fatigue, nutrient deficiencies, and rebound weight gain. A deficit that is too small yields frustratingly slow progress. Calculating your personal deficit based on your actual TDEE — rather than using a generic 1,200 kcal diet — protects your metabolic health and makes the process sustainable long-term.",
+      "proTip": "Never let your daily calories drop below your BMR for extended periods. Eating below BMR forces your body to break down muscle for energy, reduces thyroid output, and slows metabolism in ways that can persist long after the diet ends. A 20% deficit below TDEE is generally the safe maximum for most people."
+    }
   },
   "qrGenerator": {
     "metaTitle": "QR Code Generator — Free, No Sign-Up Required | ToolNotch",
@@ -2569,6 +2732,30 @@
     "gradeNeeded": "Grade Needed",
     "impossible": "Not achievable — maximum is 100%",
     "alreadyAchieved": "You've already achieved your target!",
+    "richContent": {
+      "whatIs": "A GPA (Grade Point Average) calculator converts your course grades and credit hours into a single weighted average that represents your overall academic performance. On the US 4.0 scale, each letter grade maps to a numeric value: A = 4.0, B = 3.0, C = 2.0, D = 1.0, F = 0.0. Each course's grade value is multiplied by its credit hours, and the sum is divided by the total credits — giving more weight to courses with more credits. This calculator also supports the Portuguese and Brazilian 0–20 scale and the Spanish and Latin American 0–10 scale, so international students can calculate their GPA in the system that is most relevant to their academic institution.",
+      "howToUse": [
+        "Select your grading scale (US 4.0, Portugal/Brazil 0–20, or Spain/Latin America 0–10).",
+        "Enter each course name (optional), grade, and credit hours in the course rows.",
+        "Click 'Add Course' to add more rows as needed.",
+        "Click 'Calculate GPA' to see your weighted GPA and total credits.",
+        "Use the Cumulative GPA tab to combine your current GPA record with a new semester's results."
+      ],
+      "whyItMatters": "GPA is one of the most consequential numbers in a student's academic life. Most universities require a minimum GPA — often 2.0 — to remain in good standing, and many programmes require 3.0 or higher for continued enrollment. Scholarship committees, graduate school admissions panels, and many employers use GPA as a screening criterion. On the US 4.0 scale, a GPA above 3.5 is widely considered excellent and is a common threshold for honours distinctions, Dean's List recognition, and competitive graduate programme applications. Understanding exactly where you stand — and how each course affects your overall average — empowers you to make strategic decisions about your workload and study focus.",
+      "proTip": "Because GPA is credit-weighted, high-credit courses have an outsized impact on your average. If you are struggling in a 4-credit course graded A–F, that course affects your GPA twice as much as a 2-credit elective. Prioritise your study time accordingly — protecting your grade in high-credit core courses is the most efficient way to maintain or raise your GPA."
+    },
+    "gradeRichContent": {
+      "whatIs": "The grade calculator helps you work backwards from a target final grade to determine exactly what score you need on your remaining coursework or final exam. Rather than guessing, you enter your current grade, the percentage weight of work already completed, and your desired final grade — and the calculator returns the precise score you need on the remaining portion. This is invaluable at the end of a semester when students are deciding how to allocate study time across multiple finals. It also supports weighted grade scenarios where assignments, midterms, and finals each carry different percentage weights toward the final grade.",
+      "howToUse": [
+        "Enter your current grade as a percentage in the 'Current Grade' field.",
+        "Enter how much of the total grade weight has already been assessed (e.g. 70 if 70% of the grade has been completed).",
+        "Enter your target final grade as a percentage.",
+        "Click 'Calculate' to see the exact score you need on the remaining work.",
+        "If the result shows 'Not achievable', your current grade makes the target mathematically impossible — adjust your target grade and recalculate."
+      ],
+      "whyItMatters": "Knowing exactly what grade you need removes anxiety and replaces it with a concrete goal. Students often overestimate or underestimate what is required to reach a pass or distinction threshold — this calculator gives you the real number so you can study with intention rather than guessing. It also reveals when a target is already secured (you have already achieved it) or is mathematically out of reach, helping you redirect effort to subjects where study time will have the most impact. Having an honest conversation with your teacher or professor about a grade target is far easier when you come prepared with specific numbers.",
+      "proTip": "If you need a very high score on a final exam to reach your target, talk to your instructor before the exam — not after. Most educators appreciate students who are proactive, and there may be extra credit opportunities, grade rounding policies, or assignment resubmissions you were not aware of. Coming with your current grade and the score you need demonstrates seriousness and initiative."
+    },
     "faqs": [
       { "question": "How is GPA calculated?", "answer": "GPA (Grade Point Average) is calculated by multiplying each course grade by its credit hours, summing all values, then dividing by the total credit hours. For the US 4.0 scale: A=4.0, B=3.0, C=2.0, D=1.0, F=0.0." },
       { "question": "What is a good GPA?", "answer": "On the US 4.0 scale, a GPA above 3.5 is generally considered excellent, 3.0–3.5 is good, and 2.0 is typically the minimum to remain in good academic standing." },
@@ -2642,6 +2829,18 @@
     "copy": "Copy Citation",
     "copied": "Copied!",
     "emptyState": "Fill in the fields above to generate your citation",
+    "richContent": {
+      "whatIs": "A citation generator formats source references according to established academic style guides — automatically and accurately. Citations serve two critical purposes: academic integrity (giving proper credit to original authors and avoiding plagiarism) and credibility (allowing readers to verify your sources and trace the intellectual lineage of your arguments). APA (American Psychological Association) is standard in social sciences and psychology, using author-date in-text citations. MLA (Modern Language Association) is common in humanities and literature, using author-page format. Chicago style is preferred in history and some humanities, offering both footnote and author-date systems. Each format has precise rules governing punctuation, capitalisation, and element order that differ in ways that matter to academic reviewers.",
+      "howToUse": [
+        "Select your citation format (APA 7th, MLA 9th, or Chicago 17th) using the tabs at the top.",
+        "Choose the source type — website, book, journal article, YouTube video, or newspaper.",
+        "Fill in the available fields: author names, title, publication year, URL, and any other relevant details.",
+        "Your formatted citation appears instantly in the output box as you type.",
+        "Click 'Copy Citation' to copy the formatted reference to your clipboard, ready to paste into your reference list."
+      ],
+      "whyItMatters": "Incorrect citations are one of the most common reasons academic papers lose marks or are rejected. Different citation styles are not interchangeable — submitting an MLA-formatted paper to an APA-required journal signals a lack of attention to detail that reviewers notice immediately. Beyond academics, proper attribution is a mark of intellectual honesty in journalism, research, and professional writing. This generator handles the formatting rules automatically — comma placement, italics, edition formatting, and access date conventions — so you can focus on your writing rather than memorising style manual rules that change with each edition.",
+      "proTip": "ABNT citation format (Brazilian academic standard NBR 6023) is available only in the Portuguese locale of this tool, as it is exclusively used in Brazilian academic institutions. If you are writing in Portuguese for a Brazilian university, switch to the Portuguese version of ToolNotch to access ABNT formatting alongside APA, MLA, and Chicago."
+    },
     "faqs": [
       { "question": "What is APA citation format?", "answer": "APA (American Psychological Association) format is widely used in social sciences and education. The 7th edition uses author-date in-text citations (Smith, 2021) and a reference list. For books: Author, A. A. (Year). Title. Publisher." },
       { "question": "How do I cite a website in MLA?", "answer": "In MLA 9th edition: Last, First. \"Title of Page.\" Site Name, Day Month Year, URL. If no author, start with the title. If no date, omit the date." },
@@ -2649,5 +2848,344 @@
       { "question": "What is ABNT format?", "answer": "ABNT (NBR 6023) is the Brazilian academic citation standard. For books: SOBRENOME, Nome. *Título*. Edition. City: Publisher, Year. Available in Portuguese locale only." },
       { "question": "Is this citation generator free?", "answer": "Yes — completely free, no sign-up, no usage limits. All citations are generated instantly in your browser with no data sent to servers." }
     ]
+  },
+  "about": {
+    "metaTitle": "About ToolNotch — Free Online Tools Built by Developers",
+    "metaDescription": "Learn why ToolNotch was created, what we believe, and who built it. Free tools with no sign-up, no data stored, and no paywalls — ever.",
+    "title": "About ToolNotch",
+    "subtitle": "Free tools. No accounts. No nonsense.",
+    "backHome": "Back to ToolNotch",
+    "whyTitle": "Why ToolNotch exists",
+    "whyP1": "Every developer has been there: you need to quickly compress an image, merge two PDFs, or convert a unit, so you search online and land on a site plastered with pop-ups, paywalls, and \"Sign up to continue\" banners. You upload your file, wait for a server to process it, and hope the result is usable. It's a frustrating experience that has barely changed in a decade.",
+    "whyP2": "ToolNotch was built out of that frustration. The goal was simple: create a set of tools that are instant, free, and completely private. Every tool on this site runs entirely in your browser — your files never leave your device. There are no accounts to create, no usage limits, and no features locked behind a subscription.",
+    "whyP3": "The result is a platform that respects your time and your data. Open a tool, use it, close the tab. That's it. No confirmation emails, no onboarding wizards, no \"upgrade to Pro\" prompts. Just tools that work.",
+    "believeTitle": "What we believe",
+    "believeP1": "The best tool is one that gets out of your way. We believe utility software should be free, fast to load, and private by default. You should never have to hand over your email address, agree to a trial period, or wait for a cloud upload just to resize a photo or calculate a loan payment.",
+    "believeP2": "All ToolNotch tools are client-side: your data is processed in the browser and never transmitted to our servers. The site works offline for most tools after the initial load. No paywalls, no feature tiers, and no accounts — ever.",
+    "whoTitle": "Who built this",
+    "whoP1": "ToolNotch is built and maintained by Juan Soares, a software developer who got tired of telling people \"just use that sketchy site\" every time they needed a simple online tool. He built the first version over a weekend and has been adding tools ever since.",
+    "toolsTitle": "Our tools",
+    "toolsP1": "ToolNotch currently offers 74+ free tools across seven categories: PDF utilities (merge, split, compress, convert), image tools (compress, convert between formats), finance calculators (loan calculator, invoice generator, portfolio tracker), health tools (BMI calculator, TDEE calculator, calorie deficit planner), text tools (word counter, paraphraser, case converter), education tools (GPA calculator, grade calculator, citation generator), and fun tools (typing test, random generators).",
+    "toolsP2": "New tools are added regularly based on what people actually need. If you want to suggest a tool, the GitHub link above is the best place to do that."
+  },
+  "terms": {
+    "metaTitle": "Terms of Service | ToolNotch",
+    "metaDescription": "Read ToolNotch's Terms of Service — your rights, our disclaimers, and the rules governing use of our free online tools.",
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: April 10, 2026",
+    "backHome": "Back to ToolNotch",
+    "s1Title": "1. Acceptance of Terms",
+    "s1P1": "By accessing or using toolnotch.com (\"the Site\"), you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please stop using the Site immediately.",
+    "s1P2": "These terms apply to all visitors, users, and anyone who accesses or uses ToolNotch's services. We reserve the right to update these terms at any time, and continued use of the Site after such changes constitutes your acceptance of the new terms.",
+    "s2Title": "2. Use of Tools",
+    "s2P1": "All ToolNotch tools are provided free of charge for informational and personal use. You may use them without creating an account or providing any personal information. Most tools operate entirely in your browser — no file or data you enter is transmitted to our servers.",
+    "s2P2": "You agree not to use the Site for any illegal purpose, not to attempt to reverse-engineer or scrape our tools at scale, and not to interfere with the normal operation of the Site in any way.",
+    "s3Title": "3. No Financial Advice",
+    "s3P1": "ToolNotch's financial tools — including loan calculators, mortgage calculators, amortization schedules, and related instruments — are provided for general estimation and educational purposes only. Results are based on the data you enter and standard mathematical formulas; they do not account for your personal financial situation, creditworthiness, local regulations, or other individual factors.",
+    "s3P2": "Nothing on this Site constitutes financial, investment, tax, or legal advice. You should not make any financial decision based solely on the output of these tools. Before taking any significant financial action, consult a qualified, licensed financial advisor.",
+    "s4Title": "4. No Medical Advice",
+    "s4P1": "ToolNotch's health tools — including the BMI calculator, TDEE calculator, and calorie deficit calculator — are provided for general wellness awareness and educational purposes only. Results are estimates based on widely used formulas (such as Mifflin-St Jeor) and do not account for your individual medical history, conditions, medications, or other clinical factors.",
+    "s4P2": "Nothing on this Site constitutes medical advice, diagnosis, or treatment. Do not use these tools as a substitute for professional medical care. Always consult a qualified healthcare provider before making changes to your diet, exercise regimen, or health routine.",
+    "s5Title": "5. No Warranties",
+    "s5P1": "ToolNotch and its tools are provided \"as is\" and \"as available\" without warranties of any kind, express or implied. We make no representations or guarantees regarding the accuracy, completeness, or reliability of any results generated by the tools. Calculated results may differ from figures provided by financial institutions, healthcare professionals, or other authoritative sources.",
+    "s6Title": "6. Intellectual Property",
+    "s6P1": "All tool code, design, written content, and branding on toolnotch.com are the intellectual property of ToolNotch and are protected by applicable copyright and trademark laws. You may not reproduce, redistribute, or use any part of this Site for commercial purposes without our prior written permission.",
+    "s7Title": "7. Limitation of Liability",
+    "s7P1": "To the fullest extent permitted by applicable law, ToolNotch shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from your use of, or inability to use, any tool or content on this Site. This includes, without limitation, any financial loss, health outcome, or other decision made based on tool results.",
+    "s8Title": "8. Changes to Terms",
+    "s8P1": "We may revise these Terms of Service periodically. Updated terms will be posted on this page with a revised \"Last updated\" date. Continued use of ToolNotch after such changes constitutes your binding acceptance of the updated terms.",
+    "s9Title": "9. Contact",
+    "s9P1": "If you have questions about these Terms of Service, please contact us through our",
+    "s9ContactLink": "contact page"
+  },
+  "contact": {
+    "metaTitle": "Contact | ToolNotch",
+    "metaDescription": "Get in touch with the ToolNotch team. Report a bug, suggest a tool, or ask about business inquiries.",
+    "backHome": "Back to ToolNotch",
+    "heading": "Contact Us",
+    "intro": "Have a question, found a bug, or want to suggest a tool? We'd love to hear from you.",
+    "emailLabel": "Write to us at",
+    "categories": {
+      "bugs": {
+        "title": "Bug Reports",
+        "description": "Describe the tool, your browser, and what went wrong. Screenshots are always helpful."
+      },
+      "features": {
+        "title": "Feature Requests",
+        "description": "What tool or feature would help you? Tell us what you're trying to accomplish."
+      },
+      "business": {
+        "title": "Business Inquiries",
+        "description": "Partnerships, sponsored content, and advertising — reach out and we'll get back to you."
+      }
+    },
+    "responseTime": "We typically respond within 1–2 business days."
+  },
+  "blog": {
+    "indexTitle": "Blog — Free Tool Guides & Calculator Tutorials",
+    "indexDescription": "Learn how to use ToolNotch tools with step-by-step guides, calculator tutorials, and practical tips for finance, health, education, and productivity.",
+    "readArticle": "Read article →",
+    "minRead": "{n} min read",
+    "categories": {
+      "finance": "Finance",
+      "health": "Health",
+      "text": "Text",
+      "education": "Education",
+      "productivity": "Productivity",
+      "engineering": "Engineering"
+    },
+    "breadcrumbBlog": "Blog",
+    "relatedTool": "Try the free {toolName} →",
+    "posts": {
+      "how-to-calculate-mortgage-payment": {
+        "title": "How to Calculate Your Mortgage Payment: A Step-by-Step Guide",
+        "description": "Learn the formula behind mortgage payments, what affects your monthly cost, and common mistakes to avoid.",
+        "relatedToolName": "Mortgage Calculator",
+        "relatedToolPath": "/tools/finance/mortgage-calculator",
+        "body": [
+          { "type": "paragraph", "text": "Buying a home is probably the largest financial decision most of us will ever make — and yet the monthly payment that shows up on a lender's quote can feel like a mystery. Where does that number come from? Why does a tiny difference in interest rate change it so much? And why is the payment your lender quotes always higher than what you see on a mortgage calculator?" },
+          { "type": "paragraph", "text": "This guide walks you through the actual math behind a mortgage payment, explains every factor that can push your monthly cost up or down, and helps you spot the common mistakes that catch first-time buyers off guard." },
+          { "type": "heading", "level": 2, "text": "The Core Formula: Principal and Interest" },
+          { "type": "paragraph", "text": "A standard fixed-rate mortgage payment is calculated using a formula that amortizes — or spreads — both the loan principal and the interest evenly across every month of the loan term. The formula looks like this:" },
+          { "type": "callout", "text": "M = P × [r(1+r)^n] / [(1+r)^n − 1]\n\nWhere: M = monthly payment, P = loan principal (amount borrowed), r = monthly interest rate (annual rate ÷ 12), n = total number of payments (years × 12)" },
+          { "type": "paragraph", "text": "Let's make that concrete. Suppose you borrow $300,000 at a 6.5% annual interest rate for 30 years. Your monthly rate r is 6.5% ÷ 12 = 0.5417%, or 0.005417 as a decimal. Your n is 30 × 12 = 360 payments." },
+          { "type": "paragraph", "text": "Plugging in: M = 300,000 × [0.005417 × (1.005417)^360] / [(1.005417)^360 − 1]. The result is approximately $1,896 per month — just for principal and interest. That number might already feel high, but here's the thing: it's not the whole picture." },
+          { "type": "heading", "level": 2, "text": "What Else Goes Into Your Monthly Payment?" },
+          { "type": "paragraph", "text": "Lenders almost always bundle additional costs into one monthly payment, which is why your actual bill is higher than what the P+I formula gives you. The main add-ons are:" },
+          { "type": "list", "ordered": false, "items": [
+            "Property taxes — Typically collected monthly by the lender and held in escrow, then paid to your local government annually. On a $400,000 home in many U.S. states, this alone can add $300–$700 per month.",
+            "Homeowners insurance — Your lender requires coverage to protect the property. Budget roughly $100–$200 per month for most homes, though coastal and high-risk areas cost more.",
+            "Private mortgage insurance (PMI) — If your down payment is less than 20%, the lender will require PMI to protect themselves if you default. PMI typically runs 0.5%–1.5% of the loan amount per year, which on a $300,000 loan is $125–$375 added to your monthly bill.",
+            "HOA fees — If you're buying a condo or a home in a managed community, homeowners association fees are separate but still part of your real monthly housing cost."
+          ]},
+          { "type": "paragraph", "text": "When all of these are included, that $1,896 P+I payment on our $300,000 example could realistically become $2,500–$2,800 per month. Always ask your lender for a full loan estimate that includes the escrow breakdown — comparing just the interest rate between lenders without looking at total payment is one of the most common mistakes buyers make." },
+          { "type": "heading", "level": 2, "text": "How Interest Rate Affects Your Payment" },
+          { "type": "paragraph", "text": "Many people assume a 0.5% difference in interest rate is trivial. It isn't. On a $300,000 loan over 30 years, the difference between a 6.0% and a 6.5% rate adds roughly $97 per month — or nearly $35,000 over the life of the loan. This is why improving your credit score before applying, shopping at least three lenders, and timing your lock carefully can pay off enormously." },
+          { "type": "list", "ordered": false, "items": [
+            "At 6.0%: monthly P+I ≈ $1,799",
+            "At 6.5%: monthly P+I ≈ $1,896",
+            "At 7.0%: monthly P+I ≈ $1,996"
+          ]},
+          { "type": "heading", "level": 2, "text": "Loan Term: 30 Years vs. 15 Years" },
+          { "type": "paragraph", "text": "A 15-year mortgage has a much higher monthly payment than a 30-year, but the total interest you pay over the life of the loan can be less than half. Using the same $300,000 at 6.0%:" },
+          { "type": "list", "ordered": false, "items": [
+            "30-year: ~$1,799/month, ~$347,000 in total interest",
+            "15-year: ~$2,532/month, ~$155,000 in total interest"
+          ]},
+          { "type": "paragraph", "text": "The 15-year saves you nearly $200,000 in interest, but your monthly payment is $733 higher. The right choice depends on your cash flow, job stability, and what else you'd do with that extra money each month." },
+          { "type": "heading", "level": 2, "text": "Common Mistakes to Avoid" },
+          { "type": "list", "ordered": false, "items": [
+            "Forgetting taxes and insurance — The P+I formula is just the starting point. Always calculate total housing cost: principal, interest, taxes, insurance, plus PMI and HOA if applicable.",
+            "Shopping by monthly payment instead of total cost — A longer term lowers your monthly payment but dramatically increases total interest paid.",
+            "Not accounting for rate type — Adjustable-rate mortgages (ARMs) start lower but can reset significantly. Make sure you can afford the worst-case adjusted payment.",
+            "Skipping the amortization schedule — In the early years of a 30-year loan, most of your payment goes toward interest, not principal. Knowing this helps you decide whether making extra principal payments makes sense.",
+            "Ignoring closing costs — These typically run 2%–5% of the loan amount and need to be paid upfront or rolled into the loan."
+          ]},
+          { "type": "heading", "level": 2, "text": "Run Your Own Numbers" },
+          { "type": "paragraph", "text": "The formula is useful to understand, but there's no need to do this math by hand every time you want to test a scenario. Use our free Mortgage Calculator to model any combination of loan amount, interest rate, term, taxes, and insurance — and get an instant breakdown of your monthly payment, total interest, and amortization schedule." },
+          { "type": "toolCta", "toolName": "Mortgage Calculator", "toolPath": "/tools/finance/mortgage-calculator" },
+          { "type": "paragraph", "text": "Understanding how your mortgage payment is built gives you real power in negotiations and planning. You'll know why locking in a rate that's 0.25% lower is worth fighting for, why putting down 20% saves you more than just the PMI, and why that attractive ARM might be a risk you don't need to take. Run the numbers, compare scenarios, and go into your home purchase with eyes open." }
+        ]
+      },
+      "bmi-vs-body-fat-percentage": {
+        "title": "BMI vs Body Fat Percentage: What Actually Matters for Your Health",
+        "description": "BMI and body fat percentage measure different things. Here's when each one matters — and when BMI can mislead you.",
+        "relatedToolName": "BMI Calculator",
+        "relatedToolPath": "/tools/health/bmi-calculator",
+        "body": [
+          { "type": "paragraph", "text": "If you've ever had a routine checkup, your doctor probably calculated your BMI. And if you've ever spent time in a gym, you've probably heard someone argue that BMI is meaningless and body fat percentage is the only number that counts. The truth, as is often the case, is more nuanced." },
+          { "type": "paragraph", "text": "Both metrics measure something real — they just measure different things. Knowing what each one actually tells you, and where each one breaks down, helps you make smarter decisions about your health without obsessing over a single number." },
+          { "type": "heading", "level": 2, "text": "What BMI Measures (and What It Doesn't)" },
+          { "type": "paragraph", "text": "BMI, or Body Mass Index, is calculated by dividing your weight in kilograms by the square of your height in meters (kg/m²). It's a population-level screening tool developed in the 19th century by Belgian mathematician Adolphe Quetelet — not a doctor, notably. It was designed to describe the average body proportions of European men, not to diagnose individual health." },
+          { "type": "paragraph", "text": "The standard adult BMI categories are:" },
+          { "type": "list", "ordered": false, "items": [
+            "Under 18.5 — Underweight",
+            "18.5–24.9 — Normal weight",
+            "25.0–29.9 — Overweight",
+            "30.0 and above — Obese"
+          ]},
+          { "type": "paragraph", "text": "What BMI does well: it's free, instant, requires no equipment, and at the population level it correlates reasonably well with health risks like type 2 diabetes, heart disease, and certain cancers. That's why it remains a standard screening tool in clinical settings." },
+          { "type": "paragraph", "text": "What BMI doesn't measure: body composition. BMI has no idea whether your weight comes from muscle, fat, bone, or water. A pound of muscle and a pound of fat weigh exactly the same — BMI treats them identically." },
+          { "type": "heading", "level": 2, "text": "When BMI Can Mislead You" },
+          { "type": "paragraph", "text": "There are specific groups for whom BMI is a genuinely poor indicator of health:" },
+          { "type": "list", "ordered": false, "items": [
+            "Athletes and highly muscular individuals — A competitive rugby player or bodybuilder may have a BMI in the 'overweight' or 'obese' range with very low body fat and excellent cardiovascular health. Their high muscle mass inflates BMI without the associated health risks.",
+            "Older adults — Aging tends to reduce muscle mass (sarcopenia) while fat increases, often without much change in weight. An elderly person might have a 'normal' BMI while carrying a dangerously high proportion of body fat.",
+            "Different ethnic groups — Research has shown that at the same BMI, people of South and East Asian descent tend to carry more body fat and face higher metabolic risk. Some health organizations now recommend lower BMI cutoffs for Asian populations.",
+            "Women vs. men — Women naturally carry more body fat than men at the same BMI due to hormonal and reproductive differences. Two people with identical BMIs may have meaningfully different body fat percentages."
+          ]},
+          { "type": "heading", "level": 2, "text": "What Body Fat Percentage Actually Tells You" },
+          { "type": "paragraph", "text": "Body fat percentage is exactly what it sounds like: the proportion of your total body weight that comes from fat tissue. The rest — muscle, bone, organs, water — is called lean mass or fat-free mass." },
+          { "type": "paragraph", "text": "Healthy body fat ranges vary by sex and age, but rough benchmarks for adults are:" },
+          { "type": "list", "ordered": false, "items": [
+            "Women: 20–35% is generally considered healthy; athletes typically fall in the 14–20% range",
+            "Men: 10–25% is generally healthy; male athletes often sit at 6–13%",
+            "Essential fat (minimum needed for organ function): roughly 3–5% for men, 10–13% for women"
+          ]},
+          { "type": "paragraph", "text": "High body fat — particularly visceral fat stored around the organs rather than subcutaneous fat under the skin — is more directly linked to insulin resistance, inflammation, heart disease, and metabolic syndrome than BMI is. This is why body fat percentage is considered a more meaningful marker of cardiometabolic health." },
+          { "type": "heading", "level": 2, "text": "The Catch: Measuring Body Fat Is Hard" },
+          { "type": "paragraph", "text": "The main reason BMI hasn't been replaced by body fat percentage in clinical settings is that accurate body fat measurement is much more difficult and expensive. The most accurate methods include DEXA scan (a low-dose X-ray), hydrostatic weighing (underwater weighing), and Bod Pod air displacement — none of which are available during a routine checkup." },
+          { "type": "paragraph", "text": "Consumer tools like bioelectrical impedance scales and handheld devices are convenient but notoriously inconsistent — hydration levels, food intake, and time of day can all swing readings by 3–5 percentage points. Skinfold calipers, done by a trained professional, are reasonably accurate but highly user-dependent." },
+          { "type": "heading", "level": 2, "text": "Using Both Metrics Together" },
+          { "type": "paragraph", "text": "The most practical approach is to treat BMI and body fat percentage as complementary tools, not competing ones:" },
+          { "type": "list", "ordered": false, "items": [
+            "Use BMI as a quick, free first screen. If your BMI is in the normal range and you have no other risk factors, that's reassuring — though not conclusive.",
+            "Use body fat percentage (or waist circumference as a proxy) when BMI seems inconsistent with how you look or feel, or when you want to track body composition changes during training.",
+            "Pay attention to waist-to-height ratio — keeping your waist circumference to less than half your height is a simple, validated marker that captures visceral fat risk better than BMI alone."
+          ]},
+          { "type": "callout", "text": "Neither number tells the complete story. Blood pressure, blood glucose, cholesterol, sleep quality, and physical fitness are all equally important health markers — context always matters." },
+          { "type": "heading", "level": 2, "text": "Check Your Own BMI" },
+          { "type": "paragraph", "text": "Want to see where you stand? Use our free BMI Calculator to get your BMI instantly, see which category it falls into, and understand what the number means for your specific situation — including the important caveats." },
+          { "type": "toolCta", "toolName": "BMI Calculator", "toolPath": "/tools/health/bmi-calculator" },
+          { "type": "paragraph", "text": "Ultimately, the goal isn't to optimize a number on a chart — it's to feel strong, have energy, and reduce your long-term risk of chronic disease. BMI and body fat percentage are both imperfect proxies for that goal. Use them as conversation starters, not verdicts." }
+        ]
+      },
+      "how-to-cite-website-apa": {
+        "title": "How to Cite a Website in APA Format (2025 Complete Guide)",
+        "description": "Step-by-step guide to citing websites in APA 7th edition format, with examples, common mistakes, and a free citation tool.",
+        "relatedToolName": "Citation Generator",
+        "relatedToolPath": "/tools/education/citation-generator",
+        "body": [
+          { "type": "paragraph", "text": "Citing a website in APA format trips up even experienced students. The 7th edition (released in 2020 and still current in 2025) changed several rules from the 6th edition — including how to handle URLs, missing authors, and retrieval dates. If you learned APA a few years ago, there's a good chance some of what you know is now out of date." },
+          { "type": "paragraph", "text": "This guide covers everything you need: the correct template, a real step-by-step example, the most common mistakes, and how APA handles the situations that come up most often." },
+          { "type": "heading", "level": 2, "text": "The APA 7th Edition Template for Websites" },
+          { "type": "paragraph", "text": "The basic structure for a webpage or online article in APA 7th edition is:" },
+          { "type": "callout", "text": "Author Last Name, First Initial. (Year, Month Day). Title of the page. Site Name. URL" },
+          { "type": "paragraph", "text": "A few things to note right away: the title of the page is in sentence case (only capitalize the first word and proper nouns), and it is italicized. The site name follows in plain text, and no period goes after the URL." },
+          { "type": "heading", "level": 2, "text": "Step-by-Step Example" },
+          { "type": "paragraph", "text": "Let's walk through a real example. Say you want to cite an article with the following details — Author: Jonathan Amos. Date: March 15, 2024. Title: Scientists find ancient river system under Antarctica. Site: BBC News." },
+          { "type": "list", "ordered": true, "items": [
+            "Author: Write the last name, then a comma, then the first initial followed by a period. → Amos, J.",
+            "Date: Put the year first, then month and day in parentheses, followed by a period. → (2024, March 15).",
+            "Title: Write the full title in sentence case and italicize it. → Scientists find ancient river system under Antarctica.",
+            "Site name: Write the name of the website in plain (non-italic) text, followed by a period. → BBC News.",
+            "URL: Paste the full URL. No angle brackets, no period at the end."
+          ]},
+          { "type": "callout", "text": "Amos, J. (2024, March 15). Scientists find ancient river system under Antarctica. BBC News. https://www.bbc.com/news/science-environment-68593472" },
+          { "type": "heading", "level": 2, "text": "What to Do When There's No Author" },
+          { "type": "paragraph", "text": "Many websites don't list an individual author. In APA 7th edition, when there is no author, move the title to the author position. Keep it italicized, and skip the author field entirely." },
+          { "type": "callout", "text": "Federal student aid overview. (2024, January 10). U.S. Department of Education. https://studentaid.gov/understand-aid/types" },
+          { "type": "heading", "level": 2, "text": "What to Do When There's No Date" },
+          { "type": "paragraph", "text": "If a webpage has no publication or update date, use \"n.d.\" (which stands for \"no date\") in the date position:" },
+          { "type": "callout", "text": "Author Last Name, First Initial. (n.d.). Title of the page. Site Name. URL" },
+          { "type": "heading", "level": 2, "text": "Do You Need a Retrieval Date?" },
+          { "type": "paragraph", "text": "In APA 6th edition, you often included a retrieval date (\"Retrieved March 10, 2024, from...\"). APA 7th edition dropped this requirement for most sources. You only need a retrieval date if the content is designed to change over time and there is no archive — things like live database entries or wiki pages that are frequently updated. For standard articles and web pages, leave it out." },
+          { "type": "heading", "level": 2, "text": "Common APA Citation Mistakes" },
+          { "type": "list", "ordered": false, "items": [
+            "Wrong capitalization in the title — APA uses sentence case, not title case. 'How to Write a Literature Review' should be 'How to write a literature review' (except for proper nouns).",
+            "Forgetting to italicize the page title — Webpage titles are italicized; the site name is not.",
+            "Adding a period after the URL — The URL is the final element and takes no period.",
+            "Using 6th edition rules — APA 7th edition removed the publisher location for books and changed how DOIs and URLs are formatted. If your style guide was written before 2020, double-check it.",
+            "Treating 'no author' as 'Anonymous' — APA 7th edition does not use [Anonymous] as an author placeholder. If there is genuinely no author, move the title to the author position."
+          ]},
+          { "type": "heading", "level": 2, "text": "APA vs. MLA: The Quick Difference" },
+          { "type": "paragraph", "text": "Students frequently confuse APA and MLA format. The key differences for websites: APA puts the year right after the author and uses initials for first names; MLA puts the full first name and puts the date at the end. APA italicizes the page title; MLA puts it in quotation marks. If your class or institution specifies a style, use that one — they are not interchangeable." },
+          { "type": "heading", "level": 2, "text": "Generate Your Citation Automatically" },
+          { "type": "paragraph", "text": "If you're working on a paper with multiple sources, doing this manually for every citation gets tedious fast. Use our free Citation Generator to create properly formatted APA 7th edition citations — as well as MLA, Chicago, and ABNT — in seconds." },
+          { "type": "toolCta", "toolName": "Citation Generator", "toolPath": "/tools/education/citation-generator" },
+          { "type": "paragraph", "text": "Getting citations right matters — not just because your professor checks them, but because proper attribution is the foundation of academic honesty and gives readers a clear path back to your sources. Take the extra minute to do it correctly." }
+        ]
+      },
+      "word-count-guide": {
+        "title": "Word Count for Every Content Type: Blog Posts, Essays, Emails & More",
+        "description": "The ideal word count depends on your goal. Here are research-backed targets for blog posts, academic essays, emails, and social media.",
+        "relatedToolName": "Word Counter",
+        "relatedToolPath": "/tools/text/word-counter",
+        "body": [
+          { "type": "paragraph", "text": "Ask ten content strategists how long a blog post should be and you'll get ten different answers. Some will say 1,500 words minimum, others will cite research showing that long-form posts above 3,000 words dominate Google's first page. Meanwhile, your English professor insists on exactly 1,000 words, and every piece of email advice you've ever read says keep it under 200." },
+          { "type": "paragraph", "text": "The frustrating truth is that all of them can be right — because ideal word count depends entirely on what you're writing, who you're writing for, and what you want to happen when they read it. Here's a practical breakdown for the content types most people write." },
+          { "type": "heading", "level": 2, "text": "Blog Posts and Long-Form Articles" },
+          { "type": "paragraph", "text": "For SEO-focused content, longer tends to perform better — up to a point. Analysis of Google's top-ranking pages consistently shows that posts between 1,500 and 2,500 words rank well for competitive keywords, and posts over 3,000 words earn more backlinks on average, likely because they're more comprehensive and thus more shareable among other writers." },
+          { "type": "paragraph", "text": "However, longer only helps if the extra words add genuine value. Google's helpful content guidance explicitly penalizes content that's padded to hit a length target. Padding — repeating the same point, adding filler sections, burying the answer in the fifth paragraph — hurts both your ranking and your reader's experience." },
+          { "type": "list", "ordered": false, "items": [
+            "News or opinion piece: 400–800 words — say the thing and stop",
+            "How-to guide or tutorial: 1,200–2,000 words — enough for step-by-step detail without padding",
+            "Comprehensive pillar content or ultimate guide: 2,500–4,000 words — only if the topic genuinely requires it",
+            "Listicle: 1,000–1,500 words — brief per-item descriptions, skimmable"
+          ]},
+          { "type": "heading", "level": 2, "text": "Academic Essays" },
+          { "type": "paragraph", "text": "Academic writing has a different priority than blog writing: demonstrating depth of argument, not ranking on Google. Most professors set explicit word counts, and the right approach is to hit the range — not significantly under, not significantly over." },
+          { "type": "list", "ordered": false, "items": [
+            "Short response or reflection: 250–500 words",
+            "Standard undergraduate essay: 1,000–2,000 words",
+            "Research paper: 3,000–6,000 words",
+            "Dissertation chapter: 8,000–12,000 words per chapter",
+            "Full dissertation or thesis: 15,000–80,000 words depending on level and discipline"
+          ]},
+          { "type": "paragraph", "text": "One underrated rule for academic writing: never repeat your introduction in your conclusion. Restating what you just said is the easiest way to inflate a word count, and experienced readers always notice. If you're consistently coming up short, your argument probably needs more evidence, not more summary." },
+          { "type": "heading", "level": 2, "text": "Emails" },
+          { "type": "paragraph", "text": "Email is the one content type where shorter is almost always better — and where most professionals consistently write too much. Research on email response rates shows that emails between 50 and 125 words receive the highest reply rates. That's roughly four to eight short sentences." },
+          { "type": "list", "ordered": false, "items": [
+            "Quick request or question: 50–100 words",
+            "Business proposal or pitch email: 150–250 words",
+            "Newsletter (single topic): 200–400 words",
+            "Newsletter (multi-section digest): 500–800 words"
+          ]},
+          { "type": "paragraph", "text": "The most common email mistake is burying the request. Front-load what you need. If you want someone to review a document, say so in sentence one — not after three paragraphs of context." },
+          { "type": "heading", "level": 2, "text": "Social Media Posts" },
+          { "type": "paragraph", "text": "Social platforms have their own rhythms, and word counts that work on one platform bomb on another:" },
+          { "type": "list", "ordered": false, "items": [
+            "X / X: 71–100 characters gets higher engagement than full 280-character posts — shorter wins",
+            "LinkedIn: 1,300–2,000 characters for a native post that drives comments (about 200–300 words)",
+            "Instagram caption: 138–150 characters above the fold is what most users read; the full caption can be longer for hashtags",
+            "Facebook: 40–80 words for highest engagement on organic posts"
+          ]},
+          { "type": "heading", "level": 2, "text": "Why Readability Matters More Than Raw Word Count" },
+          { "type": "paragraph", "text": "Word count is a proxy for effort, not quality. A 500-word article written at an eighth-grade reading level with clear subheadings will outperform a 2,000-word wall of text every time — in both search rankings and reader satisfaction." },
+          { "type": "paragraph", "text": "Things that make a piece feel longer or shorter than its actual word count:" },
+          { "type": "list", "ordered": false, "items": [
+            "Paragraph length — Two-sentence paragraphs read faster and feel less intimidating than eight-sentence blocks",
+            "Sentence length — Varying short and long sentences keeps readers from scanning past you",
+            "Subheadings — They let skimmers decide which sections to actually read",
+            "Passive voice — It adds words without adding meaning: 'The report was written by the team' vs. 'The team wrote the report'"
+          ]},
+          { "type": "heading", "level": 2, "text": "Track Your Word Count as You Write" },
+          { "type": "paragraph", "text": "Whether you're targeting a specific count for SEO, staying within a professor's assignment limit, or trying to keep an email from becoming an essay, keeping an eye on word count while you write is easier than editing down afterward. Use our free Word Counter to get a real-time word, character, sentence, and paragraph count for any text." },
+          { "type": "toolCta", "toolName": "Word Counter", "toolPath": "/tools/text/word-counter" },
+          { "type": "paragraph", "text": "The best word count for any piece of writing is the minimum number of words needed to serve the reader completely. Everything else is just noise." }
+        ]
+      },
+      "average-typing-speed": {
+        "title": "What's a Good Typing Speed? (And How to Actually Improve It)",
+        "description": "The average typing speed is 40 WPM. Here's how you compare, what professionals achieve, and practical techniques to type faster.",
+        "relatedToolName": "Typing Test",
+        "relatedToolPath": "/tools/fun/typing-test",
+        "body": [
+          { "type": "paragraph", "text": "Most of us spend several hours a day typing — emails, documents, messages, code — and yet very few people have ever deliberately tried to get better at it. Typing speed is one of those skills that seems fixed, like handwriting, when in reality it's highly trainable. A few focused weeks of practice can add 20–30 WPM to your speed, which compounds into hours saved every year." },
+          { "type": "paragraph", "text": "Before you can improve, it helps to know where you stand and what 'good' actually looks like across different professions and age groups." },
+          { "type": "heading", "level": 2, "text": "What Is the Average Typing Speed?" },
+          { "type": "paragraph", "text": "The average typing speed for an adult is approximately 40 words per minute (WPM) with around 92% accuracy. This varies by age group, profession, and how much someone types as part of their daily routine:" },
+          { "type": "list", "ordered": false, "items": [
+            "General adults: 38–44 WPM",
+            "College students: 40–50 WPM (more daily typing from coursework)",
+            "Office workers and professionals: 55–70 WPM",
+            "Programmers and developers: 50–70 WPM (lower than expected due to special characters and syntax pauses)",
+            "Transcriptionists and data entry specialists: 70–100+ WPM (professional requirement)",
+            "World record holders: 200–300+ WPM (peak burst speeds, not sustained)"
+          ]},
+          { "type": "paragraph", "text": "For most knowledge workers, hitting 60–70 WPM with high accuracy is a practical goal that noticeably reduces friction in daily work. Above 80 WPM, typing stops being a bottleneck for most tasks — your thinking becomes the limiting factor, not your fingers." },
+          { "type": "heading", "level": 2, "text": "How Typing Speed Affects Productivity" },
+          { "type": "paragraph", "text": "At 40 WPM, typing 1,000 words takes about 25 minutes. At 80 WPM, it takes about 12–13 minutes. Over a full workday of writing-heavy tasks, that difference can add up to an hour or more of recovered time." },
+          { "type": "paragraph", "text": "But raw speed isn't the only thing that matters. Accuracy is equally — arguably more — important. A typist who hits 80 WPM with 95% accuracy will need to stop and correct frequently, which breaks focus and slows effective output. Aim for accuracy first, then let speed follow naturally." },
+          { "type": "callout", "text": "A good target ratio: accuracy over 98% at your current speed before trying to push faster. Rushing before you're accurate just trains bad habits." },
+          { "type": "heading", "level": 2, "text": "The Techniques That Actually Work" },
+          { "type": "heading", "level": 3, "text": "1. Commit to the Home Row" },
+          { "type": "paragraph", "text": "The home row — ASDF on the left hand, JKL; on the right — is the foundation of touch typing. Every finger has a designated starting position and a set of keys it's responsible for. Typing without this system means you're hunting for keys, which caps your speed around 30–40 WPM permanently." },
+          { "type": "paragraph", "text": "If you don't already touch-type, transitioning will feel painfully slow for two to four weeks. You will go from your current speed down to 15–20 WPM before climbing back up past where you started. That dip is worth it — touch typists plateau significantly higher than hunt-and-peck typists." },
+          { "type": "heading", "level": 3, "text": "2. Stop Looking at the Keyboard" },
+          { "type": "paragraph", "text": "Looking down at your hands while you type forces you to split your attention between the screen and the keyboard, which slows you down and increases errors. Covering your hands with a cloth, using a blank keyboard, or simply forcing yourself to keep your eyes on the screen are all techniques that accelerate muscle memory formation." },
+          { "type": "heading", "level": 3, "text": "3. Practice in Short Bursts, Not Long Sessions" },
+          { "type": "paragraph", "text": "Spaced repetition works for typing just as it does for language learning. Three focused 10-minute sessions throughout the day produce faster improvement than one 30-minute block, because your motor memory consolidates between sessions. This makes typing practice highly compatible with a busy schedule — a few minutes during a coffee break is genuinely effective." },
+          { "type": "heading", "level": 3, "text": "4. Slow Down to Speed Up" },
+          { "type": "paragraph", "text": "Counter-intuitive but true: the fastest way to increase your top speed is to practice at a pace just below your comfortable limit and focus entirely on accuracy. Reaching for speed before accuracy is the single most common mistake in self-taught typing practice. Your brain encodes whatever you repeat — including errors." },
+          { "type": "heading", "level": 3, "text": "5. Identify and Drill Your Problem Keys" },
+          { "type": "paragraph", "text": "Most people have five to ten key combinations that consistently trip them up — common ones include reaching for 'b' with the wrong finger, mistyping 'the' as 'teh', or fumbling on quotation marks and semicolons. Targeted practice on your personal weak spots produces faster gains than general practice." },
+          { "type": "heading", "level": 2, "text": "Measure Where You Are Now" },
+          { "type": "paragraph", "text": "You can't improve what you don't measure. Use our free Typing Test to find out your exact WPM and accuracy score right now, then use it as a benchmark as you practice. The test takes 60 seconds and gives you an immediate read on both speed and accuracy." },
+          { "type": "toolCta", "toolName": "Typing Test", "toolPath": "/tools/fun/typing-test" },
+          { "type": "paragraph", "text": "Typing is a skill, not a fixed trait. At 40 WPM, you're average. At 70 WPM, you're noticeably faster than most colleagues. At 90+ WPM, typing simply stops being something you think about. Pick up the home row, stop peeking at the keyboard, and give it a few deliberate weeks — the improvement will surprise you." }
+        ]
+      }
+    }
   }
 }

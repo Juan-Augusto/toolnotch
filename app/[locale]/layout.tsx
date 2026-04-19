@@ -9,6 +9,7 @@ import { locales } from '@/i18n'
 import ThemeProvider from '@/components/ThemeProvider'
 import DarkModeToggle from '@/components/DarkModeToggle'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
+import Footer from '@/components/Footer'
 import '../globals.css'
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? ''
@@ -136,6 +137,7 @@ export default async function LocaleLayout({
             </Script>
           </>
         )}
+        <Footer locale={locale} />
       </body>
     </html>
   )
