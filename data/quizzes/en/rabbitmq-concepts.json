@@ -1,0 +1,430 @@
+{
+  "id": "rabbitmq-concepts",
+  "type": "trivia",
+  "category": "backend",
+  "title": "RabbitMQ Concepts Quiz",
+  "description": "Master RabbitMQ: exchange types, routing keys, binding keys, quorum queues, and advanced AMQP internals.",
+  "image": "/images/quizzes/rabbitmq-concepts-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "level": "beginner",
+      "text": "What is RabbitMQ?",
+      "options": [
+        { "id": "q1a", "text": "A relational database management system" },
+        { "id": "q1b", "text": "An open-source AMQP message broker" },
+        { "id": "q1c", "text": "A REST API gateway" },
+        { "id": "q1d", "text": "A distributed key-value store" }
+      ],
+      "correctAnswerId": "q1b",
+      "explanation": "RabbitMQ is an open-source message broker that implements the Advanced Message Queuing Protocol (AMQP), enabling applications to communicate by sending and receiving messages."
+    },
+    {
+      "id": "q2",
+      "level": "beginner",
+      "text": "In a typical RabbitMQ message flow, what is the correct order of components?",
+      "options": [
+        { "id": "q2a", "text": "Consumer → Queue → Exchange → Producer" },
+        { "id": "q2b", "text": "Producer → Queue → Exchange → Consumer" },
+        { "id": "q2c", "text": "Producer → Exchange → Queue → Consumer" },
+        { "id": "q2d", "text": "Exchange → Producer → Queue → Consumer" }
+      ],
+      "correctAnswerId": "q2c",
+      "explanation": "Messages flow from Producer to Exchange, the Exchange routes them to one or more Queues via bindings, and Consumers read messages from those Queues."
+    },
+    {
+      "id": "q3",
+      "level": "beginner",
+      "text": "What is a binding in RabbitMQ?",
+      "options": [
+        { "id": "q3a", "text": "A TCP connection between two brokers" },
+        { "id": "q3b", "text": "A rule that links an exchange to a queue (or another exchange)" },
+        { "id": "q3c", "text": "The authentication credential used by a producer" },
+        { "id": "q3d", "text": "A named reference to a virtual host" }
+      ],
+      "correctAnswerId": "q3b",
+      "explanation": "A binding is a relationship between an exchange and a queue that tells the exchange which queues should receive messages matching the binding criteria."
+    },
+    {
+      "id": "q4",
+      "level": "beginner",
+      "text": "What is the default exchange in RabbitMQ?",
+      "options": [
+        { "id": "q4a", "text": "A fanout exchange named 'default'" },
+        { "id": "q4b", "text": "A pre-declared direct exchange with an empty string name" },
+        { "id": "q4c", "text": "A topic exchange named 'amq.default'" },
+        { "id": "q4d", "text": "A headers exchange that must be declared before use" }
+      ],
+      "correctAnswerId": "q4b",
+      "explanation": "The default exchange is a direct exchange with an empty string name; every queue is automatically bound to it using the queue name as the routing key."
+    },
+    {
+      "id": "q5",
+      "level": "beginner",
+      "text": "What is the difference between a durable and a transient queue?",
+      "options": [
+        { "id": "q5a", "text": "Durable queues survive broker restarts; transient queues do not" },
+        { "id": "q5b", "text": "Durable queues are faster; transient queues are slower" },
+        { "id": "q5c", "text": "Durable queues can hold more messages than transient queues" },
+        { "id": "q5d", "text": "Durable queues require authentication; transient queues do not" }
+      ],
+      "correctAnswerId": "q5a",
+      "explanation": "Marking a queue as durable causes RabbitMQ to persist its definition to disk so it survives broker restarts, whereas a transient (non-durable) queue is lost on restart."
+    },
+    {
+      "id": "q6",
+      "level": "beginner",
+      "text": "What does a consumer send to RabbitMQ to confirm it has successfully processed a message?",
+      "options": [
+        { "id": "q6a", "text": "A NACK" },
+        { "id": "q6b", "text": "A REJECT" },
+        { "id": "q6c", "text": "An ACK (acknowledgement)" },
+        { "id": "q6d", "text": "A CONFIRM" }
+      ],
+      "correctAnswerId": "q6c",
+      "explanation": "An ACK (basic.ack) tells RabbitMQ the message was successfully processed and can be removed from the queue."
+    },
+    {
+      "id": "q7",
+      "level": "beginner",
+      "text": "What is the difference between basic.nack and basic.reject in RabbitMQ?",
+      "options": [
+        { "id": "q7a", "text": "basic.nack supports bulk rejection of multiple messages; basic.reject handles only one message at a time" },
+        { "id": "q7b", "text": "basic.reject requeues the message; basic.nack discards it permanently" },
+        { "id": "q7c", "text": "basic.nack is only available in AMQP 1.0; basic.reject is AMQP 0-9-1" },
+        { "id": "q7d", "text": "There is no functional difference" }
+      ],
+      "correctAnswerId": "q7a",
+      "explanation": "basic.nack is a RabbitMQ extension that allows rejecting multiple messages at once, while basic.reject can only reject a single message."
+    },
+    {
+      "id": "q8",
+      "level": "beginner",
+      "text": "Which RabbitMQ built-in plugin provides a browser-based management and monitoring dashboard?",
+      "options": [
+        { "id": "q8a", "text": "rabbitmq_shovel" },
+        { "id": "q8b", "text": "rabbitmq_management" },
+        { "id": "q8c", "text": "rabbitmq_federation" },
+        { "id": "q8d", "text": "rabbitmq_stomp" }
+      ],
+      "correctAnswerId": "q8b",
+      "explanation": "The rabbitmq_management plugin provides an HTTP-based API and a browser UI for managing and monitoring RabbitMQ nodes, queues, exchanges, and bindings."
+    },
+    {
+      "id": "q9",
+      "level": "beginner",
+      "text": "What does the prefetch count (basic.qos) setting control in RabbitMQ?",
+      "options": [
+        { "id": "q9a", "text": "The maximum number of queues a channel can subscribe to" },
+        { "id": "q9b", "text": "The maximum number of unacknowledged messages delivered to a consumer at once" },
+        { "id": "q9c", "text": "The maximum message size in bytes" },
+        { "id": "q9d", "text": "The maximum number of connections per virtual host" }
+      ],
+      "correctAnswerId": "q9b",
+      "explanation": "basic.qos prefetch count limits how many unacknowledged messages can be outstanding on a channel, providing flow control and preventing consumers from being overwhelmed."
+    },
+    {
+      "id": "q10",
+      "level": "beginner",
+      "text": "Why is RabbitMQ generally preferred over a relational database for task queue workloads?",
+      "options": [
+        { "id": "q10a", "text": "RabbitMQ stores messages in SQL tables for easy querying" },
+        { "id": "q10b", "text": "RabbitMQ provides built-in push delivery, acknowledgements, and back-pressure without polling" },
+        { "id": "q10c", "text": "A database cannot persist data across restarts" },
+        { "id": "q10d", "text": "RabbitMQ automatically generates SQL schemas for task metadata" }
+      ],
+      "correctAnswerId": "q10b",
+      "explanation": "A message broker like RabbitMQ delivers messages via push, manages acknowledgements and retries natively, and supports back-pressure — eliminating the need for costly database polling loops."
+    },
+    {
+      "id": "q11",
+      "level": "intermediate",
+      "text": "How does a direct exchange route messages?",
+      "options": [
+        { "id": "q11a", "text": "It broadcasts the message to every bound queue regardless of routing key" },
+        { "id": "q11b", "text": "It routes the message to queues whose binding key exactly matches the message's routing key" },
+        { "id": "q11c", "text": "It uses message header attributes to decide routing" },
+        { "id": "q11d", "text": "It routes based on wildcard patterns in the binding key" }
+      ],
+      "correctAnswerId": "q11b",
+      "explanation": "A direct exchange performs an exact string comparison between the message routing key and each queue binding key, delivering only to matching queues."
+    },
+    {
+      "id": "q12",
+      "level": "intermediate",
+      "text": "What is the defining behaviour of a fanout exchange?",
+      "options": [
+        { "id": "q12a", "text": "It routes messages only to queues whose binding key matches the routing key" },
+        { "id": "q12b", "text": "It broadcasts every message to all bound queues, completely ignoring the routing key" },
+        { "id": "q12c", "text": "It routes messages using wildcard patterns (* and #)" },
+        { "id": "q12d", "text": "It sends messages only to queues on the same node" }
+      ],
+      "correctAnswerId": "q12b",
+      "explanation": "A fanout exchange copies and delivers every incoming message to all queues that are bound to it, making it ideal for broadcast or pub/sub scenarios."
+    },
+    {
+      "id": "q13",
+      "level": "intermediate",
+      "text": "In a topic exchange binding key, what does the '#' wildcard match?",
+      "options": [
+        { "id": "q13a", "text": "Exactly one dot-separated word" },
+        { "id": "q13b", "text": "Any single character" },
+        { "id": "q13c", "text": "Zero or more dot-separated words" },
+        { "id": "q13d", "text": "Only numeric characters" }
+      ],
+      "correctAnswerId": "q13c",
+      "explanation": "In a topic exchange, '#' matches zero or more dot-delimited words, while '*' matches exactly one word — enabling flexible routing hierarchies."
+    },
+    {
+      "id": "q14",
+      "level": "intermediate",
+      "text": "How does a headers exchange decide which queues receive a message?",
+      "options": [
+        { "id": "q14a", "text": "It matches the message routing key against binding key wildcards" },
+        { "id": "q14b", "text": "It ignores routing keys entirely and routes based on message header attributes matching binding arguments" },
+        { "id": "q14c", "text": "It round-robins messages across all bound queues" },
+        { "id": "q14d", "text": "It routes based on the message body content type" }
+      ],
+      "correctAnswerId": "q14b",
+      "explanation": "A headers exchange uses the x-match binding argument ('all' or 'any') to compare message headers against binding table arguments, completely ignoring the routing key."
+    },
+    {
+      "id": "q15",
+      "level": "intermediate",
+      "text": "What is the conceptual difference between a routing key and a binding key in RabbitMQ?",
+      "options": [
+        { "id": "q15a", "text": "They are identical — both terms refer to the same string set by the producer" },
+        { "id": "q15b", "text": "The routing key is set by the producer on the message; the binding key is set when a queue is bound to an exchange" },
+        { "id": "q15c", "text": "The binding key is set by the producer; the routing key is set on the queue" },
+        { "id": "q15d", "text": "Routing keys are only used by direct exchanges; binding keys are only used by topic exchanges" }
+      ],
+      "correctAnswerId": "q15b",
+      "explanation": "Producers stamp each published message with a routing key; separately, an administrator (or code) sets a binding key when connecting a queue to an exchange — the exchange compares them to decide delivery."
+    },
+    {
+      "id": "q16",
+      "level": "intermediate",
+      "text": "How is a Dead Letter Exchange (DLX) configured for a queue?",
+      "options": [
+        { "id": "q16a", "text": "By setting the 'x-dead-letter-exchange' argument when declaring the queue" },
+        { "id": "q16b", "text": "By publishing directly to an exchange named 'dlx'" },
+        { "id": "q16c", "text": "By enabling the rabbitmq_dlx plugin" },
+        { "id": "q16d", "text": "By setting the 'dead-letter' property on each message individually" }
+      ],
+      "correctAnswerId": "q16a",
+      "explanation": "A DLX is assigned by passing the 'x-dead-letter-exchange' (and optionally 'x-dead-letter-routing-key') argument when declaring the source queue."
+    },
+    {
+      "id": "q17",
+      "level": "intermediate",
+      "text": "What is the difference between setting a message TTL per-queue versus per-message?",
+      "options": [
+        { "id": "q17a", "text": "Per-queue TTL applies to all messages in that queue via x-message-ttl; per-message TTL is set in the message expiration property and may vary per message" },
+        { "id": "q17b", "text": "Per-message TTL is always higher priority and overrides any queue TTL" },
+        { "id": "q17c", "text": "Per-queue TTL requires a plugin; per-message TTL is built-in" },
+        { "id": "q17d", "text": "There is no difference — both cause identical broker behaviour" }
+      ],
+      "correctAnswerId": "q17a",
+      "explanation": "x-message-ttl on a queue sets the maximum lifetime for all messages in that queue; the per-message expiration property sets TTL for individual messages, and RabbitMQ applies whichever expires first."
+    },
+    {
+      "id": "q18",
+      "level": "intermediate",
+      "text": "What is the key advantage of publisher confirms over AMQP transactions (tx.select/tx.commit) in RabbitMQ?",
+      "options": [
+        { "id": "q18a", "text": "Publisher confirms are synchronous and block the channel until the broker commits" },
+        { "id": "q18b", "text": "Publisher confirms provide asynchronous, lightweight acknowledgement without the heavyweight two-phase commit overhead of transactions" },
+        { "id": "q18c", "text": "AMQP transactions support batch commits; publisher confirms do not" },
+        { "id": "q18d", "text": "Publisher confirms are only available for quorum queues" }
+      ],
+      "correctAnswerId": "q18b",
+      "explanation": "Publisher confirms are a RabbitMQ extension that allows asynchronous per-message acknowledgement from the broker with much lower throughput overhead than AMQP 0-9-1 transactions."
+    },
+    {
+      "id": "q19",
+      "level": "intermediate",
+      "text": "What is the primary purpose of the RabbitMQ Shovel plugin?",
+      "options": [
+        { "id": "q19a", "text": "To mirror queues across cluster nodes for high availability" },
+        { "id": "q19b", "text": "To reliably move or copy messages from a source queue/exchange to a destination queue/exchange, potentially across brokers" },
+        { "id": "q19c", "text": "To expose queues via an HTTP REST API" },
+        { "id": "q19d", "text": "To compress message payloads before storage" }
+      ],
+      "correctAnswerId": "q19b",
+      "explanation": "The Shovel plugin continuously consumes messages from a source (queue or exchange) and republishes them to a destination, which can reside on the same broker or a remote one."
+    },
+    {
+      "id": "q20",
+      "level": "intermediate",
+      "text": "What is the main architectural difference between quorum queues and classic mirrored queues?",
+      "options": [
+        { "id": "q20a", "text": "Quorum queues use Raft consensus for replication; classic mirrored queues use asynchronous master-mirror replication" },
+        { "id": "q20b", "text": "Classic mirrored queues are faster because they use Raft; quorum queues use two-phase commit" },
+        { "id": "q20c", "text": "Quorum queues can only exist on a single node; mirrored queues span the whole cluster" },
+        { "id": "q20d", "text": "There is no difference — quorum queues are simply renamed mirrored queues" }
+      ],
+      "correctAnswerId": "q20a",
+      "explanation": "Quorum queues use the Raft distributed consensus algorithm for strong replication guarantees, whereas classic mirrored queues relied on an asynchronous master-mirror approach that was prone to data loss on failover."
+    },
+    {
+      "id": "q21",
+      "level": "advanced",
+      "text": "How does AMQP 0-9-1 enable multiple logical communication streams over a single TCP connection in RabbitMQ?",
+      "options": [
+        { "id": "q21a", "text": "By opening multiple TCP sockets bundled into one connection object" },
+        { "id": "q21b", "text": "Through channels — lightweight virtual connections multiplexed over a single TCP connection" },
+        { "id": "q21c", "text": "By using HTTP/2 stream multiplexing within the AMQP framing" },
+        { "id": "q21d", "text": "By encoding each logical stream as a separate virtual host" }
+      ],
+      "correctAnswerId": "q21b",
+      "explanation": "AMQP 0-9-1 multiplexes channels over a single TCP connection; each channel is an independent logical stream with its own state, allowing concurrent operations without the overhead of multiple TCP connections."
+    },
+    {
+      "id": "q22",
+      "level": "advanced",
+      "text": "What does the AMQP 0-9-1 channel.flow mechanism do?",
+      "options": [
+        { "id": "q22a", "text": "It increases the prefetch window dynamically when the consumer is idle" },
+        { "id": "q22b", "text": "It allows the broker or client to pause/resume message delivery on a channel to apply back-pressure" },
+        { "id": "q22c", "text": "It migrates a channel from one TCP connection to another without interruption" },
+        { "id": "q22d", "text": "It flushes all pending messages from a channel's internal buffer to disk" }
+      ],
+      "correctAnswerId": "q22b",
+      "explanation": "channel.flow is an AMQP method that either the broker or client can send to pause (active=false) or resume (active=true) the flow of messages on a channel, providing a basic back-pressure mechanism."
+    },
+    {
+      "id": "q23",
+      "level": "advanced",
+      "text": "What is the primary operational benefit of declaring a queue as a lazy queue?",
+      "options": [
+        { "id": "q23a", "text": "Lazy queues skip acknowledgement processing to increase throughput" },
+        { "id": "q23b", "text": "Lazy queues write messages directly to disk as they arrive rather than keeping them in memory, reducing RAM usage for deep queues" },
+        { "id": "q23c", "text": "Lazy queues replicate to disk only when the node restarts" },
+        { "id": "q23d", "text": "Lazy queues defer binding evaluation until a consumer connects" }
+      ],
+      "correctAnswerId": "q23b",
+      "explanation": "Lazy queues move messages to disk as soon as possible rather than keeping them in RAM, which significantly reduces memory pressure when queues accumulate large backlogs."
+    },
+    {
+      "id": "q24",
+      "level": "advanced",
+      "text": "What is the key architectural difference between the Federation plugin and the Shovel plugin?",
+      "options": [
+        { "id": "q24a", "text": "Federation links are permanent; Shovel links are temporary and delete themselves after a single message" },
+        { "id": "q24b", "text": "Federation provides loosely coupled, broker-to-broker exchange/queue linking with autonomous nodes; Shovel is a simple point-to-point message mover that requires tight coupling" },
+        { "id": "q24c", "text": "Shovel supports AMQP 1.0; Federation only supports AMQP 0-9-1" },
+        { "id": "q24d", "text": "They are functionally identical — Federation is just the newer name for Shovel" }
+      ],
+      "correctAnswerId": "q24b",
+      "explanation": "Federation is designed for loosely coupled, WAN-spanning topologies where each broker remains independent; Shovel is a lower-level tool that simply consumes from one endpoint and republishes to another."
+    },
+    {
+      "id": "q25",
+      "level": "advanced",
+      "text": "What does the consistent hash exchange plugin accomplish that a standard direct or topic exchange cannot?",
+      "options": [
+        { "id": "q25a", "text": "It routes messages to exactly one queue chosen by a consistent hash of the routing key, distributing load while keeping messages with the same key on the same queue" },
+        { "id": "q25b", "text": "It replicates messages to all bound queues using a hash-based deduplication mechanism" },
+        { "id": "q25c", "text": "It hashes the message body for integrity verification before routing" },
+        { "id": "q25d", "text": "It ensures round-robin delivery across queues regardless of routing key" }
+      ],
+      "correctAnswerId": "q25a",
+      "explanation": "The consistent hash exchange uses a hash of the routing key (or message header/property) to deterministically select one queue from the bound set, allowing ordered per-key partitioning with load distribution."
+    },
+    {
+      "id": "q26",
+      "level": "advanced",
+      "text": "In a RabbitMQ cluster, what is the functional difference between disc nodes and RAM nodes?",
+      "options": [
+        { "id": "q26a", "text": "Disc nodes persist broker metadata (queues, exchanges, bindings, users) to disk; RAM nodes keep all metadata only in memory for lower latency writes" },
+        { "id": "q26b", "text": "RAM nodes handle message routing; disc nodes handle only persistent message storage" },
+        { "id": "q26c", "text": "Disc nodes can host quorum queues; RAM nodes cannot" },
+        { "id": "q26d", "text": "The terms are deprecated — all modern RabbitMQ nodes are identical" }
+      ],
+      "correctAnswerId": "q26a",
+      "explanation": "Disc nodes write cluster metadata to disk, making them mandatory for cluster restarts; RAM nodes store metadata only in memory (message content is always written to disc on persistent queues regardless of node type)."
+    },
+    {
+      "id": "q27",
+      "level": "advanced",
+      "text": "How do quorum queues use the Raft consensus algorithm to guarantee data safety?",
+      "options": [
+        { "id": "q27a", "text": "A message is considered confirmed only after a majority (quorum) of replicas have written it, ensuring no data loss even if a minority of nodes fail" },
+        { "id": "q27b", "text": "Raft is used only for leader election; message storage uses a separate two-phase commit protocol" },
+        { "id": "q27c", "text": "Quorum queues write to all replicas synchronously and require unanimous acknowledgement" },
+        { "id": "q27d", "text": "Raft ensures messages are deduplicated across all cluster nodes" }
+      ],
+      "correctAnswerId": "q27a",
+      "explanation": "Quorum queues implement Raft so that each enqueue is replicated to a majority of member nodes before being confirmed, guaranteeing durability as long as a quorum of nodes is available."
+    },
+    {
+      "id": "q28",
+      "level": "advanced",
+      "text": "When both a per-queue policy and a queue declaration argument (e.g., x-message-ttl) are set for the same queue, which takes precedence in RabbitMQ?",
+      "options": [
+        { "id": "q28a", "text": "Policies always win over declaration arguments" },
+        { "id": "q28b", "text": "Declaration arguments always win over policies" },
+        { "id": "q28c", "text": "Declaration arguments (set at queue creation) take precedence over policies for the same key" },
+        { "id": "q28d", "text": "Both are merged additively — neither overrides the other" }
+      ],
+      "correctAnswerId": "q28c",
+      "explanation": "For operator-defined parameters such as x-message-ttl and x-dead-letter-exchange, queue declaration arguments take precedence over policy values for the same key, because declaration arguments are set at creation time and are immutable."
+    },
+    {
+      "id": "q29",
+      "level": "advanced",
+      "text": "Which pair of RabbitMQ management metrics most directly indicates that consumers are falling behind message producers?",
+      "options": [
+        { "id": "q29a", "text": "publish_rate and deliver_rate — when publish_rate consistently exceeds deliver_rate, messages_ready will grow" },
+        { "id": "q29b", "text": "memory_used and disk_free — a rising memory_used with falling disk_free shows consumer lag" },
+        { "id": "q29c", "text": "connection_count and channel_count — too many channels indicates consumer backlog" },
+        { "id": "q29d", "text": "node_uptime and gc_reclaim_rate — high GC activity confirms consumer lag" }
+      ],
+      "correctAnswerId": "q29a",
+      "explanation": "When publish_rate exceeds deliver_rate, the messages_ready counter grows, signalling that consumers cannot keep pace; messages_unacknowledged rising simultaneously reveals in-flight messages not yet acked."
+    },
+    {
+      "id": "q30",
+      "level": "advanced",
+      "text": "What is the recommended approach for graceful consumer shutdown in RabbitMQ to avoid message loss?",
+      "options": [
+        { "id": "q30a", "text": "Kill the process immediately — RabbitMQ will automatically requeue any unacknowledged messages" },
+        { "id": "q30b", "text": "Cancel the consumer subscription, finish processing all in-flight messages, send ACKs or NACKs for each, then close the channel and connection" },
+        { "id": "q30c", "text": "Call basic.reject on all messages, then close the TCP connection without sending a connection.close frame" },
+        { "id": "q30d", "text": "Set prefetch to 0 and wait for the broker to drain the queue before closing" }
+      ],
+      "correctAnswerId": "q30b",
+      "explanation": "Graceful shutdown requires cancelling the consumer (basic.cancel), processing and acknowledging all already-delivered messages, then cleanly closing the channel and connection so RabbitMQ can requeue any unacked messages if needed."
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "Legend",
+      "description": "Outstanding — you have a deep, professional mastery of RabbitMQ. You understand the full AMQP 0-9-1 protocol stack from TCP channel multiplexing and flow control all the way up to advanced exchange types, Raft-based quorum queues, and cluster topology decisions. You can design resilient messaging architectures that handle back-pressure, dead-lettering, TTL policies, and graceful consumer shutdown without hesitation. You know when to reach for Shovel versus Federation, how consistent hash exchanges enable ordered partitioning, and exactly which metrics to watch when a queue depth starts climbing. Whether you're debugging a split-brain scenario or fine-tuning prefetch for maximum throughput, you operate with the confidence of someone who has run RabbitMQ in production under real load.",
+      "shareText": "I scored {percent}% on the RabbitMQ Concepts Quiz on ToolNotch! Can you beat me?"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Expert",
+      "description": "Impressive work — you have a strong command of RabbitMQ concepts and can confidently design and operate messaging systems in production. You understand the core exchange types and their routing semantics, know how to configure dead-letter exchanges and message TTLs, and grasp the reliability guarantees that publisher confirms and quorum queues provide. A few advanced internals — such as Raft consensus details, consistent hash exchanges, or the precise precedence rules for policy versus argument — may still catch you off guard, but you have the solid foundation needed to look them up quickly. Keep experimenting with clustering and advanced plugins and the Legend tier is well within reach.",
+      "shareText": "I scored {percent}% on the RabbitMQ Concepts Quiz on ToolNotch! Can you beat me?"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Fan",
+      "description": "Good effort — you understand the fundamentals of RabbitMQ and can work with it day-to-day on basic tasks. You know what a message broker is, how producers and consumers interact through exchanges and queues, and the importance of acknowledgements. Some of the intermediate and advanced topics — like topic exchange wildcards, DLX configuration, publisher confirms, quorum queue replication, or AMQP channel multiplexing — are still fuzzy, but that's completely normal at this stage. Spend some time with the official RabbitMQ documentation, set up a local cluster, and experiment with the management UI. Hands-on practice with exchange types and queue arguments will move you to Expert faster than you might expect.",
+      "shareText": "I scored {percent}% on the RabbitMQ Concepts Quiz on ToolNotch! Can you beat me?"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "Rookie",
+      "description": "Everyone starts somewhere — and RabbitMQ has a steeper learning curve than it first appears. The good news is that the core concepts are logical once they click: a producer publishes to an exchange, the exchange routes to queues via bindings, and consumers pull from those queues. Start by reading the official RabbitMQ getting-started guide, install the management plugin locally, and publish your first few messages using the built-in UI. Once direct and fanout exchanges feel natural, move on to topic exchange wildcards and then DLX. Take your time with the AMQP fundamentals — channels, acknowledgements, and durability — and you will build a solid foundation that makes the advanced material much easier to absorb.",
+      "shareText": "I scored {percent}% on the RabbitMQ Concepts Quiz on ToolNotch! Can you beat me?"
+    }
+  ]
+}

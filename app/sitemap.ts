@@ -17,6 +17,12 @@ const ALL_ROUTES = [
   // Interview prep
   '/interview',
   '/interview/typescript',
+  '/interview/database-design',
+  '/interview/database-indexing',
+  '/interview/messaging-sqs-kafka',
+  '/interview/rabbitmq-concepts',
+  '/interview/nodejs-fundamentals',
+  '/interview/system-architecture',
   // Legal / info (moved to TRUST_ROUTES above — rendered at priority 0.6)
   // PDF tools
   '/tools/pdf',
@@ -185,5 +191,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...ALL_ROUTES.map((path) => urlWithAlternates(path)),
     ...BLOG_POSTS.map((post) => urlWithAlternates(`/blog/${post.slug}`, 0.8)),
     ...mdxBlogEntries,
+    // Backend Engineering quizzes
+    ...[
+      '/quiz/nodejs-fundamentals',
+      '/quiz/database-design',
+      '/quiz/database-indexing',
+      '/quiz/messaging-sqs-kafka',
+      '/quiz/rabbitmq-concepts',
+      '/quiz/system-architecture',
+    ].map((path) => urlWithAlternates(path, 0.7)),
   ]
 }

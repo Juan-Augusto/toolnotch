@@ -1,0 +1,431 @@
+{
+  "id": "database-design",
+  "type": "trivia",
+  "locale": "en",
+  "category": "backend",
+  "title": "Database Design Quiz",
+  "description": "Test your database design knowledge: normalization, relationships, CAP theorem, sharding, and distributed patterns.",
+  "image": "/images/quizzes/database-design-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What is the primary purpose of a primary key in a relational database?",
+      "options": [
+        { "id": "q1a", "text": "To sort rows alphabetically" },
+        { "id": "q1b", "text": "To uniquely identify each row in a table" },
+        { "id": "q1c", "text": "To link two tables together" },
+        { "id": "q1d", "text": "To enforce NOT NULL on all columns" }
+      ],
+      "correctAnswerId": "q1b",
+      "explanation": "A primary key uniquely identifies every row in a table, ensuring no two rows have the same key value.",
+      "level": "beginner"
+    },
+    {
+      "id": "q2",
+      "text": "What does a foreign key do in a relational database?",
+      "options": [
+        { "id": "q2a", "text": "Encrypts column values for security" },
+        { "id": "q2b", "text": "References the primary key of another table to enforce referential integrity" },
+        { "id": "q2c", "text": "Speeds up SELECT queries on large tables" },
+        { "id": "q2d", "text": "Prevents duplicate rows within a single table" }
+      ],
+      "correctAnswerId": "q2b",
+      "explanation": "A foreign key establishes a link between two tables by referencing the primary key of the parent table, enforcing referential integrity.",
+      "level": "beginner"
+    },
+    {
+      "id": "q3",
+      "text": "Which of the following best describes a NoSQL database?",
+      "options": [
+        { "id": "q3a", "text": "A database that never uses indexes" },
+        { "id": "q3b", "text": "A database that only stores numbers" },
+        { "id": "q3c", "text": "A non-relational database that stores data in formats like documents, key-value pairs, or graphs" },
+        { "id": "q3d", "text": "A database that forbids SQL syntax entirely" }
+      ],
+      "correctAnswerId": "q3c",
+      "explanation": "NoSQL databases are non-relational and support flexible data models such as documents, key-value, column-family, and graph formats.",
+      "level": "beginner"
+    },
+    {
+      "id": "q4",
+      "text": "What does CRUD stand for in the context of database operations?",
+      "options": [
+        { "id": "q4a", "text": "Copy, Replace, Update, Delete" },
+        { "id": "q4b", "text": "Create, Read, Update, Delete" },
+        { "id": "q4c", "text": "Connect, Retrieve, Upload, Drop" },
+        { "id": "q4d", "text": "Create, Restore, Undo, Deploy" }
+      ],
+      "correctAnswerId": "q4b",
+      "explanation": "CRUD stands for Create, Read, Update, and Delete — the four fundamental operations performed on database records.",
+      "level": "beginner"
+    },
+    {
+      "id": "q5",
+      "text": "What value does a NULL represent in SQL?",
+      "options": [
+        { "id": "q5a", "text": "Zero" },
+        { "id": "q5b", "text": "An empty string" },
+        { "id": "q5c", "text": "The absence of a value or unknown" },
+        { "id": "q5d", "text": "False" }
+      ],
+      "correctAnswerId": "q5c",
+      "explanation": "NULL in SQL represents the absence of a value or an unknown value — it is distinct from zero or an empty string.",
+      "level": "beginner"
+    },
+    {
+      "id": "q6",
+      "text": "Which relationship type exists when one row in Table A can relate to many rows in Table B, and one row in Table B can also relate to many rows in Table A?",
+      "options": [
+        { "id": "q6a", "text": "One-to-One (1:1)" },
+        { "id": "q6b", "text": "One-to-Many (1:N)" },
+        { "id": "q6c", "text": "Many-to-Many (M:N)" },
+        { "id": "q6d", "text": "Self-referential" }
+      ],
+      "correctAnswerId": "q6c",
+      "explanation": "A Many-to-Many (M:N) relationship means each row on either side can relate to multiple rows on the other side, typically resolved with a junction table.",
+      "level": "beginner"
+    },
+    {
+      "id": "q7",
+      "text": "What is database normalization?",
+      "options": [
+        { "id": "q7a", "text": "Converting all column names to lowercase" },
+        { "id": "q7b", "text": "Organizing data to reduce redundancy and improve integrity" },
+        { "id": "q7c", "text": "Merging all tables into a single flat table for performance" },
+        { "id": "q7d", "text": "Backing up data to a secondary server" }
+      ],
+      "correctAnswerId": "q7b",
+      "explanation": "Normalization is the process of organizing a database schema to minimize data redundancy and ensure data integrity through defined normal forms.",
+      "level": "beginner"
+    },
+    {
+      "id": "q8",
+      "text": "Which property of ACID transactions ensures that a transaction either fully completes or has no effect at all?",
+      "options": [
+        { "id": "q8a", "text": "Consistency" },
+        { "id": "q8b", "text": "Isolation" },
+        { "id": "q8c", "text": "Atomicity" },
+        { "id": "q8d", "text": "Durability" }
+      ],
+      "correctAnswerId": "q8c",
+      "explanation": "Atomicity guarantees that all operations within a transaction are treated as a single unit — they either all succeed or all roll back.",
+      "level": "beginner"
+    },
+    {
+      "id": "q9",
+      "text": "What is the main difference between the SQL and NoSQL query models?",
+      "options": [
+        { "id": "q9a", "text": "SQL uses JSON while NoSQL uses XML" },
+        { "id": "q9b", "text": "SQL uses structured query language on fixed schemas; NoSQL databases use flexible, often API-based query patterns" },
+        { "id": "q9c", "text": "SQL can only run on Windows servers" },
+        { "id": "q9d", "text": "NoSQL databases never support indexing" }
+      ],
+      "correctAnswerId": "q9b",
+      "explanation": "SQL databases use a structured query language on predefined schemas, whereas NoSQL databases offer flexible data models with varied query APIs suited to their data structure.",
+      "level": "beginner"
+    },
+    {
+      "id": "q10",
+      "text": "What is the purpose of a database migration?",
+      "options": [
+        { "id": "q10a", "text": "Moving the database server to a different data center" },
+        { "id": "q10b", "text": "Exporting data to a CSV file" },
+        { "id": "q10c", "text": "Applying versioned, incremental changes to a database schema over time" },
+        { "id": "q10d", "text": "Switching from SQL to NoSQL" }
+      ],
+      "correctAnswerId": "q10c",
+      "explanation": "Database migrations are versioned scripts that apply incremental schema changes, enabling teams to evolve a database schema in a controlled, repeatable way.",
+      "level": "beginner"
+    },
+    {
+      "id": "q11",
+      "text": "Which normal form requires that every non-key attribute is fully functionally dependent on the entire primary key (eliminating partial dependencies)?",
+      "options": [
+        { "id": "q11a", "text": "First Normal Form (1NF)" },
+        { "id": "q11b", "text": "Second Normal Form (2NF)" },
+        { "id": "q11c", "text": "Third Normal Form (3NF)" },
+        { "id": "q11d", "text": "Boyce-Codd Normal Form (BCNF)" }
+      ],
+      "correctAnswerId": "q11b",
+      "explanation": "2NF builds on 1NF by requiring that every non-key attribute depends on the whole composite primary key, not just part of it.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q12",
+      "text": "What does First Normal Form (1NF) require?",
+      "options": [
+        { "id": "q12a", "text": "No transitive dependencies between non-key columns" },
+        { "id": "q12b", "text": "All columns contain atomic (indivisible) values and each column holds values of a single type" },
+        { "id": "q12c", "text": "All foreign keys reference existing rows" },
+        { "id": "q12d", "text": "The table has a composite primary key" }
+      ],
+      "correctAnswerId": "q12b",
+      "explanation": "1NF requires that each column contains only atomic, indivisible values and that each column holds values of a single data type — no repeating groups.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q13",
+      "text": "Which of the following is a valid reason to intentionally denormalize a database?",
+      "options": [
+        { "id": "q13a", "text": "To satisfy foreign key constraints" },
+        { "id": "q13b", "text": "To improve read query performance by reducing the number of joins" },
+        { "id": "q13c", "text": "To enforce stricter data integrity" },
+        { "id": "q13d", "text": "To ensure every table is in 3NF" }
+      ],
+      "correctAnswerId": "q13b",
+      "explanation": "Denormalization deliberately introduces redundancy to reduce expensive join operations, improving read performance at the cost of write complexity and potential inconsistency.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q14",
+      "text": "What is a surrogate key?",
+      "options": [
+        { "id": "q14a", "text": "A key derived from business data such as an email address" },
+        { "id": "q14b", "text": "A system-generated key (e.g., auto-increment integer or UUID) with no business meaning" },
+        { "id": "q14c", "text": "A key that spans multiple columns" },
+        { "id": "q14d", "text": "A foreign key that references itself" }
+      ],
+      "correctAnswerId": "q14b",
+      "explanation": "A surrogate key is an artificial, system-generated identifier (such as an auto-increment ID or UUID) that has no inherent business meaning.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q15",
+      "text": "In an ER diagram, what does a double-line (total participation) on an entity side of a relationship indicate?",
+      "options": [
+        { "id": "q15a", "text": "The entity has a composite primary key" },
+        { "id": "q15b", "text": "Every instance of that entity must participate in the relationship" },
+        { "id": "q15c", "text": "The relationship is Many-to-Many" },
+        { "id": "q15d", "text": "The entity is a weak entity" }
+      ],
+      "correctAnswerId": "q15b",
+      "explanation": "A double line (total participation) in an ER diagram means every entity instance must participate in that relationship — there are no optional members on that side.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q16",
+      "text": "According to the CAP theorem, a distributed database can guarantee at most how many of the three properties simultaneously?",
+      "options": [
+        { "id": "q16a", "text": "All three: Consistency, Availability, and Partition Tolerance" },
+        { "id": "q16b", "text": "Only one" },
+        { "id": "q16c", "text": "Any two" },
+        { "id": "q16d", "text": "None — they are always in conflict" }
+      ],
+      "correctAnswerId": "q16c",
+      "explanation": "The CAP theorem states that a distributed system can satisfy at most two of Consistency, Availability, and Partition Tolerance at the same time.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q17",
+      "text": "What is the key distinction between OLTP and OLAP workloads?",
+      "options": [
+        { "id": "q17a", "text": "OLTP stores only structured data; OLAP stores only unstructured data" },
+        { "id": "q17b", "text": "OLTP handles many short transactional read/write operations; OLAP handles complex analytical queries over large historical datasets" },
+        { "id": "q17c", "text": "OLAP requires ACID transactions; OLTP does not" },
+        { "id": "q17d", "text": "OLTP is cloud-only; OLAP is on-premises only" }
+      ],
+      "correctAnswerId": "q17b",
+      "explanation": "OLTP is optimized for high-frequency, low-latency transactional operations; OLAP is optimized for complex aggregations and analytical queries over large historical datasets.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q18",
+      "text": "Which transaction isolation level prevents dirty reads but still allows non-repeatable reads?",
+      "options": [
+        { "id": "q18a", "text": "Read Uncommitted" },
+        { "id": "q18b", "text": "Read Committed" },
+        { "id": "q18c", "text": "Repeatable Read" },
+        { "id": "q18d", "text": "Serializable" }
+      ],
+      "correctAnswerId": "q18b",
+      "explanation": "Read Committed prevents dirty reads by only reading committed data, but a second read of the same row in the same transaction can see a different value if another transaction commits between reads.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q19",
+      "text": "What is the difference between a soft delete and a hard delete?",
+      "options": [
+        { "id": "q19a", "text": "Soft delete removes the row immediately; hard delete marks it with a timestamp" },
+        { "id": "q19b", "text": "Soft delete marks a row as deleted (e.g., with an is_deleted flag) without removing it; hard delete permanently removes the row" },
+        { "id": "q19c", "text": "Soft delete applies only to indexes; hard delete applies to table rows" },
+        { "id": "q19d", "text": "They are two names for the same SQL DELETE operation" }
+      ],
+      "correctAnswerId": "q19b",
+      "explanation": "A soft delete sets a flag (such as is_deleted or deleted_at) to hide a row from normal queries while preserving the data; a hard delete permanently removes the row from the table.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q20",
+      "text": "What does 'schema-on-write' mean compared to 'schema-on-read'?",
+      "options": [
+        { "id": "q20a", "text": "Schema-on-write applies the schema when the data is written; schema-on-read applies it when the data is queried" },
+        { "id": "q20b", "text": "Schema-on-write is used only by NoSQL databases" },
+        { "id": "q20c", "text": "Schema-on-read requires strict column definitions before inserting data" },
+        { "id": "q20d", "text": "They are equivalent — both enforce the schema at insertion time" }
+      ],
+      "correctAnswerId": "q20a",
+      "explanation": "Schema-on-write (traditional RDBMS) validates data against a defined schema at write time, while schema-on-read (e.g., data lakes, MongoDB) interprets schema at query time, allowing flexible storage.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q21",
+      "text": "In hash-based sharding, what is the main advantage over range-based sharding?",
+      "options": [
+        { "id": "q21a", "text": "Hash sharding makes range queries faster" },
+        { "id": "q21b", "text": "Hash sharding distributes data more evenly across shards, reducing hotspots" },
+        { "id": "q21c", "text": "Hash sharding allows unlimited shards without rebalancing" },
+        { "id": "q21d", "text": "Hash sharding requires no shard key" }
+      ],
+      "correctAnswerId": "q21b",
+      "explanation": "Hash-based sharding applies a hash function to the shard key so data is distributed uniformly, preventing the write hotspots that can occur when sequential keys are used with range sharding.",
+      "level": "advanced"
+    },
+    {
+      "id": "q22",
+      "text": "What is the main trade-off of synchronous replication compared to asynchronous replication?",
+      "options": [
+        { "id": "q22a", "text": "Synchronous replication is faster but loses data on failure" },
+        { "id": "q22b", "text": "Synchronous replication guarantees no data loss but increases write latency because the primary waits for replica acknowledgment" },
+        { "id": "q22c", "text": "Asynchronous replication guarantees zero data loss" },
+        { "id": "q22d", "text": "Synchronous replication only works with document databases" }
+      ],
+      "correctAnswerId": "q22b",
+      "explanation": "Synchronous replication ensures the replica has confirmed the write before the primary acknowledges success, providing zero data loss but at the cost of higher write latency.",
+      "level": "advanced"
+    },
+    {
+      "id": "q23",
+      "text": "What distinguishes Event Sourcing from a traditional CRUD data model?",
+      "options": [
+        { "id": "q23a", "text": "Event Sourcing stores only the latest state; CRUD stores a full event log" },
+        { "id": "q23b", "text": "Event Sourcing stores an immutable log of all state-changing events; current state is derived by replaying them" },
+        { "id": "q23c", "text": "Event Sourcing requires a relational database; CRUD works with any database" },
+        { "id": "q23d", "text": "They are functionally identical but use different SQL syntax" }
+      ],
+      "correctAnswerId": "q23b",
+      "explanation": "In Event Sourcing the system persists an immutable append-only log of domain events; the current state is reconstructed by replaying those events, enabling full audit trails and temporal queries.",
+      "level": "advanced"
+    },
+    {
+      "id": "q24",
+      "text": "What problem does CQRS (Command Query Responsibility Segregation) primarily solve?",
+      "options": [
+        { "id": "q24a", "text": "It eliminates the need for database indexes" },
+        { "id": "q24b", "text": "It separates the write model (commands) from the read model (queries), allowing each to be optimized independently" },
+        { "id": "q24c", "text": "It replaces transactions with eventual consistency" },
+        { "id": "q24d", "text": "It enforces strict 3NF normalization on all tables" }
+      ],
+      "correctAnswerId": "q24b",
+      "explanation": "CQRS separates the data model used for writes (commands) from the model used for reads (queries), enabling independent scaling, caching, and optimization of each side.",
+      "level": "advanced"
+    },
+    {
+      "id": "q25",
+      "text": "What is the key difference between optimistic and pessimistic locking?",
+      "options": [
+        { "id": "q25a", "text": "Optimistic locking prevents all concurrent reads; pessimistic locking allows them" },
+        { "id": "q25b", "text": "Optimistic locking assumes conflicts are rare and detects them at commit time; pessimistic locking acquires locks upfront to prevent concurrent modification" },
+        { "id": "q25c", "text": "Pessimistic locking is only available in NoSQL databases" },
+        { "id": "q25d", "text": "They differ only in syntax, not in behavior" }
+      ],
+      "correctAnswerId": "q25b",
+      "explanation": "Optimistic locking allows concurrent access and validates for conflicts (e.g., via a version column) only at commit time, while pessimistic locking holds a lock for the duration of the transaction to block competing updates.",
+      "level": "advanced"
+    },
+    {
+      "id": "q26",
+      "text": "What is the difference between horizontal partitioning (sharding) and vertical partitioning?",
+      "options": [
+        { "id": "q26a", "text": "Horizontal partitioning splits rows across multiple nodes; vertical partitioning splits columns into separate tables or stores" },
+        { "id": "q26b", "text": "Horizontal partitioning splits columns; vertical partitioning splits rows" },
+        { "id": "q26c", "text": "They are the same concept with different names" },
+        { "id": "q26d", "text": "Vertical partitioning applies only to NoSQL databases" }
+      ],
+      "correctAnswerId": "q26a",
+      "explanation": "Horizontal partitioning (sharding) distributes rows across multiple nodes based on a shard key; vertical partitioning splits a wide table into narrower tables grouping related columns together.",
+      "level": "advanced"
+    },
+    {
+      "id": "q27",
+      "text": "What problem does the Two-Phase Commit (2PC) protocol solve in distributed databases?",
+      "options": [
+        { "id": "q27a", "text": "It speeds up read queries across multiple shards" },
+        { "id": "q27b", "text": "It coordinates an atomic commit across multiple participating nodes so all commit or all abort" },
+        { "id": "q27c", "text": "It replicates data from primary to read replicas" },
+        { "id": "q27d", "text": "It compresses transaction logs to save disk space" }
+      ],
+      "correctAnswerId": "q27b",
+      "explanation": "Two-Phase Commit ensures atomicity for distributed transactions: in phase one a coordinator asks all participants to prepare; in phase two it instructs all to commit or abort based on unanimous agreement.",
+      "level": "advanced"
+    },
+    {
+      "id": "q28",
+      "text": "Which data modeling technique is best suited for time-series data with high write throughput and range-based time queries?",
+      "options": [
+        { "id": "q28a", "text": "Storing all events in a single normalized row per entity" },
+        { "id": "q28b", "text": "Using an append-only table partitioned by time range, with a monotonically increasing timestamp as part of the primary key" },
+        { "id": "q28c", "text": "Using a Many-to-Many junction table" },
+        { "id": "q28d", "text": "Applying 3NF normalization to eliminate all redundancy" }
+      ],
+      "correctAnswerId": "q28b",
+      "explanation": "Time-series data benefits from append-only writes and time-range partitioning: including the timestamp in the primary key enables efficient range scans, and partitioning keeps hot partitions small.",
+      "level": "advanced"
+    },
+    {
+      "id": "q29",
+      "text": "In a multi-tenant SaaS application, what is the main advantage of the 'database-per-tenant' isolation strategy over a shared schema?",
+      "options": [
+        { "id": "q29a", "text": "It uses less total storage than a shared schema" },
+        { "id": "q29b", "text": "It provides stronger data isolation, simplifies per-tenant backups, and avoids noisy-neighbor query contention" },
+        { "id": "q29c", "text": "It requires no schema migrations when adding new tenants" },
+        { "id": "q29d", "text": "It is the only approach that supports ACID transactions" }
+      ],
+      "correctAnswerId": "q29b",
+      "explanation": "Database-per-tenant gives each tenant a fully isolated database, ensuring data cannot leak between tenants, enabling independent backups, and preventing one tenant's heavy queries from impacting others.",
+      "level": "advanced"
+    },
+    {
+      "id": "q30",
+      "text": "How does the Saga pattern address distributed transaction consistency without using 2PC?",
+      "options": [
+        { "id": "q30a", "text": "It locks all involved services until the transaction completes" },
+        { "id": "q30b", "text": "It breaks a distributed transaction into a sequence of local transactions, each publishing an event; compensating transactions undo completed steps on failure" },
+        { "id": "q30c", "text": "It relies on a central coordinator to hold a global lock" },
+        { "id": "q30d", "text": "It buffers all writes in memory until the entire operation succeeds" }
+      ],
+      "correctAnswerId": "q30b",
+      "explanation": "The Saga pattern chains local transactions across services via events or orchestration; if a step fails, previously completed steps are reversed using compensating transactions, achieving eventual consistency without distributed locks.",
+      "level": "advanced"
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "Legend",
+      "description": "Outstanding — you have a mastery-level command of database design. From first principles like primary keys and ACID properties all the way up to advanced distributed systems patterns like CQRS, Event Sourcing, Saga, and Two-Phase Commit, your knowledge spans the full depth of the discipline. You understand not just how to model data but why each design decision carries trade-offs in consistency, performance, and scalability. Whether you are designing a high-throughput sharded OLTP system, choosing between sync and async replication, or architecting a multi-tenant platform with strict isolation, you approach each problem with the confidence and nuance of a seasoned database architect. Engineers on any team would be fortunate to have you reviewing their schema designs.",
+      "shareText": "I scored {percent}% on the Database Design Quiz on ToolNotch! Can you beat me?"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Expert",
+      "description": "Impressive work — you have a strong, well-rounded foundation in database design. You're comfortable with normalization up through 3NF, understand the CAP theorem and transaction isolation levels, and can reason about trade-offs like denormalization and soft deletes. A few of the more advanced distributed patterns may have tripped you up, but you clearly have the depth to grow into them quickly. You're the kind of engineer who asks the right schema questions early in a project, catches data integrity issues before they hit production, and understands why index design matters. Keep diving into distributed systems and storage engine internals and the Legend tier will be well within reach.",
+      "shareText": "I scored {percent}% on the Database Design Quiz on ToolNotch! Can you beat me?"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Fan",
+      "description": "You have a solid working knowledge of database fundamentals and you're building in the right direction. You know your way around relational concepts, understand what normalization is trying to achieve, and can reason about basic query patterns. Some of the trickier territory — isolation levels, sharding strategies, distributed consistency patterns — still needs more exposure, but that's exactly where the most interesting engineering challenges live. Spend time with topics like the CAP theorem, CQRS, and transaction isolation, and work through real schema design exercises to cement your intuition. Come back and take the quiz again — your Expert result is closer than you think.",
+      "shareText": "I scored {percent}% on the Database Design Quiz on ToolNotch! Can you beat me?"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "Rookie",
+      "description": "Everyone starts here — database design is a rich discipline that takes real practice to master. You've got the most important thing: curiosity. Start by getting comfortable with the relational model, primary and foreign keys, and basic normalization. Then move on to ACID transactions, indexing, and common query patterns. From there, the world of distributed databases, CAP theorem, sharding, and consistency models opens up. There are fantastic resources online — from database documentation to system design courses — that will take you from the basics to advanced architecture quickly. Keep learning, take the quiz again, and watch your score climb.",
+      "shareText": "I scored {percent}% on the Database Design Quiz on ToolNotch! Can you beat me?"
+    }
+  ]
+}

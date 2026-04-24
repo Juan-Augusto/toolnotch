@@ -36,6 +36,13 @@ import uclEsRaw from '@/data/quizzes/es/champions-league-trivia.json'
 import loveLangEsRaw from '@/data/quizzes/es/what-is-your-love-language.json'
 import f1TriviaEsRaw from '@/data/quizzes/es/formula-1-trivia.json'
 import f1DriverEsRaw from '@/data/quizzes/es/which-f1-driver-are-you.json'
+// Backend Engineering (English only)
+import nodejsFundamentalsRaw from '@/data/quizzes/en/nodejs-fundamentals.json'
+import databaseDesignRaw from '@/data/quizzes/en/database-design.json'
+import databaseIndexingRaw from '@/data/quizzes/en/database-indexing.json'
+import messagingSqsKafkaRaw from '@/data/quizzes/en/messaging-sqs-kafka.json'
+import rabbitmqConceptsRaw from '@/data/quizzes/en/rabbitmq-concepts.json'
+import systemArchitectureRaw from '@/data/quizzes/en/system-architecture.json'
 
 // ── Quiz map: slug → locale → raw data ────────────────────────────────────────
 const QUIZ_MAP: Record<string, Record<string, unknown>> = {
@@ -50,6 +57,12 @@ const QUIZ_MAP: Record<string, Record<string, unknown>> = {
   'what-is-your-love-language':          { en: loveLangEnRaw, pt: loveLangPtRaw, es: loveLangEsRaw },
   'formula-1-trivia':                    { en: f1TriviaEnRaw, pt: f1TriviaPtRaw, es: f1TriviaEsRaw },
   'which-f1-driver-are-you':             { en: f1DriverEnRaw, pt: f1DriverPtRaw, es: f1DriverEsRaw },
+  'nodejs-fundamentals':                 { en: nodejsFundamentalsRaw },
+  'database-design':                     { en: databaseDesignRaw },
+  'database-indexing':                   { en: databaseIndexingRaw },
+  'messaging-sqs-kafka':                 { en: messagingSqsKafkaRaw },
+  'rabbitmq-concepts':                   { en: rabbitmqConceptsRaw },
+  'system-architecture':                 { en: systemArchitectureRaw },
 }
 
 function getQuiz(slug: string, locale: string): AnyQuiz | undefined {

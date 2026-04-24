@@ -1,7 +1,7 @@
 export type QuizMeta = {
   id: string
   type: 'personality' | 'trivia'
-  category: 'personality' | 'sports'
+  category: 'personality' | 'sports' | 'backend'
   locales: ('en' | 'pt' | 'es')[]
 }
 
@@ -13,6 +13,13 @@ export const QUIZ_REGISTRY: QuizMeta[] = [
   { id: 'what-is-your-love-language',       type: 'personality', category: 'personality', locales: ['en','pt','es'] },
   { id: 'formula-1-trivia',                type: 'trivia',      category: 'sports',      locales: ['en','pt','es'] },
   { id: 'which-f1-driver-are-you',         type: 'personality', category: 'sports',      locales: ['en','pt','es'] },
+  // Backend Engineering (English only)
+  { id: 'nodejs-fundamentals',  type: 'trivia', category: 'backend', locales: ['en'] },
+  { id: 'database-design',      type: 'trivia', category: 'backend', locales: ['en'] },
+  { id: 'database-indexing',    type: 'trivia', category: 'backend', locales: ['en'] },
+  { id: 'messaging-sqs-kafka',  type: 'trivia', category: 'backend', locales: ['en'] },
+  { id: 'rabbitmq-concepts',    type: 'trivia', category: 'backend', locales: ['en'] },
+  { id: 'system-architecture',  type: 'trivia', category: 'backend', locales: ['en'] },
   // Personality (English only)
   { id: 'what-career-suits-you',           type: 'personality', category: 'personality', locales: ['en'] },
   { id: 'which-programming-language-are-you', type: 'personality', category: 'personality', locales: ['en'] },

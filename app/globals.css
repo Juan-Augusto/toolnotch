@@ -1,57 +1,408 @@
 @import "tailwindcss";
 
-/* Tell Tailwind v4 to activate dark: utilities via .dark class, not @media (prefers-color-scheme: dark) */
+/* Dark class variant — triggered by .dark on <html> */
 @variant dark (&:where(.dark, .dark *));
 
-html {
-  scroll-behavior: smooth;
-}
+/* ═══════════════════════════════════════════════════════════════════
+   TOOLNOTCH — SURGICAL NEON DESIGN SYSTEM
+   One neon accent. Dark surfaces. Precision over decoration.
+   ═══════════════════════════════════════════════════════════════════ */
 
-*, *::before, *::after {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* ── Tailwind v4 theme mapping — exposes tokens as utilities ── */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface:    var(--base-surface);
+  --color-elevated:   var(--base-elevated);
+  --color-neon:       var(--neon);
+  --color-bd-base:    var(--base-border);
+  --color-bd-neon:    var(--neon-border);
+  --color-tx-primary:   var(--text-primary);
+  --color-tx-secondary: var(--text-secondary);
+  --color-tx-muted:     var(--text-muted);
+
+  --font-sans:    'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-syne), 'Syne', ui-sans-serif, sans-serif;
+  --font-mono:    var(--font-geist-mono), 'JetBrains Mono', ui-monospace, monospace;
+
+  --shadow-neon-sm: 0 0 8px rgb(var(--neon-rgb) / 0.45), 0 0 20px rgb(var(--neon-rgb) / 0.15);
+  --shadow-neon:    0 0 12px rgb(var(--neon-rgb) / 0.55), 0 0 32px rgb(var(--neon-rgb) / 0.22), 0 0 60px rgb(var(--neon-rgb) / 0.07);
+}
+
+/* ── Light mode (default) ── */
+:root {
+  /* Neon: darker variant for light-mode contrast */
+  --neon:          #00a86b;
+  --neon-rgb:      0 168 107;
+  --neon-dim:      rgb(0 168 107 / 0.09);
+  --neon-border:   rgb(0 168 107 / 0.35);
+  --neon-glow-sm:  0 0 6px rgb(0 168 107 / 0.35), 0 0 18px rgb(0 168 107 / 0.12);
+  --neon-glow:     0 0 10px rgb(0 168 107 / 0.45), 0 0 28px rgb(0 168 107 / 0.18);
+  --neon-text-glow: 0 0 8px rgb(0 168 107 / 0.5);
+
+  /* Surfaces */
+  --base-bg:           #f7f7fd;
+  --base-surface:      #ffffff;
+  --base-elevated:     #f0f0fa;
+  --base-border:       #e3e3f0;
+  --base-border-muted: #ededfa;
+
+  /* Text */
+  --text-primary:   #0b0b1e;
+  --text-secondary: #3a3a60;
+  --text-muted:     #8080a8;
+
+  /* Semantic */
+  --background: var(--base-bg);
+  --foreground: var(--text-primary);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.06), 0 1px 2px rgb(0 0 0 / 0.04);
+  --shadow:    0 4px 16px rgb(0 0 0 / 0.08);
+  --shadow-lg: 0 8px 32px rgb(0 0 0 / 0.1);
+}
+
+/* ── Dark mode overrides ── */
+.dark {
+  /* Neon: full brightness */
+  --neon:          #00e5a0;
+  --neon-rgb:      0 229 160;
+  --neon-dim:      rgb(0 229 160 / 0.07);
+  --neon-border:   rgb(0 229 160 / 0.22);
+  --neon-glow-sm:  0 0 8px rgb(0 229 160 / 0.5), 0 0 24px rgb(0 229 160 / 0.16);
+  --neon-glow:     0 0 14px rgb(0 229 160 / 0.6), 0 0 36px rgb(0 229 160 / 0.24), 0 0 70px rgb(0 229 160 / 0.07);
+  --neon-text-glow: 0 0 10px rgb(0 229 160 / 0.7);
+
+  /* Surfaces */
+  --base-bg:           #07070f;
+  --base-surface:      #0d0d1c;
+  --base-elevated:     #131328;
+  --base-border:       #1c1c36;
+  --base-border-muted: #141430;
+
+  /* Text */
+  --text-primary:   #e8e8f6;
+  --text-secondary: #8e8eb6;
+  --text-muted:     #4e4e72;
+
+  /* Semantic */
+  --background: var(--base-bg);
+  --foreground: var(--text-primary);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.5);
+  --shadow:    0 4px 16px rgb(0 0 0 / 0.6);
+  --shadow-lg: 0 8px 32px rgb(0 0 0 / 0.7);
+}
+
+/* ── Base ── */
+html { scroll-behavior: smooth; }
+
+*, *::before, *::after {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
-  line-height: 1.6;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Force explicit colours on form controls so they never inherit unexpected values */
-input, textarea, select {
-  color: inherit;
+/* ── Typography ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), var(--font-sans), sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
 }
 
-/* Dark mode: ensure all native form controls are readable */
-.dark input:not([type="range"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]),
-.dark textarea,
-.dark select {
-  background-color: oklch(0.19 0 0);
-  color: oklch(0.96 0 0);
-  border-color: oklch(0.34 0 0);
+/* ── Form controls ── */
+input, textarea, select { color: inherit; }
+
+input:not([type="range"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+  background: var(--base-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--base-border);
+  border-radius: 8px;
+  transition: border-color 180ms, box-shadow 180ms;
 }
 
-/* Dark mode — only override semantic tokens used by body/layout.
-   Component-level dark styles are handled via dark: utility classes. */
-.dark {
-  --background: #0f172a;
-  --foreground: #f1f5f9;
+input:not([type="range"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]):focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--neon-border);
+  box-shadow: 0 0 0 3px var(--neon-dim), var(--neon-glow-sm);
 }
 
-/* rehype-pretty-code dual theme: show dark theme when html has .dark class */
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--base-border);
+  border-radius: 999px;
+  transition: background 200ms;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--neon-border); }
+
+/* ── Selection ── */
+::selection {
+  background: var(--neon-dim);
+  color: var(--neon);
+}
+
+/* ── Focus ring ── */
+:focus-visible {
+  outline: 2px solid var(--neon-border);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ══════════════════════════════════════
+   COMPONENT PATTERNS
+   Reusable design-system building blocks
+   ══════════════════════════════════════ */
+
+/* ── Badge / tag ── */
+.badge-neon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.22rem 0.65rem;
+  background: var(--neon-dim);
+  color: var(--neon);
+  border: 1px solid var(--neon-border);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ── Button — primary neon ── */
+.btn-neon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.2rem;
+  background: var(--neon-dim);
+  color: var(--neon);
+  border: 1px solid var(--neon-border);
+  border-radius: 8px;
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background 200ms, box-shadow 200ms, transform 150ms, border-color 200ms;
+  white-space: nowrap;
+}
+
+.btn-neon:hover {
+  background: rgb(var(--neon-rgb) / 0.13);
+  border-color: rgb(var(--neon-rgb) / 0.45);
+  box-shadow: var(--neon-glow-sm);
+  transform: translateY(-1px);
+}
+
+.btn-neon:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn-neon:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ── Button — ghost ── */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.2rem;
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--base-border);
+  border-radius: 8px;
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 200ms, border-color 200ms, color 200ms, transform 150ms;
+}
+
+.btn-ghost:hover {
+  background: var(--base-elevated);
+  border-color: var(--text-muted);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.btn-ghost:active {
+  transform: translateY(0);
+}
+
+/* ── Card ── */
+.card-neon {
+  background: var(--base-surface);
+  border: 1px solid var(--base-border);
+  border-radius: 12px;
+  transition: border-color 250ms, box-shadow 250ms;
+}
+
+.card-neon:hover {
+  border-color: var(--neon-border);
+  box-shadow: var(--neon-glow-sm);
+}
+
+/* ── Interactive card (clickable) ── */
+.card-neon-interactive {
+  background: var(--base-surface);
+  border: 1px solid var(--base-border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 220ms, box-shadow 220ms, transform 180ms, background 220ms;
+}
+
+.card-neon-interactive:hover {
+  background: var(--base-elevated);
+  border-color: var(--neon-border);
+  box-shadow: var(--neon-glow-sm);
+  transform: translateY(-2px);
+}
+
+.card-neon-interactive:active {
+  transform: translateY(0);
+}
+
+/* ── Input ── */
+.input-neon {
+  width: 100%;
+  background: var(--base-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--base-border);
+  border-radius: 8px;
+  padding: 0.55rem 0.875rem;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.875rem;
+  transition: border-color 180ms, box-shadow 180ms;
+}
+
+.input-neon::placeholder { color: var(--text-muted); }
+
+.input-neon:focus {
+  outline: none;
+  border-color: var(--neon-border);
+  box-shadow: 0 0 0 3px var(--neon-dim), var(--neon-glow-sm);
+}
+
+/* ── Label ── */
+.label-neon {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+/* ── Divider ── */
+.divider-neon {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--base-border), transparent);
+  border: none;
+}
+
+/* ── Pro-tip block ── */
+.protip-neon {
+  background: var(--neon-dim);
+  border-left: 3px solid var(--neon);
+  border-top: 1px solid var(--neon-border);
+  border-right: 1px solid var(--neon-border);
+  border-bottom: 1px solid var(--neon-border);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.25rem;
+}
+
+/* ── Link hover ── */
+.link-hover {
+  color: var(--text-muted);
+  transition: color 180ms;
+}
+.link-hover:hover { color: var(--neon); }
+
+/* ── Neon text glow ── */
+.text-glow { text-shadow: var(--neon-text-glow); }
+
+/* ── Section heading pattern ── */
+.section-heading {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+}
+
+/* ── Ad unit placeholder ── */
+.ad-placeholder {
+  background: var(--base-elevated);
+  border: 1px dashed var(--base-border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  height: 5rem;
+}
+
+/* ══════════════════════════════
+   ANIMATIONS
+   ══════════════════════════════ */
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes neon-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.55; }
+}
+
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.35s cubic-bezier(0.0, 0, 0.2, 1) both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.25s ease both;
+}
+
+.animate-neon-pulse {
+  animation: neon-pulse 2.4s ease-in-out infinite;
+}
+
+/* ── rehype-pretty-code dual theme ── */
 [data-theme='light'] { display: block; }
 [data-theme='dark']  { display: none; }
 .dark [data-theme='light'] { display: none; }

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Plus_Jakarta_Sans } from 'next/font/google'
+import { Plus_Jakarta_Sans, Syne } from 'next/font/google'
 import Script from 'next/script'
 import { cookies } from 'next/headers'
 import { NextIntlClientProvider } from 'next-intl'
@@ -19,6 +19,13 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   variable: '--font-sans',
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
+  display: 'swap',
+})
+
+const syne = Syne({
+  variable: '--font-syne',
+  subsets: ['latin'],
+  weight: ['700', '800'],
   display: 'swap',
 })
 
@@ -104,7 +111,7 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
         />
       </head>
-      <body className={`${plusJakartaSans.variable} antialiased`}>
+      <body className={`${plusJakartaSans.variable} ${syne.variable} antialiased`}>
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
             {children}

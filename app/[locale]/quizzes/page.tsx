@@ -18,6 +18,12 @@ import uclEnRaw from '@/data/quizzes/en/champions-league-trivia.json'
 import loveLangEnRaw from '@/data/quizzes/en/what-is-your-love-language.json'
 import f1TriviaEnRaw from '@/data/quizzes/en/formula-1-trivia.json'
 import f1DriverEnRaw from '@/data/quizzes/en/which-f1-driver-are-you.json'
+import nodejsFundamentalsRaw from '@/data/quizzes/en/nodejs-fundamentals.json'
+import databaseDesignRaw from '@/data/quizzes/en/database-design.json'
+import databaseIndexingRaw from '@/data/quizzes/en/database-indexing.json'
+import messagingSqsKafkaRaw from '@/data/quizzes/en/messaging-sqs-kafka.json'
+import rabbitmqConceptsRaw from '@/data/quizzes/en/rabbitmq-concepts.json'
+import systemArchitectureRaw from '@/data/quizzes/en/system-architecture.json'
 
 const PATH = '/quizzes'
 
@@ -34,6 +40,12 @@ const QUIZ_EN_MAP: Record<string, AnyQuiz> = {
   'what-is-your-love-language':          loveLangEnRaw as unknown as AnyQuiz,
   'formula-1-trivia':                    f1TriviaEnRaw as unknown as AnyQuiz,
   'which-f1-driver-are-you':             f1DriverEnRaw as unknown as AnyQuiz,
+  'nodejs-fundamentals':                 nodejsFundamentalsRaw as unknown as AnyQuiz,
+  'database-design':                     databaseDesignRaw as unknown as AnyQuiz,
+  'database-indexing':                   databaseIndexingRaw as unknown as AnyQuiz,
+  'messaging-sqs-kafka':                 messagingSqsKafkaRaw as unknown as AnyQuiz,
+  'rabbitmq-concepts':                   rabbitmqConceptsRaw as unknown as AnyQuiz,
+  'system-architecture':                 systemArchitectureRaw as unknown as AnyQuiz,
 }
 
 // Build card data from registry + English quiz data
@@ -44,7 +56,7 @@ const ALL_QUIZ_CARDS: QuizCardData[] = QUIZ_REGISTRY.map(meta => {
     id: meta.id,
     title: quiz?.title ?? meta.id,
     description: quiz?.description ?? '',
-    category: meta.category === 'sports' ? 'sports' : 'personality',
+    category: meta.category === 'sports' ? 'sports' : meta.category === 'backend' ? 'backend' : 'personality',
     questionCount,
   }
 })

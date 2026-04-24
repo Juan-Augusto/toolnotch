@@ -30,9 +30,7 @@ export default function AdUnit({ slot, className = '' }: Props) {
 
   if (!AD_CLIENT) {
     return (
-      <div
-        className={`bg-zinc-100 border-2 border-dashed border-zinc-200 rounded-lg flex items-center justify-center text-zinc-400 text-xs h-20 ${className}`}
-      >
+      <div className={`ad-placeholder ${className}`}>
         Ad unit — set NEXT_PUBLIC_ADSENSE_CLIENT to activate
       </div>
     )

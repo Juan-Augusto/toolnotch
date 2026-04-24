@@ -8,7 +8,6 @@ export default function DarkModeToggle() {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    // Read the class the blocking script already set — no flash, no delay
     setIsDark(document.documentElement.classList.contains('dark'))
     setMounted(true)
   }, [])
@@ -22,7 +21,6 @@ export default function DarkModeToggle() {
       document.documentElement.classList.remove('dark')
     }
     localStorage.setItem('theme', value)
-    // Cookie lets the server render <html class="dark"> directly — no flash on navigation
     document.cookie = `theme=${value}; path=/; max-age=31536000; SameSite=Lax`
     setIsDark(next)
   }
@@ -33,9 +31,28 @@ export default function DarkModeToggle() {
     <button
       onClick={toggle}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      className="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-lg text-gray-700 dark:text-gray-300 transition-all hover:scale-105"
+      style={{
+        background: 'var(--base-surface)',
+        border: `1px solid ${isDark ? 'var(--neon-border)' : 'var(--base-border)'}`,
+        boxShadow: isDark ? 'var(--neon-glow-sm)' : 'var(--shadow-sm)',
+        color: isDark ? 'var(--neon)' : 'var(--text-secondary)',
+        borderRadius: '999px',
+        width: '2.25rem',
+        height: '2.25rem',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        cursor: 'pointer',
+        transition: 'border-color 220ms, box-shadow 220ms, color 220ms, transform 150ms',
+      }}
+      onMouseEnter={e => {
+        (e.currentTarget as HTMLButtonElement).style.transform = 'translateY(-1px) scale(1.05)'
+      }}
+      onMouseLeave={e => {
+        (e.currentTarget as HTMLButtonElement).style.transform = ''
+      }}
     >
-      {isDark ? <Sun size={18} /> : <Moon size={18} />}
+      {isDark ? <Sun size={15} /> : <Moon size={15} />}
     </button>
   )
 }

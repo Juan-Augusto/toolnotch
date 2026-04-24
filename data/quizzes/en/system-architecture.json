@@ -1,0 +1,431 @@
+{
+  "id": "system-architecture",
+  "type": "trivia",
+  "category": "backend",
+  "locale": "en",
+  "title": "System Architecture & Deployment Quiz",
+  "description": "Test your system design knowledge: microservices, CI/CD, Kubernetes, circuit breakers, Saga pattern, and GitOps.",
+  "image": "/images/quizzes/system-architecture-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What is the primary difference between a monolithic and a microservices architecture?",
+      "options": [
+        { "id": "q1a", "text": "A monolith uses containers; microservices do not" },
+        { "id": "q1b", "text": "A monolith is deployed as a single unit; microservices are deployed as independent services" },
+        { "id": "q1c", "text": "Microservices must share a single database; a monolith cannot" },
+        { "id": "q1d", "text": "A monolith can only run on one server; microservices run on many" }
+      ],
+      "correctAnswerId": "q1b",
+      "explanation": "In a monolithic architecture all functionality is bundled and deployed together, while microservices decompose the application into independently deployable services.",
+      "level": "beginner"
+    },
+    {
+      "id": "q2",
+      "text": "Which HTTP method is conventionally used to UPDATE an existing resource in a REST API?",
+      "options": [
+        { "id": "q2a", "text": "POST" },
+        { "id": "q2b", "text": "GET" },
+        { "id": "q2c", "text": "PUT" },
+        { "id": "q2d", "text": "DELETE" }
+      ],
+      "correctAnswerId": "q2c",
+      "explanation": "PUT (or PATCH for partial updates) is the RESTful convention for updating an existing resource identified by its URI.",
+      "level": "beginner"
+    },
+    {
+      "id": "q3",
+      "text": "In one sentence, what does Docker do?",
+      "options": [
+        { "id": "q3a", "text": "It provisions virtual machines on cloud providers" },
+        { "id": "q3b", "text": "It packages an application and its dependencies into a portable container that runs consistently anywhere" },
+        { "id": "q3c", "text": "It replaces the operating system kernel for better performance" },
+        { "id": "q3d", "text": "It orchestrates clusters of servers across data centers" }
+      ],
+      "correctAnswerId": "q3b",
+      "explanation": "Docker uses OS-level virtualisation to package code and its runtime into lightweight, reproducible containers.",
+      "level": "beginner"
+    },
+    {
+      "id": "q4",
+      "text": "What does CI/CD stand for?",
+      "options": [
+        { "id": "q4a", "text": "Container Integration / Container Delivery" },
+        { "id": "q4b", "text": "Continuous Inspection / Continuous Deployment" },
+        { "id": "q4c", "text": "Continuous Integration / Continuous Delivery (or Deployment)" },
+        { "id": "q4d", "text": "Code Integration / Code Distribution" }
+      ],
+      "correctAnswerId": "q4c",
+      "explanation": "CI/CD stands for Continuous Integration and Continuous Delivery (or Deployment), automating build, test, and release pipelines.",
+      "level": "beginner"
+    },
+    {
+      "id": "q5",
+      "text": "Why are environment variables preferred over hard-coded values for secrets in an application?",
+      "options": [
+        { "id": "q5a", "text": "They make the application run faster" },
+        { "id": "q5b", "text": "They keep sensitive values out of source code and allow configuration per environment" },
+        { "id": "q5c", "text": "They are automatically encrypted at the OS level" },
+        { "id": "q5d", "text": "They are required by the Docker runtime" }
+      ],
+      "correctAnswerId": "q5b",
+      "explanation": "Externalising secrets as environment variables prevents them being committed to version control and allows the same image to run in dev, staging, and production.",
+      "level": "beginner"
+    },
+    {
+      "id": "q6",
+      "text": "What is the main job of a load balancer?",
+      "options": [
+        { "id": "q6a", "text": "Compressing HTTP responses before they reach the client" },
+        { "id": "q6b", "text": "Distributing incoming network traffic across multiple servers" },
+        { "id": "q6c", "text": "Caching database query results" },
+        { "id": "q6d", "text": "Monitoring application logs in real time" }
+      ],
+      "correctAnswerId": "q6b",
+      "explanation": "A load balancer routes incoming requests across a pool of servers to maximise throughput, minimise latency, and avoid overloading any single node.",
+      "level": "beginner"
+    },
+    {
+      "id": "q7",
+      "text": "What is the difference between horizontal and vertical scaling?",
+      "options": [
+        { "id": "q7a", "text": "Horizontal scaling adds more CPU/RAM to a single server; vertical scaling adds more servers" },
+        { "id": "q7b", "text": "Horizontal scaling adds more servers; vertical scaling adds more CPU/RAM to an existing server" },
+        { "id": "q7c", "text": "They are the same concept but used in different cloud providers" },
+        { "id": "q7d", "text": "Horizontal scaling only applies to databases; vertical scaling only applies to web servers" }
+      ],
+      "correctAnswerId": "q7b",
+      "explanation": "Scaling out (horizontal) means adding more instances, while scaling up (vertical) means increasing the resources of an existing instance.",
+      "level": "beginner"
+    },
+    {
+      "id": "q8",
+      "text": "When Nginx is used as a reverse proxy, which traffic direction does it primarily handle?",
+      "options": [
+        { "id": "q8a", "text": "Requests from internal services to the database" },
+        { "id": "q8b", "text": "Outbound requests from the server to external APIs" },
+        { "id": "q8c", "text": "Inbound client requests forwarded to backend application servers" },
+        { "id": "q8d", "text": "Traffic between microservices inside a Kubernetes cluster" }
+      ],
+      "correctAnswerId": "q8c",
+      "explanation": "A reverse proxy like Nginx sits in front of backend servers, receiving client requests and forwarding them to the appropriate upstream service.",
+      "level": "beginner"
+    },
+    {
+      "id": "q9",
+      "text": "What is the purpose of a health check endpoint (e.g., GET /health) in a web service?",
+      "options": [
+        { "id": "q9a", "text": "To return the current CPU and memory usage to the end user" },
+        { "id": "q9b", "text": "To allow load balancers and orchestrators to verify that the service is running correctly" },
+        { "id": "q9c", "text": "To trigger a manual restart of the service" },
+        { "id": "q9d", "text": "To expose internal API documentation" }
+      ],
+      "correctAnswerId": "q9b",
+      "explanation": "Health check endpoints give orchestration tools like Kubernetes and load balancers a reliable signal to decide whether traffic should be sent to a given instance.",
+      "level": "beginner"
+    },
+    {
+      "id": "q10",
+      "text": "In a deployment pipeline, what does a rollback accomplish?",
+      "options": [
+        { "id": "q10a", "text": "It deletes all data written since the last release" },
+        { "id": "q10b", "text": "It reverts the running application to a previously known-good version" },
+        { "id": "q10c", "text": "It scales the number of instances back to zero" },
+        { "id": "q10d", "text": "It resets environment variables to their default values" }
+      ],
+      "correctAnswerId": "q10b",
+      "explanation": "A rollback redeploys a previous stable artifact or image when the current release is found to be defective.",
+      "level": "beginner"
+    },
+    {
+      "id": "q11",
+      "text": "The 12-Factor App methodology's 'Config' factor states that configuration should be stored in:",
+      "options": [
+        { "id": "q11a", "text": "A config file committed alongside the source code" },
+        { "id": "q11b", "text": "The environment" },
+        { "id": "q11c", "text": "A dedicated configuration microservice" },
+        { "id": "q11d", "text": "A relational database table" }
+      ],
+      "correctAnswerId": "q11b",
+      "explanation": "Factor III of the 12-Factor App says anything that varies between deploys (credentials, resource handles) must be stored in environment variables, not in code.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q12",
+      "text": "In a blue/green deployment, what happens to the 'blue' environment after a successful switch to 'green'?",
+      "options": [
+        { "id": "q12a", "text": "It is permanently deleted to save cost" },
+        { "id": "q12b", "text": "It continues to receive 50 % of production traffic" },
+        { "id": "q12c", "text": "It is kept idle and can serve as a rollback target" },
+        { "id": "q12d", "text": "It is automatically upgraded to match the green environment" }
+      ],
+      "correctAnswerId": "q12c",
+      "explanation": "The old blue environment remains on standby so that traffic can be instantly switched back if a critical defect is discovered in green.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q13",
+      "text": "What differentiates a canary deployment from a blue/green deployment?",
+      "options": [
+        { "id": "q13a", "text": "Canary deployments require two identical environments; blue/green requires only one" },
+        { "id": "q13b", "text": "Canary deployments gradually shift a small percentage of traffic to the new version before a full rollout" },
+        { "id": "q13c", "text": "Canary deployments are only used for database migrations" },
+        { "id": "q13d", "text": "Blue/green deployments are always faster than canary deployments" }
+      ],
+      "correctAnswerId": "q13b",
+      "explanation": "A canary release exposes the new version to a small slice of users first, allowing teams to catch problems with limited blast radius before rolling out fully.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q14",
+      "text": "In Kubernetes, what is the role of a Pod?",
+      "options": [
+        { "id": "q14a", "text": "It is the control plane component that schedules containers onto nodes" },
+        { "id": "q14b", "text": "It is the smallest deployable unit, wrapping one or more co-located containers that share network and storage" },
+        { "id": "q14c", "text": "It is the Kubernetes equivalent of a virtual machine" },
+        { "id": "q14d", "text": "It is the configuration manifest for a Kubernetes cluster" }
+      ],
+      "correctAnswerId": "q14b",
+      "explanation": "A Pod is Kubernetes's atomic unit of deployment — containers within the same Pod share an IP address, localhost network, and mounted volumes.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q15",
+      "text": "What is the key difference between DNS-based and registry-based service discovery?",
+      "options": [
+        { "id": "q15a", "text": "DNS-based discovery works only inside a single host; registry-based works across hosts" },
+        { "id": "q15b", "text": "DNS-based discovery resolves service names to IPs via standard DNS; registry-based services query a dedicated registry (e.g., Consul) for live instance lists" },
+        { "id": "q15c", "text": "Registry-based discovery is slower because it requires a round trip to the registry on every request" },
+        { "id": "q15d", "text": "There is no practical difference — both achieve exactly the same result" }
+      ],
+      "correctAnswerId": "q15b",
+      "explanation": "DNS-based discovery leverages standard DNS records for routing, while client-side registry discovery queries a service like Consul or Eureka to get a fresh list of healthy instances.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q16",
+      "text": "What problem does an API gateway pattern solve in a microservices architecture?",
+      "options": [
+        { "id": "q16a", "text": "It replaces the need for a message broker between services" },
+        { "id": "q16b", "text": "It provides a single entry point for clients, handling cross-cutting concerns like auth, rate limiting, and routing" },
+        { "id": "q16c", "text": "It synchronises databases across services automatically" },
+        { "id": "q16d", "text": "It eliminates the need for service health checks" }
+      ],
+      "correctAnswerId": "q16b",
+      "explanation": "An API gateway acts as the front door for all client requests, centralising concerns such as authentication, SSL termination, and request routing away from individual services.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q17",
+      "text": "Why should microservices be designed to be stateless?",
+      "options": [
+        { "id": "q17a", "text": "Stateless services run faster because they never write to disk" },
+        { "id": "q17b", "text": "Stateless services can be freely scaled out and replaced without migrating session data" },
+        { "id": "q17c", "text": "Stateless services do not need a load balancer" },
+        { "id": "q17d", "text": "Kubernetes only supports stateless workloads" }
+      ],
+      "correctAnswerId": "q17b",
+      "explanation": "When a service holds no local state, any instance can handle any request, making horizontal scaling and fault recovery straightforward.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q18",
+      "text": "In the circuit breaker pattern, what does the 'Half-Open' state represent?",
+      "options": [
+        { "id": "q18a", "text": "The circuit is permanently disabled and traffic is rejected" },
+        { "id": "q18b", "text": "The circuit allows a limited number of test requests through to see whether the downstream service has recovered" },
+        { "id": "q18c", "text": "The circuit is passing all traffic normally after a successful recovery" },
+        { "id": "q18d", "text": "The circuit is blocked but still logging requests for audit purposes" }
+      ],
+      "correctAnswerId": "q18b",
+      "explanation": "The Half-Open state is a probe phase: a small number of requests are forwarded; if they succeed the circuit closes again, otherwise it re-opens.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q19",
+      "text": "How does the token bucket algorithm differ from the leaky bucket algorithm for rate limiting?",
+      "options": [
+        { "id": "q19a", "text": "Token bucket enforces a strict constant output rate; leaky bucket allows bursts up to the bucket capacity" },
+        { "id": "q19b", "text": "Token bucket allows bursts up to the bucket capacity; leaky bucket enforces a strict constant output rate" },
+        { "id": "q19c", "text": "They are identical — just different names used by different vendors" },
+        { "id": "q19d", "text": "Leaky bucket is only used for UDP traffic; token bucket is for HTTP" }
+      ],
+      "correctAnswerId": "q19b",
+      "explanation": "Token bucket accumulates tokens over time and permits bursts by spending multiple tokens at once, whereas leaky bucket drains at a fixed rate regardless of input speed.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q20",
+      "text": "What does 'immutable infrastructure' mean?",
+      "options": [
+        { "id": "q20a", "text": "Servers are patched in place and never restarted" },
+        { "id": "q20b", "text": "Servers are never modified after deployment; changes are applied by replacing instances with new ones built from updated images" },
+        { "id": "q20c", "text": "Infrastructure configuration files are stored in a read-only S3 bucket" },
+        { "id": "q20d", "text": "All servers in a cluster must have identical hardware specifications" }
+      ],
+      "correctAnswerId": "q20b",
+      "explanation": "Immutable infrastructure treats servers like disposable artefacts: instead of patching live hosts, you build a new image and roll out fresh instances, eliminating configuration drift.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q21",
+      "text": "Why does a rolling update in Kubernetes use readiness probes before routing traffic to new pods?",
+      "options": [
+        { "id": "q21a", "text": "To check that the container image was signed by a trusted registry" },
+        { "id": "q21b", "text": "To ensure the new pod is fully initialised and ready to serve requests before old pods are removed" },
+        { "id": "q21c", "text": "To throttle the deployment speed to avoid overwhelming the scheduler" },
+        { "id": "q21d", "text": "To run database migrations inside the new pod before traffic is sent" }
+      ],
+      "correctAnswerId": "q21b",
+      "explanation": "Kubernetes gates traffic on readiness probes to guarantee zero-downtime rolling updates — a pod only joins the load balancer rotation once it passes the probe.",
+      "level": "advanced"
+    },
+    {
+      "id": "q22",
+      "text": "What is the expand-contract (parallel change) pattern for database migrations?",
+      "options": [
+        { "id": "q22a", "text": "Run a full database backup before and after every schema change" },
+        { "id": "q22b", "text": "First expand the schema to support both old and new shapes, deploy code that works with both, then contract the schema by removing the old shape" },
+        { "id": "q22c", "text": "Scale the database cluster horizontally before applying a migration, then scale it back down afterwards" },
+        { "id": "q22d", "text": "Use feature flags to hide new columns from users until the migration is complete" }
+      ],
+      "correctAnswerId": "q22b",
+      "explanation": "Expand-contract decouples schema changes from code deployments so both old and new application versions can run simultaneously, enabling zero-downtime migrations.",
+      "level": "advanced"
+    },
+    {
+      "id": "q23",
+      "text": "In the context of distributed systems, what does API idempotency guarantee?",
+      "options": [
+        { "id": "q23a", "text": "A request will always be processed in under 100 ms" },
+        { "id": "q23b", "text": "Making the same request multiple times produces the same result as making it once" },
+        { "id": "q23c", "text": "The API will automatically retry failed requests on behalf of the client" },
+        { "id": "q23d", "text": "Each request is processed by exactly one server instance" }
+      ],
+      "correctAnswerId": "q23b",
+      "explanation": "Idempotency is essential for safe retries in unreliable networks — if the client cannot tell whether a request succeeded, re-sending it must not cause duplicate side effects.",
+      "level": "advanced"
+    },
+    {
+      "id": "q24",
+      "text": "In the Saga pattern, what is the key difference between choreography and orchestration?",
+      "options": [
+        { "id": "q24a", "text": "Choreography uses a central coordinator to call each service in order; orchestration uses events emitted by each service" },
+        { "id": "q24b", "text": "Choreography has each service react to domain events and publish new ones; orchestration uses a central saga orchestrator to command each step" },
+        { "id": "q24c", "text": "Choreography is only used for read operations; orchestration is only for write operations" },
+        { "id": "q24d", "text": "They are equivalent implementations with different naming conventions" }
+      ],
+      "correctAnswerId": "q24b",
+      "explanation": "In choreography services communicate through events with no central brain, while in orchestration a dedicated process explicitly drives each step and handles compensating transactions.",
+      "level": "advanced"
+    },
+    {
+      "id": "q25",
+      "text": "The Strangler Fig pattern is used to:",
+      "options": [
+        { "id": "q25a", "text": "Gradually replace a legacy monolith by routing specific features to new microservices until the monolith can be retired" },
+        { "id": "q25b", "text": "Throttle traffic to a legacy system to force users onto a new platform faster" },
+        { "id": "q25c", "text": "Inject faults into a legacy system to find hidden dependencies before migration" },
+        { "id": "q25d", "text": "Wrap a legacy database with an ORM to decouple it from the application layer" }
+      ],
+      "correctAnswerId": "q25a",
+      "explanation": "Inspired by the strangler fig tree, the pattern intercepts calls to the old system and redirects them incrementally to new services until the legacy system can be decommissioned.",
+      "level": "advanced"
+    },
+    {
+      "id": "q26",
+      "text": "What is the primary goal of chaos engineering tools like Chaos Monkey and Gremlin?",
+      "options": [
+        { "id": "q26a", "text": "To stress-test databases by generating millions of random write operations" },
+        { "id": "q26b", "text": "To proactively inject failures into production systems to expose weaknesses before they cause unplanned outages" },
+        { "id": "q26c", "text": "To simulate high network latency during load testing in staging environments only" },
+        { "id": "q26d", "text": "To fuzz API inputs and detect security vulnerabilities in microservices" }
+      ],
+      "correctAnswerId": "q26b",
+      "explanation": "Chaos engineering deliberately introduces turbulence — killing instances, dropping network packets, exhausting CPU — to verify that a system's resilience mechanisms work before a real incident occurs.",
+      "level": "advanced"
+    },
+    {
+      "id": "q27",
+      "text": "What does a service mesh like Istio or Linkerd provide that a traditional API gateway does not?",
+      "options": [
+        { "id": "q27a", "text": "A single external entry point for all client-facing HTTP traffic" },
+        { "id": "q27b", "text": "Mutual TLS, traffic observability, and fine-grained routing between every service-to-service call inside the cluster" },
+        { "id": "q27c", "text": "Automatic horizontal pod autoscaling based on network throughput" },
+        { "id": "q27d", "text": "DNS resolution for services that span multiple Kubernetes namespaces" }
+      ],
+      "correctAnswerId": "q27b",
+      "explanation": "A service mesh operates at the east-west (service-to-service) layer via sidecar proxies, providing mTLS encryption, circuit breaking, and telemetry for all internal communication — beyond what a north-south API gateway handles.",
+      "level": "advanced"
+    },
+    {
+      "id": "q28",
+      "text": "In GitOps (using ArgoCD or Flux), what is the single source of truth for the desired cluster state?",
+      "options": [
+        { "id": "q28a", "text": "The running containers in the Kubernetes cluster" },
+        { "id": "q28b", "text": "A Git repository containing declarative infrastructure and application manifests" },
+        { "id": "q28c", "text": "The CI pipeline's most recently published artifact" },
+        { "id": "q28d", "text": "An operations runbook stored in a wiki" }
+      ],
+      "correctAnswerId": "q28b",
+      "explanation": "GitOps mandates that a Git repository is the authoritative record of desired state; the GitOps controller continuously reconciles the live cluster to match what is declared in that repo.",
+      "level": "advanced"
+    },
+    {
+      "id": "q29",
+      "text": "In a multi-region active-active architecture, which consistency challenge must be explicitly addressed?",
+      "options": [
+        { "id": "q29a", "text": "Ensuring all regions use the same container image digest" },
+        { "id": "q29b", "text": "Handling write conflicts and replication lag when the same data can be modified concurrently in different regions" },
+        { "id": "q29c", "text": "Routing all writes through a single primary region to avoid latency" },
+        { "id": "q29d", "text": "Synchronising Kubernetes node clocks across regions via NTP" }
+      ],
+      "correctAnswerId": "q29b",
+      "explanation": "Active-active setups allow writes in every region, so the system must implement a conflict-resolution strategy (e.g., last-write-wins, CRDTs, or vector clocks) and tolerate transient replication lag.",
+      "level": "advanced"
+    },
+    {
+      "id": "q30",
+      "text": "Which three pillars make up full observability in a distributed system, and why are correlation IDs important?",
+      "options": [
+        { "id": "q30a", "text": "Uptime, latency, and error rate; correlation IDs link SLO alerts to on-call schedules" },
+        { "id": "q30b", "text": "Logs, metrics, and traces; correlation IDs allow a single request to be tracked end-to-end across all services and their telemetry" },
+        { "id": "q30c", "text": "Dashboards, alerts, and runbooks; correlation IDs replace the need for distributed tracing" },
+        { "id": "q30d", "text": "CPU, memory, and disk; correlation IDs map infrastructure metrics to application deployments" }
+      ],
+      "correctAnswerId": "q30b",
+      "explanation": "Logs, metrics, and distributed traces are the three observability pillars; a correlation ID propagated through every service call ties all three signals together, making it possible to reconstruct the full journey of a request across a microservices system.",
+      "level": "advanced"
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "Legend",
+      "description": "Outstanding — you have the system design knowledge of a senior engineer or solutions architect. You command the full stack of modern deployment practices: from Docker and Kubernetes fundamentals through advanced patterns like the Saga, Strangler Fig, and expand-contract migration, all the way to multi-region active-active consistency and GitOps. You understand not just what these patterns are but why they exist and what trade-offs they carry. You are the person teams turn to when designing for reliability, scalability, and observability. Whether you are architecting a greenfield platform or safely decomposing a legacy monolith, your decisions are grounded in deep, practical knowledge. The industry needs architects like you.",
+      "shareText": "I scored {percent}% on the System Architecture & Deployment Quiz on ToolNotch! Can you beat me? 🏗️"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Expert",
+      "description": "Excellent work — you have a strong grasp of modern system architecture and deployment practices. You are comfortable with microservices, CI/CD pipelines, Kubernetes, and key resilience patterns such as the circuit breaker and canary deployments. A few advanced topics — perhaps multi-region consistency or the nuances of Saga orchestration vs choreography — caught you out, but your overall knowledge is well above average. You are the engineer colleagues ask when debating architectural decisions or reviewing a deployment runbook. Keep diving into service mesh internals, chaos engineering, and FinOps to close those gaps and reach Legend status.",
+      "shareText": "I scored {percent}% on the System Architecture & Deployment Quiz on ToolNotch! Can you beat me? 🏗️"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Fan",
+      "description": "You have a solid foundation in system architecture — you know the core ideas behind microservices, load balancing, and containerisation, and you understand why practices like CI/CD and health checks matter. Some of the intermediate and advanced concepts, such as the 12-Factor App, circuit breaker states, or the Saga pattern, are still developing. That is perfectly normal. System design is a broad field and every expert builds knowledge incrementally through hands-on experience. Pick one advanced topic per week, build a small demo, and revisit this quiz. You are closer to Expert than you think.",
+      "shareText": "I scored {percent}% on the System Architecture & Deployment Quiz on ToolNotch! Can you beat me? 🏗️"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "Rookie",
+      "description": "Everyone starts somewhere, and system architecture is genuinely one of the most complex areas of software engineering. This quiz covers a wide range of topics — from Docker basics and REST conventions through Kubernetes, service meshes, chaos engineering, and multi-region distributed systems. If many of these concepts were unfamiliar, that is a great sign that you have an exciting learning journey ahead. Start with Docker and basic CI/CD, then work up to Kubernetes and the 12-Factor App. Hands-on projects and cloud free-tier experiments will teach you more than any book alone. Come back and try again — your score will surprise you.",
+      "shareText": "I scored {percent}% on the System Architecture & Deployment Quiz on ToolNotch! Can you beat me? 🏗️"
+    }
+  ]
+}

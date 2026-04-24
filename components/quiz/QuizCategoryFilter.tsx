@@ -6,7 +6,7 @@ export interface QuizCardData {
   id: string
   title: string
   description: string
-  category: 'sports' | 'personality'
+  category: 'sports' | 'personality' | 'backend'
   questionCount: number
 }
 
@@ -14,7 +14,7 @@ interface QuizCategoryFilterProps {
   quizzes: QuizCardData[]
 }
 
-type ActiveCategory = 'all' | 'sports' | 'personality'
+type ActiveCategory = 'all' | 'sports' | 'personality' | 'backend'
 
 export default function QuizCategoryFilter({ quizzes }: QuizCategoryFilterProps) {
   const [activeCategory, setActiveCategory] = useState<ActiveCategory>('all')
@@ -27,7 +27,7 @@ export default function QuizCategoryFilter({ quizzes }: QuizCategoryFilterProps)
     <div>
       {/* Tab buttons */}
       <div className="flex gap-2 mb-8 flex-wrap">
-        {(['all', 'sports', 'personality'] as ActiveCategory[]).map(cat => (
+        {(['all', 'sports', 'personality', 'backend'] as ActiveCategory[]).map(cat => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
@@ -37,7 +37,7 @@ export default function QuizCategoryFilter({ quizzes }: QuizCategoryFilterProps)
                 : 'bg-white border border-gray-200 text-gray-600 hover:border-blue-300 hover:text-blue-600 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300 dark:hover:border-blue-600 dark:hover:text-blue-400'
             }`}
           >
-            {cat === 'all' ? 'All' : cat === 'sports' ? 'Sports' : 'Personality'}
+            {cat === 'all' ? 'All' : cat === 'sports' ? 'Sports' : cat === 'personality' ? 'Personality' : 'Backend Engineering'}
           </button>
         ))}
       </div>
@@ -55,6 +55,10 @@ export default function QuizCategoryFilter({ quizzes }: QuizCategoryFilterProps)
               {quiz.category === 'sports' ? (
                 <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
                   Sports
+                </span>
+              ) : quiz.category === 'backend' ? (
+                <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400">
+                  Backend Engineering
                 </span>
               ) : (
                 <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400">

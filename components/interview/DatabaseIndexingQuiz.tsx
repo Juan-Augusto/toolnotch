@@ -1,128 +1,41 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { TYPESCRIPT_QUESTIONS } from '@/data/interview/typescript-questions'
+import { DATABASE_INDEXING_QUESTIONS } from '@/data/interview/database-indexing-questions'
 import type { InterviewQuestion, QuizLevel, QuizState, ExplanationTab, UserAnswer } from '@/lib/interviewTypes'
 
-// ── Syntax tokenizer (no external deps) ─────────────────────────────────────
-
-type TType = 'kw' | 'ty' | 'str' | 'cmt' | 'num' | 'txt'
-
-const KW = new Set([
-  'const','let','var','function','return','if','else','switch','case','default',
-  'for','while','typeof','instanceof','new','class','export','import','from','as',
-  'keyof','infer','satisfies','declare','namespace','enum','readonly','abstract',
-  'override','async','await','of','in','throw','try','catch','finally','break',
-  'continue','do','type','interface','extends','implements',
-])
-
-const TY = new Set([
-  'string','number','boolean','object','symbol','bigint','any',
-  'unknown','never','void','null','undefined','true','false',
-])
-
-type Token = { t: TType; v: string }
-
-function tokenize(code: string): Token[] {
-  const tokens: Token[] = []
-  let i = 0
-  while (i < code.length) {
-    if (code[i] === '/' && code[i + 1] === '/') {
-      let j = i
-      while (j < code.length && code[j] !== '\n') j++
-      tokens.push({ t: 'cmt', v: code.slice(i, j) })
-      i = j
-      continue
-    }
-    if (code[i] === '/' && code[i + 1] === '*') {
-      let j = i + 2
-      while (j < code.length - 1 && !(code[j] === '*' && code[j + 1] === '/')) j++
-      tokens.push({ t: 'cmt', v: code.slice(i, j + 2) })
-      i = j + 2
-      continue
-    }
-    const q = code[i]
-    if (q === '"' || q === "'" || q === '`') {
-      let j = i + 1
-      while (j < code.length) {
-        if (code[j] === '\\') { j += 2; continue }
-        if (code[j] === q) { j++; break }
-        j++
-      }
-      tokens.push({ t: 'str', v: code.slice(i, j) })
-      i = j
-      continue
-    }
-    if (/\d/.test(code[i])) {
-      let j = i
-      while (j < code.length && /[\d.eExX_a-fA-F]/.test(code[j])) j++
-      tokens.push({ t: 'num', v: code.slice(i, j) })
-      i = j
-      continue
-    }
-    if (/[a-zA-Z_$]/.test(code[i])) {
-      let j = i
-      while (j < code.length && /[a-zA-Z0-9_$]/.test(code[j])) j++
-      const w = code.slice(i, j)
-      tokens.push({ t: KW.has(w) ? 'kw' : TY.has(w) ? 'ty' : 'txt', v: w })
-      i = j
-      continue
-    }
-    tokens.push({ t: 'txt', v: code[i] })
-    i++
-  }
-  return tokens
-}
-
-const TOKEN_COLOR: Record<TType, string> = {
-  kw:  '#c792ea',
-  ty:  '#82aaff',
-  str: '#c3e88d',
-  cmt: '#546e7a',
-  num: '#f78c6c',
-  txt: '#e8eaf0',
-}
-
-function CodeBlock({ code }: { code: string }) {
-  return (
-    <pre style={{
-      background: '#12151e',
-      borderRadius: '8px',
-      padding: '1rem',
-      overflowX: 'auto',
-      fontSize: '0.8rem',
-      fontFamily: "'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace",
-      lineHeight: '1.7',
-      margin: '0',
-      border: '1px solid var(--base-border)',
-    }}>
-      <code>
-        {tokenize(code).map((tok, i) => (
-          <span key={i} style={{ color: TOKEN_COLOR[tok.t] }}>{tok.v}</span>
-        ))}
-      </code>
-    </pre>
-  )
-}
-
-// ── TS Logo SVG ───────────────────────────────────────────────────────────────
-
-function TsLogo({ size = 48 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="256" height="256" rx="20" fill="#3178c6" />
-      <path d="M150 200v-27c4.5 2.3 9.8 4 15.8 5.1 6 1 11.7 1.5 17.2 1.5 3.5 0 6.8-.3 9.7-.8 2.9-.6 5.4-1.4 7.4-2.5 2-.9 3.6-2.2 4.7-3.7 1.1-1.5 1.6-3.3 1.6-5.3 0-2.6-.7-4.8-2.2-6.7-1.4-1.9-3.4-3.6-5.8-5.2-2.4-1.6-5.3-3-8.5-4.4-3.2-1.4-6.7-2.8-10.3-4.4-8.8-3.8-15.5-8.3-20-13.6-4.5-5.3-6.8-12-6.8-20 0-6.2 1.3-11.6 3.8-16.1 2.5-4.5 5.9-8.2 10.3-11.2 4.4-3 9.4-5.2 15-6.7 5.6-1.5 11.6-2.2 17.9-2.2 6 0 11.4.3 16.3 1 4.9.7 9.2 1.7 12.9 3.1v25.4c-2.2-1.3-4.6-2.5-7.1-3.4-2.5-.9-5.1-1.7-7.7-2.3-2.6-.6-5.3-1-7.9-1.3-2.6-.3-5-.4-7.2-.4-3.2 0-6.1.3-8.7.9-2.6.6-4.9 1.5-6.7 2.6-1.9 1.1-3.4 2.4-4.4 4-1 1.5-1.6 3.3-1.6 5.1 0 2.2.6 4.2 1.7 5.9 1.2 1.7 2.8 3.3 5 4.7 2.1 1.4 4.7 2.8 7.8 4.1 3 1.3 6.5 2.7 10.3 4.2 4.5 1.8 8.7 3.8 12.4 6 3.8 2.2 7 4.7 9.7 7.5 2.7 2.8 4.8 6.1 6.3 9.8 1.5 3.7 2.2 8 2.2 12.8 0 6.7-1.3 12.4-4 17-2.7 4.6-6.2 8.4-10.7 11.2-4.5 2.8-9.7 4.9-15.6 6.1-5.9 1.2-12.1 1.8-18.7 1.8-6.6 0-12.8-.5-18.6-1.5-5.9-1-10.8-2.5-14.8-4.6zM128 118H88v82H60v-82H20V94h108v24z" fill="white" />
-    </svg>
-  )
-}
-
-// ── Level badge ───────────────────────────────────────────────────────────────
+// ── Level metadata ────────────────────────────────────────────────────────────
 
 const LEVEL_META: Record<QuizLevel, { label: string; color: string; bg: string }> = {
   beginner:     { label: 'Beginner',     color: '#22c55e', bg: '#14532d22' },
   intermediate: { label: 'Intermediate', color: '#f59e0b', bg: '#78350f22' },
   advanced:     { label: 'Advanced',     color: '#ef4444', bg: '#7f1d1d22' },
 }
+
+const ACCENT = '#a78bfa'
+
+// ── Index icon ────────────────────────────────────────────────────────────────
+
+function IndexIcon({ size = 48 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="64" height="64" rx="12" fill="#a78bfa" />
+      <rect x="10" y="14" width="28" height="4" rx="2" fill="#fff" fillOpacity="0.9" />
+      <rect x="10" y="22" width="22" height="4" rx="2" fill="#fff" fillOpacity="0.6" />
+      <rect x="10" y="30" width="26" height="4" rx="2" fill="#fff" fillOpacity="0.6" />
+      <rect x="10" y="38" width="18" height="4" rx="2" fill="#fff" fillOpacity="0.6" />
+      <rect x="10" y="46" width="24" height="4" rx="2" fill="#fff" fillOpacity="0.6" />
+      <line x1="46" y1="12" x2="46" y2="52" stroke="#fff" strokeWidth="2" strokeOpacity="0.4" />
+      <circle cx="46" cy="16" r="4" fill="#fff" fillOpacity="0.9" />
+      <circle cx="46" cy="24" r="3" fill="#fff" fillOpacity="0.5" />
+      <circle cx="46" cy="32" r="3" fill="#fff" fillOpacity="0.5" />
+      <circle cx="46" cy="40" r="3" fill="#fff" fillOpacity="0.5" />
+      <circle cx="46" cy="48" r="3" fill="#fff" fillOpacity="0.5" />
+    </svg>
+  )
+}
+
+// ── Level badge ───────────────────────────────────────────────────────────────
 
 function LevelBadge({ level }: { level: QuizLevel }) {
   const { label, color, bg } = LEVEL_META[level]
@@ -142,26 +55,26 @@ function LevelBadge({ level }: { level: QuizLevel }) {
   )
 }
 
-// ── Home Screen ───────────────────────────────────────────────────────────────
+// ── Home screen ───────────────────────────────────────────────────────────────
 
 const LEVEL_CARDS: { level: QuizLevel; title: string; desc: string; topics: string[] }[] = [
   {
     level: 'beginner',
     title: 'Beginner',
-    desc: '10 questions on TypeScript fundamentals',
-    topics: ['Type Inference', 'any vs unknown', 'interface vs type', 'readonly', 'Enums', 'Tuples', 'never'],
+    desc: '10 questions on index fundamentals',
+    topics: ['What is an Index', 'Read vs Write Cost', 'Primary Index', 'Full Table Scan', 'EXPLAIN', 'Unique Index', 'Clustered Index'],
   },
   {
     level: 'intermediate',
     title: 'Intermediate',
-    desc: '10 questions on the type system in depth',
-    topics: ['Generics', 'keyof + T[K]', 'Mapped types', 'Type predicates', 'Template literals', 'Extract / Exclude'],
+    desc: '10 questions on index internals',
+    topics: ['B-Tree Traversal', 'Hash Index', 'Composite Index', 'Covering Index', 'Partial Index', 'VACUUM', 'LIKE Prefix'],
   },
   {
     level: 'advanced',
     title: 'Advanced',
-    desc: '10 questions on cutting-edge TypeScript',
-    topics: ['Conditional types', 'infer', 'satisfies', 'const params', 'Variadic tuples', 'NoInfer'],
+    desc: '10 questions on advanced PostgreSQL indexing',
+    topics: ['GiST / GIN / BRIN', 'LSM-Tree', 'CONCURRENTLY', 'MVCC Dead Tuples', 'Bitmap Scan', 'Partitioned Indexes', 'pg_stat_user_indexes'],
   },
 ]
 
@@ -169,14 +82,14 @@ function HomeScreen({ onStart }: { onStart: (level: QuizLevel) => void }) {
   return (
     <div style={{ maxWidth: 760, margin: '0 auto', padding: '2.5rem 1.25rem', textAlign: 'center' }}>
       <div style={{ marginBottom: '1.5rem' }}>
-        <TsLogo size={56} />
+        <IndexIcon size={56} />
       </div>
       <h1 style={{ color: 'var(--text-primary)', fontSize: '2rem', fontWeight: 700, margin: '0 0 0.5rem' }}>
-        TypeScript Deep-Dive Quiz
+        Database Indexing Interview Quiz
       </h1>
       <p style={{ color: 'var(--text-muted)', fontSize: '1rem', marginBottom: '2.5rem' }}>
-        30 questions across 3 levels — covering compilation, type theory, and industry best practices.
-        Each answer explains <em>why</em>, what TypeScript compiles to, and what the pros do.
+        30 questions across 3 levels — from B-Tree fundamentals and covering indexes to GIN/GiST types, MVCC bloat, and production tuning.
+        Each answer shows the <em>query plan or DDL impact</em> and the industry best practice.
       </p>
 
       <div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', textAlign: 'left' }}>
@@ -188,7 +101,7 @@ function HomeScreen({ onStart }: { onStart: (level: QuizLevel) => void }) {
               onClick={() => onStart(level)}
               style={{
                 background: 'var(--base-surface)',
-                border: `1px solid var(--base-border)`,
+                border: '1px solid var(--base-border)',
                 borderRadius: '12px',
                 padding: '1.5rem',
                 cursor: 'pointer',
@@ -239,19 +152,115 @@ function HomeScreen({ onStart }: { onStart: (level: QuizLevel) => void }) {
       </div>
 
       <p style={{ color: 'var(--text-muted)', fontSize: '0.78rem', marginTop: '2.5rem' }}>
-        Based on the TypeScript Handbook &amp; common interview questions · Keyboard: 1–4 to answer · Enter/→ to advance · Tab to switch tabs
+        Based on PostgreSQL Docs, Use The Index Luke &amp; DDIA · Keyboard: 1–4 to answer · Enter/→ to advance · Tab to switch tabs
       </p>
     </div>
   )
 }
 
-// ── Quiz Screen ───────────────────────────────────────────────────────────────
+// ── SQL Code block ────────────────────────────────────────────────────────────
+
+type TType = 'kw' | 'cmt' | 'str' | 'num' | 'txt'
+
+const SQL_KW = new Set([
+  'SELECT','FROM','WHERE','JOIN','LEFT','RIGHT','INNER','OUTER','ON','GROUP','BY',
+  'ORDER','HAVING','LIMIT','OFFSET','INSERT','INTO','VALUES','UPDATE','SET',
+  'DELETE','CREATE','TABLE','INDEX','VIEW','ALTER','ADD','DROP','COLUMN',
+  'PRIMARY','KEY','FOREIGN','REFERENCES','NOT','NULL','UNIQUE','DEFAULT',
+  'CASCADE','CONSTRAINT','PARTITION','RANGE','BEGIN','COMMIT','ROLLBACK',
+  'TRANSACTION','ISOLATION','LEVEL','FOR','UPDATE','EXPLAIN','ANALYZE',
+  'CONCURRENT','CONCURRENTLY','IF','EXISTS','AS','AND','OR','IN','IS',
+  'SERIAL','BIGINT','BIGSERIAL','TEXT','INT','BOOLEAN','TIMESTAMPTZ','JSONB',
+  'DOUBLE','PRECISION','GENERATED','ALWAYS','IDENTITY','FUNCTION','RETURNS',
+  'LANGUAGE','PLPGSQL','TRIGGER','AFTER','BEFORE','EACH','ROW','EXECUTE',
+  'WITH','COALESCE','SUM','AVG','COUNT','MAX','MIN','INTERVAL','NOW',
+  'USING','GIN','GIST','BRIN','HASH','BTREE','REINDEX','VACUUM','FULL',
+  'WHERE','INCLUDE','NULLS','LAST','FIRST','DESC','ASC',
+])
+
+type Token = { t: TType; v: string }
+
+function tokenizeSQL(code: string): Token[] {
+  const tokens: Token[] = []
+  let i = 0
+  while (i < code.length) {
+    if (code[i] === '-' && code[i + 1] === '-') {
+      let j = i
+      while (j < code.length && code[j] !== '\n') j++
+      tokens.push({ t: 'cmt', v: code.slice(i, j) })
+      i = j
+      continue
+    }
+    const q = code[i]
+    if (q === "'" || q === '"') {
+      let j = i + 1
+      while (j < code.length) {
+        if (code[j] === '\\') { j += 2; continue }
+        if (code[j] === q) { j++; break }
+        j++
+      }
+      tokens.push({ t: 'str', v: code.slice(i, j) })
+      i = j
+      continue
+    }
+    if (/\d/.test(code[i])) {
+      let j = i
+      while (j < code.length && /[\d.]/.test(code[j])) j++
+      tokens.push({ t: 'num', v: code.slice(i, j) })
+      i = j
+      continue
+    }
+    if (/[a-zA-Z_$]/.test(code[i])) {
+      let j = i
+      while (j < code.length && /[a-zA-Z0-9_$]/.test(code[j])) j++
+      const w = code.slice(i, j)
+      tokens.push({ t: SQL_KW.has(w.toUpperCase()) ? 'kw' : 'txt', v: w })
+      i = j
+      continue
+    }
+    tokens.push({ t: 'txt', v: code[i] })
+    i++
+  }
+  return tokens
+}
+
+const TOKEN_COLOR: Record<TType, string> = {
+  kw:  '#82aaff',
+  cmt: '#546e7a',
+  str: '#c3e88d',
+  num: '#f78c6c',
+  txt: '#e8eaf0',
+}
+
+function CodeBlock({ code }: { code: string }) {
+  return (
+    <pre style={{
+      background: '#12151e',
+      borderRadius: '8px',
+      padding: '1rem',
+      overflowX: 'auto',
+      fontSize: '0.8rem',
+      fontFamily: "'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace",
+      lineHeight: '1.7',
+      margin: '0',
+      border: '1px solid var(--base-border)',
+    }}>
+      <code>
+        {tokenizeSQL(code).map((tok, idx) => (
+          <span key={idx} style={{ color: TOKEN_COLOR[tok.t] }}>{tok.v}</span>
+        ))}
+      </code>
+    </pre>
+  )
+}
+
+// ── Quiz screen ───────────────────────────────────────────────────────────────
 
 const OPTION_LABELS = ['A', 'B', 'C', 'D']
 const TABS: { id: ExplanationTab; label: string }[] = [
-  { id: 'why', label: 'Why This Answer' },
-  { id: 'compiled', label: 'Compiled JS' },
-  { id: 'best', label: 'Best Practice' },
+  { id: 'why',      label: 'Why This Answer' },
+  { id: 'compiled', label: 'Query Plan / DDL' },
+  { id: 'best',     label: 'Best Practice' },
 ]
 
 interface QuizScreenProps {
@@ -265,24 +274,21 @@ interface QuizScreenProps {
 function QuizScreen({ state, onAnswer, onNext, onTab, onBack }: QuizScreenProps) {
   const [shaking, setShaking] = useState<number | null>(null)
   const q = state.questions[state.currentIndex]
-  const progress = ((state.currentIndex) / state.questions.length) * 100
+  const progress = (state.currentIndex / state.questions.length) * 100
   const isLast = state.currentIndex === state.questions.length - 1
+  const lastAnswer = state.userAnswers[state.userAnswers.length - 1]
 
   const handleOptionClick = (index: number) => {
     if (state.answered) return
-    const correct = index === q.correctIndex
-    if (!correct) {
+    if (index !== q.correctIndex) {
       setShaking(index)
       setTimeout(() => setShaking(null), 600)
     }
     onAnswer(index)
   }
 
-  const lastAnswer = state.userAnswers[state.userAnswers.length - 1]
-
   return (
     <div style={{ maxWidth: 720, margin: '0 auto', padding: '2rem 1.25rem' }}>
-      {/* Header */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem', flexWrap: 'wrap' }}>
         <button
           onClick={onBack}
@@ -296,37 +302,32 @@ function QuizScreen({ state, onAnswer, onNext, onTab, onBack }: QuizScreenProps)
         </span>
       </div>
 
-      {/* Progress bar */}
       <div style={{ height: 4, background: 'var(--base-border)', borderRadius: 2, marginBottom: '1.5rem', overflow: 'hidden' }}>
         <div style={{
           height: '100%',
           width: `${progress}%`,
-          background: '#3178c6',
+          background: ACCENT,
           borderRadius: 2,
           transition: 'width 0.4s ease',
         }} />
       </div>
 
-      {/* Topic badge */}
       <div style={{ marginBottom: '0.6rem' }}>
-        <span style={{ color: '#3178c6', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+        <span style={{ color: ACCENT, fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
           {q.topic}
         </span>
       </div>
 
-      {/* Question */}
       <p style={{ color: 'var(--text-primary)', fontSize: '1.1rem', lineHeight: 1.65, marginBottom: '1rem', fontWeight: 500 }}>
         {q.question}
       </p>
 
-      {/* Code block */}
       {q.code && (
         <div style={{ marginBottom: '1.25rem' }}>
           <CodeBlock code={q.code} />
         </div>
       )}
 
-      {/* Options */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '1.25rem' }}>
         {q.options.map((option, i) => {
           const isCorrect = i === q.correctIndex
@@ -338,7 +339,6 @@ function QuizScreen({ state, onAnswer, onNext, onTab, onBack }: QuizScreenProps)
             if (isCorrect) { borderColor = '#22c55e'; bg = '#14532d22'; textColor = '#22c55e' }
             else if (isChosen && !isCorrect) { borderColor = '#ef4444'; bg = '#7f1d1d22'; textColor = '#ef4444' }
           }
-
           return (
             <button
               key={i}
@@ -357,21 +357,17 @@ function QuizScreen({ state, onAnswer, onNext, onTab, onBack }: QuizScreenProps)
                 fontSize: '0.9rem',
                 lineHeight: 1.5,
                 transition: 'border-color 0.15s, background 0.15s',
-                animation: shaking === i ? 'tsShake 0.55s ease' : 'none',
+                animation: shaking === i ? 'idxShake 0.55s ease' : 'none',
               }}
             >
               <span style={{
                 flexShrink: 0,
-                width: 26,
-                height: 26,
+                width: 26, height: 26,
                 borderRadius: '50%',
                 background: state.answered && isCorrect ? '#22c55e' : state.answered && isChosen ? '#ef4444' : 'var(--base-border)',
                 color: state.answered ? '#fff' : 'var(--text-muted)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '0.75rem',
-                fontWeight: 700,
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: '0.75rem', fontWeight: 700,
               }}>
                 {OPTION_LABELS[i]}
               </span>
@@ -381,20 +377,13 @@ function QuizScreen({ state, onAnswer, onNext, onTab, onBack }: QuizScreenProps)
         })}
       </div>
 
-      {/* Explanation panel */}
       <div style={{
         overflow: 'hidden',
-        maxHeight: state.answered ? 600 : 0,
+        maxHeight: state.answered ? 700 : 0,
         transition: 'max-height 0.4s ease',
         marginBottom: '1.25rem',
       }}>
-        <div style={{
-          background: 'var(--base-surface)',
-          border: '1px solid var(--base-border)',
-          borderRadius: '10px',
-          overflow: 'hidden',
-        }}>
-          {/* Tabs */}
+        <div style={{ background: 'var(--base-surface)', border: '1px solid var(--base-border)', borderRadius: '10px', overflow: 'hidden' }}>
           <div style={{ display: 'flex', borderBottom: '1px solid var(--base-border)' }}>
             {TABS.map(tab => (
               <button
@@ -405,8 +394,8 @@ function QuizScreen({ state, onAnswer, onNext, onTab, onBack }: QuizScreenProps)
                   padding: '0.65rem 0.5rem',
                   background: 'none',
                   border: 'none',
-                  borderBottom: state.activeTab === tab.id ? '2px solid #3178c6' : '2px solid transparent',
-                  color: state.activeTab === tab.id ? '#3178c6' : 'var(--text-muted)',
+                  borderBottom: state.activeTab === tab.id ? `2px solid ${ACCENT}` : '2px solid transparent',
+                  color: state.activeTab === tab.id ? ACCENT : 'var(--text-muted)',
                   cursor: 'pointer',
                   fontSize: '0.78rem',
                   fontWeight: 600,
@@ -418,7 +407,6 @@ function QuizScreen({ state, onAnswer, onNext, onTab, onBack }: QuizScreenProps)
             ))}
           </div>
 
-          {/* Tab content */}
           <div style={{ padding: '1rem 1.15rem' }}>
             {state.activeTab === 'why' && (
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.7, margin: 0 }}>
@@ -430,7 +418,7 @@ function QuizScreen({ state, onAnswer, onNext, onTab, onBack }: QuizScreenProps)
                 <CodeBlock code={q.compiledJS} />
               ) : (
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', fontStyle: 'italic', margin: 0 }}>
-                  No compilation change — this construct is type-level only and is fully erased.
+                  This concept applies at the planner or storage level — there is no single SQL snippet that demonstrates it. See the &ldquo;Why This Answer&rdquo; tab for the full explanation.
                 </p>
               )
             )}
@@ -441,27 +429,25 @@ function QuizScreen({ state, onAnswer, onNext, onTab, onBack }: QuizScreenProps)
             )}
           </div>
 
-          {/* Source */}
           <div style={{ padding: '0.5rem 1.15rem 0.75rem', borderTop: '1px solid var(--base-border)' }}>
             <span style={{ color: 'var(--text-muted)', fontSize: '0.72rem' }}>📖 {q.source}</span>
           </div>
         </div>
       </div>
 
-      {/* Navigation */}
       <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
         {state.answered && (
           <button
             onClick={onNext}
             style={{
-              background: '#3178c6',
-              color: '#fff',
+              background: ACCENT,
+              color: '#0f1117',
               border: 'none',
               borderRadius: '8px',
               padding: '0.65rem 1.5rem',
               cursor: 'pointer',
               fontSize: '0.9rem',
-              fontWeight: 600,
+              fontWeight: 700,
               transition: 'opacity 0.15s',
             }}
             onMouseEnter={e => ((e.currentTarget as HTMLElement).style.opacity = '0.85')}
@@ -472,7 +458,6 @@ function QuizScreen({ state, onAnswer, onNext, onTab, onBack }: QuizScreenProps)
         )}
       </div>
 
-      {/* Keyboard hint */}
       <div style={{ marginTop: '1rem', textAlign: 'center' }}>
         <span style={{ color: 'var(--text-muted)', fontSize: '0.72rem' }}>
           1–4 select option · Enter/→ next · Tab switch tabs
@@ -482,7 +467,7 @@ function QuizScreen({ state, onAnswer, onNext, onTab, onBack }: QuizScreenProps)
   )
 }
 
-// ── Results Screen ────────────────────────────────────────────────────────────
+// ── Results screen ────────────────────────────────────────────────────────────
 
 interface ResultsScreenProps {
   state: QuizState
@@ -496,14 +481,13 @@ function ResultsScreen({ state, onRetry, onHome }: ResultsScreenProps) {
   const pct = Math.round((score / state.questions.length) * 100)
   const circumference = 2 * Math.PI * 54
   const dashOffset = circumference * (1 - score / state.questions.length)
-  const ringColor = score >= 8 ? '#22c55e' : score >= 5 ? '#f59e0b' : '#ef4444'
+  const ringColor = score >= 8 ? '#22c55e' : score >= 5 ? ACCENT : '#ef4444'
+  const verdict = score >= 8 ? 'Excellent work!' : score >= 5 ? 'Good effort!' : 'Keep studying!'
 
   useEffect(() => {
     const t = setTimeout(() => setAnimate(true), 100)
     return () => clearTimeout(t)
   }, [])
-
-  const verdict = score >= 8 ? 'Excellent work!' : score >= 5 ? 'Good effort!' : 'Keep studying!'
 
   return (
     <div style={{ maxWidth: 680, margin: '0 auto', padding: '2.5rem 1.25rem', textAlign: 'center' }}>
@@ -514,7 +498,6 @@ function ResultsScreen({ state, onRetry, onHome }: ResultsScreenProps) {
         {state.level && LEVEL_META[state.level].label} level · {pct}% correct
       </p>
 
-      {/* Score ring */}
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
         <svg width="140" height="140" viewBox="0 0 120 120">
           <circle cx="60" cy="60" r="54" fill="none" stroke="var(--base-border)" strokeWidth="8" />
@@ -536,7 +519,6 @@ function ResultsScreen({ state, onRetry, onHome }: ResultsScreenProps) {
         </svg>
       </div>
 
-      {/* Per-question review */}
       <div style={{ textAlign: 'left', marginBottom: '2rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
         {state.questions.map((q, i) => {
           const ua = state.userAnswers.find(a => a.questionIndex === i)
@@ -547,9 +529,7 @@ function ResultsScreen({ state, onRetry, onHome }: ResultsScreenProps) {
               border: `1px solid ${correct ? '#14532d' : '#7f1d1d'}`,
               borderRadius: '8px',
               padding: '0.65rem 0.9rem',
-              display: 'flex',
-              alignItems: 'flex-start',
-              gap: '0.6rem',
+              display: 'flex', alignItems: 'flex-start', gap: '0.6rem',
             }}>
               <span style={{ fontSize: '0.9rem', flexShrink: 0 }}>{correct ? '✓' : '✗'}</span>
               <div>
@@ -568,35 +548,16 @@ function ResultsScreen({ state, onRetry, onHome }: ResultsScreenProps) {
         })}
       </div>
 
-      {/* Buttons */}
       <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
         <button
           onClick={onRetry}
-          style={{
-            background: '#3178c6',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '8px',
-            padding: '0.65rem 1.5rem',
-            cursor: 'pointer',
-            fontSize: '0.9rem',
-            fontWeight: 600,
-          }}
+          style={{ background: ACCENT, color: '#0f1117', border: 'none', borderRadius: '8px', padding: '0.65rem 1.5rem', cursor: 'pointer', fontSize: '0.9rem', fontWeight: 700 }}
         >
           Try Again
         </button>
         <button
           onClick={onHome}
-          style={{
-            background: 'var(--base-surface)',
-            color: 'var(--text-muted)',
-            border: '1px solid var(--base-border)',
-            borderRadius: '8px',
-            padding: '0.65rem 1.5rem',
-            cursor: 'pointer',
-            fontSize: '0.9rem',
-            fontWeight: 600,
-          }}
+          style={{ background: 'var(--base-surface)', color: 'var(--text-muted)', border: '1px solid var(--base-border)', borderRadius: '8px', padding: '0.65rem 1.5rem', cursor: 'pointer', fontSize: '0.9rem', fontWeight: 600 }}
         >
           Choose Another Level
         </button>
@@ -605,7 +566,7 @@ function ResultsScreen({ state, onRetry, onHome }: ResultsScreenProps) {
   )
 }
 
-// ── Main Component ─────────────────────────────────────────────────────────────
+// ── Main component ────────────────────────────────────────────────────────────
 
 const INITIAL_STATE: QuizState = {
   screen: 'home',
@@ -617,21 +578,13 @@ const INITIAL_STATE: QuizState = {
   activeTab: 'why',
 }
 
-export function TypeScriptQuiz() {
+export function DatabaseIndexingQuiz() {
   const [state, setState] = useState<QuizState>(INITIAL_STATE)
 
   const startQuiz = useCallback((level: QuizLevel) => {
-    const pool = TYPESCRIPT_QUESTIONS.filter(q => q.id[0] === level[0])
+    const pool = DATABASE_INDEXING_QUESTIONS.filter(q => q.id[0] === level[0])
     const shuffled = [...pool].sort(() => Math.random() - 0.5)
-    setState({
-      screen: 'quiz',
-      level,
-      questions: shuffled,
-      currentIndex: 0,
-      answered: false,
-      userAnswers: [],
-      activeTab: 'why',
-    })
+    setState({ screen: 'quiz', level, questions: shuffled, currentIndex: 0, answered: false, userAnswers: [], activeTab: 'why' })
   }, [])
 
   const handleAnswer = useCallback((chosenIndex: number) => {
@@ -665,22 +618,13 @@ export function TypeScriptQuiz() {
     })
   }, [])
 
-  // Keyboard shortcuts
   useEffect(() => {
     if (state.screen !== 'quiz') return
     const handler = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return
-      if (['1', '2', '3', '4'].includes(e.key) && !state.answered) {
-        handleAnswer(parseInt(e.key) - 1)
-      }
-      if ((e.key === 'Enter' || e.key === 'ArrowRight') && state.answered) {
-        e.preventDefault()
-        handleNext()
-      }
-      if (e.key === 'Tab' && state.answered) {
-        e.preventDefault()
-        handleTabCycle()
-      }
+      if (['1', '2', '3', '4'].includes(e.key) && !state.answered) handleAnswer(parseInt(e.key) - 1)
+      if ((e.key === 'Enter' || e.key === 'ArrowRight') && state.answered) { e.preventDefault(); handleNext() }
+      if (e.key === 'Tab' && state.answered) { e.preventDefault(); handleTabCycle() }
     }
     document.addEventListener('keydown', handler)
     return () => document.removeEventListener('keydown', handler)
@@ -689,7 +633,7 @@ export function TypeScriptQuiz() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes tsShake {
+        @keyframes idxShake {
           0%,100% { transform: translateX(0); }
           20%      { transform: translateX(-6px); }
           40%      { transform: translateX(6px); }
@@ -697,31 +641,10 @@ export function TypeScriptQuiz() {
           80%      { transform: translateX(4px); }
         }
       `}} />
-      <div style={{
-        background: 'var(--background)',
-        minHeight: '100vh',
-        fontFamily: 'Inter, system-ui, sans-serif',
-        color: 'var(--text-primary)',
-      }}>
-        {state.screen === 'home' && (
-          <HomeScreen onStart={startQuiz} />
-        )}
-        {state.screen === 'quiz' && (
-          <QuizScreen
-            state={state}
-            onAnswer={handleAnswer}
-            onNext={handleNext}
-            onTab={handleTab}
-            onBack={() => setState(INITIAL_STATE)}
-          />
-        )}
-        {state.screen === 'results' && (
-          <ResultsScreen
-            state={state}
-            onRetry={() => startQuiz(state.level!)}
-            onHome={() => setState(INITIAL_STATE)}
-          />
-        )}
+      <div style={{ background: 'var(--background)', minHeight: '100vh', fontFamily: 'Inter, system-ui, sans-serif', color: 'var(--text-primary)' }}>
+        {state.screen === 'home'    && <HomeScreen onStart={startQuiz} />}
+        {state.screen === 'quiz'    && <QuizScreen state={state} onAnswer={handleAnswer} onNext={handleNext} onTab={handleTab} onBack={() => setState(INITIAL_STATE)} />}
+        {state.screen === 'results' && <ResultsScreen state={state} onRetry={() => startQuiz(state.level!)} onHome={() => setState(INITIAL_STATE)} />}
       </div>
     </>
   )

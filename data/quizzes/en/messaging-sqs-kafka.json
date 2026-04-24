@@ -1,0 +1,431 @@
+{
+  "id": "messaging-sqs-kafka",
+  "type": "trivia",
+  "category": "backend",
+  "locale": "en",
+  "title": "SQS & Kafka Messaging Quiz",
+  "description": "Test your knowledge of SQS and Apache Kafka: queues, partitions, offsets, delivery semantics, and advanced streaming patterns.",
+  "image": "/images/quizzes/messaging-sqs-kafka-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "level": "beginner",
+      "text": "What is the primary purpose of a message queue in a distributed system?",
+      "options": [
+        { "id": "q1a", "text": "To store data permanently in a relational database" },
+        { "id": "q1b", "text": "To decouple producers and consumers so they can operate independently" },
+        { "id": "q1c", "text": "To synchronize HTTP requests between microservices" },
+        { "id": "q1d", "text": "To provide a shared in-memory cache for services" }
+      ],
+      "correctAnswerId": "q1b",
+      "explanation": "A message queue decouples producers from consumers, allowing each side to run at its own pace without direct synchronization."
+    },
+    {
+      "id": "q2",
+      "level": "beginner",
+      "text": "In the producer/consumer model, what is the role of a producer?",
+      "options": [
+        { "id": "q2a", "text": "It reads and processes messages from the queue" },
+        { "id": "q2b", "text": "It manages the queue infrastructure and routing rules" },
+        { "id": "q2c", "text": "It sends messages to the queue for downstream processing" },
+        { "id": "q2d", "text": "It monitors queue depth and triggers auto-scaling" }
+      ],
+      "correctAnswerId": "q2c",
+      "explanation": "A producer publishes messages into the queue; a consumer reads and processes those messages on the other end."
+    },
+    {
+      "id": "q3",
+      "level": "beginner",
+      "text": "What is Amazon SQS?",
+      "options": [
+        { "id": "q3a", "text": "A fully managed relational database service from AWS" },
+        { "id": "q3b", "text": "A fully managed message queuing service from AWS" },
+        { "id": "q3c", "text": "An open-source distributed streaming platform" },
+        { "id": "q3d", "text": "A serverless compute engine for batch jobs" }
+      ],
+      "correctAnswerId": "q3b",
+      "explanation": "Amazon SQS (Simple Queue Service) is a fully managed, serverless message queuing service offered by AWS."
+    },
+    {
+      "id": "q4",
+      "level": "beginner",
+      "text": "What is the key difference between an SQS Standard queue and an SQS FIFO queue?",
+      "options": [
+        { "id": "q4a", "text": "Standard queues guarantee strict message ordering; FIFO queues do not" },
+        { "id": "q4b", "text": "FIFO queues guarantee ordering and exactly-once processing; Standard queues offer best-effort ordering and at-least-once delivery" },
+        { "id": "q4c", "text": "Standard queues support encryption; FIFO queues do not" },
+        { "id": "q4d", "text": "FIFO queues are cheaper but have no throughput limits" }
+      ],
+      "correctAnswerId": "q4b",
+      "explanation": "FIFO queues strictly preserve message order and prevent duplicates, while Standard queues offer higher throughput with best-effort ordering and at-least-once delivery."
+    },
+    {
+      "id": "q5",
+      "level": "beginner",
+      "text": "What does 'at-least-once delivery' mean in a messaging system?",
+      "options": [
+        { "id": "q5a", "text": "A message is delivered exactly one time with no duplicates" },
+        { "id": "q5b", "text": "A message may be delivered more than once, so consumers must handle duplicates" },
+        { "id": "q5c", "text": "A message is delivered only if the consumer is online" },
+        { "id": "q5d", "text": "A message is never delivered more than once per consumer group" }
+      ],
+      "correctAnswerId": "q5b",
+      "explanation": "At-least-once delivery guarantees the message reaches the consumer but allows duplicates, requiring consumers to be idempotent."
+    },
+    {
+      "id": "q6",
+      "level": "beginner",
+      "text": "What is a Dead Letter Queue (DLQ)?",
+      "options": [
+        { "id": "q6a", "text": "A queue that deletes messages automatically after 1 minute" },
+        { "id": "q6b", "text": "A secondary queue where messages are sent after failing processing a configured number of times" },
+        { "id": "q6c", "text": "A high-priority queue for urgent system alerts" },
+        { "id": "q6d", "text": "A queue that stores only metadata about processed messages" }
+      ],
+      "correctAnswerId": "q6b",
+      "explanation": "A DLQ captures messages that repeatedly fail processing so they can be inspected and reprocessed without blocking the main queue."
+    },
+    {
+      "id": "q7",
+      "level": "beginner",
+      "text": "What is Apache Kafka?",
+      "options": [
+        { "id": "q7a", "text": "A relational database optimized for time-series data" },
+        { "id": "q7b", "text": "A distributed event streaming platform designed for high-throughput, fault-tolerant messaging" },
+        { "id": "q7c", "text": "An AWS-managed in-memory cache service" },
+        { "id": "q7d", "text": "A REST API gateway for microservice communication" }
+      ],
+      "correctAnswerId": "q7b",
+      "explanation": "Apache Kafka is an open-source distributed event streaming platform used for high-throughput, durable, fault-tolerant publish-subscribe messaging."
+    },
+    {
+      "id": "q8",
+      "level": "beginner",
+      "text": "How does a Kafka topic differ from a traditional message queue?",
+      "options": [
+        { "id": "q8a", "text": "A topic deletes messages immediately after they are read by one consumer" },
+        { "id": "q8b", "text": "A topic retains messages on a log so multiple independent consumer groups can read the same data" },
+        { "id": "q8c", "text": "A topic only supports a single producer at a time" },
+        { "id": "q8d", "text": "A topic guarantees delivery within 1 second" }
+      ],
+      "correctAnswerId": "q8b",
+      "explanation": "Unlike a queue that removes messages once consumed, a Kafka topic persists messages on an append-only log, allowing multiple consumer groups to read independently."
+    },
+    {
+      "id": "q9",
+      "level": "beginner",
+      "text": "What is a Kafka consumer group?",
+      "options": [
+        { "id": "q9a", "text": "A set of brokers that replicate partition data" },
+        { "id": "q9b", "text": "A collection of consumers that jointly consume a topic, each reading from a distinct subset of partitions" },
+        { "id": "q9c", "text": "An admin group that manages topic creation and deletion" },
+        { "id": "q9d", "text": "A group of producers that share the same client ID" }
+      ],
+      "correctAnswerId": "q9b",
+      "explanation": "A consumer group allows horizontal scaling of message processing: each partition is assigned to exactly one consumer within the group at any time."
+    },
+    {
+      "id": "q10",
+      "level": "beginner",
+      "text": "Why is strict global message ordering difficult to guarantee at scale in distributed messaging systems?",
+      "options": [
+        { "id": "q10a", "text": "Network latency and parallel processing across multiple nodes make a single global sequence hard to enforce without becoming a bottleneck" },
+        { "id": "q10b", "text": "Ordering requires a relational database, which messaging systems cannot use" },
+        { "id": "q10c", "text": "TCP connections inherently scramble packet order" },
+        { "id": "q10d", "text": "Message brokers deliberately randomize order to improve performance" }
+      ],
+      "correctAnswerId": "q10a",
+      "explanation": "Global ordering requires a single ordered sequence, which forces serialization and becomes a throughput bottleneck; partitioned systems trade global order for scalability."
+    },
+    {
+      "id": "q11",
+      "level": "intermediate",
+      "text": "What is the SQS visibility timeout and why does it matter?",
+      "options": [
+        { "id": "q11a", "text": "The maximum time a message can stay in the queue before being deleted automatically" },
+        { "id": "q11b", "text": "The period during which a received message is hidden from other consumers, preventing duplicate processing" },
+        { "id": "q11c", "text": "The delay before a newly sent message becomes visible to consumers" },
+        { "id": "q11d", "text": "The time window allowed for a consumer to authenticate before reading a message" }
+      ],
+      "correctAnswerId": "q11b",
+      "explanation": "The visibility timeout hides a message from other consumers while one consumer is processing it; if not deleted before the timeout expires, the message becomes visible again for retry."
+    },
+    {
+      "id": "q12",
+      "level": "intermediate",
+      "text": "What is the advantage of SQS long polling over short polling?",
+      "options": [
+        { "id": "q12a", "text": "Long polling compresses messages to reduce bandwidth usage" },
+        { "id": "q12b", "text": "Long polling holds the connection open up to 20 seconds, reducing empty responses and lowering cost" },
+        { "id": "q12c", "text": "Long polling guarantees messages arrive in FIFO order" },
+        { "id": "q12d", "text": "Long polling allows consumers to push acknowledgements back to SQS in real time" }
+      ],
+      "correctAnswerId": "q12b",
+      "explanation": "Long polling waits up to 20 seconds for a message to arrive before returning, eliminating most empty ReceiveMessage responses and reducing API costs."
+    },
+    {
+      "id": "q13",
+      "level": "intermediate",
+      "text": "What are the default and maximum message retention periods for an SQS queue?",
+      "options": [
+        { "id": "q13a", "text": "Default 1 day, maximum 7 days" },
+        { "id": "q13b", "text": "Default 4 days, maximum 14 days" },
+        { "id": "q13c", "text": "Default 7 days, maximum 30 days" },
+        { "id": "q13d", "text": "Default 1 hour, maximum 24 hours" }
+      ],
+      "correctAnswerId": "q13b",
+      "explanation": "SQS retains messages for 4 days by default and can be configured up to a maximum of 14 days, after which undelivered messages are deleted."
+    },
+    {
+      "id": "q14",
+      "level": "intermediate",
+      "text": "How do Kafka partitions enable parallelism in message consumption?",
+      "options": [
+        { "id": "q14a", "text": "Each partition runs on a separate AWS region, so consumers process data geographically" },
+        { "id": "q14b", "text": "Each consumer in a group is assigned one or more partitions, allowing multiple consumers to read different partitions simultaneously" },
+        { "id": "q14c", "text": "Partitions compress messages so each consumer processes twice as many per second" },
+        { "id": "q14d", "text": "Partitions allow producers to write faster by batching messages into chunks" }
+      ],
+      "correctAnswerId": "q14b",
+      "explanation": "Kafka partitions divide a topic into independent ordered logs; each partition can be consumed by exactly one consumer per group, enabling parallel processing proportional to partition count."
+    },
+    {
+      "id": "q15",
+      "level": "intermediate",
+      "text": "What is the difference between a committed offset and the latest offset in Kafka?",
+      "options": [
+        { "id": "q15a", "text": "The committed offset is the next message to produce; the latest offset is the last message produced" },
+        { "id": "q15b", "text": "The committed offset is the last position the consumer group confirmed processing; the latest offset is the last message written to the partition" },
+        { "id": "q15c", "text": "The committed offset is stored on disk; the latest offset is in memory only" },
+        { "id": "q15d", "text": "They are synonymous terms used interchangeably in Kafka documentation" }
+      ],
+      "correctAnswerId": "q15b",
+      "explanation": "Consumer lag is the difference between the latest offset (end of the partition log) and the committed offset (last confirmed position), representing unprocessed messages."
+    },
+    {
+      "id": "q16",
+      "level": "intermediate",
+      "text": "What triggers a Kafka consumer group rebalance?",
+      "options": [
+        { "id": "q16a", "text": "A topic's replication factor is increased by an administrator" },
+        { "id": "q16b", "text": "A consumer joins or leaves the group, or a session timeout expires, causing partitions to be reassigned among active consumers" },
+        { "id": "q16c", "text": "A producer sends a message larger than the configured batch size" },
+        { "id": "q16d", "text": "The ZooKeeper leader election completes a new round" }
+      ],
+      "correctAnswerId": "q16b",
+      "explanation": "Rebalancing redistributes partition ownership among consumers whenever group membership changes or a consumer fails its heartbeat, temporarily pausing consumption."
+    },
+    {
+      "id": "q17",
+      "level": "intermediate",
+      "text": "What is the purpose of a Kafka replication factor, and what does ISR mean?",
+      "options": [
+        { "id": "q17a", "text": "Replication factor sets message TTL; ISR stands for In-Sync Retention" },
+        { "id": "q17b", "text": "Replication factor controls how many broker copies exist for each partition; ISR (In-Sync Replicas) is the set of replicas fully caught up with the leader" },
+        { "id": "q17c", "text": "Replication factor determines the number of consumer groups; ISR tracks their lag" },
+        { "id": "q17d", "text": "Replication factor sets the compression level; ISR is the index of stored records" }
+      ],
+      "correctAnswerId": "q17b",
+      "explanation": "A higher replication factor improves durability; Kafka only acknowledges a write when the required number of ISR replicas have confirmed it, balancing durability with latency."
+    },
+    {
+      "id": "q18",
+      "level": "intermediate",
+      "text": "Which Kafka configuration achieves exactly-once semantics end-to-end?",
+      "options": [
+        { "id": "q18a", "text": "Setting acks=0 on the producer and enabling auto-commit on the consumer" },
+        { "id": "q18b", "text": "Enabling idempotent producers (enable.idempotence=true) combined with transactional APIs on producers and isolation.level=read_committed on consumers" },
+        { "id": "q18c", "text": "Using a FIFO topic with a single partition and a single consumer" },
+        { "id": "q18d", "text": "Disabling batching and setting max.in.flight.requests.per.connection=1" }
+      ],
+      "correctAnswerId": "q18b",
+      "explanation": "Kafka's exactly-once delivery requires idempotent producers to prevent duplicate writes and transactional APIs to atomically produce and commit offsets, with consumers reading only committed data."
+    },
+    {
+      "id": "q19",
+      "level": "intermediate",
+      "text": "What is the primary difference between Amazon SQS, Amazon SNS, and Amazon EventBridge?",
+      "options": [
+        { "id": "q19a", "text": "SQS is a queue for point-to-point messaging; SNS is a pub/sub fanout to multiple subscribers; EventBridge is an event bus with routing rules and schema registry" },
+        { "id": "q19b", "text": "SQS is for streaming data; SNS is for batch jobs; EventBridge is for IoT devices only" },
+        { "id": "q19c", "text": "All three are identical services with different pricing models" },
+        { "id": "q19d", "text": "SNS stores messages for 14 days like SQS; EventBridge does not retain events" }
+      ],
+      "correctAnswerId": "q19a",
+      "explanation": "SQS decouples single consumers, SNS fans out to multiple subscribers simultaneously, and EventBridge adds content-based routing rules and integrations with SaaS event sources."
+    },
+    {
+      "id": "q20",
+      "level": "intermediate",
+      "text": "What is Kafka log compaction and when should you use it?",
+      "options": [
+        { "id": "q20a", "text": "A background process that compresses log files using gzip to save disk space" },
+        { "id": "q20b", "text": "A retention policy that keeps only the latest value per key, discarding older records with the same key" },
+        { "id": "q20c", "text": "A Kafka Streams operation that merges two topics into one sorted topic" },
+        { "id": "q20d", "text": "A process that deletes all messages older than the configured retention period" }
+      ],
+      "correctAnswerId": "q20b",
+      "explanation": "Log compaction retains the most recent value for each message key, making the topic suitable as a changelog or key-value store while still allowing consumers to replay the latest state."
+    },
+    {
+      "id": "q21",
+      "level": "advanced",
+      "text": "What are the three files that make up a Kafka log segment and what does each store?",
+      "options": [
+        { "id": "q21a", "text": ".log stores raw message bytes; .index maps offsets to byte positions in .log; .timeindex maps timestamps to offsets" },
+        { "id": "q21b", "text": ".log stores offsets; .index stores message bytes; .timeindex stores partition metadata" },
+        { "id": "q21c", "text": ".log stores consumer group state; .index stores producer IDs; .timeindex stores replication lag" },
+        { "id": "q21d", "text": ".log stores compressed batches; .index stores schema IDs; .timeindex stores TTL expiry times" }
+      ],
+      "correctAnswerId": "q21a",
+      "explanation": "Each segment's .log file contains the raw message data; .index provides a sparse offset-to-byte-position lookup for fast seeks; .timeindex enables time-based offset lookups for time-travel consumption."
+    },
+    {
+      "id": "q22",
+      "level": "advanced",
+      "text": "What is a hot partition in Kafka and how does key-based partitioning cause it?",
+      "options": [
+        { "id": "q22a", "text": "A hot partition is one that receives too many replicas; key-based routing distributes replicas unevenly" },
+        { "id": "q22b", "text": "A hot partition receives disproportionately more messages than others because a high-cardinality key (e.g., a popular user ID) consistently hashes to the same partition" },
+        { "id": "q22c", "text": "A hot partition is temporarily offline; key-based routing avoids it until it recovers" },
+        { "id": "q22d", "text": "A hot partition stores compacted data; round-robin partitioning avoids compaction" }
+      ],
+      "correctAnswerId": "q22b",
+      "explanation": "When a small number of keys carry the majority of traffic, those keys always hash to the same partition, creating an uneven load that can saturate a single broker and its consumer."
+    },
+    {
+      "id": "q23",
+      "level": "advanced",
+      "text": "How does back-pressure manifest in a Kafka consumer chain and what is a common mitigation strategy?",
+      "options": [
+        { "id": "q23a", "text": "Back-pressure appears as producer throttling; the mitigation is to increase the number of topics" },
+        { "id": "q23b", "text": "Back-pressure appears as growing consumer lag when processing is slower than the production rate; mitigations include adding consumers up to the partition count, increasing partitions, or rate-limiting the producer" },
+        { "id": "q23c", "text": "Back-pressure appears as broker disk saturation; the mitigation is to enable log compaction" },
+        { "id": "q23d", "text": "Back-pressure appears as ZooKeeper timeouts; the mitigation is to upgrade to KRaft mode" }
+      ],
+      "correctAnswerId": "q23b",
+      "explanation": "Consumer lag signals back-pressure; the standard fix is to scale consumers up to the partition count, repartition for more parallelism, or reduce per-message processing time."
+    },
+    {
+      "id": "q24",
+      "level": "advanced",
+      "text": "How does Kafka Streams differ from Apache Flink and Apache Spark Structured Streaming for stateful stream processing?",
+      "options": [
+        { "id": "q24a", "text": "Kafka Streams is a batch framework; Flink and Spark are pure streaming engines" },
+        { "id": "q24b", "text": "Kafka Streams is a client library that runs inside your application without a separate cluster; Flink and Spark are standalone distributed processing frameworks with their own resource management" },
+        { "id": "q24c", "text": "Kafka Streams requires Kubernetes; Flink and Spark run on bare metal only" },
+        { "id": "q24d", "text": "Kafka Streams does not support stateful operations; Flink and Spark do" }
+      ],
+      "correctAnswerId": "q24b",
+      "explanation": "Kafka Streams embeds directly in a JVM application and uses Kafka partitions for parallelism, while Flink and Spark operate as separate distributed clusters with richer processing APIs and independent resource scheduling."
+    },
+    {
+      "id": "q25",
+      "level": "advanced",
+      "text": "What is the throughput limit of an SQS FIFO queue and how do message group IDs affect it?",
+      "options": [
+        { "id": "q25a", "text": "FIFO queues support unlimited throughput; message group IDs have no effect on throughput" },
+        { "id": "q25b", "text": "FIFO queues support up to 300 messages/second (or 3,000 with batching); messages in the same group ID are processed sequentially, so more distinct group IDs enable greater parallelism" },
+        { "id": "q25c", "text": "FIFO queues support 10,000 messages/second; each group ID adds 1,000 messages/second of capacity" },
+        { "id": "q25d", "text": "FIFO queues support up to 1,000 messages/second regardless of group IDs" }
+      ],
+      "correctAnswerId": "q25b",
+      "explanation": "SQS FIFO queues process 300 TPS (3,000 with batching); within a group ID, strict ordering serializes processing, so spreading traffic across many group IDs is the key to maximizing parallelism."
+    },
+    {
+      "id": "q26",
+      "level": "advanced",
+      "text": "Why is a schema registry important when using Avro or Protobuf with Kafka, and what problem does it solve?",
+      "options": [
+        { "id": "q26a", "text": "A schema registry encrypts messages in transit; without it, Avro payloads are sent in plain text" },
+        { "id": "q26b", "text": "A schema registry centralizes schema versioning so producers and consumers can evolve schemas independently while maintaining backward or forward compatibility, and stores only the schema ID in the message payload" },
+        { "id": "q26c", "text": "A schema registry is a Kafka broker plugin that validates message size limits" },
+        { "id": "q26d", "text": "A schema registry replaces ZooKeeper for cluster metadata management in newer Kafka versions" }
+      ],
+      "correctAnswerId": "q26b",
+      "explanation": "Embedding only the schema ID instead of the full schema in every message drastically reduces payload size, while the registry enforces compatibility rules to prevent schema changes from breaking existing consumers."
+    },
+    {
+      "id": "q27",
+      "level": "advanced",
+      "text": "What metrics and tools are commonly used to monitor Kafka consumer lag in production?",
+      "options": [
+        { "id": "q27a", "text": "Consumer lag can only be monitored via Kafka's built-in web UI dashboard" },
+        { "id": "q27b", "text": "Consumer lag is monitored using kafka-consumer-groups.sh, Kafka's JMX metrics (records-lag-max), Prometheus with the kafka-exporter or Confluent's JMX exporter, and platforms like Datadog or Grafana" },
+        { "id": "q27c", "text": "Consumer lag is visible only in AWS CloudWatch when using Amazon MSK" },
+        { "id": "q27d", "text": "Consumer lag is tracked by reading the __consumer_offsets topic directly from the application code" }
+      ],
+      "correctAnswerId": "q27b",
+      "explanation": "The kafka-consumer-groups.sh CLI gives a snapshot, while JMX metrics exported via Prometheus and visualized in Grafana provide continuous alerting on lag trends in production."
+    },
+    {
+      "id": "q28",
+      "level": "advanced",
+      "text": "What is the transactional outbox pattern and how does it solve dual-write problems between a database and a message broker?",
+      "options": [
+        { "id": "q28a", "text": "The outbox pattern stores messages in an SQS FIFO queue before writing to the database, ensuring the database only updates if the queue accepts the message" },
+        { "id": "q28b", "text": "The outbox pattern writes both the domain state change and the outgoing message to the same database transaction; a separate relay process then reads the outbox table and publishes to the broker, ensuring atomicity without distributed transactions" },
+        { "id": "q28c", "text": "The outbox pattern uses two-phase commit across the database and Kafka broker to guarantee simultaneous writes" },
+        { "id": "q28d", "text": "The outbox pattern buffers messages in application memory and flushes them to Kafka after the database transaction commits" }
+      ],
+      "correctAnswerId": "q28b",
+      "explanation": "By writing the event to an outbox table within the same ACID transaction as the business data, the pattern eliminates the risk of committing to the DB but failing to publish, with the relay providing at-least-once delivery to the broker."
+    },
+    {
+      "id": "q29",
+      "level": "advanced",
+      "text": "What is Kafka Connect and what are its two main connector types?",
+      "options": [
+        { "id": "q29a", "text": "Kafka Connect is a client library for building custom consumer groups; its two types are polling and push connectors" },
+        { "id": "q29b", "text": "Kafka Connect is a framework for scalably streaming data between Kafka and external systems; Source connectors ingest data into Kafka, and Sink connectors export data from Kafka to external targets" },
+        { "id": "q29c", "text": "Kafka Connect is a monitoring tool; its connector types are metrics and logs connectors" },
+        { "id": "q29d", "text": "Kafka Connect is a schema registry extension; its types are Avro connectors and Protobuf connectors" }
+      ],
+      "correctAnswerId": "q29b",
+      "explanation": "Kafka Connect provides a scalable, fault-tolerant pipeline framework: Source connectors pull data from databases, files, or APIs into Kafka topics, while Sink connectors push topic data into data warehouses, search engines, or storage systems."
+    },
+    {
+      "id": "q30",
+      "level": "advanced",
+      "text": "How does cross-region replication differ between SQS-based fan-out and Kafka MirrorMaker 2?",
+      "options": [
+        { "id": "q30a", "text": "SQS fan-out and MirrorMaker 2 are functionally identical; the choice depends only on cost" },
+        { "id": "q30b", "text": "SQS fan-out uses SNS to push messages to queues in multiple regions simultaneously (active-active), while MirrorMaker 2 asynchronously replicates Kafka topics and consumer group offsets across clusters, supporting both active-active and active-passive topologies" },
+        { "id": "q30c", "text": "SQS fan-out replicates messages using Kafka Connect; MirrorMaker 2 uses AWS Data Sync" },
+        { "id": "q30d", "text": "MirrorMaker 2 works only with exactly-once semantics; SQS fan-out works only with at-most-once semantics" }
+      ],
+      "correctAnswerId": "q30b",
+      "explanation": "SQS cross-region replication typically involves SNS multi-region fan-out for simple push patterns, while MirrorMaker 2 is a dedicated Kafka replication tool that also mirrors offsets, enabling seamless consumer failover across clusters."
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "Legend",
+      "description": "Outstanding work — you have mastered both SQS and Apache Kafka at an expert level. You understand not just the fundamentals of message queuing but the deep internals: log segment files, ISR mechanics, exactly-once transactional APIs, schema registries, consumer lag monitoring, and advanced replication strategies like MirrorMaker 2. You can architect reliable, high-throughput messaging systems from scratch, anticipate failure modes like hot partitions and rebalance storms, and choose the right tool — SQS, SNS, EventBridge, or Kafka — for each use case. Engineers on your team look to you when distributed messaging gets complex. You are the person who designs the transactional outbox, tunes visibility timeouts, and writes the runbook for consumer lag alerts. Genuinely impressive.",
+      "shareText": "I scored {percent}% on the SQS & Kafka Messaging Quiz on ToolNotch! Can you beat me?"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Expert",
+      "description": "Great result — you have a strong command of both SQS and Kafka. You understand partitions, offsets, consumer groups, delivery semantics, and the key differences between AWS messaging services. A few advanced internals or edge cases caught you out, but your practical knowledge is well above average. You can design robust event-driven systems, handle DLQs and visibility timeouts confidently, and hold your own in architecture discussions about streaming versus queuing. With a bit more focus on Kafka's internal storage format, transactional APIs, and cross-region replication patterns, you will be scoring at Legend level. Keep building and reading — the gap is smaller than you think.",
+      "shareText": "I scored {percent}% on the SQS & Kafka Messaging Quiz on ToolNotch! Can you beat me?"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Fan",
+      "description": "Solid effort — you have a good grasp of the core concepts behind message queuing and distributed streaming. You know what SQS and Kafka are, understand producers and consumers, and have a working mental model of topics, partitions, and delivery guarantees. Some of the intermediate and advanced questions on visibility timeouts, ISR, exactly-once semantics, and log internals were challenging, but that is entirely expected at this stage. The best way to level up is to build something hands-on: spin up a local Kafka cluster, process some SQS messages with Lambda, and trace a message from producer to consumer group. Practical experience will make the advanced concepts click quickly.",
+      "shareText": "I scored {percent}% on the SQS & Kafka Messaging Quiz on ToolNotch! Can you beat me?"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "Rookie",
+      "description": "Everyone starts somewhere, and distributed messaging is genuinely one of the trickier areas of backend engineering. The concepts of queues, topics, partitions, offsets, and delivery semantics can feel abstract until you work with them directly. Start with the basics: read the AWS SQS documentation and try the Kafka quickstart guide to get a local broker running. Understanding why systems decouple producers from consumers, and what at-least-once delivery means in practice, will give you a strong foundation. Come back and retake the quiz after some hands-on practice — you will be surprised how quickly the intermediate concepts start making sense once you have seen them in action.",
+      "shareText": "I scored {percent}% on the SQS & Kafka Messaging Quiz on ToolNotch! Can you beat me?"
+    }
+  ]
+}

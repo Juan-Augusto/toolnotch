@@ -15,39 +15,56 @@ export default function Footer({ locale }: FooterProps) {
   ]
 
   return (
-    <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-8 text-sm text-gray-500 dark:text-gray-400">
-      <div className="max-w-5xl mx-auto px-4 flex flex-col items-center gap-4">
-        {/* Navigation links */}
+    <footer
+      style={{
+        background: 'var(--base-surface)',
+        borderTop: '1px solid var(--base-border)',
+      }}
+    >
+      <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col items-center gap-5">
+
+        <div
+          className="text-xs font-bold uppercase tracking-widest"
+          style={{ color: 'var(--neon)', letterSpacing: '0.12em', fontFamily: 'var(--font-display)' }}
+        >
+          ToolNotch
+        </div>
+
         <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2" aria-label="Footer navigation">
           {navLinks.map(({ label, href }) => (
             <Link
               key={label}
               href={href}
-              className="hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
+              className="link-hover text-sm"
             >
               {label}
             </Link>
           ))}
         </nav>
 
-        {/* Tagline */}
-        <p className="text-center text-gray-400 dark:text-gray-500">
+        <div
+          className="text-xs text-center max-w-sm"
+          style={{ color: 'var(--text-muted)' }}
+        >
           Free tools that run in your browser. No sign-up. No data stored.
-        </p>
+        </div>
 
-        {/* Copyright + social links */}
-        <div className="flex items-center gap-4">
+        <div
+          className="flex items-center gap-4 text-xs"
+          style={{ color: 'var(--text-muted)' }}
+        >
           <span>© 2026 ToolNotch · Built by Juan Soares</span>
           <a
             href="https://github.com/Juan-Augusto"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
+            className="link-hover transition-colors"
           >
-            <Github size={16} />
+            <Github size={14} />
           </a>
         </div>
+
       </div>
     </footer>
   )

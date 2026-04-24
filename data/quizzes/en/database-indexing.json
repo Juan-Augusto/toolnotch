@@ -1,0 +1,431 @@
+{
+  "id": "database-indexing",
+  "type": "trivia",
+  "category": "backend",
+  "locale": "en",
+  "title": "Database Indexing Quiz",
+  "description": "Master database indexing: B-Tree internals, composite indexes, covering indexes, and advanced PostgreSQL index types.",
+  "image": "/images/quizzes/database-indexing.png",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What is a database index?",
+      "options": [
+        { "id": "a", "text": "A backup copy of the entire table stored on a separate disk" },
+        { "id": "b", "text": "A separate data structure that maps column values to row locations, speeding up data retrieval" },
+        { "id": "c", "text": "A constraint that enforces row uniqueness across a table" },
+        { "id": "d", "text": "A transaction log that records every INSERT, UPDATE, and DELETE" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "An index is an auxiliary data structure (commonly a B-Tree) that stores a sorted subset of column values alongside pointers to the corresponding heap rows, allowing the engine to locate rows without scanning the entire table.",
+      "level": "beginner"
+    },
+    {
+      "id": "q2",
+      "text": "Which of the following best describes the read vs. write trade-off of adding an index?",
+      "options": [
+        { "id": "a", "text": "Indexes speed up both reads and writes equally" },
+        { "id": "b", "text": "Indexes slow down reads because the planner must check the index first" },
+        { "id": "c", "text": "Indexes speed up reads but add overhead to INSERT, UPDATE, and DELETE operations" },
+        { "id": "d", "text": "Indexes only affect DELETE performance, not SELECT" }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "Every write must update both the table data and every index on it, so indexes trade write throughput for faster read (SELECT) performance.",
+      "level": "beginner"
+    },
+    {
+      "id": "q3",
+      "text": "What distinguishes a primary index from a secondary index?",
+      "options": [
+        { "id": "a", "text": "A primary index is always a hash index; secondary indexes are always B-Trees" },
+        { "id": "b", "text": "A primary index is built on the primary key and typically determines physical row order; secondary indexes are on other columns" },
+        { "id": "c", "text": "A primary index can only be defined at table creation; secondary indexes can be added at any time" },
+        { "id": "d", "text": "There is no practical difference — the terms are interchangeable" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "A primary index is associated with the primary key (and in clustered storage defines physical ordering), while secondary indexes cover additional columns to support other query patterns.",
+      "level": "beginner"
+    },
+    {
+      "id": "q4",
+      "text": "What is a full table scan, and when does the database use one?",
+      "options": [
+        { "id": "a", "text": "Reading every row in a table sequentially; used when no suitable index exists or when the planner estimates it is cheaper than an index scan" },
+        { "id": "b", "text": "Reading only the first and last rows of a table to estimate table size" },
+        { "id": "c", "text": "A special operation that rebuilds all indexes on the table" },
+        { "id": "d", "text": "A scan that only reads rows matching a WHERE clause" }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "A sequential (full table) scan reads every data page from disk; the planner chooses it when there is no usable index or when the selectivity is so low that random I/O via an index would be more expensive.",
+      "level": "beginner"
+    },
+    {
+      "id": "q5",
+      "text": "Given the query `SELECT * FROM orders WHERE customer_id = 42`, which condition allows the database to use an index on `customer_id`?",
+      "options": [
+        { "id": "a", "text": "The table must have fewer than 1,000 rows" },
+        { "id": "b", "text": "An index must exist on the `customer_id` column" },
+        { "id": "c", "text": "`customer_id` must be the first column defined in the table" },
+        { "id": "d", "text": "The query must use `LIMIT 1`" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The query planner can only use an index on `customer_id` if such an index has been created; otherwise it falls back to a sequential scan.",
+      "level": "beginner"
+    },
+    {
+      "id": "q6",
+      "text": "What does a UNIQUE index guarantee?",
+      "options": [
+        { "id": "a", "text": "That the indexed column is never NULL" },
+        { "id": "b", "text": "That no two rows share the same value in the indexed column(s)" },
+        { "id": "c", "text": "That the index is stored in a separate tablespace from the table data" },
+        { "id": "d", "text": "That SELECT queries on that column always return results in sorted order" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "A UNIQUE index enforces a uniqueness constraint — the database rejects any INSERT or UPDATE that would produce a duplicate value in the indexed column(s).",
+      "level": "beginner"
+    },
+    {
+      "id": "q7",
+      "text": "In PostgreSQL, what does the `EXPLAIN` command show you?",
+      "options": [
+        { "id": "a", "text": "The SQL standard version of your query after automatic rewriting" },
+        { "id": "b", "text": "The query execution plan the planner intends to use, including node types, estimated costs, and row counts" },
+        { "id": "c", "text": "A list of all indexes on the tables referenced in the query" },
+        { "id": "d", "text": "The wall-clock time the query took to execute" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "`EXPLAIN` outputs the planner's chosen execution plan tree with cost estimates; `EXPLAIN ANALYZE` also executes the query and reports actual timings.",
+      "level": "beginner"
+    },
+    {
+      "id": "q8",
+      "text": "What is the key difference between a clustered and a non-clustered index?",
+      "options": [
+        { "id": "a", "text": "A clustered index stores the actual row data in index order; a non-clustered index stores only pointers to the data rows" },
+        { "id": "b", "text": "A clustered index can only be on a single column; non-clustered indexes support multiple columns" },
+        { "id": "c", "text": "Non-clustered indexes are faster for all query types" },
+        { "id": "d", "text": "Clustered indexes require more disk space than non-clustered indexes" }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "A clustered index physically orders the heap (or stores data in the leaf level of the index itself), so range scans are very fast; a non-clustered index is a separate structure that holds key values and row-location pointers.",
+      "level": "beginner"
+    },
+    {
+      "id": "q9",
+      "text": "Why are indexes on low-cardinality columns (e.g., a boolean `is_active`) often ineffective?",
+      "options": [
+        { "id": "a", "text": "The database cannot build B-Tree indexes on boolean columns" },
+        { "id": "b", "text": "When a column has very few distinct values, an index scan may touch most of the table, making a sequential scan cheaper" },
+        { "id": "c", "text": "Low-cardinality indexes are automatically dropped by the database engine" },
+        { "id": "d", "text": "Indexes on booleans require a special storage engine not available in standard PostgreSQL" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "With only a handful of distinct values, each value appears in a large fraction of rows; the cost of random I/O through the index often exceeds the cost of a sequential scan.",
+      "level": "beginner"
+    },
+    {
+      "id": "q10",
+      "text": "What happens to an index when you update a row's indexed column?",
+      "options": [
+        { "id": "a", "text": "Nothing — indexes are refreshed only during the next VACUUM" },
+        { "id": "b", "text": "The old index entry is deleted and a new entry is inserted to reflect the updated value" },
+        { "id": "c", "text": "The entire index is rebuilt from scratch after every UPDATE" },
+        { "id": "d", "text": "The index entry is marked as invalid until the next SELECT is executed" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Updating an indexed column causes the engine to remove the old key entry and insert a new one, which is why heavy UPDATE workloads on indexed columns incur write amplification.",
+      "level": "beginner"
+    },
+    {
+      "id": "q11",
+      "text": "When the B-Tree index is traversed to find a key value, what is the time complexity of the search?",
+      "options": [
+        { "id": "a", "text": "O(n) — linear in the number of rows" },
+        { "id": "b", "text": "O(log n) — logarithmic in the number of rows" },
+        { "id": "c", "text": "O(1) — constant time regardless of table size" },
+        { "id": "d", "text": "O(n²) — quadratic in the number of rows" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "A B-Tree is a balanced tree; each level halves the search space, so locating a key requires at most O(log n) node reads.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q12",
+      "text": "Which statement correctly contrasts a hash index with a B-Tree index?",
+      "options": [
+        { "id": "a", "text": "Hash indexes support range queries (>, <, BETWEEN); B-Trees do not" },
+        { "id": "b", "text": "Hash indexes offer O(1) equality lookups but cannot support range queries or ORDER BY; B-Trees support all of these" },
+        { "id": "c", "text": "Hash indexes store data in sorted order, making range scans very fast" },
+        { "id": "d", "text": "B-Tree and hash indexes have identical performance characteristics; the choice is purely cosmetic" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Hash indexes bucket values by hash, giving O(1) equality lookups, but the hash destroys ordering so they cannot satisfy range predicates or sort requirements.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q13",
+      "text": "Given a composite index on `(last_name, first_name)`, which WHERE clause can use the index efficiently?",
+      "options": [
+        { "id": "a", "text": "`WHERE first_name = 'Alice'` (skipping `last_name`)" },
+        { "id": "b", "text": "`WHERE last_name = 'Smith'`" },
+        { "id": "c", "text": "`WHERE first_name = 'Alice' AND last_name = 'Smith'` — only when both columns appear" },
+        { "id": "d", "text": "Neither column can use the index unless the query includes all indexed columns" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "A composite B-Tree index is sorted by the leftmost column first; queries that filter on `last_name` (the leading column) can seek into the index, but queries on `first_name` alone cannot.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q14",
+      "text": "What is a covering index?",
+      "options": [
+        { "id": "a", "text": "An index that spans every column in the table" },
+        { "id": "b", "text": "An index that contains all columns needed to satisfy a query, allowing the engine to return results from the index alone without accessing the table heap" },
+        { "id": "c", "text": "An index that automatically expands to cover new columns as they are added to the table" },
+        { "id": "d", "text": "An index that covers NULL values that standard indexes would normally skip" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "When an index includes every column referenced by a query (in the key or via INCLUDE), the database can answer the query entirely from the index pages, eliminating heap fetches.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q15",
+      "text": "What is index selectivity, and why does it matter to the query planner?",
+      "options": [
+        { "id": "a", "text": "The number of pages the index occupies on disk; higher page counts mean faster scans" },
+        { "id": "b", "text": "The ratio of distinct values to total rows; high selectivity means few rows per key value, making the index more useful for lookups" },
+        { "id": "c", "text": "Whether the index was created on a primary key column" },
+        { "id": "d", "text": "The percentage of queries in the workload that reference the indexed column" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "High selectivity (close to 1.0) means each key value identifies very few rows, so the index efficiently narrows the result set; low selectivity means many rows per key and the planner may prefer a sequential scan.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q16",
+      "text": "What is a partial index in PostgreSQL?",
+      "options": [
+        { "id": "a", "text": "An index built on only the first N bytes of a text column" },
+        { "id": "b", "text": "An index that includes only rows satisfying a WHERE predicate, reducing its size and maintenance cost" },
+        { "id": "c", "text": "An index that covers only half of a composite key" },
+        { "id": "d", "text": "An index automatically created by the planner for a single query execution" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "A partial index is created with a WHERE clause (e.g., `CREATE INDEX … WHERE status = 'active'`), so it indexes only matching rows, resulting in a smaller, faster-to-maintain structure.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q17",
+      "text": "What is a function-based (expression) index?",
+      "options": [
+        { "id": "a", "text": "An index stored as a stored procedure that regenerates itself nightly" },
+        { "id": "b", "text": "An index built on the result of an expression or function applied to one or more columns, enabling index scans on computed predicates" },
+        { "id": "c", "text": "An index that triggers a user-defined function whenever a row is inserted" },
+        { "id": "d", "text": "An index whose key values are encrypted using a hash function for security" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "A function-based index (e.g., `CREATE INDEX ON users (lower(email))`) stores the pre-computed function result, so a query like `WHERE lower(email) = '…'` can use the index instead of scanning all rows.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q18",
+      "text": "What is index bloat and how does VACUUM help in PostgreSQL?",
+      "options": [
+        { "id": "a", "text": "Index bloat occurs when an index has too many columns; VACUUM removes extra columns automatically" },
+        { "id": "b", "text": "Index bloat is the accumulation of dead tuple references in index pages from UPDATEs and DELETEs; VACUUM reclaims those pages and marks them reusable" },
+        { "id": "c", "text": "Index bloat means the index file exceeds the size of the table; VACUUM compresses both to the same size" },
+        { "id": "d", "text": "Index bloat is caused by too many concurrent reads; VACUUM resets read counters" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "PostgreSQL's MVCC model leaves dead tuple versions in the heap and old index entries pointing to them; VACUUM removes those dead entries, freeing space and keeping the index lean.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q19",
+      "text": "Why might the PostgreSQL query planner ignore an index even when one exists on the filtered column?",
+      "options": [
+        { "id": "a", "text": "PostgreSQL never ignores an index once it is created — it is always used" },
+        { "id": "b", "text": "The planner's cost model estimates that a sequential scan is cheaper, often because the predicate matches a large fraction of rows or table statistics are stale" },
+        { "id": "c", "text": "The index can only be used if the query includes an ORDER BY clause on the indexed column" },
+        { "id": "d", "text": "Indexes are only used for JOIN operations, never for WHERE clause filtering" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The planner compares estimated costs; if row estimates (based on table statistics) suggest most rows match, random I/O through the index is more expensive than a sequential scan, so the index is skipped.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q20",
+      "text": "Given a B-Tree index on a `name` column, which LIKE pattern can use the index?",
+      "options": [
+        { "id": "a", "text": "`WHERE name LIKE '%smith'` (suffix wildcard)" },
+        { "id": "b", "text": "`WHERE name LIKE '%smith%'` (both sides wildcard)" },
+        { "id": "c", "text": "`WHERE name LIKE 'smith%'` (prefix wildcard)" },
+        { "id": "d", "text": "None — LIKE never uses a B-Tree index" }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "A B-Tree index is sorted lexicographically; a prefix wildcard (`'smith%'`) maps to a range scan on the index, while a leading wildcard forces a full index scan because the common prefix is unknown.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q21",
+      "text": "Which PostgreSQL index type is designed for geometric and spatial data types such as points, boxes, and polygons?",
+      "options": [
+        { "id": "a", "text": "GIN (Generalized Inverted Index)" },
+        { "id": "b", "text": "BRIN (Block Range INdex)" },
+        { "id": "c", "text": "GiST (Generalized Search Tree)" },
+        { "id": "d", "text": "SPGIST (Space-Partitioned GiST)" }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "GiST is an extensible index framework that supports non-scalar data types including geometric shapes, full-text `tsvector`, and range types, enabling operations like containment and overlap queries.",
+      "level": "advanced"
+    },
+    {
+      "id": "q22",
+      "text": "A GIN (Generalized Inverted Index) is most appropriate for which type of column?",
+      "options": [
+        { "id": "a", "text": "A single-value integer primary key" },
+        { "id": "b", "text": "A column containing composite values such as arrays, JSONB, or `tsvector` full-text search documents" },
+        { "id": "c", "text": "A monotonically increasing timestamp column in an append-only table" },
+        { "id": "d", "text": "A low-cardinality boolean column" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "GIN builds an inverted index over the individual elements of composite values (array elements, JSON keys, lexemes), making it ideal for containment operators like `@>` or full-text search with `@@`.",
+      "level": "advanced"
+    },
+    {
+      "id": "q23",
+      "text": "What is a BRIN index and for which table characteristic is it best suited?",
+      "options": [
+        { "id": "a", "text": "A block range index that stores min/max values per range of pages; best for large, physically ordered (correlated) columns like `created_at` in append-only tables" },
+        { "id": "b", "text": "A balanced range index that replaces B-Trees for all numeric columns" },
+        { "id": "c", "text": "A bitmap range index used to speed up bitmap heap scans on random data" },
+        { "id": "d", "text": "A binary range index that only works with UUID primary keys" }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "BRIN records only the minimum and maximum values for each page range, making it extremely small and cheap to maintain; it works well when column values naturally correlate with physical storage order.",
+      "level": "advanced"
+    },
+    {
+      "id": "q24",
+      "text": "What is 'write amplification' in the context of LSM-tree (Log-Structured Merge-tree) indexes?",
+      "options": [
+        { "id": "a", "text": "Each logical write is physically written multiple times across different levels of the LSM tree during compaction" },
+        { "id": "b", "text": "The database writes a redundant copy of every row to the transaction log" },
+        { "id": "c", "text": "Write amplification refers to the overhead of updating a B-Tree's parent nodes after a leaf split" },
+        { "id": "d", "text": "It is the extra latency caused by flushing the write-ahead log to disk" }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "In LSM trees, data flows through multiple levels (L0 → L1 → … → Ln) via compaction; a single logical key may be rewritten many times, so the ratio of physical bytes written to logical bytes written is the write amplification factor.",
+      "level": "advanced"
+    },
+    {
+      "id": "q25",
+      "text": "What is the purpose of `CREATE INDEX CONCURRENTLY` in PostgreSQL?",
+      "options": [
+        { "id": "a", "text": "It builds the index on multiple CPU cores simultaneously to reduce build time" },
+        { "id": "b", "text": "It builds the index without taking an exclusive table lock, allowing concurrent reads and writes during index creation at the cost of a longer build time" },
+        { "id": "c", "text": "It creates the index on a replica before promoting it to the primary, avoiding downtime" },
+        { "id": "d", "text": "It defers index enforcement until after a COMMIT, improving transaction throughput" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "`CREATE INDEX CONCURRENTLY` performs multiple passes over the table data and only holds brief locks, so the table remains fully accessible during the build — essential for production tables that cannot tolerate downtime.",
+      "level": "advanced"
+    },
+    {
+      "id": "q26",
+      "text": "What is an 'invisible index' (supported in MySQL 8+ and Oracle) and what is its primary use case?",
+      "options": [
+        { "id": "a", "text": "An index encrypted at rest so its contents cannot be read by unauthorized users" },
+        { "id": "b", "text": "An index that is maintained by the engine but hidden from the query planner, used to safely test the impact of dropping an index before actually removing it" },
+        { "id": "c", "text": "An index stored in memory only, never persisted to disk" },
+        { "id": "d", "text": "An index on system catalog tables that is not exposed in information_schema views" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Invisible indexes are still updated on writes but the optimizer ignores them by default; this lets DBAs simulate index removal and verify query plans before committing to a potentially disruptive DROP INDEX.",
+      "level": "advanced"
+    },
+    {
+      "id": "q27",
+      "text": "How does PostgreSQL's MVCC (Multi-Version Concurrency Control) model contribute to index bloat over time?",
+      "options": [
+        { "id": "a", "text": "MVCC compresses old row versions, causing indexes to fragment over time" },
+        { "id": "b", "text": "Every UPDATE creates a new heap tuple version while leaving the old version in place; both the old and new index entries coexist until VACUUM reclaims the dead tuples" },
+        { "id": "c", "text": "MVCC forces the index to store the transaction ID alongside every key, doubling its size" },
+        { "id": "d", "text": "MVCC has no effect on indexes — only heap pages accumulate dead tuples" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Because PostgreSQL never updates a row in-place (it writes a new version), the index must point to the new version while the old index entry lingers until VACUUM removes the now-invisible dead tuple.",
+      "level": "advanced"
+    },
+    {
+      "id": "q28",
+      "text": "When does the PostgreSQL planner choose a Bitmap Index Scan over a plain Index Scan?",
+      "options": [
+        { "id": "a", "text": "When the query returns only a single row" },
+        { "id": "b", "text": "When multiple indexes must be combined (AND/OR) or when the estimated row count is moderate, allowing heap pages to be read once in physical order rather than via many random seeks" },
+        { "id": "c", "text": "When the table has no heap pages — data is stored in the index itself" },
+        { "id": "d", "text": "Bitmap Index Scan is always faster and is always preferred over a plain Index Scan" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "A Bitmap Index Scan collects all matching TIDs into a bitmap in memory, sorts them by physical location, then reads the heap pages once in order — efficient for moderate result sets and multi-index queries that plain index scans cannot combine.",
+      "level": "advanced"
+    },
+    {
+      "id": "q29",
+      "text": "In a partitioned table, what is a key consideration when creating indexes to ensure all partitions benefit?",
+      "options": [
+        { "id": "a", "text": "Indexes must be created on the partition key column only; other columns cannot be indexed" },
+        { "id": "b", "text": "Creating an index on the parent partitioned table in PostgreSQL 11+ automatically propagates the index to all existing and future partitions" },
+        { "id": "c", "text": "Each partition requires a manually created index with a unique name; there is no automatic propagation" },
+        { "id": "d", "text": "Partitioned tables do not support B-Tree indexes; only BRIN indexes are available" }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Since PostgreSQL 11, `CREATE INDEX` on a partitioned table creates a corresponding local index on each partition and automatically creates indexes on new partitions as they are attached.",
+      "level": "advanced"
+    },
+    {
+      "id": "q30",
+      "text": "Which PostgreSQL system view would you query to find the number of index scans, sequential scans, and tuples fetched for user-created indexes?",
+      "options": [
+        { "id": "a", "text": "`pg_indexes`" },
+        { "id": "b", "text": "`information_schema.table_constraints`" },
+        { "id": "c", "text": "`pg_stat_user_indexes`" },
+        { "id": "d", "text": "`pg_index`" }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "`pg_stat_user_indexes` exposes cumulative statistics per index including `idx_scan` (number of scans initiated), `idx_tup_read`, and `idx_tup_fetch`, making it the primary view for identifying unused or heavily-used indexes.",
+      "level": "advanced"
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "Legend",
+      "description": "Outstanding result — you have a deep, expert-level understanding of database indexing. You can navigate B-Tree internals, design covering and partial indexes, interpret query plans, and work confidently with PostgreSQL-specific index types like GiST, GIN, and BRIN. You understand the subtle interplay between MVCC, VACUUM, and index bloat, and you know when to reach for advanced tools such as CREATE INDEX CONCURRENTLY or pg_stat_user_indexes to monitor production systems. Your indexing skills would translate directly into measurable query performance improvements in large-scale production databases.",
+      "shareText": "I scored Legend on the Database Indexing Quiz at ToolNotch! 🗂️"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Expert",
+      "description": "Great performance — you have a solid, working knowledge of database indexing that goes well beyond the basics. You understand composite index column order, covering indexes, selectivity, partial indexes, and the difference between hash and B-Tree indexes. You may want to deepen your knowledge of advanced PostgreSQL index types (GiST, GIN, BRIN), LSM-tree internals, and operational concerns like MVCC-related bloat and pg_stat_user_indexes monitoring to reach the Legend tier.",
+      "shareText": "I scored Expert on the Database Indexing Quiz at ToolNotch! 🗂️"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Fan",
+      "description": "Decent effort — you grasp the fundamentals of database indexing, including what an index is, the read/write trade-off, and how WHERE clauses interact with indexes. To level up, focus on composite index leading-column rules, covering indexes, selectivity, and why the planner sometimes ignores available indexes. Studying PostgreSQL's EXPLAIN output and experimenting with partial and function-based indexes will quickly strengthen your practical indexing skills.",
+      "shareText": "I scored Fan on the Database Indexing Quiz at ToolNotch! 🗂️"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "Rookie",
+      "description": "Everyone starts somewhere! Database indexing is a rich topic that rewards hands-on practice. Begin with the basics: what an index is, how B-Trees store sorted data, and the trade-off between read speed and write overhead. Then explore how to read EXPLAIN output in PostgreSQL, when to use composite indexes, and how selectivity affects whether the planner uses your index. Revisit this quiz after some practice and you will be surprised how quickly you improve.",
+      "shareText": "I just took the Database Indexing Quiz at ToolNotch — time to study up! 🗂️"
+    }
+  ]
+}
