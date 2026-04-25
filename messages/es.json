@@ -8,10 +8,14 @@
     "free": "Gratis"
   },
   "toolWrapper": {
-    "breadcrumb": { "home": "Inicio" },
+    "breadcrumb": {
+      "home": "Inicio"
+    },
     "allTools": "Todas las herramientas"
   },
-  "faqSection": { "heading": "Preguntas frecuentes" },
+  "faqSection": {
+    "heading": "Preguntas frecuentes"
+  },
   "image": {
     "compressor": {
       "metaTitle": "Comprimir Imagen Gratis en Línea — Sin Registro",
@@ -52,7 +56,9 @@
         "hint": "o haz clic para explorar · Compatible con JPG, PNG, WebP, AVIF",
         "replace": "Haz clic o arrastra para reemplazar"
       },
-      "format": { "label": "Formato de salida" },
+      "format": {
+        "label": "Formato de salida"
+      },
       "quality": {
         "label": "Calidad",
         "smaller": "Archivo más pequeño",
@@ -72,7 +78,9 @@
         "noSavings": "El tamaño del archivo no se redujo — prueba con menor calidad o diferente formato",
         "dragHint": "Arrastra el control para comparar original vs comprimido"
       },
-      "download": { "label": "Descargar imagen comprimida" }
+      "download": {
+        "label": "Descargar imagen comprimida"
+      }
     }
   },
   "pdf": {
@@ -624,7 +632,19 @@
             "question": "¿Cómo puedo reducir el interés total pagado?",
             "answer": "Puedes reducir el interés total haciendo un pago inicial mayor, eligiendo un plazo más corto o realizando pagos adicionales al capital cuando sea posible."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Una calculadora de préstamos estima tu cuota mensual para cualquier préstamo a plazos fijos — préstamos personales, automotrices, estudiantiles o cualquier monto tomado a tasa fija por un plazo determinado. Cada pago cubre primero los intereses acumulados y luego reduce el saldo del capital. Entender la diferencia entre la tasa de interés nominal y la TEA o CAT (Costo Anual Total, según el país) es fundamental: el CAT incluye comisiones de apertura y otros cargos, siendo el costo real del financiamiento. Las instituciones financieras están obligadas a informar esta tasa, y es siempre la cifra correcta para comparar ofertas de diferentes prestamistas.",
+          "howToUse": [
+            "Ingresa el monto del préstamo — el total que planeas solicitar, antes de cualquier comisión.",
+            "Ingresa la tasa de interés anual. Usa el CAT o TEA de la oferta para el costo total más preciso.",
+            "Selecciona el plazo en meses o años. Plazos más cortos implican cuotas más altas pero mucho menos intereses.",
+            "Haz clic en Calcular para ver tu cuota mensual y el total de intereses durante la vida del préstamo.",
+            "Prueba distintos montos y plazos para encontrar la combinación que se ajuste a tu presupuesto sin maximizar el costo total."
+          ],
+          "whyItMatters": "El plazo tiene un efecto desproporcionado en el costo total. Un préstamo de $10,000 al 12% anual a 3 años cuesta aproximadamente $1,957 en intereses. El mismo préstamo a 5 años reduce la cuota en unos $100 por mes — pero los intereses totales suben a $3,346. Para montos mayores, esta diferencia se amplifica considerablemente. Conocer el costo real antes de firmar te permite comparar ofertas con precisión y evitar el error común de optimizar por la cuota más baja sin ver lo que pagarás en total.",
+          "proTip": "Siempre compara préstamos usando el CAT o TEA, no la tasa nominal. Dos préstamos con tasas idénticas pueden tener CAT muy distintos si las comisiones de apertura difieren. También pregunta si existe penalización por pago anticipado — si planeas liquidar el préstamo antes del plazo, un préstamo con menor comisión pero tasa ligeramente mayor puede costarte menos en total."
+        }
       },
       "mortgage-calculator": {
         "metaTitle": "Calculadora de Hipoteca — Pago Mensual y Costo Total",
@@ -648,7 +668,20 @@
             "question": "¿Cómo ayuda un pago inicial mayor?",
             "answer": "Un pago inicial mayor reduce el monto del préstamo (lo que baja los pagos mensuales y el interés total), puede eliminar el PMI y te da capital inmediato en tu vivienda."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Una calculadora de hipoteca estima tu cuota mensual de capital e intereses en función del monto del préstamo, la tasa de interés y el plazo. Las cuotas se calculan usando la fórmula de amortización estándar, que mantiene el pago fijo mientras cambia la proporción entre intereses y capital — en los primeros años, la mayor parte es intereses; al final, es amortización del capital. Lo que esta calculadora no incluye es tu costo mensual total de vivienda: impuestos sobre la propiedad, seguro del hogar y — si tu pago inicial es menor al 20% — el seguro hipotecario (PMI o equivalente según el país). Estos extras pueden añadir una cantidad significativa al mes dependiendo del mercado y el precio de la vivienda.",
+          "howToUse": [
+            "Ingresa el precio de la vivienda — el precio total de compra, no el monto del préstamo.",
+            "Ingresa tu pago inicial como monto o porcentaje. Un pago inicial del 20% elimina el seguro hipotecario.",
+            "Ingresa la tasa de interés anual. Usa la tasa cotizada por tu banco o una referencia del mercado actual.",
+            "Elige el plazo del préstamo: 30 años para cuotas más bajas, 15 años para pagar menos intereses en total.",
+            "Haz clic en Calcular para ver tu cuota mensual de capital e intereses, el total de intereses y la tabla de amortización completa.",
+            "Suma impuestos, seguro y otros cargos al resultado para obtener tu costo mensual real de vivienda."
+          ],
+          "whyItMatters": "Una diferencia del 0.5% en la tasa de interés puede costarte o ahorrarte decenas de miles de dólares a lo largo de un préstamo a 30 años. Simular distintos escenarios — tasas, plazos y pagos iniciales — antes de hacer una oferta te da ventaja en la negociación y te protege de comprometerte más de la cuenta. Muchos compradores se enfocan en la cuota mensual sin ver el total de intereses: una propiedad de $300,000 al 7% a 30 años puede costar más de $400,000 solo en intereses. Entender el panorama completo te ayuda a elegir el producto correcto y a decidir si vale la pena dar un mayor pago inicial.",
+          "proTip": "Antes de solicitar el préstamo, obtén preaprobación de al menos dos o tres instituciones financieras. Las tasas hipotecarias son negociables, y una diferencia del 0.25% puede representar entre $25 y $50 menos por mes en una hipoteca típica. También evalúa si pagar puntos de descuento por adelantado tiene sentido según tu horizonte temporal: un punto (1% del monto del préstamo) generalmente reduce la tasa en 0.25%, con un punto de equilibrio de aproximadamente 4 a 6 años."
+        }
       },
       "car-loan-calculator": {
         "metaTitle": "Calculadora de Préstamo Vehicular — Pago Mensual de Auto",
@@ -746,7 +779,20 @@
             "question": "¿Puedo descargar mi tabla de amortización?",
             "answer": "Usa la función de impresión de tu navegador para imprimir o guardar la tabla como PDF. La tabla muestra todos los pagos mensuales con un desglose completo."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Una calculadora de amortización genera el cronograma completo de pagos de un préstamo a cuotas fijas, mostrando exactamente cuánto de cada pago se destina a intereses y cuánto reduce el saldo del capital. La principal revelación de las tablas de amortización es la concentración de intereses al inicio: en los primeros años de una hipoteca, la mayor parte de cada cuota es intereses. En una hipoteca de $300,000 al 7% a 30 años, el primer pago aplica aproximadamente $250 al capital y $1,750 a intereses. Con el tiempo, esa proporción se invierte — la mayoría de cada cuota reduce el capital. Entender este cronograma ayuda a visualizar cómo los pagos extra aceleran la liquidación y reducen el costo total.",
+          "howToUse": [
+            "Ingresa el monto del préstamo, la tasa de interés anual y el plazo en años.",
+            "Opcionalmente ingresa un pago extra mensual para ver cómo acorta el préstamo y reduce los intereses.",
+            "Haz clic en Calcular para generar el cronograma de amortización completo y los totales del préstamo.",
+            "Revisa el resumen: total de intereses pagados, fecha de liquidación y costo total del préstamo.",
+            "Examina la tabla año por año para ver cómo cambia la proporción intereses/capital con el tiempo.",
+            "Experimenta con distintos montos de pago extra para encontrar el equilibrio ideal entre cuota y ahorro a largo plazo."
+          ],
+          "whyItMatters": "La mayoría de los prestatarios se sorprenden al descubrir cuánto poco capital reducen sus pagos iniciales. En el primer año de una hipoteca a 30 años al 7%, más del 85% de cada cuota se destina a intereses. Los pagos extra realizados en los primeros años tienen un impacto desproporcionado porque reducen el saldo sobre el que se calculan todos los intereses futuros — el ahorro se multiplica a lo largo del plazo restante. Realizar un pago hipotecario extra al año generalmente acorta un préstamo a 30 años en 4 o 5 años y ahorra decenas de miles de dólares en intereses. La tabla de amortización hace que esta matemática sea concreta.",
+          "proTip": "Confirma con tu institución financiera cómo se aplican los pagos extra. Algunas aplican los fondos al próximo pago programado (lo que solo ahorra un mes de intereses), mientras que otras los aplican directamente al capital (lo que reduce el saldo y ahorra intereses durante todo el plazo restante). Siempre especifica 'aplicar al capital' por escrito al hacer pagos extra — es el predeterminado en algunas instituciones pero no en todas, y la diferencia en ahorro puede ser considerable."
+        }
       },
       "home-affordability-calculator": {
         "metaTitle": "Calculadora de Asequibilidad de Vivienda — ¿Cuánto Puedo Gastar en una Casa?",
@@ -794,7 +840,20 @@
             "question": "¿Puedo refinanciar a un plazo más corto?",
             "answer": "Sí, refinanciar de una hipoteca a 30 años a una de 15 años frecuentemente ofrece una tasa más baja y mucho menos interés total, aunque tu pago mensual será más alto."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Una calculadora de refinanciamiento determina si reemplazar tu hipoteca actual con un nuevo préstamo a menor tasa ahorra dinero después de considerar los costos de cierre. La métrica clave es el punto de equilibrio: cuántos meses se necesitan para que el ahorro mensual compense lo que pagaste para refinanciar. El refinanciamiento generalmente cuesta entre el 2% y el 5% del monto del préstamo en costos de cierre — incluso los préstamos anunciados como 'sin costo' suelen incluir esos costos en la tasa o en el saldo. Esta calculadora compara la tasa menor con el costo de obtenerla, para que puedas determinar si refinanciar tiene sentido dado el tiempo que planeas mantener la propiedad.",
+          "howToUse": [
+            "Ingresa tu saldo actual del préstamo, la tasa de interés actual y el plazo restante de tu hipoteca.",
+            "Ingresa la nueva tasa de interés cotizada y el nuevo plazo que estás considerando.",
+            "Ingresa los costos de cierre estimados — típicamente entre el 2% y el 3% del monto del préstamo.",
+            "Haz clic en Calcular para ver el ahorro mensual, la comparación de intereses totales y el punto de equilibrio en meses.",
+            "Compara el punto de equilibrio con cuánto tiempo planeas quedarte en la propiedad. Si el equilibrio es a 36 meses pero planeas mudarte en 24, el refinanciamiento probablemente no vale la pena.",
+            "Simula pagar los costos de bolsillo versus incorporarlos al préstamo para ver el impacto real a largo plazo."
+          ],
+          "whyItMatters": "Refinanciar puede ahorrar cientos de dólares al mes, pero solo si el momento es el adecuado. Los propietarios que refinancian sin calcular el punto de equilibrio frecuentemente pagan costos que nunca recuperan — especialmente quienes venden o refinancian de nuevo en pocos años. Por el contrario, esperar demasiado cuando las tasas bajan tiene un costo real mes a mes. Esta calculadora te da un criterio numérico claro: si el punto de equilibrio está dentro de tu horizonte de permanencia, refinanciar es probablemente una buena decisión financiera.",
+          "proTip": "El 'refinanciamiento sin costos' rara vez es gratuito. Los prestamistas típicamente incorporan los costos al saldo del préstamo o a la tasa — usualmente entre 0.25% y 0.375% más alta. Simula ambas opciones: pagar los costos de bolsillo ahorra más si planeas quedarte a largo plazo, mientras que incorporarlos al préstamo preserva el flujo de caja si podrías mudarte pronto."
+        }
       },
       "student-loan-calculator": {
         "metaTitle": "Calculadora de Préstamo Estudiantil — Pago Mensual y Devolución",
@@ -1027,7 +1086,19 @@
             "question": "¿Debo pagar deudas o invertir?",
             "answer": "Si la tasa de interés de tu deuda es mayor que el rendimiento esperado de las inversiones (generalmente del 7–10%), paga la deuda primero. Para deudas con tasa baja, por debajo del 4%, invertir puede tener más sentido."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Una calculadora de pago de deudas muestra cuánto tiempo tardará en eliminar sus deudas y cuántos intereses totales pagará con distintas estrategias de pago. Los dos métodos más comunes son: el método avalancha, que prioriza la deuda con mayor tasa de interés (matemáticamente óptimo — minimiza el total de intereses pagados), y el método bola de nieve, que prioriza el saldo más pequeño (psicológicamente motivador — los logros rápidos generan impulso). El costo real de pagar solo el mínimo es a menudo el resultado más revelador de esta calculadora. En una tarjeta de crédito con saldo de $5,000 al 22% anual, pagar solo el mínimo puede tomar más de 15 años y costar más en intereses que el saldo original.",
+          "howToUse": [
+            "Lista cada deuda con su saldo actual, tasa de interés anual y pago mínimo mensual actual.",
+            "Ingresa cualquier monto extra mensual que puedas destinar al pago de deudas más allá de los mínimos.",
+            "Elige una estrategia: avalancha (mayor tasa de interés primero) o bola de nieve (menor saldo primero).",
+            "Revisa la fecha de liquidación y el total de intereses de cada estrategia para ver cuál ahorra más.",
+            "Ajusta el pago extra para ver cómo incluso pequeños aumentos cambian drásticamente el plazo y los intereses totales."
+          ],
+          "whyItMatters": "La diferencia entre pagar solo el mínimo y añadir incluso $100 extra por mes puede significar años de deuda y miles de dólares más en intereses. Muchas personas subestiman cuánto tardan los pagos mínimos porque los estados de cuenta no muestran este dato de forma prominente. Ver una fecha concreta de liquidación y un monto en dólares para el total de intereses hace visible el costo real de una manera que los porcentajes abstractos de tasas no logran. Esa visibilidad suele ser lo que motiva la acción real — y las cifras casi siempre son más urgentes de lo que uno espera.",
+          "proTip": "Una vez que liquides una deuda, redirige inmediatamente su pago mínimo completo a la siguiente deuda de la lista — el 'efecto bola de nieve'. Esto mantiene tu desembolso mensual total idéntico mientras acelera dramáticamente la liquidación, ya que cada deuda eliminada agrega impulso a la siguiente. El método avalancha ahorra más dinero; el método bola de nieve suele eliminar deudas más rápido, lo que puede valer el costo en intereses adicionales por su efecto motivacional."
+        }
       }
     },
     "invoiceGenerator": {
@@ -1036,14 +1107,38 @@
       "title": "Generador de Facturas Gratis",
       "description": "Crea facturas profesionales al instante. Sin registro. Sin marcas de agua. Los datos permanecen en tu navegador.",
       "faqs": [
-        { "question": "¿Mis datos de factura se almacenan en sus servidores?", "answer": "No. Todo es 100% del lado del cliente. Los datos de tu factura solo se guardan en el localStorage de tu navegador y nunca se envían a ningún servidor." },
-        { "question": "¿Cómo descargo la factura como PDF?", "answer": "Haz clic en 'Descargar / Imprimir PDF' para abrir el diálogo de impresión. Selecciona 'Guardar como PDF' en el destino para guardarla." },
-        { "question": "¿Puedo agregar mi logo?", "answer": "Sí — haz clic en el botón 'Logo' en la sección De para subir una imagen. Aparecerá en la parte superior de la vista previa de la factura." },
-        { "question": "¿Cómo cambio la moneda?", "answer": "Selecciona tu moneda en el menú desplegable de la sección Detalles de la factura. La vista previa se actualiza al instante." },
-        { "question": "¿Mis facturas se guardan automáticamente?", "answer": "Sí — el borrador actual de tu factura se guarda automáticamente en el localStorage de tu navegador mientras escribes. Estará ahí cuando regreses." },
-        { "question": "¿Qué monedas son compatibles?", "answer": "Más de 30 monedas, incluyendo USD, EUR, GBP, JPY, CAD, AUD, CHF, INR y más." },
-        { "question": "¿Puedo usar esto para facturas con IVA?", "answer": "Sí — usa el campo Impuesto % para el IVA. Para facturas del Reino Unido con IVA preconfigurado, prueba nuestra herramienta Generador de Facturas UK." },
-        { "question": "¿Hay marca de agua en la factura?", "answer": "Sin marca de agua, nunca. Esta es una herramienta completamente gratuita sin tarifas ocultas, sin registro y sin marcas de agua en tus facturas." }
+        {
+          "question": "¿Mis datos de factura se almacenan en sus servidores?",
+          "answer": "No. Todo es 100% del lado del cliente. Los datos de tu factura solo se guardan en el localStorage de tu navegador y nunca se envían a ningún servidor."
+        },
+        {
+          "question": "¿Cómo descargo la factura como PDF?",
+          "answer": "Haz clic en 'Descargar / Imprimir PDF' para abrir el diálogo de impresión. Selecciona 'Guardar como PDF' en el destino para guardarla."
+        },
+        {
+          "question": "¿Puedo agregar mi logo?",
+          "answer": "Sí — haz clic en el botón 'Logo' en la sección De para subir una imagen. Aparecerá en la parte superior de la vista previa de la factura."
+        },
+        {
+          "question": "¿Cómo cambio la moneda?",
+          "answer": "Selecciona tu moneda en el menú desplegable de la sección Detalles de la factura. La vista previa se actualiza al instante."
+        },
+        {
+          "question": "¿Mis facturas se guardan automáticamente?",
+          "answer": "Sí — el borrador actual de tu factura se guarda automáticamente en el localStorage de tu navegador mientras escribes. Estará ahí cuando regreses."
+        },
+        {
+          "question": "¿Qué monedas son compatibles?",
+          "answer": "Más de 30 monedas, incluyendo USD, EUR, GBP, JPY, CAD, AUD, CHF, INR y más."
+        },
+        {
+          "question": "¿Puedo usar esto para facturas con IVA?",
+          "answer": "Sí — usa el campo Impuesto % para el IVA. Para facturas del Reino Unido con IVA preconfigurado, prueba nuestra herramienta Generador de Facturas UK."
+        },
+        {
+          "question": "¿Hay marca de agua en la factura?",
+          "answer": "Sin marca de agua, nunca. Esta es una herramienta completamente gratuita sin tarifas ocultas, sin registro y sin marcas de agua en tus facturas."
+        }
       ],
       "invoiceUk": {
         "metaTitle": "Generador de Facturas UK — Plantilla de Factura con IVA Gratis | ToolNotch",
@@ -1051,10 +1146,22 @@
         "title": "Generador de Facturas UK",
         "description": "Generador de facturas del Reino Unido con IVA preconfigurado. Moneda GBP, 20% IVA. Descarga como PDF.",
         "faqs": [
-          { "question": "¿Está el IVA preconfigurado para facturas del Reino Unido?", "answer": "Sí — la plantilla del Reino Unido configura automáticamente el 20% de IVA y la moneda GBP." },
-          { "question": "¿Necesito un número de IVA en mi factura?", "answer": "Si estás registrado en el IVA, sí. Agrega tu número de registro de IVA en el campo 'ID Fiscal' en la sección De." },
-          { "question": "¿Es adecuado para Making Tax Digital (MTD)?", "answer": "Esta herramienta solo genera facturas en PDF. Para cumplimiento total con MTD, necesitarás software de contabilidad compatible." },
-          { "question": "¿Puedo cambiar la tasa de IVA?", "answer": "Sí — edita el campo Impuesto %. La tasa estándar de IVA del Reino Unido es del 20%, pero se aplican tasas reducidas (5%, 0%) a algunos bienes y servicios." }
+          {
+            "question": "¿Está el IVA preconfigurado para facturas del Reino Unido?",
+            "answer": "Sí — la plantilla del Reino Unido configura automáticamente el 20% de IVA y la moneda GBP."
+          },
+          {
+            "question": "¿Necesito un número de IVA en mi factura?",
+            "answer": "Si estás registrado en el IVA, sí. Agrega tu número de registro de IVA en el campo 'ID Fiscal' en la sección De."
+          },
+          {
+            "question": "¿Es adecuado para Making Tax Digital (MTD)?",
+            "answer": "Esta herramienta solo genera facturas en PDF. Para cumplimiento total con MTD, necesitarás software de contabilidad compatible."
+          },
+          {
+            "question": "¿Puedo cambiar la tasa de IVA?",
+            "answer": "Sí — edita el campo Impuesto %. La tasa estándar de IVA del Reino Unido es del 20%, pero se aplican tasas reducidas (5%, 0%) a algunos bienes y servicios."
+          }
         ]
       },
       "invoiceCanada": {
@@ -1063,9 +1170,18 @@
         "title": "Generador de Facturas Canadiense",
         "description": "Generador de facturas canadiense con GST preconfigurado. Moneda CAD, 5% GST. Descarga como PDF.",
         "faqs": [
-          { "question": "¿Está el GST preconfigurado?", "answer": "Sí — la plantilla canadiense configura automáticamente el 5% de GST y la moneda CAD." },
-          { "question": "¿Debo cobrar HST o GST?", "answer": "Depende de tu provincia. Ontario, Nuevo Brunswick y otras usan HST. Alberta y BC usan GST/PST por separado. Ajusta la tasa de impuesto según corresponda." },
-          { "question": "¿Necesito un número de registro GST/HST?", "answer": "Si tus ingresos anuales superan los $30,000 CAD, debes registrarte para GST/HST. Agrega tu número en el campo ID Fiscal." }
+          {
+            "question": "¿Está el GST preconfigurado?",
+            "answer": "Sí — la plantilla canadiense configura automáticamente el 5% de GST y la moneda CAD."
+          },
+          {
+            "question": "¿Debo cobrar HST o GST?",
+            "answer": "Depende de tu provincia. Ontario, Nuevo Brunswick y otras usan HST. Alberta y BC usan GST/PST por separado. Ajusta la tasa de impuesto según corresponda."
+          },
+          {
+            "question": "¿Necesito un número de registro GST/HST?",
+            "answer": "Si tus ingresos anuales superan los $30,000 CAD, debes registrarte para GST/HST. Agrega tu número en el campo ID Fiscal."
+          }
         ]
       },
       "invoiceAustralia": {
@@ -1074,9 +1190,18 @@
         "title": "Generador de Facturas Australiano",
         "description": "Generador de facturas australiano con GST preconfigurado. Moneda AUD, 10% GST. Descarga como PDF.",
         "faqs": [
-          { "question": "¿Está el GST preconfigurado para Australia?", "answer": "Sí — la plantilla australiana configura automáticamente el 10% de GST y la moneda AUD." },
-          { "question": "¿Quién debe registrarse para el GST en Australia?", "answer": "Las empresas con facturación anual de $75,000 AUD o más (o $150,000 para organizaciones sin fines de lucro) deben registrarse para el GST." },
-          { "question": "¿Qué debe incluir una factura fiscal australiana?", "answer": "Las facturas conformes con la ATO deben incluir: las palabras 'Tax Invoice', tu ABN, fecha, descripción de bienes/servicios, precio y monto del GST." }
+          {
+            "question": "¿Está el GST preconfigurado para Australia?",
+            "answer": "Sí — la plantilla australiana configura automáticamente el 10% de GST y la moneda AUD."
+          },
+          {
+            "question": "¿Quién debe registrarse para el GST en Australia?",
+            "answer": "Las empresas con facturación anual de $75,000 AUD o más (o $150,000 para organizaciones sin fines de lucro) deben registrarse para el GST."
+          },
+          {
+            "question": "¿Qué debe incluir una factura fiscal australiana?",
+            "answer": "Las facturas conformes con la ATO deben incluir: las palabras 'Tax Invoice', tu ABN, fecha, descripción de bienes/servicios, precio y monto del GST."
+          }
         ]
       },
       "invoiceFreelancers": {
@@ -1085,10 +1210,22 @@
         "title": "Generador de Facturas para Freelancers",
         "description": "Crea facturas profesionales para freelancers gratis. Sin marcas de agua, sin suscripciones. Descarga como PDF al instante.",
         "faqs": [
-          { "question": "¿Es gratis para freelancers?", "answer": "Sí — completamente gratis. Sin suscripción, sin marca de agua, sin cuenta requerida." },
-          { "question": "¿Cómo registro qué facturas se han pagado?", "answer": "Usa el campo Estado (borrador/enviada/pagada) en cada factura. Tu navegador guarda el borrador automáticamente." },
-          { "question": "¿Qué debo incluir en una factura de freelancer?", "answer": "Incluye tu nombre, nombre del cliente, número de factura, fecha, fecha de vencimiento, líneas detalladas, términos de pago y método de pago preferido." },
-          { "question": "¿Cómo me pagan más rápido?", "answer": "Indica claramente tus términos de pago, ofrece múltiples opciones de pago y da seguimiento amablemente si el pago está vencido. Los términos a 14 días suelen resultar en pagos más rápidos que a 30 días." }
+          {
+            "question": "¿Es gratis para freelancers?",
+            "answer": "Sí — completamente gratis. Sin suscripción, sin marca de agua, sin cuenta requerida."
+          },
+          {
+            "question": "¿Cómo registro qué facturas se han pagado?",
+            "answer": "Usa el campo Estado (borrador/enviada/pagada) en cada factura. Tu navegador guarda el borrador automáticamente."
+          },
+          {
+            "question": "¿Qué debo incluir en una factura de freelancer?",
+            "answer": "Incluye tu nombre, nombre del cliente, número de factura, fecha, fecha de vencimiento, líneas detalladas, términos de pago y método de pago preferido."
+          },
+          {
+            "question": "¿Cómo me pagan más rápido?",
+            "answer": "Indica claramente tus términos de pago, ofrece múltiples opciones de pago y da seguimiento amablemente si el pago está vencido. Los términos a 14 días suelen resultar en pagos más rápidos que a 30 días."
+          }
         ]
       },
       "receiptGenerator": {
@@ -1097,10 +1234,22 @@
         "title": "Generador de Recibos Gratis",
         "description": "Crea recibos profesionales al instante. Descarga como PDF. Sin registro, sin marcas de agua.",
         "faqs": [
-          { "question": "¿Cuál es la diferencia entre un recibo y una factura?", "answer": "Una factura se envía antes del pago como solicitud de cobro. Un recibo se emite después del pago como prueba de que se recibió." },
-          { "question": "¿Mis datos de recibo se almacenan en sus servidores?", "answer": "No. Todos los datos del recibo se guardan solo en el localStorage de tu navegador. Nada se envía a ningún servidor." },
-          { "question": "¿Cómo descargo el recibo como PDF?", "answer": "Haz clic en 'Descargar / Imprimir PDF' y elige 'Guardar como PDF' en el diálogo de impresión de tu navegador." },
-          { "question": "¿Puedo agregar el logo de mi empresa?", "answer": "Sí — haz clic en el botón Logo para subir el logo de tu empresa. Aparece en la parte superior del recibo." }
+          {
+            "question": "¿Cuál es la diferencia entre un recibo y una factura?",
+            "answer": "Una factura se envía antes del pago como solicitud de cobro. Un recibo se emite después del pago como prueba de que se recibió."
+          },
+          {
+            "question": "¿Mis datos de recibo se almacenan en sus servidores?",
+            "answer": "No. Todos los datos del recibo se guardan solo en el localStorage de tu navegador. Nada se envía a ningún servidor."
+          },
+          {
+            "question": "¿Cómo descargo el recibo como PDF?",
+            "answer": "Haz clic en 'Descargar / Imprimir PDF' y elige 'Guardar como PDF' en el diálogo de impresión de tu navegador."
+          },
+          {
+            "question": "¿Puedo agregar el logo de mi empresa?",
+            "answer": "Sí — haz clic en el botón Logo para subir el logo de tu empresa. Aparece en la parte superior del recibo."
+          }
         ]
       },
       "fields": {
@@ -1478,58 +1627,214 @@
       "interviewPrep": "Preparación para Entrevistas"
     },
     "tools": {
-      "imageCompressor": { "label": "Compresor de imágenes", "desc": "Comprime JPG, PNG, WebP, AVIF" },
-      "imageConverter": { "label": "Convertidor de imágenes", "desc": "Convierte entre formatos" },
-      "mergePdf": { "label": "Combinar PDF", "desc": "Une varios PDFs en uno" },
-      "splitPdf": { "label": "Dividir PDF", "desc": "Divide PDF por rango de páginas" },
-      "compressPdf": { "label": "Comprimir PDF", "desc": "Reduce el tamaño del archivo PDF" },
-      "pdfToJpg": { "label": "PDF a JPG", "desc": "Convierte páginas de PDF a imágenes" },
-      "jpgToPdf": { "label": "JPG a PDF", "desc": "Convierte imágenes a PDF" },
-      "unitConverter": { "label": "Conversor de unidades", "desc": "Longitud, peso, temperatura y más de 200 unidades" },
-      "currencyConverter": { "label": "Conversor de divisas", "desc": "Tasas en tiempo real para más de 150 monedas" },
-      "metersToFeet": { "label": "Metros a Pies", "desc": "Conversión rápida de longitud" },
-      "celsiusToFahrenheit": { "label": "Celsius a Fahrenheit", "desc": "Conversión rápida de temperatura" },
-      "kgToPounds": { "label": "Kg a Libras", "desc": "Conversión rápida de peso" },
-      "wordCounter": { "label": "Contador de palabras", "desc": "Cuenta palabras, caracteres y legibilidad" },
-      "characterCounter": { "label": "Contador de caracteres", "desc": "Cuenta caracteres con/sin espacios" },
-      "readabilityChecker": { "label": "Comprobador de legibilidad", "desc": "Puntuaciones Flesch, Kincaid e Índice Niebla" },
-      "readingTimeCalculator": { "label": "Calculadora de tiempo de lectura", "desc": "Estima el tiempo de lectura y habla" },
-      "wordFrequencyCounter": { "label": "Contador de frecuencia de palabras", "desc": "Encuentra las palabras clave más usadas" },
-      "loanCalculator": { "label": "Calculadora de préstamos", "desc": "Pago mensual y tabla de amortización" },
-      "mortgageCalculator": { "label": "Calculadora de hipoteca", "desc": "Calcula los pagos hipotecarios" },
-      "carLoanCalculator": { "label": "Calculadora de préstamo vehicular", "desc": "Pago mensual de préstamo de auto" },
-      "invoiceGenerator": { "label": "Generador de facturas", "desc": "Facturas profesionales gratuitas — listas para PDF" },
-      "invoiceGeneratorUk": { "label": "Generador de facturas UK", "desc": "Facturas en GBP con IVA preconfigurado" },
-      "homeAffordability": { "label": "Asequibilidad de vivienda", "desc": "¿Cuánto puedes gastar en una casa?" },
-      "amortizationCalculator": { "label": "Calculadora de amortización", "desc": "Desglose completo de la tabla de pagos" },
-      "studentLoanCalculator": { "label": "Calculadora de préstamo estudiantil", "desc": "Calculadora de devolución de préstamo estudiantil" },
-      "spinTheWheel": { "label": "Girar la ruleta", "desc": "Decisor aleatorio — agrega tus opciones" },
-      "randomNamePicker": { "label": "Selector de nombres aleatorio", "desc": "Elige un ganador de tu lista" },
-      "teamGenerator": { "label": "Generador de equipos", "desc": "Divide nombres en equipos balanceados" },
-      "coinFlip": { "label": "Lanzar moneda", "desc": "Cara o cruz virtual" },
-      "diceRoller": { "label": "Lanzador de dados", "desc": "Lanza d6, d20, 3d6+5 y más" },
-      "numberGenerator": { "label": "Generador de números", "desc": "Números aleatorios en cualquier rango" },
-      "yesOrNoWheel": { "label": "Ruleta de Sí o No", "desc": "Que la ruleta decida" },
-      "wheelOfNames": { "label": "Wheel of Names", "desc": "Alternativa gratuita a Wheel of Names" },
-      "allQuizzes": { "label": "Todos los cuestionarios", "desc": "Explora quizzes de personalidad y deportes" },
-      "programmingLanguageQuiz": { "label": "¿Qué lenguaje de programación eres?", "desc": "¿Python, JavaScript, Rust, Go o Java?" },
-      "introvertExtrovertQuiz": { "label": "¿Introvertido o extrovertido?", "desc": "Descubre dónde te ubicas en el espectro" },
-      "careerQuiz": { "label": "¿Qué carrera te conviene?", "desc": "Descubre tu camino profesional ideal" },
-      "travelerQuiz": { "label": "¿Qué tipo de viajero eres?", "desc": "¿Aventurero, explorador o amante de la playa?" },
-      "worldCupQuiz": { "label": "Quiz: Campeones de la Copa del Mundo", "desc": "Pon a prueba tu conocimiento sobre cada campeón mundial" },
-      "footballClubQuiz": { "label": "¿Qué Equipo de Fútbol Eres?", "desc": "Descubre qué club se adapta a tu personalidad" },
-      "championsLeagueQuiz": { "label": "Trivia: Champions League", "desc": "¿Cuánto sabes sobre la mayor competición de clubes de Europa?" },
-      "loveLangaugeQuiz": { "label": "¿Cuál es tu Lenguaje del Amor?", "desc": "Descubre cómo das y recibes amor" },
-      "formula1TriviaQuiz": { "label": "Quiz de Fórmula 1", "desc": "Pon a prueba tu conocimiento de F1 — circuitos, campeones y récords" },
-      "f1DriverQuiz": { "label": "¿Qué Piloto de F1 Eres Tú?", "desc": "¿Verstappen, Hamilton, Senna o Norris?" },
-      "retroBoard": { "label": "Tablero de Retrospectiva", "desc": "Funcionó Bien · A Mejorar · Puntos de Acción" },
-      "standupGenerator": { "label": "Generador de Standup", "desc": "Ayer · Hoy · Bloqueos → resumen listo para pegar" },
-      "planningPoker": { "label": "Planning Poker", "desc": "Estimaciones Fibonacci — revelar todo a la vez" },
-      "userStoryWriter": { "label": "Escritor de User Story", "desc": "Como [rol], quiero [funcionalidad], para que [beneficio]" },
-      "sprintDateCalculator": { "label": "Calculadora de Sprint", "desc": "Fecha de inicio + duración → todas las fechas de ceremonias" },
-      "percentageCalculator": { "label": "Calculadora de Porcentaje", "desc": "% de, qué % es y variación % — tres calculadoras en una" },
-      "typescriptQuiz": { "label": "Quiz de TypeScript para Entrevistas", "desc": "30 preguntas: Principiante → Intermedio → Avanzado" },
-      "interviewHub": { "label": "Centro de Preparación para Entrevistas", "desc": "TypeScript, JS y más — con explicaciones y buenas prácticas" }
+      "imageCompressor": {
+        "label": "Compresor de imágenes",
+        "desc": "Comprime JPG, PNG, WebP, AVIF"
+      },
+      "imageConverter": {
+        "label": "Convertidor de imágenes",
+        "desc": "Convierte entre formatos"
+      },
+      "mergePdf": {
+        "label": "Combinar PDF",
+        "desc": "Une varios PDFs en uno"
+      },
+      "splitPdf": {
+        "label": "Dividir PDF",
+        "desc": "Divide PDF por rango de páginas"
+      },
+      "compressPdf": {
+        "label": "Comprimir PDF",
+        "desc": "Reduce el tamaño del archivo PDF"
+      },
+      "pdfToJpg": {
+        "label": "PDF a JPG",
+        "desc": "Convierte páginas de PDF a imágenes"
+      },
+      "jpgToPdf": {
+        "label": "JPG a PDF",
+        "desc": "Convierte imágenes a PDF"
+      },
+      "unitConverter": {
+        "label": "Conversor de unidades",
+        "desc": "Longitud, peso, temperatura y más de 200 unidades"
+      },
+      "currencyConverter": {
+        "label": "Conversor de divisas",
+        "desc": "Tasas en tiempo real para más de 150 monedas"
+      },
+      "metersToFeet": {
+        "label": "Metros a Pies",
+        "desc": "Conversión rápida de longitud"
+      },
+      "celsiusToFahrenheit": {
+        "label": "Celsius a Fahrenheit",
+        "desc": "Conversión rápida de temperatura"
+      },
+      "kgToPounds": {
+        "label": "Kg a Libras",
+        "desc": "Conversión rápida de peso"
+      },
+      "wordCounter": {
+        "label": "Contador de palabras",
+        "desc": "Cuenta palabras, caracteres y legibilidad"
+      },
+      "characterCounter": {
+        "label": "Contador de caracteres",
+        "desc": "Cuenta caracteres con/sin espacios"
+      },
+      "readabilityChecker": {
+        "label": "Comprobador de legibilidad",
+        "desc": "Puntuaciones Flesch, Kincaid e Índice Niebla"
+      },
+      "readingTimeCalculator": {
+        "label": "Calculadora de tiempo de lectura",
+        "desc": "Estima el tiempo de lectura y habla"
+      },
+      "wordFrequencyCounter": {
+        "label": "Contador de frecuencia de palabras",
+        "desc": "Encuentra las palabras clave más usadas"
+      },
+      "loanCalculator": {
+        "label": "Calculadora de préstamos",
+        "desc": "Pago mensual y tabla de amortización"
+      },
+      "mortgageCalculator": {
+        "label": "Calculadora de hipoteca",
+        "desc": "Calcula los pagos hipotecarios"
+      },
+      "carLoanCalculator": {
+        "label": "Calculadora de préstamo vehicular",
+        "desc": "Pago mensual de préstamo de auto"
+      },
+      "invoiceGenerator": {
+        "label": "Generador de facturas",
+        "desc": "Facturas profesionales gratuitas — listas para PDF"
+      },
+      "invoiceGeneratorUk": {
+        "label": "Generador de facturas UK",
+        "desc": "Facturas en GBP con IVA preconfigurado"
+      },
+      "homeAffordability": {
+        "label": "Asequibilidad de vivienda",
+        "desc": "¿Cuánto puedes gastar en una casa?"
+      },
+      "amortizationCalculator": {
+        "label": "Calculadora de amortización",
+        "desc": "Desglose completo de la tabla de pagos"
+      },
+      "studentLoanCalculator": {
+        "label": "Calculadora de préstamo estudiantil",
+        "desc": "Calculadora de devolución de préstamo estudiantil"
+      },
+      "spinTheWheel": {
+        "label": "Girar la ruleta",
+        "desc": "Decisor aleatorio — agrega tus opciones"
+      },
+      "randomNamePicker": {
+        "label": "Selector de nombres aleatorio",
+        "desc": "Elige un ganador de tu lista"
+      },
+      "teamGenerator": {
+        "label": "Generador de equipos",
+        "desc": "Divide nombres en equipos balanceados"
+      },
+      "coinFlip": {
+        "label": "Lanzar moneda",
+        "desc": "Cara o cruz virtual"
+      },
+      "diceRoller": {
+        "label": "Lanzador de dados",
+        "desc": "Lanza d6, d20, 3d6+5 y más"
+      },
+      "numberGenerator": {
+        "label": "Generador de números",
+        "desc": "Números aleatorios en cualquier rango"
+      },
+      "yesOrNoWheel": {
+        "label": "Ruleta de Sí o No",
+        "desc": "Que la ruleta decida"
+      },
+      "wheelOfNames": {
+        "label": "Wheel of Names",
+        "desc": "Alternativa gratuita a Wheel of Names"
+      },
+      "allQuizzes": {
+        "label": "Todos los cuestionarios",
+        "desc": "Explora quizzes de personalidad y deportes"
+      },
+      "programmingLanguageQuiz": {
+        "label": "¿Qué lenguaje de programación eres?",
+        "desc": "¿Python, JavaScript, Rust, Go o Java?"
+      },
+      "introvertExtrovertQuiz": {
+        "label": "¿Introvertido o extrovertido?",
+        "desc": "Descubre dónde te ubicas en el espectro"
+      },
+      "careerQuiz": {
+        "label": "¿Qué carrera te conviene?",
+        "desc": "Descubre tu camino profesional ideal"
+      },
+      "travelerQuiz": {
+        "label": "¿Qué tipo de viajero eres?",
+        "desc": "¿Aventurero, explorador o amante de la playa?"
+      },
+      "worldCupQuiz": {
+        "label": "Quiz: Campeones de la Copa del Mundo",
+        "desc": "Pon a prueba tu conocimiento sobre cada campeón mundial"
+      },
+      "footballClubQuiz": {
+        "label": "¿Qué Equipo de Fútbol Eres?",
+        "desc": "Descubre qué club se adapta a tu personalidad"
+      },
+      "championsLeagueQuiz": {
+        "label": "Trivia: Champions League",
+        "desc": "¿Cuánto sabes sobre la mayor competición de clubes de Europa?"
+      },
+      "loveLangaugeQuiz": {
+        "label": "¿Cuál es tu Lenguaje del Amor?",
+        "desc": "Descubre cómo das y recibes amor"
+      },
+      "formula1TriviaQuiz": {
+        "label": "Quiz de Fórmula 1",
+        "desc": "Pon a prueba tu conocimiento de F1 — circuitos, campeones y récords"
+      },
+      "f1DriverQuiz": {
+        "label": "¿Qué Piloto de F1 Eres Tú?",
+        "desc": "¿Verstappen, Hamilton, Senna o Norris?"
+      },
+      "retroBoard": {
+        "label": "Tablero de Retrospectiva",
+        "desc": "Funcionó Bien · A Mejorar · Puntos de Acción"
+      },
+      "standupGenerator": {
+        "label": "Generador de Standup",
+        "desc": "Ayer · Hoy · Bloqueos → resumen listo para pegar"
+      },
+      "planningPoker": {
+        "label": "Planning Poker",
+        "desc": "Estimaciones Fibonacci — revelar todo a la vez"
+      },
+      "userStoryWriter": {
+        "label": "Escritor de User Story",
+        "desc": "Como [rol], quiero [funcionalidad], para que [beneficio]"
+      },
+      "sprintDateCalculator": {
+        "label": "Calculadora de Sprint",
+        "desc": "Fecha de inicio + duración → todas las fechas de ceremonias"
+      },
+      "percentageCalculator": {
+        "label": "Calculadora de Porcentaje",
+        "desc": "% de, qué % es y variación % — tres calculadoras en una"
+      },
+      "typescriptQuiz": {
+        "label": "Quiz de TypeScript para Entrevistas",
+        "desc": "30 preguntas: Principiante → Intermedio → Avanzado"
+      },
+      "interviewHub": {
+        "label": "Centro de Preparación para Entrevistas",
+        "desc": "TypeScript, JS y más — con explicaciones y buenas prácticas"
+      }
     }
   },
   "agile": {
@@ -1839,11 +2144,26 @@
     "size1024": "1024px (grande)",
     "emptyState": "Ingresa contenido arriba para generar tu código QR",
     "faqs": [
-      { "question": "¿Los códigos QR son gratuitos?", "answer": "Sí — completamente gratuitos, sin necesidad de registro y sin marcas de agua en las imágenes descargadas. Puedes generar códigos QR ilimitados." },
-      { "question": "¿Los códigos QR expiran?", "answer": "Los códigos QR generados aquí no expiran. Todo el procesamiento ocurre en tu navegador, por lo que ningún dato se almacena en nuestros servidores." },
-      { "question": "¿Qué tamaño de código QR debo usar?", "answer": "Para uso digital (correos, sitios web), 256px es suficiente. Para materiales impresos como folletos, usa 512px o 1024px. Para impresión en gran formato, descarga el SVG para resolución infinita." },
-      { "question": "¿Puedo crear un código QR para WiFi?", "answer": "Sí — selecciona la pestaña WiFi, ingresa el nombre de la red (SSID) y la contraseña, y el código QR permitirá que cualquier persona se conecte a tu WiFi instantáneamente." },
-      { "question": "¿Son seguros mis datos?", "answer": "Sí — toda la generación del código QR ocurre en tu navegador. No se envía información a nuestros servidores." }
+      {
+        "question": "¿Los códigos QR son gratuitos?",
+        "answer": "Sí — completamente gratuitos, sin necesidad de registro y sin marcas de agua en las imágenes descargadas. Puedes generar códigos QR ilimitados."
+      },
+      {
+        "question": "¿Los códigos QR expiran?",
+        "answer": "Los códigos QR generados aquí no expiran. Todo el procesamiento ocurre en tu navegador, por lo que ningún dato se almacena en nuestros servidores."
+      },
+      {
+        "question": "¿Qué tamaño de código QR debo usar?",
+        "answer": "Para uso digital (correos, sitios web), 256px es suficiente. Para materiales impresos como folletos, usa 512px o 1024px. Para impresión en gran formato, descarga el SVG para resolución infinita."
+      },
+      {
+        "question": "¿Puedo crear un código QR para WiFi?",
+        "answer": "Sí — selecciona la pestaña WiFi, ingresa el nombre de la red (SSID) y la contraseña, y el código QR permitirá que cualquier persona se conecte a tu WiFi instantáneamente."
+      },
+      {
+        "question": "¿Son seguros mis datos?",
+        "answer": "Sí — toda la generación del código QR ocurre en tu navegador. No se envía información a nuestros servidores."
+      }
     ]
   },
   "healthCalculator": {
@@ -1891,16 +2211,40 @@
     "gainFast": "Ganar ~0,5 kg/semana",
     "calculate": "Calcular",
     "bmiFaqs": [
-      { "question": "¿Qué es el IMC?", "answer": "El Índice de Masa Corporal (IMC) es una medida de grasa corporal basada en la altura y el peso. Se calcula dividiendo el peso en kilogramos por el cuadrado de la altura en metros. El IMC se usa como herramienta de detección para indicar si una persona puede tener un problema de peso." },
-      { "question": "¿Cuál es un IMC saludable?", "answer": "Para la mayoría de los adultos, un IMC de 18,5–24,9 se considera saludable. Un IMC inferior a 18,5 es bajo peso, de 25 a 29,9 es sobrepeso y 30 o más se clasifica como obesidad." },
-      { "question": "¿Es preciso el IMC?", "answer": "El IMC es una herramienta útil pero tiene limitaciones. No distingue entre músculo y grasa. Úsalo como indicador general, no como diagnóstico médico." },
-      { "question": "¿Cómo se calcula el IMC?", "answer": "IMC = peso (kg) ÷ altura² (m²). Ejemplo: 70 kg ÷ (1,75 m)² = 70 ÷ 3,0625 = 22,9." }
+      {
+        "question": "¿Qué es el IMC?",
+        "answer": "El Índice de Masa Corporal (IMC) es una medida de grasa corporal basada en la altura y el peso. Se calcula dividiendo el peso en kilogramos por el cuadrado de la altura en metros. El IMC se usa como herramienta de detección para indicar si una persona puede tener un problema de peso."
+      },
+      {
+        "question": "¿Cuál es un IMC saludable?",
+        "answer": "Para la mayoría de los adultos, un IMC de 18,5–24,9 se considera saludable. Un IMC inferior a 18,5 es bajo peso, de 25 a 29,9 es sobrepeso y 30 o más se clasifica como obesidad."
+      },
+      {
+        "question": "¿Es preciso el IMC?",
+        "answer": "El IMC es una herramienta útil pero tiene limitaciones. No distingue entre músculo y grasa. Úsalo como indicador general, no como diagnóstico médico."
+      },
+      {
+        "question": "¿Cómo se calcula el IMC?",
+        "answer": "IMC = peso (kg) ÷ altura² (m²). Ejemplo: 70 kg ÷ (1,75 m)² = 70 ÷ 3,0625 = 22,9."
+      }
     ],
     "tdeeFaqs": [
-      { "question": "¿Qué es el TDEE?", "answer": "El TDEE (Gasto Energético Total Diario) es el total de calorías que tu cuerpo quema en un día, considerando tu Tasa Metabólica Basal (TMB) y actividad física. Indica cuántas calorías necesitas para mantener tu peso actual." },
-      { "question": "¿Qué es la TMB?", "answer": "La Tasa Metabólica Basal (TMB) es el número de calorías que tu cuerpo quema en reposo completo para mantener funciones básicas como la respiración y la circulación." },
-      { "question": "¿Cuántas calorías debo comer para adelgazar?", "answer": "Un déficit calórico seguro es de 250–500 calorías por debajo de tu TDEE al día, lo que resulta en aproximadamente 0,25–0,5 kg de pérdida de peso por semana." },
-      { "question": "¿Qué fórmula usa esta calculadora?", "answer": "Esta calculadora usa la ecuación de Mifflin-St Jeor: TMB = 10 × peso(kg) + 6,25 × altura(cm) − 5 × edad + 5 (masculino) o −161 (femenino)." }
+      {
+        "question": "¿Qué es el TDEE?",
+        "answer": "El TDEE (Gasto Energético Total Diario) es el total de calorías que tu cuerpo quema en un día, considerando tu Tasa Metabólica Basal (TMB) y actividad física. Indica cuántas calorías necesitas para mantener tu peso actual."
+      },
+      {
+        "question": "¿Qué es la TMB?",
+        "answer": "La Tasa Metabólica Basal (TMB) es el número de calorías que tu cuerpo quema en reposo completo para mantener funciones básicas como la respiración y la circulación."
+      },
+      {
+        "question": "¿Cuántas calorías debo comer para adelgazar?",
+        "answer": "Un déficit calórico seguro es de 250–500 calorías por debajo de tu TDEE al día, lo que resulta en aproximadamente 0,25–0,5 kg de pérdida de peso por semana."
+      },
+      {
+        "question": "¿Qué fórmula usa esta calculadora?",
+        "answer": "Esta calculadora usa la ecuación de Mifflin-St Jeor: TMB = 10 × peso(kg) + 6,25 × altura(cm) − 5 × edad + 5 (masculino) o −161 (femenino)."
+      }
     ],
     "bmiRichContent": {
       "whatIs": "El Índice de Masa Corporal (IMC) es un número calculado a partir de tu peso y estatura que ofrece una visión rápida de si tu peso corporal se encuentra dentro de un rango saludable. Es ampliamente utilizado por clínicos e investigadores como herramienta de detección de bajo costo para identificar posibles riesgos de salud relacionados con el peso. Sin embargo, el IMC tiene limitaciones reales: no puede distinguir entre masa muscular y masa grasa, por lo que un deportista musculoso puede clasificarse como \"sobrepeso\" a pesar de tener muy poca grasa corporal. El IMC tampoco considera dónde se distribuye la grasa en el cuerpo — la grasa abdominal conlleva riesgos de salud diferentes a la grasa almacenada en otras zonas. Para una imagen más completa de la composición corporal, considera medir también el perímetro de cintura, la relación cintura-cadera o realizarte una densitometría ósea.",
@@ -2001,11 +2345,26 @@
       "proTip": "Si necesitas una nota muy alta en el examen final para alcanzar tu objetivo, habla con tu docente antes del examen — no después. La mayoría de los profesores valoran a los estudiantes proactivos, y puede haber oportunidades de crédito extra, políticas de redondeo o reentregas de trabajos que no conocías. Llegar con tu nota actual y la puntuación que necesitas demuestra seriedad e iniciativa."
     },
     "faqs": [
-      { "question": "¿Cómo se calcula el GPA?", "answer": "El GPA se calcula multiplicando la nota de cada materia por sus créditos, sumando todos los valores y dividiendo entre el total de créditos. En la escala americana 4.0: A=4.0, B=3.0, C=2.0, D=1.0, F=0.0." },
-      { "question": "¿Qué es un buen GPA?", "answer": "En la escala americana 4.0, un GPA superior a 3.5 se considera excelente, de 3.0 a 3.5 es bueno, y 2.0 suele ser el mínimo para mantener una buena situación académica." },
-      { "question": "¿Qué es el promedio acumulado?", "answer": "Tu promedio acumulado es el promedio ponderado de todas las calificaciones a lo largo de todos los semestres de tu carrera. Combina tu GPA anterior y créditos con los resultados del nuevo semestre." },
-      { "question": "¿Cómo calculo la nota que necesito para aprobar?", "answer": "Usa la Calculadora de Nota: ingresa tu nota actual, el porcentaje de peso de los trabajos ya entregados y tu nota objetivo. La calculadora determina exactamente qué necesitas en los trabajos restantes." },
-      { "question": "¿Esta calculadora funciona para el sistema latinoamericano?", "answer": "Sí — esta calculadora admite la escala americana 4.0 (letras A–F), la escala portuguesa y brasileña de 0 a 20 y la escala española y latinoamericana de 0 a 10. Selecciona tu escala en el menú." }
+      {
+        "question": "¿Cómo se calcula el GPA?",
+        "answer": "El GPA se calcula multiplicando la nota de cada materia por sus créditos, sumando todos los valores y dividiendo entre el total de créditos. En la escala americana 4.0: A=4.0, B=3.0, C=2.0, D=1.0, F=0.0."
+      },
+      {
+        "question": "¿Qué es un buen GPA?",
+        "answer": "En la escala americana 4.0, un GPA superior a 3.5 se considera excelente, de 3.0 a 3.5 es bueno, y 2.0 suele ser el mínimo para mantener una buena situación académica."
+      },
+      {
+        "question": "¿Qué es el promedio acumulado?",
+        "answer": "Tu promedio acumulado es el promedio ponderado de todas las calificaciones a lo largo de todos los semestres de tu carrera. Combina tu GPA anterior y créditos con los resultados del nuevo semestre."
+      },
+      {
+        "question": "¿Cómo calculo la nota que necesito para aprobar?",
+        "answer": "Usa la Calculadora de Nota: ingresa tu nota actual, el porcentaje de peso de los trabajos ya entregados y tu nota objetivo. La calculadora determina exactamente qué necesitas en los trabajos restantes."
+      },
+      {
+        "question": "¿Esta calculadora funciona para el sistema latinoamericano?",
+        "answer": "Sí — esta calculadora admite la escala americana 4.0 (letras A–F), la escala portuguesa y brasileña de 0 a 20 y la escala española y latinoamericana de 0 a 10. Selecciona tu escala en el menú."
+      }
     ]
   },
   "ageCalculator": {
@@ -2026,11 +2385,26 @@
     "futureResult": "El {date}, tendrás {years} años",
     "errorFutureDate": "Por favor, ingresa una fecha en el pasado",
     "faqs": [
-      { "question": "¿Cómo calcular mi edad exacta?", "answer": "Tu edad exacta es la diferencia entre tu fecha de nacimiento y la fecha de hoy, desglosada en años, meses y días. Esta calculadora usa aritmética de fechas precisa para considerar años bisiestos y meses de diferentes duraciones." },
-      { "question": "¿Cuántos días faltan para mi cumpleaños?", "answer": "Ingresa tu fecha de nacimiento y la calculadora mostrará automáticamente cuántos días faltan para tu próximo cumpleaños. Si hoy es tu cumpleaños, se mostrará un mensaje especial." },
-      { "question": "¿Cuántos años tendré en una fecha futura?", "answer": "Usa la sección '¿Cuántos años tendré el...'. Ingresa cualquier fecha futura y la calculadora te dirá exactamente cuántos años tendrás en esa fecha." },
-      { "question": "¿La calculadora considera los años bisiestos?", "answer": "Sí — esta calculadora usa aritmética de fechas precisa que maneja correctamente los años bisiestos, los cumpleaños del 29 de febrero y los meses con diferentes números de días." },
-      { "question": "¿Cuál es mi edad si nací en 1990?", "answer": "Si naciste en 1990, actualmente tienes 35 o 36 años dependiendo de tu mes de nacimiento y la fecha de hoy. Ingresa tu fecha de nacimiento completa arriba para un resultado preciso." }
+      {
+        "question": "¿Cómo calcular mi edad exacta?",
+        "answer": "Tu edad exacta es la diferencia entre tu fecha de nacimiento y la fecha de hoy, desglosada en años, meses y días. Esta calculadora usa aritmética de fechas precisa para considerar años bisiestos y meses de diferentes duraciones."
+      },
+      {
+        "question": "¿Cuántos días faltan para mi cumpleaños?",
+        "answer": "Ingresa tu fecha de nacimiento y la calculadora mostrará automáticamente cuántos días faltan para tu próximo cumpleaños. Si hoy es tu cumpleaños, se mostrará un mensaje especial."
+      },
+      {
+        "question": "¿Cuántos años tendré en una fecha futura?",
+        "answer": "Usa la sección '¿Cuántos años tendré el...'. Ingresa cualquier fecha futura y la calculadora te dirá exactamente cuántos años tendrás en esa fecha."
+      },
+      {
+        "question": "¿La calculadora considera los años bisiestos?",
+        "answer": "Sí — esta calculadora usa aritmética de fechas precisa que maneja correctamente los años bisiestos, los cumpleaños del 29 de febrero y los meses con diferentes números de días."
+      },
+      {
+        "question": "¿Cuál es mi edad si nací en 1990?",
+        "answer": "Si naciste en 1990, actualmente tienes 35 o 36 años dependiendo de tu mes de nacimiento y la fecha de hoy. Ingresa tu fecha de nacimiento completa arriba para un resultado preciso."
+      }
     ]
   },
   "about": {
@@ -2135,11 +2509,26 @@
       "proTip": "APA es el formato de cita más utilizado en las universidades de América Latina, especialmente en psicología, ciencias sociales y educación. Si estudias en una institución latinoamericana y no estás seguro del estilo requerido, APA 7ª edición es generalmente la mejor opción por defecto. El formato ABNT (norma académica brasileña NBR 6023) está disponible únicamente en la versión en portugués de esta herramienta, ya que se usa exclusivamente en instituciones académicas de Brasil."
     },
     "faqs": [
-      { "question": "¿Qué es el formato APA?", "answer": "APA (7ª ed.) se usa en ciencias sociales. Formato básico de libro: Autor, A. A. (Año). *Título*. Editorial." },
-      { "question": "¿Cómo citar un sitio web en APA 7?", "answer": "Autor, A. A. (Año, Mes Día). Título de la página. *Nombre del sitio*. URL. Si no hay autor, el título toma su lugar." },
-      { "question": "¿Qué es el estilo Chicago?", "answer": "Chicago 17ª ed. se usa en historia y humanidades. Formato básico: Autor, Nombre. *Título*. Ciudad: Editorial, Año." },
-      { "question": "¿Cómo citar un video de YouTube?", "answer": "Selecciona 'YouTube', ingresa el título, nombre del canal, fecha y URL. El generador lo formateará según el estilo elegido." },
-      { "question": "¿El generador es gratuito?", "answer": "Sí — completamente gratuito, sin registro, sin límites. Las citas se generan en tu navegador." }
+      {
+        "question": "¿Qué es el formato APA?",
+        "answer": "APA (7ª ed.) se usa en ciencias sociales. Formato básico de libro: Autor, A. A. (Año). *Título*. Editorial."
+      },
+      {
+        "question": "¿Cómo citar un sitio web en APA 7?",
+        "answer": "Autor, A. A. (Año, Mes Día). Título de la página. *Nombre del sitio*. URL. Si no hay autor, el título toma su lugar."
+      },
+      {
+        "question": "¿Qué es el estilo Chicago?",
+        "answer": "Chicago 17ª ed. se usa en historia y humanidades. Formato básico: Autor, Nombre. *Título*. Ciudad: Editorial, Año."
+      },
+      {
+        "question": "¿Cómo citar un video de YouTube?",
+        "answer": "Selecciona 'YouTube', ingresa el título, nombre del canal, fecha y URL. El generador lo formateará según el estilo elegido."
+      },
+      {
+        "question": "¿El generador es gratuito?",
+        "answer": "Sí — completamente gratuito, sin registro, sin límites. Las citas se generan en tu navegador."
+      }
     ]
   },
   "contact": {
@@ -2187,48 +2576,131 @@
         "relatedToolName": "Calculadora de Hipoteca",
         "relatedToolPath": "/tools/finance/mortgage-calculator",
         "body": [
-          { "type": "paragraph", "text": "Comprar una vivienda probablemente sea la decisión financiera más importante que la mayoría de nosotros tomará en la vida, y aun así la cuota mensual que aparece en la cotización de un banco puede parecer un misterio. ¿De dónde sale ese número? ¿Por qué una pequeña diferencia en la tasa de interés lo cambia tanto? ¿Y por qué la cuota que te da el banco siempre es más alta que la que ves en una calculadora de hipotecas?" },
-          { "type": "paragraph", "text": "Esta guía te explica la matemática real detrás de una hipoteca, detalla cada factor que puede subir o bajar tu cuota mensual y te ayuda a identificar los errores más comunes que sorprenden a los compradores primerizos." },
-          { "type": "heading", "level": 2, "text": "La Fórmula Base: Capital e Intereses" },
-          { "type": "paragraph", "text": "La cuota de una hipoteca a tasa fija se calcula con una fórmula que amortiza —o distribuye— tanto el capital del préstamo como los intereses de forma equitativa a lo largo de cada mes del plazo. La fórmula es la siguiente:" },
-          { "type": "callout", "text": "M = P × [r(1+r)^n] / [(1+r)^n − 1]\n\nDonde: M = cuota mensual, P = capital del préstamo (monto solicitado), r = tasa de interés mensual (tasa anual ÷ 12), n = número total de cuotas (años × 12)" },
-          { "type": "paragraph", "text": "Pongámoslo en práctica. Supón que solicitas $300,000 a una tasa anual del 6.5% a 30 años. Tu tasa mensual r es 6.5% ÷ 12 = 0.5417%, o 0.005417 en decimal. Tu n es 30 × 12 = 360 cuotas." },
-          { "type": "paragraph", "text": "Aplicando la fórmula: M = 300,000 × [0.005417 × (1.005417)^360] / [(1.005417)^360 − 1]. El resultado es aproximadamente $1,896 al mes, solo por capital e intereses. Ese número ya puede parecer alto, pero hay algo importante: no es el panorama completo." },
-          { "type": "heading", "level": 2, "text": "¿Qué Más Incluye la Cuota Mensual?" },
-          { "type": "paragraph", "text": "Los bancos casi siempre agrupan costos adicionales en un solo pago mensual, por eso tu cuota real es más alta que lo que arroja la fórmula de capital e intereses. Los principales componentes adicionales son:" },
-          { "type": "list", "ordered": false, "items": [
-            "Impuestos sobre la propiedad — Generalmente el banco los retiene mensualmente y los paga al gobierno al final del año. En una vivienda de $400,000, esto puede sumar entre $300 y $700 al mes según el país o estado.",
-            "Seguro de hogar — El banco exige cobertura para proteger la propiedad. Presupuesta entre $100 y $200 al mes para la mayoría de las viviendas, aunque en zonas costeras o de alto riesgo puede ser más.",
-            "Seguro hipotecario privado (PMI) — Si tu enganche es menor al 20%, el banco exigirá este seguro para cubrirse en caso de impago. El PMI suele rondar entre el 0.5% y el 1.5% del préstamo anual; en un préstamo de $300,000 eso representa entre $125 y $375 adicionales al mes.",
-            "Cuotas de mantenimiento (HOA) — Si compras un condominio o una propiedad en un conjunto cerrado, las cuotas de mantenimiento son un costo real que debes considerar aunque no las pague el banco directamente."
-          ]},
-          { "type": "paragraph", "text": "Cuando se suman todos estos costos, la cuota de capital e intereses de $1,896 en nuestro ejemplo de $300,000 podría convertirse fácilmente en $2,500–$2,800 al mes. Siempre solicita a tu banco un desglose completo del pago que incluya el fideicomiso de impuestos y seguros. Comparar solo las tasas de interés sin mirar el pago total es uno de los errores más frecuentes." },
-          { "type": "heading", "level": 2, "text": "Cómo Afecta la Tasa de Interés tu Cuota" },
-          { "type": "paragraph", "text": "Mucha gente cree que una diferencia del 0.5% en la tasa es insignificante. No lo es. En un préstamo de $300,000 a 30 años, la diferencia entre una tasa del 6.0% y una del 6.5% representa unos $97 más al mes, o casi $35,000 adicionales durante toda la vida del préstamo. Por eso mejorar tu historial crediticio antes de solicitar, comparar al menos tres bancos y asegurar tu tasa en el momento adecuado puede ser muy valioso." },
-          { "type": "list", "ordered": false, "items": [
-            "Al 6.0%: cuota mensual (capital + intereses) ≈ $1,799",
-            "Al 6.5%: cuota mensual (capital + intereses) ≈ $1,896",
-            "Al 7.0%: cuota mensual (capital + intereses) ≈ $1,996"
-          ]},
-          { "type": "heading", "level": 2, "text": "Plazo del Préstamo: 30 Años vs. 15 Años" },
-          { "type": "paragraph", "text": "Una hipoteca a 15 años tiene una cuota mensual mucho más alta que una a 30 años, pero el total de intereses que pagas a lo largo del préstamo puede ser menos de la mitad. Con los mismos $300,000 al 6.0%:" },
-          { "type": "list", "ordered": false, "items": [
-            "30 años: ~$1,799/mes, ~$347,000 en intereses totales",
-            "15 años: ~$2,532/mes, ~$155,000 en intereses totales"
-          ]},
-          { "type": "paragraph", "text": "El plazo de 15 años te ahorra casi $200,000 en intereses, pero tu cuota mensual es $733 más alta. La decisión correcta depende de tu flujo de efectivo, la estabilidad de tus ingresos y qué harías con ese dinero extra cada mes." },
-          { "type": "heading", "level": 2, "text": "Errores Comunes que Debes Evitar" },
-          { "type": "list", "ordered": false, "items": [
-            "Olvidar impuestos y seguros — La fórmula de capital e intereses es solo el punto de partida. Siempre calcula el costo total de la vivienda: capital, intereses, impuestos, seguros, más el seguro hipotecario y cuotas de mantenimiento si aplica.",
-            "Comparar por cuota mensual en lugar de por costo total — Un plazo más largo baja la cuota mensual pero aumenta drásticamente los intereses totales pagados.",
-            "No considerar el tipo de tasa — Las hipotecas a tasa variable suelen empezar más bajas, pero pueden ajustarse significativamente. Asegúrate de poder pagar la cuota en el peor escenario posible.",
-            "Saltar el calendario de amortización — En los primeros años de un préstamo a 30 años, la mayor parte de tu pago va a intereses, no a capital. Entender esto te ayuda a decidir si tiene sentido hacer pagos adicionales a capital.",
-            "Ignorar los costos de cierre — Suelen representar entre el 2% y el 5% del monto del préstamo y deben pagarse por adelantado o incorporarse al financiamiento."
-          ]},
-          { "type": "heading", "level": 2, "text": "Calcula tus Propios Números" },
-          { "type": "paragraph", "text": "La fórmula es útil para entender cómo funciona, pero no es necesario hacerla a mano cada vez que quieras evaluar un escenario. Usa nuestra Calculadora de Hipoteca gratuita para simular cualquier combinación de monto del préstamo, tasa de interés, plazo, impuestos y seguro, y obtén al instante el desglose de tu cuota mensual, intereses totales y calendario de amortización." },
-          { "type": "toolCta", "toolName": "Calculadora de Hipoteca", "toolPath": "/tools/finance/mortgage-calculator" },
-          { "type": "paragraph", "text": "Entender cómo se construye tu cuota hipotecaria te da un poder real en las negociaciones y la planificación. Sabrás por qué vale la pena pelear por una tasa 0.25% más baja, por qué dar un enganche del 20% te ahorra más que solo el seguro hipotecario, y por qué esa hipoteca variable atractiva puede ser un riesgo innecesario. Haz los números, compara escenarios y entra a tu compra con los ojos bien abiertos." }
+          {
+            "type": "paragraph",
+            "text": "Comprar una vivienda probablemente sea la decisión financiera más importante que la mayoría de nosotros tomará en la vida, y aun así la cuota mensual que aparece en la cotización de un banco puede parecer un misterio. ¿De dónde sale ese número? ¿Por qué una pequeña diferencia en la tasa de interés lo cambia tanto? ¿Y por qué la cuota que te da el banco siempre es más alta que la que ves en una calculadora de hipotecas?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Esta guía te explica la matemática real detrás de una hipoteca, detalla cada factor que puede subir o bajar tu cuota mensual y te ayuda a identificar los errores más comunes que sorprenden a los compradores primerizos."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "La Fórmula Base: Capital e Intereses"
+          },
+          {
+            "type": "paragraph",
+            "text": "La cuota de una hipoteca a tasa fija se calcula con una fórmula que amortiza —o distribuye— tanto el capital del préstamo como los intereses de forma equitativa a lo largo de cada mes del plazo. La fórmula es la siguiente:"
+          },
+          {
+            "type": "callout",
+            "text": "M = P × [r(1+r)^n] / [(1+r)^n − 1]\n\nDonde: M = cuota mensual, P = capital del préstamo (monto solicitado), r = tasa de interés mensual (tasa anual ÷ 12), n = número total de cuotas (años × 12)"
+          },
+          {
+            "type": "paragraph",
+            "text": "Pongámoslo en práctica. Supón que solicitas $300,000 a una tasa anual del 6.5% a 30 años. Tu tasa mensual r es 6.5% ÷ 12 = 0.5417%, o 0.005417 en decimal. Tu n es 30 × 12 = 360 cuotas."
+          },
+          {
+            "type": "paragraph",
+            "text": "Aplicando la fórmula: M = 300,000 × [0.005417 × (1.005417)^360] / [(1.005417)^360 − 1]. El resultado es aproximadamente $1,896 al mes, solo por capital e intereses. Ese número ya puede parecer alto, pero hay algo importante: no es el panorama completo."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "¿Qué Más Incluye la Cuota Mensual?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Los bancos casi siempre agrupan costos adicionales en un solo pago mensual, por eso tu cuota real es más alta que lo que arroja la fórmula de capital e intereses. Los principales componentes adicionales son:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Impuestos sobre la propiedad — Generalmente el banco los retiene mensualmente y los paga al gobierno al final del año. En una vivienda de $400,000, esto puede sumar entre $300 y $700 al mes según el país o estado.",
+              "Seguro de hogar — El banco exige cobertura para proteger la propiedad. Presupuesta entre $100 y $200 al mes para la mayoría de las viviendas, aunque en zonas costeras o de alto riesgo puede ser más.",
+              "Seguro hipotecario privado (PMI) — Si tu enganche es menor al 20%, el banco exigirá este seguro para cubrirse en caso de impago. El PMI suele rondar entre el 0.5% y el 1.5% del préstamo anual; en un préstamo de $300,000 eso representa entre $125 y $375 adicionales al mes.",
+              "Cuotas de mantenimiento (HOA) — Si compras un condominio o una propiedad en un conjunto cerrado, las cuotas de mantenimiento son un costo real que debes considerar aunque no las pague el banco directamente."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Cuando se suman todos estos costos, la cuota de capital e intereses de $1,896 en nuestro ejemplo de $300,000 podría convertirse fácilmente en $2,500–$2,800 al mes. Siempre solicita a tu banco un desglose completo del pago que incluya el fideicomiso de impuestos y seguros. Comparar solo las tasas de interés sin mirar el pago total es uno de los errores más frecuentes."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Cómo Afecta la Tasa de Interés tu Cuota"
+          },
+          {
+            "type": "paragraph",
+            "text": "Mucha gente cree que una diferencia del 0.5% en la tasa es insignificante. No lo es. En un préstamo de $300,000 a 30 años, la diferencia entre una tasa del 6.0% y una del 6.5% representa unos $97 más al mes, o casi $35,000 adicionales durante toda la vida del préstamo. Por eso mejorar tu historial crediticio antes de solicitar, comparar al menos tres bancos y asegurar tu tasa en el momento adecuado puede ser muy valioso."
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Al 6.0%: cuota mensual (capital + intereses) ≈ $1,799",
+              "Al 6.5%: cuota mensual (capital + intereses) ≈ $1,896",
+              "Al 7.0%: cuota mensual (capital + intereses) ≈ $1,996"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Plazo del Préstamo: 30 Años vs. 15 Años"
+          },
+          {
+            "type": "paragraph",
+            "text": "Una hipoteca a 15 años tiene una cuota mensual mucho más alta que una a 30 años, pero el total de intereses que pagas a lo largo del préstamo puede ser menos de la mitad. Con los mismos $300,000 al 6.0%:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "30 años: ~$1,799/mes, ~$347,000 en intereses totales",
+              "15 años: ~$2,532/mes, ~$155,000 en intereses totales"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "El plazo de 15 años te ahorra casi $200,000 en intereses, pero tu cuota mensual es $733 más alta. La decisión correcta depende de tu flujo de efectivo, la estabilidad de tus ingresos y qué harías con ese dinero extra cada mes."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Errores Comunes que Debes Evitar"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Olvidar impuestos y seguros — La fórmula de capital e intereses es solo el punto de partida. Siempre calcula el costo total de la vivienda: capital, intereses, impuestos, seguros, más el seguro hipotecario y cuotas de mantenimiento si aplica.",
+              "Comparar por cuota mensual en lugar de por costo total — Un plazo más largo baja la cuota mensual pero aumenta drásticamente los intereses totales pagados.",
+              "No considerar el tipo de tasa — Las hipotecas a tasa variable suelen empezar más bajas, pero pueden ajustarse significativamente. Asegúrate de poder pagar la cuota en el peor escenario posible.",
+              "Saltar el calendario de amortización — En los primeros años de un préstamo a 30 años, la mayor parte de tu pago va a intereses, no a capital. Entender esto te ayuda a decidir si tiene sentido hacer pagos adicionales a capital.",
+              "Ignorar los costos de cierre — Suelen representar entre el 2% y el 5% del monto del préstamo y deben pagarse por adelantado o incorporarse al financiamiento."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Calcula tus Propios Números"
+          },
+          {
+            "type": "paragraph",
+            "text": "La fórmula es útil para entender cómo funciona, pero no es necesario hacerla a mano cada vez que quieras evaluar un escenario. Usa nuestra Calculadora de Hipoteca gratuita para simular cualquier combinación de monto del préstamo, tasa de interés, plazo, impuestos y seguro, y obtén al instante el desglose de tu cuota mensual, intereses totales y calendario de amortización."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Calculadora de Hipoteca",
+            "toolPath": "/tools/finance/mortgage-calculator"
+          },
+          {
+            "type": "paragraph",
+            "text": "Entender cómo se construye tu cuota hipotecaria te da un poder real en las negociaciones y la planificación. Sabrás por qué vale la pena pelear por una tasa 0.25% más baja, por qué dar un enganche del 20% te ahorra más que solo el seguro hipotecario, y por qué esa hipoteca variable atractiva puede ser un riesgo innecesario. Haz los números, compara escenarios y entra a tu compra con los ojos bien abiertos."
+          }
         ]
       },
       "bmi-vs-body-fat-percentage": {
@@ -2237,51 +2709,143 @@
         "relatedToolName": "Calculadora de IMC",
         "relatedToolPath": "/tools/health/bmi-calculator",
         "body": [
-          { "type": "paragraph", "text": "Si alguna vez has tenido una consulta médica de rutina, es probable que tu médico haya calculado tu IMC. Y si has pasado tiempo en un gimnasio, seguramente has escuchado a alguien decir que el IMC no sirve para nada y que el porcentaje de grasa corporal es el único número que importa. La verdad, como suele ocurrir, es más matizada." },
-          { "type": "paragraph", "text": "Ambas métricas miden algo real, solo que miden cosas distintas. Saber qué te dice cada una y dónde falla cada una te permite tomar decisiones más inteligentes sobre tu salud sin obsesionarte con un solo número." },
-          { "type": "heading", "level": 2, "text": "Qué Mide el IMC (y Qué No Mide)" },
-          { "type": "paragraph", "text": "El IMC, o Índice de Masa Corporal, se calcula dividiendo tu peso en kilogramos entre el cuadrado de tu altura en metros (kg/m²). Es una herramienta de evaluación a nivel poblacional desarrollada en el siglo XIX por el matemático belga Adolphe Quetelet, que no era médico. Se diseñó para describir las proporciones corporales promedio de hombres europeos, no para diagnosticar la salud individual." },
-          { "type": "paragraph", "text": "Las categorías estándar del IMC para adultos son:" },
-          { "type": "list", "ordered": false, "items": [
-            "Menos de 18.5 — Bajo peso",
-            "18.5–24.9 — Peso normal",
-            "25.0–29.9 — Sobrepeso",
-            "30.0 o más — Obesidad"
-          ]},
-          { "type": "paragraph", "text": "Lo que el IMC hace bien: es gratuito, inmediato, no requiere equipos y a nivel poblacional se correlaciona razonablemente bien con riesgos de salud como diabetes tipo 2, enfermedades cardíacas y ciertos tipos de cáncer. Por eso sigue siendo una herramienta de evaluación estándar en entornos clínicos." },
-          { "type": "paragraph", "text": "Lo que el IMC no mide: la composición corporal. El IMC no tiene forma de saber si tu peso proviene de músculo, grasa, hueso o agua. Un kilo de músculo y un kilo de grasa pesan exactamente lo mismo, y el IMC los trata de forma idéntica." },
-          { "type": "heading", "level": 2, "text": "Cuándo el IMC Puede Engañarte" },
-          { "type": "paragraph", "text": "Existen grupos específicos para los que el IMC es un indicador de salud genuinamente deficiente:" },
-          { "type": "list", "ordered": false, "items": [
-            "Deportistas y personas con mucha masa muscular — Un jugador de rugby o un fisicoculturista puede tener un IMC en el rango de 'sobrepeso' u 'obesidad' con muy poca grasa corporal y excelente salud cardiovascular. Su alta masa muscular infla el IMC sin los riesgos de salud asociados.",
-            "Adultos mayores — El envejecimiento tiende a reducir la masa muscular (sarcopenia) mientras la grasa aumenta, muchas veces sin grandes cambios de peso. Una persona mayor puede tener un IMC 'normal' y al mismo tiempo una proporción de grasa peligrosamente alta.",
-            "Diferentes grupos étnicos — La investigación ha demostrado que con el mismo IMC, las personas de origen asiático tienden a acumular más grasa corporal y enfrentan mayor riesgo metabólico. Algunas organizaciones de salud recomiendan umbrales de IMC más bajos para estas poblaciones.",
-            "Mujeres vs. hombres — Las mujeres naturalmente tienen mayor porcentaje de grasa corporal que los hombres con el mismo IMC, debido a diferencias hormonales y reproductivas. Dos personas con IMC idéntico pueden tener porcentajes de grasa corporal significativamente distintos."
-          ]},
-          { "type": "heading", "level": 2, "text": "Qué Nos Dice Realmente el Porcentaje de Grasa Corporal" },
-          { "type": "paragraph", "text": "El porcentaje de grasa corporal es exactamente lo que su nombre indica: la proporción de tu peso total que corresponde a tejido graso. El resto —músculo, hueso, órganos, agua— se denomina masa magra o masa libre de grasa." },
-          { "type": "paragraph", "text": "Los rangos saludables de grasa corporal varían según sexo y edad, pero los puntos de referencia generales para adultos son:" },
-          { "type": "list", "ordered": false, "items": [
-            "Mujeres: entre 20% y 35% se considera generalmente saludable; las deportistas suelen estar entre 14% y 20%",
-            "Hombres: entre 10% y 25% es generalmente saludable; los deportistas masculinos suelen estar entre 6% y 13%",
-            "Grasa esencial (mínimo necesario para el funcionamiento de los órganos): aproximadamente 3–5% en hombres y 10–13% en mujeres"
-          ]},
-          { "type": "paragraph", "text": "Una grasa corporal alta, especialmente la grasa visceral almacenada alrededor de los órganos en lugar de la grasa subcutánea bajo la piel, está más directamente relacionada con la resistencia a la insulina, la inflamación, las enfermedades cardíacas y el síndrome metabólico que el IMC. Por eso el porcentaje de grasa corporal se considera un indicador más significativo de la salud cardiometabólica." },
-          { "type": "heading", "level": 2, "text": "El Problema: Medir la Grasa Corporal No Es Fácil" },
-          { "type": "paragraph", "text": "La razón principal por la que el IMC no ha sido reemplazado por el porcentaje de grasa corporal en la práctica clínica es que medir la grasa con precisión es mucho más difícil y costoso. Los métodos más precisos incluyen la densitometría ósea (DEXA), el pesaje hidrostático (bajo el agua) y la pletismografía por desplazamiento de aire (Bod Pod), ninguno de los cuales está disponible en una consulta de rutina." },
-          { "type": "paragraph", "text": "Las básculas de impedancia bioeléctrica y los dispositivos manuales son prácticos pero notoriamente inconsistentes: los niveles de hidratación, la ingesta de alimentos y el momento del día pueden alterar las lecturas entre 3 y 5 puntos porcentuales. Los pliegues cutáneos, realizados por un profesional entrenado, son razonablemente precisos pero muy dependientes del operador." },
-          { "type": "heading", "level": 2, "text": "Usar Ambas Métricas de Forma Complementaria" },
-          { "type": "paragraph", "text": "El enfoque más práctico es tratar el IMC y el porcentaje de grasa como herramientas complementarias, no opuestas:" },
-          { "type": "list", "ordered": false, "items": [
-            "Usa el IMC como un primer filtro rápido y gratuito. Si tu IMC está en el rango normal y no tienes otros factores de riesgo, es una señal positiva, aunque no definitiva.",
-            "Usa el porcentaje de grasa corporal (o la circunferencia de la cintura como referencia aproximada) cuando el IMC no coincide con cómo te ves o te sientes, o cuando quieres monitorear cambios en la composición corporal durante el entrenamiento.",
-            "Presta atención a la proporción cintura-altura: mantener la circunferencia de tu cintura en menos de la mitad de tu altura es un indicador simple y validado que refleja mejor el riesgo de grasa visceral que el IMC solo."
-          ]},
-          { "type": "callout", "text": "Ningún número cuenta la historia completa. La presión arterial, la glucosa en sangre, el colesterol, la calidad del sueño y la condición física son también indicadores de salud igualmente importantes; el contexto siempre es clave." },
-          { "type": "heading", "level": 2, "text": "Calcula tu IMC Ahora" },
-          { "type": "paragraph", "text": "¿Quieres saber dónde estás parado? Usa nuestra Calculadora de IMC gratuita para obtener tu IMC al instante, ver en qué categoría te ubica y entender qué significa ese número para tu situación específica, incluyendo sus limitaciones importantes." },
-          { "type": "toolCta", "toolName": "Calculadora de IMC", "toolPath": "/tools/health/bmi-calculator" },
-          { "type": "paragraph", "text": "El objetivo final no es optimizar un número en una tabla, sino sentirte fuerte, tener energía y reducir el riesgo de enfermedades crónicas a largo plazo. El IMC y el porcentaje de grasa corporal son herramientas imperfectas para alcanzar ese objetivo. Úsalos como punto de partida para la conversación, no como veredicto definitivo." }
+          {
+            "type": "paragraph",
+            "text": "Si alguna vez has tenido una consulta médica de rutina, es probable que tu médico haya calculado tu IMC. Y si has pasado tiempo en un gimnasio, seguramente has escuchado a alguien decir que el IMC no sirve para nada y que el porcentaje de grasa corporal es el único número que importa. La verdad, como suele ocurrir, es más matizada."
+          },
+          {
+            "type": "paragraph",
+            "text": "Ambas métricas miden algo real, solo que miden cosas distintas. Saber qué te dice cada una y dónde falla cada una te permite tomar decisiones más inteligentes sobre tu salud sin obsesionarte con un solo número."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Qué Mide el IMC (y Qué No Mide)"
+          },
+          {
+            "type": "paragraph",
+            "text": "El IMC, o Índice de Masa Corporal, se calcula dividiendo tu peso en kilogramos entre el cuadrado de tu altura en metros (kg/m²). Es una herramienta de evaluación a nivel poblacional desarrollada en el siglo XIX por el matemático belga Adolphe Quetelet, que no era médico. Se diseñó para describir las proporciones corporales promedio de hombres europeos, no para diagnosticar la salud individual."
+          },
+          {
+            "type": "paragraph",
+            "text": "Las categorías estándar del IMC para adultos son:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Menos de 18.5 — Bajo peso",
+              "18.5–24.9 — Peso normal",
+              "25.0–29.9 — Sobrepeso",
+              "30.0 o más — Obesidad"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Lo que el IMC hace bien: es gratuito, inmediato, no requiere equipos y a nivel poblacional se correlaciona razonablemente bien con riesgos de salud como diabetes tipo 2, enfermedades cardíacas y ciertos tipos de cáncer. Por eso sigue siendo una herramienta de evaluación estándar en entornos clínicos."
+          },
+          {
+            "type": "paragraph",
+            "text": "Lo que el IMC no mide: la composición corporal. El IMC no tiene forma de saber si tu peso proviene de músculo, grasa, hueso o agua. Un kilo de músculo y un kilo de grasa pesan exactamente lo mismo, y el IMC los trata de forma idéntica."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Cuándo el IMC Puede Engañarte"
+          },
+          {
+            "type": "paragraph",
+            "text": "Existen grupos específicos para los que el IMC es un indicador de salud genuinamente deficiente:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Deportistas y personas con mucha masa muscular — Un jugador de rugby o un fisicoculturista puede tener un IMC en el rango de 'sobrepeso' u 'obesidad' con muy poca grasa corporal y excelente salud cardiovascular. Su alta masa muscular infla el IMC sin los riesgos de salud asociados.",
+              "Adultos mayores — El envejecimiento tiende a reducir la masa muscular (sarcopenia) mientras la grasa aumenta, muchas veces sin grandes cambios de peso. Una persona mayor puede tener un IMC 'normal' y al mismo tiempo una proporción de grasa peligrosamente alta.",
+              "Diferentes grupos étnicos — La investigación ha demostrado que con el mismo IMC, las personas de origen asiático tienden a acumular más grasa corporal y enfrentan mayor riesgo metabólico. Algunas organizaciones de salud recomiendan umbrales de IMC más bajos para estas poblaciones.",
+              "Mujeres vs. hombres — Las mujeres naturalmente tienen mayor porcentaje de grasa corporal que los hombres con el mismo IMC, debido a diferencias hormonales y reproductivas. Dos personas con IMC idéntico pueden tener porcentajes de grasa corporal significativamente distintos."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Qué Nos Dice Realmente el Porcentaje de Grasa Corporal"
+          },
+          {
+            "type": "paragraph",
+            "text": "El porcentaje de grasa corporal es exactamente lo que su nombre indica: la proporción de tu peso total que corresponde a tejido graso. El resto —músculo, hueso, órganos, agua— se denomina masa magra o masa libre de grasa."
+          },
+          {
+            "type": "paragraph",
+            "text": "Los rangos saludables de grasa corporal varían según sexo y edad, pero los puntos de referencia generales para adultos son:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Mujeres: entre 20% y 35% se considera generalmente saludable; las deportistas suelen estar entre 14% y 20%",
+              "Hombres: entre 10% y 25% es generalmente saludable; los deportistas masculinos suelen estar entre 6% y 13%",
+              "Grasa esencial (mínimo necesario para el funcionamiento de los órganos): aproximadamente 3–5% en hombres y 10–13% en mujeres"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Una grasa corporal alta, especialmente la grasa visceral almacenada alrededor de los órganos en lugar de la grasa subcutánea bajo la piel, está más directamente relacionada con la resistencia a la insulina, la inflamación, las enfermedades cardíacas y el síndrome metabólico que el IMC. Por eso el porcentaje de grasa corporal se considera un indicador más significativo de la salud cardiometabólica."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "El Problema: Medir la Grasa Corporal No Es Fácil"
+          },
+          {
+            "type": "paragraph",
+            "text": "La razón principal por la que el IMC no ha sido reemplazado por el porcentaje de grasa corporal en la práctica clínica es que medir la grasa con precisión es mucho más difícil y costoso. Los métodos más precisos incluyen la densitometría ósea (DEXA), el pesaje hidrostático (bajo el agua) y la pletismografía por desplazamiento de aire (Bod Pod), ninguno de los cuales está disponible en una consulta de rutina."
+          },
+          {
+            "type": "paragraph",
+            "text": "Las básculas de impedancia bioeléctrica y los dispositivos manuales son prácticos pero notoriamente inconsistentes: los niveles de hidratación, la ingesta de alimentos y el momento del día pueden alterar las lecturas entre 3 y 5 puntos porcentuales. Los pliegues cutáneos, realizados por un profesional entrenado, son razonablemente precisos pero muy dependientes del operador."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Usar Ambas Métricas de Forma Complementaria"
+          },
+          {
+            "type": "paragraph",
+            "text": "El enfoque más práctico es tratar el IMC y el porcentaje de grasa como herramientas complementarias, no opuestas:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Usa el IMC como un primer filtro rápido y gratuito. Si tu IMC está en el rango normal y no tienes otros factores de riesgo, es una señal positiva, aunque no definitiva.",
+              "Usa el porcentaje de grasa corporal (o la circunferencia de la cintura como referencia aproximada) cuando el IMC no coincide con cómo te ves o te sientes, o cuando quieres monitorear cambios en la composición corporal durante el entrenamiento.",
+              "Presta atención a la proporción cintura-altura: mantener la circunferencia de tu cintura en menos de la mitad de tu altura es un indicador simple y validado que refleja mejor el riesgo de grasa visceral que el IMC solo."
+            ]
+          },
+          {
+            "type": "callout",
+            "text": "Ningún número cuenta la historia completa. La presión arterial, la glucosa en sangre, el colesterol, la calidad del sueño y la condición física son también indicadores de salud igualmente importantes; el contexto siempre es clave."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Calcula tu IMC Ahora"
+          },
+          {
+            "type": "paragraph",
+            "text": "¿Quieres saber dónde estás parado? Usa nuestra Calculadora de IMC gratuita para obtener tu IMC al instante, ver en qué categoría te ubica y entender qué significa ese número para tu situación específica, incluyendo sus limitaciones importantes."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Calculadora de IMC",
+            "toolPath": "/tools/health/bmi-calculator"
+          },
+          {
+            "type": "paragraph",
+            "text": "El objetivo final no es optimizar un número en una tabla, sino sentirte fuerte, tener energía y reducir el riesgo de enfermedades crónicas a largo plazo. El IMC y el porcentaje de grasa corporal son herramientas imperfectas para alcanzar ese objetivo. Úsalos como punto de partida para la conversación, no como veredicto definitivo."
+          }
         ]
       },
       "how-to-cite-website-apa": {
@@ -2290,44 +2854,133 @@
         "relatedToolName": "Generador de Citas",
         "relatedToolPath": "/tools/education/citation-generator",
         "body": [
-          { "type": "paragraph", "text": "Citar un sitio web en formato APA es algo que confunde incluso a estudiantes con experiencia. La 7ª edición (publicada en 2020 y vigente en 2025) cambió varias reglas de la 6ª edición, incluyendo cómo manejar URLs, autores no identificados y fechas de consulta. Si aprendiste APA hace algunos años, es probable que parte de lo que sabes ya esté desactualizado." },
-          { "type": "paragraph", "text": "Esta guía cubre todo lo que necesitas: la plantilla correcta, un ejemplo real paso a paso, los errores más frecuentes y cómo APA maneja las situaciones más comunes. Cabe señalar que APA es el formato dominante en la mayoría de las universidades latinoamericanas, por lo que dominar estas reglas es especialmente útil en el contexto académico de la región." },
-          { "type": "heading", "level": 2, "text": "La Plantilla APA 7ª Edición para Páginas Web" },
-          { "type": "paragraph", "text": "La estructura básica para una página web o artículo en línea en APA 7ª edición es:" },
-          { "type": "callout", "text": "Apellido, Inicial del nombre. (Año, Día de Mes). Título de la página. Nombre del sitio. URL" },
-          { "type": "paragraph", "text": "Algunos puntos importantes: el título de la página va en mayúscula solo la primera palabra y los nombres propios (estilo oración), y va en cursiva. El nombre del sitio va a continuación en texto normal, y no se pone punto después de la URL." },
-          { "type": "heading", "level": 2, "text": "Ejemplo Paso a Paso" },
-          { "type": "paragraph", "text": "Veamos un ejemplo real. Supón que quieres citar un artículo con los siguientes datos: Autor: Jonathan Amos. Fecha: 15 de marzo de 2024. Título: Scientists find ancient river system under Antarctica. Sitio: BBC News." },
-          { "type": "list", "ordered": true, "items": [
-            "Autor: Escribe el apellido, luego una coma y la inicial del nombre seguida de un punto. → Amos, J.",
-            "Fecha: Pon el año primero, luego el día y el mes entre paréntesis, seguido de un punto. → (2024, 15 de marzo).",
-            "Título: Escribe el título completo en estilo oración y en cursiva. → Scientists find ancient river system under Antarctica.",
-            "Nombre del sitio: Escribe el nombre del sitio web en texto normal (sin cursiva), seguido de un punto. → BBC News.",
-            "URL: Pega la URL completa. Sin corchetes angulares ni punto al final."
-          ]},
-          { "type": "callout", "text": "Amos, J. (2024, 15 de marzo). Scientists find ancient river system under Antarctica. BBC News. https://www.bbc.com/news/science-environment-68593472" },
-          { "type": "heading", "level": 2, "text": "Qué Hacer Cuando No Hay Autor" },
-          { "type": "paragraph", "text": "Muchos sitios web no identifican a un autor individual. En APA 7ª edición, cuando no hay autor, el título pasa a la posición del autor. Se mantiene en cursiva y se omite el campo del autor." },
-          { "type": "callout", "text": "Federal student aid overview. (2024, 10 de enero). U.S. Department of Education. https://studentaid.gov/understand-aid/types" },
-          { "type": "heading", "level": 2, "text": "Qué Hacer Cuando No Hay Fecha" },
-          { "type": "paragraph", "text": "Si una página web no tiene fecha de publicación o actualización, usa \"s.f.\" (sin fecha) en la posición de la fecha:" },
-          { "type": "callout", "text": "Apellido, Inicial del nombre. (s.f.). Título de la página. Nombre del sitio. URL" },
-          { "type": "heading", "level": 2, "text": "¿Necesitas Incluir la Fecha de Consulta?" },
-          { "type": "paragraph", "text": "En APA 6ª edición era frecuente incluir una fecha de recuperación (\"Recuperado el 10 de marzo de 2024, de...\"). APA 7ª edición eliminó este requisito para la mayoría de las fuentes. Solo necesitas una fecha de consulta si el contenido está diseñado para cambiar con el tiempo y no existe una versión archivada, como entradas en bases de datos en vivo o páginas wiki que se actualizan con frecuencia. Para artículos y páginas web estándar, no es necesario incluirla." },
-          { "type": "heading", "level": 2, "text": "Errores Comunes en Citas APA" },
-          { "type": "list", "ordered": false, "items": [
-            "Mayúsculas incorrectas en el título — APA usa estilo oración, no mayúsculas en cada palabra. 'Cómo Escribir una Revisión de Literatura' debe ser 'Cómo escribir una revisión de literatura' (excepto nombres propios).",
-            "Olvidar la cursiva en el título de la página — Los títulos de páginas web van en cursiva; el nombre del sitio no.",
-            "Poner punto después de la URL — La URL es el último elemento y no lleva punto.",
-            "Usar reglas de la 6ª edición — APA 7ª edición eliminó la ubicación del editor en libros y cambió el formato de DOIs y URLs. Si tu guía de estilo es anterior a 2020, verifícala.",
-            "Usar 'Anónimo' cuando no hay autor — APA 7ª edición no usa [Anónimo] como sustituto del autor. Si genuinamente no hay autor, mueve el título a la posición del autor."
-          ]},
-          { "type": "heading", "level": 2, "text": "APA vs. MLA: La Diferencia Rápida" },
-          { "type": "paragraph", "text": "Los estudiantes frecuentemente confunden APA y MLA. Las diferencias clave para páginas web: APA coloca el año inmediatamente después del autor y usa solo la inicial del nombre; MLA escribe el nombre completo y coloca la fecha al final. APA pone el título de la página en cursiva; MLA lo pone entre comillas. Si tu institución o profesor especifica un formato, usa ese; no son intercambiables." },
-          { "type": "heading", "level": 2, "text": "Genera tu Cita Automáticamente" },
-          { "type": "paragraph", "text": "Si estás trabajando en un escrito con múltiples fuentes, hacerlo manualmente para cada cita se vuelve tedioso rápidamente. Usa nuestro Generador de Citas gratuito para crear citas en formato APA 7ª edición correctamente formateadas, así como MLA, Chicago y ABNT, en segundos." },
-          { "type": "toolCta", "toolName": "Generador de Citas", "toolPath": "/tools/education/citation-generator" },
-          { "type": "paragraph", "text": "Hacer bien las citas importa, y no solo porque tu profesor las revisa. La atribución correcta es la base de la honestidad académica y le da a tus lectores un camino claro de regreso a tus fuentes. Tómate el tiempo extra para hacerlo bien." }
+          {
+            "type": "paragraph",
+            "text": "Citar un sitio web en formato APA es algo que confunde incluso a estudiantes con experiencia. La 7ª edición (publicada en 2020 y vigente en 2025) cambió varias reglas de la 6ª edición, incluyendo cómo manejar URLs, autores no identificados y fechas de consulta. Si aprendiste APA hace algunos años, es probable que parte de lo que sabes ya esté desactualizado."
+          },
+          {
+            "type": "paragraph",
+            "text": "Esta guía cubre todo lo que necesitas: la plantilla correcta, un ejemplo real paso a paso, los errores más frecuentes y cómo APA maneja las situaciones más comunes. Cabe señalar que APA es el formato dominante en la mayoría de las universidades latinoamericanas, por lo que dominar estas reglas es especialmente útil en el contexto académico de la región."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "La Plantilla APA 7ª Edición para Páginas Web"
+          },
+          {
+            "type": "paragraph",
+            "text": "La estructura básica para una página web o artículo en línea en APA 7ª edición es:"
+          },
+          {
+            "type": "callout",
+            "text": "Apellido, Inicial del nombre. (Año, Día de Mes). Título de la página. Nombre del sitio. URL"
+          },
+          {
+            "type": "paragraph",
+            "text": "Algunos puntos importantes: el título de la página va en mayúscula solo la primera palabra y los nombres propios (estilo oración), y va en cursiva. El nombre del sitio va a continuación en texto normal, y no se pone punto después de la URL."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Ejemplo Paso a Paso"
+          },
+          {
+            "type": "paragraph",
+            "text": "Veamos un ejemplo real. Supón que quieres citar un artículo con los siguientes datos: Autor: Jonathan Amos. Fecha: 15 de marzo de 2024. Título: Scientists find ancient river system under Antarctica. Sitio: BBC News."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Autor: Escribe el apellido, luego una coma y la inicial del nombre seguida de un punto. → Amos, J.",
+              "Fecha: Pon el año primero, luego el día y el mes entre paréntesis, seguido de un punto. → (2024, 15 de marzo).",
+              "Título: Escribe el título completo en estilo oración y en cursiva. → Scientists find ancient river system under Antarctica.",
+              "Nombre del sitio: Escribe el nombre del sitio web en texto normal (sin cursiva), seguido de un punto. → BBC News.",
+              "URL: Pega la URL completa. Sin corchetes angulares ni punto al final."
+            ]
+          },
+          {
+            "type": "callout",
+            "text": "Amos, J. (2024, 15 de marzo). Scientists find ancient river system under Antarctica. BBC News. https://www.bbc.com/news/science-environment-68593472"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Qué Hacer Cuando No Hay Autor"
+          },
+          {
+            "type": "paragraph",
+            "text": "Muchos sitios web no identifican a un autor individual. En APA 7ª edición, cuando no hay autor, el título pasa a la posición del autor. Se mantiene en cursiva y se omite el campo del autor."
+          },
+          {
+            "type": "callout",
+            "text": "Federal student aid overview. (2024, 10 de enero). U.S. Department of Education. https://studentaid.gov/understand-aid/types"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Qué Hacer Cuando No Hay Fecha"
+          },
+          {
+            "type": "paragraph",
+            "text": "Si una página web no tiene fecha de publicación o actualización, usa \"s.f.\" (sin fecha) en la posición de la fecha:"
+          },
+          {
+            "type": "callout",
+            "text": "Apellido, Inicial del nombre. (s.f.). Título de la página. Nombre del sitio. URL"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "¿Necesitas Incluir la Fecha de Consulta?"
+          },
+          {
+            "type": "paragraph",
+            "text": "En APA 6ª edición era frecuente incluir una fecha de recuperación (\"Recuperado el 10 de marzo de 2024, de...\"). APA 7ª edición eliminó este requisito para la mayoría de las fuentes. Solo necesitas una fecha de consulta si el contenido está diseñado para cambiar con el tiempo y no existe una versión archivada, como entradas en bases de datos en vivo o páginas wiki que se actualizan con frecuencia. Para artículos y páginas web estándar, no es necesario incluirla."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Errores Comunes en Citas APA"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Mayúsculas incorrectas en el título — APA usa estilo oración, no mayúsculas en cada palabra. 'Cómo Escribir una Revisión de Literatura' debe ser 'Cómo escribir una revisión de literatura' (excepto nombres propios).",
+              "Olvidar la cursiva en el título de la página — Los títulos de páginas web van en cursiva; el nombre del sitio no.",
+              "Poner punto después de la URL — La URL es el último elemento y no lleva punto.",
+              "Usar reglas de la 6ª edición — APA 7ª edición eliminó la ubicación del editor en libros y cambió el formato de DOIs y URLs. Si tu guía de estilo es anterior a 2020, verifícala.",
+              "Usar 'Anónimo' cuando no hay autor — APA 7ª edición no usa [Anónimo] como sustituto del autor. Si genuinamente no hay autor, mueve el título a la posición del autor."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "APA vs. MLA: La Diferencia Rápida"
+          },
+          {
+            "type": "paragraph",
+            "text": "Los estudiantes frecuentemente confunden APA y MLA. Las diferencias clave para páginas web: APA coloca el año inmediatamente después del autor y usa solo la inicial del nombre; MLA escribe el nombre completo y coloca la fecha al final. APA pone el título de la página en cursiva; MLA lo pone entre comillas. Si tu institución o profesor especifica un formato, usa ese; no son intercambiables."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Genera tu Cita Automáticamente"
+          },
+          {
+            "type": "paragraph",
+            "text": "Si estás trabajando en un escrito con múltiples fuentes, hacerlo manualmente para cada cita se vuelve tedioso rápidamente. Usa nuestro Generador de Citas gratuito para crear citas en formato APA 7ª edición correctamente formateadas, así como MLA, Chicago y ABNT, en segundos."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Generador de Citas",
+            "toolPath": "/tools/education/citation-generator"
+          },
+          {
+            "type": "paragraph",
+            "text": "Hacer bien las citas importa, y no solo porque tu profesor las revisa. La atribución correcta es la base de la honestidad académica y le da a tus lectores un camino claro de regreso a tus fuentes. Tómate el tiempo extra para hacerlo bien."
+          }
         ]
       },
       "word-count-guide": {
@@ -2336,57 +2989,144 @@
         "relatedToolName": "Contador de Palabras",
         "relatedToolPath": "/tools/text/word-counter",
         "body": [
-          { "type": "paragraph", "text": "Pregúntale a diez estrategas de contenido cuánto debe durar un artículo de blog y obtendrás diez respuestas distintas. Unos dirán mínimo 1,500 palabras; otros citarán investigaciones que muestran que los artículos de más de 3,000 palabras dominan la primera página de Google. Mientras tanto, tu profesor de redacción insiste en exactamente 1,000 palabras, y todos los consejos sobre correos electrónicos que has leído dicen que no superes las 200." },
-          { "type": "paragraph", "text": "La verdad, aunque frustrante, es que todos pueden tener razón, porque el número ideal de palabras depende por completo de qué estás escribiendo, para quién y qué quieres que suceda cuando lo lean. Aquí tienes un análisis práctico de los tipos de contenido que la mayoría de las personas escribe." },
-          { "type": "heading", "level": 2, "text": "Artículos de Blog y Contenido de Formato Largo" },
-          { "type": "paragraph", "text": "Para el contenido orientado al SEO, más largo tiende a funcionar mejor, hasta cierto punto. Los análisis de las páginas mejor posicionadas en Google muestran consistentemente que los artículos de entre 1,500 y 2,500 palabras posicionan bien para palabras clave competitivas, y los de más de 3,000 palabras obtienen más enlaces entrantes en promedio, probablemente porque son más completos y, por lo tanto, más compartidos entre otros creadores de contenido." },
-          { "type": "paragraph", "text": "Sin embargo, más extenso solo ayuda si las palabras adicionales aportan valor real. Las pautas de contenido útil de Google penalizan explícitamente el contenido que se alarga para alcanzar un objetivo de extensión. El relleno, repetir el mismo punto, agregar secciones innecesarias, enterrar la respuesta en el quinto párrafo, perjudica tanto tu posicionamiento como la experiencia del lector." },
-          { "type": "list", "ordered": false, "items": [
-            "Nota de opinión o noticia: 400–800 palabras — di lo que tienes que decir y para",
-            "Guía práctica o tutorial: 1,200–2,000 palabras — suficiente para el detalle paso a paso sin relleno",
-            "Contenido pilar completo o guía definitiva: 2,500–4,000 palabras — solo si el tema lo requiere genuinamente",
-            "Artículo de lista: 1,000–1,500 palabras — descripciones breves por ítem, fácil de escanear"
-          ]},
-          { "type": "heading", "level": 2, "text": "Ensayos Académicos" },
-          { "type": "paragraph", "text": "La escritura académica tiene una prioridad diferente a la de un blog: demostrar profundidad de argumentación, no posicionarse en Google. La mayoría de los profesores establecen extensiones explícitas, y lo correcto es alcanzar ese rango, sin quedarse muy por debajo ni excederse demasiado." },
-          { "type": "list", "ordered": false, "items": [
-            "Respuesta corta o reflexión: 250–500 palabras",
-            "Ensayo universitario estándar: 1,000–2,000 palabras",
-            "Trabajo de investigación: 3,000–6,000 palabras",
-            "Capítulo de tesis: 8,000–12,000 palabras por capítulo",
-            "Tesis o disertación completa: 15,000–80,000 palabras según el nivel y la disciplina"
-          ]},
-          { "type": "paragraph", "text": "Una regla subestimada en la escritura académica: nunca repitas tu introducción en tu conclusión. Reformular lo que acabas de decir es la forma más fácil de inflar el conteo de palabras, y los lectores con experiencia siempre lo notan. Si consistentemente te falta espacio, tu argumento probablemente necesita más evidencia, no más resumen." },
-          { "type": "heading", "level": 2, "text": "Correos Electrónicos" },
-          { "type": "paragraph", "text": "El correo electrónico es el tipo de contenido donde más corto casi siempre es mejor, y donde la mayoría de los profesionales consistentemente escribe demasiado. Las investigaciones sobre tasas de respuesta muestran que los correos de entre 50 y 125 palabras reciben las tasas de respuesta más altas. Eso equivale a aproximadamente cuatro a ocho oraciones cortas." },
-          { "type": "list", "ordered": false, "items": [
-            "Solicitud rápida o pregunta: 50–100 palabras",
-            "Propuesta de negocio o correo de presentación: 150–250 palabras",
-            "Boletín (tema único): 200–400 palabras",
-            "Boletín (resumen con varias secciones): 500–800 palabras"
-          ]},
-          { "type": "paragraph", "text": "El error más común en los correos es enterrar la solicitud. Coloca lo más importante al inicio. Si necesitas que alguien revise un documento, dilo en la primera oración, no después de tres párrafos de contexto." },
-          { "type": "heading", "level": 2, "text": "Publicaciones en Redes Sociales" },
-          { "type": "paragraph", "text": "Cada plataforma tiene su propio ritmo, y el conteo de palabras que funciona en una puede fracasar en otra:" },
-          { "type": "list", "ordered": false, "items": [
-            "X / X: entre 71 y 100 caracteres genera mayor participación que publicaciones de 280 caracteres; lo más breve gana",
-            "LinkedIn: entre 1,300 y 2,000 caracteres para una publicación nativa que genere comentarios (unas 200–300 palabras)",
-            "Descripción de Instagram: los primeros 138–150 caracteres son lo que la mayoría lee; la descripción completa puede ser más larga para los hashtags",
-            "Facebook: entre 40 y 80 palabras para mayor participación en publicaciones orgánicas"
-          ]},
-          { "type": "heading", "level": 2, "text": "Por Qué la Legibilidad Importa Más que el Conteo de Palabras" },
-          { "type": "paragraph", "text": "El conteo de palabras es una medida del esfuerzo, no de la calidad. Un artículo de 500 palabras bien estructurado, con subtítulos claros y un lenguaje accesible superará a un muro de texto de 2,000 palabras en rankings de búsqueda y satisfacción del lector." },
-          { "type": "paragraph", "text": "Factores que hacen que un texto se sienta más largo o más corto que su conteo real de palabras:" },
-          { "type": "list", "ordered": false, "items": [
-            "Extensión de los párrafos — Los párrafos de dos oraciones se leen más rápido y resultan menos intimidantes que los bloques de ocho oraciones",
-            "Extensión de las oraciones — Alternar oraciones cortas y largas evita que los lectores pierdan el hilo",
-            "Subtítulos — Permiten que los lectores que escanean decidan qué secciones leer realmente",
-            "Voz pasiva — Agrega palabras sin agregar significado: 'El informe fue redactado por el equipo' frente a 'El equipo redactó el informe'"
-          ]},
-          { "type": "heading", "level": 2, "text": "Controla tu Conteo de Palabras Mientras Escribes" },
-          { "type": "paragraph", "text": "Ya sea que busques un conteo específico para SEO, debas mantenerte dentro del límite de una tarea académica o quieras evitar que un correo se convierta en un ensayo, es más fácil controlar el conteo mientras escribes que editarlo al final. Usa nuestro Contador de Palabras gratuito para obtener en tiempo real el número de palabras, caracteres, oraciones y párrafos de cualquier texto." },
-          { "type": "toolCta", "toolName": "Contador de Palabras", "toolPath": "/tools/text/word-counter" },
-          { "type": "paragraph", "text": "El mejor conteo de palabras para cualquier escrito es el número mínimo de palabras necesario para servir al lector completamente. Todo lo demás es ruido." }
+          {
+            "type": "paragraph",
+            "text": "Pregúntale a diez estrategas de contenido cuánto debe durar un artículo de blog y obtendrás diez respuestas distintas. Unos dirán mínimo 1,500 palabras; otros citarán investigaciones que muestran que los artículos de más de 3,000 palabras dominan la primera página de Google. Mientras tanto, tu profesor de redacción insiste en exactamente 1,000 palabras, y todos los consejos sobre correos electrónicos que has leído dicen que no superes las 200."
+          },
+          {
+            "type": "paragraph",
+            "text": "La verdad, aunque frustrante, es que todos pueden tener razón, porque el número ideal de palabras depende por completo de qué estás escribiendo, para quién y qué quieres que suceda cuando lo lean. Aquí tienes un análisis práctico de los tipos de contenido que la mayoría de las personas escribe."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Artículos de Blog y Contenido de Formato Largo"
+          },
+          {
+            "type": "paragraph",
+            "text": "Para el contenido orientado al SEO, más largo tiende a funcionar mejor, hasta cierto punto. Los análisis de las páginas mejor posicionadas en Google muestran consistentemente que los artículos de entre 1,500 y 2,500 palabras posicionan bien para palabras clave competitivas, y los de más de 3,000 palabras obtienen más enlaces entrantes en promedio, probablemente porque son más completos y, por lo tanto, más compartidos entre otros creadores de contenido."
+          },
+          {
+            "type": "paragraph",
+            "text": "Sin embargo, más extenso solo ayuda si las palabras adicionales aportan valor real. Las pautas de contenido útil de Google penalizan explícitamente el contenido que se alarga para alcanzar un objetivo de extensión. El relleno, repetir el mismo punto, agregar secciones innecesarias, enterrar la respuesta en el quinto párrafo, perjudica tanto tu posicionamiento como la experiencia del lector."
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Nota de opinión o noticia: 400–800 palabras — di lo que tienes que decir y para",
+              "Guía práctica o tutorial: 1,200–2,000 palabras — suficiente para el detalle paso a paso sin relleno",
+              "Contenido pilar completo o guía definitiva: 2,500–4,000 palabras — solo si el tema lo requiere genuinamente",
+              "Artículo de lista: 1,000–1,500 palabras — descripciones breves por ítem, fácil de escanear"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Ensayos Académicos"
+          },
+          {
+            "type": "paragraph",
+            "text": "La escritura académica tiene una prioridad diferente a la de un blog: demostrar profundidad de argumentación, no posicionarse en Google. La mayoría de los profesores establecen extensiones explícitas, y lo correcto es alcanzar ese rango, sin quedarse muy por debajo ni excederse demasiado."
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Respuesta corta o reflexión: 250–500 palabras",
+              "Ensayo universitario estándar: 1,000–2,000 palabras",
+              "Trabajo de investigación: 3,000–6,000 palabras",
+              "Capítulo de tesis: 8,000–12,000 palabras por capítulo",
+              "Tesis o disertación completa: 15,000–80,000 palabras según el nivel y la disciplina"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Una regla subestimada en la escritura académica: nunca repitas tu introducción en tu conclusión. Reformular lo que acabas de decir es la forma más fácil de inflar el conteo de palabras, y los lectores con experiencia siempre lo notan. Si consistentemente te falta espacio, tu argumento probablemente necesita más evidencia, no más resumen."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Correos Electrónicos"
+          },
+          {
+            "type": "paragraph",
+            "text": "El correo electrónico es el tipo de contenido donde más corto casi siempre es mejor, y donde la mayoría de los profesionales consistentemente escribe demasiado. Las investigaciones sobre tasas de respuesta muestran que los correos de entre 50 y 125 palabras reciben las tasas de respuesta más altas. Eso equivale a aproximadamente cuatro a ocho oraciones cortas."
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Solicitud rápida o pregunta: 50–100 palabras",
+              "Propuesta de negocio o correo de presentación: 150–250 palabras",
+              "Boletín (tema único): 200–400 palabras",
+              "Boletín (resumen con varias secciones): 500–800 palabras"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "El error más común en los correos es enterrar la solicitud. Coloca lo más importante al inicio. Si necesitas que alguien revise un documento, dilo en la primera oración, no después de tres párrafos de contexto."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Publicaciones en Redes Sociales"
+          },
+          {
+            "type": "paragraph",
+            "text": "Cada plataforma tiene su propio ritmo, y el conteo de palabras que funciona en una puede fracasar en otra:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "X / X: entre 71 y 100 caracteres genera mayor participación que publicaciones de 280 caracteres; lo más breve gana",
+              "LinkedIn: entre 1,300 y 2,000 caracteres para una publicación nativa que genere comentarios (unas 200–300 palabras)",
+              "Descripción de Instagram: los primeros 138–150 caracteres son lo que la mayoría lee; la descripción completa puede ser más larga para los hashtags",
+              "Facebook: entre 40 y 80 palabras para mayor participación en publicaciones orgánicas"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Por Qué la Legibilidad Importa Más que el Conteo de Palabras"
+          },
+          {
+            "type": "paragraph",
+            "text": "El conteo de palabras es una medida del esfuerzo, no de la calidad. Un artículo de 500 palabras bien estructurado, con subtítulos claros y un lenguaje accesible superará a un muro de texto de 2,000 palabras en rankings de búsqueda y satisfacción del lector."
+          },
+          {
+            "type": "paragraph",
+            "text": "Factores que hacen que un texto se sienta más largo o más corto que su conteo real de palabras:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Extensión de los párrafos — Los párrafos de dos oraciones se leen más rápido y resultan menos intimidantes que los bloques de ocho oraciones",
+              "Extensión de las oraciones — Alternar oraciones cortas y largas evita que los lectores pierdan el hilo",
+              "Subtítulos — Permiten que los lectores que escanean decidan qué secciones leer realmente",
+              "Voz pasiva — Agrega palabras sin agregar significado: 'El informe fue redactado por el equipo' frente a 'El equipo redactó el informe'"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Controla tu Conteo de Palabras Mientras Escribes"
+          },
+          {
+            "type": "paragraph",
+            "text": "Ya sea que busques un conteo específico para SEO, debas mantenerte dentro del límite de una tarea académica o quieras evitar que un correo se convierta en un ensayo, es más fácil controlar el conteo mientras escribes que editarlo al final. Usa nuestro Contador de Palabras gratuito para obtener en tiempo real el número de palabras, caracteres, oraciones y párrafos de cualquier texto."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Contador de Palabras",
+            "toolPath": "/tools/text/word-counter"
+          },
+          {
+            "type": "paragraph",
+            "text": "El mejor conteo de palabras para cualquier escrito es el número mínimo de palabras necesario para servir al lector completamente. Todo lo demás es ruido."
+          }
         ]
       },
       "average-typing-speed": {
@@ -2395,39 +3135,128 @@
         "relatedToolName": "Test de Mecanografía",
         "relatedToolPath": "/tools/fun/typing-test",
         "body": [
-          { "type": "paragraph", "text": "La mayoría de nosotros pasa varias horas al día escribiendo: correos, documentos, mensajes, código. Sin embargo, muy pocas personas han intentado deliberadamente mejorar su velocidad de escritura. La mecanografía es una de esas habilidades que parece fija, como la letra a mano, cuando en realidad es muy entrenable. Unas semanas de práctica enfocada pueden añadir entre 20 y 30 PPM a tu velocidad, lo que se traduce en horas ahorradas cada año." },
-          { "type": "paragraph", "text": "Antes de poder mejorar, ayuda saber dónde estás y qué significa 'rápido' para distintas profesiones y grupos de edad." },
-          { "type": "heading", "level": 2, "text": "¿Cuál es la Velocidad de Escritura Promedio?" },
-          { "type": "paragraph", "text": "La velocidad de escritura promedio para un adulto es de aproximadamente 40 palabras por minuto (PPM) con una precisión de alrededor del 92%. Esto varía según el grupo de edad, la profesión y cuánto escribe alguien en su rutina diaria:" },
-          { "type": "list", "ordered": false, "items": [
-            "Adultos en general: 38–44 PPM",
-            "Estudiantes universitarios: 40–50 PPM (más escritura diaria por los trabajos académicos)",
-            "Trabajadores de oficina y profesionales: 55–70 PPM",
-            "Programadores y desarrolladores: 50–70 PPM (menos de lo esperado por los caracteres especiales y las pausas de sintaxis)",
-            "Transcriptores y especialistas en captura de datos: 70–100+ PPM (requisito profesional)",
-            "Récords mundiales: 200–300+ PPM (velocidades máximas de ráfaga, no sostenidas)"
-          ]},
-          { "type": "paragraph", "text": "Para la mayoría de los trabajadores del conocimiento, alcanzar entre 60 y 70 PPM con alta precisión es una meta práctica que reduce notablemente la fricción en el trabajo diario. Por encima de los 80 PPM, la escritura deja de ser un cuello de botella para la mayoría de las tareas: tu pensamiento se convierte en el factor limitante, no tus dedos." },
-          { "type": "heading", "level": 2, "text": "Cómo Afecta la Velocidad de Escritura a la Productividad" },
-          { "type": "paragraph", "text": "A 40 PPM, escribir 1,000 palabras tarda unos 25 minutos. A 80 PPM, tarda entre 12 y 13 minutos. A lo largo de una jornada laboral completa con tareas intensivas de escritura, esa diferencia puede acumular una hora o más de tiempo recuperado." },
-          { "type": "paragraph", "text": "Pero la velocidad bruta no es lo único que importa. La precisión es igualmente, si no más, importante. Un mecanógrafo que alcanza 80 PPM con un 95% de precisión necesitará detenerse y corregir frecuentemente, lo que interrumpe el enfoque y reduce el rendimiento efectivo. Apunta primero a la precisión y deja que la velocidad llegue de forma natural." },
-          { "type": "callout", "text": "Un buen objetivo: precisión superior al 98% a tu velocidad actual antes de intentar ir más rápido. Apresurarte antes de ser preciso solo entrena malos hábitos." },
-          { "type": "heading", "level": 2, "text": "Las Técnicas que Realmente Funcionan" },
-          { "type": "heading", "level": 3, "text": "1. Comprométete con la Fila Principal" },
-          { "type": "paragraph", "text": "La fila principal, ASDF en la mano izquierda y JKL; en la derecha, es la base de la mecanografía táctil. Cada dedo tiene una posición inicial designada y un conjunto de teclas bajo su responsabilidad. Escribir sin este sistema significa buscar las teclas con la vista, lo que limita permanentemente la velocidad a unos 30–40 PPM." },
-          { "type": "paragraph", "text": "Si aún no escribes por tacto, la transición se sentirá muy lenta durante dos a cuatro semanas. Pasarás de tu velocidad actual a unos 15–20 PPM antes de volver a superar tu punto de partida. Ese retroceso vale la pena: los mecanógrafos táctiles alcanzan topes significativamente más altos que quienes buscan las teclas con la vista." },
-          { "type": "heading", "level": 3, "text": "2. Deja de Mirar el Teclado" },
-          { "type": "paragraph", "text": "Mirar las manos mientras escribes te obliga a dividir la atención entre la pantalla y el teclado, lo que te ralentiza y aumenta los errores. Cubrir las manos con un trapo, usar un teclado en blanco o simplemente forzarte a mantener los ojos en la pantalla son técnicas que aceleran la formación de la memoria muscular." },
-          { "type": "heading", "level": 3, "text": "3. Practica en Sesiones Cortas, No en Bloques Largos" },
-          { "type": "paragraph", "text": "La repetición espaciada funciona para la mecanografía igual que para aprender idiomas. Tres sesiones enfocadas de 10 minutos a lo largo del día producen mejoras más rápidas que un bloque de 30 minutos, porque la memoria motora se consolida entre sesiones. Esto hace que la práctica de mecanografía sea muy compatible con una agenda ocupada: unos minutos durante una pausa para el café es genuinamente efectivo." },
-          { "type": "heading", "level": 3, "text": "4. Reduce la Velocidad para Acelerar" },
-          { "type": "paragraph", "text": "Contraintuitivo pero cierto: la forma más rápida de aumentar tu velocidad máxima es practicar a un ritmo justo por debajo de tu límite cómodo y centrarte completamente en la precisión. Buscar la velocidad antes que la precisión es el error más frecuente en la práctica autodidacta de mecanografía. Tu cerebro codifica lo que repites, incluyendo los errores." },
-          { "type": "heading", "level": 3, "text": "5. Identifica y Practica tus Teclas Problemáticas" },
-          { "type": "paragraph", "text": "La mayoría de las personas tiene entre cinco y diez combinaciones de teclas que constantemente les fallan: teclear 'qu' con el dedo equivocado, escribir 'teh' en lugar de 'the', o tropezar con las comillas y los puntos y comas. Practicar específicamente tus puntos débiles personales produce mejoras más rápidas que la práctica general." },
-          { "type": "heading", "level": 2, "text": "Mide tu Punto de Partida Ahora" },
-          { "type": "paragraph", "text": "No puedes mejorar lo que no mides. Usa nuestro Test de Mecanografía gratuito para conocer tu PPM exacto y tu puntuación de precisión ahora mismo, y úsalo como punto de referencia mientras practicas. El test dura 60 segundos y te da una lectura inmediata de velocidad y precisión." },
-          { "type": "toolCta", "toolName": "Test de Mecanografía", "toolPath": "/tools/fun/typing-test" },
-          { "type": "paragraph", "text": "La mecanografía es una habilidad, no un rasgo fijo. A 40 PPM, estás en el promedio. A 70 PPM, eres notablemente más rápido que la mayoría de tus colegas. A 90+ PPM, la escritura simplemente deja de ser algo en lo que piensas. Aprende la fila principal, deja de mirar el teclado y dale unas semanas de práctica deliberada: la mejora te sorprenderá." }
+          {
+            "type": "paragraph",
+            "text": "La mayoría de nosotros pasa varias horas al día escribiendo: correos, documentos, mensajes, código. Sin embargo, muy pocas personas han intentado deliberadamente mejorar su velocidad de escritura. La mecanografía es una de esas habilidades que parece fija, como la letra a mano, cuando en realidad es muy entrenable. Unas semanas de práctica enfocada pueden añadir entre 20 y 30 PPM a tu velocidad, lo que se traduce en horas ahorradas cada año."
+          },
+          {
+            "type": "paragraph",
+            "text": "Antes de poder mejorar, ayuda saber dónde estás y qué significa 'rápido' para distintas profesiones y grupos de edad."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "¿Cuál es la Velocidad de Escritura Promedio?"
+          },
+          {
+            "type": "paragraph",
+            "text": "La velocidad de escritura promedio para un adulto es de aproximadamente 40 palabras por minuto (PPM) con una precisión de alrededor del 92%. Esto varía según el grupo de edad, la profesión y cuánto escribe alguien en su rutina diaria:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Adultos en general: 38–44 PPM",
+              "Estudiantes universitarios: 40–50 PPM (más escritura diaria por los trabajos académicos)",
+              "Trabajadores de oficina y profesionales: 55–70 PPM",
+              "Programadores y desarrolladores: 50–70 PPM (menos de lo esperado por los caracteres especiales y las pausas de sintaxis)",
+              "Transcriptores y especialistas en captura de datos: 70–100+ PPM (requisito profesional)",
+              "Récords mundiales: 200–300+ PPM (velocidades máximas de ráfaga, no sostenidas)"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Para la mayoría de los trabajadores del conocimiento, alcanzar entre 60 y 70 PPM con alta precisión es una meta práctica que reduce notablemente la fricción en el trabajo diario. Por encima de los 80 PPM, la escritura deja de ser un cuello de botella para la mayoría de las tareas: tu pensamiento se convierte en el factor limitante, no tus dedos."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Cómo Afecta la Velocidad de Escritura a la Productividad"
+          },
+          {
+            "type": "paragraph",
+            "text": "A 40 PPM, escribir 1,000 palabras tarda unos 25 minutos. A 80 PPM, tarda entre 12 y 13 minutos. A lo largo de una jornada laboral completa con tareas intensivas de escritura, esa diferencia puede acumular una hora o más de tiempo recuperado."
+          },
+          {
+            "type": "paragraph",
+            "text": "Pero la velocidad bruta no es lo único que importa. La precisión es igualmente, si no más, importante. Un mecanógrafo que alcanza 80 PPM con un 95% de precisión necesitará detenerse y corregir frecuentemente, lo que interrumpe el enfoque y reduce el rendimiento efectivo. Apunta primero a la precisión y deja que la velocidad llegue de forma natural."
+          },
+          {
+            "type": "callout",
+            "text": "Un buen objetivo: precisión superior al 98% a tu velocidad actual antes de intentar ir más rápido. Apresurarte antes de ser preciso solo entrena malos hábitos."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Las Técnicas que Realmente Funcionan"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "1. Comprométete con la Fila Principal"
+          },
+          {
+            "type": "paragraph",
+            "text": "La fila principal, ASDF en la mano izquierda y JKL; en la derecha, es la base de la mecanografía táctil. Cada dedo tiene una posición inicial designada y un conjunto de teclas bajo su responsabilidad. Escribir sin este sistema significa buscar las teclas con la vista, lo que limita permanentemente la velocidad a unos 30–40 PPM."
+          },
+          {
+            "type": "paragraph",
+            "text": "Si aún no escribes por tacto, la transición se sentirá muy lenta durante dos a cuatro semanas. Pasarás de tu velocidad actual a unos 15–20 PPM antes de volver a superar tu punto de partida. Ese retroceso vale la pena: los mecanógrafos táctiles alcanzan topes significativamente más altos que quienes buscan las teclas con la vista."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "2. Deja de Mirar el Teclado"
+          },
+          {
+            "type": "paragraph",
+            "text": "Mirar las manos mientras escribes te obliga a dividir la atención entre la pantalla y el teclado, lo que te ralentiza y aumenta los errores. Cubrir las manos con un trapo, usar un teclado en blanco o simplemente forzarte a mantener los ojos en la pantalla son técnicas que aceleran la formación de la memoria muscular."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "3. Practica en Sesiones Cortas, No en Bloques Largos"
+          },
+          {
+            "type": "paragraph",
+            "text": "La repetición espaciada funciona para la mecanografía igual que para aprender idiomas. Tres sesiones enfocadas de 10 minutos a lo largo del día producen mejoras más rápidas que un bloque de 30 minutos, porque la memoria motora se consolida entre sesiones. Esto hace que la práctica de mecanografía sea muy compatible con una agenda ocupada: unos minutos durante una pausa para el café es genuinamente efectivo."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "4. Reduce la Velocidad para Acelerar"
+          },
+          {
+            "type": "paragraph",
+            "text": "Contraintuitivo pero cierto: la forma más rápida de aumentar tu velocidad máxima es practicar a un ritmo justo por debajo de tu límite cómodo y centrarte completamente en la precisión. Buscar la velocidad antes que la precisión es el error más frecuente en la práctica autodidacta de mecanografía. Tu cerebro codifica lo que repites, incluyendo los errores."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "5. Identifica y Practica tus Teclas Problemáticas"
+          },
+          {
+            "type": "paragraph",
+            "text": "La mayoría de las personas tiene entre cinco y diez combinaciones de teclas que constantemente les fallan: teclear 'qu' con el dedo equivocado, escribir 'teh' en lugar de 'the', o tropezar con las comillas y los puntos y comas. Practicar específicamente tus puntos débiles personales produce mejoras más rápidas que la práctica general."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Mide tu Punto de Partida Ahora"
+          },
+          {
+            "type": "paragraph",
+            "text": "No puedes mejorar lo que no mides. Usa nuestro Test de Mecanografía gratuito para conocer tu PPM exacto y tu puntuación de precisión ahora mismo, y úsalo como punto de referencia mientras practicas. El test dura 60 segundos y te da una lectura inmediata de velocidad y precisión."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Test de Mecanografía",
+            "toolPath": "/tools/fun/typing-test"
+          },
+          {
+            "type": "paragraph",
+            "text": "La mecanografía es una habilidad, no un rasgo fijo. A 40 PPM, estás en el promedio. A 70 PPM, eres notablemente más rápido que la mayoría de tus colegas. A 90+ PPM, la escritura simplemente deja de ser algo en lo que piensas. Aprende la fila principal, deja de mirar el teclado y dale unas semanas de práctica deliberada: la mejora te sorprenderá."
+          }
         ]
       }
     }

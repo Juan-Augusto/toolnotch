@@ -8,10 +8,14 @@
     "free": "Grátis"
   },
   "toolWrapper": {
-    "breadcrumb": { "home": "Início" },
+    "breadcrumb": {
+      "home": "Início"
+    },
     "allTools": "Todas as ferramentas"
   },
-  "faqSection": { "heading": "Perguntas Frequentes" },
+  "faqSection": {
+    "heading": "Perguntas Frequentes"
+  },
   "image": {
     "compressor": {
       "metaTitle": "Comprimir Imagem Online Grátis — Sem Cadastro",
@@ -52,7 +56,9 @@
         "hint": "ou clique para procurar · JPG, PNG, WebP, AVIF suportados",
         "replace": "Clique ou solte para substituir"
       },
-      "format": { "label": "Formato de Saída" },
+      "format": {
+        "label": "Formato de Saída"
+      },
       "quality": {
         "label": "Qualidade",
         "smaller": "Arquivo menor",
@@ -72,7 +78,9 @@
         "noSavings": "Tamanho do arquivo não reduzido — tente qualidade menor ou formato diferente",
         "dragHint": "Arraste o controle para comparar original vs comprimido"
       },
-      "download": { "label": "Baixar Imagem Comprimida" }
+      "download": {
+        "label": "Baixar Imagem Comprimida"
+      }
     }
   },
   "pdf": {
@@ -624,7 +632,19 @@
             "question": "Como posso reduzir o total de juros pagos?",
             "answer": "Você pode reduzir os juros totais dando uma entrada maior, escolhendo um prazo mais curto ou fazendo pagamentos extras de principal sempre que possível."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Uma calculadora de empréstimo estima sua prestação mensal para qualquer empréstimo com parcelas fixas — crédito pessoal, empréstimo consignado, financiamento de veículos ou qualquer valor tomado a juros fixos por um prazo determinado. Cada prestação cobre primeiro os juros acumulados, depois reduz o saldo devedor. É fundamental entender a diferença entre a taxa de juros nominal e o CET (Custo Efetivo Total): o CET inclui taxas administrativas, seguros obrigatórios e outros encargos, sendo o valor real do empréstimo. Os bancos são obrigados a informar o CET, e é ele — não a taxa nominal — que deve ser comparado entre diferentes ofertas.",
+          "howToUse": [
+            "Insira o valor do empréstimo — o total que você deseja tomar, antes de qualquer taxa.",
+            "Insira a taxa de juros anual. Use o CET da proposta para o custo total mais preciso.",
+            "Selecione o prazo em meses ou anos. Prazos mais curtos significam prestações maiores, mas muito menos juros.",
+            "Clique em Calcular para ver a prestação mensal e o total de juros ao longo do empréstimo.",
+            "Experimente diferentes valores e prazos para encontrar a combinação que cabe no seu orçamento sem maximizar o custo total."
+          ],
+          "whyItMatters": "O prazo tem um efeito desproporcional no custo total. Um empréstimo de R$ 10.000 a 3% ao mês por 24 meses custa aproximadamente R$ 8.800 em juros. O mesmo valor em 36 meses reduz a prestação em cerca de R$ 100 por mês, mas os juros totais sobem para mais de R$ 14.000. Para valores maiores, essa diferença é ainda mais expressiva. Conhecer o custo real antes de assinar evita o erro comum de escolher o menor valor de parcela sem ver quanto vai pagar ao total.",
+          "proTip": "Sempre compare empréstimos pelo CET, não pela taxa nominal. Duas propostas com a mesma taxa de juros podem ter CET muito diferente se as taxas de cadastro ou seguros diferem. Se você tem desconto em folha (empréstimo consignado), as taxas costumam ser significativamente menores do que crédito pessoal comum."
+        }
       },
       "mortgage-calculator": {
         "metaTitle": "Calculadora de Financiamento Imobiliário — Parcela e Custo Total",
@@ -648,7 +668,20 @@
             "question": "Como uma entrada maior ajuda?",
             "answer": "Uma entrada maior reduz o valor financiado (diminuindo as parcelas e os juros totais), pode eliminar o seguro obrigatório e garante patrimônio imediato no imóvel."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Uma calculadora de financiamento imobiliário estima sua prestação mensal de capital e juros com base no valor financiado, taxa de juros e prazo. As prestações são calculadas pela Tabela Price, que mantém o valor fixo enquanto altera a proporção entre juros e amortização ao longo do tempo — nos primeiros anos, a maior parte é juros; no final, é amortização do principal. O que esta calculadora não inclui são os custos totais mensais: IPTU, seguro do imóvel e seguros obrigatórios exigidos pelo banco. Esses extras podem adicionar R$ 500–R$ 1.500 ou mais por mês dependendo do imóvel e da localidade. Sempre calcule o custo total, não apenas a prestação de capital e juros.",
+          "howToUse": [
+            "Insira o valor do imóvel — o preço total de compra, não o valor financiado.",
+            "Insira o valor da entrada. Uma entrada maior reduz a prestação e o total de juros pagos.",
+            "Insira a taxa de juros anual. Use a taxa oferecida pelo banco ou uma taxa de mercado atual.",
+            "Escolha o prazo em anos: prazos mais longos reduzem a prestação, mas aumentam o total de juros.",
+            "Clique em Calcular para ver a prestação mensal, total de juros e a tabela completa de amortização.",
+            "Some IPTU, seguro e outros encargos ao resultado para obter seu custo mensal real de moradia."
+          ],
+          "whyItMatters": "Uma diferença de 0,5% na taxa de juros pode custar ou economizar dezenas de milhares de reais ao longo de um financiamento de 30 anos. Simular diferentes cenários — taxas, prazos e valores de entrada — antes de assinar o contrato protege você de comprometer sua renda. Muitos compradores focam apenas na prestação sem considerar o total de juros: um imóvel de R$ 500.000 financiado a 10% ao ano por 30 anos pode resultar em mais de R$ 900.000 em juros. Entender o custo completo ajuda a escolher o produto certo e decidir se vale a pena dar uma entrada maior.",
+          "proTip": "Antes de fechar o financiamento, compare as taxas de pelo menos três bancos — incluindo a Caixa Econômica Federal, que geralmente tem as melhores condições para financiamento habitacional. Verifique também se vale usar o FGTS como entrada ou para abater o saldo devedor, pois isso pode reduzir significativamente os juros totais pagos."
+        }
       },
       "car-loan-calculator": {
         "metaTitle": "Calculadora de Financiamento de Carro — Parcela Mensal",
@@ -746,7 +779,20 @@
             "question": "Posso baixar minha tabela de amortização?",
             "answer": "Use a função de impressão do navegador para imprimir ou salvar a tabela como PDF. A tabela mostra todos os pagamentos mensais com detalhamento completo."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Uma calculadora de amortização gera a tabela completa de pagamentos de um empréstimo com parcelas fixas, mostrando exatamente quanto de cada prestação vai para juros e quanto reduz o saldo devedor. A principal revelação das tabelas de amortização é a concentração de juros no início: nos primeiros anos de um financiamento, a maior parte de cada prestação é composta de juros. Em um financiamento de R$ 400.000 a 10% ao ano por 30 anos no sistema Price, a primeira parcela aplica aproximadamente R$ 350 à amortização do principal e R$ 3.333 a juros. Com o tempo, essa proporção se inverte. Entender esse cronograma ajuda a visualizar como pagamentos extras aceleram a quitação e reduzem o custo total.",
+          "howToUse": [
+            "Insira o valor do empréstimo, a taxa de juros anual e o prazo em anos.",
+            "Opcionalmente, insira um valor de amortização extra mensal para ver como ele reduz o prazo e os juros.",
+            "Clique em Calcular para gerar a tabela completa de amortização e os totais do financiamento.",
+            "Analise o resumo: total de juros pagos, data de quitação e custo total do empréstimo.",
+            "Examine a tabela ano a ano para ver como a proporção juros/amortização muda ao longo do tempo.",
+            "Experimente diferentes valores de amortização extra para encontrar o equilíbrio ideal entre prestação e economia."
+          ],
+          "whyItMatters": "A maioria dos mutuários se surpreende ao descobrir o quanto suas prestações iniciais reduzem pouco o saldo devedor. No primeiro ano de um financiamento de 30 anos a 10% ao ano, mais de 90% de cada prestação é composta de juros no sistema Price. Pagamentos extras feitos nos primeiros anos têm impacto desproporcional porque reduzem o saldo sobre o qual todos os juros futuros são calculados — a economia se multiplica ao longo dos anos restantes. Amortizar R$ 10.000 adicionais no primeiro ano de um financiamento típico pode economizar R$ 30.000 ou mais em juros ao longo do prazo total. A tabela de amortização torna essa matemática concreta.",
+          "proTip": "Verifique com seu banco se as amortizações extras reduzem o prazo (você continua pagando as mesmas prestações por menos tempo) ou reduzem a prestação (você paga menos por mês pelo mesmo prazo). A redução de prazo geralmente economiza mais juros no total. Você pode usar o FGTS anualmente para amortizações extras, o que pode reduzir significativamente o custo total do financiamento imobiliário."
+        }
       },
       "home-affordability-calculator": {
         "metaTitle": "Calculadora de Capacidade de Compra de Imóvel — Quanto Posso Pagar?",
@@ -794,7 +840,20 @@
             "question": "Posso refinanciar para um prazo mais curto?",
             "answer": "Sim, refinanciar de um financiamento de 30 anos para um de 15 anos frequentemente obtém uma taxa menor e muito menos juros totais, embora a parcela mensal seja maior."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Uma calculadora de refinanciamento determina se substituir seu financiamento atual por um novo com taxa menor economiza dinheiro após considerar os custos de transferência. A métrica principal é o ponto de equilíbrio: quantos meses são necessários para que as economias mensais compensem o que você pagou para refinanciar. No Brasil, a portabilidade de crédito imobiliário permite transferir seu financiamento para outro banco sem pagar multa, mas há custos cartorários e de registro. Esta calculadora compara a taxa menor com o custo para obtê-la, para você decidir se faz sentido financeiro mudar de banco dado o tempo que ainda pretende manter o financiamento.",
+          "howToUse": [
+            "Insira o saldo devedor atual, a taxa de juros atual e o prazo restante do financiamento.",
+            "Insira a nova taxa de juros oferecida e o novo prazo que você está considerando.",
+            "Insira os custos estimados de portabilidade ou refinanciamento — custos de cartório, registro e eventuais taxas bancárias.",
+            "Clique em Calcular para ver a economia mensal, comparativo de juros totais e o ponto de equilíbrio em meses.",
+            "Compare o ponto de equilíbrio com quanto tempo você ainda pretende manter o imóvel. Se o equilíbrio é em 36 meses mas você planeja vender em 24, o refinanciamento provavelmente não compensa.",
+            "Simule pagar os custos à vista versus incorporá-los ao saldo devedor para ver o impacto de longo prazo de cada opção."
+          ],
+          "whyItMatters": "O refinanciamento pode economizar centenas de reais por mês, mas só se o momento for certo. Proprietários que refinanciam sem calcular o ponto de equilíbrio frequentemente pagam custos que jamais recuperam — especialmente quem vende ou refinancia novamente em poucos anos. Por outro lado, esperar muito quando as taxas estão caindo tem custo real a cada mês. Esta calculadora fornece um critério numérico claro: se o ponto de equilíbrio está dentro do seu horizonte de permanência, o refinanciamento é provavelmente uma boa decisão financeira.",
+          "proTip": "Na portabilidade imobiliária, o banco atual tem o direito de igualar a oferta do banco destino. Use a proposta do banco concorrente como alavanca de negociação com seu banco atual — muitas vezes ele reduz a taxa sem você precisar pagar os custos de transferência."
+        }
       },
       "student-loan-calculator": {
         "metaTitle": "Calculadora de Empréstimo Estudantil — Parcela e Quitação",
@@ -1027,7 +1086,19 @@
             "question": "Devo quitar dívidas ou investir?",
             "answer": "Se a taxa de juros da dívida for maior do que o retorno esperado de investimentos (tipicamente 7–10%), quite a dívida primeiro. Para dívidas com taxas baixas abaixo de 4%, investir pode fazer mais sentido."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Uma calculadora de quitação de dívidas mostra quanto tempo levará para eliminar suas dívidas e quanto de juros você pagará com diferentes estratégias de pagamento. Os dois métodos mais comuns são: o método avalanche, que prioriza a dívida com maior taxa de juros (matematicamente ótimo — minimiza o total de juros pagos), e o método bola de neve, que prioriza o menor saldo devedor (psicologicamente motivador — pequenas vitórias criam impulso). O custo real de pagar apenas o mínimo é muitas vezes o resultado mais revelador desta calculadora. Em um cartão de crédito com saldo de R$ 5.000 a 15% ao mês, pagar apenas o mínimo pode levar mais de 10 anos e custar mais em juros do que o saldo original.",
+          "howToUse": [
+            "Liste cada dívida com seu saldo atual, taxa de juros anual e valor atual da prestação mínima.",
+            "Insira qualquer valor extra mensal que você pode destinar ao pagamento de dívidas além dos mínimos.",
+            "Escolha uma estratégia: avalanche (maior taxa de juros primeiro) ou bola de neve (menor saldo primeiro).",
+            "Analise a data de quitação e o total de juros de cada estratégia para ver qual economiza mais.",
+            "Ajuste o valor extra para ver como pequenos aumentos mudam drasticamente o prazo e o total de juros."
+          ],
+          "whyItMatters": "A diferença entre pagar apenas o mínimo e adicionar mesmo R$ 100 extras por mês pode significar anos de dívida e milhares de reais a mais em juros. No Brasil, com taxas de cartão de crédito que podem superar 300% ao ano, o impacto dos juros compostos é ainda mais severo do que em outros países. Ver uma data concreta de quitação e um valor em reais para o total de juros torna o custo real visível de uma forma que porcentagens abstratas de juros não conseguem. Essa visibilidade costuma ser o que motiva a ação real.",
+          "proTip": "Após quitar uma dívida, redirecione imediatamente toda a prestação que você pagava para a próxima dívida da lista — o 'efeito bola de neve'. Isso mantém seu desembolso mensal total idêntico enquanto acelera drasticamente a quitação, pois cada dívida eliminada adiciona força à próxima. Priorize primeiro as dívidas com juros de cartão de crédito e cheque especial, que têm as maiores taxas do mercado."
+        }
       }
     },
     "invoiceGenerator": {
@@ -1036,14 +1107,38 @@
       "title": "Gerador de Nota Fiscal Gratuito",
       "description": "Crie notas fiscais profissionais instantaneamente. Sem cadastro. Sem marcas d'água. Dados ficam no seu navegador.",
       "faqs": [
-        { "question": "Meus dados de fatura são armazenados em seus servidores?", "answer": "Não. Tudo é 100% no lado do cliente. Seus dados de fatura são armazenados apenas no localStorage do seu navegador." },
-        { "question": "Como faço para baixar a fatura como PDF?", "answer": "Clique em 'Baixar / Imprimir PDF' e escolha 'Salvar como PDF' no menu de destino do diálogo de impressão." },
-        { "question": "Posso adicionar meu logotipo?", "answer": "Sim — clique no botão 'Logo' na seção De para fazer upload de uma imagem. Ela aparecerá no topo da fatura." },
-        { "question": "Como altero a moeda?", "answer": "Selecione sua moeda no menu suspenso na seção Detalhes da Fatura. A pré-visualização é atualizada instantaneamente." },
-        { "question": "Minhas faturas são salvas automaticamente?", "answer": "Sim — seu rascunho atual é salvo automaticamente no localStorage do seu navegador enquanto você digita." },
-        { "question": "Quais moedas são suportadas?", "answer": "Mais de 30 moedas, incluindo USD, EUR, GBP, JPY, CAD, AUD, CHF, BRL e mais." },
-        { "question": "Posso usar isso para notas fiscais com impostos?", "answer": "Sim — use o campo de Imposto (%) para qualquer imposto aplicável." },
-        { "question": "Há marca d'água na fatura?", "answer": "Nenhuma marca d'água, nunca. Esta é uma ferramenta completamente gratuita, sem taxas ocultas e sem cadastro." }
+        {
+          "question": "Meus dados de fatura são armazenados em seus servidores?",
+          "answer": "Não. Tudo é 100% no lado do cliente. Seus dados de fatura são armazenados apenas no localStorage do seu navegador."
+        },
+        {
+          "question": "Como faço para baixar a fatura como PDF?",
+          "answer": "Clique em 'Baixar / Imprimir PDF' e escolha 'Salvar como PDF' no menu de destino do diálogo de impressão."
+        },
+        {
+          "question": "Posso adicionar meu logotipo?",
+          "answer": "Sim — clique no botão 'Logo' na seção De para fazer upload de uma imagem. Ela aparecerá no topo da fatura."
+        },
+        {
+          "question": "Como altero a moeda?",
+          "answer": "Selecione sua moeda no menu suspenso na seção Detalhes da Fatura. A pré-visualização é atualizada instantaneamente."
+        },
+        {
+          "question": "Minhas faturas são salvas automaticamente?",
+          "answer": "Sim — seu rascunho atual é salvo automaticamente no localStorage do seu navegador enquanto você digita."
+        },
+        {
+          "question": "Quais moedas são suportadas?",
+          "answer": "Mais de 30 moedas, incluindo USD, EUR, GBP, JPY, CAD, AUD, CHF, BRL e mais."
+        },
+        {
+          "question": "Posso usar isso para notas fiscais com impostos?",
+          "answer": "Sim — use o campo de Imposto (%) para qualquer imposto aplicável."
+        },
+        {
+          "question": "Há marca d'água na fatura?",
+          "answer": "Nenhuma marca d'água, nunca. Esta é uma ferramenta completamente gratuita, sem taxas ocultas e sem cadastro."
+        }
       ],
       "invoiceUk": {
         "metaTitle": "Gerador de Fatura do Reino Unido — Modelo Gratuito com IVA | ToolNotch",
@@ -1051,10 +1146,22 @@
         "title": "Gerador de Fatura do Reino Unido",
         "description": "Gerador de fatura do Reino Unido gratuito com IVA pré-configurado. Moeda GBP, 20% de IVA. Baixe como PDF.",
         "faqs": [
-          { "question": "O IVA está pré-configurado para faturas do Reino Unido?", "answer": "Sim — o modelo do Reino Unido define automaticamente 20% de IVA e a moeda GBP." },
-          { "question": "Preciso do número de IVA na fatura?", "answer": "Se você é registrado para IVA, sim. Adicione seu número de registro no campo 'ID Fiscal'." },
-          { "question": "Isso é adequado para o Making Tax Digital (MTD)?", "answer": "Esta ferramenta gera apenas faturas PDF. Para conformidade total com o MTD, você precisará de software contábil compatível." },
-          { "question": "Posso alterar a taxa de IVA?", "answer": "Sim — edite o campo de Imposto (%). A taxa padrão de IVA no Reino Unido é de 20%, mas taxas reduzidas se aplicam a alguns bens e serviços." }
+          {
+            "question": "O IVA está pré-configurado para faturas do Reino Unido?",
+            "answer": "Sim — o modelo do Reino Unido define automaticamente 20% de IVA e a moeda GBP."
+          },
+          {
+            "question": "Preciso do número de IVA na fatura?",
+            "answer": "Se você é registrado para IVA, sim. Adicione seu número de registro no campo 'ID Fiscal'."
+          },
+          {
+            "question": "Isso é adequado para o Making Tax Digital (MTD)?",
+            "answer": "Esta ferramenta gera apenas faturas PDF. Para conformidade total com o MTD, você precisará de software contábil compatível."
+          },
+          {
+            "question": "Posso alterar a taxa de IVA?",
+            "answer": "Sim — edite o campo de Imposto (%). A taxa padrão de IVA no Reino Unido é de 20%, mas taxas reduzidas se aplicam a alguns bens e serviços."
+          }
         ]
       },
       "invoiceCanada": {
@@ -1063,9 +1170,18 @@
         "title": "Gerador de Fatura Canadense",
         "description": "Gerador de fatura canadense gratuito com GST pré-configurado. Moeda CAD, 5% de GST. Baixe como PDF.",
         "faqs": [
-          { "question": "O GST está pré-configurado?", "answer": "Sim — o modelo canadense define automaticamente 5% de GST e a moeda CAD." },
-          { "question": "Devo cobrar HST ou GST?", "answer": "Depende da sua província. Ontario e outras províncias usam HST. Alberta e BC usam GST/PST separados." },
-          { "question": "Preciso de um número de registro GST/HST?", "answer": "Se sua receita anual exceder CA$ 30.000, você deve registrar-se para GST/HST. Adicione seu número no campo ID Fiscal." }
+          {
+            "question": "O GST está pré-configurado?",
+            "answer": "Sim — o modelo canadense define automaticamente 5% de GST e a moeda CAD."
+          },
+          {
+            "question": "Devo cobrar HST ou GST?",
+            "answer": "Depende da sua província. Ontario e outras províncias usam HST. Alberta e BC usam GST/PST separados."
+          },
+          {
+            "question": "Preciso de um número de registro GST/HST?",
+            "answer": "Se sua receita anual exceder CA$ 30.000, você deve registrar-se para GST/HST. Adicione seu número no campo ID Fiscal."
+          }
         ]
       },
       "invoiceAustralia": {
@@ -1074,9 +1190,18 @@
         "title": "Gerador de Fatura Australiana",
         "description": "Gerador de fatura australiana gratuito com GST pré-configurado. Moeda AUD, 10% de GST. Baixe como PDF.",
         "faqs": [
-          { "question": "O GST está pré-configurado para a Austrália?", "answer": "Sim — o modelo australiano define automaticamente 10% de GST e a moeda AUD." },
-          { "question": "Quem precisa se registrar para GST na Austrália?", "answer": "Empresas com faturamento anual de AU$ 75.000 ou mais devem se registrar para GST." },
-          { "question": "O que deve conter uma nota fiscal tributária australiana?", "answer": "Faturas em conformidade com o ATO devem incluir: 'Tax Invoice', seu ABN, data, descrição, preço e valor do GST." }
+          {
+            "question": "O GST está pré-configurado para a Austrália?",
+            "answer": "Sim — o modelo australiano define automaticamente 10% de GST e a moeda AUD."
+          },
+          {
+            "question": "Quem precisa se registrar para GST na Austrália?",
+            "answer": "Empresas com faturamento anual de AU$ 75.000 ou mais devem se registrar para GST."
+          },
+          {
+            "question": "O que deve conter uma nota fiscal tributária australiana?",
+            "answer": "Faturas em conformidade com o ATO devem incluir: 'Tax Invoice', seu ABN, data, descrição, preço e valor do GST."
+          }
         ]
       },
       "invoiceFreelancers": {
@@ -1085,10 +1210,22 @@
         "title": "Gerador de Fatura para Freelancers",
         "description": "Crie faturas freelance profissionais gratuitamente. Sem marcas d'água, sem assinatura. Baixe como PDF instantaneamente.",
         "faqs": [
-          { "question": "É gratuito para freelancers?", "answer": "Sim — completamente gratuito. Sem assinatura, sem marca d'água, sem conta necessária." },
-          { "question": "Como acompanho quais faturas foram pagas?", "answer": "Use o campo Status em cada fatura. Seu navegador salva o rascunho automaticamente." },
-          { "question": "O que devo incluir em uma fatura freelance?", "answer": "Inclua seu nome, nome do cliente, número da fatura, data, vencimento, itens detalhados e condições de pagamento." },
-          { "question": "Como recebo pagamentos mais rápido?", "answer": "Inclua os termos de pagamento claramente e ofereça múltiplas opções de pagamento." }
+          {
+            "question": "É gratuito para freelancers?",
+            "answer": "Sim — completamente gratuito. Sem assinatura, sem marca d'água, sem conta necessária."
+          },
+          {
+            "question": "Como acompanho quais faturas foram pagas?",
+            "answer": "Use o campo Status em cada fatura. Seu navegador salva o rascunho automaticamente."
+          },
+          {
+            "question": "O que devo incluir em uma fatura freelance?",
+            "answer": "Inclua seu nome, nome do cliente, número da fatura, data, vencimento, itens detalhados e condições de pagamento."
+          },
+          {
+            "question": "Como recebo pagamentos mais rápido?",
+            "answer": "Inclua os termos de pagamento claramente e ofereça múltiplas opções de pagamento."
+          }
         ]
       },
       "receiptGenerator": {
@@ -1097,10 +1234,22 @@
         "title": "Gerador de Recibo Gratuito",
         "description": "Crie recibos profissionais instantaneamente. Baixe como PDF. Sem cadastro, sem marcas d'água.",
         "faqs": [
-          { "question": "Qual a diferença entre um recibo e uma fatura?", "answer": "Uma fatura é enviada antes do pagamento como pedido. Um recibo é emitido após o pagamento como comprovante." },
-          { "question": "Meus dados são armazenados em seus servidores?", "answer": "Não. Todos os dados são armazenados apenas no localStorage do seu navegador." },
-          { "question": "Como baixo o recibo como PDF?", "answer": "Clique em 'Baixar / Imprimir PDF' e escolha 'Salvar como PDF' no diálogo de impressão do seu navegador." },
-          { "question": "Posso adicionar o logotipo da minha empresa?", "answer": "Sim — clique no botão Logo para fazer upload do logotipo. Ele aparecerá no topo do recibo." }
+          {
+            "question": "Qual a diferença entre um recibo e uma fatura?",
+            "answer": "Uma fatura é enviada antes do pagamento como pedido. Um recibo é emitido após o pagamento como comprovante."
+          },
+          {
+            "question": "Meus dados são armazenados em seus servidores?",
+            "answer": "Não. Todos os dados são armazenados apenas no localStorage do seu navegador."
+          },
+          {
+            "question": "Como baixo o recibo como PDF?",
+            "answer": "Clique em 'Baixar / Imprimir PDF' e escolha 'Salvar como PDF' no diálogo de impressão do seu navegador."
+          },
+          {
+            "question": "Posso adicionar o logotipo da minha empresa?",
+            "answer": "Sim — clique no botão Logo para fazer upload do logotipo. Ele aparecerá no topo do recibo."
+          }
         ]
       },
       "fields": {
@@ -1478,58 +1627,214 @@
       "interviewPrep": "Preparação para Entrevistas"
     },
     "tools": {
-      "imageCompressor": { "label": "Compressor de Imagem", "desc": "Comprimir JPG, PNG, WebP, AVIF" },
-      "imageConverter": { "label": "Conversor de Imagem", "desc": "Converter entre formatos" },
-      "mergePdf": { "label": "Mesclar PDF", "desc": "Combinar vários PDFs em um" },
-      "splitPdf": { "label": "Dividir PDF", "desc": "Dividir PDF por intervalo de páginas" },
-      "compressPdf": { "label": "Comprimir PDF", "desc": "Reduzir tamanho do arquivo PDF" },
-      "pdfToJpg": { "label": "PDF para JPG", "desc": "Converter páginas PDF em imagens" },
-      "jpgToPdf": { "label": "JPG para PDF", "desc": "Converter imagens em PDF" },
-      "unitConverter": { "label": "Conversor de Unidades", "desc": "Comprimento, peso, temperatura e mais de 200 unidades" },
-      "currencyConverter": { "label": "Conversor de Moedas", "desc": "Cotações ao vivo para mais de 150 moedas" },
-      "metersToFeet": { "label": "Metros para Pés", "desc": "Conversão rápida de comprimento" },
-      "celsiusToFahrenheit": { "label": "Celsius para Fahrenheit", "desc": "Conversão rápida de temperatura" },
-      "kgToPounds": { "label": "Kg para Libras", "desc": "Conversão rápida de peso" },
-      "wordCounter": { "label": "Contador de Palavras", "desc": "Contar palavras, caracteres e legibilidade" },
-      "characterCounter": { "label": "Contador de Caracteres", "desc": "Contar caracteres com/sem espaços" },
-      "readabilityChecker": { "label": "Verificador de Legibilidade", "desc": "Pontuações Flesch, Kincaid e Gunning Fog" },
-      "readingTimeCalculator": { "label": "Calculadora de Tempo de Leitura", "desc": "Estimar tempo de leitura e fala" },
-      "wordFrequencyCounter": { "label": "Contador de Frequência de Palavras", "desc": "Encontrar palavras-chave mais usadas no texto" },
-      "loanCalculator": { "label": "Calculadora de Empréstimo", "desc": "Parcela mensal e tabela de amortização" },
-      "mortgageCalculator": { "label": "Calculadora de Financiamento", "desc": "Calcular parcelas de financiamento imobiliário" },
-      "carLoanCalculator": { "label": "Calculadora de Financiamento de Carro", "desc": "Parcela mensal de financiamento de veículo" },
-      "invoiceGenerator": { "label": "Gerador de Notas Fiscais", "desc": "Faturas profissionais gratuitas — pronto para PDF" },
-      "invoiceGeneratorUk": { "label": "Gerador de Faturas UK", "desc": "Faturas em GBP com VAT pré-configurado" },
-      "homeAffordability": { "label": "Capacidade de Compra de Imóvel", "desc": "Quanto de imóvel você pode pagar?" },
-      "amortizationCalculator": { "label": "Calculadora de Amortização", "desc": "Tabela completa de pagamentos detalhada" },
-      "studentLoanCalculator": { "label": "Calculadora de Empréstimo Estudantil", "desc": "Calculadora de quitação de empréstimo estudantil" },
-      "spinTheWheel": { "label": "Girar a Roleta", "desc": "Decisor aleatório — adicione suas opções" },
-      "randomNamePicker": { "label": "Sorteador de Nomes", "desc": "Sortear um vencedor da sua lista" },
-      "teamGenerator": { "label": "Gerador de Times", "desc": "Dividir nomes em times equilibrados" },
-      "coinFlip": { "label": "Cara ou Coroa", "desc": "Moeda virtual cara ou coroa" },
-      "diceRoller": { "label": "Rolador de Dados", "desc": "Rolar d6, d20, 3d6+5 e mais" },
-      "numberGenerator": { "label": "Gerador de Números", "desc": "Números aleatórios em qualquer intervalo" },
-      "yesOrNoWheel": { "label": "Roleta Sim ou Não", "desc": "Deixe a roleta decidir" },
-      "wheelOfNames": { "label": "Wheel of Names", "desc": "Alternativa gratuita ao Wheel of Names" },
-      "allQuizzes": { "label": "Todos os Quizzes", "desc": "Explore quizzes de personalidade e esportes" },
-      "programmingLanguageQuiz": { "label": "Qual Linguagem de Programação Você É?", "desc": "Python, JavaScript, Rust, Go ou Java?" },
-      "introvertExtrovertQuiz": { "label": "Introvertido ou Extrovertido?", "desc": "Descubra onde você se encaixa no espectro" },
-      "careerQuiz": { "label": "Qual Carreira Combina com Você?", "desc": "Descubra seu caminho de carreira ideal" },
-      "travelerQuiz": { "label": "Que Tipo de Viajante Você É?", "desc": "Aventureiro, explorador, amante de praia?" },
-      "worldCupQuiz": { "label": "Quiz: Campeões da Copa do Mundo", "desc": "Teste seu conhecimento sobre cada campeão mundial" },
-      "footballClubQuiz": { "label": "Qual Time de Futebol Você É?", "desc": "Descubra qual clube combina com sua personalidade" },
-      "championsLeagueQuiz": { "label": "Quiz: Liga dos Campeões", "desc": "Quanto você sabe sobre a maior competição de clubes da Europa?" },
-      "loveLangaugeQuiz": { "label": "Qual é a Sua Linguagem do Amor?", "desc": "Descubra como você dá e recebe amor" },
-      "formula1TriviaQuiz": { "label": "Quiz de Fórmula 1", "desc": "Teste seu conhecimento de F1 — circuitos, campeões e recordes" },
-      "f1DriverQuiz": { "label": "Qual Piloto de F1 É Você?", "desc": "Verstappen, Hamilton, Senna ou Norris?" },
-      "retroBoard": { "label": "Quadro de Retrospectiva", "desc": "Funcionou Bem · A Melhorar · Itens de Ação" },
-      "standupGenerator": { "label": "Gerador de Standup", "desc": "Ontem · Hoje · Bloqueios → resumo pronto para colar" },
-      "planningPoker": { "label": "Planning Poker", "desc": "Estimativas Fibonacci — revelar tudo ao mesmo tempo" },
-      "userStoryWriter": { "label": "Escritor de User Story", "desc": "Como [papel], quero [funcionalidade], para que [benefício]" },
-      "sprintDateCalculator": { "label": "Calculadora de Sprint", "desc": "Data de início + duração → todas as datas das cerimônias" },
-      "percentageCalculator": { "label": "Calculadora de Porcentagem", "desc": "% de, qual % é e variação % — três calculadoras em uma" },
-      "typescriptQuiz": { "label": "Quiz de TypeScript para Entrevistas", "desc": "30 perguntas: Iniciante → Intermediário → Avançado" },
-      "interviewHub": { "label": "Hub de Preparação para Entrevistas", "desc": "TypeScript, JS e mais — com explicações e boas práticas" }
+      "imageCompressor": {
+        "label": "Compressor de Imagem",
+        "desc": "Comprimir JPG, PNG, WebP, AVIF"
+      },
+      "imageConverter": {
+        "label": "Conversor de Imagem",
+        "desc": "Converter entre formatos"
+      },
+      "mergePdf": {
+        "label": "Mesclar PDF",
+        "desc": "Combinar vários PDFs em um"
+      },
+      "splitPdf": {
+        "label": "Dividir PDF",
+        "desc": "Dividir PDF por intervalo de páginas"
+      },
+      "compressPdf": {
+        "label": "Comprimir PDF",
+        "desc": "Reduzir tamanho do arquivo PDF"
+      },
+      "pdfToJpg": {
+        "label": "PDF para JPG",
+        "desc": "Converter páginas PDF em imagens"
+      },
+      "jpgToPdf": {
+        "label": "JPG para PDF",
+        "desc": "Converter imagens em PDF"
+      },
+      "unitConverter": {
+        "label": "Conversor de Unidades",
+        "desc": "Comprimento, peso, temperatura e mais de 200 unidades"
+      },
+      "currencyConverter": {
+        "label": "Conversor de Moedas",
+        "desc": "Cotações ao vivo para mais de 150 moedas"
+      },
+      "metersToFeet": {
+        "label": "Metros para Pés",
+        "desc": "Conversão rápida de comprimento"
+      },
+      "celsiusToFahrenheit": {
+        "label": "Celsius para Fahrenheit",
+        "desc": "Conversão rápida de temperatura"
+      },
+      "kgToPounds": {
+        "label": "Kg para Libras",
+        "desc": "Conversão rápida de peso"
+      },
+      "wordCounter": {
+        "label": "Contador de Palavras",
+        "desc": "Contar palavras, caracteres e legibilidade"
+      },
+      "characterCounter": {
+        "label": "Contador de Caracteres",
+        "desc": "Contar caracteres com/sem espaços"
+      },
+      "readabilityChecker": {
+        "label": "Verificador de Legibilidade",
+        "desc": "Pontuações Flesch, Kincaid e Gunning Fog"
+      },
+      "readingTimeCalculator": {
+        "label": "Calculadora de Tempo de Leitura",
+        "desc": "Estimar tempo de leitura e fala"
+      },
+      "wordFrequencyCounter": {
+        "label": "Contador de Frequência de Palavras",
+        "desc": "Encontrar palavras-chave mais usadas no texto"
+      },
+      "loanCalculator": {
+        "label": "Calculadora de Empréstimo",
+        "desc": "Parcela mensal e tabela de amortização"
+      },
+      "mortgageCalculator": {
+        "label": "Calculadora de Financiamento",
+        "desc": "Calcular parcelas de financiamento imobiliário"
+      },
+      "carLoanCalculator": {
+        "label": "Calculadora de Financiamento de Carro",
+        "desc": "Parcela mensal de financiamento de veículo"
+      },
+      "invoiceGenerator": {
+        "label": "Gerador de Notas Fiscais",
+        "desc": "Faturas profissionais gratuitas — pronto para PDF"
+      },
+      "invoiceGeneratorUk": {
+        "label": "Gerador de Faturas UK",
+        "desc": "Faturas em GBP com VAT pré-configurado"
+      },
+      "homeAffordability": {
+        "label": "Capacidade de Compra de Imóvel",
+        "desc": "Quanto de imóvel você pode pagar?"
+      },
+      "amortizationCalculator": {
+        "label": "Calculadora de Amortização",
+        "desc": "Tabela completa de pagamentos detalhada"
+      },
+      "studentLoanCalculator": {
+        "label": "Calculadora de Empréstimo Estudantil",
+        "desc": "Calculadora de quitação de empréstimo estudantil"
+      },
+      "spinTheWheel": {
+        "label": "Girar a Roleta",
+        "desc": "Decisor aleatório — adicione suas opções"
+      },
+      "randomNamePicker": {
+        "label": "Sorteador de Nomes",
+        "desc": "Sortear um vencedor da sua lista"
+      },
+      "teamGenerator": {
+        "label": "Gerador de Times",
+        "desc": "Dividir nomes em times equilibrados"
+      },
+      "coinFlip": {
+        "label": "Cara ou Coroa",
+        "desc": "Moeda virtual cara ou coroa"
+      },
+      "diceRoller": {
+        "label": "Rolador de Dados",
+        "desc": "Rolar d6, d20, 3d6+5 e mais"
+      },
+      "numberGenerator": {
+        "label": "Gerador de Números",
+        "desc": "Números aleatórios em qualquer intervalo"
+      },
+      "yesOrNoWheel": {
+        "label": "Roleta Sim ou Não",
+        "desc": "Deixe a roleta decidir"
+      },
+      "wheelOfNames": {
+        "label": "Wheel of Names",
+        "desc": "Alternativa gratuita ao Wheel of Names"
+      },
+      "allQuizzes": {
+        "label": "Todos os Quizzes",
+        "desc": "Explore quizzes de personalidade e esportes"
+      },
+      "programmingLanguageQuiz": {
+        "label": "Qual Linguagem de Programação Você É?",
+        "desc": "Python, JavaScript, Rust, Go ou Java?"
+      },
+      "introvertExtrovertQuiz": {
+        "label": "Introvertido ou Extrovertido?",
+        "desc": "Descubra onde você se encaixa no espectro"
+      },
+      "careerQuiz": {
+        "label": "Qual Carreira Combina com Você?",
+        "desc": "Descubra seu caminho de carreira ideal"
+      },
+      "travelerQuiz": {
+        "label": "Que Tipo de Viajante Você É?",
+        "desc": "Aventureiro, explorador, amante de praia?"
+      },
+      "worldCupQuiz": {
+        "label": "Quiz: Campeões da Copa do Mundo",
+        "desc": "Teste seu conhecimento sobre cada campeão mundial"
+      },
+      "footballClubQuiz": {
+        "label": "Qual Time de Futebol Você É?",
+        "desc": "Descubra qual clube combina com sua personalidade"
+      },
+      "championsLeagueQuiz": {
+        "label": "Quiz: Liga dos Campeões",
+        "desc": "Quanto você sabe sobre a maior competição de clubes da Europa?"
+      },
+      "loveLangaugeQuiz": {
+        "label": "Qual é a Sua Linguagem do Amor?",
+        "desc": "Descubra como você dá e recebe amor"
+      },
+      "formula1TriviaQuiz": {
+        "label": "Quiz de Fórmula 1",
+        "desc": "Teste seu conhecimento de F1 — circuitos, campeões e recordes"
+      },
+      "f1DriverQuiz": {
+        "label": "Qual Piloto de F1 É Você?",
+        "desc": "Verstappen, Hamilton, Senna ou Norris?"
+      },
+      "retroBoard": {
+        "label": "Quadro de Retrospectiva",
+        "desc": "Funcionou Bem · A Melhorar · Itens de Ação"
+      },
+      "standupGenerator": {
+        "label": "Gerador de Standup",
+        "desc": "Ontem · Hoje · Bloqueios → resumo pronto para colar"
+      },
+      "planningPoker": {
+        "label": "Planning Poker",
+        "desc": "Estimativas Fibonacci — revelar tudo ao mesmo tempo"
+      },
+      "userStoryWriter": {
+        "label": "Escritor de User Story",
+        "desc": "Como [papel], quero [funcionalidade], para que [benefício]"
+      },
+      "sprintDateCalculator": {
+        "label": "Calculadora de Sprint",
+        "desc": "Data de início + duração → todas as datas das cerimônias"
+      },
+      "percentageCalculator": {
+        "label": "Calculadora de Porcentagem",
+        "desc": "% de, qual % é e variação % — três calculadoras em uma"
+      },
+      "typescriptQuiz": {
+        "label": "Quiz de TypeScript para Entrevistas",
+        "desc": "30 perguntas: Iniciante → Intermediário → Avançado"
+      },
+      "interviewHub": {
+        "label": "Hub de Preparação para Entrevistas",
+        "desc": "TypeScript, JS e mais — com explicações e boas práticas"
+      }
     }
   },
   "agile": {
@@ -1839,11 +2144,26 @@
     "size1024": "1024px (grande)",
     "emptyState": "Insira o conteúdo acima para gerar seu QR Code",
     "faqs": [
-      { "question": "Os QR Codes são gratuitos?", "answer": "Sim — completamente gratuitos, sem necessidade de cadastro e sem marcas d'água nas imagens baixadas. Você pode gerar QR Codes ilimitados." },
-      { "question": "Os QR Codes expiram?", "answer": "Os QR Codes gerados aqui não expiram. Como todo o processamento ocorre no seu navegador, nenhum dado é armazenado em nossos servidores. Seu QR Code funcionará enquanto o destino for válido." },
-      { "question": "Qual tamanho de QR Code devo usar?", "answer": "Para uso digital (e-mails, sites), 256px é suficiente. Para materiais impressos como folhetos, use 512px ou 1024px. Para impressão em grande formato, baixe o SVG para resolução infinita." },
-      { "question": "Posso criar um QR Code para WiFi?", "answer": "Sim — selecione a aba WiFi, insira o nome da rede (SSID) e a senha, e o QR Code permitirá que qualquer pessoa se conecte ao seu WiFi instantaneamente sem digitar a senha." },
-      { "question": "Os dados são seguros?", "answer": "Sim — toda a geração do QR Code acontece no seu navegador. Nenhuma informação é enviada para nossos servidores." }
+      {
+        "question": "Os QR Codes são gratuitos?",
+        "answer": "Sim — completamente gratuitos, sem necessidade de cadastro e sem marcas d'água nas imagens baixadas. Você pode gerar QR Codes ilimitados."
+      },
+      {
+        "question": "Os QR Codes expiram?",
+        "answer": "Os QR Codes gerados aqui não expiram. Como todo o processamento ocorre no seu navegador, nenhum dado é armazenado em nossos servidores. Seu QR Code funcionará enquanto o destino for válido."
+      },
+      {
+        "question": "Qual tamanho de QR Code devo usar?",
+        "answer": "Para uso digital (e-mails, sites), 256px é suficiente. Para materiais impressos como folhetos, use 512px ou 1024px. Para impressão em grande formato, baixe o SVG para resolução infinita."
+      },
+      {
+        "question": "Posso criar um QR Code para WiFi?",
+        "answer": "Sim — selecione a aba WiFi, insira o nome da rede (SSID) e a senha, e o QR Code permitirá que qualquer pessoa se conecte ao seu WiFi instantaneamente sem digitar a senha."
+      },
+      {
+        "question": "Os dados são seguros?",
+        "answer": "Sim — toda a geração do QR Code acontece no seu navegador. Nenhuma informação é enviada para nossos servidores."
+      }
     ]
   },
   "healthCalculator": {
@@ -1891,16 +2211,40 @@
     "gainFast": "Ganhar ~0,5 kg/semana",
     "calculate": "Calcular",
     "bmiFaqs": [
-      { "question": "O que é IMC?", "answer": "O Índice de Massa Corporal (IMC) é uma medida de gordura corporal baseada em altura e peso. É calculado dividindo o peso em quilogramas pelo quadrado da altura em metros. O IMC é usado como ferramenta de triagem para indicar se uma pessoa pode ter problema de peso." },
-      { "question": "Qual é um IMC saudável?", "answer": "Para a maioria dos adultos, um IMC de 18,5–24,9 é considerado saudável. Um IMC abaixo de 18,5 é abaixo do peso, de 25 a 29,9 é sobrepeso e 30 ou mais é classificado como obesidade." },
-      { "question": "O IMC é preciso?", "answer": "O IMC é uma ferramenta útil, mas tem limitações. Ele não distingue entre músculo e gordura e pode não ser preciso para atletas ou pessoas idosas. Use-o como um indicador geral, não como diagnóstico médico." },
-      { "question": "Como calcular o IMC?", "answer": "IMC = peso (kg) ÷ altura² (m²). Exemplo: 70 kg ÷ (1,75 m)² = 70 ÷ 3,0625 = 22,9." }
+      {
+        "question": "O que é IMC?",
+        "answer": "O Índice de Massa Corporal (IMC) é uma medida de gordura corporal baseada em altura e peso. É calculado dividindo o peso em quilogramas pelo quadrado da altura em metros. O IMC é usado como ferramenta de triagem para indicar se uma pessoa pode ter problema de peso."
+      },
+      {
+        "question": "Qual é um IMC saudável?",
+        "answer": "Para a maioria dos adultos, um IMC de 18,5–24,9 é considerado saudável. Um IMC abaixo de 18,5 é abaixo do peso, de 25 a 29,9 é sobrepeso e 30 ou mais é classificado como obesidade."
+      },
+      {
+        "question": "O IMC é preciso?",
+        "answer": "O IMC é uma ferramenta útil, mas tem limitações. Ele não distingue entre músculo e gordura e pode não ser preciso para atletas ou pessoas idosas. Use-o como um indicador geral, não como diagnóstico médico."
+      },
+      {
+        "question": "Como calcular o IMC?",
+        "answer": "IMC = peso (kg) ÷ altura² (m²). Exemplo: 70 kg ÷ (1,75 m)² = 70 ÷ 3,0625 = 22,9."
+      }
     ],
     "tdeeFaqs": [
-      { "question": "O que é TDEE?", "answer": "TDEE (Total Daily Energy Expenditure) é o total de calorias que seu corpo queima em um dia, considerando sua Taxa Metabólica Basal (TMB) e atividade física. Indica quantas calorias você precisa para manter seu peso atual." },
-      { "question": "O que é TMB?", "answer": "A Taxa Metabólica Basal (TMB) é o número de calorias que seu corpo queima em repouso completo para manter funções básicas como respiração e circulação. Representa cerca de 60–75% do seu TDEE." },
-      { "question": "Quantas calorias devo comer para emagrecer?", "answer": "Um déficit calórico seguro é de 250–500 calorias abaixo do seu TDEE por dia, resultando em aproximadamente 0,25–0,5 kg de perda de peso por semana." },
-      { "question": "Qual fórmula esta calculadora usa?", "answer": "Esta calculadora usa a equação de Mifflin-St Jeor: TMB = 10 × peso(kg) + 6,25 × altura(cm) − 5 × idade + 5 (masculino) ou −161 (feminino)." }
+      {
+        "question": "O que é TDEE?",
+        "answer": "TDEE (Total Daily Energy Expenditure) é o total de calorias que seu corpo queima em um dia, considerando sua Taxa Metabólica Basal (TMB) e atividade física. Indica quantas calorias você precisa para manter seu peso atual."
+      },
+      {
+        "question": "O que é TMB?",
+        "answer": "A Taxa Metabólica Basal (TMB) é o número de calorias que seu corpo queima em repouso completo para manter funções básicas como respiração e circulação. Representa cerca de 60–75% do seu TDEE."
+      },
+      {
+        "question": "Quantas calorias devo comer para emagrecer?",
+        "answer": "Um déficit calórico seguro é de 250–500 calorias abaixo do seu TDEE por dia, resultando em aproximadamente 0,25–0,5 kg de perda de peso por semana."
+      },
+      {
+        "question": "Qual fórmula esta calculadora usa?",
+        "answer": "Esta calculadora usa a equação de Mifflin-St Jeor: TMB = 10 × peso(kg) + 6,25 × altura(cm) − 5 × idade + 5 (masculino) ou −161 (feminino)."
+      }
     ],
     "bmiRichContent": {
       "whatIs": "O Índice de Massa Corporal (IMC) é um número calculado a partir do seu peso e altura que fornece um panorama rápido de se o seu peso corporal está dentro de uma faixa saudável. É amplamente utilizado por clínicos e pesquisadores como ferramenta de triagem de baixo custo para identificar potenciais riscos de saúde relacionados ao peso. No entanto, o IMC tem limitações reais: ele não distingue entre massa muscular e gordura, portanto um atleta musculoso pode ser classificado como \"sobrepeso\" mesmo tendo um percentual de gordura muito baixo. O IMC também não leva em conta a distribuição da gordura no corpo — a gordura abdominal apresenta riscos diferentes da gordura armazenada em outras partes. Para uma visão mais completa da composição corporal, considere combinar o IMC com a medição da circunferência da cintura, a relação cintura-quadril ou uma densitometria (DEXA).",
@@ -2003,11 +2347,26 @@
       "proTip": "Se você precisa de uma nota muito alta na prova final para atingir sua meta, converse com seu professor antes da prova — não depois. A maioria dos docentes valoriza estudantes proativos, e pode haver oportunidades de trabalho extra, políticas de arredondamento de notas ou reenvios de atividades que você desconhecia. Chegar com sua nota atual e a pontuação que você precisa demonstra seriedade e iniciativa."
     },
     "faqs": [
-      { "question": "Como é calculado o GPA?", "answer": "O GPA é calculado multiplicando a nota de cada disciplina pela sua carga horária em créditos, somando todos os valores e dividindo pelo total de créditos. Na escala americana 4.0: A=4.0, B=3.0, C=2.0, D=1.0, F=0.0." },
-      { "question": "Qual é um bom GPA?", "answer": "Na escala americana 4.0, um GPA acima de 3.5 é considerado excelente, de 3.0 a 3.5 é bom, e 2.0 é geralmente o mínimo para manter uma boa situação acadêmica." },
-      { "question": "O que é GPA acumulado?", "answer": "Seu GPA acumulado é a média ponderada de todas as notas em todos os semestres do seu curso. Ele combina seu GPA anterior e créditos com os resultados do novo semestre." },
-      { "question": "Como calcular a nota que preciso para passar?", "answer": "Use a Calculadora de Nota: insira sua nota atual, o peso percentual dos trabalhos já entregues e sua nota alvo. A calculadora determina exatamente o que você precisa nos trabalhos restantes." },
-      { "question": "Esta calculadora funciona para o sistema brasileiro?", "answer": "Sim — esta calculadora suporta a escala americana 4.0 (letras A–F), a escala portuguesa e brasileira de 0 a 20 e a escala espanhola e latino-americana de 0 a 10. Selecione sua escala no menu." }
+      {
+        "question": "Como é calculado o GPA?",
+        "answer": "O GPA é calculado multiplicando a nota de cada disciplina pela sua carga horária em créditos, somando todos os valores e dividindo pelo total de créditos. Na escala americana 4.0: A=4.0, B=3.0, C=2.0, D=1.0, F=0.0."
+      },
+      {
+        "question": "Qual é um bom GPA?",
+        "answer": "Na escala americana 4.0, um GPA acima de 3.5 é considerado excelente, de 3.0 a 3.5 é bom, e 2.0 é geralmente o mínimo para manter uma boa situação acadêmica."
+      },
+      {
+        "question": "O que é GPA acumulado?",
+        "answer": "Seu GPA acumulado é a média ponderada de todas as notas em todos os semestres do seu curso. Ele combina seu GPA anterior e créditos com os resultados do novo semestre."
+      },
+      {
+        "question": "Como calcular a nota que preciso para passar?",
+        "answer": "Use a Calculadora de Nota: insira sua nota atual, o peso percentual dos trabalhos já entregues e sua nota alvo. A calculadora determina exatamente o que você precisa nos trabalhos restantes."
+      },
+      {
+        "question": "Esta calculadora funciona para o sistema brasileiro?",
+        "answer": "Sim — esta calculadora suporta a escala americana 4.0 (letras A–F), a escala portuguesa e brasileira de 0 a 20 e a escala espanhola e latino-americana de 0 a 10. Selecione sua escala no menu."
+      }
     ]
   },
   "ageCalculator": {
@@ -2028,11 +2387,26 @@
     "futureResult": "Em {date}, você terá {years} anos",
     "errorFutureDate": "Por favor, insira uma data no passado",
     "faqs": [
-      { "question": "Como calcular minha idade exata?", "answer": "Sua idade exata é a diferença entre sua data de nascimento e a data de hoje, dividida em anos, meses e dias. Esta calculadora usa aritmética de datas precisa para considerar anos bissextos e meses de diferentes durações." },
-      { "question": "Quantos dias faltam para meu aniversário?", "answer": "Insira sua data de nascimento e a calculadora mostrará automaticamente quantos dias faltam para seu próximo aniversário. Se hoje é seu aniversário, uma mensagem especial será exibida." },
-      { "question": "Quantos anos terei em uma data futura?", "answer": "Use a seção 'Quantos anos terei em...'. Insira qualquer data futura e a calculadora dirá exatamente quantos anos você terá naquela data." },
-      { "question": "A calculadora considera anos bissextos?", "answer": "Sim — esta calculadora usa aritmética de datas precisa que considera corretamente anos bissextos, aniversários no dia 29 de fevereiro e meses com diferentes números de dias." },
-      { "question": "Qual é minha idade se nasci em 1990?", "answer": "Se você nasceu em 1990, atualmente tem 35 ou 36 anos dependendo do seu mês de nascimento e da data de hoje. Insira sua data de nascimento completa acima para um resultado preciso." }
+      {
+        "question": "Como calcular minha idade exata?",
+        "answer": "Sua idade exata é a diferença entre sua data de nascimento e a data de hoje, dividida em anos, meses e dias. Esta calculadora usa aritmética de datas precisa para considerar anos bissextos e meses de diferentes durações."
+      },
+      {
+        "question": "Quantos dias faltam para meu aniversário?",
+        "answer": "Insira sua data de nascimento e a calculadora mostrará automaticamente quantos dias faltam para seu próximo aniversário. Se hoje é seu aniversário, uma mensagem especial será exibida."
+      },
+      {
+        "question": "Quantos anos terei em uma data futura?",
+        "answer": "Use a seção 'Quantos anos terei em...'. Insira qualquer data futura e a calculadora dirá exatamente quantos anos você terá naquela data."
+      },
+      {
+        "question": "A calculadora considera anos bissextos?",
+        "answer": "Sim — esta calculadora usa aritmética de datas precisa que considera corretamente anos bissextos, aniversários no dia 29 de fevereiro e meses com diferentes números de dias."
+      },
+      {
+        "question": "Qual é minha idade se nasci em 1990?",
+        "answer": "Se você nasceu em 1990, atualmente tem 35 ou 36 anos dependendo do seu mês de nascimento e da data de hoje. Insira sua data de nascimento completa acima para um resultado preciso."
+      }
     ]
   },
   "about": {
@@ -2137,11 +2511,26 @@
       "proTip": "A norma ABNT (NBR 6023) é o padrão acadêmico brasileiro obrigatório na maioria das universidades do país. Este gerador suporta ABNT integralmente nesta versão em português — incluindo as regras de maiúsculas no sobrenome dos autores, o formato de data de acesso e a pontuação específica da norma. Ao escrever trabalhos acadêmicos para instituições brasileiras, escolha ABNT para estar em conformidade com as diretrizes da sua universidade."
     },
     "faqs": [
-      { "question": "O que é a ABNT?", "answer": "A ABNT (NBR 6023) é a norma brasileira para referências bibliográficas. Formato básico para livros: SOBRENOME, Nome. *Título*. Edição. Local: Editora, Ano." },
-      { "question": "Como fazer referência ABNT para site?", "answer": "SOBRENOME, Nome. *Título*. Ano. Disponível em: URL. Acesso em: dia mês. ano. Se não houver autor, o título entra em maiúsculas." },
-      { "question": "Como citar artigo em APA?", "answer": "Autor, A. A., & Autor, B. B. (Ano). Título do artigo. *Nome do Periódico*, Volume(Número), páginas. https://doi.org/xxxxx" },
-      { "question": "Como citar vídeo do YouTube?", "answer": "Selecione 'YouTube', insira o título, nome do canal, data e URL. O gerador formatará conforme o estilo escolhido." },
-      { "question": "O gerador é gratuito?", "answer": "Sim — completamente gratuito, sem cadastro, sem limites. As citações são geradas no seu navegador." }
+      {
+        "question": "O que é a ABNT?",
+        "answer": "A ABNT (NBR 6023) é a norma brasileira para referências bibliográficas. Formato básico para livros: SOBRENOME, Nome. *Título*. Edição. Local: Editora, Ano."
+      },
+      {
+        "question": "Como fazer referência ABNT para site?",
+        "answer": "SOBRENOME, Nome. *Título*. Ano. Disponível em: URL. Acesso em: dia mês. ano. Se não houver autor, o título entra em maiúsculas."
+      },
+      {
+        "question": "Como citar artigo em APA?",
+        "answer": "Autor, A. A., & Autor, B. B. (Ano). Título do artigo. *Nome do Periódico*, Volume(Número), páginas. https://doi.org/xxxxx"
+      },
+      {
+        "question": "Como citar vídeo do YouTube?",
+        "answer": "Selecione 'YouTube', insira o título, nome do canal, data e URL. O gerador formatará conforme o estilo escolhido."
+      },
+      {
+        "question": "O gerador é gratuito?",
+        "answer": "Sim — completamente gratuito, sem cadastro, sem limites. As citações são geradas no seu navegador."
+      }
     ]
   },
   "contact": {

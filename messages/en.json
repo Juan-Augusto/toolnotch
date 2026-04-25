@@ -928,7 +928,19 @@
             "question": "What is an amortization schedule?",
             "answer": "An amortization schedule shows each monthly payment broken down into principal and interest portions, along with the remaining balance after each payment."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "A loan calculator estimates your monthly payment for any fixed installment loan — personal loans, auto loans, student loans, or any amount borrowed at a fixed rate over a defined term. Each payment covers accrued interest first, then reduces your principal balance. Understanding the difference between APR (Annual Percentage Rate) and the stated interest rate is critical: APR includes origination fees and other loan costs, making it the true cost of borrowing. Lenders are legally required to disclose the APR, and it is always the right number to use when comparing loan offers from different lenders — not the interest rate alone, which omits fees.",
+          "howToUse": [
+            "Enter the loan amount — the total amount you plan to borrow, before any fees.",
+            "Enter the annual interest rate. Use the APR from your loan offer for the most accurate total cost.",
+            "Select the loan term in months or years. Shorter terms mean higher payments but significantly less interest.",
+            "Click Calculate to see your monthly payment and total interest cost over the life of the loan.",
+            "Try different amounts and terms side by side to find the combination that fits your monthly budget without maximizing interest cost."
+          ],
+          "whyItMatters": "Loan term has an outsized effect on total cost. A $10,000 personal loan at 12% over 3 years costs about $1,957 in interest. The same loan over 5 years drops the payment by roughly $100 per month — but total interest rises to $3,346. For large loan amounts, this difference compounds significantly. Knowing your true total cost before signing lets you compare offers accurately and avoid the common mistake of optimizing for the lowest monthly payment without considering the total amount you will pay over time.",
+          "proTip": "Always compare loans using APR, not the stated interest rate. Two loans with identical rates can have very different APRs if origination fees differ. Also ask whether a prepayment penalty exists — if you plan to pay off the loan early, a lower-fee loan at a slightly higher rate may cost less overall than a lower-rate loan with a heavy prepayment penalty."
+        }
       },
       "mortgage-calculator": {
         "metaTitle": "Mortgage Calculator — Monthly Payment & Total Cost",
@@ -976,7 +988,20 @@
             "question": "How does a larger down payment help?",
             "answer": "A larger down payment reduces your loan amount (lowering monthly payments and total interest), may eliminate PMI, and gives you immediate equity in your home."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "A mortgage calculator estimates your monthly principal and interest payment based on the loan amount, interest rate, and loan term. Monthly payments are computed using the standard amortization formula, which keeps your payment flat while shifting the ratio from mostly-interest in early years to mostly-principal later. What this calculator does not include is your total monthly housing cost: property taxes, homeowner's insurance, and — if your down payment is under 20% — Private Mortgage Insurance (PMI). These extras can add $400–$800 or more per month depending on your market and home price. Always budget for the full payment, not just principal and interest, to avoid being caught short after closing.",
+          "howToUse": [
+            "Enter the home price — the full purchase price, not the loan amount.",
+            "Enter your down payment as a dollar amount or percentage. A 20% down payment eliminates PMI.",
+            "Enter the annual interest rate. Use your lender's quoted rate or a current market benchmark.",
+            "Choose your loan term: 30 years for lower payments, 15 years for less total interest.",
+            "Click Calculate to see your monthly P&I payment, total interest, and full amortization schedule.",
+            "Add estimated property taxes, insurance, and PMI to the result to get your true monthly housing cost."
+          ],
+          "whyItMatters": "A 0.5% difference in interest rate can cost or save tens of thousands of dollars over a 30-year loan. Running multiple scenarios — different rates, terms, and down payments — before making an offer gives you negotiating leverage and protects you from overextending. Many buyers focus on the monthly payment without seeing the total interest: a $400,000 home at 7% for 30 years costs over $558,000 in interest alone. Understanding the full picture helps you choose the right loan product, decide whether a larger down payment is worth delaying your purchase, and recognize when a 15-year loan is actually affordable for your budget.",
+          "proTip": "Before applying, get pre-approved by at least two or three lenders. Mortgage rates are negotiable, and even 0.25% translates to $30–$50 per month on a typical loan. Also evaluate whether paying discount points upfront makes sense for your timeline: one point (1% of the loan amount) typically lowers your rate by 0.25%, with a break-even of about 4–6 years."
+        }
       },
       "car-loan-calculator": {
         "metaTitle": "Car Loan Calculator — Auto Loan Monthly Payment",
@@ -1122,7 +1147,20 @@
             "question": "How do I calculate total interest paid over the life of a loan?",
             "answer": "Multiply your monthly payment by the total number of payments, then subtract the original loan principal. The difference is your total interest cost. The amortization calculator does this automatically and displays the total in the summary above the schedule."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "An amortization calculator generates a complete payment-by-payment schedule for a fixed loan, showing exactly how much of each payment goes toward interest and how much reduces your principal balance. The key insight amortization tables reveal is front-loaded interest: in the early years of a mortgage, the vast majority of each payment is interest. On a $400,000 30-year mortgage at 7%, the first payment applies roughly $330 to principal and $2,333 to interest. By year 25, the ratio flips — most of each payment reduces principal. Understanding this schedule helps you see how extra payments build equity faster, where total interest accumulates, and when you cross the midpoint of repayment.",
+          "howToUse": [
+            "Enter the loan amount, annual interest rate, and loan term in years.",
+            "Optionally enter an extra monthly payment amount to see how it shortens the loan and reduces total interest.",
+            "Click Calculate to generate the complete amortization schedule and summary totals.",
+            "Review the summary: total interest paid, payoff date, and total loan cost.",
+            "Examine the year-by-year table to see how the interest-to-principal ratio shifts over time.",
+            "Experiment with extra payment amounts to find your ideal balance between payment size and long-term savings."
+          ],
+          "whyItMatters": "Most homeowners are surprised to discover how little principal their early payments reduce. In the first year of a 30-year mortgage at 7%, over 85% of each payment goes to interest. Extra payments made early have an outsized impact because they reduce the balance on which all future interest is calculated — the savings compound over the remaining loan life. Making one extra mortgage payment per year typically shortens a 30-year loan by 4–5 years and saves tens of thousands of dollars in interest. The amortization table makes this math concrete and helps you decide whether extra payments represent the best use of your money.",
+          "proTip": "Confirm with your loan servicer how extra payments are applied. Some servicers apply extra funds to the next scheduled payment (saving only one month of interest), while others apply them directly to principal (reducing the balance and saving interest over the full remaining term). Always specify 'apply to principal' in writing when making extra payments — it is the default at some servicers but not all, and the difference in savings can be substantial."
+        }
       },
       "home-affordability-calculator": {
         "metaTitle": "Home Affordability Calculator — How Much House Can I Afford?",
@@ -1170,7 +1208,20 @@
             "question": "Can I refinance to a shorter term?",
             "answer": "Yes, refinancing from a 30-year to a 15-year mortgage often gets you a lower rate and much less total interest, though your monthly payment will be higher."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "A refinance calculator determines whether replacing your current mortgage with a new loan at a lower rate saves money after accounting for closing costs. The key metric is the break-even point: how many months it takes for monthly savings to offset what you paid to refinance. Refinancing typically costs 2–5% of the loan amount in closing costs — even loans advertised as 'no-cost' usually roll those costs into the rate or loan balance. This calculator weighs the lower rate against the cost to obtain it, so you can determine whether refinancing makes financial sense given how long you realistically plan to stay in the home.",
+          "howToUse": [
+            "Enter your current loan balance, current interest rate, and the remaining term on your existing mortgage.",
+            "Enter the new interest rate you have been quoted and the new loan term you are considering.",
+            "Enter estimated closing costs — typically 2–3% of the loan amount for most refinances.",
+            "Click Calculate to see monthly savings, total interest comparison, and break-even point in months.",
+            "Compare the break-even point to how long you plan to stay in the home. If break-even is 36 months but you plan to move in 24, refinancing likely is not worth it.",
+            "Run separate scenarios for paying closing costs out of pocket vs. rolling them into the loan to see the true long-term cost of each option."
+          ],
+          "whyItMatters": "Refinancing can save hundreds of dollars a month, but only if the timing is right. Homeowners who refinance without calculating the break-even point often pay closing costs they never recoup — especially those who sell or refinance again within a few years. Conversely, waiting too long when rates are falling costs real money every month. This calculator gives you a clear, numeric decision criterion: if the break-even falls within your expected time horizon, refinancing is likely a sound financial move.",
+          "proTip": "The 'no-closing-cost refinance' is rarely free. Lenders typically roll costs into the loan balance or into the rate — usually 0.25–0.375% higher. Run the calculation with costs paid out of pocket versus rolled in: the out-of-pocket version saves more money if you plan to stay long term, while the rolled-in version preserves cash flow if you may move sooner."
+        }
       },
       "student-loan-calculator": {
         "metaTitle": "Student Loan Calculator — Monthly Payment & Repayment",
@@ -1403,7 +1454,19 @@
             "question": "Should I pay off debt or invest?",
             "answer": "If your debt interest rate is higher than expected investment returns (typically 7–10%), pay off debt first. For low-rate debt under 4%, investing may make more sense."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "A debt payoff calculator shows how long it will take to eliminate your debts and how much total interest you will pay under different repayment strategies. The two most common methods are: the avalanche method, which targets the highest-interest debt first (mathematically optimal — minimizes total interest paid), and the snowball method, which targets the smallest balance first (psychologically motivating — quick wins build momentum). The true cost of making only minimum payments is often the most important output this calculator reveals. On a $5,000 credit card balance at 22% APR, minimum-only payments can take over 15 years and cost more in interest than the original balance itself.",
+          "howToUse": [
+            "List each debt with its current balance, annual interest rate, and current minimum monthly payment.",
+            "Enter any extra monthly amount you can add toward debt repayment beyond the minimums.",
+            "Choose a strategy: avalanche (highest interest rate first) or snowball (lowest balance first).",
+            "Review the payoff date and total interest under each strategy to see which saves more money.",
+            "Adjust the extra payment amount to see how even small increases change your payoff timeline and total interest."
+          ],
+          "whyItMatters": "The difference between minimum-only payments and adding even $100 extra per month can mean years of debt and thousands of dollars in interest. Many people underestimate how long minimum payments take because the math is buried in small print on statements. Seeing a concrete payoff date and a dollar figure for total interest makes the real cost visible in a way that abstract APR percentages do not. That visibility is often what motivates real action — and the numbers are almost always more urgent than people expect.",
+          "proTip": "Once you pay off one debt, immediately redirect its full minimum payment to the next target — the 'debt rollover.' It keeps your total monthly outflow identical while dramatically accelerating payoff, because each eliminated debt adds momentum to the next one. The avalanche method saves the most money; the snowball method often eliminates debts faster, which can be worth the slightly higher interest cost for its motivational effect."
+        }
       }
     },
     "invoiceGenerator": {
@@ -2604,16 +2667,40 @@
     "gainFast": "Gain ~0.5 kg/week",
     "calculate": "Calculate",
     "bmiFaqs": [
-      { "question": "What is BMI?", "answer": "Body Mass Index (BMI) is a measure of body fat based on height and weight. It is calculated by dividing weight in kilograms by the square of height in meters. BMI is used as a screening tool to indicate whether a person may have a weight problem." },
-      { "question": "What is a healthy BMI?", "answer": "For most adults, a BMI of 18.5–24.9 is considered healthy. A BMI below 18.5 is underweight, 25–29.9 is overweight, and 30 or above is classified as obese. However, BMI is a screening tool and does not directly measure body fat." },
-      { "question": "Is BMI accurate?", "answer": "BMI is a useful screening tool but has limitations. It does not distinguish between muscle and fat, and may not be accurate for athletes, elderly people, or during pregnancy. Use it as a general indicator, not a medical diagnosis." },
-      { "question": "How do I calculate BMI?", "answer": "BMI = weight (kg) ÷ height² (m²). For example: 70 kg ÷ (1.75 m)² = 70 ÷ 3.0625 = 22.9. In imperial units: BMI = (weight in lbs × 703) ÷ height² (in²)." }
+      {
+        "question": "What is BMI?",
+        "answer": "Body Mass Index (BMI) is a measure of body fat based on height and weight. It is calculated by dividing weight in kilograms by the square of height in meters. BMI is used as a screening tool to indicate whether a person may have a weight problem."
+      },
+      {
+        "question": "What is a healthy BMI?",
+        "answer": "For most adults, a BMI of 18.5–24.9 is considered healthy. A BMI below 18.5 is underweight, 25–29.9 is overweight, and 30 or above is classified as obese. However, BMI is a screening tool and does not directly measure body fat."
+      },
+      {
+        "question": "Is BMI accurate?",
+        "answer": "BMI is a useful screening tool but has limitations. It does not distinguish between muscle and fat, and may not be accurate for athletes, elderly people, or during pregnancy. Use it as a general indicator, not a medical diagnosis."
+      },
+      {
+        "question": "How do I calculate BMI?",
+        "answer": "BMI = weight (kg) ÷ height² (m²). For example: 70 kg ÷ (1.75 m)² = 70 ÷ 3.0625 = 22.9. In imperial units: BMI = (weight in lbs × 703) ÷ height² (in²)."
+      }
     ],
     "tdeeFaqs": [
-      { "question": "What is TDEE?", "answer": "Total Daily Energy Expenditure (TDEE) is the total number of calories your body burns in a day, accounting for your basal metabolic rate (BMR) and physical activity. It tells you how many calories you need to maintain your current weight." },
-      { "question": "What is BMR?", "answer": "Basal Metabolic Rate (BMR) is the number of calories your body burns at complete rest to maintain basic functions like breathing, circulation, and cell production. It represents about 60–75% of your TDEE." },
-      { "question": "How many calories should I eat to lose weight?", "answer": "A safe calorie deficit is 250–500 calories below your TDEE per day, resulting in approximately 0.25–0.5 kg (0.5–1 lb) of weight loss per week. Avoid deficits larger than 1,000 calories without medical supervision." },
-      { "question": "Which formula does this calculator use?", "answer": "This calculator uses the Mifflin-St Jeor equation, which is considered the most accurate for estimating BMR without laboratory measurements: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5 (male) or −161 (female)." }
+      {
+        "question": "What is TDEE?",
+        "answer": "Total Daily Energy Expenditure (TDEE) is the total number of calories your body burns in a day, accounting for your basal metabolic rate (BMR) and physical activity. It tells you how many calories you need to maintain your current weight."
+      },
+      {
+        "question": "What is BMR?",
+        "answer": "Basal Metabolic Rate (BMR) is the number of calories your body burns at complete rest to maintain basic functions like breathing, circulation, and cell production. It represents about 60–75% of your TDEE."
+      },
+      {
+        "question": "How many calories should I eat to lose weight?",
+        "answer": "A safe calorie deficit is 250–500 calories below your TDEE per day, resulting in approximately 0.25–0.5 kg (0.5–1 lb) of weight loss per week. Avoid deficits larger than 1,000 calories without medical supervision."
+      },
+      {
+        "question": "Which formula does this calculator use?",
+        "answer": "This calculator uses the Mifflin-St Jeor equation, which is considered the most accurate for estimating BMR without laboratory measurements: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5 (male) or −161 (female)."
+      }
     ],
     "bmiRichContent": {
       "whatIs": "Body Mass Index (BMI) is a number calculated from your weight and height that provides a quick snapshot of whether your body weight falls within a healthy range. It is widely used by clinicians and researchers as a low-cost screening tool to flag potential weight-related health risks. However, BMI has real limitations: it cannot distinguish between muscle mass and fat mass, so a muscular athlete may be classified as \"overweight\" despite having very low body fat. BMI also does not account for where fat is distributed on the body — abdominal fat carries different health risks than fat stored elsewhere. Researchers note that BMI thresholds developed from European populations may not apply equally across all ethnic groups. For a fuller picture of body composition, consider waist circumference, waist-to-hip ratio, or a DEXA scan alongside your BMI.",
@@ -2689,11 +2776,26 @@
     "size1024": "1024px (large)",
     "emptyState": "Enter content above to generate your QR code",
     "faqs": [
-      { "question": "Are these QR codes free?", "answer": "Yes — completely free, no sign-up required, and no watermarks on downloaded images. You can generate unlimited QR codes." },
-      { "question": "Do QR codes expire?", "answer": "QR codes generated here do not expire. Since all processing happens in your browser, no data is stored on our servers. Your QR code will work as long as the destination URL or content is valid." },
-      { "question": "What size QR code should I use?", "answer": "For digital use (emails, websites), 256px is sufficient. For print materials like flyers or posters, use 512px or 1024px. For large-format printing like banners, download the SVG for infinite resolution." },
-      { "question": "What is error correction?", "answer": "This generator uses medium error correction (level M), which allows up to 15% of the QR code to be damaged or obscured while still remaining scannable. This is ideal for logos or decorative uses." },
-      { "question": "Can I create a WiFi QR code?", "answer": "Yes — select the WiFi tab, enter your network name (SSID) and password, and the QR code will let anyone scan it to join your WiFi instantly without typing the password." }
+      {
+        "question": "Are these QR codes free?",
+        "answer": "Yes — completely free, no sign-up required, and no watermarks on downloaded images. You can generate unlimited QR codes."
+      },
+      {
+        "question": "Do QR codes expire?",
+        "answer": "QR codes generated here do not expire. Since all processing happens in your browser, no data is stored on our servers. Your QR code will work as long as the destination URL or content is valid."
+      },
+      {
+        "question": "What size QR code should I use?",
+        "answer": "For digital use (emails, websites), 256px is sufficient. For print materials like flyers or posters, use 512px or 1024px. For large-format printing like banners, download the SVG for infinite resolution."
+      },
+      {
+        "question": "What is error correction?",
+        "answer": "This generator uses medium error correction (level M), which allows up to 15% of the QR code to be damaged or obscured while still remaining scannable. This is ideal for logos or decorative uses."
+      },
+      {
+        "question": "Can I create a WiFi QR code?",
+        "answer": "Yes — select the WiFi tab, enter your network name (SSID) and password, and the QR code will let anyone scan it to join your WiFi instantly without typing the password."
+      }
     ]
   },
   "gpaCalculator": {
@@ -2757,11 +2859,26 @@
       "proTip": "If you need a very high score on a final exam to reach your target, talk to your instructor before the exam — not after. Most educators appreciate students who are proactive, and there may be extra credit opportunities, grade rounding policies, or assignment resubmissions you were not aware of. Coming with your current grade and the score you need demonstrates seriousness and initiative."
     },
     "faqs": [
-      { "question": "How is GPA calculated?", "answer": "GPA (Grade Point Average) is calculated by multiplying each course grade by its credit hours, summing all values, then dividing by the total credit hours. For the US 4.0 scale: A=4.0, B=3.0, C=2.0, D=1.0, F=0.0." },
-      { "question": "What is a good GPA?", "answer": "On the US 4.0 scale, a GPA above 3.5 is generally considered excellent, 3.0–3.5 is good, and 2.0 is typically the minimum to remain in good academic standing." },
-      { "question": "What is a cumulative GPA?", "answer": "Your cumulative GPA is the weighted average of all grades across all semesters of your degree. It combines your previous GPA and credits with your new semester results." },
-      { "question": "How do I calculate the grade I need to pass?", "answer": "Use the Grade Calculator: enter your current grade, the percentage weight of work already completed, and your target grade. The calculator determines exactly what you need on the remaining work." },
-      { "question": "Does this GPA calculator work for international students?", "answer": "Yes — this calculator supports the US 4.0 scale (A–F letter grades), the Portuguese and Brazilian 0–20 scale, and the Spanish and Latin American 0–10 scale. Select your scale using the dropdown." }
+      {
+        "question": "How is GPA calculated?",
+        "answer": "GPA (Grade Point Average) is calculated by multiplying each course grade by its credit hours, summing all values, then dividing by the total credit hours. For the US 4.0 scale: A=4.0, B=3.0, C=2.0, D=1.0, F=0.0."
+      },
+      {
+        "question": "What is a good GPA?",
+        "answer": "On the US 4.0 scale, a GPA above 3.5 is generally considered excellent, 3.0–3.5 is good, and 2.0 is typically the minimum to remain in good academic standing."
+      },
+      {
+        "question": "What is a cumulative GPA?",
+        "answer": "Your cumulative GPA is the weighted average of all grades across all semesters of your degree. It combines your previous GPA and credits with your new semester results."
+      },
+      {
+        "question": "How do I calculate the grade I need to pass?",
+        "answer": "Use the Grade Calculator: enter your current grade, the percentage weight of work already completed, and your target grade. The calculator determines exactly what you need on the remaining work."
+      },
+      {
+        "question": "Does this GPA calculator work for international students?",
+        "answer": "Yes — this calculator supports the US 4.0 scale (A–F letter grades), the Portuguese and Brazilian 0–20 scale, and the Spanish and Latin American 0–10 scale. Select your scale using the dropdown."
+      }
     ]
   },
   "ageCalculator": {
@@ -2782,11 +2899,26 @@
     "futureResult": "On {date}, you will be {years} years old",
     "errorFutureDate": "Please enter a date in the past",
     "faqs": [
-      { "question": "How do I calculate my exact age?", "answer": "Your exact age is the difference between your date of birth and today, broken down into years, months, and days. This calculator uses precise date arithmetic to account for leap years and months of different lengths." },
-      { "question": "How many days until my birthday?", "answer": "Enter your date of birth and the calculator will automatically show how many days remain until your next birthday. If today is your birthday, a special message will appear." },
-      { "question": "How old will I be in a future year?", "answer": "Use the 'How old will I be on...' section. Enter any future date and the calculator will tell you exactly how old you will be on that date, in years." },
-      { "question": "Does the age calculator account for leap years?", "answer": "Yes — this calculator uses precise date arithmetic that correctly handles leap years, February 29 birthdays, and months with different numbers of days." },
-      { "question": "What is my age if I was born in 1990?", "answer": "If you were born in 1990, you are currently 35–36 years old depending on your exact birth month and today's date. Enter your full birth date above for a precise result." }
+      {
+        "question": "How do I calculate my exact age?",
+        "answer": "Your exact age is the difference between your date of birth and today, broken down into years, months, and days. This calculator uses precise date arithmetic to account for leap years and months of different lengths."
+      },
+      {
+        "question": "How many days until my birthday?",
+        "answer": "Enter your date of birth and the calculator will automatically show how many days remain until your next birthday. If today is your birthday, a special message will appear."
+      },
+      {
+        "question": "How old will I be in a future year?",
+        "answer": "Use the 'How old will I be on...' section. Enter any future date and the calculator will tell you exactly how old you will be on that date, in years."
+      },
+      {
+        "question": "Does the age calculator account for leap years?",
+        "answer": "Yes — this calculator uses precise date arithmetic that correctly handles leap years, February 29 birthdays, and months with different numbers of days."
+      },
+      {
+        "question": "What is my age if I was born in 1990?",
+        "answer": "If you were born in 1990, you are currently 35–36 years old depending on your exact birth month and today's date. Enter your full birth date above for a precise result."
+      }
     ]
   },
   "citationGenerator": {
@@ -2842,11 +2974,26 @@
       "proTip": "ABNT citation format (Brazilian academic standard NBR 6023) is available only in the Portuguese locale of this tool, as it is exclusively used in Brazilian academic institutions. If you are writing in Portuguese for a Brazilian university, switch to the Portuguese version of ToolNotch to access ABNT formatting alongside APA, MLA, and Chicago."
     },
     "faqs": [
-      { "question": "What is APA citation format?", "answer": "APA (American Psychological Association) format is widely used in social sciences and education. The 7th edition uses author-date in-text citations (Smith, 2021) and a reference list. For books: Author, A. A. (Year). Title. Publisher." },
-      { "question": "How do I cite a website in MLA?", "answer": "In MLA 9th edition: Last, First. \"Title of Page.\" Site Name, Day Month Year, URL. If no author, start with the title. If no date, omit the date." },
-      { "question": "What is Chicago citation style?", "answer": "Chicago 17th edition is common in history and humanities. This generator uses the Notes-Bibliography system. Basic book format: Last, First. *Title*. City: Publisher, Year." },
-      { "question": "What is ABNT format?", "answer": "ABNT (NBR 6023) is the Brazilian academic citation standard. For books: SOBRENOME, Nome. *Título*. Edition. City: Publisher, Year. Available in Portuguese locale only." },
-      { "question": "Is this citation generator free?", "answer": "Yes — completely free, no sign-up, no usage limits. All citations are generated instantly in your browser with no data sent to servers." }
+      {
+        "question": "What is APA citation format?",
+        "answer": "APA (American Psychological Association) format is widely used in social sciences and education. The 7th edition uses author-date in-text citations (Smith, 2021) and a reference list. For books: Author, A. A. (Year). Title. Publisher."
+      },
+      {
+        "question": "How do I cite a website in MLA?",
+        "answer": "In MLA 9th edition: Last, First. \"Title of Page.\" Site Name, Day Month Year, URL. If no author, start with the title. If no date, omit the date."
+      },
+      {
+        "question": "What is Chicago citation style?",
+        "answer": "Chicago 17th edition is common in history and humanities. This generator uses the Notes-Bibliography system. Basic book format: Last, First. *Title*. City: Publisher, Year."
+      },
+      {
+        "question": "What is ABNT format?",
+        "answer": "ABNT (NBR 6023) is the Brazilian academic citation standard. For books: SOBRENOME, Nome. *Título*. Edition. City: Publisher, Year. Available in Portuguese locale only."
+      },
+      {
+        "question": "Is this citation generator free?",
+        "answer": "Yes — completely free, no sign-up, no usage limits. All citations are generated instantly in your browser with no data sent to servers."
+      }
     ]
   },
   "about": {
@@ -2943,48 +3090,131 @@
         "relatedToolName": "Mortgage Calculator",
         "relatedToolPath": "/tools/finance/mortgage-calculator",
         "body": [
-          { "type": "paragraph", "text": "Buying a home is probably the largest financial decision most of us will ever make — and yet the monthly payment that shows up on a lender's quote can feel like a mystery. Where does that number come from? Why does a tiny difference in interest rate change it so much? And why is the payment your lender quotes always higher than what you see on a mortgage calculator?" },
-          { "type": "paragraph", "text": "This guide walks you through the actual math behind a mortgage payment, explains every factor that can push your monthly cost up or down, and helps you spot the common mistakes that catch first-time buyers off guard." },
-          { "type": "heading", "level": 2, "text": "The Core Formula: Principal and Interest" },
-          { "type": "paragraph", "text": "A standard fixed-rate mortgage payment is calculated using a formula that amortizes — or spreads — both the loan principal and the interest evenly across every month of the loan term. The formula looks like this:" },
-          { "type": "callout", "text": "M = P × [r(1+r)^n] / [(1+r)^n − 1]\n\nWhere: M = monthly payment, P = loan principal (amount borrowed), r = monthly interest rate (annual rate ÷ 12), n = total number of payments (years × 12)" },
-          { "type": "paragraph", "text": "Let's make that concrete. Suppose you borrow $300,000 at a 6.5% annual interest rate for 30 years. Your monthly rate r is 6.5% ÷ 12 = 0.5417%, or 0.005417 as a decimal. Your n is 30 × 12 = 360 payments." },
-          { "type": "paragraph", "text": "Plugging in: M = 300,000 × [0.005417 × (1.005417)^360] / [(1.005417)^360 − 1]. The result is approximately $1,896 per month — just for principal and interest. That number might already feel high, but here's the thing: it's not the whole picture." },
-          { "type": "heading", "level": 2, "text": "What Else Goes Into Your Monthly Payment?" },
-          { "type": "paragraph", "text": "Lenders almost always bundle additional costs into one monthly payment, which is why your actual bill is higher than what the P+I formula gives you. The main add-ons are:" },
-          { "type": "list", "ordered": false, "items": [
-            "Property taxes — Typically collected monthly by the lender and held in escrow, then paid to your local government annually. On a $400,000 home in many U.S. states, this alone can add $300–$700 per month.",
-            "Homeowners insurance — Your lender requires coverage to protect the property. Budget roughly $100–$200 per month for most homes, though coastal and high-risk areas cost more.",
-            "Private mortgage insurance (PMI) — If your down payment is less than 20%, the lender will require PMI to protect themselves if you default. PMI typically runs 0.5%–1.5% of the loan amount per year, which on a $300,000 loan is $125–$375 added to your monthly bill.",
-            "HOA fees — If you're buying a condo or a home in a managed community, homeowners association fees are separate but still part of your real monthly housing cost."
-          ]},
-          { "type": "paragraph", "text": "When all of these are included, that $1,896 P+I payment on our $300,000 example could realistically become $2,500–$2,800 per month. Always ask your lender for a full loan estimate that includes the escrow breakdown — comparing just the interest rate between lenders without looking at total payment is one of the most common mistakes buyers make." },
-          { "type": "heading", "level": 2, "text": "How Interest Rate Affects Your Payment" },
-          { "type": "paragraph", "text": "Many people assume a 0.5% difference in interest rate is trivial. It isn't. On a $300,000 loan over 30 years, the difference between a 6.0% and a 6.5% rate adds roughly $97 per month — or nearly $35,000 over the life of the loan. This is why improving your credit score before applying, shopping at least three lenders, and timing your lock carefully can pay off enormously." },
-          { "type": "list", "ordered": false, "items": [
-            "At 6.0%: monthly P+I ≈ $1,799",
-            "At 6.5%: monthly P+I ≈ $1,896",
-            "At 7.0%: monthly P+I ≈ $1,996"
-          ]},
-          { "type": "heading", "level": 2, "text": "Loan Term: 30 Years vs. 15 Years" },
-          { "type": "paragraph", "text": "A 15-year mortgage has a much higher monthly payment than a 30-year, but the total interest you pay over the life of the loan can be less than half. Using the same $300,000 at 6.0%:" },
-          { "type": "list", "ordered": false, "items": [
-            "30-year: ~$1,799/month, ~$347,000 in total interest",
-            "15-year: ~$2,532/month, ~$155,000 in total interest"
-          ]},
-          { "type": "paragraph", "text": "The 15-year saves you nearly $200,000 in interest, but your monthly payment is $733 higher. The right choice depends on your cash flow, job stability, and what else you'd do with that extra money each month." },
-          { "type": "heading", "level": 2, "text": "Common Mistakes to Avoid" },
-          { "type": "list", "ordered": false, "items": [
-            "Forgetting taxes and insurance — The P+I formula is just the starting point. Always calculate total housing cost: principal, interest, taxes, insurance, plus PMI and HOA if applicable.",
-            "Shopping by monthly payment instead of total cost — A longer term lowers your monthly payment but dramatically increases total interest paid.",
-            "Not accounting for rate type — Adjustable-rate mortgages (ARMs) start lower but can reset significantly. Make sure you can afford the worst-case adjusted payment.",
-            "Skipping the amortization schedule — In the early years of a 30-year loan, most of your payment goes toward interest, not principal. Knowing this helps you decide whether making extra principal payments makes sense.",
-            "Ignoring closing costs — These typically run 2%–5% of the loan amount and need to be paid upfront or rolled into the loan."
-          ]},
-          { "type": "heading", "level": 2, "text": "Run Your Own Numbers" },
-          { "type": "paragraph", "text": "The formula is useful to understand, but there's no need to do this math by hand every time you want to test a scenario. Use our free Mortgage Calculator to model any combination of loan amount, interest rate, term, taxes, and insurance — and get an instant breakdown of your monthly payment, total interest, and amortization schedule." },
-          { "type": "toolCta", "toolName": "Mortgage Calculator", "toolPath": "/tools/finance/mortgage-calculator" },
-          { "type": "paragraph", "text": "Understanding how your mortgage payment is built gives you real power in negotiations and planning. You'll know why locking in a rate that's 0.25% lower is worth fighting for, why putting down 20% saves you more than just the PMI, and why that attractive ARM might be a risk you don't need to take. Run the numbers, compare scenarios, and go into your home purchase with eyes open." }
+          {
+            "type": "paragraph",
+            "text": "Buying a home is probably the largest financial decision most of us will ever make — and yet the monthly payment that shows up on a lender's quote can feel like a mystery. Where does that number come from? Why does a tiny difference in interest rate change it so much? And why is the payment your lender quotes always higher than what you see on a mortgage calculator?"
+          },
+          {
+            "type": "paragraph",
+            "text": "This guide walks you through the actual math behind a mortgage payment, explains every factor that can push your monthly cost up or down, and helps you spot the common mistakes that catch first-time buyers off guard."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "The Core Formula: Principal and Interest"
+          },
+          {
+            "type": "paragraph",
+            "text": "A standard fixed-rate mortgage payment is calculated using a formula that amortizes — or spreads — both the loan principal and the interest evenly across every month of the loan term. The formula looks like this:"
+          },
+          {
+            "type": "callout",
+            "text": "M = P × [r(1+r)^n] / [(1+r)^n − 1]\n\nWhere: M = monthly payment, P = loan principal (amount borrowed), r = monthly interest rate (annual rate ÷ 12), n = total number of payments (years × 12)"
+          },
+          {
+            "type": "paragraph",
+            "text": "Let's make that concrete. Suppose you borrow $300,000 at a 6.5% annual interest rate for 30 years. Your monthly rate r is 6.5% ÷ 12 = 0.5417%, or 0.005417 as a decimal. Your n is 30 × 12 = 360 payments."
+          },
+          {
+            "type": "paragraph",
+            "text": "Plugging in: M = 300,000 × [0.005417 × (1.005417)^360] / [(1.005417)^360 − 1]. The result is approximately $1,896 per month — just for principal and interest. That number might already feel high, but here's the thing: it's not the whole picture."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "What Else Goes Into Your Monthly Payment?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Lenders almost always bundle additional costs into one monthly payment, which is why your actual bill is higher than what the P+I formula gives you. The main add-ons are:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Property taxes — Typically collected monthly by the lender and held in escrow, then paid to your local government annually. On a $400,000 home in many U.S. states, this alone can add $300–$700 per month.",
+              "Homeowners insurance — Your lender requires coverage to protect the property. Budget roughly $100–$200 per month for most homes, though coastal and high-risk areas cost more.",
+              "Private mortgage insurance (PMI) — If your down payment is less than 20%, the lender will require PMI to protect themselves if you default. PMI typically runs 0.5%–1.5% of the loan amount per year, which on a $300,000 loan is $125–$375 added to your monthly bill.",
+              "HOA fees — If you're buying a condo or a home in a managed community, homeowners association fees are separate but still part of your real monthly housing cost."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "When all of these are included, that $1,896 P+I payment on our $300,000 example could realistically become $2,500–$2,800 per month. Always ask your lender for a full loan estimate that includes the escrow breakdown — comparing just the interest rate between lenders without looking at total payment is one of the most common mistakes buyers make."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "How Interest Rate Affects Your Payment"
+          },
+          {
+            "type": "paragraph",
+            "text": "Many people assume a 0.5% difference in interest rate is trivial. It isn't. On a $300,000 loan over 30 years, the difference between a 6.0% and a 6.5% rate adds roughly $97 per month — or nearly $35,000 over the life of the loan. This is why improving your credit score before applying, shopping at least three lenders, and timing your lock carefully can pay off enormously."
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "At 6.0%: monthly P+I ≈ $1,799",
+              "At 6.5%: monthly P+I ≈ $1,896",
+              "At 7.0%: monthly P+I ≈ $1,996"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Loan Term: 30 Years vs. 15 Years"
+          },
+          {
+            "type": "paragraph",
+            "text": "A 15-year mortgage has a much higher monthly payment than a 30-year, but the total interest you pay over the life of the loan can be less than half. Using the same $300,000 at 6.0%:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "30-year: ~$1,799/month, ~$347,000 in total interest",
+              "15-year: ~$2,532/month, ~$155,000 in total interest"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The 15-year saves you nearly $200,000 in interest, but your monthly payment is $733 higher. The right choice depends on your cash flow, job stability, and what else you'd do with that extra money each month."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Common Mistakes to Avoid"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Forgetting taxes and insurance — The P+I formula is just the starting point. Always calculate total housing cost: principal, interest, taxes, insurance, plus PMI and HOA if applicable.",
+              "Shopping by monthly payment instead of total cost — A longer term lowers your monthly payment but dramatically increases total interest paid.",
+              "Not accounting for rate type — Adjustable-rate mortgages (ARMs) start lower but can reset significantly. Make sure you can afford the worst-case adjusted payment.",
+              "Skipping the amortization schedule — In the early years of a 30-year loan, most of your payment goes toward interest, not principal. Knowing this helps you decide whether making extra principal payments makes sense.",
+              "Ignoring closing costs — These typically run 2%–5% of the loan amount and need to be paid upfront or rolled into the loan."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Run Your Own Numbers"
+          },
+          {
+            "type": "paragraph",
+            "text": "The formula is useful to understand, but there's no need to do this math by hand every time you want to test a scenario. Use our free Mortgage Calculator to model any combination of loan amount, interest rate, term, taxes, and insurance — and get an instant breakdown of your monthly payment, total interest, and amortization schedule."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Mortgage Calculator",
+            "toolPath": "/tools/finance/mortgage-calculator"
+          },
+          {
+            "type": "paragraph",
+            "text": "Understanding how your mortgage payment is built gives you real power in negotiations and planning. You'll know why locking in a rate that's 0.25% lower is worth fighting for, why putting down 20% saves you more than just the PMI, and why that attractive ARM might be a risk you don't need to take. Run the numbers, compare scenarios, and go into your home purchase with eyes open."
+          }
         ]
       },
       "bmi-vs-body-fat-percentage": {
@@ -2993,51 +3223,143 @@
         "relatedToolName": "BMI Calculator",
         "relatedToolPath": "/tools/health/bmi-calculator",
         "body": [
-          { "type": "paragraph", "text": "If you've ever had a routine checkup, your doctor probably calculated your BMI. And if you've ever spent time in a gym, you've probably heard someone argue that BMI is meaningless and body fat percentage is the only number that counts. The truth, as is often the case, is more nuanced." },
-          { "type": "paragraph", "text": "Both metrics measure something real — they just measure different things. Knowing what each one actually tells you, and where each one breaks down, helps you make smarter decisions about your health without obsessing over a single number." },
-          { "type": "heading", "level": 2, "text": "What BMI Measures (and What It Doesn't)" },
-          { "type": "paragraph", "text": "BMI, or Body Mass Index, is calculated by dividing your weight in kilograms by the square of your height in meters (kg/m²). It's a population-level screening tool developed in the 19th century by Belgian mathematician Adolphe Quetelet — not a doctor, notably. It was designed to describe the average body proportions of European men, not to diagnose individual health." },
-          { "type": "paragraph", "text": "The standard adult BMI categories are:" },
-          { "type": "list", "ordered": false, "items": [
-            "Under 18.5 — Underweight",
-            "18.5–24.9 — Normal weight",
-            "25.0–29.9 — Overweight",
-            "30.0 and above — Obese"
-          ]},
-          { "type": "paragraph", "text": "What BMI does well: it's free, instant, requires no equipment, and at the population level it correlates reasonably well with health risks like type 2 diabetes, heart disease, and certain cancers. That's why it remains a standard screening tool in clinical settings." },
-          { "type": "paragraph", "text": "What BMI doesn't measure: body composition. BMI has no idea whether your weight comes from muscle, fat, bone, or water. A pound of muscle and a pound of fat weigh exactly the same — BMI treats them identically." },
-          { "type": "heading", "level": 2, "text": "When BMI Can Mislead You" },
-          { "type": "paragraph", "text": "There are specific groups for whom BMI is a genuinely poor indicator of health:" },
-          { "type": "list", "ordered": false, "items": [
-            "Athletes and highly muscular individuals — A competitive rugby player or bodybuilder may have a BMI in the 'overweight' or 'obese' range with very low body fat and excellent cardiovascular health. Their high muscle mass inflates BMI without the associated health risks.",
-            "Older adults — Aging tends to reduce muscle mass (sarcopenia) while fat increases, often without much change in weight. An elderly person might have a 'normal' BMI while carrying a dangerously high proportion of body fat.",
-            "Different ethnic groups — Research has shown that at the same BMI, people of South and East Asian descent tend to carry more body fat and face higher metabolic risk. Some health organizations now recommend lower BMI cutoffs for Asian populations.",
-            "Women vs. men — Women naturally carry more body fat than men at the same BMI due to hormonal and reproductive differences. Two people with identical BMIs may have meaningfully different body fat percentages."
-          ]},
-          { "type": "heading", "level": 2, "text": "What Body Fat Percentage Actually Tells You" },
-          { "type": "paragraph", "text": "Body fat percentage is exactly what it sounds like: the proportion of your total body weight that comes from fat tissue. The rest — muscle, bone, organs, water — is called lean mass or fat-free mass." },
-          { "type": "paragraph", "text": "Healthy body fat ranges vary by sex and age, but rough benchmarks for adults are:" },
-          { "type": "list", "ordered": false, "items": [
-            "Women: 20–35% is generally considered healthy; athletes typically fall in the 14–20% range",
-            "Men: 10–25% is generally healthy; male athletes often sit at 6–13%",
-            "Essential fat (minimum needed for organ function): roughly 3–5% for men, 10–13% for women"
-          ]},
-          { "type": "paragraph", "text": "High body fat — particularly visceral fat stored around the organs rather than subcutaneous fat under the skin — is more directly linked to insulin resistance, inflammation, heart disease, and metabolic syndrome than BMI is. This is why body fat percentage is considered a more meaningful marker of cardiometabolic health." },
-          { "type": "heading", "level": 2, "text": "The Catch: Measuring Body Fat Is Hard" },
-          { "type": "paragraph", "text": "The main reason BMI hasn't been replaced by body fat percentage in clinical settings is that accurate body fat measurement is much more difficult and expensive. The most accurate methods include DEXA scan (a low-dose X-ray), hydrostatic weighing (underwater weighing), and Bod Pod air displacement — none of which are available during a routine checkup." },
-          { "type": "paragraph", "text": "Consumer tools like bioelectrical impedance scales and handheld devices are convenient but notoriously inconsistent — hydration levels, food intake, and time of day can all swing readings by 3–5 percentage points. Skinfold calipers, done by a trained professional, are reasonably accurate but highly user-dependent." },
-          { "type": "heading", "level": 2, "text": "Using Both Metrics Together" },
-          { "type": "paragraph", "text": "The most practical approach is to treat BMI and body fat percentage as complementary tools, not competing ones:" },
-          { "type": "list", "ordered": false, "items": [
-            "Use BMI as a quick, free first screen. If your BMI is in the normal range and you have no other risk factors, that's reassuring — though not conclusive.",
-            "Use body fat percentage (or waist circumference as a proxy) when BMI seems inconsistent with how you look or feel, or when you want to track body composition changes during training.",
-            "Pay attention to waist-to-height ratio — keeping your waist circumference to less than half your height is a simple, validated marker that captures visceral fat risk better than BMI alone."
-          ]},
-          { "type": "callout", "text": "Neither number tells the complete story. Blood pressure, blood glucose, cholesterol, sleep quality, and physical fitness are all equally important health markers — context always matters." },
-          { "type": "heading", "level": 2, "text": "Check Your Own BMI" },
-          { "type": "paragraph", "text": "Want to see where you stand? Use our free BMI Calculator to get your BMI instantly, see which category it falls into, and understand what the number means for your specific situation — including the important caveats." },
-          { "type": "toolCta", "toolName": "BMI Calculator", "toolPath": "/tools/health/bmi-calculator" },
-          { "type": "paragraph", "text": "Ultimately, the goal isn't to optimize a number on a chart — it's to feel strong, have energy, and reduce your long-term risk of chronic disease. BMI and body fat percentage are both imperfect proxies for that goal. Use them as conversation starters, not verdicts." }
+          {
+            "type": "paragraph",
+            "text": "If you've ever had a routine checkup, your doctor probably calculated your BMI. And if you've ever spent time in a gym, you've probably heard someone argue that BMI is meaningless and body fat percentage is the only number that counts. The truth, as is often the case, is more nuanced."
+          },
+          {
+            "type": "paragraph",
+            "text": "Both metrics measure something real — they just measure different things. Knowing what each one actually tells you, and where each one breaks down, helps you make smarter decisions about your health without obsessing over a single number."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "What BMI Measures (and What It Doesn't)"
+          },
+          {
+            "type": "paragraph",
+            "text": "BMI, or Body Mass Index, is calculated by dividing your weight in kilograms by the square of your height in meters (kg/m²). It's a population-level screening tool developed in the 19th century by Belgian mathematician Adolphe Quetelet — not a doctor, notably. It was designed to describe the average body proportions of European men, not to diagnose individual health."
+          },
+          {
+            "type": "paragraph",
+            "text": "The standard adult BMI categories are:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Under 18.5 — Underweight",
+              "18.5–24.9 — Normal weight",
+              "25.0–29.9 — Overweight",
+              "30.0 and above — Obese"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "What BMI does well: it's free, instant, requires no equipment, and at the population level it correlates reasonably well with health risks like type 2 diabetes, heart disease, and certain cancers. That's why it remains a standard screening tool in clinical settings."
+          },
+          {
+            "type": "paragraph",
+            "text": "What BMI doesn't measure: body composition. BMI has no idea whether your weight comes from muscle, fat, bone, or water. A pound of muscle and a pound of fat weigh exactly the same — BMI treats them identically."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "When BMI Can Mislead You"
+          },
+          {
+            "type": "paragraph",
+            "text": "There are specific groups for whom BMI is a genuinely poor indicator of health:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Athletes and highly muscular individuals — A competitive rugby player or bodybuilder may have a BMI in the 'overweight' or 'obese' range with very low body fat and excellent cardiovascular health. Their high muscle mass inflates BMI without the associated health risks.",
+              "Older adults — Aging tends to reduce muscle mass (sarcopenia) while fat increases, often without much change in weight. An elderly person might have a 'normal' BMI while carrying a dangerously high proportion of body fat.",
+              "Different ethnic groups — Research has shown that at the same BMI, people of South and East Asian descent tend to carry more body fat and face higher metabolic risk. Some health organizations now recommend lower BMI cutoffs for Asian populations.",
+              "Women vs. men — Women naturally carry more body fat than men at the same BMI due to hormonal and reproductive differences. Two people with identical BMIs may have meaningfully different body fat percentages."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "What Body Fat Percentage Actually Tells You"
+          },
+          {
+            "type": "paragraph",
+            "text": "Body fat percentage is exactly what it sounds like: the proportion of your total body weight that comes from fat tissue. The rest — muscle, bone, organs, water — is called lean mass or fat-free mass."
+          },
+          {
+            "type": "paragraph",
+            "text": "Healthy body fat ranges vary by sex and age, but rough benchmarks for adults are:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Women: 20–35% is generally considered healthy; athletes typically fall in the 14–20% range",
+              "Men: 10–25% is generally healthy; male athletes often sit at 6–13%",
+              "Essential fat (minimum needed for organ function): roughly 3–5% for men, 10–13% for women"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "High body fat — particularly visceral fat stored around the organs rather than subcutaneous fat under the skin — is more directly linked to insulin resistance, inflammation, heart disease, and metabolic syndrome than BMI is. This is why body fat percentage is considered a more meaningful marker of cardiometabolic health."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "The Catch: Measuring Body Fat Is Hard"
+          },
+          {
+            "type": "paragraph",
+            "text": "The main reason BMI hasn't been replaced by body fat percentage in clinical settings is that accurate body fat measurement is much more difficult and expensive. The most accurate methods include DEXA scan (a low-dose X-ray), hydrostatic weighing (underwater weighing), and Bod Pod air displacement — none of which are available during a routine checkup."
+          },
+          {
+            "type": "paragraph",
+            "text": "Consumer tools like bioelectrical impedance scales and handheld devices are convenient but notoriously inconsistent — hydration levels, food intake, and time of day can all swing readings by 3–5 percentage points. Skinfold calipers, done by a trained professional, are reasonably accurate but highly user-dependent."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Using Both Metrics Together"
+          },
+          {
+            "type": "paragraph",
+            "text": "The most practical approach is to treat BMI and body fat percentage as complementary tools, not competing ones:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Use BMI as a quick, free first screen. If your BMI is in the normal range and you have no other risk factors, that's reassuring — though not conclusive.",
+              "Use body fat percentage (or waist circumference as a proxy) when BMI seems inconsistent with how you look or feel, or when you want to track body composition changes during training.",
+              "Pay attention to waist-to-height ratio — keeping your waist circumference to less than half your height is a simple, validated marker that captures visceral fat risk better than BMI alone."
+            ]
+          },
+          {
+            "type": "callout",
+            "text": "Neither number tells the complete story. Blood pressure, blood glucose, cholesterol, sleep quality, and physical fitness are all equally important health markers — context always matters."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Check Your Own BMI"
+          },
+          {
+            "type": "paragraph",
+            "text": "Want to see where you stand? Use our free BMI Calculator to get your BMI instantly, see which category it falls into, and understand what the number means for your specific situation — including the important caveats."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "BMI Calculator",
+            "toolPath": "/tools/health/bmi-calculator"
+          },
+          {
+            "type": "paragraph",
+            "text": "Ultimately, the goal isn't to optimize a number on a chart — it's to feel strong, have energy, and reduce your long-term risk of chronic disease. BMI and body fat percentage are both imperfect proxies for that goal. Use them as conversation starters, not verdicts."
+          }
         ]
       },
       "how-to-cite-website-apa": {
@@ -3046,44 +3368,133 @@
         "relatedToolName": "Citation Generator",
         "relatedToolPath": "/tools/education/citation-generator",
         "body": [
-          { "type": "paragraph", "text": "Citing a website in APA format trips up even experienced students. The 7th edition (released in 2020 and still current in 2025) changed several rules from the 6th edition — including how to handle URLs, missing authors, and retrieval dates. If you learned APA a few years ago, there's a good chance some of what you know is now out of date." },
-          { "type": "paragraph", "text": "This guide covers everything you need: the correct template, a real step-by-step example, the most common mistakes, and how APA handles the situations that come up most often." },
-          { "type": "heading", "level": 2, "text": "The APA 7th Edition Template for Websites" },
-          { "type": "paragraph", "text": "The basic structure for a webpage or online article in APA 7th edition is:" },
-          { "type": "callout", "text": "Author Last Name, First Initial. (Year, Month Day). Title of the page. Site Name. URL" },
-          { "type": "paragraph", "text": "A few things to note right away: the title of the page is in sentence case (only capitalize the first word and proper nouns), and it is italicized. The site name follows in plain text, and no period goes after the URL." },
-          { "type": "heading", "level": 2, "text": "Step-by-Step Example" },
-          { "type": "paragraph", "text": "Let's walk through a real example. Say you want to cite an article with the following details — Author: Jonathan Amos. Date: March 15, 2024. Title: Scientists find ancient river system under Antarctica. Site: BBC News." },
-          { "type": "list", "ordered": true, "items": [
-            "Author: Write the last name, then a comma, then the first initial followed by a period. → Amos, J.",
-            "Date: Put the year first, then month and day in parentheses, followed by a period. → (2024, March 15).",
-            "Title: Write the full title in sentence case and italicize it. → Scientists find ancient river system under Antarctica.",
-            "Site name: Write the name of the website in plain (non-italic) text, followed by a period. → BBC News.",
-            "URL: Paste the full URL. No angle brackets, no period at the end."
-          ]},
-          { "type": "callout", "text": "Amos, J. (2024, March 15). Scientists find ancient river system under Antarctica. BBC News. https://www.bbc.com/news/science-environment-68593472" },
-          { "type": "heading", "level": 2, "text": "What to Do When There's No Author" },
-          { "type": "paragraph", "text": "Many websites don't list an individual author. In APA 7th edition, when there is no author, move the title to the author position. Keep it italicized, and skip the author field entirely." },
-          { "type": "callout", "text": "Federal student aid overview. (2024, January 10). U.S. Department of Education. https://studentaid.gov/understand-aid/types" },
-          { "type": "heading", "level": 2, "text": "What to Do When There's No Date" },
-          { "type": "paragraph", "text": "If a webpage has no publication or update date, use \"n.d.\" (which stands for \"no date\") in the date position:" },
-          { "type": "callout", "text": "Author Last Name, First Initial. (n.d.). Title of the page. Site Name. URL" },
-          { "type": "heading", "level": 2, "text": "Do You Need a Retrieval Date?" },
-          { "type": "paragraph", "text": "In APA 6th edition, you often included a retrieval date (\"Retrieved March 10, 2024, from...\"). APA 7th edition dropped this requirement for most sources. You only need a retrieval date if the content is designed to change over time and there is no archive — things like live database entries or wiki pages that are frequently updated. For standard articles and web pages, leave it out." },
-          { "type": "heading", "level": 2, "text": "Common APA Citation Mistakes" },
-          { "type": "list", "ordered": false, "items": [
-            "Wrong capitalization in the title — APA uses sentence case, not title case. 'How to Write a Literature Review' should be 'How to write a literature review' (except for proper nouns).",
-            "Forgetting to italicize the page title — Webpage titles are italicized; the site name is not.",
-            "Adding a period after the URL — The URL is the final element and takes no period.",
-            "Using 6th edition rules — APA 7th edition removed the publisher location for books and changed how DOIs and URLs are formatted. If your style guide was written before 2020, double-check it.",
-            "Treating 'no author' as 'Anonymous' — APA 7th edition does not use [Anonymous] as an author placeholder. If there is genuinely no author, move the title to the author position."
-          ]},
-          { "type": "heading", "level": 2, "text": "APA vs. MLA: The Quick Difference" },
-          { "type": "paragraph", "text": "Students frequently confuse APA and MLA format. The key differences for websites: APA puts the year right after the author and uses initials for first names; MLA puts the full first name and puts the date at the end. APA italicizes the page title; MLA puts it in quotation marks. If your class or institution specifies a style, use that one — they are not interchangeable." },
-          { "type": "heading", "level": 2, "text": "Generate Your Citation Automatically" },
-          { "type": "paragraph", "text": "If you're working on a paper with multiple sources, doing this manually for every citation gets tedious fast. Use our free Citation Generator to create properly formatted APA 7th edition citations — as well as MLA, Chicago, and ABNT — in seconds." },
-          { "type": "toolCta", "toolName": "Citation Generator", "toolPath": "/tools/education/citation-generator" },
-          { "type": "paragraph", "text": "Getting citations right matters — not just because your professor checks them, but because proper attribution is the foundation of academic honesty and gives readers a clear path back to your sources. Take the extra minute to do it correctly." }
+          {
+            "type": "paragraph",
+            "text": "Citing a website in APA format trips up even experienced students. The 7th edition (released in 2020 and still current in 2025) changed several rules from the 6th edition — including how to handle URLs, missing authors, and retrieval dates. If you learned APA a few years ago, there's a good chance some of what you know is now out of date."
+          },
+          {
+            "type": "paragraph",
+            "text": "This guide covers everything you need: the correct template, a real step-by-step example, the most common mistakes, and how APA handles the situations that come up most often."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "The APA 7th Edition Template for Websites"
+          },
+          {
+            "type": "paragraph",
+            "text": "The basic structure for a webpage or online article in APA 7th edition is:"
+          },
+          {
+            "type": "callout",
+            "text": "Author Last Name, First Initial. (Year, Month Day). Title of the page. Site Name. URL"
+          },
+          {
+            "type": "paragraph",
+            "text": "A few things to note right away: the title of the page is in sentence case (only capitalize the first word and proper nouns), and it is italicized. The site name follows in plain text, and no period goes after the URL."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Step-by-Step Example"
+          },
+          {
+            "type": "paragraph",
+            "text": "Let's walk through a real example. Say you want to cite an article with the following details — Author: Jonathan Amos. Date: March 15, 2024. Title: Scientists find ancient river system under Antarctica. Site: BBC News."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Author: Write the last name, then a comma, then the first initial followed by a period. → Amos, J.",
+              "Date: Put the year first, then month and day in parentheses, followed by a period. → (2024, March 15).",
+              "Title: Write the full title in sentence case and italicize it. → Scientists find ancient river system under Antarctica.",
+              "Site name: Write the name of the website in plain (non-italic) text, followed by a period. → BBC News.",
+              "URL: Paste the full URL. No angle brackets, no period at the end."
+            ]
+          },
+          {
+            "type": "callout",
+            "text": "Amos, J. (2024, March 15). Scientists find ancient river system under Antarctica. BBC News. https://www.bbc.com/news/science-environment-68593472"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "What to Do When There's No Author"
+          },
+          {
+            "type": "paragraph",
+            "text": "Many websites don't list an individual author. In APA 7th edition, when there is no author, move the title to the author position. Keep it italicized, and skip the author field entirely."
+          },
+          {
+            "type": "callout",
+            "text": "Federal student aid overview. (2024, January 10). U.S. Department of Education. https://studentaid.gov/understand-aid/types"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "What to Do When There's No Date"
+          },
+          {
+            "type": "paragraph",
+            "text": "If a webpage has no publication or update date, use \"n.d.\" (which stands for \"no date\") in the date position:"
+          },
+          {
+            "type": "callout",
+            "text": "Author Last Name, First Initial. (n.d.). Title of the page. Site Name. URL"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Do You Need a Retrieval Date?"
+          },
+          {
+            "type": "paragraph",
+            "text": "In APA 6th edition, you often included a retrieval date (\"Retrieved March 10, 2024, from...\"). APA 7th edition dropped this requirement for most sources. You only need a retrieval date if the content is designed to change over time and there is no archive — things like live database entries or wiki pages that are frequently updated. For standard articles and web pages, leave it out."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Common APA Citation Mistakes"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Wrong capitalization in the title — APA uses sentence case, not title case. 'How to Write a Literature Review' should be 'How to write a literature review' (except for proper nouns).",
+              "Forgetting to italicize the page title — Webpage titles are italicized; the site name is not.",
+              "Adding a period after the URL — The URL is the final element and takes no period.",
+              "Using 6th edition rules — APA 7th edition removed the publisher location for books and changed how DOIs and URLs are formatted. If your style guide was written before 2020, double-check it.",
+              "Treating 'no author' as 'Anonymous' — APA 7th edition does not use [Anonymous] as an author placeholder. If there is genuinely no author, move the title to the author position."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "APA vs. MLA: The Quick Difference"
+          },
+          {
+            "type": "paragraph",
+            "text": "Students frequently confuse APA and MLA format. The key differences for websites: APA puts the year right after the author and uses initials for first names; MLA puts the full first name and puts the date at the end. APA italicizes the page title; MLA puts it in quotation marks. If your class or institution specifies a style, use that one — they are not interchangeable."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Generate Your Citation Automatically"
+          },
+          {
+            "type": "paragraph",
+            "text": "If you're working on a paper with multiple sources, doing this manually for every citation gets tedious fast. Use our free Citation Generator to create properly formatted APA 7th edition citations — as well as MLA, Chicago, and ABNT — in seconds."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Citation Generator",
+            "toolPath": "/tools/education/citation-generator"
+          },
+          {
+            "type": "paragraph",
+            "text": "Getting citations right matters — not just because your professor checks them, but because proper attribution is the foundation of academic honesty and gives readers a clear path back to your sources. Take the extra minute to do it correctly."
+          }
         ]
       },
       "word-count-guide": {
@@ -3092,57 +3503,144 @@
         "relatedToolName": "Word Counter",
         "relatedToolPath": "/tools/text/word-counter",
         "body": [
-          { "type": "paragraph", "text": "Ask ten content strategists how long a blog post should be and you'll get ten different answers. Some will say 1,500 words minimum, others will cite research showing that long-form posts above 3,000 words dominate Google's first page. Meanwhile, your English professor insists on exactly 1,000 words, and every piece of email advice you've ever read says keep it under 200." },
-          { "type": "paragraph", "text": "The frustrating truth is that all of them can be right — because ideal word count depends entirely on what you're writing, who you're writing for, and what you want to happen when they read it. Here's a practical breakdown for the content types most people write." },
-          { "type": "heading", "level": 2, "text": "Blog Posts and Long-Form Articles" },
-          { "type": "paragraph", "text": "For SEO-focused content, longer tends to perform better — up to a point. Analysis of Google's top-ranking pages consistently shows that posts between 1,500 and 2,500 words rank well for competitive keywords, and posts over 3,000 words earn more backlinks on average, likely because they're more comprehensive and thus more shareable among other writers." },
-          { "type": "paragraph", "text": "However, longer only helps if the extra words add genuine value. Google's helpful content guidance explicitly penalizes content that's padded to hit a length target. Padding — repeating the same point, adding filler sections, burying the answer in the fifth paragraph — hurts both your ranking and your reader's experience." },
-          { "type": "list", "ordered": false, "items": [
-            "News or opinion piece: 400–800 words — say the thing and stop",
-            "How-to guide or tutorial: 1,200–2,000 words — enough for step-by-step detail without padding",
-            "Comprehensive pillar content or ultimate guide: 2,500–4,000 words — only if the topic genuinely requires it",
-            "Listicle: 1,000–1,500 words — brief per-item descriptions, skimmable"
-          ]},
-          { "type": "heading", "level": 2, "text": "Academic Essays" },
-          { "type": "paragraph", "text": "Academic writing has a different priority than blog writing: demonstrating depth of argument, not ranking on Google. Most professors set explicit word counts, and the right approach is to hit the range — not significantly under, not significantly over." },
-          { "type": "list", "ordered": false, "items": [
-            "Short response or reflection: 250–500 words",
-            "Standard undergraduate essay: 1,000–2,000 words",
-            "Research paper: 3,000–6,000 words",
-            "Dissertation chapter: 8,000–12,000 words per chapter",
-            "Full dissertation or thesis: 15,000–80,000 words depending on level and discipline"
-          ]},
-          { "type": "paragraph", "text": "One underrated rule for academic writing: never repeat your introduction in your conclusion. Restating what you just said is the easiest way to inflate a word count, and experienced readers always notice. If you're consistently coming up short, your argument probably needs more evidence, not more summary." },
-          { "type": "heading", "level": 2, "text": "Emails" },
-          { "type": "paragraph", "text": "Email is the one content type where shorter is almost always better — and where most professionals consistently write too much. Research on email response rates shows that emails between 50 and 125 words receive the highest reply rates. That's roughly four to eight short sentences." },
-          { "type": "list", "ordered": false, "items": [
-            "Quick request or question: 50–100 words",
-            "Business proposal or pitch email: 150–250 words",
-            "Newsletter (single topic): 200–400 words",
-            "Newsletter (multi-section digest): 500–800 words"
-          ]},
-          { "type": "paragraph", "text": "The most common email mistake is burying the request. Front-load what you need. If you want someone to review a document, say so in sentence one — not after three paragraphs of context." },
-          { "type": "heading", "level": 2, "text": "Social Media Posts" },
-          { "type": "paragraph", "text": "Social platforms have their own rhythms, and word counts that work on one platform bomb on another:" },
-          { "type": "list", "ordered": false, "items": [
-            "X / X: 71–100 characters gets higher engagement than full 280-character posts — shorter wins",
-            "LinkedIn: 1,300–2,000 characters for a native post that drives comments (about 200–300 words)",
-            "Instagram caption: 138–150 characters above the fold is what most users read; the full caption can be longer for hashtags",
-            "Facebook: 40–80 words for highest engagement on organic posts"
-          ]},
-          { "type": "heading", "level": 2, "text": "Why Readability Matters More Than Raw Word Count" },
-          { "type": "paragraph", "text": "Word count is a proxy for effort, not quality. A 500-word article written at an eighth-grade reading level with clear subheadings will outperform a 2,000-word wall of text every time — in both search rankings and reader satisfaction." },
-          { "type": "paragraph", "text": "Things that make a piece feel longer or shorter than its actual word count:" },
-          { "type": "list", "ordered": false, "items": [
-            "Paragraph length — Two-sentence paragraphs read faster and feel less intimidating than eight-sentence blocks",
-            "Sentence length — Varying short and long sentences keeps readers from scanning past you",
-            "Subheadings — They let skimmers decide which sections to actually read",
-            "Passive voice — It adds words without adding meaning: 'The report was written by the team' vs. 'The team wrote the report'"
-          ]},
-          { "type": "heading", "level": 2, "text": "Track Your Word Count as You Write" },
-          { "type": "paragraph", "text": "Whether you're targeting a specific count for SEO, staying within a professor's assignment limit, or trying to keep an email from becoming an essay, keeping an eye on word count while you write is easier than editing down afterward. Use our free Word Counter to get a real-time word, character, sentence, and paragraph count for any text." },
-          { "type": "toolCta", "toolName": "Word Counter", "toolPath": "/tools/text/word-counter" },
-          { "type": "paragraph", "text": "The best word count for any piece of writing is the minimum number of words needed to serve the reader completely. Everything else is just noise." }
+          {
+            "type": "paragraph",
+            "text": "Ask ten content strategists how long a blog post should be and you'll get ten different answers. Some will say 1,500 words minimum, others will cite research showing that long-form posts above 3,000 words dominate Google's first page. Meanwhile, your English professor insists on exactly 1,000 words, and every piece of email advice you've ever read says keep it under 200."
+          },
+          {
+            "type": "paragraph",
+            "text": "The frustrating truth is that all of them can be right — because ideal word count depends entirely on what you're writing, who you're writing for, and what you want to happen when they read it. Here's a practical breakdown for the content types most people write."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Blog Posts and Long-Form Articles"
+          },
+          {
+            "type": "paragraph",
+            "text": "For SEO-focused content, longer tends to perform better — up to a point. Analysis of Google's top-ranking pages consistently shows that posts between 1,500 and 2,500 words rank well for competitive keywords, and posts over 3,000 words earn more backlinks on average, likely because they're more comprehensive and thus more shareable among other writers."
+          },
+          {
+            "type": "paragraph",
+            "text": "However, longer only helps if the extra words add genuine value. Google's helpful content guidance explicitly penalizes content that's padded to hit a length target. Padding — repeating the same point, adding filler sections, burying the answer in the fifth paragraph — hurts both your ranking and your reader's experience."
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "News or opinion piece: 400–800 words — say the thing and stop",
+              "How-to guide or tutorial: 1,200–2,000 words — enough for step-by-step detail without padding",
+              "Comprehensive pillar content or ultimate guide: 2,500–4,000 words — only if the topic genuinely requires it",
+              "Listicle: 1,000–1,500 words — brief per-item descriptions, skimmable"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Academic Essays"
+          },
+          {
+            "type": "paragraph",
+            "text": "Academic writing has a different priority than blog writing: demonstrating depth of argument, not ranking on Google. Most professors set explicit word counts, and the right approach is to hit the range — not significantly under, not significantly over."
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Short response or reflection: 250–500 words",
+              "Standard undergraduate essay: 1,000–2,000 words",
+              "Research paper: 3,000–6,000 words",
+              "Dissertation chapter: 8,000–12,000 words per chapter",
+              "Full dissertation or thesis: 15,000–80,000 words depending on level and discipline"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "One underrated rule for academic writing: never repeat your introduction in your conclusion. Restating what you just said is the easiest way to inflate a word count, and experienced readers always notice. If you're consistently coming up short, your argument probably needs more evidence, not more summary."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Emails"
+          },
+          {
+            "type": "paragraph",
+            "text": "Email is the one content type where shorter is almost always better — and where most professionals consistently write too much. Research on email response rates shows that emails between 50 and 125 words receive the highest reply rates. That's roughly four to eight short sentences."
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Quick request or question: 50–100 words",
+              "Business proposal or pitch email: 150–250 words",
+              "Newsletter (single topic): 200–400 words",
+              "Newsletter (multi-section digest): 500–800 words"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The most common email mistake is burying the request. Front-load what you need. If you want someone to review a document, say so in sentence one — not after three paragraphs of context."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Social Media Posts"
+          },
+          {
+            "type": "paragraph",
+            "text": "Social platforms have their own rhythms, and word counts that work on one platform bomb on another:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "X / X: 71–100 characters gets higher engagement than full 280-character posts — shorter wins",
+              "LinkedIn: 1,300–2,000 characters for a native post that drives comments (about 200–300 words)",
+              "Instagram caption: 138–150 characters above the fold is what most users read; the full caption can be longer for hashtags",
+              "Facebook: 40–80 words for highest engagement on organic posts"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Why Readability Matters More Than Raw Word Count"
+          },
+          {
+            "type": "paragraph",
+            "text": "Word count is a proxy for effort, not quality. A 500-word article written at an eighth-grade reading level with clear subheadings will outperform a 2,000-word wall of text every time — in both search rankings and reader satisfaction."
+          },
+          {
+            "type": "paragraph",
+            "text": "Things that make a piece feel longer or shorter than its actual word count:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Paragraph length — Two-sentence paragraphs read faster and feel less intimidating than eight-sentence blocks",
+              "Sentence length — Varying short and long sentences keeps readers from scanning past you",
+              "Subheadings — They let skimmers decide which sections to actually read",
+              "Passive voice — It adds words without adding meaning: 'The report was written by the team' vs. 'The team wrote the report'"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Track Your Word Count as You Write"
+          },
+          {
+            "type": "paragraph",
+            "text": "Whether you're targeting a specific count for SEO, staying within a professor's assignment limit, or trying to keep an email from becoming an essay, keeping an eye on word count while you write is easier than editing down afterward. Use our free Word Counter to get a real-time word, character, sentence, and paragraph count for any text."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Word Counter",
+            "toolPath": "/tools/text/word-counter"
+          },
+          {
+            "type": "paragraph",
+            "text": "The best word count for any piece of writing is the minimum number of words needed to serve the reader completely. Everything else is just noise."
+          }
         ]
       },
       "average-typing-speed": {
@@ -3151,39 +3649,128 @@
         "relatedToolName": "Typing Test",
         "relatedToolPath": "/tools/fun/typing-test",
         "body": [
-          { "type": "paragraph", "text": "Most of us spend several hours a day typing — emails, documents, messages, code — and yet very few people have ever deliberately tried to get better at it. Typing speed is one of those skills that seems fixed, like handwriting, when in reality it's highly trainable. A few focused weeks of practice can add 20–30 WPM to your speed, which compounds into hours saved every year." },
-          { "type": "paragraph", "text": "Before you can improve, it helps to know where you stand and what 'good' actually looks like across different professions and age groups." },
-          { "type": "heading", "level": 2, "text": "What Is the Average Typing Speed?" },
-          { "type": "paragraph", "text": "The average typing speed for an adult is approximately 40 words per minute (WPM) with around 92% accuracy. This varies by age group, profession, and how much someone types as part of their daily routine:" },
-          { "type": "list", "ordered": false, "items": [
-            "General adults: 38–44 WPM",
-            "College students: 40–50 WPM (more daily typing from coursework)",
-            "Office workers and professionals: 55–70 WPM",
-            "Programmers and developers: 50–70 WPM (lower than expected due to special characters and syntax pauses)",
-            "Transcriptionists and data entry specialists: 70–100+ WPM (professional requirement)",
-            "World record holders: 200–300+ WPM (peak burst speeds, not sustained)"
-          ]},
-          { "type": "paragraph", "text": "For most knowledge workers, hitting 60–70 WPM with high accuracy is a practical goal that noticeably reduces friction in daily work. Above 80 WPM, typing stops being a bottleneck for most tasks — your thinking becomes the limiting factor, not your fingers." },
-          { "type": "heading", "level": 2, "text": "How Typing Speed Affects Productivity" },
-          { "type": "paragraph", "text": "At 40 WPM, typing 1,000 words takes about 25 minutes. At 80 WPM, it takes about 12–13 minutes. Over a full workday of writing-heavy tasks, that difference can add up to an hour or more of recovered time." },
-          { "type": "paragraph", "text": "But raw speed isn't the only thing that matters. Accuracy is equally — arguably more — important. A typist who hits 80 WPM with 95% accuracy will need to stop and correct frequently, which breaks focus and slows effective output. Aim for accuracy first, then let speed follow naturally." },
-          { "type": "callout", "text": "A good target ratio: accuracy over 98% at your current speed before trying to push faster. Rushing before you're accurate just trains bad habits." },
-          { "type": "heading", "level": 2, "text": "The Techniques That Actually Work" },
-          { "type": "heading", "level": 3, "text": "1. Commit to the Home Row" },
-          { "type": "paragraph", "text": "The home row — ASDF on the left hand, JKL; on the right — is the foundation of touch typing. Every finger has a designated starting position and a set of keys it's responsible for. Typing without this system means you're hunting for keys, which caps your speed around 30–40 WPM permanently." },
-          { "type": "paragraph", "text": "If you don't already touch-type, transitioning will feel painfully slow for two to four weeks. You will go from your current speed down to 15–20 WPM before climbing back up past where you started. That dip is worth it — touch typists plateau significantly higher than hunt-and-peck typists." },
-          { "type": "heading", "level": 3, "text": "2. Stop Looking at the Keyboard" },
-          { "type": "paragraph", "text": "Looking down at your hands while you type forces you to split your attention between the screen and the keyboard, which slows you down and increases errors. Covering your hands with a cloth, using a blank keyboard, or simply forcing yourself to keep your eyes on the screen are all techniques that accelerate muscle memory formation." },
-          { "type": "heading", "level": 3, "text": "3. Practice in Short Bursts, Not Long Sessions" },
-          { "type": "paragraph", "text": "Spaced repetition works for typing just as it does for language learning. Three focused 10-minute sessions throughout the day produce faster improvement than one 30-minute block, because your motor memory consolidates between sessions. This makes typing practice highly compatible with a busy schedule — a few minutes during a coffee break is genuinely effective." },
-          { "type": "heading", "level": 3, "text": "4. Slow Down to Speed Up" },
-          { "type": "paragraph", "text": "Counter-intuitive but true: the fastest way to increase your top speed is to practice at a pace just below your comfortable limit and focus entirely on accuracy. Reaching for speed before accuracy is the single most common mistake in self-taught typing practice. Your brain encodes whatever you repeat — including errors." },
-          { "type": "heading", "level": 3, "text": "5. Identify and Drill Your Problem Keys" },
-          { "type": "paragraph", "text": "Most people have five to ten key combinations that consistently trip them up — common ones include reaching for 'b' with the wrong finger, mistyping 'the' as 'teh', or fumbling on quotation marks and semicolons. Targeted practice on your personal weak spots produces faster gains than general practice." },
-          { "type": "heading", "level": 2, "text": "Measure Where You Are Now" },
-          { "type": "paragraph", "text": "You can't improve what you don't measure. Use our free Typing Test to find out your exact WPM and accuracy score right now, then use it as a benchmark as you practice. The test takes 60 seconds and gives you an immediate read on both speed and accuracy." },
-          { "type": "toolCta", "toolName": "Typing Test", "toolPath": "/tools/fun/typing-test" },
-          { "type": "paragraph", "text": "Typing is a skill, not a fixed trait. At 40 WPM, you're average. At 70 WPM, you're noticeably faster than most colleagues. At 90+ WPM, typing simply stops being something you think about. Pick up the home row, stop peeking at the keyboard, and give it a few deliberate weeks — the improvement will surprise you." }
+          {
+            "type": "paragraph",
+            "text": "Most of us spend several hours a day typing — emails, documents, messages, code — and yet very few people have ever deliberately tried to get better at it. Typing speed is one of those skills that seems fixed, like handwriting, when in reality it's highly trainable. A few focused weeks of practice can add 20–30 WPM to your speed, which compounds into hours saved every year."
+          },
+          {
+            "type": "paragraph",
+            "text": "Before you can improve, it helps to know where you stand and what 'good' actually looks like across different professions and age groups."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "What Is the Average Typing Speed?"
+          },
+          {
+            "type": "paragraph",
+            "text": "The average typing speed for an adult is approximately 40 words per minute (WPM) with around 92% accuracy. This varies by age group, profession, and how much someone types as part of their daily routine:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "General adults: 38–44 WPM",
+              "College students: 40–50 WPM (more daily typing from coursework)",
+              "Office workers and professionals: 55–70 WPM",
+              "Programmers and developers: 50–70 WPM (lower than expected due to special characters and syntax pauses)",
+              "Transcriptionists and data entry specialists: 70–100+ WPM (professional requirement)",
+              "World record holders: 200–300+ WPM (peak burst speeds, not sustained)"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "For most knowledge workers, hitting 60–70 WPM with high accuracy is a practical goal that noticeably reduces friction in daily work. Above 80 WPM, typing stops being a bottleneck for most tasks — your thinking becomes the limiting factor, not your fingers."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "How Typing Speed Affects Productivity"
+          },
+          {
+            "type": "paragraph",
+            "text": "At 40 WPM, typing 1,000 words takes about 25 minutes. At 80 WPM, it takes about 12–13 minutes. Over a full workday of writing-heavy tasks, that difference can add up to an hour or more of recovered time."
+          },
+          {
+            "type": "paragraph",
+            "text": "But raw speed isn't the only thing that matters. Accuracy is equally — arguably more — important. A typist who hits 80 WPM with 95% accuracy will need to stop and correct frequently, which breaks focus and slows effective output. Aim for accuracy first, then let speed follow naturally."
+          },
+          {
+            "type": "callout",
+            "text": "A good target ratio: accuracy over 98% at your current speed before trying to push faster. Rushing before you're accurate just trains bad habits."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "The Techniques That Actually Work"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "1. Commit to the Home Row"
+          },
+          {
+            "type": "paragraph",
+            "text": "The home row — ASDF on the left hand, JKL; on the right — is the foundation of touch typing. Every finger has a designated starting position and a set of keys it's responsible for. Typing without this system means you're hunting for keys, which caps your speed around 30–40 WPM permanently."
+          },
+          {
+            "type": "paragraph",
+            "text": "If you don't already touch-type, transitioning will feel painfully slow for two to four weeks. You will go from your current speed down to 15–20 WPM before climbing back up past where you started. That dip is worth it — touch typists plateau significantly higher than hunt-and-peck typists."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "2. Stop Looking at the Keyboard"
+          },
+          {
+            "type": "paragraph",
+            "text": "Looking down at your hands while you type forces you to split your attention between the screen and the keyboard, which slows you down and increases errors. Covering your hands with a cloth, using a blank keyboard, or simply forcing yourself to keep your eyes on the screen are all techniques that accelerate muscle memory formation."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "3. Practice in Short Bursts, Not Long Sessions"
+          },
+          {
+            "type": "paragraph",
+            "text": "Spaced repetition works for typing just as it does for language learning. Three focused 10-minute sessions throughout the day produce faster improvement than one 30-minute block, because your motor memory consolidates between sessions. This makes typing practice highly compatible with a busy schedule — a few minutes during a coffee break is genuinely effective."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "4. Slow Down to Speed Up"
+          },
+          {
+            "type": "paragraph",
+            "text": "Counter-intuitive but true: the fastest way to increase your top speed is to practice at a pace just below your comfortable limit and focus entirely on accuracy. Reaching for speed before accuracy is the single most common mistake in self-taught typing practice. Your brain encodes whatever you repeat — including errors."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "5. Identify and Drill Your Problem Keys"
+          },
+          {
+            "type": "paragraph",
+            "text": "Most people have five to ten key combinations that consistently trip them up — common ones include reaching for 'b' with the wrong finger, mistyping 'the' as 'teh', or fumbling on quotation marks and semicolons. Targeted practice on your personal weak spots produces faster gains than general practice."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Measure Where You Are Now"
+          },
+          {
+            "type": "paragraph",
+            "text": "You can't improve what you don't measure. Use our free Typing Test to find out your exact WPM and accuracy score right now, then use it as a benchmark as you practice. The test takes 60 seconds and gives you an immediate read on both speed and accuracy."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Typing Test",
+            "toolPath": "/tools/fun/typing-test"
+          },
+          {
+            "type": "paragraph",
+            "text": "Typing is a skill, not a fixed trait. At 40 WPM, you're average. At 70 WPM, you're noticeably faster than most colleagues. At 90+ WPM, typing simply stops being something you think about. Pick up the home row, stop peeking at the keyboard, and give it a few deliberate weeks — the improvement will surprise you."
+          }
         ]
       }
     }
