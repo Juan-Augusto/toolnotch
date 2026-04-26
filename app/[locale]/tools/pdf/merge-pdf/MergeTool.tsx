@@ -26,10 +26,18 @@ import { mergePDFs } from "@/lib/pdfMerge";
 import { PDFJob } from "@/lib/pdfTypes";
 import type { FaqItem } from "@/components/FaqSection";
 
+interface RichContent {
+  whatIs: string;
+  howToUse: string[];
+  whyItMatters: string;
+  proTip: string;
+}
+
 interface Props {
   title: string;
   description: string;
   faqs: FaqItem[];
+  richContent?: RichContent;
 }
 
 interface SortableItemProps {
@@ -74,7 +82,7 @@ function SortableItem({ id, name, onRemove }: SortableItemProps) {
   );
 }
 
-export default function MergeTool({ title, description, faqs }: Props) {
+export default function MergeTool({ title, description, faqs, richContent }: Props) {
   const t = useTranslations("pdf.merge");
   const [jobs, setJobs] = useState<(PDFJob & { id: string })[]>([]);
   const [loading, setLoading] = useState(false);
@@ -134,6 +142,7 @@ export default function MergeTool({ title, description, faqs }: Props) {
       breadcrumbLabel={title}
       faqs={faqs}
       adSlot="1234567890"
+      richContent={richContent}
     >
       {/* Drop Zone */}
       <div

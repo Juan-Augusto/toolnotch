@@ -4,11 +4,19 @@ import { useState } from 'react'
 import ToolWrapper from '@/components/ToolWrapper'
 import type { FaqItem } from '@/components/FaqSection'
 
+interface RichContent {
+  whatIs: string
+  howToUse: string[]
+  whyItMatters: string
+  proTip: string
+}
+
 interface Props {
   title: string
   description: string
   faqs: FaqItem[]
   labels: Record<string, string>
+  richContent?: RichContent
 }
 
 function addDays(date: Date, days: number): Date {
@@ -32,7 +40,7 @@ function getWeekdays(start: Date, end: Date): Date[] {
   return days
 }
 
-export default function SprintDateCalculatorClient({ title, description, faqs, labels }: Props) {
+export default function SprintDateCalculatorClient({ title, description, faqs, labels, richContent }: Props) {
   const today = new Date().toISOString().split('T')[0]
   const [startDate, setStartDate] = useState(today)
   const [sprintWeeks, setSprintWeeks] = useState(2)
@@ -78,7 +86,7 @@ export default function SprintDateCalculatorClient({ title, description, faqs, l
   }
 
   return (
-    <ToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} adSlot="sprint-date-calculator">
+    <ToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} adSlot="sprint-date-calculator" richContent={richContent}>
       <div className="max-w-2xl mx-auto space-y-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>

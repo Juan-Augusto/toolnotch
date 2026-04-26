@@ -9,13 +9,21 @@ import { splitPDF } from "@/lib/pdfSplit";
 import { PageRange } from "@/lib/pdfTypes";
 import type { FaqItem } from "@/components/FaqSection";
 
+interface RichContent {
+  whatIs: string;
+  howToUse: string[];
+  whyItMatters: string;
+  proTip: string;
+}
+
 interface Props {
   title: string;
   description: string;
   faqs: FaqItem[];
+  richContent?: RichContent;
 }
 
-export default function SplitTool({ title, description, faqs }: Props) {
+export default function SplitTool({ title, description, faqs, richContent }: Props) {
   const t = useTranslations("pdf.split");
   const [file, setFile] = useState<File | null>(null);
   const [rangeInput, setRangeInput] = useState("");
@@ -71,6 +79,7 @@ export default function SplitTool({ title, description, faqs }: Props) {
       breadcrumbLabel={title}
       faqs={faqs}
       adSlot="1234567891"
+      richContent={richContent}
     >
       <div
         className="border-2 border-dashed border-blue-300 rounded-xl p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-4 dark:border-blue-700 dark:hover:bg-blue-900/20"

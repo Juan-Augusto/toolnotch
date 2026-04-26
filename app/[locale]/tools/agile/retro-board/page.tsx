@@ -5,6 +5,13 @@ import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/sc
 import type { FaqItem } from '@/components/FaqSection'
 import RetroBoardTool from './RetroBoardTool'
 
+interface RichContent {
+  whatIs: string
+  howToUse: string[]
+  whyItMatters: string
+  proTip: string
+}
+
 const PATH = '/tools/agile/retro-board'
 
 interface Props { params: Promise<{ locale: string }> }
@@ -23,6 +30,7 @@ export default async function RetroBoardPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'agile.retroBoard' })
   const faqs = t.raw('faqs') as FaqItem[]
+  const richContent = t.raw('richContent') as RichContent
 
   const jsonLd = buildJsonLd(
     webAppSchema(t('title'), PATH, t('metaDescription'), locale),
@@ -41,6 +49,7 @@ export default async function RetroBoardPage({ params }: Props) {
         title={t('title')}
         description={t('description')}
         faqs={faqs}
+        richContent={richContent}
         columns={{
           wentWell: t('columns.wentWell'),
           toImprove: t('columns.toImprove'),

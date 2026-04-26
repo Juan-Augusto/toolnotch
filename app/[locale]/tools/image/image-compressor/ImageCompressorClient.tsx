@@ -11,11 +11,19 @@ import { compressImage } from '@/lib/imageConversion'
 import type { SupportedFormat, ConversionResult } from '@/lib/imageTypes'
 import type { FaqItem } from '@/components/FaqSection'
 
+interface RichContent {
+  whatIs: string
+  howToUse: string[]
+  whyItMatters: string
+  proTip: string
+}
+
 interface Props {
   defaultFormat?: SupportedFormat
   title: string
   description: string
   faqs: FaqItem[]
+  richContent?: RichContent
 }
 
 export default function ImageCompressorClient({
@@ -23,6 +31,7 @@ export default function ImageCompressorClient({
   title,
   description,
   faqs,
+  richContent,
 }: Props) {
   const t = useTranslations('image.compressor')
   const [file, setFile] = useState<File | null>(null)
@@ -60,6 +69,7 @@ export default function ImageCompressorClient({
       breadcrumbLabel={title}
       faqs={faqs}
       adSlot="1234567890"
+      richContent={richContent}
     >
       <div className="space-y-4">
         <DropZone onFile={handleFile} currentFile={file} />

@@ -8,13 +8,21 @@ import ToolWrapper from "@/components/ToolWrapper";
 import { pdfToImages } from "@/lib/pdfToImage";
 import type { FaqItem } from "@/components/FaqSection";
 
+interface RichContent {
+  whatIs: string;
+  howToUse: string[];
+  whyItMatters: string;
+  proTip: string;
+}
+
 interface Props {
   title: string;
   description: string;
   faqs: FaqItem[];
+  richContent?: RichContent;
 }
 
-export default function PdfToJpgTool({ title, description, faqs }: Props) {
+export default function PdfToJpgTool({ title, description, faqs, richContent }: Props) {
   const t = useTranslations("pdf.pdfToJpg");
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -64,6 +72,7 @@ export default function PdfToJpgTool({ title, description, faqs }: Props) {
       breadcrumbLabel={title}
       faqs={faqs}
       adSlot="1234567893"
+      richContent={richContent}
     >
       <div
         className="border-2 border-dashed border-blue-300 rounded-xl p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-4"

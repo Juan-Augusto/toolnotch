@@ -5,6 +5,13 @@ import { ThumbsUp, Trash2, Plus, Download, RefreshCw } from 'lucide-react'
 import ToolWrapper from '@/components/ToolWrapper'
 import type { FaqItem } from '@/components/FaqSection'
 
+interface RichContent {
+  whatIs: string
+  howToUse: string[]
+  whyItMatters: string
+  proTip: string
+}
+
 interface Note {
   id: string
   text: string
@@ -47,13 +54,14 @@ interface Props {
     exportHeading: string
     copiedToast: string
   }
+  richContent?: RichContent
 }
 
 function makeId() {
   return Math.random().toString(36).slice(2, 10)
 }
 
-export default function RetroBoardTool({ title, description, faqs, columns, labels }: Props) {
+export default function RetroBoardTool({ title, description, faqs, columns, labels, richContent }: Props) {
   const [board, setBoard] = useState<Board>({ wentWell: [], toImprove: [], actionItems: [] })
   const [inputs, setInputs] = useState({ wentWell: '', toImprove: '', actionItems: '' })
   const [toast, setToast] = useState(false)
@@ -149,6 +157,7 @@ export default function RetroBoardTool({ title, description, faqs, columns, labe
       breadcrumbLabel={title}
       faqs={faqs}
       adSlot="1234567890"
+      richContent={richContent}
     >
       {/* Toolbar */}
       <div className="flex flex-wrap gap-2 justify-end mb-5">

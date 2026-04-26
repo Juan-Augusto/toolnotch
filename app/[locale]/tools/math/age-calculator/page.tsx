@@ -6,6 +6,13 @@ import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/sc
 import type { FaqItem } from '@/components/FaqSection'
 import AgeCalculator from '@/components/math/AgeCalculator'
 
+interface RichContent {
+  whatIs: string
+  howToUse: string[]
+  whyItMatters: string
+  proTip: string
+}
+
 const PATH = '/tools/math/age-calculator'
 
 interface Props { params: Promise<{ locale: string }> }
@@ -25,6 +32,7 @@ export default async function AgeCalculatorPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'ageCalculator' })
   const faqs = t.raw('faqs') as FaqItem[]
+  const richContent = t.raw('richContent') as RichContent
 
   const jsonLd = buildJsonLd(
     webAppSchema(t('title'), PATH, t('metaDescription'), locale),
@@ -45,6 +53,7 @@ export default async function AgeCalculatorPage({ params }: Props) {
         breadcrumbLabel={t('title')}
         faqs={faqs}
         adSlot="age-calculator"
+        richContent={richContent}
       >
         <AgeCalculator locale={locale} />
       </ToolWrapper>

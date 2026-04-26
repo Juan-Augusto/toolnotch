@@ -6,6 +6,13 @@ import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/sc
 import type { FaqItem } from '@/components/FaqSection'
 import QrCodeGenerator from '@/components/utilities/QrCodeGenerator'
 
+interface RichContent {
+  whatIs: string
+  howToUse: string[]
+  whyItMatters: string
+  proTip: string
+}
+
 const PATH = '/tools/utilities/qr-code-generator'
 
 interface Props { params: Promise<{ locale: string }> }
@@ -25,6 +32,7 @@ export default async function QrCodeGeneratorPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'qrGenerator' })
   const faqs = t.raw('faqs') as FaqItem[]
+  const richContent = t.raw('richContent') as RichContent
 
   const jsonLd = buildJsonLd(
     webAppSchema(t('title'), PATH, t('metaDescription'), locale),
@@ -45,6 +53,7 @@ export default async function QrCodeGeneratorPage({ params }: Props) {
         breadcrumbLabel={t('title')}
         faqs={faqs}
         adSlot="qr-code-generator"
+        richContent={richContent}
       >
         <QrCodeGenerator />
       </ToolWrapper>

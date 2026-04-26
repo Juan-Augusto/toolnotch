@@ -4,14 +4,22 @@ import { useState } from 'react'
 import ToolWrapper from '@/components/ToolWrapper'
 import type { FaqItem } from '@/components/FaqSection'
 
+interface RichContent {
+  whatIs: string
+  howToUse: string[]
+  whyItMatters: string
+  proTip: string
+}
+
 interface Props {
   title: string
   description: string
   faqs: FaqItem[]
   labels: Record<string, string>
+  richContent?: RichContent
 }
 
-export default function StandupGeneratorClient({ title, description, faqs, labels }: Props) {
+export default function StandupGeneratorClient({ title, description, faqs, labels, richContent }: Props) {
   const [yesterday, setYesterday] = useState('')
   const [today, setToday] = useState('')
   const [blockers, setBlockers] = useState('')
@@ -41,7 +49,7 @@ export default function StandupGeneratorClient({ title, description, faqs, label
   const canGenerate = yesterday.trim() && today.trim()
 
   return (
-    <ToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} adSlot="standup-generator">
+    <ToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} adSlot="standup-generator" richContent={richContent}>
       <div className="max-w-2xl mx-auto space-y-5">
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1">{labels.yesterday}</label>

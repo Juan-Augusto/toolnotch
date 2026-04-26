@@ -5,6 +5,13 @@ import { webAppSchema, buildJsonLd } from "@/lib/schema";
 import JpgToPdfTool from "./JpgToPdfTool";
 import type { FaqItem } from "@/components/FaqSection";
 
+interface RichContent {
+  whatIs: string;
+  howToUse: string[];
+  whyItMatters: string;
+  proTip: string;
+}
+
 interface Props {
   params: Promise<{ locale: string }>;
 }
@@ -23,6 +30,7 @@ export default async function JpgToPdfPage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "pdf.jpgToPdf" });
   const faqs = t.raw("faqs") as FaqItem[];
+  const richContent = t.raw("richContent") as RichContent;
   const jsonLd = buildJsonLd(
     webAppSchema(t("title"), "/tools/pdf/jpg-to-pdf", t("metaDescription"), locale)
   );
@@ -32,7 +40,7 @@ export default async function JpgToPdfPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <JpgToPdfTool title={t("title")} description={t("description")} faqs={faqs} />
+      <JpgToPdfTool title={t("title")} description={t("description")} faqs={faqs} richContent={richContent} />
     </>
   );
 }

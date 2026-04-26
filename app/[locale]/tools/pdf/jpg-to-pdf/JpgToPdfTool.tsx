@@ -77,13 +77,21 @@ interface ImageEntry {
   preview: string;
 }
 
+interface RichContent {
+  whatIs: string;
+  howToUse: string[];
+  whyItMatters: string;
+  proTip: string;
+}
+
 interface Props {
   title: string;
   description: string;
   faqs: FaqItem[];
+  richContent?: RichContent;
 }
 
-export default function JpgToPdfTool({ title, description, faqs }: Props) {
+export default function JpgToPdfTool({ title, description, faqs, richContent }: Props) {
   const t = useTranslations("pdf.jpgToPdf");
   const [images, setImages] = useState<ImageEntry[]>([]);
   const [loading, setLoading] = useState(false);
@@ -151,6 +159,7 @@ export default function JpgToPdfTool({ title, description, faqs }: Props) {
       breadcrumbLabel={title}
       faqs={faqs}
       adSlot="1234567894"
+      richContent={richContent}
     >
       <div
         className="border-2 border-dashed border-blue-300 rounded-xl p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-4"

@@ -6,6 +6,13 @@ import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/sc
 import type { FaqItem } from '@/components/FaqSection'
 import GpaCalculator from '@/components/education/GpaCalculator'
 
+interface RichContent {
+  whatIs: string
+  howToUse: string[]
+  whyItMatters: string
+  proTip: string
+}
+
 const PATH = '/tools/education/cumulative-gpa-calculator'
 
 interface Props { params: Promise<{ locale: string }> }
@@ -25,6 +32,7 @@ export default async function CumulativeGpaCalculatorPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'gpaCalculator' })
   const faqs = t.raw('faqs') as FaqItem[]
+  const richContent = t.raw('richContent') as RichContent
 
   const jsonLd = buildJsonLd(
     webAppSchema(t('cumulativeTitle'), PATH, t('cumulativeMetaDescription'), locale),
@@ -45,6 +53,7 @@ export default async function CumulativeGpaCalculatorPage({ params }: Props) {
         breadcrumbLabel={t('cumulativeTitle')}
         faqs={faqs}
         adSlot="cumulative-gpa-calculator"
+        richContent={richContent}
       >
         <GpaCalculator mode="cumulative" locale={locale} />
       </ToolWrapper>

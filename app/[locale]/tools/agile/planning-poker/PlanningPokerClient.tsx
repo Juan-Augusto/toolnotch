@@ -7,14 +7,22 @@ import type { FaqItem } from '@/components/FaqSection'
 const CARDS = ['1', '2', '3', '5', '8', '13', '21', '34', '?', '∞']
 const NUMERIC_CARDS = ['1', '2', '3', '5', '8', '13', '21', '34']
 
+interface RichContent {
+  whatIs: string
+  howToUse: string[]
+  whyItMatters: string
+  proTip: string
+}
+
 interface Props {
   title: string
   description: string
   faqs: FaqItem[]
   labels: Record<string, string>
+  richContent?: RichContent
 }
 
-export default function PlanningPokerClient({ title, description, faqs, labels }: Props) {
+export default function PlanningPokerClient({ title, description, faqs, labels, richContent }: Props) {
   const [story, setStory] = useState('')
   const [picked, setPicked] = useState<string | null>(null)
   const [revealed, setRevealed] = useState(false)
@@ -31,7 +39,7 @@ export default function PlanningPokerClient({ title, description, faqs, labels }
   const numericPick = picked && NUMERIC_CARDS.includes(picked) ? Number(picked) : null
 
   return (
-    <ToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} adSlot="planning-poker">
+    <ToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} adSlot="planning-poker" richContent={richContent}>
       <div className="max-w-2xl mx-auto space-y-6">
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1">{labels.storyLabel}</label>

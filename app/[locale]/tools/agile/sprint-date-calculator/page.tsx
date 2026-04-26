@@ -5,6 +5,13 @@ import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/sc
 import type { FaqItem } from '@/components/FaqSection'
 import SprintDateCalculatorClient from './SprintDateCalculatorClient'
 
+interface RichContent {
+  whatIs: string
+  howToUse: string[]
+  whyItMatters: string
+  proTip: string
+}
+
 const PATH = '/tools/agile/sprint-date-calculator'
 
 interface Props { params: Promise<{ locale: string }> }
@@ -23,6 +30,7 @@ export default async function SprintDateCalculatorPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'agile.sprintDateCalculator' })
   const faqs = t.raw('faqs') as FaqItem[]
+  const richContent = t.raw('richContent') as RichContent
 
   const jsonLd = buildJsonLd(
     webAppSchema(t('title'), PATH, t('metaDescription'), locale),
@@ -42,6 +50,7 @@ export default async function SprintDateCalculatorPage({ params }: Props) {
         description={t('description')}
         faqs={faqs}
         labels={t.raw('labels') as Record<string, string>}
+        richContent={richContent}
       />
     </>
   )

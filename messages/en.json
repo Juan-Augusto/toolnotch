@@ -543,7 +543,19 @@
           "question": "How do I convert meters to feet?",
           "answer": "Multiply meters by 3.28084. For example, 5 meters = 5 × 3.28084 = 16.4042 feet. Select Length category and set From: Meter, To: Foot."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "A unit converter translates measurements between different unit systems — metric SI, imperial, and US customary. The most common categories include length (meters, feet, inches, miles), weight (kilograms, pounds, stone), temperature (Celsius, Fahrenheit, Kelvin), volume (liters, gallons — note that the UK gallon is 4.546 L while the US gallon is 3.785 L, a difference that matters in cooking and fuel calculations), speed (km/h vs mph), area (square meters vs square feet), and digital storage (bytes, KB, MB, GB, TB). Common confusion points: fluid ounces are a volume unit and weight ounces are a mass unit — they are not interchangeable. Stone is a British unit equal to exactly 14 pounds, rarely used outside the UK and Ireland.",
+        "howToUse": [
+          "Select the unit category you need: length, weight, temperature, volume, speed, area, or digital storage.",
+          "Enter the value you want to convert.",
+          "Select the source unit — the unit your value is currently expressed in.",
+          "Select the target unit — the unit you want to convert to.",
+          "Read the converted value instantly in the result field."
+        ],
+        "whyItMatters": "Unit conversion errors cause real-world failures. The 1999 Mars Climate Orbiter was lost — a $327 million mission — because one engineering team used metric units and another used imperial, and neither caught the mismatch. For everyday use, unit conversion enables cooking recipe scaling between US and European measurements, international travel planning for distances and temperatures, reading product dimensions listed in unfamiliar units, understanding foreign weather forecasts, and comparing fuel efficiency expressed as mpg vs L/100km.",
+        "proTip": "Quick mental math for the two most common conversions: for Celsius to Fahrenheit, double the Celsius value then add 30 (approximate — exact formula is °C × 9/5 + 32). For kilometers to miles, multiply by 0.6 for a close estimate (exact: × 0.621). A 5°C day is roughly 41°F; 100 km is roughly 62 miles. These shortcuts cover most travel and weather conversions without needing a calculator."
+      }
     },
     "currency": {
       "metaTitle": "Currency Converter — Live Exchange Rates | ToolNotch",
@@ -592,7 +604,18 @@
           "question": "Can I use this for financial transactions?",
           "answer": "This tool is for reference only. For financial transactions, always use your bank or broker's official rates, which include fees and spreads."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "A currency converter translates amounts between world currencies using exchange rates. Understanding the rate landscape matters: the mid-market rate (also called the interbank rate) is the real exchange rate shown on Reuters, Bloomberg, and Google Finance — it is the midpoint between buy and sell prices in the wholesale market. Banks typically add a 2–5% markup over mid-market. Travel cards from providers like Wise and Revolut charge 0–1% over mid-market. Airport exchange booths often apply markups of 8–15%. Rates shown in this tool are indicative — they update periodically and your actual conversion rate will depend on your provider, the transaction amount, and the exact moment of conversion.",
+        "howToUse": [
+          "Select the source currency — the currency you are converting from.",
+          "Enter the amount you want to convert.",
+          "Select the target currency — the currency you want to convert to.",
+          "Read the converted amount and the indicative exchange rate used for the calculation."
+        ],
+        "whyItMatters": "Hidden FX markups cost international travelers and businesses billions annually. Dynamic currency conversion — where a foreign merchant or ATM offers to charge you in your home currency — typically adds 3–7% above mid-market, framed as a convenience. Knowing the real mid-market rate lets you evaluate these offers accurately and decline when the cost is unreasonable. For international business invoicing and contracts, specifying which party bears currency risk and at which rate it will be settled is a material financial decision that belongs in the contract terms.",
+        "proTip": "For travel, compare your bank's advertised rate to the mid-market rate before deciding how to pay. Cards from Wise, Revolut, and Charles Schwab debit charge 0–1% over mid-market. Traditional bank cards typically charge 2–5%. On a $5,000 trip that difference is $100–250 in avoidable FX fees — significant enough to justify switching to a low-FX card before your next international trip."
+      }
     },
     "shared": {
       "from": "From",
@@ -2970,7 +2993,19 @@
           "question": "What sprint lengths are supported?",
           "answer": "2-week, 3-week, and 4-week sprints — the three most common cadences in Scrum and Kanban teams."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "A sprint date calculator determines the start date, end date, review date, and retrospective date for one or more sprints based on a team start date and sprint length. Sprint ceremonies depend on predictable boundaries: industry practice places sprint planning on Mondays and the review and retrospective on the final Friday. Starting a sprint on a Friday causes planning to bleed into the weekend; starting mid-week misaligns sprint boundaries with the work week. Aligning sprints with fiscal quarters and known public holidays prevents ceremony conflicts — no one wants a sprint review scheduled on Christmas Eve or a planning meeting on a bank holiday.",
+        "howToUse": [
+          "Enter your sprint start date — the first day of your first sprint (ideally a Monday).",
+          "Select your sprint length: 2 weeks (industry standard), 3 weeks, or 4 weeks for slower-moving programs.",
+          "Enter the number of consecutive sprints you want to plan out.",
+          "Optionally mark known holiday dates to flag sprints that contain ceremony conflicts.",
+          "Read the sprint calendar output showing start, end, review, and retro dates for each sprint."
+        ],
+        "whyItMatters": "Planning sprint dates one full quarter in advance lets teams block calendars before competing meetings appear, align PTO around sprint events, and coordinate release schedules with dependent teams. Teams that pre-plan sprint calendars experience fewer missed ceremonies and more predictable velocity because the planning overhead never competes with delivery work at the last minute. At scale, release train cadences in SAFe and LeSS require sprint boundary alignment across multiple teams — a mismatch of even a single day causes cross-team coordination chaos at program increment boundaries.",
+        "proTip": "Avoid 4-week sprints for most software teams. The longer the sprint, the higher the cost of a wrong assumption — a direction error found on day 25 of a 28-day sprint wastes nearly the entire sprint. Two-week sprints are the industry standard: they allow faster feedback loops without the ceremony overhead of 1-week sprints. Reserve 4-week iterations for hardware programs or highly regulated environments where 2-week cadences are operationally impractical."
+      }
     }
   },
   "percentage": {
@@ -3023,7 +3058,18 @@
         "question": "Can I use decimals?",
         "answer": "Yes — all three calculators accept decimal inputs like 12.5 or 0.75."
       }
-    ]
+    ],
+    "richContent": {
+      "whatIs": "A percentage calculator solves the three fundamental percentage problems: (1) What is X% of Y — for example, 20% of 350 equals 70; (2) X is what percent of Y — for example, 70 is 20% of 350; (3) Percent change from X to Y — for example, a change from 350 to 420 is a 20% increase. Real-world uses include calculating sale discounts, tip amounts, tax, grade percentages, and investment returns. One critical distinction to understand: a percentage point and a percentage are different things. If a loan interest rate rises from 10% to 12%, that is a 2 percentage point increase but a 20% relative increase. These two framings are routinely confused in media, advertising, and political reporting.",
+      "howToUse": [
+        "Select the calculation type: \"X% of Y\" for finding a portion, \"X is what % of Y\" for finding the rate, or \"Percent change\" for comparing two values.",
+        "Enter the known values in the input fields for the selected mode.",
+        "Click Calculate to compute the result.",
+        "Read the result and any explanatory breakdown shown below the inputs."
+      ],
+      "whyItMatters": "Percentage confusion is routinely exploited in sales and advertising. \"50% off, then an additional 20% off\" is not 70% off — it is 60% off (you pay 50% of the original, then 80% of that, which equals 40% of the original price). Stacking discounts never adds up the way it sounds. Politicians and marketers frequently swap percentage points and percentages to exaggerate or minimize changes depending on which framing is more favorable. Calculating percentages accurately lets you verify claimed discounts, tax amounts, and rate changes independently.",
+      "proTip": "Mental math shortcuts for everyday percentages: 10% means move the decimal point one place left. 5% is half of 10%. 15% is 10% plus 5%. 20% is double the 10% value. 25% means divide by 4. These five rules cover most tip, discount, and tax estimates without any calculator — fast enough to verify a restaurant bill or a store discount in seconds."
+    }
   },
   "healthCalculator": {
     "bmiMetaTitle": "BMI Calculator — Check Your Body Mass Index Free | ToolNotch",
@@ -3199,7 +3245,19 @@
         "question": "Can I create a WiFi QR code?",
         "answer": "Yes — select the WiFi tab, enter your network name (SSID) and password, and the QR code will let anyone scan it to join your WiFi instantly without typing the password."
       }
-    ]
+    ],
+    "richContent": {
+      "whatIs": "A QR code generator creates two-dimensional barcodes that smartphone cameras can read directly — no app required on modern iOS and Android. QR codes were invented by Denso Wave in Japan in 1994 for automotive parts tracking and became globally ubiquitous after contactless adoption accelerated in 2020. They store text data: URLs, WiFi credentials, contact information, or plain text. Error correction levels control damage tolerance: Level L (7% of the code can be damaged), M (15%), Q (25%), and H (30% — use H when a logo will overlay part of the code). Maximum data capacity depends on content type: URLs up to roughly 2,500 characters, plain text up to 4,300 characters, and WiFi credentials around 150 characters. Static QR codes encode data directly; dynamic QR codes redirect through a shortener URL that can be changed without reprinting.",
+      "howToUse": [
+        "Select the QR code type: URL, plain text, email address, phone number, or WiFi credentials.",
+        "Enter the content for the selected type — paste a URL, type your text, or fill in the WiFi SSID and password.",
+        "Select the output size: 256 px for screen display, 512 px for standard print, 1024 px for large-format print, or SVG for infinite resolution.",
+        "Preview the generated QR code to confirm it looks correct and scans cleanly.",
+        "Download as PNG for most uses or SVG for print production where resolution flexibility is needed."
+      ],
+      "whyItMatters": "QR codes bridge physical and digital contexts: business cards link to portfolios, restaurant menus go contactless, product packaging links to assembly instructions, and event badges check in attendees. A URL QR code on a business card gets scanned far more often than a URL is manually typed — removing the typing friction directly increases engagement. For WiFi sharing, QR codes eliminate the friction of reading out and typing complex network passwords. Minimum reliable print size for consistent scanning is approximately 2.5 cm × 2.5 cm (about 1 inch square) with good contrast against the background.",
+      "proTip": "Always test a QR code before printing at scale. Print a small test copy and scan it with at least two different phones — one iOS and one Android — to confirm it resolves correctly on both platforms. A typo in a QR code on 1,000 printed flyers cannot be corrected without reprinting the entire run. For WiFi QR codes, verify the password encoding is exact — a single wrong character means the code connects to nothing."
+    }
   },
   "gpaCalculator": {
     "metaTitle": "GPA Calculator — Free College GPA Calculator | ToolNotch",
@@ -3322,7 +3380,19 @@
         "question": "What is my age if I was born in 1990?",
         "answer": "If you were born in 1990, you are currently 35–36 years old depending on your exact birth month and today's date. Enter your full birth date above for a precise result."
       }
-    ]
+    ],
+    "richContent": {
+      "whatIs": "An age calculator computes the exact difference between a birth date and today — or any target date — in years, months, and days. Edge cases make this more complex than simple subtraction: leap year birthdays (February 29 exists only in leap years — most countries use February 28 as the legal birthday in non-leap years), the Korean age system (where a person is born at age 1 and everyone gains a year on January 1 rather than on their individual birthday), and legal age milestones that vary by country (18 for voting and contracts in most countries, 21 for alcohol in the United States, 65 for full Social Security retirement in the US, 67 in the UK). The birthday countdown feature shows exact days remaining for planning celebrations and tracking legal transitions.",
+      "howToUse": [
+        "Enter your birth date using the date picker or by typing in the day, month, and year.",
+        "Optionally enter a target date to calculate age at a specific point in time — defaults to today if left blank.",
+        "Read your exact age displayed in years, months, and days.",
+        "Check the days-until-next-birthday countdown for celebration planning.",
+        "Use the future age feature to find out how old you will be on any future date."
+      ],
+      "whyItMatters": "Exact age matters in many legal and medical contexts. School enrollment cutoffs use precise age-on-a-specific-date rules that vary by district and country, determining whether a child enters a grade a full year ahead or behind peers. Pediatric medical dosing for children under two years old uses age in months, not years — a 16-month-old and a 23-month-old receive different doses. Insurance premium brackets, Social Security benefit eligibility, and pension calculations all reference specific age thresholds where being a few days short can shift benefit start dates or trigger different rate tiers.",
+      "proTip": "For retirement planning, calculate your exact age on January 1 of each target year. Social Security and many pension systems use age-in-year rules — your benefit amount or eligibility tier is determined by your age on a specific date within the calendar year. Being three days short of a qualifying age cutoff can shift your benefit start date by months or trigger a lower benefit calculation tier, a difference worth knowing well in advance."
+    }
   },
   "citationGenerator": {
     "metaTitle": "Citation Generator — Free APA, MLA & Chicago Citations | ToolNotch",

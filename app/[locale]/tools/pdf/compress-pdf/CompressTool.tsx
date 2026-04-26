@@ -7,10 +7,18 @@ import ToolWrapper from "@/components/ToolWrapper";
 import { compressPDF } from "@/lib/pdfCompress";
 import type { FaqItem } from "@/components/FaqSection";
 
+interface RichContent {
+  whatIs: string;
+  howToUse: string[];
+  whyItMatters: string;
+  proTip: string;
+}
+
 interface Props {
   title: string;
   description: string;
   faqs: FaqItem[];
+  richContent?: RichContent;
 }
 
 function formatBytes(bytes: number): string {
@@ -19,7 +27,7 @@ function formatBytes(bytes: number): string {
   return `${(bytes / 1024 / 1024).toFixed(2)} MB`;
 }
 
-export default function CompressTool({ title, description, faqs }: Props) {
+export default function CompressTool({ title, description, faqs, richContent }: Props) {
   const t = useTranslations("pdf.compress");
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -63,6 +71,7 @@ export default function CompressTool({ title, description, faqs }: Props) {
       breadcrumbLabel={title}
       faqs={faqs}
       adSlot="1234567892"
+      richContent={richContent}
     >
       <div
         className="border-2 border-dashed border-blue-300 rounded-xl p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-4 dark:border-blue-700 dark:hover:bg-blue-900/20"
