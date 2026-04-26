@@ -76,7 +76,19 @@
           "question": "Is my image uploaded to a server?",
           "answer": "No. All image processing happens entirely in your browser using the Canvas API. Your images never leave your device and are not stored or transmitted anywhere."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Image compression reduces file size while maintaining acceptable visual quality. There are three main formats to choose from: JPEG (lossy compression, best for photographs, does not support transparency), PNG (lossless compression, best for screenshots, graphics, and logos that require transparency or pixel-perfect sharpness), and WebP (Google's modern format, 25–35% smaller than JPEG at equivalent quality, supported by all modern browsers since 2020). Lossy compression works by discarding high-frequency image detail that the human eye cannot perceive at normal viewing distances — this is why a 50 KB compressed photo is visually indistinguishable from a 500 KB original for most web use cases.",
+        "howToUse": [
+          "Upload an image by dragging it into the drop zone or clicking to browse your files.",
+          "Select your desired output format (JPG, PNG, or WebP) and adjust the quality slider.",
+          "Optionally set a max width in pixels to resize the image proportionally while compressing.",
+          "Click Compress Image to process the file.",
+          "Use the before/after comparison slider to review the result, then click Download to save."
+        ],
+        "whyItMatters": "Page load speed is a direct Google ranking factor through Core Web Vitals, specifically the Largest Contentful Paint metric. Images account for approximately 75% of total page weight on the average website, making them the single largest contributor to slow load times. A two-second delay in page load reduces conversions by 4.42% per second according to Portent research. Compressing images before uploading them to any website, blog, or e-commerce platform directly improves both search engine rankings and user experience.",
+        "proTip": "All processing happens entirely in your browser — no files are uploaded to any server. Your documents never leave your device. For website images, use WebP format whenever your site supports it — all modern browsers have supported WebP since 2020. For photographs, JPEG at 80% quality is visually indistinguishable from 100% quality while being 50–70% smaller. Reserve PNG only for images that require transparency or must have pixel-perfect sharpness, such as logos and screenshots containing text."
+      }
     },
     "shared": {
       "dropZone": {
@@ -167,7 +179,18 @@
           "question": "How many files can I merge at once?",
           "answer": "There is no hard limit on the number of files. You can merge two files or twenty — though very large combinations may be slower depending on your device's memory."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "PDF merging combines multiple PDF files into a single document in one click. Common use cases include submitting multiple documents as one attachment — job applications, grant submissions, and university enrolments often require a single file — creating combined reports from separate sections, archiving related documents together for long-term storage, and printing multiple files in sequence without switching between documents. The merged PDF maintains the original quality of each source document: images, fonts, and formatting are preserved exactly. Page order in the merged file follows the upload order, so you can drag and reorder files before merging to control exactly which pages appear first.",
+        "howToUse": [
+          "Click the upload area or drag and drop your PDF files into the drop zone.",
+          "Drag the file cards to reorder them — the merged PDF will follow the exact order you set.",
+          "Click Merge PDFs to combine all files into one document.",
+          "The merged PDF downloads instantly to your device."
+        ],
+        "whyItMatters": "Email attachments are often limited to a fixed size or count per message. Many institutions — HR departments, universities, and government agencies — explicitly require 'one file only' submissions. Sending five attachments when the form expects one can result in rejection or a request to resubmit. Merging beforehand also makes it easier for the recipient: one file to open, one file to print, and no confusion about which attachment is which. Print shops also strongly prefer single files for multi-page print jobs to avoid page-order errors.",
+        "proTip": "All processing happens entirely in your browser — no files are uploaded to any server. Your documents never leave your device. Before sending, open the merged PDF and scroll through it to verify the page order. The first uploaded file becomes the first pages, so if you need a cover page or index at the front, upload it first."
+      }
     },
     "split": {
       "metaTitle": "Split PDF Online Free — Extract Pages | ToolNotch",
@@ -234,7 +257,19 @@
           "question": "Is this tool free forever?",
           "answer": "Yes. ToolNotch is entirely free with no subscriptions, no usage limits, and no watermarks on your output files."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "PDF splitting extracts specific pages or page ranges from a PDF into separate files. Use cases include extracting a single chapter from a large ebook so you can share it without giving away the whole document, sharing only the relevant sections of a contract with a counterparty, splitting a scanned multi-document batch into individual files after scanning a stack of papers together, and removing a confidential page before sharing a report. There is an important distinction between two splitting modes: splitting by page range (pages 1–10 become one file, pages 11–20 another) and splitting every page into individual single-page files, which gives you the finest-grained control.",
+        "howToUse": [
+          "Upload your PDF by clicking the drop zone or dragging the file in.",
+          "Enter the page ranges you want to extract in the page ranges field — for example, '1-5, 8, 11-15' to get three separate output files.",
+          "Leave the field blank to split every page into its own individual PDF.",
+          "Click Split PDF to process the file.",
+          "Download the resulting files — multiple outputs are packaged in a ZIP archive."
+        ],
+        "whyItMatters": "Large PDFs are regularly shared when only a small portion is relevant, wasting bandwidth and forcing recipients to scroll through pages they do not need. Splitting makes sharing precise and professional. For legal and financial documents, sharing only the relevant section also reduces exposure: a counterparty reviewing clause 7 of a contract does not need to see confidential schedules on pages 40–60. Splitting before sharing is a simple way to limit information disclosure without redacting individual lines.",
+        "proTip": "All processing happens entirely in your browser — no files are uploaded to any server. Your documents never leave your device. If you need to reorganise a scanned document that was not originally created as separate files, use the 'split all pages' option first to get individual page files, then merge specific pages back together using the merge tool. This gives you full control over which pages end up in which output file."
+      }
     },
     "compress": {
       "metaTitle": "Compress PDF Online Free — Reduce File Size | ToolNotch",
@@ -302,7 +337,18 @@
           "question": "How is this different from zipping a file?",
           "answer": "Zipping creates a compressed archive container but does not reduce the internal size of the PDF itself. PDF compression reduces the size of the file's internal structure, so the resulting PDF is smaller even without a ZIP wrapper — making it easier to email directly."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "PDF compression reduces file size while preserving content. PDFs vary enormously in size depending on how they were created: scanned PDFs are essentially bitmap images embedded in a PDF container and can be 10–50 MB per page, while text-native PDFs generated from a word processor are tiny — under 1 MB for 50 pages. There are two types of compression: lossy compression reduces image quality to achieve smaller file sizes, and lossless compression removes redundant metadata and unused internal objects without touching quality at all. For most email and web use cases, medium-quality compression is visually invisible on screen and can reduce file size by 60–80%, making the difference between a rejected upload and a successful submission.",
+        "howToUse": [
+          "Upload your PDF by clicking the drop zone or dragging the file in.",
+          "Click Compress PDF to reduce the file size using lossless structure optimisation.",
+          "Review the size reduction percentage shown in the result panel.",
+          "Click Download Compressed PDF to save the smaller file to your device."
+        ],
+        "whyItMatters": "Email attachments are commonly capped at 10–25 MB by mail servers, and many form upload fields impose a 5 MB or 10 MB limit. A scanned document at original quality can easily exceed these limits and result in a bounced email or a failed upload. Compressing before sending prevents rejected submissions and avoids the back-and-forth of asking recipients to use file-sharing services. For PDFs hosted on websites, smaller files also load faster in browser PDF viewers, improving the experience for readers on slower connections.",
+        "proTip": "All processing happens entirely in your browser — no files are uploaded to any server. Your documents never leave your device. If your PDF contains text-only pages alongside scanned images, try compressing once and then evaluate whether the quality is acceptable. Most people cannot visually distinguish a compressed PDF image at 80% quality from the original when viewed at normal zoom on a screen."
+      }
     },
     "pdfToJpg": {
       "metaTitle": "PDF to JPG — Convert PDF Pages to Images Free | ToolNotch",
@@ -368,7 +414,18 @@
           "question": "Can I convert a scanned PDF to JPG?",
           "answer": "Yes. Scanned PDFs are essentially images embedded in a PDF container, and they convert to JPG just like any other PDF page. The output quality matches the resolution of the original scan."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "PDF-to-JPG conversion renders each page of a PDF as a JPEG image file. Use cases include embedding PDF content in presentations or websites — neither PowerPoint nor HTML img tags can display PDFs inline — sharing document content on social media platforms that do not support PDF uploads, creating thumbnail previews for document management systems, and extracting diagrams or charts from PDFs for use in other applications. Resolution matters: 72 DPI is screen resolution (small files, adequate for web thumbnails), 150 DPI is web-quality (sharp on most monitors), and 300 DPI is print-quality (large files, maximum detail). Higher DPI produces larger files but captures finer text and detail.",
+        "howToUse": [
+          "Upload your PDF by clicking the drop zone or dragging the file in.",
+          "Click Convert to JPG to render all pages as JPEG images.",
+          "Preview the converted images in the grid that appears below the button.",
+          "Download a single image directly, or download all pages as a ZIP archive for multi-page PDFs."
+        ],
+        "whyItMatters": "PDF files cannot be embedded directly in social media posts, HTML image tags, or presentation slides. Converting to JPG makes document content universally shareable across every platform and application that accepts images. For single-page documents such as certificates, diplomas, event badges, or professional credentials, a JPEG is more portable and easier to display in a digital portfolio or on a LinkedIn profile than a PDF attachment that must be downloaded and opened separately.",
+        "proTip": "All processing happens entirely in your browser — no files are uploaded to any server. Your documents never leave your device. Use 150 DPI for web display and email — good quality with a reasonable file size. Use 300 DPI only if the output will be printed or significantly zoomed in. For presentation slides, 96 DPI matches most screen resolutions and produces the smallest file without visible quality loss."
+      }
     },
     "jpgToPdf": {
       "metaTitle": "JPG to PDF — Convert Images to PDF Free | ToolNotch",
@@ -429,7 +486,18 @@
           "question": "Is there a limit on number of images?",
           "answer": "There is no hard limit. You can combine two images or fifty into a single PDF. Very large batches may take a few extra seconds depending on your device."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "JPG-to-PDF conversion embeds one or more JPEG images into a PDF document. Use cases include converting photos of handwritten notes or filled paper forms into a submittable document, combining multiple scanned images into a single PDF so everything arrives in one file, creating a PDF portfolio from a collection of image files, and submitting photo ID documents in PDF format as required by many official forms, visa applications, and HR onboarding processes. It is important to note that the output is an image-based PDF — the text in any images is not machine-readable or searchable unless you apply OCR (optical character recognition) separately.",
+        "howToUse": [
+          "Upload one or more JPEG or PNG images by clicking the drop zone or dragging the files in.",
+          "Drag the image thumbnails to arrange them in the order you want them to appear in the PDF.",
+          "Click Convert to PDF to generate the document.",
+          "The PDF downloads instantly to your device."
+        ],
+        "whyItMatters": "Many official submission portals, university application systems, and HR platforms accept PDF but not JPEG. Combining multiple images into one PDF also satisfies single-file submission requirements — avoiding the problem of a form that accepts only one attachment when you have three scanned pages. The PDF container also supports metadata (title, author), password protection, and digital signatures that raw JPEG files do not, giving you more control over how the document is used after delivery.",
+        "proTip": "All processing happens entirely in your browser — no files are uploaded to any server. Your documents never leave your device. If your images are very high resolution — phone camera photos are often 4000×3000 pixels and 6–12 MB each — compress or resize them before converting. A PDF containing three uncompressed phone photos can reach 30–40 MB. Aim for images under 2 MB each to produce a reasonably sized output PDF that passes most upload size limits."
+      }
     }
   },
   "convert": {
@@ -631,6 +699,18 @@
       "metaDescription": "Free online character counter. Count characters with and without spaces, useful for X, LinkedIn, Instagram, and other platforms with character limits.",
       "title": "Character Counter",
       "description": "Count characters with and without spaces. Perfect for X posts, meta descriptions, and any text with character limits.",
+      "richContent": {
+        "whatIs": "A character counter tells you exactly how many characters — letters, numbers, symbols, spaces, and punctuation marks — appear in your text. Unlike a word counter, it measures the raw length of a string, which is the unit most platforms use to enforce posting limits. Twitter/X allows 280 characters per post. SMS messages are capped at 160 characters per segment (longer messages are split and charged separately). For SEO, a meta title should stay within 50–60 characters so search engines display it in full; meta descriptions should be 150–160 characters. LinkedIn recommends keeping posts to 700 characters for best reach, while Instagram captions allow up to 2,200 characters but only 125 are visible before the 'more' cutoff. Emoji complicate matters — in UTF-16 encoding (used by X), most emoji count as 2 characters due to surrogate pairs, even though they appear as a single glyph.",
+        "howToUse": [
+          "Paste or type your text into the input area — the character count updates instantly.",
+          "Check the 'Characters' stat for the total count including spaces.",
+          "Check 'Characters (no spaces)' if the platform excludes spaces from its limit.",
+          "Compare your count against the target limit for your platform (280 for X, 160 for SMS, 50–60 for meta titles).",
+          "Edit your text directly in the box and watch the count decrease as you trim to fit."
+        ],
+        "whyItMatters": "Exceeding a platform's character limit either truncates your message silently or prevents posting altogether. For SEO, a meta title over 60 characters gets cut off in Google search results with an ellipsis, reducing click-through rates because readers see an incomplete headline. Meta descriptions over 160 characters are similarly truncated, wasting the persuasion opportunity. For SMS marketing campaigns, every segment over 160 characters doubles the cost per message sent — a small overage across thousands of sends adds up quickly. Knowing your exact character count before publishing prevents these costly mistakes.",
+        "proTip": "When writing for Twitter/X, remember that URLs are always counted as 23 characters regardless of the URL's actual length — Twitter's t.co shortener wraps every link automatically. So a 200-character URL still only costs you 23 characters in your post. Factor this into your character budget when your tweet contains a link, and use the remaining characters for your actual message."
+      },
       "faqs": [
         {
           "question": "Does the character counter include spaces?",
@@ -675,6 +755,18 @@
       "metaDescription": "Free online sentence counter. Instantly count the number of sentences in your text along with words, characters, and readability scores.",
       "title": "Sentence Counter",
       "description": "Count sentences in your text instantly. Also shows words, characters, and readability scores.",
+      "richContent": {
+        "whatIs": "A sentence counter counts the number of complete sentences in your text — each ending with a period, exclamation mark, or question mark. Beyond simple counting, sentence analysis is a core input to readability formulas: both the Flesch Reading Ease score and the Flesch-Kincaid Grade Level use average sentence length (words per sentence) as a primary variable. Very long sentences — those exceeding 30 words — dramatically lower readability scores and increase cognitive load for readers. Sentence count is also relevant to academic writing, where assignments may specify a minimum number of sentences per paragraph, and to content editing, where spotting unusually long or short sentences helps improve the flow and pacing of a piece.",
+        "howToUse": [
+          "Paste your text into the input area — sentence count updates automatically.",
+          "Read the sentence count and note the average words per sentence figure.",
+          "Identify your longest sentences — these are the best candidates for splitting to improve readability.",
+          "Aim for an average of 15–20 words per sentence for general audiences.",
+          "Edit sentences directly in the box and watch the average update in real time as you revise."
+        ],
+        "whyItMatters": "Research by Nielsen Norman Group shows that online readers skim rather than read — averaging only 20–28% of words on a page. Short, varied sentences reduce cognitive load and keep readers engaged longer. Varying sentence length also creates natural rhythm: writing composed entirely of short sentences feels choppy and robotic, while all-long sentences feel dense and exhausting. The sweet spot for most audiences is a mix — mostly 8–15 word sentences with occasional short punches for emphasis and longer sentences for detailed explanation. Checking sentence count helps you audit pacing and catch paragraphs that have grown unwieldy during editing.",
+        "proTip": "In business writing, target an average sentence length of 15–20 words. Academic writing can go up to 25–30 words but should compensate with clear paragraph structure and topic sentences. If your average sentence length is above 25 words, find the longest 30% of your sentences and split each at a natural conjunction or clause boundary — most readers will not notice the change, but comprehension measurably improves."
+      },
       "faqs": [
         {
           "question": "How does the sentence counter count sentences?",
@@ -755,6 +847,18 @@
       "metaDescription": "Calculate reading time for any text. Estimates both reading time (238 wpm) and speaking time (130 wpm). Useful for blog posts, speeches, and presentations.",
       "title": "Reading Time Calculator",
       "description": "Calculate how long it takes to read or speak your text. Paste your content below for an instant estimate.",
+      "richContent": {
+        "whatIs": "A reading time calculator estimates how long it takes to read a piece of text by dividing its word count by an average reading speed. The standard adult silent reading speed for non-fiction is 200–250 words per minute (wpm), with research commonly citing 238 wpm as a reliable benchmark. Comprehension drops significantly above 300 wpm, so speed-reading figures are not used for realistic estimates. Content type affects effective reading speed: dense technical material reads slower at 150–180 wpm, while skimming-friendly listicles read faster. Most blog platforms — Medium, Substack, Ghost — display a reading time estimate prominently at the top of articles because it directly affects whether readers click through and start reading.",
+        "howToUse": [
+          "Paste your article or text into the input area — reading and speaking time calculate instantly.",
+          "Read the estimated reading time based on the standard 238 wpm adult reading rate.",
+          "Check the speaking time estimate (around 130 wpm) if you are preparing a script, podcast, or presentation.",
+          "For technical content, mentally add 20–30% to the reading time estimate to account for slower processing.",
+          "Use the word count alongside reading time to gauge whether your content length matches your channel (LinkedIn posts under 2 min, blog SEO content 7–15 min)."
+        ],
+        "whyItMatters": "Articles with a displayed reading time have higher engagement rates because readers self-select: someone with 3 minutes available will start a 3-minute article but skip a 12-minute one without even opening it. For content marketers, matching content length to the channel matters — LinkedIn posts under 2 minutes, email newsletters 3–5 minutes, long-form SEO content 7–15 minutes. Reading time also serves as a proxy for content depth: longer pieces signal comprehensive coverage, which tends to correlate with higher search rankings, more backlinks, and greater social share rates.",
+        "proTip": "Audio podcasts and recorded narration are delivered at 150–160 wpm — roughly half the speed of silent reading. If you are adapting a blog post into a podcast script or voice-over, double the reading time estimate to get an accurate audio runtime. A 5-minute read becomes approximately a 10-minute listen, which is critical for planning podcast episode length and scheduling."
+      },
       "faqs": [
         {
           "question": "How is reading time calculated?",
@@ -799,6 +903,18 @@
       "metaDescription": "Find the most frequently used words in any text. Useful for SEO keyword analysis, studying writing style, and identifying overused words.",
       "title": "Word Frequency Counter",
       "description": "Find the most frequently used words in your text. Common words (the, and, is) are excluded to show meaningful keywords.",
+      "richContent": {
+        "whatIs": "A word frequency counter analyses text and tallies how many times each word appears, then presents the results as a ranked list — most frequent at the top. Most implementations strip out stop words (a, the, is, of, and) to surface the meaningful content terms. Use cases span several fields: writers use it to identify overused filler words like 'just', 'really', 'very', and 'actually'; SEO analysts use it to verify that primary keywords appear with appropriate frequency; academic researchers use it for corpus linguistics and text analysis; and content strategists use it to reverse-engineer competitor articles for topical focus. The output shows both raw count and density percentage, giving you a dual view of vocabulary distribution.",
+        "howToUse": [
+          "Paste your text into the input area — the word frequency table populates instantly.",
+          "Scan the top entries to identify your most-used meaningful words.",
+          "Look for filler words (just, really, very, quite) that appear high in the list and consider removing or replacing them.",
+          "Check whether your intended primary keyword appears in the top results with a density of 1–3%.",
+          "Use the frequency list to find synonyms and related terms that could replace repeated words and diversify your vocabulary."
+        ],
+        "whyItMatters": "In SEO, word frequency analysis helps verify that your primary keyword appears enough times (typically 1–2% density) without over-optimization — above 3% risks a keyword-stuffing penalty and reads unnaturally. In academic writing, high-frequency words often reveal repetitive phrasing that weakens arguments or signals a lack of vocabulary breadth. In UX writing and product copy, frequency analysis surfaces jargon that should be replaced with simpler, user-friendly language. For novelists and essayists, it exposes verbal tics and habitual word choices that homogenize prose style.",
+        "proTip": "For SEO, run word frequency analysis on the top-ranking competitor page for your target keyword. The content words that appear most frequently alongside the main keyword are your LSI (Latent Semantic Indexing) keywords — semantically related terms that Google uses to confirm topical relevance. Include these naturally in your own content and Google will more confidently categorize your page as an authoritative resource on the topic."
+      },
       "faqs": [
         {
           "question": "What words are excluded from the frequency count?",
@@ -819,6 +935,18 @@
       "metaDescription": "Free keyword density checker. Paste your content and see the most frequent keywords as a percentage of total words. Useful for SEO content optimization.",
       "title": "Keyword Density Checker",
       "description": "Paste your content to see the most frequent keywords and their density percentage. Useful for SEO content optimization.",
+      "richContent": {
+        "whatIs": "Keyword density is the percentage of times a specific keyword appears in a text relative to the total word count, calculated as: (keyword occurrences ÷ total words) × 100. The widely cited guideline is a 1–3% density range: below 1% and Google may not recognize the page as topically relevant to that term; above 3% and the content reads unnaturally and risks a keyword-stuffing algorithmic penalty. Modern search engine optimization goes significantly beyond raw density — Google's algorithms use TF-IDF (Term Frequency–Inverse Document Frequency) to measure keyword relevance against a corpus of documents, meaning context and co-occurring terms matter more than simple repetition. LSI keywords (semantically related terms) signal topical authority more effectively than keyword repetition alone.",
+        "howToUse": [
+          "Paste your article content into the input area — keyword density analysis runs instantly.",
+          "Review the top keywords list and their density percentages.",
+          "Identify your primary target keyword and check whether its density falls within the 1–3% range.",
+          "If a keyword is above 3%, replace some instances with synonyms or related terms to read more naturally.",
+          "If a keyword is below 1%, consider adding it to your introduction, a subheading, or the conclusion."
+        ],
+        "whyItMatters": "Keyword stuffing — pushing density above 5% — was a common SEO tactic in the early 2000s that Google now penalises algorithmically and manually. Under-density means the page may not rank for the target term at all, leaving traffic on the table. Checking density before publishing catches both extremes and ensures your content is optimised without appearing manipulative. More importantly, this analysis reveals opportunities to introduce synonyms and related terms that expand your semantic footprint, helping the page rank for a wider range of related search queries rather than just the single exact-match keyword.",
+        "proTip": "Modern SEO best practice: place your primary keyword in the page title, the first paragraph, one H2 subheading, and the URL slug. Then let it appear naturally in the body text — do not force it. Fill the remaining semantic space with related terms. For a 'mortgage calculator' article, those terms include: amortization, principal, interest rate, monthly payment, and loan term. This broader semantic coverage helps the page rank for dozens of related queries rather than just the exact keyword phrase, multiplying your organic traffic potential."
+      },
       "faqs": [
         {
           "question": "What is keyword density?",
@@ -1184,7 +1312,20 @@
             "question": "Should I borrow the maximum amount I qualify for?",
             "answer": "Not necessarily. Just because you qualify for a large loan doesn't mean you should take it. Consider your savings goals, job security, and lifestyle when choosing a home price."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "A home affordability calculator estimates how much house you can buy based on the 28/36 rule — a lending guideline that says your housing costs (mortgage principal, interest, property taxes, and insurance) should not exceed 28% of your gross monthly income, and all monthly debt payments combined (housing plus car loans, student loans, and credit card minimums) should not exceed 36%. Lenders use your debt-to-income ratio to calculate the maximum loan amount they will approve. But qualifying for a loan and comfortably affording it are two different things. Property taxes, homeowner's insurance, HOA fees, maintenance, and utilities are hidden costs that can add $500–$1,500 per month beyond the mortgage payment itself — costs that often surprise first-time buyers.",
+          "howToUse": [
+            "Enter your gross annual income — this is your pre-tax salary, not take-home pay, as lenders qualify you on gross income.",
+            "Add your total monthly debt payments, including car loans, student loans, and minimum credit card payments. Do not include utilities or groceries.",
+            "Enter your planned down payment amount. A larger down payment reduces the loan amount, which reduces the monthly payment.",
+            "Input the expected interest rate and loan term (typically 30 years) to reflect realistic market conditions.",
+            "Review the estimated maximum home price and monthly payment, then compare the monthly figure to your actual take-home pay to assess comfort.",
+            "Adjust inputs to run scenarios — for example, a 1% interest rate increase or a lower down payment — to see how each variable shifts your affordable price range."
+          ],
+          "whyItMatters": "Many buyers get pre-approved for the maximum amount a lender will allow and then build their home search around that ceiling — a mistake that can lead to being house-poor. A 1% increase in mortgage rates can reduce affordability by $30,000–$60,000 in purchase price on a typical income. Using this calculator before starting your home search gives you a realistic budget, helps you set down payment savings goals, and prevents the emotional trap of falling in love with homes outside your actual comfortable range. Being conservative here creates the financial breathing room that makes homeownership sustainable long-term.",
+          "proTip": "Lenders qualify you on gross income — your salary before taxes. But your mortgage payments come from your take-home pay. A $100,000 annual salary yields roughly $65,000–$70,000 in take-home pay after federal, state, and FICA taxes. Always verify that your estimated monthly payment is manageable against your net monthly income, not just whether your debt-to-income ratio clears the lender's threshold."
+        }
       },
       "refinance-calculator": {
         "metaTitle": "Refinance Calculator — Should I Refinance My Mortgage?",
@@ -1282,7 +1423,20 @@
             "question": "How can I use compound interest to grow savings?",
             "answer": "Start saving early and let compound interest work over time. Even small amounts grow significantly over 20–30 years in a high-yield savings account or investment account."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "An interest calculator computes the total interest earned or paid on a sum of money, using either simple interest (principal × rate × time) or compound interest (where earned interest is added to the principal and earns interest itself). The difference between the two is dramatic over time. Compound frequency — daily, monthly, quarterly, or annually — determines how often interest is added to the balance. APY (Annual Percentage Yield) measures the true annual return after compounding, while APR (Annual Percentage Rate) is the nominal rate before compounding. Savings accounts and certificates of deposit (CDs) typically use compound interest; simple interest is more common in short-term personal loans and some auto loans.",
+          "howToUse": [
+            "Enter the principal amount — the starting balance or loan amount.",
+            "Input the annual interest rate as a percentage (e.g., 5 for 5%).",
+            "Enter the time period in years (or months if the calculator supports it).",
+            "Select the compound frequency: daily, monthly, quarterly, or annually. Leave on simple interest to compare.",
+            "Click Calculate to see total interest earned or paid, plus the ending balance.",
+            "Toggle between compound frequencies to see how daily compounding compares to monthly on the same rate."
+          ],
+          "whyItMatters": "The difference between simple and compound interest is enormous over time. A $10,000 investment at 5% simple interest over 10 years earns $5,000 in interest. The same amount at 5% compounded monthly earns approximately $6,470 — a 29% difference — with no additional contributions. Compound frequency also matters when comparing savings accounts: two accounts both advertised at 4.80% APR can yield meaningfully different APYs depending on how often they compound. This calculator also helps evaluate financing offers — comparing whether a 0% promotional loan actually beats a cash purchase discount when the time value of money is considered.",
+          "proTip": "When comparing savings accounts or CDs, always look at APY — not APR. APY accounts for compounding and shows your true annual return. A savings account at 5.00% APR compounded daily yields an APY of approximately 5.13%, while the same rate compounded annually yields exactly 5.00%. The difference grows as balances grow. Banks are required to disclose APY, so use that number for apples-to-apples comparisons."
+        }
       },
       "30-year-mortgage-calculator": {
         "metaTitle": "30-Year Mortgage Calculator — Fixed Rate Monthly Payment",
@@ -1530,7 +1684,20 @@
             "question": "Can I change the VAT rate?",
             "answer": "Yes — edit the Tax % field. The standard UK VAT rate is 20%, but reduced rates (5%, 0%) apply to some goods and services."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "A UK invoice generator creates professional invoices compliant with HMRC requirements. For UK businesses, VAT (Value Added Tax) is the primary tax consideration. If your taxable turnover exceeds the VAT registration threshold of £90,000, you must register for VAT and include your VAT registration number on all VAT invoices. The standard VAT rate is 20%, with a reduced rate of 5% applying to certain goods and services. The Making Tax Digital (MTD) initiative requires VAT-registered businesses to keep digital records and submit VAT returns through compatible software. HMRC requires businesses to retain invoice records for a minimum of 6 years.",
+          "howToUse": [
+            "Enter your business name and address. If VAT-registered, add your VAT registration number in the Tax ID field.",
+            "Fill in your client's name and billing address. For B2B clients, note their VAT number if reverse charge applies.",
+            "Add line items with clear descriptions, quantities, and unit prices — amounts exclude VAT at this stage.",
+            "Set the tax rate to 20% for standard-rated supplies, 5% for reduced-rate, or 0% for zero-rated goods.",
+            "Review the VAT amount and total including VAT in the invoice preview.",
+            "Download as PDF and send to your client — retain a copy for your own HMRC records."
+          ],
+          "whyItMatters": "A VAT invoice must contain specific mandatory fields — including your VAT number, the VAT amount charged, and the supply date — for HMRC to accept it as valid for a VAT reclaim. For B2B clients who are themselves VAT-registered, receiving a proper VAT invoice is essential: without it, they cannot reclaim input tax on their VAT return. An invoice missing required fields can result in the VAT reclaim being denied, creating a downstream dispute with your client. Correct VAT invoicing is not just good practice — it is a legal requirement for VAT-registered UK businesses.",
+          "proTip": "If your annual turnover is below the £90,000 VAT registration threshold, you are not required to register for VAT — but you can choose to register voluntarily. For businesses primarily serving other VAT-registered businesses, voluntary registration can actually enhance credibility and allows you to reclaim VAT on your own business expenses. Run the numbers: if your input VAT (VAT you pay on purchases) is significant, voluntary registration may benefit you even below the threshold."
+        }
       },
       "invoiceCanada": {
         "metaTitle": "Canadian Invoice Generator — Free GST Invoice Template | ToolNotch",
@@ -1550,7 +1717,20 @@
             "question": "Do I need a GST/HST registration number?",
             "answer": "If your annual revenues exceed $30,000 CAD, you must register for GST/HST. Add your number in the Tax ID field."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Canada operates a multi-layered consumption tax system that varies by province. The federal Goods and Services Tax (GST) is 5% nationwide. Most provinces add their own tax: some use a harmonized approach (HST, which combines federal and provincial into a single rate — Ontario 13%, Nova Scotia 15%, New Brunswick 15%, Newfoundland 15%, PEI 15%), while others charge GST separately alongside a Provincial Sales Tax (PST — BC 7%, Saskatchewan 6%, Manitoba 7%). Quebec administers its own Quebec Sales Tax (QST) at 9.975% alongside federal GST. The applicable tax rate on an invoice depends on the province of supply — typically where your customer is located — not necessarily where your business is registered.",
+          "howToUse": [
+            "Enter your business name, address, and GST/HST registration number in the From section if you are registered.",
+            "Add your client's name, address, and province — the province of supply determines which tax rate applies.",
+            "Add line items with descriptions, quantities, and unit prices before tax.",
+            "Set the tax rate based on the applicable GST, HST, or GST+PST/QST for the client's province.",
+            "Review the tax amount and total on the invoice preview.",
+            "Download as PDF for your records and to send to your client."
+          ],
+          "whyItMatters": "Canadian businesses with over $30,000 CAD in annual taxable revenue are required to register for GST/HST — failure to do so can result in Canada Revenue Agency (CRA) penalties and interest on uncollected tax. Incorrect tax rates applied to invoices — for example, charging Ontario rates for a BC client — can expose your business to CRA audit risk. In Quebec, some businesses serving the French-speaking public are required to produce bilingual or French-language invoices. Understanding your tax obligations by province is essential for CRA compliance.",
+          "proTip": "The CRA determines tax based on the 'place of supply' rule. For services, this is generally where your client is located, not where your business operates. A Toronto-based consultant billing a client in Vancouver charges 5% GST — not Ontario's 13% HST. When you are uncertain which rate applies, particularly for cross-provincial or international service contracts, consult a Chartered Professional Accountant (CPA) to avoid filing errors."
+        }
       },
       "invoiceAustralia": {
         "metaTitle": "Australian Invoice Generator — Free GST Invoice Template | ToolNotch",
@@ -1570,7 +1750,20 @@
             "question": "What should an Australian tax invoice include?",
             "answer": "ATO-compliant invoices should include: the words 'Tax Invoice', your ABN, date, description of goods/services, price, and GST amount."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Australian invoicing is governed by the Australian Taxation Office (ATO). The Goods and Services Tax (GST) applies at a rate of 10% on most goods and services. Businesses with annual turnover of $75,000 AUD or more must register for GST. Once registered, they must issue tax invoices for any supply over $82.50 (including GST). A tax invoice differs from a regular invoice: it must include the words 'Tax Invoice', your Australian Business Number (ABN), the GST amount charged (or a statement that the total includes GST), and sufficient detail for the buyer to identify the goods or services supplied. The ATO requires businesses to retain tax invoice records for at least 5 years.",
+          "howToUse": [
+            "Enter your business name, address, and ABN in the From section — the ABN is mandatory for tax invoices over $82.50.",
+            "Add your client's name and address in the Bill To section.",
+            "Add line items with clear descriptions, quantities, and unit prices excluding GST.",
+            "Set the tax rate to 10% for GST-applicable supplies. Some supplies (fresh food, health services, education) are GST-free — leave tax at 0% for those.",
+            "Review that the invoice clearly states 'Tax Invoice' and shows the GST amount separately.",
+            "Download as PDF and retain a copy for your ATO records for a minimum of 5 years."
+          ],
+          "whyItMatters": "GST-registered clients (businesses that are also registered for GST) can only claim GST input tax credits using a valid tax invoice. An invoice missing the ABN, the GST amount, or the words 'Tax Invoice' may be rejected, preventing your client from claiming their GST credit on their Business Activity Statement (BAS). This can create friction in B2B relationships. For businesses below the $75,000 turnover threshold who choose not to register for GST, invoices should clearly state that no GST is included to avoid confusion.",
+          "proTip": "If your annual turnover is under $75,000 AUD, you are not required to register for GST — but if you primarily serve other GST-registered businesses, registration may be advantageous. Being GST-registered allows you to claim back the GST you pay on your own business expenses (software, equipment, office supplies), which can add up. If you are on the threshold, speak with a registered BAS agent or accountant to assess whether voluntary registration makes financial sense for your situation."
+        }
       },
       "invoiceFreelancers": {
         "metaTitle": "Invoice Generator for Freelancers — Free Professional Invoice | ToolNotch",
@@ -1594,7 +1787,20 @@
             "question": "How do I get paid faster?",
             "answer": "Include your payment terms clearly, offer multiple payment options, and follow up politely if payment is overdue. Net 14 terms often result in faster payment than Net 30."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Freelance invoicing has unique characteristics that differ from traditional business billing. Freelancers typically bill on a project basis (flat fee), an hourly basis, or a retainer arrangement (fixed monthly fee for ongoing availability). Common mistakes include inconsistent invoice numbering, vague line item descriptions, missing payment terms, and no late fee clause. Unlike employees, freelancers are responsible for their own tax — invoices do not include employer withholding, meaning the client pays the full amount and the freelancer manages their own self-employment tax obligations separately. Milestone-based billing — invoicing at defined project stages rather than at completion — reduces the risk of non-payment for large projects.",
+          "howToUse": [
+            "Enter your name or business name, contact details, and any applicable tax ID in the From section.",
+            "Add your client's name and billing address in the Bill To section.",
+            "Create line items for each service: use a descriptive name (e.g., 'Website Design — Homepage'), and enter either a flat fee or hours × hourly rate.",
+            "Add any reimbursable expenses as separate line items with receipts noted.",
+            "Set your payment terms (e.g., Net 14, Net 30, or Due on Receipt) and list accepted payment methods in the Notes field.",
+            "Download as PDF and send immediately — delayed invoicing correlates directly with delayed payment."
+          ],
+          "whyItMatters": "Late payment is the leading financial challenge for independent workers — surveys consistently show over 70% of freelancers experience late payment at some point. A professional invoice with a clear due date, a specific payment amount, and stated accepted payment methods removes ambiguity. Including a late fee clause (e.g., 1.5% per month after the due date) — even if you never enforce it — significantly reduces the average days-to-payment. Organized invoicing also creates the audit trail needed at tax time to substantiate business income and deductible expenses.",
+          "proTip": "When billing international clients, always specify the invoice currency clearly (USD, EUR, GBP) and state which party bears foreign exchange conversion costs. For new clients, consider requiring a 25–50% deposit before starting work — this deposit covers your time if the project stalls, and filters out clients who are not serious about moving forward. Most professional clients will not object to a reasonable deposit on substantial projects."
+        }
       },
       "receiptGenerator": {
         "metaTitle": "Free Receipt Generator — Create & Download PDF Receipts | ToolNotch",
@@ -1618,7 +1824,20 @@
             "question": "Can I add my business logo?",
             "answer": "Yes — click the Logo button to upload your business logo. It appears at the top of the receipt."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "A receipt is a document issued after payment is received, confirming that a transaction has been completed. It differs fundamentally from an invoice: an invoice is a payment request issued before payment; a receipt is proof of payment issued after. A valid receipt should include the transaction date, the seller's name and contact information, a description of goods or services provided, the total amount paid, the payment method (cash, credit card, bank transfer), and any applicable tax collected. Digital receipts are legally equivalent to paper receipts in most jurisdictions for tax and reimbursement purposes, and are preferred because paper receipts fade over time.",
+          "howToUse": [
+            "Enter the payer's name (individual or business) and the transaction date.",
+            "Fill in your business name and contact details as the receipt issuer.",
+            "Add line items describing what was purchased or paid for, with individual amounts.",
+            "Note the payment method used — cash, credit card, bank transfer, or other.",
+            "Review the total and confirm it matches the amount received.",
+            "Download as PDF for your records and provide a copy to the payer."
+          ],
+          "whyItMatters": "Tax authorities including the IRS require receipts for deductible business expenses. Many employers require receipts for any expense reimbursement. Organizing receipts digitally creates a reliable audit trail for year-end bookkeeping and prevents the common problem of lost or faded paper receipts. For cash transactions in particular — petty cash, vendor payments, or service fees paid in cash — a generated receipt creates the documentation needed to substantiate the transaction in the event of an audit or dispute.",
+          "proTip": "Keep receipts for any single deductible business expense over $75 (IRS general guidance for US taxpayers) and for any expense you plan to deduct on your tax return. Best practice is to photograph paper receipts immediately and file them digitally by year and category (e.g., 2026/Travel/, 2026/Meals/). Paper thermal receipts fade within 1–3 years — the digital photo or PDF is your actual permanent record."
+        }
       },
       "fields": {
         "from": "From",
@@ -1639,6 +1858,19 @@
         "generate": "Generate Invoice",
         "download": "Download PDF",
         "addItem": "Add Item"
+      },
+      "richContent": {
+        "whatIs": "An invoice is a formal document issued by a seller to a buyer that requests payment for goods or services delivered. A legally valid invoice must include: a unique invoice number, the issue date, seller and buyer contact information, an itemized list of products or services with unit prices and quantities, subtotals, applicable tax, the total amount due, and payment terms. Invoices differ from receipts — an invoice is sent before payment as a request; a receipt is issued after payment as proof. Professional invoicing directly impacts cash flow and client relationships: clear, accurate invoices reduce payment disputes, create a paper trail for accounting and tax purposes, and signal business credibility.",
+        "howToUse": [
+          "Fill in your business name, address, and contact details in the From section.",
+          "Add your client's name and billing address in the Bill To section.",
+          "Enter line items with a clear description of each product or service, quantity, and unit rate. The total calculates automatically.",
+          "Set the tax rate if applicable, and adjust the invoice date and due date to reflect your payment terms (e.g., Net 30).",
+          "Add any payment instructions or notes in the Notes field — including accepted payment methods.",
+          "Click Download / Print PDF and select Save as PDF to generate a professional invoice ready to send."
+        ],
+        "whyItMatters": "Professional invoices reduce payment disputes by eliminating ambiguity around what was delivered, when, and at what price. Net-30 (payment due in 30 days) is common in B2B settings, while due-on-receipt or Net-15 terms are often better for small businesses and freelancers who need faster cash flow. Including a late payment fee clause — such as 1.5% per month after the due date — incentivizes timely payment. Many small businesses lose significant revenue not from bad clients, but from failing to follow up on outstanding invoices. A numbered, dated invoice creates the paper trail needed for both collection and tax deductions.",
+        "proTip": "Always use a sequential invoice numbering system (INV-001, INV-002) from day one. Accounting software, tax audits, and business financial records all rely on consistent invoice numbering to track revenue and match payments. Also consider adding a late payment fee clause — even if you never enforce it, the presence of a stated fee accelerates payment behavior significantly."
       }
     }
   },
@@ -1696,7 +1928,18 @@
           "question": "Can I use this for giveaways?",
           "answer": "Yes — add your entrant names to the wheel and spin to pick a winner live in front of your audience. For larger giveaway lists, the dedicated Giveaway Picker tool handles longer lists more easily."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "A spin-the-wheel picker is a visual, randomized selector presented as a spinning wheel with customizable sections. Use cases include classroom games, office decision-making (where to order lunch), party games, choosing between options when paralyzed by indecision, and gamified prize draws. The spinning animation is purely cosmetic — the winning result is determined by the random number generator before the animation begins, ensuring true fairness regardless of how the wheel looks as it slows down.",
+        "howToUse": [
+          "Add your options to the wheel by typing them in the edit box, one per line.",
+          "Click Spin to start the wheel animation.",
+          "Watch the wheel slow down and land on the randomly selected result.",
+          "Optionally remove the winning option before the next spin to avoid repeats."
+        ],
+        "whyItMatters": "The visual spinning format makes random selection more engaging and dramatic than a plain text display. For classroom use, students respond better to the animation — it turns selection into a game rather than a judgment. For prizes and giveaways, the build-up as the wheel decelerates increases excitement and perceived value of the result, making the experience more memorable for participants.",
+        "proTip": "Decision fatigue research shows that when you react to the wheel result — whether you feel relieved or disappointed — you get honest information about what you actually wanted. If the wheel lands on an option and you feel a flash of disappointment, that tells you which option you actually preferred. Use the spin as a preference-revealing tool, not just a randomizer."
+      }
     },
     "wheelOfNames": {
       "metaTitle": "Wheel of Names Alternative — Free Online Spin Wheel | ToolNotch",
@@ -1724,7 +1967,18 @@
           "question": "Is the spin result truly random?",
           "answer": "Yes — the winner is selected by Math.random() before the animation begins. Every item has an equal probability of being chosen."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Wheel of Names is a random name picker displayed as a spinning wheel — combining the visual engagement of a spin wheel with a roster of names. Use cases include selecting meeting presenters, picking whose turn it is, and classroom cold calling with visual flair. The wheel is fully customizable: add, remove, and reorder names at any time. After each pick, the winning name can be removed automatically to ensure everyone gets a turn before anyone is picked twice.",
+        "howToUse": [
+          "Add participant names to the wheel using the edit box.",
+          "Click Spin to start the wheel animation.",
+          "Read the selected name when the wheel stops.",
+          "Remove the selected name to cycle through all participants fairly."
+        ],
+        "whyItMatters": "The visual format of seeing names on the wheel creates transparency — everyone in the room can see who is eligible for selection. This removes any suspicion that the selector is gaming the result. For classroom use, the wheel format is significantly more engaging than a plain random text display, turning participation selection into an interactive moment the whole class can share.",
+        "proTip": "For recurring weekly picks — meeting facilitator, status report presenter — save your name list as a text file and re-paste it quickly each session. If some participants are more often available, weight the wheel by adding their names more than once. More occurrences of a name increases that person's probability of being selected proportionally."
+      }
     },
     "namePicker": {
       "metaTitle": "Random Name Picker — Draw a Name from a List | ToolNotch",
@@ -1769,7 +2023,18 @@
           "question": "Can I save my name list?",
           "answer": "The name list is not automatically saved between page loads. For a persistent list you can bookmark and share, try the Spin the Wheel tool, which encodes your items directly into the page URL."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "A random name picker selects one or more names randomly from a list you provide. This general-purpose tool works for any collection of names: picking meeting speakers, selecting contest winners, randomizing reading order in a classroom, assigning tasks, or deciding whose turn it is for chores. Unlike the classroom-specific picker, this tool is designed for any context where you need a fair random selection from a list of people or options.",
+        "howToUse": [
+          "Enter your names in the text box, one per line.",
+          "Click Pick to randomly select a name from your list.",
+          "Read the highlighted winner displayed on screen.",
+          "Optionally remove the selected name to avoid repeats in subsequent picks."
+        ],
+        "whyItMatters": "Random selection prevents favoritism and the perception of bias. In professional settings, randomly assigning who presents first or who gets a task removes any appearance of partiality. In social settings, it takes the awkward negotiation out of decisions like who picks the restaurant tonight. Both outcomes — the actual fairness and the appearance of fairness — matter equally in group dynamics.",
+        "proTip": "For ongoing use such as weekly chore rotation or recurring meeting roles, keep a running list and remove selected names until everyone has been chosen once, then reset the list. This ensures equitable distribution across the group rather than purely random selection, which can accidentally repeat names before everyone has had a turn."
+      }
     },
     "teamGenerator": {
       "metaTitle": "Random Team Generator — Split Names into Fair Teams | ToolNotch",
@@ -1793,7 +2058,18 @@
           "question": "Can I copy the results?",
           "answer": "Yes — click 'Copy all' to copy the full team assignments to your clipboard in text format."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "A random team generator takes a list of names and divides them into equal — or near-equal — teams randomly. Use cases include classroom group projects, sports team selection, hackathon grouping, and office event teams. A key benefit is that random team composition removes unconscious bias: people naturally self-segregate by friendship, skill level, or demographics when choosing teams manually. Random assignment is the fairest and most statistically sound method in educational and organizational research for creating diverse, balanced groups.",
+        "howToUse": [
+          "Paste your list of names into the text box, one per line.",
+          "Set the number of teams you want to create.",
+          "Click Generate to split the names into random, balanced teams.",
+          "Read your team assignments and copy or share as needed."
+        ],
+        "whyItMatters": "Manual team picking — especially the sports-style captain draft — is psychologically damaging to those picked last, a well-documented phenomenon in education research. Random assignment treats everyone equally and often produces better collaboration by mixing people who would not naturally choose to work together. The result is groups with more diverse skills and perspectives than self-selected teams.",
+        "proTip": "If you need balanced skill levels rather than purely random teams, pre-sort your names list by skill tier before generating. Then generate random teams within each tier. This gives you random-within-fair grouping: the social dynamics of random selection without the risk of one team getting all the most experienced participants."
+      }
     },
     "yesNoWheel": {
       "metaTitle": "Yes or No Wheel — Let the Wheel Decide | ToolNotch",
@@ -1817,7 +2093,17 @@
           "question": "Can I spin again?",
           "answer": "Yes — just click Spin again for a new random result every time."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "A yes/no wheel is a binary random decision tool that returns Yes or No with a spinning animation. It is used for making binary decisions when neither choice strongly dominates, breaking decision paralysis, or adding randomness to games. It differs from a coin flip in presentation — the wheel format is slower and more dramatic, making it more engaging for group settings. Use cases include deciding whether to try something new, settling small group debates, and teaching probability to children in an interactive, visual way.",
+        "howToUse": [
+          "Think of a yes/no question you want to decide.",
+          "Click Spin and watch the wheel animate.",
+          "Accept the result — and notice your gut reaction to it."
+        ],
+        "whyItMatters": "Decision science shows that humans experience choice paralysis when options are roughly equal in attractiveness. A random binary choice breaks the deadlock quickly. More importantly, your emotional reaction to the result reveals your actual preference: if the wheel says Yes and you feel relieved, you wanted Yes. If you feel disappointed, you wanted No. The wheel acts as a mirror for subconscious preference.",
+        "proTip": "The 'flip and feel' technique: spin the wheel, then immediately note your gut reaction before your rational brain can rationalize it. Your emotional response to a random result is more reliable than extended deliberation for preference-based decisions where both options are objectively similar — use this as a decision-making aid, not just a random picker."
+      }
     },
     "coinFlip": {
       "metaTitle": "Coin Flip — Flip a Virtual Coin Online | ToolNotch",
@@ -1870,7 +2156,18 @@
           "question": "How is randomness generated?",
           "answer": "The flip uses JavaScript's built-in Math.random() function, which generates a pseudo-random floating-point number between 0 and 1. If the result is below 0.5 it is heads; 0.5 or above is tails. This gives both outcomes an equal 50% chance."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "A virtual coin flip is a digital tool that replicates the classic binary randomization of flipping a physical coin — giving you heads or tails with a fair 50/50 probability. Use cases include breaking ties in group decisions, making binary choices when neither option dominates, classroom randomization, and gamification. Interestingly, physical coins are not perfectly fair: research by Diaconis, Holmes & Montgomery (2007) found that coins flipped by hand land on the same side they started approximately 51% of the time due to wobble. A digital coin flip uses a cryptographically random algorithm for true 50/50 odds every time.",
+        "howToUse": [
+          "Click the Flip Coin button to toss the virtual coin.",
+          "Read the result — heads or tails — displayed instantly.",
+          "Flip again for a best-of-3 if the decision is important.",
+          "Record or screenshot the result if you need to keep a log."
+        ],
+        "whyItMatters": "Randomization removes social pressure from decisions — no one can accuse a digital coin of bias. It is widely used in sports for kickoff and serve choices, in classrooms to teach probability (flip 100 times to see the law of large numbers in action), and in any tie-breaking scenario where fairness matters. Unlike social consensus, a random coin flip produces a result everyone can accept as impartial.",
+        "proTip": "Use best-of-3 for important decisions rather than a single flip. It preserves the randomness while giving both parties a sense that the result was not determined by one lucky flip — making the outcome feel more legitimate to everyone involved."
+      }
     },
     "diceRoller": {
       "metaTitle": "Dice Roller — Roll Any Dice Online (d6, d20, d100) | ToolNotch",
@@ -1922,7 +2219,18 @@
           "question": "Can I set a custom number of sides?",
           "answer": "Yes. Simply type any die notation into the input field, such as d13 or d50. The roller accepts any positive integer as the number of sides, so you are not limited to standard die sizes."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "A virtual dice roller simulates tabletop dice for games, probability demonstrations, and random decisions. It supports standard dice notation used in tabletop RPGs: NdX+M means roll N dice of X sides and add modifier M (e.g., 2d6+3 means roll two 6-sided dice and add 3). Common dice types include d4, d6, d8, d10, d12, d20, and d100 (percentile). Notably, rolling multiple dice produces a bell-curve distribution due to the central limit theorem — two d6 average around 7, so results cluster toward the middle rather than being uniformly spread from 2 to 12. This is the core probability insight behind most tabletop RPG design.",
+        "howToUse": [
+          "Select the number of dice you want to roll.",
+          "Choose the die type — d4, d6, d8, d10, d12, d20, or enter a custom number of sides.",
+          "Add a modifier (positive or negative) if your game rules require one.",
+          "Click Roll and read the individual die results plus the total."
+        ],
+        "whyItMatters": "Physical dice develop bias over time from wear and imperfect manufacturing. Digital dice use a random number generator that maintains statistical fairness across millions of rolls. For educators, rolling dice digitally in class demonstrations is faster and results can be projected for the entire class to see — making probability lessons more interactive and immediate.",
+        "proTip": "For D&D ability score generation, roll 4d6 and drop the lowest die. For a quick NPC reaction, roll 2d6: 2–3 hostile, 4–5 unfriendly, 6–8 neutral, 9–10 friendly, 11–12 helpful. These are standard encounter tables from the Dungeon Master's Guide and work for any fantasy RPG system."
+      }
     },
     "numberGenerator": {
       "metaTitle": "Random Number Generator — Generate Numbers Between Any Range | ToolNotch",
@@ -1950,7 +2258,18 @@
           "question": "Can I generate lottery numbers?",
           "answer": "Yes — set Min: 1, Max: 49 (or your lottery's range), Count: 6, and disable duplicates. Click Generate for 6 unique random numbers."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "A random number generator produces unpredictable numbers within a range you define — useful for raffles, statistical sampling, research, gaming, and teaching probability. There is an important distinction between pseudorandom (algorithmic, deterministic with a seed) and cryptographically random (uses system entropy, suitable for security). This tool uses the browser's crypto.getRandomValues() for true randomness — not the weaker Math.random(). Use cases include picking lottery numbers, assigning random IDs, generating test data, and selecting students or participants in classroom settings.",
+        "howToUse": [
+          "Set the minimum value for your range.",
+          "Set the maximum value for your range.",
+          "Choose how many numbers to generate.",
+          "Click Generate and read the results instantly."
+        ],
+        "whyItMatters": "Humans are terrible at generating random numbers manually — we unconsciously avoid sequences, prefer certain digits, and show repeating patterns. A random number generator eliminates this bias completely. For raffles and contests, using a verifiable random number generator adds credibility and fairness, and the result can be shared or screenshotted to prove the selection was not manipulated.",
+        "proTip": "For a raffle with 500 entries, generate one number between 1 and 500 and assign it to the winner's position in your list. For multiple winners, generate numbers without repetition — use the unique numbers option. Screenshot the result before announcing to prove the draw was fair and untampered."
+      }
     },
     "giveawayPicker": {
       "metaTitle": "Giveaway Picker — Pick a Random Winner Online | ToolNotch",
@@ -1978,7 +2297,18 @@
           "question": "Can I use this for Instagram or YouTube giveaways?",
           "answer": "Yes — manually copy your commenter names into the text box and use the picker to select a random winner."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "A giveaway picker selects one or more winners randomly from a list of entries you provide. Common use cases include social media giveaways — picking winners from Instagram comment lists, Twitter/X retweet entries, and YouTube comment sections. This tool uses a local list you paste in; for platform-specific entry scraping you would need platform APIs. Transparency and verifiability are critical for giveaway fairness, and this tool makes it easy to prove a winner was chosen without bias.",
+        "howToUse": [
+          "Paste your entry list — usernames, comment text, or any identifiers — into the text box.",
+          "Set the number of winners you need.",
+          "Click Pick to randomly select winners from your list.",
+          "Optionally re-roll if a selected winner is ineligible."
+        ],
+        "whyItMatters": "Manual winner selection from thousands of entries is impractical and looks biased even when it is not. A random picker that you can screenshot and share publicly proves the winner was chosen fairly. For brands and creators, this protects credibility and satisfies platform giveaway guidelines that typically require a verifiable fair random selection method.",
+        "proTip": "Screenshot or screen-record the picking moment before announcing the winner. Share the result publicly — in a story, tweet, or post — with the full entry list visible to demonstrate transparency. This prevents accusations of favoritism that can significantly damage brand trust and community goodwill, especially for high-value prize giveaways."
+      }
     },
     "classroomNamePicker": {
       "metaTitle": "Classroom Name Picker — Random Student Picker | ToolNotch",
@@ -2006,7 +2336,18 @@
           "question": "Is this free for teachers?",
           "answer": "Yes, completely free. No signup, no account, no credit card. Just open the page and start using it."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "A classroom name picker randomly selects a student from your class roster for cold calling, participation, or task assignment. Educational research by Robert Bjork on retrieval practice shows that random selection improves engagement and learning retention compared to volunteer-only answering, where the same few students always respond. This tool is the digital equivalent of the classic popsicle stick technique — names on sticks in a cup drawn at random — but faster and visible to the whole class on a projected screen.",
+        "howToUse": [
+          "Enter your class roster in the text box, one student name per line.",
+          "Click Pick to randomly select a student.",
+          "Read the selected student's name displayed on screen.",
+          "Enable 'Remove on pick' to ensure every student is called before anyone is called twice."
+        ],
+        "whyItMatters": "Random selection keeps all students alert and engaged because anyone could be called next. Volunteer-based participation creates deep inequality — research shows 20% of students account for 80% of voluntary participation. The unpredictability of random selection activates attention in ways that volunteer formats do not, leading to higher engagement across the whole class rather than just the most confident students.",
+        "proTip": "Use the 'remove after picking' feature so each student is called once before anyone is called twice. This feels fairer to students and reduces anxiety about being called repeatedly. If a student is absent, remove their name for that session so the class flow remains uninterrupted and no one is put on the spot unfairly."
+      }
     },
     "typingTest": {
       "metaTitle": "Typing Speed Test — Check Your WPM Online Free | ToolNotch",
@@ -2030,7 +2371,18 @@
           "question": "What does accuracy mean?",
           "answer": "Accuracy is the percentage of correctly typed characters. An accuracy of 98% means 2 out of every 100 characters had an error."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "A typing speed test measures WPM (words per minute, where a word is standardized as 5 keystrokes including spaces), accuracy percentage (correct keystrokes divided by total keystrokes times 100), and raw WPM versus net WPM (net WPM deducts errors). Speed benchmarks: hunt-and-peck typists average 20–30 WPM, average office workers reach 40 WPM, proficient typists hit 60–80 WPM, professional transcriptionists exceed 80–100 WPM, competitive typists reach 120–150+ WPM, and the current world record exceeds 220 WPM.",
+        "howToUse": [
+          "Click Start or begin typing the displayed text to start the timer.",
+          "Type the passage as accurately and quickly as possible.",
+          "Read your WPM and accuracy when the time runs out.",
+          "Review which keys caused slowdowns and focus practice there."
+        ],
+        "whyItMatters": "Typing speed directly correlates with productivity for knowledge workers. At 40 WPM versus 80 WPM, a person typing the equivalent of 500 hours of documentation per year saves 250 hours — more than six weeks of work time. Touch typing using all 10 fingers on the home row doubles average speed compared to hunt-and-peck for most people within two to three months of deliberate practice.",
+        "proTip": "The biggest improvement comes from prioritizing accuracy over speed. Slow down until your accuracy is above 95%, then gradually increase pace. Speed follows accuracy naturally — trying to type fast while making many errors actually lowers net WPM and builds bad muscle memory. Use one-minute tests daily rather than one long session for the best results."
+      }
     }
   },
   "quiz": {
@@ -2347,7 +2699,20 @@
           "question": "What is the best retrospective format for remote teams?",
           "answer": "The three-column format (Went Well / To Improve / Action Items) is the most widely used and works well for remote teams because it is simple, focused, and easy to explain to new members. For variety, some teams alternate with formats like Start / Stop / Continue or the 4Ls (Liked, Learned, Lacked, Longed For)."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "A sprint retrospective is the Scrum ceremony held at the end of each sprint where the team reflects on what went well, what did not, and what to improve. The most widely used format is Start/Stop/Continue — what should the team start doing, stop doing, and continue doing. Other popular formats include 4Ls (Liked, Learned, Lacked, Longed For), which surfaces both positive and aspirational feedback, and Mad/Sad/Glad, which frames the retro around emotional responses and is particularly effective when team morale is a concern. The goal of every retrospective is actionable outcomes: each retro should produce one to three concrete improvement items with named owners, not just a venting session. Teams that treat the retro as a place to surface feelings without committing to change find the ceremony loses credibility and attendance within a few sprints.",
+        "howToUse": [
+          "Select a retro format — Start/Stop/Continue for general use, 4Ls for learning-focused teams, Mad/Sad/Glad when morale or emotions need attention.",
+          "Open the board and have each team member add observations to the relevant columns during the note-adding phase (10 minutes, no discussion yet).",
+          "Group similar or duplicate items together to reduce noise before voting.",
+          "Run a dot-vote: each participant gets 3–5 votes to spend on items they find most important — they can stack all votes on one item.",
+          "Discuss the top-voted items in order, spending the most time where votes are concentrated.",
+          "For each discussion point, assign a concrete action item to a named owner with a due date before the next sprint."
+        ],
+        "whyItMatters": "Teams that run regular, action-focused retrospectives improve sprint velocity over time because they systematically eliminate the friction that slows them down. The biggest anti-pattern in retros is discussing the same problems sprint after sprint without resolution — if the same issue appears on the board three sprints in a row, it signals a systemic problem that needs escalation beyond the retro. Retrospectives also build psychological safety when facilitated well: when team members see that raising a concern leads to a real change, they trust the process and participate more candidly. Teams that skip retros accumulate unaddressed dysfunction that eventually derails sprints entirely.",
+        "proTip": "Time-box the retro strictly: 45 minutes for a 2-week sprint. Spend 10 minutes adding items, 5 minutes grouping, 5 minutes dot-voting, 25 minutes discussing top-voted items and assigning owners. Never end a retro without named owners for each action item — 'the team' owning something means no one owns it, and the item will reappear on next sprint's board unchanged."
+      }
     },
     "standupGenerator": {
       "metaTitle": "Daily Standup Generator — Format Yesterday/Today/Blockers | ToolNotch",
@@ -2416,7 +2781,20 @@
           "question": "When should I use async standups?",
           "answer": "Async standups work well for distributed teams across multiple time zones where scheduling a synchronous meeting is impractical. Team members post their Yesterday / Today / Blockers update in a shared channel at their own start-of-day time. This generator is perfect for formatting async standup messages."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "The daily standup (daily Scrum) is a 15-minute maximum synchronization ceremony where each team member answers three questions: What did I do yesterday? What will I do today? What is blocking me? The standup originated in the Scrum Guide as a peer synchronization event — its purpose is to identify blockers early and keep the team coordinated, not to deliver status updates to management. When standups drift into status reporting to the Scrum Master or a manager, they lose their peer-coordination value and feel like surveillance. For distributed teams across time zones, the async standup is an effective alternative: team members post their three-question update in a shared channel at their own start-of-day time, giving the same information without requiring everyone to be online simultaneously.",
+        "howToUse": [
+          "Select the participants for today's standup.",
+          "For each participant, enter what they completed yesterday in the Yesterday field.",
+          "Enter what they plan to work on today in the Today field.",
+          "Enter any blockers or impediments in the Blockers field — leave blank if none.",
+          "Click Generate Standup to produce a clean, formatted summary.",
+          "Copy the output and paste it into Slack, Microsoft Teams, email, or your team's standup channel."
+        ],
+        "whyItMatters": "The standup is the most commonly misused Scrum ceremony. When it becomes a status report to a manager rather than a peer synchronization, it stops surfacing blockers early — which is its entire purpose. A 15-minute standup that surfaces one blocker per week saves more time than it costs: blockers unresolved for days compound into sprint failures. Async standups are particularly valuable for globally distributed teams, enabling the same information exchange without the timezone overhead of a synchronous meeting. This generator ensures the update is clearly formatted every time, reducing the cognitive load of writing a standup from scratch each morning.",
+        "proTip": "If your standup consistently exceeds 15 minutes, apply the parking lot rule: flag detailed discussions for after the standup with only the relevant people. The standup is for flagging blockers, not solving them. The problem-solving happens in the parking lot meeting immediately after with just the people who need to be involved — everyone else is free to start their day."
+      }
     },
     "planningPoker": {
       "metaTitle": "Planning Poker — Free Online Agile Estimation Tool | ToolNotch",
@@ -2477,7 +2855,20 @@
           "question": "Is planning poker only for software teams?",
           "answer": "No — any team that needs to estimate relative effort for tasks can use planning poker. Content teams, marketing teams, and operations groups all use it to size projects and prioritize backlogs, even without a formal software development context."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Planning poker (Scrum poker) is a consensus-based estimation technique where team members simultaneously reveal their story point estimates to avoid anchoring bias. If one person reveals their estimate first, others naturally anchor on that number — simultaneous reveal prevents this and surfaces genuine disagreement. The standard card values follow a Fibonacci-inspired sequence: 0, 1, 2, 3, 5, 8, 13, 20, 40, 100, ?, and infinity. Fibonacci works better than a linear scale because the growing gaps between large numbers reflect genuine estimation uncertainty — a 40-point story is not just twice as complex as a 20-point story, it carries far more unknowns. Story points are a relative unit of effort, not a time unit: a 5-point story is simply understood to be more effort than a 3-point story by however the team defines their scale.",
+        "howToUse": [
+          "Add team members who will participate in the estimation session.",
+          "Present a user story or task description so all participants understand what is being estimated.",
+          "Each team member privately selects their story point estimate from the Fibonacci card deck.",
+          "Reveal all estimates simultaneously — this prevents anchoring bias from early influencers.",
+          "If estimates are close, accept the consensus or the average and record the final point value.",
+          "If estimates diverge widely (e.g. one person picks 3 and another picks 13), ask the highest and lowest estimators to explain their reasoning, then re-vote."
+        ],
+        "whyItMatters": "Planning poker surfaces estimation disagreement that would otherwise be hidden. When one developer estimates 3 points and another estimates 13 for the same story, they are operating on different assumptions about scope, technical approach, or risk. That conversation — triggered by the estimate gap — prevents the misalignment that causes sprint failures mid-delivery. Teams that skip estimation or allow one person to dictate estimates routinely discover, mid-sprint, that a story was far larger than assumed. Consensus estimation builds shared understanding of the work before it begins.",
+        "proTip": "If a team cannot reach consensus after 2 rounds of voting, the user story is too large or too unclear to estimate reliably. Split it into smaller stories or spike it — timebox an investigation task to resolve the uncertainty before committing to a point value. A story the team cannot agree on is a story that will fail in the sprint."
+      }
     },
     "userStoryWriter": {
       "metaTitle": "User Story Writer — As a [Role] I Want [Feature] | ToolNotch",
@@ -2522,7 +2913,19 @@
           "question": "Can I generate multiple stories at once?",
           "answer": "Generate one story at a time, copy it, then clear the form and generate the next. Each story gets its own clean output."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "User stories are lightweight requirements written from the user's perspective in the format: As a [type of user], I want [action or feature], so that [benefit or goal]. Good user stories satisfy the INVEST criteria: Independent (can be developed and released separately from other stories), Negotiable (implementation details are open to discussion between the team and stakeholders), Valuable (delivers real value to the user or business), Estimable (can be sized by the team), Small (fits within a single sprint), and Testable (acceptance criteria can be verified by a tester). A user story is distinct from a task (which describes implementation work, not user value) and from a bug (which describes a deviation from expected behavior). The story format keeps the team focused on user outcomes rather than technical implementation details.",
+        "howToUse": [
+          "Select the type of user or role — for example, logged-in user, admin, guest, or a specific persona.",
+          "Describe the feature or action the user wants to perform in plain language.",
+          "Describe the benefit or goal — why the user wants this feature, what outcome it enables for them.",
+          "Review the generated user story in As a / I want / So that format.",
+          "Add three to five acceptance criteria in Given/When/Then format to define what done looks like for this story."
+        ],
+        "whyItMatters": "Poorly written user stories are the most common cause of sprint failure. Stories that conflate implementation details with user outcomes (such as 'as a user I want a database index' — this is a technical task, not a user story), stories without acceptance criteria, and stories too large to fit in a sprint all create ambiguity that derails development. When developers do not understand why a feature exists, they make implementation decisions that miss the user's actual need. Good stories make estimation accurate and acceptance testing straightforward because the team and the tester are working from the same definition of done.",
+        "proTip": "Always write three to five acceptance criteria per story using Given/When/Then format: Given [precondition], When [action], Then [expected result]. These become your test cases automatically — a well-written acceptance criterion maps directly to a test scenario. If you cannot write acceptance criteria for a story, it is not ready to enter the sprint backlog."
+      }
     },
     "sprintDateCalculator": {
       "metaTitle": "Sprint Date Calculator — Plan All Ceremony Dates | ToolNotch",

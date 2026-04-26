@@ -6,6 +6,13 @@ import type { FaqItem } from '@/components/FaqSection'
 import ToolWrapper from '@/components/ToolWrapper'
 import InvoiceBuilder from '../invoice-generator/InvoiceBuilder'
 
+interface RichContent {
+  whatIs: string
+  howToUse: string[]
+  whyItMatters: string
+  proTip: string
+}
+
 const PATH = '/tools/finance/invoice-generator-canada'
 
 interface Props { params: Promise<{ locale: string }> }
@@ -24,6 +31,7 @@ export default async function InvoiceGeneratorCanadaPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'finance.invoiceGenerator.invoiceCanada' })
   const faqs = t.raw('faqs') as FaqItem[]
+  const richContent = t.raw('richContent') as RichContent
 
   const jsonLd = buildJsonLd(
     webAppSchema(t('title'), PATH, t('metaDescription'), locale, 'BusinessApplication'),
@@ -44,6 +52,7 @@ export default async function InvoiceGeneratorCanadaPage({ params }: Props) {
         breadcrumbLabel={t('title')}
         faqs={faqs}
         adSlot="1234567890"
+        richContent={richContent}
       >
         <InvoiceBuilder locale="canada" />
       </ToolWrapper>

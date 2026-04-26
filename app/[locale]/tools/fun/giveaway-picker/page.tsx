@@ -8,6 +8,13 @@ import NamePicker from '@/components/fun/NamePicker'
 
 const PATH = '/tools/fun/giveaway-picker'
 
+interface RichContent {
+  whatIs: string
+  howToUse: string[]
+  whyItMatters: string
+  proTip: string
+}
+
 interface Props { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -24,6 +31,7 @@ export default async function GiveawayPickerPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'fun.giveawayPicker' })
   const faqs = t.raw('faqs') as FaqItem[]
+  const richContent = t.raw('richContent') as RichContent
 
   const jsonLd = buildJsonLd(
     webAppSchema(t('title'), PATH, t('metaDescription'), locale),
@@ -44,7 +52,7 @@ export default async function GiveawayPickerPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} adSlot="1234567890">
+      <ToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} adSlot="1234567890" richContent={richContent}>
         <NamePicker />
       </ToolWrapper>
     </>

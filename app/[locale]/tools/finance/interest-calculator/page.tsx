@@ -8,6 +8,13 @@ import type { FaqItem } from '@/components/FaqSection'
 import LoanCalculator from '@/components/finance/calculator/LoanCalculator'
 import ToolWrapper from '@/components/ToolWrapper'
 
+interface RichContent {
+  whatIs: string
+  howToUse: string[]
+  whyItMatters: string
+  proTip: string
+}
+
 const SLUG = 'interest-calculator'
 const PATH = `/tools/finance/${SLUG}`
 const variant = CALCULATOR_VARIANTS.find(v => v.slug === SLUG)!
@@ -28,6 +35,7 @@ export default async function InterestCalculatorPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: `finance.variants.${SLUG}` })
   const faqs = t.raw('faqs') as FaqItem[]
+  const richContent = t.raw('richContent') as RichContent
 
   const jsonLd = buildJsonLd(
     webAppSchema(t('title'), PATH, t('metaDescription'), locale, 'FinanceApplication'),
@@ -42,7 +50,7 @@ export default async function InterestCalculatorPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} adSlot="1234567890">
+      <ToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} adSlot="1234567890" richContent={richContent}>
         <Suspense><LoanCalculator variant={variant} /></Suspense>
       </ToolWrapper>
     </>
