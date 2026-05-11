@@ -7,6 +7,8 @@ export default createMiddleware({
   localePrefix: 'as-needed', // EN = no prefix; PT/ES get /pt/ and /es/
 })
 
+export const runtime = 'edge'
+
 export const config = {
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico|pdf.worker.min.mjs|robots.txt|sitemap.xml|ads.txt).*)'],
 }
