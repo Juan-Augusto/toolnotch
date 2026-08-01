@@ -8,6 +8,8 @@ export default function DarkModeToggle() {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    // Reads DOM class set by the pre-hydration inline script — unavailable during SSR render.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsDark(document.documentElement.classList.contains('dark'))
     setMounted(true)
   }, [])

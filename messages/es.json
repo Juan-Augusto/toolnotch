@@ -48,7 +48,19 @@
           "question": "¿Puedo cambiar el tamaño de la imagen al comprimir?",
           "answer": "Sí — ingresa un ancho máximo en píxeles y la imagen se reducirá proporcionalmente antes de la compresión. Déjalo en blanco para mantener las dimensiones originales."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "La compresión de imágenes reduce el tamaño del archivo mientras mantiene una calidad visual aceptable. Hay tres formatos principales a elegir: JPEG (compresión con pérdida, mejor para fotografías, no soporta transparencia), PNG (compresión sin pérdida, mejor para capturas de pantalla, gráficos y logotipos que requieren transparencia o nitidez píxel por píxel), y WebP (formato moderno de Google, 25-35% más pequeño que JPEG a la misma calidad, soportado por todos los navegadores modernos desde 2020). La compresión con pérdida funciona eliminando detalles de imagen de alta frecuencia que el ojo humano no puede percibir a distancias normales de visualización — es por eso que una foto comprimida de 50 KB es indistinguible visualmente de la original de 500 KB para la mayoría de los casos de uso web.",
+        "howToUse": [
+          "Sube una imagen arrastrándola al área de soltar o haciendo clic para navegar tus archivos.",
+          "Selecciona el formato de salida deseado (JPG, PNG o WebP) y ajusta el deslizador de calidad.",
+          "Opcionalmente establece un ancho máximo en píxeles para redimensionar la imagen proporcionalmente mientras se comprime.",
+          "Haz clic en Comprimir Imagen para procesar el archivo.",
+          "Usa el deslizador de comparación antes/ Después para revisar el resultado, luego haz clic en Descargar para guardar."
+        ],
+        "whyItMatters": "La velocidad de carga de la página es un factor directo en el ranking de Google a través de las Core Web Vitals, específicamente la métrica Largest Contentful Paint. Las imágenes representan aproximadamente el 75% del peso total de la página en el sitio web promedio, convirtiéndose en el único contribuyente más grande al tiempo de carga lento. Un retraso de dos segundos en la carga de la página reduce las conversiones por 4.42% por segundo según la investigación de Portent. Comprimir imágenes antes de cargarlas en cualquier sitio web, blog o plataforma de comercio electrónico mejora directamente tanto el ranking del motor de búsqueda como la experiencia del usuario.",
+        "proTip": "Todo el procesamiento ocurre completamente en tu navegador — no se cargan archivos a ningún servidor. Tus documentos nunca salen de tu dispositivo. Para imágenes de sitios web, usa el formato WebP siempre que tu sitio lo soporte — todos los navegadores modernos han soportado WebP desde 2020. Para fotografías, JPEG a la calidad del 80% es indistinguible visualmente del 100% mientras ocupa el 50-70% menos de espacio. Reserva PNG solo para imágenes que requieren transparencia o deben tener nitidez píxel por píxel perfecta, como logotipos y capturas de pantalla que contienen texto."
+      }
     },
     "shared": {
       "dropZone": {
@@ -119,7 +131,18 @@
           "question": "¿Puedo combinar PDFs protegidos con contraseña?",
           "answer": "Los PDFs protegidos con contraseña no se pueden combinar. Primero elimina la protección con tu visor de PDF."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "La fusión de PDF combina varios archivos PDF en un solo documento con un solo clic. Casos comunes de uso incluyen enviar múltiples documentos como una sola anexación — las solicitudes de trabajo, los envíos de subsidios y las matrículas universitarias a menudo requieren un solo archivo — crear informes combinados desde secciones separadas, archivar documentos relacionados juntos para el almacenamiento a largo plazo, e imprimir múltiples archivos en secuencia sin cambiar entre documentos. El PDF fusionado mantiene la calidad original de cada documento fuente: imágenes, fuentes y formato se preservan exactamente. El orden de las páginas en el archivo fusionado sigue el orden de carga, por lo que puedes arrastrar y reordenar los archivos antes de fusionar para controlar exactamente qué páginas aparecen primero.",
+        "howToUse": [
+          "Haz clic en el área de carga o arrastra y suelta tus archivos PDF en la zona de soltar.",
+          "Arrastra las tarjetas de archivo para reordenarlas — el PDF fusionado seguirá el exacto orden que establezcas.",
+          "Haz clic en Fusionar PDFs para combinar todos los archivos en un solo documento.",
+          "El PDF fusionado se descarga instantáneamente a tu dispositivo."
+        ],
+        "whyItMatters": "Las anexaciones de correo electrónico a menudo están limitadas a un tamaño o número fijos por mensaje. Muchas instituciones — departamentos de recursos humanos, universidades y agencias gubernamentales — requieren explícitamente 'un solo archivo' para las presentaciones. Enviar cinco anexos cuando el formulario espera uno puede resultar en rechazo o una solicitud para resubmitir. Fusionar los archivos antes también facilita al destinatario: un solo archivo para abrir, un solo archivo para imprimir y ninguna confusión sobre qué anexo es cual. Las tiendas de impresión también prefieren fuertemente archivos individuales para trabajos de impresión multipágina para evitar errores en el orden de las páginas.",
+        "proTip": "Todo el procesamiento ocurre completamente en tu navegador — no se cargan archivos a ningún servidor. Tus documentos nunca salen de tu dispositivo. Antes de enviar, abre el PDF fusionado y desplázate por él para verificar el orden de las páginas. El primer archivo subido se convierte en las primeras páginas, así que si necesitas una portada o índice al principio, sube primero."
+      }
     },
     "split": {
       "metaTitle": "Dividir PDF Gratis en Línea — Extraer Páginas | ToolNotch",
@@ -162,7 +185,19 @@
           "question": "¿Cómo sé cuántas páginas tiene mi PDF?",
           "answer": "Abre el PDF en cualquier visor (como tu navegador o Adobe Reader) para ver el número total de páginas."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "La división de PDF extrae páginas o rangos de páginas específicos de un PDF en archivos separados. Casos de uso incluyen extraer un capítulo único de un gran ebook para compartirlo sin revelar el documento completo, compartir solo las secciones relevantes de un contrato con un contraparte, dividir una serie de documentos escaneados en archivos individuales después de escanear una pila de papel juntos, y eliminar una página confidencial antes de compartir un informe. Hay una distinción importante entre dos modos de división: dividir por rango de páginas (las páginas 1–10 se convierten en un archivo, las páginas 11–20 en otro) y dividir cada página en archivos individuales de una sola página, lo que te da el control más fino.",
+        "howToUse": [
+          "Sube tu PDF haciendo clic en el área de soltar o arrastrando el archivo dentro.",
+          "Ingresa los rangos de página que deseas extraer en el campo de rangos de página — por ejemplo, '1-5, 8, 11-15' para obtener tres archivos de salida separados.",
+          "Deja el campo en blanco para dividir cada página en su propio archivo PDF individual.",
+          "Haz clic en Dividir PDF para procesar el archivo.",
+          "Descarga los archivos resultantes — múltiples salidas se empaquetan en un archivo ZIP."
+        ],
+        "whyItMatters": "Los PDF grandes se comparten regularmente cuando solo una pequeña porción es relevante, desperdiciando ancho de banda y forzando a los destinatarios a desplazarse por páginas que no necesitan. La división hace que la compartición sea precisa y profesional. Para documentos legales y financieros, compartir solo la sección relevante también reduce la exposición: un contraparte revisando la cláusula 7 de un contrato no necesita ver las tablas confidenciales en las páginas 40–60. Dividir antes de compartir es una forma sencilla de limitar la revelación de información sin redactar líneas individuales.",
+        "proTip": "Todo el procesamiento ocurre completamente en tu navegador — no se suben archivos a ningún servidor. Tus documentos nunca salen de tu dispositivo. Si necesitas reorganizar un documento escaneado que no fue originalmente creado como archivos separados, usa la opción 'dividir todas las páginas' primero para obtener archivos individuales de página, luego fusiona páginas específicas juntas usando la herramienta de fusión. Esto te da el control completo sobre qué páginas terminan en qué archivo de salida."
+      }
     },
     "compress": {
       "metaTitle": "Comprimir PDF Gratis en Línea — Reducir Tamaño | ToolNotch",
@@ -206,7 +241,18 @@
           "question": "¿Mi archivo se sube a algún lugar?",
           "answer": "No. La compresión se ejecuta completamente en tu navegador. Tu archivo nunca sale de tu dispositivo."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "La compresión de PDF reduce el tamaño del archivo mientras mantiene el contenido. Los PDFs varían enormemente en tamaño dependiendo de cómo se crearon: los PDFs escaneados son esencialmente imágenes bitmap incrustadas en un contenedor PDF y pueden ocupar 10–50 MB por página, mientras que los PDFs nativos de texto generados desde un procesador de palabras son muy pequeños — menos de 1 MB para 50 páginas. Hay dos tipos de compresión: la compresión con pérdida reduce la calidad de las imágenes para lograr tamaños de archivo más pequeños, y la compresión sin pérdida elimina metadatos redundantes y objetos internos no utilizados sin tocar la calidad en absoluto. Para la mayoría de los casos de uso de correo electrónico y web, una compresión de calidad media es invisible visualmente en pantalla y puede reducir el tamaño del archivo en un 60–80%, lo que hace la diferencia entre una subida rechazada y una presentación exitosa.",
+        "howToUse": [
+          "Sube tu PDF haciendo clic en el área de soltar o arrastrando el archivo dentro.",
+          "Haz clic en Comprimir PDF para reducir el tamaño del archivo utilizando la optimización estructural sin pérdida.",
+          "Revisa el porcentaje de reducción de tamaño mostrado en el panel de resultados.",
+          "Haz clic en Descargar PDF Comprimido para guardar el archivo más pequeño a tu dispositivo."
+        ],
+        "whyItMatters": "Los anexos de correo electrónico suelen estar limitados a 10–25 MB por parte del servidor de correo, y muchos campos de carga de archivos imponen un límite de 5 MB o 10 MB. Un documento escaneado en calidad original puede fácilmente superar estos límites y resultar en un correo electrónico rebotado o una subida fallida. Comprimir antes de enviar previene las subidas rechazadas y evita el intercambio de preguntas y respuestas sobre la solicitud a los destinatarios que utilicen servicios de compartición de archivos. Para los PDFs alojados en sitios web, archivos más pequeños también se cargan más rápido en los visores de PDF del navegador, mejorando la experiencia para los lectores con conexiones lentas.",
+        "proTip": "Todo el procesamiento ocurre completamente en tu navegador — no se suben archivos a ningún servidor. Tus documentos nunca salen de tu dispositivo. Si tu PDF contiene páginas solo de texto junto con imágenes escaneadas, intenta comprimir una vez y luego evalúa si la calidad es aceptable. La mayoría de las personas no pueden distinguir visualmente una imagen de PDF comprimida a 80% de calidad del original cuando se vea a un nivel normal de zoom en una pantalla."
+      }
     },
     "pdfToJpg": {
       "metaTitle": "PDF a JPG — Convertir Páginas de PDF a Imágenes Gratis | ToolNotch",
@@ -248,7 +294,18 @@
           "question": "¿Cómo abro el archivo ZIP?",
           "answer": "En Windows, haz clic derecho en el ZIP y elige Extraer todo. En Mac, haz doble clic. Cada página es un JPEG independiente."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "La conversión de PDF a JPG convierte cada página de un PDF en un archivo de imagen JPEG. Los casos de uso incluyen incrustar el contenido del PDF en presentaciones o sitios web — ni PowerPoint ni las etiquetas img HTML pueden mostrar PDFs en línea — compartir el contenido del documento en plataformas sociales que no admiten la subida de archivos PDF, crear vistas previas de miniaturas para sistemas de gestión de documentos y extraer diagramas o gráficos de PDF para su uso en otras aplicaciones. La resolución importa: 72 DPI es la resolución de pantalla (archivos pequeños, adecuados para las miniaturas web), 150 DPI es de calidad web (fino en la mayoría de los monitores) y 300 DPI es de alta calidad para impresión (archivos grandes, máxima detalle). Una mayor resolución produce archivos más grandes pero captura texto y detalles finos.",
+        "howToUse": [
+          "Sube tu PDF haciendo clic en el área de soltar o arrastrando el archivo dentro.",
+          "Haz clic en Convertir a JPG para renderizar todas las páginas como imágenes JPEG.",
+          "Revisa las imágenes convertidas en la cuadrícula que aparece debajo del botón.",
+          "Descarga una imagen individual directamente o descarga todas las páginas como un archivo ZIP para PDFs de varias páginas."
+        ],
+        "whyItMatters": "Los archivos PDF no pueden ser incrustados directamente en publicaciones de redes sociales, etiquetas img HTML o diapositivas de presentación. Convertir a JPG hace que el contenido del documento sea universalmente compartible en todos los plataformas y aplicaciones que aceptan imágenes. Para documentos de una sola página como certificados, diplomas, badges de eventos o calificaciones profesionales, un JPEG es más portátil y fácil de mostrar en una cartera digital o en un perfil de LinkedIn que un archivo PDF adjunto que debe descargarse e abrir por separado.",
+        "proTip": "Todo el procesamiento ocurre completamente en tu navegador — no se suben archivos a ningún servidor. Tus documentos nunca salen de tu dispositivo. Usa 150 DPI para la visualización en pantalla y correo electrónico — buena calidad con un tamaño de archivo razonable. Usa solo 300 DPI si la salida será impresa o ampliamente zoomada. Para diapositivas de presentación, 96 DPI coincide con la mayoría de las resoluciones de pantalla y produce el menor archivo sin pérdida de calidad visible."
+      }
     },
     "jpgToPdf": {
       "metaTitle": "JPG a PDF — Convertir Imágenes a PDF Gratis | ToolNotch",
@@ -285,7 +342,18 @@
           "question": "¿Qué tamaño tendrán las páginas del PDF?",
           "answer": "Cada página tiene las dimensiones de la imagen correspondiente, por lo que tus imágenes nunca se escalan ni se recortan."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "La conversión de JPG a PDF inserta una o más imágenes JPEG en un documento PDF. Los casos de uso incluyen convertir fotos de notas escritas a mano o formularios llenos de papel en un documento sumitábel, combinar varias imágenes escaneadas en un solo PDF para que todo llegue en un solo archivo, crear un portafolio PDF a partir de una colección de archivos de imagen y enviar documentos de identificación fotográfica en formato PDF según lo requieren muchas formas oficiales, solicitudes de visa y procesos de incorporación de RRHH. Es importante notar que la salida es un PDF basado en imágenes — el texto en cualquier imagen no es legible o searchable por máquina a menos que apliques OCR (recognition óptica de caracteres) por separado.",
+        "howToUse": [
+          "Sube una o más imágenes JPEG o PNG haciendo clic en el área de soltar o arrastrando los archivos dentro.",
+          "Arrastra las miniaturas de las imágenes para ordenarlas según el orden que deseas que aparezcan en el PDF.",
+          "Haz clic en Convertir a PDF para generar el documento.",
+          "El PDF se descarga instantáneamente a tu dispositivo."
+        ],
+        "whyItMatters": "Muchas plataformas de presentación oficial, sistemas de solicitud universitaria y plataformas de RRHH aceptan PDF pero no JPEG. Combinar varias imágenes en un solo PDF también satisface los requisitos de envío de archivos individuales — evitando el problema de una forma que acepta solo una anexión cuando tienes tres páginas escaneadas. El contenedor PDF también soporta metadatos (título, autor), protección con contraseña y firmas digitales que los archivos JPEG raw no tienen, dándote más control sobre cómo se usa el documento después de la entrega.",
+        "proTip": "Todo el procesamiento ocurre completamente en tu navegador — ningún archivo se carga a ningún servidor. Tus documentos nunca salen de tu dispositivo. Si tus imágenes son muy de alta resolución — las fotos del teléfono generalmente son de 4000×3000 píxeles y 6–12 MB cada una — comprime o redimensiona las imágenes antes de convertirlas. Un PDF que contiene tres imágenes no comprimidas de fotos del teléfono puede alcanzar hasta 30–40 MB. Busca imágenes con menos de 2 MB cada una para producir un PDF de salida razonablemente pequeño que pase la mayoría de los límites de tamaño de carga."
+      }
     }
   },
   "convert": {
@@ -315,7 +383,19 @@
           "question": "¿Cómo convierto metros a pies?",
           "answer": "Multiplica los metros por 3.28084. Por ejemplo, 5 metros = 5 × 3.28084 = 16.4042 pies. Selecciona la categoría Longitud y configura De: Metro, A: Pie."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Un conversor de unidades traduce medidas entre diferentes sistemas de unidades — métrico SI, imperial y estándar de EE.UU. Las categorías más comunes incluyen longitud (metros, pies, pulgadas, millas), peso (kilogramos, libras, piedra), temperatura (grados Celsius, Fahrenheit, Kelvin), volumen (litros, galones — nota que el galón británico es 4.546 L mientras que el galón de EE.UU. es 3.785 L, una diferencia que importa en la cocina y los cálculos de combustible), velocidad (km/h vs mph), área (metros cuadrados vs pies cuadrados) y almacenamiento digital (bytes, KB, MB, GB, TB). Puntos comunes de confusión: las onzas líquidas son una unidad de volumen y las onzas de peso son una unidad de masa — no se pueden intercambiar. La piedra es una unidad británica igual a exactamente 14 libras, raramente utilizada fuera del Reino Unido e Irlanda.",
+        "howToUse": [
+          "Selecciona la categoría de unidad que necesitas: longitud, peso, temperatura, volumen, velocidad, área o almacenamiento digital.",
+          "Ingresa el valor que quieres convertir.",
+          "Selecciona la unidad de origen — la unidad en la que se expresa tu valor actualmente.",
+          "Selecciona la unidad objetivo — la unidad a la que deseas convertir.",
+          "Lee el valor convertido inmediatamente en el campo de resultado."
+        ],
+        "whyItMatters": "Errores en la conversión de unidades causan fallos reales en el mundo real. El orbitera climático de Marte en 1999 se perdió — una misión de $327 millones — porque un equipo de ingeniería usaba unidades métricas y otro usaba imperial, y ninguno detectó la desaceleración. Para el uso diario, la conversión de unidades habilita la escalada de recetas culinarias entre las medidas de EE.UU. y Europa, el planificación del viaje internacional para distancias y temperaturas, la lectura de dimensiones de productos listadas en unidades desconocidas, la comprensión de pronósticos meteorológicos extranjeros y la comparación de la eficiencia del combustible expresada como mpg vs L/100km.",
+        "proTip": "Cálculo mental rápido para las dos conversiones más comunes: para convertir grados Celsius a Fahrenheit, doble el valor en grados Celsius y luego suma 30 (aproximado — fórmula exacta es °C × 9/5 + 32). Para convertir kilómetros a millas, multiplica por 0.6 para una estimación precisa (exacto: × 0.621). Un día de 5°C es aproximadamente 41°F; 100 km es aproximadamente 62 millas. Estos atajos cubren la mayoría de las conversiones de viaje y pronósticos meteorológicos sin necesidad de una calculadora."
+      }
     },
     "currency": {
       "metaTitle": "Conversor de Divisas — Tasas de Cambio en Tiempo Real | ToolNotch",
@@ -344,7 +424,18 @@
           "question": "¿Puedo usar esto para transacciones financieras?",
           "answer": "Esta herramienta es solo de referencia. Para transacciones financieras, usa siempre las tasas oficiales de tu banco o bróker, que incluyen comisiones y diferenciales."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Un conversor de divisas traduce cantidades entre las monedas del mundo usando tasas de intercambio. Entender el paisaje de las tasas es importante: la tasa media (también llamada tasa interbancaria) es la tasa de intercambio real mostrada en Reuters, Bloomberg y Google Finance — es el punto medio entre los precios de compra y venta en el mercado wholesale. Los bancos suelen añadir un recargo del 2-5% sobre la tasa media. Las tarjetas de viaje de proveedores como Wise y Revolut cuestan 0-1% sobre la tasa media. Las mesas de cambio en los aeropuertos a menudo aplican recargos del 8-15%. Las tasas mostradas en esta herramienta son indicativas — se actualizan periódicamente y tu tasa real de conversión dependerá de tu proveedor, la cantidad de la transacción y el momento exacto de la conversión.",
+        "howToUse": [
+          "Selecciona la moneda de origen — la moneda que estás convirtiendo.",
+          "Ingresa la cantidad que quieres convertir.",
+          "Selecciona la moneda objetivo — la moneda a la que quieres convertir.",
+          "Lee la cantidad convertida y la tasa de intercambio indicativa utilizada para el cálculo."
+        ],
+        "whyItMatters": "Los recargos ocultos por las tasas de divisas cuestan a los viajeros internacionales y a las empresas billones anualmente. El cambio dinámico de monedas — donde un comerciante extranjero o una cajera ATM te ofrece cobrar en tu moneda local — típicamente añade 3-7% sobre la tasa media, presentado como una conveniencia. Saber la tasa media real te permite evaluar estas ofertas con precisión y rechazarlas cuando el costo es injustificado. Para las facturas de negocios internacionales e los contratos, especificar quién asume el riesgo de la moneda y a qué tasa se resolverá es una decisión financiera material que debe estar en los términos del contrato.",
+        "proTip": "Para viajar, compara la tasa anunciada por tu banco con la tasa media antes de decidir cómo pagar. Las tarjetas de Wise, Revolut y Charles Schwab debit cuestan 0-1% sobre la tasa media. Las tarjetas bancarias tradicionales típicamente cuestan 2-5%. En un viaje de $5,000 esa diferencia es $100-250 en cuotas de FX evitables — suficientemente significativo para justificar el cambio a una tarjeta con bajos recargos por FX antes de tu próximo viaje internacional."
+      }
     },
     "shared": {
       "from": "De",
@@ -440,7 +531,19 @@
           "question": "¿Cuál es el límite de caracteres para una meta descripción?",
           "answer": "Google normalmente muestra entre 155 y 160 caracteres de una meta descripción en los resultados de búsqueda. Mantenlas entre 140 y 155 caracteres para mejores resultados."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Un contador de caracteres te dice exactamente cuántos caracteres — letras, números, símbolos, espacios y signos de puntuación — aparecen en tu texto. A diferencia de un contador de palabras, mide la longitud bruta de una cadena, que es la unidad más común que las plataformas usan para imponer límites de publicación. Twitter/X permite 280 caracteres por publicación. Los mensajes SMS están limitados a 160 caracteres por segmento (mensajes más largos se dividen y cobran separadamente). Para SEO, un título meta debería mantenerse dentro de 50–60 caracteres para que los motores de búsqueda lo muestren completo; las descripciones meta deberían tener 150–160 caracteres. LinkedIn recomienda mantener las publicaciones en 700 caracteres para el mejor alcance, mientras que las subtítulos de Instagram permiten hasta 2,200 caracteres pero solo 125 son visibles antes del corte 'más'. Los emojis complican las cosas — en la codificación UTF-16 (usada por X), la mayoría de los emojis cuentan como 2 caracteres debido a pares de surrogados, incluso aunque aparecen como un solo glifo.",
+        "howToUse": [
+          "Pega o escribe tu texto en el área de entrada — el conteo de caracteres se actualiza instantáneamente.",
+          "Verifica la estadística 'Caracteres' para el recuento total, incluyendo espacios.",
+          "Verifica 'Caracteres (sin espacios)' si la plataforma excluye los espacios de su límite.",
+          "Compara tu conteo con el límite objetivo para tu plataforma (280 para X, 160 para SMS, 50–60 para títulos meta).",
+          "Edita tu texto directamente en la caja y observa cómo el conteo disminuye mientras trunques para ajustarte."
+        ],
+        "whyItMatters": "Superar el límite de caracteres de una plataforma puede truncar tu mensaje silenciosamente o impedir publicarlo por completo. Para SEO, un título meta con más de 60 caracteres se corta en los resultados de búsqueda de Google con un punto suspensivo, reduciendo las tasas de clic porque los lectores ven una encabezado incompleto. Las descripciones meta con más de 160 caracteres son truncadas de manera similar, desperdiciando la oportunidad de persuadir. Para campañas de marketing por SMS, cada segmento con más de 160 caracteres duplica el costo por mensaje enviado — un pequeño exceso a lo largo de miles de envíos se acumula rápidamente. Saber tu conteo exacto de caracteres antes de publicar evita estos errores costosos.",
+        "proTip": "Cuando escribas para Twitter/X, recuerda que las URLs siempre se cuentan como 23 caracteres independientemente de la longitud real de la URL — el acortador t.co de Twitter envuelve automáticamente cada enlace. Así que una URL de 200 caracteres aún solo cuesta 23 caracteres en tu publicación. Factora esto en tu presupuesto de caracteres cuando tu tweet contiene un enlace, y usa los caracteres restantes para tu mensaje real."
+      }
     },
     "sentenceCounter": {
       "metaTitle": "Contador de Oraciones — Contar Oraciones en Línea | ToolNotch",
@@ -460,7 +563,19 @@
           "question": "¿Cuál es el promedio de palabras por oración para una lectura fácil?",
           "answer": "La fórmula de legibilidad Flesch usa las palabras por oración como métrica clave. Apunta a entre 15 y 20 palabras por oración para el público general. Las oraciones de más de 30 palabras se consideran difíciles."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Un contador de oraciones cuenta el número de oraciones completas en tu texto — cada una terminando con un punto, signo de exclamación o interrogación. Más allá del conteo simple, el análisis de oraciones es una entrada clave para fórmulas de legibilidad: tanto la puntuación Flesch Reading Ease como la escala Flesch-Kincaid Grade Level usan la longitud promedio de las oraciones (palabras por oración) como una variable principal. Las oraciones muy largas — aquellas que superan los 30 palabras — reducen drásticamente las puntuaciones de legibilidad y aumentan el esfuerzo cognitivo para los lectores. El conteo de oraciones también es relevante en la escritura académica, donde las asignaciones pueden especificar un número mínimo de oraciones por párrafo, y en la edición del contenido, donde identificar oraciones muy largas o cortas ayuda a mejorar el flujo y el ritmo de una pieza.",
+        "howToUse": [
+          "Pega tu texto en el área de entrada — el conteo de oraciones se actualiza automáticamente.",
+          "Lee el conteo de oraciones y nota la figura promedio de palabras por oración.",
+          "Identifica tus oraciones más largas — estas son las mejores candidatas para dividir para mejorar la legibilidad.",
+          "Dirige un promedio de 15–20 palabras por oración para el público general.",
+          "Edita las oraciones directamente en el cuadro y observa la figura promedio que se actualiza en tiempo real mientras revisas."
+        ],
+        "whyItMatters": "La investigación del Nielsen Norman Group muestra que los lectores en línea rastrean más que leen — promediando solo el 20–28% de las palabras por página. Las oraciones cortas y variadas reducen el esfuerzo cognitivo y mantienen a los lectores interesados durante más tiempo. Variar la longitud de las oraciones también crea un ritmo natural: escribir todo con oraciones cortas se siente desgarrado y robotizado, mientras que todas las oraciones largas se sienten densas y agotadoras. El punto de equilibrio para la mayoría de los públicos es una mezcla — principalmente 8–15 palabras por oración con golpes cortos occasionales para enfatizar y oraciones más largas para explicaciones detalladas. Revisar el conteo de oraciones te ayuda a auditar el ritmo y detectar párrafos que se han vuelto inmanejables durante la edición.",
+        "proTip": "En la escritura empresarial, dirige un promedio de longitud de oración de 15–20 palabras. La escritura académica puede ir hasta 25–30 palabras pero debe compensarse con una estructura de párrafo clara y oraciones temáticas. Si tu promedio de longitud de oración supera los 25 palabras, encuentra las oraciones más largas del 30% de tu texto y divide cada una en un punto natural de conjunción o cláusula — la mayoría de los lectores no notarán el cambio, pero la comprensión se mejora significativamente."
+      }
     },
     "readabilityChecker": {
       "metaTitle": "Comprobador de Legibilidad — Puntuación Flesch y Nivel de Lectura | ToolNotch",
@@ -520,7 +635,19 @@
           "question": "¿Cuánto debe durar un discurso de 5 minutos?",
           "answer": "Un discurso de 5 minutos tiene aproximadamente entre 650 y 750 palabras a un ritmo natural de habla de 130–150 palabras por minuto. Un discurso de 10 minutos tiene entre 1.300 y 1.500 palabras."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Un calculador de tiempo de lectura estima cuánto tiempo toma leer un texto dividiendo su recuento de palabras por una velocidad promedio de lectura silenciosa. La velocidad estándar adulta de lectura silenciosa para no ficción es de 200–250 palabras por minuto (wpm), con la investigación comúnmente citando 238 wpm como un benchmark confiable. La comprensión disminuye significativamente a partir de 300 wpm, por lo que los cálculos de lectura rápida no se usan para estimaciones realistas. El tipo de contenido afecta la velocidad efectiva de lectura: el material técnico denso lee más lento a 150–180 wpm, mientras que las listas amigables para el desplazamiento leen más rápido. La mayoría de los plataformas de blog — Medium, Substack, Ghost — muestran un estimado de tiempo de lectura prominente al principio de los artículos porque afecta directamente si los lectores hacen clic y comienzan a leer.",
+        "howToUse": [
+          "Pega tu artículo o texto en el área de entrada — el tiempo de lectura y el habla se calculan instantáneamente.",
+          "Lee el estimado de tiempo de lectura basado en la velocidad estándar de lectura adulta de 238 wpm.",
+          "Comprueba el estimado de tiempo de habla (alrededor de 130 wpm) si estás preparando un guion, podcast o presentación.",
+          "Para contenido técnico, añade mentalmente del 20–30% al estimado de tiempo de lectura para tener en cuenta el procesamiento más lento.",
+          "Usa el recuento de palabras junto con el tiempo de lectura para medir si la longitud de tu contenido coincide con tu canal (publicaciones en LinkedIn de menos de 2 min, contenido SEO de blog de 7–15 min)."
+        ],
+        "whyItMatters": "Los artículos con un tiempo de lectura mostrado tienen tasas de participación más altas porque los lectores se seleccionan por sí mismos: alguien con 3 minutos disponibles comenzará un artículo de 3 minutos pero saltará uno de 12 minutos sin siquiera abrirlo. Para los profesionales del contenido, la longitud del contenido debe coincidir con el canal — publicaciones en LinkedIn de menos de 2 minutos, boletines electrónicos de correo electrónico de 3–5 minutos, contenido SEO de larga forma de 7–15 minutos. El tiempo de lectura también sirve como un proxy para la profundidad del contenido: los artículos más largos señalan una cobertura exhaustiva, lo que tiende a correlacionar con mejores clasificaciones en búsquedas, más enlaces entrantes y mayores tasas de compartición social.",
+        "proTip": "Los podcasts audio y las narraciones grabadas se entregan a una velocidad de 150–160 wpm — aproximadamente la mitad de la velocidad de lectura silenciosa. Si está adaptando un artículo de blog a un guion de podcast o voz-over, doble el estimado de tiempo de lectura para obtener una duración precisa del audio. Un artículo de 5 minutos se convierte aproximadamente en un escuchado de 10 minutos, lo cual es crucial para planificar la longitud de los episodios de podcast y la programación."
+      }
     },
     "wordFrequency": {
       "metaTitle": "Contador de Frecuencia de Palabras — Palabras Más Usadas | ToolNotch",
@@ -540,7 +667,19 @@
           "question": "¿Cuántas palabras principales se muestran?",
           "answer": "La herramienta muestra las 10 palabras de contenido más frecuentes en tu texto, ordenadas por recuento."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Un contador de frecuencia de palabras analiza el texto y cuenta cuántas veces aparece cada palabra, luego presenta los resultados como una lista clasificada — las más frecuentes al principio. La mayoría de las implementaciones eliminan las palabras vacías (a, la, es, de, y) para mostrar los términos de contenido significativos. Los casos de uso abarcan varios campos: los escritores lo usan para identificar palabras relleno sobrepuestas como 'solo', 'veramente', 'muy' y 'realmente'; los analistas de SEO lo usan para verificar que las palabras clave principales aparezcan con la frecuencia adecuada; los investigadores académicos lo usan para lingüística corporal y análisis de texto; y los estrategistas de contenido lo usan para desarmar artículos competidores para enfocarse en temas. La salida muestra tanto el conteo bruto como el porcentaje de densidad, proporcionándote una vista dual de la distribución del vocabulario.",
+        "howToUse": [
+          "Pega tu texto en el área de entrada — la tabla de frecuencia de palabras se actualiza instantáneamente.",
+          "Revisa las entradas principales para identificar tus palabras más utilizadas significativas.",
+          "Busca palabras relleno (solo, realmente, muy, bastante) que aparezcan en la lista alta y considera eliminar o reemplazarlas.",
+          "Comprueba si tu palabra clave principal deseada aparece en los resultados principales con una densidad del 1-3%.",
+          "Utiliza la lista de frecuencia para encontrar sinónimos y términos relacionados que puedan reemplazar palabras repetidas y diversificar tu vocabulario."
+        ],
+        "whyItMatters": "En SEO, el análisis de frecuencia de palabras ayuda a verificar que tu palabra clave principal aparezca lo suficientemente veces (generalmente un 1-2% de densidad) sin optimización excesiva — por encima del 3% puede resultar en una penalización por sobrecarga de palabras clave y leerse de manera unnatural. En la escritura académica, las palabras frecuentes a menudo revelan frases repetitivas que debilitan los argumentos o señalan una falta de amplitud vocabularia. En la escritura UX y el copy de productos, el análisis de frecuencia muestra jerga que debe reemplazarse con lenguaje más simple e intuitivo para usuarios. Para novelistas y ensayistas, expone tic verbal y elecciones de palabras habituales que homogeneizan el estilo del texto.",
+        "proTip": "Para SEO, realiza un análisis de frecuencia de palabras en la página principal competidora con tu palabra clave objetivo. Las palabras de contenido que aparecen más frecuentemente junto con la palabra clave principal son tus palabras clave LSI (Latent Semantic Indexing) — términos relacionados semánticamente que Google usa para confirmar la relevancia temática. Incluye estos términos naturalmente en tu propio contenido y Google categorizará más confiadamente tu página como un recurso autoritativo sobre el tema."
+      }
     },
     "keywordDensity": {
       "metaTitle": "Comprobador de Densidad de Palabras Clave — Análisis SEO | ToolNotch",
@@ -564,7 +703,19 @@
           "question": "¿Qué palabras se excluyen del análisis?",
           "answer": "Las palabras vacías comunes (the, a, and, is, it, etc.) se excluyen automáticamente para que solo veas las palabras clave de contenido con significado."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "La densidad de palabras clave es el porcentaje de veces que una palabra clave específica aparece en un texto en relación con el recuento total de palabras, calculado como: (ocurrencias de la palabra clave ÷ palabras totales) × 100. El rango generalmente citado es un rango del 1–3%: por debajo del 1%, y Google puede no reconocer la página como relevante temáticamente para ese término; por encima del 3%, el contenido se lee de manera unnatural y corre el riesgo de una penalización algorítmica por sobrecarga de palabras clave. La optimización moderna de motores de búsqueda va mucho más allá de la densidad bruta — los algoritmos de Google usan TF-IDF (Frecuencia del término–Inverso de la frecuencia del documento) para medir la relevancia de las palabras clave contra un corpus de documentos, lo que significa que el contexto y las palabras clave co-ocurrentes son más importantes que simplemente la repetición. Las palabras clave LSI (terminos relacionados semánticamente) señalan una autoridad temática de manera más efectiva que solo la repetición de palabras clave.",
+        "howToUse": [
+          "Pega tu contenido de artículo en el área de entrada — la análisis de densidad de palabras clave se realiza instantáneamente.",
+          "Revisa la lista de las principales palabras clave y sus porcentajes de densidad.",
+          "Identifica tu palabra clave objetivo principal y verifica si su densidad cae dentro del rango del 1–3%.",
+          "Si una palabra clave está por encima del 3%, reemplaza algunas instancias con sinónimos o términos relacionados para leer de manera más natural.",
+          "Si una palabra clave está por debajo del 1%, considera agregarla a la introducción, un subencabezado o la conclusión."
+        ],
+        "whyItMatters": "La sobrecarga de palabras clave — empujar la densidad por encima del 5% — era un táctica común en el SEO de principios de los años 2000 que Google ahora penaliza algorítmicamente y manualmente. La baja densidad significa que la página puede no clasificarse para el término objetivo en absoluto, dejando el tráfico por la mesa. Revisar la lista de palabras clave principales y sus porcentajes de densidad antes de publicar atrapa ambos extremos y asegura que su contenido esté optimizado sin parecer manipulativo. Más importante aún, este análisis revela oportunidades para introducir sinónimos y términos relacionados que expandan su cobertura semántica, ayudando la página a clasificarse para una amplia gama de consultas de búsqueda relacionadas en lugar de solo la frase de palabra clave exacta.",
+        "proTip": "La mejor práctica del SEO moderno: coloque su palabra clave principal en el título de la página, el primer párrafo, un subencabezado H2 y la slug de la URL. Luego permita que aparezca naturalmente en el texto corporal — no lo force. Rellene el espacio semántico restante con términos relacionados. Para un artículo sobre 'calculadora hipotecaria', esos términos incluyen: amortización, principal, tasa de interés, pago mensual y plazo del préstamo. Esta cobertura semántica más amplia ayuda la página a clasificarse para docenas de consultas relacionadas en lugar de solo la frase de palabra clave exacta, multiplicando su potencial de tráfico orgánico."
+      }
     },
     "sampleText": "The quick brown fox jumps over the lazy dog. This sentence has been used for decades as a pangram — a phrase containing every letter of the alphabet. It is commonly used to demonstrate fonts, test typewriters, and practice typing.\n\nReadability is an important consideration in writing. Clear, concise sentences help readers understand your message quickly. Long, convoluted sentences with complex vocabulary can make text difficult to parse, especially for readers who are not specialists in the subject matter at hand.\n\nGood writing balances clarity with depth. Professional writers aim for a Flesch Reading Ease score between 60 and 70 for most audiences.",
     "buttons": {
@@ -816,7 +967,20 @@
             "question": "¿Debo pedir prestado el monto máximo para el que califico?",
             "answer": "No necesariamente. El hecho de que califiques para un préstamo grande no significa que debas tomarlo. Considera tus metas de ahorro, estabilidad laboral y estilo de vida al elegir el precio de tu vivienda."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Un calculador de la capacidad financiera para vivir en casa estima cuánta casa puedes comprar basándose en el criterio del 28/36 — una guía de préstamo que dice que tus costos de alojamiento (préstamo hipotecario, intereses, impuestos sobre la propiedad y seguros) no deben superar el 28% de tu ingreso mensual bruto, y todas las pagos mensuales de deuda combinados (alojamiento más préstamos de automóvil, préstamos educativos y mínimos de tarjetas de crédito) no deben superar el 36%. Los prestamistas usan tu ratio de deuda a ingreso para calcular la cantidad máxima de préstamo que aprobarán. Pero calificar para un préstamo y poder permitirlo comodamente son dos cosas diferentes. Los impuestos sobre la propiedad, el seguro del hogar, los cuotas de la asociación vecinal, las reparaciones y los servicios públicos son costos ocultos que pueden añadir $500–$1,500 al mes más allá del pago hipotecario mismo — costos que a menudo sorprenden a los primeros compradores.",
+          "howToUse": [
+            "Ingresa tu ingreso anual bruto — este es tu salario antes de impuestos, no el dinero neto, ya que los prestamistas califican a los solicitantes basándose en su ingreso bruto.",
+            "Añade tus pagos mensuales totales de deuda, incluyendo préstamos de automóvil, préstamos educativos y los mínimos de las tarjetas de crédito. No incluyas los servicios públicos o los alimentos.",
+            "Ingresa la cantidad que planeas pagar como aportación inicial. Un mayor aporte inicial reduce el monto del préstamo, lo que reduce el pago mensual.",
+            "Introduce la tasa de interés esperada y el plazo del préstamo (generalmente 30 años) para reflejar las condiciones del mercado realistas.",
+            "Revisa el precio máximo estimado de la casa y el pago mensual, luego compara la cifra mensual con tu dinero neto mensual para evaluar la comodidad.",
+            "Ajusta los inputs para ejecutar escenarios — por ejemplo, un aumento del 1% en las tasas de interés o un aporte inicial más bajo — para ver cómo cada variable desplaza tu rango de precio financiamente accesible."
+          ],
+          "whyItMatters": "Muchos compradores se obtienen pre-aprobados para la cantidad máxima que un prestamista permitirá y luego construyen su búsqueda de hogar alrededor de ese techo — un error que puede llevar a estar pobre por casa. Un aumento del 1% en las tasas hipotecarias puede reducir la capacidad financiera en $30,000–$60,000 en el precio de compra en una ingresos típicos. Usar este calculador antes de comenzar tu búsqueda de hogar te da un presupuesto realista, ayuda a establecer metas de ahorro para el pago inicial y evita la trampa emocional de caer en amor por casas fuera de tu rango de comodidad real. Ser conservador aquí crea el espacio respiratorio financiero que hace que la posesión de una casa sea sostenible a largo plazo.",
+          "proTip": "Los prestamistas califican a los solicitantes basándose en su ingreso bruto — tu salario antes de impuestos. Pero tus pagos hipotecarios vienen del dinero neto que recibes. Un salario anual de $100,000 produce aproximadamente $65,000–$70,000 en dinero neto después de los impuestos federales, estadounidenses y FICA. Siempre verifica que tu pago mensual estimado sea manejable contra tu ingreso neto mensual, no solo si tu ratio de deuda a ingreso supera el umbral del prestamista."
+        }
       },
       "refinance-calculator": {
         "metaTitle": "Calculadora de Refinanciamiento — ¿Debo Refinanciar Mi Hipoteca?",
@@ -914,7 +1078,20 @@
             "question": "¿Cómo puedo usar el interés compuesto para hacer crecer mis ahorros?",
             "answer": "Empieza a ahorrar pronto y deja que el interés compuesto actúe con el tiempo. Incluso cantidades pequeñas crecen de forma significativa en 20–30 años en una cuenta de ahorros de alto rendimiento o una cuenta de inversión."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Un calculador de interés calcula el interés total ganado o pagado en una suma de dinero, utilizando intereses simples (capital × tasa × tiempo) o compuestos (donde los intereses ganados se añaden al capital y también generan intereses). La diferencia entre ambos es dramática con el tiempo. La frecuencia de cálculo de interés — diaria, mensual, trimestral o anual — determina cuán seguido se añade el interés al saldo. APY (Tasa Anual Efectiva) mide el retorno real anual después del cálculo de intereses compuestos, mientras que APR (Tasa Anual Nominal) es la tasa nominal antes del cálculo de intereses. Las cuentas de ahorro y los certificados de depósito (CDs) suelen usar intereses compuestos; los intereses simples son más comunes en préstamos personales a plazo corto y algunas hipotecas automotrices.",
+          "howToUse": [
+            "Ingresa la cantidad principal — el saldo inicial o el monto del préstamo.",
+            "Introduce la tasa anual de interés como porcentaje (por ejemplo, 5 para el 5%).",
+            "Ingresa el período de tiempo en años (o meses si el calculador lo admite).",
+            "Selecciona la frecuencia de cálculo: diaria, mensual, trimestral o anual. Deja en interés simple para comparar.",
+            "Haz clic en Calcular para ver el interés total ganado o pagado, más el saldo final.",
+            "Conmuta entre las frecuencias de cálculo para ver cómo la comprensión diaria de intereses se compara con la mensual a la misma tasa."
+          ],
+          "whyItMatters": "La diferencia entre intereses simples e intereses compuestos es enorme con el tiempo. Una inversión de $10,000 a un interés del 5% simple durante 10 años genera $5,000 en intereses. La misma cantidad al 5% compuesto mensualmente genera aproximadamente $6,470 — una diferencia del 29% — sin contribuciones adicionales. La frecuencia de cálculo también importa cuando se comparan cuentas de ahorro: dos cuentas anuncian ambos el 4.80% APR pueden generar rendimientos significativamente diferentes en APY dependiendo de cuán seguido compútense. Este calculador también ayuda a evaluar ofertas de financiación — comparando si un préstamo promocional del 0% realmente vence una descuento por compra efectivo cuando se considera el valor del dinero con el tiempo.",
+          "proTip": "Cuando compares cuentas de ahorro o CDs, siempre mira el APY — no el APR. El APY cuenta con el cálculo de intereses y muestra tu verdadero retorno anual. Una cuenta de ahorro al 5.00% APR compuesta diariamente genera un APY de aproximadamente 5.13%, mientras que la misma tasa compuesta anualmente genera exactamente 5.00%. La diferencia crece a medida que aumentan los saldos. Los bancos están obligados a revelar el APY, por lo que usa ese número para comparaciones directas."
+        }
       },
       "30-year-mortgage-calculator": {
         "metaTitle": "Calculadora de Hipoteca a 30 Años — Pago Mensual a Tasa Fija",
@@ -1162,7 +1339,20 @@
             "question": "¿Puedo cambiar la tasa de IVA?",
             "answer": "Sí — edita el campo Impuesto %. La tasa estándar de IVA del Reino Unido es del 20%, pero se aplican tasas reducidas (5%, 0%) a algunos bienes y servicios."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Un generador de facturas británicas crea facturas profesionales que cumplen con los requisitos del HMRC. Para negocios británicos, el IVA (Impuesto sobre Valor Añadido) es la consideración fiscal principal. Si su volumen de ventas gravables supera el umbral de inscripción al IVA de £90,000, debe registrarse para el IVA y incluir su número de registro de IVA en todas las facturas de IVA. La tasa estándar del IVA es del 20%, con una tasa reducida del 5% aplicable a ciertos bienes y servicios. El Iniciativa Making Tax Digital (MTD) requiere que los negocios inscritos en el IVA mantengan registros digitales y presenten declaraciones de IVA a través de software compatible. El HMRC exige que las empresas retengan registros de facturas durante un mínimo de 6 años.",
+          "howToUse": [
+            "Introduzca el nombre y la dirección de su negocio. Si está inscrito en el IVA, agregue su número de registro de IVA en el campo ID fiscal.",
+            "Complete el nombre y la dirección de facturación del cliente. Para clientes B2B, anote su número de IVA si se aplica la retención reversa.",
+            "Agregue elementos con descripciones claras, cantidades y precios unitarios — los montos no incluyen el IVA en este momento.",
+            "Establezca la tasa de impuesto del 20% para suministros gravados estándar, el 5% para suministros gravados reducidos o el 0% para bienes gravados a cero.",
+            "Revise la cantidad de IVA y el total incluyendo IVA en la vista previa de la factura.",
+            "Descargue como PDF y envíe al cliente — retenga una copia para sus propios registros del HMRC."
+          ],
+          "whyItMatters": "Una factura de IVA debe contener campos obligatorios específicos — incluyendo su número de IVA, la cantidad de IVA cobrada y la fecha de suministro — para que el HMRC la acepte como válida para un reembolso de IVA. Para clientes B2B que también están inscritos en el IVA, recibir una factura de IVA adecuada es esencial: sin ella, no pueden reclamar el impuesto sobre entrada en su declaración de IVA. Una factura que falta campos obligatorios puede resultar en la denegación del reembolso de IVA, creando un conflicto subyacente con su cliente. El correcto emisión de facturas de IVA no es solo una buena práctica — es una obligación legal para los negocios inscritos en el IVA británicos.",
+          "proTip": "Si su volumen anual de ventas está por debajo del umbral de inscripción al IVA de £90,000, no necesita registrarse para el IVA — pero puede optar por inscribirse voluntariamente. Para negocios que principalmente sirven a otros negocios inscritos en el IVA, la inscripción voluntaria puede aumentar su credibilidad y le permite reclamar IVA en sus propios gastos empresariales. Realice los cálculos: si su IVA de entrada (IVA que paga por compras) es significativo, la inscripción voluntaria puede beneficiarlo incluso por debajo del umbral."
+        }
       },
       "invoiceCanada": {
         "metaTitle": "Generador de Facturas Canadiense — Plantilla de Factura con GST Gratis | ToolNotch",
@@ -1182,7 +1372,20 @@
             "question": "¿Necesito un número de registro GST/HST?",
             "answer": "Si tus ingresos anuales superan los $30,000 CAD, debes registrarte para GST/HST. Agrega tu número en el campo ID Fiscal."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Canadá opera un sistema de impuestos a consumo multicapa que varía por provincia. El Impuesto General sobre Bienes y Servicios federal (IGV) es del 5% en todo el país. La mayoría de las provincias agregan su propio impuesto: algunas utilizan una abordaje armonizado (IGV, que combina federal y provincial en un solo tasa — Ontario 13%, Nova Scotia 15%, Nuevo Brunswick 15%, Newfoundland 15%, PEI 15%), mientras que otras cobran el IGV por separado junto con el Impuesto sobre Ventas Provincial (IVP — BC 7%, Saskatchewan 6%, Manitoba 7%). La provincia de Quebec administra su propio Impuesto sobre Ventas del Estado de Quebec (IVQE) al 9.975% junto con el IGV federal. La tasa de impuesto aplicable en una factura depende de la provincia de suministro — generalmente donde se encuentra su cliente, no necesariamente donde está registrada su empresa.",
+          "howToUse": [
+            "Ingrese el nombre de su empresa, dirección y número de registro IGV/IVH en la sección 'De' si está registrado.",
+            "Agregue el nombre del cliente, dirección y provincia — la provincia de suministro determina qué tasa de impuesto aplica.",
+            "Agregue los elementos con descripciones, cantidades y precios unitarios antes del impuesto.",
+            "Establezca la tasa de impuesto basada en el IGV, HST o IGV+IVP/IVQE aplicables para la provincia del cliente.",
+            "Revise la cantidad y el total de impuestos en la vista previa de la factura.",
+            "Descargue como PDF para sus registros y enviarla a su cliente."
+          ],
+          "whyItMatters": "Las empresas canadienses con más de $30,000 CAD en ingresos anuales gravables están obligadas a registrarse para el IGV/IVH — la omisión puede resultar en multas y intereses por impuestos no recopilados por parte del Agencia Recaudadora Canadense (ARC). Cargar tasas de impuesto incorrectas en las facturas — por ejemplo, cobrar tasas de Ontario para un cliente de BC — puede exponer su empresa a riesgo de auditoría por parte de la ARC. En Quebec, algunas empresas que atienden al público francofono están obligadas a emitir facturas bilingües o en francés. Entender sus obligaciones fiscales por provincia es esencial para cumplir con las regulaciones de la ARC.",
+          "proTip": "La ARC determina el impuesto basándose en la regla 'lugar de suministro'. Para los servicios, esto generalmente es donde se encuentra su cliente, no donde opera su empresa. Un consultor ubicado en Toronto facturando a un cliente en Vancouver cobra un IGV del 5% — no el 13% HST de Ontario. Cuando esté incierto qué tasa aplica, especialmente para contratos de servicios interprovinciales o internacionales, consulte a un Contador Público Chartered (CPA) para evitar errores en la declaración."
+        }
       },
       "invoiceAustralia": {
         "metaTitle": "Generador de Facturas Australiano — Plantilla de Factura con GST Gratis | ToolNotch",
@@ -1202,7 +1405,20 @@
             "question": "¿Qué debe incluir una factura fiscal australiana?",
             "answer": "Las facturas conformes con la ATO deben incluir: las palabras 'Tax Invoice', tu ABN, fecha, descripción de bienes/servicios, precio y monto del GST."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "La facturación australiana está regida por la Oficina de Impuestos y Aduanas Australianas (ATO). El Impuesto sobre los Bienes y Servicios (GST) se aplica al 10% en la mayoría de bienes y servicios. Las empresas con un volumen anual de negocios de $75,000 AUD o más deben registrarse para el GST. Una vez registrado, deben emitir facturas fiscales por cualquier suministro por encima de $82.50 (incluyendo GST). Una factura fiscal difiere de una factura regular: debe incluir las palabras 'Factura Fiscal', su número de identificación comercial australiano (ABN), la cantidad de GST cobrada (o una declaración que el total incluye GST) y suficiente detalle para que el comprador pueda identificar los bienes o servicios suministrados. El ATO requiere a las empresas mantener registros de facturas fiscales durante al menos 5 años.",
+          "howToUse": [
+            "Ingrese su nombre de empresa, dirección y ABN en la sección 'De' — el ABN es obligatorio para facturas fiscales por encima de $82.50.",
+            "Agregue el nombre y la dirección de su cliente en la sección 'Facturar A'.",
+            "Agregue los elementos de línea con descripciones claras, cantidades y precios unitarios excluyendo GST.",
+            "Establezca la tasa de impuesto en el 10% para suministros sujetos al GST. Algunos suministros (alimentos frescos, servicios de salud, educación) están exentos del GST — déjelo en 0% para esos.",
+            "Revise que la factura esté claramente declarada como 'Factura Fiscal' y muestre el monto de GST por separado.",
+            "Descargue como PDF y mantenga una copia para sus registros del ATO durante un mínimo de 5 años."
+          ],
+          "whyItMatters": "Los clientes registrados en el GST (empresas también registradas para el GST) solo pueden reclamar créditos de impuesto de entrada utilizando una factura fiscal válida. Una factura que falta el ABN, la cantidad de GST o las palabras 'Factura Fiscal' puede ser rechazada, lo que impide que su cliente reclame su crédito de GST en su Informe de Actividad Comercial (BAS). Esto puede crear fricción en las relaciones B2B. Para empresas con un volumen anual de negocios por debajo del umbral de $75,000 AUD que eligen no registrarse para el GST, las facturas deben declarar claramente que no se incluye GST para evitar confusiones.",
+          "proTip": "Si su volumen anual es inferior a $75,000 AUD, no necesita registrarse para el GST — pero si principalmente sirve a otras empresas registradas en el GST, la inscripción puede ser ventajosa. Ser registrado en el GST le permite reclamar de vuelta el GST que paga en sus propios gastos empresariales (software, equipo, suministros oficinales), lo cual puede acumularse. Si está en el umbral, hable con un agente o contable registrado para evaluar si la inscripción voluntaria tiene sentido financiero para su situación."
+        }
       },
       "invoiceFreelancers": {
         "metaTitle": "Generador de Facturas para Freelancers — Factura Profesional Gratis | ToolNotch",
@@ -1226,7 +1442,20 @@
             "question": "¿Cómo me pagan más rápido?",
             "answer": "Indica claramente tus términos de pago, ofrece múltiples opciones de pago y da seguimiento amablemente si el pago está vencido. Los términos a 14 días suelen resultar en pagos más rápidos que a 30 días."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "La facturación freelance tiene características únicas que diferencian de la facturación tradicional en negocios. Los freelancers suelen facturar por proyecto (tarifa fija), por hora o con un acuerdo retainer (tarifa mensual fija para disponibilidad continua). Errores comunes incluyen numeración inconsistente de las facturas, descripciones vagas de los elementos de línea, omisión de términos de pago y falta de cláusula de penalidad por retraso. A diferencia de los empleados, los freelancers son responsables de sus propios impuestos — las facturas no incluyen retención del empleador, lo que significa que el cliente paga la cantidad completa y el freelancer gestiona sus obligaciones fiscales de autoempleo por separado. La facturación basada en hitos — facturar en etapas definidas del proyecto en lugar de al finalizarlo — reduce el riesgo de no pago para proyectos grandes.",
+          "howToUse": [
+            "Ingresa tu nombre o el nombre de tu negocio, detalles de contacto y cualquier ID fiscal aplicable en la sección 'De'.",
+            "Agrega el nombre del cliente y la dirección de facturación en la sección 'Facturar A'.",
+            "Crea elementos de línea para cada servicio: usa un nombre descriptivo (por ejemplo, 'Diseño Web — Página Principal') e ingresa o una tarifa fija o horas × tasa horaria.",
+            "Agrega cualquier gasto reembolsable como elementos de línea separados con recibos anotados.",
+            "Establece tus términos de pago (por ejemplo, Neto 14, Neto 30 o Vencido al Recibir) y enumera los métodos de pago aceptados en el campo 'Notas'.",
+            "Descarga como PDF e envíalo inmediatamente — la facturación retrasada está directamente correlacionada con el pago retrasado."
+          ],
+          "whyItMatters": "El retraso en el pago es el mayor desafío financiero para los trabajadores independientes — las encuestas muestran consistentemente que más del 70% de los freelancers experimentan retraso en el pago en algún momento. Una factura profesional con una fecha de vencimiento clara, un monto específico de pago y métodos de pago aceptados elimina la ambigüedad. Incluir una cláusula de penalidad por retraso (por ejemplo, 1.5% al mes después de la fecha de vencimiento) — incluso si nunca la impones — reduce significativamente el número promedio de días hasta el pago. La facturación organizada también crea la evidencia necesaria para los impuestos en tiempo de declaración para respaldar el ingreso empresarial y los gastos deducibles.",
+          "proTip": "Cuando facturas a clientes internacionales, siempre especifica claramente la moneda de la factura (USD, EUR, GBP) y indica quién asume los costos de conversión de divisas. Para nuevos clientes, considera requerir un depósito del 25-50% antes de comenzar el trabajo — este depósito cubre tu tiempo si el proyecto se detiene, y filtra a los clientes que no están serios en seguir adelante. La mayoría de los clientes profesionales no objeterán un depósito razonable en proyectos importantes."
+        }
       },
       "receiptGenerator": {
         "metaTitle": "Generador de Recibos Gratis — Crea y Descarga Recibos PDF | ToolNotch",
@@ -1250,7 +1479,20 @@
             "question": "¿Puedo agregar el logo de mi empresa?",
             "answer": "Sí — haz clic en el botón Logo para subir el logo de tu empresa. Aparece en la parte superior del recibo."
           }
-        ]
+        ],
+        "richContent": {
+          "whatIs": "Un recibo es un documento emitido después de recibir el pago, confirmando que una transacción ha sido completada. Diferencia fundamentalmente de una factura: una factura es una solicitud de pago emitida antes del pago; un recibo es pruebas de pago emitidos después. Un recibo válido debe incluir la fecha de la transacción, el nombre y los datos de contacto del vendedor, una descripción de bienes o servicios proporcionados, la cantidad total pagada, el método de pago (efectivo, tarjeta de crédito, transferencia bancaria), y cualquier impuesto aplicable recogido. Los recibos digitales son legalmente equivalentes a los recibos de papel en la mayoría de las jurisdicciones para fines fiscales e indemnizaciones, y se prefieren porque los recibos de papel se desvanecen con el tiempo.",
+          "howToUse": [
+            "Ingresa el nombre del pagador (individuo o empresa) y la fecha de la transacción.",
+            "Rellena tu nombre de negocio y detalles de contacto como emisor del recibo.",
+            "Añade ítems de línea describiendo lo que se compró o pagó, con cantidades individuales.",
+            "Anota el método de pago utilizado — efectivo, tarjeta de crédito, transferencia bancaria, o otro.",
+            "Revisa el total y confirma que coincide con la cantidad recibida.",
+            "Descarga como PDF para tus registros y proporciona una copia al pagador."
+          ],
+          "whyItMatters": "Las autoridades fiscales, incluyendo el IRS, requieren recibos para gastos deducibles de negocios. Muchas empresas requieren recibos para cualquier reembolso de gastos. Organizar los recibos digitalmente crea una auditoría confiable para el cierre del libro al año y previene el problema común de recibos perdidos o desvanecidos de papel. Para transacciones en efectivo en particular — dinero pequeño, pagos a proveedores o cuotas de servicio pagadas en efectivo — un recibo generado crea la documentación necesaria para respaldar la transacción en caso de auditoría o disputa.",
+          "proTip": "Mantén recibos por cualquier gasto deducible de negocio individual que supere los $75 (la orientación general del IRS para los contribuyentes estadounidenses) y por cualquier gasto que planees deducir en tu declaración de impuestos. La práctica recomendada es fotografiar los recibos de papel inmediatamente y archivarlos digitalmente por año y categoría (por ejemplo, 2026/Viajes/, 2026/Comidas/). Los recibos térmicos de papel se desvanecen dentro de 1-3 años — la foto o PDF digital es tu registro permanente."
+        }
       },
       "fields": {
         "from": "De",
@@ -1271,6 +1513,19 @@
         "generate": "Generar factura",
         "download": "Descargar PDF",
         "addItem": "Agregar artículo"
+      },
+      "richContent": {
+        "whatIs": "Una factura es un documento formal emitido por una vendedora a un comprador que solicita pago por bienes o servicios entregados. Una factura legalmente válida debe incluir: un número de factura único, la fecha de emisión, información de contacto del vendedor y el comprador, una lista detallada de productos o servicios con precios unitarios y cantidades, subtotales, impuestos aplicables, el monto total debido y los términos de pago. Las facturas difieren de las recibos — una factura se envía antes del pago como solicitud; un recibo se emite después del pago como prueba. La facturación profesional afecta directamente el flujo de efectivo y las relaciones con los clientes: facturas claras e precisas reducen disputas de pago, crean un rastro escrito para fines contables y fiscales, y señalan la credibilidad empresarial.",
+        "howToUse": [
+          "Llena tu nombre de negocio, dirección y detalles de contacto en la sección From.",
+          "Añade el nombre del cliente y la dirección de facturación en la sección Bill To.",
+          "Ingresa los elementos con una descripción clara de cada producto o servicio, cantidad y tasa unitaria. El total se calcula automáticamente.",
+          "Establece la tasa de impuesto si es aplicable, y ajusta la fecha de factura y la fecha de vencimiento para reflejar tus términos de pago (por ejemplo, Net 30).",
+          "Añade cualquier instrucción o nota de pago en el campo Notes — incluyendo los métodos de pago aceptados.",
+          "Haz clic en Descargar / Imprimir PDF y selecciona Guardar como PDF para generar una factura profesional lista para enviar."
+        ],
+        "whyItMatters": "Las facturas profesionales reducen las disputas de pago eliminando ambigüedad sobre lo que se entregó, cuándo y a qué precio. Net-30 (pago debido en 30 días) es común en el sector B2B, mientras que los términos due-on-receipt o Net-15 suelen ser mejores para pequeñas empresas y freelancers que necesitan un flujo de efectivo más rápido. Incluir una cláusula de penalización por pago atrasado — como 1.5% al mes después de la fecha de vencimiento — incentiva el pago puntual. Muchas pequeñas empresas pierden significativa ganancia no debido a clientes malos, sino debido a la falta de seguimiento en facturas pendientes. Una factura numerada y con fecha crea el rastro escrito necesario tanto para la cobranza como las deducciones fiscales.",
+        "proTip": "Siempre usa un sistema de numeración de facturas secuencial (INV-001, INV-002) desde el primer día. El software contable, los auditorios fiscales y los registros financieros empresariales todos dependen de la numeración de facturas consistente para rastrear las ganancias y coincidir los pagos. También considera agregar una cláusula de penalización por pago atrasado — incluso si nunca la impones, la presencia de un monto declarado acelera significativamente el comportamiento de pago."
       }
     }
   },
@@ -1308,7 +1563,18 @@
           "question": "¿En qué se diferencia de Wheel of Names?",
           "answer": "Nuestra ruleta es completamente gratuita, no requiere cuenta, guarda tus elementos en la URL para compartirlos fácilmente y funciona en cualquier dispositivo, incluso sin conexión."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Un selector de rueda giratoria es un visualizador, seleccionador aleatorio presentado como una rueda quegazón con secciones personalizables. Los casos de uso incluyen juegos en clase, toma de decisiones en el trabajo (donde ordenar almorzar), juegos de fiesta, elegir entre opciones cuando estés paralizado por la indecisión y sorteos de premios gamificados. La animación que gira es puramente cosmológica — el resultado ganador se determina por el generador de números aleatorios antes de que comience la animación, asegurando una verdadera justicia independientemente de cómo vea la rueda mientras se desacelera.",
+        "howToUse": [
+          "Añade tus opciones a la rueda escribiéndolas en el cuadro de edición, una por línea.",
+          "Haz clic en Spin para iniciar la animación de la rueda.",
+          "Observa cómo la rueda se desacelera y cae en el resultado seleccionado aleatoriamente.",
+          "Opcionalmente, elimina la opción ganadora antes del siguiente giro para evitar repetir."
+        ],
+        "whyItMatters": "El formato visual de quegazón hace que la selección aleatoria sea más atractiva y dramática que un texto plano. Para el uso en clase, los estudiantes responden mejor a la animación — lo convierte en un juego en lugar de una evaluación. Para premios y sorteos, la construcción mientras la rueda se desacelera aumenta la emoción y el valor percibido del resultado, haciendo que la experiencia sea más memorable para los participantes.",
+        "proTip": "La investigación sobre la fatiga en las decisiones muestra que cuando reaccionas al resultado de la rueda — ya sea que te sientas aliviado o decepcionado — obtienes información honesta sobre lo que realmente querías. Si la rueda cae en una opción y te das un flash de decepción, eso te dice cuál fue la opción que realmente preferiste. Usa la rueda como una herramienta reveladora de preferencias, no solo como un randomizador."
+      }
     },
     "wheelOfNames": {
       "metaTitle": "Alternativa a Wheel of Names — Ruleta Gratuita en Línea | ToolNotch",
@@ -1336,7 +1602,18 @@
           "question": "¿El resultado del giro es verdaderamente aleatorio?",
           "answer": "Sí — el ganador se selecciona con Math.random() antes de que comience la animación. Cada elemento tiene igual probabilidad de ser elegido."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "La Rueda de Nombres es un seleccionador de nombres aleatorios mostrado como una rueda que gira — combinando la participación visual de una rueda que gira con una lista de nombres. Los casos de uso incluyen seleccionar presentadores de reuniones, elegir quién toca su turno y llamadas a estudiantes en clase con un aire visual. La rueda es completamente personalizable: puedes agregar, eliminar y reordenar nombres en cualquier momento. Después de cada selección, el nombre ganador puede eliminarse automáticamente para asegurarte de que todos tengan una oportunidad antes de que alguien sea seleccionado dos veces.",
+        "howToUse": [
+          "Añade los nombres de los participantes a la rueda usando el cuadro de edición.",
+          "Haz clic en Gira para iniciar la animación de la rueda.",
+          "Lee el nombre seleccionado cuando la rueda se detenga.",
+          "Elimina el nombre seleccionado para recorrer a todos los participantes de manera equitativa."
+        ],
+        "whyItMatters": "El formato visual de ver los nombres en la rueda crea transparencia — todos en la sala pueden ver quiénes están calificados para la selección. Esto elimina cualquier sospecha de que el selector esté jugando con el resultado. Para el uso en clase, el formato de la rueda es significativamente más atractivo que una simple pantalla de texto aleatoria, convirtiendo la selección de participación en un momento interactivo que toda la clase puede compartir.",
+        "proTip": "Para seleccionar recurrentemente los participantes semanalmente — facilitador de reuniones, presentador de informes de estado — guarda tu lista de nombres como un archivo de texto y vuelve a pegarlo rápidamente cada sesión. Si algunos participantes están más disponibles con frecuencia, pesa la rueda agregándoles sus nombres más de una vez. Más ocurrencias de un nombre aumentan la probabilidad proporcional de que esa persona sea seleccionada."
+      }
     },
     "namePicker": {
       "metaTitle": "Selector de Nombres Aleatorio — Elige un Nombre de una Lista | ToolNotch",
@@ -1365,7 +1642,18 @@
           "question": "¿Cuántos nombres puedo agregar?",
           "answer": "No hay un límite estricto. La herramienta funciona con listas de cualquier tamaño, desde 2 hasta cientos de nombres."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Un generador de nombres aleatorios selecciona uno o más nombres al azar desde una lista que proporciones. Esta herramienta general de propósito funciona para cualquier colección de nombres: elegir los oradores de reuniones, seleccionar ganadores de concursos, randomizar el orden de lectura en una aula, asignar tareas o decidir cuándo es el turno de hacer tareas. A diferencia del generador específico para aulas, esta herramienta está diseñada para cualquier contexto donde necesites una selección aleatoria justa de una lista de personas o opciones.",
+        "howToUse": [
+          "Ingresa tus nombres en el cuadro de texto, uno por línea.",
+          "Haz clic en 'Pick' para seleccionar al azar un nombre de tu lista.",
+          "Lee el ganador resaltado mostrado en pantalla.",
+          "Opcionalmente, elimina el nombre seleccionado para evitar repetirlo en las selecciones siguientes."
+        ],
+        "whyItMatters": "La selección aleatoria evita la favoritismo y la percepción de sesgo. En entornos profesionales, asignar al azar quién presenta primero o quién recibe una tarea elimina cualquier apariencia de parcialidad. En entornos sociales, saca el incómodo negociación de decisiones como quién elige el restaurante esta noche. Ambos resultados — la justicia real y la apariencia de justicia — son igualmente importantes en las dinámicas grupales.",
+        "proTip": "Para uso continuo como la rotación semanal de tareas o roles recurrentes de reuniones, mantén una lista en curso y elimina los nombres seleccionados hasta que todos hayan sido elegidos una vez, luego restablece la lista. Esto asegura una distribución equitativa entre el grupo en lugar de una selección puramente aleatoria, que puede repetir accidentalmente nombres antes de que todos tengan su turno."
+      }
     },
     "teamGenerator": {
       "metaTitle": "Generador de Equipos Aleatorios — Divide Nombres en Equipos Justos | ToolNotch",
@@ -1389,7 +1677,18 @@
           "question": "¿Puedo copiar los resultados?",
           "answer": "Sí — haz clic en 'Copiar todo' para copiar las asignaciones completas de equipos al portapapeles en formato de texto."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Un generador de equipos aleatorios toma una lista de nombres y los divide en equipos iguales o casi iguales al azar. Los casos de uso incluyen proyectos de grupo en clase, selección de equipos deportivos, agrupación para hackathons y equipos para eventos oficiales. Un beneficio clave es que la composición aleatoria de equipos elimina el sesgo inconsciente: las personas tienden a segregarse naturalmente por amistad, nivel de habilidad o demografía al elegir equipos manualmente. La asignación aleatoria es el método más justo y estadísticamente sólido en investigación educativa y organizacional para crear grupos diversos y equilibrados.",
+        "howToUse": [
+          "Pega tu lista de nombres en el cuadro de texto, uno por línea.",
+          "Establece el número de equipos que deseas crear.",
+          "Haz clic en Generar para dividir los nombres en equipos aleatorios y equilibrados.",
+          "Lee tus asignaciones de equipos y cópialas o compártelas según sea necesario."
+        ],
+        "whyItMatters": "La selección de equipos manual — especialmente el estilo de draft del capitán deportivo — es psicológicamente dañina para aquellos que se eligen por último, un fenómeno bien documentado en la investigación educativa. La asignación aleatoria trata a todos igualmente y a menudo produce una mejor colaboración mezclando personas que no elegirían naturalmente trabajar juntas. El resultado es grupos con más habilidades y perspectivas diversas que los equipos seleccionados por sí mismos.",
+        "proTip": "Si necesitas niveles de habilidad equilibrados en lugar de equipos aleatorios puramente, ordena previamente la lista de nombres por nivel de habilidad antes de generar. Luego genera equipos aleatorios dentro de cada nivel. Esto te da una asignación aleatoria dentro de lo equitativo: las dinámicas sociales de la selección aleatoria sin el riesgo de que un equipo obtenga todos los participantes más experimentados."
+      }
     },
     "yesNoWheel": {
       "metaTitle": "Ruleta de Sí o No — Que la Ruleta Decida | ToolNotch",
@@ -1413,7 +1712,17 @@
           "question": "¿Puedo girar de nuevo?",
           "answer": "Sí — haz clic en Girar nuevamente para obtener un resultado aleatorio diferente cada vez."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Un volante de sí/no es una herramienta de decisión binaria aleatoria que devuelve Sí o No con una animación giratoria. Se usa para tomar decisiones binarias cuando ninguna opción domina claramente, rompiendo la parálisis de la toma de decisiones o añadiendo aleatoriedad a los juegos. Diferencia del lanzamiento de una moneda en su presentación — el formato de volante es más lento y dramático, lo que lo hace más atractivo para grupos. Los casos de uso incluyen decidir si probar algo nuevo, resolver discusiones pequeñas de grupo y enseñar la probabilidad a los niños de una manera interactiva y visual.",
+        "howToUse": [
+          "Piensa en una pregunta sí/no sobre la cual quieres decidir.",
+          "Haz clic en Gira y observa el volante animarse.",
+          "Acepta el resultado — y nota tu reacción instintiva a él."
+        ],
+        "whyItMatters": "La ciencia de las decisiones muestra que los humanos experimentan parálisis de la toma de decisiones cuando las opciones son aproximadamente iguales en atracción. Una elección binaria aleatoria rompe rápidamente el impasse. Lo más importante es que tu reacción emocional al resultado revela tu preferencia real: si el volante dice Sí y te sientes aliviado, quieres Sí. Si te sientes decepcionado, quieres No. El volante actúa como un espejo de la preferencia subconsciente.",
+        "proTip": "El método 'lanza y siente': gira el volante, luego anota inmediatamente tu reacción instintiva antes de que tu cerebro racional pueda razonarla. Tu respuesta emocional a un resultado aleatorio es más confiable que la deliberación prolongada para decisiones basadas en preferencias donde ambas opciones son objetivamente similares — usa esto como una ayuda para tomar decisiones, no solo como un selector aleatorio."
+      }
     },
     "coinFlip": {
       "metaTitle": "Lanzar Moneda — Cara o Cruz Virtual en Línea | ToolNotch",
@@ -1442,7 +1751,18 @@
           "question": "¿Funciona sin conexión a internet?",
           "answer": "Sí. Una vez que la página está cargada, el lanzamiento de moneda funciona 100% sin conexión."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Un lanzamiento de moneda virtual es una herramienta digital que replica la clásica binaria aleatorización del lanzamiento de una moneda física — dándote cara o cruz con una probabilidad equitativa del 50/50. Los casos de uso incluyen romper empates en decisiones grupales, tomar decisiones binarias cuando ninguna opción domina, randomización en aulas y gamificación. Interesantemente, las monedas físicas no son perfectamente justas: la investigación de Diaconis, Holmes & Montgomery (2007) encontró que las monedas lanzadas por mano tienden a caer en el mismo lado que comenzaron aproximadamente el 51% del tiempo debido al wobble. Un lanzamiento de moneda virtual usa un algoritmo criptográficamente aleatorio para garantizar una probabilidad equitativa del 50/50 cada vez.",
+        "howToUse": [
+          "Haz clic en el botón Lanza Moneda para arrojar la moneda virtual.",
+          "Lee el resultado — cara o cruz — mostrado instantáneamente.",
+          "Vuelve a lanzar para un mejor de tres si la decisión es importante.",
+          "Registra o captura pantalla el resultado si necesitas mantener un registro."
+        ],
+        "whyItMatters": "La aleatorización elimina la presión social en las decisiones — nadie puede acusar a una moneda digital de sesgo. Se usa ampliamente en deportes para los choices de inicio y servicio, en aulas para enseñar probabilidad (lanza 100 veces para ver el principio de los grandes números en acción), y en cualquier escenario de empate donde la justicia es importante. A diferencia del consenso social, un lanzamiento de moneda aleatoria produce un resultado que todos pueden aceptar como imparcial.",
+        "proTip": "Usa mejor de tres para decisiones importantes en lugar de un solo lanzamiento. Preserva la aleatoriedad mientras da a ambos lados una sensación de que el resultado no fue determinado por un lanzamiento de suerte — haciendo que el resultado se sienta más legítimo para todos involucrados."
+      }
     },
     "diceRoller": {
       "metaTitle": "Lanzador de Dados — Lanza Cualquier Dado en Línea (d6, d20, d100) | ToolNotch",
@@ -1474,7 +1794,18 @@
           "question": "¿Qué dados se usan en D&D?",
           "answer": "D&D usa siete dados: d4, d6, d8, d10, d12, d20 y d100 (dado percentil). El d20 es el más usado para pruebas de habilidad y ataques."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Un lanzador de dados virtuales simula los dados de mesa para juegos, demostraciones de probabilidad y decisiones aleatorias. Soporta la notación estándar de dados utilizada en RPGs de mesa: NdX+M significa lanzar N dados de X caras y añadir el modificador M (por ejemplo, 2d6+3 significa lanzar dos dados de seis caras y sumar 3). Los tipos comunes de dados incluyen d4, d6, d8, d10, d12, d20 y d100 (percentil). Notablemente, lanzar múltiples dados produce una distribución en forma de campana debido al teorema del límite central — dos d6 promedian alrededor de 7, por lo que los resultados se agrupan hacia el centro en lugar de estar uniformemente distribuidos desde 2 hasta 12. Este es el insight de probabilidad fundamental detrás de la mayoría de los diseños de RPG de mesa.",
+        "howToUse": [
+          "Selecciona el número de dados que quieres lanzar.",
+          "Elige el tipo de dado — d4, d6, d8, d10, d12, d20 o ingresa un número personalizado de caras.",
+          "Añade un modificador (positivo o negativo) si tus reglas de juego lo requieren.",
+          "Haz clic en Lanzar y lee los resultados individuales de los dados más el total."
+        ],
+        "whyItMatters": "Los dados físicos desarrollan sesgo con el tiempo debido al desgaste y la fabricación imperfecta. Los dados digitales utilizan un generador de números aleatorios que mantiene la equidad estadística a lo largo de millones de lanzamientos. Para educadores, lanzar los dados digitalmente en demostraciones de clase es más rápido y los resultados pueden proyectarse para que toda la clase los vea — haciendo que las lecciones de probabilidad sean más interactivas e inmediatas.",
+        "proTip": "Para generar habilidades en D&D, lanza 4d6 y descarta el dado más bajo. Para una rápida reacción del NPC, lanza 2d6: 2–3 hostiles, 4–5 indiferentes, 6–8 neutrales, 9–10 amigables, 11–12 útiles. Estas son tablas estándar de encuentros del Guía del Maestro de Misiones y funcionan para cualquier sistema de RPG fantástico."
+      }
     },
     "numberGenerator": {
       "metaTitle": "Generador de Números Aleatorios — Genera Números en Cualquier Rango | ToolNotch",
@@ -1502,7 +1833,18 @@
           "question": "¿Puedo generar números de lotería?",
           "answer": "Sí — establece Mín: 1, Máx: 49 (o el rango de tu lotería), Cantidad: 6 y desactiva los duplicados. Haz clic en Generar para obtener 6 números únicos al azar."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Un generador de números aleatorios produce números impredecibles dentro de un rango que defines — útil para loterías, muestreo estadístico, investigación, juegos y enseñanza de la probabilidad. Hay una importante distinción entre pseudoaleatorio (algorítmico, determinista con semilla) y aleatorio criptográfico (usa entropía del sistema, adecuado para seguridad). Esta herramienta usa crypto.getRandomValues() del navegador para verdadera aleatoriedad — no el Math.random() más débil. Los casos de uso incluyen elegir números de lotería, asignar IDs aleatorios, generar datos de prueba y seleccionar estudiantes o participantes en entornos de aula.",
+        "howToUse": [
+          "Establece el valor mínimo para tu rango.",
+          "Establece el valor máximo para tu rango.",
+          "Elige cuántos números generar.",
+          "Haz clic en Generar y lee los resultados inmediatamente."
+        ],
+        "whyItMatters": "Los humanos son terribles para generar números aleatorios manualmente — inconscientemente evitamos secuencias, preferimos ciertas cifras y mostramos patrones repetitivos. Un generador de números aleatorios elimina completamente esta sesgo. Para loterías y concursos, usar un generador de números aleatorios verificable añade credibilidad y justicia, y el resultado puede compartirse o capturarse en pantalla para probar que la selección no fue manipulada.",
+        "proTip": "Para una lotería con 500 entradas, genera uno número entre 1 y 500 y asignalo a la posición del ganador en tu lista. Para múltiples ganadores, genera números sin repetición — usa la opción de números únicos. Captura la pantalla del resultado antes de anunciar para probar que el sorteo fue justo e inalterado."
+      }
     },
     "giveawayPicker": {
       "metaTitle": "Selector de Ganador de Sorteo — Elige un Ganador al Azar | ToolNotch",
@@ -1530,7 +1872,18 @@
           "question": "¿Puedo usar esto para sorteos de Instagram o YouTube?",
           "answer": "Sí — copia manualmente los nombres de tus comentaristas en el cuadro de texto y usa el selector para elegir un ganador al azar."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Un seleccionador de sorteo elige uno o más ganadores al azar desde una lista de participantes que proporcionas. Casos comunes de uso incluyen sorteos en redes sociales — elegir ganadores de listas de comentarios de Instagram, retuits de Twitter/X y secciones de comentarios de YouTube. Esta herramienta usa una lista local que pegas; para el escaneo específico del sistema de entrada necesitarías las APIs del plataforma. La transparencia y la verificabilidad son cruciales para la justicia en los sorteos, y esta herramienta facilita probar que un ganador fue elegido sin sesgo.",
+        "howToUse": [
+          "Pega tu lista de entradas — nombres de usuarios, comentarios o cualquier identificador — en el cuadro de texto.",
+          "Establece el número de ganadores que necesitas.",
+          "Haz clic en 'Seleccionar' para elegir al azar a los ganadores de tu lista.",
+          "Opcionalmente vuelve a lanzar si un ganador seleccionado es inadecuado."
+        ],
+        "whyItMatters": "La selección manual de ganadores entre miles de entradas es impráctica y parece sesgada incluso cuando no lo es. Un seleccionador al azar que puedas capturar en pantalla y compartir públicamente demuestra que el ganador fue elegido de manera justa. Para marcas y creadores, esto protege su credibilidad y satisface las pautas de los sorteos en plataformas que generalmente requieren un método de selección aleatoria verificable.",
+        "proTip": "Captura o graba la pantalla del momento de la selección antes de anunciar el ganador. Comparte el resultado públicamente — en una historia, tweet o publicación — con la lista completa de entradas visible para demostrar transparencia. Esto evita acusaciones de favoritismo que pueden dañar significativamente la confianza del brand y el buenwill comunitario, especialmente para sorteos de premios de alta valor."
+      }
     },
     "classroomNamePicker": {
       "metaTitle": "Selector de Nombres para el Aula — Elegir Estudiante al Azar | ToolNotch",
@@ -1558,7 +1911,18 @@
           "question": "¿Es gratuito para docentes?",
           "answer": "Sí, completamente gratuito. Sin registro, sin cuenta, sin tarjeta de crédito. Solo abre la página y empieza a usarlo."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Un generador de nombres de aula selecciona al azar un estudiante de tu lista de asistencia para llamadas frías, participación o asignación de tareas. La investigación educativa de Robert Bjork sobre la práctica de recuperación muestra que la selección aleatoria mejora la participación y la retención del aprendizaje en comparación con la participación voluntaria, donde siempre son los mismos estudiantes quienes responden. Esta herramienta es el equivalente digital del clásico método de cucharilla de popsicle — nombres en cucharillas en un vaso sacudidos al azar — pero más rápido y visible para toda la clase en una pantalla proyectada.",
+        "howToUse": [
+          "Ingresa tu lista de asistencia en el cuadro de texto, un nombre de estudiante por línea.",
+          "Haz clic en 'Seleccionar' para seleccionar al azar un estudiante.",
+          "Lee el nombre del estudiante seleccionado que se muestra en pantalla.",
+          "Habilita la opción 'Quitar al seleccionar' para asegurarte de que cada estudiante sea llamado antes de que alguien sea llamado dos veces."
+        ],
+        "whyItMatters": "La selección aleatoria mantiene a todos los estudiantes alerta y comprometidos porque cualquiera podría ser llamado el siguiente. La participación basada en voluntariado crea desigualdad profunda — la investigación muestra que el 20% de los estudiantes son responsables del 80% de la participación voluntaria. La imprevisibilidad de la selección aleatoria activa la atención de formas que no lo hacen los formatos de participación basados en voluntariado, lo que lleva a una mayor participación por toda la clase en lugar solo de los estudiantes más confiantes.",
+        "proTip": "Utiliza la función 'quitar después de seleccionar' para asegurarte de que cada estudiante sea llamado antes de que alguien sea llamado dos veces. Esto se siente más justo para los estudiantes y reduce el estrés sobre ser llamado repetidamente. Si un estudiante está ausente, quita su nombre para esa sesión para mantener flujo en la clase y evitar poner a nadie en una situación injusta."
+      }
     },
     "typingTest": {
       "metaTitle": "Prueba de Velocidad de Escritura — Comprueba tus PPM Gratis | ToolNotch",
@@ -1582,7 +1946,18 @@
           "question": "¿Qué significa precisión?",
           "answer": "La precisión es el porcentaje de caracteres escritos correctamente. Una precisión del 98% significa que 2 de cada 100 caracteres tuvieron un error."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Un test de velocidad de escritura mide WPM (palabras por minuto, donde una palabra está estandarizada como 5 teclas incluyendo espacios), el porcentaje de precisión (teclas correctas divididas por el total de teclas multiplicado por 100), y WPM bruto versus WPM neto (WPM neto resta errores). Marcadores de velocidad: los tipógrafos que buscan y pelean promedian 20–30 WPM, los trabajadores del escritorio promedio alcanzan 40 WPM, los tipógrafos profesionales logran 60–80 WPM, los transcribas profesionales superan 80–100 WPM, los tipógrafos competitivos llegan a 120–150+ WPM, y el récord mundial actual supera 220 WPM.",
+        "howToUse": [
+          "Haz clic en Iniciar o comienza a escribir el texto mostrado para iniciar el temporizador.",
+          "Escribe el pasaje lo más rápido y con la mayor precisión posible.",
+          "Lee tu WPM y precisión cuando termina el tiempo.",
+          "Revisa qué teclas causaron retrasos y enfócate en su práctica."
+        ],
+        "whyItMatters": "La velocidad de escritura está directamente correlacionada con la productividad para los trabajadores de conocimiento. A 40 WPM versus 80 WPM, una persona que escribe lo equivalente a 500 horas de documentación al año guarda 250 horas — más de seis semanas de tiempo laboral. El tipado táctil usando todas las 10 dedos en la fila de inicio dobla la velocidad promedio comparada con el tipado por búsqueda y pelea para la mayoría de las personas dentro de dos a tres meses de práctica deliberada.",
+        "proTip": "La mayor mejora viene de priorizar la precisión sobre la velocidad. Lleva tu velocidad hasta que tu precisión esté por encima del 95%, luego aumenta gradualmente el ritmo. La velocidad sigue la precisión naturalmente — intentar escribir rápido mientras comete muchos errores en realidad reduce el WPM neto y construye una memoria muscular mala. Realiza pruebas de un minuto diariamente en lugar de una larga sesión para los mejores resultados."
+      }
     }
   },
   "quiz": {
@@ -1614,6 +1989,15 @@
     "heading": "ToolNotch",
     "subheading": "Herramientas gratuitas en línea — sin registro, sin subida, 100% privado",
     "moreComingSoon": "Más herramientas próximamente",
+    "nav": {
+      "tools": "Herramientas",
+      "blog": "Blog",
+      "about": "Acerca de",
+      "interview": "Entrevista",
+      "quizzes": "Cuestionarios",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos del Servicio"
+    },
     "categories": {
       "imageTools": "Herramientas de imagen",
       "pdfTools": "Herramientas PDF",
@@ -1879,7 +2263,20 @@
           "question": "¿Puedo votar los puntos?",
           "answer": "Sí — haz clic en el ícono de pulgar arriba en cualquier nota para votar. Votar ayuda al equipo a priorizar qué temas discutir primero."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Una retrospectiva de sprint es la ceremonia de Scrum celebrada al final de cada sprint donde el equipo reflexiona sobre lo que funcionó bien, lo que no y qué mejorar. El formato más utilizado es Start/Stop/Continue — lo que el equipo debe comenzar a hacer, dejar de hacer y seguir haciendo. Otros formatos populares incluyen 4Ls (Me gusta, Aprendí, Falta, Anhelo), que expone tanto feedback positivo como aspiracional, y Mad/Sad/Glad, que marca la retrospectiva alrededor de respuestas emocionales y es particularmente efectivo cuando el espíritu del equipo es un problema. El objetivo de cada retrospectiva debe ser resultados concretos: cada retrospectiva debería producir uno a tres mejoras concretas con propietarios nombrados, no solo una sesión de ventaja. Los equipos que tratan la retrospectiva como un lugar para mostrar sentimientos sin comprometerse con el cambio pierden credibilidad y asistencia en pocos sprints.",
+        "howToUse": [
+          "Elige un formato de retrospectiva — Start/Stop/Continue para uso general, 4Ls para equipos centrados en el aprendizaje, Mad/Sad/Glad cuando la moral o las emociones requieran atención.",
+          "Abre el tablero y que cada miembro del equipo agregue observaciones a las columnas relevantes durante la fase de agregar notas (10 minutos, sin discusión todavía).",
+          "Agrupa elementos similares o duplicados juntos para reducir el ruido antes de votar.",
+          "Realiza un voto con puntos: cada participante recibe 3–5 votos para gastar en los elementos que consideran más importantes — pueden apilar todos los votos en un solo elemento.",
+          "Discute los elementos más votados en orden, dedicando la mayor parte del tiempo donde hay concentración de votos.",
+          "Para cada punto de discusión, asigna una acción concreta a un propietario nombrado con una fecha límite antes del próximo sprint."
+        ],
+        "whyItMatters": "Los equipos que realizan regularmente y enfocadamente las retrospectivas mejoran la velocidad del sprint a lo largo del tiempo porque sistemáticamente eliminan la fricción que los ralentiza. El patrón anti-más común en las retrospectivas es discutir los mismos problemas sprint tras sprint sin resolución — si el mismo problema aparece en el tablero tres sprints seguidos, indica un problema sistémico que necesita escalada más allá de la retrospectiva. Las retrospectivas también construyen seguridad psicológica cuando se facilitan adecuadamente: cuando los miembros del equipo ven que levantar una preocupación conduce a un cambio real, confían en el proceso y participan más sinceramente. Los equipos que omiten las retrospectivas acumulan desfunciones sin resolver que eventualmente derriban los sprints por completo.",
+        "proTip": "Limita estrictamente la retrospectiva: 45 minutos para un sprint de dos semanas. Dedica 10 minutos a agregar elementos, 5 minutos a agrupar, 5 minutos a votar con puntos y 25 minutos a discutir los elementos más votados y asignar propietarios. Nunca termines una retrospectiva sin propietarios nombrados para cada elemento de acción — 'el equipo' teniendo algo significa que nadie lo tiene y el elemento reaparecerá en el tablero del próximo sprint sin cambios."
+      }
     },
     "standupGenerator": {
       "metaTitle": "Generador de Standup Diario — Formato Ayer/Hoy/Bloqueos | ToolNotch",
@@ -1924,7 +2321,20 @@
           "question": "¿Qué debo poner en el campo Bloqueos?",
           "answer": "Cualquier cosa que impida tu progreso: esperando una revisión de código, una dependencia no lista, requisitos poco claros o una API externa caída. Si no hay bloqueos, déjalo vacío — el generador escribirá 'Ninguno' automáticamente."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "La reunión diaria de seguimiento (daily Scrum) es una cerimonia de sincronización máxima de 15 minutos donde cada miembro del equipo responde a tres preguntas: ¿Qué hice ayer? ¿Qué haré hoy? ¿Qué me está bloqueando? La reunión diaria surgió en el Guía de Scrum como un evento de sincronización entre pares — su propósito es identificar los bloqueos temprano y mantener al equipo coordinado, no para informar actualizaciones de estado a la gestión. Cuando las reuniones diarias se desvían hacia el informe de estado a la Maestra de Scrum o un gerente, pierden su valor de sincronización entre pares y se sienten como una vigilancia. Para equipos distribuidos en diferentes zonas horarias, la reunión asincrónica es una alternativa efectiva: los miembros del equipo publican su actualización de las tres preguntas en un canal compartido a su propia hora de inicio del día, proporcionando la misma información sin requerir que todos estén en línea simultáneamente.",
+        "howToUse": [
+          "Selecciona los participantes para la reunión diaria de hoy.",
+          "Para cada participante, ingresa lo que completó ayer en el campo Yesterday.",
+          "Ingresa lo que planea trabajar hoy en el campo Today.",
+          "Ingresa cualquier bloqueo o impedimento en el campo Blockers — deja en blanco si no hay ninguno.",
+          "Haz clic en Generar Reunión para producir un resumen limpio y formateado.",
+          "Copia la salida y pégala en Slack, Microsoft Teams, correo electrónico o el canal de reunión diaria de tu equipo."
+        ],
+        "whyItMatters": "La reunión diaria es el evento de Scrum más comúnmente mal utilizado. Cuando se convierte en un informe de estado a una gestión en lugar de una sincronización entre pares, deja de mostrar los bloqueos temprano — lo cual es su propósito entero. Una reunión diaria de 15 minutos que muestra un bloqueo por semana ahorra más tiempo que cuesta: los bloqueos no resueltos durante días se acumulan en la falla de una sprint. Las reuniones asincrónicas son particularmente valiosas para equipos distribuidos globalmente, permitiendo el mismo intercambio de información sin el overhead de zona horaria de una reunión sincrónica. Este generador asegura que la actualización esté claramente formateada cada vez, reduciendo la carga cognitiva de escribir una reunión diaria desde cero cada mañana.",
+        "proTip": "Si tu reunión diaria consistentemente excede los 15 minutos, aplica la regla del parque: marca las discusiones detalladas para después de la reunión con solo las personas relevantes. La reunión es para señalar bloqueos, no resolverlos. El problema de resolución ocurre en la reunión del parque inmediatamente después con solo las personas que necesitan estar involucradas — todos los demás pueden empezar su día."
+      }
     },
     "planningPoker": {
       "metaTitle": "Planning Poker — Herramienta Gratuita de Estimación Ágil | ToolNotch",
@@ -1965,7 +2375,20 @@
           "question": "¿Es esta herramienta multijugador?",
           "answer": "Esta versión es de un solo jugador — útil para que el facilitador recoja votos verbalmente o en una sesión de pantalla compartida."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "La poker de planificación (poker de Scrum) es una técnica de estimación basada en consenso donde los miembros del equipo revelan simultáneamente sus estimaciones de puntos de historia para evitar el sesgo de anclaje. Si alguien revela su estimación primero, los demás tienden a anclar en ese número — la revelación simultánea previene esto y expone las verdaderas discusiones. Los valores estándar de las tarjetas siguen una secuencia inspirada en Fibonacci: 0, 1, 2, 3, 5, 8, 13, 20, 40, 100, ?, y infinito. La secuencia de Fibonacci funciona mejor que una escala lineal porque los espacios crecientes entre números grandes reflejan la verdadera incertidumbre en las estimaciones — una historia con 40 puntos no es simplemente el doble de compleja que una historia con 20 puntos, sino que lleva mucho más incógnitas. Los puntos de historia son una unidad relativa del esfuerzo, no un tiempo: una historia de 5 puntos se entiende simplemente como más esfuerzo que una historia de 3 puntos por lo que la equipo defina su escala.",
+        "howToUse": [
+          "Añade los miembros del equipo que participarán en la sesión de estimación.",
+          "Presenta una historia de usuario o descripción de tarea para que todos los participantes entiendan lo que se está estudiando.",
+          "Cada miembro del equipo selecciona simultáneamente su estimación de puntos de historia desde el mazo de tarjetas Fibonacci en privado.",
+          "Revela todas las estimaciones simultáneamente — esto previene el sesgo de anclaje de los influenciadores tempranos.",
+          "Si las estimaciones están cerca, acepta el consenso o el promedio y registra el valor final de puntos.",
+          "Si las estimaciones divergen ampliamente (por ejemplo, una persona elige 3 y otra elige 13), pregunta a los estimadores con la mayor y menor estimación para explicar su razonamiento, luego vuelve a votar."
+        ],
+        "whyItMatters": "La poker de planificación expone las discusiones de estimación que de otro modo estarían ocultas. Cuando un desarrollador estima 3 puntos y otro estima 13 para la misma historia, están operando sobre diferentes suposiciones sobre el alcance, enfoque técnico o riesgo. Esa conversación — desencadenada por la diferencia de estimaciones — previene la desalineación que causa las fallas del sprint durante la entrega. Los equipos que omiten las estimaciones o permiten que una persona decida las estimaciones descubren, durante el sprint, que una historia era mucho más grande de lo supuesto. La estimación consensuada construye una comprensión compartida del trabajo antes de comenzar.",
+        "proTip": "Si un equipo no puede llegar a un consenso después de dos rondas de votación, la historia de usuario es demasiado grande o demasiado descriptiva para estimarse de manera confiable. Divídala en historias más pequeñas o realiza una exploración — límite el tiempo invertido en una tarea de investigación para resolver la incertidumbre antes de comprometerse con un valor de punto. Una historia sobre la que el equipo no puede llegar a un acuerdo es una historia que fallará en el sprint."
+      }
     },
     "userStoryWriter": {
       "metaTitle": "Escritor de User Story — Como [Rol] Quiero [Funcionalidad] | ToolNotch",
@@ -2010,7 +2433,19 @@
           "question": "¿Puedo generar varias historias a la vez?",
           "answer": "Genera una historia a la vez, cópiala, luego limpia el formulario y genera la siguiente."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Las historias de usuario son requisitos ligeros escritos desde la perspectiva del usuario en el formato: Como un [tipo de usuario], quiero [acción o característica], para que [beneficio o objetivo]. Buenas historias de usuario satisfacen los criterios INVEST: Independientes (pueden desarrollarse y liberarse por separado de otras historias), Negociables (los detalles de implementación están abiertos a la discusión entre el equipo y los interesados), Valiosas (entregan valor real al usuario o al negocio), Estimables (se pueden medir por parte del equipo), Pequeñas (encajan en un solo sprint) y Pruebas (los criterios de aceptación pueden ser verificados por un tester). Una historia de usuario es distinta a una tarea (que describe trabajo de implementación, no valor para el usuario) y desde una falla (que describe una desviación del comportamiento esperado). El formato de la historia mantiene al equipo enfocado en los resultados del usuario en lugar de detalles técnicos de implementación.",
+        "howToUse": [
+          "Selecciona el tipo de usuario o rol — por ejemplo, usuario registrado, administrador, invitado o un personaje específico.",
+          "Describe la característica o acción que el usuario desea realizar en lenguaje común.",
+          "Describe el beneficio o objetivo — por qué el usuario quiere esta característica, qué resultado habilita para ellos.",
+          "Revisa la historia de usuario generada en el formato Como un / Quiero / Para que.",
+          "Añade tres a cinco criterios de aceptación en el formato Given/When/Then para definir lo que significa hecho para esta historia."
+        ],
+        "whyItMatters": "Las historias de usuario mal escritas son el motivo más común de la falla de un sprint. Historias que confunden detalles de implementación con resultados para el usuario (como 'Como un usuario quiero un índice de base de datos' — esto es una tarea técnica, no una historia de usuario), historias sin criterios de aceptación y historias demasiado grandes para encajar en un sprint crean ambigüedad que derriba el desarrollo. Cuando los desarrolladores no entienden por qué existe una característica, hacen decisiones de implementación que faltan al necesito real del usuario. Buenas historias hacen que la estimación sea precisa y la prueba de aceptación sea sencilla porque el equipo y el tester trabajan con la misma definición de hecho.",
+        "proTip": "Siempre escribe tres a cinco criterios de aceptación por historia usando el formato Given/When/Then: Dado [precondición], Cuando [acción], Entonces [resultado esperado]. Estos se convierten automáticamente en tus casos de prueba — un criterio de aceptación bien escrito se mapea directamente a una escena de prueba. Si no puedes escribir criterios de aceptación para una historia, no está lista para entrar en el backlog del sprint."
+      }
     },
     "sprintDateCalculator": {
       "metaTitle": "Calculadora de Fechas de Sprint — Planifica Todas las Ceremonias | ToolNotch",
@@ -2055,7 +2490,19 @@
           "question": "¿Qué duraciones de sprint están disponibles?",
           "answer": "Sprints de 2, 3 y 4 semanas — las tres cadencias más comunes en equipos Scrum y Kanban."
         }
-      ]
+      ],
+      "richContent": {
+        "whatIs": "Un calculador de fechas de sprint determina la fecha de inicio, fecha de fin, fecha de revisión y fecha de retrospectiva para uno o más sprints basándose en una fecha de inicio de equipo y la longitud del sprint. Las ceremonias de sprint dependen de límites predecibles: la práctica industrial coloca la planificación de sprint el lunes y la revisión y la retrospectiva el viernes final. Iniciar un sprint el viernes hace que la planificación se extienda al fin de semana; iniciar a medias de la semana desalinea los límites del sprint con la semana laboral. Alinear los sprints con trimestres fiscales y feriados públicos conocidos previene conflictos en las ceremonias — nadie quiere una revisión de sprint programada el viernes víspera de Navidad o una reunión de planificación en un día festivo bancario.",
+        "howToUse": [
+          "Ingresa tu fecha de inicio de sprint — el primer día de tu primer sprint (ideóticamente un lunes).",
+          "Selecciona la longitud del sprint: 2 semanas (estándar del industry), 3 semanas o 4 semanas para programas más lentos.",
+          "Ingresa el número de sprints consecutivos que quieres planificar.",
+          "Opcionalmente marca las fechas de feriados conocidos para señalar los sprints que contienen conflictos en las ceremonias.",
+          "Lee la salida del calendario de sprint mostrando las fechas de inicio, fin, revisión y retrospectiva para cada sprint."
+        ],
+        "whyItMatters": "Planificar fechas de sprint un cuarto de año antes permite a los equipos bloquear calendarios antes de que las reuniones competitivas aparezcan, alinear el tiempo libre (PTO) alrededor de eventos de sprint y coordinar las agendas de lanzamiento con equipos dependientes. Los equipos que previamente planifican las agendas de sprint experimentan menos ceremonias perdidas y una velocidad más predecible porque la sobrecarga de planificación nunca compite con el trabajo de entrega en el último momento. A escala, las cadencias de tren de lanzamientos en SAFe y LeSS requieren alineación de los límites del sprint entre múltiples equipos — una desaceleración incluso de un solo día causa caos de coordinación cruzada en los límites de incremento del programa.",
+        "proTip": "Evita sprints de 4 semanas para la mayoría de los equipos de software. Cuanto más largo sea el sprint, mayor será el costo de una suposición incorrecta — un error de dirección encontrado el día 25 de un sprint de 28 días desperdicia casi todo el sprint. Los sprints de 2 semanas son la estándar del industry: permiten bucles de retroalimentación más rápidos sin la sobrecarga de ceremonias de los sprints de 1 semana. Reserva iteraciones de 4 semanas para programas de hardware o entornos altamente regulados donde las cadencias de 2 semanas son operativamente imprácticas."
+      }
     }
   },
   "percentage": {
@@ -2108,7 +2555,18 @@
         "question": "¿Puedo usar decimales?",
         "answer": "Sí — las tres calculadoras aceptan entradas decimales como 12,5 o 0,75."
       }
-    ]
+    ],
+    "richContent": {
+      "whatIs": "Un calculador de porcentajes resuelve las tres problemas fundamentales de porcentaje: (1) ¿Cuál es el X% de Y — por ejemplo, 20% de 350 es igual a 70; (2) X es qué porcentaje de Y — por ejemplo, 70 es 20% de 350; (3) Cambio porcentual desde X hasta Y — por ejemplo, un cambio de 350 a 420 es un aumento del 20%. Usos en el mundo real incluyen calcular descuentos de ventas, cantidades de propinas, impuestos, porcentajes de calificaciones y retornos de inversión. Una distinción crítica que hay que entender: un punto porcentual y un porcentaje son cosas diferentes. Si una tasa de interés de un préstamo aumenta de 10% a 12%, eso es un aumento del 2 puntos porcentuales pero un aumento relativo del 20%. Estas dos interpretaciones se confunden frecuentemente en medios, publicidad y informes políticos.",
+      "howToUse": [
+        "Selecciona el tipo de cálculo: \"X% de Y\" para encontrar una porción, \"X es qué % de Y\" para encontrar la tasa o \"Cambio porcentual\" para comparar dos valores.",
+        "Ingresa los valores conocidos en los campos de entrada para el modo seleccionado.",
+        "Haz clic en Calcular para obtener el resultado.",
+        "Lee el resultado y cualquier desglose explicativo mostrado debajo de los campos de entrada."
+      ],
+      "whyItMatters": "La confusión con los porcentajes se explota regularmente en ventas y publicidad. \"50% de descuento, luego un adicional del 20%\" no es el 70% de descuento — es el 60% de descuento (paga el 50% del precio original, luego el 80% de eso, lo cual equivale al 40% del precio original). Stacker de descuentos nunca suman como suena. Los políticos y los mercadotecnicos frecuentemente cambian puntos porcentuales y porcentajes para exagerar o minimizar cambios dependiendo de cuál interpretación sea más favorable. Calcular porcentajes con precisión te permite verificar descuentos reclamados, cantidades de impuestos y cambios en tasas independientemente.",
+      "proTip": "Trucos mentales rápidos para porcentajes diarios: 10% significa mover el punto decimal un lugar a la izquierda. 5% es la mitad del 10%. 15% es el 10% más el 5%. 20% es doble el valor del 10%. 25% significa dividir por 4. Estas cinco reglas cubren la mayoría de las estimaciones de propinas, descuentos y impuestos sin ninguna calculadora — lo suficientemente rápido para verificar una cuenta en un restaurante o un descuento en una tienda en segundos."
+    }
   },
   "qrGenerator": {
     "metaTitle": "Generador de Código QR — Gratis, Sin Registro | ToolNotch",
@@ -2164,7 +2622,19 @@
         "question": "¿Son seguros mis datos?",
         "answer": "Sí — toda la generación del código QR ocurre en tu navegador. No se envía información a nuestros servidores."
       }
-    ]
+    ],
+    "richContent": {
+      "whatIs": "Un generador de códigos QR crea códigos de barras bidimensionales que los cámaras de teléfonos inteligentes pueden leer directamente — no se requiere ninguna aplicación en iOS y Android modernos. Los códigos QR fueron inventados por Denso Wave en Japón en 1994 para el seguimiento de partes automotrices y se volvieron globalmente universales después del adopción inalámbrica que aceleró en 2020. Almacenan datos de texto: URLs, credenciales de WiFi, información de contacto o texto plano. Los niveles de corrección de errores controlan la tolerancia a daños: Nivel L (el 7% del código puede estar dañado), M (15%), Q (25%) y H (30% — use H cuando un logotipo superpondrá parte del código). La capacidad máxima de datos depende del tipo de contenido: URLs hasta aproximadamente 2,500 caracteres, texto plano hasta 4,300 caracteres y credenciales de WiFi alrededor de 150 caracteres. Los códigos QR estáticos codifican los datos directamente; los códigos QR dinámicos redirigen a través de una URL acortadora que se puede cambiar sin reimpresión.",
+      "howToUse": [
+        "Seleccione el tipo de código QR: URL, texto plano, dirección de correo electrónico, número de teléfono o credenciales de WiFi.",
+        "Ingrese el contenido para el tipo seleccionado — pegue una URL, escriba su texto o complete la SSID y contraseña del WiFi.",
+        "Seleccione el tamaño de salida: 256 px para mostrar en pantalla, 512 px para impresión estándar, 1024 px para impresión a gran formato o SVG para una resolución infinita.",
+        "Vista previa del código QR generado para confirmar que lo ve correctamente y se escanea limpiamente.",
+        "Descargue como PNG para la mayoría de los usos o SVG para la producción de impresión donde se necesita flexibilidad en la resolución."
+      ],
+      "whyItMatters": "Los códigos QR unen el contexto físico y digital: tarjetas de negocios enlazan a portafolios, menús de restaurantes pasan a ser contactless, empaques de productos enlazan a instrucciones de ensamblaje y las medallas de eventos verifican la asistencia. Un código QR de URL en una tarjeta de negocios se escanea con frecuencia más que un URL escrito manualmente — eliminar la fricción del escritura directamente aumenta la participación. Para compartir WiFi, los códigos QR eliminan la fricción de leer y escribir contraseñas de red complejas. El tamaño mínimo confiable para una impresión consistente es aproximadamente 2.5 cm × 2.5 cm (alrededor de un cuadrado de 1 pulgada) con buena contraste contra el fondo.",
+      "proTip": "Siempre pruebe un código QR antes de imprimir a gran escala. Imprima una copia pequeña de prueba y escánerla con al menos dos teléfonos diferentes — uno iOS y otro Android — para confirmar que resuelve correctamente en ambos plataformas. Un error tipográfico en un código QR en 1,000 folletos impreso no puede corregirse sin reimpresión de toda la producción. Para los códigos QR de WiFi, verifique que la codificación de la contraseña sea exacta — un solo carácter incorrecto significa que el código se conecta a nada."
+    }
   },
   "healthCalculator": {
     "bmiMetaTitle": "Calculadora IMC — Verifica tu Índice de Masa Corporal Gratis | ToolNotch",
@@ -2405,7 +2875,19 @@
         "question": "¿Cuál es mi edad si nací en 1990?",
         "answer": "Si naciste en 1990, actualmente tienes 35 o 36 años dependiendo de tu mes de nacimiento y la fecha de hoy. Ingresa tu fecha de nacimiento completa arriba para un resultado preciso."
       }
-    ]
+    ],
+    "richContent": {
+      "whatIs": "Un calculador de edad calcula la diferencia exacta entre una fecha de nacimiento y hoy — o cualquier fecha objetivo — en años, meses y días. Los casos extremos hacen que esto sea más complejo que una sencilla resta: cumpleaños de año bisiesto (el 29 de febrero existe solo en los años bisiestos — la mayoría de los países usan el 28 de febrero como el cumpleaños legal en los años no bisiestos), el sistema de edad coreano (donde una persona nace a los 1 y todos ganan un año el 1 de enero en lugar de en su cumpleaños individual) y los hitos legales de edad que varían por país (18 para votar y contratos en la mayoría de los países, 21 para el alcohol en los Estados Unidos, 65 para el retiro completo de las pensiones sociales en los EE. UU., 67 en el Reino Unido). La función de conteo hacia el cumpleaños muestra los días exactos restantes para planificar celebraciones y seguir transiciones legales.",
+      "howToUse": [
+        "Introduzca su fecha de nacimiento usando el selector de fechas o escribiendo el día, mes y año.",
+        "Opcionalmente introduzca una fecha objetivo para calcular la edad en un punto específico del tiempo — por defecto es hoy si se deja en blanco.",
+        "Lea su edad exacta mostrada en años, meses y días.",
+        "Verifique el conteo de días hasta el próximo cumpleaños para la planificación de celebraciones.",
+        "Utilice la función de edad futura para saber cuántos años tendrá en cualquier fecha futura."
+      ],
+      "whyItMatters": "La edad exacta es importante en muchos contextos legales y médicos. Los cortejos de inscripción escolar usan reglas precisas de edad en una fecha específica que varían por distrito y país, determinando si un niño entra a un grado un año antes o detrás de los compañeros. La dosis médica pediátrica para niños menores de dos años usa la edad en meses, no años — un niño de 16 meses y otro de 23 meses reciben diferentes dosis. Los intervalos de tarifas de seguros, la elegibilidad para beneficios de las pensiones sociales y los cálculos de pensión todos hacen referencia a umbrales específicos de edad donde estar unos días cortos puede cambiar las fechas de inicio de los beneficios o desencadenar diferentes escalas de tasas.",
+      "proTip": "Para el planificación del retiro, calcule su edad exacta el 1 de enero de cada año objetivo. Las sistemas de seguridad social y muchas pensiones usan reglas de edad en años — la cantidad o nivel de beneficio que recibe se determina por su edad en una fecha específica dentro del año calendario. Ser tres días corto de un corte de edad cualificable puede desplazar la fecha de inicio de los beneficios por meses o activar una escalera de tasas de beneficios más baja, una diferencia que vale conocer con anticipación."
+    }
   },
   "about": {
     "metaTitle": "Acerca de ToolNotch — Herramientas Online Gratuitas para Desarrolladores",

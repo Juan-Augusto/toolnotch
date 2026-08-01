@@ -44,7 +44,7 @@ export default function TextToolsHubPage() {
             For general web content, a Flesch Reading Ease score of 60–70 ensures that most adults can read comfortably without
             effort. For SEO, tracking keyword density prevents accidental over-optimization (keyword stuffing) while ensuring
             that important terms appear often enough for search engines to understand the topic. Character counters help you
-            craft meta descriptions that fit within Google's 155-character display limit, and reading time calculators signal
+            craft meta descriptions that fit within Google&apos;s 155-character display limit, and reading time calculators signal
             to readers — and ranking algorithms — that your content has appropriate depth and substance.
           </p>
           <p>

@@ -2437,6 +2437,15 @@
     "heading": "ToolNotch",
     "subheading": "Free online tools — no signup, no upload, 100% private",
     "moreComingSoon": "More tools coming soon",
+    "nav": {
+      "tools": "Tools",
+      "blog": "Blog",
+      "about": "About",
+      "interview": "Interview",
+      "quizzes": "Quizzes",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
     "categories": {
       "imageTools": "Image Tools",
       "pdfTools": "PDF Tools",
@@ -4248,4 +4257,5 @@
       }
     }
   }
+
 }

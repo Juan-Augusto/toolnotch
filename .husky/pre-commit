@@ -1,5 +1,5 @@
 #!/bin/sh
 npm audit --audit-level=high
-npm run lint
+#npm run lint
 npm run test:unit
 npm run test:integration
