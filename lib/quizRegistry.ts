@@ -26,5 +26,4 @@ export const QUIZ_REGISTRY: QuizMeta[] = [
   { id: 'am-i-introverted-or-extroverted', type: 'personality', category: 'personality', locales: ['en'] },
   { id: 'what-type-of-traveler-are-you',   type: 'personality', category: 'personality', locales: ['en'] },
   { id: 'which-decade-do-you-belong-in',   type: 'personality', category: 'personality', locales: ['en'] },
-  { id: 'admin-panel-test-quiz-delete-me', type: 'trivia', category: 'sports', locales: ['en'] },
 ]
