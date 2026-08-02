@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { saveAs } from "file-saver";
 import ToolWrapper from "@/components/ToolWrapper";
+import Button from "@/components/Button";
 import { compressPDF } from "@/lib/pdfCompress";
 import type { FaqItem } from "@/components/FaqSection";
 
@@ -122,20 +123,11 @@ export default function CompressTool({ title, description, faqs, richContent }: 
       )}
 
       {result ? (
-        <button
-          onClick={handleDownload}
-          className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
-        >
-          {t("button.download")}
-        </button>
+        <Button onClick={handleDownload}>{t("button.download")}</Button>
       ) : (
-        <button
-          onClick={handleCompress}
-          disabled={loading || !file}
-          className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 disabled:bg-gray-300 disabled:bg-none text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
-        >
+        <Button onClick={handleCompress} disabled={loading || !file}>
           {loading ? t("button.compressing") : t("button.compress")}
-        </button>
+        </Button>
       )}
     </ToolWrapper>
   );

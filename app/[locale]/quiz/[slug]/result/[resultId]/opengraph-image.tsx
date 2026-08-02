@@ -1,24 +1,26 @@
 import { ImageResponse } from 'next/og'
-import { Quiz } from '@/lib/quizTypes'
-import careerQuizRaw from '@/data/quizzes/what-career-suits-you.json'
-import programmingQuizRaw from '@/data/quizzes/which-programming-language-are-you.json'
-import introvertQuizRaw from '@/data/quizzes/am-i-introverted-or-extroverted.json'
-import travelerQuizRaw from '@/data/quizzes/what-type-of-traveler-are-you.json'
-import decadeQuizRaw from '@/data/quizzes/which-decade-do-you-belong-in.json'
+import { isTriviaQuiz } from '@/lib/quizTypes'
+import { getQuizBySlug } from '@/lib/content/quizRepository'
 
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const ALL_QUIZZES = [careerQuizRaw, programmingQuizRaw, introvertQuizRaw, travelerQuizRaw, decadeQuizRaw] as any[] as Quiz[]
-
 export default async function QuizResultOgImage({ params }: { params: Promise<{ slug: string; resultId: string }> }) {
   const { slug, resultId } = await params
-  const quiz = ALL_QUIZZES.find(q => q.id === slug)
-  const result = quiz?.results.find(r => r.id === resultId)
+  const quiz = await getQuizBySlug(slug, 'en')
 
-  const title = result?.title ?? 'Quiz Result'
+  let title = 'Quiz Result'
   const quizTitle = quiz?.title ?? 'Personality Quiz'
+
+  if (quiz) {
+    if (isTriviaQuiz(quiz)) {
+      const tier = quiz.tiers.find((t) => t.id === resultId)
+      if (tier) title = tier.label
+    } else {
+      const result = quiz.results.find((r) => r.id === resultId)
+      if (result) title = result.title
+    }
+  }
 
   return new ImageResponse(
     (

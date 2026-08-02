@@ -1,69 +1,41 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { AnyQuiz, isTriviaQuiz } from '@/lib/quizTypes'
+import { isTriviaQuiz } from '@/lib/quizTypes'
 import { QUIZ_REGISTRY } from '@/lib/quizRegistry'
+import { getQuizBySlug, getQuizResultIds } from '@/lib/content/quizRepository'
 import { buildJsonLd, breadcrumbSchema } from '@/lib/schema'
-
-// ── Static imports for all quiz JSON files ────────────────────────────────────
-import careerQuizRaw from '@/data/quizzes/what-career-suits-you.json'
-import programmingQuizRaw from '@/data/quizzes/which-programming-language-are-you.json'
-import introvertQuizRaw from '@/data/quizzes/am-i-introverted-or-extroverted.json'
-import travelerQuizRaw from '@/data/quizzes/what-type-of-traveler-are-you.json'
-import decadeQuizRaw from '@/data/quizzes/which-decade-do-you-belong-in.json'
-
-import worldCupEnRaw from '@/data/quizzes/en/fifa-world-cup-winners.json'
-import clubEnRaw from '@/data/quizzes/en/which-football-club-are-you.json'
-import uclEnRaw from '@/data/quizzes/en/champions-league-trivia.json'
-import worldCupPtRaw from '@/data/quizzes/pt/fifa-world-cup-winners.json'
-import clubPtRaw from '@/data/quizzes/pt/which-football-club-are-you.json'
-import uclPtRaw from '@/data/quizzes/pt/champions-league-trivia.json'
-import worldCupEsRaw from '@/data/quizzes/es/fifa-world-cup-winners.json'
-import clubEsRaw from '@/data/quizzes/es/which-football-club-are-you.json'
-import uclEsRaw from '@/data/quizzes/es/champions-league-trivia.json'
-
-// ── Quiz map ──────────────────────────────────────────────────────────────────
-const QUIZ_MAP: Record<string, Record<string, unknown>> = {
-  'what-career-suits-you':               { en: careerQuizRaw, pt: careerQuizRaw, es: careerQuizRaw },
-  'which-programming-language-are-you':  { en: programmingQuizRaw, pt: programmingQuizRaw, es: programmingQuizRaw },
-  'am-i-introverted-or-extroverted':     { en: introvertQuizRaw, pt: introvertQuizRaw, es: introvertQuizRaw },
-  'what-type-of-traveler-are-you':       { en: travelerQuizRaw, pt: travelerQuizRaw, es: travelerQuizRaw },
-  'which-decade-do-you-belong-in':       { en: decadeQuizRaw, pt: decadeQuizRaw, es: decadeQuizRaw },
-  'fifa-world-cup-winners':              { en: worldCupEnRaw, pt: worldCupPtRaw, es: worldCupEsRaw },
-  'which-football-club-are-you':         { en: clubEnRaw, pt: clubPtRaw, es: clubEsRaw },
-  'champions-league-trivia':             { en: uclEnRaw, pt: uclPtRaw, es: uclEsRaw },
-}
-
-function getQuiz(slug: string, locale = 'en'): AnyQuiz | undefined {
-  const localeKey = ['pt', 'es'].includes(locale) ? locale : 'en'
-  return (QUIZ_MAP[slug]?.[localeKey] ?? QUIZ_MAP[slug]?.['en']) as AnyQuiz | undefined
-}
 
 const TRIVIA_TIER_IDS = ['legend', 'expert', 'fan', 'rookie'] as const
 
 // ── Static params ─────────────────────────────────────────────────────────────
-export function generateStaticParams() {
-  return QUIZ_REGISTRY.flatMap(q => {
-    const meta = QUIZ_REGISTRY.find(r => r.id === q.id)
-    if (meta?.type === 'trivia') {
+export async function generateStaticParams() {
+  const params: { locale: string; slug: string; resultId: string }[] = []
+  for (const q of QUIZ_REGISTRY) {
+    if (q.type === 'trivia') {
       // Trivia quizzes: generate params for each locale + each tier
-      return meta.locales.flatMap(locale =>
-        TRIVIA_TIER_IDS.map(tierId => ({ locale, slug: q.id, resultId: tierId }))
-      )
+      for (const locale of q.locales) {
+        for (const tierId of TRIVIA_TIER_IDS) {
+          params.push({ locale, slug: q.id, resultId: tierId })
+        }
+      }
+      continue
     }
     // Personality quizzes: generate params from results in English JSON
-    const quiz = getQuiz(q.id, 'en')
-    if (!quiz || isTriviaQuiz(quiz)) return []
-    return quiz.results.flatMap(result =>
-      ['en', 'pt', 'es'].map(locale => ({ locale, slug: q.id, resultId: result.id }))
-    )
-  })
+    const resultIds = await getQuizResultIds(q.id)
+    for (const resultId of resultIds) {
+      for (const locale of ['en', 'pt', 'es']) {
+        params.push({ locale, slug: q.id, resultId })
+      }
+    }
+  }
+  return params
 }
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string; resultId: string }> }): Promise<Metadata> {
   const { locale, slug, resultId } = await params
-  const quiz = getQuiz(slug, locale)
+  const quiz = await getQuizBySlug(slug, locale)
   if (!quiz) return {}
 
   if (isTriviaQuiz(quiz)) {
@@ -100,7 +72,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 // ── Page ──────────────────────────────────────────────────────────────────────
 export default async function QuizResultPage({ params }: { params: Promise<{ locale: string; slug: string; resultId: string }> }) {
   const { locale, slug, resultId } = await params
-  const quiz = getQuiz(slug, locale)
+  const quiz = await getQuizBySlug(slug, locale)
   if (!quiz) notFound()
 
   // ── Trivia result ────────────────────────────────────────────────────────

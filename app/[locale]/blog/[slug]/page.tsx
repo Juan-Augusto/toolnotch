@@ -6,7 +6,7 @@ import rehypePrettyCode from 'rehype-pretty-code'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, breadcrumbSchema, buildLocalizedUrl, authorSchema } from '@/lib/schema'
 import { BLOG_POSTS } from '@/data/blog/index'
-import { getBlogPostSource, getAllMdxSlugs, guardDescription } from '@/lib/blogContent'
+import { getBlogPostSource, getAllMdxSlugs, guardDescription } from '@/lib/content/blogRepository'
 import { mdxComponents } from '@/components/blog/mdxComponents'
 import ArticleLayout from '@/components/blog/ArticleLayout'
 

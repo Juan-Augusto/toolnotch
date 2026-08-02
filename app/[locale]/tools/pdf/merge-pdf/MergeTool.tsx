@@ -25,6 +25,7 @@ import ToolWrapper from "@/components/ToolWrapper";
 import { mergePDFs } from "@/lib/pdfMerge";
 import { PDFJob } from "@/lib/pdfTypes";
 import type { FaqItem } from "@/components/FaqSection";
+import Button from "@/components/Button";
 
 interface RichContent {
   whatIs: string;
@@ -179,13 +180,12 @@ export default function MergeTool({ title, description, faqs, richContent }: Pro
       {error && <p className="text-red-600 text-sm mb-3 dark:text-red-400">{error}</p>}
       {done && <p className="text-green-600 text-sm mb-3 dark:text-green-400">{t("success")}</p>}
 
-      <button
+      <Button
         onClick={handleMerge}
         disabled={loading || jobs.length < 2}
-        className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 disabled:bg-gray-300 disabled:bg-none text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
       >
         {loading ? t("button.merging") : t("button.merge")}
-      </button>
+      </Button>
     </ToolWrapper>
   );
 }

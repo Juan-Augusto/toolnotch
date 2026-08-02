@@ -5,6 +5,7 @@ import { calculateTotals, formatAmount } from '@/lib/invoiceCalc'
 import { saveDraft, loadDraft, getNextNumber } from '@/lib/invoiceStorage'
 import { INVOICE_CURRENCIES } from '@/data/invoiceCurrencies'
 import { LOCALE_CONFIGS, LocaleKey } from '@/data/invoiceLocales'
+import Button from '@/components/Button'
 
 function generateId() {
   return Math.random().toString(36).slice(2, 9)
@@ -198,9 +199,7 @@ export default function InvoiceBuilder({ locale }: InvoiceBuilderProps) {
               className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none mt-2" />
           </section>
 
-          <button onClick={handlePrint} className="w-full py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-            Download / Print PDF
-          </button>
+          <Button onClick={handlePrint}>Download / Print PDF</Button>
         </div>
 
         {/* Preview */}

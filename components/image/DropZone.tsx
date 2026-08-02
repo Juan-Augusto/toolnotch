@@ -45,7 +45,7 @@ export default function DropZone({ onFile, currentFile }: Props) {
       className={`border-2 border-dashed rounded-2xl p-10 text-center cursor-pointer transition-colors transition-transform duration-200 ${
         isDragging
           ? 'border-blue-500 bg-blue-50 scale-[1.01] dark:border-blue-400 dark:bg-blue-900/20'
-          : 'border-zinc-300 hover:border-zinc-400 bg-zinc-50 dark:border-zinc-600 dark:hover:border-zinc-500 dark:bg-zinc-800'
+          : 'border-zinc-300 hover:border-gray-400 bg-gray-50 dark:border-gray-600 dark:hover:border-gray-500 dark:bg-gray-800'
       }`}
     >
       <input

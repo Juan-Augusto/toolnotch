@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 import fs from 'fs/promises'
 import path from 'path'
-import { getBlogPostSource } from '@/lib/blogContent'
+import { getBlogPostSource } from '@/lib/content/blogRepository'
 import { BLOG_POSTS } from '@/data/blog/index'
 
 export const size = { width: 1200, height: 630 }

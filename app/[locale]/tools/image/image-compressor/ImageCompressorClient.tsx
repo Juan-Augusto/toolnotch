@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react'
 import { useTranslations } from 'next-intl'
+import Button from '@/components/Button'
 import DropZone from '@/components/image/DropZone'
 import FormatSelector from '@/components/image/FormatSelector'
 import ComparisonView from '@/components/image/ComparisonView'
@@ -83,13 +84,9 @@ export default function ImageCompressorClient({
           onMaxWidthChange={setMaxWidth}
         />
 
-        <button
-          onClick={handleCompress}
-          disabled={!file || isProcessing}
-          className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-zinc-300 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors text-base"
-        >
+        <Button onClick={handleCompress} disabled={!file || isProcessing}>
           {isProcessing ? t('button.compressing') : t('button.compress')}
-        </button>
+        </Button>
 
         {error && (
           <p className="text-red-500 text-sm bg-red-50 border border-red-100 rounded-lg px-4 py-3">

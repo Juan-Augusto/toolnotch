@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Button from '@/components/Button'
 
 interface Props {
   tabs: Record<string, string>
@@ -107,7 +108,7 @@ export default function PercentageCalculatorClient({ tabs, percentOf, whatPercen
             </div>
           )}
           <div className="flex gap-2">
-            <button onClick={calcPercentOf} className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-lg text-sm transition-colors">{calculate}</button>
+            <Button onClick={calcPercentOf} className="flex-1">{calculate}</Button>
             <button onClick={clearAll} className="px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2.5 rounded-lg text-sm transition-colors">{clear}</button>
           </div>
         </div>
@@ -139,7 +140,7 @@ export default function PercentageCalculatorClient({ tabs, percentOf, whatPercen
             </div>
           )}
           <div className="flex gap-2">
-            <button onClick={calcWhatPercent} className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-lg text-sm transition-colors">{calculate}</button>
+            <Button onClick={calcWhatPercent} className="flex-1">{calculate}</Button>
             <button onClick={clearAll} className="px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2.5 rounded-lg text-sm transition-colors">{clear}</button>
           </div>
         </div>
@@ -171,7 +172,7 @@ export default function PercentageCalculatorClient({ tabs, percentOf, whatPercen
             </div>
           )}
           <div className="flex gap-2">
-            <button onClick={calcChange} className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-lg text-sm transition-colors">{calculate}</button>
+            <Button onClick={calcChange} className="flex-1">{calculate}</Button>
             <button onClick={clearAll} className="px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2.5 rounded-lg text-sm transition-colors">{clear}</button>
           </div>
         </div>
