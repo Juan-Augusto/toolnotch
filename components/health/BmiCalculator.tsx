@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import {
   calculateBmi,
@@ -50,10 +50,8 @@ export default function BmiCalculator({ locale }: Props) {
   const [heightFt, setHeightFt] = useState('')
   const [heightIn, setHeightIn] = useState('')
 
-  const [result, setResult] = useState<BmiResult | null>(null)
-
-  // Recalculate whenever inputs change
-  useEffect(() => {
+  // Derived from inputs — no need to sync via effect
+  const result: BmiResult | null = (() => {
     let wKg: number
     let hCm: number
 
@@ -66,11 +64,10 @@ export default function BmiCalculator({ locale }: Props) {
     }
 
     if (wKg > 0 && hCm > 0 && isFinite(wKg) && isFinite(hCm)) {
-      setResult(calculateBmi(wKg, hCm))
-    } else {
-      setResult(null)
+      return calculateBmi(wKg, hCm)
     }
-  }, [unit, weightKg, heightCm, weightLbs, heightFt, heightIn])
+    return null
+  })()
 
   function switchUnit(newUnit: UnitSystem) {
     if (newUnit === unit) return

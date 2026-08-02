@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import {
   calculateTdee,
@@ -65,9 +65,8 @@ export default function TdeeCalculator({ locale, mode }: Props) {
   const [heightFt, setHeightFt] = useState('')
   const [heightIn, setHeightIn] = useState('')
 
-  const [result, setResult] = useState<TdeeResult | null>(null)
-
-  useEffect(() => {
+  // Derived from inputs — no need to sync via effect
+  const result: TdeeResult | null = (() => {
     let wKg: number
     let hCm: number
 
@@ -85,11 +84,10 @@ export default function TdeeCalculator({ locale, mode }: Props) {
       wKg > 0 && hCm > 0 && ageNum > 0 &&
       isFinite(wKg) && isFinite(hCm) && isFinite(ageNum)
     ) {
-      setResult(calculateTdee(wKg, hCm, ageNum, sex, activity))
-    } else {
-      setResult(null)
+      return calculateTdee(wKg, hCm, ageNum, sex, activity)
     }
-  }, [unit, weightKg, heightCm, weightLbs, heightFt, heightIn, age, sex, activity])
+    return null
+  })()
 
   function switchUnit(newUnit: UnitSystem) {
     if (newUnit === unit) return

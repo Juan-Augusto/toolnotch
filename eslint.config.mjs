@@ -15,6 +15,8 @@ const eslintConfig = defineConfig([
     // Minified vendor files
     "public/**/*.mjs",
     "public/**/*.js",
+    // Agent worktree checkouts — not source to lint
+    ".claude/worktrees/**",
   ]),
 ]);
 

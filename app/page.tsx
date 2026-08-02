@@ -3,6 +3,8 @@
 // This file satisfies Next.js App Router's requirement for a root page export.
 import { redirect } from 'next/navigation'
 
+
+
 export default function RootPage() {
   redirect('/')
 }

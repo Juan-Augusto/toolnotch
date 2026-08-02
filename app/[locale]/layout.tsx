@@ -11,6 +11,7 @@ import DarkModeToggle from '@/components/DarkModeToggle'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import Footer from '@/components/Footer'
 import '../globals.css'
+import Header from '@/components/Header'
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? ''
 const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? ''
@@ -79,9 +80,21 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params
   if (!locales.includes(locale as typeof locales[number])) notFound()
+  const t = await getTranslations({ locale, namespace: 'home' })
   const messages = await getMessages()
   const cookieStore = await cookies()
   const isDark = cookieStore.get('theme')?.value === 'dark'
+
+    const navItems = [
+    { href: '/', label: t('nav.tools') },
+    { href: '/interview', label: t('nav.interview') },
+    { href: '/quizzes', label: t('nav.quizzes') },
+    { href: '/blog', label: t('nav.blog') },
+    { href: '/about', label: t('nav.about') },
+    { href: '/privacy', label: t('nav.privacy') },
+  ]
+
+
   return (
     <html lang={locale} className={isDark ? 'dark' : ''} suppressHydrationWarning>
       <head>
@@ -122,6 +135,7 @@ export default async function LocaleLayout({
         </noscript>
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
+            <Header navItems={navItems} />
             {children}
             <div className="fixed bottom-5 right-5 z-50 flex items-center gap-2">
               <LanguageSwitcher />

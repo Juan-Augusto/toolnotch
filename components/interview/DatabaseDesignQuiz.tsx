@@ -415,7 +415,7 @@ function QuizScreen({ state, onAnswer, onNext, onTab, onBack }: QuizScreenProps)
                 <CodeBlock code={q.compiledJS} />
               ) : (
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', fontStyle: 'italic', margin: 0 }}>
-                  This concept applies at the schema design or architecture level — there is no single SQL snippet that demonstrates it. See the "Why This Answer" tab for the full explanation.
+                  This concept applies at the schema design or architecture level — there is no single SQL snippet that demonstrates it. See the &quot;Why This Answer&quot; tab for the full explanation.
                 </p>
               )
             )}

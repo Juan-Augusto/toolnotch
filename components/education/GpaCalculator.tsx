@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import {
   calculateGpa,
@@ -45,10 +45,11 @@ export default function GpaCalculator({ mode, locale }: Props) {
   const [newCredits, setNewCredits] = useState('')
 
   // Reset courses when scale changes to avoid out-of-range values
-  useEffect(() => {
+  function handleScaleChange(next: GradeScale) {
+    setScale(next)
     setCourses([{ id: 1, grade: 0, credits: 3 }])
     setNextId(2)
-  }, [scale])
+  }
 
   // ── Semester helpers ──────────────────────────────────────────────────────
   function addCourse() {
@@ -100,7 +101,7 @@ export default function GpaCalculator({ mode, locale }: Props) {
         </label>
         <select
           value={scale}
-          onChange={(e) => setScale(e.target.value as GradeScale)}
+          onChange={(e) => handleScaleChange(e.target.value as GradeScale)}
           className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
         >
           <option value="us4">{t('scaleUs4')}</option>

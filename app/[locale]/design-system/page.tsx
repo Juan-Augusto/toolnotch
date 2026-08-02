@@ -190,7 +190,7 @@ export default function DesignSystemPage() {
                 </p>
                 <p className="text-sm leading-relaxed mb-2" style={{ color: 'var(--text-secondary)' }}>
                   Small (0.875rem): Secondary text, descriptions, helper copy. Used for supporting
-                  information that doesn't need full prominence.
+                  information that doesn&apos;t need full prominence.
                 </p>
                 <p className="text-xs leading-relaxed" style={{ color: 'var(--text-muted)' }}>
                   XSmall (0.75rem): Labels, captions, metadata, timestamps. Lowest level of the
@@ -367,7 +367,7 @@ export default function DesignSystemPage() {
                 className="text-xs"
                 style={{ fontFamily: 'var(--font-mono)', color: 'var(--neon)' }}
               >
-                className="animate-fade-in-up"
+                className=&quot;animate-fade-in-up&quot;
               </code>
             </div>
             <div className="card-neon p-5 flex flex-col gap-3">
