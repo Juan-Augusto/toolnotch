@@ -163,6 +163,13 @@ export default async function InterviewHubPage({ params }: Props) {
               description: 'CI/CD, Kubernetes, circuit breakers, Saga pattern, GitOps, and observability.',
               accent: '#8b5cf6',
             },
+            {
+              slug: 'vue',
+              flagKey: 'interview-vue',
+              title: 'Vue.js',
+              description: 'Composition API, reactivity internals, composables, Pinia, and SSR hydration.',
+              accent: '#41b883',
+            },
           ].filter(({ flagKey }) => flags[flagKey] === true)
            .map(({ slug, title, description, accent }) => {
             const href =
@@ -172,6 +179,7 @@ export default async function InterviewHubPage({ params }: Props) {
               slug === 'database-indexing'    ? `/${locale}/interview/database-indexing` :
               slug === 'nodejs-fundamentals'  ? `/${locale}/interview/nodejs-fundamentals` :
               slug === 'system-architecture'  ? `/${locale}/interview/system-architecture` :
+              slug === 'vue'                  ? `/${locale}/interview/vue` :
               `/${locale}/quiz/${slug}`
             return (
             <Link key={slug} href={href} className="interview-card">

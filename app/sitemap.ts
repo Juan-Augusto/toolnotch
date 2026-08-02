@@ -23,6 +23,7 @@ const ALL_ROUTES = [
   '/interview/rabbitmq-concepts',
   '/interview/nodejs-fundamentals',
   '/interview/system-architecture',
+  '/interview/vue',
   // Legal / info (moved to TRUST_ROUTES above — rendered at priority 0.6)
   // PDF tools
   '/tools/pdf',
