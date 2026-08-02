@@ -3,63 +3,25 @@ import { getTranslations } from 'next-intl/server'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, faqSchema, breadcrumbSchema } from '@/lib/schema'
 import { QUIZ_REGISTRY } from '@/lib/quizRegistry'
-import { AnyQuiz, isTriviaQuiz } from '@/lib/quizTypes'
+import { getQuizBySlug } from '@/lib/content/quizRepository'
 import QuizCategoryFilter, { QuizCardData } from '@/components/quiz/QuizCategoryFilter'
-
-// ── Static quiz imports (English for the hub display) ─────────────────────────
-import careerQuizRaw from '@/data/quizzes/what-career-suits-you.json'
-import programmingQuizRaw from '@/data/quizzes/which-programming-language-are-you.json'
-import introvertQuizRaw from '@/data/quizzes/am-i-introverted-or-extroverted.json'
-import travelerQuizRaw from '@/data/quizzes/what-type-of-traveler-are-you.json'
-import decadeQuizRaw from '@/data/quizzes/which-decade-do-you-belong-in.json'
-import worldCupEnRaw from '@/data/quizzes/en/fifa-world-cup-winners.json'
-import clubEnRaw from '@/data/quizzes/en/which-football-club-are-you.json'
-import uclEnRaw from '@/data/quizzes/en/champions-league-trivia.json'
-import loveLangEnRaw from '@/data/quizzes/en/what-is-your-love-language.json'
-import f1TriviaEnRaw from '@/data/quizzes/en/formula-1-trivia.json'
-import f1DriverEnRaw from '@/data/quizzes/en/which-f1-driver-are-you.json'
-import nodejsFundamentalsRaw from '@/data/quizzes/en/nodejs-fundamentals.json'
-import databaseDesignRaw from '@/data/quizzes/en/database-design.json'
-import databaseIndexingRaw from '@/data/quizzes/en/database-indexing.json'
-import messagingSqsKafkaRaw from '@/data/quizzes/en/messaging-sqs-kafka.json'
-import rabbitmqConceptsRaw from '@/data/quizzes/en/rabbitmq-concepts.json'
-import systemArchitectureRaw from '@/data/quizzes/en/system-architecture.json'
 
 const PATH = '/quizzes'
 
-// ── Quiz data map (English versions for display) ──────────────────────────────
-const QUIZ_EN_MAP: Record<string, AnyQuiz> = {
-  'what-career-suits-you':               careerQuizRaw as unknown as AnyQuiz,
-  'which-programming-language-are-you':  programmingQuizRaw as unknown as AnyQuiz,
-  'am-i-introverted-or-extroverted':     introvertQuizRaw as unknown as AnyQuiz,
-  'what-type-of-traveler-are-you':       travelerQuizRaw as unknown as AnyQuiz,
-  'which-decade-do-you-belong-in':       decadeQuizRaw as unknown as AnyQuiz,
-  'fifa-world-cup-winners':              worldCupEnRaw as unknown as AnyQuiz,
-  'which-football-club-are-you':         clubEnRaw as unknown as AnyQuiz,
-  'champions-league-trivia':             uclEnRaw as unknown as AnyQuiz,
-  'what-is-your-love-language':          loveLangEnRaw as unknown as AnyQuiz,
-  'formula-1-trivia':                    f1TriviaEnRaw as unknown as AnyQuiz,
-  'which-f1-driver-are-you':             f1DriverEnRaw as unknown as AnyQuiz,
-  'nodejs-fundamentals':                 nodejsFundamentalsRaw as unknown as AnyQuiz,
-  'database-design':                     databaseDesignRaw as unknown as AnyQuiz,
-  'database-indexing':                   databaseIndexingRaw as unknown as AnyQuiz,
-  'messaging-sqs-kafka':                 messagingSqsKafkaRaw as unknown as AnyQuiz,
-  'rabbitmq-concepts':                   rabbitmqConceptsRaw as unknown as AnyQuiz,
-  'system-architecture':                 systemArchitectureRaw as unknown as AnyQuiz,
+async function buildQuizCards(): Promise<QuizCardData[]> {
+  return Promise.all(
+    QUIZ_REGISTRY.map(async (meta) => {
+      const quiz = await getQuizBySlug(meta.id, 'en')
+      return {
+        id: meta.id,
+        title: quiz?.title ?? meta.id,
+        description: quiz?.description ?? '',
+        category: meta.category === 'sports' ? 'sports' : meta.category === 'backend' ? 'backend' : 'personality',
+        questionCount: quiz?.questions.length ?? 0,
+      }
+    })
+  )
 }
-
-// Build card data from registry + English quiz data
-const ALL_QUIZ_CARDS: QuizCardData[] = QUIZ_REGISTRY.map(meta => {
-  const quiz = QUIZ_EN_MAP[meta.id]
-  const questionCount = quiz ? quiz.questions.length : 0
-  return {
-    id: meta.id,
-    title: quiz?.title ?? meta.id,
-    description: quiz?.description ?? '',
-    category: meta.category === 'sports' ? 'sports' : meta.category === 'backend' ? 'backend' : 'personality',
-    questionCount,
-  }
-})
 
 const jsonLd = buildJsonLd(
   faqSchema([
@@ -87,6 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function QuizzesHubPage({ params }: Props) {
   await params
+  const quizCards = await buildQuizCards()
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -99,7 +62,7 @@ export default async function QuizzesHubPage({ params }: Props) {
             </p>
           </div>
 
-          <QuizCategoryFilter quizzes={ALL_QUIZ_CARDS} />
+          <QuizCategoryFilter quizzes={quizCards} />
         </div>
       </main>
     </>
