@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
 import ToolWrapper from "@/components/ToolWrapper";
+import Button from "@/components/Button";
 import { pdfToImages } from "@/lib/pdfToImage";
 import type { FaqItem } from "@/components/FaqSection";
 
@@ -116,22 +117,15 @@ export default function PdfToJpgTool({ title, description, faqs, richContent }: 
       )}
 
       {previews.length > 0 ? (
-        <button
-          onClick={handleDownloadAll}
-          className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
-        >
+        <Button onClick={handleDownloadAll}>
           {previews.length === 1
             ? t("button.downloadOne")
             : t("button.downloadAll", { count: previews.length })}
-        </button>
+        </Button>
       ) : (
-        <button
-          onClick={handleConvert}
-          disabled={loading || !file}
-          className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 disabled:bg-gray-300 disabled:bg-none text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
-        >
+        <Button onClick={handleConvert} disabled={loading || !file}>
           {loading ? t("button.converting") : t("button.convert")}
-        </button>
+        </Button>
       )}
     </ToolWrapper>
   );

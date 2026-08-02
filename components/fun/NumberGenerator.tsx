@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { randomInt } from '@/lib/random'
+import Button from '@/components/Button'
 
 export default function NumberGenerator() {
   const [min, setMin] = useState(1)
@@ -75,9 +76,7 @@ export default function NumberGenerator() {
 
       {error && <p className="text-red-500 text-sm">{error}</p>}
 
-      <button onClick={generate} className="w-full py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-        Generate
-      </button>
+      <Button onClick={generate}>Generate</Button>
 
       {results.length > 0 && (
         <div className="bg-gray-50 rounded-xl p-4">

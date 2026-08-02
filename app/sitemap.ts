@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { conversionPages } from '@/data/conversionPages'
 import { COMMON_PAIRS } from '@/data/conversionPairs'
 import { BLOG_POSTS } from '@/data/blog/index'
-import { getAllMdxBlogPosts } from '@/lib/blogContent'
+import { getAllMdxBlogPosts } from '@/lib/content/blogRepository'
 
 const BASE_URL = (process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com').trim()
 

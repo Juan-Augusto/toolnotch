@@ -22,6 +22,7 @@ import { saveAs } from "file-saver";
 import { GripVertical, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import ToolWrapper from "@/components/ToolWrapper";
+import Button from "@/components/Button";
 import { imagesToPDF } from "@/lib/imageToPdf";
 import type { FaqItem } from "@/components/FaqSection";
 
@@ -200,13 +201,9 @@ export default function JpgToPdfTool({ title, description, faqs, richContent }: 
       {error && <p className="text-red-600 text-sm mb-3">{error}</p>}
       {done && <p className="text-green-600 text-sm mb-3">{t("success")}</p>}
 
-      <button
-        onClick={handleConvert}
-        disabled={loading || images.length === 0}
-        className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 disabled:bg-gray-300 disabled:bg-none text-white font-semibold py-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
-      >
+      <Button onClick={handleConvert} disabled={loading || images.length === 0}>
         {loading ? t("button.converting") : t("button.convert")}
-      </button>
+      </Button>
     </ToolWrapper>
   );
 }

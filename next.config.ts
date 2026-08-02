@@ -3,6 +3,8 @@ import createNextIntlPlugin from 'next-intl/plugin'
 
 const withNextIntl = createNextIntlPlugin('./i18n.ts')
 
+const isDev = process.env.NODE_ENV !== 'production'
+
 const securityHeaders = [
   { key: 'X-DNS-Prefetch-Control', value: 'on' },
   { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
@@ -13,7 +15,7 @@ const securityHeaders = [
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.googletagservices.com https://partner.googleadservices.com",
+      `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''} https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.googletagservices.com https://partner.googleadservices.com`,
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' blob: data: https://www.google-analytics.com https:",
       "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://cdn.jsdelivr.net https://latest.currency-api.pages.dev",

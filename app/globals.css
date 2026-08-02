@@ -41,7 +41,7 @@
   --neon-text-glow: 0 0 8px rgb(0 168 107 / 0.5);
 
   /* Surfaces */
-  --base-bg:           #f7f7fd;
+  --base-bg:           #f9fafb;
   --base-surface:      #ffffff;
   --base-elevated:     #f0f0fa;
   --base-border:       #e3e3f0;
@@ -74,7 +74,7 @@
   --neon-text-glow: 0 0 10px rgb(0 229 160 / 0.7);
 
   /* Surfaces */
-  --base-bg:           #07070f;
+  --base-bg:           #101828;
   --base-surface:      #0d0d1c;
   --base-elevated:     #131328;
   --base-border:       #1c1c36;
