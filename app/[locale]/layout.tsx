@@ -125,6 +125,14 @@ export default async function LocaleLayout({
         />
       </head>
       <body className={`${plusJakartaSans.variable} ${syne.variable} antialiased`}>
+        <noscript>
+          <iframe
+            src="https://m946j758awk6gaqx.server.usercentrics-sst.io/ns.html?id=GTM-PLJNPVNP"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
             <Header navItems={navItems} />
@@ -135,6 +143,13 @@ export default async function LocaleLayout({
             </div>
           </NextIntlClientProvider>
         </ThemeProvider>
+        <Script id="gtm" strategy="afterInteractive">{`
+          (function(w,d,s,l){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://m946j758awk6gaqx.server.usercentrics-sst.io/u2/m946j758awk6gaqx?w41njj=R1RNLVBMSk5QVk5Q'+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer');
+        `}</Script>
         {ADSENSE_ID && (
           <Script
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
