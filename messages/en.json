@@ -4256,6 +4256,16 @@
         ]
       }
     }
+  },
+  "footer": {
+    "links": {
+      "blog": "Blog",
+      "about": "About",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "contact": "Contact"
+    },
+    "tagline": "Free tools that run in your browser. No sign-up. No data stored.",
+    "copyright": "© 2026 ToolNotch · Built by {name}"
   }
-
 }

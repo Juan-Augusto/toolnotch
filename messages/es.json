@@ -3742,5 +3742,16 @@
         ]
       }
     }
+  },
+  "footer": {
+    "links": {
+      "blog": "Blog",
+      "about": "Acerca de",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio",
+      "contact": "Contacto"
+    },
+    "tagline": "Herramientas gratuitas que funcionan en tu navegador. Sin registro. Sin almacenamiento de datos.",
+    "copyright": "© 2026 ToolNotch · Creado por {name}"
   }
 }
