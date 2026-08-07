@@ -37,7 +37,7 @@ export default async function AgileToolsHubPage({ params }: Props) {
           </p>
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 p-6 mb-10 space-y-4">
+        <div className="bg-card rounded-xl border border-gray-200 p-6 mb-10 space-y-4">
           <p className="text-gray-700 leading-relaxed">
             Agile methodology is an approach to software development built around short, iterative cycles called
             sprints, typically one to four weeks long. Instead of planning a full project upfront and delivering
@@ -74,7 +74,7 @@ export default async function AgileToolsHubPage({ params }: Props) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
           {TOOLS.map(tool => (
             <Link key={tool.href} href={tool.href}
-              className="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-violet-300 transition-all group">
+              className="bg-card rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-violet-300 transition-all group">
               <h2 className="font-bold text-gray-900 group-hover:text-violet-600 mb-1">{tool.label}</h2>
               <p className="text-sm text-gray-500">{tool.desc}</p>
             </Link>
@@ -87,7 +87,7 @@ export default async function AgileToolsHubPage({ params }: Props) {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {COMING_SOON.map(tool => (
                 <div key={tool.label}
-                  className="bg-white rounded-xl border border-dashed border-gray-200 p-5 opacity-60">
+                  className="bg-card rounded-xl border border-dashed border-gray-200 p-5 opacity-60">
                   <h2 className="font-bold text-gray-700 mb-1">{tool.label}</h2>
                   <p className="text-sm text-gray-400">{tool.desc}</p>
                 </div>
@@ -96,7 +96,7 @@ export default async function AgileToolsHubPage({ params }: Props) {
           </div>
         )}
 
-        <div className="bg-white rounded-xl border border-gray-200 p-6 mt-4">
+        <div className="bg-card rounded-xl border border-gray-200 p-6 mt-4">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Why Run Agile Ceremonies Properly?</h2>
           <ul className="space-y-3 text-gray-700">
             <li className="flex gap-2">

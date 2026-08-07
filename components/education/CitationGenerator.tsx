@@ -79,7 +79,7 @@ export default function CitationGenerator({ locale }: Props) {
     setTimeout(() => setCopied(false), 2000)
   }
 
-  const inputClass = "w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-2 text-sm"
+  const inputClass = "w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-card dark:bg-card px-3 py-2 text-sm"
   const labelClass = "block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1"
 
   return (
@@ -188,11 +188,11 @@ export default function CitationGenerator({ locale }: Props) {
           )}
         </div>
         {citation ? (
-          <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-mono whitespace-pre-wrap break-words select-all">
+          <div className="p-4 rounded-lg bg-gray-50 dark:bg-card border border-gray-200 dark:border-gray-700 text-sm font-mono whitespace-pre-wrap break-words select-all">
             {citation}
           </div>
         ) : (
-          <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm text-gray-400 italic">
+          <div className="p-4 rounded-lg bg-gray-50 dark:bg-card border border-gray-200 dark:border-gray-700 text-sm text-gray-400 italic">
             {t('emptyState')}
           </div>
         )}

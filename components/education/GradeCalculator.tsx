@@ -49,7 +49,7 @@ export default function GradeCalculator() {
             value={currentGrade}
             onChange={(e) => setCurrentGrade(e.target.value)}
             placeholder="0–100"
-            className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-card dark:bg-card text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
         </div>
         <div>
@@ -64,7 +64,7 @@ export default function GradeCalculator() {
             value={earnedWeight}
             onChange={(e) => setEarnedWeight(e.target.value)}
             placeholder="0–100"
-            className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-card dark:bg-card text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
         </div>
         <div>
@@ -79,7 +79,7 @@ export default function GradeCalculator() {
             value={targetGrade}
             onChange={(e) => setTargetGrade(e.target.value)}
             placeholder="0–100"
-            className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-card dark:bg-card text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
         </div>
       </div>

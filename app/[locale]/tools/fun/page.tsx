@@ -38,7 +38,7 @@ export default async function FunToolsHubPage({ params }: Props) {
           </p>
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 p-6 mb-10 space-y-4">
+        <div className="bg-card rounded-xl border border-gray-200 p-6 mb-10 space-y-4">
           <p className="text-gray-700 leading-relaxed">
             Fun and randomization tools are used by a surprisingly wide range of people in everyday situations.
             Teachers reach for a random name picker to call on students fairly without appearing to favour anyone.
@@ -75,14 +75,14 @@ export default async function FunToolsHubPage({ params }: Props) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
           {TOOLS.map(tool => (
             <Link key={tool.href} href={tool.href}
-              className="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-orange-300 transition-all group">
+              className="bg-card rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-orange-300 transition-all group">
               <h2 className="font-bold text-gray-900 group-hover:text-orange-600 mb-1">{tool.label}</h2>
               <p className="text-sm text-gray-500">{tool.desc}</p>
             </Link>
           ))}
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
+        <div className="bg-card rounded-xl border border-gray-200 p-6">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Popular Uses for Randomization Tools</h2>
           <ul className="space-y-3 text-gray-700">
             <li className="flex gap-2">

@@ -1986,8 +1986,8 @@
     }
   },
   "home": {
-    "heading": "ToolNotch",
-    "subheading": "Herramientas gratuitas en línea — sin registro, sin subida, 100% privado",
+    "heading": "El único sitio de <highlight>herramientas</highlight> que necesitarás",
+    "subheading": "100% gratis, sin registros y sin subidas. Todo se procesa directamente en tu navegador con total privacidad.",
     "moreComingSoon": "Más herramientas próximamente",
     "nav": {
       "tools": "Herramientas",
@@ -2219,7 +2219,11 @@
         "label": "Centro de Preparación para Entrevistas",
         "desc": "TypeScript, JS y más — con explicaciones y buenas prácticas"
       }
-    }
+    },
+    "badge": "Toolnotch | Más de 40 herramientas esenciales",
+    "searchPlaceholder": "Buscar herramientas (ej., pdf, imagen)...",
+    "noResults": "No se encontraron resultados.",
+    "searchButton": "Buscar"
   },
   "agile": {
     "retroBoard": {

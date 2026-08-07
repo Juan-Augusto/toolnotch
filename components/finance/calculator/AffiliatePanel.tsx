@@ -21,7 +21,7 @@ export default function AffiliatePanel({ loanType }: AffiliatePanelProps) {
               href="https://www.lendingtree.com/home/mortgage/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs bg-white border border-amber-300 text-amber-800 px-3 py-1.5 rounded-lg hover:bg-amber-100 transition-colors"
+              className="text-xs bg-card border border-amber-300 text-amber-800 px-3 py-1.5 rounded-lg hover:bg-amber-100 transition-colors"
             >
               Compare mortgage rates at LendingTree →
             </a>
@@ -29,7 +29,7 @@ export default function AffiliatePanel({ loanType }: AffiliatePanelProps) {
               href="https://www.bankrate.com/mortgages/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs bg-white border border-amber-300 text-amber-800 px-3 py-1.5 rounded-lg hover:bg-amber-100 transition-colors"
+              className="text-xs bg-card border border-amber-300 text-amber-800 px-3 py-1.5 rounded-lg hover:bg-amber-100 transition-colors"
             >
               Compare rates at Bankrate →
             </a>
@@ -40,7 +40,7 @@ export default function AffiliatePanel({ loanType }: AffiliatePanelProps) {
             href="https://www.lendingtree.com/auto/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs bg-white border border-amber-300 text-amber-800 px-3 py-1.5 rounded-lg hover:bg-amber-100 transition-colors"
+            className="text-xs bg-card border border-amber-300 text-amber-800 px-3 py-1.5 rounded-lg hover:bg-amber-100 transition-colors"
           >
             Compare auto loan rates at LendingTree →
           </a>
@@ -50,7 +50,7 @@ export default function AffiliatePanel({ loanType }: AffiliatePanelProps) {
             href="https://www.lendingtree.com/personal/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs bg-white border border-amber-300 text-amber-800 px-3 py-1.5 rounded-lg hover:bg-amber-100 transition-colors"
+            className="text-xs bg-card border border-amber-300 text-amber-800 px-3 py-1.5 rounded-lg hover:bg-amber-100 transition-colors"
           >
             Compare personal loan rates at LendingTree →
           </a>

@@ -1,26 +1,43 @@
-'use client'
-import { Tool } from '@/app/[locale]/page' 
-import { colorMap } from './ToolsSection'
-export default function CategoriesFilter({TOOLS, setSelectedCategory, selectedCategory}: { TOOLS: Tool[], setSelectedCategory: (index: number | null) => void, selectedCategory: number | null }) {
-    const filterToolsByCategory = (index: number) => {
-      if (selectedCategory === index) {
-        setSelectedCategory(null)
-        return TOOLS
-      }
-      const filteredTools = TOOLS.filter((group) => group.index === index)
-      setSelectedCategory(index)
-      return filteredTools
+"use client";
+import { Tool } from "@/app/[locale]/page";
+
+export default function CategoriesFilter({
+  TOOLS,
+  setSelectedCategories,
+  selectedCategories,
+}: {
+  TOOLS: Tool[];
+  setSelectedCategories: (indices: number[]) => void;
+  selectedCategories: number[];
+}) {
+  const filterToolsByCategory = (index: number) => {
+    if (selectedCategories.includes(index)) {
+      setSelectedCategories(selectedCategories.filter((i) => i !== index));
+    } else {
+      setSelectedCategories([...selectedCategories, index]);
     }
-    return(
-        <section className='flex flex-wrap gap-2 mb-6 min-w-full'>
-          {TOOLS.map((tool, index) => {
-            return <button key={tool.index} className={`border  cursor-pointer rounded-full px-2 ${selectedCategory === index ? `${colorMap[tool.color]}` : 'border-slate-300 dark:border-slate-500 text-slate-400 hover:text-slate-500 hover:border-slate-400 dark:hover:text-slate-300 dark:hover:border-slate-400'}`}
-              onClick={() => filterToolsByCategory(index)}
-          
-            >
-              {tool.category}
-            </button>
-          })}
-        </section>
-    )
+  };
+  return (
+    <section className="relative z-10 flex overflow-x-auto flex-nowrap sm:flex-wrap justify-start sm:justify-center gap-2 mb-6 min-w-full pb-2 px-2 sm:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+      {TOOLS.map((tool) => {
+        return (
+          <button
+            type="button"
+            key={tool.index}
+            className={`
+                  shrink-0 cursor-pointer rounded-full px-4 py-1.5 text-sm font-medium transition-colors duration-200 border
+                  ${
+                    selectedCategories.includes(tool.index)
+                      ? `bg-blue-500 text-white border-blue-500`
+                      : " border-bd-base bg-card text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100/50 dark:hover:bg-card/50"
+                  }
+                `}
+            onClick={() => filterToolsByCategory(tool.index)}
+          >
+            {tool.category}
+          </button>
+        );
+      })}
+    </section>
+  );
 }

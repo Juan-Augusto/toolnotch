@@ -163,7 +163,7 @@ export default function RetroBoardTool({ title, description, faqs, columns, labe
       <div className="flex flex-wrap gap-2 justify-end mb-5">
         <button
           onClick={exportMarkdown}
-          className="flex items-center gap-1.5 text-sm px-3 py-2 rounded-lg border border-gray-300 hover:border-gray-400 bg-white hover:bg-gray-50 text-gray-700 transition-colors"
+          className="flex items-center gap-1.5 text-sm px-3 py-2 rounded-lg border border-gray-300 hover:border-gray-400 bg-card hover:bg-gray-50 text-gray-700 transition-colors"
         >
           <Download size={14} />
           {labels.exportButton}
@@ -171,7 +171,7 @@ export default function RetroBoardTool({ title, description, faqs, columns, labe
         {totalNotes > 0 && (
           <button
             onClick={clearBoard}
-            className="flex items-center gap-1.5 text-sm px-3 py-2 rounded-lg border border-red-200 hover:border-red-300 bg-white hover:bg-red-50 text-red-600 transition-colors"
+            className="flex items-center gap-1.5 text-sm px-3 py-2 rounded-lg border border-red-200 hover:border-red-300 bg-card hover:bg-red-50 text-red-600 transition-colors"
           >
             <RefreshCw size={14} />
             {labels.clearButton}
@@ -227,7 +227,7 @@ export default function RetroBoardTool({ title, description, faqs, columns, labe
             </div>
 
             {/* Add note input */}
-            <div className="p-3 border-t border-gray-100 bg-white">
+            <div className="p-3 border-t border-gray-100 bg-card">
               <div className="flex gap-2">
                 <input
                   type="text"

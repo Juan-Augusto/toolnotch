@@ -58,14 +58,14 @@ export default function LanguageSwitcher() {
         onClick={() => setOpen(o => !o)}
         aria-label="Change language"
         aria-expanded={open}
-        className="flex items-center gap-1.5 px-3 h-10 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-lg text-gray-700 dark:text-gray-300 text-xs font-semibold transition-all hover:scale-105"
+        className="flex items-center gap-1.5 px-3 h-10 rounded-full bg-card dark:bg-card border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-lg text-gray-700 dark:text-gray-300 text-xs font-semibold transition-all hover:scale-105"
       >
         <Languages size={15} />
         {current.short}
       </button>
 
       {open && (
-        <div className="absolute bottom-12 right-0 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl overflow-hidden min-w-[130px]">
+        <div className="absolute bottom-12 right-0 bg-card dark:bg-card border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl overflow-hidden min-w-[130px]">
           {LANGS.map(lang => (
             <button
               key={lang.code}

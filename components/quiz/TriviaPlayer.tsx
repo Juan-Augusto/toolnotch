@@ -54,7 +54,7 @@ export default function TriviaPlayer({ quiz }: TriviaPlayerProps) {
     const base = 'w-full text-left px-5 py-4 rounded-xl border-2 transition-all duration-150 text-sm font-medium'
 
     if (!revealed) {
-      return `${base} border-gray-200 bg-white text-gray-700 hover:border-blue-300 hover:bg-blue-50/50 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-blue-600 dark:hover:bg-blue-900/20`
+      return `${base} border-gray-200 bg-card text-gray-700 hover:border-blue-300 hover:bg-blue-50/50 dark:border-gray-600 dark:bg-card dark:text-gray-200 dark:hover:border-blue-600 dark:hover:bg-blue-900/20`
     }
 
     // Revealed state
@@ -71,10 +71,10 @@ export default function TriviaPlayer({ quiz }: TriviaPlayerProps) {
     }
     if (!isSelected && isCorrect) {
       // Not selected but is correct → green border to reveal correct answer
-      return `${base} border-green-500 bg-white text-gray-700 dark:bg-gray-800 dark:text-gray-200 cursor-not-allowed`
+      return `${base} border-green-500 bg-card text-gray-700 dark:bg-card dark:text-gray-200 cursor-not-allowed`
     }
     // Not selected, not correct
-    return `${base} border-gray-200 bg-white text-gray-400 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-500 cursor-not-allowed`
+    return `${base} border-gray-200 bg-card text-gray-400 dark:border-gray-700 dark:bg-card dark:text-gray-500 cursor-not-allowed`
   }
 
   const isLastQuestion = currentQuestion + 1 >= quiz.questions.length
