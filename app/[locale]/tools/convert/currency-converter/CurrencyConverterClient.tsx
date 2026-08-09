@@ -58,7 +58,7 @@ export default function CurrencyConverterClient() {
         <div className="flex-1">
           <label className="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('from')}</label>
           <select value={from} onChange={e => setFrom(e.target.value)}
-            className="w-full px-3 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2">
+            className="w-full px-3 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg text-sm bg-card dark:bg-card text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2">
             {CURRENCIES.map(c => <option key={c.code} value={c.code}>{c.code} — {c.name}</option>)}
           </select>
           <input
@@ -75,7 +75,7 @@ export default function CurrencyConverterClient() {
         <div className="flex-1">
           <label className="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('to')}</label>
           <select value={to} onChange={e => setTo(e.target.value)}
-            className="w-full px-3 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2">
+            className="w-full px-3 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg text-sm bg-card dark:bg-card text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2">
             {CURRENCIES.map(c => <option key={c.code} value={c.code}>{c.code} — {c.name}</option>)}
           </select>
           <div className={`w-full px-4 py-3 rounded-lg text-lg font-mono font-semibold border ${loading ? 'bg-gray-50 text-gray-400 border-gray-200' : 'bg-blue-50 border-blue-200 text-blue-800'}`}>

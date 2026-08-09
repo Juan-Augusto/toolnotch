@@ -30,7 +30,7 @@ export default function FormatSelector({
   const t = useTranslations('image.shared')
 
   return (
-    <div className="bg-white border border-zinc-200 rounded-2xl p-5 space-y-5 dark:bg-gray-800 dark:border-zinc-700">
+    <div className="bg-card border border-zinc-200 rounded-2xl p-5 space-y-5 dark:bg-card dark:border-zinc-700">
       <div>
         <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">{t('format.label')}</label>
         <div className="flex gap-2">
@@ -41,7 +41,7 @@ export default function FormatSelector({
               className={`flex-1 py-2 px-3 rounded-xl border text-sm font-medium transition-colors ${
                 format === f.value
                   ? 'bg-blue-600 border-blue-600 text-white'
-                  : 'border-zinc-300 text-zinc-700 hover:border-zinc-400 bg-white dark:border-zinc-600 dark:text-zinc-300 dark:hover:border-zinc-500 dark:bg-gray-700'
+                  : 'border-zinc-300 text-zinc-700 hover:border-zinc-400 bg-card dark:border-zinc-600 dark:text-zinc-300 dark:hover:border-zinc-500 dark:bg-gray-700'
               }`}
             >
               {f.label}
@@ -80,7 +80,7 @@ export default function FormatSelector({
           onChange={(e) =>
             onMaxWidthChange(e.target.value ? Number(e.target.value) : undefined)
           }
-          className="w-full border border-zinc-300 dark:border-zinc-600 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+          className="w-full border border-zinc-300 dark:border-zinc-600 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-card dark:bg-card text-gray-900 dark:text-gray-100"
         />
       </div>
     </div>

@@ -54,7 +54,7 @@ export default async function ContactPage({ params }: Props) {
           </p>
 
           {/* Email CTA */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 mb-8">
+          <div className="bg-card dark:bg-card rounded-xl border border-gray-200 dark:border-gray-700 p-6 mb-8">
             <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">
               {t('emailLabel')}
             </p>
@@ -68,7 +68,7 @@ export default async function ContactPage({ params }: Props) {
 
           {/* Categories */}
           <div className="space-y-4 mb-10">
-            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5">
+            <div className="bg-card dark:bg-card rounded-xl border border-gray-200 dark:border-gray-700 p-5">
               <h2 className="font-semibold text-gray-900 dark:text-white mb-1">
                 {t('categories.bugs.title')}
               </h2>
@@ -77,7 +77,7 @@ export default async function ContactPage({ params }: Props) {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5">
+            <div className="bg-card dark:bg-card rounded-xl border border-gray-200 dark:border-gray-700 p-5">
               <h2 className="font-semibold text-gray-900 dark:text-white mb-1">
                 {t('categories.features.title')}
               </h2>
@@ -86,7 +86,7 @@ export default async function ContactPage({ params }: Props) {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5">
+            <div className="bg-card dark:bg-card rounded-xl border border-gray-200 dark:border-gray-700 p-5">
               <h2 className="font-semibold text-gray-900 dark:text-white mb-1">
                 {t('categories.business.title')}
               </h2>

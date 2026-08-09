@@ -114,7 +114,7 @@ export default function SplitTool({ title, description, faqs, richContent }: Pro
           value={rangeInput}
           onChange={(e) => setRangeInput(e.target.value)}
           placeholder={t("pageRanges.placeholder")}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white dark:bg-gray-800 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 bg-card dark:bg-card dark:border-gray-600 text-gray-900 dark:text-gray-100"
         />
         <p className="text-xs text-gray-400 mt-1 dark:text-gray-500">{t("pageRanges.blankHint")}</p>
       </div>

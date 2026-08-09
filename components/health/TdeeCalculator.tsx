@@ -111,7 +111,7 @@ export default function TdeeCalculator({ locale, mode }: Props) {
   }
 
   const inputClass =
-    'w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm'
+    'w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-card dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm'
   const labelClass = 'block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1'
 
   return (
@@ -289,7 +289,7 @@ export default function TdeeCalculator({ locale, mode }: Props) {
                       className={
                         isHighlighted
                           ? 'bg-blue-50 dark:bg-blue-900/30'
-                          : 'bg-white dark:bg-gray-800 even:bg-gray-50 dark:even:bg-gray-700/30'
+                          : 'bg-card dark:bg-card even:bg-gray-50 dark:even:bg-gray-700/30'
                       }
                     >
                       <td className="px-4 py-3 text-gray-700 dark:text-gray-300 font-medium">

@@ -88,7 +88,7 @@ export default function NumberGenerator() {
           </div>
           <div className="flex flex-wrap gap-2">
             {results.map((n, i) => (
-              <span key={i} className="bg-white border border-gray-200 rounded px-2 py-1 text-sm font-mono">{n}</span>
+              <span key={i} className="bg-card border border-gray-200 rounded px-2 py-1 text-sm font-mono">{n}</span>
             ))}
           </div>
         </div>

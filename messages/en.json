@@ -2434,8 +2434,8 @@
     }
   },
   "home": {
-    "heading": "ToolNotch",
-    "subheading": "Free online tools — no signup, no upload, 100% private",
+    "heading": "The only <highlight>tool site</highlight> you'll ever need",
+    "subheading": "100% free, no sign-ups, and no uploads. Everything is processed directly in your browser with total privacy.",
     "moreComingSoon": "More tools coming soon",
     "nav": {
       "tools": "Tools",
@@ -2667,7 +2667,11 @@
         "label": "Interview Prep Hub",
         "desc": "TypeScript, JS & more — with explanations and best practices"
       }
-    }
+    },
+    "badge": "Toolnotch | Over 40 essential tools",
+    "searchPlaceholder": "Search for tools (e.g., pdf, image)...",
+    "noResults": "No results found.",
+    "searchButton": "Search"
   },
   "agile": {
     "retroBoard": {

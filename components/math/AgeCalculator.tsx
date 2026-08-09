@@ -34,7 +34,7 @@ export default function AgeCalculator({ locale }: Props) {
           max={todayStr}
           value={birthdate}
           onChange={e => setBirthdate(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-2 text-base"
+          className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-card dark:bg-card px-3 py-2 text-base"
         />
         {birthdate && !isValidBirthdate && (
           <p className="text-red-500 text-sm mt-1">{t('errorFutureDate')}</p>
@@ -84,10 +84,10 @@ export default function AgeCalculator({ locale }: Props) {
             min={todayStr}
             value={futureDate}
             onChange={e => setFutureDate(e.target.value)}
-            className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-2 text-base"
+            className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-card dark:bg-card px-3 py-2 text-base"
           />
           {futureAge && (
-            <div className="mt-3 p-4 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+            <div className="mt-3 p-4 rounded-lg bg-gray-50 dark:bg-card border border-gray-200 dark:border-gray-700">
               <p className="text-center text-lg font-semibold">
                 {t('futureResult', {
                   date: new Date(futureDate + 'T00:00:00').toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' }),

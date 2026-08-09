@@ -145,7 +145,7 @@ export default function QrCodeGenerator() {
   }
 
   const inputClass =
-    'w-full rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition'
+    'w-full rounded-lg border border-neutral-200 dark:border-neutral-700 bg-card dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition'
   const labelClass = 'block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1'
 
   return (
@@ -316,7 +316,7 @@ export default function QrCodeGenerator() {
       {/* Right: Preview + Download */}
       <div className="space-y-4">
         <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">{t('preview')}</p>
-        <div className="flex items-center justify-center rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 p-6 min-h-[280px]">
+        <div className="flex items-center justify-center rounded-xl border border-neutral-200 dark:border-neutral-700 bg-card dark:bg-neutral-900 p-6 min-h-[280px]">
           {isGenerating ? (
             <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
           ) : previewDataUrl ? (

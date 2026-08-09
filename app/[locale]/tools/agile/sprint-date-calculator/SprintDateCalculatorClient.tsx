@@ -103,7 +103,7 @@ export default function SprintDateCalculatorClient({ title, description, faqs, l
             <select
               value={sprintWeeks}
               onChange={e => setSprintWeeks(Number(e.target.value))}
-              className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+              className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500 bg-card dark:bg-card text-gray-900 dark:text-gray-100"
             >
               <option value={2}>{labels.twoWeeks}</option>
               <option value={3}>{labels.threeWeeks}</option>
@@ -121,12 +121,12 @@ export default function SprintDateCalculatorClient({ title, description, faqs, l
 
         {result && (
           <div className="space-y-4">
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <div className="bg-card border border-gray-200 rounded-xl overflow-hidden">
               <div className="bg-violet-600 text-white px-4 py-3 flex items-center justify-between">
                 <span className="font-semibold text-sm">{labels.sprintNumber} — {sprintWeeks}w</span>
                 <button
                   onClick={copy}
-                  className="text-xs bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded-lg transition-colors"
+                  className="text-xs bg-card/20 hover:bg-card/30 text-white px-3 py-1 rounded-lg transition-colors"
                 >
                   {copied ? labels.copiedButton : labels.copyButton}
                 </button>
@@ -152,7 +152,7 @@ export default function SprintDateCalculatorClient({ title, description, faqs, l
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
                 {result.standups.map(d => (
-                  <span key={d.toISOString()} className="text-xs text-gray-600 bg-white border border-gray-200 rounded px-2 py-1 font-mono">
+                  <span key={d.toISOString()} className="text-xs text-gray-600 bg-card border border-gray-200 rounded px-2 py-1 font-mono">
                     {formatDate(d)}
                   </span>
                 ))}

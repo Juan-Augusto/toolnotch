@@ -28,7 +28,7 @@ export default function TermSelector({ value, onChange }: TermSelectorProps) {
             key={p.months}
             type="button"
             onClick={() => onChange(p.months)}
-            className={`flex-1 py-1.5 text-sm rounded-lg border transition-colors ${value === p.months ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-50'}`}
+            className={`flex-1 py-1.5 text-sm rounded-lg border transition-colors ${value === p.months ? 'bg-blue-600 text-white border-blue-600' : 'bg-card text-gray-600 border-gray-300 hover:bg-gray-50'}`}
           >
             {p.label}
           </button>

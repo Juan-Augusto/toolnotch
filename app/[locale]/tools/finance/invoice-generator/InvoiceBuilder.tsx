@@ -138,7 +138,7 @@ export default function InvoiceBuilder({ locale }: InvoiceBuilderProps) {
               <div>
                 <label className="text-xs text-gray-500 mb-0.5 block">Currency</label>
                 <select value={invoice.currency} onChange={e => update('currency', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  className="w-full px-3 py-2 border border-gray-300 dark:bg-card dark:border-gray-600 dark:text-gray-100 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
                   {INVOICE_CURRENCIES.map(c => <option key={c.code} value={c.code}>{c.code} — {c.name}</option>)}
                 </select>
               </div>
@@ -204,7 +204,7 @@ export default function InvoiceBuilder({ locale }: InvoiceBuilderProps) {
 
         {/* Preview */}
         <div>
-          <div className="invoice-preview bg-white border border-gray-200 rounded-xl p-8 text-sm shadow-sm">
+          <div className="invoice-preview bg-card border border-gray-200 rounded-xl p-8 text-sm shadow-sm">
             {invoice.logo && <img src={invoice.logo} alt="Logo" className="h-16 mb-4 object-contain" />}
             <div className="flex justify-between items-start mb-6">
               <div>

@@ -37,7 +37,7 @@ export default function Footer({ locale }: FooterProps) {
         </div>
 
         <nav
-          className="flex flex-wrap justify-center gap-x-6 gap-y-2"
+          className="flex flex-wrap justify-center gap-x-6 gap-y-2 "
           aria-label="Footer navigation"
         >
           {navLinks.map(({ label, href }) => (
@@ -47,17 +47,11 @@ export default function Footer({ locale }: FooterProps) {
           ))}
         </nav>
 
-        <div
-          className="text-xs text-center max-w-sm"
-          style={{ color: "var(--text-muted)" }}
-        >
+        <div className="text-xs text-center max-w-sm text-tx-secondary">
           {t("tagline")}
         </div>
 
-        <div
-          className="flex items-center gap-4 text-xs"
-          style={{ color: "var(--text-muted)" }}
-        >
+        <div className="flex items-center gap-4 text-xs">
           <span>{t("copyright", { name: "Juan Soares" })}</span>
           <a
             href="https://github.com/Juan-Augusto"
