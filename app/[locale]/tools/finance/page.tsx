@@ -53,7 +53,7 @@ export default async function FinanceToolsHubPage({ params }: Props) {
         </div>
 
         {/* Intro section */}
-        <div className="bg-white rounded-2xl border border-gray-200 p-8 mb-10 space-y-4 text-gray-700 leading-relaxed">
+        <div className="bg-card rounded-2xl border border-gray-200 p-8 mb-10 space-y-4 text-gray-700 leading-relaxed">
           <p>
             Financial calculators are essential tools for anyone facing a major money decision. Whether you are a
             homebuyer trying to figure out how much house you can afford, a car shopper comparing loan offers, a
@@ -89,7 +89,7 @@ export default async function FinanceToolsHubPage({ params }: Props) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
           {CALCULATORS.map(tool => (
             <Link key={tool.href} href={tool.href}
-              className="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-green-300 transition-all group">
+              className="bg-card rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-green-300 transition-all group">
               <h2 className="font-bold text-gray-900 group-hover:text-green-600 mb-1 text-sm">{tool.label}</h2>
               <p className="text-xs text-gray-500">{tool.desc}</p>
             </Link>
@@ -100,7 +100,7 @@ export default async function FinanceToolsHubPage({ params }: Props) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
           {INVOICES.map(tool => (
             <Link key={tool.href} href={tool.href}
-              className="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-green-300 transition-all group">
+              className="bg-card rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-green-300 transition-all group">
               <h2 className="font-bold text-gray-900 group-hover:text-green-600 mb-1 text-sm">{tool.label}</h2>
               <p className="text-xs text-gray-500">{tool.desc}</p>
             </Link>
@@ -108,7 +108,7 @@ export default async function FinanceToolsHubPage({ params }: Props) {
         </div>
 
         {/* Understanding Loan Terminology */}
-        <div className="bg-white rounded-2xl border border-gray-200 p-8">
+        <div className="bg-card rounded-2xl border border-gray-200 p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Understanding Loan Terminology</h2>
           <div className="space-y-5 text-gray-700 leading-relaxed">
             <div>

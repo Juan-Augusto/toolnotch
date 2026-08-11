@@ -73,7 +73,7 @@ export default function PercentageCalculatorClient({ tabs, percentOf, whatPercen
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`flex-1 py-2 px-2 rounded-lg text-xs font-semibold transition-colors ${
-              activeTab === tab ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'
+              activeTab === tab ? 'bg-card text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'
             }`}
           >
             {tabLabels[tab]}

@@ -63,7 +63,7 @@ export default function PlanningPokerClient({ title, description, faqs, labels, 
                 className={`w-14 h-20 rounded-xl border-2 text-xl font-bold transition-all select-none
                   ${picked === card
                     ? 'border-violet-600 bg-violet-600 text-white shadow-lg scale-105'
-                    : 'border-gray-300 bg-white text-gray-700 hover:border-violet-400 hover:shadow-md'
+                    : 'border-gray-300 bg-card text-gray-700 hover:border-violet-400 hover:shadow-md'
                   }
                   ${revealed ? 'opacity-70 cursor-default' : 'cursor-pointer'}
                 `}

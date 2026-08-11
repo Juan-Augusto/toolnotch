@@ -28,7 +28,7 @@ export default function PdfToolsHubPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {TOOLS.map(tool => (
             <Link key={tool.href} href={tool.href}
-              className="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-red-300 transition-all group">
+              className="bg-card rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-red-300 transition-all group">
               <h2 className="font-bold text-gray-900 group-hover:text-red-600 mb-1">{tool.label}</h2>
               <p className="text-sm text-gray-500">{tool.desc}</p>
             </Link>
@@ -50,7 +50,7 @@ export default function PdfToolsHubPage() {
         </div>
 
         {/* Why browser-based section */}
-        <div className="mt-12 bg-white rounded-xl border border-gray-200 p-6">
+        <div className="mt-12 bg-card rounded-xl border border-gray-200 p-6">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Why Use Browser-Based PDF Tools?</h2>
           <ul className="space-y-3 text-gray-700">
             <li className="flex items-start gap-2">

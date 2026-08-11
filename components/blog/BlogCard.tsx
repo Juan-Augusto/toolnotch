@@ -37,7 +37,7 @@ export default async function BlogCard({ post, locale }: Props) {
   return (
     <Link
       href={`/${locale === 'en' ? '' : locale + '/'}blog/${post.slug}`}
-      className="block bg-white border border-gray-200 rounded-xl p-5 hover:border-gray-300 hover:shadow-sm transition-all group dark:bg-gray-800 dark:border-gray-700 dark:hover:border-gray-600"
+      className="block bg-card border border-gray-200 rounded-xl p-5 hover:border-gray-300 hover:shadow-sm transition-all group dark:bg-card dark:border-gray-700 dark:hover:border-gray-600"
     >
       <div className="flex items-center gap-2 mb-3">
         <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${categoryColorMap[post.category]}`}>

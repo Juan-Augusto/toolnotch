@@ -100,7 +100,7 @@ export default async function QuizResultPage({ params }: { params: Promise<{ loc
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
           <div className="max-w-2xl mx-auto px-4 py-10">
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-8 mb-8">
+            <div className="bg-card rounded-2xl shadow-sm border border-gray-200 dark:bg-card dark:border-gray-700 p-8 mb-8">
               <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">{quiz.title}</div>
               <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{tier.label}</h1>
               <p className="text-gray-600 leading-relaxed dark:text-gray-400 mb-6">{tier.description}</p>
@@ -147,7 +147,7 @@ export default async function QuizResultPage({ params }: { params: Promise<{ loc
       <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
         <div className="max-w-2xl mx-auto px-4 py-10">
           {/* Result detail — indexable content */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-8 mb-8">
+          <div className="bg-card rounded-2xl shadow-sm border border-gray-200 dark:bg-card dark:border-gray-700 p-8 mb-8">
             <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">{quiz.title}</div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{result.title}</h1>
             <p className="text-gray-600 leading-relaxed dark:text-gray-400 mb-6">{result.description}</p>

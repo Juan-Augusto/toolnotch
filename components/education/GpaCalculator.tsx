@@ -102,7 +102,7 @@ export default function GpaCalculator({ mode, locale }: Props) {
         <select
           value={scale}
           onChange={(e) => handleScaleChange(e.target.value as GradeScale)}
-          className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-card dark:bg-card text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
         >
           <option value="us4">{t('scaleUs4')}</option>
           <option value="pt20">{t('scalePt20')}</option>
@@ -127,7 +127,7 @@ export default function GpaCalculator({ mode, locale }: Props) {
                   value={course.grade === 0 ? '' : course.grade}
                   onChange={(e) => updateCourse(course.id, 'grade', e.target.value)}
                   placeholder={`${t('grade')} (0–${maxGrade})`}
-                  className="flex-1 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="flex-1 rounded-lg border border-gray-300 dark:border-gray-600 bg-card dark:bg-card text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
                 <input
                   type="number"
@@ -137,7 +137,7 @@ export default function GpaCalculator({ mode, locale }: Props) {
                   value={course.credits === 3 && idx === courses.length - 1 && courses.length === 1 ? course.credits : course.credits}
                   onChange={(e) => updateCourse(course.id, 'credits', e.target.value)}
                   placeholder={t('credits')}
-                  className="w-24 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-24 rounded-lg border border-gray-300 dark:border-gray-600 bg-card dark:bg-card text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
                 {courses.length > 1 && (
                   <button
@@ -207,7 +207,7 @@ export default function GpaCalculator({ mode, locale }: Props) {
                 value={currentGpa}
                 onChange={(e) => setCurrentGpa(e.target.value)}
                 placeholder={`0–${maxGrade}`}
-                className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-card dark:bg-card text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
             </div>
             <div>
@@ -221,7 +221,7 @@ export default function GpaCalculator({ mode, locale }: Props) {
                 value={currentCredits}
                 onChange={(e) => setCurrentCredits(e.target.value)}
                 placeholder="0"
-                className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-card dark:bg-card text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
             </div>
             <div>
@@ -236,7 +236,7 @@ export default function GpaCalculator({ mode, locale }: Props) {
                 value={newGpa}
                 onChange={(e) => setNewGpa(e.target.value)}
                 placeholder={`0–${maxGrade}`}
-                className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-card dark:bg-card text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
             </div>
             <div>
@@ -250,7 +250,7 @@ export default function GpaCalculator({ mode, locale }: Props) {
                 value={newCredits}
                 onChange={(e) => setNewCredits(e.target.value)}
                 placeholder="0"
-                className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-card dark:bg-card text-gray-900 dark:text-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
             </div>
           </div>

@@ -104,7 +104,7 @@ export default function CompressTool({ title, description, faqs, richContent }: 
       {error && <p className="text-red-600 text-sm mb-3 dark:text-red-400">{error}</p>}
 
       {result && (
-        <div className="mb-4 p-4 bg-gray-50 rounded-xl border border-gray-200 text-sm space-y-1 dark:bg-gray-800 dark:border-gray-700">
+        <div className="mb-4 p-4 bg-gray-50 rounded-xl border border-gray-200 text-sm space-y-1 dark:bg-card dark:border-gray-700">
           <div className="flex justify-between">
             <span className="text-gray-500 dark:text-gray-400">{t("result.originalSize")}</span>
             <span className="font-medium">{formatBytes(result.originalSize)}</span>

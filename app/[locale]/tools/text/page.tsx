@@ -67,7 +67,7 @@ export default function TextToolsHubPage() {
             <Link
               key={tool.href}
               href={tool.href}
-              className="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-purple-300 transition-all group"
+              className="bg-card rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-purple-300 transition-all group"
             >
               <h2 className="font-bold text-gray-900 group-hover:text-purple-600 mb-1">{tool.label}</h2>
               <p className="text-sm text-gray-500">{tool.desc}</p>
@@ -75,7 +75,7 @@ export default function TextToolsHubPage() {
           ))}
         </div>
 
-        <section className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8">
+        <section className="bg-card rounded-2xl border border-gray-200 p-6 md:p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Get the Most From Text Tools</h2>
           <ol className="space-y-4 text-gray-700 list-decimal list-inside">
             <li>

@@ -34,7 +34,7 @@ export default function QuizCategoryFilter({ quizzes }: QuizCategoryFilterProps)
             className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
               activeCategory === cat
                 ? 'bg-blue-600 text-white'
-                : 'bg-white border border-gray-200 text-gray-600 hover:border-blue-300 hover:text-blue-600 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300 dark:hover:border-blue-600 dark:hover:text-blue-400'
+                : 'bg-card border border-gray-200 text-gray-600 hover:border-blue-300 hover:text-blue-600 dark:bg-card dark:border-gray-700 dark:text-gray-300 dark:hover:border-blue-600 dark:hover:text-blue-400'
             }`}
           >
             {cat === 'all' ? 'All' : cat === 'sports' ? 'Sports' : cat === 'personality' ? 'Personality' : 'Backend Engineering'}
@@ -48,7 +48,7 @@ export default function QuizCategoryFilter({ quizzes }: QuizCategoryFilterProps)
           <Link
             key={quiz.id}
             href={`/quiz/${quiz.id}`}
-            className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 hover:shadow-md transition-shadow hover:border-blue-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-blue-700 group"
+            className="bg-card rounded-xl border border-gray-200 shadow-sm p-6 hover:shadow-md transition-shadow hover:border-blue-300 dark:bg-card dark:border-gray-700 dark:hover:border-blue-700 group"
           >
             {/* Category badge */}
             <div className="mb-3">

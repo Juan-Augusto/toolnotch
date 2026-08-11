@@ -20,7 +20,7 @@ export default function CategoryTabs({ activeCategory, onSelect }: CategoryTabsP
           onClick={() => onSelect(cat)}
           className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${activeCategory === cat
             ? 'bg-blue-600 text-white border-blue-600'
-            : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-50'}`}
+            : 'bg-card text-gray-600 border-gray-300 hover:bg-gray-50'}`}
         >
           {CATEGORY_LABELS[cat]}
         </button>

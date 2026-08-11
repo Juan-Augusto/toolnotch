@@ -73,7 +73,7 @@ export default function ConvertHubPage() {
               <Link
                 key={key}
                 href={key === 'currency' ? '/tools/convert/currency-converter' : `/tools/convert/unit-converter`}
-                className="bg-white border border-gray-200 rounded-xl p-4 text-center hover:shadow-md hover:border-blue-300 transition-all group"
+                className="bg-card border border-gray-200 rounded-xl p-4 text-center hover:shadow-md hover:border-blue-300 transition-all group"
               >
                 <div className="font-semibold text-gray-800 text-sm group-hover:text-blue-600">{label}</div>
               </Link>
@@ -86,7 +86,7 @@ export default function ConvertHubPage() {
               <Link
                 key={pair.slug}
                 href={`/tools/convert/${pair.slug}`}
-                className="bg-white border border-gray-200 rounded-lg px-4 py-3 hover:border-blue-300 hover:shadow-sm transition-all text-sm text-gray-700 hover:text-blue-600"
+                className="bg-card border border-gray-200 rounded-lg px-4 py-3 hover:border-blue-300 hover:shadow-sm transition-all text-sm text-gray-700 hover:text-blue-600"
               >
                 {pair.title} →
               </Link>
@@ -102,7 +102,7 @@ export default function ConvertHubPage() {
             </Link>
           </div>
 
-          <section className="mt-10 bg-white rounded-2xl border border-gray-200 p-6 md:p-8">
+          <section className="mt-10 bg-card rounded-2xl border border-gray-200 p-6 md:p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">When to Use a Conversion Tool</h2>
             <ul className="space-y-3 text-gray-700 list-disc list-inside">
               <li>

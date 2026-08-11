@@ -95,7 +95,7 @@ export default function ComparisonView({ original, result }: Props) {
 
           {/* Divider line */}
           <div
-            className="absolute top-0 bottom-0 w-0.5 bg-white dark:bg-zinc-400 shadow-lg pointer-events-none"
+            className="absolute top-0 bottom-0 w-0.5 bg-card dark:bg-zinc-400 shadow-lg pointer-events-none"
             style={{ left: `${sliderPct}%` }}
           />
 
@@ -108,7 +108,7 @@ export default function ComparisonView({ original, result }: Props) {
             aria-label={t('compare.sliderAriaLabel')}
             tabIndex={0}
             onKeyDown={onKeyDown}
-            className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-white rounded-full shadow-lg border-2 border-gray-300 flex items-center justify-center cursor-col-resize focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600"
+            className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-card rounded-full shadow-lg border-2 border-gray-300 flex items-center justify-center cursor-col-resize focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600"
             style={{ left: `${sliderPct}%` }}
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
