@@ -22,6 +22,8 @@ interface ToolWrapperProps {
   adSlot?: string;
   richContent?: RichContent;
   children: React.ReactNode;
+  maxWidth?: string;
+  noCardWrapper?: boolean;
 }
 
 export default function ToolWrapper({
@@ -32,36 +34,35 @@ export default function ToolWrapper({
   adSlot,
   richContent,
   children,
+  maxWidth,
+  noCardWrapper,
 }: ToolWrapperProps) {
   const t = useTranslations("toolWrapper");
   const tc = useTranslations("common");
 
   return (
     <main className="min-h-screen" style={{ background: "var(--background)" }}>
-      <div className="max-w-3xl mx-auto px-4 py-8">
-
+      <div className={`${maxWidth ?? "max-w-3xl"} mx-auto px-4 py-8`}>
         {/* Breadcrumb + Back */}
-        <div className="flex items-center justify-between mb-10">
+        <div className="flex items-center justify-between mb-10 no-print">
           <nav
             className="flex items-center gap-1.5 text-sm"
             aria-label="Breadcrumb"
           >
-            <Link href="/" className="link-hover flex items-center gap-1.5">
+            <Link
+              href="/"
+              className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1.5"
+            >
               <Home size={13} />
               <span>{t("breadcrumb.home")}</span>
             </Link>
-            <ChevronRight size={12} style={{ color: "var(--base-border)" }} />
-            <span
-              className="text-sm font-medium"
-              style={{ color: "var(--text-secondary)" }}
-            >
-              {breadcrumbLabel}
-            </span>
+            <ChevronRight size={12} className="mt-1" />
+            <span className="text-sm  ">{breadcrumbLabel}</span>
           </nav>
 
           <Link
             href="/"
-            className="link-hover flex items-center gap-1.5 text-sm"
+            className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1.5 text-sm"
           >
             <ArrowLeft size={13} />
             {t("allTools")}
@@ -69,10 +70,13 @@ export default function ToolWrapper({
         </div>
 
         {/* Header */}
-        <header className="text-center mb-10 animate-fade-in-up">
+        <header className="text-center mb-10 animate-fade-in-up no-print">
           <h1
             className="text-4xl font-bold tracking-tight mb-3"
-            style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
+            style={{
+              fontFamily: "var(--font-display)",
+              color: "var(--text-primary)",
+            }}
           >
             {title}
           </h1>
@@ -83,45 +87,52 @@ export default function ToolWrapper({
             {description}
           </p>
           <span className="badge-neon">
-            <ShieldCheck size={10} />
+            <ShieldCheck size={14} />
             {tc("privacyBadge")}
           </span>
         </header>
 
         {/* Top Ad */}
-        <div className="mb-6">
+        <div className="mb-6 no-print">
           <AdUnit slot={adSlot ?? AD_SLOTS.TOOL_TOP} />
         </div>
 
         {/* Tool card */}
-        <div
-          className="card-neon p-6 animate-fade-in-up"
-          style={{ animationDelay: "60ms" }}
-        >
-          {children}
-        </div>
+        {noCardWrapper ? (
+          <div
+            className="animate-fade-in-up"
+            style={{ animationDelay: "60ms" }}
+          >
+            {children}
+          </div>
+        ) : (
+          <div
+            className="card-neon p-6 animate-fade-in-up"
+            style={{ animationDelay: "60ms" }}
+          >
+            {children}
+          </div>
+        )}
 
         {/* Rich content */}
         {richContent && Array.isArray(richContent.howToUse) && (
           <div
-            className="mt-12 space-y-8 animate-fade-in-up"
+            className="mt-12 space-y-8 animate-fade-in-up no-print"
             style={{
               color: "var(--text-secondary)",
               animationDelay: "120ms",
             }}
           >
             <section>
-              <h2
-                className="text-xl font-bold mb-3 section-heading"
-              >
-                What is {title}?
+              <h2 className="text-xl font-bold mb-3 section-heading">
+                {t("whatIs", { title })}
               </h2>
               <p className="leading-relaxed">{richContent.whatIs}</p>
             </section>
 
             <section>
               <h2 className="text-xl font-bold mb-3 section-heading">
-                How to use
+                {t("howToUse")}
               </h2>
               <ol className="list-decimal list-inside space-y-2">
                 {richContent.howToUse.map((step, i) => (
@@ -134,7 +145,7 @@ export default function ToolWrapper({
 
             <section>
               <h2 className="text-xl font-bold mb-3 section-heading">
-                Why it matters
+                {t("whyItMatters")}
               </h2>
               <p className="leading-relaxed">{richContent.whyItMatters}</p>
             </section>
@@ -144,7 +155,7 @@ export default function ToolWrapper({
                 className="text-xs font-bold mb-1.5 uppercase tracking-widest"
                 style={{ color: "var(--neon)" }}
               >
-                Pro tip
+                {t("proTip")}
               </p>
               <p
                 className="text-sm leading-relaxed"
@@ -157,7 +168,9 @@ export default function ToolWrapper({
         )}
 
         {/* FAQ */}
-        <FaqSection faqs={faqs} />
+        <div className="no-print">
+          <FaqSection faqs={faqs} />
+        </div>
       </div>
     </main>
   );

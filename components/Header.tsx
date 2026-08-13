@@ -54,13 +54,13 @@ export default function Header({
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b transition-all duration-300 ${isScrolled ? "border-gray-300 dark:border-gray-700 bg-background/80 backdrop-blur-md" : "border-transparent bg-transparent"}`}
+      className={`sticky top-0 z-50 border-b transition-all border-bd-base duration-300 ${isScrolled ? " bg-background/80 backdrop-blur-md" : ""}`}
     >
       <nav
         className={`flex justify-between items-center gap-4 px-4 max-w-300 mx-auto transition-all duration-300 py-4 ${!isScrolled ? "md:py-6" : "md:py-3"} flex-row`}
       >
         <ToolnotchLogoContainer />
-        
+
         {/* Desktop Menu */}
         <div className="hidden md:block">
           <MenuItemsContainer navItems={navItems} />

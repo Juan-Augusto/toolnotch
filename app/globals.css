@@ -48,13 +48,13 @@
   --base-bg: #f9fafb;
   --base-card: #ffffff;
   --base-surface: #ffffff;
-  --base-elevated: #f0f0fa;
+  --base-elevated: #f6f7f7;
   --base-border: #e3e3f0;
   --base-border-muted: #ededfa;
 
   /* Text */
   --text-primary: #0b0b1e;
-  --text-secondary: #3a3a60;
+  --text-secondary: #606679;
   --text-muted: #8080a8;
 
   /* Semantic */
@@ -79,18 +79,17 @@
     0 0 14px rgb(0 229 160 / 0.6), 0 0 36px rgb(0 229 160 / 0.24),
     0 0 70px rgb(0 229 160 / 0.07);
   --neon-text-glow: 0 0 10px rgb(0 229 160 / 0.7);
-
   /* Surfaces */
-  --base-bg: #1c2030;
-  --base-card: #262c41;
-  --base-surface: #11141f;
-  --base-elevated: #131328;
-  --base-border: #373e5a;
+  --base-bg: #0c0e14;
+  --base-card: #13161f;
+  --base-surface: #181c27;
+  --base-elevated: rgb(9, 9, 15);
+  --base-border: #2f3446;
   --base-border-muted: #141430;
 
   /* Text */
   --text-primary: #e8e8f6;
-  --text-secondary: #8e8ea7;
+  --text-secondary: #868f9c;
   --text-muted: #4e4e72;
 
   /* Semantic */
@@ -149,23 +148,14 @@ input:not([type="range"]):not([type="file"]):not([type="checkbox"]):not(
   ),
 textarea,
 select {
-  background: var(--base-card);
+  background: var(--base-surface);
   color: var(--text-primary);
   border: 1px solid var(--base-border);
   border-radius: 8px;
   transition:
     border-color 180ms,
     box-shadow 180ms;
-}
-
-input:not([type="range"]):not([type="file"]):not([type="checkbox"]):not(
-    [type="radio"]
-  ):focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border-color: var(--neon-border);
-  /* box-shadow: 0 0 0 3px var(--neon-dim), var(--neon-glow-sm); */
+  @apply hover:border-gray-300 dark:hover:border-gray-600 focus:outline-0 focus:border-neon focus:ring-1 focus:ring-neon;
 }
 
 /* ── Scrollbar ── */
@@ -191,13 +181,6 @@ select:focus {
   color: var(--neon);
 }
 
-/* ── Focus ring ── */
-:focus-visible {
-  outline: 2px solid var(--neon-border);
-  outline-offset: 3px;
-  border-radius: 4px;
-}
-
 /* ══════════════════════════════════════
    COMPONENT PATTERNS
    Reusable design-system building blocks
@@ -205,19 +188,7 @@ select:focus {
 
 /* ── Badge / tag ── */
 .badge-neon {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0.22rem 0.65rem;
-  background: var(--neon-dim);
-  color: var(--neon);
-  border: 1px solid var(--neon-border);
-  border-radius: 999px;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  white-space: nowrap;
+  @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-neon bg-neon/5 border-bd-neon text-[9px] sm:text-xs font-bold uppercase tracking-widest backdrop-blur-sm;
 }
 
 /* ── Button — primary neon ── */
@@ -296,22 +267,14 @@ select:focus {
 
 /* ── Card ── */
 .card-neon {
-  background: var(--base-surface);
+  background: var(--base-card);
   border: 1px solid var(--base-border);
   border-radius: 12px;
-  transition:
-    border-color 250ms,
-    box-shadow 250ms;
-}
-
-.card-neon:hover {
-  border-color: var(--neon-border);
-  box-shadow: var(--neon-glow-sm);
 }
 
 /* ── Interactive card (clickable) ── */
 .card-neon-interactive {
-  background: var(--base-surface);
+  background: var(--base-card);
   border: 1px solid var(--base-border);
   border-radius: 12px;
   cursor: pointer;
@@ -322,21 +285,10 @@ select:focus {
     background 220ms;
 }
 
-.card-neon-interactive:hover {
-  background: var(--base-elevated);
-  border-color: var(--neon-border);
-  box-shadow: var(--neon-glow-sm);
-  transform: translateY(-2px);
-}
-
-.card-neon-interactive:active {
-  transform: translateY(0);
-}
-
 /* ── Input ── */
 .input-neon {
   width: 100%;
-  background: var(--base-surface);
+  background: var(--base-card);
   color: var(--text-primary);
   border: 1px solid var(--base-border);
   border-radius: 8px;
