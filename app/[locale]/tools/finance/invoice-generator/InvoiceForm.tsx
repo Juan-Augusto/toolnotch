@@ -12,8 +12,11 @@ import { formatAmount } from "@/lib/invoiceCalc";
 
 interface InvoiceFormProps {
   invoice: InvoiceData;
-  update: (field: keyof InvoiceData, value: any) => void;
-  updateLineItem: (id: string, field: string, value: any) => void;
+  update: <K extends keyof InvoiceData>(
+    field: K,
+    value: InvoiceData[K],
+  ) => void;
+  updateLineItem: (id: string, field: string, value: string | number) => void;
   addLineItem: () => void;
   removeLineItem: (id: string) => void;
   handleLogoUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;

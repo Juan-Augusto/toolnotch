@@ -47,7 +47,7 @@ describe("InvoiceBuilder Line Items removal", () => {
     expect(inputs).toHaveLength(2);
 
     // The delete buttons should now be visible for both items
-    let deleteButtons = screen.getAllByLabelText("Remove item");
+    const deleteButtons = screen.getAllByLabelText("Remove item");
     expect(deleteButtons).toHaveLength(2);
 
     // Click the first delete button
