@@ -53,6 +53,7 @@ export default async function InvoiceGeneratorAustraliaPage({ params }: Props) {
         faqs={faqs}
         adSlot="1234567890"
         richContent={richContent}
+        noCardWrapper
       >
         <InvoiceBuilder locale="australia" />
       </ToolWrapper>

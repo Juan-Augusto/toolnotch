@@ -89,7 +89,7 @@ export default function ToolsSection(props: {
                 <Link
                   key={tool.href}
                   href={tool.href}
-                  className="block bg-card border border-gray-200 rounded-xl p-4 hover:border-gray-300 hover:shadow-sm transition-all group dark:bg-card dark:border-gray-700 dark:hover:border-gray-600"
+                  className="block bg-card border border-bd-base rounded-xl p-4 hover:border-gray-300 hover:shadow-sm transition-all group dark:bg-card  dark:hover:border-gray-600"
                 >
                   <div className="flex items-start gap-3">
                     <span

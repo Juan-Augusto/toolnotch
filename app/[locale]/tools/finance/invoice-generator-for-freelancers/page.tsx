@@ -53,6 +53,7 @@ export default async function InvoiceGeneratorForFreelancersPage({ params }: Pro
         faqs={faqs}
         adSlot="1234567890"
         richContent={richContent}
+        noCardWrapper
       >
         <InvoiceBuilder />
       </ToolWrapper>
