@@ -14,7 +14,11 @@
     "breadcrumb": {
       "home": "Home"
     },
-    "allTools": "All tools"
+    "allTools": "All tools",
+    "whatIs": "What is {title}?",
+    "howToUse": "How to use",
+    "whyItMatters": "Why it matters",
+    "proTip": "Pro tip"
   },
   "faqSection": {
     "heading": "Frequently Asked Questions"
@@ -1654,6 +1658,46 @@
       "metaDescription": "Create professional invoices for free. Add line items, tax, logo, and download as PDF. Supports 30+ currencies. No sign-up required. Data stays in your browser.",
       "title": "Free Invoice Generator",
       "description": "Create professional invoices instantly. No sign-up. No watermarks. Data stays in your browser.",
+      "ui": {
+        "from": "From",
+        "nameCompanyPlaceholder": "Your Name / Company",
+        "emailPlaceholder": "Email",
+        "addressPlaceholder": "Address",
+        "logoButton": "Logo",
+        "billTo": "Bill To",
+        "clientNamePlaceholder": "Client Name",
+        "clientEmailPlaceholder": "Client Email",
+        "clientAddressPlaceholder": "Client Address",
+        "invoiceDetails": "Invoice Details",
+        "invoiceNumber": "Invoice #",
+        "currency": "Currency",
+        "date": "Date",
+        "dueDate": "Due Date",
+        "lineItems": "Line Items",
+        "descriptionPlaceholder": "Description",
+        "qty": "Qty",
+        "rate": "Rate",
+        "amount": "Amount",
+        "addItem": "+ Add item",
+        "removeItem": "Remove item",
+        "discount": "Discount %",
+        "tax": "Tax %",
+        "taxLabel": "Tax",
+        "notesPlaceholder": "Notes (optional)",
+        "termsPlaceholder": "Payment terms",
+        "downloadPrint": "Download / Print PDF",
+        "subtotal": "Subtotal",
+        "notesLabel": "Notes:",
+        "notesTerms": "Notes & Terms",
+        "total": "Total",
+        "invoiceTitle": "INVOICE",
+        "discountLabel": "Discount",
+        "formTab": "Edit Invoice",
+        "previewTab": "Preview & Print",
+        "defaultTerms": "Payment due within 30 days.",
+        "clear": "Clear",
+        "clearConfirm": "Are you sure you want to clear the invoice? This cannot be undone."
+      },
       "faqs": [
         {
           "question": "Is my invoice data stored on your servers?",

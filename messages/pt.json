@@ -14,7 +14,11 @@
     "breadcrumb": {
       "home": "Início"
     },
-    "allTools": "Todas as ferramentas"
+    "allTools": "Todas as ferramentas",
+    "whatIs": "O que é {title}?",
+    "howToUse": "Como usar",
+    "whyItMatters": "Por que isso importa",
+    "proTip": "Dica profissional"
   },
   "faqSection": {
     "heading": "Perguntas Frequentes"
@@ -1286,6 +1290,46 @@
       "metaDescription": "Crie notas fiscais profissionais gratuitamente. Adicione itens, impostos, logo e baixe como PDF. Suporta mais de 30 moedas. Sem cadastro.",
       "title": "Gerador de Nota Fiscal Gratuito",
       "description": "Crie notas fiscais profissionais instantaneamente. Sem cadastro. Sem marcas d'água. Dados ficam no seu navegador.",
+      "ui": {
+        "from": "De",
+        "nameCompanyPlaceholder": "Seu Nome / Empresa",
+        "emailPlaceholder": "E-mail",
+        "addressPlaceholder": "Endereço",
+        "logoButton": "Logo",
+        "billTo": "Cobrar De",
+        "clientNamePlaceholder": "Nome do Cliente",
+        "clientEmailPlaceholder": "E-mail do Cliente",
+        "clientAddressPlaceholder": "Endereço do Cliente",
+        "invoiceDetails": "Detalhes da Fatura",
+        "invoiceNumber": "Fatura #",
+        "currency": "Moeda",
+        "date": "Data",
+        "dueDate": "Data de Vencimento",
+        "lineItems": "Itens da Fatura",
+        "descriptionPlaceholder": "Descrição",
+        "qty": "Qtd",
+        "rate": "Preço",
+        "amount": "Total",
+        "addItem": "+ Adicionar item",
+        "removeItem": "Remover item",
+        "discount": "Desconto %",
+        "tax": "Imposto %",
+        "taxLabel": "Imposto",
+        "notesPlaceholder": "Observações (opcional)",
+        "termsPlaceholder": "Termos de pagamento",
+        "downloadPrint": "Baixar / Imprimir PDF",
+        "subtotal": "Subtotal",
+        "notesLabel": "Observações:",
+        "notesTerms": "Notas e Termos",
+        "total": "Total",
+        "invoiceTitle": "FATURA",
+        "discountLabel": "Desconto",
+        "formTab": "Preencher Fatura",
+        "previewTab": "Visualizar e Imprimir",
+        "defaultTerms": "Pagamento devido em até 30 dias.",
+        "clear": "Limpar",
+        "clearConfirm": "Tem certeza que deseja limpar a fatura? Isso não poderá ser desfeito."
+      },
       "faqs": [
         {
           "question": "Meus dados de fatura são armazenados em seus servidores?",

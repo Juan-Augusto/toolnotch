@@ -382,8 +382,8 @@ export default async function HomePage({ params }: Props) {
       </svg>
 
       {/* Vertical Edge Lines */}
-      <div className="hidden xl:block absolute top-0 bottom-0 left-4 xl:left-8 w-[1px] bg-gray-300 dark:bg-gray-700 -z-10"></div>
-      <div className="hidden xl:block absolute top-0 bottom-0 right-4 xl:right-8 w-[1px] bg-gray-300 dark:bg-gray-700 -z-10"></div>
+      <div className="hidden xl:block absolute top-0 bottom-0 left-4 xl:left-8 w-[1px] bg-bd-base -z-10"></div>
+      <div className="hidden xl:block absolute top-0 bottom-0 right-4 xl:right-8 w-[1px] bg-bd-base -z-10"></div>
 
       <div className="max-w-4xl mx-auto px-4 py-8 sm:py-12">
         <div className="relative isolate text-center mb-10 mt-8 space-y-6">
@@ -431,12 +431,10 @@ export default async function HomePage({ params }: Props) {
             </svg>
           </div>
 
-          <div className="hidden dark:block absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-40 bg-blue-500/60 blur-[150px] -z-10 rounded-full pointer-events-none"></div>
+          {/* <div className="hidden dark:block absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-40 bg-blue-500/60 blur-[150px] -z-10 rounded-full pointer-events-none"></div> */}
 
           <div className="flex justify-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-neon bg-neon/5 border-bd-neon text-[9px] sm:text-xs font-bold uppercase tracking-widest backdrop-blur-sm">
-              {t("badge")}
-            </div>
+            <div className="badge-neon">{t("badge")}</div>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white pb-2 leading-tight">

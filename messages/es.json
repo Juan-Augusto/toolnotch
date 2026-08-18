@@ -14,7 +14,11 @@
     "breadcrumb": {
       "home": "Inicio"
     },
-    "allTools": "Todas las herramientas"
+    "allTools": "Todas las herramientas",
+    "whatIs": "¿Qué es {title}?",
+    "howToUse": "Cómo usar",
+    "whyItMatters": "Por que es importante",
+    "proTip": "Consejo profesional"
   },
   "faqSection": {
     "heading": "Preguntas frecuentes"
@@ -1286,6 +1290,46 @@
       "metaDescription": "Crea facturas profesionales gratis. Agrega líneas, impuesto, logo y descarga en PDF. Compatible con 30+ monedas. Sin registro. Los datos se quedan en tu navegador.",
       "title": "Generador de Facturas Gratis",
       "description": "Crea facturas profesionales al instante. Sin registro. Sin marcas de agua. Los datos permanecen en tu navegador.",
+      "ui": {
+        "from": "De",
+        "nameCompanyPlaceholder": "Su Nombre / Empresa",
+        "emailPlaceholder": "Correo electrónico",
+        "addressPlaceholder": "Dirección",
+        "logoButton": "Logo",
+        "billTo": "Facturar a",
+        "clientNamePlaceholder": "Nombre del Cliente",
+        "clientEmailPlaceholder": "Correo del Cliente",
+        "clientAddressPlaceholder": "Dirección del Cliente",
+        "invoiceDetails": "Detalles de la Factura",
+        "invoiceNumber": "Factura #",
+        "currency": "Moneda",
+        "date": "Fecha",
+        "dueDate": "Fecha de Vencimiento",
+        "lineItems": "Líneas de la Factura",
+        "descriptionPlaceholder": "Descripción",
+        "qty": "Cant.",
+        "rate": "Precio",
+        "amount": "Total",
+        "addItem": "+ Agregar elemento",
+        "removeItem": "Eliminar elemento",
+        "discount": "Descuento %",
+        "tax": "Impuesto %",
+        "taxLabel": "Impuesto",
+        "notesPlaceholder": "Notas (opcional)",
+        "termsPlaceholder": "Condiciones de pago",
+        "downloadPrint": "Descargar / Imprimir PDF",
+        "subtotal": "Subtotal",
+        "notesLabel": "Notas:",
+        "notesTerms": "Notas y Condiciones",
+        "total": "Total",
+        "invoiceTitle": "FACTURA",
+        "discountLabel": "Descuento",
+        "formTab": "Completar Factura",
+        "previewTab": "Vista Previa e Imprimir",
+        "defaultTerms": "Pago a realizar dentro de 30 días.",
+        "clear": "Limpiar",
+        "clearConfirm": "¿Está seguro de que desea limpiar la factura? Esto no se puede deshacer."
+      },
       "faqs": [
         {
           "question": "¿Mis datos de factura se almacenan en sus servidores?",
