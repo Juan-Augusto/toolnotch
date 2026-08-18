@@ -5,7 +5,10 @@
   },
   "common": {
     "privacyBadge": "Los archivos se procesan en tu navegador — nunca se suben a nuestros servidores",
-    "free": "Gratis"
+    "free": "Gratis",
+    "notFoundTitle": "Página No Encontrada",
+    "notFoundDescription": "La página que estás buscando no existe o ha sido modificada.",
+    "backToHome": "Volver al Inicio"
   },
   "toolWrapper": {
     "breadcrumb": {
