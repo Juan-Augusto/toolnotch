@@ -474,10 +474,12 @@ export default function ReadingTimeClient() {
     return () => clearTimeout(timer);
   }, [text]);
 
-  useEffect(() => {
+  const [prevText, setPrevText] = useState(text);
+  if (prevText !== text) {
+    setPrevText(text);
     setIsPlaying(false);
     setCurrentIndex(0);
-  }, [text]);
+  }
 
   const handleClear = useCallback(() => {
     setText("");
@@ -495,11 +497,18 @@ export default function ReadingTimeClient() {
 
   const complexity = getComplexityLevel(stats.fleschEase);
 
+  const playbackFinished =
+    currentIndex >= wordsArray.length && wordsArray.length > 0;
+  const [wasFinished, setWasFinished] = useState(false);
+  if (playbackFinished !== wasFinished) {
+    setWasFinished(playbackFinished);
+    if (playbackFinished && isPlaying) {
+      setIsPlaying(false);
+    }
+  }
+
   useEffect(() => {
     if (!isPlaying || currentIndex >= wordsArray.length) {
-      if (currentIndex >= wordsArray.length && wordsArray.length > 0) {
-        setIsPlaying(false);
-      }
       return;
     }
 

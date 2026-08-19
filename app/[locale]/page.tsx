@@ -2,7 +2,6 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import ToolsSection from "@/components/ToolsSection";
-import ToolnotchLogo from "@/components/ToolnotchLogo";
 
 interface Props {
   params: Promise<{ locale: string }>;
