@@ -5,7 +5,10 @@
   },
   "common": {
     "privacyBadge": "Arquivos processados no seu navegador — nunca enviados para nossos servidores",
-    "free": "Grátis"
+    "free": "Grátis",
+    "notFoundTitle": "Página Não Encontrada",
+    "notFoundDescription": "A página que você está procurando não existe ou foi movida.",
+    "backToHome": "Voltar ao Início"
   },
   "toolWrapper": {
     "breadcrumb": {
@@ -622,32 +625,6 @@
       "metaDescription": "Calcule o tempo de leitura de qualquer texto. Estima tanto o tempo de leitura (238 ppm) quanto o tempo de fala (130 ppm). Útil para posts de blog, discursos e apresentações.",
       "title": "Calculadora de Tempo de Leitura",
       "description": "Calcule quanto tempo leva para ler ou falar o seu texto. Cole seu conteúdo abaixo para uma estimativa instantânea.",
-      "ui": {
-        "readingSpeedLabel": "Velocidade de Leitura",
-        "speakingSpeedLabel": "Velocidade de Fala",
-        "wordsPerMinute": "{wpm} PPM",
-        "estimatedReadingTime": "Tempo de Leitura Estimado",
-        "estimatedSpeakingTime": "Tempo de Fala Estimado",
-        "seconds": "{s} seg",
-        "minutesAndSeconds": "{m} min e {s} seg",
-        "complexityNote": "Ajuste de Complexidade",
-        "complexityEasy": "Texto fácil (+0% de tempo)",
-        "complexityAverage": "Texto normal (+0% de tempo)",
-        "complexityHard": "Texto técnico (+15% de tempo)",
-        "complexityVeryHard": "Texto muito denso (+30% de tempo)",
-        "startSpeedReader": "Praticar Leitura Dinâmica (RSVP)",
-        "closeSpeedReader": "Fechar Leitor",
-        "wordCounter": "Palavra {current} de {total}",
-        "play": "Iniciar",
-        "pause": "Pausar",
-        "reset": "Reiniciar",
-        "speedSlow": "Devagar",
-        "speedMedium": "Médio",
-        "speedFast": "Rápido",
-        "speedSuperFast": "Dinâmico",
-        "speedReaderTitle": "Leitura Rápida",
-        "done": "Concluído!"
-      },
       "faqs": [
         {
           "question": "Quanto tempo leva para ler 1000 palavras?",
@@ -766,21 +743,12 @@
       "avgWordsPerSentence": "Média de Palavras/Frase",
       "topWords": "Palavras Mais Usadas",
       "readabilityScores": "Pontuações de Legibilidade",
-      "densityAnalysis": "Análise de Densidade",
       "gradeLevel": "Nível escolar",
       "gradeEquivalent": "Equivalente ao grau escolar americano",
       "yearsEducation": "Anos de educação",
       "higherEasier": "Maior = mais fácil de ler",
       "lowerAccessible": "Menor = mais acessível",
-      "syllableNote": "A contagem de sílabas é uma aproximação heurística. As pontuações podem variar levemente em relação a outras ferramentas.",
-      "fleschLabels": {
-        "veryEasy": "Muito Fácil",
-        "easy": "Fácil",
-        "standard": "Padrão",
-        "fairlyDifficult": "Razoavelmente Difícil",
-        "difficult": "Difícil",
-        "veryDifficult": "Muito Difícil"
-      }
+      "syllableNote": "A contagem de sílabas é uma aproximação heurística. As pontuações podem variar levemente em relação a outras ferramentas."
     }
   },
   "finance": {
