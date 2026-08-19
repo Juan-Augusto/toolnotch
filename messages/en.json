@@ -877,6 +877,32 @@
       "metaDescription": "Calculate reading time for any text. Estimates both reading time (238 wpm) and speaking time (130 wpm). Useful for blog posts, speeches, and presentations.",
       "title": "Reading Time Calculator",
       "description": "Calculate how long it takes to read or speak your text. Paste your content below for an instant estimate.",
+      "ui": {
+        "readingSpeedLabel": "Reading Speed",
+        "speakingSpeedLabel": "Speaking Speed",
+        "wordsPerMinute": "{wpm} WPM",
+        "estimatedReadingTime": "Estimated Reading Time",
+        "estimatedSpeakingTime": "Estimated Speaking Time",
+        "seconds": "{s} sec",
+        "minutesAndSeconds": "{m} min {s} sec",
+        "complexityNote": "Complexity Adjustment",
+        "complexityEasy": "Easy text (+0% reading time)",
+        "complexityAverage": "Average text (+0% reading time)",
+        "complexityHard": "Technical text (+15% reading time)",
+        "complexityVeryHard": "Very dense text (+30% reading time)",
+        "startSpeedReader": "Practice Speed Reading (RSVP)",
+        "closeSpeedReader": "Close Reader",
+        "wordCounter": "Word {current} of {total}",
+        "play": "Play",
+        "pause": "Pause",
+        "reset": "Reset",
+        "speedSlow": "Slow",
+        "speedMedium": "Average",
+        "speedFast": "Fast",
+        "speedSuperFast": "Speed Reader",
+        "speedReaderTitle": "Speed Reader",
+        "done": "Done!"
+      },
       "richContent": {
         "whatIs": "A reading time calculator estimates how long it takes to read a piece of text by dividing its word count by an average reading speed. The standard adult silent reading speed for non-fiction is 200–250 words per minute (wpm), with research commonly citing 238 wpm as a reliable benchmark. Comprehension drops significantly above 300 wpm, so speed-reading figures are not used for realistic estimates. Content type affects effective reading speed: dense technical material reads slower at 150–180 wpm, while skimming-friendly listicles read faster. Most blog platforms — Medium, Substack, Ghost — display a reading time estimate prominently at the top of articles because it directly affects whether readers click through and start reading.",
         "howToUse": [
@@ -1015,12 +1041,21 @@
       "avgWordsPerSentence": "Avg. Words/Sentence",
       "topWords": "Top Words",
       "readabilityScores": "Readability Scores",
+      "densityAnalysis": "Density Analysis",
       "gradeLevel": "Grade level",
       "gradeEquivalent": "US school grade equivalent",
       "yearsEducation": "Years of education",
       "higherEasier": "Higher = easier to read",
       "lowerAccessible": "Lower = more accessible",
-      "syllableNote": "Syllable counting is a heuristic approximation. Scores may vary slightly from other tools."
+      "syllableNote": "Syllable counting is a heuristic approximation. Scores may vary slightly from other tools.",
+      "fleschLabels": {
+        "veryEasy": "Very Easy",
+        "easy": "Easy",
+        "standard": "Standard",
+        "fairlyDifficult": "Fairly Difficult",
+        "difficult": "Difficult",
+        "veryDifficult": "Very Difficult"
+      }
     }
   },
   "finance": {

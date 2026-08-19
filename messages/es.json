@@ -625,6 +625,32 @@
       "metaDescription": "Calcula el tiempo de lectura de cualquier texto. Estima tanto el tiempo de lectura (238 ppm) como el de habla (130 ppm). Útil para artículos de blog, discursos y presentaciones.",
       "title": "Calculadora de Tiempo de Lectura",
       "description": "Calcula cuánto tiempo tardarás en leer o hablar tu texto. Pega tu contenido abajo para una estimación instantánea.",
+      "ui": {
+        "readingSpeedLabel": "Velocidad de Lectura",
+        "speakingSpeedLabel": "Velocidad de Habla",
+        "wordsPerMinute": "{wpm} PPM",
+        "estimatedReadingTime": "Tiempo de Lectura Estimado",
+        "estimatedSpeakingTime": "Tiempo de Habla Estimado",
+        "seconds": "{s} seg",
+        "minutesAndSeconds": "{m} min {s} seg",
+        "complexityNote": "Ajuste de Complejidad",
+        "complexityEasy": "Texto fácil (+0% de tiempo)",
+        "complexityAverage": "Texto normal (+0% de tiempo)",
+        "complexityHard": "Texto técnico (+15% de tiempo)",
+        "complexityVeryHard": "Texto muy denso (+30% de tiempo)",
+        "startSpeedReader": "Practicar Lectura Dinámica (RSVP)",
+        "closeSpeedReader": "Cerrar Lector",
+        "wordCounter": "Palabra {current} de {total}",
+        "play": "Iniciar",
+        "pause": "Pausar",
+        "reset": "Reiniciar",
+        "speedSlow": "Lento",
+        "speedMedium": "Medio",
+        "speedFast": "Rápido",
+        "speedSuperFast": "Dinámico",
+        "speedReaderTitle": "Lectura Rápida",
+        "done": "¡Terminado!"
+      },
       "faqs": [
         {
           "question": "¿Cuánto tarda en leerse 1000 palabras?",
@@ -743,12 +769,21 @@
       "avgWordsPerSentence": "Prom. palabras/oración",
       "topWords": "Palabras principales",
       "readabilityScores": "Puntuaciones de legibilidad",
+      "densityAnalysis": "Análisis de Densidad",
       "gradeLevel": "Nivel escolar",
       "gradeEquivalent": "Equivalente al grado escolar de EE.UU.",
       "yearsEducation": "Años de educación",
       "higherEasier": "Mayor = más fácil de leer",
       "lowerAccessible": "Menor = más accesible",
-      "syllableNote": "El conteo de sílabas es una aproximación heurística. Las puntuaciones pueden variar ligeramente respecto a otras herramientas."
+      "syllableNote": "El conteo de sílabas es una aproximación heurística. Las puntuaciones pueden variar ligeramente respecto a otras herramientas.",
+      "fleschLabels": {
+        "veryEasy": "Muy Fácil",
+        "easy": "Fácil",
+        "standard": "Estándar",
+        "fairlyDifficult": "Moderadamente Difícil",
+        "difficult": "Difícil",
+        "veryDifficult": "Muy Difícil"
+      }
     }
   },
   "finance": {
