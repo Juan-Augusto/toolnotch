@@ -29,7 +29,7 @@ export default function CategoriesFilter({
                   ${
                     selectedCategories.includes(tool.index)
                       ? `bg-blue-500 text-white border-blue-500`
-                      : " border-bd-base bg-card text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100/50 dark:hover:bg-card/50"
+                      : " border-bd-base bg-card text-tx-secondary  hover:text-tx-primary  hover:bg-surface dark:hover:bg-card/50"
                   }
                 `}
             onClick={() => filterToolsByCategory(tool.index)}
