@@ -4,7 +4,15 @@ import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  color?: "default" | "panel" | "primary" | "foreground" | "grey" | "gray";
+  color?:
+    | "default"
+    | "panel"
+    | "primary"
+    | "secondary"
+    | "danger"
+    | "grey"
+    | "foreground"
+    | "gray";
   opacity?: boolean;
   rounded?: boolean;
   small?: boolean;

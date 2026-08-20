@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import ToolWrapper from '@/components/ToolWrapper'
-import ReadingTimeClient from './ReadingTimeClient'
+import WordCounterClient from '../word-counter/WordCounterClient'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/schema'
 import type { FaqItem } from '@/components/FaqSection'
@@ -52,7 +52,7 @@ export default async function ReadingTimeCalculatorPage({ params }: Props) {
         adSlot="1234567890"
         richContent={richContent}
       >
-        <ReadingTimeClient />
+        <WordCounterClient primaryStat="readingTime" />
       </ToolWrapper>
     </>
   )

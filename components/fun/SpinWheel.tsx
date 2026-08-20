@@ -79,7 +79,11 @@ export default function SpinWheel({ items, onResult }: SpinWheelProps) {
     const targetIndex = Math.floor(Math.random() * items.length)
     const arc = (2 * Math.PI) / items.length
     const totalSpins = prefersReducedMotion() ? 0 : (Math.floor(Math.random() * 3) + 4) * Math.PI * 2
-    const targetAngle = rotationRef.current - (targetIndex * arc + arc / 2) - Math.PI / 2 + totalSpins
+    const twoPi = Math.PI * 2
+    const desiredResting = -(targetIndex * arc + arc / 2)
+    let delta = (desiredResting - rotationRef.current) % twoPi
+    if (delta < 0) delta += twoPi
+    const targetAngle = rotationRef.current + delta + totalSpins
 
     if (prefersReducedMotion()) {
       rotationRef.current = targetAngle
