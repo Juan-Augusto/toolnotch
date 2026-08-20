@@ -106,17 +106,17 @@ export default async function HomePage({ params }: Props) {
           desc: t("tools.percentageCalculator.desc"),
         },
         {
-          href: "/tools/convert/meters-to-feet",
+          href: "/tools/convert/length-converter",
           label: t("tools.metersToFeet.label"),
           desc: t("tools.metersToFeet.desc"),
         },
         {
-          href: "/tools/convert/celsius-to-fahrenheit",
+          href: "/tools/convert/temperature-converter",
           label: t("tools.celsiusToFahrenheit.label"),
           desc: t("tools.celsiusToFahrenheit.desc"),
         },
         {
-          href: "/tools/convert/kilograms-to-pounds",
+          href: "/tools/convert/weight-converter",
           label: t("tools.kgToPounds.label"),
           desc: t("tools.kgToPounds.desc"),
         },

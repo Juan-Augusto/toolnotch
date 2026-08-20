@@ -101,7 +101,7 @@ describe('ConversionWidget', () => {
       // The result text somewhere on the page should have changed
       const resultDiv = input
         .closest('.space-y-4')!
-        .querySelector('.bg-blue-50')!
+        .querySelector('[data-testid="conversion-result"]')!
       expect(resultDiv.textContent).not.toBe(initialResult)
     })
 
@@ -147,7 +147,7 @@ describe('ConversionWidget', () => {
 
       // Get the result before swapping
       const resultDiv = document
-        .querySelector('.bg-blue-50')!
+        .querySelector('[data-testid="conversion-result"]')!
       const resultBeforeSwap = resultDiv.textContent
 
       const swapBtn = screen.getByTitle('swap')
@@ -181,7 +181,7 @@ describe('ConversionWidget', () => {
       const input = screen.getByRole('spinbutton')
       fireEvent.change(input, { target: { value: '100' } })
 
-      const resultDiv = document.querySelector('.bg-blue-50')!
+      const resultDiv = screen.getByTestId('conversion-result')
       expect(resultDiv.textContent).toBe('212')
     })
   })
@@ -191,11 +191,11 @@ describe('ConversionWidget', () => {
       render(<ConversionWidget category="length" defaultFrom="meter" defaultTo="foot" />)
 
       const selects = screen.getAllByRole('combobox')
-      const resultBefore = document.querySelector('.bg-blue-50')!.textContent
+      const resultBefore = screen.getByTestId('conversion-result').textContent
 
       fireEvent.change(selects[0], { target: { value: 'kilometer' } })
 
-      const resultAfter = document.querySelector('.bg-blue-50')!.textContent
+      const resultAfter = screen.getByTestId('conversion-result').textContent
       expect(resultAfter).not.toBe(resultBefore)
     })
 
@@ -203,11 +203,11 @@ describe('ConversionWidget', () => {
       render(<ConversionWidget category="length" defaultFrom="meter" defaultTo="foot" />)
 
       const selects = screen.getAllByRole('combobox')
-      const resultBefore = document.querySelector('.bg-blue-50')!.textContent
+      const resultBefore = screen.getByTestId('conversion-result').textContent
 
       fireEvent.change(selects[1], { target: { value: 'inch' } })
 
-      const resultAfter = document.querySelector('.bg-blue-50')!.textContent
+      const resultAfter = screen.getByTestId('conversion-result').textContent
       expect(resultAfter).not.toBe(resultBefore)
     })
   })

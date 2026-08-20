@@ -6,6 +6,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   color?: "default" | "panel" | "primary" | "foreground" | "grey" | "gray";
   opacity?: boolean;
+  rounded?: boolean;
+  small?: boolean;
 }
 
 export default function Button({
@@ -13,6 +15,8 @@ export default function Button({
   className = "",
   color = "default",
   opacity = false,
+  rounded = false,
+  small = false,
   ...props
 }: ButtonProps) {
   let colorClasses = "";
@@ -37,12 +41,18 @@ export default function Button({
     // default
     colorClasses = opacity
       ? "bg-blue-600/10 text-blue-600 dark:text-blue-400 hover:not-disabled:bg-blue-600/20 border border-blue-600/60 dark:border-blue-500/60"
-      : "bg-blue-600 hover:not-disabled:bg-blue-700 text-white border border-transparent";
+      : "bg-blue-500 hover:not-disabled:bg-blue-700 text-white border border-transparent";
   }
+
+  const sizeClasses = small
+    ? "w-10 h-10 flex items-center justify-center p-0 text-sm"
+    : "w-full py-3 px-6 text-base";
+
+  const radiusClasses = rounded ? "rounded-full" : "rounded-lg";
 
   return (
     <button
-      className={`w-full cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed font-semibold py-3 px-6 rounded-lg transition-all text-base ${colorClasses} ${className}`}
+      className={`cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed active:translate-y-0.5 font-semibold transition-all ${sizeClasses} ${radiusClasses} ${colorClasses} ${className}`}
       {...props}
     >
       {children}
