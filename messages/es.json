@@ -2024,6 +2024,7 @@
       "timeUp": "¡Se acabó el tiempo!",
       "nextQuestion": "Siguiente Pregunta",
       "seeResult": "Ver Mi Resultado",
+      "sourceLabel": "Fuente: {source}",
       "tiers": {
         "legend": "Leyenda",
         "expert": "Experto",
@@ -2233,6 +2234,18 @@
       "f1DriverQuiz": {
         "label": "¿Qué Piloto de F1 Eres Tú?",
         "desc": "¿Verstappen, Hamilton, Senna o Norris?"
+      },
+      "politicalProfileQuiz": {
+        "label": "¿Cuál Es Tu Perfil Político?",
+        "desc": "Un quiz neutral y divertido sobre valores — descubre tu perfil político"
+      },
+      "echoChamberQuiz": {
+        "label": "Quiz: Burbuja Política",
+        "desc": "Descubre cuánto tu feed y tu círculo refuerzan una sola visión política."
+      },
+      "fakeNewsQuiz": {
+        "label": "¿Fake News o Realidad?",
+        "desc": "10 afirmaciones virales — ¿puedes distinguir cuáles son reales?"
       },
       "retroBoard": {
         "label": "Tablero de Retrospectiva",
@@ -3804,5 +3817,149 @@
     },
     "tagline": "Herramientas gratuitas que funcionan en tu navegador. Sin registro. Sin almacenamiento de datos.",
     "copyright": "© 2026 ToolNotch · Creado por {name}"
+  },
+  "electionCountdown": {
+    "metaTitle": "Cuenta Regresiva Elecciones Brasil 2026 | ToolNotch",
+    "metaDescription": "Cuenta regresiva en vivo para las elecciones generales de Brasil 2026. Fechas oficiales de la primera vuelta (4 de octubre) y la segunda vuelta (25 de octubre) confirmadas por el TSE.",
+    "title": "Cuenta Regresiva Elecciones Brasil 2026",
+    "description": "¿Cuántos días faltan para las elecciones de Brasil 2026? Cuenta regresiva en vivo hasta la primera vuelta (4 de octubre) y la segunda vuelta (25 de octubre, si es necesaria), según fechas oficiales del TSE.",
+    "round1Label": "1ª Vuelta",
+    "round2Label": "2ª Vuelta (si es necesaria)",
+    "days": "Días",
+    "hours": "Horas",
+    "minutes": "Minutos",
+    "seconds": "Segundos",
+    "electionConcludedRound1": "La primera vuelta ha finalizado. Esperando confirmación sobre si es necesaria una segunda vuelta.",
+    "electionConcludedRound2": "El período electoral de Brasil 2026 ha concluido. Esta página no realiza seguimiento de resultados — consulte al TSE para información oficial.",
+    "faqs": [
+      {
+        "question": "¿Cuándo son las elecciones de Brasil 2026?",
+        "answer": "Las elecciones generales de Brasil 2026 se celebran el domingo 4 de octubre de 2026 (primera vuelta). La fecha está fijada por la Constitución brasileña y la Ley Electoral (Ley nº 9.504/1997), que establecen el primer domingo de octubre como día de elección, y fue confirmada oficialmente por el Tribunal Superior Electoral (TSE) de Brasil."
+      },
+      {
+        "question": "¿Cómo funciona la segunda vuelta?",
+        "answer": "La segunda vuelta ocurre solo para los cargos de Presidente y Gobernador, y únicamente si ningún candidato obtiene más del 50% de los votos válidos en la primera vuelta. Si es necesaria, se realiza el último domingo de octubre — el 25 de octubre de 2026. Las elecciones al Senado y a las cámaras legislativas se deciden en una sola vuelta."
+      },
+      {
+        "question": "¿Quién puede votar en las elecciones de Brasil 2026?",
+        "answer": "El voto es obligatorio para los ciudadanos alfabetizados de 18 a 70 años. Es opcional para jóvenes de 16 y 17 años, para mayores de 70 años y para quienes no saben leer ni escribir. Consulte el sitio del TSE para conocer las reglas completas de elegibilidad."
+      },
+      {
+        "question": "¿Qué cargos se eligen el 4 de octubre?",
+        "answer": "Ese mismo día, Brasil elige a su Presidente, los Gobernadores estatales, Senadores y legisladores federales, estatales y distritales. Solo las disputas por la Presidencia y las Gobernaciones pueden ir a una segunda vuelta."
+      },
+      {
+        "question": "¿Puede cambiar la fecha de las elecciones?",
+        "answer": "No — las fechas del primer y del último domingo de octubre están fijadas por la Constitución y la Ley Electoral, no por decisión discrecional del TSE, por lo que esta cuenta regresiva utiliza fechas fijas."
+      }
+    ],
+    "richContent": {
+      "whatIs": "Las elecciones generales de Brasil 2026 se celebran el domingo 4 de octubre de 2026, cuando los votantes eligen al Presidente, los Gobernadores estatales, Senadores y legisladores federales, estatales y distritales, todos en una misma jornada. La fecha está fijada por la Constitución brasileña y la Ley Electoral de 1997, que establecen el primer domingo de octubre como día de elección. Si ningún candidato a Presidente o Gobernador obtiene más del 50% de los votos válidos, se realiza una segunda vuelta el último domingo de octubre — el 25 de octubre de 2026. Ambas fechas fueron confirmadas por el Tribunal Superior Electoral (TSE) de Brasil.",
+      "howToUse": [
+        "La cuenta regresiva en vivo, en la parte superior, muestra días, horas, minutos y segundos hasta el cierre de las urnas de la vuelta actual.",
+        "Cambia automáticamente de la primera vuelta a la segunda vuelta en cuanto finaliza el horario de votación del 4 de octubre.",
+        "Ambas fechas oficiales permanecen visibles debajo de la cuenta regresiva, incluso después de que haya pasado la primera vuelta."
+      ],
+      "whyItMatters": "Brasil utiliza un sistema de dos vueltas para sus dos cargos ejecutivos principales — Presidente y Gobernador — para asegurar que el ganador cuente con el respaldo de la mayoría de los votantes, no solo de una pluralidad. Los escaños del Senado y las cámaras legislativas, en cambio, se deciden en una sola vuelta. Si habrá o no una segunda vuelta solo se confirma después de contar los resultados de la primera, por lo que esta página presenta el 25 de octubre como una fecha condicional.",
+      "proTip": "Si la disputa por la Gobernación de su estado — o por la Presidencia — llega a una segunda vuelta, esta página cambiará automáticamente su cuenta regresiva al 25 de octubre de 2026."
+    }
+  },
+  "pollingPlaceFinder": {
+    "metaTitle": "¿Dónde Voto en las Elecciones de Brasil 2026? Cómo Consultar tu Local de Votación | ToolNotch",
+    "metaDescription": "Guía en español sobre el sistema de locales de votación en Brasil y cómo cualquier elector consulta su local asignado a través de las herramientas oficiales del TSE — sin formularios ni datos personales aquí.",
+    "title": "¿Dónde Voto en las Elecciones de Brasil 2026? Cómo Consultar tu Local de Votación",
+    "description": "Cómo funciona el sistema de locales de votación en Brasil y las dos herramientas oficiales del TSE que usa cualquier elector para consultar su local asignado.",
+    "intro": "El sistema electoral brasileño asigna a cada elector un local de votación específico — y ese local puede cambiar de una elección a otra. Esta guía explica cómo funciona esa asignación y cómo consultarla en menos de dos minutos, usando únicamente la autoridad electoral oficial de Brasil, el TSE.",
+    "sections": {
+      "whatIsPollingPlace": {
+        "heading": "¿Qué es el \"local de votação\" (local de votación) en Brasil?",
+        "body": [
+          "En el sistema electoral brasileño, cada elector registrado está asignado a una zona electoral (zona eleitoral) y, dentro de ella, a una sección electoral específica (seção eleitoral) — un grupo pequeño de electores que comparte una urna en un mismo lugar físico, normalmente una escuela o edificio público. Juntas, la zona y la sección apuntan a una sola dirección: tu local de votación.",
+          "Esta asignación no es permanente. El tribunal electoral de Brasil (TSE) y sus tribunales regionales (TREs) reorganizan periódicamente zonas y secciones — porque los electores se mudan, se cierran locales usados antes, o es necesario reequilibrar el número de electores por sección. Por eso tu local de votación puede cambiar de una elección a otra incluso si no te mudaste, y por eso se recomienda siempre volver a consultarlo antes de cada elección."
+        ]
+      },
+      "howToCheck": {
+        "heading": "Cómo consultar tu local de votación (pasos oficiales)",
+        "intro": "Existen dos canales oficiales y gratuitos para esta consulta, ambos operados directamente por el TSE. Evita cualquier sitio o aplicación de terceros que diga hacer esta consulta por ti — solo tse.jus.br y la aplicación oficial e-Título son fuentes autorizadas.",
+        "steps": [
+          {
+            "title": "En el sitio del TSE (Autoatendimento Eleitoral)",
+            "body": "Entra a tse.jus.br, abre el menú \"Serviços eleitorais\" y selecciona \"Autoatendimento Eleitoral\" (el servicio que reemplazó al antiguo Título Net). Dentro, elige la opción \"Onde votar\" (\"Dónde votar\") para abrir el formulario de consulta."
+          },
+          {
+            "title": "En la aplicación e-Título (Android e iOS)",
+            "body": "Descarga e-Título desde la tienda de aplicaciones de tu teléfono e inicia sesión. Tu local de votación asignado aparece directamente en la pantalla principal, con la dirección completa y, el día de la elección, un mapa integrado para ayudarte a llegar."
+          },
+          {
+            "title": "Qué datos vas a necesitar",
+            "body": "Ambas herramientas piden tu número de título de elector (título de eleitor), tu CPF o tu nombre completo, además de tu fecha de nacimiento, para confirmar tu identidad antes de mostrar el resultado."
+          }
+        ]
+      },
+      "lostTitle": {
+        "heading": "¿Perdiste tu título de elector? Esto es lo que realmente importa",
+        "body": [
+          "No necesitas el documento físico del título para votar — una identificación oficial con foto es suficiente. El encargado de la mesa confirma tu sección a través del sistema electoral, no con un papel.",
+          "Si de todos modos quieres regularizar tu registro o revisar tu situación, la vía más rápida es la aplicación e-Título o el portal Autoatendimento Eleitoral del TSE: ambos permiten ver tu situación electoral y solicitar una segunda vía digital sin ir presencialmente a una oficina electoral."
+        ]
+      },
+      "movedCity": {
+        "heading": "Me mudé de ciudad, estado o país — ¿cambia mi local de votación?",
+        "body": [
+          "Sí. Si te mudas a otro municipio (o incluso a otro barrio cubierto por una zona electoral distinta), tu local de votación sigue vinculado a tu zona anterior hasta que solicites formalmente una transferencia de domicilio electoral — el simple hecho de vivir en otro lugar no lo actualiza automáticamente.",
+          "Para los brasileños que viven en el exterior, la votación ocurre en una sección consular y no en un local de votación dentro de Brasil, y el registro funciona de forma distinta — el propio sitio del TSE tiene una sección dedicada al \"voto no exterior\" con ese proceso. En cualquier caso, las solicitudes de transferencia o registro deben presentarse dentro del plazo que fije el calendario electoral oficial del TSE para ese año, un plazo que suele cerrarse bastante antes del día de la votación — consulta siempre el calendario vigente en lugar de asumir que las fechas del ciclo anterior siguen aplicando."
+        ]
+      },
+      "whatToBring": {
+        "heading": "Qué llevar el día de la elección",
+        "body": [
+          "Lleva una identificación oficial con foto — no es necesario el título físico. El TSE generalmente acepta cédula de identidad (RG o la nueva Carteira de Identidade Nacional), licencia de conducir (CNH), pasaporte, carteira de trabalho, o carnés de colegios profesionales reconocidos por ley. Confirma la lista vigente en el sitio o la aplicación oficial del TSE antes del día de la votación.",
+          "Llega a tu sección dentro del horario de votación que fije el TSE para esa elección. Quienes ya están en la fila cuando cierran las urnas normalmente todavía pueden votar, pero no conviene arriesgarse llegando sobre la hora."
+        ],
+        "documentList": [
+          "Cédula de identidad (RG) o Carteira de Identidade Nacional (CIN)",
+          "Licencia de conducir (CNH)",
+          "Pasaporte",
+          "Carteira de Trabalho",
+          "Carnés de colegios profesionales reconocidos por ley"
+        ]
+      }
+    },
+    "cta": {
+      "label": "Consultar mi local de votación en el sitio oficial del TSE",
+      "sublabel": "Serás redirigido a tse.jus.br — el único canal oficial para esta consulta. ToolNotch nunca ve, procesa ni almacena ningún dato de tu título electoral."
+    },
+    "howToSteps": [
+      "Entra a tse.jus.br y abre Autoatendimento Eleitoral, o instala la aplicación e-Título en tu teléfono.",
+      "Selecciona la opción \"Onde votar\" (\"Dónde votar\") en el menú de consultas.",
+      "Ingresa tu número de título de elector, tu CPF o tu nombre completo, junto con tu fecha de nacimiento.",
+      "Revisa la zona, sección y dirección de tu local de votación asignado."
+    ],
+    "faqs": [
+      {
+        "question": "¿Puedo votar en cualquier local de votación?",
+        "answer": "No. Solo puedes votar en la sección electoral que te fue asignada, aunque otro local te quede más cerca ese día. Confirma siempre la dirección correcta antes de salir."
+      },
+      {
+        "question": "¿Qué pasa si ya no tengo mi título de elector?",
+        "answer": "No necesitas el documento físico para votar — una identificación oficial con foto es suficiente. Para regularizar tu registro u obtener una segunda vía digital, usa la aplicación e-Título o el portal Autoatendimento Eleitoral del TSE."
+      },
+      {
+        "question": "¿Puedo consultar el local de votación de otra persona?",
+        "answer": "No desde tu propia sesión de e-Título — la app solo muestra los datos de la cuenta con la que iniciaste sesión. Para consultar el local de otra persona (con su consentimiento), usa el Autoatendimento Eleitoral del TSE ingresando sus datos."
+      },
+      {
+        "question": "¿El local de votación cambia en cada elección?",
+        "answer": "Puede cambiar. El TSE reorganiza zonas y secciones periódicamente, así que conviene volver a consultarlo antes de cada elección en lugar de asumir que es el mismo que la vez anterior, incluso si no te mudaste."
+      },
+      {
+        "question": "¿Necesito llevar el título de elector físico el día de la votación?",
+        "answer": "No. Una identificación oficial con foto — RG, licencia de conducir, pasaporte u otro documento aceptado por el TSE — es suficiente para confirmar tu identidad en la sección."
+      },
+      {
+        "question": "¿Qué hago si estoy en la fila equivocada el día de la votación?",
+        "answer": "Busca a un encargado de mesa (mesário) o al personal presente ese día — pueden revisar el sistema para confirmar tu sección correcta y dirigirte sin que tengas que salir del edificio."
+      }
+    ]
   }
 }

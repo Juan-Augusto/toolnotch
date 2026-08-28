@@ -147,6 +147,19 @@ export default function TriviaPlayer({ quiz }: TriviaPlayerProps) {
                         })}
                   </span>
                 )}
+                {question.explanation && (
+                  <p className="mt-2 text-xs opacity-90">{question.explanation}</p>
+                )}
+                {question.source && (
+                  <a
+                    href={question.source.url}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="mt-1 inline-block text-xs underline"
+                  >
+                    {t('trivia.sourceLabel', { source: question.source.name })}
+                  </a>
+                )}
               </motion.div>
             )}
           </AnimatePresence>

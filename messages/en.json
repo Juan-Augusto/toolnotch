@@ -2472,6 +2472,7 @@
       "timeUp": "Time's up!",
       "nextQuestion": "Next Question",
       "seeResult": "See My Result",
+      "sourceLabel": "Source: {source}",
       "tiers": {
         "legend": "Legend",
         "expert": "Expert",
@@ -2681,6 +2682,18 @@
       "f1DriverQuiz": {
         "label": "Which F1 Driver Are You?",
         "desc": "Verstappen, Hamilton, Senna, or Norris?"
+      },
+      "politicalProfileQuiz": {
+        "label": "What's Your Political Profile?",
+        "desc": "A fun, neutral values quiz — discover your political archetype"
+      },
+      "echoChamberQuiz": {
+        "label": "Political Echo Chamber Quiz",
+        "desc": "Discover how much your feed and social circle echo your own views."
+      },
+      "fakeNewsQuiz": {
+        "label": "Fake News or Fact?",
+        "desc": "10 viral claims — can you spot which ones are true?"
       },
       "retroBoard": {
         "label": "Retrospective Board",
@@ -4318,5 +4331,149 @@
     },
     "tagline": "Free tools that run in your browser. No sign-up. No data stored.",
     "copyright": "© 2026 ToolNotch · Built by {name}"
+  },
+  "electionCountdown": {
+    "metaTitle": "Brazil 2026 Election Countdown | ToolNotch",
+    "metaDescription": "Live countdown to Brazil's 2026 general election. Official first-round (Oct 4) and runoff (Oct 25) dates confirmed by TSE. No polls, no candidates, no opinions.",
+    "title": "Brazil 2026 Election Countdown",
+    "description": "How many days until Brazil's 2026 general election? Live countdown to the first round (October 4) and the runoff (October 25, if needed), based on official TSE dates.",
+    "round1Label": "Round 1",
+    "round2Label": "Runoff (if needed)",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "electionConcludedRound1": "The first round has closed. Waiting to confirm whether a runoff is needed.",
+    "electionConcludedRound2": "Brazil's 2026 election period has concluded. This page does not track results — see the TSE for official information.",
+    "faqs": [
+      {
+        "question": "When is Brazil's 2026 election?",
+        "answer": "Brazil's 2026 general election takes place on Sunday, October 4, 2026 (first round). The date is fixed by the Brazilian Constitution and the Elections Law (Lei nº 9.504/1997), which set the first Sunday of October as election day, and was confirmed officially by Brazil's Superior Electoral Court (TSE)."
+      },
+      {
+        "question": "How does the runoff work?",
+        "answer": "A runoff happens only for the President and Governor races, and only if no candidate wins more than 50% of valid votes in round 1. If needed, it's held on the last Sunday of October — October 25, 2026. Senate and Deputy races are decided in a single round."
+      },
+      {
+        "question": "Who can vote in Brazil's 2026 election?",
+        "answer": "Voting is mandatory for literate citizens aged 18–70. It's optional for 16–17 year-olds, for people over 70, and for citizens who cannot read or write. See the TSE for complete eligibility rules."
+      },
+      {
+        "question": "What's being elected on October 4?",
+        "answer": "On the same day, Brazil elects its President, state Governors, Senators, and federal, state, and district-level legislators. Only the Presidential and Governor races can go to a runoff."
+      },
+      {
+        "question": "Can the election date change?",
+        "answer": "No — the first-Sunday-of-October and last-Sunday-of-October dates are set by the Constitution and Elections Law, not by discretionary scheduling, which is why this countdown uses fixed dates."
+      }
+    ],
+    "richContent": {
+      "whatIs": "Brazil's 2026 general election takes place on Sunday, October 4, 2026, when voters choose the President, state Governors, Senators, and federal, state, and district legislators — all in a single vote. The date is set by the Brazilian Constitution and the 1997 Elections Law, which fix the first Sunday of October as election day. If no candidate for President or Governor wins more than 50% of valid votes, a runoff is held on the last Sunday of October — October 25, 2026. Both dates were confirmed by Brazil's Superior Electoral Court (TSE).",
+      "howToUse": [
+        "The live countdown at the top shows days, hours, minutes, and seconds until polls close for the current round.",
+        "It switches automatically from round 1 to the runoff once October 4 voting hours end.",
+        "Both official dates stay visible below the countdown, even after round 1 has passed."
+      ],
+      "whyItMatters": "Brazil uses a two-round system for its top two offices — President and Governor — to ensure the winner has support from a majority of voters, not just a plurality. Senate and legislative seats, by contrast, are decided in one round. Whether a runoff happens is only confirmed after round-1 results are counted, which is why this page frames October 25 as conditional rather than certain.",
+      "proTip": "If your state's Governor race — or the Presidential race — goes to a runoff, this page automatically switches its countdown to October 25, 2026."
+    }
+  },
+  "pollingPlaceFinder": {
+    "metaTitle": "Where Do I Vote in Brazil's 2026 Election? How to Find Your Polling Place | ToolNotch",
+    "metaDescription": "A plain-English guide to Brazil's polling-place system and how any registered voter checks their assigned voting location through the official TSE tools — no forms, no data collected here.",
+    "title": "Where Do I Vote in Brazil's 2026 Election? How to Find Your Polling Place",
+    "description": "How Brazil's voting-location system works, and the two official TSE tools every voter uses to check their assigned polling place.",
+    "intro": "Brazil's electoral system assigns every voter to a specific polling place — and it can genuinely change between elections. This guide explains how that assignment works and how to look yours up in under two minutes, using only Brazil's official electoral authority, the TSE.",
+    "sections": {
+      "whatIsPollingPlace": {
+        "heading": "What is a \"polling place\" (local de votação) in Brazil?",
+        "body": [
+          "In Brazil's electoral system, every registered voter is assigned to an electoral zone (zona eleitoral) and, within it, a specific polling section (seção eleitoral) — a small group of voters who share one ballot box at one physical location, usually a school or public building. Together, the zone and section point to a single address: your polling place.",
+          "These assignments aren't permanent. Brazil's electoral court (TSE) and its regional branches (TREs) periodically reorganize zones and sections — because voters move, buildings used as polling places close, or voter counts need rebalancing. That means your polling place can change between elections even if you haven't moved, which is why officials recommend checking it before every election rather than relying on where you voted last time."
+        ]
+      },
+      "howToCheck": {
+        "heading": "How to check your polling place (official steps)",
+        "intro": "Two official, free tools handle this — both run directly by TSE. Avoid any third-party site or app claiming to do this lookup for you; only tse.jus.br and the official e-Título app are authoritative.",
+        "steps": [
+          {
+            "title": "On TSE's website (Autoatendimento Eleitoral)",
+            "body": "Go to tse.jus.br, open \"Serviços eleitorais,\" and select \"Autoatendimento Eleitoral\" (the self-service portal that replaced the older Título Net system). Inside it, choose \"Onde votar\" (\"Where to vote\") to open the lookup form."
+          },
+          {
+            "title": "On the e-Título app (Android and iOS)",
+            "body": "Download e-Título from your phone's app store and log in. Your assigned polling place shows on the home screen, complete with the full address and, on election day, a built-in map to help you get there."
+          },
+          {
+            "title": "What you'll need to enter",
+            "body": "Both tools ask for your voter registration number (título de eleitor), CPF, or full name, plus your date of birth, to confirm your identity before showing your result."
+          }
+        ]
+      },
+      "lostTitle": {
+        "heading": "Lost your voter registration card? Here's what actually matters",
+        "body": [
+          "You don't need the physical card to vote — a government-issued photo ID is enough. Poll workers confirm your section through the electoral system, not a piece of paper.",
+          "If you'd still like to regularize your registration or check your status, the fastest path is the e-Título app or TSE's Autoatendimento Eleitoral portal — both let you view your standing and request a digital reissue without visiting an electoral office in person."
+        ]
+      },
+      "movedCity": {
+        "heading": "Moved cities, states, or abroad — does that change your polling place?",
+        "body": [
+          "Yes. If you move to a different municipality (or even a different neighborhood covered by another zone), your polling place stays tied to your old zone until you formally request an electoral address transfer — simply living somewhere new doesn't update it automatically.",
+          "For Brazilians living abroad, voting happens at a consular section rather than a domestic polling place, and registration works a bit differently — TSE's own site has a dedicated \"voto no exterior\" section covering that process. Either way, transfer and registration requests must be filed within the deadline set by TSE's official election calendar for that year, and that window typically closes well before election day — check the current calendar rather than assuming last cycle's dates still apply."
+        ]
+      },
+      "whatToBring": {
+        "heading": "What to bring on election day",
+        "body": [
+          "Bring an official photo ID — not necessarily the physical voter card. TSE generally accepts a national ID card (RG or the newer Carteira de Identidade Nacional), driver's license, passport, work card, or licensed professional ID cards. Confirm the current accepted-document list on TSE's official site or app before election day.",
+          "Arrive at your assigned section within the voting hours TSE sets for that election. Voters already in line when polls close are typically still allowed to vote, but it's not worth cutting it close."
+        ],
+        "documentList": [
+          "National ID card (RG) or Carteira de Identidade Nacional (CIN)",
+          "Driver's license (CNH)",
+          "Passport",
+          "Work card (Carteira de Trabalho)",
+          "Licensed professional ID cards recognized by law"
+        ]
+      }
+    },
+    "cta": {
+      "label": "Look up my polling place on TSE's official site",
+      "sublabel": "You'll be redirected to tse.jus.br — the only official channel for this lookup. ToolNotch never sees, processes, or stores any of your voter data."
+    },
+    "howToSteps": [
+      "Go to tse.jus.br and open Autoatendimento Eleitoral, or install the e-Título app on your phone.",
+      "Select \"Onde votar\" (\"Where to vote\") from the lookup menu.",
+      "Enter your voter registration number, CPF, or full name, along with your date of birth.",
+      "Review the zone, section, and address shown for your assigned polling place."
+    ],
+    "faqs": [
+      {
+        "question": "Can I vote at any polling place?",
+        "answer": "No. You can only vote at the specific section you're assigned to, even if another location is closer on election day. Always confirm the correct address before you head out."
+      },
+      {
+        "question": "What if I don't have my voter registration card anymore?",
+        "answer": "You don't need the physical card to vote — a government photo ID is enough. To regularize your registration or get a digital reissue, use the e-Título app or TSE's Autoatendimento Eleitoral portal."
+      },
+      {
+        "question": "Can I look up someone else's polling place?",
+        "answer": "Not through your own e-Título app login — it only shows the data for the account you're logged into. To check someone else's polling place (with their consent), use TSE's Autoatendimento Eleitoral site and enter their information there."
+      },
+      {
+        "question": "Does the polling place change every election?",
+        "answer": "It can. TSE periodically reorganizes zones and sections, so it's worth rechecking before every election instead of assuming it's the same as last time — even if you haven't moved."
+      },
+      {
+        "question": "Do I need to bring the physical voter registration card on election day?",
+        "answer": "No. An official photo ID — RG, driver's license, passport, or another document TSE accepts — is enough to confirm your identity at your section."
+      },
+      {
+        "question": "What if I'm in the wrong line on election day?",
+        "answer": "Find a poll worker (mesário) or election-day staff on-site — they can check the system for your correct section and redirect you without you having to leave the building."
+      }
+    ]
   }
 }

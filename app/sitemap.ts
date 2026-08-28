@@ -108,6 +108,11 @@ const ALL_ROUTES = [
   '/quiz/what-is-your-love-language',
   '/quiz/formula-1-trivia',
   '/quiz/which-f1-driver-are-you',
+  // Election 2026 quizzes
+  '/quiz/what-is-your-political-profile',
+  '/quiz/political-echo-chamber-quiz',
+  '/quiz/which-historical-figure-matches-you',
+  '/quiz/fake-news-or-fact',
   // Health tools
   '/tools/health',
   '/tools/health/bmi-calculator',
@@ -125,6 +130,8 @@ const ALL_ROUTES = [
   // Utilities
   '/tools/utilities',
   '/tools/utilities/qr-code-generator',
+  '/tools/utilities/election-countdown',
+  '/tools/utilities/polling-place-finder',
   // Blog
   '/blog',
 ]

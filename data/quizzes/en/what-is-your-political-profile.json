@@ -1,0 +1,108 @@
+{
+  "id": "what-is-your-political-profile",
+  "type": "personality",
+  "category": "personality",
+  "title": "What's Your Political Profile?",
+  "description": "Answer 8 quick questions about your values to discover your political archetype. For fun and self-reflection only — not a scientific test or voting advice.",
+  "image": "/images/quizzes/what-is-your-political-profile-cover.jpg",
+  "questions": [
+    { "id": "q1", "text": "You think the government's main role should be to...", "options": [
+      { "id": "q1a", "text": "Maintain order and protect traditions", "scores": { "guardian": 3 } },
+      { "id": "q1b", "text": "Stay small and let people thrive on their own", "scores": { "builder": 3 } },
+      { "id": "q1c", "text": "Actively reduce inequality and expand public services", "scores": { "reformer": 3 } },
+      { "id": "q1d", "text": "Protect individual rights above all", "scores": { "free-thinker": 3 } },
+      { "id": "q1e", "text": "Adapt case-by-case — no single rule fits every situation", "scores": { "balancer": 3 } }
+    ]},
+    { "id": "q2", "text": "When it comes to taxes, you lean toward...", "options": [
+      { "id": "q2a", "text": "Moderate, stable taxes that fund strong institutions (police, courts, defense)", "scores": { "guardian": 3 } },
+      { "id": "q2b", "text": "Lower taxes so people and businesses keep more of what they earn", "scores": { "builder": 3 } },
+      { "id": "q2c", "text": "Higher taxes on higher incomes to fund public programs", "scores": { "reformer": 3 } },
+      { "id": "q2d", "text": "Taxes should be minimal — people should choose how to spend their own money", "scores": { "free-thinker": 3 } },
+      { "id": "q2e", "text": "A mix — what matters is how efficiently the money is spent", "scores": { "balancer": 3 } }
+    ]},
+    { "id": "q3", "text": "On the economy, you believe...", "options": [
+      { "id": "q3a", "text": "Stability and predictability matter more than fast growth", "scores": { "guardian": 3 } },
+      { "id": "q3b", "text": "Free markets and competition create the best outcomes for everyone", "scores": { "builder": 3 } },
+      { "id": "q3c", "text": "Government should actively regulate markets to protect workers and consumers", "scores": { "reformer": 3 } },
+      { "id": "q3d", "text": "People should be free to make their own economic choices, with minimal interference", "scores": { "free-thinker": 3 } },
+      { "id": "q3e", "text": "Markets need some rules, but not too many — it depends on the industry", "scores": { "balancer": 3 } }
+    ]},
+    { "id": "q4", "text": "On personal freedoms and social norms, you think...", "options": [
+      { "id": "q4a", "text": "Shared traditions and community standards keep society stable", "scores": { "guardian": 3 } },
+      { "id": "q4b", "text": "People should be free to live as they choose, as long as they respect others", "scores": { "builder": 3 } },
+      { "id": "q4c", "text": "Laws should evolve quickly to reflect changing social values", "scores": { "reformer": 3 } },
+      { "id": "q4d", "text": "Personal choices are nobody's business but your own", "scores": { "free-thinker": 3 } },
+      { "id": "q4e", "text": "Change is fine, but it should happen gradually, not overnight", "scores": { "balancer": 3 } }
+    ]},
+    { "id": "q5", "text": "Faced with a new problem in your city, your instinct is to...", "options": [
+      { "id": "q5a", "text": "Trust experienced institutions to handle it the tried-and-tested way", "scores": { "guardian": 3 } },
+      { "id": "q5b", "text": "Let local communities and businesses solve it without top-down rules", "scores": { "builder": 3 } },
+      { "id": "q5c", "text": "Push for bold new public policy to fix it at the root", "scores": { "reformer": 3 } },
+      { "id": "q5d", "text": "Question whether it's the government's job to get involved at all", "scores": { "free-thinker": 3 } },
+      { "id": "q5e", "text": "Look at what's worked elsewhere and adapt it", "scores": { "balancer": 3 } }
+    ]},
+    { "id": "q6", "text": "When you disagree with a rule or law, you usually...", "options": [
+      { "id": "q6a", "text": "Respect it — rules exist for a reason, even ones you don't love", "scores": { "guardian": 3 } },
+      { "id": "q6b", "text": "Look for ways to work around it while building your own path", "scores": { "builder": 3 } },
+      { "id": "q6c", "text": "Get involved to change it through collective action", "scores": { "reformer": 3 } },
+      { "id": "q6d", "text": "Push back hard — restrictions on freedom bother you", "scores": { "free-thinker": 3 } },
+      { "id": "q6e", "text": "Try to understand both sides before deciding how to react", "scores": { "balancer": 3 } }
+    ]},
+    { "id": "q7", "text": "Your view on how involved government should be in people's daily lives...", "options": [
+      { "id": "q7a", "text": "Enough to keep things safe and orderly", "scores": { "guardian": 3 } },
+      { "id": "q7b", "text": "As little as possible — people manage best on their own", "scores": { "builder": 3 } },
+      { "id": "q7c", "text": "A lot — government can be a powerful tool for fairness", "scores": { "reformer": 3 } },
+      { "id": "q7d", "text": "Almost none — that's for the individual to decide", "scores": { "free-thinker": 3 } },
+      { "id": "q7e", "text": "Depends entirely on the issue at hand", "scores": { "balancer": 3 } }
+    ]},
+    { "id": "q8", "text": "If you had to pick one value that matters most to you in a leader...", "options": [
+      { "id": "q8a", "text": "Stability and reliability", "scores": { "guardian": 3 } },
+      { "id": "q8b", "text": "Efficiency and results", "scores": { "builder": 3 } },
+      { "id": "q8c", "text": "Compassion and fairness", "scores": { "reformer": 3 } },
+      { "id": "q8d", "text": "Respect for individual liberty", "scores": { "free-thinker": 3 } },
+      { "id": "q8e", "text": "Willingness to listen and adapt", "scores": { "balancer": 3 } }
+    ]}
+  ],
+  "results": [
+    {
+      "id": "guardian",
+      "title": "The Guardian",
+      "description": "Your results point to The Guardian — someone who values stability, order, and the strength of long-standing institutions. You believe that steady, tested approaches serve people better than sudden change, and that shared rules and structure are what keep a community functioning smoothly. You're drawn to predictability: you'd rather build on something that has proven itself over time than gamble on an untested idea, even if that idea sounds exciting on paper. In everyday trade-offs, you tend to prioritize reliability over speed and caution over risk — you ask 'will this still work in ten years?' before you ask 'how fast can we do this?' Civically, you're likely most comfortable engaging through established channels: showing up, following process, and trusting institutions to self-correct over time rather than tearing things down and starting over. This doesn't mean you resist all change — it means you want change to be earned, tested, and gradual rather than reactive. People like you are often the steady hand in a group, the one who remembers what happened last time and plans accordingly. That instinct for order isn't rigidity; it's a quiet form of care for the people who depend on things working the way they're supposed to.",
+      "image": "/images/results/guardian.jpg",
+      "traits": ["Steady", "Institutional", "Order-minded", "Careful"],
+      "shareText": "I'm The Guardian! I took the political profile quiz on ToolNotch."
+    },
+    {
+      "id": "builder",
+      "title": "The Builder",
+      "description": "Your results point to The Builder — someone who values self-reliance, free enterprise, and the freedom to create without unnecessary interference. You believe people and communities do their best work when they're given room to build, experiment, and take ownership of the outcome, rather than waiting for permission or guidance from above. Efficiency matters to you: you'd rather see a problem solved quickly by the people closest to it than watch it move through layers of process. In everyday trade-offs, you lean toward keeping more control in the hands of individuals and local communities — you trust that people generally know what's best for their own lives and businesses better than any outside authority does. Civically, you're likely most energized by direct action: starting something, fixing something yourself, or supporting initiatives that reward effort and results. You're not against structure entirely — you just want it to earn its keep, staying out of the way when it isn't needed. People like you tend to be the ones who get things moving when everyone else is still debating the plan. That drive isn't about going it alone; it's a belief that trust, freedom, and initiative bring out the best in people and the communities they build together.",
+      "image": "/images/results/builder.jpg",
+      "traits": ["Self-reliant", "Entrepreneurial", "Independent", "Efficient"],
+      "shareText": "I'm The Builder! I took the political profile quiz on ToolNotch."
+    },
+    {
+      "id": "reformer",
+      "title": "The Reformer",
+      "description": "Your results point to The Reformer — someone who values fairness and believes that thoughtful public policy can be a genuine force for positive change. You tend to notice when a system isn't working for everyone, and your instinct is to fix it at the root rather than patch around it. Equity matters deeply to you: you believe that collective action, done well, can lift people up in ways individual effort alone often can't. In everyday trade-offs, you're generally willing to invest more — time, resources, or structure — if it means a fairer outcome for more people, even when that path is slower or more complicated than the alternative. Civically, you're likely drawn to organizing, advocacy, or public service — anywhere that lets you push an idea from 'this should change' to 'this changed.' You're comfortable with ambition; big problems don't scare you off, they motivate you. This doesn't mean you want change for its own sake — it means you believe inaction has a cost too, and that waiting for problems to fix themselves rarely works. People like you tend to be the ones asking 'but is this actually fair?' in rooms where no one else thought to ask. That instinct isn't idealism without substance; it's a genuine belief that things can, and should, get better.",
+      "image": "/images/results/reformer.jpg",
+      "traits": ["Fair-minded", "Proactive", "Idealistic", "Community-driven"],
+      "shareText": "I'm The Reformer! I took the political profile quiz on ToolNotch."
+    },
+    {
+      "id": "free-thinker",
+      "title": "The Free Thinker",
+      "description": "Your results point to The Free Thinker — someone who values individual liberty above almost everything else. You believe people should be free to live, choose, and spend their own resources as they see fit, without someone else deciding what's best for them. Autonomy isn't just a preference for you — it's close to a first principle: your rights end where someone else's begin, and not a moment sooner. In everyday trade-offs, you tend to push back against rules or restrictions that limit personal choice, even when they're framed as being for the greater good — you want to see the specific justification, not just take it on faith. Civically, you're likely most comfortable as an independent voice: questioning assumptions, resisting groupthink, and standing by your own conclusions even when they're unpopular. This doesn't mean you're indifferent to others — it means you believe respecting people's autonomy is itself a form of respect, maybe the most fundamental one there is. People like you tend to be the ones who ask 'why does this rule exist at all?' when everyone else has stopped questioning it. That instinct isn't about rejecting responsibility — it's a conviction that freedom, real freedom, is worth defending even when it's inconvenient.",
+      "image": "/images/results/free-thinker.jpg",
+      "traits": ["Independent", "Principled", "Liberty-minded", "Unconventional"],
+      "shareText": "I'm The Free Thinker! I took the political profile quiz on ToolNotch."
+    },
+    {
+      "id": "balancer",
+      "title": "The Balancer",
+      "description": "Your results point to The Balancer — someone who values pragmatism, nuance, and the willingness to look at each situation on its own terms rather than through a fixed ideology. You're genuinely skeptical of one-size-fits-all answers; your instinct is to ask what's actually worked before, weigh the trade-offs honestly, and adapt from there. Consistency matters less to you than being right for the specific problem in front of you. In everyday trade-offs, you're comfortable holding views that don't fit neatly into a single camp — favoring caution here, boldness there — because you judge each issue on its own merits rather than defaulting to a pre-set position. Civically, you're likely the person in the room who asks clarifying questions before taking a side, who can see the strongest version of more than one argument, and who's genuinely open to changing your mind when the evidence shifts. This doesn't mean you're indecisive — it means you'd rather be accurate than consistent. People like you tend to be the ones who keep a conversation grounded when it starts sliding toward extremes on either side. That instinct isn't fence-sitting; it's a quiet confidence that the truth is usually more complicated than either side wants to admit.",
+      "image": "/images/results/balancer.jpg",
+      "traits": ["Pragmatic", "Open-minded", "Nuanced", "Adaptable"],
+      "shareText": "I'm The Balancer! I took the political profile quiz on ToolNotch."
+    }
+  ]
+}
