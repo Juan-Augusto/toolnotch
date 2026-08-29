@@ -214,14 +214,37 @@
         "placeholder": "1-3, 4-6, 7",
         "blankHint": "Leave blank to extract all pages individually."
       },
+      "examples": {
+        "title": "Formatting examples:",
+        "empty": {
+          "label": "(blank)",
+          "desc": "Extracts all pages of the document individually."
+        },
+        "single": {
+          "desc": "Extracts only page 5."
+        },
+        "range": {
+          "desc": "Extracts pages 2 through 5 into a single file."
+        },
+        "combined": {
+          "desc": "Creates separate files for each specified range (e.g. 1-3, 5, 8-10)."
+        }
+      },
       "button": {
         "split": "Split PDF",
         "splitting": "Splitting…"
       },
       "errors": {
         "noFile": "Please select a PDF file.",
-        "splitFailed": "Split failed."
+        "splitFailed": "Split failed.",
+        "invalidFormat": "Invalid page range format. Use format like 1-3, 5 or leave blank.",
+        "startGreaterThanEnd": "Start page cannot be greater than end page (e.g. 1-3).",
+        "zeroPage": "Page numbers must be greater than 0.",
+        "pageOutOfBounds": "Page range exceeds document page count ({total} pages).",
+        "invalidFile": "Could not load PDF. It may be password-protected or corrupted."
       },
+      "pageCountSingular": "page",
+      "pageCountPlural": "pages",
       "success": "Split PDF(s) downloaded!",
       "faqs": [
         {
