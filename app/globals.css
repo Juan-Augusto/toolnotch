@@ -147,7 +147,8 @@ input:not([type="range"]):not([type="file"]):not([type="checkbox"]):not(
     [type="radio"]
   ),
 textarea,
-select {
+select,
+.input {
   background: var(--base-surface);
   color: var(--text-primary);
   border: 1px solid var(--base-border);
@@ -156,6 +157,25 @@ select {
     border-color 180ms,
     box-shadow 180ms;
   @apply hover:border-gray-300 dark:hover:border-gray-600 focus:outline-0 focus:border-neon focus:ring-1 focus:ring-neon;
+}
+
+.input {
+  @apply px-4 py-2;
+}
+
+select {
+  @apply cursor-pointer;
+}
+
+/* Remove spin buttons from number inputs globally */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 /* ── Scrollbar ── */

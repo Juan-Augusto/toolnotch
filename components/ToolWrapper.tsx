@@ -51,7 +51,7 @@ export default function ToolWrapper({
           >
             <Link
               href="/"
-              className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1.5"
+              className="hover:underline flex items-center gap-1.5 "
             >
               <Home size={13} />
               <span>{t("breadcrumb.home")}</span>
@@ -62,7 +62,7 @@ export default function ToolWrapper({
 
           <Link
             href="/"
-            className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1.5 text-sm"
+            className="hover:underline flex items-center gap-1.5 text-sm"
           >
             <ArrowLeft size={13} />
             {t("allTools")}
