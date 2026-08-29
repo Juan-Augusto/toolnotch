@@ -166,14 +166,37 @@
         "placeholder": "1-3, 4-6, 7",
         "blankHint": "Déjalo en blanco para extraer todas las páginas individualmente."
       },
+      "examples": {
+        "title": "Ejemplos de formato:",
+        "empty": {
+          "label": "(en blanco)",
+          "desc": "Extrae todas las páginas del documento individualmente."
+        },
+        "single": {
+          "desc": "Extrae únicamente la página 5."
+        },
+        "range": {
+          "desc": "Extrae de la página 2 a la 5 en un archivo."
+        },
+        "combined": {
+          "desc": "Crea archivos separados para cada rango especificado (p. ej. 1-3, 5, 8-10)."
+        }
+      },
       "button": {
         "split": "Dividir PDF",
         "splitting": "Dividiendo…"
       },
       "errors": {
         "noFile": "Por favor selecciona un archivo PDF.",
-        "splitFailed": "Error al dividir."
+        "splitFailed": "Error al dividir.",
+        "invalidFormat": "Formato de rango inválido. Usa un formato como 1-3, 5 o déjalo en blanco.",
+        "startGreaterThanEnd": "La página inicial no puede ser mayor que la final (ej.: 1-3).",
+        "zeroPage": "Los números de página deben ser mayores que 0.",
+        "pageOutOfBounds": "El rango de páginas supera el total del documento ({total} páginas).",
+        "invalidFile": "No se pudo cargar el PDF. Puede estar dañado o protegido con contraseña."
       },
+      "pageCountSingular": "página",
+      "pageCountPlural": "páginas",
       "success": "¡PDF(s) dividido(s) descargado(s)!",
       "faqs": [
         {
