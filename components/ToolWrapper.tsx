@@ -42,7 +42,7 @@ export default function ToolWrapper({
 
   return (
     <main className="min-h-screen" style={{ background: "var(--background)" }}>
-      <div className={`${maxWidth ?? "max-w-3xl"} mx-auto px-4 py-8`}>
+      <div className={`${maxWidth ?? "max-w-4xl"} mx-auto px-4 py-8`}>
         {/* Breadcrumb + Back */}
         <div className="flex items-center justify-between mb-10 no-print">
           <nav
