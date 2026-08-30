@@ -346,13 +346,19 @@
         "label": "Clique ou arraste imagens aqui",
         "hint": "JPEG ou PNG — vários arquivos suportados"
       },
+      "filename": {
+        "label": "Nome personalizado do PDF",
+        "hint": "opcional",
+        "placeholder": "images"
+      },
       "button": {
         "convert": "Converter para PDF",
         "converting": "Convertendo…"
       },
       "errors": {
         "noImages": "Adicione pelo menos uma imagem.",
-        "conversionFailed": "Falha na conversão."
+        "conversionFailed": "Falha na conversão.",
+        "invalidFilename": "Formato de arquivo ou nome inválido. Somente .pdf é suportado."
       },
       "success": "PDF baixado!",
       "faqs": [

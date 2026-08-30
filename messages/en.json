@@ -466,13 +466,19 @@
         "label": "Click or drag images here",
         "hint": "JPEG or PNG — multiple files supported"
       },
+      "filename": {
+        "label": "Custom PDF file name",
+        "hint": "optional",
+        "placeholder": "images"
+      },
       "button": {
         "convert": "Convert to PDF",
         "converting": "Converting…"
       },
       "errors": {
         "noImages": "Add at least one image.",
-        "conversionFailed": "Conversion failed."
+        "conversionFailed": "Conversion failed.",
+        "invalidFilename": "Invalid file format or name. Only .pdf is supported."
       },
       "success": "PDF downloaded!",
       "faqs": [
