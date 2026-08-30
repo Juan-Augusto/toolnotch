@@ -1851,6 +1851,65 @@
       "metaDescription": "Gerador de times aleatórios gratuito. Cole uma lista de nomes, escolha quantos times e obtenha grupos equilibrados instantaneamente. Perfeito para esportes, salas de aula e trabalho.",
       "title": "Gerador de Times Aleatórios",
       "description": "Cole os nomes, escolha o número de times e obtenha grupos equilibrados instantaneamente.",
+      "participants": {
+        "title": "Participantes",
+        "inputPlaceholder": "Digite o nome do participante...",
+        "addButton": "Adicionar",
+        "bulkToggle": "Colar lista de nomes",
+        "bulkPlaceholder": "Cole vários nomes aqui (um por linha)...",
+        "bulkAddButton": "Adicionar à lista",
+        "clearAll": "Limpar tudo",
+        "loadSample": "Carregar exemplo",
+        "count": "{count} participante(s)",
+        "empty": "Nenhum participante adicionado ainda. Digite um nome acima ou cole uma lista."
+      },
+      "mode": {
+        "byTeams": "Por número de times",
+        "byTeamSize": "Por tamanho do time",
+        "byTeamNames": "Por nomes dos times"
+      },
+      "teamCount": {
+        "label": "Número de times",
+        "hint": "De 2 até o total de participantes"
+      },
+      "teamSize": {
+        "label": "Participantes por time",
+        "hint": "Quantidade média desejada de membros em cada time"
+      },
+      "teamNames": {
+        "title": "Nomes dos Times",
+        "inputPlaceholder": "Ex: Time Backend, Time Frontend...",
+        "addButton": "Adicionar time",
+        "bulkToggle": "Colar lista de times",
+        "bulkPlaceholder": "Cole nomes de times aqui (um por linha)...",
+        "bulkAddButton": "Adicionar times à lista",
+        "loadSample": "Carregar exemplo",
+        "clearAll": "Limpar times",
+        "count": "{count} time(s)",
+        "empty": "Nenhum time adicionado ainda. Digite os nomes dos times acima ou cole uma lista."
+      },
+      "errors": {
+        "minParticipants": "Adicione pelo menos 2 participantes para gerar times.",
+        "invalidTeamCountMin": "O número mínimo de times é 2.",
+        "invalidTeamCountMax": "O número de times ({teams}) não pode ser maior que o número de participantes ({total}).",
+        "invalidCustomTeamNamesMin": "Adicione pelo menos 2 nomes de times.",
+        "invalidCustomTeamNamesMax": "O número de times ({teams}) não pode ser maior que o número de participantes ({total}).",
+        "invalidTeamSizeMin": "O tamanho do time deve ser de pelo menos 1 participante.",
+        "invalidTeamSizeMax": "O tamanho do time ({size}) deve permitir criar pelo menos 2 times."
+      },
+      "button": {
+        "generate": "Gerar Times",
+        "generating": "Gerando times..."
+      },
+      "results": {
+        "title": "Times Gerados",
+        "copyAll": "Copiar todos",
+        "copied": "Copiado!",
+        "teamTitle": "Time {number}",
+        "memberCount": "{count} participante(s)",
+        "fewerMembers": "Menos membros ({count})",
+        "balancedNotice": "Times distribuídos de forma equilibrada com diferença máxima de 1 participante."
+      },
       "faqs": [
         {
           "question": "Como os times são equilibrados?",

@@ -1852,6 +1852,65 @@
       "metaDescription": "Generador de equipos aleatorios gratuito. Pega una lista de nombres, elige cuántos equipos quieres y obtén equipos distribuidos de forma justa al instante. Ideal para deportes, clases y trabajo.",
       "title": "Generador de Equipos Aleatorios",
       "description": "Pega los nombres, elige el número de equipos y obtén grupos balanceados al azar al instante.",
+      "participants": {
+        "title": "Participantes",
+        "inputPlaceholder": "Nombre del participante...",
+        "addButton": "Agregar",
+        "bulkToggle": "Pegar lista de nombres",
+        "bulkPlaceholder": "Pega varios nombres aquí (uno por línea)...",
+        "bulkAddButton": "Agregar a la lista",
+        "clearAll": "Limpiar todo",
+        "loadSample": "Cargar ejemplo",
+        "count": "{count} participante(s)",
+        "empty": "Aún no hay participantes agregados. Escribe un nombre arriba o pega una lista."
+      },
+      "mode": {
+        "byTeams": "Por número de equipos",
+        "byTeamSize": "Por tamaño de equipo",
+        "byTeamNames": "Por nombres de equipos"
+      },
+      "teamCount": {
+        "label": "Número de equipos",
+        "hint": "De 2 hasta el total de participantes"
+      },
+      "teamSize": {
+        "label": "Participantes por equipo",
+        "hint": "Cantidad promedio deseada de miembros en cada equipo"
+      },
+      "teamNames": {
+        "title": "Nombres de los Equipos",
+        "inputPlaceholder": "Ej: Equipo Backend, Equipo Frontend...",
+        "addButton": "Agregar equipo",
+        "bulkToggle": "Pegar lista de equipos",
+        "bulkPlaceholder": "Pega nombres de equipos aquí (uno por línea)...",
+        "bulkAddButton": "Agregar equipos a la lista",
+        "loadSample": "Cargar ejemplo",
+        "clearAll": "Limpiar equipos",
+        "count": "{count} equipo(s)",
+        "empty": "Ningún equipo agregado aún. Escribe nombres de equipos arriba o pega una lista."
+      },
+      "errors": {
+        "minParticipants": "Agrega al menos 2 participantes para generar equipos.",
+        "invalidTeamCountMin": "El número mínimo de equipos es 2.",
+        "invalidTeamCountMax": "El número de equipos ({teams}) no puede ser mayor que el de participantes ({total}).",
+        "invalidCustomTeamNamesMin": "Agrega al menos 2 nombres de equipos.",
+        "invalidCustomTeamNamesMax": "El número de equipos ({teams}) no puede ser mayor que el de participantes ({total}).",
+        "invalidTeamSizeMin": "El tamaño del equipo debe ser de al menos 1 participante.",
+        "invalidTeamSizeMax": "El tamaño del equipo ({size}) debe permitir crear al menos 2 equipos."
+      },
+      "button": {
+        "generate": "Generar Equipos",
+        "generating": "Generando equipos..."
+      },
+      "results": {
+        "title": "Equipos Generados",
+        "copyAll": "Copiar todo",
+        "copied": "¡Copiado!",
+        "teamTitle": "Equipo {number}",
+        "memberCount": "{count} participante(s)",
+        "fewerMembers": "Menos miembros ({count})",
+        "balancedNotice": "Equipos distribuidos de forma equilibrada con diferencia máxima de 1 participante."
+      },
       "faqs": [
         {
           "question": "¿Cómo se balancean los equipos?",

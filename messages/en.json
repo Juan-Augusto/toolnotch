@@ -2256,6 +2256,65 @@
       "metaDescription": "Free random team generator. Paste a list of names, choose how many teams, and get fairly shuffled teams instantly. Perfect for sports, classrooms, and work.",
       "title": "Random Team Generator",
       "description": "Paste names, choose the number of teams, and get randomly balanced groups instantly.",
+      "participants": {
+        "title": "Participants",
+        "inputPlaceholder": "Enter participant name...",
+        "addButton": "Add",
+        "bulkToggle": "Paste multiple names",
+        "bulkPlaceholder": "Paste multiple names here (one per line)...",
+        "bulkAddButton": "Add to list",
+        "clearAll": "Clear all",
+        "loadSample": "Load sample",
+        "count": "{count} participant(s)",
+        "empty": "No participants added yet. Type a name above or paste a list."
+      },
+      "mode": {
+        "byTeams": "By number of teams",
+        "byTeamSize": "By team size",
+        "byTeamNames": "By custom team names"
+      },
+      "teamCount": {
+        "label": "Number of teams",
+        "hint": "From 2 up to total participants"
+      },
+      "teamSize": {
+        "label": "Participants per team",
+        "hint": "Desired average number of members in each team"
+      },
+      "teamNames": {
+        "title": "Team Names",
+        "inputPlaceholder": "e.g. Backend Team, Frontend Team...",
+        "addButton": "Add team",
+        "bulkToggle": "Paste team names",
+        "bulkPlaceholder": "Paste team names here (one per line)...",
+        "bulkAddButton": "Add teams to list",
+        "loadSample": "Load sample",
+        "clearAll": "Clear teams",
+        "count": "{count} team(s)",
+        "empty": "No custom teams added yet. Type team names above or paste a list."
+      },
+      "errors": {
+        "minParticipants": "Add at least 2 participants to generate teams.",
+        "invalidTeamCountMin": "Minimum number of teams is 2.",
+        "invalidTeamCountMax": "Number of teams ({teams}) cannot exceed number of participants ({total}).",
+        "invalidCustomTeamNamesMin": "Add at least 2 custom team names.",
+        "invalidCustomTeamNamesMax": "The number of teams ({teams}) cannot exceed the number of participants ({total}).",
+        "invalidTeamSizeMin": "Team size must be at least 1 participant.",
+        "invalidTeamSizeMax": "Team size ({size}) must allow creating at least 2 teams."
+      },
+      "button": {
+        "generate": "Generate Teams",
+        "generating": "Generating teams..."
+      },
+      "results": {
+        "title": "Generated Teams",
+        "copyAll": "Copy all",
+        "copied": "Copied!",
+        "teamTitle": "Team {number}",
+        "memberCount": "{count} participant(s)",
+        "fewerMembers": "Fewer members ({count})",
+        "balancedNotice": "Teams balanced with at most 1 member difference."
+      },
       "faqs": [
         {
           "question": "How are teams balanced?",
