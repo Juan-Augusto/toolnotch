@@ -2227,6 +2227,7 @@
       "timeUp": "Tempo esgotado!",
       "nextQuestion": "Próxima Pergunta",
       "seeResult": "Ver Meu Resultado",
+      "sourceLabel": "Fonte: {source}",
       "tiers": {
         "legend": "Lenda",
         "expert": "Especialista",
@@ -2436,6 +2437,18 @@
       "f1DriverQuiz": {
         "label": "Qual Piloto de F1 É Você?",
         "desc": "Verstappen, Hamilton, Senna ou Norris?"
+      },
+      "politicalProfileQuiz": {
+        "label": "Qual É o Seu Perfil Político?",
+        "desc": "Um quiz neutro e divertido sobre valores — descubra seu perfil político"
+      },
+      "echoChamberQuiz": {
+        "label": "Quiz: Bolha Política",
+        "desc": "Descubra o quanto seu feed e seu círculo reforçam só uma visão política."
+      },
+      "fakeNewsQuiz": {
+        "label": "Fake News ou Verdade?",
+        "desc": "10 boatos virais — você consegue identificar quais são reais?"
       },
       "retroBoard": {
         "label": "Quadro de Retrospectiva",
@@ -4008,5 +4021,154 @@
     },
     "tagline": "Ferramentas gratuitas direto no seu navegador. Sem cadastro. Sem dados armazenados.",
     "copyright": "© 2026 ToolNotch · Criado por {name}"
+  },
+  "electionCountdown": {
+    "metaTitle": "Contagem Regressiva Eleições 2026 — Quantos Dias Faltam? | ToolNotch",
+    "metaDescription": "Veja quantos dias, horas e minutos faltam para as eleições de 2026 no Brasil. Datas oficiais do 1º e 2º turno confirmadas pelo TSE. Sem opinião, sem candidatos.",
+    "title": "Contagem Regressiva para as Eleições 2026",
+    "description": "Quantos dias faltam para as eleições de 2026? Contagem regressiva ao vivo até o 1º turno (4 de outubro) e o 2º turno (25 de outubro, se necessário), com base em dados oficiais do TSE.",
+    "round1Label": "1º Turno",
+    "round2Label": "2º Turno (se necessário)",
+    "days": "Dias",
+    "hours": "Horas",
+    "minutes": "Minutos",
+    "seconds": "Segundos",
+    "electionConcludedRound1": "O primeiro turno foi encerrado. Aguardando confirmação sobre a necessidade de segundo turno.",
+    "electionConcludedRound2": "O período eleitoral de 2026 foi concluído. Esta página não acompanha resultados — consulte o TSE para informações oficiais.",
+    "faqs": [
+      {
+        "question": "Quando são as eleições de 2026?",
+        "answer": "As eleições de 2026 no Brasil acontecem no domingo, 4 de outubro de 2026 (1º turno). Essa data é fixada pela Constituição Federal e pela Lei das Eleições (Lei nº 9.504/1997), que estabelece o primeiro domingo de outubro como data do primeiro turno. A data foi confirmada oficialmente pelo TSE (Tribunal Superior Eleitoral)."
+      },
+      {
+        "question": "Como funciona o segundo turno?",
+        "answer": "O segundo turno só ocorre para as eleições de Presidente e Governador, e apenas se nenhum candidato alcançar mais de 50% dos votos válidos (excluindo brancos e nulos) no primeiro turno. Caso seja necessário, o segundo turno acontece no último domingo de outubro — 25 de outubro de 2026. As eleições para Senador e para Deputado Federal, Estadual e Distrital são decididas em turno único."
+      },
+      {
+        "question": "Quem pode votar nas eleições de 2026?",
+        "answer": "O voto é obrigatório para cidadãos alfabetizados entre 18 e 70 anos. É facultativo para jovens de 16 e 17 anos, para maiores de 70 anos e para analfabetos, que têm o direito de votar mas não são obrigados a fazê-lo. Consulte o site do TSE para as regras completas de alistamento e justificativa eleitoral."
+      },
+      {
+        "question": "O que é eleito no primeiro turno?",
+        "answer": "No dia 4 de outubro de 2026 são eleitos, no mesmo pleito: Presidente da República, Governadores, Senadores e Deputados Federais, Estaduais e Distritais. Apenas as disputas para Presidente e Governador podem ir a um segundo turno; as demais são definidas em turno único."
+      },
+      {
+        "question": "A data das eleições pode mudar?",
+        "answer": "Não. A data do primeiro domingo de outubro (1º turno) e do último domingo de outubro (2º turno, se necessário) é definida pela Constituição Federal e pela Lei das Eleições, não por decisão discricionária do TSE. Por isso essa contagem regressiva usa datas fixas em vez de buscar informações de uma fonte externa a cada visita."
+      },
+      {
+        "question": "A que horas fecham as urnas?",
+        "answer": "As seções eleitorais funcionam das 8h às 17h, no horário de Brasília, em todo o território nacional. Esta contagem regressiva usa o fechamento das urnas (17h) como referência, não a meia-noite."
+      }
+    ],
+    "richContent": {
+      "whatIs": "As eleições de 2026 no Brasil acontecem no domingo, 4 de outubro de 2026, quando são escolhidos o Presidente da República, os Governadores estaduais, os Senadores e os Deputados Federais, Estaduais e Distritais — todos no mesmo dia. Essa data é definida pela Constituição Federal e pela Lei das Eleições (Lei nº 9.504/1997), que fixam o primeiro domingo de outubro como data do primeiro turno em anos de eleição geral. Caso nenhum candidato a Presidente ou a Governador receba mais de 50% dos votos válidos, ocorre um segundo turno marcado para o último domingo de outubro, 25 de outubro de 2026. Essas datas foram confirmadas oficialmente pelo Tribunal Superior Eleitoral (TSE) e não estão sujeitas a alteração discricionária: seguem uma regra fixa prevista em lei, o que já ocorreu nos pleitos de 2018 (7 e 28 de outubro) e 2022 (2 e 30 de outubro).",
+      "howToUse": [
+        "Veja a contagem regressiva ao vivo no topo da página — ela mostra dias, horas, minutos e segundos até o fechamento das urnas do turno atual.",
+        "A contagem alterna automaticamente do 1º turno para o 2º turno assim que o horário de votação de 4 de outubro é encerrado.",
+        "Consulte as datas fixas de cada turno na seção abaixo da contagem, sempre visíveis, mesmo depois que o primeiro turno já tiver passado.",
+        "Leia as perguntas frequentes para entender como funciona o sistema de dois turnos e quem tem direito a voto."
+      ],
+      "whyItMatters": "Saber a data exata das eleições ajuda no planejamento pessoal — como organizar viagens, verificar o local de votação com antecedência e evitar imprevistos no dia da votação, já que o voto é obrigatório para a maior parte dos eleitores brasileiros. A definição sobre a existência ou não de um segundo turno também é relevante: ela só é confirmada depois da apuração do primeiro turno, e apenas as disputas de Presidente e Governador podem chegar a essa segunda etapa. Compreender esse mecanismo evita confusão sobre por que algumas eleições (Senador, Deputado) são decididas em uma única votação enquanto outras (Presidente, Governador) podem se estender até o fim de outubro.",
+      "proTip": "Marque o dia 4 de outubro de 2026 no seu calendário e verifique com antecedência o seu local de votação e a validade do seu título de eleitor — o TSE recomenda confirmar esses dados semanas antes do pleito para evitar contratempos. Se a disputa para Presidente ou Governador do seu estado for para o segundo turno, volte a esta página: a contagem regressiva alternará automaticamente para o dia 25 de outubro de 2026."
+    }
+  },
+  "pollingPlaceFinder": {
+    "metaTitle": "Onde Vou Votar em 2026? Como Consultar Seu Local de Votação | ToolNotch",
+    "metaDescription": "Descubra como consultar seu local de votação para as eleições de 2026 pelo site oficial do TSE. Passo a passo, o que fazer se perdeu o título e o que levar no dia da votação.",
+    "title": "Onde Vou Votar em 2026? Como Consultar Seu Local de Votação",
+    "description": "Passo a passo oficial para descobrir sua zona, seção e endereço de votação — direto no site do TSE, sem formulários nem dados pessoais no ToolNotch.",
+    "intro": "Se você não lembra onde vota, mudou de endereço recentemente ou perdeu o título de eleitor, a resposta certa está sempre no site ou aplicativo oficial do TSE — nunca em terceiros. Este guia explica o que é o local de votação, como consultá-lo em menos de dois minutos e o que fazer nos casos mais comuns antes da eleição.",
+    "sections": {
+      "whatIsPollingPlace": {
+        "heading": "O que é o \"local de votação\"?",
+        "body": [
+          "Seu local de votação é o endereço físico — geralmente uma escola ou prédio público — onde você deve comparecer para votar. Ele é definido por dois números que aparecem no seu título de eleitor: a zona eleitoral (a divisão administrativa da Justiça Eleitoral responsável pela sua região) e a seção eleitoral (o grupo específico de eleitores dentro dessa zona, cada um atendido por uma urna). Juntos, zona e seção apontam para um único endereço: o seu local de votação.",
+          "Esses números não são fixos para sempre. A cada eleição, o TSE e os Tribunais Regionais Eleitorais (TREs) podem reorganizar zonas e seções — por causa de mudanças de endereço registradas pelos próprios eleitores, fechamento ou abertura de locais de votação, ou simples redistribuição para equilibrar o número de eleitores por seção. É por isso que, mesmo sem ter feito nenhuma alteração cadastral, seu local pode não ser o mesmo da eleição anterior. A recomendação oficial é sempre reconferir antes de cada eleição."
+        ]
+      },
+      "howToCheck": {
+        "heading": "Como consultar seu local de votação (passo a passo oficial)",
+        "intro": "Existem dois canais oficiais para essa consulta — ambos mantidos pelo TSE e gratuitos. Não é preciso, e não é recomendado, usar qualquer site ou aplicativo que não seja da própria Justiça Eleitoral.",
+        "steps": [
+          {
+            "title": "Pelo site do TSE (Autoatendimento Eleitoral)",
+            "body": "Acesse tse.jus.br, abra o menu \"Serviços eleitorais\" e selecione \"Autoatendimento Eleitoral\" (o serviço que substituiu o antigo Título Net). Dentro dele, escolha a opção \"Onde votar\" para abrir o formulário de consulta."
+          },
+          {
+            "title": "Pelo aplicativo e-Título (Android e iOS)",
+            "body": "Baixe o e-Título na loja de aplicativos do seu celular, faça login com seus dados e seu local de votação aparece diretamente na tela inicial — com endereço completo e, no dia da eleição, um recurso de geolocalização para te ajudar a chegar até lá."
+          },
+          {
+            "title": "O que você vai precisar informar",
+            "body": "Em ambos os canais, o sistema pede o número do seu título de eleitor, CPF ou nome completo, além da data de nascimento (e, em alguns casos, o nome da mãe) para confirmar sua identidade antes de mostrar o resultado."
+          }
+        ]
+      },
+      "lostTitle": {
+        "heading": "Perdi meu título de eleitor — e agora?",
+        "body": [
+          "Calma: você não precisa do papel físico do título para votar. No dia da eleição, basta apresentar um documento oficial com foto — o mesário confirma sua seção pelo sistema, não pelo pedaço de papel.",
+          "Se quiser regularizar mesmo assim ou apenas conferir seus dados, o caminho mais rápido é pelo aplicativo e-Título ou pelo Autoatendimento Eleitoral no site do TSE: ambos permitem consultar sua situação eleitoral e, quando necessário, solicitar a emissão de uma segunda via digital do título, sem precisar ir a um cartório eleitoral presencialmente."
+        ]
+      },
+      "movedCity": {
+        "heading": "Mudei de cidade ou estado — isso muda meu local de votação?",
+        "body": [
+          "Sim. Se você mudou de endereço para outro município (ou mesmo outro bairro atendido por zona eleitoral diferente), seu local de votação continua vinculado à zona antiga até que você solicite formalmente a transferência de domicílio eleitoral — o simples fato de morar em outro lugar não atualiza isso automaticamente.",
+          "A transferência é feita pelo Autoatendimento Eleitoral ou pelo e-Título, mas precisa ser solicitada dentro do prazo definido pelo calendário eleitoral do TSE para o ano da eleição — e esse prazo costuma se encerrar bem antes da data da votação. Consulte o calendário eleitoral oficial de 2026 para confirmar as datas exatas antes de deixar para a última hora."
+        ]
+      },
+      "whatToBring": {
+        "heading": "O que levar no dia da eleição",
+        "body": [
+          "Leve um documento oficial com foto — não precisa ser o título de eleitor físico. São geralmente aceitos: carteira de identidade (RG ou a nova Carteira de Identidade Nacional/CIN), CNH, passaporte, carteira de trabalho e carteiras de categoria profissional emitidas por conselhos reconhecidos em lei. Confirme a lista completa e atualizada no site ou app oficial do TSE antes do dia da votação.",
+          "Chegue à sua seção dentro do horário de votação definido pelo TSE para a eleição — quem já está na fila no horário de encerramento normalmente ainda consegue votar, mas não vale a pena arriscar deixando para os últimos minutos."
+        ],
+        "documentList": [
+          "Carteira de Identidade (RG) ou Carteira de Identidade Nacional (CIN)",
+          "Carteira Nacional de Habilitação (CNH)",
+          "Passaporte",
+          "Carteira de Trabalho",
+          "Carteiras de categoria profissional reconhecidas em lei"
+        ]
+      }
+    },
+    "cta": {
+      "label": "Consultar meu local de votação no site oficial do TSE",
+      "sublabel": "Você será redirecionado para tse.jus.br — o único canal oficial para essa consulta. O ToolNotch não processa, armazena nem tem acesso a nenhum dado do seu título de eleitor."
+    },
+    "howToSteps": [
+      "Acesse tse.jus.br e abra o Autoatendimento Eleitoral (ou instale o aplicativo e-Título) no seu celular.",
+      "Selecione a opção \"Onde votar\" dentro do menu de consultas.",
+      "Informe seu número de título de eleitor, CPF ou nome completo, junto com sua data de nascimento.",
+      "Confira a zona, a seção e o endereço do seu local de votação exibidos na tela."
+    ],
+    "faqs": [
+      {
+        "question": "Posso votar em qualquer local de votação?",
+        "answer": "Não. Você só pode votar na seção eleitoral para a qual está designado — mesmo que outro local fique mais perto de onde você está no dia da eleição. Confirme sempre o endereço correto antes de sair de casa."
+      },
+      {
+        "question": "E se eu não tiver mais o título de eleitor?",
+        "answer": "Você não precisa do papel físico para votar — um documento oficial com foto é suficiente. Se quiser regularizar sua situação ou emitir uma segunda via digital, use o e-Título ou o Autoatendimento Eleitoral no site do TSE."
+      },
+      {
+        "question": "Posso consultar o local de votação de outra pessoa?",
+        "answer": "Pelo e-Título instalado no seu próprio celular, não — o aplicativo mostra apenas os dados de quem fez login. Para consultar o local de outra pessoa (com o consentimento dela), use o Autoatendimento Eleitoral no site do TSE informando os dados dela."
+      },
+      {
+        "question": "O local de votação muda a cada eleição?",
+        "answer": "Pode mudar, sim — o TSE reorganiza zonas e seções periodicamente. Mesmo que você não tenha se mudado, vale a pena reconferir seu local antes de cada eleição em vez de confiar na memória da eleição anterior."
+      },
+      {
+        "question": "Preciso levar o título de eleitor físico no dia da votação?",
+        "answer": "Não. Um documento oficial com foto (RG, CNH, passaporte, entre outros aceitos pelo TSE) já é suficiente para confirmar sua identidade na seção."
+      },
+      {
+        "question": "O que fazer se eu estiver na fila errada no dia da votação?",
+        "answer": "Procure um mesário ou um dos fiscais/orientadores no local — eles têm acesso ao sistema para confirmar sua seção correta e te direcionar para a fila certa, sem que você precise sair do prédio."
+      }
+    ]
   }
 }

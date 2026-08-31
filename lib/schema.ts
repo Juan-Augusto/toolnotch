@@ -64,6 +64,25 @@ export function howToSchema(name: string, steps: string[]) {
   }
 }
 
+export function eventSchema(
+  name: string,
+  startDate: string,
+  url: string,
+  locale = 'en',
+  description?: string,
+) {
+  return {
+    '@type': 'Event',
+    name,
+    startDate,
+    eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
+    eventStatus: 'https://schema.org/EventScheduled',
+    location: { '@type': 'Country', name: 'Brazil' },
+    url: buildLocalizedUrl(url, locale),
+    ...(description ? { description } : {}),
+  }
+}
+
 export function breadcrumbSchema(items: { name: string; url: string }[]) {
   return {
     '@type': 'BreadcrumbList',

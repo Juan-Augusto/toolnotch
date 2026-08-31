@@ -16,7 +16,7 @@ async function buildQuizCards(): Promise<QuizCardData[]> {
         id: meta.id,
         title: quiz?.title ?? meta.id,
         description: quiz?.description ?? '',
-        category: meta.category === 'sports' ? 'sports' : meta.category === 'backend' ? 'backend' : 'personality',
+        category: meta.category === 'sports' ? 'sports' : meta.category === 'backend' ? 'backend' : meta.category === 'civic' ? 'civic' : 'personality',
         questionCount: quiz?.questions.length ?? 0,
       }
     })

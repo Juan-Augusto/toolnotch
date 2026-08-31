@@ -1,0 +1,156 @@
+{
+  "id": "which-historical-figure-matches-you",
+  "type": "personality",
+  "category": "personality",
+  "title": "Which Historical Figure Matches You?",
+  "description": "Answer 8 questions about how you lead, decide, and handle pressure to discover which historical statesman or stateswoman matches your leadership style. This free historical figure personality quiz matches you with one of six deceased, globally significant leaders — Abraham Lincoln, Mahatma Gandhi, Eleanor Roosevelt, Simón Bolívar, Toussaint Louverture, or Catherine the Great — based on how you handle conflict, setbacks, and power, never on any political platform or party. Every figure here died decades ago and is judged purely on leadership style: patience versus boldness, persuasion versus decisive action, empathy versus pragmatism. In two minutes, find out whether you lead like the principled unifier who held a fracturing nation together, the peaceful reformer who changed the world through personal example, the empathetic diplomat who helped write the language of human rights, the visionary who liberated half a continent, the strategist who outmaneuvered empires, or the pragmatic modernizer who rebuilt a nation from the ground up. Take the quiz, get your result, and share which historical leader matches you.",
+  "image": "/images/quizzes/which-historical-figure-matches-you-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "When your group faces a sudden crisis, what's your first move?",
+      "options": [
+        { "id": "q1a", "text": "Rally everyone around a shared principle, even if it takes longer.", "scores": { "abraham-lincoln": 3, "eleanor-roosevelt": 1 } },
+        { "id": "q1b", "text": "Lead from the front, by personal example.", "scores": { "mahatma-gandhi": 3, "toussaint-louverture": 1 } },
+        { "id": "q1c", "text": "Talk to everyone affected first, and shape the response around what you hear.", "scores": { "eleanor-roosevelt": 3, "abraham-lincoln": 1 } },
+        { "id": "q1d", "text": "Set one bold, ambitious goal and commit the whole group to it.", "scores": { "simon-bolivar": 3, "catherine-the-great": 1 } },
+        { "id": "q1e", "text": "Move fast, and adapt tactics on the fly as new information comes in.", "scores": { "toussaint-louverture": 3, "simon-bolivar": 1 } },
+        { "id": "q1f", "text": "Study the problem, consult experts, then redesign how things are done.", "scores": { "catherine-the-great": 3, "mahatma-gandhi": 1 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "How do you prefer to convince people who disagree with you?",
+      "options": [
+        { "id": "q2a", "text": "Appeal to a common principle everyone already agrees matters.", "scores": { "abraham-lincoln": 3, "catherine-the-great": 1 } },
+        { "id": "q2b", "text": "Show them through your own actions, and let your example speak.", "scores": { "mahatma-gandhi": 3, "abraham-lincoln": 1 } },
+        { "id": "q2c", "text": "Listen to their side fully first, then find where your goals overlap.", "scores": { "eleanor-roosevelt": 3, "mahatma-gandhi": 1 } },
+        { "id": "q2d", "text": "Paint a vision so compelling they want to join it.", "scores": { "simon-bolivar": 3, "toussaint-louverture": 1 } },
+        { "id": "q2e", "text": "Demonstrate results quickly so the argument becomes moot.", "scores": { "toussaint-louverture": 3, "catherine-the-great": 1 } },
+        { "id": "q2f", "text": "Bring data, precedent, and outside expertise to the table.", "scores": { "catherine-the-great": 3, "eleanor-roosevelt": 1 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "What does \"success\" look like to you as a leader?",
+      "options": [
+        { "id": "q3a", "text": "Holding a fractured group together without abandoning what's right.", "scores": { "abraham-lincoln": 3, "mahatma-gandhi": 1 } },
+        { "id": "q3b", "text": "Changing hearts and minds, not just outcomes.", "scores": { "mahatma-gandhi": 3, "eleanor-roosevelt": 1 } },
+        { "id": "q3c", "text": "Everyone affected feeling heard and represented.", "scores": { "eleanor-roosevelt": 3, "abraham-lincoln": 1 } },
+        { "id": "q3d", "text": "Achieving something previously thought impossible.", "scores": { "simon-bolivar": 3, "toussaint-louverture": 1 } },
+        { "id": "q3e", "text": "Winning against real, urgent, high-stakes odds.", "scores": { "toussaint-louverture": 3, "simon-bolivar": 1 } },
+        { "id": "q3f", "text": "Leaving institutions stronger than you found them.", "scores": { "catherine-the-great": 3, "abraham-lincoln": 1 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "How do you handle a major setback?",
+      "options": [
+        { "id": "q4a", "text": "Stay steady, don't panic, and keep the group focused on the bigger picture.", "scores": { "abraham-lincoln": 3, "eleanor-roosevelt": 1 } },
+        { "id": "q4b", "text": "Reflect and recommit — a setback tests conviction, not defeat.", "scores": { "mahatma-gandhi": 3, "simon-bolivar": 1 } },
+        { "id": "q4c", "text": "Reassess by listening to people on the ground first.", "scores": { "eleanor-roosevelt": 3, "catherine-the-great": 1 } },
+        { "id": "q4d", "text": "Regroup and push again, harder.", "scores": { "simon-bolivar": 3, "mahatma-gandhi": 1 } },
+        { "id": "q4e", "text": "Adapt the plan immediately and keep moving.", "scores": { "toussaint-louverture": 3, "abraham-lincoln": 1 } },
+        { "id": "q4f", "text": "Analyze methodically what went wrong, then fix the system.", "scores": { "catherine-the-great": 3, "toussaint-louverture": 1 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "Which quality do you value most in yourself as a decision-maker?",
+      "options": [
+        { "id": "q5a", "text": "Patience.", "scores": { "abraham-lincoln": 3, "catherine-the-great": 1 } },
+        { "id": "q5b", "text": "Integrity.", "scores": { "mahatma-gandhi": 3, "abraham-lincoln": 1 } },
+        { "id": "q5c", "text": "Empathy.", "scores": { "eleanor-roosevelt": 3, "mahatma-gandhi": 1 } },
+        { "id": "q5d", "text": "Ambition.", "scores": { "simon-bolivar": 3, "toussaint-louverture": 1 } },
+        { "id": "q5e", "text": "Decisiveness.", "scores": { "toussaint-louverture": 3, "simon-bolivar": 1 } },
+        { "id": "q5f", "text": "Pragmatism.", "scores": { "catherine-the-great": 3, "eleanor-roosevelt": 1 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "Your closest friends would say you lead by...",
+      "options": [
+        { "id": "q6a", "text": "...holding the group to a shared standard everyone can live with.", "scores": { "abraham-lincoln": 3, "catherine-the-great": 1 } },
+        { "id": "q6b", "text": "...living the values you ask others to follow.", "scores": { "mahatma-gandhi": 3, "eleanor-roosevelt": 1 } },
+        { "id": "q6c", "text": "...making sure the quiet voices get heard too.", "scores": { "eleanor-roosevelt": 3, "abraham-lincoln": 1 } },
+        { "id": "q6d", "text": "...painting a picture of what's possible and chasing it.", "scores": { "simon-bolivar": 3, "mahatma-gandhi": 1 } },
+        { "id": "q6e", "text": "...getting things done, fast, when it counts.", "scores": { "toussaint-louverture": 3, "catherine-the-great": 1 } },
+        { "id": "q6f", "text": "...being the most prepared person in the room.", "scores": { "catherine-the-great": 3, "simon-bolivar": 1 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "When you have power or authority, how do you use it?",
+      "options": [
+        { "id": "q7a", "text": "Sparingly, and only to hold things together.", "scores": { "abraham-lincoln": 3, "mahatma-gandhi": 1 } },
+        { "id": "q7b", "text": "To set an example others willingly choose to follow.", "scores": { "mahatma-gandhi": 3, "abraham-lincoln": 1 } },
+        { "id": "q7c", "text": "To make space for people who don't usually get a voice.", "scores": { "eleanor-roosevelt": 3, "toussaint-louverture": 1 } },
+        { "id": "q7d", "text": "To pursue a mission bigger than any one person.", "scores": { "simon-bolivar": 3, "catherine-the-great": 1 } },
+        { "id": "q7e", "text": "Decisively, in short bursts, when the moment demands it.", "scores": { "toussaint-louverture": 3, "eleanor-roosevelt": 1 } },
+        { "id": "q7f", "text": "To reform and modernize whatever institution you're responsible for.", "scores": { "catherine-the-great": 3, "simon-bolivar": 1 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "Which of these mottos feels most like you?",
+      "options": [
+        { "id": "q8a", "text": "\"With malice toward none, with charity for all.\"", "scores": { "abraham-lincoln": 3 } },
+        { "id": "q8b", "text": "\"My life is my message.\"", "scores": { "mahatma-gandhi": 3 } },
+        { "id": "q8c", "text": "\"This declaration may well become the international Magna Carta of all mankind.\"", "scores": { "eleanor-roosevelt": 3 } },
+        { "id": "q8d", "text": "\"The most perfect system of government is the one that produces the greatest happiness, the greatest social security, and the greatest political stability.\"", "scores": { "simon-bolivar": 3 } },
+        { "id": "q8e", "text": "\"You have only cut down the trunk of the tree of liberty. It will grow back, for its roots are many and deep.\"", "scores": { "toussaint-louverture": 3 } },
+        { "id": "q8f", "text": "\"Power without a nation's confidence is nothing.\"", "scores": { "catherine-the-great": 3 } }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "abraham-lincoln",
+      "title": "Abraham Lincoln — The Principled Unifier",
+      "description": "You lead the way Lincoln did: patiently, and without abandoning what you believe is right. As the 16th U.S. President, Lincoln held a fracturing country together through its Civil War, issued the Emancipation Proclamation, and became known for absorbing intense criticism from every side without losing his temper or his direction. He surrounded himself with rivals rather than yes-men, believing the strongest decisions come from hearing the hardest disagreements first. His famous line — \"with malice toward none, with charity for all\" — captures a leadership style built on reconciliation over revenge. Like Lincoln, you probably value steadiness under pressure, a willingness to be unpopular for the sake of principle, and the long view over the quick win.",
+      "image": "/images/quizzes/which-historical-figure-matches-you-cover.jpg",
+      "traits": ["Patient", "Principled", "Unifying", "Steady under pressure"],
+      "shareText": "I lead like Abraham Lincoln — The Principled Unifier! Which historical figure matches you? Take the quiz on ToolNotch 🎩"
+    },
+    {
+      "id": "mahatma-gandhi",
+      "title": "Mahatma Gandhi — The Peaceful Reformer",
+      "description": "You lead by example, the way Gandhi did. Mohandas Gandhi led India's independence movement through nonviolent civil disobedience — organized boycotts, mass marches like the 1930 Salt March, and a personal discipline (in diet, speech, and conduct) that he insisted was inseparable from political authority. He believed you cannot ask others to change if you are not willing to change first, and that the moral high ground is a stronger weapon than force. His approach later directly influenced civil rights movements worldwide. Like Gandhi, you probably believe conduct persuades louder than argument, that patience is a form of strength, and that how you win matters as much as whether you win.",
+      "image": "/images/quizzes/which-historical-figure-matches-you-cover.jpg",
+      "traits": ["Disciplined", "Nonviolent", "Morally consistent", "Leads by example"],
+      "shareText": "I lead like Mahatma Gandhi — The Peaceful Reformer! Which historical figure matches you? Take the quiz on ToolNotch 🕊️"
+    },
+    {
+      "id": "eleanor-roosevelt",
+      "title": "Eleanor Roosevelt — The Empathetic Diplomat",
+      "description": "You lead by listening first, the way Eleanor Roosevelt did. As U.S. First Lady from 1933–1945 and later a United Nations delegate, she chaired the commission that drafted the 1948 Universal Declaration of Human Rights — a document built by finding common ground among dozens of countries with competing interests. She was known for traveling widely to hear directly from ordinary people and writing about it in a daily newspaper column, insisting policy should be shaped by those it affects, not just decided for them. Like Eleanor Roosevelt, you probably lead through coalition-building, make sure quieter voices get heard, and believe empathy and diplomacy are leadership tools, not soft alternatives to them.",
+      "image": "/images/quizzes/which-historical-figure-matches-you-cover.jpg",
+      "traits": ["Empathetic", "Diplomatic", "Coalition-builder", "Human rights advocate"],
+      "shareText": "I lead like Eleanor Roosevelt — The Empathetic Diplomat! Which historical figure matches you? Take the quiz on ToolNotch 🌍"
+    },
+    {
+      "id": "simon-bolivar",
+      "title": "Simón Bolívar — The Visionary Unifier",
+      "description": "You lead with bold, outsized ambition, the way Bolívar did. Known as \"El Libertador,\" Simón Bolívar led the military campaigns that freed what are now Venezuela, Colombia, Ecuador, Panama, Peru, and Bolivia from Spanish colonial rule, and spent his life pursuing a vision of a unified South America — a dream that outlived him even though the confederation he imagined fractured after his death. He combined military strategy with sweeping political vision, willing to risk everything for a goal most people considered impossible. Like Bolívar, you probably set audacious goals, rally people around a vision bigger than any single victory, and keep pushing even when the odds — or your own allies — say to stop.",
+      "image": "/images/quizzes/which-historical-figure-matches-you-cover.jpg",
+      "traits": ["Visionary", "Bold", "Ambitious", "Unifying"],
+      "shareText": "I lead like Simón Bolívar — The Visionary Unifier! Which historical figure matches you? Take the quiz on ToolNotch ⚔️"
+    },
+    {
+      "id": "toussaint-louverture",
+      "title": "Toussaint Louverture — The Strategic Freedom Fighter",
+      "description": "You lead with decisive, tactical clarity, the way Toussaint Louverture did. Born enslaved, he rose to lead the Haitian Revolution — the only slave uprising in history to result in an independent nation — by outmaneuvering shifting French, Spanish, and British forces through sharp military strategy and administrative skill. He built and broke alliances as the situation demanded, moved fast on incomplete information, and effectively ended slavery in the colony before his death in French custody. Like Louverture, you probably think on your feet, adapt plans quickly when circumstances change, and treat decisive action under pressure as a form of leadership in itself.",
+      "image": "/images/quizzes/which-historical-figure-matches-you-cover.jpg",
+      "traits": ["Decisive", "Strategic", "Adaptive", "Tactical"],
+      "shareText": "I lead like Toussaint Louverture — The Strategic Freedom Fighter! Which historical figure matches you? Take the quiz on ToolNotch 🔥"
+    },
+    {
+      "id": "catherine-the-great",
+      "title": "Catherine the Great — The Pragmatic Modernizer",
+      "description": "You lead by studying the system and then rebuilding it, the way Catherine the Great did. As Empress of Russia for 34 years, she expanded Russian territory, overhauled state administration, and invested heavily in education and the arts, corresponding with Enlightenment philosophers and implementing sweeping legal reforms. Her reign is also remembered as one that entrenched serfdom for millions of Russian peasants — a reminder that even reform-minded leadership has real costs and trade-offs worth naming honestly. Like Catherine, you probably lead through preparation and pragmatism: you study a problem thoroughly, bring in outside expertise, and prefer methodical institution-building over grand gestures.",
+      "image": "/images/quizzes/which-historical-figure-matches-you-cover.jpg",
+      "traits": ["Pragmatic", "Methodical", "Reform-minded", "Institution-builder"],
+      "shareText": "I lead like Catherine the Great — The Pragmatic Modernizer! Which historical figure matches you? Take the quiz on ToolNotch 👑"
+    }
+  ]
+}

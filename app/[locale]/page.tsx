@@ -351,6 +351,21 @@ export default async function HomePage({ params }: Props) {
           label: t("tools.formula1TriviaQuiz.label"),
           desc: t("tools.formula1TriviaQuiz.desc"),
         },
+        {
+          href: "/quiz/what-is-your-political-profile",
+          label: t("tools.politicalProfileQuiz.label"),
+          desc: t("tools.politicalProfileQuiz.desc"),
+        },
+        {
+          href: "/quiz/political-echo-chamber-quiz",
+          label: t("tools.echoChamberQuiz.label"),
+          desc: t("tools.echoChamberQuiz.desc"),
+        },
+        {
+          href: "/quiz/fake-news-or-fact",
+          label: t("tools.fakeNewsQuiz.label"),
+          desc: t("tools.fakeNewsQuiz.desc"),
+        },
       ],
     },
   ];

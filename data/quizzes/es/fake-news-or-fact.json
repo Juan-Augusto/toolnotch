@@ -1,0 +1,150 @@
+{
+  "id": "fake-news-or-fact",
+  "type": "trivia",
+  "category": "civic",
+  "title": "¿Fake News o Verdad? — Test de Noticias Falsas",
+  "description": "¿Sabes identificar una noticia falsa? En este test evaluarás diez afirmaciones y bulos conocidos —algunos verdaderos, otros desmentidos hace años— y decidirás qué es real y qué es falso. Los temas van desde mitos de salud y ciencia hasta cadenas que circulan desde hace años por WhatsApp. Después de cada respuesta verás una breve explicación y el enlace a la fuente real y verificable, de organizaciones como la OMS, la NASA y Harvard Health. Sin política, sin candidatos — solo afirmaciones de cultura general que cualquiera puede comprobar. Descubre cuántas aciertas y compara tu resultado con tus amigos.",
+  "image": "/images/quizzes/fake-news-or-fact-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Las torres de 5G propagan la COVID-19.",
+      "options": [
+        { "id": "q1a", "text": "Verdadero" },
+        { "id": "q1b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q1b",
+      "explanation": "Los virus no viajan por ondas de radio, y la COVID-19 se propagó ampliamente en países con poca o ninguna infraestructura 5G.",
+      "source": { "name": "Maldita.es", "url": "https://maldita.es/malditaciencia/20200729/los-bulos-que-intentan-relacionar-la-pandemia-de-covid-19-con-el-5g/" }
+    },
+    {
+      "id": "q2",
+      "text": "La Gran Muralla China es visible desde el espacio a simple vista.",
+      "options": [
+        { "id": "q2a", "text": "Verdadero" },
+        { "id": "q2b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q2b",
+      "explanation": "La NASA y varios astronautas confirman que el material del muro se confunde con el paisaje circundante, por lo que es indistinguible desde la órbita sin aumento.",
+      "source": { "name": "NASA", "url": "https://www.nasa.gov/vision/space/workinginspace/great_wall.html" }
+    },
+    {
+      "id": "q3",
+      "text": "Los peces dorados solo tienen 3 segundos de memoria.",
+      "options": [
+        { "id": "q3a", "text": "Verdadero" },
+        { "id": "q3b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q3b",
+      "explanation": "Investigadores en cognición de peces demuestran que los peces dorados aprenden y recuerdan tareas y ubicaciones durante semanas o meses, no segundos.",
+      "source": { "name": "IFLScience", "url": "https://www.iflscience.com/do-goldfish-really-have-a-three-second-memory-75017" }
+    },
+    {
+      "id": "q4",
+      "text": "Los humanos solo usamos el 10% del cerebro.",
+      "options": [
+        { "id": "q4a", "text": "Verdadero" },
+        { "id": "q4b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q4b",
+      "explanation": "Los estudios de neuroimagen muestran que casi todas las regiones del cerebro están activas a lo largo del día; no existe un 90% sin usar.",
+      "source": { "name": "Scientific American", "url": "https://www.scientificamerican.com/article/do-people-only-use-10-percent-of-their-brains/" }
+    },
+    {
+      "id": "q5",
+      "text": "Un mensaje viral asegura que WhatsApp empezará a cobrar una mensualidad a menos que lo reenvíes a tus contactos.",
+      "options": [
+        { "id": "q5a", "text": "Verdadero" },
+        { "id": "q5b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q5b",
+      "explanation": "Este bulo circula desde 2012; WhatsApp ha confirmado repetidamente que es falso y nunca ha cobrado por enviar mensajes.",
+      "source": { "name": "WhatsApp (Meta)", "url": "https://blog.whatsapp.com/it-is-a-hoax-really-it-is" }
+    },
+    {
+      "id": "q6",
+      "text": "Arqueólogos han encontrado miel milenaria en tumbas egipcias selladas que todavía era comestible.",
+      "options": [
+        { "id": "q6a", "text": "Verdadero" },
+        { "id": "q6b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q6a",
+      "explanation": "La baja humedad y la acidez natural de la miel impiden el crecimiento bacteriano, por lo que se han hallado tarros sellados hace miles de años aún conservados.",
+      "source": { "name": "Smithsonian Magazine", "url": "https://www.smithsonianmag.com/science-nature/the-science-behind-honeys-eternal-shelf-life-1218690/" }
+    },
+    {
+      "id": "q7",
+      "text": "La Organización Mundial de la Salud declaró el fin de la emergencia sanitaria mundial por COVID-19 en mayo de 2023.",
+      "options": [
+        { "id": "q7a", "text": "Verdadero" },
+        { "id": "q7b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q7a",
+      "explanation": "El Comité de Emergencia de la OMS puso fin oficialmente a la declaración de Emergencia de Salud Pública de Importancia Internacional el 5 de mayo de 2023.",
+      "source": { "name": "OPS/OMS", "url": "https://www.paho.org/es/noticias/8-5-2023-covid-19-es-ahora-problema-salud-establecido-persistente" }
+    },
+    {
+      "id": "q8",
+      "text": "Los pulpos tienen tres corazones.",
+      "options": [
+        { "id": "q8a", "text": "Verdadero" },
+        { "id": "q8b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q8a",
+      "explanation": "Dos corazones bombean sangre hacia las branquias y un tercero la bombea al resto del cuerpo, un hecho confirmado por la biología marina.",
+      "source": { "name": "NOAA", "url": "https://oceanservice.noaa.gov/news/feb26/undersea-creatures-valentines-day.html" }
+    },
+    {
+      "id": "q9",
+      "text": "Cocinar verduras en el microondas puede conservar más nutrientes que hervirlas.",
+      "options": [
+        { "id": "q9a", "text": "Verdadero" },
+        { "id": "q9b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q9a",
+      "explanation": "Tiempos de cocción más cortos y menos contacto con agua hacen que el microondas suela conservar más vitamina C y otros nutrientes que hervir.",
+      "source": { "name": "Harvard Health Publishing", "url": "https://www.health.harvard.edu/staying-healthy/microwave-cooking-and-nutrition" }
+    },
+    {
+      "id": "q10",
+      "text": "Los tiburones existieron en la Tierra antes que los árboles.",
+      "options": [
+        { "id": "q10a", "text": "Verdadero" },
+        { "id": "q10b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q10a",
+      "explanation": "Los ancestros de los tiburones aparecieron hace unos 400 millones de años, decenas de millones de años antes de que evolucionaran las primeras plantas con forma de árbol.",
+      "source": { "name": "Smithsonian Magazine", "url": "https://www.smithsonianmag.com/smart-news/respect-sharks-are-older-than-trees-3818/" }
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "Leyenda de la Verificación",
+      "description": "Tienes buen ojo para detectar la desinformación. En un mundo donde los bulos, las leyendas urbanas y las cadenas virales se propagan más rápido que la verdad, sabes detenerte, cuestionar la fuente y separar los hechos de la ficción. Esa es una habilidad real: verificar quién hace la afirmación, buscar una fuente identificable y no compartir algo solo porque suene convincente o alarmante. Sigue aplicando ese instinto fuera del test: comprueba antes de compartir, sobre todo en WhatsApp y redes sociales, y seguirás siendo la persona que detecta la noticia falsa antes de que se propague.",
+      "shareText": "¡Obtuve el nivel Leyenda de la Verificación en el test Fake News o Verdad! ¿Crees que puedes detectar la desinformación tan bien como yo?"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Experto en Verificación",
+      "description": "Se te da muy bien detectar la desinformación, aunque alguna afirmación se te haya escapado. Es un resultado sólido: la mayoría de los bulos y mitos virales están diseñados para sonar lo bastante creíbles como para engañar a cualquiera. Los hábitos que te trajeron hasta aquí importan: pausar antes de compartir, comprobar si una afirmación tiene una fuente real e identificable, y desconfiar un poco más de todo lo que parezca diseñado para provocar una reacción fuerte. Sigue afinando ese instinto. Un poco más de atención —revisar la fecha, la fuente y si algún verificador ya cubrió el tema— suele bastar para pasar de experto a leyenda.",
+      "shareText": "¡Obtuve el nivel Experto en Verificación en el test Fake News o Verdad! Buen ojo para la desinformación. ¿Puedes superarme?"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Fanático de la Verificación",
+      "description": "Te interesa separar los hechos de la ficción, pero algunos bulos bien elaborados todavía lograron engañarte, y eso es completamente normal, ya que la desinformación suele estar diseñada para parecer verdadera. La buena noticia es que detectarla es una habilidad que se aprende. Antes de compartir algo sorprendente, intenta comprobar quién lo publicó primero, si algún medio o verificador de datos ya cubrió el tema, y si la afirmación usa frases vagas como 'los expertos dicen' sin nombrar a nadie. Una pausa extra antes de compartir puede marcar una gran diferencia para frenar la desinformación en línea.",
+      "shareText": "Obtuve el nivel Fanático de la Verificación en el test Fake News o Verdad. ¡Algunos bulos me engañaron! ¿Cómo te irá a ti?"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "Novato en Verificación",
+      "description": "La desinformación está diseñada para ser convincente, así que una puntuación más baja aquí solo significa que hay margen para desarrollar tu instinto de verificación — todos empiezan por algún lado. El hábito más fiable es simple: antes de creer o compartir una afirmación sorprendente, busca quién la está diciendo realmente. Una noticia real tiene una fuente identificable y verificable; un bulo normalmente no la tiene. Prueba una búsqueda rápida de la afirmación junto con la palabra 'verificación' antes de reenviar algo por WhatsApp o redes sociales. Repite este test cuando quieras practicar: cuanto más cuestiones las afirmaciones sorprendentes, más agudo será tu instinto.",
+      "shareText": "Acabo de hacer el test Fake News o Verdad — todavía tengo que afinar mi instinto de verificación. ¿Puedes puntuar más que yo?"
+    }
+  ]
+}
