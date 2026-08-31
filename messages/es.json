@@ -2250,6 +2250,7 @@
       "terms": "Términos del Servicio"
     },
     "categories": {
+      "developerTools": "Herramientas para Desarrolladores",
       "imageTools": "Herramientas de imagen",
       "pdfTools": "Herramientas PDF",
       "converterTools": "Herramientas de conversión",
@@ -2262,6 +2263,30 @@
       "interviewPrep": "Preparación para Entrevistas"
     },
     "tools": {
+      "cpfGenerator": {
+        "label": "Generador y Validador de CPF",
+        "desc": "Generar CPF válido con/sin formato y validar por estado"
+      },
+      "cnpjGenerator": {
+        "label": "Generador de CNPJ + Consulta",
+        "desc": "Generar, validar y consultar datos de empresas en la Receita"
+      },
+      "uuidGenerator": {
+        "label": "Generador de UUID / GUID",
+        "desc": "Generar UUID v4, v1, v7 en lote con inspector"
+      },
+      "jsonFormatter": {
+        "label": "Formateador y Validador JSON",
+        "desc": "Prettify, minificar y validar sintaxis con diagnóstico de errores"
+      },
+      "base64Converter": {
+        "label": "Codificador y Decodificador Base64",
+        "desc": "Codificar y decodificar texto en Base64 y formato URL-safe"
+      },
+      "hashGenerator": {
+        "label": "Generador de Hashes (MD5, SHA)",
+        "desc": "Calcular MD5, SHA-256, SHA-512 y HMAC en tiempo real"
+      },
       "imageCompressor": {
         "label": "Compresor de imágenes",
         "desc": "Comprime JPG, PNG, WebP, AVIF"
@@ -3995,6 +4020,302 @@
             "text": "La mecanografía es una habilidad, no un rasgo fijo. A 40 PPM, estás en el promedio. A 70 PPM, eres notablemente más rápido que la mayoría de tus colegas. A 90+ PPM, la escritura simplemente deja de ser algo en lo que piensas. Aprende la fila principal, deja de mirar el teclado y dale unas semanas de práctica deliberada: la mejora te sorprenderá."
           }
         ]
+      }
+    }
+  },
+  "developer": {
+    "cpfGenerator": {
+      "metaTitle": "Generador y Validador de CPF Online Gratis — ToolNotch",
+      "metaDescription": "Genera números de CPF brasileños válidos para pruebas de software con o sin formato, selecciona la región fiscal y valida en tiempo real.",
+      "title": "Generador y Validador de CPF",
+      "description": "Herramienta para desarrolladores para generar CPFs válidos para pruebas de software y validar con identificación de región fiscal.",
+      "tabs": {
+        "generate": "Generador de CPF",
+        "validate": "Validador de CPF"
+      },
+      "options": {
+        "format": "Formato de Salida",
+        "withMask": "Con puntuación (000.000.000-00)",
+        "region": "Región Fiscal / Estado",
+        "allRegions": "Cualquier Región (Aleatorio)",
+        "quantity": "Cantidad de CPFs"
+      },
+      "button": {
+        "generate": "Generar CPF Válido"
+      },
+      "results": {
+        "title": "CPFs Generados",
+        "copy": "Copiar",
+        "copied": "¡Copiado!",
+        "copyAll": "Copiar Todos",
+        "copiedAll": "¡Todos Copiados!"
+      },
+      "validate": {
+        "inputLabel": "Ingresa o pega el CPF para validar",
+        "hint": "Acepta CPF con o sin puntuación. Valida dígitos verificadores y estado de origen.",
+        "validTitle": "¡CPF Válido!",
+        "invalidTitle": "¡CPF Inválido!"
+      },
+      "faqs": [
+        {
+          "question": "¿Los CPFs generados son válidos para pruebas de software?",
+          "answer": "Sí. Los CPFs generados son válidos matemáticamente según el algoritmo oficial del Módulo 11 de la Receita Federal brasileña, con dígitos verificadores correctos para pruebas de desarrollo y control de calidad."
+        },
+        {
+          "question": "¿Qué significa la Región Fiscal del CPF?",
+          "answer": "El 9º dígito del CPF indica la jurisdicción fiscal brasileña de emisión (por ejemplo: 8 para São Paulo, 7 para Río de Janeiro / ES, 6 para Minas Gerais, etc.)."
+        },
+        {
+          "question": "¿Mis datos ingresados se envían a algún servidor?",
+          "answer": "No. Todo el cálculo y validación se realiza 100% de forma local en tu navegador con total privacidad."
+        }
+      ],
+      "richContent": {
+        "whatIs": "El Cadastro de Pessoas Físicas (CPF) es el registro de identificación tributaria individual de Brasil. Consta de 11 dígitos decimales calculados mediante el algoritmo Módulo 11.",
+        "howToUse": [
+          "Elige si deseas el CPF con o sin máscara de puntuación.",
+          "Opcionalmente selecciona un estado brasileño o déjalo aleatorio.",
+          "Selecciona la cantidad de CPFs y haz clic en Generar CPF Válido.",
+          "Copia individualmente o copia todos con un solo clic.",
+          "Cambia a la pestaña Validador para verificar cualquier número de CPF."
+        ],
+        "whyItMatters": "Desarrolladores y equipos de QA necesitan constantemente datos sintéticos válidos para probar formularios, flujos de pago y pipelines de CI/CD sin exponer datos reales de usuarios.",
+        "proTip": "Usa el generador en lote para poblar bases de datos de pruebas o mocks en tests automatizados con Jest, Cypress o Playwright."
+      }
+    },
+    "cnpjGenerator": {
+      "metaTitle": "Generador y Consulta de CNPJ Online Gratis — ToolNotch",
+      "metaDescription": "Genera CNPJs válidos (matriz o sucursal), valida números y consulta datos de empresas reales en la Receita Federal vía API pública.",
+      "title": "Generador y Consulta de CNPJ",
+      "description": "Genera CNPJs matemáticamente válidos para pruebas y consulta datos reales de empresas (Razón Social, CNAE, Estado y Socios).",
+      "tabs": {
+        "generate": "Generador de CNPJ",
+        "validate": "Validador de CNPJ",
+        "lookup": "Consulta de Empresa (API)"
+      },
+      "options": {
+        "format": "Formato de Salida",
+        "withMask": "Con puntuación (00.000.000/0001-00)",
+        "type": "Tipo de Establecimiento",
+        "headquarters": "Matriz (0001)",
+        "branch": "Sucursal (0002...)",
+        "quantity": "Cantidad de CNPJs"
+      },
+      "button": {
+        "generate": "Generar CNPJ Válido"
+      },
+      "results": {
+        "title": "CNPJs Generados",
+        "copy": "Copiar",
+        "copied": "¡Copiado!",
+        "copyAll": "Copiar Todos",
+        "copiedAll": "¡Todos Copiados!"
+      },
+      "validate": {
+        "inputLabel": "Ingresa o pega el CNPJ para validar",
+        "hint": "Acepta CNPJ con formato o solo dígitos. Valida los dos dígitos verificadores mediante Módulo 11.",
+        "validTitle": "¡CNPJ Válido!",
+        "invalidTitle": "¡CNPJ Inválido!"
+      },
+      "lookup": {
+        "inputLabel": "Ingresa un CNPJ para consultar en el registro público de Brasil",
+        "searchButton": "Consultar",
+        "copyData": "Copiar Resumen"
+      },
+      "faqs": [
+        {
+          "question": "¿Cómo funciona la consulta de CNPJ?",
+          "answer": "La herramienta consulta directamente el servicio público y gratuito de BrasilAPI, devolviendo datos oficiales de la Receita Federal como Razón Social, Estado de Registro, Actividad Principal (CNAE) y Cuadro Societario (QSA)."
+        },
+        {
+          "question": "¿Los CNPJs generados pertenecen a empresas reales?",
+          "answer": "Los CNPJs generados son creados aleatoriamente según la regla matemática del Módulo 11 para fines exclusivos de desarrollo y pruebas."
+        }
+      ],
+      "richContent": {
+        "whatIs": "El Cadastro Nacional da Pessoa Jurídica (CNPJ) es el registro de entidades comerciales en Brasil, formado por 14 dígitos en el formato XX.XXX.XXX/YYYY-ZZ.",
+        "howToUse": [
+          "Selecciona si deseas generar CNPJ de Matriz (0001) o Sucursal.",
+          "Elige el formato de puntuación y la cantidad, luego haz clic en Generar CNPJ Válido.",
+          "En la pestaña Consulta de Empresa, ingresa cualquier CNPJ para cargar los datos oficiales."
+        ],
+        "whyItMatters": "Facilita las pruebas de integraciones con facturación electrónica, pasarelas de pago y validación de formularios comerciales B2B.",
+        "proTip": "Puedes hacer clic en el botón Consultar junto a cualquier CNPJ generado para verificar de inmediato su estado público."
+      }
+    },
+    "uuidGenerator": {
+      "metaTitle": "Generador de UUID / GUID Online Gratis — ToolNotch",
+      "metaDescription": "Genera UUID v4 criptográficos, v1 y v7 en lote. Elige mayúsculas, con o sin guiones, exporta en JSON o TXT e inspecciona UUIDs.",
+      "title": "Generador de UUID / GUID",
+      "description": "Genera identificadores únicos universales (UUID v4, v1, v7) en lote con opciones de formato e inspector de versiones.",
+      "tabs": {
+        "generate": "Generador de UUID",
+        "inspect": "Inspector / Validador"
+      },
+      "options": {
+        "version": "Versión del UUID",
+        "quantity": "Cantidad",
+        "uppercase": "Mayúsculas (A-Z)",
+        "hyphens": "Con guiones (-)",
+        "braces": "Con llaves { }"
+      },
+      "button": {
+        "generate": "Generar UUIDs"
+      },
+      "results": {
+        "title": "UUIDs Generados",
+        "copy": "Copiar",
+        "copied": "¡Copiado!",
+        "copyAll": "Copiar Todos",
+        "copiedAll": "¡Todos Copiados!"
+      },
+      "inspect": {
+        "inputLabel": "Ingresa o pega un UUID para inspeccionar",
+        "hint": "Analiza la conformidad con RFC 4122 / RFC 9562, identificando versión, variante y timestamp de creación.",
+        "validTitle": "¡UUID Válido!",
+        "invalidTitle": "¡UUID Inválido!"
+      },
+      "faqs": [
+        {
+          "question": "¿Cuál es la diferencia entre UUID v4, v1 y v7?",
+          "answer": "UUID v4 es 100% aleatorio criptográficamente. UUID v1 se basa en la hora del sistema. UUID v7 (RFC 9562) está ordenado por tiempo (Time-Ordered), lo cual es ideal para claves primarias en bases de datos como PostgreSQL y MySQL."
+        },
+        {
+          "question": "¿Hay riesgo de colisión en UUIDs v4?",
+          "answer": "La probabilidad de colisión en UUIDs v4 es de aproximadamente 1 en 5,3 x 10^36, lo que resulta prácticamente imposible."
+        }
+      ],
+      "richContent": {
+        "whatIs": "Un Identificador Único Universal (UUID / GUID) es un identificador estándar de 128 bits especificado por RFC 4122 y RFC 9562, representado en 32 dígitos hexadecimales con formato 8-4-4-4-12.",
+        "howToUse": [
+          "Selecciona la versión deseada (v4 para aleatorio, v7 para ordenado por tiempo).",
+          "Ajusta mayúsculas, guiones y formato de llaves.",
+          "Elige la cantidad y haz clic en Generar UUIDs.",
+          "Copia todo al portapapeles o descárgalo como JSON o archivo .txt."
+        ],
+        "whyItMatters": "Elimina la necesidad de coordinación centralizada para generar identificadores únicos en microservicios y sistemas distribuidos.",
+        "proTip": "Para claves primarias en bases de datos relacionales, prefiere UUID v7 para mantener alto rendimiento en índices B-Tree."
+      }
+    },
+    "jsonFormatter": {
+      "metaTitle": "Formateador y Validador JSON Online Gratis — ToolNotch",
+      "metaDescription": "Formatea, embellece (prettify), minifica y valida código JSON con diagnóstico en tiempo real y localización de errores de sintaxis.",
+      "title": "Formateador y Validador JSON",
+      "description": "Embellece, minifica y valida código JSON con diagnóstico de sintaxis al instante, cálculo de compresión y descarga.",
+      "button": {
+        "format": "Formatear JSON",
+        "minify": "Minificar",
+        "loadSample": "Cargar Ejemplo",
+        "clear": "Limpiar",
+        "copy": "Copiar",
+        "download": "Descargar .json"
+      },
+      "status": {
+        "validJson": "JSON Válido y Bien Formado",
+        "invalidJson": "Error de Sintaxis en el JSON"
+      },
+      "inputPlaceholder": "Pega o escribe tu código JSON aquí...",
+      "faqs": [
+        {
+          "question": "¿Mi JSON se envía a algún servidor?",
+          "answer": "No. Todo el procesamiento, análisis y formateo se ejecuta exclusivamente en el navegador de tu dispositivo."
+        },
+        {
+          "question": "¿Cómo detecta los errores de sintaxis?",
+          "answer": "El validador detecta con precisión la línea, columna y fragmento de código con error (comas sobrantes, corchetes sin cerrar, etc.)."
+        }
+      ],
+      "richContent": {
+        "whatIs": "JSON (JavaScript Object Notation) es el formato de intercambio de datos ligero y estándar más utilizado en APIs web.",
+        "howToUse": [
+          "Pega el código JSON en el editor.",
+          "Haz clic en Formatear JSON para sangrar con 2 o 4 espacios.",
+          "Haz clic en Minificar para comprimir en 1 sola línea compacta.",
+          "Copia el resultado o descarga el archivo .json directamente."
+        ],
+        "whyItMatters": "Facilita la depuración de respuestas de APIs y la compresión de datos antes de transmitirlos por red.",
+        "proTip": "Usa el modo Minificar para ahorrar ancho de banda y Formatear para facilitar la lectura durante revisiones de código."
+      }
+    },
+    "base64Converter": {
+      "metaTitle": "Codificador y Decodificador Base64 Online Gratis — ToolNotch",
+      "metaDescription": "Codifica texto a Base64 y decodifica Base64 a texto con soporte completo UTF-8, acentos, emojis y formato URL-Safe.",
+      "title": "Codificador y Decodificador Base64",
+      "description": "Convierte textos y cargas útiles entre formato estándar/URL-safe y Base64 instantáneamente en tu navegador.",
+      "tabs": {
+        "encode": "Codificar (Texto → Base64)",
+        "decode": "Decodificar (Base64 → Texto)"
+      },
+      "input": {
+        "encodeLabel": "Texto Original (Entrada)",
+        "decodeLabel": "Código Base64 (Entrada)",
+        "encodePlaceholder": "Escribe o pega el texto que deseas codificar en Base64...",
+        "decodePlaceholder": "Pega el código Base64 para decodificar..."
+      },
+      "output": {
+        "encodeLabel": "Resultado en Base64",
+        "decodeLabel": "Texto Decodificado"
+      },
+      "faqs": [
+        {
+          "question": "¿El conversor admite acentos y emojis?",
+          "answer": "Sí. Nuestra herramienta utiliza codificación completa en UTF-8, asegurando que acentos y caracteres especiales no se corrompan."
+        },
+        {
+          "question": "¿Qué es el modo URL-Safe?",
+          "answer": "El modo URL-Safe reemplaza los caracteres + y / por - y _ para evitar conflictos en parámetros de URL y tokens JWT."
+        }
+      ],
+      "richContent": {
+        "whatIs": "Base64 es un sistema de codificación binario-a-texto que representa datos binarios en formato de texto ASCII.",
+        "howToUse": [
+          "Selecciona la pestaña Codificar o Decodificar.",
+          "Ingresa el texto en el panel izquierdo para ver el resultado en tiempo real en el derecho.",
+          "Activa la opción URL-Safe si vas a usar el resultado en URLs."
+        ],
+        "whyItMatters": "Permite transmitir con seguridad datos binarios a través de canales diseñados para texto ASCII puro.",
+        "proTip": "Base64 es un mecanismo de codificación, no de cifrado. No debe usarse solo para proteger contraseñas o datos confidenciales."
+      }
+    },
+    "hashGenerator": {
+      "metaTitle": "Generador de Hashes MD5, SHA-256 y SHA-512 Online Gratis — ToolNotch",
+      "metaDescription": "Genera hashes criptográficos MD5, SHA-1, SHA-256, SHA-384, SHA-512 y HMAC en tiempo real con verificador de integridad.",
+      "title": "Generador de Hashes Criptográficos",
+      "description": "Calcula resúmenes criptográficos (MD5, SHA-256, SHA-512, HMAC) en tiempo real y verifica la integridad de hashes.",
+      "input": {
+        "label": "Texto de Entrada",
+        "placeholder": "Escribe o pega el texto para generar los hashes criptográficos..."
+      },
+      "options": {
+        "secretKey": "Clave Secreta HMAC",
+        "uppercase": "Mostrar en Mayúsculas"
+      },
+      "results": {
+        "title": "Hashes Criptográficos Generados"
+      },
+      "compare": {
+        "title": "Verificador y Comparador de Hash"
+      },
+      "faqs": [
+        {
+          "question": "¿Se puede revertir un hash para obtener el texto original?",
+          "answer": "No. Las funciones hash criptográficas son unidireccionales (one-way). No es posible decodificar un hash hacia el texto original."
+        },
+        {
+          "question": "¿Qué algoritmo de hash es más recomendado?",
+          "answer": "Para seguridad moderna y firmas digitales, SHA-256 o SHA-512 son el estándar de la industria. MD5 y SHA-1 se usan principalmente para sumas de verificación rápidas de archivos."
+        }
+      ],
+      "richContent": {
+        "whatIs": "Una función hash criptográfica transforma cualquier volumen de datos en una cadena de longitud fija. Cualquier variación mínima en la entrada altera por completo el hash (efecto avalancha).",
+        "howToUse": [
+          "Escribe o pega el texto en el campo de entrada.",
+          "Opcionalmente añade una clave secreta para HMAC.",
+          "Copia cualquiera de los hashes calculados con un clic.",
+          "Usa la sección Verificador para comprobar la integridad de un hash."
+        ],
+        "whyItMatters": "Fundamental para verificar la integridad de descargas, almacenar contraseñas seguras y validar webhooks de APIs (Stripe, GitHub).",
+        "proTip": "Usa HMAC-SHA256 con clave secreta para verificar firmas de webhooks de servicios externos."
       }
     }
   },
