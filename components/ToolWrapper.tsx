@@ -45,6 +45,7 @@ interface ToolWrapperProps {
   children: React.ReactNode;
   maxWidth?: string;
   noCardWrapper?: boolean;
+  extraContent?: React.ReactNode;
 }
 
 export default function ToolWrapper({
@@ -64,7 +65,7 @@ export default function ToolWrapper({
 
   return (
     <main className="min-h-screen" style={{ background: "var(--background)" }}>
-      <div className={`${maxWidth ?? "max-w-3xl"} mx-auto px-4 py-8`}>
+      <div className={`${maxWidth ?? "max-w-4xl"} mx-auto px-4 py-8`}>
         {/* Breadcrumb + Back */}
         <div className="flex items-center justify-between mb-10 no-print">
           <nav
@@ -73,7 +74,7 @@ export default function ToolWrapper({
           >
             <Link
               href="/"
-              className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1.5"
+              className="hover:underline flex items-center gap-1.5 "
             >
               <Home size={13} />
               <span>{t("breadcrumb.home")}</span>
@@ -84,7 +85,7 @@ export default function ToolWrapper({
 
           <Link
             href="/"
-            className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1.5 text-sm"
+            className="hover:underline flex items-center gap-1.5 text-sm"
           >
             <ArrowLeft size={13} />
             {t("allTools")}

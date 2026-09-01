@@ -214,14 +214,37 @@
         "placeholder": "1-3, 4-6, 7",
         "blankHint": "Leave blank to extract all pages individually."
       },
+      "examples": {
+        "title": "Formatting examples:",
+        "empty": {
+          "label": "(blank)",
+          "desc": "Extracts all pages of the document individually."
+        },
+        "single": {
+          "desc": "Extracts only page 5."
+        },
+        "range": {
+          "desc": "Extracts pages 2 through 5 into a single file."
+        },
+        "combined": {
+          "desc": "Creates separate files for each specified range (e.g. 1-3, 5, 8-10)."
+        }
+      },
       "button": {
         "split": "Split PDF",
         "splitting": "Splitting…"
       },
       "errors": {
         "noFile": "Please select a PDF file.",
-        "splitFailed": "Split failed."
+        "splitFailed": "Split failed.",
+        "invalidFormat": "Invalid page range format. Use format like 1-3, 5 or leave blank.",
+        "startGreaterThanEnd": "Start page cannot be greater than end page (e.g. 1-3).",
+        "zeroPage": "Page numbers must be greater than 0.",
+        "pageOutOfBounds": "Page range exceeds document page count ({total} pages).",
+        "invalidFile": "Could not load PDF. It may be password-protected or corrupted."
       },
+      "pageCountSingular": "page",
+      "pageCountPlural": "pages",
       "success": "Split PDF(s) downloaded!",
       "faqs": [
         {
@@ -443,13 +466,19 @@
         "label": "Click or drag images here",
         "hint": "JPEG or PNG — multiple files supported"
       },
+      "filename": {
+        "label": "Custom PDF file name",
+        "hint": "optional",
+        "placeholder": "images"
+      },
       "button": {
         "convert": "Convert to PDF",
         "converting": "Converting…"
       },
       "errors": {
         "noImages": "Add at least one image.",
-        "conversionFailed": "Conversion failed."
+        "conversionFailed": "Conversion failed.",
+        "invalidFilename": "Invalid file format or name. Only .pdf is supported."
       },
       "success": "PDF downloaded!",
       "faqs": [
@@ -624,7 +653,109 @@
         "proTip": "For travel, compare your bank's advertised rate to the mid-market rate before deciding how to pay. Cards from Wise, Revolut, and Charles Schwab debit charge 0–1% over mid-market. Traditional bank cards typically charge 2–5%. On a $5,000 trip that difference is $100–250 in avoidable FX fees — significant enough to justify switching to a low-FX card before your next international trip."
       }
     },
+    "categories": {
+      "length": "Length",
+      "weight": "Weight",
+      "temperature": "Temperature",
+      "area": "Area",
+      "volume": "Volume",
+      "speed": "Speed",
+      "time": "Time",
+      "digital-storage": "Digital Storage",
+      "pressure": "Pressure"
+    },
+    "units": {
+      "meter": "Meter (m)",
+      "kilometer": "Kilometer (km)",
+      "centimeter": "Centimeter (cm)",
+      "millimeter": "Millimeter (mm)",
+      "micrometer": "Micrometer (μm)",
+      "mile": "Mile (mi)",
+      "yard": "Yard (yd)",
+      "foot": "Foot (ft)",
+      "inch": "Inch (in)",
+      "nautical mile": "Nautical Mile (nmi)",
+      "kilogram": "Kilogram (kg)",
+      "gram": "Gram (g)",
+      "milligram": "Milligram (mg)",
+      "pound": "Pound (lb)",
+      "ounce": "Ounce (oz)",
+      "ton": "Metric Ton (t)",
+      "short ton": "Short Ton (US)",
+      "stone": "Stone (st)",
+      "carat": "Carat (ct)",
+      "celsius": "Celsius (°C)",
+      "fahrenheit": "Fahrenheit (°F)",
+      "kelvin": "Kelvin (K)",
+      "rankine": "Rankine (°R)",
+      "square meter": "Square Meter (m²)",
+      "square kilometer": "Square Kilometer (km²)",
+      "square mile": "Square Mile (mi²)",
+      "square foot": "Square Foot (ft²)",
+      "square inch": "Square Inch (in²)",
+      "hectare": "Hectare (ha)",
+      "acre": "Acre (ac)",
+      "liter": "Liter (L)",
+      "milliliter": "Milliliter (mL)",
+      "cubic meter": "Cubic Meter (m³)",
+      "gallon (US)": "Gallon US (gal)",
+      "quart": "Quart (qt)",
+      "pint": "Pint (pt)",
+      "cup": "Cup",
+      "fluid ounce": "Fluid Ounce (fl oz)",
+      "meter per second": "Meter/Second (m/s)",
+      "kilometer per hour": "Kilometer/Hour (km/h)",
+      "mile per hour": "Mile/Hour (mph)",
+      "knot": "Knot (kn)",
+      "foot per second": "Foot/Second (fps)",
+      "second": "Second (s)",
+      "minute": "Minute (min)",
+      "hour": "Hour (h)",
+      "day": "Day",
+      "week": "Week",
+      "month": "Month",
+      "year": "Year",
+      "byte": "Byte (B)",
+      "kilobyte": "Kilobyte (KB)",
+      "megabyte": "Megabyte (MB)",
+      "gigabyte": "Gigabyte (GB)",
+      "terabyte": "Terabyte (TB)",
+      "petabyte": "Petabyte (PB)",
+      "bit": "Bit",
+      "kilobit": "Kilobit (Kb)",
+      "megabit": "Megabit (Mb)",
+      "gigabit": "Gigabit (Gb)",
+      "pascal": "Pascal (Pa)",
+      "kilopascal": "Kilopascal (kPa)",
+      "bar": "Bar",
+      "psi": "PSI",
+      "atmosphere": "Atmosphere (atm)",
+      "millimeter of mercury": "mmHg",
+      "torr": "Torr",
+      "light year": "Light Year (ly)",
+      "parsec": "Parsec (pc)",
+      "microgram": "Microgram (μg)",
+      "long ton": "Long Ton (UK)",
+      "square centimeter": "Square Centimeter (cm²)",
+      "square millimeter": "Square Millimeter (mm²)",
+      "square yard": "Square Yard (yd²)",
+      "cubic centimeter": "Cubic Centimeter (cm³)",
+      "cubic foot": "Cubic Foot (ft³)",
+      "cubic inch": "Cubic Inch (in³)",
+      "gallon (UK)": "Gallon UK (gal)",
+      "tablespoon": "Tablespoon (tbsp)",
+      "teaspoon": "Teaspoon (tsp)",
+      "mach": "Mach",
+      "millisecond": "Millisecond (ms)",
+      "microsecond": "Microsecond (μs)",
+      "nanosecond": "Nanosecond (ns)",
+      "decade": "Decade",
+      "century": "Century",
+      "megapascal": "Megapascal (MPa)",
+      "millibar": "Millibar (mbar)"
+    },
     "shared": {
+      "quickReference": "Quick Reference",
       "from": "From",
       "to": "To",
       "swap": "Swap",
@@ -638,7 +769,29 @@
         "accurate": "How accurate is this converter?",
         "accurateAnswer": "Conversions use precise factor-based math with up to 8 significant figures. Results are rounded for display only.",
         "offline": "Does this work offline?",
-        "offlineAnswer": "Yes — all unit conversions work entirely in your browser with no internet connection required."
+        "offlineAnswer": "Yes — all unit conversions work entirely in your browser with no internet connection required.",
+        "howManyAnswer": "1 {from} = {value} {to}.",
+        "howToAnswer": "Enter any value in the {from} field of the converter above and the result in {to} appears instantly. The formula is {formula}.",
+        "formulaQuestion": "What is the formula to convert {from} to {to}?"
+      },
+      "breadcrumbConverter": "Converter",
+      "aboutHeading": "{from} and {to} explained",
+      "formulaHeading": "Formula and worked examples",
+      "scenariosHeading": "Where you will use this",
+      "tableHeading": "{from} to {to} conversion table",
+      "tableCaption": "Common {from} values converted to {to}. Every figure uses the same conversion factor as the calculator above.",
+      "relatedHeading": "More {category} conversions",
+      "proTipLabel": "Pro tip",
+      "categories": {
+        "length": "length",
+        "weight": "weight",
+        "temperature": "temperature",
+        "area": "area",
+        "volume": "volume",
+        "speed": "speed",
+        "time": "time",
+        "digital-storage": "digital storage",
+        "pressure": "pressure"
       }
     }
   },
@@ -2236,6 +2389,65 @@
       "metaDescription": "Free random team generator. Paste a list of names, choose how many teams, and get fairly shuffled teams instantly. Perfect for sports, classrooms, and work.",
       "title": "Random Team Generator",
       "description": "Paste names, choose the number of teams, and get randomly balanced groups instantly.",
+      "participants": {
+        "title": "Participants",
+        "inputPlaceholder": "Enter participant name...",
+        "addButton": "Add",
+        "bulkToggle": "Paste multiple names",
+        "bulkPlaceholder": "Paste multiple names here (one per line)...",
+        "bulkAddButton": "Add to list",
+        "clearAll": "Clear all",
+        "loadSample": "Load sample",
+        "count": "{count} participant(s)",
+        "empty": "No participants added yet. Type a name above or paste a list."
+      },
+      "mode": {
+        "byTeams": "By number of teams",
+        "byTeamSize": "By team size",
+        "byTeamNames": "By custom team names"
+      },
+      "teamCount": {
+        "label": "Number of teams",
+        "hint": "From 2 up to total participants"
+      },
+      "teamSize": {
+        "label": "Participants per team",
+        "hint": "Desired average number of members in each team"
+      },
+      "teamNames": {
+        "title": "Team Names",
+        "inputPlaceholder": "e.g. Backend Team, Frontend Team...",
+        "addButton": "Add team",
+        "bulkToggle": "Paste team names",
+        "bulkPlaceholder": "Paste team names here (one per line)...",
+        "bulkAddButton": "Add teams to list",
+        "loadSample": "Load sample",
+        "clearAll": "Clear teams",
+        "count": "{count} team(s)",
+        "empty": "No custom teams added yet. Type team names above or paste a list."
+      },
+      "errors": {
+        "minParticipants": "Add at least 2 participants to generate teams.",
+        "invalidTeamCountMin": "Minimum number of teams is 2.",
+        "invalidTeamCountMax": "Number of teams ({teams}) cannot exceed number of participants ({total}).",
+        "invalidCustomTeamNamesMin": "Add at least 2 custom team names.",
+        "invalidCustomTeamNamesMax": "The number of teams ({teams}) cannot exceed the number of participants ({total}).",
+        "invalidTeamSizeMin": "Team size must be at least 1 participant.",
+        "invalidTeamSizeMax": "Team size ({size}) must allow creating at least 2 teams."
+      },
+      "button": {
+        "generate": "Generate Teams",
+        "generating": "Generating teams..."
+      },
+      "results": {
+        "title": "Generated Teams",
+        "copyAll": "Copy all",
+        "copied": "Copied!",
+        "teamTitle": "Team {number}",
+        "memberCount": "{count} participant(s)",
+        "fewerMembers": "Fewer members ({count})",
+        "balancedNotice": "Teams balanced with at most 1 member difference."
+      },
       "faqs": [
         {
           "question": "How are teams balanced?",
@@ -2597,6 +2809,7 @@
       "timeUp": "Time's up!",
       "nextQuestion": "Next Question",
       "seeResult": "See My Result",
+      "sourceLabel": "Source: {source}",
       "tiers": {
         "legend": "Legend",
         "expert": "Expert",
@@ -2628,7 +2841,8 @@
       "quizzes": "Quizzes",
       "agileTools": "Agile & Scrum Tools",
       "sportsQuizzes": "Sports Quizzes",
-      "interviewPrep": "Interview Prep"
+      "interviewPrep": "Interview Prep",
+      "educationTools": "Education Tools"
     },
     "tools": {
       "imageCompressor": {
@@ -2668,15 +2882,15 @@
         "desc": "Live rates for 150+ currencies"
       },
       "metersToFeet": {
-        "label": "Meters to Feet",
+        "label": "Length Converter",
         "desc": "Quick length conversion"
       },
       "celsiusToFahrenheit": {
-        "label": "Celsius to Fahrenheit",
+        "label": "Temperature Converter",
         "desc": "Quick temperature conversion"
       },
       "kgToPounds": {
-        "label": "Kg to Pounds",
+        "label": "Weight Converter",
         "desc": "Quick weight conversion"
       },
       "wordCounter": {
@@ -2785,7 +2999,7 @@
       },
       "worldCupQuiz": {
         "label": "FIFA World Cup Winners Quiz",
-        "desc": "Test your knowledge of every World Cup champion"
+        "desc": "Guess the World Cup winners from 1930 to 2022 — every champion, host and final"
       },
       "footballClubQuiz": {
         "label": "Which Football Club Are You?",
@@ -2806,6 +3020,18 @@
       "f1DriverQuiz": {
         "label": "Which F1 Driver Are You?",
         "desc": "Verstappen, Hamilton, Senna, or Norris?"
+      },
+      "politicalProfileQuiz": {
+        "label": "What's Your Political Profile?",
+        "desc": "A fun, neutral values quiz — discover your political archetype"
+      },
+      "echoChamberQuiz": {
+        "label": "Political Echo Chamber Quiz",
+        "desc": "Discover how much your feed and social circle echo your own views."
+      },
+      "fakeNewsQuiz": {
+        "label": "Fake News or Fact?",
+        "desc": "10 viral claims — can you spot which ones are true?"
       },
       "retroBoard": {
         "label": "Retrospective Board",
@@ -2838,6 +3064,34 @@
       "interviewHub": {
         "label": "Interview Prep Hub",
         "desc": "TypeScript, JS & more — with explanations and best practices"
+      },
+      "gpaCalculator": {
+        "label": "GPA Calculator",
+        "desc": "Weighted GPA on the 4.0, 0–20 and 0–10 scales"
+      },
+      "cumulativeGpaCalculator": {
+        "label": "Cumulative GPA Calculator",
+        "desc": "Add a new semester to your existing GPA"
+      },
+      "gradeCalculator": {
+        "label": "Grade Calculator",
+        "desc": "What grade do I need on the final exam?"
+      },
+      "citationGenerator": {
+        "label": "Citation Generator",
+        "desc": "APA, MLA, Chicago and ABNT citations"
+      },
+      "gpaGuide": {
+        "label": "Guide: How to Calculate GPA",
+        "desc": "The 4.0 scale, the formula and a worked example"
+      },
+      "gpaBrazilGuide": {
+        "label": "Guide: Brazilian Grades to GPA",
+        "desc": "Convert 0–10 and 0–100 grades to the 4.0 scale"
+      },
+      "gpaUsaGuide": {
+        "label": "Guide: GPA to Study in the US",
+        "desc": "What GPA universities expect, and what else counts"
       }
     },
     "badge": "Toolnotch | Over 40 essential tools",
@@ -3525,7 +3779,82 @@
         "question": "Does this GPA calculator work for international students?",
         "answer": "Yes — this calculator supports the US 4.0 scale (A–F letter grades), the Portuguese and Brazilian 0–20 scale, and the Spanish and Latin American 0–10 scale. Select your scale using the dropdown."
       }
-    ]
+    ],
+    "howTo": {
+      "name": "How to calculate your GPA on the 4.0 scale",
+      "steps": [
+        "Choose your grading scale: US 4.0 (A–F), Portugal/Brazil 0–20, or Spain/Latin America 0–10.",
+        "Enter each course with its grade and the number of credits it carries.",
+        "Convert every grade to grade points — on the 4.0 scale A = 4.0, B = 3.0, C = 2.0, D = 1.0 and F = 0.0.",
+        "Multiply each course's grade points by its credits to get that course's weighted points.",
+        "Add up all the weighted points and divide by the total number of credits. The result is your GPA.",
+        "Use the Cumulative GPA tab to combine this semester with the credits already on your transcript."
+      ]
+    },
+    "brConversion": {
+      "heading": "Convert Brazilian Grades (0–10 / 0–100) to a 4.0 GPA",
+      "intro": "Brazilian transcripts report grades on a 0–10 scale, or 0–100 in secondary school, while US applications ask for a number between 0.0 and 4.0. No single official conversion exists, but the band table below is the mapping most widely used to estimate a GPA, and it is what this calculator applies when you select a 0–10 scale.",
+      "columns": {
+        "decimal": "Grade (0–10)",
+        "percent": "Grade (0–100)",
+        "letter": "US letter",
+        "gpa": "GPA (4.0)"
+      },
+      "rows": [
+        {
+          "decimal": "9.5 - 10.0",
+          "percent": "95 - 100",
+          "letter": "A",
+          "gpa": "4.0"
+        },
+        {
+          "decimal": "8.5 - 9.4",
+          "percent": "85 - 94",
+          "letter": "A−",
+          "gpa": "3.7"
+        },
+        {
+          "decimal": "7.5 - 8.4",
+          "percent": "75 - 84",
+          "letter": "B+",
+          "gpa": "3.3"
+        },
+        {
+          "decimal": "6.5 - 7.4",
+          "percent": "65 - 74",
+          "letter": "B",
+          "gpa": "3.0"
+        },
+        {
+          "decimal": "6.0 - 6.4",
+          "percent": "60 - 64",
+          "letter": "B−",
+          "gpa": "2.7"
+        },
+        {
+          "decimal": "5.5 - 5.9",
+          "percent": "55 - 59",
+          "letter": "C+",
+          "gpa": "2.3"
+        },
+        {
+          "decimal": "5.0 - 5.4",
+          "percent": "50 - 54",
+          "letter": "C",
+          "gpa": "2.0"
+        },
+        {
+          "decimal": "below 5.0",
+          "percent": "below 50",
+          "letter": "F",
+          "gpa": "0.0"
+        }
+      ],
+      "disclaimer": "This table is an estimate, not an official conversion. US universities usually require an evaluation from a credential service such as WES, ECE or SpanTran, and each evaluator applies its own methodology. Use this table to plan where to apply; use the evaluator’s report to actually apply.",
+      "exampleHeading": "Worked example",
+      "exampleBody": "A semester of Calculus II 7.2 (6 credits), Physics II 6.3 (4), Linear Algebra 8.7 (4), Programming 9.6 (4) and Research Methods 8.0 (2) converts to 3.0, 2.7, 3.7, 4.0 and 3.3 grade points. Weighted by credits that is (3.0×6) + (2.7×4) + (3.7×4) + (4.0×4) + (3.3×2) = 66.2 points across 20 credits, a GPA of 3.31. Note that an arithmetic average of 7.96 in Brazil becomes a 3.31 GPA, because the conversion is not linear.",
+      "ctaLabel": "Read the full guide: How to Convert Brazilian Grades to a 4.0 GPA"
+    }
   },
   "ageCalculator": {
     "metaTitle": "Age Calculator — How Old Am I? Calculate Your Exact Age | ToolNotch",
@@ -4444,5 +4773,381 @@
     },
     "tagline": "Free tools that run in your browser. No sign-up. No data stored.",
     "copyright": "© 2026 ToolNotch · Built by {name}"
+  },
+  "electionCountdown": {
+    "metaTitle": "Brazil 2026 Election Countdown | ToolNotch",
+    "metaDescription": "Live countdown to Brazil's 2026 general election. Official first-round (Oct 4) and runoff (Oct 25) dates confirmed by TSE. No polls, no candidates, no opinions.",
+    "title": "Brazil 2026 Election Countdown",
+    "description": "How many days until Brazil's 2026 general election? Live countdown to the first round (October 4) and the runoff (October 25, if needed), based on official TSE dates.",
+    "round1Label": "Round 1",
+    "round2Label": "Runoff (if needed)",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "electionConcludedRound1": "The first round has closed. Waiting to confirm whether a runoff is needed.",
+    "electionConcludedRound2": "Brazil's 2026 election period has concluded. This page does not track results — see the TSE for official information.",
+    "faqs": [
+      {
+        "question": "When is Brazil's 2026 election?",
+        "answer": "Brazil's 2026 general election takes place on Sunday, October 4, 2026 (first round). The date is fixed by the Brazilian Constitution and the Elections Law (Lei nº 9.504/1997), which set the first Sunday of October as election day, and was confirmed officially by Brazil's Superior Electoral Court (TSE)."
+      },
+      {
+        "question": "How does the runoff work?",
+        "answer": "A runoff happens only for the President and Governor races, and only if no candidate wins more than 50% of valid votes in round 1. If needed, it's held on the last Sunday of October — October 25, 2026. Senate and Deputy races are decided in a single round."
+      },
+      {
+        "question": "Who can vote in Brazil's 2026 election?",
+        "answer": "Voting is mandatory for literate citizens aged 18–70. It's optional for 16–17 year-olds, for people over 70, and for citizens who cannot read or write. See the TSE for complete eligibility rules."
+      },
+      {
+        "question": "What's being elected on October 4?",
+        "answer": "On the same day, Brazil elects its President, state Governors, Senators, and federal, state, and district-level legislators. Only the Presidential and Governor races can go to a runoff."
+      },
+      {
+        "question": "Can the election date change?",
+        "answer": "No — the first-Sunday-of-October and last-Sunday-of-October dates are set by the Constitution and Elections Law, not by discretionary scheduling, which is why this countdown uses fixed dates."
+      }
+    ],
+    "richContent": {
+      "whatIs": "Brazil's 2026 general election takes place on Sunday, October 4, 2026, when voters choose the President, state Governors, Senators, and federal, state, and district legislators — all in a single vote. The date is set by the Brazilian Constitution and the 1997 Elections Law, which fix the first Sunday of October as election day. If no candidate for President or Governor wins more than 50% of valid votes, a runoff is held on the last Sunday of October — October 25, 2026. Both dates were confirmed by Brazil's Superior Electoral Court (TSE).",
+      "howToUse": [
+        "The live countdown at the top shows days, hours, minutes, and seconds until polls close for the current round.",
+        "It switches automatically from round 1 to the runoff once October 4 voting hours end.",
+        "Both official dates stay visible below the countdown, even after round 1 has passed."
+      ],
+      "whyItMatters": "Brazil uses a two-round system for its top two offices — President and Governor — to ensure the winner has support from a majority of voters, not just a plurality. Senate and legislative seats, by contrast, are decided in one round. Whether a runoff happens is only confirmed after round-1 results are counted, which is why this page frames October 25 as conditional rather than certain.",
+      "proTip": "If your state's Governor race — or the Presidential race — goes to a runoff, this page automatically switches its countdown to October 25, 2026."
+    }
+  },
+  "pollingPlaceFinder": {
+    "metaTitle": "Where Do I Vote in Brazil's 2026 Election? How to Find Your Polling Place | ToolNotch",
+    "metaDescription": "A plain-English guide to Brazil's polling-place system and how any registered voter checks their assigned voting location through the official TSE tools — no forms, no data collected here.",
+    "title": "Where Do I Vote in Brazil's 2026 Election? How to Find Your Polling Place",
+    "description": "How Brazil's voting-location system works, and the two official TSE tools every voter uses to check their assigned polling place.",
+    "intro": "Brazil's electoral system assigns every voter to a specific polling place — and it can genuinely change between elections. This guide explains how that assignment works and how to look yours up in under two minutes, using only Brazil's official electoral authority, the TSE.",
+    "sections": {
+      "whatIsPollingPlace": {
+        "heading": "What is a \"polling place\" (local de votação) in Brazil?",
+        "body": [
+          "In Brazil's electoral system, every registered voter is assigned to an electoral zone (zona eleitoral) and, within it, a specific polling section (seção eleitoral) — a small group of voters who share one ballot box at one physical location, usually a school or public building. Together, the zone and section point to a single address: your polling place.",
+          "These assignments aren't permanent. Brazil's electoral court (TSE) and its regional branches (TREs) periodically reorganize zones and sections — because voters move, buildings used as polling places close, or voter counts need rebalancing. That means your polling place can change between elections even if you haven't moved, which is why officials recommend checking it before every election rather than relying on where you voted last time."
+        ]
+      },
+      "howToCheck": {
+        "heading": "How to check your polling place (official steps)",
+        "intro": "Two official, free tools handle this — both run directly by TSE. Avoid any third-party site or app claiming to do this lookup for you; only tse.jus.br and the official e-Título app are authoritative.",
+        "steps": [
+          {
+            "title": "On TSE's website (Autoatendimento Eleitoral)",
+            "body": "Go to tse.jus.br, open \"Serviços eleitorais,\" and select \"Autoatendimento Eleitoral\" (the self-service portal that replaced the older Título Net system). Inside it, choose \"Onde votar\" (\"Where to vote\") to open the lookup form."
+          },
+          {
+            "title": "On the e-Título app (Android and iOS)",
+            "body": "Download e-Título from your phone's app store and log in. Your assigned polling place shows on the home screen, complete with the full address and, on election day, a built-in map to help you get there."
+          },
+          {
+            "title": "What you'll need to enter",
+            "body": "Both tools ask for your voter registration number (título de eleitor), CPF, or full name, plus your date of birth, to confirm your identity before showing your result."
+          }
+        ]
+      },
+      "lostTitle": {
+        "heading": "Lost your voter registration card? Here's what actually matters",
+        "body": [
+          "You don't need the physical card to vote — a government-issued photo ID is enough. Poll workers confirm your section through the electoral system, not a piece of paper.",
+          "If you'd still like to regularize your registration or check your status, the fastest path is the e-Título app or TSE's Autoatendimento Eleitoral portal — both let you view your standing and request a digital reissue without visiting an electoral office in person."
+        ]
+      },
+      "movedCity": {
+        "heading": "Moved cities, states, or abroad — does that change your polling place?",
+        "body": [
+          "Yes. If you move to a different municipality (or even a different neighborhood covered by another zone), your polling place stays tied to your old zone until you formally request an electoral address transfer — simply living somewhere new doesn't update it automatically.",
+          "For Brazilians living abroad, voting happens at a consular section rather than a domestic polling place, and registration works a bit differently — TSE's own site has a dedicated \"voto no exterior\" section covering that process. Either way, transfer and registration requests must be filed within the deadline set by TSE's official election calendar for that year, and that window typically closes well before election day — check the current calendar rather than assuming last cycle's dates still apply."
+        ]
+      },
+      "whatToBring": {
+        "heading": "What to bring on election day",
+        "body": [
+          "Bring an official photo ID — not necessarily the physical voter card. TSE generally accepts a national ID card (RG or the newer Carteira de Identidade Nacional), driver's license, passport, work card, or licensed professional ID cards. Confirm the current accepted-document list on TSE's official site or app before election day.",
+          "Arrive at your assigned section within the voting hours TSE sets for that election. Voters already in line when polls close are typically still allowed to vote, but it's not worth cutting it close."
+        ],
+        "documentList": [
+          "National ID card (RG) or Carteira de Identidade Nacional (CIN)",
+          "Driver's license (CNH)",
+          "Passport",
+          "Work card (Carteira de Trabalho)",
+          "Licensed professional ID cards recognized by law"
+        ]
+      }
+    },
+    "cta": {
+      "label": "Look up my polling place on TSE's official site",
+      "sublabel": "You'll be redirected to tse.jus.br — the only official channel for this lookup. ToolNotch never sees, processes, or stores any of your voter data."
+    },
+    "howToSteps": [
+      "Go to tse.jus.br and open Autoatendimento Eleitoral, or install the e-Título app on your phone.",
+      "Select \"Onde votar\" (\"Where to vote\") from the lookup menu.",
+      "Enter your voter registration number, CPF, or full name, along with your date of birth.",
+      "Review the zone, section, and address shown for your assigned polling place."
+    ],
+    "faqs": [
+      {
+        "question": "Can I vote at any polling place?",
+        "answer": "No. You can only vote at the specific section you're assigned to, even if another location is closer on election day. Always confirm the correct address before you head out."
+      },
+      {
+        "question": "What if I don't have my voter registration card anymore?",
+        "answer": "You don't need the physical card to vote — a government photo ID is enough. To regularize your registration or get a digital reissue, use the e-Título app or TSE's Autoatendimento Eleitoral portal."
+      },
+      {
+        "question": "Can I look up someone else's polling place?",
+        "answer": "Not through your own e-Título app login — it only shows the data for the account you're logged into. To check someone else's polling place (with their consent), use TSE's Autoatendimento Eleitoral site and enter their information there."
+      },
+      {
+        "question": "Does the polling place change every election?",
+        "answer": "It can. TSE periodically reorganizes zones and sections, so it's worth rechecking before every election instead of assuming it's the same as last time — even if you haven't moved."
+      },
+      {
+        "question": "Do I need to bring the physical voter registration card on election day?",
+        "answer": "No. An official photo ID — RG, driver's license, passport, or another document TSE accepts — is enough to confirm your identity at your section."
+      },
+      {
+        "question": "What if I'm in the wrong line on election day?",
+        "answer": "Find a poll worker (mesário) or election-day staff on-site — they can check the system for your correct section and redirect you without you having to leave the building."
+      }
+    ]
+  },
+  "quizDepth": {
+    "fifaWorldCupWinners": {
+      "metaTitle": "FIFA World Cup Winners Quiz — Guess Every Champion 1930–2022",
+      "metaDescription": "Play the FIFA World Cup winners quiz: 20 questions on every champion from 1930 to 2022, plus a full winners-by-year list. Guess the World Cup winners now.",
+      "introHeading": "About the FIFA World Cup Winners Quiz",
+      "intro": [
+        "The FIFA World Cup has crowned a champion every four years since 1930, pausing only in 1942 and 1946 for the Second World War. Just eight nations have ever lifted the trophy. Brazil leads with five titles, followed by Italy and Germany with four each, Argentina with three, and Uruguay and France with two. England and Spain have each won once, both in tournaments that turned on a single unforgettable final. The prize has changed too: the Jules Rimet Trophy was awarded through 1970, and the current FIFA World Cup Trophy has been lifted since 1974.",
+        "This quiz runs through 22 tournaments of history. You are asked to name the winner of specific editions, from Uruguay’s home triumph in 1930 to Argentina’s penalty-shootout victory in Qatar 2022, and to recall host nations, record goalscorers such as Miroslav Klose, and the finals that defined each era. Twenty multiple-choice questions cover champions, runners-up, and the moments every football fan argues about.",
+        "Answer each question and your score is tallied instantly, then matched to a tier: World Cup Legend, Football Expert, Football Fan, or World Cup Rookie. There is no sign-up and no time pressure. Use the winners-by-year table below to revise before you play, or to settle a debate about who won which World Cup — every result in it matches the official FIFA record."
+      ],
+      "tableHeading": "Every FIFA World Cup Winner (1930–2022)",
+      "tableNote": "aet = after extra time; pens = decided on penalties.",
+      "tableCols": {
+        "year": "Year",
+        "host": "Host",
+        "winner": "Winner",
+        "runnerUp": "Runner-up",
+        "score": "Final score"
+      },
+      "rows": [
+        {
+          "year": "1930",
+          "host": "Uruguay",
+          "winner": "Uruguay",
+          "runnerUp": "Argentina",
+          "score": "4–2"
+        },
+        {
+          "year": "1934",
+          "host": "Italy",
+          "winner": "Italy",
+          "runnerUp": "Czechoslovakia",
+          "score": "2–1 (aet)"
+        },
+        {
+          "year": "1938",
+          "host": "France",
+          "winner": "Italy",
+          "runnerUp": "Hungary",
+          "score": "4–2"
+        },
+        {
+          "year": "1942",
+          "host": "Not held",
+          "winner": "Not held",
+          "runnerUp": "—",
+          "score": "World War II"
+        },
+        {
+          "year": "1946",
+          "host": "Not held",
+          "winner": "Not held",
+          "runnerUp": "—",
+          "score": "World War II"
+        },
+        {
+          "year": "1950",
+          "host": "Brazil",
+          "winner": "Uruguay",
+          "runnerUp": "Brazil",
+          "score": "2–1 (deciding match)"
+        },
+        {
+          "year": "1954",
+          "host": "Switzerland",
+          "winner": "West Germany",
+          "runnerUp": "Hungary",
+          "score": "3–2"
+        },
+        {
+          "year": "1958",
+          "host": "Sweden",
+          "winner": "Brazil",
+          "runnerUp": "Sweden",
+          "score": "5–2"
+        },
+        {
+          "year": "1962",
+          "host": "Chile",
+          "winner": "Brazil",
+          "runnerUp": "Czechoslovakia",
+          "score": "3–1"
+        },
+        {
+          "year": "1966",
+          "host": "England",
+          "winner": "England",
+          "runnerUp": "West Germany",
+          "score": "4–2 (aet)"
+        },
+        {
+          "year": "1970",
+          "host": "Mexico",
+          "winner": "Brazil",
+          "runnerUp": "Italy",
+          "score": "4–1"
+        },
+        {
+          "year": "1974",
+          "host": "West Germany",
+          "winner": "West Germany",
+          "runnerUp": "Netherlands",
+          "score": "2–1"
+        },
+        {
+          "year": "1978",
+          "host": "Argentina",
+          "winner": "Argentina",
+          "runnerUp": "Netherlands",
+          "score": "3–1 (aet)"
+        },
+        {
+          "year": "1982",
+          "host": "Spain",
+          "winner": "Italy",
+          "runnerUp": "West Germany",
+          "score": "3–1"
+        },
+        {
+          "year": "1986",
+          "host": "Mexico",
+          "winner": "Argentina",
+          "runnerUp": "West Germany",
+          "score": "3–2"
+        },
+        {
+          "year": "1990",
+          "host": "Italy",
+          "winner": "West Germany",
+          "runnerUp": "Argentina",
+          "score": "1–0"
+        },
+        {
+          "year": "1994",
+          "host": "United States",
+          "winner": "Brazil",
+          "runnerUp": "Italy",
+          "score": "0–0 (3–2 pens)"
+        },
+        {
+          "year": "1998",
+          "host": "France",
+          "winner": "France",
+          "runnerUp": "Brazil",
+          "score": "3–0"
+        },
+        {
+          "year": "2002",
+          "host": "South Korea & Japan",
+          "winner": "Brazil",
+          "runnerUp": "Germany",
+          "score": "2–0"
+        },
+        {
+          "year": "2006",
+          "host": "Germany",
+          "winner": "Italy",
+          "runnerUp": "France",
+          "score": "1–1 (5–3 pens)"
+        },
+        {
+          "year": "2010",
+          "host": "South Africa",
+          "winner": "Spain",
+          "runnerUp": "Netherlands",
+          "score": "1–0 (aet)"
+        },
+        {
+          "year": "2014",
+          "host": "Brazil",
+          "winner": "Germany",
+          "runnerUp": "Argentina",
+          "score": "1–0 (aet)"
+        },
+        {
+          "year": "2018",
+          "host": "Russia",
+          "winner": "France",
+          "runnerUp": "Croatia",
+          "score": "4–2"
+        },
+        {
+          "year": "2022",
+          "host": "Qatar",
+          "winner": "Argentina",
+          "runnerUp": "France",
+          "score": "3–3 (4–2 pens)"
+        }
+      ],
+      "faqHeading": "World Cup winners: frequently asked questions",
+      "faqs": [
+        {
+          "question": "Who has won the most FIFA World Cups?",
+          "answer": "Brazil has won the FIFA World Cup five times (1958, 1962, 1970, 1994 and 2002), more than any other nation. Italy and Germany follow with four titles each, Argentina has three, France and Uruguay have two apiece, and England and Spain have one each."
+        },
+        {
+          "question": "Which countries have won the World Cup?",
+          "answer": "Eight national teams have won the World Cup: Brazil, Germany (including West Germany), Italy, Argentina, France, Uruguay, England and Spain. No team from outside Europe or South America has ever reached a final."
+        },
+        {
+          "question": "How does the World Cup champions quiz work?",
+          "answer": "The quiz has 20 multiple-choice questions about World Cup winners, hosts, finals and record holders. Each answer is marked right or wrong immediately, and your final percentage places you in one of four tiers, from World Cup Rookie to World Cup Legend. It is free and needs no account."
+        },
+        {
+          "question": "Can I guess all the World Cup winners from 1930 to 2022?",
+          "answer": "Yes. There have been 22 tournaments between 1930 and 2022 (1942 and 1946 were cancelled because of the Second World War). The table above lists every winner, runner-up and final score, so you can test yourself and then check the full answers."
+        },
+        {
+          "question": "Have any host nations won the World Cup at home?",
+          "answer": "Six host nations have won on home soil: Uruguay (1930), Italy (1934), England (1966), West Germany (1974), Argentina (1978) and France (1998). Brazil, the most successful team overall, has never won a World Cup it hosted."
+        }
+      ],
+      "relatedHeading": "More football quizzes",
+      "related": {
+        "worldCup": {
+          "label": "FIFA World Cup Winners Quiz",
+          "href": "/quiz/fifa-world-cup-winners",
+          "desc": "Name every World Cup champion from 1930 to 2022"
+        },
+        "footballClub": {
+          "label": "Which Football Club Are You?",
+          "href": "/quiz/which-football-club-are-you",
+          "desc": "Match your personality to a club"
+        },
+        "championsLeague": {
+          "label": "Champions League Trivia",
+          "href": "/quiz/champions-league-trivia",
+          "desc": "Test your knowledge of Europe’s elite competition"
+        }
+      }
+    }
   }
 }

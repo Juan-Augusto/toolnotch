@@ -8,7 +8,8 @@ export interface BlogPost {
   relatedToolPath?: string  // e.g. '/tools/finance/mortgage-calculator'
   relatedToolNameKey?: string
   readingTimeMinutes: number
-  locale: 'en' | 'all'
+  // 'all' = a legacy post served in every locale from a single shared MDX file
+  locale: 'en' | 'pt' | 'es' | 'all'
   // MDX-sourced fields (engineering posts only)
   title?: string            // if present, BlogCard uses this instead of calling t()
   description?: string      // same

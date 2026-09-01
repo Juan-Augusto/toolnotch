@@ -1,6 +1,7 @@
 import fs from 'fs/promises'
 import path from 'path'
 import type { BlogPost } from '@/lib/blogTypes'
+import { BLOG_LOCALES } from '@/data/blog/slugTranslations'
 
 const CONTENT_DIR = path.join(process.cwd(), 'data', 'blog', 'content')
 
@@ -23,61 +24,89 @@ export interface MdxBlogPost {
   source: string  // raw MDX string, passed to MDXRemote
 }
 
+/**
+ * Resolution order for a post's MDX file:
+ *   1. `data/blog/content/{locale}/{slug}.mdx` — a post translated per locale
+ *   2. `data/blog/content/{slug}.mdx`          — a legacy post shared by all locales
+ *
+ * A localized slug therefore resolves only under its own locale: requesting the
+ * Portuguese slug under `/en` finds neither file and the caller renders a 404.
+ */
+function candidatePaths(slug: string, locale: string): string[] {
+  return [
+    path.join(CONTENT_DIR, locale, `${slug}.mdx`),
+    path.join(CONTENT_DIR, `${slug}.mdx`),
+  ]
+}
+
 // Returns null if the file does not exist
-export async function getBlogPostSource(slug: string): Promise<MdxBlogPost | null> {
-  const filePath = path.join(CONTENT_DIR, `${slug}.mdx`)
-  try {
-    const raw = await fs.readFile(filePath, 'utf-8')
-    const { data, content } = parseFrontmatter(raw)
-    const frontmatter = data as unknown as MdxFrontmatter
-    frontmatter.readingTimeMinutes = estimateReadingTime(content)
-    return { frontmatter, source: content }
-  } catch {
-    return null
-  }
-}
-
-export async function getAllMdxSlugs(): Promise<string[]> {
-  try {
-    const files = await fs.readdir(CONTENT_DIR)
-    return files
-      .filter((f) => f.endsWith('.mdx'))
-      .map((f) => f.replace(/\.mdx$/, ''))
-  } catch {
-    return []
-  }
-}
-
-export async function getAllMdxBlogPosts(): Promise<BlogPost[]> {
-  try {
-    const files = await fs.readdir(CONTENT_DIR)
-    const mdxFiles = files.filter((f) => f.endsWith('.mdx'))
-    const posts: BlogPost[] = []
-    for (const file of mdxFiles) {
-      const slug = file.replace(/\.mdx$/, '')
-      const result = await getBlogPostSource(slug)
-      if (!result) continue
-      const fm = result.frontmatter
-      posts.push({
-        slug,
-        titleKey: '',
-        descriptionKey: '',
-        publishedAt: fm.publishedAt,
-        updatedAt: fm.updatedAt,
-        category: fm.category as BlogPost['category'],
-        readingTimeMinutes: fm.readingTimeMinutes,
-        locale: 'en',
-        title: fm.title,
-        description: fm.description,
-        tags: fm.tags,
-        linkedinUrl: fm.linkedinUrl,
-        relatedToolPath: fm.relatedToolPath,
-      })
+export async function getBlogPostSource(
+  slug: string,
+  locale = 'en',
+): Promise<MdxBlogPost | null> {
+  for (const filePath of candidatePaths(slug, locale)) {
+    try {
+      const raw = await fs.readFile(filePath, 'utf-8')
+      const { data, content } = parseFrontmatter(raw)
+      const frontmatter = data as unknown as MdxFrontmatter
+      frontmatter.readingTimeMinutes = estimateReadingTime(content)
+      return { frontmatter, source: content }
+    } catch {
+      // try the next candidate
     }
-    return posts.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+  }
+  return null
+}
+
+/** Slug list for one directory, ignoring a missing directory. */
+async function slugsInDir(dir: string): Promise<string[]> {
+  try {
+    const files = await fs.readdir(dir, { withFileTypes: true })
+    return files
+      .filter((f) => f.isFile() && f.name.endsWith('.mdx'))
+      .map((f) => f.name.replace(/\.mdx$/, ''))
   } catch {
     return []
   }
+}
+
+/**
+ * Slugs that render at `/{locale}/blog/{slug}`.
+ * With no locale, returns every slug across every locale (superset).
+ */
+export async function getAllMdxSlugs(locale?: string): Promise<string[]> {
+  const flat = await slugsInDir(CONTENT_DIR)
+  const localeDirs = locale ? [locale] : BLOG_LOCALES
+  const localized = (
+    await Promise.all(localeDirs.map((l) => slugsInDir(path.join(CONTENT_DIR, l))))
+  ).flat()
+  return Array.from(new Set([...flat, ...localized]))
+}
+
+export async function getAllMdxBlogPosts(locale = 'en'): Promise<BlogPost[]> {
+  const slugs = await getAllMdxSlugs(locale)
+  const posts: BlogPost[] = []
+  for (const slug of slugs) {
+    const result = await getBlogPostSource(slug, locale)
+    if (!result) continue
+    const fm = result.frontmatter
+    posts.push({
+      slug,
+      titleKey: '',
+      descriptionKey: '',
+      publishedAt: fm.publishedAt,
+      updatedAt: fm.updatedAt,
+      category: fm.category as BlogPost['category'],
+      readingTimeMinutes: fm.readingTimeMinutes,
+      locale: locale as BlogPost['locale'],
+      title: fm.title,
+      description: fm.description,
+      tags: fm.tags,
+      linkedinUrl: fm.linkedinUrl,
+      relatedToolPath: fm.relatedToolPath,
+    })
+  }
+  return posts.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
 }
 
 export function estimateReadingTime(content: string): number {

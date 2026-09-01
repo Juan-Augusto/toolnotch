@@ -7,4 +7,5 @@ export const AD_SLOTS = {
   TOOL_BOTTOM: '2222222222',       // rectangle below FAQ — to be added post-approval
   BLOG_ARTICLE_BOTTOM: '3333333333', // rectangle below blog articles
   BLOG_INDEX_TOP: '4444444444',    // leaderboard above blog index
+  CONVERT_SLUG: '5555555555',      // leaderboard on /tools/convert/[slug] pages
 } as const

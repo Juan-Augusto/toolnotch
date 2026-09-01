@@ -1,7 +1,7 @@
 export type QuizMeta = {
   id: string
   type: 'personality' | 'trivia'
-  category: 'personality' | 'sports' | 'backend'
+  category: 'personality' | 'sports' | 'backend' | 'civic'
   locales: ('en' | 'pt' | 'es')[]
 }
 
@@ -13,6 +13,11 @@ export const QUIZ_REGISTRY: QuizMeta[] = [
   { id: 'what-is-your-love-language',       type: 'personality', category: 'personality', locales: ['en','pt','es'] },
   { id: 'formula-1-trivia',                type: 'trivia',      category: 'sports',      locales: ['en','pt','es'] },
   { id: 'which-f1-driver-are-you',         type: 'personality', category: 'sports',      locales: ['en','pt','es'] },
+  // Election 2026 (civic / political-adjacent, neutral by construction)
+  { id: 'what-is-your-political-profile',        type: 'personality', category: 'personality', locales: ['en','pt','es'] },
+  { id: 'political-echo-chamber-quiz',           type: 'personality', category: 'personality', locales: ['en','pt','es'] },
+  { id: 'which-historical-figure-matches-you',   type: 'personality', category: 'personality', locales: ['en','pt','es'] },
+  { id: 'fake-news-or-fact',                     type: 'trivia',      category: 'civic',       locales: ['en','pt','es'] },
   // Backend Engineering (English only)
   { id: 'nodejs-fundamentals',  type: 'trivia', category: 'backend', locales: ['en'] },
   { id: 'database-design',      type: 'trivia', category: 'backend', locales: ['en'] },

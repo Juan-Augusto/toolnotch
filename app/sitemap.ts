@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { conversionPages } from '@/data/conversionPages'
 import { COMMON_PAIRS } from '@/data/conversionPairs'
 import { BLOG_POSTS } from '@/data/blog/index'
+import { findSlugGroup, BLOG_LOCALES } from '@/data/blog/slugTranslations'
 import { getAllMdxBlogPosts } from '@/lib/content/blogRepository'
 
 const BASE_URL = (process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com').trim()
@@ -108,6 +109,16 @@ const ALL_ROUTES = [
   '/quiz/what-is-your-love-language',
   '/quiz/formula-1-trivia',
   '/quiz/which-f1-driver-are-you',
+  // Election 2026 quizzes
+  '/quiz/what-is-your-political-profile',
+  '/quiz/political-echo-chamber-quiz',
+  '/quiz/which-historical-figure-matches-you',
+  '/quiz/fake-news-or-fact',
+  // World Cup quiz result/tier pages (indexable, 80–120 words each)
+  '/quiz/fifa-world-cup-winners/result/legend',
+  '/quiz/fifa-world-cup-winners/result/expert',
+  '/quiz/fifa-world-cup-winners/result/fan',
+  '/quiz/fifa-world-cup-winners/result/rookie',
   // Health tools
   '/tools/health',
   '/tools/health/bmi-calculator',
@@ -125,6 +136,8 @@ const ALL_ROUTES = [
   // Utilities
   '/tools/utilities',
   '/tools/utilities/qr-code-generator',
+  '/tools/utilities/election-countdown',
+  '/tools/utilities/polling-place-finder',
   // Blog
   '/blog',
 ]
@@ -169,7 +182,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         es: `${BASE_URL}/es/blog/${post.slug}`,
         'x-default': `${BASE_URL}/blog/${post.slug}`,
       },
-    },
+    }
   }))
 
   return [

@@ -3,10 +3,11 @@ import { notFound } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import rehypePrettyCode from 'rehype-pretty-code'
-import { buildAlternates } from '@/lib/i18nMeta'
+import { buildAlternates, buildAlternatesForPaths } from '@/lib/i18nMeta'
 import { buildJsonLd, breadcrumbSchema, buildLocalizedUrl, authorSchema } from '@/lib/schema'
 import { BLOG_POSTS } from '@/data/blog/index'
-import { getBlogPostSource, getAllMdxSlugs, guardDescription } from '@/lib/content/blogRepository'
+import { findSlugGroup, BLOG_LOCALES } from '@/data/blog/slugTranslations'
+import { getBlogPostSource, getAllMdxSlugs, getAllMdxBlogPosts, guardDescription } from '@/lib/content/blogRepository'
 import { mdxComponents } from '@/components/blog/mdxComponents'
 import ArticleLayout from '@/components/blog/ArticleLayout'
 
@@ -23,13 +24,28 @@ interface Props {
   params: Promise<{ locale: string; slug: string }>
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams(
+  { params }: { params?: { locale?: string } } = {},
+) {
+  // The parent [locale] segment supplies the locale, so each locale only
+  // pre-renders the slugs that actually exist for it. Falls back to the
+  // union of every locale's slugs if the locale is unavailable.
   const existingSlugs = BLOG_POSTS.map((post) => ({ slug: post.slug }))
-  const mdxSlugs = await getAllMdxSlugs()
+  const mdxSlugs = await getAllMdxSlugs(params?.locale)
   const mdxParams = mdxSlugs
     .filter((slug) => !BLOG_POSTS.some((p) => p.slug === slug))
     .map((slug) => ({ slug }))
   return [...existingSlugs, ...mdxParams]
+}
+
+/** Alternates for an MDX post: locale-specific slugs when the post is translated. */
+function mdxAlternates(slug: string, locale: string) {
+  const group = findSlugGroup(slug)
+  if (!group) return buildAlternates(`/blog/${slug}`)
+  const paths = Object.fromEntries(
+    BLOG_LOCALES.map((l) => [l, `/blog/${group[l]}`]),
+  )
+  return buildAlternatesForPaths(paths, locale)
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -37,14 +53,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com'
 
   // MDX-sourced post takes priority
-  const mdxResult = await getBlogPostSource(slug)
+  const mdxResult = await getBlogPostSource(slug, locale)
   if (mdxResult) {
     const { frontmatter: fm } = mdxResult
-    const path = `/blog/${slug}`
     return {
       title: fm.title,
       description: guardDescription(fm.description),
-      alternates: buildAlternates(path),
+      alternates: mdxAlternates(slug, locale),
       openGraph: {
         type: 'article',
         publishedTime: fm.publishedAt,
@@ -83,15 +98,20 @@ export default async function BlogArticlePage({ params }: Props) {
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com'
 
   // --- MDX path ---
-  const mdxResult = await getBlogPostSource(slug)
+  const mdxResult = await getBlogPostSource(slug, locale)
   if (mdxResult) {
     const { frontmatter: fm, source } = mdxResult
     const path = `/blog/${slug}`
     const currentCategory = fm.category as string | undefined
-    const relatedPosts = BLOG_POSTS
+    // Siblings come from both the MDX content dir (same locale) and the legacy
+    // registry, so a cluster of translated posts links to itself.
+    const mdxSiblings = (await getAllMdxBlogPosts(locale))
       .filter((p) => p.slug !== slug && p.category === currentCategory)
-      .slice(0, 3)
+      .map((p) => ({ slug: p.slug, title: p.title ?? p.slug }))
+    const legacySiblings = BLOG_POSTS
+      .filter((p) => p.slug !== slug && p.category === currentCategory)
       .map((p) => ({ slug: p.slug, title: p.title ?? p.titleKey }))
+    const relatedPosts = [...mdxSiblings, ...legacySiblings].slice(0, 3)
 
     const jsonLd = buildJsonLd(
       {
