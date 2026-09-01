@@ -769,21 +769,29 @@
         "accurate": "How accurate is this converter?",
         "accurateAnswer": "Conversions use precise factor-based math with up to 8 significant figures. Results are rounded for display only.",
         "offline": "Does this work offline?",
-        "offlineAnswer": "Yes — all unit conversions work entirely in your browser with no internet connection required."
+        "offlineAnswer": "Yes — all unit conversions work entirely in your browser with no internet connection required.",
+        "howManyAnswer": "1 {from} = {value} {to}.",
+        "howToAnswer": "Enter any value in the {from} field of the converter above and the result in {to} appears instantly. The formula is {formula}.",
+        "formulaQuestion": "What is the formula to convert {from} to {to}?"
       },
-      "pairs": {
-        "weight-converter": {
-          "title": "Weight Converter",
-          "description": "Convert between different units of weight such as kilograms, pounds, grams, and ounces."
-        },
-        "length-converter": {
-          "title": "Length Converter",
-          "description": "Convert between different units of length such as meters, feet, inches, and kilometers."
-        },
-        "temperature-converter": {
-          "title": "Temperature Converter",
-          "description": "Convert between different units of temperature such as Celsius, Fahrenheit, and Kelvin."
-        }
+      "breadcrumbConverter": "Converter",
+      "aboutHeading": "{from} and {to} explained",
+      "formulaHeading": "Formula and worked examples",
+      "scenariosHeading": "Where you will use this",
+      "tableHeading": "{from} to {to} conversion table",
+      "tableCaption": "Common {from} values converted to {to}. Every figure uses the same conversion factor as the calculator above.",
+      "relatedHeading": "More {category} conversions",
+      "proTipLabel": "Pro tip",
+      "categories": {
+        "length": "length",
+        "weight": "weight",
+        "temperature": "temperature",
+        "area": "area",
+        "volume": "volume",
+        "speed": "speed",
+        "time": "time",
+        "digital-storage": "digital storage",
+        "pressure": "pressure"
       }
     }
   },

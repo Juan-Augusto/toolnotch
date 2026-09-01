@@ -587,23 +587,31 @@
         "howMany": "¿Cuántos {to} hay en un {from}?",
         "howTo": "¿Cómo convierto {from} a {to}?",
         "accurate": "¿Qué tan preciso es este conversor?",
-        "accurateAnswer": "Las conversiones usan matemáticas precisas basadas en factores con hasta 8 cifras significativas. Los resultados se redondean solo para mostrarlos.",
-        "offline": "¿Funciona esto sin conexión?",
-        "offlineAnswer": "Sí — todas las conversiones de unidades funcionan completamente en tu navegador sin necesidad de conexión a internet."
+        "accurateAnswer": "Las conversiones usan aritmética de factores precisos con hasta 8 cifras significativas. Los resultados se redondean solo para su visualización.",
+        "offline": "¿Funciona sin conexión?",
+        "offlineAnswer": "Sí — todas las conversiones de unidades funcionan completamente en tu navegador sin necesidad de conexión a internet.",
+        "howManyAnswer": "1 {from} = {value} {to}.",
+        "howToAnswer": "Escribe cualquier valor en el campo {from} del conversor de arriba y el resultado en {to} aparece al instante. La fórmula es {formula}.",
+        "formulaQuestion": "¿Cuál es la fórmula para convertir {from} a {to}?"
       },
-      "pairs": {
-        "weight-converter": {
-          "title": "Conversor de peso",
-          "description": "Convierte entre diferentes unidades de peso como kilogramos, libras, gramos y onzas."
-        },
-        "length-converter": {
-          "title": "Conversor de longitud",
-          "description": "Convierte entre diferentes unidades de longitud como metros, pies, pulgadas y kilómetros."
-        },
-        "temperature-converter": {
-          "title": "Conversor de temperatura",
-          "description": "Convierte entre diferentes unidades de temperatura como Celsius, Fahrenheit y Kelvin."
-        }
+      "breadcrumbConverter": "Conversor",
+      "aboutHeading": "{from} y {to} explicados",
+      "formulaHeading": "Fórmula y ejemplos resueltos",
+      "scenariosHeading": "Dónde vas a usar esto",
+      "tableHeading": "Tabla de conversión de {from} a {to}",
+      "tableCaption": "Valores comunes de {from} convertidos a {to}. Todas las cifras usan el mismo factor de conversión que la calculadora de arriba.",
+      "relatedHeading": "Más conversiones de {category}",
+      "proTipLabel": "Consejo",
+      "categories": {
+        "length": "longitud",
+        "weight": "peso",
+        "temperature": "temperatura",
+        "area": "área",
+        "volume": "volumen",
+        "speed": "velocidad",
+        "time": "tiempo",
+        "digital-storage": "almacenamiento digital",
+        "pressure": "presión"
       }
     }
   },
