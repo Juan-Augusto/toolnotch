@@ -2708,7 +2708,8 @@
       "quizzes": "Quizzes",
       "agileTools": "Agile & Scrum Tools",
       "sportsQuizzes": "Sports Quizzes",
-      "interviewPrep": "Interview Prep"
+      "interviewPrep": "Interview Prep",
+      "educationTools": "Education Tools"
     },
     "tools": {
       "imageCompressor": {
@@ -2930,6 +2931,34 @@
       "interviewHub": {
         "label": "Interview Prep Hub",
         "desc": "TypeScript, JS & more — with explanations and best practices"
+      },
+      "gpaCalculator": {
+        "label": "GPA Calculator",
+        "desc": "Weighted GPA on the 4.0, 0–20 and 0–10 scales"
+      },
+      "cumulativeGpaCalculator": {
+        "label": "Cumulative GPA Calculator",
+        "desc": "Add a new semester to your existing GPA"
+      },
+      "gradeCalculator": {
+        "label": "Grade Calculator",
+        "desc": "What grade do I need on the final exam?"
+      },
+      "citationGenerator": {
+        "label": "Citation Generator",
+        "desc": "APA, MLA, Chicago and ABNT citations"
+      },
+      "gpaGuide": {
+        "label": "Guide: How to Calculate GPA",
+        "desc": "The 4.0 scale, the formula and a worked example"
+      },
+      "gpaBrazilGuide": {
+        "label": "Guide: Brazilian Grades to GPA",
+        "desc": "Convert 0–10 and 0–100 grades to the 4.0 scale"
+      },
+      "gpaUsaGuide": {
+        "label": "Guide: GPA to Study in the US",
+        "desc": "What GPA universities expect, and what else counts"
       }
     },
     "badge": "Toolnotch | Over 40 essential tools",
@@ -3617,7 +3646,82 @@
         "question": "Does this GPA calculator work for international students?",
         "answer": "Yes — this calculator supports the US 4.0 scale (A–F letter grades), the Portuguese and Brazilian 0–20 scale, and the Spanish and Latin American 0–10 scale. Select your scale using the dropdown."
       }
-    ]
+    ],
+    "howTo": {
+      "name": "How to calculate your GPA on the 4.0 scale",
+      "steps": [
+        "Choose your grading scale: US 4.0 (A–F), Portugal/Brazil 0–20, or Spain/Latin America 0–10.",
+        "Enter each course with its grade and the number of credits it carries.",
+        "Convert every grade to grade points — on the 4.0 scale A = 4.0, B = 3.0, C = 2.0, D = 1.0 and F = 0.0.",
+        "Multiply each course's grade points by its credits to get that course's weighted points.",
+        "Add up all the weighted points and divide by the total number of credits. The result is your GPA.",
+        "Use the Cumulative GPA tab to combine this semester with the credits already on your transcript."
+      ]
+    },
+    "brConversion": {
+      "heading": "Convert Brazilian Grades (0–10 / 0–100) to a 4.0 GPA",
+      "intro": "Brazilian transcripts report grades on a 0–10 scale, or 0–100 in secondary school, while US applications ask for a number between 0.0 and 4.0. No single official conversion exists, but the band table below is the mapping most widely used to estimate a GPA, and it is what this calculator applies when you select a 0–10 scale.",
+      "columns": {
+        "decimal": "Grade (0–10)",
+        "percent": "Grade (0–100)",
+        "letter": "US letter",
+        "gpa": "GPA (4.0)"
+      },
+      "rows": [
+        {
+          "decimal": "9.5 - 10.0",
+          "percent": "95 - 100",
+          "letter": "A",
+          "gpa": "4.0"
+        },
+        {
+          "decimal": "8.5 - 9.4",
+          "percent": "85 - 94",
+          "letter": "A−",
+          "gpa": "3.7"
+        },
+        {
+          "decimal": "7.5 - 8.4",
+          "percent": "75 - 84",
+          "letter": "B+",
+          "gpa": "3.3"
+        },
+        {
+          "decimal": "6.5 - 7.4",
+          "percent": "65 - 74",
+          "letter": "B",
+          "gpa": "3.0"
+        },
+        {
+          "decimal": "6.0 - 6.4",
+          "percent": "60 - 64",
+          "letter": "B−",
+          "gpa": "2.7"
+        },
+        {
+          "decimal": "5.5 - 5.9",
+          "percent": "55 - 59",
+          "letter": "C+",
+          "gpa": "2.3"
+        },
+        {
+          "decimal": "5.0 - 5.4",
+          "percent": "50 - 54",
+          "letter": "C",
+          "gpa": "2.0"
+        },
+        {
+          "decimal": "below 5.0",
+          "percent": "below 50",
+          "letter": "F",
+          "gpa": "0.0"
+        }
+      ],
+      "disclaimer": "This table is an estimate, not an official conversion. US universities usually require an evaluation from a credential service such as WES, ECE or SpanTran, and each evaluator applies its own methodology. Use this table to plan where to apply; use the evaluator’s report to actually apply.",
+      "exampleHeading": "Worked example",
+      "exampleBody": "A semester of Calculus II 7.2 (6 credits), Physics II 6.3 (4), Linear Algebra 8.7 (4), Programming 9.6 (4) and Research Methods 8.0 (2) converts to 3.0, 2.7, 3.7, 4.0 and 3.3 grade points. Weighted by credits that is (3.0×6) + (2.7×4) + (3.7×4) + (4.0×4) + (3.3×2) = 66.2 points across 20 credits, a GPA of 3.31. Note that an arithmetic average of 7.96 in Brazil becomes a 3.31 GPA, because the conversion is not linear.",
+      "ctaLabel": "Read the full guide: How to Convert Brazilian Grades to a 4.0 GPA"
+    }
   },
   "ageCalculator": {
     "metaTitle": "Age Calculator — How Old Am I? Calculate Your Exact Age | ToolNotch",

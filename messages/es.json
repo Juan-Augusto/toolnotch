@@ -2260,7 +2260,8 @@
       "quizzes": "Cuestionarios",
       "agileTools": "Herramientas Ágiles & Scrum",
       "sportsQuizzes": "Quiz Deportivo",
-      "interviewPrep": "Preparación para Entrevistas"
+      "interviewPrep": "Preparación para Entrevistas",
+      "educationTools": "Herramientas de Educación"
     },
     "tools": {
       "imageCompressor": {
@@ -2482,6 +2483,34 @@
       "interviewHub": {
         "label": "Centro de Preparación para Entrevistas",
         "desc": "TypeScript, JS y más — con explicaciones y buenas prácticas"
+      },
+      "gpaCalculator": {
+        "label": "Calculadora de GPA",
+        "desc": "GPA ponderado en las escalas 4.0, 0–20 y 0–10"
+      },
+      "cumulativeGpaCalculator": {
+        "label": "Calculadora de GPA Acumulado",
+        "desc": "Suma un nuevo semestre a tu GPA actual"
+      },
+      "gradeCalculator": {
+        "label": "Calculadora de Nota",
+        "desc": "¿Qué nota necesito en el examen final?"
+      },
+      "citationGenerator": {
+        "label": "Generador de Citas",
+        "desc": "Citas en APA, MLA, Chicago y ABNT"
+      },
+      "gpaGuide": {
+        "label": "Guía: Cómo Calcular el GPA",
+        "desc": "La escala 4.0, la fórmula y un ejemplo resuelto"
+      },
+      "gpaBrazilGuide": {
+        "label": "Guía: Notas Brasileñas a GPA",
+        "desc": "Convierte notas 0–10 y 0–100 a la escala 4.0"
+      },
+      "gpaUsaGuide": {
+        "label": "Guía: GPA para Estudiar en EE. UU.",
+        "desc": "Qué GPA esperan las universidades y qué más cuenta"
       }
     },
     "badge": "Toolnotch | Más de 40 herramientas esenciales",
@@ -3103,7 +3132,82 @@
         "question": "¿Esta calculadora funciona para el sistema latinoamericano?",
         "answer": "Sí — esta calculadora admite la escala americana 4.0 (letras A–F), la escala portuguesa y brasileña de 0 a 20 y la escala española y latinoamericana de 0 a 10. Selecciona tu escala en el menú."
       }
-    ]
+    ],
+    "howTo": {
+      "name": "Cómo calcular tu GPA en la escala 4.0",
+      "steps": [
+        "Elige tu escala de notas: EE. UU. 4.0 (A–F), Portugal/Brasil 0–20 o España/América Latina 0–10.",
+        "Introduce cada asignatura con su nota y el número de créditos que otorga.",
+        "Convierte cada nota en puntos — en la escala 4.0, A = 4.0, B = 3.0, C = 2.0, D = 1.0 y F = 0.0.",
+        "Multiplica los puntos de cada asignatura por sus créditos para obtener los puntos ponderados.",
+        "Suma todos los puntos ponderados y divide entre el total de créditos. El resultado es tu GPA.",
+        "Usa la pestaña de GPA Acumulado para combinar este semestre con los créditos ya cursados."
+      ]
+    },
+    "brConversion": {
+      "heading": "Convertir notas brasileñas (0–10 / 0–100) al GPA 4.0",
+      "intro": "Los expedientes brasileños y latinoamericanos usan la escala 0–10, o 0–100 en secundaria, mientras que los formularios estadounidenses piden un número entre 0.0 y 4.0. No existe una conversión oficial única, pero la tabla de bandas siguiente es el mapeo más usado para estimar el GPA, y es el que aplica esta calculadora cuando eliges una escala de 0–10.",
+      "columns": {
+        "decimal": "Nota (0–10)",
+        "percent": "Nota (0–100)",
+        "letter": "Letra EE. UU.",
+        "gpa": "GPA (4.0)"
+      },
+      "rows": [
+        {
+          "decimal": "9,5 - 10,0",
+          "percent": "95 - 100",
+          "letter": "A",
+          "gpa": "4.0"
+        },
+        {
+          "decimal": "8,5 - 9,4",
+          "percent": "85 - 94",
+          "letter": "A−",
+          "gpa": "3.7"
+        },
+        {
+          "decimal": "7,5 - 8,4",
+          "percent": "75 - 84",
+          "letter": "B+",
+          "gpa": "3.3"
+        },
+        {
+          "decimal": "6,5 - 7,4",
+          "percent": "65 - 74",
+          "letter": "B",
+          "gpa": "3.0"
+        },
+        {
+          "decimal": "6,0 - 6,4",
+          "percent": "60 - 64",
+          "letter": "B−",
+          "gpa": "2.7"
+        },
+        {
+          "decimal": "5,5 - 5,9",
+          "percent": "55 - 59",
+          "letter": "C+",
+          "gpa": "2.3"
+        },
+        {
+          "decimal": "5,0 - 5,4",
+          "percent": "50 - 54",
+          "letter": "C",
+          "gpa": "2.0"
+        },
+        {
+          "decimal": "menos de 5,0",
+          "percent": "menos de 50",
+          "letter": "F",
+          "gpa": "0.0"
+        }
+      ],
+      "disclaimer": "Esta tabla es una estimación, no una conversión oficial. Las universidades estadounidenses suelen exigir la evaluación de un servicio de credenciales como WES, ECE o SpanTran, y cada evaluador aplica su propia metodología. Usa la tabla para planificar dónde postularte; usa el informe del evaluador para postularte de verdad.",
+      "exampleHeading": "Ejemplo resuelto",
+      "exampleBody": "Un semestre con Cálculo II 7,2 (6 créditos), Física II 6,3 (4), Álgebra Lineal 8,7 (4), Programación 9,6 (4) y Metodología 8,0 (2) se convierte en 3.0, 2.7, 3.7, 4.0 y 3.3 puntos. Ponderando por créditos: (3.0×6) + (2.7×4) + (3.7×4) + (4.0×4) + (3.3×2) = 66.2 puntos entre 20 créditos, un GPA de 3.31. Fíjate en que un promedio aritmético de 7,96 se convierte en un GPA de 3.31, porque la conversión no es lineal.",
+      "ctaLabel": "Lee la guía completa: Cómo Convertir Notas Brasileñas al GPA 4.0"
+    }
   },
   "ageCalculator": {
     "metaTitle": "Calculadora de Edad — ¿Cuántos Años Tengo? Calcula tu Edad Exacta | ToolNotch",

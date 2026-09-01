@@ -2259,7 +2259,8 @@
       "quizzes": "Quizzes",
       "agileTools": "Ferramentas Ágeis & Scrum",
       "sportsQuizzes": "Quiz de Esportes",
-      "interviewPrep": "Preparação para Entrevistas"
+      "interviewPrep": "Preparação para Entrevistas",
+      "educationTools": "Ferramentas de Educação"
     },
     "tools": {
       "imageCompressor": {
@@ -2481,6 +2482,34 @@
       "interviewHub": {
         "label": "Hub de Preparação para Entrevistas",
         "desc": "TypeScript, JS e mais — com explicações e boas práticas"
+      },
+      "gpaCalculator": {
+        "label": "Calculadora de GPA",
+        "desc": "GPA ponderado nas escalas 4.0, 0–20 e 0–10"
+      },
+      "cumulativeGpaCalculator": {
+        "label": "Calculadora de GPA Acumulado",
+        "desc": "Some um novo semestre ao seu GPA atual"
+      },
+      "gradeCalculator": {
+        "label": "Calculadora de Nota",
+        "desc": "Que nota eu preciso na prova final?"
+      },
+      "citationGenerator": {
+        "label": "Gerador de Citações",
+        "desc": "Citações em APA, MLA, Chicago e ABNT"
+      },
+      "gpaGuide": {
+        "label": "Guia: Como Calcular o GPA",
+        "desc": "A escala 4.0, a fórmula e um exemplo resolvido"
+      },
+      "gpaBrazilGuide": {
+        "label": "Guia: Notas Brasileiras para GPA",
+        "desc": "Converta notas 0–10 e 0–100 para a escala 4.0"
+      },
+      "gpaUsaGuide": {
+        "label": "Guia: GPA para Estudar nos EUA",
+        "desc": "Qual GPA as universidades esperam e o que mais conta"
       }
     },
     "badge": "Toolnotch | Mais de 40 ferramentas essenciais",
@@ -3023,7 +3052,7 @@
     }
   },
   "gpaCalculator": {
-    "metaTitle": "Calculadora de GPA — Calcule sua Média Escolar Grátis | ToolNotch",
+    "metaTitle": "Calculadora de GPA — Como Calcular seu GPA (Grátis)",
     "metaDescription": "Calcule seu GPA ou média escolar instantaneamente. Insira suas disciplinas, notas e créditos. Suporta escalas US 4.0, PT 0–20 e ES 0–10. Grátis.",
     "title": "Calculadora de GPA",
     "description": "Calcule sua média semestral ou acumulada instantaneamente. Insira suas notas e créditos — suporta escalas de notas americanas, portuguesas e espanholas.",
@@ -3103,7 +3132,82 @@
         "question": "Esta calculadora funciona para o sistema brasileiro?",
         "answer": "Sim — esta calculadora suporta a escala americana 4.0 (letras A–F), a escala portuguesa e brasileira de 0 a 20 e a escala espanhola e latino-americana de 0 a 10. Selecione sua escala no menu."
       }
-    ]
+    ],
+    "howTo": {
+      "name": "Como calcular o seu GPA na escala 4.0",
+      "steps": [
+        "Escolha a sua escala de notas: EUA 4.0 (A–F), Portugal/Brasil 0–20 ou Espanha/América Latina 0–10.",
+        "Insira cada disciplina com a sua nota e a quantidade de créditos correspondente.",
+        "Converta cada nota em pontos — na escala 4.0, A = 4.0, B = 3.0, C = 2.0, D = 1.0 e F = 0.0.",
+        "Multiplique os pontos de cada disciplina pelos seus créditos para obter os pontos ponderados.",
+        "Some todos os pontos ponderados e divida pelo total de créditos. O resultado é o seu GPA.",
+        "Use a aba GPA Acumulado para combinar este semestre com os créditos já concluídos no seu histórico."
+      ]
+    },
+    "brConversion": {
+      "heading": "Converter nota brasileira (0–10 / 0–100) para GPA 4.0",
+      "intro": "O histórico brasileiro traz notas em 0–10, ou em 0–100 no ensino médio, enquanto os formulários americanos pedem um número entre 0.0 e 4.0. Não existe uma conversão oficial única, mas a tabela de bandas abaixo é o mapeamento mais usado para estimar o GPA — e é o que esta calculadora aplica quando você escolhe uma escala de 0–10.",
+      "columns": {
+        "decimal": "Nota (0–10)",
+        "percent": "Nota (0–100)",
+        "letter": "Letra EUA",
+        "gpa": "GPA (4.0)"
+      },
+      "rows": [
+        {
+          "decimal": "9,5 - 10,0",
+          "percent": "95 - 100",
+          "letter": "A",
+          "gpa": "4.0"
+        },
+        {
+          "decimal": "8,5 - 9,4",
+          "percent": "85 - 94",
+          "letter": "A−",
+          "gpa": "3.7"
+        },
+        {
+          "decimal": "7,5 - 8,4",
+          "percent": "75 - 84",
+          "letter": "B+",
+          "gpa": "3.3"
+        },
+        {
+          "decimal": "6,5 - 7,4",
+          "percent": "65 - 74",
+          "letter": "B",
+          "gpa": "3.0"
+        },
+        {
+          "decimal": "6,0 - 6,4",
+          "percent": "60 - 64",
+          "letter": "B−",
+          "gpa": "2.7"
+        },
+        {
+          "decimal": "5,5 - 5,9",
+          "percent": "55 - 59",
+          "letter": "C+",
+          "gpa": "2.3"
+        },
+        {
+          "decimal": "5,0 - 5,4",
+          "percent": "50 - 54",
+          "letter": "C",
+          "gpa": "2.0"
+        },
+        {
+          "decimal": "abaixo de 5,0",
+          "percent": "abaixo de 50",
+          "letter": "F",
+          "gpa": "0.0"
+        }
+      ],
+      "disclaimer": "Esta tabela é uma estimativa, não uma conversão oficial. As universidades americanas normalmente exigem a avaliação de um serviço de credenciais como WES, ECE ou SpanTran, e cada avaliador usa a própria metodologia. Use a tabela para planejar as candidaturas; use o relatório do avaliador para enviá-las.",
+      "exampleHeading": "Exemplo resolvido",
+      "exampleBody": "Um semestre com Cálculo II 7,2 (6 créditos), Física II 6,3 (4), Álgebra Linear 8,7 (4), Programação 9,6 (4) e Metodologia 8,0 (2) converte para 3.0, 2.7, 3.7, 4.0 e 3.3 pontos. Ponderando pelos créditos: (3.0×6) + (2.7×4) + (3.7×4) + (4.0×4) + (3.3×2) = 66.2 pontos em 20 créditos, um GPA de 3.31. Repare que uma média aritmética de 7,96 no Brasil vira um GPA 3.31, porque a conversão não é linear.",
+      "ctaLabel": "Leia o guia completo: Como Converter Notas Brasileiras para o GPA 4.0"
+    }
   },
   "ageCalculator": {
     "metaTitle": "Calculadora de Idade — Quantos Anos Tenho? Calcule sua Idade Exata | ToolNotch",
