@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { conversionPages } from '@/data/conversionPages'
 import { COMMON_PAIRS } from '@/data/conversionPairs'
 import { BLOG_POSTS } from '@/data/blog/index'
+import { findSlugGroup, BLOG_LOCALES } from '@/data/blog/slugTranslations'
 import { getAllMdxBlogPosts } from '@/lib/content/blogRepository'
 
 const BASE_URL = (process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com').trim()
@@ -159,20 +160,30 @@ function urlWithAlternates(path: string, priority = 0.8) {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const mdxPosts = await getAllMdxBlogPosts()
 
-  const mdxBlogEntries: MetadataRoute.Sitemap = mdxPosts.map((post) => ({
-    url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: new Date(post.updatedAt ?? post.publishedAt),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-    alternates: {
-      languages: {
-        en: `${BASE_URL}/blog/${post.slug}`,
-        pt: `${BASE_URL}/pt/blog/${post.slug}`,
-        es: `${BASE_URL}/es/blog/${post.slug}`,
-        'x-default': `${BASE_URL}/blog/${post.slug}`,
+  const mdxBlogEntries: MetadataRoute.Sitemap = mdxPosts.map((post) => {
+    // A translated post has a native-language slug per locale, so its hreflang
+    // alternates cannot be built by prefixing one shared slug.
+    const group = findSlugGroup(post.slug)
+    const url = (locale: string) => {
+      const slug = group ? group[locale as (typeof BLOG_LOCALES)[number]] : post.slug
+      const prefix = locale === 'en' ? '' : `/${locale}`
+      return `${BASE_URL}${prefix}/blog/${slug}`
+    }
+    return {
+      url: url('en'),
+      lastModified: new Date(post.updatedAt ?? post.publishedAt),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+      alternates: {
+        languages: {
+          en: url('en'),
+          pt: url('pt'),
+          es: url('es'),
+          'x-default': url('en'),
+        },
       },
-    },
-  }))
+    }
+  })
 
   return [
     {

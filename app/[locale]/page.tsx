@@ -2,6 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import ToolsSection from "@/components/ToolsSection";
+import { localizedPath } from "@/lib/i18nMeta";
+import { BLOG_SLUG_GROUPS, type BlogLocale } from "@/data/blog/slugTranslations";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -33,6 +35,12 @@ export default async function HomePage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: "home" });
   const tc = await getTranslations({ locale, namespace: "common" });
   const freeLabel = tc("free");
+
+  // Blog guides carry a native-language slug per locale.
+  const guideHref = (group: keyof typeof BLOG_SLUG_GROUPS) => {
+    const slugs = BLOG_SLUG_GROUPS[group];
+    return localizedPath(`/blog/${slugs[locale as BlogLocale] ?? slugs.en}`, locale);
+  };
 
   const TOOLS: Tool[] = [
     {
@@ -365,6 +373,51 @@ export default async function HomePage({ params }: Props) {
           href: "/quiz/fake-news-or-fact",
           label: t("tools.fakeNewsQuiz.label"),
           desc: t("tools.fakeNewsQuiz.desc"),
+        },
+      ],
+    },
+    {
+      category: t("categories.educationTools"),
+      color: "violet",
+      index: 9,
+      items: [
+        {
+          href: localizedPath("/tools/education/gpa-calculator", locale),
+          label: t("tools.gpaCalculator.label"),
+          desc: t("tools.gpaCalculator.desc"),
+        },
+        {
+          href: localizedPath(
+            "/tools/education/cumulative-gpa-calculator",
+            locale,
+          ),
+          label: t("tools.cumulativeGpaCalculator.label"),
+          desc: t("tools.cumulativeGpaCalculator.desc"),
+        },
+        {
+          href: localizedPath("/tools/education/grade-calculator", locale),
+          label: t("tools.gradeCalculator.label"),
+          desc: t("tools.gradeCalculator.desc"),
+        },
+        {
+          href: localizedPath("/tools/education/citation-generator", locale),
+          label: t("tools.citationGenerator.label"),
+          desc: t("tools.citationGenerator.desc"),
+        },
+        {
+          href: guideHref("gpa-how-to"),
+          label: t("tools.gpaGuide.label"),
+          desc: t("tools.gpaGuide.desc"),
+        },
+        {
+          href: guideHref("gpa-brazilian-grades"),
+          label: t("tools.gpaBrazilGuide.label"),
+          desc: t("tools.gpaBrazilGuide.desc"),
+        },
+        {
+          href: guideHref("gpa-us-admissions"),
+          label: t("tools.gpaUsaGuide.label"),
+          desc: t("tools.gpaUsaGuide.desc"),
         },
       ],
     },

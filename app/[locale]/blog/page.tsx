@@ -29,7 +29,7 @@ export default async function BlogIndexPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'blog' })
 
-  const mdxPosts = await getAllMdxBlogPosts()
+  const mdxPosts = await getAllMdxBlogPosts(locale)
   const allPosts = [...BLOG_POSTS, ...mdxPosts]
   allPosts.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
 

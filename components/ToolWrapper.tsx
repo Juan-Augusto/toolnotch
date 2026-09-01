@@ -21,6 +21,8 @@ interface ToolWrapperProps {
   faqs: FaqItem[];
   adSlot?: string;
   richContent?: RichContent;
+  /** Extra page content rendered between the rich content and the FAQ. */
+  extraContent?: React.ReactNode;
   children: React.ReactNode;
   maxWidth?: string;
   noCardWrapper?: boolean;
@@ -33,6 +35,7 @@ export default function ToolWrapper({
   faqs,
   adSlot,
   richContent,
+  extraContent,
   children,
   maxWidth,
   noCardWrapper,
@@ -165,6 +168,11 @@ export default function ToolWrapper({
               </p>
             </div>
           </div>
+        )}
+
+        {/* Extra page content (tables, guides, cross-links) */}
+        {extraContent && (
+          <div className="mt-12 no-print">{extraContent}</div>
         )}
 
         {/* FAQ */}
