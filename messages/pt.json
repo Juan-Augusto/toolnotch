@@ -2416,7 +2416,7 @@
       },
       "worldCupQuiz": {
         "label": "Quiz: Campeões da Copa do Mundo",
-        "desc": "Teste seu conhecimento sobre cada campeão mundial"
+        "desc": "Adivinhe os campeões da Copa do Mundo de 1930 a 2022 — cada campeão, sede e final"
       },
       "footballClubQuiz": {
         "label": "Qual Time de Futebol Você É?",
@@ -4170,5 +4170,237 @@
         "answer": "Procure um mesário ou um dos fiscais/orientadores no local — eles têm acesso ao sistema para confirmar sua seção correta e te direcionar para a fila certa, sem que você precise sair do prédio."
       }
     ]
+  },
+  "quizDepth": {
+    "fifaWorldCupWinners": {
+      "metaTitle": "Quiz dos Campeões da Copa do Mundo — Adivinhe Cada Campeão 1930–2022",
+      "metaDescription": "Jogue o quiz dos campeões da Copa do Mundo: 20 perguntas sobre cada campeão de 1930 a 2022, mais a lista completa de vencedores por ano.",
+      "introHeading": "Sobre o Quiz dos Campeões da Copa do Mundo",
+      "intro": [
+        "A Copa do Mundo da FIFA coroa um campeão a cada quatro anos desde 1930, com pausa apenas em 1942 e 1946 por causa da Segunda Guerra Mundial. Apenas oito seleções levantaram o troféu. O Brasil lidera com cinco títulos, seguido por Itália e Alemanha com quatro cada, a Argentina com três, e Uruguai e França com dois. Inglaterra e Espanha venceram uma vez cada, ambas em finais decididas por um único lance inesquecível. O próprio prêmio mudou: a Taça Jules Rimet foi entregue até 1970, e o atual troféu da Copa do Mundo da FIFA é erguido desde 1974.",
+        "Este quiz percorre 22 edições do torneio. Você vai indicar o campeão de edições específicas, do título do Uruguai em casa em 1930 à vitória da Argentina nos pênaltis no Catar em 2022, além de lembrar países-sede, artilheiros históricos como Miroslav Klose e as finais que marcaram cada época. São 20 perguntas de múltipla escolha sobre campeões, vice-campeões e os momentos que todo torcedor discute.",
+        "A cada resposta, sua pontuação é somada na hora e comparada a um nível: Lenda da Copa, Especialista em Futebol, Torcedor ou Iniciante. Não há cadastro nem tempo obrigatório. Use a tabela de vencedores por ano abaixo para revisar antes de jogar ou para encerrar uma discussão sobre quem ganhou cada Copa do Mundo."
+      ],
+      "tableHeading": "Todos os Campeões da Copa do Mundo da FIFA (1930–2022)",
+      "tableNote": "pro. = prorrogação; pên. = decidida nos pênaltis.",
+      "tableCols": {
+        "year": "Ano",
+        "host": "Sede",
+        "winner": "Campeão",
+        "runnerUp": "Vice",
+        "score": "Placar da final"
+      },
+      "rows": [
+        {
+          "year": "1930",
+          "host": "Uruguai",
+          "winner": "Uruguai",
+          "runnerUp": "Argentina",
+          "score": "4–2"
+        },
+        {
+          "year": "1934",
+          "host": "Itália",
+          "winner": "Itália",
+          "runnerUp": "Tchecoslováquia",
+          "score": "2–1 (pro.)"
+        },
+        {
+          "year": "1938",
+          "host": "França",
+          "winner": "Itália",
+          "runnerUp": "Hungria",
+          "score": "4–2"
+        },
+        {
+          "year": "1942",
+          "host": "Não realizada",
+          "winner": "Não realizada",
+          "runnerUp": "—",
+          "score": "Segunda Guerra Mundial"
+        },
+        {
+          "year": "1946",
+          "host": "Não realizada",
+          "winner": "Não realizada",
+          "runnerUp": "—",
+          "score": "Segunda Guerra Mundial"
+        },
+        {
+          "year": "1950",
+          "host": "Brasil",
+          "winner": "Uruguai",
+          "runnerUp": "Brasil",
+          "score": "2–1 (jogo decisivo)"
+        },
+        {
+          "year": "1954",
+          "host": "Suíça",
+          "winner": "Alemanha Ocidental",
+          "runnerUp": "Hungria",
+          "score": "3–2"
+        },
+        {
+          "year": "1958",
+          "host": "Suécia",
+          "winner": "Brasil",
+          "runnerUp": "Suécia",
+          "score": "5–2"
+        },
+        {
+          "year": "1962",
+          "host": "Chile",
+          "winner": "Brasil",
+          "runnerUp": "Tchecoslováquia",
+          "score": "3–1"
+        },
+        {
+          "year": "1966",
+          "host": "Inglaterra",
+          "winner": "Inglaterra",
+          "runnerUp": "Alemanha Ocidental",
+          "score": "4–2 (pro.)"
+        },
+        {
+          "year": "1970",
+          "host": "México",
+          "winner": "Brasil",
+          "runnerUp": "Itália",
+          "score": "4–1"
+        },
+        {
+          "year": "1974",
+          "host": "Alemanha Ocidental",
+          "winner": "Alemanha Ocidental",
+          "runnerUp": "Países Baixos",
+          "score": "2–1"
+        },
+        {
+          "year": "1978",
+          "host": "Argentina",
+          "winner": "Argentina",
+          "runnerUp": "Países Baixos",
+          "score": "3–1 (pro.)"
+        },
+        {
+          "year": "1982",
+          "host": "Espanha",
+          "winner": "Itália",
+          "runnerUp": "Alemanha Ocidental",
+          "score": "3–1"
+        },
+        {
+          "year": "1986",
+          "host": "México",
+          "winner": "Argentina",
+          "runnerUp": "Alemanha Ocidental",
+          "score": "3–2"
+        },
+        {
+          "year": "1990",
+          "host": "Itália",
+          "winner": "Alemanha Ocidental",
+          "runnerUp": "Argentina",
+          "score": "1–0"
+        },
+        {
+          "year": "1994",
+          "host": "Estados Unidos",
+          "winner": "Brasil",
+          "runnerUp": "Itália",
+          "score": "0–0 (3–2 pên.)"
+        },
+        {
+          "year": "1998",
+          "host": "França",
+          "winner": "França",
+          "runnerUp": "Brasil",
+          "score": "3–0"
+        },
+        {
+          "year": "2002",
+          "host": "Coreia do Sul e Japão",
+          "winner": "Brasil",
+          "runnerUp": "Alemanha",
+          "score": "2–0"
+        },
+        {
+          "year": "2006",
+          "host": "Alemanha",
+          "winner": "Itália",
+          "runnerUp": "França",
+          "score": "1–1 (5–3 pên.)"
+        },
+        {
+          "year": "2010",
+          "host": "África do Sul",
+          "winner": "Espanha",
+          "runnerUp": "Países Baixos",
+          "score": "1–0 (pro.)"
+        },
+        {
+          "year": "2014",
+          "host": "Brasil",
+          "winner": "Alemanha",
+          "runnerUp": "Argentina",
+          "score": "1–0 (pro.)"
+        },
+        {
+          "year": "2018",
+          "host": "Rússia",
+          "winner": "França",
+          "runnerUp": "Croácia",
+          "score": "4–2"
+        },
+        {
+          "year": "2022",
+          "host": "Catar",
+          "winner": "Argentina",
+          "runnerUp": "França",
+          "score": "3–3 (4–2 pên.)"
+        }
+      ],
+      "faqHeading": "Campeões da Copa do Mundo: perguntas frequentes",
+      "faqs": [
+        {
+          "question": "Quem mais venceu a Copa do Mundo da FIFA?",
+          "answer": "O Brasil venceu a Copa do Mundo cinco vezes (1958, 1962, 1970, 1994 e 2002), mais do que qualquer outra seleção. Itália e Alemanha vêm em seguida com quatro títulos cada, a Argentina tem três, França e Uruguai têm dois cada, e Inglaterra e Espanha, um cada."
+        },
+        {
+          "question": "Quais países já venceram a Copa do Mundo?",
+          "answer": "Oito seleções venceram a Copa do Mundo: Brasil, Alemanha (incluindo a Alemanha Ocidental), Itália, Argentina, França, Uruguai, Inglaterra e Espanha. Nenhuma equipe de fora da Europa ou da América do Sul chegou a uma final."
+        },
+        {
+          "question": "Como funciona o quiz dos campeões da Copa do Mundo?",
+          "answer": "O quiz tem 20 perguntas de múltipla escolha sobre campeões, sedes, finais e recordistas. Cada resposta é marcada como certa ou errada na hora, e sua porcentagem final coloca você em um de quatro níveis, do Iniciante à Lenda da Copa. É gratuito e não exige conta."
+        },
+        {
+          "question": "Dá para adivinhar todos os campeões da Copa do Mundo de 1930 a 2022?",
+          "answer": "Sim. Foram 22 torneios entre 1930 e 2022 (1942 e 1946 foram cancelados por causa da Segunda Guerra Mundial). A tabela acima lista todos os campeões, vices e placares das finais para você testar seus conhecimentos e depois conferir as respostas."
+        },
+        {
+          "question": "Alguma seleção anfitriã venceu a Copa do Mundo em casa?",
+          "answer": "Seis anfitriãs venceram em casa: Uruguai (1930), Itália (1934), Inglaterra (1966), Alemanha Ocidental (1974), Argentina (1978) e França (1998). O Brasil, maior campeão da história, nunca venceu uma Copa que sediou."
+        }
+      ],
+      "relatedHeading": "Mais quizzes de futebol",
+      "related": {
+        "worldCup": {
+          "label": "Quiz dos Campeões da Copa do Mundo",
+          "href": "/quiz/fifa-world-cup-winners",
+          "desc": "Nomeie cada campeão mundial de 1930 a 2022"
+        },
+        "footballClub": {
+          "label": "Qual Time de Futebol Você É?",
+          "href": "/quiz/which-football-club-are-you",
+          "desc": "Descubra o clube que combina com você"
+        },
+        "championsLeague": {
+          "label": "Quiz da Liga dos Campeões",
+          "href": "/quiz/champions-league-trivia",
+          "desc": "Teste seu conhecimento sobre a elite europeia"
+        }
+      }
+    }
   }
 }
