@@ -14,6 +14,19 @@ interface RichContent {
   howToUse: string[]
   whyItMatters: string
   proTip: string
+  sections?: { heading: string; body: string }[]
+  comparison?: {
+    heading: string
+    intro?: string
+    columns: string[]
+    rows: { feature: string; ours: string; theirs: string }[]
+    caption?: string
+  }
+}
+
+interface RelatedRaw {
+  heading: string
+  items: { label: string; path: string }[]
 }
 
 interface Props { params: Promise<{ locale: string }> }
@@ -33,6 +46,12 @@ export default async function WheelOfNamesPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: 'fun.wheelOfNames' })
   const faqs = t.raw('faqs') as FaqItem[]
   const richContent = t.raw('richContent') as RichContent
+  const relatedRaw = t.raw('related') as RelatedRaw
+  const localePrefix = locale === 'en' ? '' : `/${locale}`
+  const relatedLinks = {
+    heading: relatedRaw.heading,
+    items: relatedRaw.items.map((i) => ({ label: i.label, href: `${localePrefix}${i.path}` })),
+  }
 
   const jsonLd = buildJsonLd(
     webAppSchema(t('title'), PATH, t('metaDescription'), locale),
@@ -47,7 +66,14 @@ export default async function WheelOfNamesPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} adSlot="1234567890" richContent={richContent}>
+      <ToolWrapper
+        title={t('title')}
+        description={t('description')}
+        breadcrumbLabel={t('title')}
+        faqs={faqs}
+        richContent={richContent}
+        relatedLinks={relatedLinks}
+      >
         <Suspense>
           <SpinWheelClient />
         </Suspense>

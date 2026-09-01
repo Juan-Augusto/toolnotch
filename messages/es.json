@@ -810,71 +810,137 @@
       }
     },
     "wordFrequency": {
-      "metaTitle": "Contador de Frecuencia de Palabras — Palabras Más Usadas | ToolNotch",
-      "metaDescription": "Encuentra las palabras más frecuentes en cualquier texto. Útil para análisis de palabras clave SEO, estudio de estilo de escritura e identificación de palabras sobreusadas.",
+      "metaTitle": "Contador de Frecuencia de Palabras — Palabras Más Repetidas | ToolNotch",
+      "metaDescription": "Contador gratis de frecuencia de palabras. Mira cuántas veces aparece cada palabra en tu texto, ordenadas por recuento: detecta palabras repetidas y muletillas.",
       "title": "Contador de Frecuencia de Palabras",
-      "description": "Encuentra las palabras más frecuentes en tu texto. Las palabras comunes (el, y, es) se excluyen para mostrar solo palabras clave con significado.",
+      "description": "Pega cualquier texto para ver cuántas veces aparece cada palabra, de la más a la menos frecuente. Pensado para edición, análisis de estilo e investigación.",
+      "richContent": {
+        "whatIs": "Un contador de frecuencia de palabras cuenta cada palabra de un pasaje y las ordena de la más a la menos común. Las palabras funcionales habituales — \"el\", \"la\", \"de\", \"y\", \"que\" — se filtran para que la lista muestre las palabras con carga de significado. El análisis de frecuencia es una de las herramientas más antiguas de la lingüística: sostiene las concordancias, las fórmulas de legibilidad, las bandas de frecuencia de los diccionarios y los estudios de autoría que identifican a un escritor por sus hábitos inconscientes. Para la escritura del día a día el uso es más simple: te muestra, en segundos, de qué palabras dependes. Una repetición invisible mientras redactas se vuelve obvia en una lista ordenada, y ese suele ser el camino más rápido hacia una prosa más ajustada.",
+        "howToUse": [
+          "Pega tu texto — un ensayo, un capítulo, una transcripción o un lote de reseñas — en el cuadro. La tabla de frecuencia se genera al instante.",
+          "Recorre la lista. Las primeras palabras de contenido son tu tema; las que te sorprendan merecen una mirada más atenta.",
+          "Marca muletillas y atenuantes cerca del principio — \"solo\", \"muy\", \"realmente\", \"en realidad\", \"básicamente\" — y córtalas o varíalas.",
+          "Comprueba si algún verbo o sustantivo fuerte está haciendo demasiado trabajo y usa un sinónimo en parte de sus apariciones.",
+          "Para investigar, copia la lista para exportar los recuentos, o compara dos textos ejecutándolos uno tras otro."
+        ],
+        "whyItMatters": "Todo escritor tiene un vocabulario al que vuelve sin darse cuenta. En la ficción y los ensayos aparece como muletillas; en la escritura académica, como una banda estrecha de conectores y atenuantes que aplanan el argumento; en los textos de producto y de UX, como jerga repetida hasta que deja de significar nada. Una lista de frecuencia hace visible el patrón para que puedas actuar. Para lingüistas, docentes y estudiantes, esa misma lista es un dato: respalda las medidas de densidad léxica, el estudio de palabra en contexto, la graduación de vocabulario y las comparaciones entre borradores, autores o épocas.",
+        "proTip": "Compara, no solo cuentes. Ejecuta tu borrador, anota las diez principales palabras de contenido y luego ejecuta un texto que admires del mismo género, comparando la forma de las dos listas. Una lista sana desciende poco a poco; una lista con picos, en la que una o dos palabras destacan mucho, suele señalar una repetición que puedes editar. Hacerlo con tus propios textos antiguos a lo largo del tiempo es una forma discreta de ver crecer tu vocabulario.",
+        "sections": [
+          {
+            "heading": "¿Cuántas veces aparece una palabra?",
+            "body": "Esa es la pregunta central que responde la herramienta. Escribe o pega tu texto y la fila de la palabra muestra su recuento exacto más ese recuento como proporción de todas las palabras. Como el texto se pasa primero a minúsculas, \"El\" y \"el\" se cuentan juntos; como se quita la puntuación, \"corre,\" \"corre.\" y \"corre\" son la misma entrada. Las contracciones se mantienen enteras y los compuestos con guión se separan por el guión. Si una palabra que esperas no está en la lista, casi con seguridad está en la lista de palabras gramaticales comunes que se eliminan a propósito."
+          },
+          {
+            "heading": "Frecuencia para edición y estudio",
+            "body": "Los editores usan listas de frecuencia para imponer un manual de estilo, detectar la frase preferida de un revisor o medir cuánto se ha repetido una traducción. Los docentes las usan para comprobar que un texto se mantiene dentro de un nivel de vocabulario antes de asignarlo. Los investigadores de lingüística de corpus construyen distribuciones de frecuencia en miles de documentos para estudiar cómo cambia el uso con el tiempo o cómo difiere entre grupos. Los novelistas pasan un manuscrito terminado por un contador para encontrar el adverbio que usaron doscientas veces. En todos los casos el flujo es el mismo: obtener los recuentos ordenados, buscar lo que está demasiado alto y decidir si es un rasgo del texto o un hábito que corregir."
+          }
+        ]
+      },
       "faqs": [
         {
-          "question": "¿Qué palabras se excluyen del recuento de frecuencia?",
-          "answer": "Se excluyen las palabras vacías comunes del inglés — palabras como 'the', 'a', 'and', 'is', 'it' que aparecen con frecuencia pero aportan poco significado. Así se muestran las palabras clave reales de tu contenido."
+          "question": "¿Cómo averiguo cuántas veces aparece una palabra en un texto?",
+          "answer": "Pega el texto en el contador. La fila de cada palabra muestra el número exacto de apariciones y ese número como porcentaje del total, de la más a la menos frecuente."
         },
         {
-          "question": "¿Cómo se calcula la densidad de palabras clave?",
-          "answer": "La densidad de palabras clave es la frecuencia de una palabra dividida entre el recuento total de palabras, expresada como porcentaje. Una densidad del 1–3% se considera generalmente saludable para el SEO."
+          "question": "¿Por qué una palabra que esperaba no está en los resultados?",
+          "answer": "Las palabras gramaticales comunes — artículos, pronombres, preposiciones, conjunciones y verbos auxiliares como \"el\", \"de\", \"que\" y \"es\" — se filtran para que la lista muestre palabras de contenido. Todo lo demás se cuenta."
         },
         {
-          "question": "¿Cuántas palabras principales se muestran?",
-          "answer": "La herramienta muestra las 10 palabras de contenido más frecuentes en tu texto, ordenadas por recuento."
+          "question": "¿El recuento distingue mayúsculas y minúsculas?",
+          "answer": "No. El texto se pasa primero a minúsculas, así que \"Palabra\", \"palabra\" y \"PALABRA\" cuentan como la misma entrada. La puntuación pegada a la palabra también se elimina antes de contar."
+        },
+        {
+          "question": "¿Para qué puedo usar el análisis de frecuencia de palabras?",
+          "answer": "Usos habituales son recortar muletillas al editar, comprobar el nivel de vocabulario para docencia, estudiar el estilo de un autor, comparar borradores o traducciones e investigar en lingüística de corpus."
+        },
+        {
+          "question": "¿Cuántas palabras muestra la lista?",
+          "answer": "La herramienta muestra las diez palabras de contenido más frecuentes. Es suficiente para revelar el vocabulario dominante de la mayoría de los pasajes sin enterrar la señal en una cola larga de palabras usadas una sola vez."
         }
       ],
-      "richContent": {
-        "whatIs": "Un contador de frecuencia de palabras analiza el texto y cuenta cuántas veces aparece cada palabra, luego presenta los resultados como una lista clasificada — las más frecuentes al principio. La mayoría de las implementaciones eliminan las palabras vacías (a, la, es, de, y) para mostrar los términos de contenido significativos. Los casos de uso abarcan varios campos: los escritores lo usan para identificar palabras relleno sobrepuestas como 'solo', 'veramente', 'muy' y 'realmente'; los analistas de SEO lo usan para verificar que las palabras clave principales aparezcan con la frecuencia adecuada; los investigadores académicos lo usan para lingüística corporal y análisis de texto; y los estrategistas de contenido lo usan para desarmar artículos competidores para enfocarse en temas. La salida muestra tanto el conteo bruto como el porcentaje de densidad, proporcionándote una vista dual de la distribución del vocabulario.",
-        "howToUse": [
-          "Pega tu texto en el área de entrada — la tabla de frecuencia de palabras se actualiza instantáneamente.",
-          "Revisa las entradas principales para identificar tus palabras más utilizadas significativas.",
-          "Busca palabras relleno (solo, realmente, muy, bastante) que aparezcan en la lista alta y considera eliminar o reemplazarlas.",
-          "Comprueba si tu palabra clave principal deseada aparece en los resultados principales con una densidad del 1-3%.",
-          "Utiliza la lista de frecuencia para encontrar sinónimos y términos relacionados que puedan reemplazar palabras repetidas y diversificar tu vocabulario."
-        ],
-        "whyItMatters": "En SEO, el análisis de frecuencia de palabras ayuda a verificar que tu palabra clave principal aparezca lo suficientemente veces (generalmente un 1-2% de densidad) sin optimización excesiva — por encima del 3% puede resultar en una penalización por sobrecarga de palabras clave y leerse de manera unnatural. En la escritura académica, las palabras frecuentes a menudo revelan frases repetitivas que debilitan los argumentos o señalan una falta de amplitud vocabularia. En la escritura UX y el copy de productos, el análisis de frecuencia muestra jerga que debe reemplazarse con lenguaje más simple e intuitivo para usuarios. Para novelistas y ensayistas, expone tic verbal y elecciones de palabras habituales que homogeneizan el estilo del texto.",
-        "proTip": "Para SEO, realiza un análisis de frecuencia de palabras en la página principal competidora con tu palabra clave objetivo. Las palabras de contenido que aparecen más frecuentemente junto con la palabra clave principal son tus palabras clave LSI (Latent Semantic Indexing) — términos relacionados semánticamente que Google usa para confirmar la relevancia temática. Incluye estos términos naturalmente en tu propio contenido y Google categorizará más confiadamente tu página como un recurso autoritativo sobre el tema."
+      "related": {
+        "heading": "Herramientas y guías relacionadas",
+        "items": [
+          {
+            "label": "Comprobador de Densidad de Palabras Clave — los mismos recuentos con enfoque de SEO on-page",
+            "path": "/tools/text/keyword-density-checker"
+          },
+          {
+            "label": "Contador de Palabras — palabras, caracteres, frases y tiempo de lectura",
+            "path": "/tools/text/word-counter"
+          },
+          {
+            "label": "Guía: objetivos de recuento de palabras para blogs, ensayos y correos",
+            "path": "/blog/word-count-guide"
+          }
+        ]
       }
     },
     "keywordDensity": {
-      "metaTitle": "Comprobador de Densidad de Palabras Clave — Análisis SEO | ToolNotch",
-      "metaDescription": "Comprobador de densidad de palabras clave gratuito. Pega tu contenido y ve las palabras clave más frecuentes como porcentaje del total de palabras. Útil para optimización de contenido SEO.",
+      "metaTitle": "Comprobador de Densidad de Palabras Clave — SEO On-Page | ToolNotch",
+      "metaDescription": "Comprobador gratis de densidad de palabras clave para SEO. Mira el recuento y el % de cada término, evita el keyword stuffing y ajusta tu palabra clave.",
       "title": "Comprobador de Densidad de Palabras Clave",
-      "description": "Pega tu contenido para ver las palabras clave más frecuentes y su porcentaje de densidad. Útil para la optimización de contenido SEO.",
+      "description": "Pega el texto de tu página para ver la densidad de cada palabra como porcentaje del total: pensado para SEO on-page y optimización de contenido.",
+      "richContent": {
+        "whatIs": "La densidad de palabras clave es la parte de tu texto que ocupa un término: (veces que aparece la palabra clave ÷ total de palabras) × 100. En el SEO on-page sirve como comprobación rápida de que una página trata claramente su término objetivo sin repetirlo tanto que el texto parezca spam. El rango de trabajo habitual es del 1% al 3% para la palabra clave principal. Por debajo de aproximadamente el 0,5% el término puede ser demasiado incidental para que la página se considere relevante; por encima del 3% al 4% el texto empieza a sonar artificial y se arriesga a un filtro de sobreoptimización. La densidad es una señal aproximada, no un factor de posicionamiento que Google publique: úsala como ayuda de edición, no como una cifra exacta que alcanzar.",
+        "howToUse": [
+          "Pega tu borrador — títulos, introducción, cuerpo y conclusión — en el cuadro. La lista de palabras y los porcentajes de densidad se actualizan mientras escribes.",
+          "Busca tu palabra clave objetivo principal (o sus variantes cercanas) en la lista ordenada y lee su densidad.",
+          "Apunta a un 1%–3% aproximadamente. Si es mayor, cambia algunos usos exactos por pronombres, sinónimos o frases parciales.",
+          "Si está por debajo del 0,5%, incluye el término en el título, en las primeras 100 palabras, en un subtítulo y en la conclusión donde encaje con naturalidad.",
+          "Revisa el resto de la lista en busca de términos de apoyo que un buscador esperaría en este tema y asegúrate de que aparezcan al menos una vez."
+        ],
+        "whyItMatters": "Los buscadores premian las páginas que cubren un tema como lo haría un experto, lo que suele significar que el término principal aparece unas pocas veces y un vocabulario amplio de términos relacionados completa el resto. Comprobar la densidad detecta los dos fallos que perjudican el posicionamiento: una página tan poco optimizada que ningún término es claramente su foco, y una página con tanta repetición que activa heurísticas de spam o simplemente se lee mal y pierde al visitante. Hacer la comprobación antes de publicar es más rápido que diagnosticar una página que rinde poco durante meses.",
+        "proTip": "Antes de escribir, haz esta comprobación en las dos o tres páginas que ya posicionan para tu término objetivo. Las palabras de contenido que comparten — más allá del término principal — son los subtemas que Google espera ver. Cúbrelos en tu borrador y luego usa el comprobador en tu propio texto para confirmar que el término principal ronda el 1% y que no falta ningún término de apoyo. Es más fiable que apuntar a una densidad fija.",
+        "sections": [
+          {
+            "heading": "¿Qué es una buena densidad de palabras clave?",
+            "body": "No hay una cifra oficial. Los estudios de páginas bien posicionadas suelen encontrar densidades de la palabra clave principal entre el 0,5% y el 2,5%, la mayoría en torno al 1%. Las páginas largas diluyen la densidad de forma natural, así que un artículo de 2.000 palabras puede posicionar bien con su término principal al 0,7%, mientras que una página de 300 palabras puede llevarlo al 2%. En lugar de forzar un porcentaje, usa el comprobador para confirmar que el término está en las posiciones clave — título, primera línea, un subtítulo, el texto alternativo de las imágenes y la URL — y que nada más domina la página por accidente. Si un nombre de marca, una etiqueta de menú o una frase repetida del pie encabezan tu lista, conviene corregir eso antes de preocuparte por la palabra clave objetivo."
+          },
+          {
+            "heading": "Cómo leer el resultado",
+            "body": "La herramienta pasa el texto a minúsculas, elimina palabras vacías comunes como \"el\", \"y\" o \"de\", quita la puntuación y cuenta lo que queda. Cada fila muestra una palabra, cuántas veces aparece y ese recuento como porcentaje del total de palabras. Las frases de varias palabras no se rastrean directamente: revisa las palabras sueltas de tu frase y observa si suben juntas. Los números, los tokens de una sola letra y las palabras vacías se excluyen para que la lista refleje el contenido relevante. Usa el orden de clasificación para ver el énfasis real de la página, que a menudo difiere de lo que pretendías al redactar."
+          }
+        ]
+      },
       "faqs": [
         {
-          "question": "¿Qué es la densidad de palabras clave?",
-          "answer": "La densidad de palabras clave es la frecuencia con que una palabra clave aparece en tu texto como porcentaje del total de palabras. Una palabra clave que aparece 10 veces en un artículo de 1000 palabras tiene una densidad del 1%."
+          "question": "¿Para qué sirve un comprobador de densidad de palabras clave?",
+          "answer": "Mide con qué frecuencia aparece cada palabra de la página como porcentaje del total, para que compruebes que tu palabra clave objetivo de SEO aparece lo suficiente para señalar relevancia pero no tanto como para que el texto parezca sobreoptimizado."
         },
         {
-          "question": "¿Cuál es la densidad de palabras clave ideal para el SEO?",
-          "answer": "La mayoría de los expertos en SEO recomiendan una densidad del 1–3%. Un exceso de optimización (relleno de palabras clave) por encima del 5% puede activar penalizaciones de Google. Enfócate en escribir de forma natural y útil en lugar de apuntar a un porcentaje específico."
+          "question": "¿Qué densidad de palabra clave debo buscar?",
+          "answer": "Una palabra clave principal entre el 1% y el 3% aproximadamente es un rango seguro. Muchas páginas bien posicionadas están más cerca del 1%. Google no publica una cifra exacta, así que tómalo como guía de edición, no como objetivo."
+        },
+        {
+          "question": "¿Una densidad alta puede penalizar una página?",
+          "answer": "Repetir una palabra clave hasta el 5% o más puede activar filtros de spam y, de forma más segura, hace que el texto se lea mal y el visitante se vaya. Ambos resultados perjudican el posicionamiento. Mantén el término natural y apóyate en vocabulario relacionado."
         },
         {
           "question": "¿Cómo se calcula la densidad de palabras clave?",
-          "answer": "Densidad de palabras clave (%) = (Número de veces que aparece la palabra clave ÷ Total de palabras) × 100. Por ejemplo, una palabra que aparece 15 veces en un artículo de 500 palabras tiene una densidad del 3%."
+          "answer": "Densidad (%) = (número de veces que aparece la palabra clave ÷ total de palabras) × 100. Un término usado 12 veces en una página de 1.200 palabras tiene una densidad del 1%."
         },
         {
-          "question": "¿Qué palabras se excluyen del análisis?",
-          "answer": "Las palabras vacías comunes (the, a, and, is, it, etc.) se excluyen automáticamente para que solo veas las palabras clave de contenido con significado."
+          "question": "¿Esta herramienta analiza frases de dos o tres palabras?",
+          "answer": "Analiza palabras sueltas tras eliminar palabras vacías y puntuación. Para valorar una frase, revisa sus palabras individuales en la lista y si sus recuentos suben juntos."
         }
       ],
-      "richContent": {
-        "whatIs": "La densidad de palabras clave es el porcentaje de veces que una palabra clave específica aparece en un texto en relación con el recuento total de palabras, calculado como: (ocurrencias de la palabra clave ÷ palabras totales) × 100. El rango generalmente citado es un rango del 1–3%: por debajo del 1%, y Google puede no reconocer la página como relevante temáticamente para ese término; por encima del 3%, el contenido se lee de manera unnatural y corre el riesgo de una penalización algorítmica por sobrecarga de palabras clave. La optimización moderna de motores de búsqueda va mucho más allá de la densidad bruta — los algoritmos de Google usan TF-IDF (Frecuencia del término–Inverso de la frecuencia del documento) para medir la relevancia de las palabras clave contra un corpus de documentos, lo que significa que el contexto y las palabras clave co-ocurrentes son más importantes que simplemente la repetición. Las palabras clave LSI (terminos relacionados semánticamente) señalan una autoridad temática de manera más efectiva que solo la repetición de palabras clave.",
-        "howToUse": [
-          "Pega tu contenido de artículo en el área de entrada — la análisis de densidad de palabras clave se realiza instantáneamente.",
-          "Revisa la lista de las principales palabras clave y sus porcentajes de densidad.",
-          "Identifica tu palabra clave objetivo principal y verifica si su densidad cae dentro del rango del 1–3%.",
-          "Si una palabra clave está por encima del 3%, reemplaza algunas instancias con sinónimos o términos relacionados para leer de manera más natural.",
-          "Si una palabra clave está por debajo del 1%, considera agregarla a la introducción, un subencabezado o la conclusión."
-        ],
-        "whyItMatters": "La sobrecarga de palabras clave — empujar la densidad por encima del 5% — era un táctica común en el SEO de principios de los años 2000 que Google ahora penaliza algorítmicamente y manualmente. La baja densidad significa que la página puede no clasificarse para el término objetivo en absoluto, dejando el tráfico por la mesa. Revisar la lista de palabras clave principales y sus porcentajes de densidad antes de publicar atrapa ambos extremos y asegura que su contenido esté optimizado sin parecer manipulativo. Más importante aún, este análisis revela oportunidades para introducir sinónimos y términos relacionados que expandan su cobertura semántica, ayudando la página a clasificarse para una amplia gama de consultas de búsqueda relacionadas en lugar de solo la frase de palabra clave exacta.",
-        "proTip": "La mejor práctica del SEO moderno: coloque su palabra clave principal en el título de la página, el primer párrafo, un subencabezado H2 y la slug de la URL. Luego permita que aparezca naturalmente en el texto corporal — no lo force. Rellene el espacio semántico restante con términos relacionados. Para un artículo sobre 'calculadora hipotecaria', esos términos incluyen: amortización, principal, tasa de interés, pago mensual y plazo del préstamo. Esta cobertura semántica más amplia ayuda la página a clasificarse para docenas de consultas relacionadas en lugar de solo la frase de palabra clave exacta, multiplicando su potencial de tráfico orgánico."
+      "related": {
+        "heading": "Herramientas y guías relacionadas",
+        "items": [
+          {
+            "label": "Contador de Frecuencia de Palabras — clasifica cada palabra por su frecuencia",
+            "path": "/tools/text/word-frequency-counter"
+          },
+          {
+            "label": "Contador de Palabras — palabras, caracteres, frases y tiempo de lectura",
+            "path": "/tools/text/word-counter"
+          },
+          {
+            "label": "Guía: objetivos de recuento de palabras para blogs, ensayos y correos",
+            "path": "/blog/word-count-guide"
+          }
+        ]
       }
     },
     "sampleText": "The quick brown fox jumps over the lazy dog. This sentence has been used for decades as a pangram — a phrase containing every letter of the alphabet. It is commonly used to demonstrate fonts, test typewriters, and practice typing.\n\nReadability is an important consideration in writing. Clear, concise sentences help readers understand your message quickly. Long, convoluted sentences with complex vocabulary can make text difficult to parse, especially for readers who are not specialists in the subject matter at hand.\n\nGood writing balances clarity with depth. Professional writers aim for a Flesch Reading Ease score between 60 and 70 for most audiences.",
@@ -1812,7 +1878,66 @@
           "Elimina el nombre seleccionado para recorrer a todos los participantes de manera equitativa."
         ],
         "whyItMatters": "El formato visual de ver los nombres en la rueda crea transparencia — todos en la sala pueden ver quiénes están calificados para la selección. Esto elimina cualquier sospecha de que el selector esté jugando con el resultado. Para el uso en clase, el formato de la rueda es significativamente más atractivo que una simple pantalla de texto aleatoria, convirtiendo la selección de participación en un momento interactivo que toda la clase puede compartir.",
-        "proTip": "Para seleccionar recurrentemente los participantes semanalmente — facilitador de reuniones, presentador de informes de estado — guarda tu lista de nombres como un archivo de texto y vuelve a pegarlo rápidamente cada sesión. Si algunos participantes están más disponibles con frecuencia, pesa la rueda agregándoles sus nombres más de una vez. Más ocurrencias de un nombre aumentan la probabilidad proporcional de que esa persona sea seleccionada."
+        "proTip": "Para seleccionar recurrentemente los participantes semanalmente — facilitador de reuniones, presentador de informes de estado — guarda tu lista de nombres como un archivo de texto y vuelve a pegarlo rápidamente cada sesión. Si algunos participantes están más disponibles con frecuencia, pesa la rueda agregándoles sus nombres más de una vez. Más ocurrencias de un nombre aumentan la probabilidad proporcional de que esa persona sea seleccionada.",
+        "comparison": {
+          "heading": "Cómo se compara ToolNotch con Wheel of Names",
+          "intro": "Ambas herramientas giran una ruleta de nombres aleatoria de forma gratuita. Las diferencias están en qué requiere registro, si la página muestra anuncios y dónde se guarda tu lista de nombres.",
+          "columns": [
+            "Función",
+            "Ruleta de Nombres de ToolNotch",
+            "Wheelofnames.com"
+          ],
+          "rows": [
+            {
+              "feature": "Girar sin cuenta",
+              "ours": "Siempre — ninguna función pide inicio de sesión",
+              "theirs": "Sí para el giro básico; ofrece inicio de sesión con Google para guardar ruletas"
+            },
+            {
+              "feature": "Anuncios en la página",
+              "ours": "Ninguno",
+              "theirs": "Muestra anuncios"
+            },
+            {
+              "feature": "Dónde se guardan tus nombres",
+              "ours": "En tu navegador y en la URL de la página; no se sube nada",
+              "theirs": "Las ruletas guardadas se almacenan en sus servidores cuando inicias sesión"
+            },
+            {
+              "feature": "Compartir una ruleta concreta",
+              "ours": "Copia la URL: los nombres viajan en el enlace",
+              "theirs": "Comparte un enlace a una ruleta guardada"
+            },
+            {
+              "feature": "Quitar al ganador tras cada giro",
+              "ours": "Sí",
+              "theirs": "Sí"
+            },
+            {
+              "feature": "Precio",
+              "ours": "Gratis",
+              "theirs": "Gratis"
+            }
+          ],
+          "caption": "Según el sitio público wheelofnames.com en 2026. Las funciones de cualquiera de las herramientas pueden cambiar."
+        }
+      },
+      "related": {
+        "heading": "Más sorteadores y lecturas",
+        "items": [
+          {
+            "label": "Selector de Nombres al Azar — el mismo sorteo sin la animación de la ruleta",
+            "path": "/tools/fun/random-name-picker"
+          },
+          {
+            "label": "Generador de Equipos Aleatorios — divide una lista en grupos equilibrados",
+            "path": "/tools/fun/random-team-generator"
+          },
+          {
+            "label": "Guía: 7 alternativas gratis a Wheel of Names comparadas",
+            "path": "/blog/wheel-of-names-alternatives"
+          }
+        ]
       }
     },
     "namePicker": {
@@ -3427,7 +3552,8 @@
       "text": "Texto",
       "education": "Educación",
       "productivity": "Productividad",
-      "engineering": "Ingeniería"
+      "engineering": "Ingeniería",
+      "fun": "Diversión"
     },
     "breadcrumbBlog": "Blog",
     "relatedTool": "Prueba el {toolName} gratuito →",

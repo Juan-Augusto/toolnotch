@@ -4,7 +4,7 @@ export interface BlogPost {
   descriptionKey: string
   publishedAt: string       // ISO date string '2026-04-10'
   updatedAt?: string
-  category: 'finance' | 'health' | 'text' | 'education' | 'productivity' | 'engineering'
+  category: 'finance' | 'health' | 'text' | 'education' | 'productivity' | 'engineering' | 'fun'
   relatedToolPath?: string  // e.g. '/tools/finance/mortgage-calculator'
   relatedToolNameKey?: string
   readingTimeMinutes: number

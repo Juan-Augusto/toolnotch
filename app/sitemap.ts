@@ -165,30 +165,25 @@ function urlWithAlternates(path: string, priority = 0.8) {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const mdxPosts = await getAllMdxBlogPosts()
 
-  const mdxBlogEntries: MetadataRoute.Sitemap = mdxPosts.map((post) => {
-    // A translated post has a native-language slug per locale, so its hreflang
-    // alternates cannot be built by prefixing one shared slug.
-    const group = findSlugGroup(post.slug)
-    const url = (locale: string) => {
-      const slug = group ? group[locale as (typeof BLOG_LOCALES)[number]] : post.slug
-      const prefix = locale === 'en' ? '' : `/${locale}`
-      return `${BASE_URL}${prefix}/blog/${slug}`
-    }
-    return {
-      url: url('en'),
-      lastModified: new Date(post.updatedAt ?? post.publishedAt),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-      alternates: {
-        languages: {
-          en: url('en'),
-          pt: url('pt'),
-          es: url('es'),
-          'x-default': url('en'),
-        },
+  // Skip MDX posts already emitted via the BLOG_POSTS loop below to avoid duplicate <url> entries.
+  const registeredBlogSlugs = new Set(BLOG_POSTS.map((post) => post.slug))
+
+  const mdxBlogEntries: MetadataRoute.Sitemap = mdxPosts
+    .filter((post) => !registeredBlogSlugs.has(post.slug))
+    .map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt ?? post.publishedAt),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+    alternates: {
+      languages: {
+        en: `${BASE_URL}/blog/${post.slug}`,
+        pt: `${BASE_URL}/pt/blog/${post.slug}`,
+        es: `${BASE_URL}/es/blog/${post.slug}`,
+        'x-default': `${BASE_URL}/blog/${post.slug}`,
       },
     }
-  })
+  }))
 
   return [
     {
