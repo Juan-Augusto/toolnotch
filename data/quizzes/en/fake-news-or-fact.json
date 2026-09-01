@@ -1,0 +1,150 @@
+{
+  "id": "fake-news-or-fact",
+  "type": "trivia",
+  "category": "civic",
+  "title": "Fake News or Fact? — Media Literacy Quiz",
+  "description": "Think you can spot misinformation? This quiz puts ten well-known claims and viral stories in front of you — some true, some long-debunked hoaxes — and asks you to guess which is which. Topics range from health and science myths to internet chain messages that have fooled people for years. After every answer, you'll see a short explanation and a link to the real, checkable source behind it, from organizations like WHO, NASA, and Harvard Health. No politics, no candidates — just general-knowledge claims anyone can verify. See how many you can get right, then compare your fact-checking skills with friends.",
+  "image": "/images/quizzes/fake-news-or-fact-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "5G cell towers spread COVID-19.",
+      "options": [
+        { "id": "q1a", "text": "Real" },
+        { "id": "q1b", "text": "Fake" }
+      ],
+      "correctAnswerId": "q1b",
+      "explanation": "Viruses cannot travel over radio waves, and COVID-19 spread widely in countries with little or no 5G infrastructure at all.",
+      "source": { "name": "UK Government (GOV.UK), citing WHO", "url": "https://www.gov.uk/guidance/5g-and-coronavirus-covid-19" }
+    },
+    {
+      "id": "q2",
+      "text": "The Great Wall of China is visible from space with the naked eye.",
+      "options": [
+        { "id": "q2a", "text": "Real" },
+        { "id": "q2b", "text": "Fake" }
+      ],
+      "correctAnswerId": "q2b",
+      "explanation": "NASA and multiple astronauts confirm the wall's material blends into the surrounding landscape, making it indistinguishable from orbit without magnification.",
+      "source": { "name": "NASA", "url": "https://www.nasa.gov/vision/space/workinginspace/great_wall.html" }
+    },
+    {
+      "id": "q3",
+      "text": "Goldfish only have a 3-second memory.",
+      "options": [
+        { "id": "q3a", "text": "Real" },
+        { "id": "q3b", "text": "Fake" }
+      ],
+      "correctAnswerId": "q3b",
+      "explanation": "Fish-cognition researchers have shown goldfish can learn and remember tasks and locations for weeks or months, not seconds.",
+      "source": { "name": "IFLScience", "url": "https://www.iflscience.com/do-goldfish-really-have-a-three-second-memory-75017" }
+    },
+    {
+      "id": "q4",
+      "text": "Humans only use 10% of their brains.",
+      "options": [
+        { "id": "q4a", "text": "Real" },
+        { "id": "q4b", "text": "Fake" }
+      ],
+      "correctAnswerId": "q4b",
+      "explanation": "Brain-imaging studies show nearly every region of the brain is active over the course of a day; there is no unused 90%.",
+      "source": { "name": "Scientific American", "url": "https://www.scientificamerican.com/article/do-people-only-use-10-percent-of-their-brains/" }
+    },
+    {
+      "id": "q5",
+      "text": "A viral message claims WhatsApp will start charging a monthly fee unless you forward it to your contacts.",
+      "options": [
+        { "id": "q5a", "text": "Real" },
+        { "id": "q5b", "text": "Fake" }
+      ],
+      "correctAnswerId": "q5b",
+      "explanation": "This exact hoax has recirculated since 2012; WhatsApp has repeatedly confirmed it is fake and has never charged users to send messages.",
+      "source": { "name": "WhatsApp (Meta)", "url": "https://blog.whatsapp.com/it-is-a-hoax-really-it-is" }
+    },
+    {
+      "id": "q6",
+      "text": "Archaeologists have found ancient honey in sealed Egyptian tombs that was still edible.",
+      "options": [
+        { "id": "q6a", "text": "Real" },
+        { "id": "q6b", "text": "Fake" }
+      ],
+      "correctAnswerId": "q6a",
+      "explanation": "Honey's low moisture and natural acidity prevent bacterial growth, so honey sealed away thousands of years ago has been found still preserved.",
+      "source": { "name": "Smithsonian Magazine", "url": "https://www.smithsonianmag.com/science-nature/the-science-behind-honeys-eternal-shelf-life-1218690/" }
+    },
+    {
+      "id": "q7",
+      "text": "The World Health Organization declared the COVID-19 global health emergency over in May 2023.",
+      "options": [
+        { "id": "q7a", "text": "Real" },
+        { "id": "q7b", "text": "Fake" }
+      ],
+      "correctAnswerId": "q7a",
+      "explanation": "WHO's Emergency Committee formally ended the Public Health Emergency of International Concern designation on May 5, 2023.",
+      "source": { "name": "World Health Organization", "url": "https://www.who.int/news/item/05-05-2023-statement-on-the-fifteenth-meeting-of-the-international-health-regulations-(2005)-emergency-committee-regarding-the-coronavirus-disease-(covid-19)-pandemic" }
+    },
+    {
+      "id": "q8",
+      "text": "Octopuses have three hearts.",
+      "options": [
+        { "id": "q8a", "text": "Real" },
+        { "id": "q8b", "text": "Fake" }
+      ],
+      "correctAnswerId": "q8a",
+      "explanation": "Two hearts pump blood to the gills and a third pumps it to the rest of the body — confirmed marine biology.",
+      "source": { "name": "NOAA", "url": "https://oceanservice.noaa.gov/news/feb26/undersea-creatures-valentines-day.html" }
+    },
+    {
+      "id": "q9",
+      "text": "Microwaving vegetables can preserve more nutrients than boiling them.",
+      "options": [
+        { "id": "q9a", "text": "Real" },
+        { "id": "q9b", "text": "Fake" }
+      ],
+      "correctAnswerId": "q9a",
+      "explanation": "Shorter cook times and less water contact mean microwaving often retains more vitamin C and other nutrients than boiling does.",
+      "source": { "name": "Harvard Health Publishing", "url": "https://www.health.harvard.edu/staying-healthy/microwave-cooking-and-nutrition" }
+    },
+    {
+      "id": "q10",
+      "text": "Sharks existed on Earth before trees did.",
+      "options": [
+        { "id": "q10a", "text": "Real" },
+        { "id": "q10b", "text": "Fake" }
+      ],
+      "correctAnswerId": "q10a",
+      "explanation": "Sharks' ancestors appeared roughly 400 million years ago, tens of millions of years before the first tree-like plants evolved.",
+      "source": { "name": "Smithsonian Magazine", "url": "https://www.smithsonianmag.com/smart-news/respect-sharks-are-older-than-trees-3818/" }
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "Fact-Check Legend",
+      "description": "You have a sharp eye for misinformation. In a world where hoaxes, urban legends, and viral chain messages spread faster than the truth, you consistently know how to pause, question the source, and separate fact from fiction. Media literacy like yours is a real skill — it means checking who's making a claim, looking for a named source, and not sharing something just because it sounds convincing or scary. Keep applying that same instinct outside the quiz: verify before you share, especially on WhatsApp and social media, and you'll keep being the friend who catches the fake story before it spreads.",
+      "shareText": "I scored Fact-Check Legend on the Fake News or Fact quiz! Think you can spot misinformation as well as I can?"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Fact-Check Expert",
+      "description": "You're clearly good at spotting misinformation, even if a claim or two slipped past you. That's a strong result — most viral hoaxes and myths are designed to sound just plausible enough to catch people off guard. The habits that got you this far matter: pausing before you share, checking whether a claim has a real named source, and being a little more skeptical of anything that seems built to provoke a strong reaction. Keep sharpening that instinct. A little extra scrutiny — checking the date, the source, and whether a fact-checker has already covered a story — is often all it takes to go from expert to legend.",
+      "shareText": "I scored Fact-Check Expert on the Fake News or Fact quiz! Pretty solid at spotting misinformation. Can you beat me?"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Fact-Check Fan",
+      "description": "You're engaged and curious about telling fact from fiction, but a few well-crafted hoaxes still got the better of you — and that's completely normal, since misinformation is often designed to feel true. The good news is that spotting it is a learnable skill. Before sharing anything surprising, try checking who first reported it, whether a real news outlet or fact-checking organization has covered it, and whether the claim uses vague language like 'experts say' without naming anyone. A little extra pause before hitting share can make a big difference in slowing the spread of misinformation online.",
+      "shareText": "I scored Fact-Check Fan on the Fake News or Fact quiz. Some hoaxes got me! How will you do?"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "Fact-Check Rookie",
+      "description": "Misinformation is designed to be convincing, so a lower score here just means there's room to build up your fact-checking instincts — everyone starts somewhere. The most reliable habit is a simple one: before you believe or share a surprising claim, look for who is actually saying it. A real story has a named, checkable source; a hoax usually doesn't. Try a quick search for the claim plus the word 'fact check' before forwarding anything on WhatsApp or social media. Retake this quiz anytime to practice — the more you question surprising claims, the sharper your instincts will get.",
+      "shareText": "I just took the Fake News or Fact quiz — plenty of room to sharpen my fact-checking skills. Can you score higher?"
+    }
+  ]
+}

@@ -21,6 +21,8 @@ interface ToolWrapperProps {
   faqs: FaqItem[];
   adSlot?: string;
   richContent?: RichContent;
+  /** Extra page content rendered between the rich content and the FAQ. */
+  extraContent?: React.ReactNode;
   children: React.ReactNode;
   maxWidth?: string;
   noCardWrapper?: boolean;
@@ -33,6 +35,7 @@ export default function ToolWrapper({
   faqs,
   adSlot,
   richContent,
+  extraContent,
   children,
   maxWidth,
   noCardWrapper,
@@ -42,7 +45,7 @@ export default function ToolWrapper({
 
   return (
     <main className="min-h-screen" style={{ background: "var(--background)" }}>
-      <div className={`${maxWidth ?? "max-w-3xl"} mx-auto px-4 py-8`}>
+      <div className={`${maxWidth ?? "max-w-4xl"} mx-auto px-4 py-8`}>
         {/* Breadcrumb + Back */}
         <div className="flex items-center justify-between mb-10 no-print">
           <nav
@@ -51,7 +54,7 @@ export default function ToolWrapper({
           >
             <Link
               href="/"
-              className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1.5"
+              className="hover:underline flex items-center gap-1.5 "
             >
               <Home size={13} />
               <span>{t("breadcrumb.home")}</span>
@@ -62,7 +65,7 @@ export default function ToolWrapper({
 
           <Link
             href="/"
-            className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1.5 text-sm"
+            className="hover:underline flex items-center gap-1.5 text-sm"
           >
             <ArrowLeft size={13} />
             {t("allTools")}
@@ -165,6 +168,11 @@ export default function ToolWrapper({
               </p>
             </div>
           </div>
+        )}
+
+        {/* Extra page content (tables, guides, cross-links) */}
+        {extraContent && (
+          <div className="mt-12 no-print">{extraContent}</div>
         )}
 
         {/* FAQ */}

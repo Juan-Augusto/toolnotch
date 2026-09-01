@@ -1,0 +1,150 @@
+{
+  "id": "fake-news-or-fact",
+  "type": "trivia",
+  "category": "civic",
+  "title": "Fake News ou Verdade? — Teste de Fake News",
+  "description": "Você sabe identificar uma fake news? Neste teste, você vai avaliar dez afirmações e boatos conhecidos — alguns verdadeiros, outros desmentidos há anos — e decidir o que é real e o que é falso. Os temas vão de mitos de saúde e ciência a correntes que circulam há anos no WhatsApp. Depois de cada resposta, você verá uma explicação curta e o link para a fonte real e verificável, de organizações como OMS, NASA e Harvard Health. Sem política, sem candidatos — apenas afirmações de conhecimento geral que qualquer pessoa pode checar. Veja quantas você acerta e compare seu resultado com os amigos.",
+  "image": "/images/quizzes/fake-news-or-fact-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Torres de internet 5G espalham a COVID-19.",
+      "options": [
+        { "id": "q1a", "text": "Verdadeiro" },
+        { "id": "q1b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q1b",
+      "explanation": "Vírus não se transmitem por ondas de rádio, e a COVID-19 se espalhou amplamente em países com pouca ou nenhuma infraestrutura 5G.",
+      "source": { "name": "OPAS/OMS", "url": "https://www.paho.org/pt/cacadores-mitos-sobre-covid-19" }
+    },
+    {
+      "id": "q2",
+      "text": "A Muralha da China é visível do espaço a olho nu.",
+      "options": [
+        { "id": "q2a", "text": "Verdadeiro" },
+        { "id": "q2b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q2b",
+      "explanation": "A NASA e diversos astronautas confirmam que o material da muralha se confunde com a paisagem ao redor, tornando-a indistinguível da órbita sem ampliação.",
+      "source": { "name": "NASA", "url": "https://www.nasa.gov/vision/space/workinginspace/great_wall.html" }
+    },
+    {
+      "id": "q3",
+      "text": "Peixinhos dourados têm apenas 3 segundos de memória.",
+      "options": [
+        { "id": "q3a", "text": "Verdadeiro" },
+        { "id": "q3b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q3b",
+      "explanation": "Pesquisadores de cognição de peixes mostram que peixinhos dourados aprendem e lembram tarefas e locais por semanas ou meses, não segundos.",
+      "source": { "name": "IFLScience", "url": "https://www.iflscience.com/do-goldfish-really-have-a-three-second-memory-75017" }
+    },
+    {
+      "id": "q4",
+      "text": "Os seres humanos usam apenas 10% do cérebro.",
+      "options": [
+        { "id": "q4a", "text": "Verdadeiro" },
+        { "id": "q4b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q4b",
+      "explanation": "Estudos de neuroimagem mostram que quase todas as regiões do cérebro estão ativas ao longo do dia; não existem 90% inutilizados.",
+      "source": { "name": "Scientific American", "url": "https://www.scientificamerican.com/article/do-people-only-use-10-percent-of-their-brains/" }
+    },
+    {
+      "id": "q5",
+      "text": "Uma mensagem viral afirma que o WhatsApp vai cobrar uma mensalidade, a menos que você a encaminhe para seus contatos.",
+      "options": [
+        { "id": "q5a", "text": "Verdadeiro" },
+        { "id": "q5b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q5b",
+      "explanation": "Esse boato circula desde 2012; o WhatsApp já confirmou várias vezes que é falso e nunca cobrou para enviar mensagens.",
+      "source": { "name": "WhatsApp (Meta)", "url": "https://blog.whatsapp.com/it-is-a-hoax-really-it-is" }
+    },
+    {
+      "id": "q6",
+      "text": "Arqueólogos encontraram mel milenar em tumbas egípcias seladas que ainda estava próprio para consumo.",
+      "options": [
+        { "id": "q6a", "text": "Verdadeiro" },
+        { "id": "q6b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q6a",
+      "explanation": "A baixa umidade e a acidez natural do mel impedem o crescimento de bactérias, por isso potes selados há milhares de anos foram encontrados preservados.",
+      "source": { "name": "Smithsonian Magazine", "url": "https://www.smithsonianmag.com/science-nature/the-science-behind-honeys-eternal-shelf-life-1218690/" }
+    },
+    {
+      "id": "q7",
+      "text": "A Organização Mundial da Saúde declarou o fim da emergência de saúde global da COVID-19 em maio de 2023.",
+      "options": [
+        { "id": "q7a", "text": "Verdadeiro" },
+        { "id": "q7b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q7a",
+      "explanation": "O Comitê de Emergência da OMS encerrou oficialmente a declaração de Emergência de Saúde Pública de Importância Internacional em 5 de maio de 2023.",
+      "source": { "name": "OPAS/OMS", "url": "https://www.paho.org/pt/noticias/5-5-2023-oms-declara-fim-da-emergencia-saude-publica-importancia-internacional-referente" }
+    },
+    {
+      "id": "q8",
+      "text": "Polvos têm três corações.",
+      "options": [
+        { "id": "q8a", "text": "Verdadeiro" },
+        { "id": "q8b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q8a",
+      "explanation": "Dois corações bombeiam sangue para as brânquias e um terceiro bombeia para o resto do corpo — um fato confirmado da biologia marinha.",
+      "source": { "name": "NOAA", "url": "https://oceanservice.noaa.gov/news/feb26/undersea-creatures-valentines-day.html" }
+    },
+    {
+      "id": "q9",
+      "text": "Cozinhar legumes no micro-ondas pode preservar mais nutrientes do que fervê-los.",
+      "options": [
+        { "id": "q9a", "text": "Verdadeiro" },
+        { "id": "q9b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q9a",
+      "explanation": "Tempos de cozimento mais curtos e menos contato com água fazem com que o micro-ondas geralmente preserve mais vitamina C e outros nutrientes do que a fervura.",
+      "source": { "name": "Harvard Health Publishing", "url": "https://www.health.harvard.edu/staying-healthy/microwave-cooking-and-nutrition" }
+    },
+    {
+      "id": "q10",
+      "text": "Os tubarões existiram na Terra antes das árvores.",
+      "options": [
+        { "id": "q10a", "text": "Verdadeiro" },
+        { "id": "q10b", "text": "Falso" }
+      ],
+      "correctAnswerId": "q10a",
+      "explanation": "Os ancestrais dos tubarões surgiram há cerca de 400 milhões de anos, dezenas de milhões de anos antes das primeiras plantas parecidas com árvores.",
+      "source": { "name": "Smithsonian Magazine", "url": "https://www.smithsonianmag.com/smart-news/respect-sharks-are-older-than-trees-3818/" }
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "Lenda da Checagem de Fatos",
+      "description": "Você tem um olhar afiado para identificar desinformação. Em um mundo onde boatos, lendas urbanas e correntes virais se espalham mais rápido que a verdade, você sabe parar, questionar a fonte e separar fato de ficção. Essa é uma habilidade real: verificar quem está fazendo a afirmação, procurar uma fonte nomeada e não compartilhar algo só porque parece convincente ou assustador. Continue aplicando esse instinto fora do teste: confira antes de compartilhar, especialmente no WhatsApp e nas redes sociais, e você continuará sendo a pessoa que identifica a notícia falsa antes que ela se espalhe.",
+      "shareText": "Consegui o nível Lenda da Checagem de Fatos no teste Fake News ou Verdade! Acha que consegue identificar desinformação tão bem quanto eu?"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Especialista em Checagem de Fatos",
+      "description": "Você é claramente bom em identificar desinformação, mesmo que uma ou outra afirmação tenha passado despercebida. É um resultado forte — a maioria dos boatos e mitos virais é criada para parecer plausível o suficiente para enganar as pessoas. Os hábitos que te trouxeram até aqui importam: parar antes de compartilhar, verificar se uma afirmação tem uma fonte real e nomeada, e desconfiar um pouco mais de qualquer coisa feita para provocar uma reação forte. Continue afiando esse instinto. Um pouco mais de atenção — checando a data, a fonte e se algum checador de fatos já cobriu o assunto — costuma ser o suficiente para virar uma lenda.",
+      "shareText": "Consegui o nível Especialista em Checagem de Fatos no teste Fake News ou Verdade! Um bom faro para desinformação. Você consegue superar isso?"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Fã de Checagem de Fatos",
+      "description": "Você é curioso e se interessa por separar fato de ficção, mas alguns boatos bem construídos ainda conseguiram te enganar — e isso é normal, já que a desinformação costuma ser feita para parecer verdadeira. A boa notícia é que identificá-la é uma habilidade que se aprende. Antes de compartilhar algo surpreendente, tente verificar quem divulgou primeiro, se um veículo de notícias ou um checador de fatos já cobriu o assunto, e se a afirmação usa termos vagos como 'especialistas dizem' sem nomear ninguém. Uma pausa extra antes de compartilhar pode fazer muita diferença para conter a desinformação online.",
+      "shareText": "Consegui o nível Fã de Checagem de Fatos no teste Fake News ou Verdade. Alguns boatos me pegaram! Como você vai se sair?"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "Iniciante em Checagem de Fatos",
+      "description": "A desinformação é feita para ser convincente, então uma pontuação mais baixa aqui só significa que há espaço para desenvolver seus instintos de checagem — todo mundo começa de algum lugar. O hábito mais confiável é simples: antes de acreditar ou compartilhar uma afirmação surpreendente, procure quem realmente está dizendo isso. Uma notícia real tem uma fonte nomeada e verificável; um boato geralmente não tem. Tente uma busca rápida pela afirmação junto com a palavra 'checagem' antes de encaminhar qualquer coisa no WhatsApp ou nas redes sociais. Refaça este teste quando quiser praticar — quanto mais você questionar afirmações surpreendentes, mais afiados ficarão seus instintos.",
+      "shareText": "Acabei de fazer o teste Fake News ou Verdade — ainda tenho o que aprender sobre checagem de fatos. Consegue pontuar mais que eu?"
+    }
+  ]
+}

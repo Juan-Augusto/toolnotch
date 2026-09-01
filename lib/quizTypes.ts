@@ -43,6 +43,11 @@ export interface TriviaQuestion {
   options: TriviaOption[]
   correctAnswerId: string
   timeLimitSeconds?: number
+  explanation?: string   // one-line "why" shown after the user answers
+  source?: {              // the fact-checking / authoritative source for this claim
+    name: string          // e.g. "WHO", "Aos Fatos", "NASA"
+    url: string            // must be a live, resolving URL — verified in QA
+  }
 }
 
 export interface TriviaScoreTier {

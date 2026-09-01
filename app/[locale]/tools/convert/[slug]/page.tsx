@@ -15,10 +15,14 @@ import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/sc
 import { locales } from '@/i18n'
 import type { FaqItem } from '@/components/FaqSection'
 
-interface Props { params: Promise<{ locale: string; slug: string }> }
+interface Props {
+  params: Promise<{ locale: string; slug: string }>;
+}
 
 export function generateStaticParams() {
-  return locales.flatMap(locale => COMMON_PAIRS.map(p => ({ locale, slug: p.slug })))
+  return locales.flatMap((locale) =>
+    COMMON_PAIRS.map((p) => ({ locale, slug: p.slug })),
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -47,9 +51,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ConversionSlugPage({ params }: Props) {
-  const { locale, slug } = await params
-  const pair = COMMON_PAIRS.find(p => p.slug === slug)
-  if (!pair) notFound()
+  const { locale, slug } = await params;
+  const pair = COMMON_PAIRS.find((p) => p.slug === slug);
+  if (!pair) notFound();
 
   const t = await getTranslations({ locale, namespace: 'convert' })
   const tw = await getTranslations({ locale, namespace: 'toolWrapper' })
@@ -87,14 +91,14 @@ export default async function ConversionSlugPage({ params }: Props) {
         ]
       : []),
     {
-      question: t('slugPages.faqs.accurate'),
-      answer: t('slugPages.faqs.accurateAnswer'),
+      question: t("slugPages.faqs.accurate"),
+      answer: t("slugPages.faqs.accurateAnswer"),
     },
     {
-      question: t('slugPages.faqs.offline'),
-      answer: t('slugPages.faqs.offlineAnswer'),
+      question: t("slugPages.faqs.offline"),
+      answer: t("slugPages.faqs.offlineAnswer"),
     },
-  ]
+  ];
 
   const jsonLd = buildJsonLd(
     webAppSchema(heading, `/tools/convert/${slug}`, content?.metaDescription ?? pair.description, locale),
@@ -104,11 +108,14 @@ export default async function ConversionSlugPage({ params }: Props) {
       { name: t('slugPages.breadcrumbConverter'), url: '/tools/convert' },
       { name: heading, url: `/tools/convert/${slug}` },
     ]),
-  )
+  );
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ToolWrapper
         title={heading}
         description={intro}
@@ -207,5 +214,5 @@ export default async function ConversionSlugPage({ params }: Props) {
         />
       </ToolWrapper>
     </>
-  )
+  );
 }

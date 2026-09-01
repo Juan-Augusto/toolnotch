@@ -1,0 +1,108 @@
+{
+  "id": "what-is-your-political-profile",
+  "type": "personality",
+  "category": "personality",
+  "title": "¿Cuál Es Tu Perfil Político?",
+  "description": "Responde 8 preguntas rápidas sobre tus valores y descubre tu perfil político. Solo por diversión y autoconocimiento — no es un test científico ni consejo de voto.",
+  "image": "/images/quizzes/what-is-your-political-profile-cover.jpg",
+  "questions": [
+    { "id": "q1", "text": "Crees que el papel principal del gobierno debería ser...", "options": [
+      { "id": "q1a", "text": "Mantener el orden y proteger las tradiciones", "scores": { "guardian": 3 } },
+      { "id": "q1b", "text": "Mantenerse pequeño y dejar que las personas prosperen por su cuenta", "scores": { "builder": 3 } },
+      { "id": "q1c", "text": "Reducir la desigualdad de forma activa y ampliar los servicios públicos", "scores": { "reformer": 3 } },
+      { "id": "q1d", "text": "Proteger los derechos individuales por encima de todo", "scores": { "free-thinker": 3 } },
+      { "id": "q1e", "text": "Adaptarse a cada caso — ninguna regla única sirve para todo", "scores": { "balancer": 3 } }
+    ]},
+    { "id": "q2", "text": "Cuando se trata de impuestos, te inclinas por...", "options": [
+      { "id": "q2a", "text": "Impuestos moderados y estables que sostengan instituciones fuertes (policía, tribunales, defensa)", "scores": { "guardian": 3 } },
+      { "id": "q2b", "text": "Impuestos más bajos, para que las personas y empresas se queden con más de lo que ganan", "scores": { "builder": 3 } },
+      { "id": "q2c", "text": "Impuestos más altos para quienes ganan más, para financiar programas públicos", "scores": { "reformer": 3 } },
+      { "id": "q2d", "text": "Impuestos mínimos — cada quien debería decidir cómo gastar su propio dinero", "scores": { "free-thinker": 3 } },
+      { "id": "q2e", "text": "Una combinación equilibrada — lo que importa es qué tan bien se use el dinero recaudado", "scores": { "balancer": 3 } }
+    ]},
+    { "id": "q3", "text": "Sobre la economía, crees que...", "options": [
+      { "id": "q3a", "text": "La estabilidad y la previsibilidad importan más que el crecimiento acelerado", "scores": { "guardian": 3 } },
+      { "id": "q3b", "text": "Los mercados libres y la competencia generan los mejores resultados para todos", "scores": { "builder": 3 } },
+      { "id": "q3c", "text": "El gobierno debe regular activamente los mercados para proteger a trabajadores y consumidores", "scores": { "reformer": 3 } },
+      { "id": "q3d", "text": "Las personas deben ser libres de tomar sus propias decisiones económicas, con mínima interferencia", "scores": { "free-thinker": 3 } },
+      { "id": "q3e", "text": "Los mercados necesitan algunas reglas, pero no demasiadas — depende de la industria", "scores": { "balancer": 3 } }
+    ]},
+    { "id": "q4", "text": "Sobre libertades personales y normas sociales, piensas que...", "options": [
+      { "id": "q4a", "text": "Las tradiciones compartidas y los estándares comunitarios mantienen estable a la sociedad", "scores": { "guardian": 3 } },
+      { "id": "q4b", "text": "Las personas deben ser libres de vivir como quieran, siempre que respeten a los demás", "scores": { "builder": 3 } },
+      { "id": "q4c", "text": "Las leyes deben evolucionar rápido para reflejar los valores sociales cambiantes", "scores": { "reformer": 3 } },
+      { "id": "q4d", "text": "Las decisiones personales no le incumben a nadie más que a ti", "scores": { "free-thinker": 3 } },
+      { "id": "q4e", "text": "El cambio está bien, pero debería ocurrir de forma gradual, no de la noche a la mañana", "scores": { "balancer": 3 } }
+    ]},
+    { "id": "q5", "text": "Frente a un nuevo problema en tu ciudad, tu instinto es...", "options": [
+      { "id": "q5a", "text": "Confiar en instituciones con experiencia para resolverlo de la manera ya probada", "scores": { "guardian": 3 } },
+      { "id": "q5b", "text": "Dejar que las comunidades locales y las empresas lo resuelvan sin reglas impuestas desde arriba", "scores": { "builder": 3 } },
+      { "id": "q5c", "text": "Impulsar políticas públicas audaces para resolverlo de raíz", "scores": { "reformer": 3 } },
+      { "id": "q5d", "text": "Cuestionar si esto realmente le corresponde al gobierno", "scores": { "free-thinker": 3 } },
+      { "id": "q5e", "text": "Ver qué ha funcionado en otros lugares y adaptarlo", "scores": { "balancer": 3 } }
+    ]},
+    { "id": "q6", "text": "Cuando no estás de acuerdo con una regla o ley, normalmente...", "options": [
+      { "id": "q6a", "text": "La respetas — las reglas existen por una razón, incluso las que no te gustan", "scores": { "guardian": 3 } },
+      { "id": "q6b", "text": "Buscas formas de sortearla mientras construyes tu propio camino", "scores": { "builder": 3 } },
+      { "id": "q6c", "text": "Te involucras para cambiarla a través de la acción colectiva", "scores": { "reformer": 3 } },
+      { "id": "q6d", "text": "Te resistes con firmeza — las restricciones a la libertad te molestan", "scores": { "free-thinker": 3 } },
+      { "id": "q6e", "text": "Tratas de entender ambos lados antes de decidir cómo reaccionar", "scores": { "balancer": 3 } }
+    ]},
+    { "id": "q7", "text": "Tu opinión sobre cuánto debería involucrarse el gobierno en la vida diaria de las personas...", "options": [
+      { "id": "q7a", "text": "Lo suficiente para mantener todo seguro y en orden", "scores": { "guardian": 3 } },
+      { "id": "q7b", "text": "Lo mínimo posible — las personas se manejan mejor solas", "scores": { "builder": 3 } },
+      { "id": "q7c", "text": "Mucho — el gobierno puede ser una herramienta poderosa para lograr equidad", "scores": { "reformer": 3 } },
+      { "id": "q7d", "text": "Casi nada — eso lo decide cada individuo", "scores": { "free-thinker": 3 } },
+      { "id": "q7e", "text": "Depende totalmente del tema en cuestión", "scores": { "balancer": 3 } }
+    ]},
+    { "id": "q8", "text": "Si tuvieras que elegir el valor más importante en un líder...", "options": [
+      { "id": "q8a", "text": "Estabilidad y confiabilidad", "scores": { "guardian": 3 } },
+      { "id": "q8b", "text": "Eficiencia y resultados", "scores": { "builder": 3 } },
+      { "id": "q8c", "text": "Compasión y sentido de justicia", "scores": { "reformer": 3 } },
+      { "id": "q8d", "text": "Respeto por la libertad individual", "scores": { "free-thinker": 3 } },
+      { "id": "q8e", "text": "Disposición para escuchar y adaptarse", "scores": { "balancer": 3 } }
+    ]}
+  ],
+  "results": [
+    {
+      "id": "guardian",
+      "title": "El Guardián",
+      "description": "Tu resultado apunta a El Guardián — alguien que valora la estabilidad, el orden y la fortaleza de las instituciones consolidadas. Crees que los caminos probados y comprobados funcionan mejor que los cambios repentinos, y que las reglas y la estructura compartidas son lo que mantiene a una comunidad funcionando sin problemas. Te sientes más cómodo con lo predecible: prefieres construir sobre algo que ya demostró su valor con el tiempo antes que apostar por una idea sin probar, aunque suene emocionante sobre el papel. En el día a día, tiendes a priorizar la confiabilidad sobre la velocidad, y la cautela sobre el riesgo — antes de preguntar '¿qué tan rápido podemos hacer esto?', preguntas '¿esto seguirá funcionando dentro de diez años?'. En lo cívico, probablemente te sientas más cómodo participando por canales ya establecidos: presentándote, siguiendo los procesos y confiando en que las instituciones se corrigen con el tiempo, en lugar de derribarlo todo y empezar de cero. Esto no significa que te resistas a todo cambio — significa que quieres que el cambio se gane, se pruebe y sea gradual, no reactivo. Las personas como tú suelen ser la mano firme del grupo, la que recuerda lo que pasó la última vez y planifica en consecuencia. Ese instinto por el orden no es rigidez; es una forma silenciosa de cuidado hacia quienes dependen de que las cosas funcionen como deben.",
+      "image": "/images/results/guardian.jpg",
+      "traits": ["Estable", "Institucional", "Ordenado", "Cuidadoso"],
+      "shareText": "¡Soy El Guardián! Hice el quiz del perfil político en ToolNotch."
+    },
+    {
+      "id": "builder",
+      "title": "El Constructor",
+      "description": "Tu resultado apunta a El Constructor — alguien que valora la autosuficiencia, la libre iniciativa y la libertad de crear sin interferencias innecesarias. Crees que las personas y las comunidades hacen su mejor trabajo cuando tienen espacio para construir, experimentar y hacerse cargo de los resultados, en lugar de esperar permiso u orientación desde arriba. La eficiencia te importa mucho: prefieres ver un problema resuelto rápidamente por quienes están más cerca de él que verlo arrastrarse entre capas de trámites. En el día a día, tiendes a preferir que el control quede en manos de las personas y las comunidades locales — confías en que, en general, cada quien sabe qué es mejor para su propia vida y sus propios negocios mejor que cualquier autoridad externa. En lo cívico, probablemente te energiza la acción directa: iniciar algo, resolverlo tú mismo o apoyar iniciativas que premian el esfuerzo y los resultados. No estás en contra de toda estructura — solo quieres que se justifique, y que se quite del camino cuando no hace falta. Las personas como tú suelen ser las que ponen las cosas en marcha mientras los demás siguen debatiendo el plan. Ese impulso no se trata de actuar en solitario; es la convicción de que la confianza, la libertad y la iniciativa sacan lo mejor de las personas y de las comunidades que construyen juntas.",
+      "image": "/images/results/builder.jpg",
+      "traits": ["Autosuficiente", "Emprendedor", "Independiente", "Eficiente"],
+      "shareText": "¡Soy El Constructor! Hice el quiz del perfil político en ToolNotch."
+    },
+    {
+      "id": "reformer",
+      "title": "El Reformista",
+      "description": "Tu resultado apunta a El Reformista — alguien que valora la justicia y cree que las políticas públicas bien pensadas pueden ser una fuerza real de cambio positivo. Sueles notar cuando un sistema no está funcionando para todos, y tu instinto es resolver el problema de raíz, no solo parchear la situación. La equidad te importa profundamente: crees que la acción colectiva, bien llevada, puede impulsar a las personas de formas que el esfuerzo individual por sí solo muchas veces no logra. En el día a día, sueles estar dispuesto a invertir más — tiempo, recursos o estructura — si eso significa un resultado más justo para más personas, aunque ese camino sea más lento o complicado que la alternativa. En lo cívico, probablemente te atraiga la organización social, el activismo o el servicio público — cualquier espacio que te permita convertir un 'esto debería cambiar' en 'esto cambió'. Te llevas bien con la ambición; los grandes problemas no te espantan, te motivan. Esto no significa que quieras el cambio por el cambio — significa que crees que la inacción también tiene un costo, y que esperar a que los problemas se resuelvan solos rara vez funciona. Las personas como tú suelen ser las que preguntan '¿pero esto es realmente justo?' en salas donde nadie más pensó en preguntarlo. Ese instinto no es idealismo vacío; es la creencia genuina de que las cosas pueden, y deben, mejorar.",
+      "image": "/images/results/reformer.jpg",
+      "traits": ["Justo", "Proactivo", "Idealista", "Comunitario"],
+      "shareText": "¡Soy El Reformista! Hice el quiz del perfil político en ToolNotch."
+    },
+    {
+      "id": "free-thinker",
+      "title": "El Librepensador",
+      "description": "Tu resultado apunta a El Librepensador — alguien que valora la libertad individual por encima de casi todo. Crees que las personas deben ser libres de vivir, elegir y gastar sus propios recursos como mejor les parezca, sin que nadie más decida qué es lo mejor para ellas. La autonomía no es solo una preferencia para ti — es casi un principio fundamental: tus derechos terminan donde empiezan los de otra persona, y ni un segundo antes. En el día a día, tiendes a cuestionar reglas o restricciones que limitan la elección personal, incluso cuando se presentan como algo por el bien común — quieres ver la justificación específica, no aceptarla simplemente por fe. En lo cívico, probablemente te sientas más cómodo como una voz independiente: cuestionando supuestos, resistiendo el pensamiento de manada y defendiendo tus propias conclusiones aunque sean impopulares. Esto no significa que seas indiferente a los demás — significa que crees que respetar la autonomía de las personas es, en sí mismo, una forma de respeto, quizás la más fundamental de todas. Las personas como tú suelen ser las que preguntan '¿por qué existe esta regla, para empezar?' cuando todos los demás ya dejaron de cuestionarla. Ese instinto no se trata de rechazar la responsabilidad — es la convicción de que la libertad, la libertad de verdad, vale la pena defenderla incluso cuando resulta inconveniente.",
+      "image": "/images/results/free-thinker.jpg",
+      "traits": ["Independiente", "Convencido", "Libre", "Poco convencional"],
+      "shareText": "¡Soy El Librepensador! Hice el quiz del perfil político en ToolNotch."
+    },
+    {
+      "id": "balancer",
+      "title": "El Equilibrista",
+      "description": "Tu resultado apunta a El Equilibrista — alguien que valora el pragmatismo, los matices y la disposición de analizar cada situación en sus propios términos, en lugar de seguir una ideología fija. Eres genuinamente escéptico ante las respuestas universales; tu instinto es preguntar qué ha funcionado realmente antes, sopesar las ventajas y desventajas con honestidad y adaptarte a partir de ahí. La consistencia te importa menos que acertar en el problema específico que tienes delante. En el día a día, te sientes cómodo sosteniendo opiniones que no encajan perfectamente en un solo bando — cauteloso aquí, audaz allá — porque juzgas cada tema según sus propios méritos, en lugar de recurrir a una postura predefinida. En lo cívico, probablemente seas la persona que hace preguntas para aclarar antes de tomar partido, que puede ver la versión más sólida de más de un argumento y que está genuinamente dispuesta a cambiar de opinión cuando cambia la evidencia. Esto no significa que seas indeciso — significa que prefieres tener la razón antes que ser consistente. Las personas como tú suelen ser las que mantienen una conversación con los pies en la tierra cuando empieza a deslizarse hacia los extremos de cualquier lado. Ese instinto no es quedarse en el medio por comodidad; es una confianza tranquila en que la verdad suele ser más complicada de lo que cualquiera de los dos lados quiere admitir.",
+      "image": "/images/results/balancer.jpg",
+      "traits": ["Pragmático", "Abierto", "Ponderado", "Adaptable"],
+      "shareText": "¡Soy El Equilibrista! Hice el quiz del perfil político en ToolNotch."
+    }
+  ]
+}

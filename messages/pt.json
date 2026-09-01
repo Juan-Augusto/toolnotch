@@ -166,14 +166,37 @@
         "placeholder": "1-3, 4-6, 7",
         "blankHint": "Deixe em branco para extrair todas as páginas individualmente."
       },
+      "examples": {
+        "title": "Exemplos de formatação:",
+        "empty": {
+          "label": "(em branco)",
+          "desc": "Extrai todas as páginas do documento individualmente."
+        },
+        "single": {
+          "desc": "Extrai apenas a página 5."
+        },
+        "range": {
+          "desc": "Extrai da página 2 à página 5 em um arquivo."
+        },
+        "combined": {
+          "desc": "Cria arquivos separados para cada intervalo especificado (ex.: 1-3, 5, 8-10)."
+        }
+      },
       "button": {
         "split": "Dividir PDF",
         "splitting": "Dividindo…"
       },
       "errors": {
         "noFile": "Selecione um arquivo PDF.",
-        "splitFailed": "Falha ao dividir."
+        "splitFailed": "Falha ao dividir.",
+        "invalidFormat": "Formato de intervalo inválido. Use um formato como 1-3, 5 ou deixe em branco.",
+        "startGreaterThanEnd": "A página inicial não pode ser maior que a página final (ex.: 1-3).",
+        "zeroPage": "Os números de página devem ser maiores que 0.",
+        "pageOutOfBounds": "O intervalo de páginas excede o total do documento ({total} páginas).",
+        "invalidFile": "Não foi possível carregar o PDF. Ele pode estar corrompido ou protegido por senha."
       },
+      "pageCountSingular": "página",
+      "pageCountPlural": "páginas",
       "success": "PDF(s) dividido(s) baixado(s)!",
       "faqs": [
         {
@@ -323,13 +346,19 @@
         "label": "Clique ou arraste imagens aqui",
         "hint": "JPEG ou PNG — vários arquivos suportados"
       },
+      "filename": {
+        "label": "Nome personalizado do PDF",
+        "hint": "opcional",
+        "placeholder": "images"
+      },
       "button": {
         "convert": "Converter para PDF",
         "converting": "Convertendo…"
       },
       "errors": {
         "noImages": "Adicione pelo menos uma imagem.",
-        "conversionFailed": "Falha na conversão."
+        "conversionFailed": "Falha na conversão.",
+        "invalidFilename": "Formato de arquivo ou nome inválido. Somente .pdf é suportado."
       },
       "success": "PDF baixado!",
       "faqs": [
@@ -444,7 +473,109 @@
         "proTip": "Para viagens, compare a taxa anunciada do seu banco com a taxa média de mercado. Cartões da Wise, Revolut e Schwab debit cobram 0–1% sobre a taxa média. Cartões de bancos tradicionais normalmente cobram 2–5%. Em uma viagem de US$ 5.000, essa diferença é de US$ 100–250 em taxas de câmbio evitáveis."
       }
     },
+    "categories": {
+      "length": "Comprimento",
+      "weight": "Peso",
+      "temperature": "Temperatura",
+      "area": "Área",
+      "volume": "Volume",
+      "speed": "Velocidade",
+      "time": "Tempo",
+      "digital-storage": "Armazenamento",
+      "pressure": "Pressão"
+    },
+    "units": {
+      "meter": "Metro (m)",
+      "kilometer": "Quilômetro (km)",
+      "centimeter": "Centímetro (cm)",
+      "millimeter": "Milímetro (mm)",
+      "micrometer": "Micrômetro (μm)",
+      "mile": "Milha (mi)",
+      "yard": "Jarda (yd)",
+      "foot": "Pé (ft)",
+      "inch": "Polegada (in)",
+      "nautical mile": "Milha Náutica (nmi)",
+      "kilogram": "Quilograma (kg)",
+      "gram": "Grama (g)",
+      "milligram": "Miligrama (mg)",
+      "pound": "Libra (lb)",
+      "ounce": "Onça (oz)",
+      "ton": "Tonelada Métrica (t)",
+      "short ton": "Tonelada Curta (US)",
+      "stone": "Stone (st)",
+      "carat": "Quilate (ct)",
+      "celsius": "Celsius (°C)",
+      "fahrenheit": "Fahrenheit (°F)",
+      "kelvin": "Kelvin (K)",
+      "rankine": "Rankine (°R)",
+      "square meter": "Metro Quadrado (m²)",
+      "square kilometer": "Quilômetro Quadrado (km²)",
+      "square mile": "Milha Quadrada (mi²)",
+      "square foot": "Pé Quadrado (ft²)",
+      "square inch": "Polegada Quadrada (in²)",
+      "hectare": "Hectare (ha)",
+      "acre": "Acre (ac)",
+      "liter": "Litro (L)",
+      "milliliter": "Mililitro (mL)",
+      "cubic meter": "Metro Cúbico (m³)",
+      "gallon (US)": "Galão US (gal)",
+      "quart": "Quarto (qt)",
+      "pint": "Pint (pt)",
+      "cup": "Xícara",
+      "fluid ounce": "Onça Fluida (fl oz)",
+      "meter per second": "Metro/Segundo (m/s)",
+      "kilometer per hour": "Quilômetro/Hora (km/h)",
+      "mile per hour": "Milha/Hora (mph)",
+      "knot": "Nó (kn)",
+      "foot per second": "Pé/Segundo (fps)",
+      "second": "Segundo (s)",
+      "minute": "Minuto (min)",
+      "hour": "Hora (h)",
+      "day": "Dia",
+      "week": "Semana",
+      "month": "Mês",
+      "year": "Ano",
+      "byte": "Byte (B)",
+      "kilobyte": "Kilobyte (KB)",
+      "megabyte": "Megabyte (MB)",
+      "gigabyte": "Gigabyte (GB)",
+      "terabyte": "Terabyte (TB)",
+      "petabyte": "Petabyte (PB)",
+      "bit": "Bit",
+      "kilobit": "Kilobit (Kb)",
+      "megabit": "Megabit (Mb)",
+      "gigabit": "Gigabit (Gb)",
+      "pascal": "Pascal (Pa)",
+      "kilopascal": "Quilopascal (kPa)",
+      "bar": "Bar",
+      "psi": "PSI",
+      "atmosphere": "Atmosfera (atm)",
+      "millimeter of mercury": "mmHg",
+      "torr": "Torr",
+      "light year": "Ano-luz (ly)",
+      "parsec": "Parsec (pc)",
+      "microgram": "Micrograma (μg)",
+      "long ton": "Tonelada Longa (UK)",
+      "square centimeter": "Centímetro Quadrado (cm²)",
+      "square millimeter": "Milímetro Quadrado (mm²)",
+      "square yard": "Jarda Quadrada (yd²)",
+      "cubic centimeter": "Centímetro Cúbico (cm³)",
+      "cubic foot": "Pé Cúbico (ft³)",
+      "cubic inch": "Polegada Cúbica (in³)",
+      "gallon (UK)": "Galão UK (gal)",
+      "tablespoon": "Colher de Sopa (tbsp)",
+      "teaspoon": "Colher de Chá (tsp)",
+      "mach": "Mach",
+      "millisecond": "Milissegundo (ms)",
+      "microsecond": "Microssegundo (μs)",
+      "nanosecond": "Nanossegundo (ns)",
+      "decade": "Década",
+      "century": "Século",
+      "megapascal": "Megapascal (MPa)",
+      "millibar": "Milibar (mbar)"
+    },
     "shared": {
+      "quickReference": "Referência Rápida",
       "from": "De",
       "to": "Para",
       "swap": "Inverter",
@@ -1728,6 +1859,65 @@
       "metaDescription": "Gerador de times aleatórios gratuito. Cole uma lista de nomes, escolha quantos times e obtenha grupos equilibrados instantaneamente. Perfeito para esportes, salas de aula e trabalho.",
       "title": "Gerador de Times Aleatórios",
       "description": "Cole os nomes, escolha o número de times e obtenha grupos equilibrados instantaneamente.",
+      "participants": {
+        "title": "Participantes",
+        "inputPlaceholder": "Digite o nome do participante...",
+        "addButton": "Adicionar",
+        "bulkToggle": "Colar lista de nomes",
+        "bulkPlaceholder": "Cole vários nomes aqui (um por linha)...",
+        "bulkAddButton": "Adicionar à lista",
+        "clearAll": "Limpar tudo",
+        "loadSample": "Carregar exemplo",
+        "count": "{count} participante(s)",
+        "empty": "Nenhum participante adicionado ainda. Digite um nome acima ou cole uma lista."
+      },
+      "mode": {
+        "byTeams": "Por número de times",
+        "byTeamSize": "Por tamanho do time",
+        "byTeamNames": "Por nomes dos times"
+      },
+      "teamCount": {
+        "label": "Número de times",
+        "hint": "De 2 até o total de participantes"
+      },
+      "teamSize": {
+        "label": "Participantes por time",
+        "hint": "Quantidade média desejada de membros em cada time"
+      },
+      "teamNames": {
+        "title": "Nomes dos Times",
+        "inputPlaceholder": "Ex: Time Backend, Time Frontend...",
+        "addButton": "Adicionar time",
+        "bulkToggle": "Colar lista de times",
+        "bulkPlaceholder": "Cole nomes de times aqui (um por linha)...",
+        "bulkAddButton": "Adicionar times à lista",
+        "loadSample": "Carregar exemplo",
+        "clearAll": "Limpar times",
+        "count": "{count} time(s)",
+        "empty": "Nenhum time adicionado ainda. Digite os nomes dos times acima ou cole uma lista."
+      },
+      "errors": {
+        "minParticipants": "Adicione pelo menos 2 participantes para gerar times.",
+        "invalidTeamCountMin": "O número mínimo de times é 2.",
+        "invalidTeamCountMax": "O número de times ({teams}) não pode ser maior que o número de participantes ({total}).",
+        "invalidCustomTeamNamesMin": "Adicione pelo menos 2 nomes de times.",
+        "invalidCustomTeamNamesMax": "O número de times ({teams}) não pode ser maior que o número de participantes ({total}).",
+        "invalidTeamSizeMin": "O tamanho do time deve ser de pelo menos 1 participante.",
+        "invalidTeamSizeMax": "O tamanho do time ({size}) deve permitir criar pelo menos 2 times."
+      },
+      "button": {
+        "generate": "Gerar Times",
+        "generating": "Gerando times..."
+      },
+      "results": {
+        "title": "Times Gerados",
+        "copyAll": "Copiar todos",
+        "copied": "Copiado!",
+        "teamTitle": "Time {number}",
+        "memberCount": "{count} participante(s)",
+        "fewerMembers": "Menos membros ({count})",
+        "balancedNotice": "Times distribuídos de forma equilibrada com diferença máxima de 1 participante."
+      },
       "faqs": [
         {
           "question": "Como os times são equilibrados?",
@@ -2045,6 +2235,7 @@
       "timeUp": "Tempo esgotado!",
       "nextQuestion": "Próxima Pergunta",
       "seeResult": "Ver Meu Resultado",
+      "sourceLabel": "Fonte: {source}",
       "tiers": {
         "legend": "Lenda",
         "expert": "Especialista",
@@ -2076,7 +2267,8 @@
       "quizzes": "Quizzes",
       "agileTools": "Ferramentas Ágeis & Scrum",
       "sportsQuizzes": "Quiz de Esportes",
-      "interviewPrep": "Preparação para Entrevistas"
+      "interviewPrep": "Preparação para Entrevistas",
+      "educationTools": "Ferramentas de Educação"
     },
     "tools": {
       "imageCompressor": {
@@ -2116,15 +2308,15 @@
         "desc": "Cotações ao vivo para mais de 150 moedas"
       },
       "metersToFeet": {
-        "label": "Metros para Pés",
+        "label": "Conversor de Comprimento",
         "desc": "Conversão rápida de comprimento"
       },
       "celsiusToFahrenheit": {
-        "label": "Celsius para Fahrenheit",
+        "label": "Conversor de Temperatura",
         "desc": "Conversão rápida de temperatura"
       },
       "kgToPounds": {
-        "label": "Kg para Libras",
+        "label": "Conversor de Peso",
         "desc": "Conversão rápida de peso"
       },
       "wordCounter": {
@@ -2233,7 +2425,7 @@
       },
       "worldCupQuiz": {
         "label": "Quiz: Campeões da Copa do Mundo",
-        "desc": "Teste seu conhecimento sobre cada campeão mundial"
+        "desc": "Adivinhe os campeões da Copa do Mundo de 1930 a 2022 — cada campeão, sede e final"
       },
       "footballClubQuiz": {
         "label": "Qual Time de Futebol Você É?",
@@ -2254,6 +2446,18 @@
       "f1DriverQuiz": {
         "label": "Qual Piloto de F1 É Você?",
         "desc": "Verstappen, Hamilton, Senna ou Norris?"
+      },
+      "politicalProfileQuiz": {
+        "label": "Qual É o Seu Perfil Político?",
+        "desc": "Um quiz neutro e divertido sobre valores — descubra seu perfil político"
+      },
+      "echoChamberQuiz": {
+        "label": "Quiz: Bolha Política",
+        "desc": "Descubra o quanto seu feed e seu círculo reforçam só uma visão política."
+      },
+      "fakeNewsQuiz": {
+        "label": "Fake News ou Verdade?",
+        "desc": "10 boatos virais — você consegue identificar quais são reais?"
       },
       "retroBoard": {
         "label": "Quadro de Retrospectiva",
@@ -2286,6 +2490,34 @@
       "interviewHub": {
         "label": "Hub de Preparação para Entrevistas",
         "desc": "TypeScript, JS e mais — com explicações e boas práticas"
+      },
+      "gpaCalculator": {
+        "label": "Calculadora de GPA",
+        "desc": "GPA ponderado nas escalas 4.0, 0–20 e 0–10"
+      },
+      "cumulativeGpaCalculator": {
+        "label": "Calculadora de GPA Acumulado",
+        "desc": "Some um novo semestre ao seu GPA atual"
+      },
+      "gradeCalculator": {
+        "label": "Calculadora de Nota",
+        "desc": "Que nota eu preciso na prova final?"
+      },
+      "citationGenerator": {
+        "label": "Gerador de Citações",
+        "desc": "Citações em APA, MLA, Chicago e ABNT"
+      },
+      "gpaGuide": {
+        "label": "Guia: Como Calcular o GPA",
+        "desc": "A escala 4.0, a fórmula e um exemplo resolvido"
+      },
+      "gpaBrazilGuide": {
+        "label": "Guia: Notas Brasileiras para GPA",
+        "desc": "Converta notas 0–10 e 0–100 para a escala 4.0"
+      },
+      "gpaUsaGuide": {
+        "label": "Guia: GPA para Estudar nos EUA",
+        "desc": "Qual GPA as universidades esperam e o que mais conta"
       }
     },
     "badge": "Toolnotch | Mais de 40 ferramentas essenciais",
@@ -2828,7 +3060,7 @@
     }
   },
   "gpaCalculator": {
-    "metaTitle": "Calculadora de GPA — Calcule sua Média Escolar Grátis | ToolNotch",
+    "metaTitle": "Calculadora de GPA — Como Calcular seu GPA (Grátis)",
     "metaDescription": "Calcule seu GPA ou média escolar instantaneamente. Insira suas disciplinas, notas e créditos. Suporta escalas US 4.0, PT 0–20 e ES 0–10. Grátis.",
     "title": "Calculadora de GPA",
     "description": "Calcule sua média semestral ou acumulada instantaneamente. Insira suas notas e créditos — suporta escalas de notas americanas, portuguesas e espanholas.",
@@ -2908,7 +3140,82 @@
         "question": "Esta calculadora funciona para o sistema brasileiro?",
         "answer": "Sim — esta calculadora suporta a escala americana 4.0 (letras A–F), a escala portuguesa e brasileira de 0 a 20 e a escala espanhola e latino-americana de 0 a 10. Selecione sua escala no menu."
       }
-    ]
+    ],
+    "howTo": {
+      "name": "Como calcular o seu GPA na escala 4.0",
+      "steps": [
+        "Escolha a sua escala de notas: EUA 4.0 (A–F), Portugal/Brasil 0–20 ou Espanha/América Latina 0–10.",
+        "Insira cada disciplina com a sua nota e a quantidade de créditos correspondente.",
+        "Converta cada nota em pontos — na escala 4.0, A = 4.0, B = 3.0, C = 2.0, D = 1.0 e F = 0.0.",
+        "Multiplique os pontos de cada disciplina pelos seus créditos para obter os pontos ponderados.",
+        "Some todos os pontos ponderados e divida pelo total de créditos. O resultado é o seu GPA.",
+        "Use a aba GPA Acumulado para combinar este semestre com os créditos já concluídos no seu histórico."
+      ]
+    },
+    "brConversion": {
+      "heading": "Converter nota brasileira (0–10 / 0–100) para GPA 4.0",
+      "intro": "O histórico brasileiro traz notas em 0–10, ou em 0–100 no ensino médio, enquanto os formulários americanos pedem um número entre 0.0 e 4.0. Não existe uma conversão oficial única, mas a tabela de bandas abaixo é o mapeamento mais usado para estimar o GPA — e é o que esta calculadora aplica quando você escolhe uma escala de 0–10.",
+      "columns": {
+        "decimal": "Nota (0–10)",
+        "percent": "Nota (0–100)",
+        "letter": "Letra EUA",
+        "gpa": "GPA (4.0)"
+      },
+      "rows": [
+        {
+          "decimal": "9,5 - 10,0",
+          "percent": "95 - 100",
+          "letter": "A",
+          "gpa": "4.0"
+        },
+        {
+          "decimal": "8,5 - 9,4",
+          "percent": "85 - 94",
+          "letter": "A−",
+          "gpa": "3.7"
+        },
+        {
+          "decimal": "7,5 - 8,4",
+          "percent": "75 - 84",
+          "letter": "B+",
+          "gpa": "3.3"
+        },
+        {
+          "decimal": "6,5 - 7,4",
+          "percent": "65 - 74",
+          "letter": "B",
+          "gpa": "3.0"
+        },
+        {
+          "decimal": "6,0 - 6,4",
+          "percent": "60 - 64",
+          "letter": "B−",
+          "gpa": "2.7"
+        },
+        {
+          "decimal": "5,5 - 5,9",
+          "percent": "55 - 59",
+          "letter": "C+",
+          "gpa": "2.3"
+        },
+        {
+          "decimal": "5,0 - 5,4",
+          "percent": "50 - 54",
+          "letter": "C",
+          "gpa": "2.0"
+        },
+        {
+          "decimal": "abaixo de 5,0",
+          "percent": "abaixo de 50",
+          "letter": "F",
+          "gpa": "0.0"
+        }
+      ],
+      "disclaimer": "Esta tabela é uma estimativa, não uma conversão oficial. As universidades americanas normalmente exigem a avaliação de um serviço de credenciais como WES, ECE ou SpanTran, e cada avaliador usa a própria metodologia. Use a tabela para planejar as candidaturas; use o relatório do avaliador para enviá-las.",
+      "exampleHeading": "Exemplo resolvido",
+      "exampleBody": "Um semestre com Cálculo II 7,2 (6 créditos), Física II 6,3 (4), Álgebra Linear 8,7 (4), Programação 9,6 (4) e Metodologia 8,0 (2) converte para 3.0, 2.7, 3.7, 4.0 e 3.3 pontos. Ponderando pelos créditos: (3.0×6) + (2.7×4) + (3.7×4) + (4.0×4) + (3.3×2) = 66.2 pontos em 20 créditos, um GPA de 3.31. Repare que uma média aritmética de 7,96 no Brasil vira um GPA 3.31, porque a conversão não é linear.",
+      "ctaLabel": "Leia o guia completo: Como Converter Notas Brasileiras para o GPA 4.0"
+    }
   },
   "ageCalculator": {
     "metaTitle": "Calculadora de Idade — Quantos Anos Tenho? Calcule sua Idade Exata | ToolNotch",
@@ -3826,5 +4133,386 @@
     },
     "tagline": "Ferramentas gratuitas direto no seu navegador. Sem cadastro. Sem dados armazenados.",
     "copyright": "© 2026 ToolNotch · Criado por {name}"
+  },
+  "electionCountdown": {
+    "metaTitle": "Contagem Regressiva Eleições 2026 — Quantos Dias Faltam? | ToolNotch",
+    "metaDescription": "Veja quantos dias, horas e minutos faltam para as eleições de 2026 no Brasil. Datas oficiais do 1º e 2º turno confirmadas pelo TSE. Sem opinião, sem candidatos.",
+    "title": "Contagem Regressiva para as Eleições 2026",
+    "description": "Quantos dias faltam para as eleições de 2026? Contagem regressiva ao vivo até o 1º turno (4 de outubro) e o 2º turno (25 de outubro, se necessário), com base em dados oficiais do TSE.",
+    "round1Label": "1º Turno",
+    "round2Label": "2º Turno (se necessário)",
+    "days": "Dias",
+    "hours": "Horas",
+    "minutes": "Minutos",
+    "seconds": "Segundos",
+    "electionConcludedRound1": "O primeiro turno foi encerrado. Aguardando confirmação sobre a necessidade de segundo turno.",
+    "electionConcludedRound2": "O período eleitoral de 2026 foi concluído. Esta página não acompanha resultados — consulte o TSE para informações oficiais.",
+    "faqs": [
+      {
+        "question": "Quando são as eleições de 2026?",
+        "answer": "As eleições de 2026 no Brasil acontecem no domingo, 4 de outubro de 2026 (1º turno). Essa data é fixada pela Constituição Federal e pela Lei das Eleições (Lei nº 9.504/1997), que estabelece o primeiro domingo de outubro como data do primeiro turno. A data foi confirmada oficialmente pelo TSE (Tribunal Superior Eleitoral)."
+      },
+      {
+        "question": "Como funciona o segundo turno?",
+        "answer": "O segundo turno só ocorre para as eleições de Presidente e Governador, e apenas se nenhum candidato alcançar mais de 50% dos votos válidos (excluindo brancos e nulos) no primeiro turno. Caso seja necessário, o segundo turno acontece no último domingo de outubro — 25 de outubro de 2026. As eleições para Senador e para Deputado Federal, Estadual e Distrital são decididas em turno único."
+      },
+      {
+        "question": "Quem pode votar nas eleições de 2026?",
+        "answer": "O voto é obrigatório para cidadãos alfabetizados entre 18 e 70 anos. É facultativo para jovens de 16 e 17 anos, para maiores de 70 anos e para analfabetos, que têm o direito de votar mas não são obrigados a fazê-lo. Consulte o site do TSE para as regras completas de alistamento e justificativa eleitoral."
+      },
+      {
+        "question": "O que é eleito no primeiro turno?",
+        "answer": "No dia 4 de outubro de 2026 são eleitos, no mesmo pleito: Presidente da República, Governadores, Senadores e Deputados Federais, Estaduais e Distritais. Apenas as disputas para Presidente e Governador podem ir a um segundo turno; as demais são definidas em turno único."
+      },
+      {
+        "question": "A data das eleições pode mudar?",
+        "answer": "Não. A data do primeiro domingo de outubro (1º turno) e do último domingo de outubro (2º turno, se necessário) é definida pela Constituição Federal e pela Lei das Eleições, não por decisão discricionária do TSE. Por isso essa contagem regressiva usa datas fixas em vez de buscar informações de uma fonte externa a cada visita."
+      },
+      {
+        "question": "A que horas fecham as urnas?",
+        "answer": "As seções eleitorais funcionam das 8h às 17h, no horário de Brasília, em todo o território nacional. Esta contagem regressiva usa o fechamento das urnas (17h) como referência, não a meia-noite."
+      }
+    ],
+    "richContent": {
+      "whatIs": "As eleições de 2026 no Brasil acontecem no domingo, 4 de outubro de 2026, quando são escolhidos o Presidente da República, os Governadores estaduais, os Senadores e os Deputados Federais, Estaduais e Distritais — todos no mesmo dia. Essa data é definida pela Constituição Federal e pela Lei das Eleições (Lei nº 9.504/1997), que fixam o primeiro domingo de outubro como data do primeiro turno em anos de eleição geral. Caso nenhum candidato a Presidente ou a Governador receba mais de 50% dos votos válidos, ocorre um segundo turno marcado para o último domingo de outubro, 25 de outubro de 2026. Essas datas foram confirmadas oficialmente pelo Tribunal Superior Eleitoral (TSE) e não estão sujeitas a alteração discricionária: seguem uma regra fixa prevista em lei, o que já ocorreu nos pleitos de 2018 (7 e 28 de outubro) e 2022 (2 e 30 de outubro).",
+      "howToUse": [
+        "Veja a contagem regressiva ao vivo no topo da página — ela mostra dias, horas, minutos e segundos até o fechamento das urnas do turno atual.",
+        "A contagem alterna automaticamente do 1º turno para o 2º turno assim que o horário de votação de 4 de outubro é encerrado.",
+        "Consulte as datas fixas de cada turno na seção abaixo da contagem, sempre visíveis, mesmo depois que o primeiro turno já tiver passado.",
+        "Leia as perguntas frequentes para entender como funciona o sistema de dois turnos e quem tem direito a voto."
+      ],
+      "whyItMatters": "Saber a data exata das eleições ajuda no planejamento pessoal — como organizar viagens, verificar o local de votação com antecedência e evitar imprevistos no dia da votação, já que o voto é obrigatório para a maior parte dos eleitores brasileiros. A definição sobre a existência ou não de um segundo turno também é relevante: ela só é confirmada depois da apuração do primeiro turno, e apenas as disputas de Presidente e Governador podem chegar a essa segunda etapa. Compreender esse mecanismo evita confusão sobre por que algumas eleições (Senador, Deputado) são decididas em uma única votação enquanto outras (Presidente, Governador) podem se estender até o fim de outubro.",
+      "proTip": "Marque o dia 4 de outubro de 2026 no seu calendário e verifique com antecedência o seu local de votação e a validade do seu título de eleitor — o TSE recomenda confirmar esses dados semanas antes do pleito para evitar contratempos. Se a disputa para Presidente ou Governador do seu estado for para o segundo turno, volte a esta página: a contagem regressiva alternará automaticamente para o dia 25 de outubro de 2026."
+    }
+  },
+  "pollingPlaceFinder": {
+    "metaTitle": "Onde Vou Votar em 2026? Como Consultar Seu Local de Votação | ToolNotch",
+    "metaDescription": "Descubra como consultar seu local de votação para as eleições de 2026 pelo site oficial do TSE. Passo a passo, o que fazer se perdeu o título e o que levar no dia da votação.",
+    "title": "Onde Vou Votar em 2026? Como Consultar Seu Local de Votação",
+    "description": "Passo a passo oficial para descobrir sua zona, seção e endereço de votação — direto no site do TSE, sem formulários nem dados pessoais no ToolNotch.",
+    "intro": "Se você não lembra onde vota, mudou de endereço recentemente ou perdeu o título de eleitor, a resposta certa está sempre no site ou aplicativo oficial do TSE — nunca em terceiros. Este guia explica o que é o local de votação, como consultá-lo em menos de dois minutos e o que fazer nos casos mais comuns antes da eleição.",
+    "sections": {
+      "whatIsPollingPlace": {
+        "heading": "O que é o \"local de votação\"?",
+        "body": [
+          "Seu local de votação é o endereço físico — geralmente uma escola ou prédio público — onde você deve comparecer para votar. Ele é definido por dois números que aparecem no seu título de eleitor: a zona eleitoral (a divisão administrativa da Justiça Eleitoral responsável pela sua região) e a seção eleitoral (o grupo específico de eleitores dentro dessa zona, cada um atendido por uma urna). Juntos, zona e seção apontam para um único endereço: o seu local de votação.",
+          "Esses números não são fixos para sempre. A cada eleição, o TSE e os Tribunais Regionais Eleitorais (TREs) podem reorganizar zonas e seções — por causa de mudanças de endereço registradas pelos próprios eleitores, fechamento ou abertura de locais de votação, ou simples redistribuição para equilibrar o número de eleitores por seção. É por isso que, mesmo sem ter feito nenhuma alteração cadastral, seu local pode não ser o mesmo da eleição anterior. A recomendação oficial é sempre reconferir antes de cada eleição."
+        ]
+      },
+      "howToCheck": {
+        "heading": "Como consultar seu local de votação (passo a passo oficial)",
+        "intro": "Existem dois canais oficiais para essa consulta — ambos mantidos pelo TSE e gratuitos. Não é preciso, e não é recomendado, usar qualquer site ou aplicativo que não seja da própria Justiça Eleitoral.",
+        "steps": [
+          {
+            "title": "Pelo site do TSE (Autoatendimento Eleitoral)",
+            "body": "Acesse tse.jus.br, abra o menu \"Serviços eleitorais\" e selecione \"Autoatendimento Eleitoral\" (o serviço que substituiu o antigo Título Net). Dentro dele, escolha a opção \"Onde votar\" para abrir o formulário de consulta."
+          },
+          {
+            "title": "Pelo aplicativo e-Título (Android e iOS)",
+            "body": "Baixe o e-Título na loja de aplicativos do seu celular, faça login com seus dados e seu local de votação aparece diretamente na tela inicial — com endereço completo e, no dia da eleição, um recurso de geolocalização para te ajudar a chegar até lá."
+          },
+          {
+            "title": "O que você vai precisar informar",
+            "body": "Em ambos os canais, o sistema pede o número do seu título de eleitor, CPF ou nome completo, além da data de nascimento (e, em alguns casos, o nome da mãe) para confirmar sua identidade antes de mostrar o resultado."
+          }
+        ]
+      },
+      "lostTitle": {
+        "heading": "Perdi meu título de eleitor — e agora?",
+        "body": [
+          "Calma: você não precisa do papel físico do título para votar. No dia da eleição, basta apresentar um documento oficial com foto — o mesário confirma sua seção pelo sistema, não pelo pedaço de papel.",
+          "Se quiser regularizar mesmo assim ou apenas conferir seus dados, o caminho mais rápido é pelo aplicativo e-Título ou pelo Autoatendimento Eleitoral no site do TSE: ambos permitem consultar sua situação eleitoral e, quando necessário, solicitar a emissão de uma segunda via digital do título, sem precisar ir a um cartório eleitoral presencialmente."
+        ]
+      },
+      "movedCity": {
+        "heading": "Mudei de cidade ou estado — isso muda meu local de votação?",
+        "body": [
+          "Sim. Se você mudou de endereço para outro município (ou mesmo outro bairro atendido por zona eleitoral diferente), seu local de votação continua vinculado à zona antiga até que você solicite formalmente a transferência de domicílio eleitoral — o simples fato de morar em outro lugar não atualiza isso automaticamente.",
+          "A transferência é feita pelo Autoatendimento Eleitoral ou pelo e-Título, mas precisa ser solicitada dentro do prazo definido pelo calendário eleitoral do TSE para o ano da eleição — e esse prazo costuma se encerrar bem antes da data da votação. Consulte o calendário eleitoral oficial de 2026 para confirmar as datas exatas antes de deixar para a última hora."
+        ]
+      },
+      "whatToBring": {
+        "heading": "O que levar no dia da eleição",
+        "body": [
+          "Leve um documento oficial com foto — não precisa ser o título de eleitor físico. São geralmente aceitos: carteira de identidade (RG ou a nova Carteira de Identidade Nacional/CIN), CNH, passaporte, carteira de trabalho e carteiras de categoria profissional emitidas por conselhos reconhecidos em lei. Confirme a lista completa e atualizada no site ou app oficial do TSE antes do dia da votação.",
+          "Chegue à sua seção dentro do horário de votação definido pelo TSE para a eleição — quem já está na fila no horário de encerramento normalmente ainda consegue votar, mas não vale a pena arriscar deixando para os últimos minutos."
+        ],
+        "documentList": [
+          "Carteira de Identidade (RG) ou Carteira de Identidade Nacional (CIN)",
+          "Carteira Nacional de Habilitação (CNH)",
+          "Passaporte",
+          "Carteira de Trabalho",
+          "Carteiras de categoria profissional reconhecidas em lei"
+        ]
+      }
+    },
+    "cta": {
+      "label": "Consultar meu local de votação no site oficial do TSE",
+      "sublabel": "Você será redirecionado para tse.jus.br — o único canal oficial para essa consulta. O ToolNotch não processa, armazena nem tem acesso a nenhum dado do seu título de eleitor."
+    },
+    "howToSteps": [
+      "Acesse tse.jus.br e abra o Autoatendimento Eleitoral (ou instale o aplicativo e-Título) no seu celular.",
+      "Selecione a opção \"Onde votar\" dentro do menu de consultas.",
+      "Informe seu número de título de eleitor, CPF ou nome completo, junto com sua data de nascimento.",
+      "Confira a zona, a seção e o endereço do seu local de votação exibidos na tela."
+    ],
+    "faqs": [
+      {
+        "question": "Posso votar em qualquer local de votação?",
+        "answer": "Não. Você só pode votar na seção eleitoral para a qual está designado — mesmo que outro local fique mais perto de onde você está no dia da eleição. Confirme sempre o endereço correto antes de sair de casa."
+      },
+      {
+        "question": "E se eu não tiver mais o título de eleitor?",
+        "answer": "Você não precisa do papel físico para votar — um documento oficial com foto é suficiente. Se quiser regularizar sua situação ou emitir uma segunda via digital, use o e-Título ou o Autoatendimento Eleitoral no site do TSE."
+      },
+      {
+        "question": "Posso consultar o local de votação de outra pessoa?",
+        "answer": "Pelo e-Título instalado no seu próprio celular, não — o aplicativo mostra apenas os dados de quem fez login. Para consultar o local de outra pessoa (com o consentimento dela), use o Autoatendimento Eleitoral no site do TSE informando os dados dela."
+      },
+      {
+        "question": "O local de votação muda a cada eleição?",
+        "answer": "Pode mudar, sim — o TSE reorganiza zonas e seções periodicamente. Mesmo que você não tenha se mudado, vale a pena reconferir seu local antes de cada eleição em vez de confiar na memória da eleição anterior."
+      },
+      {
+        "question": "Preciso levar o título de eleitor físico no dia da votação?",
+        "answer": "Não. Um documento oficial com foto (RG, CNH, passaporte, entre outros aceitos pelo TSE) já é suficiente para confirmar sua identidade na seção."
+      },
+      {
+        "question": "O que fazer se eu estiver na fila errada no dia da votação?",
+        "answer": "Procure um mesário ou um dos fiscais/orientadores no local — eles têm acesso ao sistema para confirmar sua seção correta e te direcionar para a fila certa, sem que você precise sair do prédio."
+      }
+    ]
+  },
+  "quizDepth": {
+    "fifaWorldCupWinners": {
+      "metaTitle": "Quiz dos Campeões da Copa do Mundo — Adivinhe Cada Campeão 1930–2022",
+      "metaDescription": "Jogue o quiz dos campeões da Copa do Mundo: 20 perguntas sobre cada campeão de 1930 a 2022, mais a lista completa de vencedores por ano.",
+      "introHeading": "Sobre o Quiz dos Campeões da Copa do Mundo",
+      "intro": [
+        "A Copa do Mundo da FIFA coroa um campeão a cada quatro anos desde 1930, com pausa apenas em 1942 e 1946 por causa da Segunda Guerra Mundial. Apenas oito seleções levantaram o troféu. O Brasil lidera com cinco títulos, seguido por Itália e Alemanha com quatro cada, a Argentina com três, e Uruguai e França com dois. Inglaterra e Espanha venceram uma vez cada, ambas em finais decididas por um único lance inesquecível. O próprio prêmio mudou: a Taça Jules Rimet foi entregue até 1970, e o atual troféu da Copa do Mundo da FIFA é erguido desde 1974.",
+        "Este quiz percorre 22 edições do torneio. Você vai indicar o campeão de edições específicas, do título do Uruguai em casa em 1930 à vitória da Argentina nos pênaltis no Catar em 2022, além de lembrar países-sede, artilheiros históricos como Miroslav Klose e as finais que marcaram cada época. São 20 perguntas de múltipla escolha sobre campeões, vice-campeões e os momentos que todo torcedor discute.",
+        "A cada resposta, sua pontuação é somada na hora e comparada a um nível: Lenda da Copa, Especialista em Futebol, Torcedor ou Iniciante. Não há cadastro nem tempo obrigatório. Use a tabela de vencedores por ano abaixo para revisar antes de jogar ou para encerrar uma discussão sobre quem ganhou cada Copa do Mundo."
+      ],
+      "tableHeading": "Todos os Campeões da Copa do Mundo da FIFA (1930–2022)",
+      "tableNote": "pro. = prorrogação; pên. = decidida nos pênaltis.",
+      "tableCols": {
+        "year": "Ano",
+        "host": "Sede",
+        "winner": "Campeão",
+        "runnerUp": "Vice",
+        "score": "Placar da final"
+      },
+      "rows": [
+        {
+          "year": "1930",
+          "host": "Uruguai",
+          "winner": "Uruguai",
+          "runnerUp": "Argentina",
+          "score": "4–2"
+        },
+        {
+          "year": "1934",
+          "host": "Itália",
+          "winner": "Itália",
+          "runnerUp": "Tchecoslováquia",
+          "score": "2–1 (pro.)"
+        },
+        {
+          "year": "1938",
+          "host": "França",
+          "winner": "Itália",
+          "runnerUp": "Hungria",
+          "score": "4–2"
+        },
+        {
+          "year": "1942",
+          "host": "Não realizada",
+          "winner": "Não realizada",
+          "runnerUp": "—",
+          "score": "Segunda Guerra Mundial"
+        },
+        {
+          "year": "1946",
+          "host": "Não realizada",
+          "winner": "Não realizada",
+          "runnerUp": "—",
+          "score": "Segunda Guerra Mundial"
+        },
+        {
+          "year": "1950",
+          "host": "Brasil",
+          "winner": "Uruguai",
+          "runnerUp": "Brasil",
+          "score": "2–1 (jogo decisivo)"
+        },
+        {
+          "year": "1954",
+          "host": "Suíça",
+          "winner": "Alemanha Ocidental",
+          "runnerUp": "Hungria",
+          "score": "3–2"
+        },
+        {
+          "year": "1958",
+          "host": "Suécia",
+          "winner": "Brasil",
+          "runnerUp": "Suécia",
+          "score": "5–2"
+        },
+        {
+          "year": "1962",
+          "host": "Chile",
+          "winner": "Brasil",
+          "runnerUp": "Tchecoslováquia",
+          "score": "3–1"
+        },
+        {
+          "year": "1966",
+          "host": "Inglaterra",
+          "winner": "Inglaterra",
+          "runnerUp": "Alemanha Ocidental",
+          "score": "4–2 (pro.)"
+        },
+        {
+          "year": "1970",
+          "host": "México",
+          "winner": "Brasil",
+          "runnerUp": "Itália",
+          "score": "4–1"
+        },
+        {
+          "year": "1974",
+          "host": "Alemanha Ocidental",
+          "winner": "Alemanha Ocidental",
+          "runnerUp": "Países Baixos",
+          "score": "2–1"
+        },
+        {
+          "year": "1978",
+          "host": "Argentina",
+          "winner": "Argentina",
+          "runnerUp": "Países Baixos",
+          "score": "3–1 (pro.)"
+        },
+        {
+          "year": "1982",
+          "host": "Espanha",
+          "winner": "Itália",
+          "runnerUp": "Alemanha Ocidental",
+          "score": "3–1"
+        },
+        {
+          "year": "1986",
+          "host": "México",
+          "winner": "Argentina",
+          "runnerUp": "Alemanha Ocidental",
+          "score": "3–2"
+        },
+        {
+          "year": "1990",
+          "host": "Itália",
+          "winner": "Alemanha Ocidental",
+          "runnerUp": "Argentina",
+          "score": "1–0"
+        },
+        {
+          "year": "1994",
+          "host": "Estados Unidos",
+          "winner": "Brasil",
+          "runnerUp": "Itália",
+          "score": "0–0 (3–2 pên.)"
+        },
+        {
+          "year": "1998",
+          "host": "França",
+          "winner": "França",
+          "runnerUp": "Brasil",
+          "score": "3–0"
+        },
+        {
+          "year": "2002",
+          "host": "Coreia do Sul e Japão",
+          "winner": "Brasil",
+          "runnerUp": "Alemanha",
+          "score": "2–0"
+        },
+        {
+          "year": "2006",
+          "host": "Alemanha",
+          "winner": "Itália",
+          "runnerUp": "França",
+          "score": "1–1 (5–3 pên.)"
+        },
+        {
+          "year": "2010",
+          "host": "África do Sul",
+          "winner": "Espanha",
+          "runnerUp": "Países Baixos",
+          "score": "1–0 (pro.)"
+        },
+        {
+          "year": "2014",
+          "host": "Brasil",
+          "winner": "Alemanha",
+          "runnerUp": "Argentina",
+          "score": "1–0 (pro.)"
+        },
+        {
+          "year": "2018",
+          "host": "Rússia",
+          "winner": "França",
+          "runnerUp": "Croácia",
+          "score": "4–2"
+        },
+        {
+          "year": "2022",
+          "host": "Catar",
+          "winner": "Argentina",
+          "runnerUp": "França",
+          "score": "3–3 (4–2 pên.)"
+        }
+      ],
+      "faqHeading": "Campeões da Copa do Mundo: perguntas frequentes",
+      "faqs": [
+        {
+          "question": "Quem mais venceu a Copa do Mundo da FIFA?",
+          "answer": "O Brasil venceu a Copa do Mundo cinco vezes (1958, 1962, 1970, 1994 e 2002), mais do que qualquer outra seleção. Itália e Alemanha vêm em seguida com quatro títulos cada, a Argentina tem três, França e Uruguai têm dois cada, e Inglaterra e Espanha, um cada."
+        },
+        {
+          "question": "Quais países já venceram a Copa do Mundo?",
+          "answer": "Oito seleções venceram a Copa do Mundo: Brasil, Alemanha (incluindo a Alemanha Ocidental), Itália, Argentina, França, Uruguai, Inglaterra e Espanha. Nenhuma equipe de fora da Europa ou da América do Sul chegou a uma final."
+        },
+        {
+          "question": "Como funciona o quiz dos campeões da Copa do Mundo?",
+          "answer": "O quiz tem 20 perguntas de múltipla escolha sobre campeões, sedes, finais e recordistas. Cada resposta é marcada como certa ou errada na hora, e sua porcentagem final coloca você em um de quatro níveis, do Iniciante à Lenda da Copa. É gratuito e não exige conta."
+        },
+        {
+          "question": "Dá para adivinhar todos os campeões da Copa do Mundo de 1930 a 2022?",
+          "answer": "Sim. Foram 22 torneios entre 1930 e 2022 (1942 e 1946 foram cancelados por causa da Segunda Guerra Mundial). A tabela acima lista todos os campeões, vices e placares das finais para você testar seus conhecimentos e depois conferir as respostas."
+        },
+        {
+          "question": "Alguma seleção anfitriã venceu a Copa do Mundo em casa?",
+          "answer": "Seis anfitriãs venceram em casa: Uruguai (1930), Itália (1934), Inglaterra (1966), Alemanha Ocidental (1974), Argentina (1978) e França (1998). O Brasil, maior campeão da história, nunca venceu uma Copa que sediou."
+        }
+      ],
+      "relatedHeading": "Mais quizzes de futebol",
+      "related": {
+        "worldCup": {
+          "label": "Quiz dos Campeões da Copa do Mundo",
+          "href": "/quiz/fifa-world-cup-winners",
+          "desc": "Nomeie cada campeão mundial de 1930 a 2022"
+        },
+        "footballClub": {
+          "label": "Qual Time de Futebol Você É?",
+          "href": "/quiz/which-football-club-are-you",
+          "desc": "Descubra o clube que combina com você"
+        },
+        "championsLeague": {
+          "label": "Quiz da Liga dos Campeões",
+          "href": "/quiz/champions-league-trivia",
+          "desc": "Teste seu conhecimento sobre a elite europeia"
+        }
+      }
+    }
   }
 }

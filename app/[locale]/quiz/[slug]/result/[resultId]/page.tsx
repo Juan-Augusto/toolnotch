@@ -42,11 +42,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const tier = quiz.tiers.find(t => t.id === resultId)
     if (!tier) return {}
     return {
-      title: `I got "${tier.label}" on ${quiz.title} | ToolNotch`,
+      title: `${tier.label} — ${quiz.title} | ToolNotch`,
       description: tier.description.slice(0, 155),
       alternates: { canonical: `/quiz/${slug}/result/${resultId}` },
       openGraph: {
-        title: `I got "${tier.label}" — ${quiz.title}`,
+        title: `${tier.label} — ${quiz.title}`,
         description: tier.description.slice(0, 155),
         url: `/quiz/${slug}/result/${resultId}`,
       },

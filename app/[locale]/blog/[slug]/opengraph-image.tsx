@@ -23,13 +23,13 @@ function accentColor(category: string): string {
 }
 
 export default async function Image({ params }: { params: Promise<{ locale: string; slug: string }> }) {
-  const { slug } = await params
+  const { slug, locale } = await params
 
   let title = ''
   let category = 'finance'
 
   // 1. Try MDX source first (has frontmatter.title directly)
-  const mdxPost = await getBlogPostSource(slug)
+  const mdxPost = await getBlogPostSource(slug, locale)
   if (mdxPost) {
     title = mdxPost.frontmatter.title
     category = mdxPost.frontmatter.category
