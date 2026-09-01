@@ -11,6 +11,12 @@ interface RichContent {
   howToUse: string[]
   whyItMatters: string
   proTip: string
+  sections?: { heading: string; body: string }[]
+}
+
+interface RelatedRaw {
+  heading: string
+  items: { label: string; path: string }[]
 }
 
 interface Props { params: Promise<{ locale: string }> }
@@ -31,6 +37,12 @@ export default async function KeywordDensityCheckerPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: 'text.keywordDensity' })
   const faqs = t.raw('faqs') as FaqItem[]
   const richContent = t.raw('richContent') as RichContent
+  const relatedRaw = t.raw('related') as RelatedRaw
+  const localePrefix = locale === 'en' ? '' : `/${locale}`
+  const relatedLinks = {
+    heading: relatedRaw.heading,
+    items: relatedRaw.items.map((i) => ({ label: i.label, href: `${localePrefix}${i.path}` })),
+  }
 
   const jsonLd = buildJsonLd(
     webAppSchema(t('title'), '/tools/text/keyword-density-checker', t('metaDescription'), locale),
@@ -50,8 +62,8 @@ export default async function KeywordDensityCheckerPage({ params }: Props) {
         description={t('description')}
         breadcrumbLabel={t('title')}
         faqs={faqs}
-        adSlot="1234567890"
         richContent={richContent}
+        relatedLinks={relatedLinks}
       >
         <WordCounterClient primaryStat="words" />
       </ToolWrapper>

@@ -30,7 +30,13 @@ export default async function BlogIndexPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: 'blog' })
 
   const mdxPosts = await getAllMdxBlogPosts()
-  const allPosts = [...BLOG_POSTS, ...mdxPosts]
+  // A post registered in BLOG_POSTS may also have an MDX file — keep the first (registered) entry.
+  const seen = new Set<string>()
+  const allPosts = [...BLOG_POSTS, ...mdxPosts].filter((p) => {
+    if (seen.has(p.slug)) return false
+    seen.add(p.slug)
+    return true
+  })
   allPosts.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
 
   const jsonLd = buildJsonLd(

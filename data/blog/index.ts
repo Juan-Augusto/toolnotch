@@ -56,4 +56,21 @@ export const BLOG_POSTS: BlogPost[] = [
     readingTimeMinutes: 4,
     locale: 'en',
   },
+  {
+    // MDX-sourced post (data/blog/content/wheel-of-names-alternatives.mdx).
+    // title/description are read from the MDX frontmatter, not messages/*.json.
+    slug: 'wheel-of-names-alternatives',
+    titleKey: '',
+    descriptionKey: '',
+    publishedAt: '2026-02-15',
+    updatedAt: '2026-09-01',
+    category: 'fun',
+    relatedToolPath: '/tools/fun/wheel-of-names',
+    readingTimeMinutes: 6,
+    locale: 'en',
+    title: '7 Free Wheel of Names Alternatives (2026)',
+    description:
+      'Seven free spinner wheels that do the same job as Wheel of Names, compared on sign-up, ads, privacy and classroom features.',
+    tags: ['wheel-of-names', 'random-name-picker', 'spinner', 'giveaway', 'classroom'],
+  },
 ]

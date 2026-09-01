@@ -14,6 +14,7 @@ const categoryColorMap: Record<BlogPost['category'], string> = {
   education:    'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400',
   productivity: 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400',
   engineering:  'bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-400',
+  fun:          'bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-400',
 }
 
 function formatDate(isoDate: string, locale: string): string {

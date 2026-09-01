@@ -657,71 +657,137 @@
       }
     },
     "wordFrequency": {
-      "metaTitle": "Contador de Frequência de Palavras — Encontrar Palavras Mais Usadas | ToolNotch",
-      "metaDescription": "Encontre as palavras mais frequentes em qualquer texto. Útil para análise de palavras-chave em SEO, estudo de estilo de escrita e identificação de palavras usadas em excesso.",
+      "metaTitle": "Contador de Frequência de Palavras — Palavras Mais Repetidas | ToolNotch",
+      "metaDescription": "Contador grátis de frequência de palavras. Veja quantas vezes cada palavra aparece no seu texto, ordenadas por contagem — encontre palavras repetidas e vícios.",
       "title": "Contador de Frequência de Palavras",
-      "description": "Encontre as palavras mais frequentes no seu texto. Palavras comuns (o, e, é) são excluídas para mostrar palavras-chave com significado real.",
+      "description": "Cole qualquer texto para ver quantas vezes cada palavra aparece, da mais para a menos frequente. Feito para edição, análise de estilo e pesquisa.",
+      "richContent": {
+        "whatIs": "Um contador de frequência de palavras soma cada palavra de um trecho e as classifica da mais para a menos comum. Palavras funcionais comuns — \"o\", \"a\", \"de\", \"e\", \"que\" — são filtradas para que a lista mostre as palavras que carregam sentido. A análise de frequência é uma das ferramentas mais antigas da linguística: está por trás de concordâncias, fórmulas de legibilidade, faixas de frequência de dicionários e estudos de autoria que identificam um escritor por seus hábitos inconscientes. Para a escrita do dia a dia o uso é mais simples — ela mostra, em segundos, de quais palavras você depende. Uma repetição invisível durante a redação fica óbvia numa lista ordenada, e esse costuma ser o caminho mais rápido para um texto mais enxuto.",
+        "howToUse": [
+          "Cole seu texto — uma redação, um capítulo, uma transcrição ou um lote de avaliações — na caixa. A tabela de frequência é montada na hora.",
+          "Percorra a lista. As primeiras palavras de conteúdo são o seu assunto; as que surpreendem merecem um olhar mais atento.",
+          "Marque muletas e atenuadores no topo — \"só\", \"muito\", \"realmente\", \"na verdade\", \"meio\", \"basicamente\" — e corte ou varie.",
+          "Verifique se algum verbo ou substantivo forte está sendo usado demais e troque por um sinônimo em parte das ocorrências.",
+          "Para pesquisa, copie a lista para exportar as contagens, ou compare dois textos rodando um depois do outro."
+        ],
+        "whyItMatters": "Todo escritor tem um vocabulário ao qual volta sem perceber. Na ficção e nos ensaios isso aparece como cacoetes; na escrita acadêmica, como uma faixa estreita de conectivos e atenuadores que achatam o argumento; no texto de produto e de UX, como jargão repetido até perder o sentido. Uma lista de frequência torna o padrão visível para você agir. Para linguistas, professores e estudantes, essa mesma lista é dado: apoia medidas de densidade lexical, estudo de palavra em contexto, graduação de vocabulário e comparações entre rascunhos, autores ou épocas.",
+        "proTip": "Compare, não apenas conte. Rode seu rascunho, anote as dez principais palavras de conteúdo e depois rode um texto que você admira no mesmo gênero, comparando o formato das duas listas. Uma lista saudável decai aos poucos; uma lista com picos, em que uma ou duas palavras se destacam muito, costuma indicar repetição que dá para editar. Fazer isso com seus próprios textos antigos ao longo do tempo é um jeito silencioso de acompanhar seu vocabulário crescer.",
+        "sections": [
+          {
+            "heading": "Quantas vezes uma palavra aparece?",
+            "body": "Essa é a pergunta central que a ferramenta responde. Digite ou cole seu texto e a linha da palavra mostra a contagem exata mais essa contagem como fração de todas as palavras. Como o texto é convertido para minúsculas primeiro, \"O\" e \"o\" são contados juntos; como a pontuação é removida, \"corre,\" \"corre.\" e \"corre\" são a mesma entrada. Contrações são mantidas inteiras e compostos com hífen são separados no hífen. Se uma palavra que você espera não está na lista, quase certamente ela está na lista de palavras gramaticais comuns removidas de propósito."
+          },
+          {
+            "heading": "Frequência para edição e estudo",
+            "body": "Editores usam listas de frequência para impor um manual de estilo, pegar a frase preferida de um parecerista ou medir o quanto uma tradução ficou repetitiva. Professores as usam para checar se um texto fica dentro de um nível de vocabulário antes de indicá-lo. Pesquisadores de linguística de corpus constroem distribuições de frequência em milhares de documentos para estudar como o uso muda ao longo do tempo ou difere entre grupos. Romancistas passam um manuscrito pronto por um contador para achar o advérbio usado duzentas vezes. Em todos os casos o fluxo é o mesmo: obter as contagens ordenadas, procurar o que está alto demais e decidir se é uma característica do texto ou um hábito a corrigir."
+          }
+        ]
+      },
       "faqs": [
         {
-          "question": "Quais palavras são excluídas da contagem de frequência?",
-          "answer": "Stopwords comuns do inglês são excluídas — palavras como 'the', 'a', 'and', 'is', 'it' que aparecem com frequência mas carregam pouco significado. Isso revela suas palavras-chave de conteúdo reais."
+          "question": "Como descubro quantas vezes uma palavra aparece em um texto?",
+          "answer": "Cole o texto no contador. A linha de cada palavra mostra o número exato de ocorrências e esse número como porcentagem do total, da mais para a menos frequente."
         },
         {
-          "question": "Como é calculada a densidade de palavras-chave?",
-          "answer": "A densidade de palavras-chave é a frequência de uma palavra dividida pelo total de palavras, expressa em porcentagem. Uma densidade de 1–3% é geralmente considerada saudável para SEO."
+          "question": "Por que uma palavra que eu esperava não está nos resultados?",
+          "answer": "Palavras gramaticais comuns — artigos, pronomes, preposições, conjunções e verbos auxiliares como \"o\", \"de\", \"que\" e \"é\" — são filtradas para que a lista mostre palavras de conteúdo. O resto é contado."
         },
         {
-          "question": "Quantas palavras principais são exibidas?",
-          "answer": "A ferramenta mostra as 10 palavras de conteúdo mais frequentes no seu texto, classificadas por contagem."
+          "question": "A contagem diferencia maiúsculas de minúsculas?",
+          "answer": "Não. O texto é convertido para minúsculas primeiro, então \"Palavra\", \"palavra\" e \"PALAVRA\" contam como a mesma entrada. A pontuação colada à palavra também é removida antes da contagem."
+        },
+        {
+          "question": "Para que serve a análise de frequência de palavras?",
+          "answer": "Usos comuns são cortar muletas na edição, checar o nível de vocabulário para ensino, estudar o estilo de um autor, comparar rascunhos ou traduções e pesquisa em linguística de corpus."
+        },
+        {
+          "question": "Quantas palavras a lista mostra?",
+          "answer": "A ferramenta exibe as dez palavras de conteúdo mais frequentes. É o suficiente para revelar o vocabulário dominante da maioria dos trechos sem enterrar o sinal numa cauda longa de palavras usadas uma vez."
         }
       ],
-      "richContent": {
-        "whatIs": "Um contador de frequência de palavras analisa o texto e conta quantas vezes cada palavra aparece e, em seguida, apresenta os resultados como uma lista classificada — as mais frequentes no topo. A maioria das implementações remove as palavras de parada (um, o, é, de, e) para destacar os termos significativos de conteúdo. Os casos de uso abrangem vários campos: os escritores o usam para identificar palavras de preenchimento usadas em excesso, como 'apenas', 'realmente' e 'na verdade'; analistas de SEO o usam para verificar se as palavras-chave primárias aparecem com a frequência apropriada; pesquisadores acadêmicos o usam para linguística de corpus; e estrategistas de conteúdo o usam para analisar os artigos dos concorrentes.",
-        "howToUse": [
-          "Cole o seu texto na área de entrada — a tabela de frequência de palavras é preenchida instantaneamente.",
-          "Analise as primeiras entradas para identificar as palavras mais usadas e com maior significado.",
-          "Procure palavras de preenchimento (apenas, muito, bem) que aparecem no topo da lista e considere removê-las ou substituí-las.",
-          "Verifique se a sua palavra-chave principal pretendida aparece nos principais resultados com uma densidade de 1–3%.",
-          "Use a lista de frequências para encontrar sinônimos e termos relacionados que possam substituir palavras repetidas."
-        ],
-        "whyItMatters": "Em SEO, a análise de frequência de palavras ajuda a verificar se a palavra-chave principal aparece vezes suficientes (geralmente de 1 a 2% de densidade) sem superotimização — acima de 3% corre o risco de sofrer penalidade por uso excessivo de palavras-chave e a leitura soa não natural. Na escrita acadêmica, palavras de alta frequência geralmente revelam frases repetitivas. Na escrita UX, a análise de frequência destaca jargões que devem ser substituídos por linguagem mais simples. Para romancistas, expõe tiques verbais e escolhas de palavras habituais.",
-        "proTip": "Para SEO, execute uma análise de frequência de palavras na página do concorrente melhor classificada para a sua palavra-chave alvo. As palavras de conteúdo que aparecem com mais frequência ao lado da palavra-chave principal são as suas palavras-chave LSI (Indexação Semântica Latente) — termos semanticamente relacionados que o Google usa para confirmar a relevância tópica. Inclua-os naturalmente em seu próprio conteúdo."
+      "related": {
+        "heading": "Ferramentas e guias relacionados",
+        "items": [
+          {
+            "label": "Verificador de Densidade de Palavras-Chave — as mesmas contagens no enquadramento de SEO on-page",
+            "path": "/tools/text/keyword-density-checker"
+          },
+          {
+            "label": "Contador de Palavras — palavras, caracteres, frases e tempo de leitura",
+            "path": "/tools/text/word-counter"
+          },
+          {
+            "label": "Guia: metas de contagem de palavras para blogs, redações e e-mails",
+            "path": "/blog/word-count-guide"
+          }
+        ]
       }
     },
     "keywordDensity": {
-      "metaTitle": "Verificador de Densidade de Palavras-Chave — Análise SEO | ToolNotch",
-      "metaDescription": "Verificador de densidade de palavras-chave gratuito. Cole seu conteúdo e veja as palavras-chave mais frequentes como porcentagem do total de palavras. Útil para otimização de conteúdo SEO.",
+      "metaTitle": "Verificador de Densidade de Palavras-Chave — SEO On-Page | ToolNotch",
+      "metaDescription": "Verificador grátis de densidade de palavras-chave para SEO. Veja a contagem e a % de cada termo, evite keyword stuffing e ajuste sua palavra-chave alvo.",
       "title": "Verificador de Densidade de Palavras-Chave",
-      "description": "Cole seu conteúdo para ver as palavras-chave mais frequentes e sua porcentagem de densidade. Útil para otimização de conteúdo SEO.",
+      "description": "Cole o texto da sua página para ver a densidade de cada palavra como porcentagem do total — feito para SEO on-page e otimização de conteúdo.",
+      "richContent": {
+        "whatIs": "Densidade de palavras-chave é a fração do seu texto ocupada por um termo: (vezes que a palavra-chave aparece ÷ total de palavras) × 100. No SEO on-page ela serve como uma verificação rápida de que a página trata claramente do termo alvo sem repeti-lo tanto que o texto pareça spam. A faixa de trabalho comum é de 1% a 3% para a palavra-chave principal. Abaixo de cerca de 0,5% o termo pode ser incidental demais para a página ser considerada relevante; acima de 3% a 4% o texto começa a soar artificial e corre risco de um filtro de super-otimização. A densidade é um sinal aproximado, não um fator de ranqueamento divulgado pelo Google — use como apoio de edição, não como meta exata.",
+        "howToUse": [
+          "Cole o rascunho — títulos, introdução, corpo e conclusão — na caixa. A lista de palavras e as porcentagens de densidade se atualizam enquanto você digita.",
+          "Encontre sua palavra-chave alvo principal (ou variações próximas) na lista ordenada e veja a densidade dela.",
+          "Busque algo entre 1% e 3%. Se estiver maior, troque alguns usos exatos por pronomes, sinônimos ou frases parciais.",
+          "Se estiver abaixo de cerca de 0,5%, encaixe o termo no título, nas primeiras 100 palavras, em um subtítulo e na conclusão, sempre de forma natural.",
+          "Percorra o resto da lista em busca de termos de apoio que um buscador esperaria neste tópico e garanta que apareçam ao menos uma vez."
+        ],
+        "whyItMatters": "Os buscadores premiam páginas que cobrem um tópico como um especialista faria — o que costuma significar que o termo principal aparece poucas vezes e um vocabulário amplo de termos relacionados preenche o resto. A verificação de densidade pega as duas falhas que prejudicam o ranqueamento: uma página tão pouco otimizada que nenhum termo é claramente o foco, e uma página com repetição tão pesada que aciona heurísticas de spam ou simplesmente lê mal e perde o visitante. Rodar a checagem antes de publicar é mais rápido do que diagnosticar uma página que rende pouco por meses.",
+        "proTip": "Antes de escrever, rode esta checagem nas duas ou três páginas que já ranqueiam para o seu termo alvo. As palavras de conteúdo que elas compartilham — além do termo principal — são os subtópicos que o Google espera ver. Cubra esses pontos no rascunho e depois use o verificador no seu próprio texto para confirmar que o termo principal fica perto de 1% e que nenhum termo de apoio está faltando. Isso é mais confiável do que mirar uma densidade fixa.",
+        "sections": [
+          {
+            "heading": "O que é uma boa densidade de palavras-chave?",
+            "body": "Não existe número oficial. Estudos de páginas bem posicionadas costumam encontrar densidades da palavra-chave principal entre 0,5% e 2,5%, com a maioria perto de 1%. Páginas longas diluem a densidade naturalmente, então um artigo de 2.000 palavras pode ranquear bem com o termo principal a 0,7%, enquanto uma página de 300 palavras pode carregá-lo a 2%. Em vez de forçar uma porcentagem, use o verificador para confirmar que o termo está nas posições-chave — título, abertura, um subtítulo, texto alternativo de imagem e a URL — e que nada mais domina a página por acidente. Se um nome de marca, um rótulo de menu ou uma frase repetida de rodapé lidera sua lista, isso vale corrigir antes de se preocupar com a palavra-chave alvo."
+          },
+          {
+            "heading": "Como ler o resultado",
+            "body": "A ferramenta converte o texto para minúsculas, remove palavras vazias comuns como \"o\", \"e\" e \"de\", tira a pontuação e conta o que sobra. Cada linha mostra uma palavra, quantas vezes ela ocorre e essa contagem como porcentagem do total de palavras. Frases de várias palavras não são rastreadas diretamente — verifique as palavras individuais da sua frase e observe se elas sobem juntas. Números, tokens de uma letra e palavras vazias são excluídos para que a lista reflita o conteúdo relevante. Use a ordem de classificação para ver a ênfase real da página, que muitas vezes é diferente do que você pretendia ao redigir."
+          }
+        ]
+      },
       "faqs": [
         {
-          "question": "O que é densidade de palavras-chave?",
-          "answer": "Densidade de palavras-chave é a frequência com que uma palavra-chave aparece no texto como porcentagem do total de palavras. Uma palavra-chave que aparece 10 vezes em um artigo de 1000 palavras tem uma densidade de 1%."
+          "question": "Para que serve um verificador de densidade de palavras-chave?",
+          "answer": "Ele mede a frequência de cada palavra da página como porcentagem do total, para você conferir que a palavra-chave alvo de SEO aparece o suficiente para sinalizar relevância, mas não tanto a ponto de o texto parecer super-otimizado."
         },
         {
-          "question": "Qual é a densidade de palavras-chave ideal para SEO?",
-          "answer": "A maioria dos especialistas em SEO recomenda 1–3% de densidade. Otimização excessiva (keyword stuffing) acima de 5% pode gerar penalizações do Google. Foque em uma escrita natural e útil, em vez de atingir uma porcentagem específica."
+          "question": "Qual densidade de palavra-chave devo buscar?",
+          "answer": "Uma palavra-chave principal entre cerca de 1% e 3% é uma faixa segura. Muitas páginas bem posicionadas ficam mais perto de 1%. Não há valor exato divulgado pelo Google, então trate como guia de edição, não como meta."
         },
         {
-          "question": "Como é calculada a densidade de palavras-chave?",
-          "answer": "Densidade de Palavras-Chave (%) = (Número de ocorrências da palavra-chave ÷ Total de palavras) × 100. Por exemplo, uma palavra que aparece 15 vezes em um artigo de 500 palavras tem uma densidade de 3%."
+          "question": "Densidade alta pode penalizar uma página?",
+          "answer": "Repetir uma palavra-chave até 5% ou mais pode acionar filtros de spam e, de forma mais certa, deixa o texto ruim de ler, fazendo o visitante sair. Os dois resultados prejudicam o ranqueamento. Mantenha o termo natural e use vocabulário relacionado."
         },
         {
-          "question": "Quais palavras são excluídas da análise?",
-          "answer": "Stopwords comuns (o, a, e, é, etc.) são automaticamente excluídas para que você veja apenas palavras-chave de conteúdo com significado real."
+          "question": "Como a densidade de palavras-chave é calculada?",
+          "answer": "Densidade (%) = (número de vezes que a palavra-chave aparece ÷ total de palavras) × 100. Um termo usado 12 vezes em uma página de 1.200 palavras tem densidade de 1%."
+        },
+        {
+          "question": "Esta ferramenta analisa frases de duas ou três palavras?",
+          "answer": "Ela analisa palavras isoladas após remover palavras vazias e pontuação. Para avaliar uma frase, veja as palavras individuais na lista e se as contagens sobem juntas."
         }
       ],
-      "richContent": {
-        "whatIs": "A densidade de palavras-chave é a porcentagem de vezes que uma palavra-chave específica aparece em um texto em relação à contagem total de palavras, calculada como: (ocorrências de palavra-chave ÷ palavras totais) × 100. A diretriz amplamente citada é uma faixa de densidade de 1 a 3%: abaixo de 1% e o Google pode não reconhecer a página como relevante no tópico para esse termo; acima de 3% e o conteúdo tem uma leitura não natural e corre o risco de sofrer uma penalidade algorítmica por excesso de palavras-chave (keyword stuffing). O SEO moderno vai muito além da densidade bruta.",
-        "howToUse": [
-          "Cole o conteúdo do seu artigo na área de entrada — a análise de densidade de palavras-chave é executada instantaneamente.",
-          "Revise a lista de principais palavras-chave e suas porcentagens de densidade.",
-          "Identifique sua palavra-chave de destino principal e verifique se a densidade dela se enquadra na faixa de 1–3%.",
-          "Se uma palavra-chave estiver acima de 3%, substitua algumas instâncias por sinônimos ou termos relacionados para uma leitura mais natural.",
-          "Se uma palavra-chave estiver abaixo de 1%, considere adicioná-la à introdução, a um subtítulo ou à conclusão."
-        ],
-        "whyItMatters": "O uso excessivo de palavras-chave (keyword stuffing) — elevando a densidade para acima de 5% — foi uma tática comum de SEO no início dos anos 2000 que o Google agora penaliza algorítmica e manualmente. A sub-densidade significa que a página pode nem se classificar para o termo alvo. Verificar a densidade antes de publicar evita ambos os extremos. Mais importante ainda, essa análise revela oportunidades de introduzir sinônimos e termos relacionados que expandem a sua presença semântica.",
-        "proTip": "Melhor prática de SEO moderno: coloque sua palavra-chave principal no título da página, no primeiro parágrafo, em um subtítulo H2 e no slug do URL. Depois, deixe-a aparecer naturalmente no corpo do texto — não force. Preencha o espaço semântico restante com termos relacionados. Para um artigo sobre 'calculadora de hipoteca', esses termos incluem: amortização, principal, taxa de juros, pagamento mensal e prazo do empréstimo."
+      "related": {
+        "heading": "Ferramentas e guias relacionados",
+        "items": [
+          {
+            "label": "Contador de Frequência de Palavras — classifica cada palavra pela frequência",
+            "path": "/tools/text/word-frequency-counter"
+          },
+          {
+            "label": "Contador de Palavras — palavras, caracteres, frases e tempo de leitura",
+            "path": "/tools/text/word-counter"
+          },
+          {
+            "label": "Guia: metas de contagem de palavras para blogs, redações e e-mails",
+            "path": "/blog/word-count-guide"
+          }
+        ]
       }
     },
     "sampleText": "The quick brown fox jumps over the lazy dog. This sentence has been used for decades as a pangram — a phrase containing every letter of the alphabet. It is commonly used to demonstrate fonts, test typewriters, and practice typing.\n\nReadability is an important consideration in writing. Clear, concise sentences help readers understand your message quickly. Long, convoluted sentences with complex vocabulary can make text difficult to parse, especially for readers who are not specialists in the subject matter at hand.\n\nGood writing balances clarity with depth. Professional writers aim for a Flesch Reading Ease score between 60 and 70 for most audiences.",
@@ -1658,7 +1724,66 @@
           "Remova o nome selecionado para alternar entre todos os participantes de forma justa."
         ],
         "whyItMatters": "O formato visual da roleta cria transparência — todos podem ver quem é elegível para seleção. Isso remove qualquer suspeita de que o seletor esteja manipulando o resultado. Para uso em sala de aula, o formato da roda é significativamente mais atraente do que a seleção em texto simples.",
-        "proTip": "Para seleções semanais recorrentes, salve a lista de nomes como um arquivo de texto e cole-a novamente a cada sessão. Se alguns participantes estiverem mais frequentemente disponíveis, pondere a roleta adicionando seus nomes mais de uma vez."
+        "proTip": "Para seleções semanais recorrentes, salve a lista de nomes como um arquivo de texto e cole-a novamente a cada sessão. Se alguns participantes estiverem mais frequentemente disponíveis, pondere a roleta adicionando seus nomes mais de uma vez.",
+        "comparison": {
+          "heading": "Como o ToolNotch se compara ao Wheel of Names",
+          "intro": "As duas ferramentas giram uma roleta de nomes aleatória de graça. As diferenças estão no que exige cadastro, se a página mostra anúncios e onde sua lista de nomes fica guardada.",
+          "columns": [
+            "Recurso",
+            "Roleta de Nomes do ToolNotch",
+            "Wheelofnames.com"
+          ],
+          "rows": [
+            {
+              "feature": "Girar sem conta",
+              "ours": "Sempre — nenhum recurso exige login",
+              "theirs": "Sim para o giro básico; há login com Google para salvar roletas"
+            },
+            {
+              "feature": "Anúncios na página",
+              "ours": "Nenhum",
+              "theirs": "Exibe anúncios"
+            },
+            {
+              "feature": "Onde seus nomes ficam",
+              "ours": "No seu navegador e na URL da página; nada é enviado",
+              "theirs": "Roletas salvas ficam nos servidores deles quando você está logado"
+            },
+            {
+              "feature": "Compartilhar uma roleta específica",
+              "ours": "Copie a URL — os nomes vão no link",
+              "theirs": "Compartilhe um link para uma roleta salva"
+            },
+            {
+              "feature": "Remover o vencedor após cada giro",
+              "ours": "Sim",
+              "theirs": "Sim"
+            },
+            {
+              "feature": "Preço",
+              "ours": "Grátis",
+              "theirs": "Grátis"
+            }
+          ],
+          "caption": "Com base no site público wheelofnames.com em 2026. Os recursos de qualquer uma das ferramentas podem mudar."
+        }
+      },
+      "related": {
+        "heading": "Mais sorteadores e leitura",
+        "items": [
+          {
+            "label": "Sorteador de Nomes — o mesmo sorteio sem a animação da roleta",
+            "path": "/tools/fun/random-name-picker"
+          },
+          {
+            "label": "Gerador de Times Aleatórios — divide uma lista em grupos equilibrados",
+            "path": "/tools/fun/random-team-generator"
+          },
+          {
+            "label": "Guia: 7 alternativas grátis ao Wheel of Names comparadas",
+            "path": "/blog/wheel-of-names-alternatives"
+          }
+        ]
       }
     },
     "namePicker": {
@@ -3098,7 +3223,8 @@
       "text": "Texto",
       "education": "Educação",
       "productivity": "Produtividade",
-      "engineering": "Engenharia"
+      "engineering": "Engenharia",
+      "fun": "Diversão"
     },
     "breadcrumbBlog": "Blog",
     "relatedTool": "Experimente o {toolName} gratuito →",

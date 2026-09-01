@@ -929,72 +929,138 @@
       ]
     },
     "wordFrequency": {
-      "metaTitle": "Word Frequency Counter — Find Most Used Words | ToolNotch",
-      "metaDescription": "Find the most frequently used words in any text. Useful for SEO keyword analysis, studying writing style, and identifying overused words.",
+      "metaTitle": "Word Frequency Counter — Find Most Repeated Words | ToolNotch",
+      "metaDescription": "Free word frequency counter. See how many times each word appears in your text, ranked by count — find overused words, verbal tics and vocabulary patterns.",
       "title": "Word Frequency Counter",
-      "description": "Find the most frequently used words in your text. Common words (the, and, is) are excluded to show meaningful keywords.",
+      "description": "Paste any text to see how many times each word appears, ranked from most to least frequent. Built for editing, style analysis and research.",
       "richContent": {
-        "whatIs": "A word frequency counter analyses text and tallies how many times each word appears, then presents the results as a ranked list — most frequent at the top. Most implementations strip out stop words (a, the, is, of, and) to surface the meaningful content terms. Use cases span several fields: writers use it to identify overused filler words like 'just', 'really', 'very', and 'actually'; SEO analysts use it to verify that primary keywords appear with appropriate frequency; academic researchers use it for corpus linguistics and text analysis; and content strategists use it to reverse-engineer competitor articles for topical focus. The output shows both raw count and density percentage, giving you a dual view of vocabulary distribution.",
+        "whatIs": "A word frequency counter tallies every word in a passage and ranks them from most to least common. Common function words — \"the\", \"a\", \"is\", \"of\", \"and\" — are filtered out so the list shows the words that carry meaning. Frequency analysis is one of the oldest tools in linguistics: it underpins concordances, readability formulas, dictionary frequency bands, and authorship studies that identify a writer by their unconscious habits. For everyday writing it has a simpler use — it shows you, in seconds, which words you lean on. Repetition that is invisible while drafting becomes obvious in a ranked list, and that is usually the fastest route to tighter prose.",
         "howToUse": [
-          "Paste your text into the input area — the word frequency table populates instantly.",
-          "Scan the top entries to identify your most-used meaningful words.",
-          "Look for filler words (just, really, very, quite) that appear high in the list and consider removing or replacing them.",
-          "Check whether your intended primary keyword appears in the top results with a density of 1–3%.",
-          "Use the frequency list to find synonyms and related terms that could replace repeated words and diversify your vocabulary."
+          "Paste your text — an essay, chapter, transcript, or a batch of reviews — into the box. The frequency table builds instantly.",
+          "Read down the list. The top content words are your subject; the ones that surprise you are worth a closer look.",
+          "Flag filler and hedges near the top — \"just\", \"very\", \"really\", \"actually\", \"quite\", \"basically\" — and cut or vary them.",
+          "Check whether any single strong verb or noun is doing too much work, and reach for a synonym on some of its uses.",
+          "For research, copy the list to export the counts, or compare two texts by running them one after another."
         ],
-        "whyItMatters": "In SEO, word frequency analysis helps verify that your primary keyword appears enough times (typically 1–2% density) without over-optimization — above 3% risks a keyword-stuffing penalty and reads unnaturally. In academic writing, high-frequency words often reveal repetitive phrasing that weakens arguments or signals a lack of vocabulary breadth. In UX writing and product copy, frequency analysis surfaces jargon that should be replaced with simpler, user-friendly language. For novelists and essayists, it exposes verbal tics and habitual word choices that homogenize prose style.",
-        "proTip": "For SEO, run word frequency analysis on the top-ranking competitor page for your target keyword. The content words that appear most frequently alongside the main keyword are your LSI (Latent Semantic Indexing) keywords — semantically related terms that Google uses to confirm topical relevance. Include these naturally in your own content and Google will more confidently categorize your page as an authoritative resource on the topic."
+        "whyItMatters": "Every writer has a vocabulary they return to without noticing. In fiction and essays that shows up as verbal tics; in academic writing as a narrow band of connectors and hedges that flatten the argument; in product and UX copy as jargon repeated until it stops meaning anything. A frequency list makes the pattern visible so you can act on it. For linguists, teachers, and students, the same list is data: it supports lexical-density measurements, keyword-in-context study, vocabulary grading, and comparisons between drafts, authors, or time periods.",
+        "proTip": "Compare, don’t just count. Run your draft, note the top ten content words, then run a piece of writing you admire in the same genre and compare the shape of the two lists. A healthy list tapers gradually; a spiky list where one or two words tower over the rest usually signals repetition you can edit out. Doing this on your own past work over time is a quiet way to watch your range grow.",
+        "sections": [
+          {
+            "heading": "How many times does a word appear?",
+            "body": "That is the core question this tool answers. Type or paste your text and the word’s row shows its exact count plus that count as a share of all words. Because the text is lowercased first, \"The\" and \"the\" are counted together; because punctuation is stripped, \"run,\" \"run.\" and \"run\" are the same entry. Contractions are kept whole (\"don’t\" stays \"don’t\"), and hyphenated compounds are split on the hyphen. If a word you expect is missing from the list, it is almost certainly on the stop-word list of common grammatical words that are removed by design."
+          },
+          {
+            "heading": "Frequency for editing and study",
+            "body": "Editors use frequency lists to enforce a house style, catch a reviewer’s pet phrase, or measure how repetitive a translation has become. Teachers use them to check that a text sits within a target vocabulary level before assigning it. Researchers in corpus linguistics build frequency distributions across thousands of documents to study how usage shifts over time or differs between groups. Novelists run a finished manuscript through a counter to find the adverb they used two hundred times. In each case the workflow is the same: get the ranked counts, look for what is unexpectedly high, and decide whether it is a feature of the text or a habit to fix."
+          }
+        ]
       },
       "faqs": [
         {
-          "question": "What words are excluded from the frequency count?",
-          "answer": "Common English stopwords are excluded — words like 'the', 'a', 'and', 'is', 'it' that appear frequently but carry little meaning. This surfaces your actual content keywords."
+          "question": "How do I find how many times a word appears in a text?",
+          "answer": "Paste the text into the counter. Each word’s row shows its exact number of occurrences and that number as a percentage of the total word count, sorted from most to least frequent."
         },
         {
-          "question": "How is keyword density calculated?",
-          "answer": "Keyword density is the frequency of a word divided by total word count, expressed as a percentage. A keyword density of 1–3% is generally considered healthy for SEO."
+          "question": "Why is a word I expected missing from the results?",
+          "answer": "Common grammatical words — articles, pronouns, prepositions, conjunctions and auxiliary verbs like \"the\", \"it\", \"of\" and \"is\" — are filtered out so the list shows meaningful content words. Everything else is counted."
         },
         {
-          "question": "How many top words are shown?",
-          "answer": "The tool shows the top 10 most frequent content words in your text, ranked by count."
+          "question": "Is the count case-sensitive?",
+          "answer": "No. The text is converted to lowercase first, so \"Word\", \"word\" and \"WORD\" are counted as the same entry. Punctuation attached to a word is also removed before counting."
+        },
+        {
+          "question": "What can I use word frequency analysis for?",
+          "answer": "Common uses are trimming filler words while editing, checking vocabulary level for teaching, studying an author’s style, comparing drafts or translations, and corpus-linguistics research."
+        },
+        {
+          "question": "How many words does the list show?",
+          "answer": "The tool displays the ten most frequent content words. That is enough to reveal the dominant vocabulary of most passages without burying the signal in a long tail of words used once."
         }
-      ]
+      ],
+      "related": {
+        "heading": "Related tools and guides",
+        "items": [
+          {
+            "label": "Keyword Density Checker — the same counts framed for on-page SEO",
+            "path": "/tools/text/keyword-density-checker"
+          },
+          {
+            "label": "Word Counter — words, characters, sentences and reading time",
+            "path": "/tools/text/word-counter"
+          },
+          {
+            "label": "Guide: word count targets for blogs, essays and emails",
+            "path": "/blog/word-count-guide"
+          }
+        ]
+      }
     },
     "keywordDensity": {
-      "metaTitle": "Keyword Density Checker — SEO Keyword Analysis | ToolNotch",
-      "metaDescription": "Free keyword density checker. Paste your content and see the most frequent keywords as a percentage of total words. Useful for SEO content optimization.",
+      "metaTitle": "Keyword Density Checker — Free On-Page SEO Tool | ToolNotch",
+      "metaDescription": "Free keyword density checker for SEO. See each term’s count and percentage in your copy, catch keyword stuffing, and tune your target keyword.",
       "title": "Keyword Density Checker",
-      "description": "Paste your content to see the most frequent keywords and their density percentage. Useful for SEO content optimization.",
+      "description": "Paste your page copy to see each keyword’s density as a percentage of total words — built for on-page SEO and content optimization.",
       "richContent": {
-        "whatIs": "Keyword density is the percentage of times a specific keyword appears in a text relative to the total word count, calculated as: (keyword occurrences ÷ total words) × 100. The widely cited guideline is a 1–3% density range: below 1% and Google may not recognize the page as topically relevant to that term; above 3% and the content reads unnaturally and risks a keyword-stuffing algorithmic penalty. Modern search engine optimization goes significantly beyond raw density — Google's algorithms use TF-IDF (Term Frequency–Inverse Document Frequency) to measure keyword relevance against a corpus of documents, meaning context and co-occurring terms matter more than simple repetition. LSI keywords (semantically related terms) signal topical authority more effectively than keyword repetition alone.",
+        "whatIs": "Keyword density is the share of your copy taken up by one term: (times the keyword appears ÷ total words) × 100. On-page SEO uses it as a quick sanity check that a page is clearly about its target query without repeating that query so often the text reads like spam. The common working range is 1–3% for a primary keyword. Below roughly 0.5% the term may be too incidental for the page to be judged relevant; above 3–4% the copy starts to sound engineered and risks an over-optimization filter. Density is a rough signal, not a ranking factor Google publishes — treat it as an editing aid, not a target to hit exactly.",
         "howToUse": [
-          "Paste your article content into the input area — keyword density analysis runs instantly.",
-          "Review the top keywords list and their density percentages.",
-          "Identify your primary target keyword and check whether its density falls within the 1–3% range.",
-          "If a keyword is above 3%, replace some instances with synonyms or related terms to read more naturally.",
-          "If a keyword is below 1%, consider adding it to your introduction, a subheading, or the conclusion."
+          "Paste your draft — headings, intro, body, and conclusion — into the box. The keyword list and density percentages update as you type.",
+          "Find your primary target keyword (or its close variants) in the ranked list and read off its density.",
+          "Aim for roughly 1–3%. If it is higher, swap some exact-match uses for pronouns, synonyms, or partial phrases.",
+          "If it is under about 0.5%, work the term into the title, the first 100 words, one subheading, and the conclusion where it fits naturally.",
+          "Scan the rest of the list for supporting terms a search engine would expect on this topic, and make sure they appear at least once."
         ],
-        "whyItMatters": "Keyword stuffing — pushing density above 5% — was a common SEO tactic in the early 2000s that Google now penalises algorithmically and manually. Under-density means the page may not rank for the target term at all, leaving traffic on the table. Checking density before publishing catches both extremes and ensures your content is optimised without appearing manipulative. More importantly, this analysis reveals opportunities to introduce synonyms and related terms that expand your semantic footprint, helping the page rank for a wider range of related search queries rather than just the single exact-match keyword.",
-        "proTip": "Modern SEO best practice: place your primary keyword in the page title, the first paragraph, one H2 subheading, and the URL slug. Then let it appear naturally in the body text — do not force it. Fill the remaining semantic space with related terms. For a 'mortgage calculator' article, those terms include: amortization, principal, interest rate, monthly payment, and loan term. This broader semantic coverage helps the page rank for dozens of related queries rather than just the exact keyword phrase, multiplying your organic traffic potential."
+        "whyItMatters": "Search engines reward pages that cover a topic the way an expert would — which usually means the main term appears a handful of times and a wide vocabulary of related terms fills in the rest. Density checking catches the two failure modes that hurt rankings: a page so lightly optimized that no single query is obviously its focus, and a page so heavily repeated that it trips spam heuristics or simply reads badly and loses the visitor. Running the check before you publish is faster than diagnosing a page that quietly underperforms for months.",
+        "proTip": "Before writing, run this check on the two or three pages already ranking for your target query. The content words they share — beyond the main keyword — are the sub-topics Google expects to see. Cover those in your draft, then use the checker on your own text to confirm your primary term sits near 1% and none of the supporting terms are missing. That is more reliable than aiming for a fixed density.",
+        "sections": [
+          {
+            "heading": "What counts as a good keyword density?",
+            "body": "There is no official number. Studies of top-ranking pages tend to find primary-keyword densities clustered between 0.5% and 2.5%, with most around 1%. Long pages naturally dilute density, so a 2,000-word article may rank well with its main term at 0.7%, while a 300-word page might carry it at 2%. Rather than forcing a percentage, use the checker to confirm the term is present in the key positions — title, opening, a heading, image alt text, and the URL — and that nothing else is accidentally dominating the page. If a brand name, a navigation label, or a boilerplate phrase tops your list, that is worth fixing before you worry about the target keyword."
+          },
+          {
+            "heading": "How to read the output",
+            "body": "The tool lowercases the text, removes common stop words such as \"the\", \"and\", and \"of\", strips punctuation, then counts what remains. Each row shows a word, how many times it occurs, and that count as a percentage of total words. Multi-word phrases are not tracked directly — check the individual words of your phrase and look at whether they trend together. Numbers, one-letter tokens, and stop words are excluded so the list reflects meaningful content. Use the ranked order to see your page’s actual emphasis, which is often different from what you intended while drafting."
+          }
+        ]
       },
       "faqs": [
         {
-          "question": "What is keyword density?",
-          "answer": "Keyword density is how often a keyword appears in your text as a percentage of total words. A keyword that appears 10 times in a 1000-word article has a density of 1%."
+          "question": "What is a keyword density checker used for?",
+          "answer": "It measures how often each word in a page appears as a percentage of the total, so you can check that your target keyword for SEO is present enough to signal relevance but not so often that the copy looks over-optimized."
         },
         {
-          "question": "What is the ideal keyword density for SEO?",
-          "answer": "Most SEO experts recommend 1–3% keyword density. Over-optimizing (keyword stuffing) above 5% can trigger Google penalties. Focus on natural, helpful writing rather than hitting a specific percentage."
+          "question": "What keyword density should I aim for?",
+          "answer": "A primary keyword between about 1% and 3% is a safe working range. Many top-ranking pages sit closer to 1%. There is no exact figure Google publishes, so treat it as an editing guide, not a target."
+        },
+        {
+          "question": "Can high keyword density get a page penalized?",
+          "answer": "Stuffing a keyword to 5% or more can trigger spam filters and, more reliably, makes the text read poorly so visitors leave. Both outcomes hurt rankings. Keep the term natural and lean on related vocabulary instead."
         },
         {
           "question": "How is keyword density calculated?",
-          "answer": "Keyword Density (%) = (Number of times keyword appears ÷ Total word count) × 100. For example, a word appearing 15 times in a 500-word article has a density of 3%."
+          "answer": "Keyword density (%) = (number of times the keyword appears ÷ total word count) × 100. A term used 12 times in a 1,200-word page has a density of 1%."
         },
         {
-          "question": "Which words are excluded from the analysis?",
-          "answer": "Common stopwords (the, a, and, is, it, etc.) are automatically excluded so you see meaningful content keywords only."
+          "question": "Does this tool check two- or three-word phrases?",
+          "answer": "It analyzes single words after removing stop words and punctuation. To gauge a phrase, review its individual words in the list and whether their counts rise together."
         }
-      ]
+      ],
+      "related": {
+        "heading": "Related tools and guides",
+        "items": [
+          {
+            "label": "Word Frequency Counter — rank every word by how often it appears",
+            "path": "/tools/text/word-frequency-counter"
+          },
+          {
+            "label": "Word Counter — words, characters, sentences and reading time",
+            "path": "/tools/text/word-counter"
+          },
+          {
+            "label": "Guide: word count targets for blogs, essays and emails",
+            "path": "/blog/word-count-guide"
+          }
+        ]
+      }
     },
     "sampleText": "The quick brown fox jumps over the lazy dog. This sentence has been used for decades as a pangram — a phrase containing every letter of the alphabet. It is commonly used to demonstrate fonts, test typewriters, and practice typing.\n\nReadability is an important consideration in writing. Clear, concise sentences help readers understand your message quickly. Long, convoluted sentences with complex vocabulary can make text difficult to parse, especially for readers who are not specialists in the subject matter at hand.\n\nGood writing balances clarity with depth. Professional writers aim for a Flesch Reading Ease score between 60 and 70 for most audiences.",
     "buttons": {
@@ -2047,7 +2113,66 @@
           "Remove the selected name to cycle through all participants fairly."
         ],
         "whyItMatters": "The visual format of seeing names on the wheel creates transparency — everyone in the room can see who is eligible for selection. This removes any suspicion that the selector is gaming the result. For classroom use, the wheel format is significantly more engaging than a plain random text display, turning participation selection into an interactive moment the whole class can share.",
-        "proTip": "For recurring weekly picks — meeting facilitator, status report presenter — save your name list as a text file and re-paste it quickly each session. If some participants are more often available, weight the wheel by adding their names more than once. More occurrences of a name increases that person's probability of being selected proportionally."
+        "proTip": "For recurring weekly picks — meeting facilitator, status report presenter — save your name list as a text file and re-paste it quickly each session. If some participants are more often available, weight the wheel by adding their names more than once. More occurrences of a name increases that person's probability of being selected proportionally.",
+        "comparison": {
+          "heading": "How ToolNotch compares to Wheel of Names",
+          "intro": "Both tools spin a randomized wheel of names for free. The differences are in what you have to sign up for, whether the page runs ads, and where your list of names is stored.",
+          "columns": [
+            "Feature",
+            "ToolNotch Wheel of Names",
+            "Wheelofnames.com"
+          ],
+          "rows": [
+            {
+              "feature": "Spin without an account",
+              "ours": "Always — no login for any feature",
+              "theirs": "Yes for basic spinning; a Google sign-in is offered to save wheels"
+            },
+            {
+              "feature": "Ads on the page",
+              "ours": "None",
+              "theirs": "Displays ads"
+            },
+            {
+              "feature": "Where your names are stored",
+              "ours": "In your browser and the page URL; nothing is uploaded",
+              "theirs": "Saved wheels are stored on their servers when you are signed in"
+            },
+            {
+              "feature": "Share a specific wheel",
+              "ours": "Copy the URL — the names travel in the link",
+              "theirs": "Share a link to a saved wheel"
+            },
+            {
+              "feature": "Remove the winner after each spin",
+              "ours": "Yes",
+              "theirs": "Yes"
+            },
+            {
+              "feature": "Price",
+              "ours": "Free",
+              "theirs": "Free"
+            }
+          ],
+          "caption": "Based on the public wheelofnames.com site as of 2026. Features on either tool may change."
+        }
+      },
+      "related": {
+        "heading": "More random pickers and reading",
+        "items": [
+          {
+            "label": "Random Name Picker — the same draw without the wheel animation",
+            "path": "/tools/fun/random-name-picker"
+          },
+          {
+            "label": "Random Team Generator — split a list into balanced groups",
+            "path": "/tools/fun/random-team-generator"
+          },
+          {
+            "label": "Guide: 7 free Wheel of Names alternatives compared",
+            "path": "/blog/wheel-of-names-alternatives"
+          }
+        ]
       }
     },
     "namePicker": {
@@ -3612,7 +3737,8 @@
       "text": "Text",
       "education": "Education",
       "productivity": "Productivity",
-      "engineering": "Engineering"
+      "engineering": "Engineering",
+      "fun": "Fun"
     },
     "breadcrumbBlog": "Blog",
     "relatedTool": "Try the free {toolName} →",

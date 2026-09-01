@@ -152,7 +152,12 @@ function urlWithAlternates(path: string, priority = 0.8) {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const mdxPosts = await getAllMdxBlogPosts()
 
-  const mdxBlogEntries: MetadataRoute.Sitemap = mdxPosts.map((post) => ({
+  // Skip MDX posts already emitted via the BLOG_POSTS loop below to avoid duplicate <url> entries.
+  const registeredBlogSlugs = new Set(BLOG_POSTS.map((post) => post.slug))
+
+  const mdxBlogEntries: MetadataRoute.Sitemap = mdxPosts
+    .filter((post) => !registeredBlogSlugs.has(post.slug))
+    .map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}`,
     lastModified: new Date(post.updatedAt ?? post.publishedAt),
     changeFrequency: 'monthly' as const,
