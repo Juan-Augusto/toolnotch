@@ -2866,7 +2866,7 @@
       },
       "worldCupQuiz": {
         "label": "FIFA World Cup Winners Quiz",
-        "desc": "Test your knowledge of every World Cup champion"
+        "desc": "Guess the World Cup winners from 1930 to 2022 — every champion, host and final"
       },
       "footballClubQuiz": {
         "label": "Which Football Club Are You?",
@@ -4783,5 +4783,237 @@
         "answer": "Find a poll worker (mesário) or election-day staff on-site — they can check the system for your correct section and redirect you without you having to leave the building."
       }
     ]
+  },
+  "quizDepth": {
+    "fifaWorldCupWinners": {
+      "metaTitle": "FIFA World Cup Winners Quiz — Guess Every Champion 1930–2022",
+      "metaDescription": "Play the FIFA World Cup winners quiz: 20 questions on every champion from 1930 to 2022, plus a full winners-by-year list. Guess the World Cup winners now.",
+      "introHeading": "About the FIFA World Cup Winners Quiz",
+      "intro": [
+        "The FIFA World Cup has crowned a champion every four years since 1930, pausing only in 1942 and 1946 for the Second World War. Just eight nations have ever lifted the trophy. Brazil leads with five titles, followed by Italy and Germany with four each, Argentina with three, and Uruguay and France with two. England and Spain have each won once, both in tournaments that turned on a single unforgettable final. The prize has changed too: the Jules Rimet Trophy was awarded through 1970, and the current FIFA World Cup Trophy has been lifted since 1974.",
+        "This quiz runs through 22 tournaments of history. You are asked to name the winner of specific editions, from Uruguay’s home triumph in 1930 to Argentina’s penalty-shootout victory in Qatar 2022, and to recall host nations, record goalscorers such as Miroslav Klose, and the finals that defined each era. Twenty multiple-choice questions cover champions, runners-up, and the moments every football fan argues about.",
+        "Answer each question and your score is tallied instantly, then matched to a tier: World Cup Legend, Football Expert, Football Fan, or World Cup Rookie. There is no sign-up and no time pressure. Use the winners-by-year table below to revise before you play, or to settle a debate about who won which World Cup — every result in it matches the official FIFA record."
+      ],
+      "tableHeading": "Every FIFA World Cup Winner (1930–2022)",
+      "tableNote": "aet = after extra time; pens = decided on penalties.",
+      "tableCols": {
+        "year": "Year",
+        "host": "Host",
+        "winner": "Winner",
+        "runnerUp": "Runner-up",
+        "score": "Final score"
+      },
+      "rows": [
+        {
+          "year": "1930",
+          "host": "Uruguay",
+          "winner": "Uruguay",
+          "runnerUp": "Argentina",
+          "score": "4–2"
+        },
+        {
+          "year": "1934",
+          "host": "Italy",
+          "winner": "Italy",
+          "runnerUp": "Czechoslovakia",
+          "score": "2–1 (aet)"
+        },
+        {
+          "year": "1938",
+          "host": "France",
+          "winner": "Italy",
+          "runnerUp": "Hungary",
+          "score": "4–2"
+        },
+        {
+          "year": "1942",
+          "host": "Not held",
+          "winner": "Not held",
+          "runnerUp": "—",
+          "score": "World War II"
+        },
+        {
+          "year": "1946",
+          "host": "Not held",
+          "winner": "Not held",
+          "runnerUp": "—",
+          "score": "World War II"
+        },
+        {
+          "year": "1950",
+          "host": "Brazil",
+          "winner": "Uruguay",
+          "runnerUp": "Brazil",
+          "score": "2–1 (deciding match)"
+        },
+        {
+          "year": "1954",
+          "host": "Switzerland",
+          "winner": "West Germany",
+          "runnerUp": "Hungary",
+          "score": "3–2"
+        },
+        {
+          "year": "1958",
+          "host": "Sweden",
+          "winner": "Brazil",
+          "runnerUp": "Sweden",
+          "score": "5–2"
+        },
+        {
+          "year": "1962",
+          "host": "Chile",
+          "winner": "Brazil",
+          "runnerUp": "Czechoslovakia",
+          "score": "3–1"
+        },
+        {
+          "year": "1966",
+          "host": "England",
+          "winner": "England",
+          "runnerUp": "West Germany",
+          "score": "4–2 (aet)"
+        },
+        {
+          "year": "1970",
+          "host": "Mexico",
+          "winner": "Brazil",
+          "runnerUp": "Italy",
+          "score": "4–1"
+        },
+        {
+          "year": "1974",
+          "host": "West Germany",
+          "winner": "West Germany",
+          "runnerUp": "Netherlands",
+          "score": "2–1"
+        },
+        {
+          "year": "1978",
+          "host": "Argentina",
+          "winner": "Argentina",
+          "runnerUp": "Netherlands",
+          "score": "3–1 (aet)"
+        },
+        {
+          "year": "1982",
+          "host": "Spain",
+          "winner": "Italy",
+          "runnerUp": "West Germany",
+          "score": "3–1"
+        },
+        {
+          "year": "1986",
+          "host": "Mexico",
+          "winner": "Argentina",
+          "runnerUp": "West Germany",
+          "score": "3–2"
+        },
+        {
+          "year": "1990",
+          "host": "Italy",
+          "winner": "West Germany",
+          "runnerUp": "Argentina",
+          "score": "1–0"
+        },
+        {
+          "year": "1994",
+          "host": "United States",
+          "winner": "Brazil",
+          "runnerUp": "Italy",
+          "score": "0–0 (3–2 pens)"
+        },
+        {
+          "year": "1998",
+          "host": "France",
+          "winner": "France",
+          "runnerUp": "Brazil",
+          "score": "3–0"
+        },
+        {
+          "year": "2002",
+          "host": "South Korea & Japan",
+          "winner": "Brazil",
+          "runnerUp": "Germany",
+          "score": "2–0"
+        },
+        {
+          "year": "2006",
+          "host": "Germany",
+          "winner": "Italy",
+          "runnerUp": "France",
+          "score": "1–1 (5–3 pens)"
+        },
+        {
+          "year": "2010",
+          "host": "South Africa",
+          "winner": "Spain",
+          "runnerUp": "Netherlands",
+          "score": "1–0 (aet)"
+        },
+        {
+          "year": "2014",
+          "host": "Brazil",
+          "winner": "Germany",
+          "runnerUp": "Argentina",
+          "score": "1–0 (aet)"
+        },
+        {
+          "year": "2018",
+          "host": "Russia",
+          "winner": "France",
+          "runnerUp": "Croatia",
+          "score": "4–2"
+        },
+        {
+          "year": "2022",
+          "host": "Qatar",
+          "winner": "Argentina",
+          "runnerUp": "France",
+          "score": "3–3 (4–2 pens)"
+        }
+      ],
+      "faqHeading": "World Cup winners: frequently asked questions",
+      "faqs": [
+        {
+          "question": "Who has won the most FIFA World Cups?",
+          "answer": "Brazil has won the FIFA World Cup five times (1958, 1962, 1970, 1994 and 2002), more than any other nation. Italy and Germany follow with four titles each, Argentina has three, France and Uruguay have two apiece, and England and Spain have one each."
+        },
+        {
+          "question": "Which countries have won the World Cup?",
+          "answer": "Eight national teams have won the World Cup: Brazil, Germany (including West Germany), Italy, Argentina, France, Uruguay, England and Spain. No team from outside Europe or South America has ever reached a final."
+        },
+        {
+          "question": "How does the World Cup champions quiz work?",
+          "answer": "The quiz has 20 multiple-choice questions about World Cup winners, hosts, finals and record holders. Each answer is marked right or wrong immediately, and your final percentage places you in one of four tiers, from World Cup Rookie to World Cup Legend. It is free and needs no account."
+        },
+        {
+          "question": "Can I guess all the World Cup winners from 1930 to 2022?",
+          "answer": "Yes. There have been 22 tournaments between 1930 and 2022 (1942 and 1946 were cancelled because of the Second World War). The table above lists every winner, runner-up and final score, so you can test yourself and then check the full answers."
+        },
+        {
+          "question": "Have any host nations won the World Cup at home?",
+          "answer": "Six host nations have won on home soil: Uruguay (1930), Italy (1934), England (1966), West Germany (1974), Argentina (1978) and France (1998). Brazil, the most successful team overall, has never won a World Cup it hosted."
+        }
+      ],
+      "relatedHeading": "More football quizzes",
+      "related": {
+        "worldCup": {
+          "label": "FIFA World Cup Winners Quiz",
+          "href": "/quiz/fifa-world-cup-winners",
+          "desc": "Name every World Cup champion from 1930 to 2022"
+        },
+        "footballClub": {
+          "label": "Which Football Club Are You?",
+          "href": "/quiz/which-football-club-are-you",
+          "desc": "Match your personality to a club"
+        },
+        "championsLeague": {
+          "label": "Champions League Trivia",
+          "href": "/quiz/champions-league-trivia",
+          "desc": "Test your knowledge of Europe’s elite competition"
+        }
+      }
+    }
   }
 }

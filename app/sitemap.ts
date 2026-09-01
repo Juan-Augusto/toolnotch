@@ -114,6 +114,11 @@ const ALL_ROUTES = [
   '/quiz/political-echo-chamber-quiz',
   '/quiz/which-historical-figure-matches-you',
   '/quiz/fake-news-or-fact',
+  // World Cup quiz result/tier pages (indexable, 80–120 words each)
+  '/quiz/fifa-world-cup-winners/result/legend',
+  '/quiz/fifa-world-cup-winners/result/expert',
+  '/quiz/fifa-world-cup-winners/result/fan',
+  '/quiz/fifa-world-cup-winners/result/rookie',
   // Health tools
   '/tools/health',
   '/tools/health/bmi-calculator',
