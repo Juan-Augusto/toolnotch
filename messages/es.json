@@ -458,7 +458,29 @@
         "accurate": "¿Qué tan preciso es este conversor?",
         "accurateAnswer": "Las conversiones usan aritmética de factores precisos con hasta 8 cifras significativas. Los resultados se redondean solo para su visualización.",
         "offline": "¿Funciona sin conexión?",
-        "offlineAnswer": "Sí — todas las conversiones de unidades funcionan completamente en tu navegador sin necesidad de conexión a internet."
+        "offlineAnswer": "Sí — todas las conversiones de unidades funcionan completamente en tu navegador sin necesidad de conexión a internet.",
+        "howManyAnswer": "1 {from} = {value} {to}.",
+        "howToAnswer": "Escribe cualquier valor en el campo {from} del conversor de arriba y el resultado en {to} aparece al instante. La fórmula es {formula}.",
+        "formulaQuestion": "¿Cuál es la fórmula para convertir {from} a {to}?"
+      },
+      "breadcrumbConverter": "Conversor",
+      "aboutHeading": "{from} y {to} explicados",
+      "formulaHeading": "Fórmula y ejemplos resueltos",
+      "scenariosHeading": "Dónde vas a usar esto",
+      "tableHeading": "Tabla de conversión de {from} a {to}",
+      "tableCaption": "Valores comunes de {from} convertidos a {to}. Todas las cifras usan el mismo factor de conversión que la calculadora de arriba.",
+      "relatedHeading": "Más conversiones de {category}",
+      "proTipLabel": "Consejo",
+      "categories": {
+        "length": "longitud",
+        "weight": "peso",
+        "temperature": "temperatura",
+        "area": "área",
+        "volume": "volumen",
+        "speed": "velocidad",
+        "time": "tiempo",
+        "digital-storage": "almacenamiento digital",
+        "pressure": "presión"
       }
     }
   },
