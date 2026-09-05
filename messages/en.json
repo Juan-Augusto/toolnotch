@@ -2832,6 +2832,7 @@
       "terms": "Terms of Service"
     },
     "categories": {
+      "developerTools": "Developer Tools",
       "imageTools": "Image Tools",
       "pdfTools": "PDF Tools",
       "converterTools": "Converter Tools",
@@ -2845,6 +2846,30 @@
       "educationTools": "Education Tools"
     },
     "tools": {
+      "cpfGenerator": {
+        "label": "CPF Generator & Validator",
+        "desc": "Generate valid Brazilian CPF with/without mask and validate"
+      },
+      "cnpjGenerator": {
+        "label": "CNPJ Generator + Lookup",
+        "desc": "Generate, validate and lookup company data in Brazilian Federal Revenue"
+      },
+      "uuidGenerator": {
+        "label": "UUID / GUID Generator",
+        "desc": "Generate bulk UUID v4, v1, v7 with inspector"
+      },
+      "jsonFormatter": {
+        "label": "JSON Formatter & Validator",
+        "desc": "Prettify, minify and validate JSON syntax with error lines"
+      },
+      "base64Converter": {
+        "label": "Base64 Encoder / Decoder",
+        "desc": "Encode and decode text in Base64 and URL-safe format"
+      },
+      "hashGenerator": {
+        "label": "Hash Generator (MD5, SHA)",
+        "desc": "Calculate MD5, SHA-256, SHA-512 and HMAC in real-time"
+      },
       "imageCompressor": {
         "label": "Image Compressor",
         "desc": "Compress JPG, PNG, WebP, AVIF"
@@ -4760,6 +4785,302 @@
             "text": "Typing is a skill, not a fixed trait. At 40 WPM, you're average. At 70 WPM, you're noticeably faster than most colleagues. At 90+ WPM, typing simply stops being something you think about. Pick up the home row, stop peeking at the keyboard, and give it a few deliberate weeks — the improvement will surprise you."
           }
         ]
+      }
+    }
+  },
+  "developer": {
+    "cpfGenerator": {
+      "metaTitle": "Free Online Brazilian CPF Generator & Validator — ToolNotch",
+      "metaDescription": "Generate valid Brazilian CPF numbers for software testing with or without formatting, select fiscal state origin, and validate CPFs in real time.",
+      "title": "CPF Generator & Validator",
+      "description": "Developer utility to generate valid Brazilian CPF numbers for software testing and validate documents with fiscal region identification.",
+      "tabs": {
+        "generate": "CPF Generator",
+        "validate": "CPF Validator"
+      },
+      "options": {
+        "format": "Output Format",
+        "withMask": "With formatting (000.000.000-00)",
+        "region": "Fiscal Region / State",
+        "allRegions": "Any Region (Random)",
+        "quantity": "Number of CPFs"
+      },
+      "button": {
+        "generate": "Generate Valid CPF"
+      },
+      "results": {
+        "title": "Generated CPFs",
+        "copy": "Copy",
+        "copied": "Copied!",
+        "copyAll": "Copy All",
+        "copiedAll": "All Copied!"
+      },
+      "validate": {
+        "inputLabel": "Enter or paste CPF to validate",
+        "hint": "Accepts formatted or digits only. Validates check digits and identifies state origin.",
+        "validTitle": "Valid CPF!",
+        "invalidTitle": "Invalid CPF!"
+      },
+      "faqs": [
+        {
+          "question": "Are the generated CPFs valid for software testing?",
+          "answer": "Yes. The generated CPFs are mathematically valid according to the official Modulo 11 algorithm of the Brazilian Federal Revenue, with correct check digits for QA and development."
+        },
+        {
+          "question": "What does the CPF Fiscal Region mean?",
+          "answer": "The 9th digit of the CPF represents the Brazilian fiscal jurisdiction where it originated (e.g. 8 for São Paulo, 7 for Rio de Janeiro / ES, 6 for Minas Gerais, etc.)."
+        },
+        {
+          "question": "Are my entered CPFs sent to any server?",
+          "answer": "No. All calculation and validation occurs 100% locally in your browser for complete privacy."
+        }
+      ],
+      "richContent": {
+        "whatIs": "The Cadastro de Pessoas Físicas (CPF) is the Brazilian individual taxpayer identification registry. It consists of 11 decimal digits: 8 base digits, 1 fiscal region digit, and 2 verification digits computed via the Modulo 11 algorithm.",
+        "howToUse": [
+          "Choose whether to include punctuation formatting.",
+          "Optionally select a specific Brazilian state/region or keep it random.",
+          "Select the quantity of CPFs to generate and click Generate Valid CPF.",
+          "Copy individual items or click Copy All.",
+          "Switch to the Validator tab to verify any CPF number."
+        ],
+        "whyItMatters": "Software engineers and QA testers require valid synthetic data to test registration forms, checkout flows, and CI/CD pipelines without exposing real user data (LGPD/GDPR).",
+        "proTip": "Use the bulk generator to seed mock databases for automated testing with Jest, Cypress, or Playwright."
+      }
+    },
+    "cnpjGenerator": {
+      "metaTitle": "Free Online Brazilian CNPJ Generator & Lookup — ToolNotch",
+      "metaDescription": "Generate valid Brazilian CNPJs (headquarters or branch), validate numbers, and lookup official company registration data in real time.",
+      "title": "CNPJ Generator & Company Lookup",
+      "description": "Generate mathematically valid CNPJs for development and lookup real company data (Legal Name, CNAE, Status, and Partners).",
+      "tabs": {
+        "generate": "CNPJ Generator",
+        "validate": "CNPJ Validator",
+        "lookup": "Company Lookup (API)"
+      },
+      "options": {
+        "format": "Output Format",
+        "withMask": "With formatting (00.000.000/0001-00)",
+        "type": "Establishment Type",
+        "headquarters": "Headquarters (0001)",
+        "branch": "Branch (0002...)",
+        "quantity": "Number of CNPJs"
+      },
+      "button": {
+        "generate": "Generate Valid CNPJ"
+      },
+      "results": {
+        "title": "Generated CNPJs",
+        "copy": "Copy",
+        "copied": "Copied!",
+        "copyAll": "Copy All",
+        "copiedAll": "All Copied!"
+      },
+      "validate": {
+        "inputLabel": "Enter or paste CNPJ to validate",
+        "hint": "Accepts formatted or digits only. Validates check digits via Modulo 11.",
+        "validTitle": "Valid CNPJ!",
+        "invalidTitle": "Invalid CNPJ!"
+      },
+      "lookup": {
+        "inputLabel": "Enter a CNPJ to query official Brazilian public registry",
+        "searchButton": "Lookup",
+        "copyData": "Copy Summary"
+      },
+      "faqs": [
+        {
+          "question": "How does the CNPJ company lookup work?",
+          "answer": "The tool queries the free, public BrasilAPI service to retrieve real Brazilian company data, including legal name, registration status, economic activity (CNAE), and corporate partners (QSA)."
+        },
+        {
+          "question": "Are generated CNPJs belonging to real companies?",
+          "answer": "The generated CNPJs are synthetically created using the Modulo 11 checksum algorithm for software testing and prototyping."
+        }
+      ],
+      "richContent": {
+        "whatIs": "The Cadastro Nacional da Pessoa Jurídica (CNPJ) is the 14-digit national registry of legal entities in Brazil in the format XX.XXX.XXX/YYYY-ZZ.",
+        "howToUse": [
+          "Choose between Headquarters (0001) or Branch establishment types.",
+          "Select mask format and quantity, then click Generate Valid CNPJ.",
+          "Switch to Company Lookup to inspect real company registration details."
+        ],
+        "whyItMatters": "Simplifies testing invoice integrations, payment gateways, and B2B validation logic.",
+        "proTip": "Click the Lookup button next to any generated CNPJ to verify its public status immediately."
+      }
+    },
+    "uuidGenerator": {
+      "metaTitle": "Free Online UUID / GUID Generator — ToolNotch",
+      "metaDescription": "Generate cryptographically secure UUID v4, v1, and v7 in bulk. Choose uppercase, hyphens, JSON/TXT export, and inspect existing UUIDs.",
+      "title": "UUID / GUID Generator",
+      "description": "Generate bulk universal unique identifiers (UUID v4, v1, v7) with formatting options and version inspector.",
+      "tabs": {
+        "generate": "UUID Generator",
+        "inspect": "Inspector / Validator"
+      },
+      "options": {
+        "version": "UUID Version",
+        "quantity": "Quantity",
+        "uppercase": "Uppercase (A-Z)",
+        "hyphens": "With hyphens (-)",
+        "braces": "With braces { }"
+      },
+      "button": {
+        "generate": "Generate UUIDs"
+      },
+      "results": {
+        "title": "Generated UUIDs",
+        "copy": "Copy",
+        "copied": "Copied!",
+        "copyAll": "Copy All",
+        "copiedAll": "All Copied!"
+      },
+      "inspect": {
+        "inputLabel": "Enter or paste a UUID to inspect",
+        "hint": "Analyzes RFC 4122 / RFC 9562 compliance, extracting version, variant, and creation timestamp.",
+        "validTitle": "Valid UUID!",
+        "invalidTitle": "Invalid UUID!"
+      },
+      "faqs": [
+        {
+          "question": "What is the difference between UUID v4, v1, and v7?",
+          "answer": "UUID v4 is cryptographically random. UUID v1 is timestamp-based. UUID v7 (RFC 9562) is Unix-epoch time-ordered, making it ideal for primary keys in B-Tree indexed databases like PostgreSQL and MySQL."
+        },
+        {
+          "question": "Can UUID v4 have collisions?",
+          "answer": "The probability of collision in UUID v4 is approximately 1 in 5.3 x 10^36, making collisions practically impossible."
+        }
+      ],
+      "richContent": {
+        "whatIs": "A Universally Unique Identifier (UUID / GUID) is a 128-bit identifier standardized by RFC 4122 and RFC 9562, represented as 32 hexadecimal digits in a 8-4-4-4-12 pattern.",
+        "howToUse": [
+          "Select the UUID version (v4 for random, v7 for time-ordered).",
+          "Toggle uppercase, hyphens, and brace options.",
+          "Choose count and click Generate UUIDs.",
+          "Copy all to clipboard or download as JSON or .txt."
+        ],
+        "whyItMatters": "UUIDs remove the need for centralized coordination when generating unique IDs in distributed architectures and microservices.",
+        "proTip": "For database primary keys, prefer UUID v7 to optimize B-Tree index locality."
+      }
+    },
+    "jsonFormatter": {
+      "metaTitle": "Free Online JSON Formatter & Validator — ToolNotch",
+      "metaDescription": "Format, prettify, minify, and validate JSON code with real-time syntax diagnostics, line/column error highlights, and compression stats.",
+      "title": "JSON Formatter & Validator",
+      "description": "Prettify, minify, and validate JSON code with instant syntax diagnostics, compression metrics, and file export.",
+      "button": {
+        "format": "Format JSON",
+        "minify": "Minify",
+        "loadSample": "Load Sample",
+        "clear": "Clear",
+        "copy": "Copy",
+        "download": "Download .json"
+      },
+      "status": {
+        "validJson": "Valid & Well-Formed JSON",
+        "invalidJson": "JSON Syntax Error"
+      },
+      "inputPlaceholder": "Paste or type your JSON code here...",
+      "faqs": [
+        {
+          "question": "Is my JSON payload sent to any server?",
+          "answer": "No. All parsing, validation, and formatting is executed entirely inside your browser."
+        },
+        {
+          "question": "How does syntax error detection work?",
+          "answer": "The validator pinpoints the exact line, column, and token where syntax errors occur (such as trailing commas, unclosed brackets, or unquoted keys)."
+        }
+      ],
+      "richContent": {
+        "whatIs": "JSON (JavaScript Object Notation) is the standard lightweight data-interchange format for REST APIs and configuration files.",
+        "howToUse": [
+          "Paste your JSON into the editor.",
+          "Click Format JSON to indent with 2 or 4 spaces.",
+          "Click Minify to compress into a single line.",
+          "Copy or download the resulting .json file."
+        ],
+        "whyItMatters": "Crucial for debugging API responses, formatting config files, and compressing payloads for network efficiency.",
+        "proTip": "Use minify mode to reduce network bandwidth and format mode for readability during code reviews."
+      }
+    },
+    "base64Converter": {
+      "metaTitle": "Free Online Base64 Encoder & Decoder — ToolNotch",
+      "metaDescription": "Encode text to Base64 and decode Base64 to text with full UTF-8 support, special characters, emojis, and URL-Safe mode.",
+      "title": "Base64 Encoder & Decoder",
+      "description": "Convert text and payloads between standard/URL-safe format and Base64 instantly in your browser.",
+      "tabs": {
+        "encode": "Encode (Text → Base64)",
+        "decode": "Decode (Base64 → Text)"
+      },
+      "input": {
+        "encodeLabel": "Original Text (Input)",
+        "decodeLabel": "Base64 Code (Input)",
+        "encodePlaceholder": "Type or paste text to encode in Base64...",
+        "decodePlaceholder": "Paste Base64 code to decode..."
+      },
+      "output": {
+        "encodeLabel": "Base64 Result",
+        "decodeLabel": "Decoded Text"
+      },
+      "faqs": [
+        {
+          "question": "Does this tool support non-ASCII characters and emojis?",
+          "answer": "Yes. Our encoder uses standard UTF-8 byte streams, ensuring international characters and emojis are preserved perfectly."
+        },
+        {
+          "question": "What is URL-Safe Base64?",
+          "answer": "URL-Safe Base64 substitutes + and / with - and _ to prevent conflicts in URL parameters and JWT tokens."
+        }
+      ],
+      "richContent": {
+        "whatIs": "Base64 is a binary-to-text encoding scheme that represents binary data as an ASCII string format.",
+        "howToUse": [
+          "Select Encode or Decode tab.",
+          "Enter text on the left panel to see real-time output on the right.",
+          "Toggle URL-Safe mode if using in query strings or tokens."
+        ],
+        "whyItMatters": "Allows safely transmitting binary data across text-only channels like JSON payloads and HTTP headers.",
+        "proTip": "Base64 is an encoding mechanism, not encryption. Do not use it alone to protect sensitive credentials."
+      }
+    },
+    "hashGenerator": {
+      "metaTitle": "Free Online MD5, SHA-256 & SHA-512 Hash Generator — ToolNotch",
+      "metaDescription": "Generate MD5, SHA-1, SHA-256, SHA-384, SHA-512, and HMAC hashes in real time with built-in hash verification.",
+      "title": "Cryptographic Hash Generator",
+      "description": "Compute cryptographic checksums (MD5, SHA-256, SHA-512, HMAC) in real time and verify hash integrity.",
+      "input": {
+        "label": "Input Text",
+        "placeholder": "Type or paste text to generate cryptographic hashes..."
+      },
+      "options": {
+        "secretKey": "HMAC Secret Key",
+        "uppercase": "Uppercase Output"
+      },
+      "results": {
+        "title": "Generated Cryptographic Hashes"
+      },
+      "compare": {
+        "title": "Hash Verifier & Integrity Comparator"
+      },
+      "faqs": [
+        {
+          "question": "Can cryptographic hashes be reversed to recover the original text?",
+          "answer": "No. Cryptographic hashes are one-way mathematical functions designed to be irreversible."
+        },
+        {
+          "question": "Which hash algorithm should I use?",
+          "answer": "For security, integrity verification, and digital signatures, SHA-256 or SHA-512 are industry standard. MD5 and SHA-1 remain useful for quick checksums."
+        }
+      ],
+      "richContent": {
+        "whatIs": "A cryptographic hash function converts arbitrary input data into a fixed-length string of hexadecimal digits. A single character change drastically alters the hash output (avalanche effect).",
+        "howToUse": [
+          "Enter text into the input field.",
+          "Optionally add a secret key for HMAC computation.",
+          "Copy any hash with a single click.",
+          "Use the Verifier section to compare incoming hashes."
+        ],
+        "whyItMatters": "Essential for verifying file downloads, securing API webhooks (Stripe, GitHub), and password hashing.",
+        "proTip": "Use HMAC-SHA256 with a secret key when verifying webhook signatures from external APIs."
       }
     }
   },
