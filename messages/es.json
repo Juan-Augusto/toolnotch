@@ -4727,5 +4727,43 @@
   },
   "relatedQuizzes": {
     "heading": "Más quizzes como este"
+  },
+  "affiliate": {
+    "label": "Herramienta recomendada",
+    "dismiss": "Cerrar",
+    "disclosure": "Algunos enlaces de arriba son enlaces de afiliado. Si te registras a través de ellos, podemos recibir una comisión, sin costo adicional para ti.",
+    "offers": {
+      "quillbot-paraphraser": {
+        "name": "Herramienta de Parafraseo de QuillBot",
+        "cta": "Probar el parafraseador de QuillBot",
+        "blurb": "Reescribe frases en distintos tonos y estilos con un parafraseador de IA. Versión gratuita disponible."
+      },
+      "quillbot-humanizer": {
+        "name": "Humanizador de IA de QuillBot",
+        "cta": "Probar el Humanizador de IA de QuillBot",
+        "blurb": "Convierte borradores generados por IA en un texto natural, que suena humano y se lee con fluidez."
+      },
+      "quillbot-detector": {
+        "name": "Detector de IA de QuillBot",
+        "cta": "Probar el Detector de IA de QuillBot",
+        "blurb": "Comprueba si un texto probablemente lo escribió una IA antes de enviarlo o publicarlo."
+      }
+    },
+    "partners": {
+      "navLabel": "Nuestros Socios",
+      "viewAll": "Ver todos los socios",
+      "metaTitle": "Nuestros Socios — Herramientas que Recomendamos",
+      "metaDescription": "Las herramientas de pago que recomendamos y con las que colaboramos. Los enlaces de afiliado ayudan a mantener ToolNotch gratis.",
+      "title": "Nuestros Socios",
+      "subtitle": "Herramientas de pago que usamos, en las que confiamos y que recomendamos.",
+      "intro": "ToolNotch es gratis y no tiene muro de pago. Algunas de las herramientas que te recomendamos son productos de pago de empresas con las que tenemos un acuerdo de afiliado: si te registras a través de un enlace de esta página, nos pagan una comisión sin costo adicional para ti. Solo incluimos herramientas que recomendaríamos de todos modos, y esta página crecerá a medida que sumemos socios.",
+      "backHome": "Volver a todas las herramientas",
+      "categories": {
+        "writing": "Escritura y edición",
+        "study": "Estudios e investigación",
+        "finance": "Dinero y finanzas",
+        "productivity": "Productividad"
+      }
+    }
   }
 }

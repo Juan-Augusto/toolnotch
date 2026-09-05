@@ -5241,5 +5241,43 @@
   },
   "relatedQuizzes": {
     "heading": "More quizzes like this"
+  },
+  "affiliate": {
+    "label": "Recommended tool",
+    "dismiss": "Dismiss",
+    "disclosure": "Some links above are affiliate links. If you sign up through them we may earn a commission, at no extra cost to you.",
+    "offers": {
+      "quillbot-paraphraser": {
+        "name": "QuillBot Paraphrasing Tool",
+        "cta": "Try QuillBot's Paraphraser",
+        "blurb": "Rewrite sentences in different tones and styles with an AI paraphraser. Free tier available."
+      },
+      "quillbot-humanizer": {
+        "name": "QuillBot AI Humanizer",
+        "cta": "Try QuillBot's AI Humanizer",
+        "blurb": "Rework AI-generated drafts into natural, human-sounding text that reads smoothly."
+      },
+      "quillbot-detector": {
+        "name": "QuillBot AI Detector",
+        "cta": "Try QuillBot's AI Detector",
+        "blurb": "Check whether a passage was likely written by AI before you submit or publish it."
+      }
+    },
+    "partners": {
+      "navLabel": "Our Partners",
+      "viewAll": "See all partners",
+      "metaTitle": "Our Partners — Tools We Recommend",
+      "metaDescription": "The paid tools we recommend and partner with. Affiliate links here help keep ToolNotch free.",
+      "title": "Our Partners",
+      "subtitle": "Paid tools we use, trust, and recommend.",
+      "intro": "ToolNotch is free and has no paywall. Some of the tools we point you to are paid products from companies we have an affiliate arrangement with — if you sign up through a link on this page, they pay us a commission at no extra cost to you. We only list tools we would recommend anyway, and this page will grow as we add partners.",
+      "backHome": "Back to all tools",
+      "categories": {
+        "writing": "Writing & editing",
+        "study": "Study & research",
+        "finance": "Money & finance",
+        "productivity": "Productivity"
+      }
+    }
   }
 }

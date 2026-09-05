@@ -6,6 +6,8 @@ import { useTranslations } from "next-intl";
 import AdUnit from "./AdUnit";
 import FaqSection, { FaqItem } from "./FaqSection";
 import RelatedContent from "./RelatedContent";
+import AffiliateOffers from "./AffiliateOffers";
+import AffiliateStickyBar from "./AffiliateStickyBar";
 import { AD_SLOTS } from "@/lib/adSlots";
 import { buildJsonLd, howToSchema } from "@/lib/schema";
 
@@ -159,6 +161,10 @@ export default function ToolWrapper({
             {children}
           </div>
         )}
+
+        {/* Contextual affiliate offer (sponsored, disclosed) — near the tool
+            focus; renders only on mapped tools */}
+        <AffiliateOffers />
 
         {/* Rich content */}
         {richContent && Array.isArray(richContent.howToUse) && (
@@ -314,6 +320,9 @@ export default function ToolWrapper({
           <FaqSection faqs={faqs} />
         </div>
       </div>
+
+      {/* Dismissible sticky affiliate bar — renders only on mapped tools */}
+      <AffiliateStickyBar />
     </main>
   );
 }
