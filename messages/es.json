@@ -3500,7 +3500,10 @@
     "toolsP2": "Se añaden herramientas nuevas regularmente según lo que la gente realmente necesita. Si quieres sugerir una herramienta, el enlace de GitHub de arriba es el mejor lugar para hacerlo.",
     "partnersTitle": "Socios y financiación",
     "partnersNote": "ToolNotch no tiene muro de pago y no almacena datos. Se financia con publicidad y con comisiones de afiliado de un pequeño conjunto de herramientas de pago que recomendamos: si te registras a través de uno de esos enlaces, la empresa nos paga sin costo adicional para ti. Solo recomendamos herramientas que usaríamos y una recomendación nunca está influida por una comisión.",
-    "partnersLink": "Ver nuestros socios"
+    "partnersLink": "Ver nuestros socios",
+    "fundedTitle": "Cómo se financia ToolNotch",
+    "fundedP1": "ToolNotch es gratuito y no tiene plan de pago, ni suscripción, ni nada bloqueado tras un inicio de sesión. El sitio se financia por completo con la publicidad gráfica de Google AdSense. Los anuncios aparecen en espacios fijos alrededor de la página y encima de las preguntas frecuentes: nunca dentro de una herramienta mientras la usas, nunca como ventana emergente y nunca entre los pasos de una tarea. Si los ingresos por publicidad alguna vez superan los costes de alojamiento, el excedente vuelve a la creación y el mantenimiento de más herramientas.",
+    "fundedP2": "La publicidad es también la razón por la que la política de privacidad importa aquí. Google y sus socios usan cookies para mostrar y medir anuncios, y los datos de analítica se recogen mediante Google Analytics. Qué recogemos, por qué y cómo darte de baja se describe por completo en la Política de Privacidad, enlazada en el pie de cada página."
   },
   "terms": {
     "metaTitle": "Términos de Servicio | ToolNotch",
@@ -3609,26 +3612,31 @@
   },
   "contact": {
     "metaTitle": "Contacto | ToolNotch",
-    "metaDescription": "Ponte en contacto con el equipo de ToolNotch. Reporta un error, sugiere una herramienta o consulta sobre colaboraciones.",
+    "metaDescription": "Ponte en contacto con ToolNotch. Reporta un error, sugiere una herramienta, consulta sobre publicidad o envía una solicitud de privacidad.",
     "backHome": "Volver a ToolNotch",
     "heading": "Contáctanos",
-    "intro": "¿Tienes una pregunta, encontraste un error o quieres sugerir una herramienta? Nos encanta saber de ti.",
+    "intro": "ToolNotch está creado y gestionado por un solo desarrollador, Juan Soares. El correo electrónico es el único canal: no hay portal de soporte, ni cola de tickets, ni cuenta con la que iniciar sesión. Cada mensaje llega directamente a una persona, y casi todas las herramientas, correcciones y funciones del sitio empezaron como un correo de alguien que lo usa.",
     "emailLabel": "Escríbenos a",
     "categories": {
       "bugs": {
         "title": "Reportes de Errores",
-        "description": "Describe la herramienta, tu navegador y lo que salió mal. Las capturas de pantalla son siempre de ayuda."
+        "description": "Indícanos qué herramienta falló, qué navegador y sistema operativo usabas y los pasos exactos que llevaron al problema. Una captura de pantalla o una grabación breve del error hace mucho más rápido reproducirlo y corregirlo."
       },
       "features": {
         "title": "Solicitudes de Funcionalidades",
-        "description": "¿Qué herramienta o función te sería útil? Cuéntanos qué estás intentando lograr."
+        "description": "Describe la tarea que intentas terminar, no solo el nombre de la función. Conocer el objetivo de fondo suele llevar a una herramienta mejor que la imaginada al principio. Las solicitudes que responden a una necesidad real y recurrente suelen publicarse en unas pocas semanas."
       },
       "business": {
-        "title": "Consultas Comerciales",
-        "description": "Asociaciones, contenido patrocinado y publicidad — escríbenos y te responderemos a la brevedad."
+        "title": "Publicidad y Colaboraciones",
+        "description": "ToolNotch se financia por completo con publicidad gráfica. Para patrocinios, colaboraciones de contenido o consultas sobre publicidad, escribe a la dirección de arriba con una breve descripción de tu empresa y de lo que tienes en mente."
       }
     },
-    "responseTime": "Normalmente respondemos en un plazo de 1 a 2 días hábiles."
+    "noFilesTitle": "No podemos recuperar tus archivos",
+    "noFilesBody": "Todas las herramientas basadas en archivos de ToolNotch —el compresor de imágenes, unir y dividir PDF, los conversores de formato y las demás— se ejecutan por completo dentro de tu navegador. Los archivos nunca se suben ni se guardan en nuestros servidores, así que, si has perdido un documento, no hay nada de nuestro lado que recuperar. Guarda siempre tu propia copia de todo lo importante antes de procesarlo.",
+    "privacyTitle": "Privacidad y solicitudes de datos",
+    "privacyBody": "Como las herramientas se ejecutan en el navegador y no almacenamos cuentas ni archivos subidos, hay muy pocos datos personales que solicitar o eliminar. Los datos de analítica y de publicidad los gestiona Google. Para cualquier solicitud de acceso o eliminación, escríbenos y te indicaremos el proceso correcto. Todos los detalles están en nuestra",
+    "privacyLinkLabel": "Política de Privacidad",
+    "responseTime": "Una sola persona lee cada correo. Normalmente respondemos en un plazo de 1 a 2 días hábiles; los reportes de error detallados pueden tardar más mientras reproducimos el problema."
   },
   "blog": {
     "indexTitle": "Blog — Guías Gratuitas y Tutoriales de Calculadoras",

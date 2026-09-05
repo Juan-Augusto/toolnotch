@@ -10,15 +10,20 @@ interface FooterProps {
 export default function Footer({ locale }: FooterProps) {
   const t = useTranslations("footer");
 
+  // English has no URL prefix (next-intl localePrefix: 'as-needed'). Prefixing
+  // it anyway ("/en/about") makes every English-page footer link a 307 redirect
+  // to the canonical path — crawl waste flagged by the WS-6 link audit.
+  const prefix = locale === "en" ? "" : `/${locale}`;
+
   const navLinks = [
-    { label: t("links.allTools"), href: `/${locale}` },
-    { label: t("links.blog"), href: `/${locale}/blog` },
-    { label: t("links.about"), href: `/${locale}/about` },
-    { label: t("links.partners"), href: `/${locale}/partners` },
-    { label: t("links.privacy"), href: `/${locale}/privacy` },
-    { label: t("links.terms"), href: `/${locale}/terms` },
-    { label: t("links.disclosure"), href: `/${locale}/disclosure` },
-    { label: t("links.contact"), href: `/${locale}/contact` },
+    { label: t("links.allTools"), href: prefix || "/" },
+    { label: t("links.blog"), href: `${prefix}/blog` },
+    { label: t("links.about"), href: `${prefix}/about` },
+    { label: t("links.partners"), href: `${prefix}/partners` },
+    { label: t("links.privacy"), href: `${prefix}/privacy` },
+    { label: t("links.terms"), href: `${prefix}/terms` },
+    { label: t("links.disclosure"), href: `${prefix}/disclosure` },
+    { label: t("links.contact"), href: `${prefix}/contact` },
   ];
 
   return (

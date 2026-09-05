@@ -38,6 +38,9 @@ interface Props {
 
 export default async function InterviewHubPage({ params }: Props) {
   const { locale } = await params
+  // English has no URL prefix (localePrefix: 'as-needed') — prefixing it makes
+  // the link a 307 redirect to the canonical path (WS-6 link audit).
+  const lp = locale === 'en' ? '' : `/${locale}`
   const flags = await getFlags()
   return (
     <>
@@ -81,7 +84,7 @@ export default async function InterviewHubPage({ params }: Props) {
         </div>
         <div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', marginBottom: '2.5rem' }}>
           <Link
-            href={`/${locale}/interview/typescript`}
+            href={`${lp}/interview/typescript`}
             className="interview-card"
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
@@ -173,14 +176,14 @@ export default async function InterviewHubPage({ params }: Props) {
           ].filter(({ flagKey }) => flags[flagKey] === true)
            .map(({ slug, title, description, accent }) => {
             const href =
-              slug === 'database-design'     ? `/${locale}/interview/database-design` :
-              slug === 'messaging-sqs-kafka'  ? `/${locale}/interview/messaging-sqs-kafka` :
-              slug === 'rabbitmq-concepts'    ? `/${locale}/interview/rabbitmq-concepts` :
-              slug === 'database-indexing'    ? `/${locale}/interview/database-indexing` :
-              slug === 'nodejs-fundamentals'  ? `/${locale}/interview/nodejs-fundamentals` :
-              slug === 'system-architecture'  ? `/${locale}/interview/system-architecture` :
-              slug === 'vue'                  ? `/${locale}/interview/vue` :
-              `/${locale}/quiz/${slug}`
+              slug === 'database-design'     ? `${lp}/interview/database-design` :
+              slug === 'messaging-sqs-kafka'  ? `${lp}/interview/messaging-sqs-kafka` :
+              slug === 'rabbitmq-concepts'    ? `${lp}/interview/rabbitmq-concepts` :
+              slug === 'database-indexing'    ? `${lp}/interview/database-indexing` :
+              slug === 'nodejs-fundamentals'  ? `${lp}/interview/nodejs-fundamentals` :
+              slug === 'system-architecture'  ? `${lp}/interview/system-architecture` :
+              slug === 'vue'                  ? `${lp}/interview/vue` :
+              `${lp}/quiz/${slug}`
             return (
             <Link key={slug} href={href} className="interview-card">
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
