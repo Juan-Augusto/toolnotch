@@ -48,6 +48,8 @@ interface ToolWrapperProps {
   maxWidth?: string;
   noCardWrapper?: boolean;
   extraContent?: React.ReactNode;
+  /** Set on pages that already emit their own HowTo JSON-LD, to avoid a duplicate. */
+  suppressHowToSchema?: boolean;
 }
 
 export default function ToolWrapper({
@@ -61,14 +63,16 @@ export default function ToolWrapper({
   children,
   maxWidth,
   noCardWrapper,
+  suppressHowToSchema,
 }: ToolWrapperProps) {
   const t = useTranslations("toolWrapper");
   const tc = useTranslations("common");
 
   // WS-5 item 2: calculator/how-to tools describe a procedure via
   // `richContent.howToUse`. Emit a `HowTo` graph for them (additive — the page
-  // still emits its own WebApplication/FAQPage/BreadcrumbList).
-  const howToSteps = Array.isArray(richContent?.howToUse)
+  // still emits its own WebApplication/FAQPage/BreadcrumbList). Pages that
+  // already emit their own HowTo pass `suppressHowToSchema`.
+  const howToSteps = !suppressHowToSchema && Array.isArray(richContent?.howToUse)
     ? richContent.howToUse.filter((s) => typeof s === "string" && s.trim().length > 0)
     : [];
   const howToJsonLd =

@@ -83,6 +83,7 @@ export default async function GpaCalculatorPage({ params }: Props) {
         breadcrumbLabel={t('title')}
         faqs={faqs}
         richContent={richContent}
+        suppressHowToSchema
         extraContent={
           <BrGradeConversionTable
             heading={brConversion.heading}

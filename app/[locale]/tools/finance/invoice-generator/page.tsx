@@ -82,6 +82,7 @@ export default async function InvoiceGeneratorPage({ params }: Props) {
         breadcrumbLabel={t("title")}
         faqs={faqs}
         richContent={richContent}
+        suppressHowToSchema
         noCardWrapper
       >
         <InvoiceBuilder />
