@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import AdUnit from "./AdUnit";
 import FaqSection, { FaqItem } from "./FaqSection";
 import RelatedContent from "./RelatedContent";
+import AffiliateOffers from "./AffiliateOffers";
 import { AD_SLOTS } from "@/lib/adSlots";
 import { buildJsonLd, howToSchema } from "@/lib/schema";
 
@@ -308,6 +309,9 @@ export default function ToolWrapper({
 
         {/* Contextual internal links (WS-5): >= 2 related tools + >= 1 guide */}
         <RelatedContent />
+
+        {/* Contextual affiliate offers (sponsored, disclosed) — renders only on mapped tools */}
+        <AffiliateOffers />
 
         {/* FAQ */}
         <div className="no-print">

@@ -4732,5 +4732,26 @@
   },
   "relatedQuizzes": {
     "heading": "Mais quizzes como este"
+  },
+  "affiliate": {
+    "label": "Ferramenta recomendada",
+    "disclosure": "Alguns links acima são links de afiliado. Se você se cadastrar por eles, podemos receber uma comissão, sem custo adicional para você.",
+    "offers": {
+      "quillbot-paraphraser": {
+        "name": "Ferramenta de Paráfrase da QuillBot",
+        "cta": "Testar o parafraseador da QuillBot",
+        "blurb": "Reescreva frases em diferentes tons e estilos com um parafraseador de IA. Versão gratuita disponível."
+      },
+      "quillbot-humanizer": {
+        "name": "Humanizador de IA da QuillBot",
+        "cta": "Testar o Humanizador de IA da QuillBot",
+        "blurb": "Transforme rascunhos gerados por IA em um texto natural, que soa humano e flui bem."
+      },
+      "quillbot-detector": {
+        "name": "Detector de IA da QuillBot",
+        "cta": "Testar o Detector de IA da QuillBot",
+        "blurb": "Verifique se um trecho provavelmente foi escrito por IA antes de enviar ou publicar."
+      }
+    }
   }
 }
