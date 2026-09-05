@@ -5,11 +5,11 @@ import { useTranslations } from "next-intl";
 import { getAffiliateOffers } from "@/lib/affiliateOffers";
 
 /**
- * Contextual affiliate panel rendered inside ToolWrapper (below RelatedContent,
- * above the FAQ). Self-deriving from the pathname like RelatedContent, so no
- * per-page wiring is needed. Renders nothing when the current tool has no
- * mapped offers. Links are `sponsored nofollow` and the panel carries a
- * visible affiliate disclosure.
+ * Prominent contextual affiliate card, rendered inside ToolWrapper directly
+ * below the tool itself (before the long-form rich content) so it sits near
+ * the page focus. Self-derives the current tool from the pathname; renders
+ * nothing when the tool has no mapped offer. Links are `sponsored nofollow`
+ * and the card carries a visible affiliate disclosure.
  */
 
 const LOCALE_PREFIX = /^\/(pt|es)(?=\/|$)/;
@@ -21,39 +21,53 @@ export default function AffiliateOffers() {
   const t = useTranslations("affiliate");
 
   if (offers.length === 0) return null;
+  const primary = offers[0];
+  const rest = offers.slice(1);
 
   return (
-    <div
-      className="mt-12 animate-fade-in-up no-print"
-      style={{ color: "var(--text-secondary)", animationDelay: "160ms" }}
-    >
+    <div className="mt-6 card-neon p-5 no-print">
       <p
-        className="text-xs font-bold mb-3 uppercase tracking-widest"
+        className="text-[10px] font-bold mb-2 uppercase tracking-widest"
         style={{ color: "var(--neon)" }}
       >
         {t("label")}
       </p>
-      <ul className="space-y-3">
-        {offers.map((o) => (
-          <li key={o.key} className="leading-relaxed">
+      <p
+        className="text-base font-semibold"
+        style={{ color: "var(--text-primary)" }}
+      >
+        {t(`offers.${primary.key}.name`)}
+      </p>
+      <p
+        className="text-sm mt-1 mb-4 leading-relaxed"
+        style={{ color: "var(--text-secondary)" }}
+      >
+        {t(`offers.${primary.key}.blurb`)}
+      </p>
+      <a
+        href={primary.href}
+        target="_blank"
+        rel="sponsored nofollow noopener"
+        className="btn-neon"
+      >
+        {t(`offers.${primary.key}.cta`)} &rarr;
+      </a>
+      {rest.length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1">
+          {rest.map((o) => (
             <a
+              key={o.key}
               href={o.href}
               target="_blank"
               rel="sponsored nofollow noopener"
-              className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
+              className="text-xs text-blue-600 dark:text-blue-400 hover:underline"
             >
               {t(`offers.${o.key}.cta`)} &rarr;
             </a>
-            <span
-              className="block text-xs mt-0.5"
-              style={{ color: "var(--text-muted)" }}
-            >
-              {t(`offers.${o.key}.blurb`)}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <p className="text-xs mt-3" style={{ color: "var(--text-muted)" }}>
+          ))}
+        </div>
+      )}
+      <p className="text-[11px] mt-3" style={{ color: "var(--text-muted)" }}>
         {t("disclosure")}
       </p>
     </div>
