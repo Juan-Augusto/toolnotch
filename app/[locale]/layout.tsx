@@ -130,9 +130,12 @@ export default async function LocaleLayout({
           }}
         />
         <meta name="theme-color" content="#2563eb" />
+        {/* Impact.com verifier expects `value=`, not `content=` — spread to bypass React's meta typing */}
         <meta
-          name="impact-site-verification"
-          value="1f626162-6489-4f3f-9389-cc89d71457ba"
+          {...({
+            name: "impact-site-verification",
+            value: "1f626162-6489-4f3f-9389-cc89d71457ba",
+          } as Record<string, string>)}
         />
         {ADSENSE_ID && (
           <meta name="google-adsense-account" content={ADSENSE_ID} />
