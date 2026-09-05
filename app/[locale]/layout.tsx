@@ -130,6 +130,10 @@ export default async function LocaleLayout({
           }}
         />
         <meta name="theme-color" content="#2563eb" />
+        <meta
+          name="impact-site-verification"
+          value="1f626162-6489-4f3f-9389-cc89d71457ba"
+        />
         {ADSENSE_ID && (
           <meta name="google-adsense-account" content={ADSENSE_ID} />
         )}
