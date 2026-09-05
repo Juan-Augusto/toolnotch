@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import ToolsSection from "@/components/ToolsSection";
-import { localizedPath } from "@/lib/i18nMeta";
+import { localizedPath, buildAlternates } from "@/lib/i18nMeta";
 import { BLOG_SLUG_GROUPS, type BlogLocale } from "@/data/blog/slugTranslations";
 
 interface Props {
@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t("title"),
     description: t("description"),
+    alternates: buildAlternates("/"),
   };
 }
 

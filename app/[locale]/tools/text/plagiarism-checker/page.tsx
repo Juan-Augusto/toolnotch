@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Plagiarism Checker — Free Online Plagiarism Detection',
   description: 'Check your text for plagiarism against the web for free. Highlights matching sources with similarity scores.',
+  // Coming-soon stub — noindex until it ships real content (WS-5 audit; WS-6 follow-up).
+  robots: { index: false },
 }
 
 export default function PlagiarismCheckerPage() {
