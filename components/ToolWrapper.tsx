@@ -5,7 +5,9 @@ import { ArrowLeft, ChevronRight, Home, ShieldCheck } from "lucide-react";
 import { useTranslations } from "next-intl";
 import AdUnit from "./AdUnit";
 import FaqSection, { FaqItem } from "./FaqSection";
+import RelatedContent from "./RelatedContent";
 import { AD_SLOTS } from "@/lib/adSlots";
+import { buildJsonLd, howToSchema } from "@/lib/schema";
 
 interface RichContentSection {
   heading: string;
@@ -63,8 +65,25 @@ export default function ToolWrapper({
   const t = useTranslations("toolWrapper");
   const tc = useTranslations("common");
 
+  // WS-5 item 2: calculator/how-to tools describe a procedure via
+  // `richContent.howToUse`. Emit a `HowTo` graph for them (additive — the page
+  // still emits its own WebApplication/FAQPage/BreadcrumbList).
+  const howToSteps = Array.isArray(richContent?.howToUse)
+    ? richContent.howToUse.filter((s) => typeof s === "string" && s.trim().length > 0)
+    : [];
+  const howToJsonLd =
+    howToSteps.length >= 2
+      ? buildJsonLd(howToSchema(t("howToSchemaName", { title }), howToSteps))
+      : null;
+
   return (
     <main className="min-h-screen" style={{ background: "var(--background)" }}>
+      {howToJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+        />
+      )}
       <div className={`${maxWidth ?? "max-w-4xl"} mx-auto px-4 py-8`}>
         {/* Breadcrumb + Back */}
         <div className="flex items-center justify-between mb-10 no-print">
@@ -282,6 +301,9 @@ export default function ToolWrapper({
               </ul>
             </div>
           )}
+
+        {/* Contextual internal links (WS-5): >= 2 related tools + >= 1 guide */}
+        <RelatedContent />
 
         {/* FAQ */}
         <div className="no-print">

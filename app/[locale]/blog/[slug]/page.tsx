@@ -10,6 +10,17 @@ import { findSlugGroup, BLOG_LOCALES } from '@/data/blog/slugTranslations'
 import { getBlogPostSource, getAllMdxSlugs, getAllMdxBlogPosts, guardDescription } from '@/lib/content/blogRepository'
 import { mdxComponents } from '@/components/blog/mdxComponents'
 import ArticleLayout from '@/components/blog/ArticleLayout'
+import { resolveBlogRelated } from '@/lib/relatedContent'
+import { localizedPath } from '@/lib/i18nMeta'
+
+/** WS-5: resolve >= 2 contextual tool links for a post, locale-prefixed. */
+async function relatedToolsFor(slug: string, locale: string, category?: string) {
+  const th = await getTranslations({ locale, namespace: 'home' })
+  return resolveBlogRelated(slug, category).map((spec) => ({
+    href: localizedPath(spec.path ?? '/', locale),
+    label: th(`tools.${spec.labelKey}.label`),
+  }))
+}
 
 // rehype-pretty-code options — dual theme for dark mode
 const rehypePrettyCodeOptions = {
@@ -159,6 +170,7 @@ export default async function BlogArticlePage({ params }: Props) {
           locale={locale}
           showAuthorBio={true}
           relatedPosts={relatedPosts}
+          relatedTools={await relatedToolsFor(slug, locale, currentCategory)}
         >
           <MDXRemote
             source={source}
@@ -235,6 +247,7 @@ export default async function BlogArticlePage({ params }: Props) {
         relatedToolName={relatedToolName}
         locale={locale}
         relatedPosts={relatedPosts}
+        relatedTools={await relatedToolsFor(slug, locale, post.category)}
       >
         <p className="text-gray-500 dark:text-gray-400 italic">
           Article content coming soon.

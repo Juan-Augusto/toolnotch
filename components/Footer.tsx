@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Github } from "lucide-react";
 import { useTranslations } from "next-intl";
+import SiteNavIndex from "./SiteNavIndex";
 
 interface FooterProps {
   locale: string;
@@ -10,6 +11,7 @@ export default function Footer({ locale }: FooterProps) {
   const t = useTranslations("footer");
 
   const navLinks = [
+    { label: t("links.allTools"), href: `/${locale}` },
     { label: t("links.blog"), href: `/${locale}/blog` },
     { label: t("links.about"), href: `/${locale}/about` },
     { label: t("links.privacy"), href: `/${locale}/privacy` },
@@ -25,6 +27,8 @@ export default function Footer({ locale }: FooterProps) {
       }}
     >
       <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col items-center gap-5">
+        <SiteNavIndex locale={locale} />
+
         <div
           className="text-xs font-bold uppercase tracking-widest"
           style={{

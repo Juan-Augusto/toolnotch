@@ -18,7 +18,9 @@
     "whatIs": "O que é {title}?",
     "howToUse": "Como usar",
     "whyItMatters": "Por que isso importa",
-    "proTip": "Dica profissional"
+    "proTip": "Dica profissional",
+    "relatedContentHeading": "Ferramentas e guias relacionados",
+    "howToSchemaName": "Como usar a {title}"
   },
   "faqSection": {
     "heading": "Perguntas Frequentes"
@@ -2393,7 +2395,10 @@
       "agileTools": "Ferramentas Ágeis & Scrum",
       "sportsQuizzes": "Quiz de Esportes",
       "interviewPrep": "Preparação para Entrevistas",
-      "educationTools": "Ferramentas de Educação"
+      "educationTools": "Ferramentas de Educação",
+      "healthTools": "Saúde e Fitness",
+      "mathTools": "Ferramentas de Matemática",
+      "utilityTools": "Utilitários"
     },
     "tools": {
       "imageCompressor": {
@@ -2643,6 +2648,87 @@
       "gpaUsaGuide": {
         "label": "Guia: GPA para Estudar nos EUA",
         "desc": "Qual GPA as universidades esperam e o que mais conta"
+      },
+      "bmiCalculator": {
+        "label": "Calculadora de IMC"
+      },
+      "tdeeCalculator": {
+        "label": "Calculadora de TDEE"
+      },
+      "calorieDeficitCalculator": {
+        "label": "Calculadora de Déficit Calórico"
+      },
+      "ageCalculator": {
+        "label": "Calculadora de Idade"
+      },
+      "qrCodeGenerator": {
+        "label": "Gerador de QR Code"
+      },
+      "sentenceCounter": {
+        "label": "Contador de Frases"
+      },
+      "keywordDensityChecker": {
+        "label": "Verificador de Densidade de Palavras-chave"
+      },
+      "paraphraser": {
+        "label": "Ferramenta de Paráfrase"
+      },
+      "summarizer": {
+        "label": "Resumidor de Texto"
+      },
+      "plagiarismChecker": {
+        "label": "Verificador de Plágio"
+      },
+      "typingTest": {
+        "label": "Teste de Velocidade de Digitação"
+      },
+      "giveawayPicker": {
+        "label": "Sorteador de Giveaway"
+      },
+      "classroomNamePicker": {
+        "label": "Sorteador de Nomes para Sala de Aula"
+      },
+      "personalLoanCalculator": {
+        "label": "Calculadora de Empréstimo Pessoal"
+      },
+      "refinanceCalculator": {
+        "label": "Calculadora de Refinanciamento"
+      },
+      "interestCalculator": {
+        "label": "Calculadora de Juros"
+      },
+      "debtPayoffCalculator": {
+        "label": "Calculadora de Quitação de Dívidas"
+      },
+      "mortgage30Calculator": {
+        "label": "Calculadora de Financiamento de 30 Anos"
+      },
+      "mortgage15Calculator": {
+        "label": "Calculadora de Financiamento de 15 Anos"
+      },
+      "fhaLoanCalculator": {
+        "label": "Calculadora de Empréstimo FHA"
+      },
+      "vaLoanCalculator": {
+        "label": "Calculadora de Empréstimo VA"
+      },
+      "receiptGenerator": {
+        "label": "Gerador de Recibos"
+      },
+      "cryptoPortfolioTracker": {
+        "label": "Rastreador de Carteira de Criptomoedas"
+      },
+      "invoiceGeneratorCanada": {
+        "label": "Gerador de Faturas do Canadá"
+      },
+      "invoiceGeneratorAustralia": {
+        "label": "Gerador de Faturas da Austrália"
+      },
+      "invoiceGeneratorFreelancers": {
+        "label": "Gerador de Faturas para Freelancers"
+      },
+      "worldCupResult": {
+        "label": "Resultados do Quiz da Copa do Mundo"
       }
     },
     "badge": "Toolnotch | Mais de 40 ferramentas essenciais",
@@ -4247,7 +4333,8 @@
           }
         ]
       }
-    }
+    },
+    "relatedToolsHeading": "Ferramentas gratuitas para este tema"
   },
   "footer": {
     "links": {
@@ -4255,10 +4342,12 @@
       "about": "Sobre",
       "privacy": "Política de Privacidade",
       "terms": "Termos de Serviço",
-      "contact": "Contato"
+      "contact": "Contato",
+      "allTools": "Todas as ferramentas"
     },
     "tagline": "Ferramentas gratuitas direto no seu navegador. Sem cadastro. Sem dados armazenados.",
-    "copyright": "© 2026 ToolNotch · Criado por {name}"
+    "copyright": "© 2026 ToolNotch · Criado por {name}",
+    "siteIndexHeading": "Todas as ferramentas e quizzes"
   },
   "electionCountdown": {
     "metaTitle": "Contagem Regressiva Eleições 2026 — Quantos Dias Faltam? | ToolNotch",
@@ -4640,5 +4729,8 @@
         }
       }
     }
+  },
+  "relatedQuizzes": {
+    "heading": "Mais quizzes como este"
   }
 }

@@ -18,7 +18,9 @@
     "whatIs": "What is {title}?",
     "howToUse": "How to use",
     "whyItMatters": "Why it matters",
-    "proTip": "Pro tip"
+    "proTip": "Pro tip",
+    "relatedContentHeading": "Related tools & guides",
+    "howToSchemaName": "How to use the {title}"
   },
   "faqSection": {
     "heading": "Frequently Asked Questions"
@@ -2842,7 +2844,10 @@
       "agileTools": "Agile & Scrum Tools",
       "sportsQuizzes": "Sports Quizzes",
       "interviewPrep": "Interview Prep",
-      "educationTools": "Education Tools"
+      "educationTools": "Education Tools",
+      "healthTools": "Health & Fitness",
+      "mathTools": "Math Tools",
+      "utilityTools": "Utilities"
     },
     "tools": {
       "imageCompressor": {
@@ -3092,6 +3097,87 @@
       "gpaUsaGuide": {
         "label": "Guide: GPA to Study in the US",
         "desc": "What GPA universities expect, and what else counts"
+      },
+      "bmiCalculator": {
+        "label": "BMI Calculator"
+      },
+      "tdeeCalculator": {
+        "label": "TDEE Calculator"
+      },
+      "calorieDeficitCalculator": {
+        "label": "Calorie Deficit Calculator"
+      },
+      "ageCalculator": {
+        "label": "Age Calculator"
+      },
+      "qrCodeGenerator": {
+        "label": "QR Code Generator"
+      },
+      "sentenceCounter": {
+        "label": "Sentence Counter"
+      },
+      "keywordDensityChecker": {
+        "label": "Keyword Density Checker"
+      },
+      "paraphraser": {
+        "label": "Paraphrasing Tool"
+      },
+      "summarizer": {
+        "label": "Text Summarizer"
+      },
+      "plagiarismChecker": {
+        "label": "Plagiarism Checker"
+      },
+      "typingTest": {
+        "label": "Typing Speed Test"
+      },
+      "giveawayPicker": {
+        "label": "Giveaway Picker"
+      },
+      "classroomNamePicker": {
+        "label": "Classroom Name Picker"
+      },
+      "personalLoanCalculator": {
+        "label": "Personal Loan Calculator"
+      },
+      "refinanceCalculator": {
+        "label": "Refinance Calculator"
+      },
+      "interestCalculator": {
+        "label": "Interest Calculator"
+      },
+      "debtPayoffCalculator": {
+        "label": "Debt Payoff Calculator"
+      },
+      "mortgage30Calculator": {
+        "label": "30-Year Mortgage Calculator"
+      },
+      "mortgage15Calculator": {
+        "label": "15-Year Mortgage Calculator"
+      },
+      "fhaLoanCalculator": {
+        "label": "FHA Loan Calculator"
+      },
+      "vaLoanCalculator": {
+        "label": "VA Loan Calculator"
+      },
+      "receiptGenerator": {
+        "label": "Receipt Generator"
+      },
+      "cryptoPortfolioTracker": {
+        "label": "Crypto Portfolio Tracker"
+      },
+      "invoiceGeneratorCanada": {
+        "label": "Canada Invoice Generator"
+      },
+      "invoiceGeneratorAustralia": {
+        "label": "Australia Invoice Generator"
+      },
+      "invoiceGeneratorFreelancers": {
+        "label": "Freelancer Invoice Generator"
+      },
+      "worldCupResult": {
+        "label": "World Cup Quiz Results"
       }
     },
     "badge": "Toolnotch | Over 40 essential tools",
@@ -4761,7 +4847,8 @@
           }
         ]
       }
-    }
+    },
+    "relatedToolsHeading": "Free tools for this topic"
   },
   "footer": {
     "links": {
@@ -4769,10 +4856,12 @@
       "about": "About",
       "privacy": "Privacy Policy",
       "terms": "Terms of Service",
-      "contact": "Contact"
+      "contact": "Contact",
+      "allTools": "All tools"
     },
     "tagline": "Free tools that run in your browser. No sign-up. No data stored.",
-    "copyright": "© 2026 ToolNotch · Built by {name}"
+    "copyright": "© 2026 ToolNotch · Built by {name}",
+    "siteIndexHeading": "All tools & quizzes"
   },
   "electionCountdown": {
     "metaTitle": "Brazil 2026 Election Countdown | ToolNotch",
@@ -5149,5 +5238,8 @@
         }
       }
     }
+  },
+  "relatedQuizzes": {
+    "heading": "More quizzes like this"
   }
 }

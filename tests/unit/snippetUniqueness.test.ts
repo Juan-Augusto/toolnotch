@@ -1,10 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import {
-  PAIR_CONTENT,
-  PRIORITY_PAIR_SLUGS,
-  getPairContent,
-} from '@/data/conversionPairContent'
+import { PRIORITY_PAIR_SLUGS, getPairContent } from '@/data/conversionPairContent'
 import { QUIZ_REGISTRY } from '@/lib/quizRegistry'
 
 /**
