@@ -12,6 +12,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Footer from "@/components/Footer";
 import "../globals.css";
 import Header from "@/components/Header";
+import { AFFILIATE_PARTNERS } from "@/lib/affiliatePartners";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "";
 const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
@@ -88,6 +89,7 @@ export default async function LocaleLayout({
   const { locale } = await params;
   if (!locales.includes(locale as (typeof locales)[number])) notFound();
   const t = await getTranslations({ locale, namespace: "home" });
+  const tAff = await getTranslations({ locale, namespace: "affiliate" });
   const messages = await getMessages();
   const cookieStore = await cookies();
   const isDark = cookieStore.get("theme")?.value === "dark";
@@ -99,6 +101,18 @@ export default async function LocaleLayout({
     { href: "/blog", label: t("nav.blog") },
     { href: "/about", label: t("nav.about") },
     { href: "/privacy", label: t("nav.privacy") },
+    {
+      href: "/partners",
+      label: tAff("partners.navLabel"),
+      children: [
+        ...AFFILIATE_PARTNERS.map((p) => ({
+          href: p.href,
+          label: tAff(`offers.${p.key}.name`),
+          external: true,
+        })),
+        { href: "/partners", label: tAff("partners.viewAll") },
+      ],
+    },
   ];
 
   return (

@@ -1,7 +1,19 @@
 "use client";
 import Link from "next/link";
 import ToolnotchLogo from "./ToolnotchLogo";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+interface NavChild {
+  href: string;
+  label: string;
+  /** external / affiliate link — opens in a new tab, rel="sponsored nofollow" */
+  external?: boolean;
+}
+interface NavItem {
+  href: string;
+  label: string;
+  children?: NavChild[];
+}
 
 const MenuIcon = () => (
   <svg
@@ -31,12 +43,22 @@ const CloseIcon = () => (
     <path d="m6 6 12 12" />
   </svg>
 );
+const CaretIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="14"
+    height="14"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    aria-hidden="true"
+  >
+    <path d="m6 9 6 6 6-6" />
+  </svg>
+);
 
-export default function Header({
-  navItems,
-}: {
-  navItems: { href: string; label: string }[];
-}) {
+export default function Header({ navItems }: { navItems: NavItem[] }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -84,7 +106,7 @@ const CollapsedMenu = ({
   setIsMenuOpen,
   isMenuOpen,
 }: {
-  navItems: { href: string; label: string }[];
+  navItems: NavItem[];
   setIsMenuOpen: (isOpen: boolean) => void;
   isMenuOpen: boolean;
 }) => {
@@ -122,27 +144,111 @@ const CollapsedMenu = ({
   );
 };
 
+const linkClass =
+  "text-sm text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors";
+
 const MenuItemsContainer = ({
   navItems,
   onItemClick,
 }: {
-  navItems: { href: string; label: string }[];
+  navItems: NavItem[];
   onItemClick?: () => void;
 }) => {
   return (
     <div
       className={`flex flex-col md:flex-row items-center gap-6 transition-all duration-300 ease-in-out ${navItems.length > 0 ? "opacity-100" : "opacity-0"}`}
     >
-      {navItems.map((item) => (
-        <Link
-          key={item.href}
-          href={item.href}
-          onClick={onItemClick}
-          className="text-sm text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+      {navItems.map((item) =>
+        item.children && item.children.length > 0 ? (
+          <NavDropdown key={item.href} item={item} onItemClick={onItemClick} />
+        ) : (
+          <Link
+            key={item.href}
+            href={item.href}
+            onClick={onItemClick}
+            className={linkClass}
+          >
+            {item.label}
+          </Link>
+        ),
+      )}
+    </div>
+  );
+};
+
+const NavDropdown = ({
+  item,
+  onItemClick,
+}: {
+  item: NavItem;
+  onItemClick?: () => void;
+}) => {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onDocPointer = (e: PointerEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("pointerdown", onDocPointer);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("pointerdown", onDocPointer);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  const close = () => {
+    setOpen(false);
+    onItemClick?.();
+  };
+
+  return (
+    <div ref={ref} className="relative w-full md:w-auto">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-haspopup="menu"
+        className={`${linkClass} flex items-center gap-1`}
+      >
+        {item.label}
+        <CaretIcon />
+      </button>
+      {open && (
+        <div
+          role="menu"
+          className="flex flex-col gap-1 mt-2 w-full md:absolute md:right-0 md:top-full md:mt-2 md:w-64 md:rounded-lg md:border md:border-bd-base md:bg-background md:shadow-lg md:p-2 md:z-50"
         >
-          {item.label}
-        </Link>
-      ))}
+          {item.children!.map((child) =>
+            child.external ? (
+              <a
+                key={child.href}
+                href={child.href}
+                target="_blank"
+                rel="sponsored nofollow noopener"
+                onClick={close}
+                className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors px-2 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5"
+              >
+                {child.label}
+              </a>
+            ) : (
+              <Link
+                key={child.href}
+                href={child.href}
+                onClick={close}
+                className="text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:underline px-2 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5"
+              >
+                {child.label}
+              </Link>
+            ),
+          )}
+        </div>
+      )}
     </div>
   );
 };

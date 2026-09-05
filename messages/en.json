@@ -5262,6 +5262,22 @@
         "cta": "Try QuillBot's AI Detector",
         "blurb": "Check whether a passage was likely written by AI before you submit or publish it."
       }
+    },
+    "partners": {
+      "navLabel": "Our Partners",
+      "viewAll": "See all partners",
+      "metaTitle": "Our Partners — Tools We Recommend",
+      "metaDescription": "The paid tools we recommend and partner with. Affiliate links here help keep ToolNotch free.",
+      "title": "Our Partners",
+      "subtitle": "Paid tools we use, trust, and recommend.",
+      "intro": "ToolNotch is free and has no paywall. Some of the tools we point you to are paid products from companies we have an affiliate arrangement with — if you sign up through a link on this page, they pay us a commission at no extra cost to you. We only list tools we would recommend anyway, and this page will grow as we add partners.",
+      "backHome": "Back to all tools",
+      "categories": {
+        "writing": "Writing & editing",
+        "study": "Study & research",
+        "finance": "Money & finance",
+        "productivity": "Productivity"
+      }
     }
   }
 }

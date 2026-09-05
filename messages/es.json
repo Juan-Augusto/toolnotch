@@ -4748,6 +4748,22 @@
         "cta": "Probar el Detector de IA de QuillBot",
         "blurb": "Comprueba si un texto probablemente lo escribió una IA antes de enviarlo o publicarlo."
       }
+    },
+    "partners": {
+      "navLabel": "Nuestros Socios",
+      "viewAll": "Ver todos los socios",
+      "metaTitle": "Nuestros Socios — Herramientas que Recomendamos",
+      "metaDescription": "Las herramientas de pago que recomendamos y con las que colaboramos. Los enlaces de afiliado ayudan a mantener ToolNotch gratis.",
+      "title": "Nuestros Socios",
+      "subtitle": "Herramientas de pago que usamos, en las que confiamos y que recomendamos.",
+      "intro": "ToolNotch es gratis y no tiene muro de pago. Algunas de las herramientas que te recomendamos son productos de pago de empresas con las que tenemos un acuerdo de afiliado: si te registras a través de un enlace de esta página, nos pagan una comisión sin costo adicional para ti. Solo incluimos herramientas que recomendaríamos de todos modos, y esta página crecerá a medida que sumemos socios.",
+      "backHome": "Volver a todas las herramientas",
+      "categories": {
+        "writing": "Escritura y edición",
+        "study": "Estudios e investigación",
+        "finance": "Dinero y finanzas",
+        "productivity": "Productividad"
+      }
     }
   }
 }

@@ -1,39 +1,28 @@
 /**
  * Contextual affiliate offers, keyed by bare (locale-stripped) tool path.
  *
- * Rendered by `components/AffiliateOffers.tsx` inside `ToolWrapper`, below the
- * contextual internal links and above the FAQ. Links carry
- * `rel="sponsored nofollow"` and the panel shows a visible disclosure line.
- * All human-readable copy lives in `messages/*.json` under the `affiliate`
- * namespace (`affiliate.offers.<key>`); this file holds only the routing.
+ * Rendered by `components/AffiliateOffers.tsx` (inline card under the tool) and
+ * `components/AffiliateStickyBar.tsx` (dismissible sticky bar). Each value is a
+ * list of partner keys from `lib/affiliatePartners.ts`, which owns the URL and
+ * category; copy lives in `messages/*.json` under `affiliate.offers.<key>`.
  *
- * Pure data + a pure helper — no framework imports.
+ * Pure data + a pure helper.
  */
 
-export interface AffiliateOffer {
-  /** i18n key under `affiliate.offers` */
-  key: string;
-  /** affiliate tracking URL */
-  href: string;
-}
+import { AFFILIATE_PARTNERS, type AffiliatePartner } from "./affiliatePartners";
 
-const OFFERS: Record<string, AffiliateOffer[]> = {
-  "/tools/text/paraphraser": [
-    { key: "quillbot-paraphraser", href: "https://try.quillbot.com/qcgmri4yh6ck" },
-    { key: "quillbot-humanizer", href: "https://try.quillbot.com/88b200eba182" },
-  ],
-  "/tools/text/summarizer": [
-    { key: "quillbot-paraphraser", href: "https://try.quillbot.com/qcgmri4yh6ck" },
-  ],
-  "/tools/text/plagiarism-checker": [
-    { key: "quillbot-detector", href: "https://try.quillbot.com/Juan-j7hk690xoig5" },
-  ],
-  "/tools/text/readability-checker": [
-    { key: "quillbot-humanizer", href: "https://try.quillbot.com/88b200eba182" },
-  ],
+/** Bare tool path -> ordered partner keys to show on that page. */
+const OFFERS_BY_PATH: Record<string, string[]> = {
+  "/tools/text/paraphraser": ["quillbot-paraphraser", "quillbot-humanizer"],
+  "/tools/text/summarizer": ["quillbot-paraphraser"],
+  "/tools/text/plagiarism-checker": ["quillbot-detector"],
+  "/tools/text/readability-checker": ["quillbot-humanizer"],
 };
 
-/** Offers to show on a tool page, or `[]` when the path has none. */
-export function getAffiliateOffers(barePath: string): AffiliateOffer[] {
-  return OFFERS[barePath] ?? [];
+/** Partners to show on a tool page, in order, or `[]` when the path has none. */
+export function getAffiliateOffers(barePath: string): AffiliatePartner[] {
+  const keys = OFFERS_BY_PATH[barePath] ?? [];
+  return keys
+    .map((k) => AFFILIATE_PARTNERS.find((p) => p.key === k))
+    .filter((p): p is AffiliatePartner => Boolean(p));
 }

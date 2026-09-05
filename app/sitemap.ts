@@ -31,6 +31,7 @@ const TRUST_ROUTES = [
   '/privacy',
   '/terms',
   '/contact',
+  '/partners',
 ]
 
 const ALL_ROUTES = [
