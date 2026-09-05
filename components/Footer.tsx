@@ -14,8 +14,10 @@ export default function Footer({ locale }: FooterProps) {
     { label: t("links.allTools"), href: `/${locale}` },
     { label: t("links.blog"), href: `/${locale}/blog` },
     { label: t("links.about"), href: `/${locale}/about` },
+    { label: t("links.partners"), href: `/${locale}/partners` },
     { label: t("links.privacy"), href: `/${locale}/privacy` },
     { label: t("links.terms"), href: `/${locale}/terms` },
+    { label: t("links.disclosure"), href: `/${locale}/disclosure` },
     { label: t("links.contact"), href: `/${locale}/contact` },
   ];
 

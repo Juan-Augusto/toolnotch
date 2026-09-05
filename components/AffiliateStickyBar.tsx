@@ -4,6 +4,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { getAffiliateOffers } from "@/lib/affiliateOffers";
+import AffiliateLink from "./AffiliateLink";
 
 /**
  * Dismissible sticky bottom bar for the primary affiliate offer on a mapped
@@ -74,10 +75,10 @@ export default function AffiliateStickyBar() {
               {t(`offers.${o.key}.blurb`)}
             </span>
           </p>
-          <a
+          <AffiliateLink
             href={o.href}
-            target="_blank"
-            rel="sponsored nofollow noopener"
+            partnerKey={o.key}
+            placement="sticky-bar"
             className="shrink-0 inline-flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs sm:text-sm font-semibold"
             style={{
               background: "var(--neon-dim)",
@@ -86,7 +87,7 @@ export default function AffiliateStickyBar() {
             }}
           >
             {t(`offers.${o.key}.cta`)} &rarr;
-          </a>
+          </AffiliateLink>
           <button
             type="button"
             onClick={dismiss}

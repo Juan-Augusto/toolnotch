@@ -109,6 +109,7 @@ export default async function LocaleLayout({
           href: p.href,
           label: tAff(`offers.${p.key}.name`),
           external: true,
+          partnerKey: p.key,
         })),
         { href: "/partners", label: tAff("partners.viewAll") },
       ],
