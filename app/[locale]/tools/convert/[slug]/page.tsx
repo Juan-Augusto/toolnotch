@@ -6,7 +6,7 @@ import ConversionWidget from '@/components/converter/ConversionWidget'
 import ConversionValuesTable from '@/components/converter/ConversionValuesTable'
 import RelatedConversions from '@/components/converter/RelatedConversions'
 import { COMMON_PAIRS } from '@/data/conversionPairs'
-import { getPairContent } from '@/data/conversionPairContent'
+import { getPairContent, PRIORITY_PAIR_SLUGS } from '@/data/conversionPairContent'
 import { convert, formatResult } from '@/lib/units'
 import { UNIT_LABELS } from '@/data/units'
 import { buildAlternates } from '@/lib/i18nMeta'
@@ -38,9 +38,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = content?.metaTitle ?? `${pair.title} — Free Online Converter`
   const description = content?.metaDescription ?? pair.description
 
+  // Only the WS-2 priority pairs carry unique, localised, >= 250-word content.
+  // Every other pair is thin (widget + templated FAQs) — noindex it so it
+  // cannot drag down site quality, but keep it crawlable (follow) so the
+  // internal-link graph still flows through it. (WS-5 item 10)
+  const isPriority = (PRIORITY_PAIR_SLUGS as readonly string[]).includes(slug)
+
   return {
     title,
     description,
+    ...(isPriority ? {} : { robots: { index: false, follow: true } }),
     alternates: buildAlternates(`/tools/convert/${slug}`),
     openGraph: {
       title: content?.h1 ?? pair.title,
