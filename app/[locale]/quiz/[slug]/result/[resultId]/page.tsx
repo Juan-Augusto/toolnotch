@@ -5,6 +5,7 @@ import { isTriviaQuiz } from '@/lib/quizTypes'
 import { QUIZ_REGISTRY } from '@/lib/quizRegistry'
 import { getQuizBySlug, getQuizResultIds } from '@/lib/content/quizRepository'
 import { buildJsonLd, breadcrumbSchema } from '@/lib/schema'
+import { buildAlternates } from '@/lib/i18nMeta'
 
 const TRIVIA_TIER_IDS = ['legend', 'expert', 'fan', 'rookie'] as const
 
@@ -44,7 +45,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     return {
       title: `${tier.label} — ${quiz.title} | ToolNotch`,
       description: tier.description.slice(0, 155),
-      alternates: { canonical: `/quiz/${slug}/result/${resultId}` },
+      alternates: buildAlternates(`/quiz/${slug}/result/${resultId}`),
       openGraph: {
         title: `${tier.label} — ${quiz.title}`,
         description: tier.description.slice(0, 155),

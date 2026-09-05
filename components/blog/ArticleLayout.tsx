@@ -16,6 +16,8 @@ interface Props {
   children: React.ReactNode
   showAuthorBio?: boolean
   relatedPosts?: Array<{ slug: string; title: string }>
+  /** WS-5: >= 2 contextual tool links per post. Already locale-prefixed. */
+  relatedTools?: Array<{ href: string; label: string }>
 }
 
 function formatDate(isoDate: string, locale: string): string {
@@ -39,6 +41,7 @@ export default async function ArticleLayout({
   children,
   showAuthorBio,
   relatedPosts,
+  relatedTools,
 }: Props) {
   const t = await getTranslations({ locale, namespace: 'blog' })
   const localizedBlogHref = locale === 'en' ? '/blog' : `/${locale}/blog`
@@ -143,6 +146,27 @@ export default async function ArticleLayout({
               {relatedToolLabel}
             </Link>
           </div>
+        )}
+
+        {/* Related tools (WS-5: >= 2 contextual tool links per post) */}
+        {relatedTools && relatedTools.length > 0 && (
+          <section className="mt-10 pt-8 border-t border-gray-200 dark:border-gray-700">
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+              {t('relatedToolsHeading')}
+            </h2>
+            <ul className="space-y-2">
+              {relatedTools.map((tool) => (
+                <li key={tool.href}>
+                  <Link
+                    href={tool.href}
+                    className="text-blue-600 hover:underline dark:text-blue-400"
+                  >
+                    {tool.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
         )}
 
         {/* Related Articles */}

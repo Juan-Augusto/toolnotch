@@ -52,7 +52,6 @@ export default async function AgeCalculatorPage({ params }: Props) {
         description={t('description')}
         breadcrumbLabel={t('title')}
         faqs={faqs}
-        adSlot="age-calculator"
         richContent={richContent}
       >
         <AgeCalculator locale={locale} />

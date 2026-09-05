@@ -52,7 +52,6 @@ export default async function GradeCalculatorPage({ params }: Props) {
         description={t('gradeDescription')}
         breadcrumbLabel={t('gradeTitle')}
         faqs={faqs}
-        adSlot="grade-calculator"
         richContent={richContent}
       >
         <GradeCalculator />

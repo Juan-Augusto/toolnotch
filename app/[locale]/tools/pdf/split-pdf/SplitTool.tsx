@@ -95,7 +95,6 @@ export default function SplitTool({ title, description, faqs, richContent }: Pro
       description={description}
       breadcrumbLabel={title}
       faqs={faqs}
-      adSlot="1234567891"
       richContent={richContent}
     >
       <div

@@ -86,7 +86,7 @@ export default function SprintDateCalculatorClient({ title, description, faqs, l
   }
 
   return (
-    <ToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} adSlot="sprint-date-calculator" richContent={richContent}>
+    <ToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} richContent={richContent}>
       <div className="max-w-2xl mx-auto space-y-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>

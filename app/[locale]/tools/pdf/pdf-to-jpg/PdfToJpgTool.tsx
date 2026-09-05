@@ -72,7 +72,6 @@ export default function PdfToJpgTool({ title, description, faqs, richContent }: 
       description={description}
       breadcrumbLabel={title}
       faqs={faqs}
-      adSlot="1234567893"
       richContent={richContent}
     >
       <div

@@ -1,11 +1,30 @@
 import type { MetadataRoute } from 'next'
 import { conversionPages } from '@/data/conversionPages'
 import { COMMON_PAIRS } from '@/data/conversionPairs'
+import { PRIORITY_PAIR_SLUGS } from '@/data/conversionPairContent'
+import { QUIZ_REGISTRY } from '@/lib/quizRegistry'
 import { BLOG_POSTS } from '@/data/blog/index'
-import { findSlugGroup, BLOG_LOCALES } from '@/data/blog/slugTranslations'
 import { getAllMdxBlogPosts } from '@/lib/content/blogRepository'
 
 const BASE_URL = (process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com').trim()
+
+/**
+ * Stable content-refresh date for routes with no per-item date. Bumped when a
+ * WS ships a site-wide change (WS-5 = 2026-09-05). Using a fixed date instead
+ * of `new Date()` keeps `<lastmod>` from churning on every deploy.
+ */
+const SITE_CONTENT_DATE = new Date('2026-09-05T00:00:00Z')
+
+/** Priority conversion pairs stay in the sitemap; the rest are noindex (WS-5 item 10). */
+const PRIORITY_PAIR_SET = new Set<string>(PRIORITY_PAIR_SLUGS)
+
+/** Individual quiz routes, generated from the single quiz registry. */
+const QUIZ_ROUTES = QUIZ_REGISTRY.map((q) => `/quiz/${q.id}`)
+
+/** World Cup quiz result/tier pages — the only quiz result pages with unique body copy. */
+const WC_RESULT_ROUTES = ['legend', 'expert', 'fan', 'rookie'].map(
+  (tier) => `/quiz/fifa-world-cup-winners/result/${tier}`,
+)
 
 const TRUST_ROUTES = [
   '/about',
@@ -46,9 +65,8 @@ const ALL_ROUTES = [
   '/tools/text/reading-time-calculator',
   '/tools/text/word-frequency-counter',
   '/tools/text/keyword-density-checker',
-  '/tools/text/paraphraser',
-  '/tools/text/summarizer',
-  '/tools/text/plagiarism-checker',
+  // '/tools/text/paraphraser', '/tools/text/summarizer',
+  // '/tools/text/plagiarism-checker' — coming-soon stubs, noindex (WS-5 audit).
   // Finance — calculators
   '/tools/finance',
   '/tools/finance/loan-calculator',
@@ -72,7 +90,7 @@ const ALL_ROUTES = [
   '/tools/finance/invoice-generator-australia',
   '/tools/finance/invoice-generator-for-freelancers',
   '/tools/finance/receipt-generator',
-  '/tools/finance/crypto-portfolio-tracker',
+  // '/tools/finance/crypto-portfolio-tracker' — coming-soon stub, noindex (WS-5 audit).
   // Fun tools
   '/tools/fun',
   '/tools/fun/spin-the-wheel',
@@ -95,30 +113,9 @@ const ALL_ROUTES = [
   '/tools/agile/planning-poker',
   '/tools/agile/user-story-writer',
   '/tools/agile/sprint-date-calculator',
-  // Quizzes
+  // Quizzes hub — individual /quiz/<id> routes are generated from
+  // lib/quizRegistry.ts (see QUIZ_ROUTES below), not hand-listed here.
   '/quizzes',
-  '/quiz/what-career-suits-you',
-  '/quiz/which-programming-language-are-you',
-  '/quiz/am-i-introverted-or-extroverted',
-  '/quiz/what-type-of-traveler-are-you',
-  '/quiz/which-decade-do-you-belong-in',
-  // Sports quizzes
-  '/quiz/fifa-world-cup-winners',
-  '/quiz/which-football-club-are-you',
-  '/quiz/champions-league-trivia',
-  '/quiz/what-is-your-love-language',
-  '/quiz/formula-1-trivia',
-  '/quiz/which-f1-driver-are-you',
-  // Election 2026 quizzes
-  '/quiz/what-is-your-political-profile',
-  '/quiz/political-echo-chamber-quiz',
-  '/quiz/which-historical-figure-matches-you',
-  '/quiz/fake-news-or-fact',
-  // World Cup quiz result/tier pages (indexable, 80–120 words each)
-  '/quiz/fifa-world-cup-winners/result/legend',
-  '/quiz/fifa-world-cup-winners/result/expert',
-  '/quiz/fifa-world-cup-winners/result/fan',
-  '/quiz/fifa-world-cup-winners/result/rookie',
   // Health tools
   '/tools/health',
   '/tools/health/bmi-calculator',
@@ -146,10 +143,10 @@ const ALL_ROUTES = [
  * Builds a sitemap entry with locale alternates for hreflang.
  * English has no URL prefix (localePrefix: 'as-needed').
  */
-function urlWithAlternates(path: string, priority = 0.8) {
+function urlWithAlternates(path: string, priority = 0.8, lastModified: Date = SITE_CONTENT_DATE) {
   return {
     url: `${BASE_URL}${path}`,
-    lastModified: new Date(),
+    lastModified,
     changeFrequency: 'monthly' as const,
     priority,
     alternates: {
@@ -157,6 +154,7 @@ function urlWithAlternates(path: string, priority = 0.8) {
         en: `${BASE_URL}${path}`,
         pt: `${BASE_URL}/pt${path}`,
         es: `${BASE_URL}/es${path}`,
+        'x-default': `${BASE_URL}${path}`,
       },
     },
   }
@@ -172,7 +170,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .filter((post) => !registeredBlogSlugs.has(post.slug))
     .map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: new Date(post.updatedAt ?? post.publishedAt),
+    lastModified: new Date(post.updatedAt ?? post.publishedAt ?? SITE_CONTENT_DATE),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
     alternates: {
@@ -188,7 +186,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     {
       url: BASE_URL,
-      lastModified: new Date(),
+      lastModified: SITE_CONTENT_DATE,
       changeFrequency: 'weekly',
       priority: 1.0,
       alternates: {
@@ -196,6 +194,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           en: BASE_URL,
           pt: `${BASE_URL}/pt`,
           es: `${BASE_URL}/es`,
+          'x-default': BASE_URL,
         },
       },
     },
@@ -203,21 +202,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...conversionPages.map((page) =>
       urlWithAlternates(`/tools/image/${page.slug}`)
     ),
-    ...COMMON_PAIRS.map((pair) =>
-      urlWithAlternates(`/tools/convert/${pair.slug}`)
-    ),
+    // Conversion pairs: only the WS-2 priority slugs are indexable. The rest
+    // emit `robots: { index: false }` and are excluded here (WS-5 item 10).
+    ...COMMON_PAIRS
+      .filter((pair) => PRIORITY_PAIR_SET.has(pair.slug))
+      .map((pair) => urlWithAlternates(`/tools/convert/${pair.slug}`)),
     ...TRUST_ROUTES.map((path) => urlWithAlternates(path, 0.6)),
     ...ALL_ROUTES.map((path) => urlWithAlternates(path)),
-    ...BLOG_POSTS.map((post) => urlWithAlternates(`/blog/${post.slug}`, 0.8)),
+    // Quizzes — generated from lib/quizRegistry.ts (single source of truth).
+    ...QUIZ_ROUTES.map((path) => urlWithAlternates(path, 0.7)),
+    ...WC_RESULT_ROUTES.map((path) => urlWithAlternates(path, 0.6)),
+    ...BLOG_POSTS.map((post) =>
+      urlWithAlternates(
+        `/blog/${post.slug}`,
+        0.8,
+        new Date(post.updatedAt ?? post.publishedAt ?? SITE_CONTENT_DATE),
+      ),
+    ),
     ...mdxBlogEntries,
-    // Backend Engineering quizzes
-    ...[
-      '/quiz/nodejs-fundamentals',
-      '/quiz/database-design',
-      '/quiz/database-indexing',
-      '/quiz/messaging-sqs-kafka',
-      '/quiz/rabbitmq-concepts',
-      '/quiz/system-architecture',
-    ].map((path) => urlWithAlternates(path, 0.7)),
   ]
 }

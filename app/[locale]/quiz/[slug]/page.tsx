@@ -14,6 +14,7 @@ import {
 import QuizPlayer from '@/components/quiz/QuizPlayer'
 import TriviaPlayer from '@/components/quiz/TriviaPlayer'
 import WorldCupQuizDepth, { getQuizDepthContent } from '@/components/quiz/WorldCupQuizDepth'
+import RelatedQuizzes from '@/components/quiz/RelatedQuizzes'
 
 // ── Static params ─────────────────────────────────────────────────────────────
 export function generateStaticParams() {
@@ -48,30 +49,28 @@ export default async function QuizPage({ params }: { params: Promise<{ locale: s
 
   const depth = await getQuizDepthContent(slug, locale)
 
+  // Every quiz page carries exactly one primary entity (`Quiz`) + a
+  // `BreadcrumbList`; the WS-3 depth pages add a topic `FAQPage` on top.
+  const breadcrumb = breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Quizzes', url: '/quizzes' },
+    { name: quiz.title, url: `/quiz/${slug}` },
+  ])
+  const quizEntity = {
+    '@type': 'Quiz' as const,
+    name: quiz.title,
+    url: buildLocalizedUrl(`/quiz/${slug}`, locale),
+    description: depth ? depth.metaDescription : quiz.description,
+    educationalUse: 'Assessment',
+    ...(depth ? { about: { '@type': 'Thing', name: 'FIFA World Cup' } } : {}),
+  }
   const jsonLd = depth
-    ? buildJsonLd(
-        {
-          '@type': 'Quiz',
-          name: quiz.title,
-          url: buildLocalizedUrl(`/quiz/${slug}`, locale),
-          description: depth.metaDescription,
-          about: { '@type': 'Thing', name: 'FIFA World Cup' },
-          educationalUse: 'Assessment',
-        },
-        faqSchema(depth.faqs),
-        breadcrumbSchema([
-          { name: 'Home', url: '/' },
-          { name: 'Quizzes', url: '/quizzes' },
-          { name: quiz.title, url: `/quiz/${slug}` },
-        ]),
-      )
-    : null
+    ? buildJsonLd(quizEntity, faqSchema(depth.faqs), breadcrumb)
+    : buildJsonLd(quizEntity, breadcrumb)
 
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      {jsonLd && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      )}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="max-w-2xl mx-auto px-4 py-10">
         <div className="bg-card rounded-2xl shadow-sm border border-gray-200 dark:bg-card dark:border-gray-700 p-8">
           {isTriviaQuiz(quiz) ? (
@@ -83,6 +82,7 @@ export default async function QuizPage({ params }: { params: Promise<{ locale: s
       </div>
 
       {depth && <WorldCupQuizDepth content={depth} currentSlug={slug} />}
+      {!depth && <RelatedQuizzes slug={slug} locale={locale} />}
     </main>
   )
 }

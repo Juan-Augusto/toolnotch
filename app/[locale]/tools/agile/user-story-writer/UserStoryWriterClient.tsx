@@ -53,7 +53,7 @@ export default function UserStoryWriterClient({ title, description, faqs, labels
   const canGenerate = role.trim() && feature.trim() && benefit.trim()
 
   return (
-    <ToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} adSlot="user-story-writer" richContent={richContent}>
+    <ToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} richContent={richContent}>
       <div className="max-w-2xl mx-auto space-y-4">
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1">{labels.roleLabel}</label>

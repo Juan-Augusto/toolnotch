@@ -52,7 +52,6 @@ export default async function CumulativeGpaCalculatorPage({ params }: Props) {
         description={t('cumulativeDescription')}
         breadcrumbLabel={t('cumulativeTitle')}
         faqs={faqs}
-        adSlot="cumulative-gpa-calculator"
         richContent={richContent}
       >
         <GpaCalculator mode="cumulative" locale={locale} />

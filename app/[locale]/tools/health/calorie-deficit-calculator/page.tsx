@@ -45,7 +45,6 @@ export default async function CalorieDeficitCalculatorPage({ params }: Props) {
         description={t('deficitDescription')}
         breadcrumbLabel={t('deficitTitle')}
         faqs={faqs}
-        adSlot="calorie-deficit-calculator"
         richContent={richContentRaw}
       >
         <TdeeCalculator mode="deficit" locale={locale} />

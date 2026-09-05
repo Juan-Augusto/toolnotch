@@ -51,7 +51,6 @@ export default async function InvoiceGeneratorForFreelancersPage({ params }: Pro
         description={t('description')}
         breadcrumbLabel={t('title')}
         faqs={faqs}
-        adSlot="1234567890"
         richContent={richContent}
         noCardWrapper
       >
