@@ -39,7 +39,7 @@ export default function PlanningPokerClient({ title, description, faqs, labels, 
   const numericPick = picked && NUMERIC_CARDS.includes(picked) ? Number(picked) : null
 
   return (
-    <ToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} adSlot="planning-poker" richContent={richContent}>
+    <ToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} richContent={richContent}>
       <div className="max-w-2xl mx-auto space-y-6">
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1">{labels.storyLabel}</label>

@@ -69,7 +69,6 @@ export default async function CurrencyConverterPage({ params }: Props) {
         description={t("description")}
         breadcrumbLabel={t("title")}
         faqs={faqs}
-        adSlot="1234567890"
         richContent={richContent}
       >
         <CurrencyConverterClient />

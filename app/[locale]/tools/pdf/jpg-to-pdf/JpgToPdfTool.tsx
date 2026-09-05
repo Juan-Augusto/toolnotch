@@ -179,7 +179,6 @@ export default function JpgToPdfTool({ title, description, faqs, richContent }: 
       description={description}
       breadcrumbLabel={title}
       faqs={faqs}
-      adSlot="1234567894"
       richContent={richContent}
     >
       <div

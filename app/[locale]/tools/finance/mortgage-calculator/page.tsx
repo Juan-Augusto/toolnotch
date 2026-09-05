@@ -51,7 +51,7 @@ export default async function MortgageCalculatorPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} adSlot="1234567890" richContent={richContent}>
+      <ToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} richContent={richContent}>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
           <Link href="/blog/how-to-calculate-mortgage-payment" className="text-blue-600 hover:underline dark:text-blue-400">
             Read: How to Calculate Your Mortgage Payment -&gt;

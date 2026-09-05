@@ -45,7 +45,6 @@ export default async function TdeeCalculatorPage({ params }: Props) {
         description={t('tdeeDescription')}
         breadcrumbLabel={t('tdeeTitle')}
         faqs={faqs}
-        adSlot="tdee-calculator"
         richContent={richContentRaw}
       >
         <TdeeCalculator mode="maintain" locale={locale} />

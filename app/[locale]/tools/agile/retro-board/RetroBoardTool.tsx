@@ -156,7 +156,6 @@ export default function RetroBoardTool({ title, description, faqs, columns, labe
       description={description}
       breadcrumbLabel={title}
       faqs={faqs}
-      adSlot="1234567890"
       richContent={richContent}
     >
       {/* Toolbar */}

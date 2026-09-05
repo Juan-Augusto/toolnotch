@@ -52,7 +52,6 @@ export default async function QrCodeGeneratorPage({ params }: Props) {
         description={t('description')}
         breadcrumbLabel={t('title')}
         faqs={faqs}
-        adSlot="qr-code-generator"
         richContent={richContent}
       >
         <QrCodeGenerator />

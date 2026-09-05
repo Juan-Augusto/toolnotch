@@ -49,7 +49,6 @@ export default async function WordCounterPage({ params }: Props) {
         description={t('description')}
         breadcrumbLabel={t('title')}
         faqs={faqs}
-        adSlot="1234567890"
         richContent={richContent}
       >
         <WordCounterClient primaryStat="words" />

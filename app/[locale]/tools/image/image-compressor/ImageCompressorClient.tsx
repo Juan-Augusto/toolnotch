@@ -69,7 +69,6 @@ export default function ImageCompressorClient({
       description={description}
       breadcrumbLabel={title}
       faqs={faqs}
-      adSlot="1234567890"
       richContent={richContent}
     >
       <div className="space-y-4">

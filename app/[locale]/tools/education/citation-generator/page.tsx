@@ -52,7 +52,6 @@ export default async function CitationGeneratorPage({ params }: Props) {
         description={t('description')}
         breadcrumbLabel={t('title')}
         faqs={faqs}
-        adSlot="citation-generator"
         richContent={richContent}
       >
         <CitationGenerator locale={locale} />

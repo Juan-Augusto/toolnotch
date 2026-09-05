@@ -142,7 +142,6 @@ export default function MergeTool({ title, description, faqs, richContent }: Pro
       description={description}
       breadcrumbLabel={title}
       faqs={faqs}
-      adSlot="1234567890"
       richContent={richContent}
     >
       {/* Drop Zone */}

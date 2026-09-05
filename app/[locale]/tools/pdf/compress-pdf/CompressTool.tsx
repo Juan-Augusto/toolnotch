@@ -71,7 +71,6 @@ export default function CompressTool({ title, description, faqs, richContent }: 
       description={description}
       breadcrumbLabel={title}
       faqs={faqs}
-      adSlot="1234567892"
       richContent={richContent}
     >
       <div

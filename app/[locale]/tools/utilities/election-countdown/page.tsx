@@ -54,7 +54,6 @@ export default async function ElectionCountdownPage({ params }: Props) {
         description={t('description')}
         breadcrumbLabel={t('title')}
         faqs={faqs}
-        adSlot="election-countdown"
         richContent={richContent}
       >
         <ElectionCountdown locale={locale} />
