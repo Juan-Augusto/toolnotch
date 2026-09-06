@@ -179,7 +179,7 @@ export default async function ArticleLayout({
               {relatedPosts.map((p) => (
                 <li key={p.slug}>
                   <Link
-                    href={`/blog/${p.slug}`}
+                    href={`${locale === 'en' ? '' : `/${locale}`}/blog/${p.slug}`}
                     className="text-blue-600 hover:underline dark:text-blue-400"
                   >
                     {p.title}

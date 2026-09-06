@@ -19,13 +19,21 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale, slug } = await params
+  const { slug } = await params
   const page = conversionPages.find((p) => p.slug === slug)
   if (!page) return {}
-  const t = await getTranslations({ locale, namespace: 'image.compressor' })
   return {
     title: page.metaTitle,
     description: page.metaDescription,
+    // WS-6 AdSense audit: these programmatic format-permutation pages share the
+    // full UI of `/tools/image/image-compressor` and carry only a widget plus
+    // templated FAQs (~150 rendered words, no unique prose). They cannot reach
+    // 500 words of unique content without bespoke per-pair articles (out of
+    // Phase 0 scope), so noindex them while keeping them crawlable (follow) so
+    // the internal-link graph still flows. The canonical `image-compressor`
+    // page stays indexed and carries the head term. (WS-6 report; sitemap
+    // follow-up removes them from app/sitemap.ts.)
+    robots: { index: false, follow: true },
     alternates: buildAlternates(`/tools/image/${slug}`),
   }
 }

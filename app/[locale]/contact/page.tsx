@@ -96,6 +96,31 @@ export default async function ContactPage({ params }: Props) {
             </div>
           </div>
 
+          {/* What we can't do */}
+          <div className="space-y-6 mb-10">
+            <section>
+              <h2 className="font-semibold text-gray-900 dark:text-white mb-1">
+                {t('noFilesTitle')}
+              </h2>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                {t('noFilesBody')}
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-semibold text-gray-900 dark:text-white mb-1">
+                {t('privacyTitle')}
+              </h2>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                {t('privacyBody')}{' '}
+                <Link href="/privacy" className="text-blue-600 hover:underline dark:text-blue-400">
+                  {t('privacyLinkLabel')}
+                </Link>
+                .
+              </p>
+            </section>
+          </div>
+
           {/* Response time */}
           <p className="text-sm text-gray-500 dark:text-gray-400">
             {t('responseTime')}

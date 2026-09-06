@@ -3500,7 +3500,10 @@
     "toolsP2": "Novas ferramentas são adicionadas regularmente com base no que as pessoas realmente precisam. Se você quer sugerir uma ferramenta, o link do GitHub acima é o melhor lugar para isso.",
     "partnersTitle": "Parceiros e financiamento",
     "partnersNote": "O ToolNotch não tem paywall e não armazena dados. Ele é financiado por anúncios e por comissões de afiliado de um pequeno conjunto de ferramentas pagas que recomendamos — se você se cadastrar por um desses links, a empresa nos paga sem custo adicional para você. Só recomendamos ferramentas que usaríamos e uma recomendação nunca é influenciada por uma comissão.",
-    "partnersLink": "Ver nossos parceiros"
+    "partnersLink": "Ver nossos parceiros",
+    "fundedTitle": "Como o ToolNotch se mantém",
+    "fundedP1": "O ToolNotch é gratuito e não tem plano pago, assinatura nem nada bloqueado atrás de um login. O site se mantém inteiramente com a publicidade gráfica do Google AdSense. Os anúncios aparecem em espaços fixos ao redor da página e acima do FAQ — nunca dentro de uma ferramenta enquanto você a usa, nunca como pop-up e nunca entre as etapas de uma tarefa. Se a receita de anúncios algum dia superar os custos de hospedagem, o excedente volta para construir e manter mais ferramentas.",
+    "fundedP2": "A publicidade também é o motivo pelo qual a política de privacidade importa aqui. O Google e seus parceiros usam cookies para exibir e medir anúncios, e os dados de análise são coletados pelo Google Analytics. O que coletamos, por quê e como recusar está descrito por completo na Política de Privacidade, com link no rodapé de todas as páginas."
   },
   "terms": {
     "metaTitle": "Termos de Uso | ToolNotch",
@@ -3609,26 +3612,31 @@
   },
   "contact": {
     "metaTitle": "Contato | ToolNotch",
-    "metaDescription": "Entre em contato com a equipe do ToolNotch. Reporte um bug, sugira uma ferramenta ou pergunte sobre parcerias.",
+    "metaDescription": "Entre em contato com o ToolNotch. Reporte um bug, sugira uma ferramenta, pergunte sobre publicidade ou envie uma solicitação de privacidade.",
     "backHome": "Voltar para o ToolNotch",
     "heading": "Fale Conosco",
-    "intro": "Tem alguma dúvida, encontrou um bug ou quer sugerir uma ferramenta? Adoramos receber seu feedback.",
+    "intro": "O ToolNotch é criado e mantido por um único desenvolvedor, Juan Soares. O e-mail é o único canal — não há portal de suporte, fila de chamados nem conta para acessar. Cada mensagem chega diretamente a uma pessoa, e quase toda ferramenta, correção e recurso do site começou como um e-mail de quem usa.",
     "emailLabel": "Envie um e-mail para",
     "categories": {
       "bugs": {
         "title": "Relatório de Bugs",
-        "description": "Descreva a ferramenta, seu navegador e o que deu errado. Capturas de tela são sempre bem-vindas."
+        "description": "Diga qual ferramenta falhou, qual navegador e sistema operacional você usava e os passos exatos que levaram ao problema. Uma captura de tela ou uma gravação curta do erro torna muito mais rápido reproduzir e corrigir."
       },
       "features": {
         "title": "Sugestões de Funcionalidades",
-        "description": "Qual ferramenta ou recurso seria útil para você? Conte-nos o que você está tentando fazer."
+        "description": "Descreva a tarefa que você quer concluir, não apenas o nome do recurso. Conhecer o objetivo por trás costuma apontar para uma ferramenta melhor do que a imaginada no início. Pedidos que refletem uma necessidade real e recorrente geralmente são lançados em poucas semanas."
       },
       "business": {
-        "title": "Parcerias e Negócios",
-        "description": "Parcerias, conteúdo patrocinado e publicidade — entre em contato e retornaremos em breve."
+        "title": "Publicidade e Parcerias",
+        "description": "O ToolNotch é mantido inteiramente por publicidade gráfica. Para patrocínio, parcerias de conteúdo ou dúvidas sobre anúncios, escreva para o endereço acima com uma breve descrição da sua empresa e do que você tem em mente."
       }
     },
-    "responseTime": "Geralmente respondemos em até 1 a 2 dias úteis."
+    "noFilesTitle": "Não conseguimos recuperar seus arquivos",
+    "noFilesBody": "Toda ferramenta baseada em arquivos do ToolNotch — o compressor de imagens, o unir e dividir PDF, os conversores de formato e as demais — roda inteiramente dentro do seu navegador. Os arquivos nunca são enviados nem armazenados em nossos servidores, então, se você perdeu um documento, não há nada do nosso lado para recuperar. Guarde sempre a sua própria cópia de qualquer coisa importante antes de processá-la.",
+    "privacyTitle": "Privacidade e solicitações de dados",
+    "privacyBody": "Como as ferramentas rodam no navegador e não armazenamos contas nem arquivos enviados, há muito pouco dado pessoal para solicitar ou excluir. Os dados de análise e de publicidade são tratados pelo Google. Para qualquer solicitação de acesso ou exclusão, escreva para nós e indicaremos o processo correto. Todos os detalhes estão na nossa",
+    "privacyLinkLabel": "Política de Privacidade",
+    "responseTime": "Uma única pessoa lê cada e-mail. Normalmente respondemos em 1 a 2 dias úteis; relatórios de bug detalhados podem levar mais tempo enquanto reproduzimos o problema."
   },
   "blog": {
     "indexTitle": "Blog — Guias e Tutoriais de Calculadoras Gratuitas",

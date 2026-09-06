@@ -89,6 +89,14 @@ export default async function AboutPage({ params }: Props) {
 
             <section>
               <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                {t('fundedTitle')}
+              </h2>
+              <p className="mb-4">{t('fundedP1')}</p>
+              <p>{t('fundedP2')}</p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
                 {t('partnersTitle')}
               </h2>
               <p className="mb-4">{t('partnersNote')}</p>
