@@ -45,9 +45,46 @@ export default async function HomePage({ params }: Props) {
 
   const TOOLS: Tool[] = [
     {
+      category: t("categories.developerTools"),
+      color: "cyan",
+      index: 0,
+      items: [
+        {
+          href: "/tools/developer/cpf-generator",
+          label: t("tools.cpfGenerator.label"),
+          desc: t("tools.cpfGenerator.desc"),
+        },
+        {
+          href: "/tools/developer/cnpj-generator",
+          label: t("tools.cnpjGenerator.label"),
+          desc: t("tools.cnpjGenerator.desc"),
+        },
+        {
+          href: "/tools/developer/uuid-generator",
+          label: t("tools.uuidGenerator.label"),
+          desc: t("tools.uuidGenerator.desc"),
+        },
+        {
+          href: "/tools/developer/json-formatter",
+          label: t("tools.jsonFormatter.label"),
+          desc: t("tools.jsonFormatter.desc"),
+        },
+        {
+          href: "/tools/developer/base64-converter",
+          label: t("tools.base64Converter.label"),
+          desc: t("tools.base64Converter.desc"),
+        },
+        {
+          href: "/tools/developer/hash-generator",
+          label: t("tools.hashGenerator.label"),
+          desc: t("tools.hashGenerator.desc"),
+        },
+      ],
+    },
+    {
       category: t("categories.imageTools"),
       color: "blue",
-      index: 0,
+      index: 1,
       items: [
         {
           href: "/tools/image/image-compressor",
@@ -64,7 +101,7 @@ export default async function HomePage({ params }: Props) {
     {
       category: t("categories.pdfTools"),
       color: "red",
-      index: 1,
+      index: 2,
       items: [
         {
           href: "/tools/pdf/merge-pdf",
@@ -96,7 +133,7 @@ export default async function HomePage({ params }: Props) {
     {
       category: t("categories.converterTools"),
       color: "indigo",
-      index: 2,
+      index: 3,
       items: [
         {
           href: "/tools/convert/unit-converter",
@@ -133,7 +170,7 @@ export default async function HomePage({ params }: Props) {
     {
       category: t("categories.textTools"),
       color: "purple",
-      index: 3,
+      index: 4,
       items: [
         {
           href: "/tools/text/word-counter",
@@ -165,7 +202,7 @@ export default async function HomePage({ params }: Props) {
     {
       category: t("categories.financeTools"),
       color: "green",
-      index: 4,
+      index: 5,
       items: [
         {
           href: "/tools/finance/loan-calculator",
@@ -212,7 +249,7 @@ export default async function HomePage({ params }: Props) {
     {
       category: t("categories.funAndRandom"),
       color: "orange",
-      index: 5,
+      index: 6,
       items: [
         {
           href: "/tools/fun/spin-the-wheel",
@@ -257,26 +294,9 @@ export default async function HomePage({ params }: Props) {
       ],
     },
     {
-      category: t("categories.interviewPrep"),
-      color: "blue",
-      index: 7,
-      items: [
-        {
-          href: "/interview",
-          label: t("tools.interviewHub.label"),
-          desc: t("tools.interviewHub.desc"),
-        },
-        {
-          href: "/interview/typescript",
-          label: t("tools.typescriptQuiz.label"),
-          desc: t("tools.typescriptQuiz.desc"),
-        },
-      ],
-    },
-    {
       category: t("categories.agileTools"),
       color: "violet",
-      index: 6,
+      index: 7,
       items: [
         {
           href: "/tools/agile/retro-board",
@@ -306,9 +326,26 @@ export default async function HomePage({ params }: Props) {
       ],
     },
     {
+      category: t("categories.interviewPrep"),
+      color: "blue",
+      index: 8,
+      items: [
+        {
+          href: "/interview",
+          label: t("tools.interviewHub.label"),
+          desc: t("tools.interviewHub.desc"),
+        },
+        {
+          href: "/interview/typescript",
+          label: t("tools.typescriptQuiz.label"),
+          desc: t("tools.typescriptQuiz.desc"),
+        },
+      ],
+    },
+    {
       category: t("categories.quizzes"),
       color: "pink",
-      index: 8,
+      index: 9,
       items: [
         {
           href: "/quizzes",
