@@ -5284,6 +5284,11 @@
       "title": "Our Partners",
       "subtitle": "Paid tools we use, trust, and recommend.",
       "intro": "ToolNotch is free and has no paywall. Some of the tools we point you to are paid products from companies we have an affiliate arrangement with — if you sign up through a link on this page, they pay us a commission at no extra cost to you. We only list tools we would recommend anyway, and this page will grow as we add partners.",
+      "howTitle": "How we choose partners",
+      "howP1": "A tool only gets listed here after we have used it and would recommend it to a friend who asked. We start from the tasks our own visitors are trying to finish — rewriting a paragraph, checking a citation, moving money between countries, tidying a PDF — and look for the paid product that does that job best. A real free tier, transparent pricing, and a no-obligation trial matter; a product that hides its price or makes cancelling difficult is not added, whatever it pays.",
+      "howP2": "Every partner link is an affiliate link, marked with rel=\"sponsored\", and earns us a commission if you subscribe — at no extra cost to you, and at the same price you would pay going direct. The commission has no bearing on whether a tool is listed, where it appears on this page, or what our guides say about it. If a partner's product gets worse, the listing comes down.",
+      "independenceTitle": "Editorial independence",
+      "independenceP1": "ToolNotch's own calculators and converters run entirely in your browser using published formulas, so a commercial relationship cannot change a result. Our comparisons and recommendations reflect honest testing. We would rather list nothing in a category than list a product we do not believe in — which is why this page is short and grows slowly.",
       "backHome": "Back to all tools",
       "categories": {
         "writing": "Writing & editing",
@@ -5307,6 +5312,14 @@
     "adsTitle": "Advertising",
     "adsP1": "We may show display ads from third-party ad networks such as Google AdSense. Ads are clearly separated from tool content, never interrupt a tool while you are using it, and we do not control which specific advertisers appear. Ad networks may use cookies as described in our Privacy Policy.",
     "editorialTitle": "Editorial independence",
-    "editorialP1": "Every calculator and converter on ToolNotch runs entirely in your browser with published formulas — results are not influenced by any commercial relationship. Recommendations and rankings reflect our honest assessment. If that ever stops being true, this page will say so."
+    "editorialP1": "Every calculator and converter on ToolNotch runs entirely in your browser with published formulas — results are not influenced by any commercial relationship. Recommendations and rankings reflect our honest assessment. If that ever stops being true, this page will say so.",
+    "cookiesTitle": "Cookies and analytics",
+    "cookiesP1": "ToolNotch uses Google Analytics 4 to understand which tools people use and how they find the site, and Google AdSense to serve display advertising. Both set cookies in your browser — analytics cookies to count visits and measure traffic sources, advertising cookies to limit how often you see the same ad and to measure whether an ad led to a visit. We do not set our own tracking cookies, we do not build advertising profiles ourselves, and we do not sell any data. The tools themselves — every calculator, converter, and file utility — run without setting a single cookie.",
+    "optOutTitle": "How to opt out",
+    "optOutP1": "You can turn off personalised advertising for your Google Account on Google's Ads Settings page, and opt out of third-party ad-network cookies through the industry pages at aboutads.info and youronlinechoices.eu. Every major browser also lets you block or delete cookies for one specific site in its privacy settings, and tracker-blocking extensions work normally here. Blocking advertising or analytics cookies does not break any tool on the site.",
+    "changesTitle": "Changes to this page",
+    "changesP1": "If we add an advertising network, join an affiliate programme in a new category, or change how any of this works, this page is updated first and the change is reflected in the footer of every page. This disclosure was last reviewed in September 2026. Questions about anything here can go to the address on our contact page.",
+    "rightsTitle": "Your choices in short",
+    "rightsP1": "You never have to accept an affiliate link or an ad to use a tool — every calculator, converter, and file utility works the same whether or not you click anything sponsored, and whether or not you block advertising cookies. You can reach every page of the site through the footer without JavaScript. Nothing on ToolNotch requires an account, and there is no account to delete."
   }
 }

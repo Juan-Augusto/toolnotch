@@ -4775,6 +4775,11 @@
       "title": "Nossos Parceiros",
       "subtitle": "Ferramentas pagas que usamos, confiamos e recomendamos.",
       "intro": "O ToolNotch é gratuito e não tem paywall. Algumas das ferramentas que indicamos são produtos pagos de empresas com quem temos um acordo de afiliado — se você se cadastrar por um link desta página, elas nos pagam uma comissão, sem custo adicional para você. Só listamos ferramentas que recomendaríamos de qualquer forma, e esta página vai crescer conforme adicionarmos parceiros.",
+      "howTitle": "Como escolhemos os parceiros",
+      "howP1": "Uma ferramenta só entra nesta lista depois de a usarmos e de a recomendarmos a um amigo que perguntasse. Partimos das tarefas que os próprios visitantes estão tentando concluir — reescrever um parágrafo, conferir uma citação, enviar dinheiro entre países, organizar um PDF — e procuramos o produto pago que faz esse trabalho melhor. Um plano gratuito de verdade, preço transparente e um teste sem compromisso contam; um produto que esconde o preço ou dificulta o cancelamento não é adicionado, não importa quanto pague.",
+      "howP2": "Todo link de parceiro é um link de afiliado, marcado com rel=\"sponsored\", e nos rende uma comissão se você assinar — sem custo adicional para você e pelo mesmo preço que pagaria indo direto. A comissão não influencia se uma ferramenta é listada, onde ela aparece nesta página ou o que nossos guias dizem sobre ela. Se o produto de um parceiro piora, a indicação sai.",
+      "independenceTitle": "Independência editorial",
+      "independenceP1": "As calculadoras e conversores do próprio ToolNotch rodam inteiramente no seu navegador com fórmulas publicadas, então uma relação comercial não pode mudar um resultado. Nossas comparações e recomendações refletem testes honestos. Preferimos não listar nada em uma categoria a listar um produto no qual não acreditamos — por isso esta página é curta e cresce devagar.",
       "backHome": "Voltar para todas as ferramentas",
       "categories": {
         "writing": "Escrita e edição",
@@ -4798,6 +4803,14 @@
     "adsTitle": "Publicidade",
     "adsP1": "Podemos exibir anúncios de redes de terceiros, como o Google AdSense. Os anúncios ficam claramente separados do conteúdo da ferramenta, nunca interrompem o uso de uma ferramenta e não controlamos quais anunciantes aparecem. As redes de anúncios podem usar cookies conforme descrito na nossa Política de Privacidade.",
     "editorialTitle": "Independência editorial",
-    "editorialP1": "Cada calculadora e conversor do ToolNotch roda inteiramente no seu navegador, com fórmulas publicadas — os resultados não são influenciados por nenhuma relação comercial. Recomendações e rankings refletem nossa avaliação honesta. Se isso deixar de ser verdade, esta página vai dizer."
+    "editorialP1": "Cada calculadora e conversor do ToolNotch roda inteiramente no seu navegador, com fórmulas publicadas — os resultados não são influenciados por nenhuma relação comercial. Recomendações e rankings refletem nossa avaliação honesta. Se isso deixar de ser verdade, esta página vai dizer.",
+    "cookiesTitle": "Cookies e análise",
+    "cookiesP1": "O ToolNotch usa o Google Analytics 4 para entender quais ferramentas as pessoas usam e como encontram o site, e o Google AdSense para exibir publicidade. Ambos gravam cookies no seu navegador — cookies de análise para contar visitas e medir de onde vem o tráfego, cookies de publicidade para limitar quantas vezes você vê o mesmo anuncio e medir se um anúncio levou a uma visita. Não gravamos cookies de rastreamento próprios, não montamos perfis de publicidade por conta própria e não vendemos nenhum dado. As ferramentas em si — cada calculadora, conversor e utilitário de arquivo — funcionam sem gravar um único cookie.",
+    "optOutTitle": "Como recusar",
+    "optOutP1": "Você pode desativar a publicidade personalizada da sua Conta do Google na página Configurações de anúncios do Google, e recusar cookies de redes de anúncios de terceiros pelas páginas do setor em aboutads.info e youronlinechoices.eu. Todo navegador também permite bloquear ou apagar os cookies de um site específico nas configurações de privacidade, e extensões que bloqueiam rastreadores funcionam normalmente aqui. Bloquear cookies de publicidade ou de análise não quebra nenhuma ferramenta do site.",
+    "changesTitle": "Mudanças nesta página",
+    "changesP1": "Se adicionarmos uma rede de anúncios, entrarmos em um programa de afiliados de uma nova categoria ou mudarmos como qualquer coisa aqui funciona, esta página é atualizada primeiro e a mudança aparece no rodapé de todas as páginas. Esta divulgação foi revisada pela última vez em setembro de 2026. Dúvidas sobre qualquer ponto podem ser enviadas para o endereço na nossa página de contato.",
+    "rightsTitle": "Suas escolhas, em resumo",
+    "rightsP1": "Você nunca precisa aceitar um link de afiliado ou um anúncio para usar uma ferramenta — cada calculadora, conversor e utilitário de arquivo funciona igual, clicando ou não em algo patrocinado, bloqueando ou não os cookies de publicidade. Você consegue chegar a todas as páginas do site pelo rodapé, sem JavaScript. Nada no ToolNotch exige uma conta, e não há conta para apagar."
   }
 }

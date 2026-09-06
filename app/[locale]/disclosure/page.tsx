@@ -89,6 +89,34 @@ export default async function DisclosurePage({ params }: Props) {
               </h2>
               <p>{t("editorialP1")}</p>
             </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                {t("cookiesTitle")}
+              </h2>
+              <p>{t("cookiesP1")}</p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                {t("optOutTitle")}
+              </h2>
+              <p>{t("optOutP1")}</p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                {t("changesTitle")}
+              </h2>
+              <p>{t("changesP1")}</p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                {t("rightsTitle")}
+              </h2>
+              <p>{t("rightsP1")}</p>
+            </section>
           </div>
         </div>
       </main>

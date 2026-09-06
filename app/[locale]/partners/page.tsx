@@ -19,6 +19,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t("partners.metaDescription"),
     alternates: buildAlternates(PATH),
     openGraph: { title: t("partners.metaTitle"), url: PATH },
+    // Transparency page — footer-linked and crawlable, but short by nature
+    // (a curated list). Kept out of the index/sitemap until it carries enough
+    // partners to stand on its own (WS-6 audit). Flip back when it does.
+    robots: { index: false, follow: true },
   };
 }
 
@@ -60,6 +64,22 @@ export default async function PartnersPage({ params }: Props) {
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-10">
             {t("partners.intro")}
           </p>
+
+          <div className="space-y-8 text-gray-700 dark:text-gray-300 leading-relaxed mb-12">
+            <section>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                {t("partners.howTitle")}
+              </h2>
+              <p className="mb-4">{t("partners.howP1")}</p>
+              <p>{t("partners.howP2")}</p>
+            </section>
+            <section>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                {t("partners.independenceTitle")}
+              </h2>
+              <p>{t("partners.independenceP1")}</p>
+            </section>
+          </div>
 
           <div className="space-y-10">
             {groups.map(([category, partners]) => (
