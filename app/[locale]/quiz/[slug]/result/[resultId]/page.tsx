@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { isTriviaQuiz } from '@/lib/quizTypes'
-import { QUIZ_REGISTRY, NOINDEX_QUIZ_IDS } from '@/lib/quizRegistry'
+import { QUIZ_REGISTRY, NOINDEX_QUIZ_IDS, NOINDEX_RESULT_QUIZ_IDS } from '@/lib/quizRegistry'
 import { getQuizBySlug, getQuizResultIds } from '@/lib/content/quizRepository'
 import { buildJsonLd, breadcrumbSchema } from '@/lib/schema'
 import { buildAlternates } from '@/lib/i18nMeta'
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const quiz = await getQuizBySlug(slug, locale)
   if (!quiz) return {}
 
-  const noindexMeta = NOINDEX_QUIZ_IDS.has(slug)
+  const noindexMeta = NOINDEX_QUIZ_IDS.has(slug) || NOINDEX_RESULT_QUIZ_IDS.has(slug)
     ? { robots: { index: false, follow: true } as const }
     : {}
 

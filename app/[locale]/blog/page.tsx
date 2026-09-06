@@ -75,6 +75,21 @@ export default async function BlogIndexPage({ params }: Props) {
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
               {t('indexDescription')}
             </p>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mt-4">
+              {t('indexIntro')}
+            </p>
+            <div className="mt-6 max-w-2xl">
+              <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                {t('indexGuideHeading')}
+              </h2>
+              <ul className="list-disc pl-5 space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed">
+                {Object.values(t.raw('indexCategoryBlurbs') as Record<string, string>).map(
+                  (blurb, i) => (
+                    <li key={i}>{blurb}</li>
+                  ),
+                )}
+              </ul>
+            </div>
           </div>
 
           {/* Ad above grid */}

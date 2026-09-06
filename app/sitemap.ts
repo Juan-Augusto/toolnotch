@@ -27,10 +27,10 @@ const QUIZ_ROUTES = QUIZ_REGISTRY.filter((q) => !NOINDEX_QUIZ_IDS.has(q.id)).map
   (q) => `/quiz/${q.id}`,
 )
 
-/** World Cup quiz result/tier pages — the only quiz result pages with unique body copy. */
-const WC_RESULT_ROUTES = ['legend', 'expert', 'fan', 'rookie'].map(
-  (tier) => `/quiz/fifa-world-cup-winners/result/${tier}`,
-)
+// World Cup quiz result/tier pages were previously listed here. They are
+// 80–120 words by design (CLAUDE.md) and read as thin to a crawler, so they now
+// emit `robots: { index: false, follow: true }` (NOINDEX_RESULT_QUIZ_IDS) and
+// are no longer part of the sitemap (AdSense readiness, 2026-09-06).
 
 const TRUST_ROUTES = [
   '/about',
@@ -217,7 +217,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...ALL_ROUTES.map((path) => urlWithAlternates(path)),
     // Quizzes — generated from lib/quizRegistry.ts (single source of truth).
     ...QUIZ_ROUTES.map((path) => urlWithAlternates(path, 0.7)),
-    ...WC_RESULT_ROUTES.map((path) => urlWithAlternates(path, 0.6)),
     ...BLOG_POSTS.map((post) =>
       urlWithAlternates(
         `/blog/${post.slug}`,

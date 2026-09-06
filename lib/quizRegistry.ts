@@ -54,3 +54,14 @@ export const NOINDEX_QUIZ_IDS: ReadonlySet<string> = new Set([
   // Civic
   'fake-news-or-fact',
 ])
+
+/**
+ * Quizzes whose per-tier RESULT pages carry no unique indexable body — the quiz
+ * itself stays indexable, but `/quiz/<id>/result/<tier>` emits
+ * `robots: { index: false, follow: true }` and is dropped from the sitemap.
+ * Trivia tier pages are 80–120 words by design (CLAUDE.md) and read as thin
+ * to a crawler, so we noindex rather than pad them (AdSense readiness, 2026-09-06).
+ */
+export const NOINDEX_RESULT_QUIZ_IDS: ReadonlySet<string> = new Set([
+  'fifa-world-cup-winners',
+])
