@@ -4086,7 +4086,10 @@
     "whoP1": "ToolNotch is built and maintained by Juan Soares, a software developer who got tired of telling people \"just use that sketchy site\" every time they needed a simple online tool. He built the first version over a weekend and has been adding tools ever since.",
     "toolsTitle": "Our tools",
     "toolsP1": "ToolNotch currently offers 74+ free tools across seven categories: PDF utilities (merge, split, compress, convert), image tools (compress, convert between formats), finance calculators (loan calculator, invoice generator, portfolio tracker), health tools (BMI calculator, TDEE calculator, calorie deficit planner), text tools (word counter, paraphraser, case converter), education tools (GPA calculator, grade calculator, citation generator), and fun tools (typing test, random generators).",
-    "toolsP2": "New tools are added regularly based on what people actually need. If you want to suggest a tool, the GitHub link above is the best place to do that."
+    "toolsP2": "New tools are added regularly based on what people actually need. If you want to suggest a tool, the GitHub link above is the best place to do that.",
+    "partnersTitle": "Partners & funding",
+    "partnersNote": "ToolNotch has no paywall and stores no data. It is funded by display ads and by affiliate commissions from a small set of paid tools we recommend — if you sign up through one of those links, the company pays us at no extra cost to you. We only recommend tools we would use ourselves, and a recommendation is never influenced by a commission.",
+    "partnersLink": "See our partners"
   },
   "terms": {
     "metaTitle": "Terms of Service | ToolNotch",
@@ -4857,6 +4860,8 @@
       "privacy": "Privacy Policy",
       "terms": "Terms of Service",
       "contact": "Contact",
+      "partners": "Our Partners",
+      "disclosure": "Disclosure",
       "allTools": "All tools"
     },
     "tagline": "Free tools that run in your browser. No sign-up. No data stored.",
@@ -5279,5 +5284,21 @@
         "productivity": "Productivity"
       }
     }
+  },
+  "disclosure": {
+    "metaTitle": "Disclosure — Affiliate Links & Advertising",
+    "metaDescription": "How ToolNotch is funded: affiliate links, display ads, and our commitment to unbiased tool results.",
+    "title": "Disclosure",
+    "subtitle": "How ToolNotch makes money, and what that does and does not affect.",
+    "backHome": "Back to all tools",
+    "intro": "ToolNotch is free to use, has no paywall, and does not store your data. Running it still costs money, so the site is supported in two ways: display advertising and affiliate commissions. This page explains both.",
+    "affiliateTitle": "Affiliate links",
+    "affiliateP1": "Some outbound links to paid third-party tools are affiliate links. If you visit one and sign up for a paid plan, the company pays us a commission — always at no extra cost to you, and the price you pay is the same as going there directly. Affiliate links are marked with rel=\"sponsored\" and, where they appear on a tool page, labelled as a recommendation.",
+    "affiliateP2": "We only add a partner whose product we would recommend regardless of any commission, and a commission never changes which tool we suggest or what a calculator returns. The full list of current partners is here:",
+    "affiliatePartnersLink": "our partners",
+    "adsTitle": "Advertising",
+    "adsP1": "We may show display ads from third-party ad networks such as Google AdSense. Ads are clearly separated from tool content, never interrupt a tool while you are using it, and we do not control which specific advertisers appear. Ad networks may use cookies as described in our Privacy Policy.",
+    "editorialTitle": "Editorial independence",
+    "editorialP1": "Every calculator and converter on ToolNotch runs entirely in your browser with published formulas — results are not influenced by any commercial relationship. Recommendations and rankings reflect our honest assessment. If that ever stops being true, this page will say so."
   }
 }

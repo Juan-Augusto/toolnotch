@@ -2,12 +2,15 @@
 import Link from "next/link";
 import ToolnotchLogo from "./ToolnotchLogo";
 import { useEffect, useRef, useState } from "react";
+import AffiliateLink from "./AffiliateLink";
 
 interface NavChild {
   href: string;
   label: string;
   /** external / affiliate link — opens in a new tab, rel="sponsored nofollow" */
   external?: boolean;
+  /** partner i18n key, for GA4 attribution on affiliate children */
+  partnerKey?: string;
 }
 interface NavItem {
   href: string;
@@ -226,16 +229,16 @@ const NavDropdown = ({
         >
           {item.children!.map((child) =>
             child.external ? (
-              <a
+              <AffiliateLink
                 key={child.href}
                 href={child.href}
-                target="_blank"
-                rel="sponsored nofollow noopener"
+                partnerKey={child.partnerKey ?? "unknown"}
+                placement="nav-dropdown"
                 onClick={close}
                 className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors px-2 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5"
               >
                 {child.label}
-              </a>
+              </AffiliateLink>
             ) : (
               <Link
                 key={child.href}

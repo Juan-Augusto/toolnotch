@@ -3497,7 +3497,10 @@
     "whoP1": "ToolNotch está desarrollado y mantenido por Juan Soares, un desarrollador de software que se hartó de decirle a la gente \"usa ese sitio dudoso\" cada vez que necesitaban una herramienta online simple. Construyó la primera versión en un fin de semana y ha estado añadiendo herramientas desde entonces.",
     "toolsTitle": "Nuestras herramientas",
     "toolsP1": "ToolNotch ofrece actualmente más de 74 herramientas gratuitas en siete categorías: utilidades PDF (combinar, dividir, comprimir, convertir), herramientas de imagen (comprimir, convertir entre formatos), calculadoras financieras (calculadora de préstamos, generador de facturas, rastreador de cartera), herramientas de salud (calculadora de IMC, calculadora de TDEE, planificador de déficit calórico), herramientas de texto (contador de palabras, parafraseador, conversor de mayúsculas), herramientas educativas (calculadora de GPA, calculadora de calificaciones, generador de citas) y herramientas de entretenimiento (prueba de escritura, generadores aleatorios).",
-    "toolsP2": "Se añaden herramientas nuevas regularmente según lo que la gente realmente necesita. Si quieres sugerir una herramienta, el enlace de GitHub de arriba es el mejor lugar para hacerlo."
+    "toolsP2": "Se añaden herramientas nuevas regularmente según lo que la gente realmente necesita. Si quieres sugerir una herramienta, el enlace de GitHub de arriba es el mejor lugar para hacerlo.",
+    "partnersTitle": "Socios y financiación",
+    "partnersNote": "ToolNotch no tiene muro de pago y no almacena datos. Se financia con publicidad y con comisiones de afiliado de un pequeño conjunto de herramientas de pago que recomendamos: si te registras a través de uno de esos enlaces, la empresa nos paga sin costo adicional para ti. Solo recomendamos herramientas que usaríamos y una recomendación nunca está influida por una comisión.",
+    "partnersLink": "Ver nuestros socios"
   },
   "terms": {
     "metaTitle": "Términos de Servicio | ToolNotch",
@@ -4343,6 +4346,8 @@
       "privacy": "Política de Privacidad",
       "terms": "Términos de Servicio",
       "contact": "Contacto",
+      "partners": "Nuestros Socios",
+      "disclosure": "Divulgación",
       "allTools": "Todas las herramientas"
     },
     "tagline": "Herramientas gratuitas que funcionan en tu navegador. Sin registro. Sin almacenamiento de datos.",
@@ -4765,5 +4770,21 @@
         "productivity": "Productividad"
       }
     }
+  },
+  "disclosure": {
+    "metaTitle": "Divulgación — Enlaces de Afiliado y Publicidad",
+    "metaDescription": "Cómo se financia ToolNotch: enlaces de afiliado, publicidad y nuestro compromiso con resultados imparciales.",
+    "title": "Divulgación",
+    "subtitle": "Cómo gana dinero ToolNotch, y qué afecta eso — y qué no.",
+    "backHome": "Volver a todas las herramientas",
+    "intro": "ToolNotch es gratis, no tiene muro de pago y no almacena tus datos. Mantenerlo cuesta dinero, así que se financia de dos maneras: publicidad y comisiones de afiliado. Esta página explica ambas.",
+    "affiliateTitle": "Enlaces de afiliado",
+    "affiliateP1": "Algunos enlaces salientes a herramientas de pago de terceros son enlaces de afiliado. Si visitas uno y te registras en un plan de pago, la empresa nos paga una comisión, siempre sin costo adicional para ti, y el precio que pagas es el mismo que si fueras directamente. Los enlaces de afiliado llevan rel=\"sponsored\" y, cuando aparecen en la página de una herramienta, se identifican como recomendación.",
+    "affiliateP2": "Solo añadimos un socio cuyo producto recomendaríamos al margen de cualquier comisión, y una comisión nunca cambia qué herramienta sugerimos ni lo que devuelve una calculadora. La lista completa de socios actuales está aquí:",
+    "affiliatePartnersLink": "nuestros socios",
+    "adsTitle": "Publicidad",
+    "adsP1": "Podemos mostrar anuncios de redes publicitarias de terceros como Google AdSense. Los anuncios están claramente separados del contenido de la herramienta, nunca interrumpen su uso, y no controlamos qué anunciantes concretos aparecen. Las redes publicitarias pueden usar cookies según se describe en nuestra Política de Privacidad.",
+    "editorialTitle": "Independencia editorial",
+    "editorialP1": "Cada calculadora y conversor de ToolNotch se ejecuta por completo en tu navegador con fórmulas publicadas: los resultados no están influidos por ninguna relación comercial. Las recomendaciones y clasificaciones reflejan nuestra evaluación honesta. Si eso deja de ser cierto, esta página lo dirá."
   }
 }

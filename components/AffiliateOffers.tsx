@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { getAffiliateOffers } from "@/lib/affiliateOffers";
+import AffiliateLink from "./AffiliateLink";
 
 /**
  * Prominent contextual affiliate card, rendered inside ToolWrapper directly
@@ -44,26 +45,26 @@ export default function AffiliateOffers() {
       >
         {t(`offers.${primary.key}.blurb`)}
       </p>
-      <a
+      <AffiliateLink
         href={primary.href}
-        target="_blank"
-        rel="sponsored nofollow noopener"
+        partnerKey={primary.key}
+        placement="inline-card"
         className="btn-neon"
       >
         {t(`offers.${primary.key}.cta`)} &rarr;
-      </a>
+      </AffiliateLink>
       {rest.length > 0 && (
         <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1">
           {rest.map((o) => (
-            <a
+            <AffiliateLink
               key={o.key}
               href={o.href}
-              target="_blank"
-              rel="sponsored nofollow noopener"
+              partnerKey={o.key}
+              placement="inline-card"
               className="text-xs text-blue-600 dark:text-blue-400 hover:underline"
             >
               {t(`offers.${o.key}.cta`)} &rarr;
-            </a>
+            </AffiliateLink>
           ))}
         </div>
       )}
