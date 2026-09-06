@@ -4515,191 +4515,194 @@
     "fifaWorldCupWinners": {
       "metaTitle": "Quiz dos Campeões da Copa do Mundo — Adivinhe Cada Campeão 1930–2022",
       "metaDescription": "Jogue o quiz dos campeões da Copa do Mundo: 20 perguntas sobre cada campeão de 1930 a 2022, mais a lista completa de vencedores por ano.",
+      "about": "Copa do Mundo FIFA",
       "introHeading": "Sobre o Quiz dos Campeões da Copa do Mundo",
       "intro": [
         "A Copa do Mundo da FIFA coroa um campeão a cada quatro anos desde 1930, com pausa apenas em 1942 e 1946 por causa da Segunda Guerra Mundial. Apenas oito seleções levantaram o troféu. O Brasil lidera com cinco títulos, seguido por Itália e Alemanha com quatro cada, a Argentina com três, e Uruguai e França com dois. Inglaterra e Espanha venceram uma vez cada, ambas em finais decididas por um único lance inesquecível. O próprio prêmio mudou: a Taça Jules Rimet foi entregue até 1970, e o atual troféu da Copa do Mundo da FIFA é erguido desde 1974.",
         "Este quiz percorre 22 edições do torneio. Você vai indicar o campeão de edições específicas, do título do Uruguai em casa em 1930 à vitória da Argentina nos pênaltis no Catar em 2022, além de lembrar países-sede, artilheiros históricos como Miroslav Klose e as finais que marcaram cada época. São 20 perguntas de múltipla escolha sobre campeões, vice-campeões e os momentos que todo torcedor discute.",
         "A cada resposta, sua pontuação é somada na hora e comparada a um nível: Lenda da Copa, Especialista em Futebol, Torcedor ou Iniciante. Não há cadastro nem tempo obrigatório. Use a tabela de vencedores por ano abaixo para revisar antes de jogar ou para encerrar uma discussão sobre quem ganhou cada Copa do Mundo."
       ],
-      "tableHeading": "Todos os Campeões da Copa do Mundo da FIFA (1930–2022)",
-      "tableNote": "pro. = prorrogação; pên. = decidida nos pênaltis.",
-      "tableCols": {
-        "year": "Ano",
-        "host": "Sede",
-        "winner": "Campeão",
-        "runnerUp": "Vice",
-        "score": "Placar da final"
+      "table": {
+        "heading": "Todos os Campeões da Copa do Mundo da FIFA (1930–2022)",
+        "note": "pro. = prorrogação; pên. = decidida nos pênaltis.",
+        "cols": [
+          "Ano",
+          "Sede",
+          "Campeão",
+          "Vice",
+          "Placar da final"
+        ],
+        "rows": [
+          [
+            "1930",
+            "Uruguai",
+            "Uruguai",
+            "Argentina",
+            "4–2"
+          ],
+          [
+            "1934",
+            "Itália",
+            "Itália",
+            "Tchecoslováquia",
+            "2–1 (pro.)"
+          ],
+          [
+            "1938",
+            "França",
+            "Itália",
+            "Hungria",
+            "4–2"
+          ],
+          [
+            "1942",
+            "Não realizada",
+            "Não realizada",
+            "—",
+            "Segunda Guerra Mundial"
+          ],
+          [
+            "1946",
+            "Não realizada",
+            "Não realizada",
+            "—",
+            "Segunda Guerra Mundial"
+          ],
+          [
+            "1950",
+            "Brasil",
+            "Uruguai",
+            "Brasil",
+            "2–1 (jogo decisivo)"
+          ],
+          [
+            "1954",
+            "Suíça",
+            "Alemanha Ocidental",
+            "Hungria",
+            "3–2"
+          ],
+          [
+            "1958",
+            "Suécia",
+            "Brasil",
+            "Suécia",
+            "5–2"
+          ],
+          [
+            "1962",
+            "Chile",
+            "Brasil",
+            "Tchecoslováquia",
+            "3–1"
+          ],
+          [
+            "1966",
+            "Inglaterra",
+            "Inglaterra",
+            "Alemanha Ocidental",
+            "4–2 (pro.)"
+          ],
+          [
+            "1970",
+            "México",
+            "Brasil",
+            "Itália",
+            "4–1"
+          ],
+          [
+            "1974",
+            "Alemanha Ocidental",
+            "Alemanha Ocidental",
+            "Países Baixos",
+            "2–1"
+          ],
+          [
+            "1978",
+            "Argentina",
+            "Argentina",
+            "Países Baixos",
+            "3–1 (pro.)"
+          ],
+          [
+            "1982",
+            "Espanha",
+            "Itália",
+            "Alemanha Ocidental",
+            "3–1"
+          ],
+          [
+            "1986",
+            "México",
+            "Argentina",
+            "Alemanha Ocidental",
+            "3–2"
+          ],
+          [
+            "1990",
+            "Itália",
+            "Alemanha Ocidental",
+            "Argentina",
+            "1–0"
+          ],
+          [
+            "1994",
+            "Estados Unidos",
+            "Brasil",
+            "Itália",
+            "0–0 (3–2 pên.)"
+          ],
+          [
+            "1998",
+            "França",
+            "França",
+            "Brasil",
+            "3–0"
+          ],
+          [
+            "2002",
+            "Coreia do Sul e Japão",
+            "Brasil",
+            "Alemanha",
+            "2–0"
+          ],
+          [
+            "2006",
+            "Alemanha",
+            "Itália",
+            "França",
+            "1–1 (5–3 pên.)"
+          ],
+          [
+            "2010",
+            "África do Sul",
+            "Espanha",
+            "Países Baixos",
+            "1–0 (pro.)"
+          ],
+          [
+            "2014",
+            "Brasil",
+            "Alemanha",
+            "Argentina",
+            "1–0 (pro.)"
+          ],
+          [
+            "2018",
+            "Rússia",
+            "França",
+            "Croácia",
+            "4–2"
+          ],
+          [
+            "2022",
+            "Catar",
+            "Argentina",
+            "França",
+            "3–3 (4–2 pên.)"
+          ]
+        ]
       },
-      "rows": [
-        {
-          "year": "1930",
-          "host": "Uruguai",
-          "winner": "Uruguai",
-          "runnerUp": "Argentina",
-          "score": "4–2"
-        },
-        {
-          "year": "1934",
-          "host": "Itália",
-          "winner": "Itália",
-          "runnerUp": "Tchecoslováquia",
-          "score": "2–1 (pro.)"
-        },
-        {
-          "year": "1938",
-          "host": "França",
-          "winner": "Itália",
-          "runnerUp": "Hungria",
-          "score": "4–2"
-        },
-        {
-          "year": "1942",
-          "host": "Não realizada",
-          "winner": "Não realizada",
-          "runnerUp": "—",
-          "score": "Segunda Guerra Mundial"
-        },
-        {
-          "year": "1946",
-          "host": "Não realizada",
-          "winner": "Não realizada",
-          "runnerUp": "—",
-          "score": "Segunda Guerra Mundial"
-        },
-        {
-          "year": "1950",
-          "host": "Brasil",
-          "winner": "Uruguai",
-          "runnerUp": "Brasil",
-          "score": "2–1 (jogo decisivo)"
-        },
-        {
-          "year": "1954",
-          "host": "Suíça",
-          "winner": "Alemanha Ocidental",
-          "runnerUp": "Hungria",
-          "score": "3–2"
-        },
-        {
-          "year": "1958",
-          "host": "Suécia",
-          "winner": "Brasil",
-          "runnerUp": "Suécia",
-          "score": "5–2"
-        },
-        {
-          "year": "1962",
-          "host": "Chile",
-          "winner": "Brasil",
-          "runnerUp": "Tchecoslováquia",
-          "score": "3–1"
-        },
-        {
-          "year": "1966",
-          "host": "Inglaterra",
-          "winner": "Inglaterra",
-          "runnerUp": "Alemanha Ocidental",
-          "score": "4–2 (pro.)"
-        },
-        {
-          "year": "1970",
-          "host": "México",
-          "winner": "Brasil",
-          "runnerUp": "Itália",
-          "score": "4–1"
-        },
-        {
-          "year": "1974",
-          "host": "Alemanha Ocidental",
-          "winner": "Alemanha Ocidental",
-          "runnerUp": "Países Baixos",
-          "score": "2–1"
-        },
-        {
-          "year": "1978",
-          "host": "Argentina",
-          "winner": "Argentina",
-          "runnerUp": "Países Baixos",
-          "score": "3–1 (pro.)"
-        },
-        {
-          "year": "1982",
-          "host": "Espanha",
-          "winner": "Itália",
-          "runnerUp": "Alemanha Ocidental",
-          "score": "3–1"
-        },
-        {
-          "year": "1986",
-          "host": "México",
-          "winner": "Argentina",
-          "runnerUp": "Alemanha Ocidental",
-          "score": "3–2"
-        },
-        {
-          "year": "1990",
-          "host": "Itália",
-          "winner": "Alemanha Ocidental",
-          "runnerUp": "Argentina",
-          "score": "1–0"
-        },
-        {
-          "year": "1994",
-          "host": "Estados Unidos",
-          "winner": "Brasil",
-          "runnerUp": "Itália",
-          "score": "0–0 (3–2 pên.)"
-        },
-        {
-          "year": "1998",
-          "host": "França",
-          "winner": "França",
-          "runnerUp": "Brasil",
-          "score": "3–0"
-        },
-        {
-          "year": "2002",
-          "host": "Coreia do Sul e Japão",
-          "winner": "Brasil",
-          "runnerUp": "Alemanha",
-          "score": "2–0"
-        },
-        {
-          "year": "2006",
-          "host": "Alemanha",
-          "winner": "Itália",
-          "runnerUp": "França",
-          "score": "1–1 (5–3 pên.)"
-        },
-        {
-          "year": "2010",
-          "host": "África do Sul",
-          "winner": "Espanha",
-          "runnerUp": "Países Baixos",
-          "score": "1–0 (pro.)"
-        },
-        {
-          "year": "2014",
-          "host": "Brasil",
-          "winner": "Alemanha",
-          "runnerUp": "Argentina",
-          "score": "1–0 (pro.)"
-        },
-        {
-          "year": "2018",
-          "host": "Rússia",
-          "winner": "França",
-          "runnerUp": "Croácia",
-          "score": "4–2"
-        },
-        {
-          "year": "2022",
-          "host": "Catar",
-          "winner": "Argentina",
-          "runnerUp": "França",
-          "score": "3–3 (4–2 pên.)"
-        }
-      ],
       "faqHeading": "Campeões da Copa do Mundo: perguntas frequentes",
       "faqs": [
         {
@@ -4724,23 +4727,578 @@
         }
       ],
       "relatedHeading": "Mais quizzes de futebol",
-      "related": {
-        "worldCup": {
+      "related": [
+        {
           "label": "Quiz dos Campeões da Copa do Mundo",
           "href": "/quiz/fifa-world-cup-winners",
           "desc": "Nomeie cada campeão mundial de 1930 a 2022"
         },
-        "footballClub": {
+        {
           "label": "Qual Time de Futebol Você É?",
           "href": "/quiz/which-football-club-are-you",
           "desc": "Descubra o clube que combina com você"
         },
-        "championsLeague": {
+        {
           "label": "Quiz da Liga dos Campeões",
           "href": "/quiz/champions-league-trivia",
           "desc": "Teste seu conhecimento sobre a elite europeia"
         }
+      ],
+      "results": {
+        "legend": {
+          "heading": "O que significa a pontuação de Lenda da Copa",
+          "body": [
+            "Ficar no nível mais alto quer dizer que você absorveu quase um século de história do torneio. Você não fica em dúvida entre dois campeões plausíveis: sabe que o Uruguai venceu a primeira final em 1930, que a Itália foi bicampeã em 1934 e 1938 e que a vitória da Alemanha Ocidental em 1954 até hoje é chamada de Milagre de Berna. Detalhes como sedes conjuntas, finais decididas nos pênaltis e a troca da Taça Jules Rimet pelo troféu atual em 1974 são naturais para você.",
+            "Para manter a sequência, teste-se nas bordas mais difíceis do registro: os únicos jogadores que marcaram em duas finais diferentes, os goleiros que foram capitães de seleções campeãs e os países que chegaram a uma final sem nunca levantar a taça. Compartilhe seu resultado, desafie um amigo que se diz entendido de futebol e volte depois do próximo torneio para manter seu retrospecto perfeito."
+          ]
+        },
+        "expert": {
+          "heading": "O que significa a pontuação de Especialista",
+          "body": [
+            "Uma pontuação de especialista mostra que você assistiu a muito futebol e lembra dos momentos que importaram. Você reconhece a maioria dos campeões de imediato e raramente confunde um vice com um campeão. As perguntas que costumam pegar os especialistas são as bem específicas: o placar exato da final de 1994, quais países-sede venceram em casa ou o nome do maior artilheiro da história do torneio, Miroslav Klose, da Alemanha, com 16 gols em quatro Copas.",
+            "Para encostar no nível mais alto, o caminho é revisar os primeiros torneios, de 1930 a 1958, que aparecem menos na televisão hoje. Use a tabela de campeões por ano acima como material de estudo, concentre-se nas finais decididas na prorrogação ou nos pênaltis e refaça o quiz. Uma ou duas respostas certas a mais costumam ser tudo o que separa um especialista de uma lenda."
+          ]
+        },
+        "fan": {
+          "heading": "O que significa a pontuação de Fã",
+          "body": [
+            "Uma pontuação de fã é uma boa base. Você conhece os gigantes do futebol de seleções, sabe situar campeões recentes como a França em 2018 e a Argentina em 2022 e tem noção de quais países esperam brigar pelo título a cada quatro anos. O que costuma faltar é a história mais antiga: os torneios anteriores à TV em cores, as seleções que venceram uma única vez e a diferença entre sediar uma Copa e vencê-la.",
+            "A boa notícia é que este é o nível mais recompensador para evoluir, porque cada trecho de estudo acrescenta várias respostas possíveis. Leia a lista completa de campeões acima, assista aos melhores momentos de uma final clássica como as de 1970 ou 1986 e preste atenção no grupo de oito seleções que já venceram. Volte em alguns dias e você deve alcançar o nível de especialista com tranquilidade."
+          ]
+        },
+        "rookie": {
+          "heading": "O que significa a pontuação de Iniciante",
+          "body": [
+            "Uma pontuação de iniciante quer dizer apenas que a Copa do Mundo ainda é um terreno novo para você, e esse é um bom ponto de partida, porque o torneio tem uma estrutura clara depois que você a aprende. Ele é disputado a cada quatro anos desde 1930, com apenas 1942 e 1946 sem edição por causa da Segunda Guerra Mundial. Só oito seleções já venceram: Brasil, Itália, Alemanha, Argentina, França, Uruguai, Inglaterra e Espanha. O Brasil lidera com cinco títulos.",
+            "A partir daí, o resto se constrói rápido. Aprenda os últimos cinco ou seis campeões e depois volte no tempo década a década usando a tabela acima. Assistir a uma final clássica inteira ensina mais nomes e histórias do que uma hora de leitura. Aqui não há limite de tempo nem cadastro, então refaça o quiz quantas vezes quiser e veja seu nível subir de iniciante para fã e além."
+          ]
+        }
       }
+    },
+    "whichFootballClub": {
+      "metaTitle": "Qual Time de Futebol Você É? Quiz de Personalidade",
+      "metaDescription": "Responda 10 perguntas e descubra qual time de futebol combina com a sua personalidade, de Real Madrid e Barcelona a Liverpool, Bayern, Flamengo e Boca Juniors.",
+      "about": "Clubes de futebol",
+      "introHeading": "Sobre o quiz Qual Time de Futebol Você É?",
+      "intro": [
+        "Todo grande clube de futebol tem uma personalidade tão reconhecível quanto a de qualquer jogador. O Real Madrid se porta como vencedor em série, que espera o troféu não importa o cenário. O Barcelona liga sua identidade a um estilo de jogo e a uma base de garotos. O Liverpool se apoia na emoção, num hino famoso e no vínculo com a torcida. O Bayern de Munique valoriza ordem, planejamento e domínio silencioso, enquanto o Borussia Dortmund vende energia, juventude e o barulho do Muro Amarelo. Este quiz leva esses caracteres a sério e tenta descobrir qual deles está mais perto do seu.",
+        "As dez perguntas não são sobre conhecimento de futebol. Elas perguntam como você lida com a pressão, se valoriza mais o talento ou a eficiência, como trata os rivais, o que espera das pessoas ao seu redor e se prefere vencer feio ou perder com estilo. Cada opção soma pontos, em silêncio, para um ou mais de oito clubes: Real Madrid, FC Barcelona, Liverpool, Bayern de Munique, Manchester City, Flamengo, Boca Juniors e Borussia Dortmund. O clube com a maior soma no fim é a sua correspondência.",
+        "Como a pontuação é cumulativa e não um caminho único com ramificações, duas pessoas podem chegar ao mesmo resultado por rotas diferentes, e uma pequena mudança numa resposta pode te levar de um clube para um vizinho de mentalidade parecida. A página de resultado descreve o que aquele clube representa, os traços que você divide com ele e por que suas respostas apontaram para lá. Nada é armazenado, não há cadastro e você pode refazer quantas vezes quiser.",
+        "Você não precisa torcer para o clube com que foi combinado, e muita gente se surpreende com o resultado. Encare como um assunto para conversa: mande para amigos que torcem para times rivais, compare os resultados e discuta se a descrição combina. Se quiser mais futebol, a tabela de títulos abaixo e os quizzes relacionados cobrem a Copa do Mundo e a Liga dos Campeões."
+      ],
+      "table": {
+        "heading": "Mais títulos de Copa dos Campeões da Europa e Liga dos Campeões",
+        "note": "Títulos da Copa dos Campeões da Europa / Liga dos Campeões da UEFA, competição masculina. Números até a final de 2024.",
+        "cols": [
+          "Clube",
+          "País",
+          "Títulos",
+          "Mais recente"
+        ],
+        "rows": [
+          [
+            "Real Madrid",
+            "Espanha",
+            "15",
+            "2024"
+          ],
+          [
+            "Milan",
+            "Itália",
+            "7",
+            "2007"
+          ],
+          [
+            "Bayern de Munique",
+            "Alemanha",
+            "6",
+            "2020"
+          ],
+          [
+            "Liverpool",
+            "Inglaterra",
+            "6",
+            "2019"
+          ],
+          [
+            "Barcelona",
+            "Espanha",
+            "5",
+            "2015"
+          ],
+          [
+            "Ajax",
+            "Países Baixos",
+            "4",
+            "1995"
+          ]
+        ]
+      },
+      "faqHeading": "Qual time de futebol você é? Perguntas frequentes",
+      "faqs": [
+        {
+          "question": "Como funciona o quiz Qual Time de Futebol Você É?",
+          "answer": "Você responde a dez perguntas de personalidade sobre pressão, ambição, estilo e como trata os rivais. Cada resposta soma pontos para um ou mais de oito clubes, e o clube com a maior pontuação vira o seu resultado. Leva cerca de dois minutos, não exige conta e pode ser refeito quantas vezes quiser."
+        },
+        {
+          "question": "Com quais clubes eu posso ser combinado?",
+          "answer": "São oito resultados possíveis: Real Madrid, FC Barcelona, Liverpool, Bayern de Munique, Manchester City, Flamengo, Boca Juniors e Borussia Dortmund. Eles foram escolhidos para cobrir culturas futebolísticas bem diferentes da Europa e da América do Sul, então a maioria dos perfis cai num clube que realmente combina."
+        },
+        {
+          "question": "Preciso torcer para o clube que eu tirar?",
+          "answer": "Não. O quiz combina o seu temperamento e os seus valores com a identidade de um clube, não com a sua torcida. Muita gente é combinada com um rival do time para o qual torce, e é justamente isso que costuma tornar o resultado divertido de compartilhar e discutir."
+        },
+        {
+          "question": "O que diferencia a identidade de cada clube?",
+          "answer": "Os clubes constroem um caráter ao longo de décadas por meio da história, da cidade, da filosofia de jogo e da torcida. O Barcelona é associado ao jogo de posse e à base, o Real Madrid a vencer sem parar, Liverpool e Dortmund à atmosfera e à emoção, Bayern e Manchester City à estrutura e ao controle."
+        },
+        {
+          "question": "Qual clube tem mais títulos da Liga dos Campeões?",
+          "answer": "O Real Madrid, com 15 títulos entre Copa dos Campeões da Europa e Liga dos Campeões, bem à frente do Milan, com sete, e de Liverpool e Bayern de Munique, com seis. Esse retrospecto é uma das razões pelas quais o Real Madrid é tanto descrito como o clube vencedor por excelência."
+        },
+        {
+          "question": "Posso compartilhar o meu resultado ou refazer o quiz?",
+          "answer": "Sim. Cada resultado tem a própria página, que você pode enviar por link, e há uma opção de compartilhar na tela final. Nada do que você responde é salvo, então dá para refazer o quiz na hora e ver como respostas diferentes mudam o clube combinado."
+        }
+      ],
+      "relatedHeading": "Mais quizzes de futebol",
+      "related": [
+        {
+          "label": "Quiz dos Campeões da Copa do Mundo",
+          "href": "/quiz/fifa-world-cup-winners",
+          "desc": "Nomeie cada campeão mundial de 1930 a 2022"
+        },
+        {
+          "label": "Quiz da Liga dos Campeões",
+          "href": "/quiz/champions-league-trivia",
+          "desc": "Teste seu conhecimento sobre a principal competição de clubes da Europa"
+        },
+        {
+          "label": "Qual Piloto de F1 Você É?",
+          "href": "/quiz/which-f1-driver-are-you",
+          "desc": "Combine sua personalidade com um grande nome da Fórmula 1"
+        }
+      ]
+    },
+    "championsLeagueTrivia": {
+      "metaTitle": "Quiz da Liga dos Campeões — 15 Perguntas",
+      "metaDescription": "Teste seu conhecimento sobre a Liga dos Campeões da UEFA: 15 perguntas sobre finais, artilheiros, maiores campeões e noites históricas, de 1956 até hoje.",
+      "about": "Liga dos Campeões da UEFA",
+      "introHeading": "Sobre o Quiz da Liga dos Campeões",
+      "intro": [
+        "O maior prêmio do futebol de clubes da Europa começou em 1955 como Copa dos Clubes Campeões Europeus, um mata-mata direto entre os campeões nacionais. O Real Madrid venceu as cinco primeiras edições. Em 1992 a competição virou Liga dos Campeões da UEFA, ganhou uma fase de grupos e passou a aceitar mais de um clube por país. Ela seguiu crescendo até a temporada 2024–25, quando a fase de grupos deu lugar a uma única fase de liga com 36 times. Este quiz cobre todo esse período, das finais em preto e branco ao formato atual.",
+        "As quinze perguntas passam por campeões, vice-campeões, estádios, treinadores, recordistas e as noites de que os torcedores ainda falam. Espere ser perguntado sobre o recorde de títulos do Real Madrid, sobre o maior artilheiro da história, Cristiano Ronaldo, sobre a virada do Liverpool depois de estar 3 a 0 atrás na final de 2005 em Istambul e sobre o 6 a 1 do Barcelona sobre o Paris Saint-Germain em 2017. Algumas perguntas premiam quem assiste de forma casual; outras exigem estudo de verdade.",
+        "É um quiz de perguntas e respostas, então cada questão tem uma única resposta certa e você descobre na hora se acertou. No fim, o seu percentual é convertido em um nível: Lenda da Champions a partir de 80 por cento, Especialista a partir de 60, Fã a partir de 40 e Iniciante abaixo disso. Não há cronômetro, conta nem limite de tentativas, então dá para voltar na hora e tentar subir de nível.",
+        "Se quiser se preparar, a tabela abaixo lista os clubes com mais títulos e os anos em que venceram. Os quizzes relacionados cobrem a Copa do Mundo e, para mudar de esporte, a Fórmula 1."
+      ],
+      "table": {
+        "heading": "Clubes com mais títulos de Copa dos Campeões da Europa / Liga dos Campeões",
+        "note": "Competição masculina, títulos até a final de 2024.",
+        "cols": [
+          "Clube",
+          "País",
+          "Títulos",
+          "Anos"
+        ],
+        "rows": [
+          [
+            "Real Madrid",
+            "Espanha",
+            "15",
+            "1956–2024"
+          ],
+          [
+            "Milan",
+            "Itália",
+            "7",
+            "1963–2007"
+          ],
+          [
+            "Bayern de Munique",
+            "Alemanha",
+            "6",
+            "1974–2020"
+          ],
+          [
+            "Liverpool",
+            "Inglaterra",
+            "6",
+            "1977–2019"
+          ],
+          [
+            "Barcelona",
+            "Espanha",
+            "5",
+            "1992–2015"
+          ],
+          [
+            "Ajax",
+            "Países Baixos",
+            "4",
+            "1971–1995"
+          ]
+        ]
+      },
+      "faqHeading": "Quiz da Liga dos Campeões: perguntas frequentes",
+      "faqs": [
+        {
+          "question": "O que o quiz da Liga dos Campeões cobre?",
+          "answer": "Quinze perguntas que vão da Copa dos Campeões da Europa de 1956 até a Liga dos Campeões atual: campeões e vice-campeões, finais famosas, artilheiros recordistas, treinadores conhecidos e partidas históricas. Tanto o antigo mata-mata quanto a era dos grupos e da fase de liga estão incluídos."
+        },
+        {
+          "question": "Qual clube tem mais títulos da Copa dos Campeões da Europa?",
+          "answer": "O Real Madrid, com 15 títulos entre 1956 e 2024. O Milan vem em seguida, com sete, depois Liverpool e Bayern de Munique, com seis cada, o Barcelona, com cinco, e o Ajax, com quatro. Nenhum outro clube chegou a cinco."
+        },
+        {
+          "question": "Quem é o maior artilheiro da história da Liga dos Campeões?",
+          "answer": "Cristiano Ronaldo, com mais de 140 gols na competição, à frente de Lionel Messi, com cerca de 130. Robert Lewandowski e Karim Benzema são os jogadores em atividade mais próximos, mas ainda bem atrás dos dois primeiros."
+        },
+        {
+          "question": "O que foi o Milagre de Istambul?",
+          "answer": "A final de 2005 entre Liverpool e Milan. O Milan vencia por 3 a 0 no intervalo; o Liverpool marcou três vezes em seis minutos no segundo tempo para levar à prorrogação e depois venceu nos pênaltis. É considerada a maior virada de uma final europeia."
+        },
+        {
+          "question": "Como a minha pontuação é classificada?",
+          "answer": "Os seus acertos viram um percentual e um nível: Lenda da Champions com 80 por cento ou mais, Especialista a partir de 60, Fã a partir de 40 e Iniciante abaixo de 40. Você pode refazer o quiz na hora para melhorar o nível."
+        },
+        {
+          "question": "O que mudou no formato de 2024–25?",
+          "answer": "A fase de grupos com 32 times deu lugar a uma fase de liga com 36. Agora cada clube enfrenta oito adversários diferentes numa única tabela combinada, com os primeiros colocados avançando direto e o grupo seguinte disputando um mata-mata de repescagem."
+        }
+      ],
+      "relatedHeading": "Mais quizzes de futebol",
+      "related": [
+        {
+          "label": "Quiz dos Campeões da Copa do Mundo",
+          "href": "/quiz/fifa-world-cup-winners",
+          "desc": "Nomeie cada campeão mundial de 1930 a 2022"
+        },
+        {
+          "label": "Qual Time de Futebol Você É?",
+          "href": "/quiz/which-football-club-are-you",
+          "desc": "Combine sua personalidade com um clube"
+        },
+        {
+          "label": "Quiz de Fórmula 1",
+          "href": "/quiz/formula-1-trivia",
+          "desc": "Mude de esporte e teste sua história da F1"
+        }
+      ]
+    },
+    "formula1Trivia": {
+      "metaTitle": "Quiz de Fórmula 1 — 15 Perguntas de História da F1",
+      "metaDescription": "Teste seu conhecimento de Fórmula 1: 15 perguntas sobre campeões mundiais, recordes de vitórias, circuitos famosos e momentos clássicos, de 1950 até hoje.",
+      "about": "Fórmula 1",
+      "introHeading": "Sobre o Quiz de Fórmula 1",
+      "intro": [
+        "O Campeonato Mundial de Fórmula 1 acontece todos os anos desde 1950, quando Giuseppe Farina conquistou o primeiro título de pilotos pela Alfa Romeo. Desde então virou uma série global de cerca de 24 corridas por temporada, com dois campeonatos decididos a cada ano: um de pilotos e um de construtores, as equipes que projetam e constroem os carros. Este quiz usa toda essa história, então uma pergunta sobre Fangio nos anos 1950 aparece ao lado de outra sobre o grid atual.",
+        "As quinze perguntas cobrem campeões, recordes de vitórias, circuitos, regras técnicas e os momentos que definiram cada era: as voltas de classificação de Ayrton Senna, os cinco títulos seguidos de Michael Schumacher pela Ferrari, os quatro seguidos de Sebastian Vettel pela Red Bull e a sequência de campeonatos de Max Verstappen a partir de 2021. Você pode ser perguntado sobre quem tem mais vitórias na carreira, qual país sedia o Grande Prêmio de Mônaco ou como os pontos são distribuídos.",
+        "Cada pergunta tem uma única resposta certa e é corrigida na hora. O seu percentual final define o seu nível: Lenda a partir de 80 por cento, Especialista a partir de 60, Fã a partir de 40 e Iniciante abaixo disso. Não há pressão de tempo, cadastro nem limite de tentativas, então é fácil jogar de novo em busca de um resultado melhor.",
+        "A tabela abaixo lista os pilotos com mais títulos mundiais, um bom ponto de partida para revisar. Os quizzes relacionados deixam você combinar a sua personalidade com um piloto ou trocar totalmente de esporte e testar a sua história do futebol."
+      ],
+      "table": {
+        "heading": "Pilotos de Fórmula 1 com mais títulos mundiais",
+        "note": "Títulos de pilotos conquistados, até o fim da temporada de 2024.",
+        "cols": [
+          "Piloto",
+          "País",
+          "Títulos",
+          "Temporadas"
+        ],
+        "rows": [
+          [
+            "Lewis Hamilton",
+            "Reino Unido",
+            "7",
+            "2008–2020"
+          ],
+          [
+            "Michael Schumacher",
+            "Alemanha",
+            "7",
+            "1994–2004"
+          ],
+          [
+            "Juan Manuel Fangio",
+            "Argentina",
+            "5",
+            "1951–1957"
+          ],
+          [
+            "Alain Prost",
+            "França",
+            "4",
+            "1985–1993"
+          ],
+          [
+            "Sebastian Vettel",
+            "Alemanha",
+            "4",
+            "2010–2013"
+          ],
+          [
+            "Max Verstappen",
+            "Países Baixos",
+            "4",
+            "2021–2024"
+          ]
+        ]
+      },
+      "faqHeading": "Quiz de Fórmula 1: perguntas frequentes",
+      "faqs": [
+        {
+          "question": "O que o quiz de Fórmula 1 cobre?",
+          "answer": "Quinze perguntas por toda a história do esporte, de 1950 até hoje: campeões mundiais, recordes de vitórias e de pole positions, circuitos, regulamentos técnicos e corridas famosas. Tanto as eras clássicas quanto a era turbo-híbrida atual estão incluídas."
+        },
+        {
+          "question": "Quem tem mais títulos mundiais de Fórmula 1?",
+          "answer": "Michael Schumacher e Lewis Hamilton estão empatados com sete títulos de pilotos cada. Juan Manuel Fangio venceu cinco nos anos 1950, e Alain Prost, Sebastian Vettel e Max Verstappen têm quatro cada."
+        },
+        {
+          "question": "Quem tem mais vitórias na história da Fórmula 1?",
+          "answer": "Lewis Hamilton, com mais de 100 vitórias em Grandes Prêmios, à frente de Michael Schumacher. Hamilton também detém o recorde de pole positions. Os dois números já foram considerados quase impossíveis de bater."
+        },
+        {
+          "question": "Qual é a equipe mais bem-sucedida da Fórmula 1?",
+          "answer": "A Ferrari. É a única construtora a ter participado de todas as temporadas desde 1950 e venceu mais corridas e mais campeonatos de construtores do que qualquer outra equipe, ainda que tenha passado longos períodos sem título de pilotos."
+        },
+        {
+          "question": "Qual é a diferença entre o campeonato de pilotos e o de construtores?",
+          "answer": "O título de pilotos vai para o indivíduo com mais pontos na temporada. O título de construtores soma os pontos marcados pelos dois carros de uma equipe. Uma equipe pode vencer um sem vencer o outro."
+        },
+        {
+          "question": "Como a minha pontuação no quiz de F1 é classificada?",
+          "answer": "Os acertos viram um percentual e um nível: Lenda com 80 por cento ou mais, Especialista a partir de 60, Fã a partir de 40 e Iniciante abaixo de 40. As tentativas são ilimitadas, então dá para jogar de novo e subir."
+        }
+      ],
+      "relatedHeading": "Mais quizzes",
+      "related": [
+        {
+          "label": "Qual Piloto de F1 Você É?",
+          "href": "/quiz/which-f1-driver-are-you",
+          "desc": "Combine sua personalidade com um grande nome da Fórmula 1"
+        },
+        {
+          "label": "Quiz da Liga dos Campeões",
+          "href": "/quiz/champions-league-trivia",
+          "desc": "Teste seu conhecimento sobre o futebol europeu"
+        },
+        {
+          "label": "Quiz dos Campeões da Copa do Mundo",
+          "href": "/quiz/fifa-world-cup-winners",
+          "desc": "Nomeie cada campeão mundial desde 1930"
+        }
+      ]
+    },
+    "whichF1Driver": {
+      "metaTitle": "Qual Piloto de F1 Você É? Quiz de Personalidade",
+      "metaDescription": "Responda 10 perguntas e descubra qual piloto de Fórmula 1 combina com a sua personalidade, de Verstappen e Hamilton a Senna, Schumacher, Leclerc e Alonso.",
+      "about": "Pilotos de Fórmula 1",
+      "introHeading": "Sobre o quiz Qual Piloto de F1 Você É?",
+      "intro": [
+        "Os pilotos de Fórmula 1 chegam ao topo com temperamentos muito diferentes. Max Verstappen é direto e não abre mão de nada. Lewis Hamilton une pilotagem tranquila a uma vida e a causas fora do carro. Ayrton Senna tratava a pilotagem como algo quase espiritual. Fernando Alonso é o competidor incansável que nunca deixa de acreditar que o título é possível. Este quiz mapeia esses estilos num teste curto de personalidade e diz de qual piloto você mais se aproxima.",
+        "As dez perguntas tratam do seu apetite por risco, de como você reage a reveses, de confiar no instinto ou na preparação, de como lida com companheiros de equipe e rivais e do que vencer realmente significa para você. Cada resposta soma pontos para um ou mais de oito pilotos: Max Verstappen, Lewis Hamilton, Ayrton Senna, Michael Schumacher, Charles Leclerc, Fernando Alonso, Oscar Piastri e Lando Norris. O seu resultado é o piloto com a maior soma.",
+        "A pontuação é cumulativa, não uma rota única com ramificações, então mudar uma resposta pode te levar a um piloto de perfil parecido, e duas pessoas podem chegar ao mesmo resultado por caminhos diferentes. A página de resultado explica pelo que aquele piloto é conhecido, os traços que você divide com ele e por que suas respostas apontaram para lá. Nada é salvo, não há cadastro e as tentativas são ilimitadas.",
+        "Você não precisa acompanhar a Fórmula 1 de perto para ter um resultado que combine, e ser combinado com um piloto de quem você não gosta faz parte da graça. Compartilhe com os amigos, compare as respostas e, se quiser mais automobilismo, a tabela abaixo e os quizzes relacionados cobrem a história e os maiores recordes da F1."
+      ],
+      "table": {
+        "heading": "Os oito pilotos com quem você pode ser combinado",
+        "note": "Títulos de Campeonato Mundial de Pilotos, até o fim da temporada de 2024.",
+        "cols": [
+          "Piloto",
+          "País",
+          "Títulos na F1",
+          "Conhecido por"
+        ],
+        "rows": [
+          [
+            "Max Verstappen",
+            "Países Baixos",
+            "4",
+            "Ritmo agressivo e obstinado"
+          ],
+          [
+            "Lewis Hamilton",
+            "Reino Unido",
+            "7",
+            "Constância e longevidade"
+          ],
+          [
+            "Ayrton Senna",
+            "Brasil",
+            "3",
+            "Gênio da classificação e intensidade"
+          ],
+          [
+            "Michael Schumacher",
+            "Alemanha",
+            "7",
+            "Preparação implacável e volume de trabalho"
+          ],
+          [
+            "Charles Leclerc",
+            "Mônaco",
+            "0",
+            "Velocidade natural e emoção"
+          ],
+          [
+            "Fernando Alonso",
+            "Espanha",
+            "2",
+            "Pilotagem e recusa em desistir"
+          ],
+          [
+            "Oscar Piastri",
+            "Austrália",
+            "0",
+            "Cabeça fria, aprende rápido"
+          ],
+          [
+            "Lando Norris",
+            "Reino Unido",
+            "0",
+            "Rápido, expressivo, queridinho da torcida"
+          ]
+        ]
+      },
+      "faqHeading": "Qual piloto de F1 você é? Perguntas frequentes",
+      "faqs": [
+        {
+          "question": "Como funciona o quiz Qual Piloto de F1 Você É?",
+          "answer": "Você responde a dez perguntas sobre risco, mentalidade, preparação e como lida com rivais. Cada resposta soma pontos para um ou mais de oito pilotos, e a maior soma é o seu resultado. Leva cerca de dois minutos e não exige conta."
+        },
+        {
+          "question": "Com quais pilotos eu posso ser combinado?",
+          "answer": "Oito: Max Verstappen, Lewis Hamilton, Ayrton Senna, Michael Schumacher, Charles Leclerc, Fernando Alonso, Oscar Piastri e Lando Norris. A lista mistura pilotos que brigam na frente hoje com grandes nomes de todos os tempos, para que a maioria dos perfis caia num piloto que combine."
+        },
+        {
+          "question": "Preciso saber muito sobre Fórmula 1?",
+          "answer": "Não. As perguntas são sobre a sua personalidade, não sobre o esporte. Você terá um resultado quer assista a todas as corridas, quer nunca tenha visto nenhuma, ainda que os fãs costumem gostar de comparar o resultado com o piloto de quem realmente torcem."
+        },
+        {
+          "question": "Por que eu tirei um piloto de quem não gosto?",
+          "answer": "O quiz combina temperamento, não preferência. Se as suas respostas mostram uma veia agressiva de vencer a qualquer custo, você pode ser combinado com um piloto de estilo que você acha ríspido. Esse contraste costuma ser o que torna o resultado bom de compartilhar."
+        },
+        {
+          "question": "Duas pessoas podem tirar o mesmo piloto por motivos diferentes?",
+          "answer": "Sim. Como os pontos se acumulam ao longo das dez perguntas em vez de seguir um caminho fixo, diferentes combinações de respostas podem levar ao mesmo piloto, e uma única resposta mudada pode trocar o seu resultado por um parecido."
+        },
+        {
+          "question": "Posso refazer o quiz?",
+          "answer": "Quantas vezes quiser. Nada é armazenado entre as tentativas, então dá para testar respostas diferentes na hora e ver como o piloto combinado muda. Cada resultado também tem a própria página, que você pode enviar por link ou compartilhar."
+        }
+      ],
+      "relatedHeading": "Mais quizzes",
+      "related": [
+        {
+          "label": "Quiz de Fórmula 1",
+          "href": "/quiz/formula-1-trivia",
+          "desc": "Teste seu conhecimento sobre a história e os recordes da F1"
+        },
+        {
+          "label": "Qual Time de Futebol Você É?",
+          "href": "/quiz/which-football-club-are-you",
+          "desc": "Combine sua personalidade com um clube de futebol"
+        },
+        {
+          "label": "Quiz dos Campeões da Copa do Mundo",
+          "href": "/quiz/fifa-world-cup-winners",
+          "desc": "Nomeie cada campeão mundial desde 1930"
+        }
+      ]
+    },
+    "whatIsYourLoveLanguage": {
+      "metaTitle": "Qual é a Sua Linguagem do Amor? Quiz Gratuito",
+      "metaDescription": "Responda 12 perguntas e descubra qual das cinco linguagens do amor combina mais com você: palavras de afirmação, tempo de qualidade, atos de serviço, presentes ou toque físico.",
+      "about": "As cinco linguagens do amor",
+      "introHeading": "Sobre o quiz Qual é a Sua Linguagem do Amor?",
+      "intro": [
+        "A ideia das linguagens do amor vem de Gary Chapman, um conselheiro conjugal que publicou As Cinco Linguagens do Amor em 1992. O argumento dele, tirado de anos de sessões de aconselhamento, é que as pessoas tendem a expressar e a registrar afeto principalmente por um ou dois de cinco canais: palavras de afirmação, tempo de qualidade, atos de serviço, presentes e toque físico. Os problemas aparecem, segundo ele, quando os parceiros falam linguagens diferentes e cada um se sente não amado apesar do esforço real.",
+        "Este quiz coloca esse modelo em doze cenas do dia a dia. Em vez de pedir que você ordene as cinco linguagens diretamente, ele descreve situações, um parceiro cancelando planos, um amigo aparecendo para ajudar, um presente inesperado, e registra qual resposta mais importa para você. As respostas são somadas, e a linguagem com a maior pontuação é a sua principal. A maioria das pessoas também vê uma linguagem secundária clara, e as duas costumam ficar próximas.",
+        "Saber o seu resultado é útil sobretudo como um jeito de conversar sobre o que você precisa. Se tempo de qualidade for o mais pontuado, uma noite distraída no sofá vai te incomodar mais do que incomodaria alguém cuja linguagem são atos de serviço. Se a sua linguagem são palavras de afirmação, o silêncio depois de uma semana difícil pesa mais do que o seu parceiro imagina. A página de resultado explica cada linguagem e dá exemplos concretos de como ela aparece no dia a dia.",
+        "Vale ser honesto sobre os limites. As linguagens do amor são uma ferramenta popular de comunicação, não um teste de personalidade validado, e o apoio de pesquisas independentes é escasso. As suas linguagens também podem mudar com a idade, o estresse e a fase da vida. Encare o resultado como um convite à conversa, não como um rótulo fixo, e compare respostas com um parceiro ou amigo para ver onde vocês diferem."
+      ],
+      "table": {
+        "heading": "As cinco linguagens do amor em resumo",
+        "note": "Modelo de Gary Chapman, As Cinco Linguagens do Amor (1992).",
+        "cols": [
+          "Linguagem do amor",
+          "O que significa",
+          "Exemplo do dia a dia"
+        ],
+        "rows": [
+          [
+            "Palavras de afirmação",
+            "Sentir-se valorizado pelo que é dito",
+            "Elogio sincero, incentivo, dizer obrigado em voz alta"
+          ],
+          [
+            "Tempo de qualidade",
+            "Sentir-se valorizado pela atenção dedicada",
+            "Uma conversa sem telas ou uma atividade feita juntos"
+          ],
+          [
+            "Atos de serviço",
+            "Sentir-se valorizado quando alguém alivia a sua carga",
+            "Cozinhar uma refeição, resolver uma pendência, consertar algo"
+          ],
+          [
+            "Presentes",
+            "Sentir-se valorizado por lembranças atenciosas",
+            "Um item pequeno e bem escolhido que mostra que você foi lembrado"
+          ],
+          [
+            "Toque físico",
+            "Sentir-se valorizado pela proximidade física",
+            "Um abraço, dar as mãos, a mão no ombro"
+          ]
+        ]
+      },
+      "faqHeading": "Linguagens do amor: perguntas frequentes",
+      "faqs": [
+        {
+          "question": "Quais são as cinco linguagens do amor?",
+          "answer": "Palavras de afirmação, tempo de qualidade, atos de serviço, presentes e toque físico. A ideia é que cada pessoa dá e recebe afeto principalmente por uma ou duas delas e se sente mais cuidada quando o parceiro usa a mesma."
+        },
+        {
+          "question": "Quem criou as linguagens do amor?",
+          "answer": "Gary Chapman, um conselheiro conjugal e autor americano. Ele apresentou o conceito no livro de 1992 As Cinco Linguagens do Amor, a partir de padrões que notou ao aconselhar casais. O livro já vendeu bem mais de dez milhões de exemplares."
+        },
+        {
+          "question": "Posso ter mais de uma linguagem do amor?",
+          "answer": "Sim. A maioria das pessoas tem uma linguagem principal clara e uma secundária que ainda importa bastante. Para algumas pessoas duas linguagens pontuam quase igual, o que apenas significa que as duas são formas importantes de se sentir valorizado."
+        },
+        {
+          "question": "As linguagens do amor mudam com o tempo?",
+          "answer": "Podem mudar. Quem acaba de ter um filho pode passar a valorizar mais os atos de serviço; um período de distância pode aumentar a importância das palavras de afirmação ou do tempo de qualidade. Vale refazer um quiz como este a cada poucos anos."
+        },
+        {
+          "question": "A teoria das linguagens do amor tem comprovação científica?",
+          "answer": "Não muito. É um modelo de comunicação amplamente usado, e não um modelo validado, e o apoio de estudos revisados por pares é limitado. Ainda assim, pesquisadores costumam concordar que pode ser um bom ponto de partida para casais conversarem sobre suas necessidades."
+        },
+        {
+          "question": "Como este quiz define a minha linguagem do amor?",
+          "answer": "Ele apresenta doze situações do dia a dia e registra qual resposta mais importa para você em cada uma. As escolhas são somadas por linguagem, e o maior total é a sua linguagem do amor principal, com a segunda maior como secundária."
+        }
+      ],
+      "relatedHeading": "Mais quizzes de personalidade",
+      "related": [
+        {
+          "label": "Qual Time de Futebol Você É?",
+          "href": "/quiz/which-football-club-are-you",
+          "desc": "Combine sua personalidade com um clube de futebol"
+        },
+        {
+          "label": "Qual Piloto de F1 Você É?",
+          "href": "/quiz/which-f1-driver-are-you",
+          "desc": "Combine sua personalidade com um piloto de Fórmula 1"
+        },
+        {
+          "label": "Qual Figura Histórica Combina com Você?",
+          "href": "/quiz/which-historical-figure-matches-you",
+          "desc": "Veja qual personagem da história tem a sua visão de mundo"
+        }
+      ]
     }
   },
   "relatedQuizzes": {

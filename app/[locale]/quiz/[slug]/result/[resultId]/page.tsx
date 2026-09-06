@@ -6,6 +6,7 @@ import { QUIZ_REGISTRY, NOINDEX_QUIZ_IDS } from '@/lib/quizRegistry'
 import { getQuizBySlug, getQuizResultIds } from '@/lib/content/quizRepository'
 import { buildJsonLd, breadcrumbSchema } from '@/lib/schema'
 import { buildAlternates } from '@/lib/i18nMeta'
+import { getQuizDepthContent } from '@/components/quiz/QuizDepth'
 
 const TRIVIA_TIER_IDS = ['legend', 'expert', 'fan', 'rookie'] as const
 
@@ -87,6 +88,9 @@ export default async function QuizResultPage({ params }: { params: Promise<{ loc
     const tier = quiz.tiers.find(t => t.id === resultId)
     if (!tier) notFound()
 
+    const depth = await getQuizDepthContent(slug, locale)
+    const tierDepth = depth?.results?.[resultId]
+
     const jsonLd = buildJsonLd(
       {
         '@type': 'Article',
@@ -111,6 +115,16 @@ export default async function QuizResultPage({ params }: { params: Promise<{ loc
               <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">{quiz.title}</div>
               <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{tier.label}</h1>
               <p className="text-gray-600 leading-relaxed dark:text-gray-400 mb-6">{tier.description}</p>
+              {tierDepth && (
+                <div className="mb-6">
+                  <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">{tierDepth.heading}</h2>
+                  <div className="space-y-4">
+                    {tierDepth.body.map((paragraph, i) => (
+                      <p key={i} className="text-gray-600 leading-relaxed dark:text-gray-400">{paragraph}</p>
+                    ))}
+                  </div>
+                </div>
+              )}
               <Link
                 href={`/quiz/${slug}`}
                 className="inline-block px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 dark:hover:bg-blue-500 transition-colors"
