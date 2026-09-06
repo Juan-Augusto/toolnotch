@@ -4,7 +4,7 @@ import { PRIORITY_PAIR_SLUGS } from '@/data/conversionPairContent'
 import { QUIZ_REGISTRY, NOINDEX_QUIZ_IDS } from '@/lib/quizRegistry'
 import { BLOG_POSTS } from '@/data/blog/index'
 import { getAllMdxBlogPosts } from '@/lib/content/blogRepository'
-import { translateSlug } from '@/data/blog/slugTranslations'
+import { translateSlug, findSlugGroup } from '@/data/blog/slugTranslations'
 
 const BASE_URL = (process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com').trim()
 
@@ -168,10 +168,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const mdxBlogEntries: MetadataRoute.Sitemap = mdxPosts
     .filter((post) => !registeredBlogSlugs.has(post.slug))
+    // Per-locale-slug cluster posts (data/blog/slugTranslations — the 3 GPA
+    // articles) have a *different* slug in each locale, and each slug renders
+    // in exactly one locale (`/blog/how-to-calculate-gpa`, `/pt/blog/como-
+    // calcular-gpa`, `/es/blog/como-calcular-el-gpa`). A generic sitemap entry
+    // — one `<loc>` plus `/pt` + `/es` alternates — cannot describe that: any
+    // single `<loc>` implies the same path resolves under every locale, which
+    // is false here, so the pt/es forms 404. These 9 pages stay fully
+    // crawlable (generateStaticParams, the /blog index, and the cluster's
+    // own cross-links) and each page emits correct reciprocal hreflang via
+    // `mdxAlternates`; they are just not enumerated in sitemap.xml.
+    .filter((post) => !findSlugGroup(post.slug))
     .map((post) => {
-      // Posts with a per-locale MDX file have a native slug per locale
-      // (data/blog/slugTranslations). Emitting the English slug under /pt or
-      // /es is a 404 — translate it. Legacy shared-slug posts are unchanged.
+      // Remaining MDX posts are legacy shared-slug: one slug for every locale,
+      // served in English under /pt and /es. `translateSlug` is a no-op here.
       const enSlug = translateSlug(post.slug, 'en')
       return {
         url: `${BASE_URL}/blog/${enSlug}`,
@@ -217,13 +227,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...ALL_ROUTES.map((path) => urlWithAlternates(path)),
     // Quizzes — generated from lib/quizRegistry.ts (single source of truth).
     ...QUIZ_ROUTES.map((path) => urlWithAlternates(path, 0.7)),
-    ...BLOG_POSTS.map((post) =>
-      urlWithAlternates(
-        `/blog/${post.slug}`,
-        0.8,
-        new Date(post.updatedAt ?? post.publishedAt ?? SITE_CONTENT_DATE),
-      ),
-    ),
+    ...BLOG_POSTS.map((post) => {
+      // Mirror the mdxBlogEntries shape: translate the slug per locale so a
+      // registered post that ever gains per-locale MDX files emits native
+      // pt/es URLs instead of the English slug (which would 404). For the
+      // current legacy shared-slug posts `translateSlug` is a no-op.
+      const enSlug = translateSlug(post.slug, 'en')
+      return {
+        url: `${BASE_URL}/blog/${enSlug}`,
+        lastModified: new Date(post.updatedAt ?? post.publishedAt ?? SITE_CONTENT_DATE),
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+        alternates: {
+          languages: {
+            en: `${BASE_URL}/blog/${enSlug}`,
+            pt: `${BASE_URL}/pt/blog/${translateSlug(post.slug, 'pt')}`,
+            es: `${BASE_URL}/es/blog/${translateSlug(post.slug, 'es')}`,
+            'x-default': `${BASE_URL}/blog/${enSlug}`,
+          },
+        },
+      }
+    }),
     ...mdxBlogEntries,
   ]
 }
