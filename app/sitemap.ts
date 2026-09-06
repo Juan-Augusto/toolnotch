@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { COMMON_PAIRS } from '@/data/conversionPairs'
 import { PRIORITY_PAIR_SLUGS } from '@/data/conversionPairContent'
-import { QUIZ_REGISTRY } from '@/lib/quizRegistry'
+import { QUIZ_REGISTRY, NOINDEX_QUIZ_IDS } from '@/lib/quizRegistry'
 import { BLOG_POSTS } from '@/data/blog/index'
 import { getAllMdxBlogPosts } from '@/lib/content/blogRepository'
 import { translateSlug } from '@/data/blog/slugTranslations'
@@ -18,8 +18,14 @@ const SITE_CONTENT_DATE = new Date('2026-09-05T00:00:00Z')
 /** Priority conversion pairs stay in the sitemap; the rest are noindex (WS-5 item 10). */
 const PRIORITY_PAIR_SET = new Set<string>(PRIORITY_PAIR_SLUGS)
 
-/** Individual quiz routes, generated from the single quiz registry. */
-const QUIZ_ROUTES = QUIZ_REGISTRY.map((q) => `/quiz/${q.id}`)
+/**
+ * Individual quiz routes, generated from the single quiz registry.
+ * NOINDEX_QUIZ_IDS (no unique indexable body) are filtered out — they emit
+ * `robots: { index: false }` and stay out of the sitemap (AdSense readiness).
+ */
+const QUIZ_ROUTES = QUIZ_REGISTRY.filter((q) => !NOINDEX_QUIZ_IDS.has(q.id)).map(
+  (q) => `/quiz/${q.id}`,
+)
 
 /** World Cup quiz result/tier pages — the only quiz result pages with unique body copy. */
 const WC_RESULT_ROUTES = ['legend', 'expert', 'fan', 'rookie'].map(

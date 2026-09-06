@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { locales } from '@/i18n'
 import { isTriviaQuiz } from '@/lib/quizTypes'
-import { QUIZ_REGISTRY } from '@/lib/quizRegistry'
+import { QUIZ_REGISTRY, NOINDEX_QUIZ_IDS } from '@/lib/quizRegistry'
 import { getQuizBySlug } from '@/lib/content/quizRepository'
 import { buildAlternates } from '@/lib/i18nMeta'
 import {
@@ -38,6 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description,
     alternates: buildAlternates(`/quiz/${slug}`),
     openGraph: { title, description },
+    ...(NOINDEX_QUIZ_IDS.has(slug) ? { robots: { index: false, follow: true } } : {}),
   }
 }
 
