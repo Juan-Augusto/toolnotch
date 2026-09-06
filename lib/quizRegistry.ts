@@ -32,3 +32,25 @@ export const QUIZ_REGISTRY: QuizMeta[] = [
   { id: 'what-type-of-traveler-are-you',   type: 'personality', category: 'personality', locales: ['en'] },
   { id: 'which-decade-do-you-belong-in',   type: 'personality', category: 'personality', locales: ['en'] },
 ]
+
+/** Quizzes with no unique indexable body — excluded from the sitemap and marked robots:noindex (AdSense readiness, 2026-09-06). */
+export const NOINDEX_QUIZ_IDS: ReadonlySet<string> = new Set([
+  // Backend Engineering
+  'nodejs-fundamentals',
+  'database-design',
+  'database-indexing',
+  'messaging-sqs-kafka',
+  'rabbitmq-concepts',
+  'system-architecture',
+  // Personality
+  'what-career-suits-you',
+  'which-programming-language-are-you',
+  'am-i-introverted-or-extroverted',
+  'what-type-of-traveler-are-you',
+  'which-decade-do-you-belong-in',
+  'what-is-your-political-profile',
+  'political-echo-chamber-quiz',
+  'which-historical-figure-matches-you',
+  // Civic
+  'fake-news-or-fact',
+])
