@@ -13,7 +13,7 @@ import {
 } from '@/lib/schema'
 import QuizPlayer from '@/components/quiz/QuizPlayer'
 import TriviaPlayer from '@/components/quiz/TriviaPlayer'
-import WorldCupQuizDepth, { getQuizDepthContent } from '@/components/quiz/WorldCupQuizDepth'
+import QuizDepth, { getQuizDepthContent } from '@/components/quiz/QuizDepth'
 import RelatedQuizzes from '@/components/quiz/RelatedQuizzes'
 
 // ── Static params ─────────────────────────────────────────────────────────────
@@ -63,7 +63,7 @@ export default async function QuizPage({ params }: { params: Promise<{ locale: s
     url: buildLocalizedUrl(`/quiz/${slug}`, locale),
     description: depth ? depth.metaDescription : quiz.description,
     educationalUse: 'Assessment',
-    ...(depth ? { about: { '@type': 'Thing', name: 'FIFA World Cup' } } : {}),
+    ...(depth?.about ? { about: { '@type': 'Thing', name: depth.about } } : {}),
   }
   const jsonLd = depth
     ? buildJsonLd(quizEntity, faqSchema(depth.faqs), breadcrumb)
@@ -82,7 +82,7 @@ export default async function QuizPage({ params }: { params: Promise<{ locale: s
         </div>
       </div>
 
-      {depth && <WorldCupQuizDepth content={depth} currentSlug={slug} />}
+      {depth && <QuizDepth content={depth} currentSlug={slug} />}
       {!depth && <RelatedQuizzes slug={slug} locale={locale} />}
     </main>
   )

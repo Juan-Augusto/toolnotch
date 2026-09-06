@@ -5024,191 +5024,194 @@
     "fifaWorldCupWinners": {
       "metaTitle": "FIFA World Cup Winners Quiz — Guess Every Champion 1930–2022",
       "metaDescription": "Play the FIFA World Cup winners quiz: 20 questions on every champion from 1930 to 2022, plus a full winners-by-year list. Guess the World Cup winners now.",
+      "about": "FIFA World Cup",
       "introHeading": "About the FIFA World Cup Winners Quiz",
       "intro": [
         "The FIFA World Cup has crowned a champion every four years since 1930, pausing only in 1942 and 1946 for the Second World War. Just eight nations have ever lifted the trophy. Brazil leads with five titles, followed by Italy and Germany with four each, Argentina with three, and Uruguay and France with two. England and Spain have each won once, both in tournaments that turned on a single unforgettable final. The prize has changed too: the Jules Rimet Trophy was awarded through 1970, and the current FIFA World Cup Trophy has been lifted since 1974.",
         "This quiz runs through 22 tournaments of history. You are asked to name the winner of specific editions, from Uruguay’s home triumph in 1930 to Argentina’s penalty-shootout victory in Qatar 2022, and to recall host nations, record goalscorers such as Miroslav Klose, and the finals that defined each era. Twenty multiple-choice questions cover champions, runners-up, and the moments every football fan argues about.",
         "Answer each question and your score is tallied instantly, then matched to a tier: World Cup Legend, Football Expert, Football Fan, or World Cup Rookie. There is no sign-up and no time pressure. Use the winners-by-year table below to revise before you play, or to settle a debate about who won which World Cup — every result in it matches the official FIFA record."
       ],
-      "tableHeading": "Every FIFA World Cup Winner (1930–2022)",
-      "tableNote": "aet = after extra time; pens = decided on penalties.",
-      "tableCols": {
-        "year": "Year",
-        "host": "Host",
-        "winner": "Winner",
-        "runnerUp": "Runner-up",
-        "score": "Final score"
+      "table": {
+        "heading": "Every FIFA World Cup Winner (1930–2022)",
+        "note": "aet = after extra time; pens = decided on penalties.",
+        "cols": [
+          "Year",
+          "Host",
+          "Winner",
+          "Runner-up",
+          "Final score"
+        ],
+        "rows": [
+          [
+            "1930",
+            "Uruguay",
+            "Uruguay",
+            "Argentina",
+            "4–2"
+          ],
+          [
+            "1934",
+            "Italy",
+            "Italy",
+            "Czechoslovakia",
+            "2–1 (aet)"
+          ],
+          [
+            "1938",
+            "France",
+            "Italy",
+            "Hungary",
+            "4–2"
+          ],
+          [
+            "1942",
+            "Not held",
+            "Not held",
+            "—",
+            "World War II"
+          ],
+          [
+            "1946",
+            "Not held",
+            "Not held",
+            "—",
+            "World War II"
+          ],
+          [
+            "1950",
+            "Brazil",
+            "Uruguay",
+            "Brazil",
+            "2–1 (deciding match)"
+          ],
+          [
+            "1954",
+            "Switzerland",
+            "West Germany",
+            "Hungary",
+            "3–2"
+          ],
+          [
+            "1958",
+            "Sweden",
+            "Brazil",
+            "Sweden",
+            "5–2"
+          ],
+          [
+            "1962",
+            "Chile",
+            "Brazil",
+            "Czechoslovakia",
+            "3–1"
+          ],
+          [
+            "1966",
+            "England",
+            "England",
+            "West Germany",
+            "4–2 (aet)"
+          ],
+          [
+            "1970",
+            "Mexico",
+            "Brazil",
+            "Italy",
+            "4–1"
+          ],
+          [
+            "1974",
+            "West Germany",
+            "West Germany",
+            "Netherlands",
+            "2–1"
+          ],
+          [
+            "1978",
+            "Argentina",
+            "Argentina",
+            "Netherlands",
+            "3–1 (aet)"
+          ],
+          [
+            "1982",
+            "Spain",
+            "Italy",
+            "West Germany",
+            "3–1"
+          ],
+          [
+            "1986",
+            "Mexico",
+            "Argentina",
+            "West Germany",
+            "3–2"
+          ],
+          [
+            "1990",
+            "Italy",
+            "West Germany",
+            "Argentina",
+            "1–0"
+          ],
+          [
+            "1994",
+            "United States",
+            "Brazil",
+            "Italy",
+            "0–0 (3–2 pens)"
+          ],
+          [
+            "1998",
+            "France",
+            "France",
+            "Brazil",
+            "3–0"
+          ],
+          [
+            "2002",
+            "South Korea & Japan",
+            "Brazil",
+            "Germany",
+            "2–0"
+          ],
+          [
+            "2006",
+            "Germany",
+            "Italy",
+            "France",
+            "1–1 (5–3 pens)"
+          ],
+          [
+            "2010",
+            "South Africa",
+            "Spain",
+            "Netherlands",
+            "1–0 (aet)"
+          ],
+          [
+            "2014",
+            "Brazil",
+            "Germany",
+            "Argentina",
+            "1–0 (aet)"
+          ],
+          [
+            "2018",
+            "Russia",
+            "France",
+            "Croatia",
+            "4–2"
+          ],
+          [
+            "2022",
+            "Qatar",
+            "Argentina",
+            "France",
+            "3–3 (4–2 pens)"
+          ]
+        ]
       },
-      "rows": [
-        {
-          "year": "1930",
-          "host": "Uruguay",
-          "winner": "Uruguay",
-          "runnerUp": "Argentina",
-          "score": "4–2"
-        },
-        {
-          "year": "1934",
-          "host": "Italy",
-          "winner": "Italy",
-          "runnerUp": "Czechoslovakia",
-          "score": "2–1 (aet)"
-        },
-        {
-          "year": "1938",
-          "host": "France",
-          "winner": "Italy",
-          "runnerUp": "Hungary",
-          "score": "4–2"
-        },
-        {
-          "year": "1942",
-          "host": "Not held",
-          "winner": "Not held",
-          "runnerUp": "—",
-          "score": "World War II"
-        },
-        {
-          "year": "1946",
-          "host": "Not held",
-          "winner": "Not held",
-          "runnerUp": "—",
-          "score": "World War II"
-        },
-        {
-          "year": "1950",
-          "host": "Brazil",
-          "winner": "Uruguay",
-          "runnerUp": "Brazil",
-          "score": "2–1 (deciding match)"
-        },
-        {
-          "year": "1954",
-          "host": "Switzerland",
-          "winner": "West Germany",
-          "runnerUp": "Hungary",
-          "score": "3–2"
-        },
-        {
-          "year": "1958",
-          "host": "Sweden",
-          "winner": "Brazil",
-          "runnerUp": "Sweden",
-          "score": "5–2"
-        },
-        {
-          "year": "1962",
-          "host": "Chile",
-          "winner": "Brazil",
-          "runnerUp": "Czechoslovakia",
-          "score": "3–1"
-        },
-        {
-          "year": "1966",
-          "host": "England",
-          "winner": "England",
-          "runnerUp": "West Germany",
-          "score": "4–2 (aet)"
-        },
-        {
-          "year": "1970",
-          "host": "Mexico",
-          "winner": "Brazil",
-          "runnerUp": "Italy",
-          "score": "4–1"
-        },
-        {
-          "year": "1974",
-          "host": "West Germany",
-          "winner": "West Germany",
-          "runnerUp": "Netherlands",
-          "score": "2–1"
-        },
-        {
-          "year": "1978",
-          "host": "Argentina",
-          "winner": "Argentina",
-          "runnerUp": "Netherlands",
-          "score": "3–1 (aet)"
-        },
-        {
-          "year": "1982",
-          "host": "Spain",
-          "winner": "Italy",
-          "runnerUp": "West Germany",
-          "score": "3–1"
-        },
-        {
-          "year": "1986",
-          "host": "Mexico",
-          "winner": "Argentina",
-          "runnerUp": "West Germany",
-          "score": "3–2"
-        },
-        {
-          "year": "1990",
-          "host": "Italy",
-          "winner": "West Germany",
-          "runnerUp": "Argentina",
-          "score": "1–0"
-        },
-        {
-          "year": "1994",
-          "host": "United States",
-          "winner": "Brazil",
-          "runnerUp": "Italy",
-          "score": "0–0 (3–2 pens)"
-        },
-        {
-          "year": "1998",
-          "host": "France",
-          "winner": "France",
-          "runnerUp": "Brazil",
-          "score": "3–0"
-        },
-        {
-          "year": "2002",
-          "host": "South Korea & Japan",
-          "winner": "Brazil",
-          "runnerUp": "Germany",
-          "score": "2–0"
-        },
-        {
-          "year": "2006",
-          "host": "Germany",
-          "winner": "Italy",
-          "runnerUp": "France",
-          "score": "1–1 (5–3 pens)"
-        },
-        {
-          "year": "2010",
-          "host": "South Africa",
-          "winner": "Spain",
-          "runnerUp": "Netherlands",
-          "score": "1–0 (aet)"
-        },
-        {
-          "year": "2014",
-          "host": "Brazil",
-          "winner": "Germany",
-          "runnerUp": "Argentina",
-          "score": "1–0 (aet)"
-        },
-        {
-          "year": "2018",
-          "host": "Russia",
-          "winner": "France",
-          "runnerUp": "Croatia",
-          "score": "4–2"
-        },
-        {
-          "year": "2022",
-          "host": "Qatar",
-          "winner": "Argentina",
-          "runnerUp": "France",
-          "score": "3–3 (4–2 pens)"
-        }
-      ],
       "faqHeading": "World Cup winners: frequently asked questions",
       "faqs": [
         {
@@ -5233,23 +5236,578 @@
         }
       ],
       "relatedHeading": "More football quizzes",
-      "related": {
-        "worldCup": {
+      "related": [
+        {
           "label": "FIFA World Cup Winners Quiz",
           "href": "/quiz/fifa-world-cup-winners",
           "desc": "Name every World Cup champion from 1930 to 2022"
         },
-        "footballClub": {
+        {
           "label": "Which Football Club Are You?",
           "href": "/quiz/which-football-club-are-you",
           "desc": "Match your personality to a club"
         },
-        "championsLeague": {
+        {
           "label": "Champions League Trivia",
           "href": "/quiz/champions-league-trivia",
           "desc": "Test your knowledge of Europe’s elite competition"
         }
+      ],
+      "results": {
+        "legend": {
+          "heading": "What a World Cup Legend score means",
+          "body": [
+            "Scoring in the top tier means you have internalised almost a century of tournament history. You are not guessing between two plausible champions; you know that Uruguay won the first final in 1930, that Italy went back-to-back in 1934 and 1938, and that West Germany's win in 1954 is still called the Miracle of Bern. Details like joint hosts, penalty-shootout finals and the switch from the Jules Rimet Trophy to the current trophy in 1974 are second nature to you.",
+            "Keep the streak alive by testing yourself on the harder edges of the record: the only players to score in two different finals, the goalkeepers who have captained winning sides, and the nations that reached a final without ever lifting the trophy. Share your result, challenge a friend who claims to know their football, and come back after the next tournament to keep your perfect record intact."
+          ]
+        },
+        "expert": {
+          "heading": "What a Football Expert score means",
+          "body": [
+            "An expert score says you have watched a lot of football and remember the moments that mattered. You can name most champions on sight and you rarely confuse a runner-up with a winner. The questions that catch experts out tend to be the specific ones: the exact final score in 1994, which host nations have won at home, or the identity of the tournament's record goalscorer, Miroslav Klose of Germany with 16 goals across four World Cups.",
+            "Closing the gap to the top tier is mostly a matter of revising the early tournaments, from 1930 to 1958, which get less television airtime today. Use the winners-by-year table above as a study aid, focus on the finals decided after extra time or on penalties, and take the quiz again. One or two more correct answers is usually all that separates an expert from a legend."
+          ]
+        },
+        "fan": {
+          "heading": "What a Football Fan score means",
+          "body": [
+            "A fan score is a solid foundation. You know the giants of the international game, you can place recent winners like France in 2018 and Argentina in 2022, and you have a feel for which countries expect to compete every four years. What tends to be missing is the deeper history: the tournaments held before colour television, the nations that have won exactly once, and the difference between hosting a World Cup and winning one.",
+            "The good news is that this is the most rewarding tier to improve from, because every bit of study adds several possible correct answers. Read through the full winners list above, watch a highlights reel of a classic final such as 1970 or 1986, and pay attention to the group of eight nations that have ever won. Come back in a few days and you should comfortably reach the expert tier."
+          ]
+        },
+        "rookie": {
+          "heading": "What a World Cup Rookie score means",
+          "body": [
+            "A rookie score simply means the World Cup is still new territory for you, and that is a good place to start because the tournament has a clear shape once you learn it. It has been played every four years since 1930, with only 1942 and 1946 missed for the Second World War. Just eight nations have ever won: Brazil, Italy, Germany, Argentina, France, Uruguay, England and Spain. Brazil leads with five titles.",
+            "From there, the rest builds quickly. Learn the last five or six champions, then work backwards decade by decade using the table above. Watching one classic final in full will teach you more names and stories than an hour of reading. There is no time limit and no sign-up here, so take the quiz as often as you like and watch your tier climb from rookie to fan and beyond."
+          ]
+        }
       }
+    },
+    "whichFootballClub": {
+      "metaTitle": "Which Football Club Are You? Personality Quiz",
+      "metaDescription": "Answer 10 questions and find out which football club matches your personality, from Real Madrid and Barcelona to Liverpool, Bayern, Flamengo and Boca Juniors.",
+      "about": "Association football clubs",
+      "introHeading": "About the Which Football Club Are You? quiz",
+      "intro": [
+        "Every big football club has a personality as recognisable as any player's. Real Madrid carry themselves like serial winners who expect the trophy no matter the odds. Barcelona tie their identity to a style of play and a youth academy. Liverpool lean on emotion, a famous anthem and a bond with their crowd. Bayern Munich prize order, planning and quiet dominance, while Borussia Dortmund sell energy, youth and the noise of the Yellow Wall. This quiz takes those club characters seriously and works out which one is closest to yours.",
+        "The ten questions are not about football knowledge. They ask how you handle pressure, whether you value flair or efficiency, how you treat rivals, what you want from the people around you, and whether you would rather win ugly or lose with style. Each option quietly adds points to one or more of eight clubs: Real Madrid, FC Barcelona, Liverpool, Bayern Munich, Manchester City, Flamengo, Boca Juniors and Borussia Dortmund. The club with the highest total at the end is your match.",
+        "Because the scoring is cumulative rather than a single branching path, two people can reach the same result by different routes, and a small change in one answer can tip you from one club to a neighbour with a similar outlook. The result page describes what that club stands for, the traits you share with it, and why those answers pointed there. Nothing is stored, there is no sign-up, and you can retake it as often as you like.",
+        "You do not need to support the club you are matched with, and plenty of people are surprised by the result. Treat it as a conversation starter: send it to friends who support rival teams, compare results, and argue about whether the description fits. If you want more football, the honours table below and the related quizzes cover the World Cup and the Champions League."
+      ],
+      "table": {
+        "heading": "Most European Cup and Champions League titles",
+        "note": "European Cup / UEFA Champions League titles, men’s competition. Figures as of the 2024 final.",
+        "cols": [
+          "Club",
+          "Country",
+          "Titles",
+          "Most recent"
+        ],
+        "rows": [
+          [
+            "Real Madrid",
+            "Spain",
+            "15",
+            "2024"
+          ],
+          [
+            "AC Milan",
+            "Italy",
+            "7",
+            "2007"
+          ],
+          [
+            "Bayern Munich",
+            "Germany",
+            "6",
+            "2020"
+          ],
+          [
+            "Liverpool",
+            "England",
+            "6",
+            "2019"
+          ],
+          [
+            "Barcelona",
+            "Spain",
+            "5",
+            "2015"
+          ],
+          [
+            "Ajax",
+            "Netherlands",
+            "4",
+            "1995"
+          ]
+        ]
+      },
+      "faqHeading": "Which football club are you? Common questions",
+      "faqs": [
+        {
+          "question": "How does the Which Football Club Are You? quiz work?",
+          "answer": "You answer ten personality questions about pressure, ambition, style and how you treat rivals. Every answer adds points to one or more of eight clubs, and the club with the highest score becomes your result. It takes about two minutes, needs no account, and can be retaken as many times as you want."
+        },
+        {
+          "question": "Which clubs can I be matched with?",
+          "answer": "There are eight possible results: Real Madrid, FC Barcelona, Liverpool, Bayern Munich, Manchester City, Flamengo, Boca Juniors and Borussia Dortmund. They were chosen to cover very different footballing cultures across Europe and South America, so most personality profiles land on a club that genuinely fits."
+        },
+        {
+          "question": "Do I have to support the club I get?",
+          "answer": "No. The quiz matches your temperament and values to a club’s identity, not your fandom. Many people are matched with a rival of the team they support, which is usually what makes the result fun to share and argue about."
+        },
+        {
+          "question": "What makes each club's identity different?",
+          "answer": "Clubs build a character over decades through their history, city, playing philosophy and supporters. Barcelona are associated with possession football and their academy, Real Madrid with relentless winning, Liverpool and Dortmund with atmosphere and emotion, Bayern and Manchester City with structure and control."
+        },
+        {
+          "question": "Which club has won the most Champions League titles?",
+          "answer": "Real Madrid, with 15 European Cup and Champions League titles, far ahead of AC Milan on seven and Liverpool and Bayern Munich on six. That record is one reason Real Madrid are so often described as the ultimate winning club."
+        },
+        {
+          "question": "Can I share my result or take the quiz again?",
+          "answer": "Yes. Each result has its own page you can link to, and there is a share option on the result screen. Nothing you answer is saved, so you can retake the quiz immediately and see how different answers change the club you are matched with."
+        }
+      ],
+      "relatedHeading": "More football quizzes",
+      "related": [
+        {
+          "label": "FIFA World Cup Winners Quiz",
+          "href": "/quiz/fifa-world-cup-winners",
+          "desc": "Name every World Cup champion from 1930 to 2022"
+        },
+        {
+          "label": "Champions League Trivia",
+          "href": "/quiz/champions-league-trivia",
+          "desc": "Test your knowledge of Europe's top club competition"
+        },
+        {
+          "label": "Which F1 Driver Are You?",
+          "href": "/quiz/which-f1-driver-are-you",
+          "desc": "Match your personality to a Formula 1 great"
+        }
+      ]
+    },
+    "championsLeagueTrivia": {
+      "metaTitle": "Champions League Trivia Quiz — 15 Questions",
+      "metaDescription": "Test your UEFA Champions League knowledge: 15 questions on finals, top scorers, record winners and famous nights, from the 1956 European Cup to today.",
+      "about": "UEFA Champions League",
+      "introHeading": "About the Champions League Trivia Quiz",
+      "intro": [
+        "European club football's biggest prize started in 1955 as the European Champion Clubs' Cup, a straight knockout between national league winners. Real Madrid won the first five editions. In 1992 it was rebranded the UEFA Champions League, a group stage was added, and entry was widened to include more than one club per country. The competition kept growing until the 2024–25 season, when the group stage was replaced by a single 36-team league phase. This quiz covers the whole span, from black-and-white finals to the modern format.",
+        "The fifteen questions move across winners, losing finalists, venues, managers, record holders and the nights that fans still talk about. Expect to be asked about Real Madrid's record haul of titles, the all-time leading scorer Cristiano Ronaldo, Liverpool's comeback from three goals down in the 2005 final in Istanbul, and Barcelona's 6–1 defeat of Paris Saint-Germain in 2017. Some questions reward casual viewing; others need real study.",
+        "It is a trivia quiz, so every question has one correct answer and you find out immediately whether you got it right. At the end your percentage is converted into a tier: UCL Legend for 80 per cent and above, UCL Expert from 60, UCL Fan from 40, and UCL Rookie below that. There is no timer, no account and no limit on retakes, so you can go straight back and try to move up a tier.",
+        "If you want to prepare, the table below lists the clubs with the most titles and the years they won them. The related quizzes cover the World Cup and, for a change of sport, Formula 1."
+      ],
+      "table": {
+        "heading": "Clubs with the most European Cup / Champions League titles",
+        "note": "Men’s competition, titles through the 2024 final.",
+        "cols": [
+          "Club",
+          "Country",
+          "Titles",
+          "Years"
+        ],
+        "rows": [
+          [
+            "Real Madrid",
+            "Spain",
+            "15",
+            "1956–2024"
+          ],
+          [
+            "AC Milan",
+            "Italy",
+            "7",
+            "1963–2007"
+          ],
+          [
+            "Bayern Munich",
+            "Germany",
+            "6",
+            "1974–2020"
+          ],
+          [
+            "Liverpool",
+            "England",
+            "6",
+            "1977–2019"
+          ],
+          [
+            "Barcelona",
+            "Spain",
+            "5",
+            "1992–2015"
+          ],
+          [
+            "Ajax",
+            "Netherlands",
+            "4",
+            "1971–1995"
+          ]
+        ]
+      },
+      "faqHeading": "Champions League trivia: common questions",
+      "faqs": [
+        {
+          "question": "What does the Champions League trivia quiz cover?",
+          "answer": "Fifteen questions spanning the competition from the 1956 European Cup to the current Champions League: winners and runners-up, famous finals, record scorers, well-known managers and iconic matches. Both the old knockout European Cup and the modern group and league-phase eras are included."
+        },
+        {
+          "question": "Which club has won the most European Cups?",
+          "answer": "Real Madrid, with 15 titles between 1956 and 2024. AC Milan are next on seven, then Liverpool and Bayern Munich on six each, Barcelona on five, and Ajax on four. No other club has reached five."
+        },
+        {
+          "question": "Who is the all-time top scorer in the Champions League?",
+          "answer": "Cristiano Ronaldo, with more than 140 goals in the competition, ahead of Lionel Messi on around 130. Robert Lewandowski and Karim Benzema are the closest active players but remain well behind the top two."
+        },
+        {
+          "question": "What was the Miracle of Istanbul?",
+          "answer": "The 2005 final between Liverpool and AC Milan. Milan led 3–0 at half-time; Liverpool scored three times in six second-half minutes to force extra time, then won the penalty shootout. It is regarded as the greatest comeback in a European final."
+        },
+        {
+          "question": "How is my trivia score graded?",
+          "answer": "Your correct answers are turned into a percentage and matched to a tier: UCL Legend at 80 per cent or higher, UCL Expert from 60, UCL Fan from 40 and UCL Rookie below 40. You can retake the quiz straight away to improve your tier."
+        },
+        {
+          "question": "What changed in the 2024–25 format?",
+          "answer": "The 32-team group stage was replaced by a 36-team league phase. Every club now plays eight different opponents in one combined table, with the top places advancing directly and the next group entering a knockout play-off round."
+        }
+      ],
+      "relatedHeading": "More football quizzes",
+      "related": [
+        {
+          "label": "FIFA World Cup Winners Quiz",
+          "href": "/quiz/fifa-world-cup-winners",
+          "desc": "Name every World Cup champion from 1930 to 2022"
+        },
+        {
+          "label": "Which Football Club Are You?",
+          "href": "/quiz/which-football-club-are-you",
+          "desc": "Match your personality to a club"
+        },
+        {
+          "label": "Formula 1 Trivia",
+          "href": "/quiz/formula-1-trivia",
+          "desc": "Switch sports and test your F1 history"
+        }
+      ]
+    },
+    "formula1Trivia": {
+      "metaTitle": "Formula 1 Trivia Quiz — 15 Questions on F1 History",
+      "metaDescription": "Test your Formula 1 knowledge: 15 questions on world champions, race-win records, famous circuits and classic moments, from the 1950 season to the modern era.",
+      "about": "Formula One",
+      "introHeading": "About the Formula 1 Trivia Quiz",
+      "intro": [
+        "The Formula 1 World Championship has run every year since 1950, when Giuseppe Farina took the first drivers' title for Alfa Romeo. Since then it has grown into a global series of around 24 races a season, with two championships decided each year: one for drivers and one for constructors, the teams that design and build the cars. This quiz draws on the whole history, so a question about Fangio in the 1950s sits next to one about the current grid.",
+        "The fifteen questions cover champions, race-winning records, circuits, technical rules and the moments that defined each era: Ayrton Senna's qualifying laps, Michael Schumacher's five straight titles with Ferrari, Sebastian Vettel's four in a row with Red Bull, and Max Verstappen's run of championships from 2021. You may be asked who has the most career wins, which country hosts the Monaco Grand Prix, or how points are awarded.",
+        "Every question has a single correct answer and is marked immediately. Your final percentage sets your tier: Legend at 80 per cent and above, Expert from 60, Fan from 40 and Rookie below that. There is no time pressure, no sign-up and no cap on retakes, so it is easy to go again and chase a better result.",
+        "The table below lists the drivers with the most world titles, which is a good place to start revising. The related quizzes let you match your personality to a driver or switch codes entirely and test your football history."
+      ],
+      "table": {
+        "heading": "Formula 1 drivers with the most World Championships",
+        "note": "Drivers' titles won, as of the end of the 2024 season.",
+        "cols": [
+          "Driver",
+          "Country",
+          "Titles",
+          "Seasons"
+        ],
+        "rows": [
+          [
+            "Lewis Hamilton",
+            "United Kingdom",
+            "7",
+            "2008–2020"
+          ],
+          [
+            "Michael Schumacher",
+            "Germany",
+            "7",
+            "1994–2004"
+          ],
+          [
+            "Juan Manuel Fangio",
+            "Argentina",
+            "5",
+            "1951–1957"
+          ],
+          [
+            "Alain Prost",
+            "France",
+            "4",
+            "1985–1993"
+          ],
+          [
+            "Sebastian Vettel",
+            "Germany",
+            "4",
+            "2010–2013"
+          ],
+          [
+            "Max Verstappen",
+            "Netherlands",
+            "4",
+            "2021–2024"
+          ]
+        ]
+      },
+      "faqHeading": "Formula 1 trivia: common questions",
+      "faqs": [
+        {
+          "question": "What does the Formula 1 trivia quiz cover?",
+          "answer": "Fifteen questions across the sport’s history from 1950 to the present: world champions, race and pole-position records, circuits, technical regulations and famous races. Both the classic eras and the current turbo-hybrid era are included."
+        },
+        {
+          "question": "Who has won the most Formula 1 World Championships?",
+          "answer": "Michael Schumacher and Lewis Hamilton are level on seven drivers’ titles each. Juan Manuel Fangio won five in the 1950s, and Alain Prost, Sebastian Vettel and Max Verstappen have four apiece."
+        },
+        {
+          "question": "Who has the most race wins in Formula 1 history?",
+          "answer": "Lewis Hamilton, with more than 100 Grand Prix victories, ahead of Michael Schumacher. Hamilton also holds the record for most pole positions. Both figures were once thought to be nearly unbreakable."
+        },
+        {
+          "question": "Which is the most successful team in Formula 1?",
+          "answer": "Ferrari. It is the only constructor to have competed in every season since 1950 and has won more races and more constructors’ championships than any other team, though it has had long gaps between drivers’ titles."
+        },
+        {
+          "question": "What is the difference between the drivers' and constructors' championships?",
+          "answer": "The drivers’ title goes to the individual with the most points over the season. The constructors’ title adds up the points scored by both of a team’s cars. A team can win one without the other."
+        },
+        {
+          "question": "How is my F1 trivia score graded?",
+          "answer": "Correct answers become a percentage and a tier: Legend at 80 per cent or above, Expert from 60, Fan from 40 and Rookie below 40. Retakes are unlimited, so you can go again to move up."
+        }
+      ],
+      "relatedHeading": "More quizzes",
+      "related": [
+        {
+          "label": "Which F1 Driver Are You?",
+          "href": "/quiz/which-f1-driver-are-you",
+          "desc": "Match your personality to a Formula 1 great"
+        },
+        {
+          "label": "Champions League Trivia",
+          "href": "/quiz/champions-league-trivia",
+          "desc": "Test your European football knowledge"
+        },
+        {
+          "label": "FIFA World Cup Winners Quiz",
+          "href": "/quiz/fifa-world-cup-winners",
+          "desc": "Name every World Cup champion since 1930"
+        }
+      ]
+    },
+    "whichF1Driver": {
+      "metaTitle": "Which F1 Driver Are You? Personality Quiz",
+      "metaDescription": "Answer 10 questions and find out which Formula 1 driver matches your personality, from Verstappen and Hamilton to Senna, Schumacher, Leclerc and Alonso.",
+      "about": "Formula One drivers",
+      "introHeading": "About the Which F1 Driver Are You? quiz",
+      "intro": [
+        "Formula 1 drivers reach the top with very different temperaments. Max Verstappen is direct and uncompromising. Lewis Hamilton pairs calm race craft with a life and a set of causes away from the car. Ayrton Senna treated driving as something close to spiritual. Fernando Alonso is the relentless competitor who never stops believing the title is possible. This quiz maps those styles onto a short personality test and tells you which driver you resemble most.",
+        "The ten questions ask about your appetite for risk, how you respond to setbacks, whether you trust instinct or preparation, how you handle teammates and rivals, and what winning actually means to you. Each answer adds points to one or more of eight drivers: Max Verstappen, Lewis Hamilton, Ayrton Senna, Michael Schumacher, Charles Leclerc, Fernando Alonso, Oscar Piastri and Lando Norris. Your result is the driver with the highest total.",
+        "Scoring is cumulative, not a single branching route, so changing one answer can move you to a driver with a similar profile, and two people can reach the same result in different ways. The result page explains what that driver is known for, the traits you share and why your answers pointed there. Nothing is saved, there is no sign-up, and retakes are unlimited.",
+        "You do not have to follow Formula 1 closely to get a result that fits, and being matched with a driver you dislike is part of the fun. Share it with friends, compare answers, and if you want more racing, the table below and the related quizzes cover F1 history and the sport’s biggest records."
+      ],
+      "table": {
+        "heading": "The eight drivers you can be matched with",
+        "note": "World Drivers' Championships, as of the end of the 2024 season.",
+        "cols": [
+          "Driver",
+          "Country",
+          "F1 titles",
+          "Known for"
+        ],
+        "rows": [
+          [
+            "Max Verstappen",
+            "Netherlands",
+            "4",
+            "Aggressive, single-minded pace"
+          ],
+          [
+            "Lewis Hamilton",
+            "United Kingdom",
+            "7",
+            "Calm consistency and longevity"
+          ],
+          [
+            "Ayrton Senna",
+            "Brazil",
+            "3",
+            "Qualifying genius and intensity"
+          ],
+          [
+            "Michael Schumacher",
+            "Germany",
+            "7",
+            "Relentless preparation and work rate"
+          ],
+          [
+            "Charles Leclerc",
+            "Monaco",
+            "0",
+            "Natural speed and emotion"
+          ],
+          [
+            "Fernando Alonso",
+            "Spain",
+            "2",
+            "Racecraft and refusal to quit"
+          ],
+          [
+            "Oscar Piastri",
+            "Australia",
+            "0",
+            "Cool head, quick learner"
+          ],
+          [
+            "Lando Norris",
+            "United Kingdom",
+            "0",
+            "Fast, expressive, fan favourite"
+          ]
+        ]
+      },
+      "faqHeading": "Which F1 driver are you? Common questions",
+      "faqs": [
+        {
+          "question": "How does the Which F1 Driver Are You? quiz work?",
+          "answer": "You answer ten questions about risk, mindset, preparation and how you deal with rivals. Each answer adds points to one or more of eight drivers, and the highest total is your result. It takes about two minutes and needs no account."
+        },
+        {
+          "question": "Which drivers can I be matched with?",
+          "answer": "Eight: Max Verstappen, Lewis Hamilton, Ayrton Senna, Michael Schumacher, Charles Leclerc, Fernando Alonso, Oscar Piastri and Lando Norris. The list mixes current front-runners with all-time greats so that most personality types land on a driver who fits."
+        },
+        {
+          "question": "Do I need to know a lot about Formula 1?",
+          "answer": "No. The questions are about your personality, not about the sport. You will get a result whether you watch every race or have never seen one, though fans often enjoy comparing the result with the driver they actually support."
+        },
+        {
+          "question": "Why did I get a driver I do not like?",
+          "answer": "The quiz matches temperament, not preference. If your answers show an aggressive, win-at-all-costs streak you may be matched with a driver whose style you find abrasive. That mismatch is usually what makes the result worth sharing."
+        },
+        {
+          "question": "Can two people get the same driver for different reasons?",
+          "answer": "Yes. Because points build up across all ten questions rather than following one fixed path, different combinations of answers can lead to the same driver, and a single changed answer can switch your result to a similar one."
+        },
+        {
+          "question": "Can I retake the quiz?",
+          "answer": "As often as you like. Nothing is stored between attempts, so you can immediately try different answers and see how the matched driver changes. Each result also has its own page you can link to or share."
+        }
+      ],
+      "relatedHeading": "More quizzes",
+      "related": [
+        {
+          "label": "Formula 1 Trivia",
+          "href": "/quiz/formula-1-trivia",
+          "desc": "Test your knowledge of F1 history and records"
+        },
+        {
+          "label": "Which Football Club Are You?",
+          "href": "/quiz/which-football-club-are-you",
+          "desc": "Match your personality to a football club"
+        },
+        {
+          "label": "FIFA World Cup Winners Quiz",
+          "href": "/quiz/fifa-world-cup-winners",
+          "desc": "Name every World Cup champion since 1930"
+        }
+      ]
+    },
+    "whatIsYourLoveLanguage": {
+      "metaTitle": "What Is Your Love Language? Free Quiz",
+      "metaDescription": "Answer 12 questions and find out which of the five love languages fits you best: words of affirmation, quality time, acts of service, gifts or physical touch.",
+      "about": "The five love languages",
+      "introHeading": "About the What Is Your Love Language? quiz",
+      "intro": [
+        "The idea of love languages comes from Gary Chapman, a marriage counsellor who published The Five Love Languages in 1992. His argument, drawn from years of counselling sessions, is that people tend to express and register affection mainly through one or two of five channels: words of affirmation, quality time, acts of service, receiving gifts and physical touch. Problems arise, he says, when partners are fluent in different languages and each feels unloved despite real effort.",
+        "This quiz puts that framework into twelve everyday scenarios. Rather than asking you to rank the five languages directly, it describes situations, a partner cancelling plans, a friend showing up to help, an unexpected gift, and records which response matters most to you. The answers are tallied, and the language with the highest score is your primary one. Most people also see a clear secondary language, and the two are often close.",
+        "Knowing your result is useful mainly as a way to talk about what you need. If quality time scores highest, a distracted evening on the sofa will feel worse to you than it would to someone whose language is acts of service. If your language is words of affirmation, silence after a hard week lands harder than your partner might realise. The result page explains each language and gives concrete examples of what it looks like day to day.",
+        "It is worth being honest about the limits. The love languages are a popular communication tool, not a validated personality test, and independent research support is thin. Your languages can also shift with age, stress and life stage. Treat the result as a prompt for a conversation, not a fixed label, and compare answers with a partner or friend to see where you differ."
+      ],
+      "table": {
+        "heading": "The five love languages at a glance",
+        "note": "Framework from Gary Chapman, The Five Love Languages (1992).",
+        "cols": [
+          "Love language",
+          "What it means",
+          "Everyday example"
+        ],
+        "rows": [
+          [
+            "Words of affirmation",
+            "Feeling valued through what is said",
+            "Genuine praise, encouragement, saying thank you out loud"
+          ],
+          [
+            "Quality time",
+            "Feeling valued through focused attention",
+            "A device-free conversation or an activity done together"
+          ],
+          [
+            "Acts of service",
+            "Feeling valued when someone eases your load",
+            "Cooking a meal, running an errand, fixing something"
+          ],
+          [
+            "Receiving gifts",
+            "Feeling valued through thoughtful tokens",
+            "A small, well-chosen item that shows you were in mind"
+          ],
+          [
+            "Physical touch",
+            "Feeling valued through physical closeness",
+            "A hug, holding hands, a hand on the shoulder"
+          ]
+        ]
+      },
+      "faqHeading": "Love languages: common questions",
+      "faqs": [
+        {
+          "question": "What are the five love languages?",
+          "answer": "Words of affirmation, quality time, acts of service, receiving gifts and physical touch. The idea is that each person mainly gives and receives affection through one or two of these, and feels most cared for when a partner uses the same one."
+        },
+        {
+          "question": "Who came up with the love languages?",
+          "answer": "Gary Chapman, an American marriage counsellor and author. He introduced the concept in his 1992 book The Five Love Languages, based on patterns he noticed while counselling couples. The book has since sold well over ten million copies."
+        },
+        {
+          "question": "Can I have more than one love language?",
+          "answer": "Yes. Most people have a clear primary language and a secondary one that still matters a lot. For some people two languages score almost equally, which simply means both are important ways they feel appreciated."
+        },
+        {
+          "question": "Do love languages change over time?",
+          "answer": "They can. A new parent may come to value acts of service more; a long-distance period may raise the importance of words of affirmation or quality time. It is worth retaking a quiz like this every few years."
+        },
+        {
+          "question": "Is the love languages theory scientifically proven?",
+          "answer": "Not really. It is a widely used communication framework rather than a validated model, and peer-reviewed support is limited. Researchers still tend to agree it can be a helpful starting point for couples to talk about their needs."
+        },
+        {
+          "question": "How does this quiz decide my love language?",
+          "answer": "It presents twelve everyday situations and records which response matters most to you in each. The choices are added up by language, and the highest total is your primary love language, with the next highest as your secondary."
+        }
+      ],
+      "relatedHeading": "More personality quizzes",
+      "related": [
+        {
+          "label": "Which Football Club Are You?",
+          "href": "/quiz/which-football-club-are-you",
+          "desc": "Match your personality to a football club"
+        },
+        {
+          "label": "Which F1 Driver Are You?",
+          "href": "/quiz/which-f1-driver-are-you",
+          "desc": "Match your personality to a Formula 1 driver"
+        },
+        {
+          "label": "Which Historical Figure Matches You?",
+          "href": "/quiz/which-historical-figure-matches-you",
+          "desc": "See which figure from history shares your outlook"
+        }
+      ]
     }
   },
   "relatedQuizzes": {

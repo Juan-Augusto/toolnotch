@@ -3,38 +3,46 @@ import { getTranslations } from 'next-intl/server'
 import type { FaqItem } from '@/lib/schema'
 
 // ── Types ────────────────────────────────────────────────────────────────────
-interface WinnerRow {
-  year: string
-  host: string
-  winner: string
-  runnerUp: string
-  score: string
+export interface QuizDepthTable {
+  heading: string
+  note?: string
+  cols: string[]
+  rows: string[][]
 }
 
-interface RelatedLink {
+export interface QuizDepthRelated {
   label: string
   href: string
   desc: string
 }
 
+export interface QuizDepthResult {
+  heading: string
+  body: string[]
+}
+
 export interface QuizDepthContent {
   metaTitle: string
   metaDescription: string
+  about?: string
   introHeading: string
   intro: string[]
-  tableHeading: string
-  tableNote: string
-  tableCols: { year: string; host: string; winner: string; runnerUp: string; score: string }
-  rows: WinnerRow[]
+  table?: QuizDepthTable
   faqHeading: string
   faqs: FaqItem[]
   relatedHeading: string
-  related: { worldCup: RelatedLink; footballClub: RelatedLink; championsLeague: RelatedLink }
+  related: QuizDepthRelated[]
+  results?: Record<string, QuizDepthResult>
 }
 
 /** Quiz slugs that have a rich `quizDepth.<key>` content block in the message files. */
 export const QUIZ_DEPTH_KEYS: Record<string, string> = {
   'fifa-world-cup-winners': 'fifaWorldCupWinners',
+  'which-football-club-are-you': 'whichFootballClub',
+  'champions-league-trivia': 'championsLeagueTrivia',
+  'formula-1-trivia': 'formula1Trivia',
+  'which-f1-driver-are-you': 'whichF1Driver',
+  'what-is-your-love-language': 'whatIsYourLoveLanguage',
 }
 
 /** Loads the locale-correct depth content for a quiz slug, or null when the slug has none. */
@@ -45,20 +53,31 @@ export async function getQuizDepthContent(
   const key = QUIZ_DEPTH_KEYS[slug]
   if (!key) return null
   const t = await getTranslations({ locale, namespace: `quizDepth.${key}` })
-  return {
+
+  const localePrefix = locale === 'en' ? '' : `/${locale}`
+  const related = (t.raw('related') as QuizDepthRelated[]).map((link) => ({
+    ...link,
+    href: link.href.startsWith('/') ? `${localePrefix}${link.href}` : link.href,
+  }))
+
+  const content: QuizDepthContent = {
     metaTitle: t('metaTitle'),
     metaDescription: t('metaDescription'),
     introHeading: t('introHeading'),
     intro: t.raw('intro') as string[],
-    tableHeading: t('tableHeading'),
-    tableNote: t('tableNote'),
-    tableCols: t.raw('tableCols') as QuizDepthContent['tableCols'],
-    rows: t.raw('rows') as WinnerRow[],
     faqHeading: t('faqHeading'),
     faqs: t.raw('faqs') as FaqItem[],
     relatedHeading: t('relatedHeading'),
-    related: t.raw('related') as QuizDepthContent['related'],
+    related,
   }
+
+  if (t.has('about')) content.about = t('about')
+  if (t.has('table')) content.table = t.raw('table') as QuizDepthTable
+  if (t.has('results')) {
+    content.results = t.raw('results') as Record<string, QuizDepthResult>
+  }
+
+  return content
 }
 
 // ── Component ────────────────────────────────────────────────────────────────
@@ -69,15 +88,11 @@ interface Props {
 
 /**
  * Server-rendered SEO depth block shown below the quiz player: intro prose,
- * a winners-by-year table, a topic FAQ, and a football cross-link cluster.
+ * an optional generic data table, a topic FAQ, and a cross-link cluster.
  * No H1 here — the quiz player renders the page H1.
  */
-export default function WorldCupQuizDepth({ content, currentSlug }: Props) {
-  const relatedLinks = [
-    content.related.worldCup,
-    content.related.footballClub,
-    content.related.championsLeague,
-  ]
+export default function QuizDepth({ content, currentSlug }: Props) {
+  const { table } = content
 
   return (
     <section className="max-w-2xl mx-auto px-4 pb-14 space-y-12">
@@ -95,42 +110,54 @@ export default function WorldCupQuizDepth({ content, currentSlug }: Props) {
         </div>
       </div>
 
-      {/* Winners-by-year table */}
-      <div>
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-          {content.tableHeading}
-        </h2>
-        <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700">
-          <table className="w-full text-sm text-left border-collapse">
-            <thead className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
-              <tr>
-                <th scope="col" className="px-4 py-2.5 font-semibold">{content.tableCols.year}</th>
-                <th scope="col" className="px-4 py-2.5 font-semibold">{content.tableCols.host}</th>
-                <th scope="col" className="px-4 py-2.5 font-semibold">{content.tableCols.winner}</th>
-                <th scope="col" className="px-4 py-2.5 font-semibold">{content.tableCols.runnerUp}</th>
-                <th scope="col" className="px-4 py-2.5 font-semibold">{content.tableCols.score}</th>
-              </tr>
-            </thead>
-            <tbody className="text-gray-600 dark:text-gray-400">
-              {content.rows.map((row) => (
-                <tr
-                  key={row.year}
-                  className="border-t border-gray-200 dark:border-gray-700 even:bg-gray-50/60 dark:even:bg-gray-800/40"
-                >
-                  <th scope="row" className="px-4 py-2.5 font-medium text-gray-900 dark:text-gray-200">
-                    {row.year}
-                  </th>
-                  <td className="px-4 py-2.5">{row.host}</td>
-                  <td className="px-4 py-2.5 font-medium text-gray-900 dark:text-gray-200">{row.winner}</td>
-                  <td className="px-4 py-2.5">{row.runnerUp}</td>
-                  <td className="px-4 py-2.5 whitespace-nowrap">{row.score}</td>
+      {/* Optional data table */}
+      {table && (
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            {table.heading}
+          </h2>
+          <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700">
+            <table className="w-full text-sm text-left border-collapse">
+              <thead className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
+                <tr>
+                  {table.cols.map((col) => (
+                    <th key={col} scope="col" className="px-4 py-2.5 font-semibold">
+                      {col}
+                    </th>
+                  ))}
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="text-gray-600 dark:text-gray-400">
+                {table.rows.map((row, ri) => (
+                  <tr
+                    key={ri}
+                    className="border-t border-gray-200 dark:border-gray-700 even:bg-gray-50/60 dark:even:bg-gray-800/40"
+                  >
+                    {row.map((cell, ci) =>
+                      ci === 0 ? (
+                        <th
+                          key={ci}
+                          scope="row"
+                          className="px-4 py-2.5 font-medium text-gray-900 dark:text-gray-200"
+                        >
+                          {cell}
+                        </th>
+                      ) : (
+                        <td key={ci} className="px-4 py-2.5 whitespace-nowrap">
+                          {cell}
+                        </td>
+                      ),
+                    )}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          {table.note && (
+            <p className="mt-2 text-xs text-gray-400 dark:text-gray-500">{table.note}</p>
+          )}
         </div>
-        <p className="mt-2 text-xs text-gray-400 dark:text-gray-500">{content.tableNote}</p>
-      </div>
+      )}
 
       {/* Topic FAQ */}
       <div>
@@ -154,13 +181,13 @@ export default function WorldCupQuizDepth({ content, currentSlug }: Props) {
         </div>
       </div>
 
-      {/* Football cross-link cluster */}
+      {/* Cross-link cluster */}
       <nav aria-label={content.relatedHeading}>
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
           {content.relatedHeading}
         </h2>
         <ul className="grid gap-3 sm:grid-cols-3">
-          {relatedLinks.map((link) => {
+          {content.related.map((link) => {
             const isCurrent = link.href.endsWith(`/${currentSlug}`)
             return (
               <li key={link.href}>
