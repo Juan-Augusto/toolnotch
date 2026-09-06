@@ -1686,6 +1686,12 @@
             "Toggle between compound frequencies to see how daily compounding compares to monthly on the same rate."
           ],
           "whyItMatters": "The difference between simple and compound interest is enormous over time. A $10,000 investment at 5% simple interest over 10 years earns $5,000 in interest. The same amount at 5% compounded monthly earns approximately $6,470 — a 29% difference — with no additional contributions. Compound frequency also matters when comparing savings accounts: two accounts both advertised at 4.80% APR can yield meaningfully different APYs depending on how often they compound. This calculator also helps evaluate financing offers — comparing whether a 0% promotional loan actually beats a cash purchase discount when the time value of money is considered.",
+          "sections": [
+            {
+              "heading": "Worked example: how compound frequency changes the result",
+              "body": "Take $10,000 at a 6% annual rate for 5 years. With simple interest the math is 10,000 x 0.06 x 5 = $3,000, for an ending balance of $13,000. Compounded annually, the balance is 10,000 x 1.06^5 ≈ $13,382, so interest is about $3,382. Compounded monthly, the periodic rate is 0.06 / 12 = 0.005 over 60 periods: 10,000 x 1.005^60 ≈ $13,489, or roughly $3,489 in interest. Same headline rate, about $489 more than simple interest purely because interest is added more often. A frequent mistake is comparing one bank's monthly-compounded rate against another bank's annual figure — convert both to APY first so you are comparing like with like."
+            }
+          ],
           "proTip": "When comparing savings accounts or CDs, always look at APY — not APR. APY accounts for compounding and shows your true annual return. A savings account at 5.00% APR compounded daily yields an APY of approximately 5.13%, while the same rate compounded annually yields exactly 5.00%. The difference grows as balances grow. Banks are required to disclose APY, so use that number for apples-to-apples comparisons."
         }
       },
@@ -1705,6 +1711,12 @@
             "Compare this result against the 15-year mortgage calculator to see the monthly payment vs. lifetime interest trade-off."
           ],
           "whyItMatters": "The 30-year mortgage's lower monthly payment is a major financial lever — it can be the difference between qualifying for a home and not, or between a tight budget and a healthy savings rate. But the long timeline has a hidden cost: because you pay interest on a larger balance for longer, the total interest bill is enormous. Many borrowers also move or refinance before the 30-year term ends — meaning they pay primarily interest during the early years of their loan, when each payment is largely interest rather than principal reduction.",
+          "sections": [
+            {
+              "heading": "Worked example: 30-year vs. 15-year on the same loan",
+              "body": "On a $300,000 loan at 6.5%, the 30-year payment is about $1,896 in principal and interest, with roughly $382,600 of interest over the full term. A 15-year loan on the same amount, typically at a slightly lower rate near 6.0%, runs about $2,532 a month but only around $155,700 in total interest. The 15-year costs roughly $636 more each month and saves about $227,000 in interest. The common mistake is treating this as a permanent either-or: you can take the 30-year loan for its lower required payment, then voluntarily pay close to the 15-year amount most months. That captures most of the interest savings while leaving you the smaller payment as a fallback when money is tight."
+            }
+          ],
           "proTip": "You do not have to stay locked into 30 years of payments just because you take a 30-year loan. Making one extra principal payment per year — equivalent to 13 payments instead of 12 — can cut roughly 4–5 years off your payoff timeline and save tens of thousands in interest, while preserving the lower required payment in months when cash is tight."
         },
         "faqs": [
@@ -1870,6 +1882,12 @@
             "Adjust the extra payment amount to see how even small increases change your payoff timeline and total interest."
           ],
           "whyItMatters": "The difference between minimum-only payments and adding even $100 extra per month can mean years of debt and thousands of dollars in interest. Many people underestimate how long minimum payments take because the math is buried in small print on statements. Seeing a concrete payoff date and a dollar figure for total interest makes the real cost visible in a way that abstract APR percentages do not. That visibility is often what motivates real action — and the numbers are almost always more urgent than people expect.",
+          "sections": [
+            {
+              "heading": "Worked example: fixing the payment amount",
+              "body": "Take a $5,000 credit card balance at 22% APR. If the minimum is set at about 2% of the balance — roughly $100 at first — and you always pay only that shrinking minimum, payoff stretches past 15 years and total interest ends up larger than the original $5,000. Hold the payment flat at $100 a month instead and the balance clears in about 7.7 years with roughly $4,200 of interest. Raise it to $250 a month and it is gone in a little over 2 years with about $1,200 of interest. The common mistake is paying the minimum plus whatever spare cash happens to be around; an irregular top-up helps far less than a fixed higher payment you schedule and treat like any other bill."
+            }
+          ],
           "proTip": "Once you pay off one debt, immediately redirect its full minimum payment to the next target — the 'debt rollover.' It keeps your total monthly outflow identical while dramatically accelerating payoff, because each eliminated debt adds momentum to the next one. The avalanche method saves the most money; the snowball method often eliminates debts faster, which can be worth the slightly higher interest cost for its motivational effect."
         }
       }
@@ -2469,14 +2487,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "A random team generator takes a list of names and divides them into equal — or near-equal — teams randomly. Use cases include classroom group projects, sports team selection, hackathon grouping, and office event teams. A key benefit is that random team composition removes unconscious bias: people naturally self-segregate by friendship, skill level, or demographics when choosing teams manually. Random assignment is the fairest and most statistically sound method in educational and organizational research for creating diverse, balanced groups.",
+        "whatIs": "A random team generator takes a list of names and divides them into equal — or near-equal — teams randomly. Use cases include classroom group projects, sports team selection, hackathon grouping, and office event teams. A key benefit is that random team composition removes unconscious bias: people naturally self-segregate by friendship, skill level, or demographics when choosing teams manually. Random assignment is the fairest and most statistically sound method in educational and organizational research for creating diverse, balanced groups. This tool can split a list by number of teams, by target team size, or across a set of team names you supply, and it always keeps the group sizes within one member of each other.",
         "howToUse": [
           "Paste your list of names into the text box, one per line.",
           "Set the number of teams you want to create.",
           "Click Generate to split the names into random, balanced teams.",
           "Read your team assignments and copy or share as needed."
         ],
-        "whyItMatters": "Manual team picking — especially the sports-style captain draft — is psychologically damaging to those picked last, a well-documented phenomenon in education research. Random assignment treats everyone equally and often produces better collaboration by mixing people who would not naturally choose to work together. The result is groups with more diverse skills and perspectives than self-selected teams.",
+        "whyItMatters": "Manual team picking — especially the sports-style captain draft — is psychologically damaging to those picked last, a well-documented phenomenon in education research. Random assignment treats everyone equally and often produces better collaboration by mixing people who would not naturally choose to work together. The result is groups with more diverse skills and perspectives than self-selected teams. Doing the split in front of everyone, with a tool that cannot be steered, also removes any suspicion that the organiser stacked one team on purpose.",
+        "sections": [
+          {
+            "heading": "How the shuffle works",
+            "body": "The generator uses the Fisher-Yates shuffle, the standard algorithm for producing an unbiased random ordering of a list. It walks the list from the end to the start, and at each position swaps the current name with a randomly chosen one at or before it. Done correctly, every one of the possible orderings is equally likely — no name is favoured, and position in your original list has no effect on where someone lands. After the shuffle, names are dealt out one at a time across the teams in rotation, which is why the teams always end up within a single member of the same size even when the head count does not divide evenly."
+          },
+          {
+            "heading": "Balancing skill instead of pure chance",
+            "body": "Pure randomness can occasionally put every strong player, or every quiet student, on one team. If balance matters, split your list into tiers first — for example strong, average, and developing — then run the generator once per tier and combine the results so each team gets a similar mix. This keeps the fairness and transparency of a random draw while avoiding a lopsided outcome. For recurring groups, regenerate from scratch each session rather than reusing last week's teams, so the same people are not repeatedly paired or repeatedly separated."
+          },
+          {
+            "heading": "Common uses",
+            "body": "Teachers use it for group projects, lab pairs, and discussion circles; the remove-bias effect matters most here because students notice when the same friends always work together. Coaches and PE teachers use it for scrimmage sides without the captain-draft ritual. At work it covers hackathon squads, workshop breakout rooms, secret-gift draws, and on-call rotations. For events and icebreakers, generating teams live on a shared screen doubles as the reveal."
+          }
+        ],
         "proTip": "If you need balanced skill levels rather than purely random teams, pre-sort your names list by skill tier before generating. Then generate random teams within each tier. This gives you random-within-fair grouping: the social dynamics of random selection without the risk of one team getting all the most experienced participants."
       }
     },
@@ -2504,13 +2536,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "A yes/no wheel is a binary random decision tool that returns Yes or No with a spinning animation. It is used for making binary decisions when neither choice strongly dominates, breaking decision paralysis, or adding randomness to games. It differs from a coin flip in presentation — the wheel format is slower and more dramatic, making it more engaging for group settings. Use cases include deciding whether to try something new, settling small group debates, and teaching probability to children in an interactive, visual way.",
+        "whatIs": "A yes/no wheel is a binary random decision tool that returns Yes or No with a spinning animation. It is used for making binary decisions when neither choice strongly dominates, breaking decision paralysis, or adding randomness to games. It differs from a coin flip in presentation — the wheel format is slower and more dramatic, making it more engaging for group settings. Use cases include deciding whether to try something new, settling small group debates, and teaching probability to children in an interactive, visual way. Because the wheel has no memory between spins, it is also a simple hands-on way to show that each outcome is independent: a streak of one result never changes the odds of the next spin.",
         "howToUse": [
           "Think of a yes/no question you want to decide.",
+          "Optionally toggle 'Include Maybe' to add a third segment.",
           "Click Spin and watch the wheel animate.",
           "Accept the result — and notice your gut reaction to it."
         ],
-        "whyItMatters": "Decision science shows that humans experience choice paralysis when options are roughly equal in attractiveness. A random binary choice breaks the deadlock quickly. More importantly, your emotional reaction to the result reveals your actual preference: if the wheel says Yes and you feel relieved, you wanted Yes. If you feel disappointed, you wanted No. The wheel acts as a mirror for subconscious preference.",
+        "whyItMatters": "Decision science shows that humans experience choice paralysis when options are roughly equal in attractiveness. A random binary choice breaks the deadlock quickly. More importantly, your emotional reaction to the result reveals your actual preference: if the wheel says Yes and you feel relieved, you wanted Yes. If you feel disappointed, you wanted No. The wheel acts as a mirror for subconscious preference. The stakes matter here: this technique is reliable only when both options are genuinely acceptable and the choice is reversible, so treat the spin as a prompt for reflection rather than a verdict you are bound to follow.",
+        "sections": [
+          {
+            "heading": "How the randomness works",
+            "body": "The result is decided the instant you click, not while the wheel is turning. The tool calls the browser's random number generator, maps the value onto the segments, and then animates the wheel to land on the pre-chosen slice — the spin is presentation, not the draw. With two equal segments, Yes and No each have a 50% chance. Adding a Maybe segment splits the wheel into three equal parts of roughly 33.3% each. Every spin is independent: the wheel keeps no history, so five No results in a row do not make Yes any more likely on the sixth spin. This is the gambler's fallacy, and a physical or digital wheel is a good way to see why it is false."
+          },
+          {
+            "heading": "When a yes/no wheel is the right tool",
+            "body": "Use it for low-stakes, reversible choices where you have already weighed both sides and are simply stuck — which restaurant, whether to go to an event, which of two equally good options to start with. It is a poor fit for decisions with meaningful asymmetric risk: money, health, safety, or anything that affects other people without their say. For those, the wheel is at best a way to surface your instinct — spin it, notice whether you are hoping it lands a certain way, and then make the call deliberately. Never use a random result as cover for a choice that deserves real thought."
+          },
+          {
+            "heading": "Running a fair public decision",
+            "body": "If you are using the wheel to settle something between friends, in a classroom, or on a livestream, state the question and what each segment means before you spin. Spin once and take the first result. Re-spinning until you get the answer you wanted is obvious to everyone watching and defeats the point of using a random tool at all. For anything people might dispute later, screenshot or screen-record the result so the outcome is verifiable. Keeping the ritual consistent — announce, spin once, accept — is what makes the group trust it."
+          }
+        ],
         "proTip": "The 'flip and feel' technique: spin the wheel, then immediately note your gut reaction before your rational brain can rationalize it. Your emotional response to a random result is more reliable than extended deliberation for preference-based decisions where both options are objectively similar — use this as a decision-making aid, not just a random picker."
       }
     },
@@ -2669,14 +2716,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "A random number generator produces unpredictable numbers within a range you define — useful for raffles, statistical sampling, research, gaming, and teaching probability. There is an important distinction between pseudorandom (algorithmic, deterministic with a seed) and cryptographically random (uses system entropy, suitable for security). This tool uses the browser's crypto.getRandomValues() for true randomness — not the weaker Math.random(). Use cases include picking lottery numbers, assigning random IDs, generating test data, and selecting students or participants in classroom settings.",
+        "whatIs": "A random number generator produces unpredictable numbers within a range you define — useful for raffles, statistical sampling, research, gaming, and teaching probability. There is an important distinction between pseudorandom (algorithmic, deterministic with a seed) and cryptographically random (uses system entropy, suitable for security). This tool uses the browser's crypto.getRandomValues() for true randomness — not the weaker Math.random(). Use cases include picking lottery numbers, assigning random IDs, generating test data, and selecting students or participants in classroom settings. The range is inclusive at both ends, so a range of 1 to 10 can return 1 or 10, and you can ask for a single value or a batch of up to a thousand at once.",
         "howToUse": [
           "Set the minimum value for your range.",
           "Set the maximum value for your range.",
           "Choose how many numbers to generate.",
-          "Click Generate and read the results instantly."
+          "Decide whether duplicates are allowed, then click Generate and read the results instantly."
         ],
-        "whyItMatters": "Humans are terrible at generating random numbers manually — we unconsciously avoid sequences, prefer certain digits, and show repeating patterns. A random number generator eliminates this bias completely. For raffles and contests, using a verifiable random number generator adds credibility and fairness, and the result can be shared or screenshotted to prove the selection was not manipulated.",
+        "whyItMatters": "Humans are terrible at generating random numbers manually — we unconsciously avoid sequences, prefer certain digits, and show repeating patterns. A random number generator eliminates this bias completely. For raffles and contests, using a verifiable random number generator adds credibility and fairness, and the result can be shared or screenshotted to prove the selection was not manipulated. In research and testing, a documented range and method also makes a sampling step reproducible when someone reviews the work later.",
+        "sections": [
+          {
+            "heading": "Pseudorandom vs. cryptographic randomness",
+            "body": "A pseudorandom generator starts from a seed value and runs a formula that produces numbers which look random but are fully determined by that seed. Give it the same seed and you get the same sequence — useful for reproducible simulations, bad for anything an adversary might try to predict. A cryptographic generator, which is what crypto.getRandomValues() exposes, draws from entropy the operating system collects from hardware events, so the output cannot be reproduced or predicted. For a classroom draw or a giveaway either is fine in practice; for security tokens, passwords, or shuffling a deck in a real-money game, only the cryptographic kind is acceptable."
+          },
+          {
+            "heading": "Drawing without repeats",
+            "body": "Turn off 'allow duplicates' when every result must be distinct — picking five raffle positions, assigning unique jersey numbers, or sampling rows without replacement. The generator then draws from the remaining pool each time, so a value already chosen cannot come up again. This only works when the count you ask for is no larger than the size of the range: you cannot draw six unique numbers from a range of four. With duplicates allowed, each draw is independent and the same number can appear more than once, which is the correct behaviour for things like simulated dice."
+          },
+          {
+            "heading": "Running a verifiable draw",
+            "body": "Before generating, write down the range and how it maps to entries — for example, 'numbers 1 to 500, matched to row order in the signup sheet'. Generate once, screenshot the result together with that mapping, and publish both. Anyone can then check that the winning number corresponds to the entry you announced. Re-rolling until you get a result you like, or changing the mapping after the fact, is the failure mode that makes people distrust online draws."
+          }
+        ],
         "proTip": "For a raffle with 500 entries, generate one number between 1 and 500 and assign it to the winner's position in your list. For multiple winners, generate numbers without repetition — use the unique numbers option. Screenshot the result before announcing to prove the draw was fair and untampered."
       }
     },
@@ -2708,14 +2769,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "A giveaway picker selects one or more winners randomly from a list of entries you provide. Common use cases include social media giveaways — picking winners from Instagram comment lists, Twitter/X retweet entries, and YouTube comment sections. This tool uses a local list you paste in; for platform-specific entry scraping you would need platform APIs. Transparency and verifiability are critical for giveaway fairness, and this tool makes it easy to prove a winner was chosen without bias.",
+        "whatIs": "A giveaway picker selects one or more winners randomly from a list of entries you provide. Common use cases include social media giveaways — picking winners from Instagram comment lists, Twitter/X retweet entries, and YouTube comment sections. This tool uses a local list you paste in; for platform-specific entry scraping you would need platform APIs. Transparency and verifiability are critical for giveaway fairness, and this tool makes it easy to prove a winner was chosen without bias. Everything runs in your browser, so the entry list is never uploaded and you can run the draw offline once the page has loaded.",
         "howToUse": [
           "Paste your entry list — usernames, comment text, or any identifiers — into the text box.",
           "Set the number of winners you need.",
           "Click Pick to randomly select winners from your list.",
           "Optionally re-roll if a selected winner is ineligible."
         ],
-        "whyItMatters": "Manual winner selection from thousands of entries is impractical and looks biased even when it is not. A random picker that you can screenshot and share publicly proves the winner was chosen fairly. For brands and creators, this protects credibility and satisfies platform giveaway guidelines that typically require a verifiable fair random selection method.",
+        "whyItMatters": "Manual winner selection from thousands of entries is impractical and looks biased even when it is not. A random picker that you can screenshot and share publicly proves the winner was chosen fairly. For brands and creators, this protects credibility and satisfies platform giveaway guidelines that typically require a verifiable fair random selection method. Many jurisdictions also draw a legal line between a prize draw and a lottery, and a documented random selection is part of staying on the right side of it.",
+        "sections": [
+          {
+            "heading": "Preparing a clean entry list",
+            "body": "The quality of the draw depends entirely on the list you paste in. Before picking, remove obvious duplicates unless your rules explicitly allow one entry per comment, strip out the brand's own account and any bot replies, and decide how you handle people who entered several times — either dedupe to one line each or keep the repeats deliberately so extra entries genuinely raise their odds. Put one entrant per line. If your rules require actions you cannot see in the raw list, such as following the account, verify the drawn winner against that requirement before announcing and re-draw if they do not qualify."
+          },
+          {
+            "heading": "How the selection works",
+            "body": "Each line in your box is one entry with an equal chance. When you click Pick, the tool generates a random index into the list and returns that entry; for multiple winners with 'remove on pick' enabled, each selected name is taken out of the pool so nobody can win twice. The draws are independent and unweighted — the tool does not know or care who entered first, who has the most followers, or who was picked in your last giveaway. If you need weighted odds, add a name to the list as many times as the weight you want it to have."
+          },
+          {
+            "heading": "Making the result verifiable",
+            "body": "Screen-record the moment you press Pick, with the full entry list and the winner both visible in the recording, and post that clip or a screenshot alongside the announcement. State up front how many winners you are drawing and the tie-break or re-draw rule for disqualified entries. This record is what protects you if a losing entrant claims the draw was rigged, and it is now an expectation of most brand and platform giveaway guidelines for higher-value prizes."
+          }
+        ],
         "proTip": "Screenshot or screen-record the picking moment before announcing the winner. Share the result publicly — in a story, tweet, or post — with the full entry list visible to demonstrate transparency. This prevents accusations of favoritism that can significantly damage brand trust and community goodwill, especially for high-value prize giveaways."
       }
     },
@@ -2747,14 +2822,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "A classroom name picker randomly selects a student from your class roster for cold calling, participation, or task assignment. Educational research by Robert Bjork on retrieval practice shows that random selection improves engagement and learning retention compared to volunteer-only answering, where the same few students always respond. This tool is the digital equivalent of the classic popsicle stick technique — names on sticks in a cup drawn at random — but faster and visible to the whole class on a projected screen.",
+        "whatIs": "A classroom name picker randomly selects a student from your class roster for cold calling, participation, or task assignment. Educational research by Robert Bjork on retrieval practice shows that random selection improves engagement and learning retention compared to volunteer-only answering, where the same few students always respond. This tool is the digital equivalent of the classic popsicle stick technique — names on sticks in a cup drawn at random — but faster and visible to the whole class on a projected screen. It runs in the browser with no login and no app, so it works the same on an interactive whiteboard, a teacher laptop, a Chromebook, or an iPad.",
         "howToUse": [
           "Enter your class roster in the text box, one student name per line.",
           "Click Pick to randomly select a student.",
           "Read the selected student's name displayed on screen.",
           "Enable 'Remove on pick' to ensure every student is called before anyone is called twice."
         ],
-        "whyItMatters": "Random selection keeps all students alert and engaged because anyone could be called next. Volunteer-based participation creates deep inequality — research shows 20% of students account for 80% of voluntary participation. The unpredictability of random selection activates attention in ways that volunteer formats do not, leading to higher engagement across the whole class rather than just the most confident students.",
+        "whyItMatters": "Random selection keeps all students alert and engaged because anyone could be called next. Volunteer-based participation creates deep inequality — research shows 20% of students account for 80% of voluntary participation. The unpredictability of random selection activates attention in ways that volunteer formats do not, leading to higher engagement across the whole class rather than just the most confident students. It also takes the teacher out of the decision, so no student can read favouritism or punishment into who gets called.",
+        "sections": [
+          {
+            "heading": "Cold calling without raising anxiety",
+            "body": "Random calling only helps learning if students do not dread it. A few practices keep it safe: tell the class in advance that you will be using a picker so it is a routine, not an ambush; allow a student to say 'pass, come back to me' once per lesson; and give a few seconds of thinking time, or a brief turn-and-talk with a partner, before you draw a name. Use the picker for questions that have room for reasoning rather than single right-or-wrong recall under pressure. The aim is to spread participation, not to catch anyone out."
+          },
+          {
+            "heading": "Getting through the whole class fairly",
+            "body": "Turn on 'remove on pick' so each drawn name leaves the pool. The tool then works through the entire roster without repeats, which students perceive as fairer than a raw random draw where one person might be picked three times before someone else is picked at all. When the pool empties, reset it for the next activity or the next lesson. If a student is absent, take their name out for that session so the flow is not interrupted by calling on an empty seat."
+          },
+          {
+            "heading": "Beyond cold calling",
+            "body": "The same roster works for assigning classroom jobs, choosing the order groups present, pairing students for peer review, picking who demonstrates at the board, or selecting a line leader. For group work, pick several names in a row with 'remove on pick' enabled to build a team, then repeat for the next team. Keeping one saved roster per class and reusing it each period saves setup time."
+          }
+        ],
         "proTip": "Use the 'remove after picking' feature so each student is called once before anyone is called twice. This feels fairer to students and reduces anxiety about being called repeatedly. If a student is absent, remove their name for that session so the class flow remains uninterrupted and no one is put on the spot unfairly."
       }
     },
@@ -2782,14 +2871,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "A typing speed test measures WPM (words per minute, where a word is standardized as 5 keystrokes including spaces), accuracy percentage (correct keystrokes divided by total keystrokes times 100), and raw WPM versus net WPM (net WPM deducts errors). Speed benchmarks: hunt-and-peck typists average 20–30 WPM, average office workers reach 40 WPM, proficient typists hit 60–80 WPM, professional transcriptionists exceed 80–100 WPM, competitive typists reach 120–150+ WPM, and the current world record exceeds 220 WPM.",
+        "whatIs": "A typing speed test measures WPM (words per minute, where a word is standardized as 5 keystrokes including spaces), accuracy percentage (correct keystrokes divided by total keystrokes times 100), and raw WPM versus net WPM (net WPM deducts errors). Speed benchmarks: hunt-and-peck typists average 20–30 WPM, average office workers reach 40 WPM, proficient typists hit 60–80 WPM, professional transcriptionists exceed 80–100 WPM, competitive typists reach 120–150+ WPM, and the current world record exceeds 220 WPM. This test offers 15-, 30-, 60-, and 120-second modes; the longer modes give a more stable number because a single stumble is averaged over more text.",
         "howToUse": [
-          "Click Start or begin typing the displayed text to start the timer.",
+          "Choose a time limit, then click Start or begin typing the displayed text to start the timer.",
           "Type the passage as accurately and quickly as possible.",
           "Read your WPM and accuracy when the time runs out.",
           "Review which keys caused slowdowns and focus practice there."
         ],
-        "whyItMatters": "Typing speed directly correlates with productivity for knowledge workers. At 40 WPM versus 80 WPM, a person typing the equivalent of 500 hours of documentation per year saves 250 hours — more than six weeks of work time. Touch typing using all 10 fingers on the home row doubles average speed compared to hunt-and-peck for most people within two to three months of deliberate practice.",
+        "whyItMatters": "Typing speed directly correlates with productivity for knowledge workers. At 40 WPM versus 80 WPM, a person typing the equivalent of 500 hours of documentation per year saves 250 hours — more than six weeks of work time. Touch typing using all 10 fingers on the home row doubles average speed compared to hunt-and-peck for most people within two to three months of deliberate practice. Beyond raw output, faster typing lowers the friction between having a thought and getting it onto the screen, which matters when you are drafting, coding, or taking notes in a live meeting.",
+        "sections": [
+          {
+            "heading": "How WPM and accuracy are calculated",
+            "body": "The test counts every keystroke you make and checks it against the expected character. At the end, gross WPM is the total characters typed divided by five, scaled to a full minute. Net WPM subtracts your uncorrected errors from that figure, which is why a fast run with many mistakes can score lower than a slower, cleaner one. Accuracy is simply correct keystrokes as a percentage of all keystrokes. The five-character 'word' is an industry convention that goes back to mechanical typewriter tests, so scores are comparable across different passages regardless of how long the actual English words are."
+          },
+          {
+            "heading": "Why accuracy should come first",
+            "body": "Every error you have to notice, backspace over, and retype costs more time than typing the character correctly once. Chasing a high speed while your accuracy sits below 95% trains your fingers to make the same mistakes faster. The reliable path is to slow down to the pace where you can hit 97 to 98% accuracy, hold that until it feels comfortable, and let speed rise on its own. Most people find their sustainable speed climbs faster this way than by pushing raw pace."
+          },
+          {
+            "heading": "Practising for real improvement",
+            "body": "Short, frequent sessions beat occasional long ones: a few one-minute runs a day for several weeks produces steady gains, while a single hour-long grind mostly produces fatigue. Keep your wrists neutral, your fingers resting on the home row (ASDF and JKL semicolon), and your eyes on the text rather than the keyboard. When you review a result, look for the specific keys and letter combinations that slowed you down and drill those rather than repeating whole passages."
+          }
+        ],
         "proTip": "The biggest improvement comes from prioritizing accuracy over speed. Slow down until your accuracy is above 95%, then gradually increase pace. Speed follows accuracy naturally — trying to type fast while making many errors actually lowers net WPM and builds bad muscle memory. Use one-minute tests daily rather than one long session for the best results."
       }
     }
@@ -3529,6 +3632,12 @@
           "Read the sprint calendar output showing start, end, review, and retro dates for each sprint."
         ],
         "whyItMatters": "Planning sprint dates one full quarter in advance lets teams block calendars before competing meetings appear, align PTO around sprint events, and coordinate release schedules with dependent teams. Teams that pre-plan sprint calendars experience fewer missed ceremonies and more predictable velocity because the planning overhead never competes with delivery work at the last minute. At scale, release train cadences in SAFe and LeSS require sprint boundary alignment across multiple teams — a mismatch of even a single day causes cross-team coordination chaos at program increment boundaries.",
+        "sections": [
+          {
+            "heading": "Worked example: why the start day matters",
+            "body": "Start a two-week sprint on Wednesday, June 4 and the ten working days run to Tuesday, June 17 — planning lands mid-week and the review falls on a Tuesday, cutting across two calendar weeks and colliding with unrelated Monday meetings. Move the start to Monday, June 9 and the sprint ends Friday, June 20, with planning first thing Monday and the review plus retrospective on Friday afternoon: the rhythm most teams and stakeholders already expect. The calculator counts only weekdays for daily standups, so it skips every Saturday and Sunday automatically. It does not know your national or regional public holidays, so scan the generated dates against your local calendar and move any ceremony that lands on a day off."
+          }
+        ],
         "proTip": "Avoid 4-week sprints for most software teams. The longer the sprint, the higher the cost of a wrong assumption — a direction error found on day 25 of a 28-day sprint wastes nearly the entire sprint. Two-week sprints are the industry standard: they allow faster feedback loops without the ceremony overhead of 1-week sprints. Reserve 4-week iterations for hardware programs or highly regulated environments where 2-week cadences are operationally impractical."
       }
     }
@@ -3593,6 +3702,12 @@
         "Read the result and any explanatory breakdown shown below the inputs."
       ],
       "whyItMatters": "Percentage confusion is routinely exploited in sales and advertising. \"50% off, then an additional 20% off\" is not 70% off — it is 60% off (you pay 50% of the original, then 80% of that, which equals 40% of the original price). Stacking discounts never adds up the way it sounds. Politicians and marketers frequently swap percentage points and percentages to exaggerate or minimize changes depending on which framing is more favorable. Calculating percentages accurately lets you verify claimed discounts, tax amounts, and rate changes independently.",
+      "sections": [
+        {
+          "heading": "Worked example: reversing a percentage change",
+          "body": "A common mistake is trying to undo a percentage increase by subtracting the same percentage. Suppose an item that cost 80 rose by 25% to 100. Taking 25% off 100 gives 75, not 80 — because the two percentages are applied to different base numbers. To reverse an increase, divide by 1 plus the rate: 100 / 1.25 = 80. To find the pre-discount price of something now selling for 90 after 25% off, divide by 1 minus the rate: 90 / 0.75 = 120. The takeaway: an increase and a decrease of the same percentage never cancel out, so always divide to work backwards rather than adding the percentage back."
+        }
+      ],
       "proTip": "Mental math shortcuts for everyday percentages: 10% means move the decimal point one place left. 5% is half of 10%. 15% is 10% plus 5%. 20% is double the 10% value. 25% means divide by 4. These five rules cover most tip, discount, and tax estimates without any calculator — fast enough to verify a restaurant bill or a store discount in seconds."
     }
   },
@@ -4168,6 +4283,17 @@
     },
     "breadcrumbBlog": "Blog",
     "relatedTool": "Try the free {toolName} →",
+    "indexIntro": "The ToolNotch blog is where each tool gets the full explanation that will not fit on the tool page itself. Every article is written to stand on its own: the formula or method behind a tool, a worked example you can reproduce, the edge cases and common mistakes to watch for, and a link to the free tool when you are ready to run the numbers yourself. There is no sign-up and no paywall — the guides are here to help you understand the result, not just get one.",
+    "indexGuideHeading": "What you'll find here",
+    "indexCategoryBlurbs": {
+      "finance": "Finance — how loan, mortgage, interest, and debt-payoff math actually works, with worked examples you can check against the matching calculator.",
+      "health": "Health — plain-language explanations of BMI, TDEE, and calorie targets, including where each formula comes from and what it leaves out.",
+      "text": "Text — practical guidance on word and character counts, reading time, readability scores, and keyword density for writers and students.",
+      "education": "Education — how GPA, weighted grades, and the main citation styles are calculated, and how to avoid the mistakes that quietly cost marks.",
+      "productivity": "Productivity — getting more out of the everyday planning, date, and timing tools, and fitting them into a real workflow.",
+      "engineering": "Engineering — the background behind the developer-focused tools and interview quizzes, from formatting to type-system questions.",
+      "fun": "Fun — how the randomness in wheels, pickers, and generators works, and how to run a draw that everyone watching will trust."
+    },
     "posts": {
       "how-to-calculate-mortgage-payment": {
         "title": "How to Calculate Your Mortgage Payment: A Step-by-Step Guide",
@@ -4861,6 +4987,108 @@
     },
     "relatedToolsHeading": "Free tools for this topic"
   },
+  "interview": {
+    "hub": {
+      "aboutHeading": "About interview prep on ToolNotch",
+      "about": [
+        "ToolNotch interview prep is a collection of free, interactive quizzes for software engineers getting ready for a technical interview. Every quiz runs entirely in your browser: there is no account to create, nothing to install, and no paywall. You pick a topic, choose a difficulty level, and work through multiple-choice questions that mirror the kind of reasoning an interviewer is listening for.",
+        "What sets these quizzes apart from a flashcard deck is the explanation attached to every question. Instead of only telling you which option is correct, each answer explains why it is correct, shows the underlying mechanism, and adds a short note on how experienced teams apply the idea in production code. The goal is understanding you can defend under follow-up questions, not memorised trivia that collapses the moment an interviewer asks why.",
+        "The question banks are written from primary sources — official language handbooks, specification documents, and widely used engineering references — and are reviewed for accuracy rather than assembled from scraped quiz sites. Coverage currently centres on TypeScript, with further language and backend-engineering tracks released as they are finished."
+      ],
+      "formatHeading": "How the quizzes are structured",
+      "format": [
+        "Each track is split into Beginner, Intermediate, and Advanced levels of roughly ten questions each. Beginner questions confirm that the fundamentals are solid, Intermediate questions test the edge cases that trip people up in day-to-day work, and Advanced questions go after the deep behaviour that separates a senior candidate from a mid-level one. Question order is shuffled on every run, so you cannot pass by memorising positions.",
+        "Because everything is client-side, your answers and scores never leave your device. You can retake a level as many times as you want, jump straight to the difficulty you care about, and use the keyboard to move quickly: number keys to pick an option, Enter to advance, and Tab to cycle through the explanation tabs on questions that have them."
+      ],
+      "howHeading": "How to practise effectively",
+      "how": [
+        "Start one level below where you think you are. Clearing the Beginner set quickly confirms your fundamentals and builds momentum before you reach the harder material.",
+        "Read the explanation on every question, including the ones you answered correctly. A right answer for the wrong reason is still a gap an interviewer can find.",
+        "When an explanation mentions compiled output or a specification rule, pause and reproduce it yourself in an editor or REPL. Active recall beats re-reading.",
+        "Retake a level a day or two later rather than immediately. Spacing the repetition is what moves an idea into long-term memory.",
+        "Once you are consistently scoring above roughly 80% on Advanced, switch to explaining each answer out loud as if the interviewer were in the room. That is the skill the interview actually measures."
+      ],
+      "faqHeading": "Interview prep FAQ",
+      "faqs": [
+        {
+          "question": "Are the ToolNotch interview quizzes free?",
+          "answer": "Yes. Every quiz is completely free with no account, sign-up, or download. All questions and explanations run client-side in your browser, and your scores are never uploaded anywhere."
+        },
+        {
+          "question": "Which topics are covered so far?",
+          "answer": "The TypeScript track is the most complete, with 30 questions across Beginner, Intermediate, and Advanced levels. Backend-engineering tracks — Node.js internals, database design and indexing, messaging systems, and system architecture — are being finished and released one at a time."
+        },
+        {
+          "question": "Are these questions aimed at junior or senior engineers?",
+          "answer": "Both. The Beginner level suits candidates preparing for their first or second role, while the Advanced level targets the depth expected of senior and staff engineers. Most people benefit from working through all three levels in order."
+        },
+        {
+          "question": "How should I use a quiz the day before an interview?",
+          "answer": "Do one relaxed pass at the level that matches the role, focus on reading the explanations rather than chasing a high score, and stop early enough to sleep. Cramming new material the night before tends to hurt more than it helps."
+        },
+        {
+          "question": "Do the quizzes save my progress?",
+          "answer": "Scores are shown at the end of each level but are not stored on a server. Because everything is local to your browser, you can retake any level as often as you like without affecting a saved record."
+        }
+      ]
+    },
+    "typescript": {
+      "coversHeading": "What the TypeScript interview quiz covers",
+      "covers": [
+        "This quiz works through the parts of TypeScript that interviewers actually probe: how the compiler infers types when you do not annotate them, how generics let a function stay type-safe across many input shapes, and how the type system computes new types from existing ones with conditional types, mapped types, and the infer keyword. It also covers narrowing — how TypeScript uses control flow, typeof, instanceof, discriminated unions, and user-defined type guards to shrink a union down to a single type inside a branch.",
+        "A distinctive feature is that every answer includes the compiled JavaScript. Types, interfaces, and type-only imports are erased at build time and produce no runtime code, while enums, class parameter properties, and decorators do emit something. Seeing the emitted output next to the source makes it obvious which constructs are purely a compile-time contract and which carry a runtime cost — a distinction that comes up constantly in interviews about bundle size and performance.",
+        "The utility types — Partial, Required, Readonly, Pick, Omit, Record, ReturnType, Parameters, Awaited, and the rest — are treated as things you should be able to reimplement, not just call. Several questions ask you to predict the result of a hand-written mapped type that mirrors one of the built-ins, which is a common whiteboard exercise."
+      ],
+      "levelsHeading": "Difficulty levels",
+      "levels": [
+        "Beginner covers the everyday type system: primitive and literal types, arrays and tuples, union and intersection types, interfaces versus type aliases, optional and readonly properties, function types, and the difference between any, unknown, and never. These are the questions a screening call is most likely to open with.",
+        "Intermediate moves into generics with constraints, keyof and indexed access types, typeof used as a type query, basic mapped and conditional types, and control-flow narrowing. Advanced pushes into recursive conditional types, the infer keyword, template literal types, variadic tuple types, the satisfies operator, const type parameters, NoInfer, and module augmentation — the material that distinguishes a senior TypeScript answer."
+      ],
+      "topicsHeading": "Topics in the question bank",
+      "topics": [
+        "Type inference — how TypeScript assigns types to variables, return values, and generic parameters when no annotation is present, and when it widens or narrows a literal.",
+        "Generics — writing functions, classes, and types that are parameterised over a type, adding extends constraints, and supplying defaults.",
+        "Conditional and mapped types — computing one type from another with T extends U ? X : Y, key remapping, adding or removing modifiers, and distribution over unions.",
+        "Narrowing — reducing a union inside a branch using typeof, instanceof, in, equality checks, discriminated unions, and functions that return a type predicate.",
+        "Utility types — Partial, Pick, Omit, Record, ReturnType, Parameters, Awaited and friends, plus how to build equivalents by hand.",
+        "Compiled JavaScript output — which TypeScript syntax is erased at build time and produces no runtime code, and which syntax actually emits."
+      ],
+      "howHeading": "How to use the TypeScript quiz",
+      "how": [
+        "Pick a level — Beginner, Intermediate, or Advanced — from the start screen. You can take them in any order and retake each as many times as you want.",
+        "Answer each multiple-choice question. Use the number keys 1 to 4 to select and Enter or the right arrow to advance.",
+        "After answering, read the three explanation tabs: Why This Answer, Compiled JS, and Best Practice. The Compiled JS tab shows exactly what the TypeScript compiler emits for that snippet.",
+        "Review your score at the end, then retake the level a day later to check what actually stuck."
+      ],
+      "faqHeading": "TypeScript interview quiz FAQ",
+      "faqs": [
+        {
+          "question": "How many TypeScript interview questions are there?",
+          "answer": "There are 30 questions in total — 10 Beginner, 10 Intermediate, and 10 Advanced. Each level is shuffled on every playthrough, so you get a fresh order each time."
+        },
+        {
+          "question": "What topics does the TypeScript quiz cover?",
+          "answer": "It covers type inference, any versus unknown, interfaces versus type aliases, optional properties, generics and constraints, keyof and indexed access types, mapped types, conditional types, the infer keyword, discriminated unions, template literal types, variadic tuples, satisfies, NoInfer, const type parameters, and module augmentation."
+        },
+        {
+          "question": "Are these questions for junior or senior roles?",
+          "answer": "Both. The Beginner level matches a first frontend or full-stack role, Intermediate matches a mid-level engineer, and Advanced reflects what a senior or staff engineer is expected to explain confidently. Working through all three in order is the most useful approach."
+        },
+        {
+          "question": "Does the quiz show compiled JavaScript output?",
+          "answer": "Yes. Every question has a Compiled JS tab showing exactly what TypeScript emits after erasing type annotations. It makes clear which constructs have a runtime cost and which are purely compile-time."
+        },
+        {
+          "question": "Is this enough on its own to prepare for a TypeScript interview?",
+          "answer": "It is a strong knowledge check, but pair it with hands-on practice: build something small with strict mode on, read the compiler errors carefully, and practise saying each answer out loud. Interviews test explanation as much as recognition."
+        },
+        {
+          "question": "Do I need an account to take the quiz?",
+          "answer": "No. The quiz is completely free with no account, login, or download. Everything runs in your browser and no answers or scores are sent anywhere."
+        }
+      ]
+    }
+  },
   "footer": {
     "links": {
       "blog": "Blog",
@@ -4919,6 +5147,12 @@
         "Both official dates stay visible below the countdown, even after round 1 has passed."
       ],
       "whyItMatters": "Brazil uses a two-round system for its top two offices — President and Governor — to ensure the winner has support from a majority of voters, not just a plurality. Senate and legislative seats, by contrast, are decided in one round. Whether a runoff happens is only confirmed after round-1 results are counted, which is why this page frames October 25 as conditional rather than certain.",
+      "sections": [
+        {
+          "heading": "What happens between the two rounds",
+          "body": "Once first-round polls close on October 4, the TSE tabulates the valid votes in each presidential and gubernatorial race. A candidate wins outright by taking more than 50% of valid votes — blank and spoiled ballots are excluded from that base, which is why the winning threshold is measured against valid votes rather than every ballot cast. If no candidate clears that bar, the two highest-polling candidates advance to the runoff on the last Sunday of October, which is October 25, 2026. Senate seats and the federal, state, and district legislatures are all decided on October 4 and are never part of a runoff, so only the executive races can extend into the second round."
+        }
+      ],
       "proTip": "If your state's Governor race — or the Presidential race — goes to a runoff, this page automatically switches its countdown to October 25, 2026."
     }
   },

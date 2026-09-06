@@ -1,19 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
 import { buildAlternates } from '@/lib/i18nMeta'
-import { buildJsonLd, breadcrumbSchema } from '@/lib/schema'
+import { buildJsonLd, breadcrumbSchema, faqSchema, type FaqItem } from '@/lib/schema'
 import { getFlags } from '@/lib/featureFlags'
+import InterviewDepth from '@/components/interview/InterviewDepth'
 
 const PATH = '/interview'
 const DESCRIPTION =
   'Free interactive interview prep quizzes for software engineers. Deep-dive into TypeScript with in-depth questions covering type inference, generics, conditional types, and more — every answer includes compiled JS output and industry best practices.'
-
-const jsonLd = buildJsonLd(
-  breadcrumbSchema([
-    { name: 'Home', url: '/' },
-    { name: 'Interview Prep', url: PATH },
-  ]),
-)
 
 export const metadata: Metadata = {
   title: 'Interview Preparation — TypeScript & More | ToolNotch',
@@ -42,6 +37,25 @@ export default async function InterviewHubPage({ params }: Props) {
   // the link a 307 redirect to the canonical path (WS-6 link audit).
   const lp = locale === 'en' ? '' : `/${locale}`
   const flags = await getFlags()
+
+  const t = await getTranslations({ locale, namespace: 'interview.hub' })
+  const depthSections = [
+    { heading: t('aboutHeading'), body: t.raw('about') as string[] },
+    { heading: t('formatHeading'), body: t.raw('format') as string[] },
+  ]
+  const depthLists = [
+    { heading: t('howHeading'), ordered: true, items: t.raw('how') as string[] },
+  ]
+  const depthFaqs = t.raw('faqs') as FaqItem[]
+
+  const jsonLd = buildJsonLd(
+    breadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'Interview Prep', url: PATH },
+    ]),
+    faqSchema(depthFaqs),
+  )
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -220,6 +234,12 @@ export default async function InterviewHubPage({ params }: Props) {
           )})}
         </div>
       </div>
+      <InterviewDepth
+        sections={depthSections}
+        lists={depthLists}
+        faqHeading={t('faqHeading')}
+        faqs={depthFaqs}
+      />
     </main>
     </>
   )

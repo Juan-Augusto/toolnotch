@@ -1318,6 +1318,12 @@
             "Alterne entre as frequências de composição para ver como a composição diária se compara à mensal com a mesma taxa."
           ],
           "whyItMatters": "A diferença entre juros simples e compostos é enorme ao longo do tempo. Um investimento de US$ 10.000 a 5% de juros simples em 10 anos ganha US$ 5.000 em juros. O mesmo valor a 5% composto mensalmente ganha aproximadamente US$ 6.470 — uma diferença de 29% — sem contribuições adicionais. A frequência composta também é importante ao comparar contas de poupança: duas contas anunciadas a 4,80% de APR podem render APYs significativamente diferentes.",
+          "sections": [
+            {
+              "heading": "Exemplo prático: como a frequência de capitalização muda o resultado",
+              "body": "Pegue US$ 10.000 a uma taxa anual de 6% por 5 anos. Com juros simples, a conta é 10.000 x 0,06 x 5 = US$ 3.000, para um saldo final de US$ 13.000. Capitalizado anualmente, o saldo é 10.000 x 1,06^5 ≈ US$ 13.382, então os juros ficam em cerca de US$ 3.382. Capitalizado mensalmente, a taxa por período é 0,06 / 12 = 0,005 ao longo de 60 períodos: 10.000 x 1,005^60 ≈ US$ 13.489, ou cerca de US$ 3.489 em juros. Mesma taxa nominal, cerca de US$ 489 a mais que os juros simples só porque os juros são adicionados com mais frequência. Um erro comum é comparar a taxa de um banco capitalizada mensalmente com o número anual de outro banco — converta as duas para APY primeiro, para comparar coisas equivalentes."
+            }
+          ],
           "proTip": "Ao comparar contas de poupança ou CDs, sempre olhe para o APY — não para o APR. O APY é responsável pela capitalização e mostra o seu verdadeiro retorno anual. Uma conta poupança a 5,00% APR composta diariamente rende um APY de aproximadamente 5,13%, enquanto a mesma taxa composta anualmente rende exatamente 5,00%."
         }
       },
@@ -1337,6 +1343,12 @@
             "Compare esse resultado com a calculadora de financiamento de 15 anos para visualizar o equilíbrio entre parcela mensal e juros totais."
           ],
           "whyItMatters": "A parcela mais baixa do financiamento de 30 anos é uma alavanca financeira importante — pode ser a diferença entre se qualificar ou não para o crédito, ou entre um orçamento apertado e uma taxa de poupança saudável. Mas o longo prazo tem um custo oculto: como você paga juros sobre um saldo maior por mais tempo, a conta final de juros é enorme. Muitos compradores também se mudam ou refinanciam antes de concluir os 30 anos — o que significa que pagam principalmente juros nos primeiros anos, quando cada parcela é majoritariamente encargos e pouco amortização.",
+          "sections": [
+            {
+              "heading": "Exemplo prático: 30 anos vs. 15 anos no mesmo empréstimo",
+              "body": "Em um empréstimo de US$ 300.000 a 6,5%, a parcela de 30 anos fica em cerca de US$ 1.896 de principal e juros, com aproximadamente US$ 382.600 de juros ao longo de todo o prazo. Um empréstimo de 15 anos sobre o mesmo valor, normalmente a uma taxa um pouco menor, perto de 6,0%, custa cerca de US$ 2.532 por mês, mas apenas cerca de US$ 155.700 em juros totais. O de 15 anos custa cerca de US$ 636 a mais por mês e economiza cerca de US$ 227.000 em juros. O erro comum é tratar isso como um ou-outro permanente: você pode pegar o empréstimo de 30 anos pela parcela obrigatória menor e então, na maioria dos meses, pagar voluntariamente perto do valor de 15 anos. Isso captura a maior parte da economia de juros e mantém a parcela menor como reserva quando o dinheiro aperta."
+            }
+          ],
           "proTip": "Você não precisa ficar preso a 30 anos de parcelas só porque tomou um financiamento nesse prazo. Fazer um pagamento extra de principal por ano — equivalente a 13 parcelas em vez de 12 — pode reduzir cerca de 4–5 anos no prazo de quitação e economizar dezenas de milhares em juros, ao mesmo tempo em que preserva a flexibilidade da parcela menor nos meses de menor fluxo de caixa."
         },
         "faqs": [
@@ -1502,6 +1514,12 @@
             "Ajuste o valor extra para ver como pequenos aumentos mudam drasticamente o prazo e o total de juros."
           ],
           "whyItMatters": "A diferença entre pagar apenas o mínimo e adicionar mesmo R$ 100 extras por mês pode significar anos de dívida e milhares de reais a mais em juros. No Brasil, com taxas de cartão de crédito que podem superar 300% ao ano, o impacto dos juros compostos é ainda mais severo do que em outros países. Ver uma data concreta de quitação e um valor em reais para o total de juros torna o custo real visível de uma forma que porcentagens abstratas de juros não conseguem. Essa visibilidade costuma ser o que motiva a ação real.",
+          "sections": [
+            {
+              "heading": "Exemplo prático: fixar o valor da parcela",
+              "body": "Pegue um saldo de cartão de R$ 5.000 a 8% ao mês (uma taxa típica de parcelamento de fatura). Se você pagar sempre só o mínimo — que começa perto de R$ 500 e vai encolhendo junto com o saldo — a quitação se arrasta por anos e o total de juros acaba maior que os R$ 5.000 originais, porque a maior parte de cada pagamento vira encargo. Fixe a parcela em cerca de R$ 700 por mês e o saldo zera em cerca de um ano, com aproximadamente R$ 2.700 de juros. Suba para R$ 1.200 por mês e a dívida acaba em cerca de seis meses, com cerca de R$ 1.300 de juros. O erro comum é pagar o mínimo mais o dinheiro que sobrar; um reforço irregular ajuda muito menos do que uma parcela fixa e maior que você agenda e trata como qualquer outra conta."
+            }
+          ],
           "proTip": "Após quitar uma dívida, redirecione imediatamente toda a prestação que você pagava para a próxima dívida da lista — o 'efeito bola de neve'. Isso mantém seu desembolso mensal total idêntico enquanto acelera drasticamente a quitação, pois cada dívida eliminada adiciona força à próxima. Priorize primeiro as dívidas com juros de cartão de crédito e cheque especial, que têm as maiores taxas do mercado."
         }
       }
@@ -2064,14 +2082,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "Um gerador de equipes aleatório recebe uma lista de nomes e os divide em equipes iguais — ou quase iguais — aleatoriamente. Os casos de uso incluem projetos de grupo em sala de aula, seleção de equipes esportivas, agrupamento de hackathon e equipes de eventos de escritório. Um benefício importante é que a composição aleatória remove o viés inconsciente: as pessoas se separam naturalmente por amizade ou nível de habilidade.",
+        "whatIs": "Um gerador de equipes aleatório recebe uma lista de nomes e os divide em equipes iguais — ou quase iguais — aleatoriamente. Os casos de uso incluem projetos de grupo em sala de aula, seleção de equipes esportivas, agrupamento de hackathon e equipes de eventos de escritório. Um benefício importante é que a composição aleatória remove o viés inconsciente: as pessoas se separam naturalmente por amizade ou nível de habilidade. Esta ferramenta pode dividir uma lista por número de times, por tamanho-alvo de time ou entre um conjunto de nomes de times que você fornece, e sempre mantém os grupos com no máximo um membro de diferença.",
         "howToUse": [
           "Cole sua lista de nomes na caixa de texto, um por linha.",
           "Defina o número de equipes que deseja criar.",
           "Clique em Gerar para dividir os nomes em equipes aleatórias e equilibradas.",
           "Leia suas atribuições de equipe e copie ou compartilhe conforme necessário."
         ],
-        "whyItMatters": "A escolha manual de equipes é psicologicamente prejudicial para aqueles escolhidos por último. A atribuição aleatória trata todos com igualdade e frequentemente produz melhor colaboração ao misturar pessoas que não escolheriam trabalhar juntas naturalmente. O resultado são grupos com habilidades mais diversificadas.",
+        "whyItMatters": "A escolha manual de equipes é psicologicamente prejudicial para aqueles escolhidos por último. A atribuição aleatória trata todos com igualdade e frequentemente produz melhor colaboração ao misturar pessoas que não escolheriam trabalhar juntas naturalmente. O resultado são grupos com habilidades mais diversificadas. Fazer a divisão diante de todos, com uma ferramenta que não pode ser manipulada, também elimina qualquer suspeita de que o organizador reforçou um time de propósito.",
+        "sections": [
+          {
+            "heading": "Como funciona o embaralhamento",
+            "body": "O gerador usa o embaralhamento Fisher-Yates, o algoritmo padrão para produzir uma ordenação aleatória sem viés de uma lista. Ele percorre a lista do fim para o início e, em cada posição, troca o nome atual por um escolhido ao acaso entre os anteriores ou o próprio. Feito corretamente, cada uma das ordenações possíveis é igualmente provável — nenhum nome é favorecido e a posição na sua lista original não influencia onde a pessoa cai. Depois do embaralhamento, os nomes são distribuídos um a um entre os times em rodízio, e é por isso que os times sempre terminam com no máximo um membro de diferença, mesmo quando o total de pessoas não divide de forma exata."
+          },
+          {
+            "heading": "Equilibrar habilidade em vez de puro acaso",
+            "body": "O acaso puro pode, de vez em quando, colocar todos os jogadores fortes, ou todos os alunos mais quietos, no mesmo time. Se o equilíbrio importa, divida sua lista em faixas primeiro — por exemplo forte, médio e em desenvolvimento — depois rode o gerador uma vez por faixa e combine os resultados para que cada time receba uma mistura parecida. Isso mantém a imparcialidade e a transparência de um sorteio aleatório e evita um resultado desequilibrado. Para grupos recorrentes, gere do zero a cada sessão em vez de reaproveitar os times da semana passada, para que as mesmas pessoas não sejam sempre juntadas ou sempre separadas."
+          },
+          {
+            "heading": "Usos comuns",
+            "body": "Professores usam para trabalhos em grupo, duplas de laboratório e rodas de conversa; o efeito de remover o viés importa mais aqui, porque os alunos percebem quando os mesmos amigos sempre trabalham juntos. Treinadores e professores de educação física usam para formar lados de jogo sem o ritual da escolha por capitães. No trabalho, cobre equipes de hackathon, salas de discussão em oficinas, amigo-secreto e escalas de plantão. Para eventos e quebra-gelos, gerar os times ao vivo numa tela compartilhada já funciona como a própria revelação."
+          }
+        ],
         "proTip": "Se você precisa de níveis de habilidade equilibrados em vez de equipes puramente aleatórias, pré-classifique a sua lista de nomes por nível de habilidade antes de gerar. Em seguida, gere equipes aleatórias em cada nível para garantir a distribuição equitativa dos talentos."
       }
     },
@@ -2099,13 +2131,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "Uma roleta de sim/não é uma ferramenta de decisão aleatória binária que retorna Sim ou Não com uma animação giratória. É usada para tomar decisões quando nenhuma escolha domina fortemente, para quebrar a paralisia decisória ou adicionar aleatoriedade aos jogos. Ela difere do lançamento de uma moeda na apresentação — o formato da roleta é mais dramático e envolvente.",
+        "whatIs": "Uma roleta de sim/não é uma ferramenta de decisão aleatória binária que retorna Sim ou Não com uma animação giratória. É usada para tomar decisões quando nenhuma escolha domina fortemente, para quebrar a paralisia decisória ou adicionar aleatoriedade aos jogos. Ela difere do lançamento de uma moeda na apresentação — o formato da roleta é mais dramático e envolvente. Como a roleta não guarda memória entre giros, ela também serve para mostrar na prática que cada resultado é independente: uma sequência de um mesmo resultado não muda as chances do giro seguinte.",
         "howToUse": [
           "Pense em uma pergunta de sim/não que deseja decidir.",
+          "Se quiser, ative 'Incluir Talvez' para adicionar um terceiro segmento.",
           "Clique em Girar e assista à animação da roleta.",
           "Aceite o resultado — e preste atenção na sua reação instintiva a ele."
         ],
-        "whyItMatters": "A ciência da decisão mostra que os humanos experimentam paralisia de escolha quando as opções são quase iguais. Uma escolha binária aleatória resolve o impasse rapidamente. Mais importante ainda, a sua reação emocional ao resultado revela a sua preferência real: se a roleta diz Sim e sente alívio, queria Sim.",
+        "whyItMatters": "A ciência da decisão mostra que os humanos experimentam paralisia de escolha quando as opções são quase iguais. Uma escolha binária aleatória resolve o impasse rapidamente. Mais importante ainda, a sua reação emocional ao resultado revela a sua preferência real: se a roleta diz Sim e sente alívio, queria Sim. O contexto importa: essa técnica só é confiável quando as duas opções são realmente aceitáveis e a escolha é reversível, então trate o giro como um convite à reflexão, não como uma sentença que você é obrigado a seguir.",
+        "sections": [
+          {
+            "heading": "Como funciona a aleatoriedade",
+            "body": "O resultado é decidido no instante em que você clica, não enquanto a roleta gira. A ferramenta chama o gerador de números aleatórios do navegador, mapeia o valor para os segmentos e depois anima a roleta para parar na fatia já escolhida — o giro é apresentação, não o sorteio. Com dois segmentos iguais, Sim e Não têm 50% de chance cada. Adicionar o segmento Talvez divide a roleta em três partes iguais de cerca de 33,3%. Cada giro é independente: a roleta não guarda histórico, então cinco resultados 'Não' seguidos não tornam o 'Sim' mais provável no sexto giro. Isso é a falácia do apostador, e uma roleta física ou digital é uma boa forma de ver por que ela é falsa."
+          },
+          {
+            "heading": "Quando a roleta de sim/não é a ferramenta certa",
+            "body": "Use-a para escolhas de baixo risco e reversíveis em que você já pesou os dois lados e simplesmente empacou — qual restaurante, ir ou não a um evento, por qual de duas opções igualmente boas começar. Ela é uma péssima escolha para decisões com risco assimétrico relevante: dinheiro, saúde, segurança ou qualquer coisa que afete outras pessoas sem a participação delas. Nesses casos, a roleta serve no máximo para revelar seu instinto — gire, note se você está torcendo por um lado e então decida de forma deliberada. Nunca use um resultado aleatório como desculpa para uma escolha que merece reflexão de verdade."
+          },
+          {
+            "heading": "Conduzindo uma decisão pública justa",
+            "body": "Se você está usando a roleta para resolver algo entre amigos, em sala de aula ou numa transmissão ao vivo, diga qual é a pergunta e o que cada segmento significa antes de girar. Gire uma vez e aceite o primeiro resultado. Girar de novo até obter a resposta que você queria é evidente para quem está assistindo e derruba o propósito de usar uma ferramenta aleatória. Para qualquer coisa que as pessoas possam contestar depois, tire um print ou grave a tela para que o resultado seja verificável. Manter o ritual consistente — anunciar, girar uma vez, aceitar — é o que faz o grupo confiar nele."
+          }
+        ],
         "proTip": "A técnica 'girar e sentir': gire a roleta e, em seguida, anote imediatamente a sua reação instintiva antes que o cérebro racional possa racionalizá-la. Sua resposta emocional a um resultado aleatório é mais confiável do que a deliberação prolongada para decisões baseadas em preferências."
       }
     },
@@ -2220,14 +2267,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "Um gerador de números aleatórios produz números imprevisíveis dentro de um intervalo que você define — útil para sorteios, amostragem estatística, pesquisas e jogos. O uso do crypto.getRandomValues() do navegador garante verdadeira aleatoriedade em comparação com Math.random().",
+        "whatIs": "Um gerador de números aleatórios produz números imprevisíveis dentro de um intervalo que você define — útil para sorteios, amostragem estatística, pesquisas e jogos. O uso do crypto.getRandomValues() do navegador garante verdadeira aleatoriedade em comparação com Math.random(). O intervalo é inclusivo nas duas pontas, então um intervalo de 1 a 10 pode retornar 1 ou 10, e você pode pedir um único valor ou um lote de até mil de uma vez.",
         "howToUse": [
           "Defina o valor mínimo para seu intervalo.",
           "Defina o valor máximo para seu intervalo.",
           "Escolha quantos números deseja gerar.",
-          "Clique em Gerar e leia os resultados instantaneamente."
+          "Decida se as repetições são permitidas, clique em Gerar e leia os resultados instantaneamente."
         ],
-        "whyItMatters": "Os humanos são péssimos na geração manual de números aleatórios — nós evitamos sequências inconscientemente. Para sorteios e concursos, o uso de um gerador verificável adiciona credibilidade e justiça, e o resultado pode ser capturado para provar que a seleção não foi manipulada.",
+        "whyItMatters": "Os humanos são péssimos na geração manual de números aleatórios — nós evitamos sequências inconscientemente. Para sorteios e concursos, o uso de um gerador verificável adiciona credibilidade e justiça, e o resultado pode ser capturado para provar que a seleção não foi manipulada. Em pesquisa e testes, um intervalo e um método documentados também tornam uma etapa de amostragem reproduzível quando alguém revisa o trabalho depois.",
+        "sections": [
+          {
+            "heading": "Aleatoriedade pseudoaleatória vs. criptográfica",
+            "body": "Um gerador pseudoaleatório parte de um valor de semente e roda uma fórmula que produz números que parecem aleatórios, mas são totalmente determinados por essa semente. Dê a ele a mesma semente e você obtém a mesma sequência — útil para simulações reproduzíveis, ruim para qualquer coisa que um adversário possa tentar prever. Um gerador criptográfico, que é o que o crypto.getRandomValues() expõe, extrai entropia que o sistema operacional coleta de eventos de hardware, então a saída não pode ser reproduzida nem prevista. Para um sorteio em sala de aula ou uma promoção, qualquer um serve na prática; para tokens de segurança, senhas ou embaralhar um baralho num jogo a dinheiro real, só o tipo criptográfico é aceitável."
+          },
+          {
+            "heading": "Sortear sem repetições",
+            "body": "Desative 'permitir duplicatas' quando cada resultado precisar ser distinto — escolher cinco posições de sorteio, atribuir números de camisa únicos ou amostrar linhas sem reposição. O gerador então sorteia do que resta do conjunto a cada vez, então um valor já escolhido não pode voltar a sair. Isso só funciona quando a quantidade pedida não é maior que o tamanho do intervalo: você não pode sortear seis números únicos de um intervalo de quatro. Com duplicatas permitidas, cada sorteio é independente e o mesmo número pode aparecer mais de uma vez, que é o comportamento correto para coisas como dados simulados."
+          },
+          {
+            "heading": "Conduzir um sorteio verificável",
+            "body": "Antes de gerar, anote o intervalo e como ele se liga às inscrições — por exemplo, 'números de 1 a 500, associados à ordem das linhas na planilha de inscrição'. Gere uma vez, tire um print do resultado junto com esse mapeamento e publique os dois. Qualquer pessoa pode então conferir que o número sorteado corresponde à inscrição que você anunciou. Sortear de novo até obter um resultado que você goste, ou mudar o mapeamento depois, é o erro que faz as pessoas desconfiarem de sorteios online."
+          }
+        ],
         "proTip": "Para um sorteio com 500 inscrições, gere um número entre 1 e 500. Para vários vencedores, gere números sem repetição — use a opção de números únicos. Tire uma captura de tela do resultado antes de anunciar para provar que o sorteio foi justo."
       }
     },
@@ -2259,14 +2320,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "Um selecionador de sorteios escolhe um ou mais vencedores aleatoriamente em uma lista de entradas. Os casos de uso incluem sorteios de mídia social — escolhendo vencedores das listas de comentários do Instagram ou YouTube. A transparência e a verificabilidade são fundamentais para a imparcialidade do sorteio.",
+        "whatIs": "Um selecionador de sorteios escolhe um ou mais vencedores aleatoriamente em uma lista de entradas. Os casos de uso incluem sorteios de mídia social — escolhendo vencedores das listas de comentários do Instagram ou YouTube. A transparência e a verificabilidade são fundamentais para a imparcialidade do sorteio. Tudo roda no seu navegador, então a lista de inscritos nunca é enviada e você pode fazer o sorteio offline depois que a página carregar.",
         "howToUse": [
           "Cole sua lista de inscrições — nomes de usuário, texto de comentários — na caixa de texto.",
           "Defina o número de vencedores necessários.",
           "Clique em Escolher para selecionar aleatoriamente os vencedores da sua lista.",
           "Opcionalmente, role novamente se um vencedor selecionado for inelegível."
         ],
-        "whyItMatters": "A seleção manual de milhares de inscritos é impraticável e parece tendenciosa. Um seletor aleatório que você pode capturar na tela prova que o vencedor foi escolhido de forma justa. Para marcas, isso protege a credibilidade.",
+        "whyItMatters": "A seleção manual de milhares de inscritos é impraticável e parece tendenciosa. Um seletor aleatório que você pode capturar na tela prova que o vencedor foi escolhido de forma justa. Para marcas, isso protege a credibilidade. Muitas legislações também traçam uma linha entre um sorteio promocional e uma loteria, e uma seleção aleatória documentada faz parte de ficar do lado certo dessa linha.",
+        "sections": [
+          {
+            "heading": "Preparar uma lista de inscrições limpa",
+            "body": "A qualidade do sorteio depende inteiramente da lista que você cola. Antes de escolher, remova duplicatas óbvias a menos que suas regras permitam explicitamente uma inscrição por comentário, tire da lista a conta da própria marca e respostas de bots, e defina como você trata quem participou várias vezes — ou reduza para uma linha por pessoa, ou mantenha as repetições de propósito para que inscrições extras realmente aumentem as chances. Coloque um inscrito por linha. Se suas regras exigem ações que você não vê na lista bruta, como seguir a conta, verifique o vencedor sorteado contra esse requisito antes de anunciar e sorteie de novo se ele não se qualificar."
+          },
+          {
+            "heading": "Como a seleção funciona",
+            "body": "Cada linha da sua caixa é uma inscrição com chance igual. Quando você clica em Escolher, a ferramenta gera um índice aleatório na lista e retorna aquela inscrição; para vários vencedores com 'Remover ao sortear' ativado, cada nome selecionado sai do conjunto para que ninguém ganhe duas vezes. Os sorteios são independentes e sem peso — a ferramenta não sabe nem se importa com quem se inscreveu primeiro, quem tem mais seguidores ou quem foi escolhido no último sorteio. Se você precisa de chances ponderadas, adicione um nome à lista tantas vezes quanto o peso que quer dar a ele."
+          },
+          {
+            "heading": "Tornar o resultado verificável",
+            "body": "Grave a tela no momento em que você aperta Escolher, com a lista completa de inscrições e o vencedor visíveis na gravação, e publique esse vídeo ou um print junto com o anúncio. Diga de antemão quantos vencedores você vai sortear e a regra de desempate ou de novo sorteio para inscrições desqualificadas. Esse registro é o que protege você se um inscrito perdedor alegar que o sorteio foi fraudado, e hoje já é uma expectativa da maioria das diretrizes de sorteio de marcas e plataformas para prêmios de maior valor."
+          }
+        ],
         "proTip": "Faça uma captura de tela ou grave a tela do momento da escolha antes de anunciar o vencedor. Compartilhe o resultado publicamente — em uma história, tweet ou postagem — com a lista de inscritos visível para demonstrar total transparência."
       }
     },
@@ -2298,14 +2373,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "Um seletor de nomes de sala de aula escolhe aleatoriamente um aluno da sua lista de classe para chamadas, participação ou atribuição de tarefas. A pesquisa educacional de Robert Bjork sobre a prática de recuperação mostra que a seleção aleatória melhora o engajamento e a retenção de aprendizado em comparação com as respostas apenas de voluntários. Esta ferramenta é o equivalente digital da técnica clássica dos palitos de picolé.",
+        "whatIs": "Um seletor de nomes de sala de aula escolhe aleatoriamente um aluno da sua lista de classe para chamadas, participação ou atribuição de tarefas. A pesquisa educacional de Robert Bjork sobre a prática de recuperação mostra que a seleção aleatória melhora o engajamento e a retenção de aprendizado em comparação com as respostas apenas de voluntários. Esta ferramenta é o equivalente digital da técnica clássica dos palitos de picolé. Ela roda no navegador, sem login e sem aplicativo, então funciona igual numa lousa interativa, no notebook do professor, num Chromebook ou num iPad.",
         "howToUse": [
           "Insira sua lista de classe na caixa de texto, um nome de aluno por linha.",
           "Clique em Escolher para selecionar aleatoriamente um aluno.",
           "Leia o nome do aluno selecionado exibido na tela.",
           "Ative 'Remover ao escolher' para garantir que cada aluno seja chamado antes que alguém seja chamado duas vezes."
         ],
-        "whyItMatters": "A seleção aleatória mantém todos os alunos alertas e engajados, pois qualquer um pode ser o próximo. A participação voluntária cria profunda desigualdade — as pesquisas mostram que 20% dos alunos são responsáveis por 80% da participação voluntária. A imprevisibilidade ativa a atenção de forma que os formatos voluntários não conseguem.",
+        "whyItMatters": "A seleção aleatória mantém todos os alunos alertas e engajados, pois qualquer um pode ser o próximo. A participação voluntária cria profunda desigualdade — as pesquisas mostram que 20% dos alunos são responsáveis por 80% da participação voluntária. A imprevisibilidade ativa a atenção de forma que os formatos voluntários não conseguem. Isso também tira o professor da decisão, então nenhum aluno pode interpretar favoritismo ou punição em quem é chamado.",
+        "sections": [
+          {
+            "heading": "Chamar alunos sem aumentar a ansiedade",
+            "body": "A chamada aleatória só ajuda a aprendizagem se os alunos não a temem. Algumas práticas a tornam segura: avise a turma com antecedência de que você vai usar um sorteador, para que seja rotina e não uma emboscada; permita que um aluno diga 'passo, volte a mim' uma vez por aula; e dê alguns segundos de reflexão, ou uma breve conversa em dupla, antes de sortear um nome. Use o sorteador para perguntas que abrem espaço para raciocínio, e não para recordação exata de certo ou errado sob pressão. O objetivo é distribuir a participação, não pegar ninguém de surpresa."
+          },
+          {
+            "heading": "Percorrer a turma inteira de forma justa",
+            "body": "Ative 'Remover ao sortear' para que cada nome sorteado saia do conjunto. A ferramenta então percorre a lista inteira sem repetições, o que os alunos percebem como mais justo do que um sorteio bruto em que uma pessoa pode ser escolhida três vezes antes de outra ser escolhida uma vez. Quando o conjunto esvazia, reinicie-o para a próxima atividade ou a próxima aula. Se um aluno estiver ausente, tire o nome dele naquela sessão para que o fluxo não seja interrompido ao chamar uma carteira vazia."
+          },
+          {
+            "heading": "Além da chamada aleatória",
+            "body": "A mesma lista serve para distribuir tarefas de sala, definir a ordem de apresentação dos grupos, formar duplas para revisão entre colegas, escolher quem demonstra no quadro ou selecionar um líder de fila. Para trabalho em grupo, sorteie vários nomes em sequência com 'Remover ao sortear' ativado para montar um time, depois repita para o próximo time. Manter uma lista salva por turma e reutilizá-la a cada período economiza tempo de preparo."
+          }
+        ],
         "proTip": "Use o recurso 'remover após escolher' para que cada aluno seja chamado uma vez. Isso parece mais justo e reduz a ansiedade de ser chamado repetidamente. Se um aluno estiver ausente, remova seu nome para aquela sessão."
       }
     },
@@ -2333,14 +2422,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "Um teste de velocidade de digitação mede PPM (palavras por minuto, onde uma palavra é padronizada como 5 toques de tecla, incluindo espaços), porcentagem de precisão e PPM bruto versus PPM líquido (PPM líquido deduz erros). Marcos de velocidade: digitadores de dois dedos têm média de 20 a 30 PPM, trabalhadores de escritório chegam a 40 PPM, digitadores proficientes chegam a 60-80 PPM e transcritores profissionais excedem 80-100 PPM.",
+        "whatIs": "Um teste de velocidade de digitação mede PPM (palavras por minuto, onde uma palavra é padronizada como 5 toques de tecla, incluindo espaços), porcentagem de precisão e PPM bruto versus PPM líquido (PPM líquido deduz erros). Marcos de velocidade: digitadores de dois dedos têm média de 20 a 30 PPM, trabalhadores de escritório chegam a 40 PPM, digitadores proficientes chegam a 60-80 PPM e transcritores profissionais excedem 80-100 PPM. Este teste oferece modos de 15, 30, 60 e 120 segundos; os modos mais longos dão um número mais estável porque um único tropeço é diluído em mais texto.",
         "howToUse": [
-          "Clique em Iniciar ou comece a digitar o texto exibido para iniciar o cronômetro.",
+          "Escolha um limite de tempo, depois clique em Iniciar ou comece a digitar o texto exibido para iniciar o cronômetro.",
           "Digite a passagem com a maior precisão e rapidez possíveis.",
           "Leia seu PPM e precisão quando o tempo acabar.",
           "Revise quais teclas causaram lentidão e concentre a prática nelas."
         ],
-        "whyItMatters": "A velocidade de digitação se correlaciona diretamente com a produtividade dos trabalhadores do conhecimento. A 40 PPM versus 80 PPM, uma pessoa que digita o equivalente a 500 horas economiza 250 horas — mais de seis semanas de trabalho. A digitação por toque usando todos os 10 dedos dobra a velocidade média.",
+        "whyItMatters": "A velocidade de digitação se correlaciona diretamente com a produtividade dos trabalhadores do conhecimento. A 40 PPM versus 80 PPM, uma pessoa que digita o equivalente a 500 horas economiza 250 horas — mais de seis semanas de trabalho. A digitação por toque usando todos os 10 dedos dobra a velocidade média. Além da produção bruta, digitar mais rápido reduz o atrito entre ter uma ideia e colocá-la na tela, o que importa quando você está redigindo, programando ou fazendo anotações numa reunião ao vivo.",
+        "sections": [
+          {
+            "heading": "Como o PPM e a precisão são calculados",
+            "body": "O teste conta cada tecla que você pressiona e a compara com o caractere esperado. No fim, o PPM bruto é o total de caracteres digitados dividido por cinco, ajustado para um minuto inteiro. O PPM líquido subtrai desse valor os erros não corrigidos, e é por isso que uma corrida rápida com muitos erros pode pontuar menos do que uma mais lenta e limpa. A precisão é simplesmente a porcentagem de teclas corretas sobre o total de teclas. A 'palavra' de cinco caracteres é uma convenção do setor que vem dos testes de máquina de escrever, então as pontuações são comparáveis entre textos diferentes, não importa o tamanho real das palavras."
+          },
+          {
+            "heading": "Por que a precisão deve vir primeiro",
+            "body": "Cada erro que você precisa notar, apagar e redigitar custa mais tempo do que digitar o caractere certo uma vez. Perseguir uma velocidade alta com a precisão abaixo de 95% treina seus dedos a cometer os mesmos erros mais rápido. O caminho confiável é reduzir o ritmo até o ponto em que você acerta 97 a 98% de precisão, manter isso até ficar confortável e deixar a velocidade subir sozinha. A maioria das pessoas descobre que a velocidade sustentável cresce mais rápido assim do que forçando o ritmo bruto."
+          },
+          {
+            "heading": "Praticar para melhorar de verdade",
+            "body": "Sessões curtas e frequentes vencem sessões longas e ocasionais: algumas corridas de um minuto por dia durante várias semanas produzem ganhos constantes, enquanto uma única maratona de uma hora produz principalmente cansaço. Mantenha os pulsos neutros, os dedos apoiados na linha de descanso (ASDF e JKLÇ) e os olhos no texto em vez de no teclado. Ao revisar um resultado, procure as teclas e combinações de letras específicas que te atrasaram e treine essas, em vez de repetir passagens inteiras."
+          }
+        ],
         "proTip": "A maior melhoria vem da priorização da precisão sobre a velocidade. Diminua a velocidade até que sua precisão fique acima de 95%, depois aumente o ritmo gradativamente. A velocidade acompanha a precisão naturalmente. Faça testes de um minuto diariamente em vez de uma longa sessão."
       }
     }
@@ -3006,16 +3109,22 @@
         }
       ],
       "richContent": {
-        "whatIs": "Uma calculadora de datas de sprint determina as datas de início, término, revisão e retrospectiva. As cerimônias de sprint dependem de limites previsíveis: a prática da indústria coloca o planejamento nas segundas-feiras e a revisão/retrospectiva na sexta-feira.",
+        "whatIs": "Uma calculadora de datas de sprint determina a data de início, a data de término, a data da revisão e a data da retrospectiva de uma ou mais sprints a partir de uma data de início da equipe e da duração da sprint. As cerimônias de sprint dependem de limites previsíveis: a prática da indústria coloca o planejamento nas segundas-feiras e a revisão e a retrospectiva na última sexta-feira. Começar uma sprint numa sexta faz o planejamento invadir o fim de semana; começar no meio da semana desalinha os limites da sprint com a semana de trabalho. Alinhar as sprints com os trimestres fiscais e os feriados conhecidos evita conflitos de cerimônia — ninguém quer uma revisão de sprint marcada na véspera de Natal ou um planejamento num feriado bancário.",
         "howToUse": [
-          "Insira a data de início da sprint (idealmente uma segunda-feira).",
-          "Selecione a duração: 2, 3 ou 4 semanas.",
-          "Insira o número de sprints consecutivos.",
-          "Opcionalmente, marque feriados conhecidos.",
-          "Leia a saída do calendário."
+          "Insira a data de início da sprint — o primeiro dia da sua primeira sprint (idealmente uma segunda-feira).",
+          "Selecione a duração da sprint: 2 semanas (padrão da indústria), 3 semanas ou 4 semanas para programas mais lentos.",
+          "Insira o número de sprints consecutivas que deseja planejar.",
+          "Opcionalmente, marque datas de feriados conhecidos para sinalizar sprints com conflitos de cerimônia.",
+          "Leia a saída do calendário de sprints, mostrando as datas de início, término, revisão e retrospectiva de cada sprint."
         ],
-        "whyItMatters": "Planejar as datas com um trimestre de antecedência permite que as equipes bloqueiem os calendários, coordenem as férias e planejem lançamentos com dependências. Equipes que planejam com antecedência apresentam maior velocidade previsível.",
-        "proTip": "Evite sprints de 4 semanas. Quanto maior a sprint, maior o custo de uma suposição errada. Sprints de duas semanas são o padrão da indústria."
+        "whyItMatters": "Planejar as datas das sprints com um trimestre de antecedência permite que as equipes bloqueiem os calendários antes que reuniões concorrentes apareçam, alinhem as férias em torno dos eventos da sprint e coordenem cronogramas de lançamento com equipes dependentes. Equipes que planejam o calendário de sprints com antecedência sofrem menos cerimônias perdidas e têm velocidade mais previsível, porque a sobrecarga de planejamento nunca compete com o trabalho de entrega em cima da hora. Em escala, as cadências de release train no SAFe e no LeSS exigem alinhamento dos limites de sprint entre várias equipes — uma diferença de um único dia gera caos de coordenação entre times nos limites do program increment.",
+        "sections": [
+          {
+            "heading": "Exemplo prático: por que o dia de início importa",
+            "body": "Comece uma sprint de duas semanas na quarta-feira, 4 de junho, e os dez dias úteis vão até terça-feira, 17 de junho — o planejamento cai no meio da semana e a revisão acontece numa terça, atravessando duas semanas de calendário e colidindo com reuniões de segunda-feira que nada têm a ver. Mude o início para segunda-feira, 9 de junho, e a sprint termina na sexta, 20 de junho, com o planejamento logo cedo na segunda e a revisão mais a retrospectiva na tarde de sexta: o ritmo que a maioria das equipes e stakeholders já espera. A calculadora conta apenas dias úteis para as dailies, então pula todo sábado e domingo automaticamente. Ela não conhece os feriados nacionais ou regionais da sua equipe, então confira as datas geradas com o seu calendário local e mova qualquer cerimônia que caia num feriado."
+          }
+        ],
+        "proTip": "Evite sprints de 4 semanas na maioria dos times de software. Quanto mais longa a sprint, maior o custo de uma suposição errada — um erro de direção descoberto no dia 25 de uma sprint de 28 dias desperdiça quase a sprint inteira. Sprints de duas semanas são o padrão da indústria: permitem ciclos de feedback mais rápidos sem a sobrecarga de cerimônias das sprints de uma semana. Reserve iterações de 4 semanas para programas de hardware ou ambientes muito regulados em que a cadência de duas semanas é inviável na prática."
       }
     }
   },
@@ -3071,15 +3180,21 @@
       }
     ],
     "richContent": {
-      "whatIs": "Uma calculadora de porcentagem resolve os três problemas fundamentais: (1) Quanto é X% de Y; (2) X é qual porcentagem de Y; (3) Variação percentual de X para Y. Há uma distinção crítica: ponto percentual e porcentagem são coisas diferentes. Se uma taxa subir de 10% para 12%, é um aumento de 2 pontos percentuais, mas de 20% relativo.",
+      "whatIs": "Uma calculadora de porcentagem resolve os três problemas fundamentais de porcentagem: (1) Quanto é X% de Y — por exemplo, 20% de 350 é igual a 70; (2) X é qual porcentagem de Y — por exemplo, 70 é 20% de 350; (3) Variação percentual de X para Y — por exemplo, uma mudança de 350 para 420 é um aumento de 20%. Usos do dia a dia incluem calcular descontos, gorjetas, impostos, notas escolares e retornos de investimento. Uma distinção crítica: ponto percentual e porcentagem são coisas diferentes. Se a taxa de juros de um empréstimo sobe de 10% para 12%, isso é um aumento de 2 pontos percentuais, mas de 20% em termos relativos. Essas duas leituras são confundidas com frequência em reportagens, publicidade e análises políticas.",
       "howToUse": [
-        "Selecione o tipo de cálculo.",
-        "Insira os valores conhecidos.",
-        "Clique em Calcular.",
-        "Leia o resultado e a explicação detalhada."
+        "Selecione o tipo de cálculo: \"X% de Y\" para achar uma parte, \"X é qual % de Y\" para achar a taxa ou \"Variação percentual\" para comparar dois valores.",
+        "Insira os valores conhecidos nos campos do modo selecionado.",
+        "Clique em Calcular para obter o resultado.",
+        "Leia o resultado e a explicação detalhada mostrada abaixo dos campos."
       ],
-      "whyItMatters": "A confusão com porcentagens é explorada em vendas. Calcular as porcentagens com precisão permite que verifique os descontos reivindicados, o valor do imposto e as alterações de taxa.",
-      "proTip": "Atalhos mentais: 10% significa mover a vírgula para a esquerda. 5% é metade de 10%. 15% é 10% mais 5%. 25% significa dividir por 4."
+      "whyItMatters": "A confusão com porcentagens é explorada rotineiramente em vendas e publicidade. \"50% de desconto e mais 20%\" não é 70% de desconto — é 60% de desconto (você paga 50% do preço original e depois 80% disso, o que equivale a 40% do preço original). Descontos acumulados nunca somam do jeito que parecem. Políticos e profissionais de marketing trocam pontos percentuais e porcentagens para exagerar ou minimizar variações conforme a leitura mais conveniente. Calcular porcentagens com precisão permite verificar por conta própria os descontos anunciados, os valores de imposto e as mudanças de taxa.",
+      "sections": [
+        {
+          "heading": "Exemplo prático: reverter uma variação percentual",
+          "body": "Um erro comum é tentar desfazer um aumento percentual subtraindo a mesma porcentagem. Suponha que um item que custava 80 subiu 25% e foi para 100. Tirar 25% de 100 dá 75, e não 80 — porque as duas porcentagens são aplicadas sobre bases diferentes. Para reverter um aumento, divida por 1 mais a taxa: 100 / 1,25 = 80. Para achar o preço antes do desconto de algo que agora custa 90 após 25% de desconto, divida por 1 menos a taxa: 90 / 0,75 = 120. A lição: um aumento e uma redução da mesma porcentagem nunca se cancelam, então sempre divida para voltar atrás em vez de somar a porcentagem de novo."
+        }
+      ],
+      "proTip": "Atalhos de cálculo mental para as porcentagens do dia a dia: 10% é mover a vírgula uma casa para a esquerda. 5% é metade de 10%. 15% é 10% mais 5%. 20% é o dobro do valor de 10%. 25% é dividir por 4. Essas cinco regras cobrem a maioria das estimativas de gorjeta, desconto e imposto sem calculadora nenhuma — rápido o bastante para conferir a conta de um restaurante ou o desconto de uma loja em segundos."
     }
   },
   "qrGenerator": {
@@ -3654,6 +3769,17 @@
     },
     "breadcrumbBlog": "Blog",
     "relatedTool": "Experimente o {toolName} gratuito →",
+    "indexIntro": "O blog do ToolNotch é onde cada ferramenta ganha a explicação completa que não cabe na própria página da ferramenta. Todo artigo é escrito para se sustentar sozinho: a fórmula ou o método por trás de uma ferramenta, um exemplo prático que você pode reproduzir, os casos-limite e os erros comuns a observar, e um link para a ferramenta gratuita quando você quiser fazer as contas. Não há cadastro nem paywall — os guias estão aqui para ajudar você a entender o resultado, não só a obtê-lo.",
+    "indexGuideHeading": "O que você encontra aqui",
+    "indexCategoryBlurbs": {
+      "finance": "Finanças — como funcionam de verdade as contas de empréstimo, financiamento, juros e quitação de dívidas, com exemplos práticos que você pode conferir na calculadora correspondente.",
+      "health": "Saúde — explicações em linguagem simples sobre IMC, TDEE e metas de calorias, incluindo de onde vem cada fórmula e o que ela deixa de fora.",
+      "text": "Texto — orientação prática sobre contagem de palavras e caracteres, tempo de leitura, índices de legibilidade e densidade de palavras-chave para quem escreve e estuda.",
+      "education": "Educação — como se calculam a média geral, as notas ponderadas e os principais estilos de citação, e como evitar os erros que fazem perder pontos.",
+      "productivity": "Produtividade — como tirar mais proveito das ferramentas do dia a dia de planejamento, datas e prazos, e encaixá-las num fluxo de trabalho real.",
+      "engineering": "Engenharia — o contexto por trás das ferramentas voltadas para desenvolvedores e dos quizzes de entrevista, da formatação às perguntas de sistema de tipos.",
+      "fun": "Diversão — como funciona a aleatoriedade das roletas, sorteadores e geradores, e como conduzir um sorteio em que todos que assistem vão confiar."
+    },
     "posts": {
       "how-to-calculate-mortgage-payment": {
         "title": "Como Calcular a Parcela Mensal do Financiamento Imobiliário",
@@ -4347,6 +4473,108 @@
     },
     "relatedToolsHeading": "Ferramentas gratuitas para este tema"
   },
+  "interview": {
+    "hub": {
+      "aboutHeading": "Sobre a preparação para entrevistas no ToolNotch",
+      "about": [
+        "A preparação para entrevistas do ToolNotch é uma coleção de quizzes interativos e gratuitos para pessoas desenvolvedoras que estão se preparando para uma entrevista técnica. Cada quiz roda inteiramente no navegador: não há conta para criar, nada para instalar e nenhum paywall. Você escolhe um tema, seleciona um nível de dificuldade e responde a questões de múltipla escolha que refletem o tipo de raciocínio que quem entrevista está tentando ouvir.",
+        "O que diferencia esses quizzes de um baralho de flashcards é a explicação anexada a cada questão. Em vez de apenas dizer qual alternativa está correta, cada resposta explica por que ela está correta, mostra o mecanismo por trás e acrescenta uma nota curta sobre como equipes experientes aplicam a ideia em código de produção. O objetivo é um entendimento que você consiga defender sob perguntas de acompanhamento, não trivialidades decoradas que desmoronam no instante em que alguém pergunta por quê.",
+        "Os bancos de questões são escritos a partir de fontes primárias — manuais oficiais das linguagens, documentos de especificação e referências de engenharia amplamente usadas — e revisados quanto à precisão, em vez de montados a partir de sites de quiz raspados. A cobertura hoje se concentra em TypeScript, com trilhas adicionais de linguagens e de engenharia de back-end sendo lançadas conforme ficam prontas."
+      ],
+      "formatHeading": "Como os quizzes são estruturados",
+      "format": [
+        "Cada trilha é dividida em níveis Iniciante, Intermediário e Avançado, com cerca de dez questões cada. As questões Iniciante confirmam que os fundamentos estão sólidos, as Intermediário testam os casos-limite que confundem as pessoas no dia a dia, e as Avançado vão atrás do comportamento profundo que separa uma pessoa candidata sênior de uma de nível pleno. A ordem das questões é embaralhada a cada execução, então não dá para passar decorando posições.",
+        "Como tudo roda no lado do cliente, suas respostas e pontuações nunca saem do seu dispositivo. Você pode refazer um nível quantas vezes quiser, ir direto para a dificuldade que interessa e usar o teclado para agilizar: teclas numéricas para escolher uma alternativa, Enter para avançar e Tab para alternar entre as abas de explicação nas questões que as têm."
+      ],
+      "howHeading": "Como praticar de forma eficaz",
+      "how": [
+        "Comece um nível abaixo de onde você acha que está. Passar rápido pelo conjunto Iniciante confirma seus fundamentos e cria ritmo antes de chegar ao material mais difícil.",
+        "Leia a explicação de todas as questões, inclusive as que você acertou. Uma resposta certa pelo motivo errado ainda é uma lacuna que quem entrevista pode encontrar.",
+        "Quando uma explicação mencionar a saída compilada ou uma regra da especificação, pare e reproduza você mesmo em um editor ou REPL. A recuperação ativa vence a releitura.",
+        "Refaça um nível um ou dois dias depois, em vez de na hora. Espaçar a repetição é o que move uma ideia para a memória de longo prazo.",
+        "Quando estiver pontuando de forma consistente acima de cerca de 80% no Avançado, passe a explicar cada resposta em voz alta como se quem entrevista estivesse na sala. É essa a habilidade que a entrevista de fato mede."
+      ],
+      "faqHeading": "Perguntas frequentes sobre preparação para entrevistas",
+      "faqs": [
+        {
+          "question": "Os quizzes de entrevista do ToolNotch são gratuitos?",
+          "answer": "Sim. Todo quiz é totalmente gratuito, sem conta, cadastro ou download. Todas as questões e explicações rodam no lado do cliente, no seu navegador, e suas pontuações nunca são enviadas para lugar nenhum."
+        },
+        {
+          "question": "Quais temas já estão cobertos?",
+          "answer": "A trilha de TypeScript é a mais completa, com 30 questões nos níveis Iniciante, Intermediário e Avançado. Trilhas de engenharia de back-end — internals do Node.js, projeto e indexação de banco de dados, sistemas de mensageria e arquitetura de sistemas — estão sendo finalizadas e lançadas uma de cada vez."
+        },
+        {
+          "question": "Essas questões são voltadas para pessoas juniores ou seniores?",
+          "answer": "Ambas. O nível Iniciante serve para quem se prepara para a primeira ou segunda vaga, enquanto o nível Avançado mira na profundidade esperada de engenheiros seniores e staff. A maioria das pessoas se beneficia de percorrer os três níveis em ordem."
+        },
+        {
+          "question": "Como devo usar um quiz no dia anterior a uma entrevista?",
+          "answer": "Faça uma passagem tranquila no nível que combina com a vaga, foque em ler as explicações em vez de buscar uma pontuação alta e pare cedo o suficiente para dormir. Estudar material novo na véspera costuma atrapalhar mais do que ajudar."
+        },
+        {
+          "question": "Os quizzes salvam meu progresso?",
+          "answer": "As pontuações aparecem no fim de cada nível, mas não são armazenadas em um servidor. Como tudo fica local no seu navegador, você pode refazer qualquer nível quantas vezes quiser sem afetar um registro salvo."
+        }
+      ]
+    },
+    "typescript": {
+      "coversHeading": "O que o quiz de entrevista de TypeScript cobre",
+      "covers": [
+        "Este quiz percorre as partes de TypeScript que quem entrevista realmente investiga: como o compilador infere tipos quando você não os anota, como generics deixam uma função continuar type-safe em muitos formatos de entrada e como o sistema de tipos calcula tipos novos a partir dos existentes com tipos condicionais, tipos mapeados e a palavra-chave infer. Também cobre narrowing — como o TypeScript usa fluxo de controle, typeof, instanceof, unions discriminadas e type guards definidos pelo usuário para reduzir uma union a um único tipo dentro de um ramo.",
+        "Um recurso distintivo é que toda resposta inclui o JavaScript compilado. Tipos, interfaces e imports somente de tipo são apagados no build e não produzem código de runtime, enquanto enums, propriedades de parâmetro de classe e decorators de fato emitem algo. Ver a saída emitida ao lado do código-fonte deixa óbvio quais construções são puramente um contrato de tempo de compilação e quais têm custo em runtime — uma distinção que aparece o tempo todo em entrevistas sobre tamanho de bundle e desempenho.",
+        "Os utility types — Partial, Required, Readonly, Pick, Omit, Record, ReturnType, Parameters, Awaited e os demais — são tratados como coisas que você deve conseguir reimplementar, não apenas chamar. Várias questões pedem que você preveja o resultado de um tipo mapeado escrito à mão que espelha um dos embutidos, um exercício comum de quadro branco."
+      ],
+      "levelsHeading": "Níveis de dificuldade",
+      "levels": [
+        "O Iniciante cobre o sistema de tipos do dia a dia: tipos primitivos e literais, arrays e tuplas, tipos union e intersection, interfaces versus type aliases, propriedades opcionais e readonly, tipos de função e a diferença entre any, unknown e never. São as questões com que uma ligação de triagem tem mais chance de começar.",
+        "O Intermediário avança para generics com constraints, keyof e tipos de acesso indexado, typeof usado como consulta de tipo, tipos mapeados e condicionais básicos e narrowing por fluxo de controle. O Avançado empurra para tipos condicionais recursivos, a palavra-chave infer, tipos de literal de template, tipos de tupla variádicos, o operador satisfies, parâmetros de tipo const, NoInfer e module augmentation — o material que distingue uma resposta sênior de TypeScript."
+      ],
+      "topicsHeading": "Tópicos do banco de questões",
+      "topics": [
+        "Inferência de tipos — como o TypeScript atribui tipos a variáveis, valores de retorno e parâmetros genéricos quando não há anotação, e quando ele alarga ou estreita um literal.",
+        "Generics — escrever funções, classes e tipos parametrizados por um tipo, adicionar constraints com extends e fornecer valores padrão.",
+        "Tipos condicionais e mapeados — calcular um tipo a partir de outro com T extends U ? X : Y, remapeamento de chaves, adicionar ou remover modificadores e distribuição sobre unions.",
+        "Narrowing — reduzir uma union dentro de um ramo usando typeof, instanceof, in, verificações de igualdade, unions discriminadas e funções que retornam um type predicate.",
+        "Utility types — Partial, Pick, Omit, Record, ReturnType, Parameters, Awaited e afins, além de como montar equivalentes à mão.",
+        "Saída em JavaScript compilado — qual sintaxe de TypeScript é apagada no build e não gera código de runtime, e qual sintaxe realmente emite."
+      ],
+      "howHeading": "Como usar o quiz de TypeScript",
+      "how": [
+        "Escolha um nível — Iniciante, Intermediário ou Avançado — na tela inicial. Você pode fazê-los em qualquer ordem e refazer cada um quantas vezes quiser.",
+        "Responda a cada questão de múltipla escolha. Use as teclas numéricas de 1 a 4 para selecionar e Enter ou a seta para a direita para avançar.",
+        "Depois de responder, leia as três abas de explicação: Por Que Esta Resposta, JS Compilado e Boa Prática. A aba JS Compilado mostra exatamente o que o compilador de TypeScript emite para aquele trecho.",
+        "Revise sua pontuação no fim e refaça o nível um dia depois para checar o que realmente ficou."
+      ],
+      "faqHeading": "Perguntas frequentes sobre o quiz de entrevista de TypeScript",
+      "faqs": [
+        {
+          "question": "Quantas questões de entrevista de TypeScript existem?",
+          "answer": "São 30 questões no total — 10 Iniciante, 10 Intermediário e 10 Avançado. Cada nível é embaralhado a cada tentativa, então você recebe uma ordem nova toda vez."
+        },
+        {
+          "question": "Quais tópicos o quiz de TypeScript cobre?",
+          "answer": "Ele cobre inferência de tipos, any versus unknown, interfaces versus type aliases, propriedades opcionais, generics e constraints, keyof e tipos de acesso indexado, tipos mapeados, tipos condicionais, a palavra-chave infer, unions discriminadas, tipos de literal de template, tuplas variádicas, satisfies, NoInfer, parâmetros de tipo const e module augmentation."
+        },
+        {
+          "question": "Essas questões são para vagas juniores ou seniores?",
+          "answer": "Ambas. O nível Iniciante combina com uma primeira vaga de front-end ou full-stack, o Intermediário com uma pessoa de nível pleno e o Avançado reflete o que se espera que alguém sênior ou staff explique com segurança. Percorrer os três em ordem é a abordagem mais útil."
+        },
+        {
+          "question": "O quiz mostra a saída em JavaScript compilado?",
+          "answer": "Sim. Toda questão tem uma aba JS Compilado mostrando exatamente o que o TypeScript emite depois de apagar as anotações de tipo. Isso deixa claro quais construções têm custo em runtime e quais são puramente de tempo de compilação."
+        },
+        {
+          "question": "Isso basta sozinho para se preparar para uma entrevista de TypeScript?",
+          "answer": "É uma boa verificação de conhecimento, mas combine com prática de mão na massa: construa algo pequeno com o modo strict ligado, leia os erros do compilador com atenção e pratique dizer cada resposta em voz alta. Entrevistas testam a explicação tanto quanto o reconhecimento."
+        },
+        {
+          "question": "Preciso de uma conta para fazer o quiz?",
+          "answer": "Não. O quiz é totalmente gratuito, sem conta, login ou download. Tudo roda no seu navegador e nenhuma resposta ou pontuação é enviada para lugar nenhum."
+        }
+      ]
+    }
+  },
   "footer": {
     "links": {
       "blog": "Blog",
@@ -4410,6 +4638,12 @@
         "Leia as perguntas frequentes para entender como funciona o sistema de dois turnos e quem tem direito a voto."
       ],
       "whyItMatters": "Saber a data exata das eleições ajuda no planejamento pessoal — como organizar viagens, verificar o local de votação com antecedência e evitar imprevistos no dia da votação, já que o voto é obrigatório para a maior parte dos eleitores brasileiros. A definição sobre a existência ou não de um segundo turno também é relevante: ela só é confirmada depois da apuração do primeiro turno, e apenas as disputas de Presidente e Governador podem chegar a essa segunda etapa. Compreender esse mecanismo evita confusão sobre por que algumas eleições (Senador, Deputado) são decididas em uma única votação enquanto outras (Presidente, Governador) podem se estender até o fim de outubro.",
+      "sections": [
+        {
+          "heading": "O que acontece entre os dois turnos",
+          "body": "Assim que as urnas do primeiro turno fecham, em 4 de outubro, o TSE apura os votos válidos em cada disputa de Presidente e de Governador. Um candidato vence direto ao obter mais de 50% dos votos válidos — brancos e nulos ficam de fora dessa base, e é por isso que o limite de vitória é medido sobre os votos válidos, e não sobre todos os votos depositados. Se nenhum candidato passar desse limite, os dois mais votados vão para o segundo turno, no último domingo de outubro, que é 25 de outubro de 2026. As vagas de Senador e as Câmaras Federal, Estaduais e Distritais são todas decididas em 4 de outubro e nunca entram em segundo turno, de modo que apenas as disputas do Executivo podem se estender à segunda etapa."
+        }
+      ],
       "proTip": "Marque o dia 4 de outubro de 2026 no seu calendário e verifique com antecedência o seu local de votação e a validade do seu título de eleitor — o TSE recomenda confirmar esses dados semanas antes do pleito para evitar contratempos. Se a disputa para Presidente ou Governador do seu estado for para o segundo turno, volte a esta página: a contagem regressiva alternará automaticamente para o dia 25 de outubro de 2026."
     }
   },
