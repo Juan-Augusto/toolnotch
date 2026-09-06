@@ -1,10 +1,10 @@
 import type { MetadataRoute } from 'next'
-import { conversionPages } from '@/data/conversionPages'
 import { COMMON_PAIRS } from '@/data/conversionPairs'
 import { PRIORITY_PAIR_SLUGS } from '@/data/conversionPairContent'
 import { QUIZ_REGISTRY } from '@/lib/quizRegistry'
 import { BLOG_POSTS } from '@/data/blog/index'
 import { getAllMdxBlogPosts } from '@/lib/content/blogRepository'
+import { translateSlug } from '@/data/blog/slugTranslations'
 
 const BASE_URL = (process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com').trim()
 
@@ -36,16 +36,12 @@ const TRUST_ROUTES = [
 ]
 
 const ALL_ROUTES = [
-  // Interview prep
+  // Interview prep — only routes that render without a feature flag.
+  // database-design / database-indexing / messaging-sqs-kafka / rabbitmq-concepts
+  // / nodejs-fundamentals / system-architecture / vue redirect (307) to /interview
+  // until `interview-<name>` flags ship — kept out of the sitemap (WS-6 audit §7).
   '/interview',
   '/interview/typescript',
-  '/interview/database-design',
-  '/interview/database-indexing',
-  '/interview/messaging-sqs-kafka',
-  '/interview/rabbitmq-concepts',
-  '/interview/nodejs-fundamentals',
-  '/interview/system-architecture',
-  '/interview/vue',
   // Legal / info (moved to TRUST_ROUTES above — rendered at priority 0.6)
   // PDF tools
   '/tools/pdf',
@@ -118,22 +114,18 @@ const ALL_ROUTES = [
   // Quizzes hub — individual /quiz/<id> routes are generated from
   // lib/quizRegistry.ts (see QUIZ_ROUTES below), not hand-listed here.
   '/quizzes',
-  // Health tools
-  '/tools/health',
+  // Health tools (no /tools/health hub page — 404, WS-6 audit §7)
   '/tools/health/bmi-calculator',
   '/tools/health/tdee-calculator',
   '/tools/health/calorie-deficit-calculator',
-  // Education tools
-  '/tools/education',
+  // Education tools (no /tools/education hub page — 404, WS-6 audit §7)
   '/tools/education/gpa-calculator',
   '/tools/education/cumulative-gpa-calculator',
   '/tools/education/grade-calculator',
   '/tools/education/citation-generator',
-  // Math tools
-  '/tools/math',
+  // Math tools (no /tools/math hub page — 404, WS-6 audit §7)
   '/tools/math/age-calculator',
-  // Utilities
-  '/tools/utilities',
+  // Utilities (no /tools/utilities hub page — 404, WS-6 audit §7)
   '/tools/utilities/qr-code-generator',
   '/tools/utilities/election-countdown',
   '/tools/utilities/polling-place-finder',
@@ -170,20 +162,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const mdxBlogEntries: MetadataRoute.Sitemap = mdxPosts
     .filter((post) => !registeredBlogSlugs.has(post.slug))
-    .map((post) => ({
-    url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: new Date(post.updatedAt ?? post.publishedAt ?? SITE_CONTENT_DATE),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-    alternates: {
-      languages: {
-        en: `${BASE_URL}/blog/${post.slug}`,
-        pt: `${BASE_URL}/pt/blog/${post.slug}`,
-        es: `${BASE_URL}/es/blog/${post.slug}`,
-        'x-default': `${BASE_URL}/blog/${post.slug}`,
-      },
-    }
-  }))
+    .map((post) => {
+      // Posts with a per-locale MDX file have a native slug per locale
+      // (data/blog/slugTranslations). Emitting the English slug under /pt or
+      // /es is a 404 — translate it. Legacy shared-slug posts are unchanged.
+      const enSlug = translateSlug(post.slug, 'en')
+      return {
+        url: `${BASE_URL}/blog/${enSlug}`,
+        lastModified: new Date(post.updatedAt ?? post.publishedAt ?? SITE_CONTENT_DATE),
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+        alternates: {
+          languages: {
+            en: `${BASE_URL}/blog/${enSlug}`,
+            pt: `${BASE_URL}/pt/blog/${translateSlug(post.slug, 'pt')}`,
+            es: `${BASE_URL}/es/blog/${translateSlug(post.slug, 'es')}`,
+            'x-default': `${BASE_URL}/blog/${enSlug}`,
+          },
+        },
+      }
+    })
 
   return [
     {
@@ -201,9 +199,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       },
     },
     urlWithAlternates('/tools/image/image-compressor', 0.9),
-    ...conversionPages.map((page) =>
-      urlWithAlternates(`/tools/image/${page.slug}`)
-    ),
+    // The 8 programmatic /tools/image/<slug> format-permutation pages now emit
+    // `robots: { index: false }` — they duplicate the image-compressor UI
+    // (~150 words). Excluded from the sitemap (WS-6 audit §7).
     // Conversion pairs: only the WS-2 priority slugs are indexable. The rest
     // emit `robots: { index: false }` and are excluded here (WS-5 item 10).
     ...COMMON_PAIRS
