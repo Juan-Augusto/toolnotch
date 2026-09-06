@@ -24,6 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t('metaTitle'),
     description: t('metaDescription'),
     alternates: buildAlternates(PATH),
+    // Utility page — useful to visitors, not a search target. Kept crawlable
+    // (follow) and footer-linked, but out of the index and the sitemap so it
+    // is not judged as a thin content page (WS-6 audit).
+    robots: { index: false, follow: true },
   }
 }
 
