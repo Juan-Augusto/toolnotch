@@ -2,6 +2,8 @@
 
 import { useState, useMemo, type ReactNode } from "react";
 import { Plus, Minus } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import AppCornerAccents from "./AppCornerAccents";
 
 export interface AccordionGroup {
   name: string;
@@ -81,22 +83,7 @@ export function AppAccordion({
 
         return (
           <div key={key} className={`relative ${itemClassName}`}>
-            <span
-              className="absolute -top-0.5 -left-0.5 w-2.5 h-2.5 border-t-3 border-l-3 border-foreground pointer-events-none z-10"
-              aria-hidden="true"
-            />
-            <span
-              className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 border-t-3 border-r-3 border-foreground pointer-events-none z-10"
-              aria-hidden="true"
-            />
-            <span
-              className="absolute -bottom-0.5 -left-0.5 w-2.5 h-2.5 border-b-3 border-l-3 border-foreground pointer-events-none z-10"
-              aria-hidden="true"
-            />
-            <span
-              className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 border-b-3 border-r-3 border-foreground pointer-events-none z-10"
-              aria-hidden="true"
-            />
+            <AppCornerAccents />
 
             <button
               type="button"
@@ -108,35 +95,58 @@ export function AppAccordion({
                 {grp.name}
               </span>
 
-              <span className="shrink-0 ml-4 flex items-center justify-center">
+              <motion.span
+                animate={{ rotate: open ? 180 : 0 }}
+                transition={{ duration: 0.25, ease: "easeInOut" }}
+                className="shrink-0 ml-4 flex items-center justify-center text-foreground"
+              >
                 {open ? (
-                  <Minus className="w-3.5 h-3.5 text-foreground stroke-[3]" />
+                  <Minus className="w-3.5 h-3.5 stroke-[3]" />
                 ) : (
-                  <Plus className="w-3.5 h-3.5 text-foreground stroke-[3]" />
+                  <Plus className="w-3.5 h-3.5 stroke-[3]" />
                 )}
-              </span>
+              </motion.span>
 
-              {open && (
-                <>
-                  <span
-                    className="absolute -bottom-0.5 -left-0.5 w-2.5 h-2.5 border-b-3 border-l-3 border-foreground pointer-events-none z-10"
-                    aria-hidden="true"
-                  />
-                  <span
-                    className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 border-b-3 border-r-3 border-foreground pointer-events-none z-10"
-                    aria-hidden="true"
-                  />
-                </>
-              )}
+              {open && <AppCornerAccents position="bottom" />}
             </button>
 
-            {open && (
-              <div
-                className={`p-6 border-dashed-5 border-t-transparent! font-mono text-xs md:text-sm text-label/90 leading-relaxed ${contentClassName}`}
-              >
-                {grp.content}
-              </div>
-            )}
+            <AnimatePresence initial={false}>
+              {open && (
+                <motion.div
+                  key="content"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{
+                    height: "auto",
+                    opacity: 1,
+                    transition: {
+                      height: {
+                        duration: 0.28,
+                        ease: [0.04, 0.62, 0.23, 0.98],
+                      },
+                      opacity: { duration: 0.2, delay: 0.05 },
+                    },
+                  }}
+                  exit={{
+                    height: 0,
+                    opacity: 0,
+                    transition: {
+                      height: {
+                        duration: 0.22,
+                        ease: [0.04, 0.62, 0.23, 0.98],
+                      },
+                      opacity: { duration: 0.15 },
+                    },
+                  }}
+                  className="overflow-hidden"
+                >
+                  <div
+                    className={`p-6 border-dashed-5-no-t font-mono text-xs md:text-sm text-label/90 leading-relaxed ${contentClassName}`}
+                  >
+                    {grp.content}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         );
       })}

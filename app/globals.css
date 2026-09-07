@@ -218,6 +218,133 @@ input[type="number"] {
   background-repeat: no-repeat;
 }
 
+.border-dashed-5-primary {
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      var(--primary) 0,
+      var(--primary) 5px,
+      transparent 5px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      to right,
+      var(--primary) 0,
+      var(--primary) 5px,
+      transparent 5px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--primary) 0,
+      var(--primary) 5px,
+      transparent 5px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--primary) 0,
+      var(--primary) 5px,
+      transparent 5px,
+      transparent 10px
+    );
+  background-position:
+    top left,
+    bottom left,
+    top left,
+    top right;
+  background-size:
+    100% 1px,
+    100% 1px,
+    1px 100%,
+    1px 100%;
+  background-repeat: no-repeat;
+}
+
+.border-dashed-5-no-t {
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      var(--border) 0,
+      var(--border) 5px,
+      transparent 5px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--border) 0,
+      var(--border) 5px,
+      transparent 5px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--border) 0,
+      var(--border) 5px,
+      transparent 5px,
+      transparent 10px
+    );
+  background-position:
+    bottom left,
+    top left,
+    top right;
+  background-size:
+    100% 1px,
+    1px 100%,
+    1px 100%;
+  background-repeat: no-repeat;
+}
+
+.border-x-dashed-5 {
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      var(--border) 0,
+      var(--border) 5px,
+      transparent 5px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--border) 0,
+      var(--border) 5px,
+      transparent 5px,
+      transparent 10px
+    );
+  background-position:
+    top left,
+    top right;
+  background-size:
+    1px 100%,
+    1px 100%;
+  background-repeat: no-repeat;
+}
+
+.border-y-dashed-5 {
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      var(--border) 0,
+      var(--border) 5px,
+      transparent 5px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      to right,
+      var(--border) 0,
+      var(--border) 5px,
+      transparent 5px,
+      transparent 10px
+    );
+  background-position:
+    top left,
+    bottom left;
+  background-size:
+    100% 1px,
+    100% 1px;
+  background-repeat: no-repeat;
+}
+
 .container {
   width: 100%;
   max-width: 1270px;

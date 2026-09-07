@@ -193,7 +193,7 @@ export function AppSelect<T = string>({
               error
                 ? "border-red-500 focus:border-red-500 ring-1 ring-red-500/20 bg-tertiary"
                 : isOpen
-                  ? "border-secondary bg-secondary/5 ring-1 ring-secondary/20 shadow-[0_0_10px_rgba(86,255,247,0.15)]"
+                  ? "border-secondary bg-secondary/5 ring-1 ring-secondary/20"
                   : "border-border hover:border-foreground/30 bg-tertiary"
             }
             ${className}
@@ -228,7 +228,6 @@ export function AppSelect<T = string>({
               border
               border-border
               rounded-[2px]
-              shadow-xl
               max-h-60
               overflow-y-auto
               py-1
@@ -264,7 +263,7 @@ export function AppSelect<T = string>({
                         ? "opacity-40 cursor-not-allowed"
                         : isSelected
                           ? "text-primary font-semibold cursor-pointer"
-                          : " hover:bg-[#2e333b] text-label hover:text-foreground cursor-pointer"
+                          : " hover:bg-border/30 text-label hover:text-foreground cursor-pointer"
                     }
                   `}
                 >

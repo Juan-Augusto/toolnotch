@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import AppMenu, { type MenuGroup } from '@/components/AppMenu';
 
 const mockGroups: MenuGroup[] = [
@@ -21,6 +21,10 @@ const mockGroups: MenuGroup[] = [
 ];
 
 describe('AppMenu', () => {
+  beforeAll(() => {
+    window.scrollTo = jest.fn();
+  });
+
   it('renders all groups and starts with all groups open', () => {
     render(<AppMenu group={mockGroups} />);
 
@@ -33,7 +37,7 @@ describe('AppMenu', () => {
     expect(screen.getByText('Dividir pdf')).toBeInTheDocument();
   });
 
-  it('collapses and expands a group when clicking its header', () => {
+  it('collapses and expands a group when clicking its header', async () => {
     render(<AppMenu group={mockGroups} />);
 
     expect(screen.getByText('Compressor de imagem')).toBeInTheDocument();
@@ -41,13 +45,17 @@ describe('AppMenu', () => {
     const imagensHeader = screen.getByRole('button', { name: /IMAGENS/i });
     fireEvent.click(imagensHeader);
 
-    expect(screen.queryByText('Compressor de imagem')).not.toBeInTheDocument();
-    expect(screen.queryByText('Conversor de imagem')).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.queryByText('Compressor de imagem')).not.toBeInTheDocument();
+      expect(screen.queryByText('Conversor de imagem')).not.toBeInTheDocument();
+    });
 
     expect(screen.getByText('Mesclar PDF')).toBeInTheDocument();
 
     fireEvent.click(imagensHeader);
-    expect(screen.getByText('Compressor de imagem')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText('Compressor de imagem')).toBeInTheDocument();
+    });
   });
 
   it('triggers item click handler when item is clicked', () => {
