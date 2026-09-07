@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import { ChevronRight, Home } from 'lucide-react'
 import AdUnit from '@/components/AdUnit'
 import { AD_SLOTS } from '@/lib/adSlots'
+import { translateSlug } from '@/data/blog/slugTranslations'
 
 interface Props {
   title: string
@@ -179,7 +180,7 @@ export default async function ArticleLayout({
               {relatedPosts.map((p) => (
                 <li key={p.slug}>
                   <Link
-                    href={`${locale === 'en' ? '' : `/${locale}`}/blog/${p.slug}`}
+                    href={`${locale === 'en' ? '' : `/${locale}`}/blog/${translateSlug(p.slug, locale)}`}
                     className="text-blue-600 hover:underline dark:text-blue-400"
                   >
                     {p.title}

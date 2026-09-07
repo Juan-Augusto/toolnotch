@@ -138,7 +138,27 @@
         },
         {
           "question": "Posso mesclar PDFs com senha?",
-          "answer": "PDFs com senha não podem ser mesclados. Remova a proteção por senha primeiro usando o seu visualizador de PDF."
+          "answer": "PDFs com senha não podem ser mesclados. Remova a proteção por senha primeiro no seu visualizador de PDF e mescle o arquivo desbloqueado."
+        },
+        {
+          "question": "Mesclar PDFs reduz a qualidade?",
+          "answer": "Não. A ferramenta combina os PDFs no nível da estrutura do arquivo, então imagens, fontes e formatação são mantidas exatamente como estavam nos originais. Não há recompressão nem perda."
+        },
+        {
+          "question": "Posso reordenar as páginas antes de mesclar?",
+          "answer": "Pode. Arraste os cartões dos arquivos para a ordem que você quiser antes de clicar em Mesclar. O PDF final segue exatamente essa ordem, então coloque a capa ou o índice como primeiro arquivo."
+        },
+        {
+          "question": "Quantos arquivos posso mesclar de uma vez?",
+          "answer": "Não há limite fixo de quantidade. Dá para mesclar dois arquivos ou vinte — combinações muito grandes só podem ficar mais lentas dependendo da memória do seu aparelho."
+        },
+        {
+          "question": "Funciona em qualquer navegador e no celular?",
+          "answer": "Sim. A ferramenta funciona em todos os navegadores modernos — Chrome, Firefox, Safari e Edge — tanto no computador quanto no celular, sem instalar nada."
+        },
+        {
+          "question": "Meus dados ficam privados ao usar a ferramenta?",
+          "answer": "Ficam. Toda a mesclagem acontece no seu navegador, com JavaScript. Os arquivos PDF não são enviados para nenhum servidor e são apagados da memória assim que você fecha ou atualiza a página."
         }
       ],
       "richContent": {
@@ -215,7 +235,31 @@
         },
         {
           "question": "Como saber quantas páginas meu PDF tem?",
-          "answer": "Abra o PDF em qualquer visualizador (como o navegador ou o Adobe Reader) para ver o total de páginas."
+          "answer": "Abra o PDF em qualquer visualizador (o próprio navegador ou o Adobe Reader) para ver o total de páginas antes de definir os intervalos."
+        },
+        {
+          "question": "Posso dividir por intervalos de páginas?",
+          "answer": "Pode. Informe os intervalos no campo (ex.: 1-3, 4-6, 7) e cada intervalo vira um PDF separado dentro de um arquivo ZIP. Deixe o campo em branco para separar todas as páginas individualmente."
+        },
+        {
+          "question": "O que acontece com o arquivo original?",
+          "answer": "Nada. A ferramenta apenas lê o original para gerar os novos arquivos divididos; o seu PDF de origem continua intacto no dispositivo."
+        },
+        {
+          "question": "Quantas páginas posso dividir de uma vez?",
+          "answer": "Não há limite de páginas. Dá para dividir um PDF de 2 ou de 500 páginas — arquivos maiores só levam alguns segundos a mais para processar."
+        },
+        {
+          "question": "Posso dividir um PDF protegido por senha?",
+          "answer": "Não. A ferramenta não consegue ler PDFs com senha. Remova a proteção primeiro no seu visualizador e depois divida o arquivo desbloqueado."
+        },
+        {
+          "question": "Dividir reduz a qualidade das imagens?",
+          "answer": "Não. A divisão só reorganiza as páginas em arquivos separados. Imagens, texto e formatação de cada página são preservados por completo."
+        },
+        {
+          "question": "A ferramenta é gratuita de verdade?",
+          "answer": "É. O ToolNotch é totalmente gratuito, sem assinatura, sem limite de uso e sem marca d'água nos arquivos de saída."
         }
       ],
       "richContent": {
@@ -271,7 +315,31 @@
         },
         {
           "question": "Meu arquivo é enviado para algum lugar?",
-          "answer": "Não. A compressão funciona inteiramente no seu navegador. Seu arquivo nunca sai do dispositivo."
+          "answer": "Não. A compressão funciona inteiramente no seu navegador. Seu arquivo nunca sai do dispositivo e é apagado da memória quando você fecha a aba."
+        },
+        {
+          "question": "Quanto dá para reduzir o tamanho de um PDF?",
+          "answer": "Depende do arquivo. PDFs com muitos metadados redundantes ou fluxos de objetos não otimizados podem encolher de 20% a 50%. PDFs já otimizados podem reduzir pouco ou nada."
+        },
+        {
+          "question": "A compressão afeta a qualidade do texto?",
+          "answer": "Não. A ferramenta comprime a estrutura do documento, não o texto nem as fontes embutidas. Todo o texto continua legível e pesquisável depois da compressão."
+        },
+        {
+          "question": "O que deixa um PDF pesado?",
+          "answer": "As causas mais comuns são imagens embutidas em alta resolução, fluxos de objetos não otimizados, fontes embutidas e metadados redundantes. PDFs cheios de imagens têm a maior margem de redução."
+        },
+        {
+          "question": "Existe um tamanho máximo de arquivo?",
+          "answer": "Não há limite rígido, mas arquivos muito grandes (acima de 100 MB) podem ficar lentos dependendo do navegador e da memória do aparelho. Para melhor desempenho, recomendamos arquivos abaixo de 50 MB."
+        },
+        {
+          "question": "Posso comprimir vários PDFs de uma vez?",
+          "answer": "Por enquanto a ferramenta comprime um arquivo por vez. Comprima o primeiro, baixe o resultado e envie o próximo."
+        },
+        {
+          "question": "Qual a diferença entre isto e compactar em ZIP?",
+          "answer": "O ZIP cria um contêiner compactado, mas não reduz o tamanho interno do PDF em si. A compressão de PDF diminui a estrutura interna do arquivo, então o próprio PDF fica menor mesmo sem o ZIP — o que facilita anexar direto no e-mail."
         }
       ],
       "richContent": {
@@ -324,19 +392,39 @@
         },
         {
           "question": "Como abro o arquivo ZIP?",
-          "answer": "No Windows, clique com o botão direito no ZIP e escolha Extrair Tudo. No Mac, dê dois cliques. Cada página é um JPEG separado."
+          "answer": "No Windows, clique com o botão direito no ZIP e escolha Extrair Tudo. No Mac, dê dois cliques. Cada página vira um JPEG separado dentro da pasta."
+        },
+        {
+          "question": "Qual será a resolução das imagens JPG?",
+          "answer": "As páginas são renderizadas em resolução 2x com o PDF.js, o que gera imagens nítidas, boas para tela e apresentações. As dimensões exatas em pixels dependem do tamanho original da página."
+        },
+        {
+          "question": "O texto continua legível no JPG?",
+          "answer": "Sim. Como as páginas são renderizadas em 2x, o texto fica nítido nas imagens. Em fontes muito pequenas, basta dar zoom no JPG para ler com clareza."
+        },
+        {
+          "question": "JPG é o melhor formato para converter PDF?",
+          "answer": "O JPG é ideal para PDFs com fotos ou gráficos complexos. Para páginas com texto ou diagramas sobre fundo branco, o PNG dá bordas mais definidas — mas o JPG é a opção mais compatível em qualquer lugar."
+        },
+        {
+          "question": "Qual será o tamanho dos arquivos de saída?",
+          "answer": "Cada página convertida costuma ter entre 200 KB e 1 MB em JPEG, dependendo da complexidade e das imagens. Um PDF de 10 páginas costuma gerar um ZIP de 2 a 10 MB."
+        },
+        {
+          "question": "Dá para converter um PDF digitalizado em JPG?",
+          "answer": "Dá. PDFs digitalizados são basicamente imagens dentro de um contêiner PDF e convertem para JPG como qualquer outra página. A qualidade da saída acompanha a resolução do escaneamento original."
         }
       ],
       "richContent": {
-        "whatIs": "A conversão de PDF para JPG renderiza cada página de um PDF como um arquivo de imagem JPEG. Casos de uso incluem incorporar conteúdo PDF em apresentações ou sites, compartilhar em plataformas de mídia social que não suportam upload de PDF, criar visualizações em miniatura para sistemas de gerenciamento de documentos e extrair diagramas ou gráficos. A resolução é importante: 72 DPI é resolução de tela (arquivos pequenos, adequados para web), 150 DPI é qualidade web (nítido na maioria dos monitores) e 300 DPI é qualidade de impressão (arquivos grandes, detalhe máximo).",
+        "whatIs": "A conversão de PDF para JPG renderiza cada página de um PDF como um arquivo de imagem JPEG. Serve para incorporar conteúdo de PDF em apresentações e sites — nem o PowerPoint nem a tag <img> do HTML exibem PDF direto —, compartilhar páginas em redes sociais que não aceitam upload de PDF, criar miniaturas de pré-visualização para sistemas de gestão de documentos e extrair diagramas ou gráficos de um PDF para usar em outros programas. A resolução importa: 72 DPI é resolução de tela (arquivos pequenos, suficiente para miniaturas na web), 150 DPI é qualidade web (nítido na maioria dos monitores) e 300 DPI é qualidade de impressão (arquivos grandes, detalhe máximo). Quanto maior o DPI, maior o arquivo e mais fino o detalhe de texto capturado.",
         "howToUse": [
           "Envie seu PDF clicando na zona para soltar ou arrastando o arquivo para dentro.",
           "Clique em Converter para JPG para renderizar todas as páginas como imagens JPEG.",
-          "Visualize as imagens convertidas na grade que aparece abaixo do botão.",
-          "Baixe uma única imagem diretamente ou baixe todas as páginas como um arquivo ZIP para PDFs de várias páginas."
+          "Veja as imagens convertidas na grade que aparece abaixo do botão.",
+          "Baixe uma imagem avulsa ou todas as páginas de uma vez em um arquivo ZIP, no caso de PDFs com várias páginas."
         ],
-        "whyItMatters": "Arquivos PDF não podem ser incorporados diretamente em postagens de mídia social, tags de imagem HTML ou slides de apresentação. Converter para JPG torna o conteúdo do documento universalmente compartilhável em todas as plataformas e aplicativos que aceitam imagens. Para documentos de uma única página, como certificados, diplomas e credenciais, um JPEG é mais portátil.",
-        "proTip": "Todo processamento ocorre no navegador — nenhum arquivo é enviado a servidores. Use 150 DPI para exibição na web e e-mail — boa qualidade com tamanho razoável. Use 300 DPI apenas se a saída for impressa. Para slides de apresentação, 96 DPI corresponde à maioria das resoluções de tela e produz o menor arquivo sem perda de qualidade visível."
+        "whyItMatters": "Arquivos PDF não podem ser inseridos direto em posts de redes sociais, em tags de imagem HTML ou em slides de apresentação. Converter para JPG deixa o conteúdo do documento compartilhável em qualquer plataforma e aplicativo que aceite imagem. Para documentos de uma página só — certificados, diplomas, crachás de evento, credenciais profissionais — um JPEG é mais portátil e mais fácil de exibir num portfólio digital ou no perfil do LinkedIn do que um anexo PDF que precisa ser baixado e aberto à parte.",
+        "proTip": "Todo o processamento acontece no seu navegador — nenhum arquivo é enviado para servidor, e seus documentos não saem do dispositivo. Use 150 DPI para tela e e-mail: boa qualidade com tamanho razoável. Reserve 300 DPI para quando a saída for impressa ou muito ampliada. Para slides de apresentação, 96 DPI acompanha a maioria das resoluções de tela e gera o menor arquivo sem perda visível."
       }
     },
     "jpgToPdf": {
@@ -378,19 +466,39 @@
         },
         {
           "question": "Qual será o tamanho das páginas do PDF?",
-          "answer": "Cada página corresponde às dimensões da imagem original, portanto suas imagens nunca são redimensionadas nem cortadas."
+          "answer": "Cada página tem as dimensões da imagem correspondente, então suas imagens nunca são redimensionadas, esticadas nem cortadas — cada pixel do original é preservado."
+        },
+        {
+          "question": "A qualidade das imagens é mantida?",
+          "answer": "Sim. A ferramenta embute os dados originais da imagem direto no PDF, sem recodificar, então não há perda de qualidade na conversão."
+        },
+        {
+          "question": "Posso juntar várias imagens em um PDF só?",
+          "answer": "Pode, e esse é o uso principal. Adicione quantas imagens quiser e cada uma vira uma página do PDF final, na ordem que você definir."
+        },
+        {
+          "question": "Como reordeno as imagens antes de converter?",
+          "answer": "Arraste as miniaturas para a ordem desejada antes de clicar em Converter. As páginas do PDF seguem exatamente essa sequência."
+        },
+        {
+          "question": "Existe limite de quantidade de imagens?",
+          "answer": "Não há limite rígido. Dá para combinar duas imagens ou cinquenta em um único PDF. Lotes muito grandes podem levar alguns segundos a mais dependendo do aparelho."
+        },
+        {
+          "question": "O texto das fotos fica pesquisável no PDF?",
+          "answer": "Não. A saída é um PDF baseado em imagem, então o texto dentro das fotos não é selecionável nem pesquisável — para isso seria preciso aplicar OCR (reconhecimento de texto) à parte."
         }
       ],
       "richContent": {
-        "whatIs": "A conversão de JPG para PDF incorpora uma ou mais imagens JPEG em um documento PDF. Casos de uso incluem converter fotos de notas manuscritas ou formulários de papel preenchidos em um documento submetível, combinar várias imagens digitalizadas em um único PDF para que tudo chegue em um arquivo e enviar documentos de identidade em formato PDF, conforme exigido por muitos formulários oficiais. É importante notar que a saída é um PDF baseado em imagem — o texto não é pesquisável ou legível por máquina a menos que você aplique OCR separadamente.",
+        "whatIs": "A conversão de JPG para PDF embute uma ou mais imagens JPEG em um documento PDF. Serve para transformar fotos de anotações à mão ou de formulários de papel preenchidos em um documento que dá para enviar, juntar várias imagens digitalizadas em um único PDF para que tudo chegue em um arquivo só, montar um portfólio em PDF a partir de uma coleção de imagens e enviar documentos de identidade em PDF, como pedem muitos formulários oficiais, processos de visto e admissões de RH. Vale lembrar que a saída é um PDF de imagem — o texto dentro das fotos não é pesquisável nem legível por máquina a menos que você aplique OCR (reconhecimento óptico de caracteres) separadamente.",
         "howToUse": [
-          "Envie uma ou mais imagens JPEG ou PNG clicando na zona para soltar ou arrastando os arquivos para dentro.",
-          "Arraste as miniaturas das imagens para organizá-las na ordem em que deseja que apareçam no PDF.",
+          "Envie uma ou mais imagens JPEG ou PNG clicando na zona para soltar ou arrastando os arquivos.",
+          "Arraste as miniaturas para organizá-las na ordem em que devem aparecer no PDF.",
           "Clique em Converter para PDF para gerar o documento.",
-          "O PDF é baixado instantaneamente para o seu dispositivo."
+          "O PDF é baixado na hora para o seu dispositivo."
         ],
-        "whyItMatters": "Muitos portais de submissão oficiais aceitam PDF, mas não JPEG. Combinar várias imagens em um PDF também satisfaz o requisito de envio de um único arquivo. O contêiner PDF também suporta metadados (título, autor), proteção por senha e assinaturas digitais que arquivos JPEG brutos não têm.",
-        "proTip": "Todo processamento ocorre no navegador. Se suas imagens forem de altíssima resolução — fotos de câmeras de celular costumam ter 4000x3000 pixels e 6–12 MB cada — comprima ou redimensione antes de converter. Um PDF com três fotos não comprimidas de celular pode chegar a 30–40 MB. Procure imagens com menos de 2 MB cada para produzir um PDF de saída com tamanho razoável."
+        "whyItMatters": "Muitos portais de submissão oficiais, sistemas de inscrição de universidades e plataformas de RH aceitam PDF, mas não JPEG. Juntar várias imagens em um PDF também resolve a exigência de 'arquivo único' — o problema de um formulário que aceita só um anexo quando você tem três páginas digitalizadas. O contêiner PDF ainda suporta metadados (título, autor), proteção por senha e assinatura digital, coisas que um JPEG solto não oferece, o que dá mais controle sobre como o documento é usado depois de entregue.",
+        "proTip": "Todo o processamento acontece no seu navegador — nenhum arquivo é enviado para servidor. Se suas imagens forem de altíssima resolução — fotos de celular costumam ter 4000×3000 pixels e de 6 a 12 MB cada —, comprima ou redimensione antes de converter. Um PDF com três fotos de celular sem compressão pode chegar a 30–40 MB. Mire em imagens abaixo de 2 MB cada para gerar um PDF de tamanho razoável, que passa na maioria dos limites de upload."
       }
     }
   },
@@ -420,19 +528,35 @@
         {
           "question": "Como converto metros para pés?",
           "answer": "Multiplique metros por 3,28084. Por exemplo, 5 metros = 5 × 3,28084 = 16,4042 pés. Selecione a categoria Comprimento e defina De: Metro, Para: Pé."
+        },
+        {
+          "question": "Como converto Fahrenheit para Celsius?",
+          "answer": "Selecione a categoria Temperatura, defina De: Fahrenheit e Para: Celsius e digite o valor. A fórmula usada é °C = (°F − 32) × 5/9. Por exemplo, 98,6 °F = 37 °C. Na mesma tela dá para converter também para Kelvin (K = °C + 273,15) ou Rankine."
+        },
+        {
+          "question": "Qual a diferença entre onça fluida e onça de peso?",
+          "answer": "A onça fluida (fl oz) mede volume e é usada para líquidos — uma lata de refrigerante tem 12 fl oz. A onça (oz) mede peso ou massa. São categorias diferentes no conversor: a fluida fica em Volume e a de peso em Peso. Uma onça fluida de água pesa cerca de 1,043 onça, mas isso varia com a densidade do líquido."
+        },
+        {
+          "question": "O conversor aceita notação científica?",
+          "answer": "Você pode digitar números decimais normais e a ferramenta lida corretamente com valores muito grandes ou muito pequenos. Os resultados são mostrados em forma decimal sempre que possível. Para um valor em notação científica, digite o decimal equivalente (por exemplo, 0,000001 no lugar de 1×10⁻⁶)."
+        },
+        {
+          "question": "Por que o galão dos EUA e o do Reino Unido são diferentes?",
+          "answer": "São padrões históricos distintos: o galão dos EUA equivale a 3,785 litros e o galão imperial (Reino Unido) a 4,546 litros — cerca de 20% maior. A diferença importa em receitas de culinária e em cálculos de consumo de combustível. O conversor deixa você escolher qual dos dois usar."
         }
       ],
       "richContent": {
-        "whatIs": "Um conversor de unidades traduz medidas entre diferentes sistemas de unidades — SI métrico, imperial e customary dos EUA. As categorias mais comuns incluem comprimento, peso, temperatura, volume (litros, galões — observe que o galão do Reino Unido é 4,546 L, enquanto o dos EUA é 3,785 L), velocidade, área e armazenamento digital. Pontos comuns de confusão: onças fluidas são uma unidade de volume e onças de peso são uma unidade de massa — elas não são intercambiáveis.",
+        "whatIs": "O conversor de unidades traduz medidas entre sistemas diferentes — SI métrico, imperial e o customary dos Estados Unidos. As categorias mais comuns são comprimento (metros, pés, polegadas, milhas), peso (quilos, libras, stone), temperatura (Celsius, Fahrenheit, Kelvin), volume (litros, galões — lembrando que o galão do Reino Unido tem 4,546 L e o dos EUA, 3,785 L, uma diferença que pesa em culinária e em cálculo de combustível), velocidade (km/h contra mph), área (metro quadrado contra pé quadrado) e armazenamento digital (bytes, KB, MB, GB, TB). Pontos que confundem: onça fluida é unidade de volume e onça de peso é unidade de massa — não são intercambiáveis. Stone é uma unidade britânica igual a exatamente 14 libras, pouco usada fora do Reino Unido e da Irlanda.",
         "howToUse": [
-          "Selecione a categoria de unidade de que você precisa: comprimento, peso, temperatura, volume, velocidade, área ou armazenamento digital.",
-          "Insira o valor que deseja converter.",
-          "Selecione a unidade de origem — a unidade em que seu valor está expresso no momento.",
-          "Selecione a unidade de destino — a unidade para a qual deseja converter.",
-          "Leia o valor convertido instantaneamente no campo de resultado."
+          "Selecione a categoria de que você precisa: comprimento, peso, temperatura, volume, velocidade, área ou armazenamento digital.",
+          "Digite o valor que quer converter.",
+          "Selecione a unidade de origem — aquela em que o valor está agora.",
+          "Selecione a unidade de destino — aquela para a qual você quer converter.",
+          "Leia o valor convertido na hora, no campo de resultado."
         ],
-        "whyItMatters": "Erros de conversão de unidades causam falhas no mundo real. A Mars Climate Orbiter de 1999 foi perdida porque uma equipe de engenharia usou unidades métricas e outra usou unidades imperiais. Para uso diário, a conversão de unidades permite o dimensionamento de receitas culinárias, planejamento de viagens internacionais para distâncias e temperaturas e a compreensão de previsões do tempo estrangeiras.",
-        "proTip": "Matemática mental rápida para as conversões mais comuns: para Celsius para Fahrenheit, dobre o valor Celsius e adicione 30. Para quilômetros para milhas, multiplique por 0,6 para uma estimativa próxima. Um dia a 5°C é aproximadamente 41°F; 100 km são aproximadamente 62 milhas."
+        "whyItMatters": "Erros de conversão de unidades causam falhas reais. A sonda Mars Climate Orbiter, de 1999, foi perdida — uma missão de US$ 327 milhões — porque uma equipe de engenharia usou unidades métricas e outra usou imperiais, e ninguém pegou a divergência. No dia a dia, a conversão de unidades serve para ajustar a quantidade de uma receita entre medidas dos EUA e da Europa, planejar viagens internacionais em distâncias e temperaturas, ler dimensões de produtos em unidades desconhecidas, entender previsão do tempo de outro país e comparar consumo de combustível expresso em mpg contra L/100 km.",
+        "proTip": "Contas de cabeça rápidas para as duas conversões mais comuns: de Celsius para Fahrenheit, dobre o valor em Celsius e some 30 (aproximado — a fórmula exata é °C × 9/5 + 32). De quilômetros para milhas, multiplique por 0,6 para uma estimativa próxima (exato: × 0,621). Um dia de 5 °C fica em torno de 41 °F; 100 km são cerca de 62 milhas. Esses atalhos cobrem quase toda conversão de viagem e de clima sem precisar de calculadora."
       }
     },
     "currency": {
@@ -691,20 +815,40 @@
         },
         {
           "question": "Qual é o limite de caracteres para uma meta descrição?",
-          "answer": "O Google geralmente exibe 155–160 caracteres de uma meta descrição nos resultados de busca. Mantenha entre 140–155 caracteres para melhores resultados."
+          "answer": "O Google costuma exibir 155–160 caracteres de uma meta descrição nos resultados de busca. Mantenha entre 140 e 155 caracteres para que ela apareça inteira no desktop e no celular."
+        },
+        {
+          "question": "Qual a diferença entre contagem de caracteres e contagem de bytes?",
+          "answer": "A contagem de caracteres mede quantas letras, números, símbolos e espaços há no texto. A contagem de bytes mede quanto espaço ele ocupa na memória. Em texto ASCII (inglês básico), 1 caractere = 1 byte. Letras acentuadas, 'ç', caracteres chineses e emojis ocupam de 2 a 4 bytes cada em UTF-8. Muitas plataformas e bancos de dados aplicam limites por byte, não por caractere."
+        },
+        {
+          "question": "Como os emojis afetam a contagem?",
+          "answer": "A maioria dos emojis conta como um ou dois pontos de código Unicode, mas ocupa 4 bytes em UTF-8. No X, a maior parte dos emojis conta como 2 caracteres no limite de 280 por causa da codificação UTF-16. Em textos com muitos emojis, cole aqui e confira o total antes de publicar."
+        },
+        {
+          "question": "Quantos caracteres cabem em um tweet?",
+          "answer": "O X permite 280 caracteres por post. Links são sempre contados como 23 caracteres, não importa o tamanho real da URL, e a maioria dos emojis conta como 2."
+        },
+        {
+          "question": "Qual limite usar em linha de assunto de e-mail?",
+          "answer": "A maioria dos clientes de e-mail mostra de 40 a 60 caracteres do assunto no desktop e de 30 a 40 no celular antes de cortar. Manter o assunto abaixo de 50 caracteres garante que ele apareça inteiro na maior parte dos aplicativos e melhora a taxa de abertura."
+        },
+        {
+          "question": "Qual o limite de caracteres em outras redes?",
+          "answer": "X: 280 por post. SMS: 160 por segmento. LinkedIn: até 3.000, com melhor alcance por volta de 700. Instagram: até 2.200 na legenda, mas só cerca de 125 aparecem antes do 'mais'."
         }
       ],
       "richContent": {
-        "whatIs": "Um contador de caracteres diz exatamente quantos caracteres — letras, números, símbolos, espaços e sinais de pontuação — aparecem no seu texto. Ao contrário de um contador de palavras, ele mede o comprimento bruto de uma string, que é a unidade usada pela maioria das plataformas para impor limites de postagem. O Twitter/X permite 280 caracteres. As mensagens SMS são limitadas a 160 caracteres por segmento. Para SEO, um meta título deve ficar entre 50–60 caracteres; meta descrições devem ter 150–160 caracteres. Os emojis complicam a situação — na codificação UTF-16, a maioria dos emojis conta como 2 caracteres.",
+        "whatIs": "O contador de caracteres informa exatamente quantos caracteres — letras, números, símbolos, espaços e pontuação — existem no seu texto. Diferente do contador de palavras, ele mede o comprimento bruto da string, que é a unidade usada pela maioria das plataformas para impor limites de publicação. O Twitter/X permite 280 caracteres por post. Mensagens SMS são limitadas a 160 caracteres por segmento (mensagens maiores são divididas e cobradas separadamente). Para SEO, um meta título deve ficar entre 50 e 60 caracteres para o buscador exibi-lo inteiro; meta descrições, entre 150 e 160. O LinkedIn recomenda até 700 caracteres para melhor alcance, e a legenda do Instagram aceita até 2.200, mas só 125 aparecem antes do corte 'mais'. Emojis complicam a conta — na codificação UTF-16, usada pelo X, a maioria conta como 2 caracteres por causa dos pares substitutos, mesmo aparecendo como um único símbolo.",
         "howToUse": [
-          "Cole ou digite seu texto na área de entrada — a contagem de caracteres é atualizada instantaneamente.",
-          "Verifique a estatística 'Caracteres' para a contagem total, incluindo espaços.",
-          "Verifique 'Caracteres (sem espaços)' se a plataforma excluir espaços do limite.",
-          "Compare a contagem com o limite de destino para a sua plataforma.",
-          "Edite seu texto diretamente na caixa e observe a contagem diminuir à medida que você o apara para caber."
+          "Cole ou digite o texto na área de entrada — a contagem se atualiza na hora.",
+          "Veja o número 'Caracteres' para o total com espaços.",
+          "Veja 'Caracteres (sem espaços)' se a plataforma não contar espaços no limite.",
+          "Compare a contagem com o limite da sua plataforma (280 no X, 160 em SMS, 50–60 em meta títulos).",
+          "Edite direto na caixa e acompanhe a contagem baixar enquanto você corta o texto para caber."
         ],
-        "whyItMatters": "Exceder o limite de caracteres de uma plataforma trunca a mensagem ou impede a postagem. Para SEO, um meta título com mais de 60 caracteres é cortado nos resultados de pesquisa com reticências. Para campanhas de marketing por SMS, cada segmento acima de 160 caracteres dobra o custo por mensagem enviada — um pequeno excesso em milhares de envios se acumula rapidamente.",
-        "proTip": "Ao escrever para o Twitter/X, lembre-se de que as URLs são sempre contadas como 23 caracteres, independentemente do comprimento real — o encurtador t.co envolve cada link. Portanto, uma URL de 200 caracteres ainda custa apenas 23 caracteres na sua postagem."
+        "whyItMatters": "Passar do limite de caracteres de uma plataforma ou trunca a mensagem em silêncio ou impede a publicação. No SEO, um meta título acima de 60 caracteres é cortado com reticências nos resultados do Google, o que reduz os cliques porque o leitor vê um título incompleto. Meta descrições acima de 160 caracteres são cortadas do mesmo jeito, desperdiçando a chance de persuasão. Em campanhas de SMS, cada segmento acima de 160 caracteres dobra o custo por mensagem — um pequeno excesso multiplicado por milhares de envios pesa rápido. Saber a contagem exata antes de publicar evita esses erros caros.",
+        "proTip": "Ao escrever para o Twitter/X, lembre-se de que links são sempre contados como 23 caracteres, não importa o tamanho real da URL — o encurtador t.co embrulha todo link automaticamente. Então uma URL de 200 caracteres custa apenas 23 no seu post. Considere isso no orçamento de caracteres quando o tweet tiver link e use o resto para a mensagem em si."
       }
     },
     "sentenceCounter": {
@@ -723,20 +867,32 @@
         },
         {
           "question": "Qual é a média de palavras por frase para uma leitura fácil?",
-          "answer": "A fórmula de legibilidade Flesch usa palavras por frase como métrica principal. Busque 15–20 palavras por frase para públicos em geral. Frases acima de 30 palavras são consideradas difíceis."
+          "answer": "A fórmula de legibilidade Flesch usa palavras por frase como métrica principal. Busque 15–20 palavras por frase para o público em geral. Frases acima de 30 palavras são consideradas difíceis."
+        },
+        {
+          "question": "O contador conta frases com ponto e vírgula ou reticências?",
+          "answer": "A quebra é feita nos sinais de fim de frase mais comuns: ponto final, exclamação e interrogação seguidos de espaço ou fim do texto. Ponto e vírgula é tratado como pausa interna, não como fim de frase; reticências no meio do parágrafo podem gerar pequenas variações."
+        },
+        {
+          "question": "Por que o número de frases não bate com a minha contagem manual?",
+          "answer": "Abreviações com ponto (Sr., Dra., etc.), números decimais (3.14) e siglas podem ser lidos como fim de frase. Em textos técnicos com muitos desses casos, espere uma diferença de uma ou duas frases em relação à contagem à mão."
+        },
+        {
+          "question": "Meu texto fica salvo em algum lugar?",
+          "answer": "Não. Toda a análise acontece no seu navegador e o texto não é enviado para nenhum servidor. Ao fechar a aba, o conteúdo é descartado."
         }
       ],
       "richContent": {
-        "whatIs": "Um contador de frases conta o número de frases completas no seu texto — cada uma terminando com ponto final, ponto de exclamação ou ponto de interrogação. Além da simples contagem, a análise de frases é uma entrada essencial para fórmulas de legibilidade. Frases muito longas diminuem drasticamente as pontuações de legibilidade e aumentam a carga cognitiva. A contagem de frases também é relevante para a redação acadêmica e edição de conteúdo.",
+        "whatIs": "O contador de frases conta quantas frases completas existem no seu texto — cada uma encerrada por ponto final, exclamação ou interrogação. Além da contagem simples, a análise de frases alimenta as fórmulas de legibilidade: tanto a pontuação Flesch Reading Ease quanto o Flesch-Kincaid Grade Level usam o comprimento médio da frase (palavras por frase) como variável principal. Frases muito longas — acima de 30 palavras — derrubam bastante a legibilidade e aumentam o esforço de leitura. A contagem de frases também importa na redação acadêmica, em que alguns trabalhos definem um mínimo de frases por parágrafo, e na edição de conteúdo, em que identificar frases longas ou curtas demais ajuda a melhorar o ritmo do texto.",
         "howToUse": [
-          "Cole seu texto na área de entrada — a contagem de frases é atualizada automaticamente.",
+          "Cole seu texto na área de entrada — a contagem de frases se atualiza automaticamente.",
           "Leia a contagem de frases e observe a média de palavras por frase.",
-          "Identifique suas frases mais longas — essas são as melhores candidatas para divisão para melhorar a legibilidade.",
-          "Almeje uma média de 15–20 palavras por frase para o público em geral.",
-          "Edite frases diretamente na caixa e observe a média ser atualizada em tempo real."
+          "Identifique as frases mais longas — são as melhores candidatas a serem divididas para ganhar legibilidade.",
+          "Mire numa média de 15–20 palavras por frase para o público em geral.",
+          "Edite direto na caixa e acompanhe a média se ajustando em tempo real conforme você revisa."
         ],
-        "whyItMatters": "Pesquisas mostram que os leitores online folheiam em vez de ler — em média, lendo apenas 20–28% das palavras. Frases curtas e variadas reduzem a carga cognitiva. O ponto ideal para a maioria do público é uma mistura — em sua maioria, frases de 8 a 15 palavras com toques curtos ocasionais para dar ênfase e frases mais longas para explicação detalhada.",
-        "proTip": "Na redação de negócios, almeje um comprimento médio de frase de 15 a 20 palavras. A redação acadêmica pode chegar a 25–30 palavras, mas deve compensar com uma estrutura clara de parágrafos."
+        "whyItMatters": "Estudos do Nielsen Norman Group mostram que o leitor on-line escaneia em vez de ler — consome em média só 20% a 28% das palavras de uma página. Frases curtas e variadas reduzem o esforço e prendem o leitor por mais tempo. Variar o comprimento também cria ritmo: um texto só de frases curtas soa robótico e picotado, enquanto um texto só de frases longas cansa. O ponto de equilíbrio para a maioria dos públicos é a mistura — frases de 8 a 15 palavras na maior parte, com frases curtas ocasionais para dar ênfase e frases mais longas para explicações detalhadas. Conferir a contagem ajuda a auditar o ritmo e a pegar parágrafos que incharam durante a edição.",
+        "proTip": "Na redação corporativa, mire numa média de 15 a 20 palavras por frase. Textos acadêmicos podem chegar a 25–30 palavras, desde que compensem com estrutura clara de parágrafos e frases-tópico. Se a sua média passa de 25 palavras, localize os 30% de frases mais longas e quebre cada uma numa conjunção ou fronteira de oração natural — a maioria dos leitores não percebe a mudança, mas a compreensão melhora de forma mensurável."
       }
     },
     "readabilityChecker": {
@@ -1010,10 +1166,30 @@
           {
             "question": "Como posso reduzir o total de juros pagos?",
             "answer": "Você pode reduzir os juros totais dando uma entrada maior, escolhendo um prazo mais curto ou fazendo pagamentos extras de principal sempre que possível."
+          },
+          {
+            "question": "Quais fatores afetam o valor da parcela?",
+            "answer": "Os três principais são o valor emprestado (principal), a taxa de juros e o prazo. Um principal maior ou uma taxa maior aumentam a parcela; um prazo mais longo dilui os pagamentos e reduz cada parcela — mas você paga mais juros no total."
+          },
+          {
+            "question": "Qual a diferença entre taxa de juros e CET?",
+            "answer": "A taxa de juros é o custo anual de tomar o principal emprestado. O CET (Custo Efetivo Total) soma a taxa de juros mais tarifas, seguros e encargos obrigatórios, dando o retrato completo do custo. Ao comparar propostas, o CET é o número certo a usar."
+          },
+          {
+            "question": "Posso usar esta calculadora para financiamento de carro?",
+            "answer": "Pode. Ela funciona para qualquer empréstimo com parcelas fixas — crédito pessoal, financiamento de veículo, consignado, crédito estudantil. Basta inserir o valor, a taxa e o prazo em meses para ver a parcela e a tabela de amortização completa."
+          },
+          {
+            "question": "Prazo mais curto ou mais longo é melhor?",
+            "answer": "Depende da sua prioridade. Um prazo curto economiza bastante em juros e quita a dívida mais cedo, mas exige parcelas maiores. Um prazo longo libera caixa todo mês e custa mais no total. Use a calculadora para comparar os dois cenários lado a lado."
+          },
+          {
+            "question": "Existe multa por quitação antecipada?",
+            "answer": "No Brasil, a legislação garante desconto proporcional dos juros ao quitar um empréstimo antes do prazo, e a maioria dos contratos não cobra multa por isso. Ainda assim, confirme as condições no seu contrato antes de fazer um pagamento antecipado grande."
           }
         ],
         "richContent": {
-          "whatIs": "Uma calculadora de empréstimo estima sua prestação mensal para qualquer empréstimo com parcelas fixas — crédito pessoal, empréstimo consignado, financiamento de veículos ou qualquer valor tomado a juros fixos por um prazo determinado. Cada prestação cobre primeiro os juros acumulados, depois reduz o saldo devedor. É fundamental entender a diferença entre a taxa de juros nominal e o CET (Custo Efetivo Total): o CET inclui taxas administrativas, seguros obrigatórios e outros encargos, sendo o valor real do empréstimo. Os bancos são obrigados a informar o CET, e é ele — não a taxa nominal — que deve ser comparado entre diferentes ofertas.",
+          "whatIs": "Uma calculadora de empréstimo estima sua prestação mensal para qualquer empréstimo com parcelas fixas — crédito pessoal, empréstimo consignado, financiamento de veículos ou qualquer valor tomado a juros fixos por um prazo determinado. Cada prestação cobre primeiro os juros acumulados, depois reduz o saldo devedor. É fundamental entender a diferença entre a taxa de juros nominal e o CET (Custo Efetivo Total): o CET inclui taxas administrativas, seguros obrigatórios e outros encargos, sendo o valor real do empréstimo. Os bancos são obrigados a informar o CET, e é ele — não a taxa nominal — que deve ser comparado entre diferentes ofertas. Uma taxa mensal baixa pode esconder um CET alto se o contrato tiver muitos encargos embutidos.",
           "howToUse": [
             "Insira o valor do empréstimo — o total que você deseja tomar, antes de qualquer taxa.",
             "Insira a taxa de juros anual. Use o CET da proposta para o custo total mais preciso.",
@@ -1763,20 +1939,37 @@
           },
           {
             "question": "Posso adicionar o logotipo da minha empresa?",
-            "answer": "Sim — clique no botão Logo para fazer upload do logotipo. Ele aparecerá no topo do recibo."
+            "answer": "Sim — clique no botão Logo para enviar o logotipo. Ele aparece no topo do recibo."
+          },
+          {
+            "question": "O que um recibo válido precisa conter?",
+            "answer": "Data da transação, nome e contato de quem emite, descrição dos produtos ou serviços, valor total pago, forma de pagamento (dinheiro, cartão, transferência, Pix) e qualquer imposto destacado. Para pessoa física prestando serviço, é comum incluir também o CPF de quem paga e de quem recebe."
+          },
+          {
+            "question": "Um recibo digital tem a mesma validade de um em papel?",
+            "answer": "Para fins de comprovação de despesa, reembolso e organização contábil, sim — na maioria dos casos o recibo em PDF é equivalente ao de papel e ainda tem a vantagem de não desbotar. Para situações que exigem documento fiscal (nota fiscal), o recibo não substitui a NF-e."
+          },
+          {
+            "question": "Quando devo emitir um recibo em vez de uma nota fiscal?",
+            "answer": "O recibo serve como comprovante simples de que um pagamento foi feito — útil para aluguel, serviços autônomos, acertos entre pessoas físicas e pagamentos em dinheiro. Empresas que vendem produtos ou prestam serviços tributados normalmente precisam emitir nota fiscal; o recibo é um complemento, não o documento fiscal."
+          },
+          {
+            "question": "Posso reutilizar os dados do emissor em recibos futuros?",
+            "answer": "Pode. Os dados ficam salvos no localStorage do seu navegador, então da próxima vez o nome e o contato do seu negócio já vêm preenchidos. Nada é enviado para um servidor — a informação fica só no seu dispositivo."
           }
         ],
         "richContent": {
-          "whatIs": "Um recibo é um documento emitido após o recebimento de um pagamento. Ele difere de uma fatura: uma fatura é um pedido de pagamento; um recibo é a prova de pagamento. Um recibo válido deve incluir a data, os dados do vendedor, uma descrição, o valor total, o método de pagamento e qualquer imposto coletado. Recibos digitais são legalmente equivalentes aos de papel e preferíveis porque estes últimos tendem a desbotar.",
+          "whatIs": "Um recibo é um documento emitido depois que o pagamento é recebido, confirmando que a transação foi concluída. Ele difere de uma fatura: a fatura é um pedido de pagamento emitido antes do pagamento; o recibo é a prova de pagamento emitida depois. Um recibo válido deve trazer a data da transação, o nome e o contato de quem emite, a descrição dos produtos ou serviços, o valor total pago, a forma de pagamento (dinheiro, cartão, transferência, Pix) e qualquer imposto destacado. Recibos digitais são, na maioria das situações, equivalentes aos de papel para fins de imposto e reembolso, e são preferíveis porque o papel térmico desbota com o tempo.",
           "howToUse": [
-            "Insira o nome do pagador e a data da transação.",
-            "Preencha o nome e o contato do seu negócio como emissor.",
-            "Adicione linhas descrevendo o que foi comprado e os respetivos valores.",
-            "Indique o método de pagamento.",
-            "Revise o total e baixe em PDF, fornecendo uma cópia ao cliente."
+            "Insira o nome de quem pagou (pessoa física ou empresa) e a data da transação.",
+            "Preencha o nome e o contato do seu negócio como emissor do recibo.",
+            "Adicione linhas descrevendo o que foi comprado ou pago, com os valores individuais.",
+            "Registre a forma de pagamento usada — dinheiro, cartão, transferência, Pix ou outra.",
+            "Confira o total e verifique se bate com o valor recebido.",
+            "Baixe em PDF para o seu arquivo e entregue uma cópia a quem pagou."
           ],
-          "whyItMatters": "As autoridades tributárias exigem recibos para despesas comerciais dedutíveis. A organização digital cria um rastro de auditoria fiável e previne o problema comum de recibos perdidos ou apagados. Para transações em dinheiro, o recibo é a documentação necessária para fundamentar o negócio.",
-          "proTip": "Guarde recibos de qualquer despesa comercial superior a um limite relevante ($75 nos EUA). A prática recomendada é fotografar recibos de papel imediatamente e arquivá-los digitalmente por ano e categoria. Os recibos em papel térmico desvanecem rapidamente — a foto digital é o seu registro permanente."
+          "whyItMatters": "Autoridades tributárias exigem comprovantes para despesas dedutíveis, e muitas empresas pedem recibo para qualquer reembolso de despesa. Organizar recibos em formato digital cria uma trilha de auditoria confiável para o fechamento contábil do ano e evita o problema comum do recibo de papel perdido ou apagado. Para transações em dinheiro em especial — caixa pequeno, pagamento a fornecedor, taxa de serviço paga à vista — o recibo gerado cria a documentação necessária para justificar o gasto em caso de auditoria ou disputa.",
+          "proTip": "Guarde o recibo de qualquer despesa que você pretende deduzir ou pedir reembolso, principalmente as pagas em dinheiro, que não deixam rastro no extrato. A boa prática é fotografar o recibo de papel na hora e arquivar o digital por ano e categoria (por exemplo, 2026/Viagem/, 2026/Refeições/). Recibo de papel térmico desbota em um a três anos — a foto ou o PDF é o seu registro permanente de verdade."
         }
       },
       "fields": {
@@ -1830,35 +2023,47 @@
       "faqs": [
         {
           "question": "Posso salvar minha roleta?",
-          "answer": "Sim — seus itens são salvos na URL. Copie e salve nos favoritos para guardar sua roleta ou compartilhá-la com outras pessoas."
+          "answer": "Pode. Os itens que você digita são gravados dentro da própria URL da página. Copie o endereço da barra do navegador e salve nos favoritos ou envie para outras pessoas — quem abrir o link vê a roleta com exatamente as mesmas opções."
         },
         {
-          "question": "O giro é verdadeiramente aleatório?",
-          "answer": "Sim, o vencedor é determinado pelo Math.random() antes da animação começar. A animação de giro é apenas para diversão — o resultado já está decidido."
+          "question": "O giro é realmente aleatório?",
+          "answer": "É. O vencedor é sorteado pela função Math.random() antes de a animação começar. O giro na tela é só efeito visual: o resultado já foi decidido, e a forma como a roleta desacelera não muda nada."
         },
         {
           "question": "Quantos itens posso adicionar?",
-          "answer": "Você pode adicionar quantos itens quiser, embora a roleta fique difícil de ler com mais de 20 itens."
+          "answer": "Quantos quiser. Na prática, acima de uns 20 itens as fatias ficam finas e difíceis de ler. Para listas longas, vale usar o Sorteador de Nomes, que lida melhor com muitos participantes."
         },
         {
-          "question": "Posso usar isso em sala de aula?",
-          "answer": "Com certeza! Professores adoram a roleta para sortear alunos, atribuir tópicos e tomar decisões aleatórias de forma justa."
+          "question": "Posso usar em sala de aula?",
+          "answer": "Sim, é um dos usos favoritos. Cole os nomes da turma e gire para chamar os alunos ao acaso. A animação transforma a chamada em brincadeira e tira qualquer aparência de o professor estar 'escolhendo' alguém de propósito."
         },
         {
-          "question": "Como isso é diferente do Wheel of Names?",
-          "answer": "Nossa roleta é completamente gratuita, não exige conta, salva seus itens na URL para fácil compartilhamento e funciona em qualquer dispositivo, inclusive offline."
+          "question": "Como a roleta é diferente do Wheel of Names?",
+          "answer": "A nossa é totalmente gratuita, não pede cadastro, guarda os itens na URL para você compartilhar com um link e funciona em qualquer aparelho, inclusive offline depois que a página carrega."
+        },
+        {
+          "question": "Posso colocar qualquer tipo de opção na roleta?",
+          "answer": "Pode. Digite uma opção por linha na caixa de edição: nomes, tarefas, temas de trabalho, restaurantes, prêmios, comandos de um jogo. A roleta se atualiza na hora conforme você edita a lista."
+        },
+        {
+          "question": "E se a roleta cair no mesmo resultado duas vezes seguidas?",
+          "answer": "Cada giro é independente, então repetir é possível por acaso. Se você quer garantir que cada opção saia só uma vez, use o Sorteador de Nomes com a opção 'remover ao sortear', que trabalha sem reposição."
+        },
+        {
+          "question": "Serve para sorteios ao vivo e lives?",
+          "answer": "Serve. Coloque os nomes dos participantes e gire na frente da audiência para revelar o ganhador na hora. Para listas muito grandes, o Sorteador de Nomes é mais confortável; a roleta brilha quando dá para mostrar todas as opções na tela."
         }
       ],
       "richContent": {
-        "whatIs": "A roleta seletora é um seletor aleatório e visual, apresentado como uma roda giratória com seções personalizáveis. Os casos de uso incluem jogos de sala de aula, decisões de escritório (onde pedir o almoço), jogos de festa e sorteios de prêmios gamificados. A animação de giro é puramente cosmética — o resultado vencedor é determinado pelo gerador de números aleatórios antes do início da animação, garantindo justiça verdadeira.",
+        "whatIs": "A roleta de decisão é um sorteador visual: as opções aparecem como fatias de uma roda que gira e para em uma delas. Ela é útil em brincadeiras de sala de aula, em decisões de escritório ('onde a gente pede almoço hoje?'), em jogos de festa, na hora de escolher entre alternativas quando a indecisão trava e em sorteios de prêmio com clima de gameshow. A animação do giro é apenas enfeite — o resultado vencedor é sorteado pelo gerador de números aleatórios antes de a roda começar a girar, então a justiça não depende de como a roleta parece enquanto desacelera.",
         "howToUse": [
-          "Adicione suas opções à roleta digitando-as na caixa de edição, uma por linha.",
-          "Clique em Girar para iniciar a animação da roleta.",
-          "Observe a roleta desacelerar e parar no resultado selecionado aleatoriamente.",
-          "Opcionalmente, remova a opção vencedora antes do próximo giro para evitar repetições."
+          "Adicione as opções na caixa de edição, uma por linha.",
+          "Clique em Girar para começar a animação da roda.",
+          "Acompanhe a roleta desacelerar e parar no resultado sorteado.",
+          "Se quiser, apague a opção vencedora antes do próximo giro para não repetir."
         ],
-        "whyItMatters": "O formato visual giratório torna a seleção aleatória mais envolvente e dramática do que uma exibição de texto simples. Para uso em sala de aula, os alunos respondem melhor à animação — isso transforma a seleção em um jogo em vez de um julgamento. Para prêmios e sorteios, a expectativa à medida que a roleta desacelera aumenta a emoção e o valor percebido do resultado.",
-        "proTip": "Pesquisas sobre fadiga de decisão mostram que, ao reagir ao resultado da roleta — quer você sinta alívio ou decepção —, obtém informações honestas sobre o que realmente queria. Se a roda cair em uma opção e você sentir um lampejo de decepção, isso indica qual opção você realmente preferia. Use o giro como uma ferramenta reveladora de preferências."
+        "whyItMatters": "O formato visual deixa o sorteio mais divertido e cheio de suspense do que um resultado em texto puro. Em sala de aula, os alunos reagem melhor à animação: a chamada vira jogo, não julgamento. Em premiações e sorteios, a tensão enquanto a roda perde velocidade aumenta a emoção e faz o resultado parecer mais valioso, deixando a experiência mais memorável para quem assiste.",
+        "proTip": "Estudos sobre fadiga de decisão sugerem um truque: preste atenção na sua reação ao resultado. Se a roleta para em uma opção e você sente alívio, era isso que você queria; se sente uma pontada de decepção, provavelmente preferia outra. Use o giro não só como sorteio, mas como um jeito de revelar a preferência que você ainda não tinha admitido."
       }
     },
     "wheelOfNames": {
@@ -1972,31 +2177,47 @@
       "faqs": [
         {
           "question": "O que é 'sortear sem repetição'?",
-          "answer": "Quando ativado, cada nome sorteado é removido da lista para não ser selecionado novamente. Perfeito para rifas onde cada participante tem uma chance igual e única."
+          "answer": "Quando essa opção está ativada, cada nome sorteado sai da lista e não pode ser escolhido de novo. É o modo ideal para rifas e sorteios, em que cada participante tem uma única chance igual à dos outros."
         },
         {
-          "question": "O sorteio é verdadeiramente aleatório?",
-          "answer": "Sim. Os nomes são selecionados usando Math.random(), que produz um resultado imprevisível a cada vez."
+          "question": "O sorteio é realmente aleatório?",
+          "answer": "É. Os nomes são escolhidos pela função Math.random() do JavaScript, que gera um resultado imprevisível a cada clique. Não há ordem de cadastro, tamanho do nome ou posição na lista que influencie quem é sorteado."
         },
         {
-          "question": "Posso usar isso em atividades de sala de aula?",
-          "answer": "Com certeza. Cole sua lista de alunos, ative 'remover ao sortear' para que nenhum aluno seja chamado duas vezes e use-o para perguntas aleatórias ou atribuição de tarefas."
+          "question": "Posso usar em atividades de sala de aula?",
+          "answer": "Pode, e é um dos usos mais comuns. Cole a lista da turma, ative 'remover ao sortear' e vá chamando os alunos sem repetir ninguém. O método mantém a participação justa e a turma atenta, porque qualquer um pode ser o próximo."
         },
         {
           "question": "Quantos nomes posso adicionar?",
-          "answer": "Não há limite rígido. A ferramenta funciona com listas de qualquer tamanho, de 2 a centenas de nomes."
+          "answer": "Não há limite fixo. A ferramenta funciona com listas de qualquer tamanho, de 2 nomes a várias centenas. Listas muito grandes continuam sendo sorteadas na mesma velocidade."
+        },
+        {
+          "question": "Posso colocar nomes completos, apelidos ou números?",
+          "answer": "Sim. Digite o que quiser, um item por linha: primeiros nomes, nomes completos, apelidos, e-mails, números de matrícula ou números de bilhete de rifa. O sorteador trata cada linha como uma opção."
+        },
+        {
+          "question": "Dá para sortear mais de um vencedor de uma vez?",
+          "answer": "Dá. Sorteie o primeiro nome, ative 'remover ao sortear' e clique de novo para o segundo, o terceiro e assim por diante. Cada nome sai da lista ao ser escolhido, então não há risco de premiar a mesma pessoa duas vezes."
+        },
+        {
+          "question": "O sorteio serve para rifas e vaquinhas com prêmio?",
+          "answer": "Serve. Numere os bilhetes vendidos, cole a faixa de números na lista, desative a repetição e sorteie na frente dos participantes. Como o resultado é gerado na hora e no próprio navegador, dá para mostrar a tela durante a transmissão ao vivo."
+        },
+        {
+          "question": "Minha lista de nomes fica salva?",
+          "answer": "A lista não é salva automaticamente entre um acesso e outro. Se você precisa de uma lista fixa para reutilizar e compartilhar, a ferramenta Girar a Roleta guarda os itens dentro da própria URL da página."
         }
       ],
       "richContent": {
-        "whatIs": "Um seletor de nomes aleatório escolhe um ou mais nomes de uma lista que você fornece. Esta ferramenta de uso geral funciona para qualquer coleção de nomes: escolher palestrantes, selecionar vencedores de concursos, sortear a ordem de leitura em uma sala de aula, atribuir tarefas ou decidir de quem é a vez de realizar tarefas domésticas.",
+        "whatIs": "O sorteador de nomes escolhe um ou mais nomes ao acaso a partir de uma lista que você cola. É uma ferramenta de uso geral: serve para definir quem apresenta primeiro numa reunião, tirar o vencedor de um concurso ou de uma rifa, sortear a ordem de leitura de um trabalho, distribuir tarefas de um projeto ou decidir de quem é a vez de lavar a louça. Diferente de um sorteador feito só para sala de aula, aqui a proposta é funcionar em qualquer contexto em que você precise de uma escolha justa entre pessoas ou opções.",
         "howToUse": [
-          "Insira os seus nomes na caixa de texto, um por linha.",
-          "Clique em Escolher para selecionar aleatoriamente um nome da sua lista.",
-          "Leia o vencedor em destaque exibido na tela.",
-          "Opcionalmente, remova o nome selecionado para evitar repetições em escolhas subsequentes."
+          "Digite ou cole os nomes na caixa de texto, um por linha.",
+          "Clique em Sortear para escolher um nome ao acaso da lista.",
+          "Veja o vencedor destacado na tela.",
+          "Ative 'remover ao sortear' e clique de novo para tirar os próximos nomes sem repetir ninguém."
         ],
-        "whyItMatters": "A seleção aleatória evita o favoritismo e a percepção de viés. Em configurações profissionais, a atribuição aleatória de quem apresenta primeiro remove qualquer aparência de parcialidade. Em ambientes sociais, ela elimina a negociação estranha de decisões como quem escolhe o restaurante hoje à noite.",
-        "proTip": "Para uso contínuo, como a rotação semanal de tarefas, mantenha uma lista em execução e remova os nomes selecionados até que todos tenham sido escolhidos uma vez, depois redefina a lista. Isso garante uma distribuição equitativa em todo o grupo, em vez de uma seleção puramente aleatória."
+        "whyItMatters": "O sorteio aleatório evita o favoritismo e também a impressão de favoritismo — as duas coisas pesam na dinâmica de um grupo. No trabalho, sortear quem apresenta primeiro ou quem assume uma tarefa chata tira qualquer suspeita de perseguição ou preferência. Em casa ou entre amigos, resolve sem discussão aquelas decisões pequenas, como quem escolhe o filme ou o restaurante. O resultado vem de fora da vontade de qualquer pessoa, então é mais fácil de aceitar.",
+        "proTip": "Para rodízios que se repetem, como escala de tarefas ou papéis de reunião, mantenha a mesma lista e vá removendo cada nome sorteado até todos terem saído uma vez; só então reinicie a lista. Isso garante que todo mundo passe pela vez antes de alguém repetir — um sorteio puramente aleatório, sem remoção, pode chamar a mesma pessoa duas vezes seguidas e deixar outra de fora por semanas."
       }
     },
     "teamGenerator": {
@@ -2169,31 +2390,55 @@
       "faqs": [
         {
           "question": "O lançamento da moeda é verdadeiramente justo?",
-          "answer": "Sim. Cada lançamento é determinado pelo Math.random(), dando a cara e a coroa igual probabilidade de 50%."
+          "answer": "Sim. Cada lançamento é determinado pela função Math.random() do JavaScript, que sorteia um número antes de a animação começar. Cara e coroa têm exatamente a mesma probabilidade de 50% em toda jogada."
         },
         {
-          "question": "Posso lançar várias vezes?",
-          "answer": "Sim — basta clicar em Jogar Moeda novamente. Seus últimos 10 lançamentos são mostrados no histórico abaixo da moeda."
+          "question": "Posso lançar a moeda várias vezes?",
+          "answer": "Pode. Basta clicar em Jogar Moeda novamente. Os seus últimos 10 resultados aparecem no histórico logo abaixo da moeda, útil para acompanhar uma sequência ou uma 'melhor de 3'."
         },
         {
           "question": "Qual é a probabilidade de sair cara 10 vezes seguidas?",
-          "answer": "A probabilidade de sair cara 10 vezes seguidas é (0,5)^10 = 1/1024, ou cerca de 0,1%. Cada lançamento é independente — resultados passados não afetam os futuros."
+          "answer": "É (0,5)^10 = 1/1024, ou cerca de 0,1%. Cada lançamento é independente — o resultado anterior não influencia o próximo. Uma sequência longa de caras não deixa a coroa 'mais provável' na jogada seguinte; essa ideia é a chamada falácia do apostador."
         },
         {
           "question": "Funciona sem conexão com a internet?",
-          "answer": "Sim. Uma vez que a página é carregada, o lançamento da moeda funciona 100% offline."
+          "answer": "Sim. Depois que a página carrega, o cara ou coroa funciona 100% offline. Nada é enviado para um servidor: o sorteio acontece inteiramente no seu navegador."
+        },
+        {
+          "question": "Por que usar uma moeda digital em vez de uma moeda de verdade?",
+          "answer": "Uma moeda física pode ter um viés pequeno por causa da distribuição de peso, do jeito de lançar ou da superfície onde cai. Um estudo de Diaconis, Holmes e Montgomery (2007) mostrou que moedas lançadas com a mão caem no mesmo lado em que começaram cerca de 51% das vezes. A moeda digital usa uma função aleatória uniforme, então é tão justa quanto uma ferramenta consegue ser — e está sempre à mão, mesmo quando você não tem trocado no bolso."
+        },
+        {
+          "question": "É justo para tomar decisões e resolver disputas?",
+          "answer": "É. Como os dois resultados têm 50% de chance, o cara ou coroa é uma forma imparcial de resolver uma escolha entre duas opções. É muito usado para decidir quem começa em um jogo, quem paga a conta ou qualquer impasse em que ninguém quer 'bater o martelo'."
+        },
+        {
+          "question": "Dá para usar no futebol ou em outros esportes?",
+          "answer": "Sim. Muitas partidas usam o sorteio de moeda para definir quem escolhe o lado do campo ou dá o pontapé inicial. Para peladas, jogos de várzea e treinos, o cara ou coroa digital vale tanto quanto o do árbitro."
+        },
+        {
+          "question": "Serve para a sala de aula?",
+          "answer": "Serve muito bem. Professores usam o cara ou coroa para ensinar probabilidade na prática: peça para a turma lançar 100 vezes e registrar os resultados para ver a lei dos grandes números em ação — a proporção de caras se aproxima de 50% conforme o número de jogadas cresce."
+        },
+        {
+          "question": "Como a aleatoriedade é gerada?",
+          "answer": "O sorteio usa a função Math.random() do JavaScript, que devolve um número decimal pseudoaleatório entre 0 e 1. Se o número for menor que 0,5, o resultado é cara; se for 0,5 ou maior, é coroa. Isso dá 50% para cada lado."
+        },
+        {
+          "question": "Posso jogar várias moedas ao mesmo tempo?",
+          "answer": "A ferramenta joga uma moeda por vez. Se você precisa de vários resultados independentes, é só lançar em sequência — cada jogada é separada e não depende das anteriores."
         }
       ],
       "richContent": {
-        "whatIs": "O cara ou coroa virtual é uma ferramenta digital que replica a randomização binária clássica de jogar uma moeda física — dando a você cara ou coroa com probabilidade justa de 50/50. Casos de uso incluem desempatar decisões, fazer escolhas binárias e gamificação. Curiosamente, as moedas físicas não são perfeitamente justas, tendendo levemente para o lado em que começaram. Um lançamento de moeda digital usa um algoritmo criptograficamente aleatório para chances verdadeiras de 50/50.",
+        "whatIs": "O cara ou coroa virtual é uma ferramenta digital que reproduz o sorteio binário clássico de jogar uma moeda física, entregando cara ou coroa com probabilidade justa de 50/50. Ele resolve situações do dia a dia: desempatar uma decisão em grupo, escolher entre duas opções quando nenhuma é claramente melhor, sortear quem começa uma brincadeira, dividir tarefas ou ensinar probabilidade na sala de aula. Curiosamente, moedas de verdade não são perfeitamente justas — a pesquisa de Diaconis, Holmes e Montgomery (2007) mediu que uma moeda lançada com a mão tende a cair no mesmo lado em que começou cerca de 51% das vezes, por causa da trepidação durante o giro. A moeda digital não tem esse problema: o resultado vem de uma função aleatória uniforme, com 50% para cada lado em toda jogada.",
         "howToUse": [
-          "Clique no botão Jogar Moeda para jogar a moeda virtual.",
-          "Leia o resultado — cara ou coroa — exibido instantaneamente.",
-          "Jogue novamente para uma 'melhor de 3' se a decisão for importante.",
-          "Grave ou faça uma captura de tela do resultado se precisar manter um registro."
+          "Clique no botão Jogar Moeda para lançar a moeda virtual.",
+          "Leia o resultado — cara ou coroa — exibido na hora.",
+          "Jogue de novo para uma 'melhor de 3' quando a decisão for importante.",
+          "Consulte o histórico das últimas 10 jogadas logo abaixo da moeda, ou faça uma captura de tela se precisar de registro."
         ],
-        "whyItMatters": "A randomização remove a pressão social das decisões — ninguém pode acusar uma moeda digital de viés. É amplamente usada nos esportes, nas salas de aula para ensinar probabilidade e em qualquer cenário de desempate em que a justiça seja importante.",
-        "proTip": "Use o formato 'melhor de 3' para decisões importantes, em vez de um único lançamento. Isso preserva a aleatoriedade e dá a ambas as partes a sensação de que o resultado não foi determinado por uma jogada de sorte — fazendo com que o resultado pareça mais legítimo."
+        "whyItMatters": "O sorteio tira a pressão social da decisão: ninguém pode acusar uma moeda de ter preferência. Por isso ele aparece no início de partidas esportivas para definir lado de campo e posse de bola, na sala de aula para mostrar a lei dos grandes números na prática (jogue 100 vezes e veja a proporção se aproximar de 50%) e em qualquer impasse em que a imparcialidade importa. Diferente de um acordo negociado, o resultado de um sorteio aleatório é algo que todo mundo aceita como justo, porque não depende de quem falou mais alto.",
+        "proTip": "Para decisões que pesam, use 'melhor de 3' em vez de uma jogada só. Isso mantém a aleatoriedade, mas dá aos envolvidos a sensação de que o resultado não foi obra de uma única jogada de sorte — o que faz a decisão parecer mais legítima para todos. Um segundo truque: repare na sua reação ao resultado. Se a moeda cai em uma opção e você sente um alívio ou uma decepção, esse impulso revela qual opção você realmente queria desde o começo."
       }
     },
     "diceRoller": {
@@ -2216,27 +2461,47 @@
         },
         {
           "question": "Posso rolar vários dados ao mesmo tempo?",
-          "answer": "Sim — use notação como '5d6' para rolar cinco dados de seis faces simultaneamente. O resultado mostra cada dado individual mais o total."
+          "answer": "Pode. Use uma notação como '5d6' para rolar cinco dados de seis faces de uma vez. O resultado mostra cada dado separadamente e também a soma total."
         },
         {
-          "question": "As rolagens são verdadeiramente aleatórias?",
-          "answer": "Sim, cada dado é rolado independentemente usando Math.random(), que dá uma distribuição uniforme em todas as faces."
+          "question": "As rolagens são realmente aleatórias?",
+          "answer": "Sim. Cada dado é rolado de forma independente com a função Math.random() do JavaScript, que gera uma distribuição uniforme — toda face tem a mesma chance de aparecer em cada rolagem, sem 'memória' de resultados anteriores."
         },
         {
           "question": "Quais dados são usados no D&D?",
-          "answer": "D&D usa sete dados: d4, d6, d8, d10, d12, d20 e d100 (dado percentual). O d20 é usado com mais frequência para testes de habilidade e ataques."
+          "answer": "D&D usa sete tipos: d4, d6, d8, d10, d12, d20 e d100 (dado percentual, geralmente dois d10). O d20 é o mais frequente, usado em testes de habilidade, jogadas de ataque e testes de resistência."
+        },
+        {
+          "question": "Dá para escolher um número de faces fora do padrão?",
+          "answer": "Dá. É só digitar a notação com o número que você quiser, como d3, d7, d30 ou d50. O rolador aceita qualquer número inteiro positivo de faces, então você não fica preso aos dados tradicionais."
+        },
+        {
+          "question": "Qual é a chance de tirar um 6 em um dado comum?",
+          "answer": "1/6, ou cerca de 16,67%. Todas as faces têm a mesma probabilidade porque cada rolagem é um evento independente e uniforme. Tirar três 6 seguidos, por exemplo, tem chance de (1/6)^3 ≈ 0,46%."
+        },
+        {
+          "question": "Por que rolar 2d6 não dá resultados igualmente prováveis entre 2 e 12?",
+          "answer": "Porque existem mais combinações que somam 7 (seis delas: 1-6, 2-5, 3-4, 4-3, 5-2, 6-1) do que combinações que somam 2 ou 12 (uma só cada). Ao somar vários dados, os resultados se concentram no meio, formando uma curva em sino — é o teorema central do limite na prática, e é a base do equilíbrio de quase todo RPG de mesa."
+        },
+        {
+          "question": "Posso usar para Dungeons & Dragons e outros RPGs?",
+          "answer": "Sim. O rolador aceita os sete dados de D&D e a notação com modificador, como 1d20+5 para uma jogada de ataque ou 4d6 para gerar atributos. É um substituto prático quando você esqueceu os dados em casa ou joga on-line."
+        },
+        {
+          "question": "Funciona offline?",
+          "answer": "Funciona. Depois que a página carrega, todas as rolagens acontecem no seu navegador, sem enviar nada para um servidor. Você pode usar em mesa sem depender da conexão."
         }
       ],
       "richContent": {
-        "whatIs": "Um rolador de dados virtual simula dados de mesa para jogos, demonstrações de probabilidade e decisões aleatórias. Suporta a notação de dados padrão usada em RPGs de mesa (ex.: 2d6+3). Tipos comuns incluem d4, d6, d8, d10, d12, d20 e d100. Notavelmente, rolar vários dados produz uma distribuição de curva em sino devido ao teorema central do limite.",
+        "whatIs": "Um rolador de dados virtual simula os dados de mesa para RPGs, jogos de tabuleiro, demonstrações de probabilidade e decisões aleatórias. Ele entende a notação padrão dos RPGs: NdX+M significa rolar N dados de X faces e somar o modificador M — por exemplo, 2d6+3 rola dois dados de seis faces e adiciona 3 ao total. Os tipos mais comuns são d4, d6, d8, d10, d12, d20 e d100 (percentual). Um detalhe importante: quando você soma vários dados, os resultados não se distribuem de forma uniforme. Dois d6 têm média em torno de 7 e os valores se concentram no meio, formando uma curva em sino por causa do teorema central do limite. Esse comportamento é a razão de a maioria dos sistemas de RPG usar somas de dados em vez de um único dado gigante.",
         "howToUse": [
-          "Selecione o número de dados que deseja lançar.",
-          "Escolha o tipo de dado — d4, d6, d8, d10, d12, d20, ou insira um número personalizado de lados.",
-          "Adicione um modificador (positivo ou negativo) se as regras do jogo exigirem.",
-          "Clique em Rolar e leia os resultados individuais dos dados, além do total."
+          "Digite a notação da rolagem no campo, por exemplo 2d6+3 ou 1d20.",
+          "Escolha o tipo de dado — d4, d6, d8, d10, d12, d20 — ou informe um número de faces personalizado.",
+          "Inclua um modificador positivo ou negativo se as regras do seu jogo pedirem.",
+          "Clique em Rolar e leia o resultado de cada dado junto com o total."
         ],
-        "whyItMatters": "Os dados físicos desenvolvem vieses com o tempo devido ao desgaste. Os dados digitais usam um gerador de números aleatórios que mantém a justiça estatística em milhões de rolagens. Para educadores, o lançamento digital em sala de aula é mais rápido e pode ser projetado para que todos vejam.",
-        "proTip": "Para a geração de atributos no D&D, role 4d6 e descarte o menor dado. Para a reação rápida de um NPC, role 2d6: 2–3 hostil, 4–5 hostil, 6–8 neutro, 9–10 amigável, 11–12 prestativo. Essas tabelas são padrão e funcionam para qualquer sistema de RPG de fantasia."
+        "whyItMatters": "Dados físicos ganham viés com o tempo por causa do desgaste e de imperfeições de fabricação — um dado 'viciado' pode favorecer certas faces sem que ninguém perceba. O dado digital usa um gerador de números aleatórios que mantém a distribuição justa por milhões de rolagens. Para quem dá aula, rolar dados na tela é mais rápido e pode ser projetado para a turma inteira acompanhar, o que torna a lição de probabilidade mais concreta: dá para rolar 2d6 cem vezes e mostrar a curva em sino se formando em tempo real.",
+        "proTip": "Para gerar atributos em D&D, role 4d6 e descarte o menor dado — isso puxa a média para cima e evita personagens fracos demais. Para a reação rápida de um NPC, role 2d6 e consulte esta tabela clássica: 2–3 hostil, 4–5 desconfiado, 6–8 neutro, 9–10 amigável, 11–12 prestativo. Ela vem do Guia do Mestre e funciona em qualquer cenário de fantasia."
       }
     },
     "numberGenerator": {
@@ -2879,21 +3144,41 @@
         },
         {
           "question": "Posso votar nos itens?",
-          "answer": "Sim — clique no ícone de positivo em qualquer nota para votar. Votar ajuda a equipe a priorizar quais tópicos discutir primeiro."
+          "answer": "Sim — clique no ícone de positivo em qualquer nota para votar. A votação por pontos ajuda o time a priorizar quais tópicos discutir primeiro."
+        },
+        {
+          "question": "O que é uma retrospectiva de sprint?",
+          "answer": "É a cerimônia ágil no fim de cada sprint em que o time reflete sobre como trabalhou junto — não sobre o que construiu, mas sobre como construiu. A meta é identificar melhorias concretas para levar ao próximo sprint."
+        },
+        {
+          "question": "Com que frequência o time deve fazer retrospectiva?",
+          "answer": "No Scrum, uma por sprint — ou seja, a cada uma a quatro semanas, conforme a duração do sprint. A maioria dos times acha que uma cadência de duas semanas dá tempo de implementar mudanças antes da retro seguinte."
+        },
+        {
+          "question": "Vários membros do time podem usar ao mesmo tempo?",
+          "answer": "A ferramenta roda inteiramente no navegador, sem back-end, então não há colaboração multiusuário em tempo real. O recomendado é o facilitador conduzir o quadro em uma tela compartilhada e digitar as notas conforme o time discute cada item."
+        },
+        {
+          "question": "Como exporto as notas da retrospectiva?",
+          "answer": "Clique em 'Exportar como Markdown' para copiar o quadro completo formatado. Depois cole no Confluence, Notion, em uma issue do GitHub, no Slack ou em qualquer ferramenta que renderize Markdown, preservando as notas para consulta futura."
+        },
+        {
+          "question": "Qual o melhor formato de retro para times remotos?",
+          "answer": "O formato de três colunas (Funcionou Bem / A Melhorar / Itens de Ação) é o mais usado e funciona bem no remoto porque é simples, focado e fácil de explicar para quem chegou agora. Para variar, alguns times alternam com Começar / Parar / Continuar ou com o 4Ls (Gostou, Aprendeu, Faltou, Desejou)."
         }
       ],
       "richContent": {
-        "whatIs": "A retrospectiva da sprint é a cerimônia Scrum realizada no final de cada sprint onde a equipe reflete sobre o que correu bem, o que não correu e o que melhorar. O formato mais usado é Começar/Parar/Continuar. Outros formatos populares incluem o 4Ls (Gostou, Aprendeu, Faltou, Desejou), e Louco/Triste/Feliz. O objetivo é criar resultados acionáveis: cada retrospectiva deve produzir de um a três itens de melhoria concretos com proprietários nomeados.",
+        "whatIs": "A retrospectiva de sprint é a cerimônia Scrum feita no fim de cada sprint em que o time reflete sobre o que funcionou bem, o que não funcionou e o que melhorar. O formato mais usado é Começar/Parar/Continuar — o que o time deveria começar a fazer, parar de fazer e continuar fazendo. Outros formatos populares incluem o 4Ls (Gostou, Aprendeu, Faltou, Desejou), que traz feedback positivo e aspiracional, e o Louco/Triste/Feliz, que organiza a retro em torno das respostas emocionais e é especialmente eficaz quando o moral do time é uma preocupação. A meta de toda retrospectiva são resultados acionáveis: cada retro deve produzir de um a três itens de melhoria concretos com responsáveis nomeados, não só uma sessão de desabafo. Times que tratam a retro como um lugar para expor sentimentos sem se comprometer com mudanças veem a cerimônia perder credibilidade e presença em poucos sprints.",
         "howToUse": [
-          "Selecione um formato de retrospectiva.",
-          "Abra o quadro e faça com que cada membro da equipe adicione observações (10 minutos, sem discussão ainda).",
-          "Agrupe itens semelhantes ou duplicados para reduzir o ruído antes de votar.",
-          "Faça uma votação por pontos (dot-vote): cada um recebe de 3 a 5 votos.",
-          "Discuta os itens mais votados em ordem.",
-          "Para cada ponto, atribua um item de ação a um responsável com uma data de vencimento."
+          "Escolha um formato de retro — Começar/Parar/Continuar para uso geral, 4Ls para times focados em aprendizado, Louco/Triste/Feliz quando o moral ou as emoções precisam de atenção.",
+          "Abra o quadro e peça que cada pessoa adicione observações nas colunas certas durante a fase de escrita (10 minutos, ainda sem discussão).",
+          "Agrupe itens parecidos ou duplicados para reduzir o ruído antes de votar.",
+          "Faça a votação por pontos: cada participante recebe de 3 a 5 votos para gastar nos itens que considera mais importantes — pode concentrar todos em um só.",
+          "Discuta os itens mais votados em ordem, dedicando mais tempo onde os votos se concentram.",
+          "Para cada ponto discutido, atribua um item de ação concreto a um responsável nomeado, com prazo antes do próximo sprint."
         ],
-        "whyItMatters": "As equipes que realizam retrospectivas regulares melhoram a velocidade do sprint ao longo do tempo. O maior anti-padrão nas retrospectivas é discutir os mesmos problemas repetidamente sem resolução. As retrospectivas também constroem segurança psicológica quando bem facilitadas.",
-        "proTip": "Limite a retrospectiva estritamente: 45 minutos para um sprint de 2 semanas. Nunca termine uma retrospectiva sem proprietários nomeados para cada item de ação."
+        "whyItMatters": "Times que fazem retrospectivas regulares e focadas em ação melhoram a velocidade do sprint com o tempo, porque eliminam de forma sistemática o atrito que os desacelera. O maior anti-padrão da retro é discutir os mesmos problemas sprint após sprint sem resolução — se o mesmo item aparece no quadro três sprints seguidos, é sinal de um problema sistêmico que precisa ser escalado para além da retro. Retrospectivas bem facilitadas também constroem segurança psicológica: quando as pessoas veem que levantar uma preocupação leva a uma mudança real, elas confiam no processo e participam com mais franqueza. Times que pulam a retro acumulam disfunção não tratada que acaba descarrilando os sprints por completo.",
+        "proTip": "Limite o tempo da retro com rigor: 45 minutos para um sprint de 2 semanas. Reserve 10 minutos para adicionar itens, 5 para agrupar, 5 para a votação por pontos e 25 para discutir os itens mais votados e atribuir responsáveis. Nunca encerre uma retro sem um responsável nomeado por item de ação — 'o time' ser dono de algo significa que ninguém é dono, e o item volta ao quadro do próximo sprint sem mudança."
       }
     },
     "standupGenerator": {
@@ -2937,21 +3222,45 @@
         },
         {
           "question": "O que devo colocar no campo Bloqueios?",
-          "answer": "Qualquer coisa que impeça seu progresso: aguardando revisão de código, uma dependência não pronta, requisitos pouco claros ou uma API externa fora do ar. Se não houver bloqueios, deixe em branco — o gerador escreverá 'Nenhum' automaticamente."
+          "answer": "Qualquer coisa que impeça seu progresso: aguardando revisão de código, uma dependência não pronta, requisitos pouco claros ou uma API externa fora do ar. Se não houver bloqueios, deixe em branco — o gerador escreve 'Nenhum' automaticamente."
+        },
+        {
+          "question": "Quais são as três perguntas do standup?",
+          "answer": "As três perguntas clássicas são: (1) O que concluí ontem? (2) No que estou trabalhando hoje? (3) Há algum bloqueio ou impedimento atrapalhando meu progresso? Elas mantêm a reunião focada e dentro do tempo."
+        },
+        {
+          "question": "Quanto tempo deve durar um standup?",
+          "answer": "No Scrum, o standup é limitado a 15 minutos. Na prática, times de 5 a 8 pessoas costumam terminar em 10 minutos ou menos. Se o seu standup passa disso com frequência, geralmente é sinal de que as discussões de solução deveriam ir para outra reunião."
+        },
+        {
+          "question": "Por que alguns times abandonam o standup?",
+          "answer": "Normalmente quando a reunião deixa de agregar valor — em geral porque virou um relatório de status para a gerência em vez de uma sincronização entre pares. Manter o standup curto, focado e horizontal (não de cima para baixo) recupera o valor dele."
+        },
+        {
+          "question": "Posso personalizar o modelo do standup?",
+          "answer": "O gerador usa o formato padrão de três perguntas. Depois de copiar a saída, você pode editar à vontade antes de colar no canal do time, adaptando ao formato que a sua equipe preferir."
+        },
+        {
+          "question": "Qual a diferença entre standup e relatório de status?",
+          "answer": "O standup é uma sincronização entre colegas de time — serve para coordenar o trabalho e trazer bloqueios à tona. O relatório de status é uma prestação de contas de uma pessoa para um gestor ou stakeholder. Misturar os dois é um anti-padrão comum que faz o standup parecer vigilância e reduz a eficácia."
+        },
+        {
+          "question": "Quando usar standup assíncrono?",
+          "answer": "Funciona bem para times distribuídos em vários fusos horários, onde marcar uma reunião ao vivo é inviável. Cada pessoa posta o update de Ontem / Hoje / Bloqueios em um canal compartilhado no próprio início do dia. Este gerador é ideal para formatar essas mensagens."
         }
       ],
       "richContent": {
-        "whatIs": "A reunião diária (daily Scrum) é uma cerimônia de sincronização de 15 minutos onde cada membro da equipe responde: O que fiz ontem? O que farei hoje? O que me bloqueia? O objetivo é identificar bloqueios precocemente, não entregar atualizações de status à gerência. Para equipes distribuídas em diferentes fusos horários, a reunião assíncrona é uma alternativa eficaz.",
+        "whatIs": "A reunião diária (daily Scrum) é uma cerimônia de sincronização de no máximo 15 minutos em que cada pessoa do time responde três perguntas: O que fiz ontem? O que farei hoje? O que está me bloqueando? Ela nasceu no Guia Scrum como um evento de sincronização entre pares — o objetivo é identificar bloqueios cedo e manter o time coordenado, não entregar status para a gerência. Quando o standup vira relatório para o Scrum Master ou para um gestor, ele perde o valor de coordenação e passa a parecer vigilância. Para times distribuídos entre fusos horários, o standup assíncrono é uma alternativa eficaz: cada pessoa posta o update de três perguntas em um canal compartilhado no próprio início do dia, passando a mesma informação sem exigir que todo mundo esteja on-line ao mesmo tempo.",
         "howToUse": [
-          "Selecione os participantes.",
-          "Para cada um, insira o que concluiu ontem.",
-          "Insira no que planejam trabalhar hoje.",
-          "Insira bloqueios ou impedimentos — ou deixe em branco.",
-          "Clique em Gerar Standup para produzir um resumo formatado.",
-          "Copie a saída e cole no Slack, Microsoft Teams, etc."
+          "Selecione os participantes do standup de hoje.",
+          "Para cada participante, escreva o que foi concluído ontem no campo Ontem.",
+          "Escreva o que a pessoa planeja fazer hoje no campo Hoje.",
+          "Escreva bloqueios ou impedimentos no campo Bloqueios — deixe em branco se não houver.",
+          "Clique em Gerar Standup para produzir um resumo limpo e formatado.",
+          "Copie a saída e cole no Slack, Microsoft Teams, e-mail ou no canal de standup do time."
         ],
-        "whyItMatters": "A reunião diária é frequentemente mal utilizada como um relatório de status. Quando se torna isso, deixa de revelar bloqueios. Um standup que revela um bloqueio por semana economiza mais tempo do que custa.",
-        "proTip": "Se a sua reunião exceder 15 minutos, aplique a regra do 'estacionamento': marque discussões detalhadas para depois da reunião apenas com as pessoas relevantes."
+        "whyItMatters": "O standup é a cerimônia Scrum mais mal utilizada. Quando vira um relatório de status para um gestor em vez de uma sincronização entre pares, ele para de trazer bloqueios à tona cedo — que é toda a razão de existir dele. Um standup de 15 minutos que revela um bloqueio por semana economiza mais tempo do que custa: bloqueios sem solução por dias se acumulam em fracasso de sprint. O standup assíncrono é especialmente valioso para times globalmente distribuídos, permitindo a mesma troca de informação sem o custo de fuso horário de uma reunião ao vivo. Este gerador garante que o update saia bem formatado toda vez, reduzindo o esforço de escrever um standup do zero a cada manhã.",
+        "proTip": "Se o seu standup passa dos 15 minutos com frequência, aplique a regra do estacionamento (parking lot): marque as discussões detalhadas para depois do standup, só com quem é relevante. O standup é para sinalizar bloqueios, não para resolvê-los. A solução acontece na reunião de estacionamento logo em seguida, com as pessoas que precisam participar — todo o resto fica livre para começar o dia."
       }
     },
     "planningPoker": {
@@ -2991,20 +3300,41 @@
         },
         {
           "question": "Esta ferramenta é multiplayer?",
-          "answer": "Esta versão é single-player — útil para o facilitador coletar votos verbalmente ou em uma sessão de tela compartilhada."
+          "answer": "Esta versão é single-player — útil para o facilitador coletar os votos verbalmente ou em uma sessão de tela compartilhada. Cada pessoa escolhe a carta e o facilitador registra o consenso."
+        },
+        {
+          "question": "O que os números Fibonacci representam no planning poker?",
+          "answer": "A sequência (1, 2, 3, 5, 8, 13, 21...) representa story points — uma medida relativa de esforço, complexidade e incerteza, não de horas. Os intervalos maiores entre números altos refletem a imprecisão natural de estimar pedaços grandes de trabalho."
+        },
+        {
+          "question": "Como o planning poker evita o viés de ancoragem?",
+          "answer": "Todos escolhem a estimativa em segredo e revelam as cartas ao mesmo tempo. Assim a primeira pessoa a falar não ancora o julgamento das demais. Quando as estimativas divergem muito, abre-se uma discussão produtiva em vez de um consenso de manada."
+        },
+        {
+          "question": "Quantas pessoas participam de uma sessão?",
+          "answer": "Funciona melhor com 3 a 8 participantes — normalmente o time de desenvolvimento mais o Scrum Master. Grupos maiores conseguem participar, mas a discussão depois de revelar estimativas divergentes fica mais difícil de conduzir com eficiência."
+        },
+        {
+          "question": "O que fazer quando as estimativas são muito diferentes?",
+          "answer": "Uma divergência grande é valiosa: sinaliza diferença de entendimento ou de abordagem. Peça a quem estimou mais alto e mais baixo que expliquem o raciocínio. Isso costuma revelar um requisito esquecido, uma preocupação técnica ou uma implementação mais simples que nenhum dos lados tinha considerado."
+        },
+        {
+          "question": "Planning poker serve só para times de software?",
+          "answer": "Não. Qualquer time que precise estimar esforço relativo pode usar. Times de conteúdo, de marketing e de operações usam para dimensionar projetos e priorizar backlogs, mesmo sem um contexto formal de desenvolvimento de software."
         }
       ],
       "richContent": {
-        "whatIs": "O Planning Poker é uma técnica de estimativa baseada em consenso onde os membros da equipe revelam suas estimativas de pontos simultaneamente para evitar o viés de ancoragem. Os valores das cartas seguem a sequência de Fibonacci (0, 1, 2, 3, 5, 8, 13...). Os pontos da história são uma unidade relativa de esforço, não uma unidade de tempo.",
+        "whatIs": "O planning poker (ou Scrum poker) é uma técnica de estimativa por consenso em que os membros do time revelam suas estimativas de story points ao mesmo tempo, para evitar o viés de ancoragem. Se alguém revela a estimativa primeiro, os outros tendem a se ancorar naquele número — a revelação simultânea impede isso e faz aparecer a discordância real. Os valores das cartas seguem uma sequência inspirada em Fibonacci: 0, 1, 2, 3, 5, 8, 13, 20, 40, 100, ? e infinito. Fibonacci funciona melhor que uma escala linear porque os intervalos crescentes entre números grandes refletem a incerteza real da estimativa — uma história de 40 pontos não é só duas vezes mais complexa que uma de 20, ela carrega muito mais desconhecidos. Story points são uma unidade relativa de esforço, não de tempo: uma história de 5 pontos é simplesmente entendida como mais trabalho que uma de 3, segundo a escala que o próprio time define.",
         "howToUse": [
-          "Adicione os membros da equipe que participarão.",
-          "Apresente a história do usuário.",
-          "Cada membro seleciona sua estimativa privada.",
-          "Revele todas as estimativas simultaneamente.",
-          "Se as estimativas estiverem próximas, aceite o consenso. Se divergirem amplamente, peça aos estimadores extremos que expliquem seus motivos e vote novamente."
+          "Adicione os membros do time que vão participar da estimativa.",
+          "Apresente a descrição da história ou tarefa para que todos entendam o que está sendo estimado.",
+          "Cada pessoa escolhe em segredo a estimativa de story points no baralho Fibonacci.",
+          "Revele todas as estimativas ao mesmo tempo — isso evita a ancoragem por influenciadores iniciais.",
+          "Se as estimativas estão próximas, aceite o consenso ou a média e registre o valor final.",
+          "Se divergem muito (por exemplo, uma pessoa escolhe 3 e outra 13), peça a quem estimou mais alto e mais baixo que expliquem o raciocínio e vote de novo."
         ],
-        "whyItMatters": "O Planning Poker revela divergências na estimativa que, de outra forma, ficariam ocultas, prevenindo o desalinhamento que causa o fracasso da sprint.",
-        "proTip": "Se uma equipe não conseguir chegar a um consenso após 2 rodadas, a história é muito grande ou muito obscura. Divida-a em histórias menores."
+        "whyItMatters": "O planning poker faz aparecer a discordância de estimativa que ficaria escondida de outra forma. Quando uma pessoa estima 3 pontos e outra estima 13 para a mesma história, elas estão partindo de premissas diferentes sobre escopo, abordagem técnica ou risco. Essa conversa — disparada pela diferença nas estimativas — evita o desalinhamento que causa fracasso de sprint no meio da entrega. Times que pulam a estimativa ou deixam uma pessoa ditar os números costumam descobrir, no meio do sprint, que a história era muito maior do que se supunha. A estimativa por consenso constrói entendimento compartilhado do trabalho antes de ele começar.",
+        "proTip": "Se o time não chega a consenso depois de 2 rodadas de votação, a história é grande demais ou obscura demais para estimar com confiança. Divida-a em histórias menores ou faça um spike — uma investigação com prazo fixo para resolver a incerteza antes de assumir um valor em pontos. Uma história em que o time não consegue concordar é uma história que vai falhar no sprint."
       }
     },
     "userStoryWriter": {
@@ -3048,20 +3378,40 @@
         },
         {
           "question": "Posso gerar várias histórias de uma vez?",
-          "answer": "Gere uma história por vez, copie-a, depois limpe o formulário e gere a próxima."
+          "answer": "Gere uma história por vez, copie o resultado, limpe o formulário e gere a próxima. Cada história sai com a formatação limpa, sem misturar com a anterior."
+        },
+        {
+          "question": "Qual a diferença entre uma user story e uma tarefa?",
+          "answer": "A user story descreve um resultado para o usuário ('Como cliente, quero rastrear meu pedido...'). A tarefa descreve o trabalho técnico para entregar isso ('criar endpoint de rastreio', 'ajustar o índice do banco'). Uma story costuma se desdobrar em várias tarefas."
+        },
+        {
+          "question": "O que são os critérios INVEST?",
+          "answer": "É um checklist para uma boa story: Independente (pode ser desenvolvida e entregue sozinha), Negociável (os detalhes são discutíveis), Valiosa (entrega valor real), Estimável (a equipe consegue dimensionar), Small/pequena (cabe em um sprint) e Testável (dá para verificar os critérios de aceitação)."
+        },
+        {
+          "question": "Devo escrever quantos critérios de aceitação?",
+          "answer": "Entre três e cinco por história costuma ser o ideal. Poucos deixam a definição de pronto vaga; muitos geralmente indicam que a story é grande demais e deveria ser dividida."
+        },
+        {
+          "question": "O que é o formato Dado/Quando/Então?",
+          "answer": "É a estrutura Gherkin para critérios de aceitação: 'Dado [pré-condição], Quando [ação do usuário], Então [resultado esperado]'. Cada critério nesse formato vira quase automaticamente um caso de teste."
+        },
+        {
+          "question": "Como sei que uma história está pronta para o sprint?",
+          "answer": "Ela precisa ter papel, funcionalidade e benefício claros, caber em um sprint e ter critérios de aceitação testáveis. Se a equipe não consegue escrever os critérios, a história ainda não está pronta para entrar no backlog do sprint."
         }
       ],
       "richContent": {
-        "whatIs": "Histórias de usuário são requisitos leves escritos na perspectiva do usuário: Como um [tipo de usuário], eu quero [ação], para que [benefício]. Boas histórias satisfazem os critérios INVEST. Uma história de usuário é diferente de uma tarefa e de um bug. O formato mantém o foco nos resultados do usuário e não na implementação técnica.",
+        "whatIs": "Histórias de usuário (user stories) são requisitos leves escritos do ponto de vista de quem usa o produto, no formato: Como [tipo de usuário], quero [ação ou funcionalidade], para que [benefício ou objetivo]. Uma boa história atende aos critérios INVEST: Independente (pode ser desenvolvida e entregue sem depender de outras), Negociável (os detalhes de implementação ficam abertos à conversa entre time e stakeholders), Valiosa (entrega valor real ao usuário ou ao negócio), Estimável (o time consegue dimensionar), Small — pequena o suficiente para caber em um sprint — e Testável (os critérios de aceitação podem ser verificados por quem testa). A história é diferente de uma tarefa (que descreve trabalho de implementação, não valor para o usuário) e de um bug (que descreve um desvio do comportamento esperado). O formato mantém o time focado no resultado para o usuário, não nos detalhes técnicos.",
         "howToUse": [
-          "Selecione o tipo de usuário ou função.",
-          "Descreva a funcionalidade ou ação.",
-          "Descreva o benefício ou objetivo.",
-          "Revise a história de usuário gerada.",
-          "Adicione de três a cinco critérios de aceitação no formato Dado/Quando/Então."
+          "Selecione o tipo de usuário ou papel — por exemplo, usuário logado, administrador, visitante ou uma persona específica.",
+          "Descreva em linguagem simples a funcionalidade ou ação que o usuário quer realizar.",
+          "Descreva o benefício ou objetivo — por que o usuário quer isso e que resultado a funcionalidade viabiliza.",
+          "Revise a história gerada no formato Como / quero / para que.",
+          "Adicione de três a cinco critérios de aceitação no formato Dado/Quando/Então para definir o que significa 'pronto' nessa história."
         ],
-        "whyItMatters": "Histórias de usuário mal escritas são a causa mais comum de fracasso do sprint. Histórias que misturam detalhes de implementação, sem critérios de aceitação ou grandes demais geram ambiguidade. Boas histórias tornam a estimativa precisa e os testes fáceis.",
-        "proTip": "Sempre escreva de três a cinco critérios de aceitação no formato: Dado [pré-condição], Quando [ação], Então [resultado]. Estes tornam-se seus casos de teste automaticamente."
+        "whyItMatters": "Histórias mal escritas são a causa mais comum de fracasso de sprint. Histórias que confundem implementação com resultado ('como usuário, quero um índice no banco' — isso é tarefa técnica, não história), histórias sem critérios de aceitação e histórias grandes demais para um sprint geram ambiguidade que descarrila o desenvolvimento. Quando a pessoa que desenvolve não entende por que a funcionalidade existe, ela toma decisões de implementação que não atendem à necessidade real do usuário. Boas histórias tornam a estimativa mais precisa e o teste de aceitação mais direto, porque o time e quem testa partem da mesma definição de pronto.",
+        "proTip": "Escreva sempre de três a cinco critérios de aceitação por história no formato Dado/Quando/Então: Dado [pré-condição], Quando [ação], Então [resultado esperado]. Eles viram seus casos de teste automaticamente — um critério bem escrito mapeia direto para um cenário de teste. Se você não consegue escrever critérios de aceitação para uma história, ela ainda não está pronta para entrar no backlog do sprint."
       }
     },
     "sprintDateCalculator": {
@@ -3249,20 +3599,36 @@
       },
       {
         "question": "Os dados são seguros?",
-        "answer": "Sim — toda a geração do QR Code acontece no seu navegador. Nenhuma informação é enviada para nossos servidores."
+        "answer": "Sim — toda a geração do QR Code acontece no seu navegador. Nenhuma informação é enviada para nossos servidores, e o conteúdo do código nunca passa pela internet."
+      },
+      {
+        "question": "O que é correção de erros no QR Code?",
+        "answer": "É a redundância que permite ler o código mesmo com parte dele danificada ou coberta. São quatro níveis: L (7% de tolerância a dano), M (15%), Q (25%) e H (30%). Este gerador usa o nível M, suficiente para a maioria dos usos; escolha H se for colocar um logotipo sobre o código."
+      },
+      {
+        "question": "Quanto de informação cabe em um QR Code?",
+        "answer": "Depende do tipo de conteúdo: URLs de até cerca de 2.500 caracteres, texto simples de até cerca de 4.300 e credenciais de WiFi em torno de 150. Quanto mais dados, mais denso o código e maior ele precisa ser impresso para continuar legível."
+      },
+      {
+        "question": "Qual o tamanho mínimo para imprimir?",
+        "answer": "Cerca de 2,5 cm × 2,5 cm (aproximadamente uma polegada quadrada), com bom contraste em relação ao fundo. Abaixo disso, câmeras de celular mais antigas podem ter dificuldade para focar e ler."
+      },
+      {
+        "question": "Qual a diferença entre QR Code estático e dinâmico?",
+        "answer": "O estático — como o gerado aqui — codifica o dado diretamente e não pode ser alterado depois de criado. O dinâmico redireciona por uma URL encurtada que pode ser trocada sem reimprimir o código. Para dinâmico é preciso um serviço externo que hospede o redirecionamento."
       }
     ],
     "richContent": {
-      "whatIs": "Um gerador de código QR cria códigos de barras bidimensionais que as câmeras dos smartphones leem diretamente. Eles armazenam texto, URLs ou Wi-Fi. Os níveis de correção de erros controlam a tolerância a danos.",
+      "whatIs": "Um gerador de QR Code cria códigos de barras bidimensionais que a câmera do celular lê diretamente — sem app extra em iOS e Android modernos. O QR Code foi inventado pela Denso Wave, no Japão, em 1994, para rastrear peças automotivas, e virou onipresente depois que o uso sem contato acelerou a partir de 2020. Ele armazena dados de texto: URLs, credenciais de WiFi, dados de contato ou texto puro. Os níveis de correção de erro controlam a tolerância a dano: L (7% do código pode ser danificado), M (15%), Q (25%) e H (30% — use H quando um logotipo cobrir parte do código). A capacidade máxima varia por tipo de conteúdo: URLs de até cerca de 2.500 caracteres, texto puro de até 4.300 e credenciais de WiFi em torno de 150. QR Codes estáticos codificam o dado direto; QR Codes dinâmicos redirecionam por uma URL encurtada que pode ser trocada sem reimprimir.",
       "howToUse": [
-        "Selecione o tipo de código QR.",
-        "Insira o conteúdo.",
-        "Selecione o tamanho de saída (PNG ou SVG).",
-        "Visualize o código QR gerado.",
-        "Faça o download."
+        "Selecione o tipo de QR Code: URL, texto simples, e-mail, telefone ou credenciais de WiFi.",
+        "Insira o conteúdo do tipo escolhido — cole uma URL, digite o texto ou preencha o SSID e a senha do WiFi.",
+        "Escolha o tamanho de saída: 256 px para tela, 512 px para impressão comum, 1024 px para grande formato ou SVG para resolução infinita.",
+        "Confira a pré-visualização para garantir que o código está correto e lê com facilidade.",
+        "Baixe como PNG para a maioria dos usos ou SVG para produção gráfica, onde a flexibilidade de resolução importa."
       ],
-      "whyItMatters": "Os códigos QR preenchem a lacuna entre o físico e o digital: os cartões de visita vinculam-se a portfólios, os menus são sem contato, etc.",
-      "proTip": "Teste sempre um código QR antes de imprimi-lo em escala com pelo menos dois telefones diferentes."
+      "whyItMatters": "O QR Code conecta o mundo físico ao digital: cartões de visita levam ao portfólio, cardápios de restaurante ficam sem contato, embalagens apontam para instruções de montagem e crachás de evento fazem o check-in do participante. Um QR Code de URL no cartão de visita é escaneado muito mais vezes do que a URL seria digitada à mão — tirar o atrito de digitar aumenta o engajamento diretamente. No compartilhamento de WiFi, o QR Code elimina o trabalho de ditar e digitar senhas de rede complexas. O tamanho mínimo confiável para impressão é de cerca de 2,5 cm × 2,5 cm, com bom contraste contra o fundo.",
+      "proTip": "Teste sempre o QR Code antes de imprimir em escala. Imprima uma cópia pequena de teste e escaneie com pelo menos dois celulares diferentes — um iOS e um Android — para confirmar que resolve nos dois. Um erro de digitação em um código impresso em 1.000 folhetos não tem conserto sem reimprimir toda a tiragem. Para QR de WiFi, confira se a senha está exatamente certa — um único caractere errado faz o código não conectar a nada."
     }
   },
   "healthCalculator": {
@@ -3579,20 +3945,36 @@
       },
       {
         "question": "Qual é minha idade se nasci em 1990?",
-        "answer": "Se você nasceu em 1990, atualmente tem 35 ou 36 anos dependendo do seu mês de nascimento e da data de hoje. Insira sua data de nascimento completa acima para um resultado preciso."
+        "answer": "Se você nasceu em 1990, hoje tem 35 ou 36 anos, dependendo do mês de nascimento e da data atual. Insira a data completa acima para um resultado preciso ao dia."
+      },
+      {
+        "question": "Como é contada a idade de quem nasceu em 29 de fevereiro?",
+        "answer": "Nos anos em que 29 de fevereiro não existe, a maioria dos países considera 28 de fevereiro (ou 1º de março, conforme a lei local) como a data do aniversário para fins legais. A calculadora completa o ano na virada de fevereiro para março."
+      },
+      {
+        "question": "A idade é contada de forma diferente em outros países?",
+        "answer": "Sim. O sistema coreano tradicional considera o bebê com 1 ano ao nascer e todos ganham um ano em 1º de janeiro, não no aniversário individual — então uma pessoa pode ser 'dois anos mais velha' nessa contagem. A maioria dos países, incluindo o Brasil, usa a idade cronológica a partir do dia do nascimento."
+      },
+      {
+        "question": "Meus dados de nascimento são enviados para algum servidor?",
+        "answer": "Não. Todo o cálculo acontece no seu navegador. A data que você digita não sai do dispositivo e nada é armazenado depois que você fecha a página."
+      },
+      {
+        "question": "Posso calcular a idade de outra pessoa ou de um pet?",
+        "answer": "Pode. Basta inserir a data de nascimento de quem você quiser — filho, familiar, animal de estimação — e a calculadora mostra a idade exata e a contagem até o próximo aniversário do mesmo jeito."
       }
     ],
     "richContent": {
-      "whatIs": "Uma calculadora de idade calcula a diferença exata entre uma data de nascimento e o dia de hoje (ou data alvo) em anos, meses e dias. Casos isolados tornam isso complexo: aniversários de ano bissexto, sistema de idade coreano e marcos legais.",
+      "whatIs": "A calculadora de idade calcula a diferença exata entre uma data de nascimento e o dia de hoje — ou qualquer data-alvo — em anos, meses e dias. Alguns casos tornam isso mais complexo do que uma subtração simples: aniversários em 29 de fevereiro (que só existe em anos bissextos — a maioria dos países usa 28 de fevereiro como data legal nos anos comuns), o sistema coreano de idade (em que a pessoa nasce com 1 ano e todos ganham um ano em 1º de janeiro, não no aniversário individual) e os marcos legais que variam por país (18 anos para votar e assinar contratos na maioria dos lugares, 21 para álcool nos Estados Unidos, 65 para aposentadoria integral nos EUA, 67 no Reino Unido). A contagem regressiva de aniversário mostra os dias exatos que faltam, útil para planejar comemorações e acompanhar transições legais.",
       "howToUse": [
-        "Insira a sua data de nascimento.",
-        "Opcionalmente, insira uma data-alvo.",
-        "Leia a sua idade exata.",
-        "Verifique a contagem regressiva de dias.",
-        "Use o recurso de idade futura para outras datas."
+        "Insira a data de nascimento pelo seletor de datas ou digitando dia, mês e ano.",
+        "Se quiser, informe uma data-alvo para calcular a idade em um momento específico — sem preencher, vale o dia de hoje.",
+        "Leia a sua idade exata em anos, meses e dias.",
+        "Confira a contagem regressiva de dias até o próximo aniversário para planejar a comemoração.",
+        "Use o recurso de idade futura para saber quantos anos você terá em qualquer data à frente."
       ],
-      "whyItMatters": "A idade exata é importante em contextos legais e médicos. Os cortes de matrícula na escola usam regras precisas, dosagens médicas para bebês e benefícios previdenciários.",
-      "proTip": "Para planejamento de aposentadoria, calcule a sua idade exata em 1º de janeiro do ano pretendido para garantir os benefícios corretamente."
+      "whyItMatters": "A idade exata pesa em muitos contextos legais e médicos. As datas de corte para matrícula escolar usam regras precisas de idade em um dia específico, que variam por rede e por país e definem se a criança entra em uma série um ano à frente ou atrás dos colegas. A dosagem pediátrica para crianças abaixo de dois anos usa a idade em meses, não em anos — uma criança de 16 meses e outra de 23 meses recebem doses diferentes. Faixas de prêmio de seguro, elegibilidade a benefícios e cálculos de aposentadoria também se apoiam em limites de idade específicos, em que faltar poucos dias pode mudar a data de início do benefício ou a faixa de cálculo.",
+      "proTip": "Para planejamento de aposentadoria, calcule a sua idade exata em 1º de janeiro de cada ano-alvo. A previdência e muitos planos de pensão usam regras de idade no ano — o valor ou a faixa de elegibilidade é definido pela sua idade em uma data específica do ano civil. Ficar três dias aquém de um corte pode adiar o início do benefício em meses ou jogar você em uma faixa de cálculo menor, algo que vale saber com antecedência."
     }
   },
   "about": {

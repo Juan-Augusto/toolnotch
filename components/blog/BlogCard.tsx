@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import type { BlogPost } from '@/lib/blogTypes'
+import { translateSlug } from '@/data/blog/slugTranslations'
 
 interface Props {
   post: BlogPost
@@ -35,9 +36,13 @@ export default async function BlogCard({ post, locale }: Props) {
   const readArticle = t('readArticle')
   const minRead = t('minRead', { n: post.readingTimeMinutes })
 
+  // Posts translated per locale have a native slug; translateSlug is a no-op for
+  // legacy shared-slug posts, so the English slug under /pt or /es never leaks.
+  const slug = translateSlug(post.slug, locale)
+
   return (
     <Link
-      href={`/${locale === 'en' ? '' : locale + '/'}blog/${post.slug}`}
+      href={`/${locale === 'en' ? '' : locale + '/'}blog/${slug}`}
       className="block bg-card border border-gray-200 rounded-xl p-5 hover:border-gray-300 hover:shadow-sm transition-all group dark:bg-card dark:border-gray-700 dark:hover:border-gray-600"
     >
       <div className="flex items-center gap-2 mb-3">

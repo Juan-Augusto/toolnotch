@@ -173,27 +173,52 @@ function killTree(proc) {
 // ---------------------------------------------------------------------------
 // sitemap -> route paths
 // ---------------------------------------------------------------------------
+/**
+ * Real localized path per `${locale}\n${enPath}`, read from each entry's
+ * <xhtml:link rel="alternate" hreflang> — so a post with a translated slug
+ * (/pt/blog/como-calcular-gpa) is audited at its real URL, not a fabricated
+ * /pt/blog/<en-slug> that 404s. Populated by getSitemapPaths().
+ */
+const SITEMAP_ALT = new Map()
+
 async function getSitemapPaths() {
   const res = await fetch(BASE + '/sitemap.xml', { headers: { 'user-agent': 'ToolNotch-wordcount-audit' } })
   if (!res.ok) throw new Error(`sitemap.xml returned ${res.status}`)
   const xml = await res.text()
-  const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].trim())
   const paths = new Set()
-  for (const loc of locs) {
-    let path
+  // Split into <url>…</url> blocks so alternates stay attached to their <loc>.
+  for (const block of xml.split(/<url>/).slice(1)) {
+    const locM = block.match(/<loc>([^<]+)<\/loc>/)
+    if (!locM) continue
+    let enPath
     try {
-      path = new URL(loc).pathname
+      enPath = new URL(locM[1].trim()).pathname
     } catch {
-      path = loc
+      enPath = locM[1].trim()
     }
     // sitemap emits English (unprefixed) URLs; strip any accidental locale prefix
-    path = path.replace(/^\/(pt|es)(?=\/|$)/, '') || '/'
-    paths.add(path)
+    enPath = enPath.replace(/^\/(pt|es)(?=\/|$)/, '') || '/'
+    paths.add(enPath)
+    for (const m of block.matchAll(
+      /<xhtml:link\s+rel="alternate"\s+hreflang="([a-z-]+)"\s+href="([^"]+)"/g,
+    )) {
+      const [, lang, href] = m
+      if (lang === 'x-default' || lang === 'en') continue
+      let p
+      try {
+        p = new URL(href).pathname
+      } catch {
+        p = href
+      }
+      SITEMAP_ALT.set(`${lang}\n${enPath}`, p.replace(/\/+$/, '') || '/')
+    }
   }
   return [...paths].sort()
 }
 
 function localizedPath(path, locale) {
+  const real = SITEMAP_ALT.get(`${locale}\n${path}`)
+  if (real) return real
   if (locale === 'en') return path
   return path === '/' ? `/${locale}` : `/${locale}${path}`
 }
@@ -223,6 +248,10 @@ async function analyse(path, locale) {
       path,
       locale,
       status: res.status,
+      // A sitemap URL that redirects (e.g. apex -> www) wastes crawl budget and
+      // splits ranking signals — flagged separately from a hard non-200.
+      redirected: res.redirected,
+      finalUrl: res.url,
       noindex: robotsNoindex(html),
       h1: hasH1(html),
       words: countWords(text),
@@ -327,12 +356,19 @@ async function main() {
   const belowThreshold = rows.filter((r) => r.flag)
   const brokenStatus = rows.filter((r) => r.status !== 200)
   const missingH1 = rows.filter((r) => r.h1 === 'NO')
+  const redirectedRoutes = results
+    .filter((r) => r.redirected)
+    .map((r) => ({ route: localizedPath(r.path, r.locale), finalUrl: r.finalUrl }))
 
   console.log('')
   console.log(`boilerplate segments filtered: ${boilerplate.size} (per-locale cutoff ${boilerCutoffNote.join(', ')})`)
   if (brokenStatus.length) {
     console.log(`non-200 routes: ${brokenStatus.length}`)
     for (const r of brokenStatus) console.log(`   ${r.status}  ${r.route}`)
+  }
+  if (redirectedRoutes.length) {
+    console.log(`sitemap routes that REDIRECT (fix canonical host / trailing slash): ${redirectedRoutes.length}`)
+    for (const r of redirectedRoutes) console.log(`   ${r.route}  ->  ${r.finalUrl}`)
   }
   if (missingH1.length) {
     console.log(`routes with no <h1> in raw HTML: ${missingH1.length}`)
@@ -372,7 +408,7 @@ async function main() {
       `|--:|---|--:|:--:|--:|--:|---|`,
       ...rows.map((r, i) => `| ${i + 1} | \`${r.route}\` | ${r.status} | ${r.h1} | ${r.words} | ${r.unique} | ${r.noindex || r.flag} |`),
       '',
-      `**${belowThreshold.length} routes below ${THRESHOLD} words** (indexable only). ${boilerplate.size} boilerplate segments filtered. ${brokenLinks.length} broken/redirecting internal links.`,
+      `**${belowThreshold.length} routes below ${THRESHOLD} words** (indexable only). ${boilerplate.size} boilerplate segments filtered. ${brokenLinks.length} broken/redirecting internal links. ${redirectedRoutes.length} sitemap routes that redirect.`,
       '',
     ].join('\n')
     writeFileSync(OUT, md)
@@ -380,7 +416,14 @@ async function main() {
   }
 
   killTree(server)
-  process.exit(belowThreshold.length === 0 && brokenStatus.length === 0 && brokenLinks.length === 0 ? 0 : 1)
+  process.exit(
+    belowThreshold.length === 0 &&
+      brokenStatus.length === 0 &&
+      brokenLinks.length === 0 &&
+      redirectedRoutes.length === 0
+      ? 0
+      : 1,
+  )
 }
 
 main()
