@@ -10,6 +10,7 @@
   --color-foreground: var(--foreground);
   --color-background: var(--background);
   --color-label: var(--label);
+  --color-panel: var(--panel);
 
   --font-sans:
     "Azeret Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
@@ -30,6 +31,7 @@
   --border: #a4a9b1;
   --foreground: #3f3f3f;
   --background: #f9f9f9;
+  --panel: #eeeeee;
   --label: #7d7d7d;
 
   --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.06), 0 1px 2px rgb(0 0 0 / 0.04);
@@ -48,6 +50,7 @@
   --border: #5c6269;
   --foreground: #fefefe;
   --background: #1f2124;
+  --panel: #131416;
   --label: #a8a8a8;
 }
 
@@ -143,6 +146,32 @@ input[type="number"] {
   );
   background-size: 100% 1px;
   background-position: top;
+  background-repeat: no-repeat;
+}
+
+.border-r-dashed-5 {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--border) 0,
+    var(--border) 5px,
+    transparent 5px,
+    transparent 10px
+  );
+  background-size: 1px 100%;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.border-l-dashed-5 {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--border) 0,
+    var(--border) 5px,
+    transparent 5px,
+    transparent 10px
+  );
+  background-size: 1px 100%;
+  background-position: left;
   background-repeat: no-repeat;
 }
 

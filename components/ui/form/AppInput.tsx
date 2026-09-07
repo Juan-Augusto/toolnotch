@@ -1,6 +1,6 @@
 "use client";
 
-import React, {
+import {
   useState,
   useId,
   useEffect,
@@ -164,8 +164,7 @@ export function AppInput({
             text-sm
             tracking-wider
             text-foreground
-            bg-[#202327]
-            dark:bg-[#1a1d20]
+            bg-tertiary
             border
             rounded-[2px]
             transition-colors
@@ -181,8 +180,8 @@ export function AppInput({
               error
                 ? "border-red-500 focus:border-red-500 ring-1 ring-red-500/20"
                 : isFocused
-                  ? "border-[#56fff7] ring-1 ring-[#56fff7]/20 shadow-[0_0_10px_rgba(86,255,247,0.15)]"
-                  : "border-[#3a3f47] hover:border-[#4d535e]"
+                  ? "border-secondary ring-1 ring-secondary/20 shadow-[0_0_10px_rgba(86,255,247,0.15)]"
+                  : "border-border hover:border-foreground/30"
             }
             ${className}
           `}
