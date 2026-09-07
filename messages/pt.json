@@ -528,19 +528,35 @@
         {
           "question": "Como converto metros para pés?",
           "answer": "Multiplique metros por 3,28084. Por exemplo, 5 metros = 5 × 3,28084 = 16,4042 pés. Selecione a categoria Comprimento e defina De: Metro, Para: Pé."
+        },
+        {
+          "question": "Como converto Fahrenheit para Celsius?",
+          "answer": "Selecione a categoria Temperatura, defina De: Fahrenheit e Para: Celsius e digite o valor. A fórmula usada é °C = (°F − 32) × 5/9. Por exemplo, 98,6 °F = 37 °C. Na mesma tela dá para converter também para Kelvin (K = °C + 273,15) ou Rankine."
+        },
+        {
+          "question": "Qual a diferença entre onça fluida e onça de peso?",
+          "answer": "A onça fluida (fl oz) mede volume e é usada para líquidos — uma lata de refrigerante tem 12 fl oz. A onça (oz) mede peso ou massa. São categorias diferentes no conversor: a fluida fica em Volume e a de peso em Peso. Uma onça fluida de água pesa cerca de 1,043 onça, mas isso varia com a densidade do líquido."
+        },
+        {
+          "question": "O conversor aceita notação científica?",
+          "answer": "Você pode digitar números decimais normais e a ferramenta lida corretamente com valores muito grandes ou muito pequenos. Os resultados são mostrados em forma decimal sempre que possível. Para um valor em notação científica, digite o decimal equivalente (por exemplo, 0,000001 no lugar de 1×10⁻⁶)."
+        },
+        {
+          "question": "Por que o galão dos EUA e o do Reino Unido são diferentes?",
+          "answer": "São padrões históricos distintos: o galão dos EUA equivale a 3,785 litros e o galão imperial (Reino Unido) a 4,546 litros — cerca de 20% maior. A diferença importa em receitas de culinária e em cálculos de consumo de combustível. O conversor deixa você escolher qual dos dois usar."
         }
       ],
       "richContent": {
-        "whatIs": "Um conversor de unidades traduz medidas entre diferentes sistemas de unidades — SI métrico, imperial e customary dos EUA. As categorias mais comuns incluem comprimento, peso, temperatura, volume (litros, galões — observe que o galão do Reino Unido é 4,546 L, enquanto o dos EUA é 3,785 L), velocidade, área e armazenamento digital. Pontos comuns de confusão: onças fluidas são uma unidade de volume e onças de peso são uma unidade de massa — elas não são intercambiáveis.",
+        "whatIs": "O conversor de unidades traduz medidas entre sistemas diferentes — SI métrico, imperial e o customary dos Estados Unidos. As categorias mais comuns são comprimento (metros, pés, polegadas, milhas), peso (quilos, libras, stone), temperatura (Celsius, Fahrenheit, Kelvin), volume (litros, galões — lembrando que o galão do Reino Unido tem 4,546 L e o dos EUA, 3,785 L, uma diferença que pesa em culinária e em cálculo de combustível), velocidade (km/h contra mph), área (metro quadrado contra pé quadrado) e armazenamento digital (bytes, KB, MB, GB, TB). Pontos que confundem: onça fluida é unidade de volume e onça de peso é unidade de massa — não são intercambiáveis. Stone é uma unidade britânica igual a exatamente 14 libras, pouco usada fora do Reino Unido e da Irlanda.",
         "howToUse": [
-          "Selecione a categoria de unidade de que você precisa: comprimento, peso, temperatura, volume, velocidade, área ou armazenamento digital.",
-          "Insira o valor que deseja converter.",
-          "Selecione a unidade de origem — a unidade em que seu valor está expresso no momento.",
-          "Selecione a unidade de destino — a unidade para a qual deseja converter.",
-          "Leia o valor convertido instantaneamente no campo de resultado."
+          "Selecione a categoria de que você precisa: comprimento, peso, temperatura, volume, velocidade, área ou armazenamento digital.",
+          "Digite o valor que quer converter.",
+          "Selecione a unidade de origem — aquela em que o valor está agora.",
+          "Selecione a unidade de destino — aquela para a qual você quer converter.",
+          "Leia o valor convertido na hora, no campo de resultado."
         ],
-        "whyItMatters": "Erros de conversão de unidades causam falhas no mundo real. A Mars Climate Orbiter de 1999 foi perdida porque uma equipe de engenharia usou unidades métricas e outra usou unidades imperiais. Para uso diário, a conversão de unidades permite o dimensionamento de receitas culinárias, planejamento de viagens internacionais para distâncias e temperaturas e a compreensão de previsões do tempo estrangeiras.",
-        "proTip": "Matemática mental rápida para as conversões mais comuns: para Celsius para Fahrenheit, dobre o valor Celsius e adicione 30. Para quilômetros para milhas, multiplique por 0,6 para uma estimativa próxima. Um dia a 5°C é aproximadamente 41°F; 100 km são aproximadamente 62 milhas."
+        "whyItMatters": "Erros de conversão de unidades causam falhas reais. A sonda Mars Climate Orbiter, de 1999, foi perdida — uma missão de US$ 327 milhões — porque uma equipe de engenharia usou unidades métricas e outra usou imperiais, e ninguém pegou a divergência. No dia a dia, a conversão de unidades serve para ajustar a quantidade de uma receita entre medidas dos EUA e da Europa, planejar viagens internacionais em distâncias e temperaturas, ler dimensões de produtos em unidades desconhecidas, entender previsão do tempo de outro país e comparar consumo de combustível expresso em mpg contra L/100 km.",
+        "proTip": "Contas de cabeça rápidas para as duas conversões mais comuns: de Celsius para Fahrenheit, dobre o valor em Celsius e some 30 (aproximado — a fórmula exata é °C × 9/5 + 32). De quilômetros para milhas, multiplique por 0,6 para uma estimativa próxima (exato: × 0,621). Um dia de 5 °C fica em torno de 41 °F; 100 km são cerca de 62 milhas. Esses atalhos cobrem quase toda conversão de viagem e de clima sem precisar de calculadora."
       }
     },
     "currency": {
@@ -799,20 +815,40 @@
         },
         {
           "question": "Qual é o limite de caracteres para uma meta descrição?",
-          "answer": "O Google geralmente exibe 155–160 caracteres de uma meta descrição nos resultados de busca. Mantenha entre 140–155 caracteres para melhores resultados."
+          "answer": "O Google costuma exibir 155–160 caracteres de uma meta descrição nos resultados de busca. Mantenha entre 140 e 155 caracteres para que ela apareça inteira no desktop e no celular."
+        },
+        {
+          "question": "Qual a diferença entre contagem de caracteres e contagem de bytes?",
+          "answer": "A contagem de caracteres mede quantas letras, números, símbolos e espaços há no texto. A contagem de bytes mede quanto espaço ele ocupa na memória. Em texto ASCII (inglês básico), 1 caractere = 1 byte. Letras acentuadas, 'ç', caracteres chineses e emojis ocupam de 2 a 4 bytes cada em UTF-8. Muitas plataformas e bancos de dados aplicam limites por byte, não por caractere."
+        },
+        {
+          "question": "Como os emojis afetam a contagem?",
+          "answer": "A maioria dos emojis conta como um ou dois pontos de código Unicode, mas ocupa 4 bytes em UTF-8. No X, a maior parte dos emojis conta como 2 caracteres no limite de 280 por causa da codificação UTF-16. Em textos com muitos emojis, cole aqui e confira o total antes de publicar."
+        },
+        {
+          "question": "Quantos caracteres cabem em um tweet?",
+          "answer": "O X permite 280 caracteres por post. Links são sempre contados como 23 caracteres, não importa o tamanho real da URL, e a maioria dos emojis conta como 2."
+        },
+        {
+          "question": "Qual limite usar em linha de assunto de e-mail?",
+          "answer": "A maioria dos clientes de e-mail mostra de 40 a 60 caracteres do assunto no desktop e de 30 a 40 no celular antes de cortar. Manter o assunto abaixo de 50 caracteres garante que ele apareça inteiro na maior parte dos aplicativos e melhora a taxa de abertura."
+        },
+        {
+          "question": "Qual o limite de caracteres em outras redes?",
+          "answer": "X: 280 por post. SMS: 160 por segmento. LinkedIn: até 3.000, com melhor alcance por volta de 700. Instagram: até 2.200 na legenda, mas só cerca de 125 aparecem antes do 'mais'."
         }
       ],
       "richContent": {
-        "whatIs": "Um contador de caracteres diz exatamente quantos caracteres — letras, números, símbolos, espaços e sinais de pontuação — aparecem no seu texto. Ao contrário de um contador de palavras, ele mede o comprimento bruto de uma string, que é a unidade usada pela maioria das plataformas para impor limites de postagem. O Twitter/X permite 280 caracteres. As mensagens SMS são limitadas a 160 caracteres por segmento. Para SEO, um meta título deve ficar entre 50–60 caracteres; meta descrições devem ter 150–160 caracteres. Os emojis complicam a situação — na codificação UTF-16, a maioria dos emojis conta como 2 caracteres.",
+        "whatIs": "O contador de caracteres informa exatamente quantos caracteres — letras, números, símbolos, espaços e pontuação — existem no seu texto. Diferente do contador de palavras, ele mede o comprimento bruto da string, que é a unidade usada pela maioria das plataformas para impor limites de publicação. O Twitter/X permite 280 caracteres por post. Mensagens SMS são limitadas a 160 caracteres por segmento (mensagens maiores são divididas e cobradas separadamente). Para SEO, um meta título deve ficar entre 50 e 60 caracteres para o buscador exibi-lo inteiro; meta descrições, entre 150 e 160. O LinkedIn recomenda até 700 caracteres para melhor alcance, e a legenda do Instagram aceita até 2.200, mas só 125 aparecem antes do corte 'mais'. Emojis complicam a conta — na codificação UTF-16, usada pelo X, a maioria conta como 2 caracteres por causa dos pares substitutos, mesmo aparecendo como um único símbolo.",
         "howToUse": [
-          "Cole ou digite seu texto na área de entrada — a contagem de caracteres é atualizada instantaneamente.",
-          "Verifique a estatística 'Caracteres' para a contagem total, incluindo espaços.",
-          "Verifique 'Caracteres (sem espaços)' se a plataforma excluir espaços do limite.",
-          "Compare a contagem com o limite de destino para a sua plataforma.",
-          "Edite seu texto diretamente na caixa e observe a contagem diminuir à medida que você o apara para caber."
+          "Cole ou digite o texto na área de entrada — a contagem se atualiza na hora.",
+          "Veja o número 'Caracteres' para o total com espaços.",
+          "Veja 'Caracteres (sem espaços)' se a plataforma não contar espaços no limite.",
+          "Compare a contagem com o limite da sua plataforma (280 no X, 160 em SMS, 50–60 em meta títulos).",
+          "Edite direto na caixa e acompanhe a contagem baixar enquanto você corta o texto para caber."
         ],
-        "whyItMatters": "Exceder o limite de caracteres de uma plataforma trunca a mensagem ou impede a postagem. Para SEO, um meta título com mais de 60 caracteres é cortado nos resultados de pesquisa com reticências. Para campanhas de marketing por SMS, cada segmento acima de 160 caracteres dobra o custo por mensagem enviada — um pequeno excesso em milhares de envios se acumula rapidamente.",
-        "proTip": "Ao escrever para o Twitter/X, lembre-se de que as URLs são sempre contadas como 23 caracteres, independentemente do comprimento real — o encurtador t.co envolve cada link. Portanto, uma URL de 200 caracteres ainda custa apenas 23 caracteres na sua postagem."
+        "whyItMatters": "Passar do limite de caracteres de uma plataforma ou trunca a mensagem em silêncio ou impede a publicação. No SEO, um meta título acima de 60 caracteres é cortado com reticências nos resultados do Google, o que reduz os cliques porque o leitor vê um título incompleto. Meta descrições acima de 160 caracteres são cortadas do mesmo jeito, desperdiçando a chance de persuasão. Em campanhas de SMS, cada segmento acima de 160 caracteres dobra o custo por mensagem — um pequeno excesso multiplicado por milhares de envios pesa rápido. Saber a contagem exata antes de publicar evita esses erros caros.",
+        "proTip": "Ao escrever para o Twitter/X, lembre-se de que links são sempre contados como 23 caracteres, não importa o tamanho real da URL — o encurtador t.co embrulha todo link automaticamente. Então uma URL de 200 caracteres custa apenas 23 no seu post. Considere isso no orçamento de caracteres quando o tweet tiver link e use o resto para a mensagem em si."
       }
     },
     "sentenceCounter": {
@@ -831,20 +867,32 @@
         },
         {
           "question": "Qual é a média de palavras por frase para uma leitura fácil?",
-          "answer": "A fórmula de legibilidade Flesch usa palavras por frase como métrica principal. Busque 15–20 palavras por frase para públicos em geral. Frases acima de 30 palavras são consideradas difíceis."
+          "answer": "A fórmula de legibilidade Flesch usa palavras por frase como métrica principal. Busque 15–20 palavras por frase para o público em geral. Frases acima de 30 palavras são consideradas difíceis."
+        },
+        {
+          "question": "O contador conta frases com ponto e vírgula ou reticências?",
+          "answer": "A quebra é feita nos sinais de fim de frase mais comuns: ponto final, exclamação e interrogação seguidos de espaço ou fim do texto. Ponto e vírgula é tratado como pausa interna, não como fim de frase; reticências no meio do parágrafo podem gerar pequenas variações."
+        },
+        {
+          "question": "Por que o número de frases não bate com a minha contagem manual?",
+          "answer": "Abreviações com ponto (Sr., Dra., etc.), números decimais (3.14) e siglas podem ser lidos como fim de frase. Em textos técnicos com muitos desses casos, espere uma diferença de uma ou duas frases em relação à contagem à mão."
+        },
+        {
+          "question": "Meu texto fica salvo em algum lugar?",
+          "answer": "Não. Toda a análise acontece no seu navegador e o texto não é enviado para nenhum servidor. Ao fechar a aba, o conteúdo é descartado."
         }
       ],
       "richContent": {
-        "whatIs": "Um contador de frases conta o número de frases completas no seu texto — cada uma terminando com ponto final, ponto de exclamação ou ponto de interrogação. Além da simples contagem, a análise de frases é uma entrada essencial para fórmulas de legibilidade. Frases muito longas diminuem drasticamente as pontuações de legibilidade e aumentam a carga cognitiva. A contagem de frases também é relevante para a redação acadêmica e edição de conteúdo.",
+        "whatIs": "O contador de frases conta quantas frases completas existem no seu texto — cada uma encerrada por ponto final, exclamação ou interrogação. Além da contagem simples, a análise de frases alimenta as fórmulas de legibilidade: tanto a pontuação Flesch Reading Ease quanto o Flesch-Kincaid Grade Level usam o comprimento médio da frase (palavras por frase) como variável principal. Frases muito longas — acima de 30 palavras — derrubam bastante a legibilidade e aumentam o esforço de leitura. A contagem de frases também importa na redação acadêmica, em que alguns trabalhos definem um mínimo de frases por parágrafo, e na edição de conteúdo, em que identificar frases longas ou curtas demais ajuda a melhorar o ritmo do texto.",
         "howToUse": [
-          "Cole seu texto na área de entrada — a contagem de frases é atualizada automaticamente.",
+          "Cole seu texto na área de entrada — a contagem de frases se atualiza automaticamente.",
           "Leia a contagem de frases e observe a média de palavras por frase.",
-          "Identifique suas frases mais longas — essas são as melhores candidatas para divisão para melhorar a legibilidade.",
-          "Almeje uma média de 15–20 palavras por frase para o público em geral.",
-          "Edite frases diretamente na caixa e observe a média ser atualizada em tempo real."
+          "Identifique as frases mais longas — são as melhores candidatas a serem divididas para ganhar legibilidade.",
+          "Mire numa média de 15–20 palavras por frase para o público em geral.",
+          "Edite direto na caixa e acompanhe a média se ajustando em tempo real conforme você revisa."
         ],
-        "whyItMatters": "Pesquisas mostram que os leitores online folheiam em vez de ler — em média, lendo apenas 20–28% das palavras. Frases curtas e variadas reduzem a carga cognitiva. O ponto ideal para a maioria do público é uma mistura — em sua maioria, frases de 8 a 15 palavras com toques curtos ocasionais para dar ênfase e frases mais longas para explicação detalhada.",
-        "proTip": "Na redação de negócios, almeje um comprimento médio de frase de 15 a 20 palavras. A redação acadêmica pode chegar a 25–30 palavras, mas deve compensar com uma estrutura clara de parágrafos."
+        "whyItMatters": "Estudos do Nielsen Norman Group mostram que o leitor on-line escaneia em vez de ler — consome em média só 20% a 28% das palavras de uma página. Frases curtas e variadas reduzem o esforço e prendem o leitor por mais tempo. Variar o comprimento também cria ritmo: um texto só de frases curtas soa robótico e picotado, enquanto um texto só de frases longas cansa. O ponto de equilíbrio para a maioria dos públicos é a mistura — frases de 8 a 15 palavras na maior parte, com frases curtas ocasionais para dar ênfase e frases mais longas para explicações detalhadas. Conferir a contagem ajuda a auditar o ritmo e a pegar parágrafos que incharam durante a edição.",
+        "proTip": "Na redação corporativa, mire numa média de 15 a 20 palavras por frase. Textos acadêmicos podem chegar a 25–30 palavras, desde que compensem com estrutura clara de parágrafos e frases-tópico. Se a sua média passa de 25 palavras, localize os 30% de frases mais longas e quebre cada uma numa conjunção ou fronteira de oração natural — a maioria dos leitores não percebe a mudança, mas a compreensão melhora de forma mensurável."
       }
     },
     "readabilityChecker": {
@@ -1118,10 +1166,30 @@
           {
             "question": "Como posso reduzir o total de juros pagos?",
             "answer": "Você pode reduzir os juros totais dando uma entrada maior, escolhendo um prazo mais curto ou fazendo pagamentos extras de principal sempre que possível."
+          },
+          {
+            "question": "Quais fatores afetam o valor da parcela?",
+            "answer": "Os três principais são o valor emprestado (principal), a taxa de juros e o prazo. Um principal maior ou uma taxa maior aumentam a parcela; um prazo mais longo dilui os pagamentos e reduz cada parcela — mas você paga mais juros no total."
+          },
+          {
+            "question": "Qual a diferença entre taxa de juros e CET?",
+            "answer": "A taxa de juros é o custo anual de tomar o principal emprestado. O CET (Custo Efetivo Total) soma a taxa de juros mais tarifas, seguros e encargos obrigatórios, dando o retrato completo do custo. Ao comparar propostas, o CET é o número certo a usar."
+          },
+          {
+            "question": "Posso usar esta calculadora para financiamento de carro?",
+            "answer": "Pode. Ela funciona para qualquer empréstimo com parcelas fixas — crédito pessoal, financiamento de veículo, consignado, crédito estudantil. Basta inserir o valor, a taxa e o prazo em meses para ver a parcela e a tabela de amortização completa."
+          },
+          {
+            "question": "Prazo mais curto ou mais longo é melhor?",
+            "answer": "Depende da sua prioridade. Um prazo curto economiza bastante em juros e quita a dívida mais cedo, mas exige parcelas maiores. Um prazo longo libera caixa todo mês e custa mais no total. Use a calculadora para comparar os dois cenários lado a lado."
+          },
+          {
+            "question": "Existe multa por quitação antecipada?",
+            "answer": "No Brasil, a legislação garante desconto proporcional dos juros ao quitar um empréstimo antes do prazo, e a maioria dos contratos não cobra multa por isso. Ainda assim, confirme as condições no seu contrato antes de fazer um pagamento antecipado grande."
           }
         ],
         "richContent": {
-          "whatIs": "Uma calculadora de empréstimo estima sua prestação mensal para qualquer empréstimo com parcelas fixas — crédito pessoal, empréstimo consignado, financiamento de veículos ou qualquer valor tomado a juros fixos por um prazo determinado. Cada prestação cobre primeiro os juros acumulados, depois reduz o saldo devedor. É fundamental entender a diferença entre a taxa de juros nominal e o CET (Custo Efetivo Total): o CET inclui taxas administrativas, seguros obrigatórios e outros encargos, sendo o valor real do empréstimo. Os bancos são obrigados a informar o CET, e é ele — não a taxa nominal — que deve ser comparado entre diferentes ofertas.",
+          "whatIs": "Uma calculadora de empréstimo estima sua prestação mensal para qualquer empréstimo com parcelas fixas — crédito pessoal, empréstimo consignado, financiamento de veículos ou qualquer valor tomado a juros fixos por um prazo determinado. Cada prestação cobre primeiro os juros acumulados, depois reduz o saldo devedor. É fundamental entender a diferença entre a taxa de juros nominal e o CET (Custo Efetivo Total): o CET inclui taxas administrativas, seguros obrigatórios e outros encargos, sendo o valor real do empréstimo. Os bancos são obrigados a informar o CET, e é ele — não a taxa nominal — que deve ser comparado entre diferentes ofertas. Uma taxa mensal baixa pode esconder um CET alto se o contrato tiver muitos encargos embutidos.",
           "howToUse": [
             "Insira o valor do empréstimo — o total que você deseja tomar, antes de qualquer taxa.",
             "Insira a taxa de juros anual. Use o CET da proposta para o custo total mais preciso.",
@@ -1871,20 +1939,37 @@
           },
           {
             "question": "Posso adicionar o logotipo da minha empresa?",
-            "answer": "Sim — clique no botão Logo para fazer upload do logotipo. Ele aparecerá no topo do recibo."
+            "answer": "Sim — clique no botão Logo para enviar o logotipo. Ele aparece no topo do recibo."
+          },
+          {
+            "question": "O que um recibo válido precisa conter?",
+            "answer": "Data da transação, nome e contato de quem emite, descrição dos produtos ou serviços, valor total pago, forma de pagamento (dinheiro, cartão, transferência, Pix) e qualquer imposto destacado. Para pessoa física prestando serviço, é comum incluir também o CPF de quem paga e de quem recebe."
+          },
+          {
+            "question": "Um recibo digital tem a mesma validade de um em papel?",
+            "answer": "Para fins de comprovação de despesa, reembolso e organização contábil, sim — na maioria dos casos o recibo em PDF é equivalente ao de papel e ainda tem a vantagem de não desbotar. Para situações que exigem documento fiscal (nota fiscal), o recibo não substitui a NF-e."
+          },
+          {
+            "question": "Quando devo emitir um recibo em vez de uma nota fiscal?",
+            "answer": "O recibo serve como comprovante simples de que um pagamento foi feito — útil para aluguel, serviços autônomos, acertos entre pessoas físicas e pagamentos em dinheiro. Empresas que vendem produtos ou prestam serviços tributados normalmente precisam emitir nota fiscal; o recibo é um complemento, não o documento fiscal."
+          },
+          {
+            "question": "Posso reutilizar os dados do emissor em recibos futuros?",
+            "answer": "Pode. Os dados ficam salvos no localStorage do seu navegador, então da próxima vez o nome e o contato do seu negócio já vêm preenchidos. Nada é enviado para um servidor — a informação fica só no seu dispositivo."
           }
         ],
         "richContent": {
-          "whatIs": "Um recibo é um documento emitido após o recebimento de um pagamento. Ele difere de uma fatura: uma fatura é um pedido de pagamento; um recibo é a prova de pagamento. Um recibo válido deve incluir a data, os dados do vendedor, uma descrição, o valor total, o método de pagamento e qualquer imposto coletado. Recibos digitais são legalmente equivalentes aos de papel e preferíveis porque estes últimos tendem a desbotar.",
+          "whatIs": "Um recibo é um documento emitido depois que o pagamento é recebido, confirmando que a transação foi concluída. Ele difere de uma fatura: a fatura é um pedido de pagamento emitido antes do pagamento; o recibo é a prova de pagamento emitida depois. Um recibo válido deve trazer a data da transação, o nome e o contato de quem emite, a descrição dos produtos ou serviços, o valor total pago, a forma de pagamento (dinheiro, cartão, transferência, Pix) e qualquer imposto destacado. Recibos digitais são, na maioria das situações, equivalentes aos de papel para fins de imposto e reembolso, e são preferíveis porque o papel térmico desbota com o tempo.",
           "howToUse": [
-            "Insira o nome do pagador e a data da transação.",
-            "Preencha o nome e o contato do seu negócio como emissor.",
-            "Adicione linhas descrevendo o que foi comprado e os respetivos valores.",
-            "Indique o método de pagamento.",
-            "Revise o total e baixe em PDF, fornecendo uma cópia ao cliente."
+            "Insira o nome de quem pagou (pessoa física ou empresa) e a data da transação.",
+            "Preencha o nome e o contato do seu negócio como emissor do recibo.",
+            "Adicione linhas descrevendo o que foi comprado ou pago, com os valores individuais.",
+            "Registre a forma de pagamento usada — dinheiro, cartão, transferência, Pix ou outra.",
+            "Confira o total e verifique se bate com o valor recebido.",
+            "Baixe em PDF para o seu arquivo e entregue uma cópia a quem pagou."
           ],
-          "whyItMatters": "As autoridades tributárias exigem recibos para despesas comerciais dedutíveis. A organização digital cria um rastro de auditoria fiável e previne o problema comum de recibos perdidos ou apagados. Para transações em dinheiro, o recibo é a documentação necessária para fundamentar o negócio.",
-          "proTip": "Guarde recibos de qualquer despesa comercial superior a um limite relevante ($75 nos EUA). A prática recomendada é fotografar recibos de papel imediatamente e arquivá-los digitalmente por ano e categoria. Os recibos em papel térmico desvanecem rapidamente — a foto digital é o seu registro permanente."
+          "whyItMatters": "Autoridades tributárias exigem comprovantes para despesas dedutíveis, e muitas empresas pedem recibo para qualquer reembolso de despesa. Organizar recibos em formato digital cria uma trilha de auditoria confiável para o fechamento contábil do ano e evita o problema comum do recibo de papel perdido ou apagado. Para transações em dinheiro em especial — caixa pequeno, pagamento a fornecedor, taxa de serviço paga à vista — o recibo gerado cria a documentação necessária para justificar o gasto em caso de auditoria ou disputa.",
+          "proTip": "Guarde o recibo de qualquer despesa que você pretende deduzir ou pedir reembolso, principalmente as pagas em dinheiro, que não deixam rastro no extrato. A boa prática é fotografar o recibo de papel na hora e arquivar o digital por ano e categoria (por exemplo, 2026/Viagem/, 2026/Refeições/). Recibo de papel térmico desbota em um a três anos — a foto ou o PDF é o seu registro permanente de verdade."
         }
       },
       "fields": {
@@ -3059,21 +3144,41 @@
         },
         {
           "question": "Posso votar nos itens?",
-          "answer": "Sim — clique no ícone de positivo em qualquer nota para votar. Votar ajuda a equipe a priorizar quais tópicos discutir primeiro."
+          "answer": "Sim — clique no ícone de positivo em qualquer nota para votar. A votação por pontos ajuda o time a priorizar quais tópicos discutir primeiro."
+        },
+        {
+          "question": "O que é uma retrospectiva de sprint?",
+          "answer": "É a cerimônia ágil no fim de cada sprint em que o time reflete sobre como trabalhou junto — não sobre o que construiu, mas sobre como construiu. A meta é identificar melhorias concretas para levar ao próximo sprint."
+        },
+        {
+          "question": "Com que frequência o time deve fazer retrospectiva?",
+          "answer": "No Scrum, uma por sprint — ou seja, a cada uma a quatro semanas, conforme a duração do sprint. A maioria dos times acha que uma cadência de duas semanas dá tempo de implementar mudanças antes da retro seguinte."
+        },
+        {
+          "question": "Vários membros do time podem usar ao mesmo tempo?",
+          "answer": "A ferramenta roda inteiramente no navegador, sem back-end, então não há colaboração multiusuário em tempo real. O recomendado é o facilitador conduzir o quadro em uma tela compartilhada e digitar as notas conforme o time discute cada item."
+        },
+        {
+          "question": "Como exporto as notas da retrospectiva?",
+          "answer": "Clique em 'Exportar como Markdown' para copiar o quadro completo formatado. Depois cole no Confluence, Notion, em uma issue do GitHub, no Slack ou em qualquer ferramenta que renderize Markdown, preservando as notas para consulta futura."
+        },
+        {
+          "question": "Qual o melhor formato de retro para times remotos?",
+          "answer": "O formato de três colunas (Funcionou Bem / A Melhorar / Itens de Ação) é o mais usado e funciona bem no remoto porque é simples, focado e fácil de explicar para quem chegou agora. Para variar, alguns times alternam com Começar / Parar / Continuar ou com o 4Ls (Gostou, Aprendeu, Faltou, Desejou)."
         }
       ],
       "richContent": {
-        "whatIs": "A retrospectiva da sprint é a cerimônia Scrum realizada no final de cada sprint onde a equipe reflete sobre o que correu bem, o que não correu e o que melhorar. O formato mais usado é Começar/Parar/Continuar. Outros formatos populares incluem o 4Ls (Gostou, Aprendeu, Faltou, Desejou), e Louco/Triste/Feliz. O objetivo é criar resultados acionáveis: cada retrospectiva deve produzir de um a três itens de melhoria concretos com proprietários nomeados.",
+        "whatIs": "A retrospectiva de sprint é a cerimônia Scrum feita no fim de cada sprint em que o time reflete sobre o que funcionou bem, o que não funcionou e o que melhorar. O formato mais usado é Começar/Parar/Continuar — o que o time deveria começar a fazer, parar de fazer e continuar fazendo. Outros formatos populares incluem o 4Ls (Gostou, Aprendeu, Faltou, Desejou), que traz feedback positivo e aspiracional, e o Louco/Triste/Feliz, que organiza a retro em torno das respostas emocionais e é especialmente eficaz quando o moral do time é uma preocupação. A meta de toda retrospectiva são resultados acionáveis: cada retro deve produzir de um a três itens de melhoria concretos com responsáveis nomeados, não só uma sessão de desabafo. Times que tratam a retro como um lugar para expor sentimentos sem se comprometer com mudanças veem a cerimônia perder credibilidade e presença em poucos sprints.",
         "howToUse": [
-          "Selecione um formato de retrospectiva.",
-          "Abra o quadro e faça com que cada membro da equipe adicione observações (10 minutos, sem discussão ainda).",
-          "Agrupe itens semelhantes ou duplicados para reduzir o ruído antes de votar.",
-          "Faça uma votação por pontos (dot-vote): cada um recebe de 3 a 5 votos.",
-          "Discuta os itens mais votados em ordem.",
-          "Para cada ponto, atribua um item de ação a um responsável com uma data de vencimento."
+          "Escolha um formato de retro — Começar/Parar/Continuar para uso geral, 4Ls para times focados em aprendizado, Louco/Triste/Feliz quando o moral ou as emoções precisam de atenção.",
+          "Abra o quadro e peça que cada pessoa adicione observações nas colunas certas durante a fase de escrita (10 minutos, ainda sem discussão).",
+          "Agrupe itens parecidos ou duplicados para reduzir o ruído antes de votar.",
+          "Faça a votação por pontos: cada participante recebe de 3 a 5 votos para gastar nos itens que considera mais importantes — pode concentrar todos em um só.",
+          "Discuta os itens mais votados em ordem, dedicando mais tempo onde os votos se concentram.",
+          "Para cada ponto discutido, atribua um item de ação concreto a um responsável nomeado, com prazo antes do próximo sprint."
         ],
-        "whyItMatters": "As equipes que realizam retrospectivas regulares melhoram a velocidade do sprint ao longo do tempo. O maior anti-padrão nas retrospectivas é discutir os mesmos problemas repetidamente sem resolução. As retrospectivas também constroem segurança psicológica quando bem facilitadas.",
-        "proTip": "Limite a retrospectiva estritamente: 45 minutos para um sprint de 2 semanas. Nunca termine uma retrospectiva sem proprietários nomeados para cada item de ação."
+        "whyItMatters": "Times que fazem retrospectivas regulares e focadas em ação melhoram a velocidade do sprint com o tempo, porque eliminam de forma sistemática o atrito que os desacelera. O maior anti-padrão da retro é discutir os mesmos problemas sprint após sprint sem resolução — se o mesmo item aparece no quadro três sprints seguidos, é sinal de um problema sistêmico que precisa ser escalado para além da retro. Retrospectivas bem facilitadas também constroem segurança psicológica: quando as pessoas veem que levantar uma preocupação leva a uma mudança real, elas confiam no processo e participam com mais franqueza. Times que pulam a retro acumulam disfunção não tratada que acaba descarrilando os sprints por completo.",
+        "proTip": "Limite o tempo da retro com rigor: 45 minutos para um sprint de 2 semanas. Reserve 10 minutos para adicionar itens, 5 para agrupar, 5 para a votação por pontos e 25 para discutir os itens mais votados e atribuir responsáveis. Nunca encerre uma retro sem um responsável nomeado por item de ação — 'o time' ser dono de algo significa que ninguém é dono, e o item volta ao quadro do próximo sprint sem mudança."
       }
     },
     "standupGenerator": {
@@ -3117,21 +3222,45 @@
         },
         {
           "question": "O que devo colocar no campo Bloqueios?",
-          "answer": "Qualquer coisa que impeça seu progresso: aguardando revisão de código, uma dependência não pronta, requisitos pouco claros ou uma API externa fora do ar. Se não houver bloqueios, deixe em branco — o gerador escreverá 'Nenhum' automaticamente."
+          "answer": "Qualquer coisa que impeça seu progresso: aguardando revisão de código, uma dependência não pronta, requisitos pouco claros ou uma API externa fora do ar. Se não houver bloqueios, deixe em branco — o gerador escreve 'Nenhum' automaticamente."
+        },
+        {
+          "question": "Quais são as três perguntas do standup?",
+          "answer": "As três perguntas clássicas são: (1) O que concluí ontem? (2) No que estou trabalhando hoje? (3) Há algum bloqueio ou impedimento atrapalhando meu progresso? Elas mantêm a reunião focada e dentro do tempo."
+        },
+        {
+          "question": "Quanto tempo deve durar um standup?",
+          "answer": "No Scrum, o standup é limitado a 15 minutos. Na prática, times de 5 a 8 pessoas costumam terminar em 10 minutos ou menos. Se o seu standup passa disso com frequência, geralmente é sinal de que as discussões de solução deveriam ir para outra reunião."
+        },
+        {
+          "question": "Por que alguns times abandonam o standup?",
+          "answer": "Normalmente quando a reunião deixa de agregar valor — em geral porque virou um relatório de status para a gerência em vez de uma sincronização entre pares. Manter o standup curto, focado e horizontal (não de cima para baixo) recupera o valor dele."
+        },
+        {
+          "question": "Posso personalizar o modelo do standup?",
+          "answer": "O gerador usa o formato padrão de três perguntas. Depois de copiar a saída, você pode editar à vontade antes de colar no canal do time, adaptando ao formato que a sua equipe preferir."
+        },
+        {
+          "question": "Qual a diferença entre standup e relatório de status?",
+          "answer": "O standup é uma sincronização entre colegas de time — serve para coordenar o trabalho e trazer bloqueios à tona. O relatório de status é uma prestação de contas de uma pessoa para um gestor ou stakeholder. Misturar os dois é um anti-padrão comum que faz o standup parecer vigilância e reduz a eficácia."
+        },
+        {
+          "question": "Quando usar standup assíncrono?",
+          "answer": "Funciona bem para times distribuídos em vários fusos horários, onde marcar uma reunião ao vivo é inviável. Cada pessoa posta o update de Ontem / Hoje / Bloqueios em um canal compartilhado no próprio início do dia. Este gerador é ideal para formatar essas mensagens."
         }
       ],
       "richContent": {
-        "whatIs": "A reunião diária (daily Scrum) é uma cerimônia de sincronização de 15 minutos onde cada membro da equipe responde: O que fiz ontem? O que farei hoje? O que me bloqueia? O objetivo é identificar bloqueios precocemente, não entregar atualizações de status à gerência. Para equipes distribuídas em diferentes fusos horários, a reunião assíncrona é uma alternativa eficaz.",
+        "whatIs": "A reunião diária (daily Scrum) é uma cerimônia de sincronização de no máximo 15 minutos em que cada pessoa do time responde três perguntas: O que fiz ontem? O que farei hoje? O que está me bloqueando? Ela nasceu no Guia Scrum como um evento de sincronização entre pares — o objetivo é identificar bloqueios cedo e manter o time coordenado, não entregar status para a gerência. Quando o standup vira relatório para o Scrum Master ou para um gestor, ele perde o valor de coordenação e passa a parecer vigilância. Para times distribuídos entre fusos horários, o standup assíncrono é uma alternativa eficaz: cada pessoa posta o update de três perguntas em um canal compartilhado no próprio início do dia, passando a mesma informação sem exigir que todo mundo esteja on-line ao mesmo tempo.",
         "howToUse": [
-          "Selecione os participantes.",
-          "Para cada um, insira o que concluiu ontem.",
-          "Insira no que planejam trabalhar hoje.",
-          "Insira bloqueios ou impedimentos — ou deixe em branco.",
-          "Clique em Gerar Standup para produzir um resumo formatado.",
-          "Copie a saída e cole no Slack, Microsoft Teams, etc."
+          "Selecione os participantes do standup de hoje.",
+          "Para cada participante, escreva o que foi concluído ontem no campo Ontem.",
+          "Escreva o que a pessoa planeja fazer hoje no campo Hoje.",
+          "Escreva bloqueios ou impedimentos no campo Bloqueios — deixe em branco se não houver.",
+          "Clique em Gerar Standup para produzir um resumo limpo e formatado.",
+          "Copie a saída e cole no Slack, Microsoft Teams, e-mail ou no canal de standup do time."
         ],
-        "whyItMatters": "A reunião diária é frequentemente mal utilizada como um relatório de status. Quando se torna isso, deixa de revelar bloqueios. Um standup que revela um bloqueio por semana economiza mais tempo do que custa.",
-        "proTip": "Se a sua reunião exceder 15 minutos, aplique a regra do 'estacionamento': marque discussões detalhadas para depois da reunião apenas com as pessoas relevantes."
+        "whyItMatters": "O standup é a cerimônia Scrum mais mal utilizada. Quando vira um relatório de status para um gestor em vez de uma sincronização entre pares, ele para de trazer bloqueios à tona cedo — que é toda a razão de existir dele. Um standup de 15 minutos que revela um bloqueio por semana economiza mais tempo do que custa: bloqueios sem solução por dias se acumulam em fracasso de sprint. O standup assíncrono é especialmente valioso para times globalmente distribuídos, permitindo a mesma troca de informação sem o custo de fuso horário de uma reunião ao vivo. Este gerador garante que o update saia bem formatado toda vez, reduzindo o esforço de escrever um standup do zero a cada manhã.",
+        "proTip": "Se o seu standup passa dos 15 minutos com frequência, aplique a regra do estacionamento (parking lot): marque as discussões detalhadas para depois do standup, só com quem é relevante. O standup é para sinalizar bloqueios, não para resolvê-los. A solução acontece na reunião de estacionamento logo em seguida, com as pessoas que precisam participar — todo o resto fica livre para começar o dia."
       }
     },
     "planningPoker": {
@@ -3171,20 +3300,41 @@
         },
         {
           "question": "Esta ferramenta é multiplayer?",
-          "answer": "Esta versão é single-player — útil para o facilitador coletar votos verbalmente ou em uma sessão de tela compartilhada."
+          "answer": "Esta versão é single-player — útil para o facilitador coletar os votos verbalmente ou em uma sessão de tela compartilhada. Cada pessoa escolhe a carta e o facilitador registra o consenso."
+        },
+        {
+          "question": "O que os números Fibonacci representam no planning poker?",
+          "answer": "A sequência (1, 2, 3, 5, 8, 13, 21...) representa story points — uma medida relativa de esforço, complexidade e incerteza, não de horas. Os intervalos maiores entre números altos refletem a imprecisão natural de estimar pedaços grandes de trabalho."
+        },
+        {
+          "question": "Como o planning poker evita o viés de ancoragem?",
+          "answer": "Todos escolhem a estimativa em segredo e revelam as cartas ao mesmo tempo. Assim a primeira pessoa a falar não ancora o julgamento das demais. Quando as estimativas divergem muito, abre-se uma discussão produtiva em vez de um consenso de manada."
+        },
+        {
+          "question": "Quantas pessoas participam de uma sessão?",
+          "answer": "Funciona melhor com 3 a 8 participantes — normalmente o time de desenvolvimento mais o Scrum Master. Grupos maiores conseguem participar, mas a discussão depois de revelar estimativas divergentes fica mais difícil de conduzir com eficiência."
+        },
+        {
+          "question": "O que fazer quando as estimativas são muito diferentes?",
+          "answer": "Uma divergência grande é valiosa: sinaliza diferença de entendimento ou de abordagem. Peça a quem estimou mais alto e mais baixo que expliquem o raciocínio. Isso costuma revelar um requisito esquecido, uma preocupação técnica ou uma implementação mais simples que nenhum dos lados tinha considerado."
+        },
+        {
+          "question": "Planning poker serve só para times de software?",
+          "answer": "Não. Qualquer time que precise estimar esforço relativo pode usar. Times de conteúdo, de marketing e de operações usam para dimensionar projetos e priorizar backlogs, mesmo sem um contexto formal de desenvolvimento de software."
         }
       ],
       "richContent": {
-        "whatIs": "O Planning Poker é uma técnica de estimativa baseada em consenso onde os membros da equipe revelam suas estimativas de pontos simultaneamente para evitar o viés de ancoragem. Os valores das cartas seguem a sequência de Fibonacci (0, 1, 2, 3, 5, 8, 13...). Os pontos da história são uma unidade relativa de esforço, não uma unidade de tempo.",
+        "whatIs": "O planning poker (ou Scrum poker) é uma técnica de estimativa por consenso em que os membros do time revelam suas estimativas de story points ao mesmo tempo, para evitar o viés de ancoragem. Se alguém revela a estimativa primeiro, os outros tendem a se ancorar naquele número — a revelação simultânea impede isso e faz aparecer a discordância real. Os valores das cartas seguem uma sequência inspirada em Fibonacci: 0, 1, 2, 3, 5, 8, 13, 20, 40, 100, ? e infinito. Fibonacci funciona melhor que uma escala linear porque os intervalos crescentes entre números grandes refletem a incerteza real da estimativa — uma história de 40 pontos não é só duas vezes mais complexa que uma de 20, ela carrega muito mais desconhecidos. Story points são uma unidade relativa de esforço, não de tempo: uma história de 5 pontos é simplesmente entendida como mais trabalho que uma de 3, segundo a escala que o próprio time define.",
         "howToUse": [
-          "Adicione os membros da equipe que participarão.",
-          "Apresente a história do usuário.",
-          "Cada membro seleciona sua estimativa privada.",
-          "Revele todas as estimativas simultaneamente.",
-          "Se as estimativas estiverem próximas, aceite o consenso. Se divergirem amplamente, peça aos estimadores extremos que expliquem seus motivos e vote novamente."
+          "Adicione os membros do time que vão participar da estimativa.",
+          "Apresente a descrição da história ou tarefa para que todos entendam o que está sendo estimado.",
+          "Cada pessoa escolhe em segredo a estimativa de story points no baralho Fibonacci.",
+          "Revele todas as estimativas ao mesmo tempo — isso evita a ancoragem por influenciadores iniciais.",
+          "Se as estimativas estão próximas, aceite o consenso ou a média e registre o valor final.",
+          "Se divergem muito (por exemplo, uma pessoa escolhe 3 e outra 13), peça a quem estimou mais alto e mais baixo que expliquem o raciocínio e vote de novo."
         ],
-        "whyItMatters": "O Planning Poker revela divergências na estimativa que, de outra forma, ficariam ocultas, prevenindo o desalinhamento que causa o fracasso da sprint.",
-        "proTip": "Se uma equipe não conseguir chegar a um consenso após 2 rodadas, a história é muito grande ou muito obscura. Divida-a em histórias menores."
+        "whyItMatters": "O planning poker faz aparecer a discordância de estimativa que ficaria escondida de outra forma. Quando uma pessoa estima 3 pontos e outra estima 13 para a mesma história, elas estão partindo de premissas diferentes sobre escopo, abordagem técnica ou risco. Essa conversa — disparada pela diferença nas estimativas — evita o desalinhamento que causa fracasso de sprint no meio da entrega. Times que pulam a estimativa ou deixam uma pessoa ditar os números costumam descobrir, no meio do sprint, que a história era muito maior do que se supunha. A estimativa por consenso constrói entendimento compartilhado do trabalho antes de ele começar.",
+        "proTip": "Se o time não chega a consenso depois de 2 rodadas de votação, a história é grande demais ou obscura demais para estimar com confiança. Divida-a em histórias menores ou faça um spike — uma investigação com prazo fixo para resolver a incerteza antes de assumir um valor em pontos. Uma história em que o time não consegue concordar é uma história que vai falhar no sprint."
       }
     },
     "userStoryWriter": {
@@ -3228,20 +3378,40 @@
         },
         {
           "question": "Posso gerar várias histórias de uma vez?",
-          "answer": "Gere uma história por vez, copie-a, depois limpe o formulário e gere a próxima."
+          "answer": "Gere uma história por vez, copie o resultado, limpe o formulário e gere a próxima. Cada história sai com a formatação limpa, sem misturar com a anterior."
+        },
+        {
+          "question": "Qual a diferença entre uma user story e uma tarefa?",
+          "answer": "A user story descreve um resultado para o usuário ('Como cliente, quero rastrear meu pedido...'). A tarefa descreve o trabalho técnico para entregar isso ('criar endpoint de rastreio', 'ajustar o índice do banco'). Uma story costuma se desdobrar em várias tarefas."
+        },
+        {
+          "question": "O que são os critérios INVEST?",
+          "answer": "É um checklist para uma boa story: Independente (pode ser desenvolvida e entregue sozinha), Negociável (os detalhes são discutíveis), Valiosa (entrega valor real), Estimável (a equipe consegue dimensionar), Small/pequena (cabe em um sprint) e Testável (dá para verificar os critérios de aceitação)."
+        },
+        {
+          "question": "Devo escrever quantos critérios de aceitação?",
+          "answer": "Entre três e cinco por história costuma ser o ideal. Poucos deixam a definição de pronto vaga; muitos geralmente indicam que a story é grande demais e deveria ser dividida."
+        },
+        {
+          "question": "O que é o formato Dado/Quando/Então?",
+          "answer": "É a estrutura Gherkin para critérios de aceitação: 'Dado [pré-condição], Quando [ação do usuário], Então [resultado esperado]'. Cada critério nesse formato vira quase automaticamente um caso de teste."
+        },
+        {
+          "question": "Como sei que uma história está pronta para o sprint?",
+          "answer": "Ela precisa ter papel, funcionalidade e benefício claros, caber em um sprint e ter critérios de aceitação testáveis. Se a equipe não consegue escrever os critérios, a história ainda não está pronta para entrar no backlog do sprint."
         }
       ],
       "richContent": {
-        "whatIs": "Histórias de usuário são requisitos leves escritos na perspectiva do usuário: Como um [tipo de usuário], eu quero [ação], para que [benefício]. Boas histórias satisfazem os critérios INVEST. Uma história de usuário é diferente de uma tarefa e de um bug. O formato mantém o foco nos resultados do usuário e não na implementação técnica.",
+        "whatIs": "Histórias de usuário (user stories) são requisitos leves escritos do ponto de vista de quem usa o produto, no formato: Como [tipo de usuário], quero [ação ou funcionalidade], para que [benefício ou objetivo]. Uma boa história atende aos critérios INVEST: Independente (pode ser desenvolvida e entregue sem depender de outras), Negociável (os detalhes de implementação ficam abertos à conversa entre time e stakeholders), Valiosa (entrega valor real ao usuário ou ao negócio), Estimável (o time consegue dimensionar), Small — pequena o suficiente para caber em um sprint — e Testável (os critérios de aceitação podem ser verificados por quem testa). A história é diferente de uma tarefa (que descreve trabalho de implementação, não valor para o usuário) e de um bug (que descreve um desvio do comportamento esperado). O formato mantém o time focado no resultado para o usuário, não nos detalhes técnicos.",
         "howToUse": [
-          "Selecione o tipo de usuário ou função.",
-          "Descreva a funcionalidade ou ação.",
-          "Descreva o benefício ou objetivo.",
-          "Revise a história de usuário gerada.",
-          "Adicione de três a cinco critérios de aceitação no formato Dado/Quando/Então."
+          "Selecione o tipo de usuário ou papel — por exemplo, usuário logado, administrador, visitante ou uma persona específica.",
+          "Descreva em linguagem simples a funcionalidade ou ação que o usuário quer realizar.",
+          "Descreva o benefício ou objetivo — por que o usuário quer isso e que resultado a funcionalidade viabiliza.",
+          "Revise a história gerada no formato Como / quero / para que.",
+          "Adicione de três a cinco critérios de aceitação no formato Dado/Quando/Então para definir o que significa 'pronto' nessa história."
         ],
-        "whyItMatters": "Histórias de usuário mal escritas são a causa mais comum de fracasso do sprint. Histórias que misturam detalhes de implementação, sem critérios de aceitação ou grandes demais geram ambiguidade. Boas histórias tornam a estimativa precisa e os testes fáceis.",
-        "proTip": "Sempre escreva de três a cinco critérios de aceitação no formato: Dado [pré-condição], Quando [ação], Então [resultado]. Estes tornam-se seus casos de teste automaticamente."
+        "whyItMatters": "Histórias mal escritas são a causa mais comum de fracasso de sprint. Histórias que confundem implementação com resultado ('como usuário, quero um índice no banco' — isso é tarefa técnica, não história), histórias sem critérios de aceitação e histórias grandes demais para um sprint geram ambiguidade que descarrila o desenvolvimento. Quando a pessoa que desenvolve não entende por que a funcionalidade existe, ela toma decisões de implementação que não atendem à necessidade real do usuário. Boas histórias tornam a estimativa mais precisa e o teste de aceitação mais direto, porque o time e quem testa partem da mesma definição de pronto.",
+        "proTip": "Escreva sempre de três a cinco critérios de aceitação por história no formato Dado/Quando/Então: Dado [pré-condição], Quando [ação], Então [resultado esperado]. Eles viram seus casos de teste automaticamente — um critério bem escrito mapeia direto para um cenário de teste. Se você não consegue escrever critérios de aceitação para uma história, ela ainda não está pronta para entrar no backlog do sprint."
       }
     },
     "sprintDateCalculator": {
@@ -3429,20 +3599,36 @@
       },
       {
         "question": "Os dados são seguros?",
-        "answer": "Sim — toda a geração do QR Code acontece no seu navegador. Nenhuma informação é enviada para nossos servidores."
+        "answer": "Sim — toda a geração do QR Code acontece no seu navegador. Nenhuma informação é enviada para nossos servidores, e o conteúdo do código nunca passa pela internet."
+      },
+      {
+        "question": "O que é correção de erros no QR Code?",
+        "answer": "É a redundância que permite ler o código mesmo com parte dele danificada ou coberta. São quatro níveis: L (7% de tolerância a dano), M (15%), Q (25%) e H (30%). Este gerador usa o nível M, suficiente para a maioria dos usos; escolha H se for colocar um logotipo sobre o código."
+      },
+      {
+        "question": "Quanto de informação cabe em um QR Code?",
+        "answer": "Depende do tipo de conteúdo: URLs de até cerca de 2.500 caracteres, texto simples de até cerca de 4.300 e credenciais de WiFi em torno de 150. Quanto mais dados, mais denso o código e maior ele precisa ser impresso para continuar legível."
+      },
+      {
+        "question": "Qual o tamanho mínimo para imprimir?",
+        "answer": "Cerca de 2,5 cm × 2,5 cm (aproximadamente uma polegada quadrada), com bom contraste em relação ao fundo. Abaixo disso, câmeras de celular mais antigas podem ter dificuldade para focar e ler."
+      },
+      {
+        "question": "Qual a diferença entre QR Code estático e dinâmico?",
+        "answer": "O estático — como o gerado aqui — codifica o dado diretamente e não pode ser alterado depois de criado. O dinâmico redireciona por uma URL encurtada que pode ser trocada sem reimprimir o código. Para dinâmico é preciso um serviço externo que hospede o redirecionamento."
       }
     ],
     "richContent": {
-      "whatIs": "Um gerador de código QR cria códigos de barras bidimensionais que as câmeras dos smartphones leem diretamente. Eles armazenam texto, URLs ou Wi-Fi. Os níveis de correção de erros controlam a tolerância a danos.",
+      "whatIs": "Um gerador de QR Code cria códigos de barras bidimensionais que a câmera do celular lê diretamente — sem app extra em iOS e Android modernos. O QR Code foi inventado pela Denso Wave, no Japão, em 1994, para rastrear peças automotivas, e virou onipresente depois que o uso sem contato acelerou a partir de 2020. Ele armazena dados de texto: URLs, credenciais de WiFi, dados de contato ou texto puro. Os níveis de correção de erro controlam a tolerância a dano: L (7% do código pode ser danificado), M (15%), Q (25%) e H (30% — use H quando um logotipo cobrir parte do código). A capacidade máxima varia por tipo de conteúdo: URLs de até cerca de 2.500 caracteres, texto puro de até 4.300 e credenciais de WiFi em torno de 150. QR Codes estáticos codificam o dado direto; QR Codes dinâmicos redirecionam por uma URL encurtada que pode ser trocada sem reimprimir.",
       "howToUse": [
-        "Selecione o tipo de código QR.",
-        "Insira o conteúdo.",
-        "Selecione o tamanho de saída (PNG ou SVG).",
-        "Visualize o código QR gerado.",
-        "Faça o download."
+        "Selecione o tipo de QR Code: URL, texto simples, e-mail, telefone ou credenciais de WiFi.",
+        "Insira o conteúdo do tipo escolhido — cole uma URL, digite o texto ou preencha o SSID e a senha do WiFi.",
+        "Escolha o tamanho de saída: 256 px para tela, 512 px para impressão comum, 1024 px para grande formato ou SVG para resolução infinita.",
+        "Confira a pré-visualização para garantir que o código está correto e lê com facilidade.",
+        "Baixe como PNG para a maioria dos usos ou SVG para produção gráfica, onde a flexibilidade de resolução importa."
       ],
-      "whyItMatters": "Os códigos QR preenchem a lacuna entre o físico e o digital: os cartões de visita vinculam-se a portfólios, os menus são sem contato, etc.",
-      "proTip": "Teste sempre um código QR antes de imprimi-lo em escala com pelo menos dois telefones diferentes."
+      "whyItMatters": "O QR Code conecta o mundo físico ao digital: cartões de visita levam ao portfólio, cardápios de restaurante ficam sem contato, embalagens apontam para instruções de montagem e crachás de evento fazem o check-in do participante. Um QR Code de URL no cartão de visita é escaneado muito mais vezes do que a URL seria digitada à mão — tirar o atrito de digitar aumenta o engajamento diretamente. No compartilhamento de WiFi, o QR Code elimina o trabalho de ditar e digitar senhas de rede complexas. O tamanho mínimo confiável para impressão é de cerca de 2,5 cm × 2,5 cm, com bom contraste contra o fundo.",
+      "proTip": "Teste sempre o QR Code antes de imprimir em escala. Imprima uma cópia pequena de teste e escaneie com pelo menos dois celulares diferentes — um iOS e um Android — para confirmar que resolve nos dois. Um erro de digitação em um código impresso em 1.000 folhetos não tem conserto sem reimprimir toda a tiragem. Para QR de WiFi, confira se a senha está exatamente certa — um único caractere errado faz o código não conectar a nada."
     }
   },
   "healthCalculator": {
@@ -3759,20 +3945,36 @@
       },
       {
         "question": "Qual é minha idade se nasci em 1990?",
-        "answer": "Se você nasceu em 1990, atualmente tem 35 ou 36 anos dependendo do seu mês de nascimento e da data de hoje. Insira sua data de nascimento completa acima para um resultado preciso."
+        "answer": "Se você nasceu em 1990, hoje tem 35 ou 36 anos, dependendo do mês de nascimento e da data atual. Insira a data completa acima para um resultado preciso ao dia."
+      },
+      {
+        "question": "Como é contada a idade de quem nasceu em 29 de fevereiro?",
+        "answer": "Nos anos em que 29 de fevereiro não existe, a maioria dos países considera 28 de fevereiro (ou 1º de março, conforme a lei local) como a data do aniversário para fins legais. A calculadora completa o ano na virada de fevereiro para março."
+      },
+      {
+        "question": "A idade é contada de forma diferente em outros países?",
+        "answer": "Sim. O sistema coreano tradicional considera o bebê com 1 ano ao nascer e todos ganham um ano em 1º de janeiro, não no aniversário individual — então uma pessoa pode ser 'dois anos mais velha' nessa contagem. A maioria dos países, incluindo o Brasil, usa a idade cronológica a partir do dia do nascimento."
+      },
+      {
+        "question": "Meus dados de nascimento são enviados para algum servidor?",
+        "answer": "Não. Todo o cálculo acontece no seu navegador. A data que você digita não sai do dispositivo e nada é armazenado depois que você fecha a página."
+      },
+      {
+        "question": "Posso calcular a idade de outra pessoa ou de um pet?",
+        "answer": "Pode. Basta inserir a data de nascimento de quem você quiser — filho, familiar, animal de estimação — e a calculadora mostra a idade exata e a contagem até o próximo aniversário do mesmo jeito."
       }
     ],
     "richContent": {
-      "whatIs": "Uma calculadora de idade calcula a diferença exata entre uma data de nascimento e o dia de hoje (ou data alvo) em anos, meses e dias. Casos isolados tornam isso complexo: aniversários de ano bissexto, sistema de idade coreano e marcos legais.",
+      "whatIs": "A calculadora de idade calcula a diferença exata entre uma data de nascimento e o dia de hoje — ou qualquer data-alvo — em anos, meses e dias. Alguns casos tornam isso mais complexo do que uma subtração simples: aniversários em 29 de fevereiro (que só existe em anos bissextos — a maioria dos países usa 28 de fevereiro como data legal nos anos comuns), o sistema coreano de idade (em que a pessoa nasce com 1 ano e todos ganham um ano em 1º de janeiro, não no aniversário individual) e os marcos legais que variam por país (18 anos para votar e assinar contratos na maioria dos lugares, 21 para álcool nos Estados Unidos, 65 para aposentadoria integral nos EUA, 67 no Reino Unido). A contagem regressiva de aniversário mostra os dias exatos que faltam, útil para planejar comemorações e acompanhar transições legais.",
       "howToUse": [
-        "Insira a sua data de nascimento.",
-        "Opcionalmente, insira uma data-alvo.",
-        "Leia a sua idade exata.",
-        "Verifique a contagem regressiva de dias.",
-        "Use o recurso de idade futura para outras datas."
+        "Insira a data de nascimento pelo seletor de datas ou digitando dia, mês e ano.",
+        "Se quiser, informe uma data-alvo para calcular a idade em um momento específico — sem preencher, vale o dia de hoje.",
+        "Leia a sua idade exata em anos, meses e dias.",
+        "Confira a contagem regressiva de dias até o próximo aniversário para planejar a comemoração.",
+        "Use o recurso de idade futura para saber quantos anos você terá em qualquer data à frente."
       ],
-      "whyItMatters": "A idade exata é importante em contextos legais e médicos. Os cortes de matrícula na escola usam regras precisas, dosagens médicas para bebês e benefícios previdenciários.",
-      "proTip": "Para planejamento de aposentadoria, calcule a sua idade exata em 1º de janeiro do ano pretendido para garantir os benefícios corretamente."
+      "whyItMatters": "A idade exata pesa em muitos contextos legais e médicos. As datas de corte para matrícula escolar usam regras precisas de idade em um dia específico, que variam por rede e por país e definem se a criança entra em uma série um ano à frente ou atrás dos colegas. A dosagem pediátrica para crianças abaixo de dois anos usa a idade em meses, não em anos — uma criança de 16 meses e outra de 23 meses recebem doses diferentes. Faixas de prêmio de seguro, elegibilidade a benefícios e cálculos de aposentadoria também se apoiam em limites de idade específicos, em que faltar poucos dias pode mudar a data de início do benefício ou a faixa de cálculo.",
+      "proTip": "Para planejamento de aposentadoria, calcule a sua idade exata em 1º de janeiro de cada ano-alvo. A previdência e muitos planos de pensão usam regras de idade no ano — o valor ou a faixa de elegibilidade é definido pela sua idade em uma data específica do ano civil. Ficar três dias aquém de um corte pode adiar o início do benefício em meses ou jogar você em uma faixa de cálculo menor, algo que vale saber com antecedência."
     }
   },
   "about": {
