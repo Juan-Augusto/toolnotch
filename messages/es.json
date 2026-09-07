@@ -1831,35 +1831,47 @@
       "faqs": [
         {
           "question": "¿Puedo guardar mi ruleta?",
-          "answer": "Sí — tus elementos se guardan en la URL. Copia y guarda la URL como favorito para conservar tu ruleta o compartirla con otros."
+          "answer": "Sí. Los elementos que escribes quedan guardados dentro de la propia URL de la página. Copia la dirección de la barra del navegador y agrégala a favoritos o envíala a otras personas: quien abra el enlace verá la ruleta con exactamente las mismas opciones."
         },
         {
-          "question": "¿El giro es verdaderamente aleatorio?",
-          "answer": "Sí, el ganador se determina con Math.random() antes de que comience la animación. La animación de giro es solo para divertirse — el resultado ya está decidido."
+          "question": "¿El giro es realmente aleatorio?",
+          "answer": "Sí. El ganador lo sortea la función Math.random() antes de que empiece la animación. El giro en pantalla es solo un efecto visual: el resultado ya está decidido, y la forma en que la ruleta frena no cambia nada."
         },
         {
           "question": "¿Cuántos elementos puedo agregar?",
-          "answer": "Puedes agregar tantos elementos como quieras, aunque la ruleta se vuelve difícil de leer con más de 20 elementos."
+          "answer": "Los que quieras. En la práctica, por encima de unos 20 elementos las porciones quedan finas y difíciles de leer. Para listas largas conviene usar el Selector de Nombres, que maneja mejor a muchos participantes."
         },
         {
           "question": "¿Puedo usarla en el aula?",
-          "answer": "¡Claro que sí! Los docentes adoran la ruleta para elegir estudiantes, asignar temas y tomar decisiones aleatorias de forma justa."
+          "answer": "Sí, es uno de los usos favoritos. Pega los nombres del curso y gira para llamar a los alumnos al azar. La animación convierte la selección en un juego y elimina cualquier apariencia de que el docente está 'eligiendo' a alguien a propósito."
         },
         {
           "question": "¿En qué se diferencia de Wheel of Names?",
-          "answer": "Nuestra ruleta es completamente gratuita, no requiere cuenta, guarda tus elementos en la URL para compartirlos fácilmente y funciona en cualquier dispositivo, incluso sin conexión."
+          "answer": "La nuestra es totalmente gratuita, no pide registro, guarda los elementos en la URL para que los compartas con un enlace y funciona en cualquier dispositivo, incluso sin conexión una vez que la página carga."
+        },
+        {
+          "question": "¿Puedo poner cualquier tipo de opción en la ruleta?",
+          "answer": "Sí. Escribe una opción por línea en el cuadro de edición: nombres, tareas, temas de trabajo, restaurantes, premios, castigos de un juego. La ruleta se actualiza al instante mientras editas la lista."
+        },
+        {
+          "question": "¿Y si la ruleta cae en el mismo resultado dos veces seguidas?",
+          "answer": "Cada giro es independiente, así que repetir es posible por azar. Si quieres asegurarte de que cada opción salga una sola vez, usa el Selector de Nombres con la opción 'eliminar al elegir', que trabaja sin reemplazo."
+        },
+        {
+          "question": "¿Sirve para sorteos en vivo?",
+          "answer": "Sí. Carga los nombres de los participantes y gira frente a la audiencia para revelar al ganador al momento. Para listas muy grandes, el Selector de Nombres es más cómodo; la ruleta luce mejor cuando todas las opciones caben en la pantalla."
         }
       ],
       "richContent": {
-        "whatIs": "Un selector de rueda giratoria es un visualizador, seleccionador aleatorio presentado como una rueda quegazón con secciones personalizables. Los casos de uso incluyen juegos en clase, toma de decisiones en el trabajo (donde ordenar almorzar), juegos de fiesta, elegir entre opciones cuando estés paralizado por la indecisión y sorteos de premios gamificados. La animación que gira es puramente cosmológica — el resultado ganador se determina por el generador de números aleatorios antes de que comience la animación, asegurando una verdadera justicia independientemente de cómo vea la rueda mientras se desacelera.",
+        "whatIs": "La ruleta de decisión es un sorteador visual: las opciones aparecen como porciones de una rueda que gira y se detiene en una de ellas. Es útil en juegos de aula, en decisiones de oficina ('¿dónde pedimos el almuerzo hoy?'), en juegos de fiesta, a la hora de elegir entre alternativas cuando la indecisión te paraliza y en sorteos de premios con clima de programa de concursos. La animación del giro es solo un adorno: el resultado ganador lo sortea el generador de números aleatorios antes de que la rueda empiece a moverse, así que la imparcialidad no depende de cómo se ve la ruleta mientras frena.",
         "howToUse": [
-          "Añade tus opciones a la rueda escribiéndolas en el cuadro de edición, una por línea.",
-          "Haz clic en Spin para iniciar la animación de la rueda.",
-          "Observa cómo la rueda se desacelera y cae en el resultado seleccionado aleatoriamente.",
-          "Opcionalmente, elimina la opción ganadora antes del siguiente giro para evitar repetir."
+          "Agrega las opciones en el cuadro de edición, una por línea.",
+          "Haz clic en Girar para iniciar la animación de la rueda.",
+          "Observa cómo la ruleta frena y se detiene en el resultado sorteado.",
+          "Si quieres, borra la opción ganadora antes del siguiente giro para no repetir."
         ],
-        "whyItMatters": "El formato visual de quegazón hace que la selección aleatoria sea más atractiva y dramática que un texto plano. Para el uso en clase, los estudiantes responden mejor a la animación — lo convierte en un juego en lugar de una evaluación. Para premios y sorteos, la construcción mientras la rueda se desacelera aumenta la emoción y el valor percibido del resultado, haciendo que la experiencia sea más memorable para los participantes.",
-        "proTip": "La investigación sobre la fatiga en las decisiones muestra que cuando reaccionas al resultado de la rueda — ya sea que te sientas aliviado o decepcionado — obtienes información honesta sobre lo que realmente querías. Si la rueda cae en una opción y te das un flash de decepción, eso te dice cuál fue la opción que realmente preferiste. Usa la rueda como una herramienta reveladora de preferencias, no solo como un randomizador."
+        "whyItMatters": "El formato visual hace que el sorteo sea más entretenido y con más suspenso que un resultado en texto plano. En el aula, los estudiantes responden mejor a la animación: la selección se vuelve un juego, no una evaluación. En premiaciones y sorteos, la tensión mientras la rueda pierde velocidad aumenta la emoción y hace que el resultado se sienta más valioso, dejando la experiencia más memorable para quien mira.",
+        "proTip": "Estudios sobre fatiga de decisión sugieren un truco: presta atención a tu reacción ante el resultado. Si la ruleta se detiene en una opción y sientes alivio, era la que querías; si sientes una punzada de decepción, probablemente preferías otra. Usa el giro no solo como sorteo, sino como una forma de revelar la preferencia que todavía no te habías admitido."
       }
     },
     "wheelOfNames": {
@@ -1973,31 +1985,47 @@
       "faqs": [
         {
           "question": "¿Qué es 'elegir sin reemplazo'?",
-          "answer": "Cuando está activado, cada nombre elegido se elimina del grupo para que no pueda seleccionarse de nuevo. Ideal para rifas donde cada participante tiene una oportunidad única e igual."
+          "answer": "Cuando esta opción está activada, cada nombre elegido sale de la lista y no puede volver a salir. Es el modo ideal para rifas y sorteos, donde cada participante tiene una sola oportunidad, igual a la de los demás."
         },
         {
-          "question": "¿La selección es verdaderamente aleatoria?",
-          "answer": "Sí. Los nombres se seleccionan con Math.random(), que produce un resultado impredecible cada vez."
+          "question": "¿La selección es realmente aleatoria?",
+          "answer": "Sí. Los nombres se eligen con la función Math.random() de JavaScript, que da un resultado impredecible en cada clic. Ni el orden de carga, ni el largo del nombre, ni la posición en la lista influyen en quién sale elegido."
         },
         {
-          "question": "¿Puedo usar esto para actividades en el aula?",
-          "answer": "Por supuesto. Pega tu lista de estudiantes, activa 'eliminar al elegir' para que ningún alumno sea llamado dos veces y úsalo para preguntas o asignación de tareas al azar."
+          "question": "¿Puedo usarlo para actividades en el aula?",
+          "answer": "Sí, es uno de los usos más comunes. Pega la lista del curso, activa 'eliminar al elegir' y ve llamando a los alumnos sin repetir a nadie. El método mantiene la participación pareja y a la clase atenta, porque cualquiera puede ser el siguiente."
         },
         {
           "question": "¿Cuántos nombres puedo agregar?",
-          "answer": "No hay un límite estricto. La herramienta funciona con listas de cualquier tamaño, desde 2 hasta cientos de nombres."
+          "answer": "No hay un límite fijo. La herramienta funciona con listas de cualquier tamaño, desde 2 nombres hasta varios cientos. Las listas largas se sortean igual de rápido."
+        },
+        {
+          "question": "¿Puedo poner nombres completos, apodos o números?",
+          "answer": "Sí. Escribe lo que quieras, un elemento por línea: nombres de pila, nombres completos, apodos, correos, números de matrícula o números de boleto de rifa. El selector trata cada línea como una opción."
+        },
+        {
+          "question": "¿Puedo elegir más de un ganador de una vez?",
+          "answer": "Sí. Elige el primer nombre, activa 'eliminar al elegir' y vuelve a hacer clic para el segundo, el tercero y así sucesivamente. Cada nombre sale de la lista al ser elegido, por lo que nadie puede ganar dos veces."
+        },
+        {
+          "question": "¿Sirve para rifas y sorteos con premio?",
+          "answer": "Sí. Numera los boletos vendidos, pega el rango de números en la lista, desactiva la repetición y sortea frente a los participantes. Como el resultado se genera al momento y en el propio navegador, puedes mostrar la pantalla durante una transmisión en vivo."
+        },
+        {
+          "question": "¿Mi lista de nombres queda guardada?",
+          "answer": "La lista no se guarda automáticamente entre una visita y otra. Si necesitas una lista fija para reutilizar y compartir, la herramienta Girar la Ruleta guarda los elementos dentro de la propia URL de la página."
         }
       ],
       "richContent": {
-        "whatIs": "Un generador de nombres aleatorios selecciona uno o más nombres al azar desde una lista que proporciones. Esta herramienta general de propósito funciona para cualquier colección de nombres: elegir los oradores de reuniones, seleccionar ganadores de concursos, randomizar el orden de lectura en una aula, asignar tareas o decidir cuándo es el turno de hacer tareas. A diferencia del generador específico para aulas, esta herramienta está diseñada para cualquier contexto donde necesites una selección aleatoria justa de una lista de personas o opciones.",
+        "whatIs": "El selector de nombres elige al azar uno o más nombres de una lista que tú pegas. Es una herramienta de propósito general: sirve para definir quién presenta primero en una reunión, sacar al ganador de un concurso o una rifa, sortear el orden de exposición de un trabajo, repartir las tareas de un proyecto o decidir a quién le toca lavar los platos. A diferencia de un selector pensado solo para el aula, aquí la idea es que funcione en cualquier contexto donde necesites una elección justa entre personas u opciones.",
         "howToUse": [
-          "Ingresa tus nombres en el cuadro de texto, uno por línea.",
-          "Haz clic en 'Pick' para seleccionar al azar un nombre de tu lista.",
-          "Lee el ganador resaltado mostrado en pantalla.",
-          "Opcionalmente, elimina el nombre seleccionado para evitar repetirlo en las selecciones siguientes."
+          "Escribe o pega los nombres en el cuadro de texto, uno por línea.",
+          "Haz clic en Elegir para sacar un nombre al azar de la lista.",
+          "Mira el ganador resaltado en la pantalla.",
+          "Activa 'eliminar al elegir' y vuelve a hacer clic para sacar los siguientes nombres sin repetir a nadie."
         ],
-        "whyItMatters": "La selección aleatoria evita la favoritismo y la percepción de sesgo. En entornos profesionales, asignar al azar quién presenta primero o quién recibe una tarea elimina cualquier apariencia de parcialidad. En entornos sociales, saca el incómodo negociación de decisiones como quién elige el restaurante esta noche. Ambos resultados — la justicia real y la apariencia de justicia — son igualmente importantes en las dinámicas grupales.",
-        "proTip": "Para uso continuo como la rotación semanal de tareas o roles recurrentes de reuniones, mantén una lista en curso y elimina los nombres seleccionados hasta que todos hayan sido elegidos una vez, luego restablece la lista. Esto asegura una distribución equitativa entre el grupo en lugar de una selección puramente aleatoria, que puede repetir accidentalmente nombres antes de que todos tengan su turno."
+        "whyItMatters": "El sorteo al azar evita el favoritismo y también la impresión de favoritismo, y las dos cosas pesan en la dinámica de un grupo. En el trabajo, sortear quién presenta primero o quién asume una tarea pesada elimina cualquier sospecha de preferencia. En casa o entre amigos, resuelve sin discusión esas decisiones pequeñas, como quién elige la película o el restaurante. El resultado viene de fuera de la voluntad de cualquiera, así que es más fácil de aceptar.",
+        "proTip": "Para turnos que se repiten, como la escala de tareas o los roles de una reunión, mantén la misma lista y ve eliminando cada nombre sorteado hasta que todos hayan salido una vez; recién entonces reinicia la lista. Así te aseguras de que todos pasen por su turno antes de que alguien repita: un sorteo puramente aleatorio, sin eliminación, puede llamar a la misma persona dos veces seguidas y dejar a otra afuera durante semanas."
       }
     },
     "teamGenerator": {
@@ -2169,32 +2197,52 @@
       "tails": "Cruz",
       "faqs": [
         {
-          "question": "¿El lanzamiento de moneda es verdaderamente justo?",
-          "answer": "Sí. Cada lanzamiento se determina con Math.random(), dando a cara y cruz una probabilidad igual del 50%."
+          "question": "¿El lanzamiento de moneda es realmente justo?",
+          "answer": "Sí. Cada lanzamiento lo decide la función Math.random() de JavaScript, que sortea un número antes de que empiece la animación. Cara y cruz tienen exactamente un 50% de probabilidad en cada tiro."
         },
         {
-          "question": "¿Puedo lanzar varias veces?",
-          "answer": "Sí — haz clic en Lanzar moneda de nuevo. Tus últimos 10 lanzamientos se muestran en el historial debajo de la moneda."
+          "question": "¿Puedo lanzar la moneda varias veces?",
+          "answer": "Sí. Solo vuelve a hacer clic en Lanzar moneda. Tus últimos 10 resultados aparecen en el historial, justo debajo de la moneda, así puedes seguir una racha o un 'mejor de tres'."
         },
         {
-          "question": "¿Cuál es la probabilidad de obtener cara 10 veces seguidas?",
-          "answer": "La probabilidad de obtener cara 10 veces seguidas es (0.5)^10 = 1/1024, o aproximadamente el 0.1%. Cada lanzamiento es independiente — los resultados anteriores no afectan los futuros."
+          "question": "¿Cuál es la probabilidad de sacar cara 10 veces seguidas?",
+          "answer": "Es (0,5)^10 = 1/1024, alrededor del 0,1%. Cada lanzamiento es independiente: el resultado anterior no cambia el siguiente. Una racha larga de caras no hace que la cruz sea 'más probable' después; creer lo contrario es la llamada falacia del apostador."
         },
         {
           "question": "¿Funciona sin conexión a internet?",
-          "answer": "Sí. Una vez que la página está cargada, el lanzamiento de moneda funciona 100% sin conexión."
+          "answer": "Sí. Una vez que la página carga, el lanzamiento funciona 100% sin conexión. Nada se envía a un servidor: el sorteo ocurre por completo en tu navegador."
+        },
+        {
+          "question": "¿Por qué usar una moneda digital en vez de una real?",
+          "answer": "Una moneda física puede tener un pequeño sesgo por su distribución de peso, la forma de lanzarla o la superficie donde cae. Un estudio de Diaconis, Holmes y Montgomery (2007) midió que las monedas lanzadas con la mano caen del mismo lado en que empezaron cerca del 51% de las veces. La moneda digital usa una función aleatoria uniforme, así que es tan justa como puede serlo una herramienta, y siempre está a mano."
+        },
+        {
+          "question": "¿Sirve para tomar decisiones y resolver disputas?",
+          "answer": "Sí. Como ambos resultados tienen un 50% de probabilidad, es una forma imparcial de resolver una elección entre dos opciones. Se usa mucho para decidir quién empieza un juego, quién paga la cuenta o cualquier empate en el que nadie quiere ser quien decide."
+        },
+        {
+          "question": "¿Puedo usarlo para deportes?",
+          "answer": "Sí. Muchos partidos usan el sorteo de moneda para decidir el lado de la cancha o el saque inicial. Para partidos informales, entrenamientos o juegos entre amigos, la moneda digital vale igual que una física."
+        },
+        {
+          "question": "¿Sirve para el aula?",
+          "answer": "Sí. Docentes lo usan para enseñar probabilidad con datos reales: pide a la clase que lance 100 veces y anote los resultados para ver la ley de los grandes números en acción — la proporción de caras se acerca al 50% a medida que aumenta el número de tiros."
+        },
+        {
+          "question": "¿Cómo se genera la aleatoriedad?",
+          "answer": "El sorteo usa la función Math.random() de JavaScript, que devuelve un número decimal pseudoaleatorio entre 0 y 1. Si el número es menor que 0,5, el resultado es cara; si es 0,5 o mayor, es cruz. Así ambos lados tienen la misma probabilidad."
         }
       ],
       "richContent": {
-        "whatIs": "Un lanzamiento de moneda virtual es una herramienta digital que replica la clásica binaria aleatorización del lanzamiento de una moneda física — dándote cara o cruz con una probabilidad equitativa del 50/50. Los casos de uso incluyen romper empates en decisiones grupales, tomar decisiones binarias cuando ninguna opción domina, randomización en aulas y gamificación. Interesantemente, las monedas físicas no son perfectamente justas: la investigación de Diaconis, Holmes & Montgomery (2007) encontró que las monedas lanzadas por mano tienden a caer en el mismo lado que comenzaron aproximadamente el 51% del tiempo debido al wobble. Un lanzamiento de moneda virtual usa un algoritmo criptográficamente aleatorio para garantizar una probabilidad equitativa del 50/50 cada vez.",
+        "whatIs": "El lanzamiento de moneda virtual es una herramienta digital que reproduce el clásico sorteo binario de tirar una moneda física: te da cara o cruz con una probabilidad justa de 50/50. Resuelve situaciones cotidianas como romper un empate en una decisión grupal, elegir entre dos opciones cuando ninguna es claramente mejor, sortear quién empieza un juego, repartir tareas o enseñar probabilidad en el aula. Curiosamente, las monedas reales no son perfectamente justas: la investigación de Diaconis, Holmes y Montgomery (2007) midió que una moneda lanzada con la mano tiende a caer del mismo lado en que empezó cerca del 51% de las veces, por el bamboleo durante el giro. La moneda digital no tiene ese problema: el resultado sale de una función aleatoria uniforme, con un 50% para cada lado en cada tiro.",
         "howToUse": [
-          "Haz clic en el botón Lanza Moneda para arrojar la moneda virtual.",
-          "Lee el resultado — cara o cruz — mostrado instantáneamente.",
-          "Vuelve a lanzar para un mejor de tres si la decisión es importante.",
-          "Registra o captura pantalla el resultado si necesitas mantener un registro."
+          "Haz clic en el botón Lanzar moneda para tirar la moneda virtual.",
+          "Lee el resultado — cara o cruz — que aparece al instante.",
+          "Vuelve a lanzar para un 'mejor de tres' cuando la decisión sea importante.",
+          "Consulta el historial de los últimos 10 tiros debajo de la moneda, o haz una captura si necesitas dejar registro."
         ],
-        "whyItMatters": "La aleatorización elimina la presión social en las decisiones — nadie puede acusar a una moneda digital de sesgo. Se usa ampliamente en deportes para los choices de inicio y servicio, en aulas para enseñar probabilidad (lanza 100 veces para ver el principio de los grandes números en acción), y en cualquier escenario de empate donde la justicia es importante. A diferencia del consenso social, un lanzamiento de moneda aleatoria produce un resultado que todos pueden aceptar como imparcial.",
-        "proTip": "Usa mejor de tres para decisiones importantes en lugar de un solo lanzamiento. Preserva la aleatoriedad mientras da a ambos lados una sensación de que el resultado no fue determinado por un lanzamiento de suerte — haciendo que el resultado se sienta más legítimo para todos involucrados."
+        "whyItMatters": "El sorteo le quita la presión social a la decisión: nadie puede acusar a una moneda de tener preferencia. Por eso aparece al inicio de los partidos para definir el lado de la cancha y la posesión, en el aula para mostrar la ley de los grandes números en la práctica (lanza 100 veces y observa cómo la proporción se acerca al 50%) y en cualquier empate donde importa la imparcialidad. A diferencia de un acuerdo negociado, el resultado de un sorteo aleatorio es algo que todos aceptan como justo, porque no depende de quién habló más fuerte.",
+        "proTip": "Para decisiones que pesan, usa 'mejor de tres' en lugar de un solo tiro. Mantiene la aleatoriedad, pero les da a las partes la sensación de que el resultado no fue obra de un único golpe de suerte, y eso hace que la decisión se sienta más legítima. Un segundo truco: fíjate en tu reacción al resultado. Si la moneda cae en una opción y sientes alivio o decepción, ese impulso revela cuál opción querías en realidad."
       }
     },
     "diceRoller": {

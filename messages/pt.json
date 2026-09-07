@@ -1830,35 +1830,47 @@
       "faqs": [
         {
           "question": "Posso salvar minha roleta?",
-          "answer": "Sim — seus itens são salvos na URL. Copie e salve nos favoritos para guardar sua roleta ou compartilhá-la com outras pessoas."
+          "answer": "Pode. Os itens que você digita são gravados dentro da própria URL da página. Copie o endereço da barra do navegador e salve nos favoritos ou envie para outras pessoas — quem abrir o link vê a roleta com exatamente as mesmas opções."
         },
         {
-          "question": "O giro é verdadeiramente aleatório?",
-          "answer": "Sim, o vencedor é determinado pelo Math.random() antes da animação começar. A animação de giro é apenas para diversão — o resultado já está decidido."
+          "question": "O giro é realmente aleatório?",
+          "answer": "É. O vencedor é sorteado pela função Math.random() antes de a animação começar. O giro na tela é só efeito visual: o resultado já foi decidido, e a forma como a roleta desacelera não muda nada."
         },
         {
           "question": "Quantos itens posso adicionar?",
-          "answer": "Você pode adicionar quantos itens quiser, embora a roleta fique difícil de ler com mais de 20 itens."
+          "answer": "Quantos quiser. Na prática, acima de uns 20 itens as fatias ficam finas e difíceis de ler. Para listas longas, vale usar o Sorteador de Nomes, que lida melhor com muitos participantes."
         },
         {
-          "question": "Posso usar isso em sala de aula?",
-          "answer": "Com certeza! Professores adoram a roleta para sortear alunos, atribuir tópicos e tomar decisões aleatórias de forma justa."
+          "question": "Posso usar em sala de aula?",
+          "answer": "Sim, é um dos usos favoritos. Cole os nomes da turma e gire para chamar os alunos ao acaso. A animação transforma a chamada em brincadeira e tira qualquer aparência de o professor estar 'escolhendo' alguém de propósito."
         },
         {
-          "question": "Como isso é diferente do Wheel of Names?",
-          "answer": "Nossa roleta é completamente gratuita, não exige conta, salva seus itens na URL para fácil compartilhamento e funciona em qualquer dispositivo, inclusive offline."
+          "question": "Como a roleta é diferente do Wheel of Names?",
+          "answer": "A nossa é totalmente gratuita, não pede cadastro, guarda os itens na URL para você compartilhar com um link e funciona em qualquer aparelho, inclusive offline depois que a página carrega."
+        },
+        {
+          "question": "Posso colocar qualquer tipo de opção na roleta?",
+          "answer": "Pode. Digite uma opção por linha na caixa de edição: nomes, tarefas, temas de trabalho, restaurantes, prêmios, comandos de um jogo. A roleta se atualiza na hora conforme você edita a lista."
+        },
+        {
+          "question": "E se a roleta cair no mesmo resultado duas vezes seguidas?",
+          "answer": "Cada giro é independente, então repetir é possível por acaso. Se você quer garantir que cada opção saia só uma vez, use o Sorteador de Nomes com a opção 'remover ao sortear', que trabalha sem reposição."
+        },
+        {
+          "question": "Serve para sorteios ao vivo e lives?",
+          "answer": "Serve. Coloque os nomes dos participantes e gire na frente da audiência para revelar o ganhador na hora. Para listas muito grandes, o Sorteador de Nomes é mais confortável; a roleta brilha quando dá para mostrar todas as opções na tela."
         }
       ],
       "richContent": {
-        "whatIs": "A roleta seletora é um seletor aleatório e visual, apresentado como uma roda giratória com seções personalizáveis. Os casos de uso incluem jogos de sala de aula, decisões de escritório (onde pedir o almoço), jogos de festa e sorteios de prêmios gamificados. A animação de giro é puramente cosmética — o resultado vencedor é determinado pelo gerador de números aleatórios antes do início da animação, garantindo justiça verdadeira.",
+        "whatIs": "A roleta de decisão é um sorteador visual: as opções aparecem como fatias de uma roda que gira e para em uma delas. Ela é útil em brincadeiras de sala de aula, em decisões de escritório ('onde a gente pede almoço hoje?'), em jogos de festa, na hora de escolher entre alternativas quando a indecisão trava e em sorteios de prêmio com clima de gameshow. A animação do giro é apenas enfeite — o resultado vencedor é sorteado pelo gerador de números aleatórios antes de a roda começar a girar, então a justiça não depende de como a roleta parece enquanto desacelera.",
         "howToUse": [
-          "Adicione suas opções à roleta digitando-as na caixa de edição, uma por linha.",
-          "Clique em Girar para iniciar a animação da roleta.",
-          "Observe a roleta desacelerar e parar no resultado selecionado aleatoriamente.",
-          "Opcionalmente, remova a opção vencedora antes do próximo giro para evitar repetições."
+          "Adicione as opções na caixa de edição, uma por linha.",
+          "Clique em Girar para começar a animação da roda.",
+          "Acompanhe a roleta desacelerar e parar no resultado sorteado.",
+          "Se quiser, apague a opção vencedora antes do próximo giro para não repetir."
         ],
-        "whyItMatters": "O formato visual giratório torna a seleção aleatória mais envolvente e dramática do que uma exibição de texto simples. Para uso em sala de aula, os alunos respondem melhor à animação — isso transforma a seleção em um jogo em vez de um julgamento. Para prêmios e sorteios, a expectativa à medida que a roleta desacelera aumenta a emoção e o valor percebido do resultado.",
-        "proTip": "Pesquisas sobre fadiga de decisão mostram que, ao reagir ao resultado da roleta — quer você sinta alívio ou decepção —, obtém informações honestas sobre o que realmente queria. Se a roda cair em uma opção e você sentir um lampejo de decepção, isso indica qual opção você realmente preferia. Use o giro como uma ferramenta reveladora de preferências."
+        "whyItMatters": "O formato visual deixa o sorteio mais divertido e cheio de suspense do que um resultado em texto puro. Em sala de aula, os alunos reagem melhor à animação: a chamada vira jogo, não julgamento. Em premiações e sorteios, a tensão enquanto a roda perde velocidade aumenta a emoção e faz o resultado parecer mais valioso, deixando a experiência mais memorável para quem assiste.",
+        "proTip": "Estudos sobre fadiga de decisão sugerem um truque: preste atenção na sua reação ao resultado. Se a roleta para em uma opção e você sente alívio, era isso que você queria; se sente uma pontada de decepção, provavelmente preferia outra. Use o giro não só como sorteio, mas como um jeito de revelar a preferência que você ainda não tinha admitido."
       }
     },
     "wheelOfNames": {
@@ -1972,31 +1984,47 @@
       "faqs": [
         {
           "question": "O que é 'sortear sem repetição'?",
-          "answer": "Quando ativado, cada nome sorteado é removido da lista para não ser selecionado novamente. Perfeito para rifas onde cada participante tem uma chance igual e única."
+          "answer": "Quando essa opção está ativada, cada nome sorteado sai da lista e não pode ser escolhido de novo. É o modo ideal para rifas e sorteios, em que cada participante tem uma única chance igual à dos outros."
         },
         {
-          "question": "O sorteio é verdadeiramente aleatório?",
-          "answer": "Sim. Os nomes são selecionados usando Math.random(), que produz um resultado imprevisível a cada vez."
+          "question": "O sorteio é realmente aleatório?",
+          "answer": "É. Os nomes são escolhidos pela função Math.random() do JavaScript, que gera um resultado imprevisível a cada clique. Não há ordem de cadastro, tamanho do nome ou posição na lista que influencie quem é sorteado."
         },
         {
-          "question": "Posso usar isso em atividades de sala de aula?",
-          "answer": "Com certeza. Cole sua lista de alunos, ative 'remover ao sortear' para que nenhum aluno seja chamado duas vezes e use-o para perguntas aleatórias ou atribuição de tarefas."
+          "question": "Posso usar em atividades de sala de aula?",
+          "answer": "Pode, e é um dos usos mais comuns. Cole a lista da turma, ative 'remover ao sortear' e vá chamando os alunos sem repetir ninguém. O método mantém a participação justa e a turma atenta, porque qualquer um pode ser o próximo."
         },
         {
           "question": "Quantos nomes posso adicionar?",
-          "answer": "Não há limite rígido. A ferramenta funciona com listas de qualquer tamanho, de 2 a centenas de nomes."
+          "answer": "Não há limite fixo. A ferramenta funciona com listas de qualquer tamanho, de 2 nomes a várias centenas. Listas muito grandes continuam sendo sorteadas na mesma velocidade."
+        },
+        {
+          "question": "Posso colocar nomes completos, apelidos ou números?",
+          "answer": "Sim. Digite o que quiser, um item por linha: primeiros nomes, nomes completos, apelidos, e-mails, números de matrícula ou números de bilhete de rifa. O sorteador trata cada linha como uma opção."
+        },
+        {
+          "question": "Dá para sortear mais de um vencedor de uma vez?",
+          "answer": "Dá. Sorteie o primeiro nome, ative 'remover ao sortear' e clique de novo para o segundo, o terceiro e assim por diante. Cada nome sai da lista ao ser escolhido, então não há risco de premiar a mesma pessoa duas vezes."
+        },
+        {
+          "question": "O sorteio serve para rifas e vaquinhas com prêmio?",
+          "answer": "Serve. Numere os bilhetes vendidos, cole a faixa de números na lista, desative a repetição e sorteie na frente dos participantes. Como o resultado é gerado na hora e no próprio navegador, dá para mostrar a tela durante a transmissão ao vivo."
+        },
+        {
+          "question": "Minha lista de nomes fica salva?",
+          "answer": "A lista não é salva automaticamente entre um acesso e outro. Se você precisa de uma lista fixa para reutilizar e compartilhar, a ferramenta Girar a Roleta guarda os itens dentro da própria URL da página."
         }
       ],
       "richContent": {
-        "whatIs": "Um seletor de nomes aleatório escolhe um ou mais nomes de uma lista que você fornece. Esta ferramenta de uso geral funciona para qualquer coleção de nomes: escolher palestrantes, selecionar vencedores de concursos, sortear a ordem de leitura em uma sala de aula, atribuir tarefas ou decidir de quem é a vez de realizar tarefas domésticas.",
+        "whatIs": "O sorteador de nomes escolhe um ou mais nomes ao acaso a partir de uma lista que você cola. É uma ferramenta de uso geral: serve para definir quem apresenta primeiro numa reunião, tirar o vencedor de um concurso ou de uma rifa, sortear a ordem de leitura de um trabalho, distribuir tarefas de um projeto ou decidir de quem é a vez de lavar a louça. Diferente de um sorteador feito só para sala de aula, aqui a proposta é funcionar em qualquer contexto em que você precise de uma escolha justa entre pessoas ou opções.",
         "howToUse": [
-          "Insira os seus nomes na caixa de texto, um por linha.",
-          "Clique em Escolher para selecionar aleatoriamente um nome da sua lista.",
-          "Leia o vencedor em destaque exibido na tela.",
-          "Opcionalmente, remova o nome selecionado para evitar repetições em escolhas subsequentes."
+          "Digite ou cole os nomes na caixa de texto, um por linha.",
+          "Clique em Sortear para escolher um nome ao acaso da lista.",
+          "Veja o vencedor destacado na tela.",
+          "Ative 'remover ao sortear' e clique de novo para tirar os próximos nomes sem repetir ninguém."
         ],
-        "whyItMatters": "A seleção aleatória evita o favoritismo e a percepção de viés. Em configurações profissionais, a atribuição aleatória de quem apresenta primeiro remove qualquer aparência de parcialidade. Em ambientes sociais, ela elimina a negociação estranha de decisões como quem escolhe o restaurante hoje à noite.",
-        "proTip": "Para uso contínuo, como a rotação semanal de tarefas, mantenha uma lista em execução e remova os nomes selecionados até que todos tenham sido escolhidos uma vez, depois redefina a lista. Isso garante uma distribuição equitativa em todo o grupo, em vez de uma seleção puramente aleatória."
+        "whyItMatters": "O sorteio aleatório evita o favoritismo e também a impressão de favoritismo — as duas coisas pesam na dinâmica de um grupo. No trabalho, sortear quem apresenta primeiro ou quem assume uma tarefa chata tira qualquer suspeita de perseguição ou preferência. Em casa ou entre amigos, resolve sem discussão aquelas decisões pequenas, como quem escolhe o filme ou o restaurante. O resultado vem de fora da vontade de qualquer pessoa, então é mais fácil de aceitar.",
+        "proTip": "Para rodízios que se repetem, como escala de tarefas ou papéis de reunião, mantenha a mesma lista e vá removendo cada nome sorteado até todos terem saído uma vez; só então reinicie a lista. Isso garante que todo mundo passe pela vez antes de alguém repetir — um sorteio puramente aleatório, sem remoção, pode chamar a mesma pessoa duas vezes seguidas e deixar outra de fora por semanas."
       }
     },
     "teamGenerator": {
@@ -2169,31 +2197,55 @@
       "faqs": [
         {
           "question": "O lançamento da moeda é verdadeiramente justo?",
-          "answer": "Sim. Cada lançamento é determinado pelo Math.random(), dando a cara e a coroa igual probabilidade de 50%."
+          "answer": "Sim. Cada lançamento é determinado pela função Math.random() do JavaScript, que sorteia um número antes de a animação começar. Cara e coroa têm exatamente a mesma probabilidade de 50% em toda jogada."
         },
         {
-          "question": "Posso lançar várias vezes?",
-          "answer": "Sim — basta clicar em Jogar Moeda novamente. Seus últimos 10 lançamentos são mostrados no histórico abaixo da moeda."
+          "question": "Posso lançar a moeda várias vezes?",
+          "answer": "Pode. Basta clicar em Jogar Moeda novamente. Os seus últimos 10 resultados aparecem no histórico logo abaixo da moeda, útil para acompanhar uma sequência ou uma 'melhor de 3'."
         },
         {
           "question": "Qual é a probabilidade de sair cara 10 vezes seguidas?",
-          "answer": "A probabilidade de sair cara 10 vezes seguidas é (0,5)^10 = 1/1024, ou cerca de 0,1%. Cada lançamento é independente — resultados passados não afetam os futuros."
+          "answer": "É (0,5)^10 = 1/1024, ou cerca de 0,1%. Cada lançamento é independente — o resultado anterior não influencia o próximo. Uma sequência longa de caras não deixa a coroa 'mais provável' na jogada seguinte; essa ideia é a chamada falácia do apostador."
         },
         {
           "question": "Funciona sem conexão com a internet?",
-          "answer": "Sim. Uma vez que a página é carregada, o lançamento da moeda funciona 100% offline."
+          "answer": "Sim. Depois que a página carrega, o cara ou coroa funciona 100% offline. Nada é enviado para um servidor: o sorteio acontece inteiramente no seu navegador."
+        },
+        {
+          "question": "Por que usar uma moeda digital em vez de uma moeda de verdade?",
+          "answer": "Uma moeda física pode ter um viés pequeno por causa da distribuição de peso, do jeito de lançar ou da superfície onde cai. Um estudo de Diaconis, Holmes e Montgomery (2007) mostrou que moedas lançadas com a mão caem no mesmo lado em que começaram cerca de 51% das vezes. A moeda digital usa uma função aleatória uniforme, então é tão justa quanto uma ferramenta consegue ser — e está sempre à mão, mesmo quando você não tem trocado no bolso."
+        },
+        {
+          "question": "É justo para tomar decisões e resolver disputas?",
+          "answer": "É. Como os dois resultados têm 50% de chance, o cara ou coroa é uma forma imparcial de resolver uma escolha entre duas opções. É muito usado para decidir quem começa em um jogo, quem paga a conta ou qualquer impasse em que ninguém quer 'bater o martelo'."
+        },
+        {
+          "question": "Dá para usar no futebol ou em outros esportes?",
+          "answer": "Sim. Muitas partidas usam o sorteio de moeda para definir quem escolhe o lado do campo ou dá o pontapé inicial. Para peladas, jogos de várzea e treinos, o cara ou coroa digital vale tanto quanto o do árbitro."
+        },
+        {
+          "question": "Serve para a sala de aula?",
+          "answer": "Serve muito bem. Professores usam o cara ou coroa para ensinar probabilidade na prática: peça para a turma lançar 100 vezes e registrar os resultados para ver a lei dos grandes números em ação — a proporção de caras se aproxima de 50% conforme o número de jogadas cresce."
+        },
+        {
+          "question": "Como a aleatoriedade é gerada?",
+          "answer": "O sorteio usa a função Math.random() do JavaScript, que devolve um número decimal pseudoaleatório entre 0 e 1. Se o número for menor que 0,5, o resultado é cara; se for 0,5 ou maior, é coroa. Isso dá 50% para cada lado."
+        },
+        {
+          "question": "Posso jogar várias moedas ao mesmo tempo?",
+          "answer": "A ferramenta joga uma moeda por vez. Se você precisa de vários resultados independentes, é só lançar em sequência — cada jogada é separada e não depende das anteriores."
         }
       ],
       "richContent": {
-        "whatIs": "O cara ou coroa virtual é uma ferramenta digital que replica a randomização binária clássica de jogar uma moeda física — dando a você cara ou coroa com probabilidade justa de 50/50. Casos de uso incluem desempatar decisões, fazer escolhas binárias e gamificação. Curiosamente, as moedas físicas não são perfeitamente justas, tendendo levemente para o lado em que começaram. Um lançamento de moeda digital usa um algoritmo criptograficamente aleatório para chances verdadeiras de 50/50.",
+        "whatIs": "O cara ou coroa virtual é uma ferramenta digital que reproduz o sorteio binário clássico de jogar uma moeda física, entregando cara ou coroa com probabilidade justa de 50/50. Ele resolve situações do dia a dia: desempatar uma decisão em grupo, escolher entre duas opções quando nenhuma é claramente melhor, sortear quem começa uma brincadeira, dividir tarefas ou ensinar probabilidade na sala de aula. Curiosamente, moedas de verdade não são perfeitamente justas — a pesquisa de Diaconis, Holmes e Montgomery (2007) mediu que uma moeda lançada com a mão tende a cair no mesmo lado em que começou cerca de 51% das vezes, por causa da trepidação durante o giro. A moeda digital não tem esse problema: o resultado vem de uma função aleatória uniforme, com 50% para cada lado em toda jogada.",
         "howToUse": [
-          "Clique no botão Jogar Moeda para jogar a moeda virtual.",
-          "Leia o resultado — cara ou coroa — exibido instantaneamente.",
-          "Jogue novamente para uma 'melhor de 3' se a decisão for importante.",
-          "Grave ou faça uma captura de tela do resultado se precisar manter um registro."
+          "Clique no botão Jogar Moeda para lançar a moeda virtual.",
+          "Leia o resultado — cara ou coroa — exibido na hora.",
+          "Jogue de novo para uma 'melhor de 3' quando a decisão for importante.",
+          "Consulte o histórico das últimas 10 jogadas logo abaixo da moeda, ou faça uma captura de tela se precisar de registro."
         ],
-        "whyItMatters": "A randomização remove a pressão social das decisões — ninguém pode acusar uma moeda digital de viés. É amplamente usada nos esportes, nas salas de aula para ensinar probabilidade e em qualquer cenário de desempate em que a justiça seja importante.",
-        "proTip": "Use o formato 'melhor de 3' para decisões importantes, em vez de um único lançamento. Isso preserva a aleatoriedade e dá a ambas as partes a sensação de que o resultado não foi determinado por uma jogada de sorte — fazendo com que o resultado pareça mais legítimo."
+        "whyItMatters": "O sorteio tira a pressão social da decisão: ninguém pode acusar uma moeda de ter preferência. Por isso ele aparece no início de partidas esportivas para definir lado de campo e posse de bola, na sala de aula para mostrar a lei dos grandes números na prática (jogue 100 vezes e veja a proporção se aproximar de 50%) e em qualquer impasse em que a imparcialidade importa. Diferente de um acordo negociado, o resultado de um sorteio aleatório é algo que todo mundo aceita como justo, porque não depende de quem falou mais alto.",
+        "proTip": "Para decisões que pesam, use 'melhor de 3' em vez de uma jogada só. Isso mantém a aleatoriedade, mas dá aos envolvidos a sensação de que o resultado não foi obra de uma única jogada de sorte — o que faz a decisão parecer mais legítima para todos. Um segundo truque: repare na sua reação ao resultado. Se a moeda cai em uma opção e você sente um alívio ou uma decepção, esse impulso revela qual opção você realmente queria desde o começo."
       }
     },
     "diceRoller": {
@@ -2216,27 +2268,47 @@
         },
         {
           "question": "Posso rolar vários dados ao mesmo tempo?",
-          "answer": "Sim — use notação como '5d6' para rolar cinco dados de seis faces simultaneamente. O resultado mostra cada dado individual mais o total."
+          "answer": "Pode. Use uma notação como '5d6' para rolar cinco dados de seis faces de uma vez. O resultado mostra cada dado separadamente e também a soma total."
         },
         {
-          "question": "As rolagens são verdadeiramente aleatórias?",
-          "answer": "Sim, cada dado é rolado independentemente usando Math.random(), que dá uma distribuição uniforme em todas as faces."
+          "question": "As rolagens são realmente aleatórias?",
+          "answer": "Sim. Cada dado é rolado de forma independente com a função Math.random() do JavaScript, que gera uma distribuição uniforme — toda face tem a mesma chance de aparecer em cada rolagem, sem 'memória' de resultados anteriores."
         },
         {
           "question": "Quais dados são usados no D&D?",
-          "answer": "D&D usa sete dados: d4, d6, d8, d10, d12, d20 e d100 (dado percentual). O d20 é usado com mais frequência para testes de habilidade e ataques."
+          "answer": "D&D usa sete tipos: d4, d6, d8, d10, d12, d20 e d100 (dado percentual, geralmente dois d10). O d20 é o mais frequente, usado em testes de habilidade, jogadas de ataque e testes de resistência."
+        },
+        {
+          "question": "Dá para escolher um número de faces fora do padrão?",
+          "answer": "Dá. É só digitar a notação com o número que você quiser, como d3, d7, d30 ou d50. O rolador aceita qualquer número inteiro positivo de faces, então você não fica preso aos dados tradicionais."
+        },
+        {
+          "question": "Qual é a chance de tirar um 6 em um dado comum?",
+          "answer": "1/6, ou cerca de 16,67%. Todas as faces têm a mesma probabilidade porque cada rolagem é um evento independente e uniforme. Tirar três 6 seguidos, por exemplo, tem chance de (1/6)^3 ≈ 0,46%."
+        },
+        {
+          "question": "Por que rolar 2d6 não dá resultados igualmente prováveis entre 2 e 12?",
+          "answer": "Porque existem mais combinações que somam 7 (seis delas: 1-6, 2-5, 3-4, 4-3, 5-2, 6-1) do que combinações que somam 2 ou 12 (uma só cada). Ao somar vários dados, os resultados se concentram no meio, formando uma curva em sino — é o teorema central do limite na prática, e é a base do equilíbrio de quase todo RPG de mesa."
+        },
+        {
+          "question": "Posso usar para Dungeons & Dragons e outros RPGs?",
+          "answer": "Sim. O rolador aceita os sete dados de D&D e a notação com modificador, como 1d20+5 para uma jogada de ataque ou 4d6 para gerar atributos. É um substituto prático quando você esqueceu os dados em casa ou joga on-line."
+        },
+        {
+          "question": "Funciona offline?",
+          "answer": "Funciona. Depois que a página carrega, todas as rolagens acontecem no seu navegador, sem enviar nada para um servidor. Você pode usar em mesa sem depender da conexão."
         }
       ],
       "richContent": {
-        "whatIs": "Um rolador de dados virtual simula dados de mesa para jogos, demonstrações de probabilidade e decisões aleatórias. Suporta a notação de dados padrão usada em RPGs de mesa (ex.: 2d6+3). Tipos comuns incluem d4, d6, d8, d10, d12, d20 e d100. Notavelmente, rolar vários dados produz uma distribuição de curva em sino devido ao teorema central do limite.",
+        "whatIs": "Um rolador de dados virtual simula os dados de mesa para RPGs, jogos de tabuleiro, demonstrações de probabilidade e decisões aleatórias. Ele entende a notação padrão dos RPGs: NdX+M significa rolar N dados de X faces e somar o modificador M — por exemplo, 2d6+3 rola dois dados de seis faces e adiciona 3 ao total. Os tipos mais comuns são d4, d6, d8, d10, d12, d20 e d100 (percentual). Um detalhe importante: quando você soma vários dados, os resultados não se distribuem de forma uniforme. Dois d6 têm média em torno de 7 e os valores se concentram no meio, formando uma curva em sino por causa do teorema central do limite. Esse comportamento é a razão de a maioria dos sistemas de RPG usar somas de dados em vez de um único dado gigante.",
         "howToUse": [
-          "Selecione o número de dados que deseja lançar.",
-          "Escolha o tipo de dado — d4, d6, d8, d10, d12, d20, ou insira um número personalizado de lados.",
-          "Adicione um modificador (positivo ou negativo) se as regras do jogo exigirem.",
-          "Clique em Rolar e leia os resultados individuais dos dados, além do total."
+          "Digite a notação da rolagem no campo, por exemplo 2d6+3 ou 1d20.",
+          "Escolha o tipo de dado — d4, d6, d8, d10, d12, d20 — ou informe um número de faces personalizado.",
+          "Inclua um modificador positivo ou negativo se as regras do seu jogo pedirem.",
+          "Clique em Rolar e leia o resultado de cada dado junto com o total."
         ],
-        "whyItMatters": "Os dados físicos desenvolvem vieses com o tempo devido ao desgaste. Os dados digitais usam um gerador de números aleatórios que mantém a justiça estatística em milhões de rolagens. Para educadores, o lançamento digital em sala de aula é mais rápido e pode ser projetado para que todos vejam.",
-        "proTip": "Para a geração de atributos no D&D, role 4d6 e descarte o menor dado. Para a reação rápida de um NPC, role 2d6: 2–3 hostil, 4–5 hostil, 6–8 neutro, 9–10 amigável, 11–12 prestativo. Essas tabelas são padrão e funcionam para qualquer sistema de RPG de fantasia."
+        "whyItMatters": "Dados físicos ganham viés com o tempo por causa do desgaste e de imperfeições de fabricação — um dado 'viciado' pode favorecer certas faces sem que ninguém perceba. O dado digital usa um gerador de números aleatórios que mantém a distribuição justa por milhões de rolagens. Para quem dá aula, rolar dados na tela é mais rápido e pode ser projetado para a turma inteira acompanhar, o que torna a lição de probabilidade mais concreta: dá para rolar 2d6 cem vezes e mostrar a curva em sino se formando em tempo real.",
+        "proTip": "Para gerar atributos em D&D, role 4d6 e descarte o menor dado — isso puxa a média para cima e evita personagens fracos demais. Para a reação rápida de um NPC, role 2d6 e consulte esta tabela clássica: 2–3 hostil, 4–5 desconfiado, 6–8 neutro, 9–10 amigável, 11–12 prestativo. Ela vem do Guia do Mestre e funciona em qualquer cenário de fantasia."
       }
     },
     "numberGenerator": {
