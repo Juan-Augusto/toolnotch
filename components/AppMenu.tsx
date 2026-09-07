@@ -3,6 +3,7 @@
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export interface MenuItem {
   name: string;
@@ -96,73 +97,103 @@ export function AppMenu({
               )}
             </button>
 
-            {open && (
-              <ul className="flex flex-col pb-3 pt-0 px-2 space-y-0.5">
-                {grp.items.map((item, itemIdx) => {
-                  const itemKey = `${item.name}-${itemIdx}`;
-                  const isExternal =
-                    item.link?.startsWith("http://") ||
-                    item.link?.startsWith("https://");
+            <AnimatePresence initial={false}>
+              {open && (
+                <motion.div
+                  key="menu-group-content"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{
+                    height: "auto",
+                    opacity: 1,
+                    transition: {
+                      height: {
+                        duration: 0.24,
+                        ease: [0.04, 0.62, 0.23, 0.98],
+                      },
+                      opacity: { duration: 0.18, delay: 0.04 },
+                    },
+                  }}
+                  exit={{
+                    height: 0,
+                    opacity: 0,
+                    transition: {
+                      height: {
+                        duration: 0.18,
+                        ease: [0.04, 0.62, 0.23, 0.98],
+                      },
+                      opacity: { duration: 0.12 },
+                    },
+                  }}
+                  className="overflow-hidden"
+                >
+                  <ul className="flex flex-col pb-3 pt-0 px-2 space-y-0.5">
+                    {grp.items.map((item, itemIdx) => {
+                      const itemKey = `${item.name}-${itemIdx}`;
+                      const isExternal =
+                        item.link?.startsWith("http://") ||
+                        item.link?.startsWith("https://");
 
-                  const itemClasses =
-                    "flex items-center justify-between gap-2 w-full px-4 py-2 font-mono text-xs text-label hover:text-foreground hover:bg-tertiary/30 rounded-[2px] transition-colors text-left";
+                      const itemClasses =
+                        "flex items-center justify-between gap-2 w-full px-4 py-2 font-mono text-xs text-label hover:text-foreground hover:bg-tertiary/30 rounded-[2px] transition-colors text-left";
 
-                  const content = (
-                    <>
-                      <span className="truncate">{item.name}</span>
-                      {item.tags && item.tags.length > 0 && (
-                        <div className="flex items-center gap-1 shrink-0">
-                          {item.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="font-mono text-[9px] px-1.5 py-0.5 rounded bg-tertiary/60 text-label/80 border border-border/30 uppercase"
+                      const content = (
+                        <>
+                          <span className="truncate">{item.name}</span>
+                          {item.tags && item.tags.length > 0 && (
+                            <div className="flex items-center gap-1 shrink-0">
+                              {item.tags.map((tag) => (
+                                <span
+                                  key={tag}
+                                  className="font-mono text-[9px] px-1.5 py-0.5 rounded bg-tertiary/60 text-label/80 border border-border/30 uppercase"
+                                >
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </>
+                      );
+
+                      return (
+                        <li key={itemKey}>
+                          {item.link ? (
+                            isExternal ? (
+                              <a
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={item.click}
+                                className={itemClasses}
+                              >
+                                {content}
+                              </a>
+                            ) : (
+                              <Link
+                                href={item.link}
+                                onClick={item.click}
+                                className={itemClasses}
+                              >
+                                {content}
+                              </Link>
+                            )
+                          ) : item.click ? (
+                            <button
+                              type="button"
+                              onClick={item.click}
+                              className={itemClasses}
                             >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-                    </>
-                  );
-
-                  return (
-                    <li key={itemKey}>
-                      {item.link ? (
-                        isExternal ? (
-                          <a
-                            href={item.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={item.click}
-                            className={itemClasses}
-                          >
-                            {content}
-                          </a>
-                        ) : (
-                          <Link
-                            href={item.link}
-                            onClick={item.click}
-                            className={itemClasses}
-                          >
-                            {content}
-                          </Link>
-                        )
-                      ) : item.click ? (
-                        <button
-                          type="button"
-                          onClick={item.click}
-                          className={itemClasses}
-                        >
-                          {content}
-                        </button>
-                      ) : (
-                        <div className={itemClasses}>{content}</div>
-                      )}
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
+                              {content}
+                            </button>
+                          ) : (
+                            <div className={itemClasses}>{content}</div>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         );
       })}

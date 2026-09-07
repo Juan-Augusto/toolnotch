@@ -1,14 +1,18 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { AppAccordion } from '@/components/ui/AppAccordion';
 
 describe('AppAccordion', () => {
-  it('renders single group and displays content by default', () => {
+  beforeAll(() => {
+    window.scrollTo = jest.fn();
+  });
+
+  it('renders single group and displays content by default with border-dashed-5-no-t', () => {
     render(
       <AppAccordion
         group={{
           name: 'ACCORDION/DROPDOWN',
-          content: <div>Conteúdo de teste</div>,
+          content: <div data-testid="accordion-content">Conteúdo de teste</div>,
         }}
       />
     );
@@ -18,9 +22,12 @@ describe('AppAccordion', () => {
 
     const button = screen.getByRole('button', { name: /ACCORDION\/DROPDOWN/i });
     expect(button).toHaveAttribute('aria-expanded', 'true');
+
+    const contentBox = screen.getByTestId('accordion-content').parentElement;
+    expect(contentBox).toHaveClass('border-dashed-5-no-t');
   });
 
-  it('toggles content visibility when header button is clicked', () => {
+  it('toggles content visibility when header button is clicked', async () => {
     render(
       <AppAccordion
         group={{
@@ -36,15 +43,19 @@ describe('AppAccordion', () => {
     const button = screen.getByRole('button', { name: /ITEM 1/i });
     fireEvent.click(button);
 
-    expect(screen.queryByText('Conteúdo Secreto')).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.queryByText('Conteúdo Secreto')).not.toBeInTheDocument();
+    });
     expect(button).toHaveAttribute('aria-expanded', 'false');
 
     fireEvent.click(button);
-    expect(screen.getByText('Conteúdo Secreto')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText('Conteúdo Secreto')).toBeInTheDocument();
+    });
     expect(button).toHaveAttribute('aria-expanded', 'true');
   });
 
-  it('handles multiple groups independently by default', () => {
+  it('handles multiple groups independently by default', async () => {
     render(
       <AppAccordion
         groups={[
@@ -68,11 +79,13 @@ describe('AppAccordion', () => {
     const button2 = screen.getByRole('button', { name: /GRUPO 2/i });
     fireEvent.click(button2);
 
-    expect(screen.getByText('Conteúdo 1')).toBeInTheDocument();
-    expect(screen.getByText('Conteúdo 2')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText('Conteúdo 1')).toBeInTheDocument();
+      expect(screen.getByText('Conteúdo 2')).toBeInTheDocument();
+    });
   });
 
-  it('closes other items when allowMultiple is false', () => {
+  it('closes other items when allowMultiple is false', async () => {
     render(
       <AppAccordion
         allowMultiple={false}
@@ -97,7 +110,9 @@ describe('AppAccordion', () => {
     const buttonB = screen.getByRole('button', { name: /GRUPO B/i });
     fireEvent.click(buttonB);
 
-    expect(screen.queryByText('Conteúdo A')).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.queryByText('Conteúdo A')).not.toBeInTheDocument();
+    });
     expect(screen.getByText('Conteúdo B')).toBeInTheDocument();
   });
 

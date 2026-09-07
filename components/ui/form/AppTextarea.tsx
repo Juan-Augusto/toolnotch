@@ -3,45 +3,36 @@
 import {
   useState,
   useId,
-  useEffect,
-  type InputHTMLAttributes,
+  type TextareaHTMLAttributes,
   type ReactNode,
   type ChangeEvent,
   type FocusEvent,
 } from "react";
-import type { Formatter } from "@/utils/formatters/types";
 
-export interface AppInputProps extends Omit<
-  InputHTMLAttributes<HTMLInputElement>,
-  "onChange"
-> {
+export interface AppTextareaProps
+  extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   /**
-   * Texto ou elemento de rótulo acima do input.
+   * Texto ou elemento de rótulo acima do textarea.
    */
   label?: ReactNode;
   /**
-   * Mensagem de erro exibida abaixo do input com estilo de erro.
+   * Mensagem de erro exibida abaixo do textarea com estilo de erro.
    */
   error?: string;
   /**
-   * Texto de auxílio exibido abaixo do input.
+   * Texto de auxílio exibido abaixo do textarea.
    */
   helperText?: string;
   /**
-   * Formatador opcional (ex: CurrencyFormatter, DateFormatter).
-   * Converte valores brutos em strings formatadas e vice-versa.
+   * Quantidade de linhas visíveis (padrão: 4).
    */
-  formatter?: Formatter<any>;
+  rows?: number;
   /**
-   * Callback disparado na alteração do valor com o valor bruto tipado e a string formatada.
+   * Callback disparado na alteração do valor com a nova string.
    */
-  onValueChange?: (rawValue: any, formattedValue: string) => void;
+  onValueChange?: (value: string) => void;
   /**
-   * Callback de mudança padrão do React.
-   */
-  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
-  /**
-   * Classes adicionais para o container do input.
+   * Classes adicionais para o container do textarea.
    */
   containerClassName?: string;
   /**
@@ -50,11 +41,11 @@ export interface AppInputProps extends Omit<
   labelClassName?: string;
 }
 
-export function AppInput({
+export function AppTextarea({
   label,
   error,
   helperText,
-  formatter,
+  rows = 4,
   onValueChange,
   onChange,
   onFocus,
@@ -67,66 +58,25 @@ export function AppInput({
   containerClassName = "",
   labelClassName = "",
   id,
-  type = "text",
   ...props
-}: AppInputProps) {
+}: AppTextareaProps) {
   const generatedId = useId();
-  const inputId = id ?? generatedId;
-
-  // Gerencia o valor interno para suportar formatação
-  const [displayValue, setDisplayValue] = useState<string>(() => {
-    const initial = value !== undefined ? value : defaultValue;
-    if (formatter && initial !== undefined && initial !== null) {
-      return formatter.toString(initial);
-    }
-    return initial !== undefined && initial !== null ? String(initial) : "";
-  });
+  const textareaId = id ?? generatedId;
 
   const [isFocused, setIsFocused] = useState(false);
 
-  useEffect(() => {
-    if (value !== undefined) {
-      const nextDisplay =
-        formatter && value !== null
-          ? formatter.toString(value)
-          : value !== null
-            ? String(value)
-            : "";
-      setDisplayValue(nextDisplay);
-    }
-  }, [value, formatter]);
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const inputVal = e.target.value;
-    setDisplayValue(inputVal);
-
-    if (formatter) {
-      const raw = formatter.toValue(inputVal);
-      onValueChange?.(raw, inputVal);
-    } else {
-      onValueChange?.(inputVal, inputVal);
-    }
-
+  const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    onValueChange?.(e.target.value);
     onChange?.(e);
   };
 
-  const handleFocus = (e: FocusEvent<HTMLInputElement>) => {
+  const handleFocus = (e: FocusEvent<HTMLTextAreaElement>) => {
     setIsFocused(true);
     onFocus?.(e);
   };
 
-  const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
+  const handleBlur = (e: FocusEvent<HTMLTextAreaElement>) => {
     setIsFocused(false);
-
-    if (formatter && displayValue) {
-      const raw = formatter.toValue(displayValue);
-      const formatted = formatter.toString(raw);
-      if (formatted && formatted !== displayValue) {
-        setDisplayValue(formatted);
-        onValueChange?.(raw, formatted);
-      }
-    }
-
     onBlur?.(e);
   };
 
@@ -134,7 +84,7 @@ export function AppInput({
     <div className={`flex flex-col w-full ${containerClassName}`}>
       {label && (
         <label
-          htmlFor={inputId}
+          htmlFor={textareaId}
           className={`font-mono text-xs font-semibold uppercase tracking-wider text-foreground mb-2 select-none ${
             disabled ? "opacity-50" : ""
           } ${labelClassName}`}
@@ -144,18 +94,18 @@ export function AppInput({
       )}
 
       <div className="relative w-full">
-        <input
-          id={inputId}
-          type={type}
+        <textarea
+          id={textareaId}
+          rows={rows}
           disabled={disabled}
           placeholder={placeholder}
-          value={displayValue}
+          value={value}
+          defaultValue={defaultValue}
           onChange={handleChange}
           onFocus={handleFocus}
           onBlur={handleBlur}
           className={`
             w-full
-            h-12
             px-4
             py-3
             font-mono
@@ -174,6 +124,7 @@ export function AppInput({
             disabled:opacity-40
             disabled:cursor-not-allowed
             focus:bg-secondary/3
+            resize-y
             ${
               error
                 ? "border-red-500 focus:border-red-500 ring-1 ring-red-500/20"
@@ -202,4 +153,4 @@ export function AppInput({
   );
 }
 
-export default AppInput;
+export default AppTextarea;

@@ -1,4 +1,5 @@
 import type { HTMLAttributes, ReactNode } from "react";
+import AppCornerAccents from "./AppCornerAccents";
 
 export interface AppCardProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode;
@@ -31,22 +32,7 @@ export default function AppCard({
         />
       </svg>
 
-      <span
-        className="absolute -top-0.5 -left-0.5 w-2.5 h-2.5 border-t-3 border-l-3 border-foreground dark:border-foreground pointer-events-none z-10"
-        aria-hidden="true"
-      />
-      <span
-        className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 border-t-3 border-r-3 border-foreground dark:border-foreground pointer-events-none z-10"
-        aria-hidden="true"
-      />
-      <span
-        className="absolute -bottom-0.5 -left-0.5 w-2.5 h-2.5 border-b-3 border-l-3 border-foreground dark:border-foreground pointer-events-none z-10"
-        aria-hidden="true"
-      />
-      <span
-        className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 border-b-3 border-r-3 border-foreground dark:border-foreground pointer-events-none z-10"
-        aria-hidden="true"
-      />
+      <AppCornerAccents />
 
       {children}
     </div>

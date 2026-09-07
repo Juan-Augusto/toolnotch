@@ -101,24 +101,23 @@ export function AppSwitch({
               h-6
               rounded-full
               border
-              border-[#454b54]
-              bg-[#1e2126]
-              dark:bg-[#16181b]
+              border-border
+              bg-panel
               p-0.5
               flex
               items-center
               transition-colors
               duration-200
               peer-focus-visible:ring-2
-              peer-focus-visible:ring-[#56fff7]
+              peer-focus-visible:ring-secondary
               peer-focus-visible:ring-offset-1
-              peer-focus-visible:ring-offset-[#121518]
+              peer-focus-visible:ring-offset-background
               ${
                 error
                   ? "border-red-500"
                   : isChecked
-                    ? "border-[#4a515c]"
-                    : "hover:border-[#5c636e]"
+                    ? "border-secondary"
+                    : "hover:border-foreground/30"
               }
               ${trackClassName}
             `}
@@ -133,8 +132,8 @@ export function AppSwitch({
                 ease-in-out
                 ${
                   isChecked
-                    ? "translate-x-[20px] bg-[#56fff7] shadow-[0_0_8px_rgba(86,255,247,0.5)]"
-                    : "translate-x-0 bg-[#373c44]"
+                    ? "translate-x-[20px] bg-secondary"
+                    : "translate-x-0 bg-border"
                 }
                 ${thumbClassName}
               `}

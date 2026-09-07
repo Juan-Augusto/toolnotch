@@ -1,6 +1,6 @@
 "use client";
 
-import React, {
+import  {
   useState,
   useId,
   useRef,
@@ -101,23 +101,23 @@ export function AppCheckbox({
               transition-colors
               duration-150
               peer-focus-visible:ring-2
-              peer-focus-visible:ring-[#56fff7]
+              peer-focus-visible:ring-secondary
               peer-focus-visible:ring-offset-1
-              peer-focus-visible:ring-offset-[#121518]
+              peer-focus-visible:ring-offset-background
               ${
                 error
-                  ? "border border-red-500 bg-[#202327]"
+                  ? "border border-red-500 bg-tertiary"
                   : isChecked || indeterminate
-                    ? "bg-[#56fff7] border border-[#56fff7] shadow-[0_0_8px_rgba(86,255,247,0.3)]"
-                    : "bg-[#202327] dark:bg-[#1a1d20] border border-[#454b54] hover:border-[#5c636e]"
+                    ? "bg-secondary border border-secondary"
+                    : "bg-panel border border-border hover:border-foreground/40"
               }
               ${boxClassName}
             `}
           >
             {indeterminate ? (
-              <Minus className="w-3.5 h-3.5 text-[#121518] stroke-[3.5]" />
+              <Minus className="w-3.5 h-3.5 text-background stroke-[3.5]" />
             ) : isChecked ? (
-              <Check className="w-3.5 h-3.5 text-[#121518] stroke-[3.5]" />
+              <Check className="w-3.5 h-3.5 text-background stroke-[3.5]" />
             ) : null}
           </div>
         </div>
