@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import ToolWrapper from '@/components/ToolWrapper'
+import AppToolWrapper from '@/components/AppToolWrapper'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import type { FaqItem } from '@/components/FaqSection'
-import CitationGenerator from '@/components/education/CitationGenerator'
+import type { FaqItem } from '@/components/AppFaqSection'
+import AppCitationGenerator from '@/components/education/AppCitationGenerator'
 
 const PATH = '/tools/education/citation-generator'
 
@@ -47,16 +47,15 @@ export default async function CitationGeneratorPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper
+      <AppToolWrapper
         title={t('title')}
         description={t('description')}
         breadcrumbLabel={t('title')}
         faqs={faqs}
-        adSlot="citation-generator"
         richContent={richContent}
       >
-        <CitationGenerator locale={locale} />
-      </ToolWrapper>
+        <AppCitationGenerator locale={locale} />
+      </AppToolWrapper>
     </>
   )
 }

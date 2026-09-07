@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'AI Paraphraser — Rewrite Text Free Online',
   description: 'Free AI paraphraser powered by Claude. Rewrite text in formal, casual, creative, or academic tone. 500 words/day free.',
+  // Coming-soon stub — noindex until it ships real content (WS-5 audit; WS-6 follow-up).
+  robots: { index: false },
 }
 
 export default function ParaphraserPage() {

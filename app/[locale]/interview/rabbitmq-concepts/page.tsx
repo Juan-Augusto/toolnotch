@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import { RabbitMQConceptsQuiz } from '@/components/interview/RabbitMQConceptsQuiz'
+import { AppRabbitMQConceptsQuiz } from '@/components/interview/AppRabbitMQConceptsQuiz'
 import { getFlag } from '@/lib/featureFlags'
 
 const PATH = '/interview/rabbitmq-concepts'
@@ -104,7 +104,7 @@ export default async function RabbitMQConceptsQuizPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <RabbitMQConceptsQuiz />
+      <AppRabbitMQConceptsQuiz />
     </>
   )
 }

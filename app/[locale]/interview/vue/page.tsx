@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import { VueQuiz } from '@/components/interview/VueQuiz'
+import { AppVueQuiz } from '@/components/interview/AppVueQuiz'
 import { getFlag } from '@/lib/featureFlags'
 
 const PATH = '/interview/vue'
@@ -103,7 +103,7 @@ export default async function VueQuizPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <VueQuiz />
+      <AppVueQuiz />
     </>
   )
 }

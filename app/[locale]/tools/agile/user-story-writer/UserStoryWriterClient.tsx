@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import ToolWrapper from '@/components/ToolWrapper'
-import type { FaqItem } from '@/components/FaqSection'
+import AppToolWrapper from '@/components/AppToolWrapper'
+import type { FaqItem } from '@/components/AppFaqSection'
 
 interface RichContent {
   whatIs: string
@@ -53,7 +53,7 @@ export default function UserStoryWriterClient({ title, description, faqs, labels
   const canGenerate = role.trim() && feature.trim() && benefit.trim()
 
   return (
-    <ToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} adSlot="user-story-writer" richContent={richContent}>
+    <AppToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} richContent={richContent}>
       <div className="max-w-2xl mx-auto space-y-4">
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1">{labels.roleLabel}</label>
@@ -132,6 +132,6 @@ export default function UserStoryWriterClient({ title, description, faqs, labels
           </div>
         )}
       </div>
-    </ToolWrapper>
+    </AppToolWrapper>
   )
 }

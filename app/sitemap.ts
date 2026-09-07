@@ -1,29 +1,53 @@
 import type { MetadataRoute } from 'next'
-import { conversionPages } from '@/data/conversionPages'
 import { COMMON_PAIRS } from '@/data/conversionPairs'
+import { PRIORITY_PAIR_SLUGS } from '@/data/conversionPairContent'
+import { QUIZ_REGISTRY, NOINDEX_QUIZ_IDS } from '@/lib/quizRegistry'
 import { BLOG_POSTS } from '@/data/blog/index'
 import { getAllMdxBlogPosts } from '@/lib/content/blogRepository'
+import { translateSlug } from '@/data/blog/slugTranslations'
 
 const BASE_URL = (process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com').trim()
+
+/**
+ * Stable content-refresh date for routes with no per-item date. Bumped when a
+ * WS ships a site-wide change (WS-5 = 2026-09-05). Using a fixed date instead
+ * of `new Date()` keeps `<lastmod>` from churning on every deploy.
+ */
+const SITE_CONTENT_DATE = new Date('2026-09-05T00:00:00Z')
+
+/** Priority conversion pairs stay in the sitemap; the rest are noindex (WS-5 item 10). */
+const PRIORITY_PAIR_SET = new Set<string>(PRIORITY_PAIR_SLUGS)
+
+/**
+ * Individual quiz routes, generated from the single quiz registry.
+ * NOINDEX_QUIZ_IDS (no unique indexable body) are filtered out — they emit
+ * `robots: { index: false }` and stay out of the sitemap (AdSense readiness).
+ */
+const QUIZ_ROUTES = QUIZ_REGISTRY.filter((q) => !NOINDEX_QUIZ_IDS.has(q.id)).map(
+  (q) => `/quiz/${q.id}`,
+)
+
+// World Cup quiz result/tier pages were previously listed here. They are
+// 80–120 words by design (CLAUDE.md) and read as thin to a crawler, so they now
+// emit `robots: { index: false, follow: true }` (NOINDEX_RESULT_QUIZ_IDS) and
+// are no longer part of the sitemap (AdSense readiness, 2026-09-06).
 
 const TRUST_ROUTES = [
   '/about',
   '/privacy',
   '/terms',
-  '/contact',
+  // '/contact', '/partners' — robots:noindex (utility / short transparency
+  // pages, WS-6 audit). AppFooter-linked and crawlable, just not indexed.
+  '/disclosure',
 ]
 
 const ALL_ROUTES = [
-  // Interview prep
+  // Interview prep — only routes that render without a feature flag.
+  // database-design / database-indexing / messaging-sqs-kafka / rabbitmq-concepts
+  // / nodejs-fundamentals / system-architecture / vue redirect (307) to /interview
+  // until `interview-<name>` flags ship — kept out of the sitemap (WS-6 audit §7).
   '/interview',
   '/interview/typescript',
-  '/interview/database-design',
-  '/interview/database-indexing',
-  '/interview/messaging-sqs-kafka',
-  '/interview/rabbitmq-concepts',
-  '/interview/nodejs-fundamentals',
-  '/interview/system-architecture',
-  '/interview/vue',
   // Legal / info (moved to TRUST_ROUTES above — rendered at priority 0.6)
   // PDF tools
   '/tools/pdf',
@@ -45,9 +69,8 @@ const ALL_ROUTES = [
   '/tools/text/reading-time-calculator',
   '/tools/text/word-frequency-counter',
   '/tools/text/keyword-density-checker',
-  '/tools/text/paraphraser',
-  '/tools/text/summarizer',
-  '/tools/text/plagiarism-checker',
+  // '/tools/text/paraphraser', '/tools/text/summarizer',
+  // '/tools/text/plagiarism-checker' — coming-soon stubs, noindex (WS-5 audit).
   // Finance — calculators
   '/tools/finance',
   '/tools/finance/loan-calculator',
@@ -71,7 +94,7 @@ const ALL_ROUTES = [
   '/tools/finance/invoice-generator-australia',
   '/tools/finance/invoice-generator-for-freelancers',
   '/tools/finance/receipt-generator',
-  '/tools/finance/crypto-portfolio-tracker',
+  // '/tools/finance/crypto-portfolio-tracker' — coming-soon stub, noindex (WS-5 audit).
   // Fun tools
   '/tools/fun',
   '/tools/fun/spin-the-wheel',
@@ -94,37 +117,24 @@ const ALL_ROUTES = [
   '/tools/agile/planning-poker',
   '/tools/agile/user-story-writer',
   '/tools/agile/sprint-date-calculator',
-  // Quizzes
+  // Quizzes hub — individual /quiz/<id> routes are generated from
+  // lib/quizRegistry.ts (see QUIZ_ROUTES below), not hand-listed here.
   '/quizzes',
-  '/quiz/what-career-suits-you',
-  '/quiz/which-programming-language-are-you',
-  '/quiz/am-i-introverted-or-extroverted',
-  '/quiz/what-type-of-traveler-are-you',
-  '/quiz/which-decade-do-you-belong-in',
-  // Sports quizzes
-  '/quiz/fifa-world-cup-winners',
-  '/quiz/which-football-club-are-you',
-  '/quiz/champions-league-trivia',
-  '/quiz/what-is-your-love-language',
-  '/quiz/formula-1-trivia',
-  '/quiz/which-f1-driver-are-you',
-  // Health tools
-  '/tools/health',
+  // Health tools (no /tools/health hub page — 404, WS-6 audit §7)
   '/tools/health/bmi-calculator',
   '/tools/health/tdee-calculator',
   '/tools/health/calorie-deficit-calculator',
-  // Education tools
-  '/tools/education',
+  // Education tools (no /tools/education hub page — 404, WS-6 audit §7)
   '/tools/education/gpa-calculator',
   '/tools/education/cumulative-gpa-calculator',
   '/tools/education/grade-calculator',
   '/tools/education/citation-generator',
-  // Math tools
-  '/tools/math',
+  // Math tools (no /tools/math hub page — 404, WS-6 audit §7)
   '/tools/math/age-calculator',
-  // Utilities
-  '/tools/utilities',
+  // Utilities (no /tools/utilities hub page — 404, WS-6 audit §7)
   '/tools/utilities/qr-code-generator',
+  '/tools/utilities/election-countdown',
+  '/tools/utilities/polling-place-finder',
   // Blog
   '/blog',
 ]
@@ -133,10 +143,10 @@ const ALL_ROUTES = [
  * Builds a sitemap entry with locale alternates for hreflang.
  * English has no URL prefix (localePrefix: 'as-needed').
  */
-function urlWithAlternates(path: string, priority = 0.8) {
+function urlWithAlternates(path: string, priority = 0.8, lastModified: Date = SITE_CONTENT_DATE) {
   return {
     url: `${BASE_URL}${path}`,
-    lastModified: new Date(),
+    lastModified,
     changeFrequency: 'monthly' as const,
     priority,
     alternates: {
@@ -144,6 +154,7 @@ function urlWithAlternates(path: string, priority = 0.8) {
         en: `${BASE_URL}${path}`,
         pt: `${BASE_URL}/pt${path}`,
         es: `${BASE_URL}/es${path}`,
+        'x-default': `${BASE_URL}${path}`,
       },
     },
   }
@@ -152,25 +163,36 @@ function urlWithAlternates(path: string, priority = 0.8) {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const mdxPosts = await getAllMdxBlogPosts()
 
-  const mdxBlogEntries: MetadataRoute.Sitemap = mdxPosts.map((post) => ({
-    url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: new Date(post.updatedAt ?? post.publishedAt),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-    alternates: {
-      languages: {
-        en: `${BASE_URL}/blog/${post.slug}`,
-        pt: `${BASE_URL}/pt/blog/${post.slug}`,
-        es: `${BASE_URL}/es/blog/${post.slug}`,
-        'x-default': `${BASE_URL}/blog/${post.slug}`,
-      },
-    },
-  }))
+  // Skip MDX posts already emitted via the BLOG_POSTS loop below to avoid duplicate <url> entries.
+  const registeredBlogSlugs = new Set(BLOG_POSTS.map((post) => post.slug))
+
+  const mdxBlogEntries: MetadataRoute.Sitemap = mdxPosts
+    .filter((post) => !registeredBlogSlugs.has(post.slug))
+    .map((post) => {
+      // Posts with a per-locale MDX file have a native slug per locale
+      // (data/blog/slugTranslations). Emitting the English slug under /pt or
+      // /es is a 404 — translate it. Legacy shared-slug posts are unchanged.
+      const enSlug = translateSlug(post.slug, 'en')
+      return {
+        url: `${BASE_URL}/blog/${enSlug}`,
+        lastModified: new Date(post.updatedAt ?? post.publishedAt ?? SITE_CONTENT_DATE),
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+        alternates: {
+          languages: {
+            en: `${BASE_URL}/blog/${enSlug}`,
+            pt: `${BASE_URL}/pt/blog/${translateSlug(post.slug, 'pt')}`,
+            es: `${BASE_URL}/es/blog/${translateSlug(post.slug, 'es')}`,
+            'x-default': `${BASE_URL}/blog/${enSlug}`,
+          },
+        },
+      }
+    })
 
   return [
     {
       url: BASE_URL,
-      lastModified: new Date(),
+      lastModified: SITE_CONTENT_DATE,
       changeFrequency: 'weekly',
       priority: 1.0,
       alternates: {
@@ -178,28 +200,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           en: BASE_URL,
           pt: `${BASE_URL}/pt`,
           es: `${BASE_URL}/es`,
+          'x-default': BASE_URL,
         },
       },
     },
     urlWithAlternates('/tools/image/image-compressor', 0.9),
-    ...conversionPages.map((page) =>
-      urlWithAlternates(`/tools/image/${page.slug}`)
-    ),
-    ...COMMON_PAIRS.map((pair) =>
-      urlWithAlternates(`/tools/convert/${pair.slug}`)
-    ),
+    // The 8 programmatic /tools/image/<slug> format-permutation pages now emit
+    // `robots: { index: false }` — they duplicate the image-compressor UI
+    // (~150 words). Excluded from the sitemap (WS-6 audit §7).
+    // Conversion pairs: only the WS-2 priority slugs are indexable. The rest
+    // emit `robots: { index: false }` and are excluded here (WS-5 item 10).
+    ...COMMON_PAIRS
+      .filter((pair) => PRIORITY_PAIR_SET.has(pair.slug))
+      .map((pair) => urlWithAlternates(`/tools/convert/${pair.slug}`)),
     ...TRUST_ROUTES.map((path) => urlWithAlternates(path, 0.6)),
     ...ALL_ROUTES.map((path) => urlWithAlternates(path)),
-    ...BLOG_POSTS.map((post) => urlWithAlternates(`/blog/${post.slug}`, 0.8)),
+    // Quizzes — generated from lib/quizRegistry.ts (single source of truth).
+    ...QUIZ_ROUTES.map((path) => urlWithAlternates(path, 0.7)),
+    ...BLOG_POSTS.map((post) =>
+      urlWithAlternates(
+        `/blog/${post.slug}`,
+        0.8,
+        new Date(post.updatedAt ?? post.publishedAt ?? SITE_CONTENT_DATE),
+      ),
+    ),
     ...mdxBlogEntries,
-    // Backend Engineering quizzes
-    ...[
-      '/quiz/nodejs-fundamentals',
-      '/quiz/database-design',
-      '/quiz/database-indexing',
-      '/quiz/messaging-sqs-kafka',
-      '/quiz/rabbitmq-concepts',
-      '/quiz/system-architecture',
-    ].map((path) => urlWithAlternates(path, 0.7)),
   ]
 }

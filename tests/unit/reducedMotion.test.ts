@@ -152,7 +152,7 @@ describe('DiceRoller3D — prefers-reduced-motion handling', () => {
   test('registers useFrame callback for the animation loop when motion is allowed', async () => {
     mockMatchMedia(false) // reduced motion OFF
 
-    const DiceRoller3D = (await import('@/components/fun/DiceRoller3D')).default
+    const DiceRoller3D = (await import('@/components/fun/AppDiceRoller3D')).default
     const onAllDone = jest.fn()
 
     render(
@@ -190,7 +190,7 @@ describe('DiceRoller3D — prefers-reduced-motion handling', () => {
     // TODO: Re-enable with node-canvas + real @react-three/fiber renderer.
     mockMatchMedia(true) // reduced motion ON
 
-    const DiceRoller3D = (await import('@/components/fun/DiceRoller3D')).default
+    const DiceRoller3D = (await import('@/components/fun/AppDiceRoller3D')).default
     const onAllDone = jest.fn()
 
     await act(async () => {
@@ -211,7 +211,7 @@ describe('DiceRoller3D — prefers-reduced-motion handling', () => {
   test('renders Canvas container regardless of reduced-motion setting', async () => {
     mockMatchMedia(true)
 
-    const DiceRoller3D = (await import('@/components/fun/DiceRoller3D')).default
+    const DiceRoller3D = (await import('@/components/fun/AppDiceRoller3D')).default
     const { getByTestId } = render(
       React.createElement(DiceRoller3D, {
         dice: [{ sides: 20, result: 15 }],
@@ -226,7 +226,7 @@ describe('DiceRoller3D — prefers-reduced-motion handling', () => {
   test('adjusts canvas height based on number of dice (<=2 → 180px, >2 → 200px)', async () => {
     mockMatchMedia(false)
 
-    const DiceRoller3D = (await import('@/components/fun/DiceRoller3D')).default
+    const DiceRoller3D = (await import('@/components/fun/AppDiceRoller3D')).default
     const { container: c1 } = render(
       React.createElement(DiceRoller3D, {
         dice: [{ sides: 6, result: 1 }, { sides: 6, result: 2 }],
@@ -271,7 +271,7 @@ describe('CoinFlip3D — prefers-reduced-motion handling', () => {
     // TODO: Re-enable with node-canvas + real @react-three/fiber renderer.
     mockMatchMedia(true) // reduced motion ON
 
-    const CoinFlip3D = (await import('@/components/fun/CoinFlip3D')).default
+    const CoinFlip3D = (await import('@/components/fun/AppCoinFlip3D')).default
     const onDone = jest.fn()
 
     await act(async () => {
@@ -292,7 +292,7 @@ describe('CoinFlip3D — prefers-reduced-motion handling', () => {
   test('registers useFrame callback when motion is allowed', async () => {
     mockMatchMedia(false) // reduced motion OFF
 
-    const CoinFlip3D = (await import('@/components/fun/CoinFlip3D')).default
+    const CoinFlip3D = (await import('@/components/fun/AppCoinFlip3D')).default
     const onDone = jest.fn()
 
     render(
@@ -311,7 +311,7 @@ describe('CoinFlip3D — prefers-reduced-motion handling', () => {
   test('renders Canvas container for both heads and tails', async () => {
     mockMatchMedia(false)
 
-    const CoinFlip3D = (await import('@/components/fun/CoinFlip3D')).default
+    const CoinFlip3D = (await import('@/components/fun/AppCoinFlip3D')).default
 
     const { getByTestId: getH } = render(
       React.createElement(CoinFlip3D, { side: 'heads', flipping: false, onDone: jest.fn() }),

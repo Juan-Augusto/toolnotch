@@ -8,7 +8,7 @@
 
 import React from 'react'
 import { render, screen, within } from '@testing-library/react'
-import AffiliatePanel from '@/components/finance/calculator/AffiliatePanel'
+import AffiliatePanel from '@/components/finance/calculator/AppAffiliatePanel'
 
 // ---------------------------------------------------------------------------
 // Helper — collect all <a> elements inside the rendered panel

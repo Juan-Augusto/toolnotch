@@ -1,108 +1,56 @@
 @import "tailwindcss";
 
-/* Dark class variant — triggered by .dark on <html> */
 @variant dark (&:where(.dark, .dark *));
 
-/* ═══════════════════════════════════════════════════════════════════
-   TOOLNOTCH — SURGICAL NEON DESIGN SYSTEM
-   One neon accent. Dark surfaces. Precision over decoration.
-   ═══════════════════════════════════════════════════════════════════ */
-
-/* ── Tailwind v4 theme mapping — exposes tokens as utilities ── */
 @theme inline {
-  --color-background: var(--background);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-border: var(--border);
   --color-foreground: var(--foreground);
-  --color-surface: var(--base-surface);
-  --color-elevated: var(--base-elevated);
-  --color-card: var(--base-card);
-  --color-neon: var(--neon);
-  --color-bd-base: var(--base-border);
-  --color-bd-neon: var(--neon-border);
-  --color-tx-primary: var(--text-primary);
-  --color-tx-secondary: var(--text-secondary);
-  --color-tx-muted: var(--text-muted);
+  --color-background: var(--background);
+  --color-label: var(--label);
 
-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-syne), "Syne", ui-sans-serif, sans-serif;
+  --font-sans:
+    "Azeret Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --font-display: var(--font-syne), "Azeret Mono", ui-monospace, monospace;
   --font-mono:
     var(--font-geist-mono), "JetBrains Mono", ui-monospace, monospace;
-  --shadow-neon-sm:
-    0 0 8px rgb(var(--neon-rgb) / 0.45), 0 0 20px rgb(var(--neon-rgb) / 0.15);
-  --shadow-neon:
-    0 0 12px rgb(var(--neon-rgb) / 0.55), 0 0 32px rgb(var(--neon-rgb) / 0.22),
-    0 0 60px rgb(var(--neon-rgb) / 0.07);
 }
 
-/* ── Light mode (default) ── */
 :root {
-  /* Neon: darker variant for light-mode contrast */
-  --neon: #2ace92;
-  --neon-rgb: 0 168 107;
-  --neon-dim: rgb(0 168 107 / 0.09);
-  --neon-border: rgb(0 168 107 / 0.35);
-  --neon-glow-sm: 0 0 6px rgb(0 168 107 / 0.35), 0 0 18px rgb(0 168 107 / 0.12);
-  --neon-glow: 0 0 10px rgb(0 168 107 / 0.45), 0 0 28px rgb(0 168 107 / 0.18);
-  --neon-text-glow: 0 0 8px rgb(0 168 107 / 0.5);
+  --primary: #e86298;
+  --primary-dim: rgba(232, 98, 152, 0.1);
+  --primary-glow: 0 0 10px rgba(232, 98, 152, 0.4);
+  --primary-text-glow: 0 0 8px rgba(232, 98, 152, 0.5);
 
-  /* Surfaces */
-  --base-bg: #f9fafb;
-  --base-card: #ffffff;
-  --base-surface: #ffffff;
-  --base-elevated: #f6f7f7;
-  --base-border: #e3e3f0;
-  --base-border-muted: #ededfa;
+  --secondary: #3f3f3f;
+  --tertiary: #e9e9e9;
+  --border: #a4a9b1;
+  --foreground: #3f3f3f;
+  --background: #f9f9f9;
+  --label: #7d7d7d;
 
-  /* Text */
-  --text-primary: #0b0b1e;
-  --text-secondary: #606679;
-  --text-muted: #8080a8;
-
-  /* Semantic */
-  --background: var(--base-bg);
-  --foreground: var(--text-primary);
-
-  /* Shadows */
   --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.06), 0 1px 2px rgb(0 0 0 / 0.04);
   --shadow: 0 4px 16px rgb(0 0 0 / 0.08);
   --shadow-lg: 0 8px 32px rgb(0 0 0 / 0.1);
 }
 
-/* ── Dark mode overrides ── */
 .dark {
-  /* Neon: full brightness */
-  --neon: #00e5a0;
-  --neon-rgb: 0 229 160;
-  --neon-dim: rgb(0 229 160 / 0.07);
-  --neon-border: rgb(0 229 160 / 0.22);
-  --neon-glow-sm: 0 0 8px rgb(0 229 160 / 0.5), 0 0 24px rgb(0 229 160 / 0.16);
-  --neon-glow:
-    0 0 14px rgb(0 229 160 / 0.6), 0 0 36px rgb(0 229 160 / 0.24),
-    0 0 70px rgb(0 229 160 / 0.07);
-  --neon-text-glow: 0 0 10px rgb(0 229 160 / 0.7);
-  /* Surfaces */
-  --base-bg: #0c0e14;
-  --base-card: #13161f;
-  --base-surface: #181c27;
-  --base-elevated: rgb(9, 9, 15);
-  --base-border: #2f3446;
-  --base-border-muted: #141430;
+  --primary: #d5ff4a;
+  --primary-dim: rgba(213, 255, 74, 0.1);
+  --primary-glow: 0 0 10px rgba(213, 255, 74, 0.4);
+  --primary-text-glow: 0 0 8px rgba(213, 255, 74, 0.5);
 
-  /* Text */
-  --text-primary: #e8e8f6;
-  --text-secondary: #868f9c;
-  --text-muted: #4e4e72;
-
-  /* Semantic */
-  --background: var(--base-bg);
-  --foreground: var(--text-primary);
-
-  /* Shadows */
-  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.5);
-  --shadow: 0 4px 16px rgb(0 0 0 / 0.6);
-  --shadow-lg: 0 8px 32px rgb(0 0 0 / 0.7);
+  --secondary: #56fff7;
+  --tertiary: #292c30;
+  --border: #5c6269;
+  --foreground: #fefefe;
+  --background: #1f2124;
+  --label: #a8a8a8;
 }
 
-/* ── Base ── */
 html {
   scroll-behavior: smooth;
 }
@@ -117,12 +65,13 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ── Typography ── */
 h1,
 h2,
 h3,
@@ -130,35 +79,24 @@ h4,
 h5,
 h6 {
   font-family: var(--font-display), var(--font-sans), sans-serif;
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  color: var(--text-primary);
+  @apply font-semibold;
 }
 
-/* ── Form controls ── */
-input,
-textarea,
 select {
-  color: inherit;
+  @apply cursor-pointer;
 }
 
-input:not([type="range"]):not([type="file"]):not([type="checkbox"]):not(
-    [type="radio"]
-  ),
-textarea,
-select {
-  background: var(--base-surface);
-  color: var(--text-primary);
-  border: 1px solid var(--base-border);
-  border-radius: 8px;
-  transition:
-    border-color 180ms,
-    box-shadow 180ms;
-  @apply hover:border-gray-300 dark:hover:border-gray-600 focus:outline-0 focus:border-neon focus:ring-1 focus:ring-neon;
+/* Remove spin buttons from number inputs globally */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-/* ── Scrollbar ── */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -167,223 +105,134 @@ select {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--base-border);
+  background: var(--border);
   border-radius: 999px;
   transition: background 200ms;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--neon-border);
+  background: var(--primary);
 }
 
 /* ── Selection ── */
 ::selection {
-  background: var(--neon-dim);
-  color: var(--neon);
+  background: var(--primary-dim);
+  color: var(--primary);
 }
 
-/* ══════════════════════════════════════
-   COMPONENT PATTERNS
-   Reusable design-system building blocks
-   ══════════════════════════════════════ */
-
-/* ── Badge / tag ── */
-.badge-neon {
-  @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-neon bg-neon/5 border-bd-neon text-[9px] sm:text-xs font-bold uppercase tracking-widest backdrop-blur-sm;
-}
-
-/* ── Button — primary neon ── */
-.btn-neon {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 1.2rem;
-  background: var(--neon-dim);
-  color: var(--neon);
-  border: 1px solid var(--neon-border);
-  border-radius: 8px;
-  font-family: var(--font-sans), sans-serif;
-  font-weight: 600;
-  font-size: 0.875rem;
-  letter-spacing: 0.01em;
-  cursor: pointer;
-  transition:
-    background 200ms,
-    box-shadow 200ms,
-    transform 150ms,
-    border-color 200ms;
-  white-space: nowrap;
-}
-
-.btn-neon:hover {
-  background: rgb(var(--neon-rgb) / 0.13);
-  border-color: rgb(var(--neon-rgb) / 0.45);
-  box-shadow: var(--neon-glow-sm);
-  transform: translateY(-1px);
-}
-
-.btn-neon:active {
-  transform: translateY(0);
-  box-shadow: none;
-}
-
-.btn-neon:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: none;
-}
-
-/* ── Button — ghost ── */
-.btn-ghost {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 1.2rem;
-  background: transparent;
-  color: var(--text-secondary);
-  border: 1px solid var(--base-border);
-  border-radius: 8px;
-  font-family: var(--font-sans), sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
-  cursor: pointer;
-  transition:
-    background 200ms,
-    border-color 200ms,
-    color 200ms,
-    transform 150ms;
-}
-
-.btn-ghost:hover {
-  background: var(--base-elevated);
-  border-color: var(--text-muted);
-  color: var(--text-primary);
-  transform: translateY(-1px);
-}
-
-.btn-ghost:active {
-  transform: translateY(0);
-}
-
-/* ── Card ── */
-.card-neon {
-  background: var(--base-card);
-  border: 1px solid var(--base-border);
-  border-radius: 12px;
-}
-
-/* ── Interactive card (clickable) ── */
-.card-neon-interactive {
-  background: var(--base-card);
-  border: 1px solid var(--base-border);
-  border-radius: 12px;
-  cursor: pointer;
-  transition:
-    border-color 220ms,
-    box-shadow 220ms,
-    transform 180ms,
-    background 220ms;
-}
-
-/* ── Input ── */
-.input-neon {
-  width: 100%;
-  background: var(--base-card);
-  color: var(--text-primary);
-  border: 1px solid var(--base-border);
-  border-radius: 8px;
-  padding: 0.55rem 0.875rem;
-  font-family: var(--font-sans), sans-serif;
-  font-size: 0.875rem;
-  transition:
-    border-color 180ms,
-    box-shadow 180ms;
-}
-
-.input-neon::placeholder {
-  color: var(--text-muted);
-}
-
-.input-neon:focus {
-  outline: none;
-  border-color: var(--neon-border);
-  box-shadow:
-    0 0 0 3px var(--neon-dim),
-    var(--neon-glow-sm);
-}
-
-/* ── Label ── */
-.label-neon {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 0.4rem;
-}
-
-/* ── Divider ── */
-.divider-neon {
-  height: 1px;
-  background: linear-gradient(
+/* ── Dashed border (5px dash, 5px gap) ── */
+.border-b-dashed-5 {
+  background-image: repeating-linear-gradient(
     to right,
-    transparent,
-    var(--base-border),
-    transparent
+    var(--border) 0,
+    var(--border) 5px,
+    transparent 5px,
+    transparent 10px
   );
-  border: none;
+  background-size: 100% 1px;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
-/* ── Pro-tip block ── */
+.border-t-dashed-5 {
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--border) 0,
+    var(--border) 5px,
+    transparent 5px,
+    transparent 10px
+  );
+  background-size: 100% 1px;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.border-dashed-5 {
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      var(--border) 0,
+      var(--border) 5px,
+      transparent 5px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      to right,
+      var(--border) 0,
+      var(--border) 5px,
+      transparent 5px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--border) 0,
+      var(--border) 5px,
+      transparent 5px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--border) 0,
+      var(--border) 5px,
+      transparent 5px,
+      transparent 10px
+    );
+  background-position:
+    top left,
+    bottom left,
+    top left,
+    top right;
+  background-size:
+    100% 1px,
+    100% 1px,
+    1px 100%,
+    1px 100%;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 100%;
+  max-width: 1270px;
+  margin-left: auto;
+  margin-right: auto;
+  @apply px-6 md:px-10;
+}
+
 .protip-neon {
-  background: var(--neon-dim);
-  border-left: 3px solid var(--neon);
-  border-top: 1px solid var(--neon-border);
-  border-right: 1px solid var(--neon-border);
-  border-bottom: 1px solid var(--neon-border);
+  background: var(--primary-dim);
+  border-left: 3px solid var(--primary);
+  border-top: 1px solid var(--primary);
+  border-right: 1px solid var(--primary);
+  border-bottom: 1px solid var(--primary);
   border-radius: 0 8px 8px 0;
   padding: 1rem 1.25rem;
 }
 
-/* ── Link hover ── */
 .link-hover {
-  color: var(--text-secondary);
+  color: var(--label);
   transition: color 180ms;
 }
 .link-hover:hover {
-  color: var(--neon);
+  color: var(--primary);
 }
 
-/* ── Neon text glow ── */
-.text-glow {
-  text-shadow: var(--neon-text-glow);
-}
-
-/* ── Section heading pattern ── */
 .section-heading {
   font-family: var(--font-display), sans-serif;
   font-weight: 700;
   letter-spacing: -0.025em;
-  color: var(--text-primary);
+  color: var(--foreground);
 }
 
-/* ── Ad unit placeholder ── */
 .ad-placeholder {
-  background: var(--base-elevated);
-  border: 1px dashed var(--base-border);
+  background: var(--tertiary);
+  border: 1px dashed var(--border);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-muted);
+  color: var(--label);
   font-size: 0.75rem;
   height: 5rem;
 }
-
-/* ══════════════════════════════
-   ANIMATIONS
-   ══════════════════════════════ */
 
 @keyframes fade-in-up {
   from {
@@ -438,7 +287,6 @@ select {
   animation: neon-pulse 2.4s ease-in-out infinite;
 }
 
-/* ── rehype-pretty-code dual theme ── */
 [data-theme="light"] {
   display: block;
 }

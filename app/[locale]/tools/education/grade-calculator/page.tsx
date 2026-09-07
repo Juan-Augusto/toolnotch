@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import ToolWrapper from '@/components/ToolWrapper'
+import AppToolWrapper from '@/components/AppToolWrapper'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import type { FaqItem } from '@/components/FaqSection'
-import GradeCalculator from '@/components/education/GradeCalculator'
+import type { FaqItem } from '@/components/AppFaqSection'
+import AppGradeCalculator from '@/components/education/AppGradeCalculator'
 
 const PATH = '/tools/education/grade-calculator'
 
@@ -47,16 +47,15 @@ export default async function GradeCalculatorPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper
+      <AppToolWrapper
         title={t('gradeTitle')}
         description={t('gradeDescription')}
         breadcrumbLabel={t('gradeTitle')}
         faqs={faqs}
-        adSlot="grade-calculator"
         richContent={richContent}
       >
-        <GradeCalculator />
-      </ToolWrapper>
+        <AppGradeCalculator />
+      </AppToolWrapper>
     </>
   )
 }

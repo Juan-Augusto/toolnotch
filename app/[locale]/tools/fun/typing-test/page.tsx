@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { buildAlternates } from '@/lib/i18nMeta'
-import type { FaqItem } from '@/components/FaqSection'
-import ToolWrapper from '@/components/ToolWrapper'
+import type { FaqItem } from '@/components/AppFaqSection'
+import AppToolWrapper from '@/components/AppToolWrapper'
 
 const PATH = '/tools/fun/typing-test'
 
@@ -32,17 +32,16 @@ export default async function TypingTestPage({ params }: Props) {
   const richContent = t.raw('richContent') as RichContent
 
   return (
-    <ToolWrapper
+    <AppToolWrapper
       title={t('title')}
       description={t('description')}
       breadcrumbLabel={t('title')}
       faqs={faqs}
-      adSlot="1234567890"
       richContent={richContent}
     >
       <div className="text-center py-8">
         <p className="text-gray-500">Coming soon</p>
       </div>
-    </ToolWrapper>
+    </AppToolWrapper>
   )
 }

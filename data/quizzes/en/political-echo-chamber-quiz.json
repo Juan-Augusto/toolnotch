@@ -1,0 +1,102 @@
+{
+  "id": "political-echo-chamber-quiz",
+  "title": "What's Your Political Echo Chamber Level?",
+  "description": "Find out how much your feed and social circle reinforce a single political view — in 10 quick questions about your habits, not your opinions.",
+  "image": "/images/quizzes/political-echo-chamber-quiz-cover.jpg",
+  "questions": [
+    { "id": "q1", "text": "When you open your social media, the political posts that show up are mostly:", "options": [
+      { "id": "q1a", "text": "Only from people who think exactly like me", "scores": { "bolha_extrema": 3, "bolha_moderada": 1 } },
+      { "id": "q1b", "text": "Mostly from people with opinions similar to mine", "scores": { "bolha_moderada": 3, "bolha_extrema": 1 } },
+      { "id": "q1c", "text": "A reasonable mix of different opinions", "scores": { "visao_equilibrada": 3, "exposicao_ampla": 1 } },
+      { "id": "q1d", "text": "All kinds of opinions, including ones I disagree with a lot", "scores": { "exposicao_ampla": 3, "visao_equilibrada": 1 } }
+    ]},
+    { "id": "q2", "text": "Do you follow profiles, pages, or news outlets with political views different from yours?", "options": [
+      { "id": "q2a", "text": "No, I'd rather not see that kind of content", "scores": { "bolha_extrema": 3, "bolha_moderada": 1 } },
+      { "id": "q2b", "text": "I follow very few, more by accident than on purpose", "scores": { "bolha_moderada": 3, "bolha_extrema": 1 } },
+      { "id": "q2c", "text": "I follow some on purpose, to get other perspectives", "scores": { "visao_equilibrada": 3, "exposicao_ampla": 1 } },
+      { "id": "q2d", "text": "I follow several on purpose, specifically to understand other sides", "scores": { "exposicao_ampla": 3, "visao_equilibrada": 1 } }
+    ]},
+    { "id": "q3", "text": "When someone posts a political opinion you strongly disagree with, what do you usually do?", "options": [
+      { "id": "q3a", "text": "I unfollow, mute, or block the person", "scores": { "bolha_extrema": 3, "bolha_moderada": 1 } },
+      { "id": "q3b", "text": "I ignore it and scroll past", "scores": { "bolha_moderada": 3, "bolha_extrema": 1 } },
+      { "id": "q3c", "text": "I sometimes read all the way through to understand the argument", "scores": { "visao_equilibrada": 3, "exposicao_ampla": 1 } },
+      { "id": "q3d", "text": "I usually read it carefully and sometimes comment to debate it", "scores": { "exposicao_ampla": 3, "visao_equilibrada": 1 } }
+    ]},
+    { "id": "q4", "text": "In family/friend groups that talk about politics, the opinions are:", "options": [
+      { "id": "q4a", "text": "Pretty much everyone thinks the same as me", "scores": { "bolha_extrema": 3, "bolha_moderada": 1 } },
+      { "id": "q4b", "text": "Most people think similarly, but there are exceptions", "scores": { "bolha_moderada": 3, "bolha_extrema": 1 } },
+      { "id": "q4c", "text": "It's a fairly even mix of opinions", "scores": { "visao_equilibrada": 3, "exposicao_ampla": 1 } },
+      { "id": "q4d", "text": "There are plenty of people who think very differently from me", "scores": { "exposicao_ampla": 3, "visao_equilibrada": 1 } }
+    ]},
+    { "id": "q5", "text": "How often do you talk about politics with someone who thinks differently than you?", "options": [
+      { "id": "q5a", "text": "Almost never — I avoid that kind of conversation", "scores": { "bolha_extrema": 3, "bolha_moderada": 1 } },
+      { "id": "q5b", "text": "Rarely, only when it's unavoidable", "scores": { "bolha_moderada": 3, "bolha_extrema": 1 } },
+      { "id": "q5c", "text": "Every once in a while, and I try to hear the other side", "scores": { "visao_equilibrada": 3, "exposicao_ampla": 1 } },
+      { "id": "q5d", "text": "Frequently — I like understanding why the person thinks that way", "scores": { "exposicao_ampla": 3, "visao_equilibrada": 1 } }
+    ]},
+    { "id": "q6", "text": "Where does the political news you read come from?", "options": [
+      { "id": "q6a", "text": "A single app/social network I already know matches my views", "scores": { "bolha_extrema": 3, "bolha_moderada": 1 } },
+      { "id": "q6b", "text": "Two or three sources that are similar to each other", "scores": { "bolha_moderada": 3, "bolha_extrema": 1 } },
+      { "id": "q6c", "text": "A variety of sources, including outlets with different editorial lines", "scores": { "visao_equilibrada": 3, "exposicao_ampla": 1 } },
+      { "id": "q6d", "text": "I make a point of comparing how different outlets cover the same story", "scores": { "exposicao_ampla": 3, "visao_equilibrada": 1 } }
+    ]},
+    { "id": "q7", "text": "Before sharing something about politics, you:", "options": [
+      { "id": "q7a", "text": "Share it right away if it confirms what I already think", "scores": { "bolha_extrema": 3, "bolha_moderada": 1 } },
+      { "id": "q7b", "text": "Usually share it without checking much", "scores": { "bolha_moderada": 3, "bolha_extrema": 1 } },
+      { "id": "q7c", "text": "Take a quick look before sharing", "scores": { "visao_equilibrada": 3, "exposicao_ampla": 1 } },
+      { "id": "q7d", "text": "Only share after checking the source and seeing what other sides say", "scores": { "exposicao_ampla": 3, "visao_equilibrada": 1 } }
+    ]},
+    { "id": "q8", "text": "Has it ever happened that you changed your mind about a political topic after hearing an opposing argument?", "options": [
+      { "id": "q8a", "text": "I don't remember it ever happening", "scores": { "bolha_extrema": 3, "bolha_moderada": 1 } },
+      { "id": "q8b", "text": "Rarely, but it may have happened", "scores": { "bolha_moderada": 3, "bolha_extrema": 1 } },
+      { "id": "q8c", "text": "Yes, a few times", "scores": { "visao_equilibrada": 3, "exposicao_ampla": 1 } },
+      { "id": "q8d", "text": "Yes, that happens fairly often", "scores": { "exposicao_ampla": 3, "visao_equilibrada": 1 } }
+    ]},
+    { "id": "q9", "text": "When the algorithm shows you political content you disagree with, you:", "options": [
+      { "id": "q9a", "text": "I've complained, reported it, or asked to \"see less of this\"", "scores": { "bolha_extrema": 3, "bolha_moderada": 1 } },
+      { "id": "q9b", "text": "I scroll past quickly and ignore it", "scores": { "bolha_moderada": 3, "bolha_extrema": 1 } },
+      { "id": "q9c", "text": "I sometimes stop to read it", "scores": { "visao_equilibrada": 3, "exposicao_ampla": 1 } },
+      { "id": "q9d", "text": "I usually stop to understand the point of view", "scores": { "exposicao_ampla": 3, "visao_equilibrada": 1 } }
+    ]},
+    { "id": "q10", "text": "If you could choose, would you prefer your feed to show you:", "options": [
+      { "id": "q10a", "text": "Only content that confirms what I already think — it's more relaxing", "scores": { "bolha_extrema": 3, "bolha_moderada": 1 } },
+      { "id": "q10b", "text": "Mostly content similar to my views", "scores": { "bolha_moderada": 3, "bolha_extrema": 1 } },
+      { "id": "q10c", "text": "A balanced mix of opinions", "scores": { "visao_equilibrada": 3, "exposicao_ampla": 1 } },
+      { "id": "q10d", "text": "As many different points of view as possible, even if it's uncomfortable", "scores": { "exposicao_ampla": 3, "visao_equilibrada": 1 } }
+    ]}
+  ],
+  "results": [
+    {
+      "id": "bolha_extrema",
+      "title": "Deep Echo Chamber",
+      "description": "Based on your answers, your feed and your social circle revolve almost entirely around voices that already think like you. That's extremely common — it's how most social algorithms and friend groups work by default — and it's nothing to feel bad about. But it does mean that, day to day, you're likely seeing a fairly narrow slice of the public conversation, with little chance of running into an argument that makes you reconsider something. This says nothing about whether your views are right or wrong — only about how much variety reaches you. Practical tip: pick one source or person you know thinks differently and follow them for a week, just to understand their reasoning — you don't have to agree with any of it.",
+      "image": "/images/results/bolha-extrema.jpg",
+      "traits": ["Consistent feed", "Aligned circle", "Little counterpoint"],
+      "shareText": "My political bubble level is: Deep Echo Chamber! Take the quiz on ToolNotch 🫧"
+    },
+    {
+      "id": "bolha_moderada",
+      "title": "Moderate Bubble",
+      "description": "Your answers show a political environment that's mostly similar to what you already think, but not completely closed off — every so often a different viewpoint shows up in your feed or in a conversation. You've had some exposure to other opinions, but it tends to be occasional rather than a regular habit. This is a very common pattern and says nothing about how informed or open-minded you are — it just describes the mix of voices reaching you right now. Practical tip: over the next week, try noticing how many times a different political opinion shows up in your feed or a conversation without just scrolling past it — simply paying attention to that already starts to shift the habit.",
+      "image": "/images/results/bolha-moderada.jpg",
+      "traits": ["Mostly similar", "Occasional counterpoint", "Some openness"],
+      "shareText": "My political bubble level is: Moderate Bubble! Take the quiz on ToolNotch 🫧"
+    },
+    {
+      "id": "visao_equilibrada",
+      "title": "Balanced View",
+      "description": "You keep a healthy balance between voices that agree with you and voices that don't — you're neither surrounded only by people who think the same way, nor exposed to absolutely everything all the time. That kind of mix tends to be a solid starting point for forming an opinion with more context, since you regularly encounter more than one way of looking at things before drawing your own conclusions. This isn't about having the \"right\" opinion — it's about the variety of voices shaping your point of view. Practical tip: keep varying your sources, and every so often read a full article — not just the headline — from an outlet you don't normally follow.",
+      "image": "/images/results/visao-equilibrada.jpg",
+      "traits": ["Varied sources", "Balanced voices", "Broad context"],
+      "shareText": "My political bubble level is: Balanced View! Take the quiz on ToolNotch 🫧"
+    },
+    {
+      "id": "exposicao_ampla",
+      "title": "Wide Exposure",
+      "description": "Based on your answers, you actively seek out viewpoints different from your own — on social media, in the news, and in everyday conversations. That broadens the range of voices reaching you and tends to give you a fuller picture of the public conversation. It's worth remembering, though, that seeing many sides isn't the same as checking whether each one is well-informed — opinion diversity and information quality are two different things. Practical tip: put that habit of hearing many sides to use by also checking the credibility of the sources you consume — from every side — since not every differing voice is necessarily well-researched.",
+      "image": "/images/results/exposicao-ampla.jpg",
+      "traits": ["Active seeker", "Multiple sides", "High diversity"],
+      "shareText": "My political bubble level is: Wide Exposure! Take the quiz on ToolNotch 🫧"
+    }
+  ]
+}

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import { MessagingSqsKafkaQuiz } from '@/components/interview/MessagingSqsKafkaQuiz'
+import { AppMessagingSqsKafkaQuiz } from '@/components/interview/AppMessagingSqsKafkaQuiz'
 import { getFlag } from '@/lib/featureFlags'
 
 const PATH = '/interview/messaging-sqs-kafka'
@@ -104,7 +104,7 @@ export default async function MessagingSqsKafkaQuizPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <MessagingSqsKafkaQuiz />
+      <AppMessagingSqsKafkaQuiz />
     </>
   )
 }

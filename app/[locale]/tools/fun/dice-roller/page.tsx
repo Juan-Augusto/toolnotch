@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, howToSchema, breadcrumbSchema } from '@/lib/schema'
-import type { FaqItem } from '@/components/FaqSection'
-import ToolWrapper from '@/components/ToolWrapper'
-import DiceRoller from '@/components/fun/DiceRoller'
+import type { FaqItem } from '@/components/AppFaqSection'
+import AppToolWrapper from '@/components/AppToolWrapper'
+import AppDiceRoller from '@/components/fun/AppDiceRoller'
 
 const PATH = '/tools/fun/dice-roller'
 
@@ -52,9 +52,9 @@ export default async function DiceRollerPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} adSlot="1234567890" richContent={richContent}>
-        <DiceRoller />
-      </ToolWrapper>
+      <AppToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} richContent={richContent} suppressHowToSchema>
+        <AppDiceRoller />
+      </AppToolWrapper>
     </>
   )
 }

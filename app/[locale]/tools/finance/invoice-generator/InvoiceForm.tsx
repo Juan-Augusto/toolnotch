@@ -6,8 +6,8 @@ import { useTranslations } from "next-intl";
 import { InvoiceData } from "@/lib/invoiceTypes";
 import { INVOICE_CURRENCIES } from "@/data/invoiceCurrencies";
 import { LOCALE_CONFIGS, LocaleKey } from "@/data/invoiceLocales";
-import Button from "@/components/Button";
-import Label from "@/components/Label";
+import AppButton from "@/components/AppButton";
+import AppLabel from "@/components/AppLabel";
 import { formatAmount } from "@/lib/invoiceCalc";
 
 interface InvoiceFormProps {
@@ -72,13 +72,13 @@ export default function InvoiceForm({
               ref={logoInputRef}
               id="logo-upload"
             />
-            <Button
+            <AppButton
               type="button"
               onClick={handleLogoClick}
               className="!w-auto py-2 px-4 text-xs font-semibold"
             >
               {t("logoButton")}
-            </Button>
+            </AppButton>
           </div>
           <input
             placeholder={t("emailPlaceholder")}
@@ -143,7 +143,7 @@ export default function InvoiceForm({
         </h3>
         <div className="grid grid-cols-2 gap-2">
           <div>
-            <Label>{t("invoiceNumber")}</Label>
+            <AppLabel>{t("invoiceNumber")}</AppLabel>
             <input
               value={invoice.number}
               onChange={(e) => update("number", e.target.value)}
@@ -151,7 +151,7 @@ export default function InvoiceForm({
             />
           </div>
           <div>
-            <Label>{t("currency")}</Label>
+            <AppLabel>{t("currency")}</AppLabel>
             <select
               value={invoice.currency}
               onChange={(e) => update("currency", e.target.value)}
@@ -165,7 +165,7 @@ export default function InvoiceForm({
             </select>
           </div>
           <div>
-            <Label>{t("date")}</Label>
+            <AppLabel>{t("date")}</AppLabel>
             <input
               type="date"
               value={invoice.date}
@@ -174,7 +174,7 @@ export default function InvoiceForm({
             />
           </div>
           <div>
-            <Label>{t("dueDate")}</Label>
+            <AppLabel>{t("dueDate")}</AppLabel>
             <input
               type="date"
               value={invoice.dueDate}
@@ -191,7 +191,7 @@ export default function InvoiceForm({
           {t("lineItems")}
         </h3>
         <div className="space-y-2">
-          {/* Header labels */}
+          {/* AppHeader labels */}
           <div className="flex gap-1.5 text-xs font-semibold text-gray-500 dark:text-gray-400 px-0.5 select-none no-print">
             <span className="flex-1">{t("descriptionPlaceholder")}</span>
             <span className="w-24 text-center">{t("qty")}</span>
@@ -264,7 +264,7 @@ export default function InvoiceForm({
           <button
             type="button"
             onClick={addLineItem}
-            className="text-sm text-blue-600 dark:text-tx-primary hover:underline cursor-pointer"
+            className="text-sm text-blue-600 dark:text-foreground hover:underline cursor-pointer"
           >
             {t("addItem")}
           </button>
@@ -275,7 +275,7 @@ export default function InvoiceForm({
       <section>
         <div className="grid grid-cols-2 gap-2">
           <div>
-            <Label>{t("discount")}</Label>
+            <AppLabel>{t("discount")}</AppLabel>
             <input
               type="number"
               min={0}
@@ -295,7 +295,7 @@ export default function InvoiceForm({
             />
           </div>
           <div>
-            <Label>{taxLabel} %</Label>
+            <AppLabel>{taxLabel} %</AppLabel>
             <input
               type="number"
               min={0}
@@ -341,18 +341,18 @@ export default function InvoiceForm({
       </section>
 
       {/* Action Buttons */}
-      <div className="flex gap-4 mt-6 pt-4 border-t border-bd-base">
-        <Button
+      <div className="flex gap-4 mt-6 pt-4 border-t border-border">
+        <AppButton
           type="button"
           onClick={clearInvoice}
           color="panel"
           className="flex-1"
         >
           {t("clear")}
-        </Button>
-        <Button type="button" onClick={handlePrint} className="flex-1">
+        </AppButton>
+        <AppButton type="button" onClick={handlePrint} className="flex-1">
           {t("downloadPrint")}
-        </Button>
+        </AppButton>
       </div>
     </div>
   );

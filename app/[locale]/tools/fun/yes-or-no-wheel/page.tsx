@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import type { FaqItem } from '@/components/FaqSection'
-import ToolWrapper from '@/components/ToolWrapper'
-import YesNoWheel from '@/components/fun/YesNoWheel'
+import type { FaqItem } from '@/components/AppFaqSection'
+import AppToolWrapper from '@/components/AppToolWrapper'
+import AppYesNoWheel from '@/components/fun/AppYesNoWheel'
 
 const PATH = '/tools/fun/yes-or-no-wheel'
 
@@ -46,9 +46,9 @@ export default async function YesOrNoWheelPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} adSlot="1234567890" richContent={richContent}>
-        <YesNoWheel />
-      </ToolWrapper>
+      <AppToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} richContent={richContent}>
+        <AppYesNoWheel />
+      </AppToolWrapper>
     </>
   )
 }

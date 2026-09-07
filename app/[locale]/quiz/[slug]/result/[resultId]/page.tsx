@@ -2,9 +2,11 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { isTriviaQuiz } from '@/lib/quizTypes'
-import { QUIZ_REGISTRY } from '@/lib/quizRegistry'
+import { QUIZ_REGISTRY, NOINDEX_QUIZ_IDS, NOINDEX_RESULT_QUIZ_IDS } from '@/lib/quizRegistry'
 import { getQuizBySlug, getQuizResultIds } from '@/lib/content/quizRepository'
 import { buildJsonLd, breadcrumbSchema } from '@/lib/schema'
+import { buildAlternates } from '@/lib/i18nMeta'
+import { getQuizDepthContent } from '@/components/quiz/AppQuizDepth'
 
 const TRIVIA_TIER_IDS = ['legend', 'expert', 'fan', 'rookie'] as const
 
@@ -38,19 +40,24 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const quiz = await getQuizBySlug(slug, locale)
   if (!quiz) return {}
 
+  const noindexMeta = NOINDEX_QUIZ_IDS.has(slug) || NOINDEX_RESULT_QUIZ_IDS.has(slug)
+    ? { robots: { index: false, follow: true } as const }
+    : {}
+
   if (isTriviaQuiz(quiz)) {
     const tier = quiz.tiers.find(t => t.id === resultId)
     if (!tier) return {}
     return {
-      title: `I got "${tier.label}" on ${quiz.title} | ToolNotch`,
+      title: `${tier.label} — ${quiz.title} | ToolNotch`,
       description: tier.description.slice(0, 155),
-      alternates: { canonical: `/quiz/${slug}/result/${resultId}` },
+      alternates: buildAlternates(`/quiz/${slug}/result/${resultId}`),
       openGraph: {
-        title: `I got "${tier.label}" — ${quiz.title}`,
+        title: `${tier.label} — ${quiz.title}`,
         description: tier.description.slice(0, 155),
         url: `/quiz/${slug}/result/${resultId}`,
       },
       twitter: { card: 'summary_large_image' },
+      ...noindexMeta,
     }
   }
 
@@ -66,6 +73,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       url: `/quiz/${slug}/result/${resultId}`,
     },
     twitter: { card: 'summary_large_image' },
+    ...noindexMeta,
   }
 }
 
@@ -79,6 +87,9 @@ export default async function QuizResultPage({ params }: { params: Promise<{ loc
   if (isTriviaQuiz(quiz)) {
     const tier = quiz.tiers.find(t => t.id === resultId)
     if (!tier) notFound()
+
+    const depth = await getQuizDepthContent(slug, locale)
+    const tierDepth = depth?.results?.[resultId]
 
     const jsonLd = buildJsonLd(
       {
@@ -100,10 +111,20 @@ export default async function QuizResultPage({ params }: { params: Promise<{ loc
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
           <div className="max-w-2xl mx-auto px-4 py-10">
-            <div className="bg-card rounded-2xl shadow-sm border border-gray-200 dark:bg-card dark:border-gray-700 p-8 mb-8">
+            <div className="bg-tertiary rounded-2xl shadow-sm border border-gray-200 dark:bg-tertiary dark:border-gray-700 p-8 mb-8">
               <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">{quiz.title}</div>
               <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{tier.label}</h1>
               <p className="text-gray-600 leading-relaxed dark:text-gray-400 mb-6">{tier.description}</p>
+              {tierDepth && (
+                <div className="mb-6">
+                  <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">{tierDepth.heading}</h2>
+                  <div className="space-y-4">
+                    {tierDepth.body.map((paragraph, i) => (
+                      <p key={i} className="text-gray-600 leading-relaxed dark:text-gray-400">{paragraph}</p>
+                    ))}
+                  </div>
+                </div>
+              )}
               <Link
                 href={`/quiz/${slug}`}
                 className="inline-block px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 dark:hover:bg-blue-500 transition-colors"
@@ -147,7 +168,7 @@ export default async function QuizResultPage({ params }: { params: Promise<{ loc
       <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
         <div className="max-w-2xl mx-auto px-4 py-10">
           {/* Result detail — indexable content */}
-          <div className="bg-card rounded-2xl shadow-sm border border-gray-200 dark:bg-card dark:border-gray-700 p-8 mb-8">
+          <div className="bg-tertiary rounded-2xl shadow-sm border border-gray-200 dark:bg-tertiary dark:border-gray-700 p-8 mb-8">
             <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">{quiz.title}</div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{result.title}</h1>
             <p className="text-gray-600 leading-relaxed dark:text-gray-400 mb-6">{result.description}</p>

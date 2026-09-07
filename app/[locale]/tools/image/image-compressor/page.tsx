@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import ImageCompressorClient from './ImageCompressorClient'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema } from '@/lib/schema'
-import type { FaqItem } from '@/components/FaqSection'
+import type { FaqItem } from '@/components/AppFaqSection'
 
 interface RichContent {
   whatIs: string

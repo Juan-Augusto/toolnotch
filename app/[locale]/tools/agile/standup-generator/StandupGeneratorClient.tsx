@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import ToolWrapper from '@/components/ToolWrapper'
-import type { FaqItem } from '@/components/FaqSection'
+import AppToolWrapper from '@/components/AppToolWrapper'
+import type { FaqItem } from '@/components/AppFaqSection'
 
 interface RichContent {
   whatIs: string
@@ -49,7 +49,7 @@ export default function StandupGeneratorClient({ title, description, faqs, label
   const canGenerate = yesterday.trim() && today.trim()
 
   return (
-    <ToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} adSlot="standup-generator" richContent={richContent}>
+    <AppToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} richContent={richContent}>
       <div className="max-w-2xl mx-auto space-y-5">
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1">{labels.yesterday}</label>
@@ -117,6 +117,6 @@ export default function StandupGeneratorClient({ title, description, faqs, label
           </div>
         )}
       </div>
-    </ToolWrapper>
+    </AppToolWrapper>
   )
 }

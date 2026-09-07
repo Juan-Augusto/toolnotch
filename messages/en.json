@@ -5,7 +5,10 @@
   },
   "common": {
     "privacyBadge": "Files processed in your browser — never uploaded to our servers",
-    "free": "Free"
+    "free": "Free",
+    "notFoundTitle": "Page Not Found",
+    "notFoundDescription": "The page you are looking for does not exist or has been moved.",
+    "backToHome": "Back to Home"
   },
   "toolWrapper": {
     "breadcrumb": {
@@ -15,7 +18,9 @@
     "whatIs": "What is {title}?",
     "howToUse": "How to use",
     "whyItMatters": "Why it matters",
-    "proTip": "Pro tip"
+    "proTip": "Pro tip",
+    "relatedContentHeading": "Related tools & guides",
+    "howToSchemaName": "How to use the {title}"
   },
   "faqSection": {
     "heading": "Frequently Asked Questions"
@@ -211,14 +216,37 @@
         "placeholder": "1-3, 4-6, 7",
         "blankHint": "Leave blank to extract all pages individually."
       },
+      "examples": {
+        "title": "Formatting examples:",
+        "empty": {
+          "label": "(blank)",
+          "desc": "Extracts all pages of the document individually."
+        },
+        "single": {
+          "desc": "Extracts only page 5."
+        },
+        "range": {
+          "desc": "Extracts pages 2 through 5 into a single file."
+        },
+        "combined": {
+          "desc": "Creates separate files for each specified range (e.g. 1-3, 5, 8-10)."
+        }
+      },
       "button": {
         "split": "Split PDF",
         "splitting": "Splitting…"
       },
       "errors": {
         "noFile": "Please select a PDF file.",
-        "splitFailed": "Split failed."
+        "splitFailed": "Split failed.",
+        "invalidFormat": "Invalid page range format. Use format like 1-3, 5 or leave blank.",
+        "startGreaterThanEnd": "Start page cannot be greater than end page (e.g. 1-3).",
+        "zeroPage": "Page numbers must be greater than 0.",
+        "pageOutOfBounds": "Page range exceeds document page count ({total} pages).",
+        "invalidFile": "Could not load PDF. It may be password-protected or corrupted."
       },
+      "pageCountSingular": "page",
+      "pageCountPlural": "pages",
       "success": "Split PDF(s) downloaded!",
       "faqs": [
         {
@@ -440,13 +468,19 @@
         "label": "Click or drag images here",
         "hint": "JPEG or PNG — multiple files supported"
       },
+      "filename": {
+        "label": "Custom PDF file name",
+        "hint": "optional",
+        "placeholder": "images"
+      },
       "button": {
         "convert": "Convert to PDF",
         "converting": "Converting…"
       },
       "errors": {
         "noImages": "Add at least one image.",
-        "conversionFailed": "Conversion failed."
+        "conversionFailed": "Conversion failed.",
+        "invalidFilename": "Invalid file format or name. Only .pdf is supported."
       },
       "success": "PDF downloaded!",
       "faqs": [
@@ -621,7 +655,109 @@
         "proTip": "For travel, compare your bank's advertised rate to the mid-market rate before deciding how to pay. Cards from Wise, Revolut, and Charles Schwab debit charge 0–1% over mid-market. Traditional bank cards typically charge 2–5%. On a $5,000 trip that difference is $100–250 in avoidable FX fees — significant enough to justify switching to a low-FX card before your next international trip."
       }
     },
+    "categories": {
+      "length": "Length",
+      "weight": "Weight",
+      "temperature": "Temperature",
+      "area": "Area",
+      "volume": "Volume",
+      "speed": "Speed",
+      "time": "Time",
+      "digital-storage": "Digital Storage",
+      "pressure": "Pressure"
+    },
+    "units": {
+      "meter": "Meter (m)",
+      "kilometer": "Kilometer (km)",
+      "centimeter": "Centimeter (cm)",
+      "millimeter": "Millimeter (mm)",
+      "micrometer": "Micrometer (μm)",
+      "mile": "Mile (mi)",
+      "yard": "Yard (yd)",
+      "foot": "Foot (ft)",
+      "inch": "Inch (in)",
+      "nautical mile": "Nautical Mile (nmi)",
+      "kilogram": "Kilogram (kg)",
+      "gram": "Gram (g)",
+      "milligram": "Milligram (mg)",
+      "pound": "Pound (lb)",
+      "ounce": "Ounce (oz)",
+      "ton": "Metric Ton (t)",
+      "short ton": "Short Ton (US)",
+      "stone": "Stone (st)",
+      "carat": "Carat (ct)",
+      "celsius": "Celsius (°C)",
+      "fahrenheit": "Fahrenheit (°F)",
+      "kelvin": "Kelvin (K)",
+      "rankine": "Rankine (°R)",
+      "square meter": "Square Meter (m²)",
+      "square kilometer": "Square Kilometer (km²)",
+      "square mile": "Square Mile (mi²)",
+      "square foot": "Square Foot (ft²)",
+      "square inch": "Square Inch (in²)",
+      "hectare": "Hectare (ha)",
+      "acre": "Acre (ac)",
+      "liter": "Liter (L)",
+      "milliliter": "Milliliter (mL)",
+      "cubic meter": "Cubic Meter (m³)",
+      "gallon (US)": "Gallon US (gal)",
+      "quart": "Quart (qt)",
+      "pint": "Pint (pt)",
+      "cup": "Cup",
+      "fluid ounce": "Fluid Ounce (fl oz)",
+      "meter per second": "Meter/Second (m/s)",
+      "kilometer per hour": "Kilometer/Hour (km/h)",
+      "mile per hour": "Mile/Hour (mph)",
+      "knot": "Knot (kn)",
+      "foot per second": "Foot/Second (fps)",
+      "second": "Second (s)",
+      "minute": "Minute (min)",
+      "hour": "Hour (h)",
+      "day": "Day",
+      "week": "Week",
+      "month": "Month",
+      "year": "Year",
+      "byte": "Byte (B)",
+      "kilobyte": "Kilobyte (KB)",
+      "megabyte": "Megabyte (MB)",
+      "gigabyte": "Gigabyte (GB)",
+      "terabyte": "Terabyte (TB)",
+      "petabyte": "Petabyte (PB)",
+      "bit": "Bit",
+      "kilobit": "Kilobit (Kb)",
+      "megabit": "Megabit (Mb)",
+      "gigabit": "Gigabit (Gb)",
+      "pascal": "Pascal (Pa)",
+      "kilopascal": "Kilopascal (kPa)",
+      "bar": "Bar",
+      "psi": "PSI",
+      "atmosphere": "Atmosphere (atm)",
+      "millimeter of mercury": "mmHg",
+      "torr": "Torr",
+      "light year": "Light Year (ly)",
+      "parsec": "Parsec (pc)",
+      "microgram": "Microgram (μg)",
+      "long ton": "Long Ton (UK)",
+      "square centimeter": "Square Centimeter (cm²)",
+      "square millimeter": "Square Millimeter (mm²)",
+      "square yard": "Square Yard (yd²)",
+      "cubic centimeter": "Cubic Centimeter (cm³)",
+      "cubic foot": "Cubic Foot (ft³)",
+      "cubic inch": "Cubic Inch (in³)",
+      "gallon (UK)": "Gallon UK (gal)",
+      "tablespoon": "Tablespoon (tbsp)",
+      "teaspoon": "Teaspoon (tsp)",
+      "mach": "Mach",
+      "millisecond": "Millisecond (ms)",
+      "microsecond": "Microsecond (μs)",
+      "nanosecond": "Nanosecond (ns)",
+      "decade": "Decade",
+      "century": "Century",
+      "megapascal": "Megapascal (MPa)",
+      "millibar": "Millibar (mbar)"
+    },
     "shared": {
+      "quickReference": "Quick Reference",
       "from": "From",
       "to": "To",
       "swap": "Swap",
@@ -635,7 +771,29 @@
         "accurate": "How accurate is this converter?",
         "accurateAnswer": "Conversions use precise factor-based math with up to 8 significant figures. Results are rounded for display only.",
         "offline": "Does this work offline?",
-        "offlineAnswer": "Yes — all unit conversions work entirely in your browser with no internet connection required."
+        "offlineAnswer": "Yes — all unit conversions work entirely in your browser with no internet connection required.",
+        "howManyAnswer": "1 {from} = {value} {to}.",
+        "howToAnswer": "Enter any value in the {from} field of the converter above and the result in {to} appears instantly. The formula is {formula}.",
+        "formulaQuestion": "What is the formula to convert {from} to {to}?"
+      },
+      "breadcrumbConverter": "Converter",
+      "aboutHeading": "{from} and {to} explained",
+      "formulaHeading": "Formula and worked examples",
+      "scenariosHeading": "Where you will use this",
+      "tableHeading": "{from} to {to} conversion table",
+      "tableCaption": "Common {from} values converted to {to}. Every figure uses the same conversion factor as the calculator above.",
+      "relatedHeading": "More {category} conversions",
+      "proTipLabel": "Pro tip",
+      "categories": {
+        "length": "length",
+        "weight": "weight",
+        "temperature": "temperature",
+        "area": "area",
+        "volume": "volume",
+        "speed": "speed",
+        "time": "time",
+        "digital-storage": "digital storage",
+        "pressure": "pressure"
       }
     }
   },
@@ -926,72 +1084,138 @@
       ]
     },
     "wordFrequency": {
-      "metaTitle": "Word Frequency Counter — Find Most Used Words | ToolNotch",
-      "metaDescription": "Find the most frequently used words in any text. Useful for SEO keyword analysis, studying writing style, and identifying overused words.",
+      "metaTitle": "Word Frequency Counter — Find Most Repeated Words | ToolNotch",
+      "metaDescription": "Free word frequency counter. See how many times each word appears in your text, ranked by count — find overused words, verbal tics and vocabulary patterns.",
       "title": "Word Frequency Counter",
-      "description": "Find the most frequently used words in your text. Common words (the, and, is) are excluded to show meaningful keywords.",
+      "description": "Paste any text to see how many times each word appears, ranked from most to least frequent. Built for editing, style analysis and research.",
       "richContent": {
-        "whatIs": "A word frequency counter analyses text and tallies how many times each word appears, then presents the results as a ranked list — most frequent at the top. Most implementations strip out stop words (a, the, is, of, and) to surface the meaningful content terms. Use cases span several fields: writers use it to identify overused filler words like 'just', 'really', 'very', and 'actually'; SEO analysts use it to verify that primary keywords appear with appropriate frequency; academic researchers use it for corpus linguistics and text analysis; and content strategists use it to reverse-engineer competitor articles for topical focus. The output shows both raw count and density percentage, giving you a dual view of vocabulary distribution.",
+        "whatIs": "A word frequency counter tallies every word in a passage and ranks them from most to least common. Common function words — \"the\", \"a\", \"is\", \"of\", \"and\" — are filtered out so the list shows the words that carry meaning. Frequency analysis is one of the oldest tools in linguistics: it underpins concordances, readability formulas, dictionary frequency bands, and authorship studies that identify a writer by their unconscious habits. For everyday writing it has a simpler use — it shows you, in seconds, which words you lean on. Repetition that is invisible while drafting becomes obvious in a ranked list, and that is usually the fastest route to tighter prose.",
         "howToUse": [
-          "Paste your text into the input area — the word frequency table populates instantly.",
-          "Scan the top entries to identify your most-used meaningful words.",
-          "Look for filler words (just, really, very, quite) that appear high in the list and consider removing or replacing them.",
-          "Check whether your intended primary keyword appears in the top results with a density of 1–3%.",
-          "Use the frequency list to find synonyms and related terms that could replace repeated words and diversify your vocabulary."
+          "Paste your text — an essay, chapter, transcript, or a batch of reviews — into the box. The frequency table builds instantly.",
+          "Read down the list. The top content words are your subject; the ones that surprise you are worth a closer look.",
+          "Flag filler and hedges near the top — \"just\", \"very\", \"really\", \"actually\", \"quite\", \"basically\" — and cut or vary them.",
+          "Check whether any single strong verb or noun is doing too much work, and reach for a synonym on some of its uses.",
+          "For research, copy the list to export the counts, or compare two texts by running them one after another."
         ],
-        "whyItMatters": "In SEO, word frequency analysis helps verify that your primary keyword appears enough times (typically 1–2% density) without over-optimization — above 3% risks a keyword-stuffing penalty and reads unnaturally. In academic writing, high-frequency words often reveal repetitive phrasing that weakens arguments or signals a lack of vocabulary breadth. In UX writing and product copy, frequency analysis surfaces jargon that should be replaced with simpler, user-friendly language. For novelists and essayists, it exposes verbal tics and habitual word choices that homogenize prose style.",
-        "proTip": "For SEO, run word frequency analysis on the top-ranking competitor page for your target keyword. The content words that appear most frequently alongside the main keyword are your LSI (Latent Semantic Indexing) keywords — semantically related terms that Google uses to confirm topical relevance. Include these naturally in your own content and Google will more confidently categorize your page as an authoritative resource on the topic."
+        "whyItMatters": "Every writer has a vocabulary they return to without noticing. In fiction and essays that shows up as verbal tics; in academic writing as a narrow band of connectors and hedges that flatten the argument; in product and UX copy as jargon repeated until it stops meaning anything. A frequency list makes the pattern visible so you can act on it. For linguists, teachers, and students, the same list is data: it supports lexical-density measurements, keyword-in-context study, vocabulary grading, and comparisons between drafts, authors, or time periods.",
+        "proTip": "Compare, don’t just count. Run your draft, note the top ten content words, then run a piece of writing you admire in the same genre and compare the shape of the two lists. A healthy list tapers gradually; a spiky list where one or two words tower over the rest usually signals repetition you can edit out. Doing this on your own past work over time is a quiet way to watch your range grow.",
+        "sections": [
+          {
+            "heading": "How many times does a word appear?",
+            "body": "That is the core question this tool answers. Type or paste your text and the word’s row shows its exact count plus that count as a share of all words. Because the text is lowercased first, \"The\" and \"the\" are counted together; because punctuation is stripped, \"run,\" \"run.\" and \"run\" are the same entry. Contractions are kept whole (\"don’t\" stays \"don’t\"), and hyphenated compounds are split on the hyphen. If a word you expect is missing from the list, it is almost certainly on the stop-word list of common grammatical words that are removed by design."
+          },
+          {
+            "heading": "Frequency for editing and study",
+            "body": "Editors use frequency lists to enforce a house style, catch a reviewer’s pet phrase, or measure how repetitive a translation has become. Teachers use them to check that a text sits within a target vocabulary level before assigning it. Researchers in corpus linguistics build frequency distributions across thousands of documents to study how usage shifts over time or differs between groups. Novelists run a finished manuscript through a counter to find the adverb they used two hundred times. In each case the workflow is the same: get the ranked counts, look for what is unexpectedly high, and decide whether it is a feature of the text or a habit to fix."
+          }
+        ]
       },
       "faqs": [
         {
-          "question": "What words are excluded from the frequency count?",
-          "answer": "Common English stopwords are excluded — words like 'the', 'a', 'and', 'is', 'it' that appear frequently but carry little meaning. This surfaces your actual content keywords."
+          "question": "How do I find how many times a word appears in a text?",
+          "answer": "Paste the text into the counter. Each word’s row shows its exact number of occurrences and that number as a percentage of the total word count, sorted from most to least frequent."
         },
         {
-          "question": "How is keyword density calculated?",
-          "answer": "Keyword density is the frequency of a word divided by total word count, expressed as a percentage. A keyword density of 1–3% is generally considered healthy for SEO."
+          "question": "Why is a word I expected missing from the results?",
+          "answer": "Common grammatical words — articles, pronouns, prepositions, conjunctions and auxiliary verbs like \"the\", \"it\", \"of\" and \"is\" — are filtered out so the list shows meaningful content words. Everything else is counted."
         },
         {
-          "question": "How many top words are shown?",
-          "answer": "The tool shows the top 10 most frequent content words in your text, ranked by count."
+          "question": "Is the count case-sensitive?",
+          "answer": "No. The text is converted to lowercase first, so \"Word\", \"word\" and \"WORD\" are counted as the same entry. Punctuation attached to a word is also removed before counting."
+        },
+        {
+          "question": "What can I use word frequency analysis for?",
+          "answer": "Common uses are trimming filler words while editing, checking vocabulary level for teaching, studying an author’s style, comparing drafts or translations, and corpus-linguistics research."
+        },
+        {
+          "question": "How many words does the list show?",
+          "answer": "The tool displays the ten most frequent content words. That is enough to reveal the dominant vocabulary of most passages without burying the signal in a long tail of words used once."
         }
-      ]
+      ],
+      "related": {
+        "heading": "Related tools and guides",
+        "items": [
+          {
+            "label": "Keyword Density Checker — the same counts framed for on-page SEO",
+            "path": "/tools/text/keyword-density-checker"
+          },
+          {
+            "label": "Word Counter — words, characters, sentences and reading time",
+            "path": "/tools/text/word-counter"
+          },
+          {
+            "label": "Guide: word count targets for blogs, essays and emails",
+            "path": "/blog/word-count-guide"
+          }
+        ]
+      }
     },
     "keywordDensity": {
-      "metaTitle": "Keyword Density Checker — SEO Keyword Analysis | ToolNotch",
-      "metaDescription": "Free keyword density checker. Paste your content and see the most frequent keywords as a percentage of total words. Useful for SEO content optimization.",
+      "metaTitle": "Keyword Density Checker — Free On-Page SEO Tool | ToolNotch",
+      "metaDescription": "Free keyword density checker for SEO. See each term’s count and percentage in your copy, catch keyword stuffing, and tune your target keyword.",
       "title": "Keyword Density Checker",
-      "description": "Paste your content to see the most frequent keywords and their density percentage. Useful for SEO content optimization.",
+      "description": "Paste your page copy to see each keyword’s density as a percentage of total words — built for on-page SEO and content optimization.",
       "richContent": {
-        "whatIs": "Keyword density is the percentage of times a specific keyword appears in a text relative to the total word count, calculated as: (keyword occurrences ÷ total words) × 100. The widely cited guideline is a 1–3% density range: below 1% and Google may not recognize the page as topically relevant to that term; above 3% and the content reads unnaturally and risks a keyword-stuffing algorithmic penalty. Modern search engine optimization goes significantly beyond raw density — Google's algorithms use TF-IDF (Term Frequency–Inverse Document Frequency) to measure keyword relevance against a corpus of documents, meaning context and co-occurring terms matter more than simple repetition. LSI keywords (semantically related terms) signal topical authority more effectively than keyword repetition alone.",
+        "whatIs": "Keyword density is the share of your copy taken up by one term: (times the keyword appears ÷ total words) × 100. On-page SEO uses it as a quick sanity check that a page is clearly about its target query without repeating that query so often the text reads like spam. The common working range is 1–3% for a primary keyword. Below roughly 0.5% the term may be too incidental for the page to be judged relevant; above 3–4% the copy starts to sound engineered and risks an over-optimization filter. Density is a rough signal, not a ranking factor Google publishes — treat it as an editing aid, not a target to hit exactly.",
         "howToUse": [
-          "Paste your article content into the input area — keyword density analysis runs instantly.",
-          "Review the top keywords list and their density percentages.",
-          "Identify your primary target keyword and check whether its density falls within the 1–3% range.",
-          "If a keyword is above 3%, replace some instances with synonyms or related terms to read more naturally.",
-          "If a keyword is below 1%, consider adding it to your introduction, a subheading, or the conclusion."
+          "Paste your draft — headings, intro, body, and conclusion — into the box. The keyword list and density percentages update as you type.",
+          "Find your primary target keyword (or its close variants) in the ranked list and read off its density.",
+          "Aim for roughly 1–3%. If it is higher, swap some exact-match uses for pronouns, synonyms, or partial phrases.",
+          "If it is under about 0.5%, work the term into the title, the first 100 words, one subheading, and the conclusion where it fits naturally.",
+          "Scan the rest of the list for supporting terms a search engine would expect on this topic, and make sure they appear at least once."
         ],
-        "whyItMatters": "Keyword stuffing — pushing density above 5% — was a common SEO tactic in the early 2000s that Google now penalises algorithmically and manually. Under-density means the page may not rank for the target term at all, leaving traffic on the table. Checking density before publishing catches both extremes and ensures your content is optimised without appearing manipulative. More importantly, this analysis reveals opportunities to introduce synonyms and related terms that expand your semantic footprint, helping the page rank for a wider range of related search queries rather than just the single exact-match keyword.",
-        "proTip": "Modern SEO best practice: place your primary keyword in the page title, the first paragraph, one H2 subheading, and the URL slug. Then let it appear naturally in the body text — do not force it. Fill the remaining semantic space with related terms. For a 'mortgage calculator' article, those terms include: amortization, principal, interest rate, monthly payment, and loan term. This broader semantic coverage helps the page rank for dozens of related queries rather than just the exact keyword phrase, multiplying your organic traffic potential."
+        "whyItMatters": "Search engines reward pages that cover a topic the way an expert would — which usually means the main term appears a handful of times and a wide vocabulary of related terms fills in the rest. Density checking catches the two failure modes that hurt rankings: a page so lightly optimized that no single query is obviously its focus, and a page so heavily repeated that it trips spam heuristics or simply reads badly and loses the visitor. Running the check before you publish is faster than diagnosing a page that quietly underperforms for months.",
+        "proTip": "Before writing, run this check on the two or three pages already ranking for your target query. The content words they share — beyond the main keyword — are the sub-topics Google expects to see. Cover those in your draft, then use the checker on your own text to confirm your primary term sits near 1% and none of the supporting terms are missing. That is more reliable than aiming for a fixed density.",
+        "sections": [
+          {
+            "heading": "What counts as a good keyword density?",
+            "body": "There is no official number. Studies of top-ranking pages tend to find primary-keyword densities clustered between 0.5% and 2.5%, with most around 1%. Long pages naturally dilute density, so a 2,000-word article may rank well with its main term at 0.7%, while a 300-word page might carry it at 2%. Rather than forcing a percentage, use the checker to confirm the term is present in the key positions — title, opening, a heading, image alt text, and the URL — and that nothing else is accidentally dominating the page. If a brand name, a navigation label, or a boilerplate phrase tops your list, that is worth fixing before you worry about the target keyword."
+          },
+          {
+            "heading": "How to read the output",
+            "body": "The tool lowercases the text, removes common stop words such as \"the\", \"and\", and \"of\", strips punctuation, then counts what remains. Each row shows a word, how many times it occurs, and that count as a percentage of total words. Multi-word phrases are not tracked directly — check the individual words of your phrase and look at whether they trend together. Numbers, one-letter tokens, and stop words are excluded so the list reflects meaningful content. Use the ranked order to see your page’s actual emphasis, which is often different from what you intended while drafting."
+          }
+        ]
       },
       "faqs": [
         {
-          "question": "What is keyword density?",
-          "answer": "Keyword density is how often a keyword appears in your text as a percentage of total words. A keyword that appears 10 times in a 1000-word article has a density of 1%."
+          "question": "What is a keyword density checker used for?",
+          "answer": "It measures how often each word in a page appears as a percentage of the total, so you can check that your target keyword for SEO is present enough to signal relevance but not so often that the copy looks over-optimized."
         },
         {
-          "question": "What is the ideal keyword density for SEO?",
-          "answer": "Most SEO experts recommend 1–3% keyword density. Over-optimizing (keyword stuffing) above 5% can trigger Google penalties. Focus on natural, helpful writing rather than hitting a specific percentage."
+          "question": "What keyword density should I aim for?",
+          "answer": "A primary keyword between about 1% and 3% is a safe working range. Many top-ranking pages sit closer to 1%. There is no exact figure Google publishes, so treat it as an editing guide, not a target."
+        },
+        {
+          "question": "Can high keyword density get a page penalized?",
+          "answer": "Stuffing a keyword to 5% or more can trigger spam filters and, more reliably, makes the text read poorly so visitors leave. Both outcomes hurt rankings. Keep the term natural and lean on related vocabulary instead."
         },
         {
           "question": "How is keyword density calculated?",
-          "answer": "Keyword Density (%) = (Number of times keyword appears ÷ Total word count) × 100. For example, a word appearing 15 times in a 500-word article has a density of 3%."
+          "answer": "Keyword density (%) = (number of times the keyword appears ÷ total word count) × 100. A term used 12 times in a 1,200-word page has a density of 1%."
         },
         {
-          "question": "Which words are excluded from the analysis?",
-          "answer": "Common stopwords (the, a, and, is, it, etc.) are automatically excluded so you see meaningful content keywords only."
+          "question": "Does this tool check two- or three-word phrases?",
+          "answer": "It analyzes single words after removing stop words and punctuation. To gauge a phrase, review its individual words in the list and whether their counts rise together."
         }
-      ]
+      ],
+      "related": {
+        "heading": "Related tools and guides",
+        "items": [
+          {
+            "label": "Word Frequency Counter — rank every word by how often it appears",
+            "path": "/tools/text/word-frequency-counter"
+          },
+          {
+            "label": "Word Counter — words, characters, sentences and reading time",
+            "path": "/tools/text/word-counter"
+          },
+          {
+            "label": "Guide: word count targets for blogs, essays and emails",
+            "path": "/blog/word-count-guide"
+          }
+        ]
+      }
     },
     "sampleText": "The quick brown fox jumps over the lazy dog. This sentence has been used for decades as a pangram — a phrase containing every letter of the alphabet. It is commonly used to demonstrate fonts, test typewriters, and practice typing.\n\nReadability is an important consideration in writing. Clear, concise sentences help readers understand your message quickly. Long, convoluted sentences with complex vocabulary can make text difficult to parse, especially for readers who are not specialists in the subject matter at hand.\n\nGood writing balances clarity with depth. Professional writers aim for a Flesch Reading Ease score between 60 and 70 for most audiences.",
     "buttons": {
@@ -1462,6 +1686,12 @@
             "Toggle between compound frequencies to see how daily compounding compares to monthly on the same rate."
           ],
           "whyItMatters": "The difference between simple and compound interest is enormous over time. A $10,000 investment at 5% simple interest over 10 years earns $5,000 in interest. The same amount at 5% compounded monthly earns approximately $6,470 — a 29% difference — with no additional contributions. Compound frequency also matters when comparing savings accounts: two accounts both advertised at 4.80% APR can yield meaningfully different APYs depending on how often they compound. This calculator also helps evaluate financing offers — comparing whether a 0% promotional loan actually beats a cash purchase discount when the time value of money is considered.",
+          "sections": [
+            {
+              "heading": "Worked example: how compound frequency changes the result",
+              "body": "Take $10,000 at a 6% annual rate for 5 years. With simple interest the math is 10,000 x 0.06 x 5 = $3,000, for an ending balance of $13,000. Compounded annually, the balance is 10,000 x 1.06^5 ≈ $13,382, so interest is about $3,382. Compounded monthly, the periodic rate is 0.06 / 12 = 0.005 over 60 periods: 10,000 x 1.005^60 ≈ $13,489, or roughly $3,489 in interest. Same headline rate, about $489 more than simple interest purely because interest is added more often. A frequent mistake is comparing one bank's monthly-compounded rate against another bank's annual figure — convert both to APY first so you are comparing like with like."
+            }
+          ],
           "proTip": "When comparing savings accounts or CDs, always look at APY — not APR. APY accounts for compounding and shows your true annual return. A savings account at 5.00% APR compounded daily yields an APY of approximately 5.13%, while the same rate compounded annually yields exactly 5.00%. The difference grows as balances grow. Banks are required to disclose APY, so use that number for apples-to-apples comparisons."
         }
       },
@@ -1481,6 +1711,12 @@
             "Compare this result against the 15-year mortgage calculator to see the monthly payment vs. lifetime interest trade-off."
           ],
           "whyItMatters": "The 30-year mortgage's lower monthly payment is a major financial lever — it can be the difference between qualifying for a home and not, or between a tight budget and a healthy savings rate. But the long timeline has a hidden cost: because you pay interest on a larger balance for longer, the total interest bill is enormous. Many borrowers also move or refinance before the 30-year term ends — meaning they pay primarily interest during the early years of their loan, when each payment is largely interest rather than principal reduction.",
+          "sections": [
+            {
+              "heading": "Worked example: 30-year vs. 15-year on the same loan",
+              "body": "On a $300,000 loan at 6.5%, the 30-year payment is about $1,896 in principal and interest, with roughly $382,600 of interest over the full term. A 15-year loan on the same amount, typically at a slightly lower rate near 6.0%, runs about $2,532 a month but only around $155,700 in total interest. The 15-year costs roughly $636 more each month and saves about $227,000 in interest. The common mistake is treating this as a permanent either-or: you can take the 30-year loan for its lower required payment, then voluntarily pay close to the 15-year amount most months. That captures most of the interest savings while leaving you the smaller payment as a fallback when money is tight."
+            }
+          ],
           "proTip": "You do not have to stay locked into 30 years of payments just because you take a 30-year loan. Making one extra principal payment per year — equivalent to 13 payments instead of 12 — can cut roughly 4–5 years off your payoff timeline and save tens of thousands in interest, while preserving the lower required payment in months when cash is tight."
         },
         "faqs": [
@@ -1646,6 +1882,12 @@
             "Adjust the extra payment amount to see how even small increases change your payoff timeline and total interest."
           ],
           "whyItMatters": "The difference between minimum-only payments and adding even $100 extra per month can mean years of debt and thousands of dollars in interest. Many people underestimate how long minimum payments take because the math is buried in small print on statements. Seeing a concrete payoff date and a dollar figure for total interest makes the real cost visible in a way that abstract APR percentages do not. That visibility is often what motivates real action — and the numbers are almost always more urgent than people expect.",
+          "sections": [
+            {
+              "heading": "Worked example: fixing the payment amount",
+              "body": "Take a $5,000 credit card balance at 22% APR. If the minimum is set at about 2% of the balance — roughly $100 at first — and you always pay only that shrinking minimum, payoff stretches past 15 years and total interest ends up larger than the original $5,000. Hold the payment flat at $100 a month instead and the balance clears in about 7.7 years with roughly $4,200 of interest. Raise it to $250 a month and it is gone in a little over 2 years with about $1,200 of interest. The common mistake is paying the minimum plus whatever spare cash happens to be around; an irregular top-up helps far less than a fixed higher payment you schedule and treat like any other bill."
+            }
+          ],
           "proTip": "Once you pay off one debt, immediately redirect its full minimum payment to the next target — the 'debt rollover.' It keeps your total monthly outflow identical while dramatically accelerating payoff, because each eliminated debt adds momentum to the next one. The avalanche method saves the most money; the snowball method often eliminates debts faster, which can be worth the slightly higher interest cost for its motivational effect."
         }
       }
@@ -2044,7 +2286,66 @@
           "Remove the selected name to cycle through all participants fairly."
         ],
         "whyItMatters": "The visual format of seeing names on the wheel creates transparency — everyone in the room can see who is eligible for selection. This removes any suspicion that the selector is gaming the result. For classroom use, the wheel format is significantly more engaging than a plain random text display, turning participation selection into an interactive moment the whole class can share.",
-        "proTip": "For recurring weekly picks — meeting facilitator, status report presenter — save your name list as a text file and re-paste it quickly each session. If some participants are more often available, weight the wheel by adding their names more than once. More occurrences of a name increases that person's probability of being selected proportionally."
+        "proTip": "For recurring weekly picks — meeting facilitator, status report presenter — save your name list as a text file and re-paste it quickly each session. If some participants are more often available, weight the wheel by adding their names more than once. More occurrences of a name increases that person's probability of being selected proportionally.",
+        "comparison": {
+          "heading": "How ToolNotch compares to Wheel of Names",
+          "intro": "Both tools spin a randomized wheel of names for free. The differences are in what you have to sign up for, whether the page runs ads, and where your list of names is stored.",
+          "columns": [
+            "Feature",
+            "ToolNotch Wheel of Names",
+            "Wheelofnames.com"
+          ],
+          "rows": [
+            {
+              "feature": "Spin without an account",
+              "ours": "Always — no login for any feature",
+              "theirs": "Yes for basic spinning; a Google sign-in is offered to save wheels"
+            },
+            {
+              "feature": "Ads on the page",
+              "ours": "None",
+              "theirs": "Displays ads"
+            },
+            {
+              "feature": "Where your names are stored",
+              "ours": "In your browser and the page URL; nothing is uploaded",
+              "theirs": "Saved wheels are stored on their servers when you are signed in"
+            },
+            {
+              "feature": "Share a specific wheel",
+              "ours": "Copy the URL — the names travel in the link",
+              "theirs": "Share a link to a saved wheel"
+            },
+            {
+              "feature": "Remove the winner after each spin",
+              "ours": "Yes",
+              "theirs": "Yes"
+            },
+            {
+              "feature": "Price",
+              "ours": "Free",
+              "theirs": "Free"
+            }
+          ],
+          "caption": "Based on the public wheelofnames.com site as of 2026. Features on either tool may change."
+        }
+      },
+      "related": {
+        "heading": "More random pickers and reading",
+        "items": [
+          {
+            "label": "Random Name Picker — the same draw without the wheel animation",
+            "path": "/tools/fun/random-name-picker"
+          },
+          {
+            "label": "Random Team Generator — split a list into balanced groups",
+            "path": "/tools/fun/random-team-generator"
+          },
+          {
+            "label": "Guide: 7 free Wheel of Names alternatives compared",
+            "path": "/blog/wheel-of-names-alternatives"
+          }
+        ]
       }
     },
     "namePicker": {
@@ -2108,6 +2409,65 @@
       "metaDescription": "Free random team generator. Paste a list of names, choose how many teams, and get fairly shuffled teams instantly. Perfect for sports, classrooms, and work.",
       "title": "Random Team Generator",
       "description": "Paste names, choose the number of teams, and get randomly balanced groups instantly.",
+      "participants": {
+        "title": "Participants",
+        "inputPlaceholder": "Enter participant name...",
+        "addButton": "Add",
+        "bulkToggle": "Paste multiple names",
+        "bulkPlaceholder": "Paste multiple names here (one per line)...",
+        "bulkAddButton": "Add to list",
+        "clearAll": "Clear all",
+        "loadSample": "Load sample",
+        "count": "{count} participant(s)",
+        "empty": "No participants added yet. Type a name above or paste a list."
+      },
+      "mode": {
+        "byTeams": "By number of teams",
+        "byTeamSize": "By team size",
+        "byTeamNames": "By custom team names"
+      },
+      "teamCount": {
+        "label": "Number of teams",
+        "hint": "From 2 up to total participants"
+      },
+      "teamSize": {
+        "label": "Participants per team",
+        "hint": "Desired average number of members in each team"
+      },
+      "teamNames": {
+        "title": "Team Names",
+        "inputPlaceholder": "e.g. Backend Team, Frontend Team...",
+        "addButton": "Add team",
+        "bulkToggle": "Paste team names",
+        "bulkPlaceholder": "Paste team names here (one per line)...",
+        "bulkAddButton": "Add teams to list",
+        "loadSample": "Load sample",
+        "clearAll": "Clear teams",
+        "count": "{count} team(s)",
+        "empty": "No custom teams added yet. Type team names above or paste a list."
+      },
+      "errors": {
+        "minParticipants": "Add at least 2 participants to generate teams.",
+        "invalidTeamCountMin": "Minimum number of teams is 2.",
+        "invalidTeamCountMax": "Number of teams ({teams}) cannot exceed number of participants ({total}).",
+        "invalidCustomTeamNamesMin": "Add at least 2 custom team names.",
+        "invalidCustomTeamNamesMax": "The number of teams ({teams}) cannot exceed the number of participants ({total}).",
+        "invalidTeamSizeMin": "Team size must be at least 1 participant.",
+        "invalidTeamSizeMax": "Team size ({size}) must allow creating at least 2 teams."
+      },
+      "button": {
+        "generate": "Generate Teams",
+        "generating": "Generating teams..."
+      },
+      "results": {
+        "title": "Generated Teams",
+        "copyAll": "Copy all",
+        "copied": "Copied!",
+        "teamTitle": "Team {number}",
+        "memberCount": "{count} participant(s)",
+        "fewerMembers": "Fewer members ({count})",
+        "balancedNotice": "Teams balanced with at most 1 member difference."
+      },
       "faqs": [
         {
           "question": "How are teams balanced?",
@@ -2127,14 +2487,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "A random team generator takes a list of names and divides them into equal — or near-equal — teams randomly. Use cases include classroom group projects, sports team selection, hackathon grouping, and office event teams. A key benefit is that random team composition removes unconscious bias: people naturally self-segregate by friendship, skill level, or demographics when choosing teams manually. Random assignment is the fairest and most statistically sound method in educational and organizational research for creating diverse, balanced groups.",
+        "whatIs": "A random team generator takes a list of names and divides them into equal — or near-equal — teams randomly. Use cases include classroom group projects, sports team selection, hackathon grouping, and office event teams. A key benefit is that random team composition removes unconscious bias: people naturally self-segregate by friendship, skill level, or demographics when choosing teams manually. Random assignment is the fairest and most statistically sound method in educational and organizational research for creating diverse, balanced groups. This tool can split a list by number of teams, by target team size, or across a set of team names you supply, and it always keeps the group sizes within one member of each other.",
         "howToUse": [
           "Paste your list of names into the text box, one per line.",
           "Set the number of teams you want to create.",
           "Click Generate to split the names into random, balanced teams.",
           "Read your team assignments and copy or share as needed."
         ],
-        "whyItMatters": "Manual team picking — especially the sports-style captain draft — is psychologically damaging to those picked last, a well-documented phenomenon in education research. Random assignment treats everyone equally and often produces better collaboration by mixing people who would not naturally choose to work together. The result is groups with more diverse skills and perspectives than self-selected teams.",
+        "whyItMatters": "Manual team picking — especially the sports-style captain draft — is psychologically damaging to those picked last, a well-documented phenomenon in education research. Random assignment treats everyone equally and often produces better collaboration by mixing people who would not naturally choose to work together. The result is groups with more diverse skills and perspectives than self-selected teams. Doing the split in front of everyone, with a tool that cannot be steered, also removes any suspicion that the organiser stacked one team on purpose.",
+        "sections": [
+          {
+            "heading": "How the shuffle works",
+            "body": "The generator uses the Fisher-Yates shuffle, the standard algorithm for producing an unbiased random ordering of a list. It walks the list from the end to the start, and at each position swaps the current name with a randomly chosen one at or before it. Done correctly, every one of the possible orderings is equally likely — no name is favoured, and position in your original list has no effect on where someone lands. After the shuffle, names are dealt out one at a time across the teams in rotation, which is why the teams always end up within a single member of the same size even when the head count does not divide evenly."
+          },
+          {
+            "heading": "Balancing skill instead of pure chance",
+            "body": "Pure randomness can occasionally put every strong player, or every quiet student, on one team. If balance matters, split your list into tiers first — for example strong, average, and developing — then run the generator once per tier and combine the results so each team gets a similar mix. This keeps the fairness and transparency of a random draw while avoiding a lopsided outcome. For recurring groups, regenerate from scratch each session rather than reusing last week's teams, so the same people are not repeatedly paired or repeatedly separated."
+          },
+          {
+            "heading": "Common uses",
+            "body": "Teachers use it for group projects, lab pairs, and discussion circles; the remove-bias effect matters most here because students notice when the same friends always work together. Coaches and PE teachers use it for scrimmage sides without the captain-draft ritual. At work it covers hackathon squads, workshop breakout rooms, secret-gift draws, and on-call rotations. For events and icebreakers, generating teams live on a shared screen doubles as the reveal."
+          }
+        ],
         "proTip": "If you need balanced skill levels rather than purely random teams, pre-sort your names list by skill tier before generating. Then generate random teams within each tier. This gives you random-within-fair grouping: the social dynamics of random selection without the risk of one team getting all the most experienced participants."
       }
     },
@@ -2162,13 +2536,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "A yes/no wheel is a binary random decision tool that returns Yes or No with a spinning animation. It is used for making binary decisions when neither choice strongly dominates, breaking decision paralysis, or adding randomness to games. It differs from a coin flip in presentation — the wheel format is slower and more dramatic, making it more engaging for group settings. Use cases include deciding whether to try something new, settling small group debates, and teaching probability to children in an interactive, visual way.",
+        "whatIs": "A yes/no wheel is a binary random decision tool that returns Yes or No with a spinning animation. It is used for making binary decisions when neither choice strongly dominates, breaking decision paralysis, or adding randomness to games. It differs from a coin flip in presentation — the wheel format is slower and more dramatic, making it more engaging for group settings. Use cases include deciding whether to try something new, settling small group debates, and teaching probability to children in an interactive, visual way. Because the wheel has no memory between spins, it is also a simple hands-on way to show that each outcome is independent: a streak of one result never changes the odds of the next spin.",
         "howToUse": [
           "Think of a yes/no question you want to decide.",
+          "Optionally toggle 'Include Maybe' to add a third segment.",
           "Click Spin and watch the wheel animate.",
           "Accept the result — and notice your gut reaction to it."
         ],
-        "whyItMatters": "Decision science shows that humans experience choice paralysis when options are roughly equal in attractiveness. A random binary choice breaks the deadlock quickly. More importantly, your emotional reaction to the result reveals your actual preference: if the wheel says Yes and you feel relieved, you wanted Yes. If you feel disappointed, you wanted No. The wheel acts as a mirror for subconscious preference.",
+        "whyItMatters": "Decision science shows that humans experience choice paralysis when options are roughly equal in attractiveness. A random binary choice breaks the deadlock quickly. More importantly, your emotional reaction to the result reveals your actual preference: if the wheel says Yes and you feel relieved, you wanted Yes. If you feel disappointed, you wanted No. The wheel acts as a mirror for subconscious preference. The stakes matter here: this technique is reliable only when both options are genuinely acceptable and the choice is reversible, so treat the spin as a prompt for reflection rather than a verdict you are bound to follow.",
+        "sections": [
+          {
+            "heading": "How the randomness works",
+            "body": "The result is decided the instant you click, not while the wheel is turning. The tool calls the browser's random number generator, maps the value onto the segments, and then animates the wheel to land on the pre-chosen slice — the spin is presentation, not the draw. With two equal segments, Yes and No each have a 50% chance. Adding a Maybe segment splits the wheel into three equal parts of roughly 33.3% each. Every spin is independent: the wheel keeps no history, so five No results in a row do not make Yes any more likely on the sixth spin. This is the gambler's fallacy, and a physical or digital wheel is a good way to see why it is false."
+          },
+          {
+            "heading": "When a yes/no wheel is the right tool",
+            "body": "Use it for low-stakes, reversible choices where you have already weighed both sides and are simply stuck — which restaurant, whether to go to an event, which of two equally good options to start with. It is a poor fit for decisions with meaningful asymmetric risk: money, health, safety, or anything that affects other people without their say. For those, the wheel is at best a way to surface your instinct — spin it, notice whether you are hoping it lands a certain way, and then make the call deliberately. Never use a random result as cover for a choice that deserves real thought."
+          },
+          {
+            "heading": "Running a fair public decision",
+            "body": "If you are using the wheel to settle something between friends, in a classroom, or on a livestream, state the question and what each segment means before you spin. Spin once and take the first result. Re-spinning until you get the answer you wanted is obvious to everyone watching and defeats the point of using a random tool at all. For anything people might dispute later, screenshot or screen-record the result so the outcome is verifiable. Keeping the ritual consistent — announce, spin once, accept — is what makes the group trust it."
+          }
+        ],
         "proTip": "The 'flip and feel' technique: spin the wheel, then immediately note your gut reaction before your rational brain can rationalize it. Your emotional response to a random result is more reliable than extended deliberation for preference-based decisions where both options are objectively similar — use this as a decision-making aid, not just a random picker."
       }
     },
@@ -2327,14 +2716,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "A random number generator produces unpredictable numbers within a range you define — useful for raffles, statistical sampling, research, gaming, and teaching probability. There is an important distinction between pseudorandom (algorithmic, deterministic with a seed) and cryptographically random (uses system entropy, suitable for security). This tool uses the browser's crypto.getRandomValues() for true randomness — not the weaker Math.random(). Use cases include picking lottery numbers, assigning random IDs, generating test data, and selecting students or participants in classroom settings.",
+        "whatIs": "A random number generator produces unpredictable numbers within a range you define — useful for raffles, statistical sampling, research, gaming, and teaching probability. There is an important distinction between pseudorandom (algorithmic, deterministic with a seed) and cryptographically random (uses system entropy, suitable for security). This tool uses the browser's crypto.getRandomValues() for true randomness — not the weaker Math.random(). Use cases include picking lottery numbers, assigning random IDs, generating test data, and selecting students or participants in classroom settings. The range is inclusive at both ends, so a range of 1 to 10 can return 1 or 10, and you can ask for a single value or a batch of up to a thousand at once.",
         "howToUse": [
           "Set the minimum value for your range.",
           "Set the maximum value for your range.",
           "Choose how many numbers to generate.",
-          "Click Generate and read the results instantly."
+          "Decide whether duplicates are allowed, then click Generate and read the results instantly."
         ],
-        "whyItMatters": "Humans are terrible at generating random numbers manually — we unconsciously avoid sequences, prefer certain digits, and show repeating patterns. A random number generator eliminates this bias completely. For raffles and contests, using a verifiable random number generator adds credibility and fairness, and the result can be shared or screenshotted to prove the selection was not manipulated.",
+        "whyItMatters": "Humans are terrible at generating random numbers manually — we unconsciously avoid sequences, prefer certain digits, and show repeating patterns. A random number generator eliminates this bias completely. For raffles and contests, using a verifiable random number generator adds credibility and fairness, and the result can be shared or screenshotted to prove the selection was not manipulated. In research and testing, a documented range and method also makes a sampling step reproducible when someone reviews the work later.",
+        "sections": [
+          {
+            "heading": "Pseudorandom vs. cryptographic randomness",
+            "body": "A pseudorandom generator starts from a seed value and runs a formula that produces numbers which look random but are fully determined by that seed. Give it the same seed and you get the same sequence — useful for reproducible simulations, bad for anything an adversary might try to predict. A cryptographic generator, which is what crypto.getRandomValues() exposes, draws from entropy the operating system collects from hardware events, so the output cannot be reproduced or predicted. For a classroom draw or a giveaway either is fine in practice; for security tokens, passwords, or shuffling a deck in a real-money game, only the cryptographic kind is acceptable."
+          },
+          {
+            "heading": "Drawing without repeats",
+            "body": "Turn off 'allow duplicates' when every result must be distinct — picking five raffle positions, assigning unique jersey numbers, or sampling rows without replacement. The generator then draws from the remaining pool each time, so a value already chosen cannot come up again. This only works when the count you ask for is no larger than the size of the range: you cannot draw six unique numbers from a range of four. With duplicates allowed, each draw is independent and the same number can appear more than once, which is the correct behaviour for things like simulated dice."
+          },
+          {
+            "heading": "Running a verifiable draw",
+            "body": "Before generating, write down the range and how it maps to entries — for example, 'numbers 1 to 500, matched to row order in the signup sheet'. Generate once, screenshot the result together with that mapping, and publish both. Anyone can then check that the winning number corresponds to the entry you announced. Re-rolling until you get a result you like, or changing the mapping after the fact, is the failure mode that makes people distrust online draws."
+          }
+        ],
         "proTip": "For a raffle with 500 entries, generate one number between 1 and 500 and assign it to the winner's position in your list. For multiple winners, generate numbers without repetition — use the unique numbers option. Screenshot the result before announcing to prove the draw was fair and untampered."
       }
     },
@@ -2366,14 +2769,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "A giveaway picker selects one or more winners randomly from a list of entries you provide. Common use cases include social media giveaways — picking winners from Instagram comment lists, Twitter/X retweet entries, and YouTube comment sections. This tool uses a local list you paste in; for platform-specific entry scraping you would need platform APIs. Transparency and verifiability are critical for giveaway fairness, and this tool makes it easy to prove a winner was chosen without bias.",
+        "whatIs": "A giveaway picker selects one or more winners randomly from a list of entries you provide. Common use cases include social media giveaways — picking winners from Instagram comment lists, Twitter/X retweet entries, and YouTube comment sections. This tool uses a local list you paste in; for platform-specific entry scraping you would need platform APIs. Transparency and verifiability are critical for giveaway fairness, and this tool makes it easy to prove a winner was chosen without bias. Everything runs in your browser, so the entry list is never uploaded and you can run the draw offline once the page has loaded.",
         "howToUse": [
           "Paste your entry list — usernames, comment text, or any identifiers — into the text box.",
           "Set the number of winners you need.",
           "Click Pick to randomly select winners from your list.",
           "Optionally re-roll if a selected winner is ineligible."
         ],
-        "whyItMatters": "Manual winner selection from thousands of entries is impractical and looks biased even when it is not. A random picker that you can screenshot and share publicly proves the winner was chosen fairly. For brands and creators, this protects credibility and satisfies platform giveaway guidelines that typically require a verifiable fair random selection method.",
+        "whyItMatters": "Manual winner selection from thousands of entries is impractical and looks biased even when it is not. A random picker that you can screenshot and share publicly proves the winner was chosen fairly. For brands and creators, this protects credibility and satisfies platform giveaway guidelines that typically require a verifiable fair random selection method. Many jurisdictions also draw a legal line between a prize draw and a lottery, and a documented random selection is part of staying on the right side of it.",
+        "sections": [
+          {
+            "heading": "Preparing a clean entry list",
+            "body": "The quality of the draw depends entirely on the list you paste in. Before picking, remove obvious duplicates unless your rules explicitly allow one entry per comment, strip out the brand's own account and any bot replies, and decide how you handle people who entered several times — either dedupe to one line each or keep the repeats deliberately so extra entries genuinely raise their odds. Put one entrant per line. If your rules require actions you cannot see in the raw list, such as following the account, verify the drawn winner against that requirement before announcing and re-draw if they do not qualify."
+          },
+          {
+            "heading": "How the selection works",
+            "body": "Each line in your box is one entry with an equal chance. When you click Pick, the tool generates a random index into the list and returns that entry; for multiple winners with 'remove on pick' enabled, each selected name is taken out of the pool so nobody can win twice. The draws are independent and unweighted — the tool does not know or care who entered first, who has the most followers, or who was picked in your last giveaway. If you need weighted odds, add a name to the list as many times as the weight you want it to have."
+          },
+          {
+            "heading": "Making the result verifiable",
+            "body": "Screen-record the moment you press Pick, with the full entry list and the winner both visible in the recording, and post that clip or a screenshot alongside the announcement. State up front how many winners you are drawing and the tie-break or re-draw rule for disqualified entries. This record is what protects you if a losing entrant claims the draw was rigged, and it is now an expectation of most brand and platform giveaway guidelines for higher-value prizes."
+          }
+        ],
         "proTip": "Screenshot or screen-record the picking moment before announcing the winner. Share the result publicly — in a story, tweet, or post — with the full entry list visible to demonstrate transparency. This prevents accusations of favoritism that can significantly damage brand trust and community goodwill, especially for high-value prize giveaways."
       }
     },
@@ -2405,14 +2822,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "A classroom name picker randomly selects a student from your class roster for cold calling, participation, or task assignment. Educational research by Robert Bjork on retrieval practice shows that random selection improves engagement and learning retention compared to volunteer-only answering, where the same few students always respond. This tool is the digital equivalent of the classic popsicle stick technique — names on sticks in a cup drawn at random — but faster and visible to the whole class on a projected screen.",
+        "whatIs": "A classroom name picker randomly selects a student from your class roster for cold calling, participation, or task assignment. Educational research by Robert Bjork on retrieval practice shows that random selection improves engagement and learning retention compared to volunteer-only answering, where the same few students always respond. This tool is the digital equivalent of the classic popsicle stick technique — names on sticks in a cup drawn at random — but faster and visible to the whole class on a projected screen. It runs in the browser with no login and no app, so it works the same on an interactive whiteboard, a teacher laptop, a Chromebook, or an iPad.",
         "howToUse": [
           "Enter your class roster in the text box, one student name per line.",
           "Click Pick to randomly select a student.",
           "Read the selected student's name displayed on screen.",
           "Enable 'Remove on pick' to ensure every student is called before anyone is called twice."
         ],
-        "whyItMatters": "Random selection keeps all students alert and engaged because anyone could be called next. Volunteer-based participation creates deep inequality — research shows 20% of students account for 80% of voluntary participation. The unpredictability of random selection activates attention in ways that volunteer formats do not, leading to higher engagement across the whole class rather than just the most confident students.",
+        "whyItMatters": "Random selection keeps all students alert and engaged because anyone could be called next. Volunteer-based participation creates deep inequality — research shows 20% of students account for 80% of voluntary participation. The unpredictability of random selection activates attention in ways that volunteer formats do not, leading to higher engagement across the whole class rather than just the most confident students. It also takes the teacher out of the decision, so no student can read favouritism or punishment into who gets called.",
+        "sections": [
+          {
+            "heading": "Cold calling without raising anxiety",
+            "body": "Random calling only helps learning if students do not dread it. A few practices keep it safe: tell the class in advance that you will be using a picker so it is a routine, not an ambush; allow a student to say 'pass, come back to me' once per lesson; and give a few seconds of thinking time, or a brief turn-and-talk with a partner, before you draw a name. Use the picker for questions that have room for reasoning rather than single right-or-wrong recall under pressure. The aim is to spread participation, not to catch anyone out."
+          },
+          {
+            "heading": "Getting through the whole class fairly",
+            "body": "Turn on 'remove on pick' so each drawn name leaves the pool. The tool then works through the entire roster without repeats, which students perceive as fairer than a raw random draw where one person might be picked three times before someone else is picked at all. When the pool empties, reset it for the next activity or the next lesson. If a student is absent, take their name out for that session so the flow is not interrupted by calling on an empty seat."
+          },
+          {
+            "heading": "Beyond cold calling",
+            "body": "The same roster works for assigning classroom jobs, choosing the order groups present, pairing students for peer review, picking who demonstrates at the board, or selecting a line leader. For group work, pick several names in a row with 'remove on pick' enabled to build a team, then repeat for the next team. Keeping one saved roster per class and reusing it each period saves setup time."
+          }
+        ],
         "proTip": "Use the 'remove after picking' feature so each student is called once before anyone is called twice. This feels fairer to students and reduces anxiety about being called repeatedly. If a student is absent, remove their name for that session so the class flow remains uninterrupted and no one is put on the spot unfairly."
       }
     },
@@ -2440,14 +2871,28 @@
         }
       ],
       "richContent": {
-        "whatIs": "A typing speed test measures WPM (words per minute, where a word is standardized as 5 keystrokes including spaces), accuracy percentage (correct keystrokes divided by total keystrokes times 100), and raw WPM versus net WPM (net WPM deducts errors). Speed benchmarks: hunt-and-peck typists average 20–30 WPM, average office workers reach 40 WPM, proficient typists hit 60–80 WPM, professional transcriptionists exceed 80–100 WPM, competitive typists reach 120–150+ WPM, and the current world record exceeds 220 WPM.",
+        "whatIs": "A typing speed test measures WPM (words per minute, where a word is standardized as 5 keystrokes including spaces), accuracy percentage (correct keystrokes divided by total keystrokes times 100), and raw WPM versus net WPM (net WPM deducts errors). Speed benchmarks: hunt-and-peck typists average 20–30 WPM, average office workers reach 40 WPM, proficient typists hit 60–80 WPM, professional transcriptionists exceed 80–100 WPM, competitive typists reach 120–150+ WPM, and the current world record exceeds 220 WPM. This test offers 15-, 30-, 60-, and 120-second modes; the longer modes give a more stable number because a single stumble is averaged over more text.",
         "howToUse": [
-          "Click Start or begin typing the displayed text to start the timer.",
+          "Choose a time limit, then click Start or begin typing the displayed text to start the timer.",
           "Type the passage as accurately and quickly as possible.",
           "Read your WPM and accuracy when the time runs out.",
           "Review which keys caused slowdowns and focus practice there."
         ],
-        "whyItMatters": "Typing speed directly correlates with productivity for knowledge workers. At 40 WPM versus 80 WPM, a person typing the equivalent of 500 hours of documentation per year saves 250 hours — more than six weeks of work time. Touch typing using all 10 fingers on the home row doubles average speed compared to hunt-and-peck for most people within two to three months of deliberate practice.",
+        "whyItMatters": "Typing speed directly correlates with productivity for knowledge workers. At 40 WPM versus 80 WPM, a person typing the equivalent of 500 hours of documentation per year saves 250 hours — more than six weeks of work time. Touch typing using all 10 fingers on the home row doubles average speed compared to hunt-and-peck for most people within two to three months of deliberate practice. Beyond raw output, faster typing lowers the friction between having a thought and getting it onto the screen, which matters when you are drafting, coding, or taking notes in a live meeting.",
+        "sections": [
+          {
+            "heading": "How WPM and accuracy are calculated",
+            "body": "The test counts every keystroke you make and checks it against the expected character. At the end, gross WPM is the total characters typed divided by five, scaled to a full minute. Net WPM subtracts your uncorrected errors from that figure, which is why a fast run with many mistakes can score lower than a slower, cleaner one. Accuracy is simply correct keystrokes as a percentage of all keystrokes. The five-character 'word' is an industry convention that goes back to mechanical typewriter tests, so scores are comparable across different passages regardless of how long the actual English words are."
+          },
+          {
+            "heading": "Why accuracy should come first",
+            "body": "Every error you have to notice, backspace over, and retype costs more time than typing the character correctly once. Chasing a high speed while your accuracy sits below 95% trains your fingers to make the same mistakes faster. The reliable path is to slow down to the pace where you can hit 97 to 98% accuracy, hold that until it feels comfortable, and let speed rise on its own. Most people find their sustainable speed climbs faster this way than by pushing raw pace."
+          },
+          {
+            "heading": "Practising for real improvement",
+            "body": "Short, frequent sessions beat occasional long ones: a few one-minute runs a day for several weeks produces steady gains, while a single hour-long grind mostly produces fatigue. Keep your wrists neutral, your fingers resting on the home row (ASDF and JKL semicolon), and your eyes on the text rather than the keyboard. When you review a result, look for the specific keys and letter combinations that slowed you down and drill those rather than repeating whole passages."
+          }
+        ],
         "proTip": "The biggest improvement comes from prioritizing accuracy over speed. Slow down until your accuracy is above 95%, then gradually increase pace. Speed follows accuracy naturally — trying to type fast while making many errors actually lowers net WPM and builds bad muscle memory. Use one-minute tests daily rather than one long session for the best results."
       }
     }
@@ -2469,6 +2914,7 @@
       "timeUp": "Time's up!",
       "nextQuestion": "Next Question",
       "seeResult": "See My Result",
+      "sourceLabel": "Source: {source}",
       "tiers": {
         "legend": "Legend",
         "expert": "Expert",
@@ -2478,9 +2924,29 @@
     }
   },
   "home": {
-    "heading": "The only <highlight>tool site</highlight> you'll ever need",
+    "caption": "Over 40 essential tools",
+    "heading": "The <highlight>only</highlight> tool site you'll ever need",
     "subheading": "100% free, no sign-ups, and no uploads. Everything is processed directly in your browser with total privacy.",
     "moreComingSoon": "More tools coming soon",
+    "cards": {
+      "tools": {
+        "title": "TOOLS",
+        "desc": "Compress images, handle PDFs, calculate finances, and use fast, 100% private utilities directly in your browser."
+      },
+      "quizzes": {
+        "title": "QUIZZES",
+        "desc": "Interactive quizzes, sports trivia, general knowledge, and personality tests to challenge your skills."
+      },
+      "blog": {
+        "title": "BLOG",
+        "desc": "Practical articles, step-by-step tutorials, and essential tips to streamline your daily workflow and tasks."
+      },
+      "interview": {
+        "title": "INTERVIEW",
+        "desc": "Real technical questions, core concepts, and architecture mock tests to accelerate your tech career."
+      },
+      "button": "Access"
+    },
     "nav": {
       "tools": "Tools",
       "blog": "Blog",
@@ -2500,7 +2966,11 @@
       "quizzes": "Quizzes",
       "agileTools": "Agile & Scrum Tools",
       "sportsQuizzes": "Sports Quizzes",
-      "interviewPrep": "Interview Prep"
+      "interviewPrep": "Interview Prep",
+      "educationTools": "Education Tools",
+      "healthTools": "Health & Fitness",
+      "mathTools": "Math Tools",
+      "utilityTools": "Utilities"
     },
     "tools": {
       "imageCompressor": {
@@ -2540,15 +3010,15 @@
         "desc": "Live rates for 150+ currencies"
       },
       "metersToFeet": {
-        "label": "Meters to Feet",
+        "label": "Length Converter",
         "desc": "Quick length conversion"
       },
       "celsiusToFahrenheit": {
-        "label": "Celsius to Fahrenheit",
+        "label": "Temperature Converter",
         "desc": "Quick temperature conversion"
       },
       "kgToPounds": {
-        "label": "Kg to Pounds",
+        "label": "Weight Converter",
         "desc": "Quick weight conversion"
       },
       "wordCounter": {
@@ -2657,7 +3127,7 @@
       },
       "worldCupQuiz": {
         "label": "FIFA World Cup Winners Quiz",
-        "desc": "Test your knowledge of every World Cup champion"
+        "desc": "Guess the World Cup winners from 1930 to 2022 — every champion, host and final"
       },
       "footballClubQuiz": {
         "label": "Which Football Club Are You?",
@@ -2678,6 +3148,18 @@
       "f1DriverQuiz": {
         "label": "Which F1 Driver Are You?",
         "desc": "Verstappen, Hamilton, Senna, or Norris?"
+      },
+      "politicalProfileQuiz": {
+        "label": "What's Your Political Profile?",
+        "desc": "A fun, neutral values quiz — discover your political archetype"
+      },
+      "echoChamberQuiz": {
+        "label": "Political Echo Chamber Quiz",
+        "desc": "Discover how much your feed and social circle echo your own views."
+      },
+      "fakeNewsQuiz": {
+        "label": "Fake News or Fact?",
+        "desc": "10 viral claims — can you spot which ones are true?"
       },
       "retroBoard": {
         "label": "Retrospective Board",
@@ -2710,6 +3192,115 @@
       "interviewHub": {
         "label": "Interview Prep Hub",
         "desc": "TypeScript, JS & more — with explanations and best practices"
+      },
+      "gpaCalculator": {
+        "label": "GPA Calculator",
+        "desc": "Weighted GPA on the 4.0, 0–20 and 0–10 scales"
+      },
+      "cumulativeGpaCalculator": {
+        "label": "Cumulative GPA Calculator",
+        "desc": "Add a new semester to your existing GPA"
+      },
+      "gradeCalculator": {
+        "label": "Grade Calculator",
+        "desc": "What grade do I need on the final exam?"
+      },
+      "citationGenerator": {
+        "label": "Citation Generator",
+        "desc": "APA, MLA, Chicago and ABNT citations"
+      },
+      "gpaGuide": {
+        "label": "Guide: How to Calculate GPA",
+        "desc": "The 4.0 scale, the formula and a worked example"
+      },
+      "gpaBrazilGuide": {
+        "label": "Guide: Brazilian Grades to GPA",
+        "desc": "Convert 0–10 and 0–100 grades to the 4.0 scale"
+      },
+      "gpaUsaGuide": {
+        "label": "Guide: GPA to Study in the US",
+        "desc": "What GPA universities expect, and what else counts"
+      },
+      "bmiCalculator": {
+        "label": "BMI Calculator"
+      },
+      "tdeeCalculator": {
+        "label": "TDEE Calculator"
+      },
+      "calorieDeficitCalculator": {
+        "label": "Calorie Deficit Calculator"
+      },
+      "ageCalculator": {
+        "label": "Age Calculator"
+      },
+      "qrCodeGenerator": {
+        "label": "QR Code Generator"
+      },
+      "sentenceCounter": {
+        "label": "Sentence Counter"
+      },
+      "keywordDensityChecker": {
+        "label": "Keyword Density Checker"
+      },
+      "paraphraser": {
+        "label": "Paraphrasing Tool"
+      },
+      "summarizer": {
+        "label": "Text Summarizer"
+      },
+      "plagiarismChecker": {
+        "label": "Plagiarism Checker"
+      },
+      "typingTest": {
+        "label": "Typing Speed Test"
+      },
+      "giveawayPicker": {
+        "label": "Giveaway Picker"
+      },
+      "classroomNamePicker": {
+        "label": "Classroom Name Picker"
+      },
+      "personalLoanCalculator": {
+        "label": "Personal Loan Calculator"
+      },
+      "refinanceCalculator": {
+        "label": "Refinance Calculator"
+      },
+      "interestCalculator": {
+        "label": "Interest Calculator"
+      },
+      "debtPayoffCalculator": {
+        "label": "Debt Payoff Calculator"
+      },
+      "mortgage30Calculator": {
+        "label": "30-Year Mortgage Calculator"
+      },
+      "mortgage15Calculator": {
+        "label": "15-Year Mortgage Calculator"
+      },
+      "fhaLoanCalculator": {
+        "label": "FHA Loan Calculator"
+      },
+      "vaLoanCalculator": {
+        "label": "VA Loan Calculator"
+      },
+      "receiptGenerator": {
+        "label": "Receipt Generator"
+      },
+      "cryptoPortfolioTracker": {
+        "label": "Crypto Portfolio Tracker"
+      },
+      "invoiceGeneratorCanada": {
+        "label": "Canada Invoice Generator"
+      },
+      "invoiceGeneratorAustralia": {
+        "label": "Australia Invoice Generator"
+      },
+      "invoiceGeneratorFreelancers": {
+        "label": "Freelancer Invoice Generator"
+      },
+      "worldCupResult": {
+        "label": "World Cup Quiz Results"
       }
     },
     "badge": "Toolnotch | Over 40 essential tools",
@@ -3061,6 +3652,12 @@
           "Read the sprint calendar output showing start, end, review, and retro dates for each sprint."
         ],
         "whyItMatters": "Planning sprint dates one full quarter in advance lets teams block calendars before competing meetings appear, align PTO around sprint events, and coordinate release schedules with dependent teams. Teams that pre-plan sprint calendars experience fewer missed ceremonies and more predictable velocity because the planning overhead never competes with delivery work at the last minute. At scale, release train cadences in SAFe and LeSS require sprint boundary alignment across multiple teams — a mismatch of even a single day causes cross-team coordination chaos at program increment boundaries.",
+        "sections": [
+          {
+            "heading": "Worked example: why the start day matters",
+            "body": "Start a two-week sprint on Wednesday, June 4 and the ten working days run to Tuesday, June 17 — planning lands mid-week and the review falls on a Tuesday, cutting across two calendar weeks and colliding with unrelated Monday meetings. Move the start to Monday, June 9 and the sprint ends Friday, June 20, with planning first thing Monday and the review plus retrospective on Friday afternoon: the rhythm most teams and stakeholders already expect. The calculator counts only weekdays for daily standups, so it skips every Saturday and Sunday automatically. It does not know your national or regional public holidays, so scan the generated dates against your local calendar and move any ceremony that lands on a day off."
+          }
+        ],
         "proTip": "Avoid 4-week sprints for most software teams. The longer the sprint, the higher the cost of a wrong assumption — a direction error found on day 25 of a 28-day sprint wastes nearly the entire sprint. Two-week sprints are the industry standard: they allow faster feedback loops without the ceremony overhead of 1-week sprints. Reserve 4-week iterations for hardware programs or highly regulated environments where 2-week cadences are operationally impractical."
       }
     }
@@ -3125,6 +3722,12 @@
         "Read the result and any explanatory breakdown shown below the inputs."
       ],
       "whyItMatters": "Percentage confusion is routinely exploited in sales and advertising. \"50% off, then an additional 20% off\" is not 70% off — it is 60% off (you pay 50% of the original, then 80% of that, which equals 40% of the original price). Stacking discounts never adds up the way it sounds. Politicians and marketers frequently swap percentage points and percentages to exaggerate or minimize changes depending on which framing is more favorable. Calculating percentages accurately lets you verify claimed discounts, tax amounts, and rate changes independently.",
+      "sections": [
+        {
+          "heading": "Worked example: reversing a percentage change",
+          "body": "A common mistake is trying to undo a percentage increase by subtracting the same percentage. Suppose an item that cost 80 rose by 25% to 100. Taking 25% off 100 gives 75, not 80 — because the two percentages are applied to different base numbers. To reverse an increase, divide by 1 plus the rate: 100 / 1.25 = 80. To find the pre-discount price of something now selling for 90 after 25% off, divide by 1 minus the rate: 90 / 0.75 = 120. The takeaway: an increase and a decrease of the same percentage never cancel out, so always divide to work backwards rather than adding the percentage back."
+        }
+      ],
       "proTip": "Mental math shortcuts for everyday percentages: 10% means move the decimal point one place left. 5% is half of 10%. 15% is 10% plus 5%. 20% is double the 10% value. 25% means divide by 4. These five rules cover most tip, discount, and tax estimates without any calculator — fast enough to verify a restaurant bill or a store discount in seconds."
     }
   },
@@ -3397,7 +4000,82 @@
         "question": "Does this GPA calculator work for international students?",
         "answer": "Yes — this calculator supports the US 4.0 scale (A–F letter grades), the Portuguese and Brazilian 0–20 scale, and the Spanish and Latin American 0–10 scale. Select your scale using the dropdown."
       }
-    ]
+    ],
+    "howTo": {
+      "name": "How to calculate your GPA on the 4.0 scale",
+      "steps": [
+        "Choose your grading scale: US 4.0 (A–F), Portugal/Brazil 0–20, or Spain/Latin America 0–10.",
+        "Enter each course with its grade and the number of credits it carries.",
+        "Convert every grade to grade points — on the 4.0 scale A = 4.0, B = 3.0, C = 2.0, D = 1.0 and F = 0.0.",
+        "Multiply each course's grade points by its credits to get that course's weighted points.",
+        "Add up all the weighted points and divide by the total number of credits. The result is your GPA.",
+        "Use the Cumulative GPA tab to combine this semester with the credits already on your transcript."
+      ]
+    },
+    "brConversion": {
+      "heading": "Convert Brazilian Grades (0–10 / 0–100) to a 4.0 GPA",
+      "intro": "Brazilian transcripts report grades on a 0–10 scale, or 0–100 in secondary school, while US applications ask for a number between 0.0 and 4.0. No single official conversion exists, but the band table below is the mapping most widely used to estimate a GPA, and it is what this calculator applies when you select a 0–10 scale.",
+      "columns": {
+        "decimal": "Grade (0–10)",
+        "percent": "Grade (0–100)",
+        "letter": "US letter",
+        "gpa": "GPA (4.0)"
+      },
+      "rows": [
+        {
+          "decimal": "9.5 - 10.0",
+          "percent": "95 - 100",
+          "letter": "A",
+          "gpa": "4.0"
+        },
+        {
+          "decimal": "8.5 - 9.4",
+          "percent": "85 - 94",
+          "letter": "A−",
+          "gpa": "3.7"
+        },
+        {
+          "decimal": "7.5 - 8.4",
+          "percent": "75 - 84",
+          "letter": "B+",
+          "gpa": "3.3"
+        },
+        {
+          "decimal": "6.5 - 7.4",
+          "percent": "65 - 74",
+          "letter": "B",
+          "gpa": "3.0"
+        },
+        {
+          "decimal": "6.0 - 6.4",
+          "percent": "60 - 64",
+          "letter": "B−",
+          "gpa": "2.7"
+        },
+        {
+          "decimal": "5.5 - 5.9",
+          "percent": "55 - 59",
+          "letter": "C+",
+          "gpa": "2.3"
+        },
+        {
+          "decimal": "5.0 - 5.4",
+          "percent": "50 - 54",
+          "letter": "C",
+          "gpa": "2.0"
+        },
+        {
+          "decimal": "below 5.0",
+          "percent": "below 50",
+          "letter": "F",
+          "gpa": "0.0"
+        }
+      ],
+      "disclaimer": "This table is an estimate, not an official conversion. US universities usually require an evaluation from a credential service such as WES, ECE or SpanTran, and each evaluator applies its own methodology. Use this table to plan where to apply; use the evaluator’s report to actually apply.",
+      "exampleHeading": "Worked example",
+      "exampleBody": "A semester of Calculus II 7.2 (6 credits), Physics II 6.3 (4), Linear Algebra 8.7 (4), Programming 9.6 (4) and Research Methods 8.0 (2) converts to 3.0, 2.7, 3.7, 4.0 and 3.3 grade points. Weighted by credits that is (3.0×6) + (2.7×4) + (3.7×4) + (4.0×4) + (3.3×2) = 66.2 points across 20 credits, a GPA of 3.31. Note that an arithmetic average of 7.96 in Brazil becomes a 3.31 GPA, because the conversion is not linear.",
+      "ctaLabel": "Read the full guide: How to Convert Brazilian Grades to a 4.0 GPA"
+    }
   },
   "ageCalculator": {
     "metaTitle": "Age Calculator — How Old Am I? Calculate Your Exact Age | ToolNotch",
@@ -3543,7 +4221,13 @@
     "whoP1": "ToolNotch is built and maintained by Juan Soares, a software developer who got tired of telling people \"just use that sketchy site\" every time they needed a simple online tool. He built the first version over a weekend and has been adding tools ever since.",
     "toolsTitle": "Our tools",
     "toolsP1": "ToolNotch currently offers 74+ free tools across seven categories: PDF utilities (merge, split, compress, convert), image tools (compress, convert between formats), finance calculators (loan calculator, invoice generator, portfolio tracker), health tools (BMI calculator, TDEE calculator, calorie deficit planner), text tools (word counter, paraphraser, case converter), education tools (GPA calculator, grade calculator, citation generator), and fun tools (typing test, random generators).",
-    "toolsP2": "New tools are added regularly based on what people actually need. If you want to suggest a tool, the GitHub link above is the best place to do that."
+    "toolsP2": "New tools are added regularly based on what people actually need. If you want to suggest a tool, the GitHub link above is the best place to do that.",
+    "partnersTitle": "Partners & funding",
+    "partnersNote": "ToolNotch has no paywall and stores no data. It is funded by display ads and by affiliate commissions from a small set of paid tools we recommend — if you sign up through one of those links, the company pays us at no extra cost to you. We only recommend tools we would use ourselves, and a recommendation is never influenced by a commission.",
+    "partnersLink": "See our partners",
+    "fundedTitle": "How ToolNotch is funded",
+    "fundedP1": "ToolNotch is free and has no paid plan, no subscription, and nothing locked behind a login. The site is funded entirely by Google AdSense display advertising. Ads appear in fixed slots around the page and above the FAQ — never inside a tool while you are using it, never as a pop-up, and never between the steps of a task. If ad revenue ever exceeds hosting costs, the surplus goes back into building and maintaining more tools.",
+    "fundedP2": "Advertising is also why the privacy policy matters here. Google and its partners use cookies to serve and measure ads, and analytics data is collected through Google Analytics. What we collect, why, and how to opt out is described in full in the Privacy Policy, linked in the footer of every page."
   },
   "terms": {
     "metaTitle": "Terms of Service | ToolNotch",
@@ -3577,26 +4261,31 @@
   },
   "contact": {
     "metaTitle": "Contact | ToolNotch",
-    "metaDescription": "Get in touch with the ToolNotch team. Report a bug, suggest a tool, or ask about business inquiries.",
+    "metaDescription": "Get in touch with ToolNotch. Report a bug, suggest a tool, ask about advertising, or send a data-privacy request.",
     "backHome": "Back to ToolNotch",
     "heading": "Contact Us",
-    "intro": "Have a question, found a bug, or want to suggest a tool? We'd love to hear from you.",
+    "intro": "ToolNotch is built and run by one developer, Juan Soares. Email is the only channel — there is no support portal, no ticket queue, and no account to sign in to. Every message reaches a person directly, and almost every tool, fix, and feature on the site started as an email from someone who uses it.",
     "emailLabel": "Write to us at",
     "categories": {
       "bugs": {
         "title": "Bug Reports",
-        "description": "Describe the tool, your browser, and what went wrong. Screenshots are always helpful."
+        "description": "Tell us which tool failed, which browser and operating system you were using, and the exact steps that led to the problem. A screenshot or short screen recording of the error makes it far faster to reproduce and fix."
       },
       "features": {
         "title": "Feature Requests",
-        "description": "What tool or feature would help you? Tell us what you're trying to accomplish."
+        "description": "Describe the task you are trying to finish, not only the feature name. Knowing the underlying goal often points to a better tool than the one first imagined. Requests that match a real, recurring need are usually shipped within a few weeks."
       },
       "business": {
-        "title": "Business Inquiries",
-        "description": "Partnerships, sponsored content, and advertising — reach out and we'll get back to you."
+        "title": "Advertising & Partnerships",
+        "description": "ToolNotch is funded entirely by display advertising. For sponsorship, content partnerships, or advertising questions, email the address above with a short description of your company and what you have in mind."
       }
     },
-    "responseTime": "We typically respond within 1–2 business days."
+    "noFilesTitle": "We cannot recover your files",
+    "noFilesBody": "Every file-based tool on ToolNotch — the image compressor, PDF merge and split, the format converters, and the rest — runs entirely inside your browser. Files are never uploaded to or stored on our servers, so if you have lost a document there is nothing on our side to retrieve. Always keep your own copy of anything important before processing it.",
+    "privacyTitle": "Privacy and data requests",
+    "privacyBody": "Because the tools run client-side and we store no accounts and no uploaded files, there is very little personal data to request or delete. Analytics and advertising data is handled by Google. For any access or deletion request, email us and we will point you to the right process. Full details are in our",
+    "privacyLinkLabel": "Privacy Policy",
+    "responseTime": "One person reads every email. We usually reply within one to two business days; detailed bug reports can take longer while we reproduce the issue."
   },
   "blog": {
     "indexTitle": "Blog — Free Tool Guides & Calculator Tutorials",
@@ -3609,10 +4298,22 @@
       "text": "Text",
       "education": "Education",
       "productivity": "Productivity",
-      "engineering": "Engineering"
+      "engineering": "Engineering",
+      "fun": "Fun"
     },
     "breadcrumbBlog": "Blog",
     "relatedTool": "Try the free {toolName} →",
+    "indexIntro": "The ToolNotch blog is where each tool gets the full explanation that will not fit on the tool page itself. Every article is written to stand on its own: the formula or method behind a tool, a worked example you can reproduce, the edge cases and common mistakes to watch for, and a link to the free tool when you are ready to run the numbers yourself. There is no sign-up and no paywall — the guides are here to help you understand the result, not just get one.",
+    "indexGuideHeading": "What you'll find here",
+    "indexCategoryBlurbs": {
+      "finance": "Finance — how loan, mortgage, interest, and debt-payoff math actually works, with worked examples you can check against the matching calculator.",
+      "health": "Health — plain-language explanations of BMI, TDEE, and calorie targets, including where each formula comes from and what it leaves out.",
+      "text": "Text — practical guidance on word and character counts, reading time, readability scores, and keyword density for writers and students.",
+      "education": "Education — how GPA, weighted grades, and the main citation styles are calculated, and how to avoid the mistakes that quietly cost marks.",
+      "productivity": "Productivity — getting more out of the everyday planning, date, and timing tools, and fitting them into a real workflow.",
+      "engineering": "Engineering — the background behind the developer-focused tools and interview quizzes, from formatting to type-system questions.",
+      "fun": "Fun — how the randomness in wheels, pickers, and generators works, and how to run a draw that everyone watching will trust."
+    },
     "posts": {
       "how-to-calculate-mortgage-payment": {
         "title": "How to Calculate Your Mortgage Payment: A Step-by-Step Guide",
@@ -4303,17 +5004,1137 @@
           }
         ]
       }
+    },
+    "relatedToolsHeading": "Free tools for this topic"
+  },
+  "interview": {
+    "hub": {
+      "aboutHeading": "About interview prep on ToolNotch",
+      "about": [
+        "ToolNotch interview prep is a collection of free, interactive quizzes for software engineers getting ready for a technical interview. Every quiz runs entirely in your browser: there is no account to create, nothing to install, and no paywall. You pick a topic, choose a difficulty level, and work through multiple-choice questions that mirror the kind of reasoning an interviewer is listening for.",
+        "What sets these quizzes apart from a flashcard deck is the explanation attached to every question. Instead of only telling you which option is correct, each answer explains why it is correct, shows the underlying mechanism, and adds a short note on how experienced teams apply the idea in production code. The goal is understanding you can defend under follow-up questions, not memorised trivia that collapses the moment an interviewer asks why.",
+        "The question banks are written from primary sources — official language handbooks, specification documents, and widely used engineering references — and are reviewed for accuracy rather than assembled from scraped quiz sites. Coverage currently centres on TypeScript, with further language and backend-engineering tracks released as they are finished."
+      ],
+      "formatHeading": "How the quizzes are structured",
+      "format": [
+        "Each track is split into Beginner, Intermediate, and Advanced levels of roughly ten questions each. Beginner questions confirm that the fundamentals are solid, Intermediate questions test the edge cases that trip people up in day-to-day work, and Advanced questions go after the deep behaviour that separates a senior candidate from a mid-level one. Question order is shuffled on every run, so you cannot pass by memorising positions.",
+        "Because everything is client-side, your answers and scores never leave your device. You can retake a level as many times as you want, jump straight to the difficulty you care about, and use the keyboard to move quickly: number keys to pick an option, Enter to advance, and Tab to cycle through the explanation tabs on questions that have them."
+      ],
+      "howHeading": "How to practise effectively",
+      "how": [
+        "Start one level below where you think you are. Clearing the Beginner set quickly confirms your fundamentals and builds momentum before you reach the harder material.",
+        "Read the explanation on every question, including the ones you answered correctly. A right answer for the wrong reason is still a gap an interviewer can find.",
+        "When an explanation mentions compiled output or a specification rule, pause and reproduce it yourself in an editor or REPL. Active recall beats re-reading.",
+        "Retake a level a day or two later rather than immediately. Spacing the repetition is what moves an idea into long-term memory.",
+        "Once you are consistently scoring above roughly 80% on Advanced, switch to explaining each answer out loud as if the interviewer were in the room. That is the skill the interview actually measures."
+      ],
+      "faqHeading": "Interview prep FAQ",
+      "faqs": [
+        {
+          "question": "Are the ToolNotch interview quizzes free?",
+          "answer": "Yes. Every quiz is completely free with no account, sign-up, or download. All questions and explanations run client-side in your browser, and your scores are never uploaded anywhere."
+        },
+        {
+          "question": "Which topics are covered so far?",
+          "answer": "The TypeScript track is the most complete, with 30 questions across Beginner, Intermediate, and Advanced levels. Backend-engineering tracks — Node.js internals, database design and indexing, messaging systems, and system architecture — are being finished and released one at a time."
+        },
+        {
+          "question": "Are these questions aimed at junior or senior engineers?",
+          "answer": "Both. The Beginner level suits candidates preparing for their first or second role, while the Advanced level targets the depth expected of senior and staff engineers. Most people benefit from working through all three levels in order."
+        },
+        {
+          "question": "How should I use a quiz the day before an interview?",
+          "answer": "Do one relaxed pass at the level that matches the role, focus on reading the explanations rather than chasing a high score, and stop early enough to sleep. Cramming new material the night before tends to hurt more than it helps."
+        },
+        {
+          "question": "Do the quizzes save my progress?",
+          "answer": "Scores are shown at the end of each level but are not stored on a server. Because everything is local to your browser, you can retake any level as often as you like without affecting a saved record."
+        }
+      ]
+    },
+    "typescript": {
+      "coversHeading": "What the TypeScript interview quiz covers",
+      "covers": [
+        "This quiz works through the parts of TypeScript that interviewers actually probe: how the compiler infers types when you do not annotate them, how generics let a function stay type-safe across many input shapes, and how the type system computes new types from existing ones with conditional types, mapped types, and the infer keyword. It also covers narrowing — how TypeScript uses control flow, typeof, instanceof, discriminated unions, and user-defined type guards to shrink a union down to a single type inside a branch.",
+        "A distinctive feature is that every answer includes the compiled JavaScript. Types, interfaces, and type-only imports are erased at build time and produce no runtime code, while enums, class parameter properties, and decorators do emit something. Seeing the emitted output next to the source makes it obvious which constructs are purely a compile-time contract and which carry a runtime cost — a distinction that comes up constantly in interviews about bundle size and performance.",
+        "The utility types — Partial, Required, Readonly, Pick, Omit, Record, ReturnType, Parameters, Awaited, and the rest — are treated as things you should be able to reimplement, not just call. Several questions ask you to predict the result of a hand-written mapped type that mirrors one of the built-ins, which is a common whiteboard exercise."
+      ],
+      "levelsHeading": "Difficulty levels",
+      "levels": [
+        "Beginner covers the everyday type system: primitive and literal types, arrays and tuples, union and intersection types, interfaces versus type aliases, optional and readonly properties, function types, and the difference between any, unknown, and never. These are the questions a screening call is most likely to open with.",
+        "Intermediate moves into generics with constraints, keyof and indexed access types, typeof used as a type query, basic mapped and conditional types, and control-flow narrowing. Advanced pushes into recursive conditional types, the infer keyword, template literal types, variadic tuple types, the satisfies operator, const type parameters, NoInfer, and module augmentation — the material that distinguishes a senior TypeScript answer."
+      ],
+      "topicsHeading": "Topics in the question bank",
+      "topics": [
+        "Type inference — how TypeScript assigns types to variables, return values, and generic parameters when no annotation is present, and when it widens or narrows a literal.",
+        "Generics — writing functions, classes, and types that are parameterised over a type, adding extends constraints, and supplying defaults.",
+        "Conditional and mapped types — computing one type from another with T extends U ? X : Y, key remapping, adding or removing modifiers, and distribution over unions.",
+        "Narrowing — reducing a union inside a branch using typeof, instanceof, in, equality checks, discriminated unions, and functions that return a type predicate.",
+        "Utility types — Partial, Pick, Omit, Record, ReturnType, Parameters, Awaited and friends, plus how to build equivalents by hand.",
+        "Compiled JavaScript output — which TypeScript syntax is erased at build time and produces no runtime code, and which syntax actually emits."
+      ],
+      "howHeading": "How to use the TypeScript quiz",
+      "how": [
+        "Pick a level — Beginner, Intermediate, or Advanced — from the start screen. You can take them in any order and retake each as many times as you want.",
+        "Answer each multiple-choice question. Use the number keys 1 to 4 to select and Enter or the right arrow to advance.",
+        "After answering, read the three explanation tabs: Why This Answer, Compiled JS, and Best Practice. The Compiled JS tab shows exactly what the TypeScript compiler emits for that snippet.",
+        "Review your score at the end, then retake the level a day later to check what actually stuck."
+      ],
+      "faqHeading": "TypeScript interview quiz FAQ",
+      "faqs": [
+        {
+          "question": "How many TypeScript interview questions are there?",
+          "answer": "There are 30 questions in total — 10 Beginner, 10 Intermediate, and 10 Advanced. Each level is shuffled on every playthrough, so you get a fresh order each time."
+        },
+        {
+          "question": "What topics does the TypeScript quiz cover?",
+          "answer": "It covers type inference, any versus unknown, interfaces versus type aliases, optional properties, generics and constraints, keyof and indexed access types, mapped types, conditional types, the infer keyword, discriminated unions, template literal types, variadic tuples, satisfies, NoInfer, const type parameters, and module augmentation."
+        },
+        {
+          "question": "Are these questions for junior or senior roles?",
+          "answer": "Both. The Beginner level matches a first frontend or full-stack role, Intermediate matches a mid-level engineer, and Advanced reflects what a senior or staff engineer is expected to explain confidently. Working through all three in order is the most useful approach."
+        },
+        {
+          "question": "Does the quiz show compiled JavaScript output?",
+          "answer": "Yes. Every question has a Compiled JS tab showing exactly what TypeScript emits after erasing type annotations. It makes clear which constructs have a runtime cost and which are purely compile-time."
+        },
+        {
+          "question": "Is this enough on its own to prepare for a TypeScript interview?",
+          "answer": "It is a strong knowledge check, but pair it with hands-on practice: build something small with strict mode on, read the compiler errors carefully, and practise saying each answer out loud. Interviews test explanation as much as recognition."
+        },
+        {
+          "question": "Do I need an account to take the quiz?",
+          "answer": "No. The quiz is completely free with no account, login, or download. Everything runs in your browser and no answers or scores are sent anywhere."
+        }
+      ]
     }
   },
   "footer": {
     "links": {
+      "tools": "Tools",
+      "quizzes": "Quizzes",
       "blog": "Blog",
+      "interview": "Interview",
       "about": "About",
-      "privacy": "Privacy Policy",
       "terms": "Terms of Service",
-      "contact": "Contact"
+      "privacy": "Privacy Policy",
+      "contact": "Contact",
+      "disclosure": "Disclosure",
+      "partners": "Our Partners",
+      "allTools": "All tools"
     },
     "tagline": "Free tools that run in your browser. No sign-up. No data stored.",
-    "copyright": "© 2026 ToolNotch · Built by {name}"
+    "copyright": "© 2026 ToolNotch · Built by {name}",
+    "siteIndexHeading": "All tools & quizzes"
+  },
+  "electionCountdown": {
+    "metaTitle": "Brazil 2026 Election Countdown | ToolNotch",
+    "metaDescription": "Live countdown to Brazil's 2026 general election. Official first-round (Oct 4) and runoff (Oct 25) dates confirmed by TSE. No polls, no candidates, no opinions.",
+    "title": "Brazil 2026 Election Countdown",
+    "description": "How many days until Brazil's 2026 general election? Live countdown to the first round (October 4) and the runoff (October 25, if needed), based on official TSE dates.",
+    "round1Label": "Round 1",
+    "round2Label": "Runoff (if needed)",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "electionConcludedRound1": "The first round has closed. Waiting to confirm whether a runoff is needed.",
+    "electionConcludedRound2": "Brazil's 2026 election period has concluded. This page does not track results — see the TSE for official information.",
+    "faqs": [
+      {
+        "question": "When is Brazil's 2026 election?",
+        "answer": "Brazil's 2026 general election takes place on Sunday, October 4, 2026 (first round). The date is fixed by the Brazilian Constitution and the Elections Law (Lei nº 9.504/1997), which set the first Sunday of October as election day, and was confirmed officially by Brazil's Superior Electoral Court (TSE)."
+      },
+      {
+        "question": "How does the runoff work?",
+        "answer": "A runoff happens only for the President and Governor races, and only if no candidate wins more than 50% of valid votes in round 1. If needed, it's held on the last Sunday of October — October 25, 2026. Senate and Deputy races are decided in a single round."
+      },
+      {
+        "question": "Who can vote in Brazil's 2026 election?",
+        "answer": "Voting is mandatory for literate citizens aged 18–70. It's optional for 16–17 year-olds, for people over 70, and for citizens who cannot read or write. See the TSE for complete eligibility rules."
+      },
+      {
+        "question": "What's being elected on October 4?",
+        "answer": "On the same day, Brazil elects its President, state Governors, Senators, and federal, state, and district-level legislators. Only the Presidential and Governor races can go to a runoff."
+      },
+      {
+        "question": "Can the election date change?",
+        "answer": "No — the first-Sunday-of-October and last-Sunday-of-October dates are set by the Constitution and Elections Law, not by discretionary scheduling, which is why this countdown uses fixed dates."
+      }
+    ],
+    "richContent": {
+      "whatIs": "Brazil's 2026 general election takes place on Sunday, October 4, 2026, when voters choose the President, state Governors, Senators, and federal, state, and district legislators — all in a single vote. The date is set by the Brazilian Constitution and the 1997 Elections Law, which fix the first Sunday of October as election day. If no candidate for President or Governor wins more than 50% of valid votes, a runoff is held on the last Sunday of October — October 25, 2026. Both dates were confirmed by Brazil's Superior Electoral Court (TSE).",
+      "howToUse": [
+        "The live countdown at the top shows days, hours, minutes, and seconds until polls close for the current round.",
+        "It switches automatically from round 1 to the runoff once October 4 voting hours end.",
+        "Both official dates stay visible below the countdown, even after round 1 has passed."
+      ],
+      "whyItMatters": "Brazil uses a two-round system for its top two offices — President and Governor — to ensure the winner has support from a majority of voters, not just a plurality. Senate and legislative seats, by contrast, are decided in one round. Whether a runoff happens is only confirmed after round-1 results are counted, which is why this page frames October 25 as conditional rather than certain.",
+      "sections": [
+        {
+          "heading": "What happens between the two rounds",
+          "body": "Once first-round polls close on October 4, the TSE tabulates the valid votes in each presidential and gubernatorial race. A candidate wins outright by taking more than 50% of valid votes — blank and spoiled ballots are excluded from that base, which is why the winning threshold is measured against valid votes rather than every ballot cast. If no candidate clears that bar, the two highest-polling candidates advance to the runoff on the last Sunday of October, which is October 25, 2026. Senate seats and the federal, state, and district legislatures are all decided on October 4 and are never part of a runoff, so only the executive races can extend into the second round."
+        }
+      ],
+      "proTip": "If your state's Governor race — or the Presidential race — goes to a runoff, this page automatically switches its countdown to October 25, 2026."
+    }
+  },
+  "pollingPlaceFinder": {
+    "metaTitle": "Where Do I Vote in Brazil's 2026 Election? How to Find Your Polling Place | ToolNotch",
+    "metaDescription": "A plain-English guide to Brazil's polling-place system and how any registered voter checks their assigned voting location through the official TSE tools — no forms, no data collected here.",
+    "title": "Where Do I Vote in Brazil's 2026 Election? How to Find Your Polling Place",
+    "description": "How Brazil's voting-location system works, and the two official TSE tools every voter uses to check their assigned polling place.",
+    "intro": "Brazil's electoral system assigns every voter to a specific polling place — and it can genuinely change between elections. This guide explains how that assignment works and how to look yours up in under two minutes, using only Brazil's official electoral authority, the TSE.",
+    "sections": {
+      "whatIsPollingPlace": {
+        "heading": "What is a \"polling place\" (local de votação) in Brazil?",
+        "body": [
+          "In Brazil's electoral system, every registered voter is assigned to an electoral zone (zona eleitoral) and, within it, a specific polling section (seção eleitoral) — a small group of voters who share one ballot box at one physical location, usually a school or public building. Together, the zone and section point to a single address: your polling place.",
+          "These assignments aren't permanent. Brazil's electoral court (TSE) and its regional branches (TREs) periodically reorganize zones and sections — because voters move, buildings used as polling places close, or voter counts need rebalancing. That means your polling place can change between elections even if you haven't moved, which is why officials recommend checking it before every election rather than relying on where you voted last time."
+        ]
+      },
+      "howToCheck": {
+        "heading": "How to check your polling place (official steps)",
+        "intro": "Two official, free tools handle this — both run directly by TSE. Avoid any third-party site or app claiming to do this lookup for you; only tse.jus.br and the official e-Título app are authoritative.",
+        "steps": [
+          {
+            "title": "On TSE's website (Autoatendimento Eleitoral)",
+            "body": "Go to tse.jus.br, open \"Serviços eleitorais,\" and select \"Autoatendimento Eleitoral\" (the self-service portal that replaced the older Título Net system). Inside it, choose \"Onde votar\" (\"Where to vote\") to open the lookup form."
+          },
+          {
+            "title": "On the e-Título app (Android and iOS)",
+            "body": "Download e-Título from your phone's app store and log in. Your assigned polling place shows on the home screen, complete with the full address and, on election day, a built-in map to help you get there."
+          },
+          {
+            "title": "What you'll need to enter",
+            "body": "Both tools ask for your voter registration number (título de eleitor), CPF, or full name, plus your date of birth, to confirm your identity before showing your result."
+          }
+        ]
+      },
+      "lostTitle": {
+        "heading": "Lost your voter registration card? Here's what actually matters",
+        "body": [
+          "You don't need the physical card to vote — a government-issued photo ID is enough. Poll workers confirm your section through the electoral system, not a piece of paper.",
+          "If you'd still like to regularize your registration or check your status, the fastest path is the e-Título app or TSE's Autoatendimento Eleitoral portal — both let you view your standing and request a digital reissue without visiting an electoral office in person."
+        ]
+      },
+      "movedCity": {
+        "heading": "Moved cities, states, or abroad — does that change your polling place?",
+        "body": [
+          "Yes. If you move to a different municipality (or even a different neighborhood covered by another zone), your polling place stays tied to your old zone until you formally request an electoral address transfer — simply living somewhere new doesn't update it automatically.",
+          "For Brazilians living abroad, voting happens at a consular section rather than a domestic polling place, and registration works a bit differently — TSE's own site has a dedicated \"voto no exterior\" section covering that process. Either way, transfer and registration requests must be filed within the deadline set by TSE's official election calendar for that year, and that window typically closes well before election day — check the current calendar rather than assuming last cycle's dates still apply."
+        ]
+      },
+      "whatToBring": {
+        "heading": "What to bring on election day",
+        "body": [
+          "Bring an official photo ID — not necessarily the physical voter card. TSE generally accepts a national ID card (RG or the newer Carteira de Identidade Nacional), driver's license, passport, work card, or licensed professional ID cards. Confirm the current accepted-document list on TSE's official site or app before election day.",
+          "Arrive at your assigned section within the voting hours TSE sets for that election. Voters already in line when polls close are typically still allowed to vote, but it's not worth cutting it close."
+        ],
+        "documentList": [
+          "National ID card (RG) or Carteira de Identidade Nacional (CIN)",
+          "Driver's license (CNH)",
+          "Passport",
+          "Work card (Carteira de Trabalho)",
+          "Licensed professional ID cards recognized by law"
+        ]
+      }
+    },
+    "cta": {
+      "label": "Look up my polling place on TSE's official site",
+      "sublabel": "You'll be redirected to tse.jus.br — the only official channel for this lookup. ToolNotch never sees, processes, or stores any of your voter data."
+    },
+    "howToSteps": [
+      "Go to tse.jus.br and open Autoatendimento Eleitoral, or install the e-Título app on your phone.",
+      "Select \"Onde votar\" (\"Where to vote\") from the lookup menu.",
+      "Enter your voter registration number, CPF, or full name, along with your date of birth.",
+      "Review the zone, section, and address shown for your assigned polling place."
+    ],
+    "faqs": [
+      {
+        "question": "Can I vote at any polling place?",
+        "answer": "No. You can only vote at the specific section you're assigned to, even if another location is closer on election day. Always confirm the correct address before you head out."
+      },
+      {
+        "question": "What if I don't have my voter registration card anymore?",
+        "answer": "You don't need the physical card to vote — a government photo ID is enough. To regularize your registration or get a digital reissue, use the e-Título app or TSE's Autoatendimento Eleitoral portal."
+      },
+      {
+        "question": "Can I look up someone else's polling place?",
+        "answer": "Not through your own e-Título app login — it only shows the data for the account you're logged into. To check someone else's polling place (with their consent), use TSE's Autoatendimento Eleitoral site and enter their information there."
+      },
+      {
+        "question": "Does the polling place change every election?",
+        "answer": "It can. TSE periodically reorganizes zones and sections, so it's worth rechecking before every election instead of assuming it's the same as last time — even if you haven't moved."
+      },
+      {
+        "question": "Do I need to bring the physical voter registration card on election day?",
+        "answer": "No. An official photo ID — RG, driver's license, passport, or another document TSE accepts — is enough to confirm your identity at your section."
+      },
+      {
+        "question": "What if I'm in the wrong line on election day?",
+        "answer": "Find a poll worker (mesário) or election-day staff on-site — they can check the system for your correct section and redirect you without you having to leave the building."
+      }
+    ]
+  },
+  "quizDepth": {
+    "fifaWorldCupWinners": {
+      "metaTitle": "FIFA World Cup Winners Quiz — Guess Every Champion 1930–2022",
+      "metaDescription": "Play the FIFA World Cup winners quiz: 20 questions on every champion from 1930 to 2022, plus a full winners-by-year list. Guess the World Cup winners now.",
+      "about": "FIFA World Cup",
+      "introHeading": "About the FIFA World Cup Winners Quiz",
+      "intro": [
+        "The FIFA World Cup has crowned a champion every four years since 1930, pausing only in 1942 and 1946 for the Second World War. Just eight nations have ever lifted the trophy. Brazil leads with five titles, followed by Italy and Germany with four each, Argentina with three, and Uruguay and France with two. England and Spain have each won once, both in tournaments that turned on a single unforgettable final. The prize has changed too: the Jules Rimet Trophy was awarded through 1970, and the current FIFA World Cup Trophy has been lifted since 1974.",
+        "This quiz runs through 22 tournaments of history. You are asked to name the winner of specific editions, from Uruguay’s home triumph in 1930 to Argentina’s penalty-shootout victory in Qatar 2022, and to recall host nations, record goalscorers such as Miroslav Klose, and the finals that defined each era. Twenty multiple-choice questions cover champions, runners-up, and the moments every football fan argues about.",
+        "Answer each question and your score is tallied instantly, then matched to a tier: World Cup Legend, Football Expert, Football Fan, or World Cup Rookie. There is no sign-up and no time pressure. Use the winners-by-year table below to revise before you play, or to settle a debate about who won which World Cup — every result in it matches the official FIFA record."
+      ],
+      "table": {
+        "heading": "Every FIFA World Cup Winner (1930–2022)",
+        "note": "aet = after extra time; pens = decided on penalties.",
+        "cols": [
+          "Year",
+          "Host",
+          "Winner",
+          "Runner-up",
+          "Final score"
+        ],
+        "rows": [
+          [
+            "1930",
+            "Uruguay",
+            "Uruguay",
+            "Argentina",
+            "4–2"
+          ],
+          [
+            "1934",
+            "Italy",
+            "Italy",
+            "Czechoslovakia",
+            "2–1 (aet)"
+          ],
+          [
+            "1938",
+            "France",
+            "Italy",
+            "Hungary",
+            "4–2"
+          ],
+          [
+            "1942",
+            "Not held",
+            "Not held",
+            "—",
+            "World War II"
+          ],
+          [
+            "1946",
+            "Not held",
+            "Not held",
+            "—",
+            "World War II"
+          ],
+          [
+            "1950",
+            "Brazil",
+            "Uruguay",
+            "Brazil",
+            "2–1 (deciding match)"
+          ],
+          [
+            "1954",
+            "Switzerland",
+            "West Germany",
+            "Hungary",
+            "3–2"
+          ],
+          [
+            "1958",
+            "Sweden",
+            "Brazil",
+            "Sweden",
+            "5–2"
+          ],
+          [
+            "1962",
+            "Chile",
+            "Brazil",
+            "Czechoslovakia",
+            "3–1"
+          ],
+          [
+            "1966",
+            "England",
+            "England",
+            "West Germany",
+            "4–2 (aet)"
+          ],
+          [
+            "1970",
+            "Mexico",
+            "Brazil",
+            "Italy",
+            "4–1"
+          ],
+          [
+            "1974",
+            "West Germany",
+            "West Germany",
+            "Netherlands",
+            "2–1"
+          ],
+          [
+            "1978",
+            "Argentina",
+            "Argentina",
+            "Netherlands",
+            "3–1 (aet)"
+          ],
+          [
+            "1982",
+            "Spain",
+            "Italy",
+            "West Germany",
+            "3–1"
+          ],
+          [
+            "1986",
+            "Mexico",
+            "Argentina",
+            "West Germany",
+            "3–2"
+          ],
+          [
+            "1990",
+            "Italy",
+            "West Germany",
+            "Argentina",
+            "1–0"
+          ],
+          [
+            "1994",
+            "United States",
+            "Brazil",
+            "Italy",
+            "0–0 (3–2 pens)"
+          ],
+          [
+            "1998",
+            "France",
+            "France",
+            "Brazil",
+            "3–0"
+          ],
+          [
+            "2002",
+            "South Korea & Japan",
+            "Brazil",
+            "Germany",
+            "2–0"
+          ],
+          [
+            "2006",
+            "Germany",
+            "Italy",
+            "France",
+            "1–1 (5–3 pens)"
+          ],
+          [
+            "2010",
+            "South Africa",
+            "Spain",
+            "Netherlands",
+            "1–0 (aet)"
+          ],
+          [
+            "2014",
+            "Brazil",
+            "Germany",
+            "Argentina",
+            "1–0 (aet)"
+          ],
+          [
+            "2018",
+            "Russia",
+            "France",
+            "Croatia",
+            "4–2"
+          ],
+          [
+            "2022",
+            "Qatar",
+            "Argentina",
+            "France",
+            "3–3 (4–2 pens)"
+          ]
+        ]
+      },
+      "faqHeading": "World Cup winners: frequently asked questions",
+      "faqs": [
+        {
+          "question": "Who has won the most FIFA World Cups?",
+          "answer": "Brazil has won the FIFA World Cup five times (1958, 1962, 1970, 1994 and 2002), more than any other nation. Italy and Germany follow with four titles each, Argentina has three, France and Uruguay have two apiece, and England and Spain have one each."
+        },
+        {
+          "question": "Which countries have won the World Cup?",
+          "answer": "Eight national teams have won the World Cup: Brazil, Germany (including West Germany), Italy, Argentina, France, Uruguay, England and Spain. No team from outside Europe or South America has ever reached a final."
+        },
+        {
+          "question": "How does the World Cup champions quiz work?",
+          "answer": "The quiz has 20 multiple-choice questions about World Cup winners, hosts, finals and record holders. Each answer is marked right or wrong immediately, and your final percentage places you in one of four tiers, from World Cup Rookie to World Cup Legend. It is free and needs no account."
+        },
+        {
+          "question": "Can I guess all the World Cup winners from 1930 to 2022?",
+          "answer": "Yes. There have been 22 tournaments between 1930 and 2022 (1942 and 1946 were cancelled because of the Second World War). The table above lists every winner, runner-up and final score, so you can test yourself and then check the full answers."
+        },
+        {
+          "question": "Have any host nations won the World Cup at home?",
+          "answer": "Six host nations have won on home soil: Uruguay (1930), Italy (1934), England (1966), West Germany (1974), Argentina (1978) and France (1998). Brazil, the most successful team overall, has never won a World Cup it hosted."
+        }
+      ],
+      "relatedHeading": "More football quizzes",
+      "related": [
+        {
+          "label": "FIFA World Cup Winners Quiz",
+          "href": "/quiz/fifa-world-cup-winners",
+          "desc": "Name every World Cup champion from 1930 to 2022"
+        },
+        {
+          "label": "Which Football Club Are You?",
+          "href": "/quiz/which-football-club-are-you",
+          "desc": "Match your personality to a club"
+        },
+        {
+          "label": "Champions League Trivia",
+          "href": "/quiz/champions-league-trivia",
+          "desc": "Test your knowledge of Europe’s elite competition"
+        }
+      ],
+      "results": {
+        "legend": {
+          "heading": "What a World Cup Legend score means",
+          "body": [
+            "Scoring in the top tier means you have internalised almost a century of tournament history. You are not guessing between two plausible champions; you know that Uruguay won the first final in 1930, that Italy went back-to-back in 1934 and 1938, and that West Germany's win in 1954 is still called the Miracle of Bern. Details like joint hosts, penalty-shootout finals and the switch from the Jules Rimet Trophy to the current trophy in 1974 are second nature to you.",
+            "Keep the streak alive by testing yourself on the harder edges of the record: the only players to score in two different finals, the goalkeepers who have captained winning sides, and the nations that reached a final without ever lifting the trophy. Share your result, challenge a friend who claims to know their football, and come back after the next tournament to keep your perfect record intact."
+          ]
+        },
+        "expert": {
+          "heading": "What a Football Expert score means",
+          "body": [
+            "An expert score says you have watched a lot of football and remember the moments that mattered. You can name most champions on sight and you rarely confuse a runner-up with a winner. The questions that catch experts out tend to be the specific ones: the exact final score in 1994, which host nations have won at home, or the identity of the tournament's record goalscorer, Miroslav Klose of Germany with 16 goals across four World Cups.",
+            "Closing the gap to the top tier is mostly a matter of revising the early tournaments, from 1930 to 1958, which get less television airtime today. Use the winners-by-year table above as a study aid, focus on the finals decided after extra time or on penalties, and take the quiz again. One or two more correct answers is usually all that separates an expert from a legend."
+          ]
+        },
+        "fan": {
+          "heading": "What a Football Fan score means",
+          "body": [
+            "A fan score is a solid foundation. You know the giants of the international game, you can place recent winners like France in 2018 and Argentina in 2022, and you have a feel for which countries expect to compete every four years. What tends to be missing is the deeper history: the tournaments held before colour television, the nations that have won exactly once, and the difference between hosting a World Cup and winning one.",
+            "The good news is that this is the most rewarding tier to improve from, because every bit of study adds several possible correct answers. Read through the full winners list above, watch a highlights reel of a classic final such as 1970 or 1986, and pay attention to the group of eight nations that have ever won. Come back in a few days and you should comfortably reach the expert tier."
+          ]
+        },
+        "rookie": {
+          "heading": "What a World Cup Rookie score means",
+          "body": [
+            "A rookie score simply means the World Cup is still new territory for you, and that is a good place to start because the tournament has a clear shape once you learn it. It has been played every four years since 1930, with only 1942 and 1946 missed for the Second World War. Just eight nations have ever won: Brazil, Italy, Germany, Argentina, France, Uruguay, England and Spain. Brazil leads with five titles.",
+            "From there, the rest builds quickly. Learn the last five or six champions, then work backwards decade by decade using the table above. Watching one classic final in full will teach you more names and stories than an hour of reading. There is no time limit and no sign-up here, so take the quiz as often as you like and watch your tier climb from rookie to fan and beyond."
+          ]
+        }
+      }
+    },
+    "whichFootballClub": {
+      "metaTitle": "Which Football Club Are You? Personality Quiz",
+      "metaDescription": "Answer 10 questions and find out which football club matches your personality, from Real Madrid and Barcelona to Liverpool, Bayern, Flamengo and Boca Juniors.",
+      "about": "Association football clubs",
+      "introHeading": "About the Which Football Club Are You? quiz",
+      "intro": [
+        "Every big football club has a personality as recognisable as any player's. Real Madrid carry themselves like serial winners who expect the trophy no matter the odds. Barcelona tie their identity to a style of play and a youth academy. Liverpool lean on emotion, a famous anthem and a bond with their crowd. Bayern Munich prize order, planning and quiet dominance, while Borussia Dortmund sell energy, youth and the noise of the Yellow Wall. This quiz takes those club characters seriously and works out which one is closest to yours.",
+        "The ten questions are not about football knowledge. They ask how you handle pressure, whether you value flair or efficiency, how you treat rivals, what you want from the people around you, and whether you would rather win ugly or lose with style. Each option quietly adds points to one or more of eight clubs: Real Madrid, FC Barcelona, Liverpool, Bayern Munich, Manchester City, Flamengo, Boca Juniors and Borussia Dortmund. The club with the highest total at the end is your match.",
+        "Because the scoring is cumulative rather than a single branching path, two people can reach the same result by different routes, and a small change in one answer can tip you from one club to a neighbour with a similar outlook. The result page describes what that club stands for, the traits you share with it, and why those answers pointed there. Nothing is stored, there is no sign-up, and you can retake it as often as you like.",
+        "You do not need to support the club you are matched with, and plenty of people are surprised by the result. Treat it as a conversation starter: send it to friends who support rival teams, compare results, and argue about whether the description fits. If you want more football, the honours table below and the related quizzes cover the World Cup and the Champions League."
+      ],
+      "table": {
+        "heading": "Most European Cup and Champions League titles",
+        "note": "European Cup / UEFA Champions League titles, men’s competition. Figures as of the 2024 final.",
+        "cols": [
+          "Club",
+          "Country",
+          "Titles",
+          "Most recent"
+        ],
+        "rows": [
+          [
+            "Real Madrid",
+            "Spain",
+            "15",
+            "2024"
+          ],
+          [
+            "AC Milan",
+            "Italy",
+            "7",
+            "2007"
+          ],
+          [
+            "Bayern Munich",
+            "Germany",
+            "6",
+            "2020"
+          ],
+          [
+            "Liverpool",
+            "England",
+            "6",
+            "2019"
+          ],
+          [
+            "Barcelona",
+            "Spain",
+            "5",
+            "2015"
+          ],
+          [
+            "Ajax",
+            "Netherlands",
+            "4",
+            "1995"
+          ]
+        ]
+      },
+      "faqHeading": "Which football club are you? Common questions",
+      "faqs": [
+        {
+          "question": "How does the Which Football Club Are You? quiz work?",
+          "answer": "You answer ten personality questions about pressure, ambition, style and how you treat rivals. Every answer adds points to one or more of eight clubs, and the club with the highest score becomes your result. It takes about two minutes, needs no account, and can be retaken as many times as you want."
+        },
+        {
+          "question": "Which clubs can I be matched with?",
+          "answer": "There are eight possible results: Real Madrid, FC Barcelona, Liverpool, Bayern Munich, Manchester City, Flamengo, Boca Juniors and Borussia Dortmund. They were chosen to cover very different footballing cultures across Europe and South America, so most personality profiles land on a club that genuinely fits."
+        },
+        {
+          "question": "Do I have to support the club I get?",
+          "answer": "No. The quiz matches your temperament and values to a club’s identity, not your fandom. Many people are matched with a rival of the team they support, which is usually what makes the result fun to share and argue about."
+        },
+        {
+          "question": "What makes each club's identity different?",
+          "answer": "Clubs build a character over decades through their history, city, playing philosophy and supporters. Barcelona are associated with possession football and their academy, Real Madrid with relentless winning, Liverpool and Dortmund with atmosphere and emotion, Bayern and Manchester City with structure and control."
+        },
+        {
+          "question": "Which club has won the most Champions League titles?",
+          "answer": "Real Madrid, with 15 European Cup and Champions League titles, far ahead of AC Milan on seven and Liverpool and Bayern Munich on six. That record is one reason Real Madrid are so often described as the ultimate winning club."
+        },
+        {
+          "question": "Can I share my result or take the quiz again?",
+          "answer": "Yes. Each result has its own page you can link to, and there is a share option on the result screen. Nothing you answer is saved, so you can retake the quiz immediately and see how different answers change the club you are matched with."
+        }
+      ],
+      "relatedHeading": "More football quizzes",
+      "related": [
+        {
+          "label": "FIFA World Cup Winners Quiz",
+          "href": "/quiz/fifa-world-cup-winners",
+          "desc": "Name every World Cup champion from 1930 to 2022"
+        },
+        {
+          "label": "Champions League Trivia",
+          "href": "/quiz/champions-league-trivia",
+          "desc": "Test your knowledge of Europe's top club competition"
+        },
+        {
+          "label": "Which F1 Driver Are You?",
+          "href": "/quiz/which-f1-driver-are-you",
+          "desc": "Match your personality to a Formula 1 great"
+        }
+      ]
+    },
+    "championsLeagueTrivia": {
+      "metaTitle": "Champions League Trivia Quiz — 15 Questions",
+      "metaDescription": "Test your UEFA Champions League knowledge: 15 questions on finals, top scorers, record winners and famous nights, from the 1956 European Cup to today.",
+      "about": "UEFA Champions League",
+      "introHeading": "About the Champions League Trivia Quiz",
+      "intro": [
+        "European club football's biggest prize started in 1955 as the European Champion Clubs' Cup, a straight knockout between national league winners. Real Madrid won the first five editions. In 1992 it was rebranded the UEFA Champions League, a group stage was added, and entry was widened to include more than one club per country. The competition kept growing until the 2024–25 season, when the group stage was replaced by a single 36-team league phase. This quiz covers the whole span, from black-and-white finals to the modern format.",
+        "The fifteen questions move across winners, losing finalists, venues, managers, record holders and the nights that fans still talk about. Expect to be asked about Real Madrid's record haul of titles, the all-time leading scorer Cristiano Ronaldo, Liverpool's comeback from three goals down in the 2005 final in Istanbul, and Barcelona's 6–1 defeat of Paris Saint-Germain in 2017. Some questions reward casual viewing; others need real study.",
+        "It is a trivia quiz, so every question has one correct answer and you find out immediately whether you got it right. At the end your percentage is converted into a tier: UCL Legend for 80 per cent and above, UCL Expert from 60, UCL Fan from 40, and UCL Rookie below that. There is no timer, no account and no limit on retakes, so you can go straight back and try to move up a tier.",
+        "If you want to prepare, the table below lists the clubs with the most titles and the years they won them. The related quizzes cover the World Cup and, for a change of sport, Formula 1."
+      ],
+      "table": {
+        "heading": "Clubs with the most European Cup / Champions League titles",
+        "note": "Men’s competition, titles through the 2024 final.",
+        "cols": [
+          "Club",
+          "Country",
+          "Titles",
+          "Years"
+        ],
+        "rows": [
+          [
+            "Real Madrid",
+            "Spain",
+            "15",
+            "1956–2024"
+          ],
+          [
+            "AC Milan",
+            "Italy",
+            "7",
+            "1963–2007"
+          ],
+          [
+            "Bayern Munich",
+            "Germany",
+            "6",
+            "1974–2020"
+          ],
+          [
+            "Liverpool",
+            "England",
+            "6",
+            "1977–2019"
+          ],
+          [
+            "Barcelona",
+            "Spain",
+            "5",
+            "1992–2015"
+          ],
+          [
+            "Ajax",
+            "Netherlands",
+            "4",
+            "1971–1995"
+          ]
+        ]
+      },
+      "faqHeading": "Champions League trivia: common questions",
+      "faqs": [
+        {
+          "question": "What does the Champions League trivia quiz cover?",
+          "answer": "Fifteen questions spanning the competition from the 1956 European Cup to the current Champions League: winners and runners-up, famous finals, record scorers, well-known managers and iconic matches. Both the old knockout European Cup and the modern group and league-phase eras are included."
+        },
+        {
+          "question": "Which club has won the most European Cups?",
+          "answer": "Real Madrid, with 15 titles between 1956 and 2024. AC Milan are next on seven, then Liverpool and Bayern Munich on six each, Barcelona on five, and Ajax on four. No other club has reached five."
+        },
+        {
+          "question": "Who is the all-time top scorer in the Champions League?",
+          "answer": "Cristiano Ronaldo, with more than 140 goals in the competition, ahead of Lionel Messi on around 130. Robert Lewandowski and Karim Benzema are the closest active players but remain well behind the top two."
+        },
+        {
+          "question": "What was the Miracle of Istanbul?",
+          "answer": "The 2005 final between Liverpool and AC Milan. Milan led 3–0 at half-time; Liverpool scored three times in six second-half minutes to force extra time, then won the penalty shootout. It is regarded as the greatest comeback in a European final."
+        },
+        {
+          "question": "How is my trivia score graded?",
+          "answer": "Your correct answers are turned into a percentage and matched to a tier: UCL Legend at 80 per cent or higher, UCL Expert from 60, UCL Fan from 40 and UCL Rookie below 40. You can retake the quiz straight away to improve your tier."
+        },
+        {
+          "question": "What changed in the 2024–25 format?",
+          "answer": "The 32-team group stage was replaced by a 36-team league phase. Every club now plays eight different opponents in one combined table, with the top places advancing directly and the next group entering a knockout play-off round."
+        }
+      ],
+      "relatedHeading": "More football quizzes",
+      "related": [
+        {
+          "label": "FIFA World Cup Winners Quiz",
+          "href": "/quiz/fifa-world-cup-winners",
+          "desc": "Name every World Cup champion from 1930 to 2022"
+        },
+        {
+          "label": "Which Football Club Are You?",
+          "href": "/quiz/which-football-club-are-you",
+          "desc": "Match your personality to a club"
+        },
+        {
+          "label": "Formula 1 Trivia",
+          "href": "/quiz/formula-1-trivia",
+          "desc": "Switch sports and test your F1 history"
+        }
+      ]
+    },
+    "formula1Trivia": {
+      "metaTitle": "Formula 1 Trivia Quiz — 15 Questions on F1 History",
+      "metaDescription": "Test your Formula 1 knowledge: 15 questions on world champions, race-win records, famous circuits and classic moments, from the 1950 season to the modern era.",
+      "about": "Formula One",
+      "introHeading": "About the Formula 1 Trivia Quiz",
+      "intro": [
+        "The Formula 1 World Championship has run every year since 1950, when Giuseppe Farina took the first drivers' title for Alfa Romeo. Since then it has grown into a global series of around 24 races a season, with two championships decided each year: one for drivers and one for constructors, the teams that design and build the cars. This quiz draws on the whole history, so a question about Fangio in the 1950s sits next to one about the current grid.",
+        "The fifteen questions cover champions, race-winning records, circuits, technical rules and the moments that defined each era: Ayrton Senna's qualifying laps, Michael Schumacher's five straight titles with Ferrari, Sebastian Vettel's four in a row with Red Bull, and Max Verstappen's run of championships from 2021. You may be asked who has the most career wins, which country hosts the Monaco Grand Prix, or how points are awarded.",
+        "Every question has a single correct answer and is marked immediately. Your final percentage sets your tier: Legend at 80 per cent and above, Expert from 60, Fan from 40 and Rookie below that. There is no time pressure, no sign-up and no cap on retakes, so it is easy to go again and chase a better result.",
+        "The table below lists the drivers with the most world titles, which is a good place to start revising. The related quizzes let you match your personality to a driver or switch codes entirely and test your football history."
+      ],
+      "table": {
+        "heading": "Formula 1 drivers with the most World Championships",
+        "note": "Drivers' titles won, as of the end of the 2024 season.",
+        "cols": [
+          "Driver",
+          "Country",
+          "Titles",
+          "Seasons"
+        ],
+        "rows": [
+          [
+            "Lewis Hamilton",
+            "United Kingdom",
+            "7",
+            "2008–2020"
+          ],
+          [
+            "Michael Schumacher",
+            "Germany",
+            "7",
+            "1994–2004"
+          ],
+          [
+            "Juan Manuel Fangio",
+            "Argentina",
+            "5",
+            "1951–1957"
+          ],
+          [
+            "Alain Prost",
+            "France",
+            "4",
+            "1985–1993"
+          ],
+          [
+            "Sebastian Vettel",
+            "Germany",
+            "4",
+            "2010–2013"
+          ],
+          [
+            "Max Verstappen",
+            "Netherlands",
+            "4",
+            "2021–2024"
+          ]
+        ]
+      },
+      "faqHeading": "Formula 1 trivia: common questions",
+      "faqs": [
+        {
+          "question": "What does the Formula 1 trivia quiz cover?",
+          "answer": "Fifteen questions across the sport’s history from 1950 to the present: world champions, race and pole-position records, circuits, technical regulations and famous races. Both the classic eras and the current turbo-hybrid era are included."
+        },
+        {
+          "question": "Who has won the most Formula 1 World Championships?",
+          "answer": "Michael Schumacher and Lewis Hamilton are level on seven drivers’ titles each. Juan Manuel Fangio won five in the 1950s, and Alain Prost, Sebastian Vettel and Max Verstappen have four apiece."
+        },
+        {
+          "question": "Who has the most race wins in Formula 1 history?",
+          "answer": "Lewis Hamilton, with more than 100 Grand Prix victories, ahead of Michael Schumacher. Hamilton also holds the record for most pole positions. Both figures were once thought to be nearly unbreakable."
+        },
+        {
+          "question": "Which is the most successful team in Formula 1?",
+          "answer": "Ferrari. It is the only constructor to have competed in every season since 1950 and has won more races and more constructors’ championships than any other team, though it has had long gaps between drivers’ titles."
+        },
+        {
+          "question": "What is the difference between the drivers' and constructors' championships?",
+          "answer": "The drivers’ title goes to the individual with the most points over the season. The constructors’ title adds up the points scored by both of a team’s cars. A team can win one without the other."
+        },
+        {
+          "question": "How is my F1 trivia score graded?",
+          "answer": "Correct answers become a percentage and a tier: Legend at 80 per cent or above, Expert from 60, Fan from 40 and Rookie below 40. Retakes are unlimited, so you can go again to move up."
+        }
+      ],
+      "relatedHeading": "More quizzes",
+      "related": [
+        {
+          "label": "Which F1 Driver Are You?",
+          "href": "/quiz/which-f1-driver-are-you",
+          "desc": "Match your personality to a Formula 1 great"
+        },
+        {
+          "label": "Champions League Trivia",
+          "href": "/quiz/champions-league-trivia",
+          "desc": "Test your European football knowledge"
+        },
+        {
+          "label": "FIFA World Cup Winners Quiz",
+          "href": "/quiz/fifa-world-cup-winners",
+          "desc": "Name every World Cup champion since 1930"
+        }
+      ]
+    },
+    "whichF1Driver": {
+      "metaTitle": "Which F1 Driver Are You? Personality Quiz",
+      "metaDescription": "Answer 10 questions and find out which Formula 1 driver matches your personality, from Verstappen and Hamilton to Senna, Schumacher, Leclerc and Alonso.",
+      "about": "Formula One drivers",
+      "introHeading": "About the Which F1 Driver Are You? quiz",
+      "intro": [
+        "Formula 1 drivers reach the top with very different temperaments. Max Verstappen is direct and uncompromising. Lewis Hamilton pairs calm race craft with a life and a set of causes away from the car. Ayrton Senna treated driving as something close to spiritual. Fernando Alonso is the relentless competitor who never stops believing the title is possible. This quiz maps those styles onto a short personality test and tells you which driver you resemble most.",
+        "The ten questions ask about your appetite for risk, how you respond to setbacks, whether you trust instinct or preparation, how you handle teammates and rivals, and what winning actually means to you. Each answer adds points to one or more of eight drivers: Max Verstappen, Lewis Hamilton, Ayrton Senna, Michael Schumacher, Charles Leclerc, Fernando Alonso, Oscar Piastri and Lando Norris. Your result is the driver with the highest total.",
+        "Scoring is cumulative, not a single branching route, so changing one answer can move you to a driver with a similar profile, and two people can reach the same result in different ways. The result page explains what that driver is known for, the traits you share and why your answers pointed there. Nothing is saved, there is no sign-up, and retakes are unlimited.",
+        "You do not have to follow Formula 1 closely to get a result that fits, and being matched with a driver you dislike is part of the fun. Share it with friends, compare answers, and if you want more racing, the table below and the related quizzes cover F1 history and the sport’s biggest records."
+      ],
+      "table": {
+        "heading": "The eight drivers you can be matched with",
+        "note": "World Drivers' Championships, as of the end of the 2024 season.",
+        "cols": [
+          "Driver",
+          "Country",
+          "F1 titles",
+          "Known for"
+        ],
+        "rows": [
+          [
+            "Max Verstappen",
+            "Netherlands",
+            "4",
+            "Aggressive, single-minded pace"
+          ],
+          [
+            "Lewis Hamilton",
+            "United Kingdom",
+            "7",
+            "Calm consistency and longevity"
+          ],
+          [
+            "Ayrton Senna",
+            "Brazil",
+            "3",
+            "Qualifying genius and intensity"
+          ],
+          [
+            "Michael Schumacher",
+            "Germany",
+            "7",
+            "Relentless preparation and work rate"
+          ],
+          [
+            "Charles Leclerc",
+            "Monaco",
+            "0",
+            "Natural speed and emotion"
+          ],
+          [
+            "Fernando Alonso",
+            "Spain",
+            "2",
+            "Racecraft and refusal to quit"
+          ],
+          [
+            "Oscar Piastri",
+            "Australia",
+            "0",
+            "Cool head, quick learner"
+          ],
+          [
+            "Lando Norris",
+            "United Kingdom",
+            "0",
+            "Fast, expressive, fan favourite"
+          ]
+        ]
+      },
+      "faqHeading": "Which F1 driver are you? Common questions",
+      "faqs": [
+        {
+          "question": "How does the Which F1 Driver Are You? quiz work?",
+          "answer": "You answer ten questions about risk, mindset, preparation and how you deal with rivals. Each answer adds points to one or more of eight drivers, and the highest total is your result. It takes about two minutes and needs no account."
+        },
+        {
+          "question": "Which drivers can I be matched with?",
+          "answer": "Eight: Max Verstappen, Lewis Hamilton, Ayrton Senna, Michael Schumacher, Charles Leclerc, Fernando Alonso, Oscar Piastri and Lando Norris. The list mixes current front-runners with all-time greats so that most personality types land on a driver who fits."
+        },
+        {
+          "question": "Do I need to know a lot about Formula 1?",
+          "answer": "No. The questions are about your personality, not about the sport. You will get a result whether you watch every race or have never seen one, though fans often enjoy comparing the result with the driver they actually support."
+        },
+        {
+          "question": "Why did I get a driver I do not like?",
+          "answer": "The quiz matches temperament, not preference. If your answers show an aggressive, win-at-all-costs streak you may be matched with a driver whose style you find abrasive. That mismatch is usually what makes the result worth sharing."
+        },
+        {
+          "question": "Can two people get the same driver for different reasons?",
+          "answer": "Yes. Because points build up across all ten questions rather than following one fixed path, different combinations of answers can lead to the same driver, and a single changed answer can switch your result to a similar one."
+        },
+        {
+          "question": "Can I retake the quiz?",
+          "answer": "As often as you like. Nothing is stored between attempts, so you can immediately try different answers and see how the matched driver changes. Each result also has its own page you can link to or share."
+        }
+      ],
+      "relatedHeading": "More quizzes",
+      "related": [
+        {
+          "label": "Formula 1 Trivia",
+          "href": "/quiz/formula-1-trivia",
+          "desc": "Test your knowledge of F1 history and records"
+        },
+        {
+          "label": "Which Football Club Are You?",
+          "href": "/quiz/which-football-club-are-you",
+          "desc": "Match your personality to a football club"
+        },
+        {
+          "label": "FIFA World Cup Winners Quiz",
+          "href": "/quiz/fifa-world-cup-winners",
+          "desc": "Name every World Cup champion since 1930"
+        }
+      ]
+    },
+    "whatIsYourLoveLanguage": {
+      "metaTitle": "What Is Your Love Language? Free Quiz",
+      "metaDescription": "Answer 12 questions and find out which of the five love languages fits you best: words of affirmation, quality time, acts of service, gifts or physical touch.",
+      "about": "The five love languages",
+      "introHeading": "About the What Is Your Love Language? quiz",
+      "intro": [
+        "The idea of love languages comes from Gary Chapman, a marriage counsellor who published The Five Love Languages in 1992. His argument, drawn from years of counselling sessions, is that people tend to express and register affection mainly through one or two of five channels: words of affirmation, quality time, acts of service, receiving gifts and physical touch. Problems arise, he says, when partners are fluent in different languages and each feels unloved despite real effort.",
+        "This quiz puts that framework into twelve everyday scenarios. Rather than asking you to rank the five languages directly, it describes situations, a partner cancelling plans, a friend showing up to help, an unexpected gift, and records which response matters most to you. The answers are tallied, and the language with the highest score is your primary one. Most people also see a clear secondary language, and the two are often close.",
+        "Knowing your result is useful mainly as a way to talk about what you need. If quality time scores highest, a distracted evening on the sofa will feel worse to you than it would to someone whose language is acts of service. If your language is words of affirmation, silence after a hard week lands harder than your partner might realise. The result page explains each language and gives concrete examples of what it looks like day to day.",
+        "It is worth being honest about the limits. The love languages are a popular communication tool, not a validated personality test, and independent research support is thin. Your languages can also shift with age, stress and life stage. Treat the result as a prompt for a conversation, not a fixed label, and compare answers with a partner or friend to see where you differ."
+      ],
+      "table": {
+        "heading": "The five love languages at a glance",
+        "note": "Framework from Gary Chapman, The Five Love Languages (1992).",
+        "cols": [
+          "Love language",
+          "What it means",
+          "Everyday example"
+        ],
+        "rows": [
+          [
+            "Words of affirmation",
+            "Feeling valued through what is said",
+            "Genuine praise, encouragement, saying thank you out loud"
+          ],
+          [
+            "Quality time",
+            "Feeling valued through focused attention",
+            "A device-free conversation or an activity done together"
+          ],
+          [
+            "Acts of service",
+            "Feeling valued when someone eases your load",
+            "Cooking a meal, running an errand, fixing something"
+          ],
+          [
+            "Receiving gifts",
+            "Feeling valued through thoughtful tokens",
+            "A small, well-chosen item that shows you were in mind"
+          ],
+          [
+            "Physical touch",
+            "Feeling valued through physical closeness",
+            "A hug, holding hands, a hand on the shoulder"
+          ]
+        ]
+      },
+      "faqHeading": "Love languages: common questions",
+      "faqs": [
+        {
+          "question": "What are the five love languages?",
+          "answer": "Words of affirmation, quality time, acts of service, receiving gifts and physical touch. The idea is that each person mainly gives and receives affection through one or two of these, and feels most cared for when a partner uses the same one."
+        },
+        {
+          "question": "Who came up with the love languages?",
+          "answer": "Gary Chapman, an American marriage counsellor and author. He introduced the concept in his 1992 book The Five Love Languages, based on patterns he noticed while counselling couples. The book has since sold well over ten million copies."
+        },
+        {
+          "question": "Can I have more than one love language?",
+          "answer": "Yes. Most people have a clear primary language and a secondary one that still matters a lot. For some people two languages score almost equally, which simply means both are important ways they feel appreciated."
+        },
+        {
+          "question": "Do love languages change over time?",
+          "answer": "They can. A new parent may come to value acts of service more; a long-distance period may raise the importance of words of affirmation or quality time. It is worth retaking a quiz like this every few years."
+        },
+        {
+          "question": "Is the love languages theory scientifically proven?",
+          "answer": "Not really. It is a widely used communication framework rather than a validated model, and peer-reviewed support is limited. Researchers still tend to agree it can be a helpful starting point for couples to talk about their needs."
+        },
+        {
+          "question": "How does this quiz decide my love language?",
+          "answer": "It presents twelve everyday situations and records which response matters most to you in each. The choices are added up by language, and the highest total is your primary love language, with the next highest as your secondary."
+        }
+      ],
+      "relatedHeading": "More personality quizzes",
+      "related": [
+        {
+          "label": "Which Football Club Are You?",
+          "href": "/quiz/which-football-club-are-you",
+          "desc": "Match your personality to a football club"
+        },
+        {
+          "label": "Which F1 Driver Are You?",
+          "href": "/quiz/which-f1-driver-are-you",
+          "desc": "Match your personality to a Formula 1 driver"
+        },
+        {
+          "label": "Which Historical Figure Matches You?",
+          "href": "/quiz/which-historical-figure-matches-you",
+          "desc": "See which figure from history shares your outlook"
+        }
+      ]
+    }
+  },
+  "relatedQuizzes": {
+    "heading": "More quizzes like this"
+  },
+  "affiliate": {
+    "label": "Recommended tool",
+    "dismiss": "Dismiss",
+    "disclosure": "Some links above are affiliate links. If you sign up through them we may earn a commission, at no extra cost to you.",
+    "offers": {
+      "quillbot-paraphraser": {
+        "name": "QuillBot Paraphrasing Tool",
+        "cta": "Try QuillBot's Paraphraser",
+        "blurb": "Rewrite sentences in different tones and styles with an AI paraphraser. Free tier available."
+      },
+      "quillbot-humanizer": {
+        "name": "QuillBot AI Humanizer",
+        "cta": "Try QuillBot's AI Humanizer",
+        "blurb": "Rework AI-generated drafts into natural, human-sounding text that reads smoothly."
+      },
+      "quillbot-detector": {
+        "name": "QuillBot AI Detector",
+        "cta": "Try QuillBot's AI Detector",
+        "blurb": "Check whether a passage was likely written by AI before you submit or publish it."
+      }
+    },
+    "partners": {
+      "navLabel": "Our Partners",
+      "viewAll": "See all partners",
+      "metaTitle": "Our Partners — Tools We Recommend",
+      "metaDescription": "The paid tools we recommend and partner with. Affiliate links here help keep ToolNotch free.",
+      "title": "Our Partners",
+      "subtitle": "Paid tools we use, trust, and recommend.",
+      "intro": "ToolNotch is free and has no paywall. Some of the tools we point you to are paid products from companies we have an affiliate arrangement with — if you sign up through a link on this page, they pay us a commission at no extra cost to you. We only list tools we would recommend anyway, and this page will grow as we add partners.",
+      "howTitle": "How we choose partners",
+      "howP1": "A tool only gets listed here after we have used it and would recommend it to a friend who asked. We start from the tasks our own visitors are trying to finish — rewriting a paragraph, checking a citation, moving money between countries, tidying a PDF — and look for the paid product that does that job best. A real free tier, transparent pricing, and a no-obligation trial matter; a product that hides its price or makes cancelling difficult is not added, whatever it pays.",
+      "howP2": "Every partner link is an affiliate link, marked with rel=\"sponsored\", and earns us a commission if you subscribe — at no extra cost to you, and at the same price you would pay going direct. The commission has no bearing on whether a tool is listed, where it appears on this page, or what our guides say about it. If a partner's product gets worse, the listing comes down.",
+      "independenceTitle": "Editorial independence",
+      "independenceP1": "ToolNotch's own calculators and converters run entirely in your browser using published formulas, so a commercial relationship cannot change a result. Our comparisons and recommendations reflect honest testing. We would rather list nothing in a category than list a product we do not believe in — which is why this page is short and grows slowly.",
+      "backHome": "Back to all tools",
+      "categories": {
+        "writing": "Writing & editing",
+        "study": "Study & research",
+        "finance": "Money & finance",
+        "productivity": "Productivity"
+      }
+    }
+  },
+  "disclosure": {
+    "metaTitle": "Disclosure — Affiliate Links & Advertising",
+    "metaDescription": "How ToolNotch is funded: affiliate links, display ads, and our commitment to unbiased tool results.",
+    "title": "Disclosure",
+    "subtitle": "How ToolNotch makes money, and what that does and does not affect.",
+    "backHome": "Back to all tools",
+    "intro": "ToolNotch is free to use, has no paywall, and does not store your data. Running it still costs money, so the site is supported in two ways: display advertising and affiliate commissions. This page explains both.",
+    "affiliateTitle": "Affiliate links",
+    "affiliateP1": "Some outbound links to paid third-party tools are affiliate links. If you visit one and sign up for a paid plan, the company pays us a commission — always at no extra cost to you, and the price you pay is the same as going there directly. Affiliate links are marked with rel=\"sponsored\" and, where they appear on a tool page, labelled as a recommendation.",
+    "affiliateP2": "We only add a partner whose product we would recommend regardless of any commission, and a commission never changes which tool we suggest or what a calculator returns. The full list of current partners is here:",
+    "affiliatePartnersLink": "our partners",
+    "adsTitle": "Advertising",
+    "adsP1": "We may show display ads from third-party ad networks such as Google AdSense. Ads are clearly separated from tool content, never interrupt a tool while you are using it, and we do not control which specific advertisers appear. Ad networks may use cookies as described in our Privacy Policy.",
+    "editorialTitle": "Editorial independence",
+    "editorialP1": "Every calculator and converter on ToolNotch runs entirely in your browser with published formulas — results are not influenced by any commercial relationship. Recommendations and rankings reflect our honest assessment. If that ever stops being true, this page will say so.",
+    "cookiesTitle": "Cookies and analytics",
+    "cookiesP1": "ToolNotch uses Google Analytics 4 to understand which tools people use and how they find the site, and Google AdSense to serve display advertising. Both set cookies in your browser — analytics cookies to count visits and measure traffic sources, advertising cookies to limit how often you see the same ad and to measure whether an ad led to a visit. We do not set our own tracking cookies, we do not build advertising profiles ourselves, and we do not sell any data. The tools themselves — every calculator, converter, and file utility — run without setting a single cookie.",
+    "optOutTitle": "How to opt out",
+    "optOutP1": "You can turn off personalised advertising for your Google Account on Google's Ads Settings page, and opt out of third-party ad-network cookies through the industry pages at aboutads.info and youronlinechoices.eu. Every major browser also lets you block or delete cookies for one specific site in its privacy settings, and tracker-blocking extensions work normally here. Blocking advertising or analytics cookies does not break any tool on the site.",
+    "changesTitle": "Changes to this page",
+    "changesP1": "If we add an advertising network, join an affiliate programme in a new category, or change how any of this works, this page is updated first and the change is reflected in the footer of every page. This disclosure was last reviewed in September 2026. Questions about anything here can go to the address on our contact page.",
+    "rightsTitle": "Your choices in short",
+    "rightsP1": "You never have to accept an affiliate link or an ad to use a tool — every calculator, converter, and file utility works the same whether or not you click anything sponsored, and whether or not you block advertising cookies. You can reach every page of the site through the footer without JavaScript. Nothing on ToolNotch requires an account, and there is no account to delete."
   }
 }

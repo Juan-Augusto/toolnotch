@@ -1,29 +1,28 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Syne } from "next/font/google";
+import { Azeret_Mono } from "next/font/google";
 import Script from "next/script";
 import { cookies } from "next/headers";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { locales } from "@/i18n";
-import ThemeProvider from "@/components/ThemeProvider";
-import DarkModeToggle from "@/components/DarkModeToggle";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
-import Footer from "@/components/Footer";
+import AppThemeProvider from "@/components/AppThemeProvider";
+import AppFooter from "@/components/AppFooter";
 import "../globals.css";
-import Header from "@/components/Header";
+import AppHeader from "@/components/AppHeader";
+import { AFFILIATE_PARTNERS } from "@/lib/affiliatePartners";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "";
 const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const azeretMono = Azeret_Mono({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
-const syne = Syne({
+const azeretMonoDisplay = Azeret_Mono({
   variable: "--font-syne",
   subsets: ["latin"],
   weight: ["700", "800"],
@@ -88,6 +87,7 @@ export default async function LocaleLayout({
   const { locale } = await params;
   if (!locales.includes(locale as (typeof locales)[number])) notFound();
   const t = await getTranslations({ locale, namespace: "home" });
+  const tAff = await getTranslations({ locale, namespace: "affiliate" });
   const messages = await getMessages();
   const cookieStore = await cookies();
   const isDark = cookieStore.get("theme")?.value === "dark";
@@ -96,9 +96,20 @@ export default async function LocaleLayout({
     { href: "/", label: t("nav.tools") },
     { href: "/interview", label: t("nav.interview") },
     { href: "/quizzes", label: t("nav.quizzes") },
-    { href: "/blog", label: t("nav.blog") },
     { href: "/about", label: t("nav.about") },
-    { href: "/privacy", label: t("nav.privacy") },
+    {
+      href: "/partners",
+      label: tAff("partners.navLabel"),
+      children: [
+        ...AFFILIATE_PARTNERS.map((p) => ({
+          href: p.href,
+          label: tAff(`offers.${p.key}.name`),
+          external: true,
+          partnerKey: p.key,
+        })),
+        { href: "/partners", label: tAff("partners.viewAll") },
+      ],
+    },
   ];
 
   return (
@@ -108,7 +119,6 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Blocking script: reads localStorage before first paint to prevent theme flash on navigation */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -130,6 +140,12 @@ export default async function LocaleLayout({
           }}
         />
         <meta name="theme-color" content="#2563eb" />
+        <meta
+          {...({
+            name: "impact-site-verification",
+            value: "1f626162-6489-4f3f-9389-cc89d71457ba",
+          } as Record<string, string>)}
+        />
         {ADSENSE_ID && (
           <meta name="google-adsense-account" content={ADSENSE_ID} />
         )}
@@ -142,7 +158,7 @@ export default async function LocaleLayout({
       </head>
 
       <body
-        className={`${plusJakartaSans.variable} ${syne.variable} antialiased`}
+        className={`${azeretMono.variable} ${azeretMonoDisplay.variable} antialiased`}
       >
         <noscript>
           <iframe
@@ -152,16 +168,12 @@ export default async function LocaleLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        <ThemeProvider>
+        <AppThemeProvider>
           <NextIntlClientProvider messages={messages}>
-            <Header navItems={navItems} />
+            <AppHeader navItems={navItems} />
             {children}
-            <div className="fixed bottom-5 right-5 z-50 flex items-center gap-2">
-              <LanguageSwitcher />
-              <DarkModeToggle />
-            </div>
           </NextIntlClientProvider>
-        </ThemeProvider>
+        </AppThemeProvider>
         <Script id="gtm" strategy="afterInteractive">{`
           (function(w,d,s,l){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -192,7 +204,7 @@ export default async function LocaleLayout({
             </Script>
           </>
         )}
-        <Footer locale={locale} />
+        <AppFooter locale={locale} />
       </body>
     </html>
   );

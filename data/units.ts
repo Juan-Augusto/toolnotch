@@ -120,6 +120,7 @@ export const UNIT_LABELS: Record<string, string> = {
   meter: 'Meter (m)', kilometer: 'Kilometer (km)', centimeter: 'Centimeter (cm)',
   millimeter: 'Millimeter (mm)', micrometer: 'Micrometer (μm)', mile: 'Mile (mi)',
   yard: 'Yard (yd)', foot: 'Foot (ft)', inch: 'Inch (in)', 'nautical mile': 'Nautical Mile (nmi)',
+  'light year': 'Light Year (ly)', parsec: 'Parsec (pc)',
   kilogram: 'Kilogram (kg)', gram: 'Gram (g)', milligram: 'Milligram (mg)',
   pound: 'Pound (lb)', ounce: 'Ounce (oz)', ton: 'Metric Ton (t)',
   'short ton': 'Short Ton (US)', stone: 'Stone (st)', carat: 'Carat (ct)',

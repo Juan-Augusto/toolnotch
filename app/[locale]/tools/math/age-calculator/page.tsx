@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import ToolWrapper from '@/components/ToolWrapper'
+import AppToolWrapper from '@/components/AppToolWrapper'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import type { FaqItem } from '@/components/FaqSection'
-import AgeCalculator from '@/components/math/AgeCalculator'
+import type { FaqItem } from '@/components/AppFaqSection'
+import AppAgeCalculator from '@/components/math/AppAgeCalculator'
 
 interface RichContent {
   whatIs: string
@@ -47,16 +47,15 @@ export default async function AgeCalculatorPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper
+      <AppToolWrapper
         title={t('title')}
         description={t('description')}
         breadcrumbLabel={t('title')}
         faqs={faqs}
-        adSlot="age-calculator"
         richContent={richContent}
       >
-        <AgeCalculator locale={locale} />
-      </ToolWrapper>
+        <AppAgeCalculator locale={locale} />
+      </AppToolWrapper>
     </>
   )
 }

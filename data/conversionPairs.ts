@@ -2,7 +2,7 @@ import { ConversionPair } from '@/lib/unitTypes'
 
 export const COMMON_PAIRS: ConversionPair[] = [
   // Length
-  { slug: 'meters-to-feet', category: 'length', from: 'meter', to: 'foot', title: 'Meters to Feet', description: 'Convert meters to feet. 1 meter = 3.28084 feet.' },
+  { slug: 'length-converter', category: 'length', from: 'meter', to: 'foot', title: 'Length Converter', description: 'Convert between different units of length such as meters, feet, inches, and kilometers.' },
   { slug: 'feet-to-meters', category: 'length', from: 'foot', to: 'meter', title: 'Feet to Meters', description: 'Convert feet to meters. 1 foot = 0.3048 meters.' },
   { slug: 'kilometers-to-miles', category: 'length', from: 'kilometer', to: 'mile', title: 'Kilometers to Miles', description: 'Convert kilometers to miles. 1 kilometer = 0.621371 miles.' },
   { slug: 'miles-to-kilometers', category: 'length', from: 'mile', to: 'kilometer', title: 'Miles to Kilometers', description: 'Convert miles to kilometers. 1 mile = 1.60934 kilometers.' },
@@ -18,7 +18,7 @@ export const COMMON_PAIRS: ConversionPair[] = [
   { slug: 'centimeters-to-millimeters', category: 'length', from: 'centimeter', to: 'millimeter', title: 'Centimeters to Millimeters', description: 'Convert centimeters to millimeters. 1 centimeter = 10 millimeters.' },
   { slug: 'millimeters-to-centimeters', category: 'length', from: 'millimeter', to: 'centimeter', title: 'Millimeters to Centimeters', description: 'Convert millimeters to centimeters. 10 millimeters = 1 centimeter.' },
   // Weight
-  { slug: 'kilograms-to-pounds', category: 'weight', from: 'kilogram', to: 'pound', title: 'Kilograms to Pounds', description: 'Convert kilograms to pounds. 1 kilogram = 2.20462 pounds.' },
+  { slug: 'weight-converter', category: 'weight', from: 'kilogram', to: 'pound', title: 'Weight Converter', description: 'Convert between different units of weight such as kilograms, pounds, grams, and ounces.' },
   { slug: 'pounds-to-kilograms', category: 'weight', from: 'pound', to: 'kilogram', title: 'Pounds to Kilograms', description: 'Convert pounds to kilograms. 1 pound = 0.453592 kilograms.' },
   { slug: 'grams-to-ounces', category: 'weight', from: 'gram', to: 'ounce', title: 'Grams to Ounces', description: 'Convert grams to ounces. 1 gram = 0.035274 ounces.' },
   { slug: 'ounces-to-grams', category: 'weight', from: 'ounce', to: 'gram', title: 'Ounces to Grams', description: 'Convert ounces to grams. 1 ounce = 28.3495 grams.' },
@@ -31,7 +31,7 @@ export const COMMON_PAIRS: ConversionPair[] = [
   { slug: 'stones-to-pounds', category: 'weight', from: 'stone', to: 'pound', title: 'Stones to Pounds', description: 'Convert stones to pounds. 1 stone = 14 pounds.' },
   { slug: 'pounds-to-stones', category: 'weight', from: 'pound', to: 'stone', title: 'Pounds to Stones', description: 'Convert pounds to stones. 14 pounds = 1 stone.' },
   // Temperature
-  { slug: 'celsius-to-fahrenheit', category: 'temperature', from: 'celsius', to: 'fahrenheit', title: 'Celsius to Fahrenheit', description: 'Convert Celsius to Fahrenheit. °F = °C × 9/5 + 32.' },
+  { slug: 'temperature-converter', category: 'temperature', from: 'celsius', to: 'fahrenheit', title: 'Temperature Converter', description: 'Convert between different units of temperature such as Celsius, Fahrenheit, and Kelvin.' },
   { slug: 'fahrenheit-to-celsius', category: 'temperature', from: 'fahrenheit', to: 'celsius', title: 'Fahrenheit to Celsius', description: 'Convert Fahrenheit to Celsius. °C = (°F − 32) × 5/9.' },
   { slug: 'celsius-to-kelvin', category: 'temperature', from: 'celsius', to: 'kelvin', title: 'Celsius to Kelvin', description: 'Convert Celsius to Kelvin. K = °C + 273.15.' },
   { slug: 'kelvin-to-celsius', category: 'temperature', from: 'kelvin', to: 'celsius', title: 'Kelvin to Celsius', description: 'Convert Kelvin to Celsius. °C = K − 273.15.' },

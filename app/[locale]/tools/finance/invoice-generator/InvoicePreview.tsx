@@ -24,8 +24,8 @@ export default function InvoicePreview({
   const fmt = (v: number) => formatAmount(v, invoice.currency);
 
   return (
-    <div className="invoice-preview bg-card border border-bd-base rounded-xl p-8 text-sm">
-      {/* Invoice Header */}
+    <div className="invoice-preview bg-tertiary border border-border rounded-xl p-8 text-sm">
+      {/* Invoice AppHeader */}
       <div className="flex justify-between items-start mb-8">
         <div>
           {invoice.logo ? (
@@ -51,7 +51,7 @@ export default function InvoicePreview({
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-8 mb-8 border-t border-bd-base pt-6">
+      <div className="grid grid-cols-2 gap-8 mb-8 border-t border-border pt-6">
         <div>
           <div className="text-xs font-semibold uppercase mb-2">
             {t("billTo")}
@@ -93,7 +93,7 @@ export default function InvoicePreview({
         </thead>
         <tbody>
           {invoice.lineItems.map((item) => (
-            <tr key={item.id} className="border-b border-bd-base text-xs">
+            <tr key={item.id} className="border-b border-border text-xs">
               <td className="py-2 pr-2 font-medium break-all">
                 {item.description || `—`}
               </td>
@@ -136,7 +136,7 @@ export default function InvoicePreview({
             </span>
           </div>
         )}
-        <div className="flex justify-between gap-4 border-t border-bd-base pt-2 text-sm font-bold">
+        <div className="flex justify-between gap-4 border-t border-border pt-2 text-sm font-bold">
           <span className="shrink-0">{t("total")}</span>
           <span className="text-right break-all">{fmt(totals.total)}</span>
         </div>

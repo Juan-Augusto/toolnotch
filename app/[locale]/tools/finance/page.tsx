@@ -131,8 +131,7 @@ export default async function FinanceToolsHubPage({ params }: Props) {
           </p>
         </div>
 
-        {/* Intro section */}
-        <div className="bg-card rounded-2xl border border-gray-200 p-8 mb-10 space-y-4 text-gray-700 leading-relaxed">
+        <div className="bg-tertiary rounded-2xl border border-gray-200 p-8 mb-10 space-y-4 text-gray-700 leading-relaxed">
           <p>
             Financial calculators are essential tools for anyone facing a major
             money decision. Whether you are a homebuyer trying to figure out how
@@ -183,7 +182,7 @@ export default async function FinanceToolsHubPage({ params }: Props) {
             <Link
               key={tool.href}
               href={tool.href}
-              className="bg-card rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-green-300 transition-all group"
+              className="bg-tertiary rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-green-300 transition-all group"
             >
               <h2 className="font-bold text-gray-900 group-hover:text-green-600 mb-1 text-sm">
                 {tool.label}
@@ -201,7 +200,7 @@ export default async function FinanceToolsHubPage({ params }: Props) {
             <Link
               key={tool.href}
               href={tool.href}
-              className="bg-card rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-green-300 transition-all group"
+              className="bg-tertiary rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-green-300 transition-all group"
             >
               <h2 className="font-bold text-gray-900 group-hover:text-green-600 mb-1 text-sm">
                 {tool.label}
@@ -211,8 +210,7 @@ export default async function FinanceToolsHubPage({ params }: Props) {
           ))}
         </div>
 
-        {/* Understanding Loan Terminology */}
-        <div className="bg-card rounded-2xl border border-gray-200 p-8">
+        <div className="bg-tertiary rounded-2xl border border-gray-200 p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
             Understanding Loan Terminology
           </h2>

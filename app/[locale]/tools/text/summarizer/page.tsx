@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'AI Text Summarizer — Summarize Any Article Free',
   description: 'Free AI summarizer. Paste any article, essay, or document and get a concise summary in seconds. Powered by Claude.',
+  // Coming-soon stub — noindex until it ships real content (WS-5 audit; WS-6 follow-up).
+  robots: { index: false },
 }
 
 export default function SummarizerPage() {

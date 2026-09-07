@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import ToolWrapper from '@/components/ToolWrapper'
-import type { FaqItem } from '@/components/FaqSection'
+import AppToolWrapper from '@/components/AppToolWrapper'
+import type { FaqItem } from '@/components/AppFaqSection'
 
 const CARDS = ['1', '2', '3', '5', '8', '13', '21', '34', '?', '∞']
 const NUMERIC_CARDS = ['1', '2', '3', '5', '8', '13', '21', '34']
@@ -39,7 +39,7 @@ export default function PlanningPokerClient({ title, description, faqs, labels, 
   const numericPick = picked && NUMERIC_CARDS.includes(picked) ? Number(picked) : null
 
   return (
-    <ToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} adSlot="planning-poker" richContent={richContent}>
+    <AppToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} richContent={richContent}>
       <div className="max-w-2xl mx-auto space-y-6">
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1">{labels.storyLabel}</label>
@@ -63,7 +63,7 @@ export default function PlanningPokerClient({ title, description, faqs, labels, 
                 className={`w-14 h-20 rounded-xl border-2 text-xl font-bold transition-all select-none
                   ${picked === card
                     ? 'border-violet-600 bg-violet-600 text-white shadow-lg scale-105'
-                    : 'border-gray-300 bg-card text-gray-700 hover:border-violet-400 hover:shadow-md'
+                    : 'border-gray-300 bg-tertiary text-gray-700 hover:border-violet-400 hover:shadow-md'
                   }
                   ${revealed ? 'opacity-70 cursor-default' : 'cursor-pointer'}
                 `}
@@ -111,6 +111,6 @@ export default function PlanningPokerClient({ title, description, faqs, labels, 
           </div>
         )}
       </div>
-    </ToolWrapper>
+    </AppToolWrapper>
   )
 }

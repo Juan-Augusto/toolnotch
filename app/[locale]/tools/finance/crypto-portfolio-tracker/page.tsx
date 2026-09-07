@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Crypto Portfolio Tracker — Track Your Holdings Free',
   description: 'Track your crypto and stock portfolio with live prices, P&L, and allocation charts. Free account required.',
+  // Coming-soon stub — noindex until it ships real content (WS-5 audit; WS-6 follow-up).
+  robots: { index: false },
 }
 
 export default function CryptoPortfolioTrackerPage() {

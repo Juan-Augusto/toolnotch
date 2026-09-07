@@ -1,16 +1,16 @@
-'use client'
-import { useState } from 'react'
-import { UnitCategory } from '@/lib/unitTypes'
-import CategoryTabs from '@/components/converter/CategoryTabs'
-import ConversionWidget from '@/components/converter/ConversionWidget'
+"use client";
+import { useState } from "react";
+import { UnitCategory } from "@/lib/unitTypes";
+import AppCategoryTabs from "@/components/converter/AppCategoryTabs";
+import AppConversionWidget from "@/components/converter/AppConversionWidget";
 
 export default function UnitConverterClient() {
-  const [category, setCategory] = useState<UnitCategory>('length')
+  const [category, setCategory] = useState<UnitCategory>("length");
 
   return (
     <div>
-      <CategoryTabs activeCategory={category} onSelect={setCategory} />
-      <ConversionWidget category={category} />
+      <AppCategoryTabs activeCategory={category} onSelect={setCategory} />
+      <AppConversionWidget key={category} category={category} />
     </div>
-  )
+  );
 }

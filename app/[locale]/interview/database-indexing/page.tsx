@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import { DatabaseIndexingQuiz } from '@/components/interview/DatabaseIndexingQuiz'
+import { AppDatabaseIndexingQuiz } from '@/components/interview/AppDatabaseIndexingQuiz'
 import { getFlag } from '@/lib/featureFlags'
 
 const PATH = '/interview/database-indexing'
@@ -104,7 +104,7 @@ export default async function DatabaseIndexingQuizPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <DatabaseIndexingQuiz />
+      <AppDatabaseIndexingQuiz />
     </>
   )
 }
