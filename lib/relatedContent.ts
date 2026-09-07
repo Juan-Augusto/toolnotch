@@ -2,7 +2,7 @@
  * WS-5 item 1 — contextual internal-linking map.
  *
  * A typed map from a tool/blog path to the related tools + blog posts that
- * belong next to it. `components/RelatedContent.tsx` renders it as real
+ * belong next to it. `components/AppRelatedContent.tsx` renders it as real
  * server-reachable `<a href>` links with descriptive, locale-correct anchor
  * text; `resolveToolRelated()` guarantees the WS-5 minimum (>= 2 related
  * tools + >= 1 blog post) for EVERY tool path, falling back to catalogue

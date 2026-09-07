@@ -4,7 +4,7 @@ import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, faqSchema, breadcrumbSchema } from '@/lib/schema'
 import { QUIZ_REGISTRY } from '@/lib/quizRegistry'
 import { getQuizBySlug } from '@/lib/content/quizRepository'
-import QuizCategoryFilter, { QuizCardData } from '@/components/quiz/QuizCategoryFilter'
+import AppQuizCategoryFilter, { QuizCardData } from '@/components/quiz/AppQuizCategoryFilter'
 
 const PATH = '/quizzes'
 
@@ -62,7 +62,7 @@ export default async function QuizzesHubPage({ params }: Props) {
             </p>
           </div>
 
-          <QuizCategoryFilter quizzes={quizCards} />
+          <AppQuizCategoryFilter quizzes={quizCards} />
         </div>
       </main>
     </>

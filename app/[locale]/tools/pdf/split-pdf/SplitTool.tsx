@@ -6,10 +6,10 @@ import JSZip from "jszip";
 import { saveAs } from "file-saver";
 import { PDFDocument } from "pdf-lib";
 import { Info } from "lucide-react";
-import ToolWrapper from "@/components/ToolWrapper";
+import AppToolWrapper from "@/components/AppToolWrapper";
 import { splitPDF, validateAndParsePageRanges } from "@/lib/pdfSplit";
-import type { FaqItem } from "@/components/FaqSection";
-import Button from "@/components/Button";
+import type { FaqItem } from "@/components/AppFaqSection";
+import AppButton from "@/components/AppButton";
 
 interface RichContent {
   whatIs: string;
@@ -90,7 +90,7 @@ export default function SplitTool({ title, description, faqs, richContent }: Pro
   };
 
   return (
-    <ToolWrapper
+    <AppToolWrapper
       title={title}
       description={description}
       breadcrumbLabel={title}
@@ -143,7 +143,7 @@ export default function SplitTool({ title, description, faqs, richContent }: Pro
           value={rangeInput}
           onChange={(e) => setRangeInput(e.target.value)}
           placeholder={t("pageRanges.placeholder")}
-          className={`w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 bg-card dark:bg-card text-gray-900 dark:text-gray-100 ${
+          className={`w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 bg-tertiary dark:bg-tertiary text-gray-900 dark:text-gray-100 ${
             rangeError
               ? "border-red-500 focus:ring-red-400 dark:border-red-500"
               : "border-gray-300 focus:ring-blue-400 dark:border-gray-600"
@@ -154,7 +154,7 @@ export default function SplitTool({ title, description, faqs, richContent }: Pro
           <p className="text-xs text-red-600 mt-1 dark:text-red-400">{rangeError}</p>
         )}
 
-        <div className="mt-3 p-3 bg-gray-50 dark:bg-card border border-gray-200 dark:border-gray-700 rounded-lg text-xs text-gray-600 dark:text-gray-300">
+        <div className="mt-3 p-3 bg-gray-50 dark:bg-tertiary border border-gray-200 dark:border-gray-700 rounded-lg text-xs text-gray-600 dark:text-gray-300">
           <p className="font-semibold text-gray-700 dark:text-gray-200 mb-2 flex items-center gap-1.5">
             <Info size={14} className="text-blue-500" />
             {t("examples.title")}
@@ -191,12 +191,12 @@ export default function SplitTool({ title, description, faqs, richContent }: Pro
       {error && <p className="text-red-600 text-sm mb-3 dark:text-red-400">{error}</p>}
       {done && <p className="text-green-600 text-sm mb-3 dark:text-green-400">{t("success")}</p>}
 
-      <Button
+      <AppButton
         onClick={handleSplit}
         disabled={loading || !file || !validation.valid || Boolean(error)}
       >
         {loading ? t("button.splitting") : t("button.split")}
-      </Button>
-    </ToolWrapper>
+      </AppButton>
+    </AppToolWrapper>
   );
 }

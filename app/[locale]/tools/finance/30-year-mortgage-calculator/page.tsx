@@ -4,9 +4,9 @@ import { getTranslations } from 'next-intl/server'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/schema'
 import { CALCULATOR_VARIANTS } from '@/data/calculatorVariants'
-import type { FaqItem } from '@/components/FaqSection'
-import LoanCalculator from '@/components/finance/calculator/LoanCalculator'
-import ToolWrapper from '@/components/ToolWrapper'
+import type { FaqItem } from '@/components/AppFaqSection'
+import AppLoanCalculator from '@/components/finance/calculator/AppLoanCalculator'
+import AppToolWrapper from '@/components/AppToolWrapper'
 
 interface RichContent {
   whatIs: string
@@ -50,9 +50,9 @@ export default async function ThirtyYearMortgagePage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} richContent={richContent}>
-        <Suspense><LoanCalculator variant={variant} /></Suspense>
-      </ToolWrapper>
+      <AppToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} richContent={richContent}>
+        <Suspense><AppLoanCalculator variant={variant} /></Suspense>
+      </AppToolWrapper>
     </>
   )
 }

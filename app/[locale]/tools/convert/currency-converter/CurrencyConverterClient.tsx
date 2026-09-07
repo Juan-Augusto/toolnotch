@@ -3,9 +3,9 @@ import { useState, useEffect, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { getRates } from "@/lib/currency";
 import { CURRENCIES } from "@/data/currencies";
-import Label from "@/components/Label";
+import AppLabel from "@/components/AppLabel";
 import { ArrowLeftRightIcon } from "lucide-react";
-import Button from "@/components/Button";
+import AppButton from "@/components/AppButton";
 
 export default function CurrencyConverterClient() {
   const t = useTranslations("convert.shared");
@@ -59,7 +59,7 @@ export default function CurrencyConverterClient() {
 
       <div className="flex gap-2 items-end">
         <div className="flex-1">
-          <Label>{t("from")}</Label>
+          <AppLabel>{t("from")}</AppLabel>
           <select
             value={from}
             onChange={(e) => setFrom(e.target.value)}
@@ -79,7 +79,7 @@ export default function CurrencyConverterClient() {
             placeholder={tc("amountPlaceholder")}
           />
         </div>
-        <Button
+        <AppButton
           onClick={swap}
           color="primary"
           rounded
@@ -88,10 +88,10 @@ export default function CurrencyConverterClient() {
           title={t("swap")}
         >
           <ArrowLeftRightIcon className="w-4.5 h-4.5" />
-        </Button>
+        </AppButton>
 
         <div className="flex-1">
-          <Label>{t("to")}</Label>
+          <AppLabel>{t("to")}</AppLabel>
           <select
             value={to}
             onChange={(e) => setTo(e.target.value)}
@@ -104,7 +104,7 @@ export default function CurrencyConverterClient() {
             ))}
           </select>
           <div
-            className={`w-full px-4 py-2! input bg-card font-mono font-semibold ${loading ? "bg-gray-50 text-gray-400 border-gray-200" : "bg-blue-50 border-blue-200 text-blue-800"}`}
+            className={`w-full px-4 py-2! input bg-tertiary font-mono font-semibold ${loading ? "bg-gray-50 text-gray-400 border-gray-200" : "bg-blue-50 border-blue-200 text-blue-800"}`}
           >
             {loading
               ? tc("loading")
@@ -116,7 +116,7 @@ export default function CurrencyConverterClient() {
       </div>
 
       {result !== null && !loading && (
-        <div className="w-full px-4 py-3 bg-surface border border-bd-base rounded-lg font-mono font-semibold text-center">
+        <div className="w-full px-4 py-3 bg-background border border-border rounded-lg font-mono font-semibold text-center">
           {amount} {from} ={" "}
           <strong>
             {result.toFixed(4)} {to}

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import ToolWrapper from '@/components/ToolWrapper'
+import AppToolWrapper from '@/components/AppToolWrapper'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema, eventSchema } from '@/lib/schema'
-import type { FaqItem } from '@/components/FaqSection'
+import type { FaqItem } from '@/components/AppFaqSection'
 import { ELECTION_ROUNDS } from '@/lib/electionCountdownMath'
-import ElectionCountdown from '@/components/utilities/ElectionCountdown'
+import AppElectionCountdown from '@/components/utilities/AppElectionCountdown'
 
 interface RichContent {
   whatIs: string
@@ -49,15 +49,15 @@ export default async function ElectionCountdownPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper
+      <AppToolWrapper
         title={t('title')}
         description={t('description')}
         breadcrumbLabel={t('title')}
         faqs={faqs}
         richContent={richContent}
       >
-        <ElectionCountdown locale={locale} />
-      </ToolWrapper>
+        <AppElectionCountdown locale={locale} />
+      </AppToolWrapper>
     </>
   )
 }

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import ToolWrapper from '@/components/ToolWrapper'
+import AppToolWrapper from '@/components/AppToolWrapper'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import type { FaqItem } from '@/components/FaqSection'
-import GpaCalculator from '@/components/education/GpaCalculator'
+import type { FaqItem } from '@/components/AppFaqSection'
+import AppGpaCalculator from '@/components/education/AppGpaCalculator'
 
 interface RichContent {
   whatIs: string
@@ -47,15 +47,15 @@ export default async function CumulativeGpaCalculatorPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper
+      <AppToolWrapper
         title={t('cumulativeTitle')}
         description={t('cumulativeDescription')}
         breadcrumbLabel={t('cumulativeTitle')}
         faqs={faqs}
         richContent={richContent}
       >
-        <GpaCalculator mode="cumulative" locale={locale} />
-      </ToolWrapper>
+        <AppGpaCalculator mode="cumulative" locale={locale} />
+      </AppToolWrapper>
     </>
   )
 }

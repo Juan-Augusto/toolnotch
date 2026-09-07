@@ -2,7 +2,7 @@ import { convert, formatResult } from './units'
 import { UnitCategory } from './unitTypes'
 
 /**
- * The reference values rendered in <ConversionValuesTable> on every
+ * The reference values rendered in <AppConversionValuesTable> on every
  * `/tools/convert/[slug]` page. Chosen to cover the range people actually
  * search for ("how many cm is 10 inches") while staying small enough to be a
  * featured-snippet candidate.

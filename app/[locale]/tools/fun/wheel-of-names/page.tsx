@@ -3,8 +3,8 @@ import { Suspense } from 'react'
 import { getTranslations } from 'next-intl/server'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import type { FaqItem } from '@/components/FaqSection'
-import ToolWrapper from '@/components/ToolWrapper'
+import type { FaqItem } from '@/components/AppFaqSection'
+import AppToolWrapper from '@/components/AppToolWrapper'
 import SpinWheelClient from '../spin-the-wheel/SpinWheelClient'
 
 const PATH = '/tools/fun/wheel-of-names'
@@ -66,7 +66,7 @@ export default async function WheelOfNamesPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper
+      <AppToolWrapper
         title={t('title')}
         description={t('description')}
         breadcrumbLabel={t('title')}
@@ -77,7 +77,7 @@ export default async function WheelOfNamesPage({ params }: Props) {
         <Suspense>
           <SpinWheelClient />
         </Suspense>
-      </ToolWrapper>
+      </AppToolWrapper>
     </>
   )
 }

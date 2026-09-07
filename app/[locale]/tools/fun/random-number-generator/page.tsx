@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import type { FaqItem } from '@/components/FaqSection'
-import ToolWrapper from '@/components/ToolWrapper'
-import NumberGenerator from '@/components/fun/NumberGenerator'
+import type { FaqItem } from '@/components/AppFaqSection'
+import AppToolWrapper from '@/components/AppToolWrapper'
+import AppNumberGenerator from '@/components/fun/AppNumberGenerator'
 
 const PATH = '/tools/fun/random-number-generator'
 
@@ -46,9 +46,9 @@ export default async function RandomNumberGeneratorPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} richContent={richContent}>
-        <NumberGenerator />
-      </ToolWrapper>
+      <AppToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} richContent={richContent}>
+        <AppNumberGenerator />
+      </AppToolWrapper>
     </>
   )
 }

@@ -3,9 +3,9 @@ import { useState, useEffect, useCallback } from 'react'
 import { useTranslations } from 'next-intl'
 import { analyzeText } from '@/lib/textAnalysis'
 import { TextStats } from '@/lib/textTypes'
-import StatsGrid from '@/components/text-counter/StatsGrid'
-import ReadabilityPanel from '@/components/text-counter/ReadabilityPanel'
-import TopWordsChart from '@/components/text-counter/TopWordsChart'
+import AppStatsGrid from '@/components/text-counter/AppStatsGrid'
+import AppReadabilityPanel from '@/components/text-counter/AppReadabilityPanel'
+import AppTopWordsChart from '@/components/text-counter/AppTopWordsChart'
 
 const EMPTY_STATS: TextStats = {
   words: 0, characters: 0, charactersNoSpaces: 0,
@@ -63,9 +63,9 @@ export default function WordCounterClient({ primaryStat = 'words', placeholder }
       </div>
 
       <div className="mt-4">
-        <StatsGrid stats={stats} primaryStat={primaryStat} />
-        <ReadabilityPanel stats={stats} />
-        {stats.topWords.length > 0 && <TopWordsChart topWords={stats.topWords} />}
+        <AppStatsGrid stats={stats} primaryStat={primaryStat} />
+        <AppReadabilityPanel stats={stats} />
+        {stats.topWords.length > 0 && <AppTopWordsChart topWords={stats.topWords} />}
       </div>
     </div>
   )

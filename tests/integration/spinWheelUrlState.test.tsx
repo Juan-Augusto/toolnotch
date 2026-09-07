@@ -27,7 +27,7 @@ jest.mock('next/navigation', () => ({
 
 // SpinWheel uses canvas APIs and requestAnimationFrame which don't exist in
 // jsdom, so we replace it with a lightweight stub.
-jest.mock('@/components/fun/SpinWheel', () => {
+jest.mock('@/components/fun/AppSpinWheel', () => {
   const MockSpinWheel = ({ items, onResult }: { items: string[]; onResult: (s: string) => void }) => (
     <div data-testid="spin-wheel">
       <span data-testid="item-count">{items.length}</span>

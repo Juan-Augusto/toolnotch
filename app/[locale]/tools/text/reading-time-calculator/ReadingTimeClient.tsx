@@ -21,8 +21,8 @@ import {
 } from "lucide-react";
 import { analyzeText } from "@/lib/textAnalysis";
 import { TextStats, getFleschLabel, getFleschColor } from "@/lib/textTypes";
-import TopWordsChart from "@/components/text-counter/TopWordsChart";
-import Button from "@/components/Button";
+import AppTopWordsChart from "@/components/text-counter/AppTopWordsChart";
+import AppButton from "@/components/AppButton";
 
 // --- CONSTANTS & HELPERS ---
 const EMPTY_STATS: TextStats = {
@@ -73,7 +73,7 @@ function TextInputArea({
   return (
     <div className="relative">
       <textarea
-        className="w-full h-64 p-4 border border-bd-base rounded-xl text-sm resize-y focus:outline-none focus:ring-2 focus:ring-neon bg-card text-tx-primary placeholder-gray-400 dark:placeholder-gray-500"
+        className="w-full h-64 p-4 border border-border rounded-xl text-sm resize-y focus:outline-none focus:ring-2 focus:ring-primary bg-tertiary text-foreground placeholder-gray-400 dark:placeholder-gray-500"
         placeholder={t("wordCounter.placeholder")}
         value={text}
         onChange={(e) => setText(e.target.value)}
@@ -82,7 +82,7 @@ function TextInputArea({
       <div className="flex gap-2">
         <button
           onClick={handleSample}
-          className="text-xs bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 hover:text-tx-primary px-3 py-1.5 rounded-lg transition-colors cursor-pointer"
+          className="text-xs bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 hover:text-foreground px-3 py-1.5 rounded-lg transition-colors cursor-pointer"
         >
           {t("buttons.sampleText")}
         </button>
@@ -143,17 +143,17 @@ function SpeedReaderWidget({
 
     return (
       <span className="font-mono text-3xl sm:text-5xl font-extrabold tracking-tight select-none">
-        <span className="text-tx-primary">{left}</span>
+        <span className="text-foreground">{left}</span>
         <span className="text-red-500 dark:text-red-400">{middle}</span>
-        <span className="text-tx-primary">{right}</span>
+        <span className="text-foreground">{right}</span>
       </span>
     );
   };
 
   return (
-    <div className="bg-card border border-bd-base rounded-xl p-6 relative overflow-hidden flex flex-col items-center space-y-6 animate-fade-in-up">
-      <div className="w-full flex justify-between items-center pb-3 border-b border-bd-base">
-        <span className="text-xs font-semibold uppercase tracking-wider text-tx-secondary flex items-center gap-1.5">
+    <div className="bg-tertiary border border-border rounded-xl p-6 relative overflow-hidden flex flex-col items-center space-y-6 animate-fade-in-up">
+      <div className="w-full flex justify-between items-center pb-3 border-b border-border">
+        <span className="text-xs font-semibold uppercase tracking-wider text-label flex items-center gap-1.5">
           {tr("ui.speedReaderTitle")}
         </span>
         <button
@@ -168,20 +168,20 @@ function SpeedReaderWidget({
         </button>
       </div>
 
-      <div className="w-full h-36 flex items-center justify-center bg-gray-50 dark:bg-elevated border border-bd-base rounded-xl relative">
+      <div className="w-full h-36 flex items-center justify-center bg-gray-50 dark:bg-tertiary border border-border rounded-xl relative">
         {currentIndex < wordsArray.length ? (
           renderOrpWord(wordsArray[currentIndex])
         ) : (
-          <span className="text-xs text-tx-secondary italic font-semibold">
+          <span className="text-xs text-label italic font-semibold">
             {tr("ui.done")}
           </span>
         )}
       </div>
 
       <div className="w-full">
-        <div className="flex justify-between text-xs text-tx-secondary">
+        <div className="flex justify-between text-xs text-label">
           <span>{tr("ui.readingSpeedLabel")}</span>
-          <span className="font-semibold text-neon">
+          <span className="font-semibold text-primary">
             {tr("ui.wordsPerMinute", { wpm: speedReaderWpm })} (
             {getReadingSpeedCategory(speedReaderWpm)})
           </span>
@@ -198,7 +198,7 @@ function SpeedReaderWidget({
       </div>
 
       <div className="w-full space-y-2">
-        <div className="flex justify-between text-xs text-tx-secondary">
+        <div className="flex justify-between text-xs text-label">
           <span>
             {tr("ui.wordCounter", {
               current: Math.min(currentIndex + 1, wordsArray.length),
@@ -214,9 +214,9 @@ function SpeedReaderWidget({
             %
           </span>
         </div>
-        <div className="w-full bg-gray-100 dark:bg-gray-800 h-1.5 rounded-full overflow-hidden border border-bd-base/10">
+        <div className="w-full bg-gray-100 dark:bg-gray-800 h-1.5 rounded-full overflow-hidden border border-border/10">
           <div
-            className="bg-neon h-full rounded-full transition-all duration-300"
+            className="bg-primary h-full rounded-full transition-all duration-300"
             style={{
               width: `${(Math.min(currentIndex + 1, wordsArray.length) / wordsArray.length) * 100}%`,
             }}
@@ -225,7 +225,7 @@ function SpeedReaderWidget({
       </div>
 
       <div className="flex items-center gap-4">
-        <Button
+        <AppButton
           onClick={() => {
             if (currentIndex >= wordsArray.length) {
               setCurrentIndex(0);
@@ -241,8 +241,8 @@ function SpeedReaderWidget({
             <PlayIcon className="w-4 h-4" />
           )}
           {isPlaying ? tr("ui.pause") : tr("ui.play")}
-        </Button>
-        <Button
+        </AppButton>
+        <AppButton
           onClick={() => {
             setIsPlaying(false);
             setCurrentIndex(0);
@@ -252,7 +252,7 @@ function SpeedReaderWidget({
         >
           <RotateCcwIcon className="w-4 h-4" />
           {tr("ui.reset")}
-        </Button>
+        </AppButton>
       </div>
     </div>
   );
@@ -298,22 +298,22 @@ function HeroStats({
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div className="card-neon p-6 bg-card border border-bd-base rounded-xl relative overflow-hidden flex flex-col justify-between">
-        <div className="absolute right-4 top-4 text-neon pointer-events-none">
+      <div className=" p-6 bg-tertiary border border-border rounded-xl relative overflow-hidden flex flex-col justify-between">
+        <div className="absolute right-4 top-4 text-primary pointer-events-none">
           <BookOpen size={48} />
         </div>
         <div>
-          <div className="text-xs font-semibold text-tx-secondary uppercase tracking-wider mb-1">
+          <div className="text-xs font-semibold text-label uppercase tracking-wider mb-1">
             {tr("ui.estimatedReadingTime")}
           </div>
-          <div className="text-3xl font-black text-neon">
+          <div className="text-3xl font-black text-primary">
             {formatDuration(readingTimeObj)}
           </div>
         </div>
         <div className="mt-6 space-y-2">
-          <div className="flex justify-between text-xs text-tx-secondary">
+          <div className="flex justify-between text-xs text-label">
             <span>{tr("ui.readingSpeedLabel")}</span>
-            <span className="font-semibold text-neon">
+            <span className="font-semibold text-primary">
               {tr("ui.wordsPerMinute", { wpm: readingWpm })} (
               {getReadingSpeedCategory(readingWpm)})
             </span>
@@ -330,12 +330,12 @@ function HeroStats({
         </div>
       </div>
 
-      <div className="card-neon p-6 bg-card border border-bd-base rounded-xl relative overflow-hidden flex flex-col justify-between">
+      <div className=" p-6 bg-tertiary border border-border rounded-xl relative overflow-hidden flex flex-col justify-between">
         <div className="absolute right-4 top-4 text-blue-500 pointer-events-none">
           <Mic size={48} />
         </div>
         <div>
-          <div className="text-xs font-semibold text-tx-secondary uppercase tracking-wider mb-1">
+          <div className="text-xs font-semibold text-label uppercase tracking-wider mb-1">
             {tr("ui.estimatedSpeakingTime")}
           </div>
           <div className="text-3xl font-black text-blue-600 dark:text-blue-400">
@@ -343,7 +343,7 @@ function HeroStats({
           </div>
         </div>
         <div className="mt-6 space-y-2">
-          <div className="flex justify-between text-xs text-tx-secondary">
+          <div className="flex justify-between text-xs text-label">
             <span>{tr("ui.speakingSpeedLabel")}</span>
             <span className="font-semibold text-blue-600 dark:text-blue-400">
               {tr("ui.wordsPerMinute", { wpm: speakingWpm })} (
@@ -385,49 +385,49 @@ function SecondaryStats({
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <div className="bg-card border border-bd-base rounded-xl p-5 space-y-3">
-        <p className="text-xs font-semibold text-tx-secondary uppercase tracking-wider mb-1">
+      <div className="bg-tertiary border border-border rounded-xl p-5 space-y-3">
+        <p className="text-xs font-semibold text-label uppercase tracking-wider mb-1">
           {t("stats.readabilityScores")}
         </p>
         <div className="grid grid-cols-2 gap-4 pt-1">
           <div>
-            <div className="text-[10px] font-semibold tracking-wide text-tx-secondary uppercase">
+            <div className="text-[10px] font-semibold tracking-wide text-label uppercase">
               {t("stats.words")}
             </div>
-            <div className="text-lg font-bold text-tx-primary">
+            <div className="text-lg font-bold text-foreground">
               {stats.words.toLocaleString()}
             </div>
           </div>
           <div>
-            <div className="text-[10px] font-semibold tracking-wide text-tx-secondary uppercase">
+            <div className="text-[10px] font-semibold tracking-wide text-label uppercase">
               {t("stats.characters")}
             </div>
-            <div className="text-lg font-bold text-tx-primary">
+            <div className="text-lg font-bold text-foreground">
               {stats.characters.toLocaleString()}
             </div>
           </div>
           <div>
-            <div className="text-[10px] font-semibold tracking-wide text-tx-secondary uppercase">
+            <div className="text-[10px] font-semibold tracking-wide text-label uppercase">
               {t("stats.sentences")}
             </div>
-            <div className="text-lg font-bold text-tx-primary">
+            <div className="text-lg font-bold text-foreground">
               {stats.sentences.toLocaleString()}
             </div>
           </div>
           <div>
-            <div className="text-[10px] font-semibold tracking-wide text-tx-secondary uppercase">
+            <div className="text-[10px] font-semibold tracking-wide text-label uppercase">
               {t("stats.paragraphs")}
             </div>
-            <div className="text-lg font-bold text-tx-primary">
+            <div className="text-lg font-bold text-foreground">
               {stats.paragraphs.toLocaleString()}
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-card border border-bd-base rounded-xl p-5 flex flex-col justify-between">
+      <div className="bg-tertiary border border-border rounded-xl p-5 flex flex-col justify-between">
         <div>
-          <p className="text-xs font-semibold text-tx-secondary uppercase tracking-wider mb-1">
+          <p className="text-xs font-semibold text-label uppercase tracking-wider mb-1">
             {tr("ui.complexityNote")}
           </p>
           <div className="flex items-baseline gap-2">
@@ -443,7 +443,7 @@ function SecondaryStats({
             </span>
           </div>
         </div>
-        <div className="mt-4 pt-2 border-t border-bd-base text-xs text-tx-secondary">
+        <div className="mt-4 pt-2 border-t border-border text-xs text-label">
           {tr(`ui.${complexity.key}`)}
         </div>
       </div>
@@ -573,7 +573,7 @@ export default function ReadingTimeClient() {
 
       {!speedReaderActive && wordsArray.length > 0 && (
         <div className="flex justify-center">
-          <Button
+          <AppButton
             onClick={() => {
               setCurrentIndex(0);
               setSpeedReaderWpm(readingWpm);
@@ -584,7 +584,7 @@ export default function ReadingTimeClient() {
             className="flex items-center justify-center gap-2"
           >
             <Zap className="w-5 h-5" /> {tr("ui.startSpeedReader")}
-          </Button>
+          </AppButton>
         </div>
       )}
 
@@ -600,8 +600,8 @@ export default function ReadingTimeClient() {
       <SecondaryStats stats={stats} complexity={complexity} />
 
       {stats.topWords.length > 0 && (
-        <div className="bg-card border border-bd-base rounded-xl p-5">
-          <TopWordsChart topWords={stats.topWords} />
+        <div className="bg-tertiary border border-border rounded-xl p-5">
+          <AppTopWordsChart topWords={stats.topWords} />
         </div>
       )}
     </div>

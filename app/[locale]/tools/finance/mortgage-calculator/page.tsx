@@ -5,9 +5,9 @@ import { getTranslations } from 'next-intl/server'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/schema'
 import { CALCULATOR_VARIANTS } from '@/data/calculatorVariants'
-import type { FaqItem } from '@/components/FaqSection'
-import LoanCalculator from '@/components/finance/calculator/LoanCalculator'
-import ToolWrapper from '@/components/ToolWrapper'
+import type { FaqItem } from '@/components/AppFaqSection'
+import AppLoanCalculator from '@/components/finance/calculator/AppLoanCalculator'
+import AppToolWrapper from '@/components/AppToolWrapper'
 
 interface RichContent {
   whatIs: string
@@ -51,14 +51,14 @@ export default async function MortgageCalculatorPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} richContent={richContent}>
+      <AppToolWrapper title={t('title')} description={t('description')} breadcrumbLabel={t('title')} faqs={faqs} richContent={richContent}>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
           <Link href="/blog/how-to-calculate-mortgage-payment" className="text-blue-600 hover:underline dark:text-blue-400">
             Read: How to Calculate Your Mortgage Payment -&gt;
           </Link>
         </p>
-        <Suspense><LoanCalculator variant={variant} /></Suspense>
-      </ToolWrapper>
+        <Suspense><AppLoanCalculator variant={variant} /></Suspense>
+      </AppToolWrapper>
     </>
   )
 }

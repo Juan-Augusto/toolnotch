@@ -4,10 +4,10 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
-import ToolWrapper from "@/components/ToolWrapper";
-import Button from "@/components/Button";
+import AppToolWrapper from "@/components/AppToolWrapper";
+import AppButton from "@/components/AppButton";
 import { pdfToImages } from "@/lib/pdfToImage";
-import type { FaqItem } from "@/components/FaqSection";
+import type { FaqItem } from "@/components/AppFaqSection";
 
 interface RichContent {
   whatIs: string;
@@ -67,7 +67,7 @@ export default function PdfToJpgTool({ title, description, faqs, richContent }: 
   };
 
   return (
-    <ToolWrapper
+    <AppToolWrapper
       title={title}
       description={description}
       breadcrumbLabel={title}
@@ -116,16 +116,16 @@ export default function PdfToJpgTool({ title, description, faqs, richContent }: 
       )}
 
       {previews.length > 0 ? (
-        <Button onClick={handleDownloadAll}>
+        <AppButton onClick={handleDownloadAll}>
           {previews.length === 1
             ? t("button.downloadOne")
             : t("button.downloadAll", { count: previews.length })}
-        </Button>
+        </AppButton>
       ) : (
-        <Button onClick={handleConvert} disabled={loading || !file}>
+        <AppButton onClick={handleConvert} disabled={loading || !file}>
           {loading ? t("button.converting") : t("button.convert")}
-        </Button>
+        </AppButton>
       )}
-    </ToolWrapper>
+    </AppToolWrapper>
   );
 }

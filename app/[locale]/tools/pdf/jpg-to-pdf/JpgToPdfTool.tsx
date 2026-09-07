@@ -21,10 +21,10 @@ import { CSS } from "@dnd-kit/utilities";
 import { saveAs } from "file-saver";
 import { GripVertical, X } from "lucide-react";
 import { useTranslations } from "next-intl";
-import ToolWrapper from "@/components/ToolWrapper";
-import Button from "@/components/Button";
+import AppToolWrapper from "@/components/AppToolWrapper";
+import AppButton from "@/components/AppButton";
 import { imagesToPDF, validatePdfFilename } from "@/lib/imageToPdf";
-import type { FaqItem } from "@/components/FaqSection";
+import type { FaqItem } from "@/components/AppFaqSection";
 
 interface SortableImageItemProps {
   id: string;
@@ -47,7 +47,7 @@ function SortableImageItem({ id, name, preview, onRemove }: SortableImageItemPro
     <div
       ref={setNodeRef}
       style={style}
-      className="flex items-center gap-3 p-3 bg-gray-50 border border-gray-200 rounded-xl dark:bg-card dark:border-gray-700"
+      className="flex items-center gap-3 p-3 bg-gray-50 border border-gray-200 rounded-xl dark:bg-tertiary dark:border-gray-700"
     >
       <button
         {...attributes}
@@ -174,7 +174,7 @@ export default function JpgToPdfTool({ title, description, faqs, richContent }: 
   };
 
   return (
-    <ToolWrapper
+    <AppToolWrapper
       title={title}
       description={description}
       breadcrumbLabel={title}
@@ -232,7 +232,7 @@ export default function JpgToPdfTool({ title, description, faqs, richContent }: 
               value={filename}
               onChange={(e) => setFilename(e.target.value)}
               placeholder={t("filename.placeholder")}
-              className={`w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 bg-card dark:bg-card text-gray-900 dark:text-gray-100 ${
+              className={`w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 bg-tertiary dark:bg-tertiary text-gray-900 dark:text-gray-100 ${
                 filenameError
                   ? "border-red-500 focus:ring-red-400 dark:border-red-500"
                   : "border-gray-300 focus:ring-blue-400 dark:border-gray-600"
@@ -249,12 +249,12 @@ export default function JpgToPdfTool({ title, description, faqs, richContent }: 
       {error && <p className="text-red-600 text-sm mb-3 dark:text-red-400">{error}</p>}
       {done && <p className="text-green-600 text-sm mb-3 dark:text-green-400">{t("success")}</p>}
 
-      <Button
+      <AppButton
         onClick={handleConvert}
         disabled={loading || images.length === 0 || !filenameValidation.valid}
       >
         {loading ? t("button.converting") : t("button.convert")}
-      </Button>
-    </ToolWrapper>
+      </AppButton>
+    </AppToolWrapper>
   );
 }

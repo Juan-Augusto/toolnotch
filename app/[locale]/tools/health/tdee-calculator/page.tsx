@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import ToolWrapper from '@/components/ToolWrapper'
+import AppToolWrapper from '@/components/AppToolWrapper'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import type { FaqItem } from '@/components/FaqSection'
-import TdeeCalculator from '@/components/health/TdeeCalculator'
+import type { FaqItem } from '@/components/AppFaqSection'
+import AppTdeeCalculator from '@/components/health/AppTdeeCalculator'
 
 const PATH = '/tools/health/tdee-calculator'
 
@@ -40,15 +40,15 @@ export default async function TdeeCalculatorPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper
+      <AppToolWrapper
         title={t('tdeeTitle')}
         description={t('tdeeDescription')}
         breadcrumbLabel={t('tdeeTitle')}
         faqs={faqs}
         richContent={richContentRaw}
       >
-        <TdeeCalculator mode="maintain" locale={locale} />
-      </ToolWrapper>
+        <AppTdeeCalculator mode="maintain" locale={locale} />
+      </AppToolWrapper>
     </>
   )
 }

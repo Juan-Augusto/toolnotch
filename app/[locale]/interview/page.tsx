@@ -1,64 +1,74 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { getTranslations } from 'next-intl/server'
-import { buildAlternates } from '@/lib/i18nMeta'
-import { buildJsonLd, breadcrumbSchema, faqSchema, type FaqItem } from '@/lib/schema'
-import { getFlags } from '@/lib/featureFlags'
-import InterviewDepth from '@/components/interview/InterviewDepth'
+import type { Metadata } from "next";
+import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { buildAlternates } from "@/lib/i18nMeta";
+import {
+  buildJsonLd,
+  breadcrumbSchema,
+  faqSchema,
+  type FaqItem,
+} from "@/lib/schema";
+import { getFlags } from "@/lib/featureFlags";
+import AppInterviewDepth from "@/components/interview/AppInterviewDepth";
 
-const PATH = '/interview'
+const PATH = "/interview";
 const DESCRIPTION =
-  'Free interactive interview prep quizzes for software engineers. Deep-dive into TypeScript with in-depth questions covering type inference, generics, conditional types, and more — every answer includes compiled JS output and industry best practices.'
+  "Free interactive interview prep quizzes for software engineers. Deep-dive into TypeScript with in-depth questions covering type inference, generics, conditional types, and more — every answer includes compiled JS output and industry best practices.";
 
 export const metadata: Metadata = {
-  title: 'Interview Preparation — TypeScript & More | ToolNotch',
+  title: "Interview Preparation — TypeScript & More | ToolNotch",
   description: DESCRIPTION,
   alternates: buildAlternates(PATH),
   keywords: [
-    'software engineer interview prep',
-    'TypeScript interview questions',
-    'frontend interview quiz',
-    'JavaScript interview preparation',
-    'technical interview practice',
+    "software engineer interview prep",
+    "TypeScript interview questions",
+    "frontend interview quiz",
+    "JavaScript interview preparation",
+    "technical interview practice",
   ],
   openGraph: {
-    title: 'Interview Prep Quizzes for Software Engineers | ToolNotch',
+    title: "Interview Prep Quizzes for Software Engineers | ToolNotch",
     description: DESCRIPTION,
   },
-}
+};
 
 interface Props {
-  params: Promise<{ locale: string }>
+  params: Promise<{ locale: string }>;
 }
 
 export default async function InterviewHubPage({ params }: Props) {
-  const { locale } = await params
-  // English has no URL prefix (localePrefix: 'as-needed') — prefixing it makes
-  // the link a 307 redirect to the canonical path (WS-6 link audit).
-  const lp = locale === 'en' ? '' : `/${locale}`
-  const flags = await getFlags()
+  const { locale } = await params;
 
-  const t = await getTranslations({ locale, namespace: 'interview.hub' })
+  const lp = locale === "en" ? "" : `/${locale}`;
+  const flags = await getFlags();
+  const t = await getTranslations({ locale, namespace: "interview.hub" });
   const depthSections = [
-    { heading: t('aboutHeading'), body: t.raw('about') as string[] },
-    { heading: t('formatHeading'), body: t.raw('format') as string[] },
-  ]
+    { heading: t("aboutHeading"), body: t.raw("about") as string[] },
+    { heading: t("formatHeading"), body: t.raw("format") as string[] },
+  ];
   const depthLists = [
-    { heading: t('howHeading'), ordered: true, items: t.raw('how') as string[] },
-  ]
-  const depthFaqs = t.raw('faqs') as FaqItem[]
+    {
+      heading: t("howHeading"),
+      ordered: true,
+      items: t.raw("how") as string[],
+    },
+  ];
+  const depthFaqs = t.raw("faqs") as FaqItem[];
 
   const jsonLd = buildJsonLd(
     breadcrumbSchema([
-      { name: 'Home', url: '/' },
-      { name: 'Interview Prep', url: PATH },
+      { name: "Home", url: "/" },
+      { name: "Interview Prep", url: PATH },
     ]),
     faqSchema(depthFaqs),
-  )
+  );
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <style>{`
         .interview-card {
           display: block;
@@ -75,172 +85,332 @@ export default async function InterviewHubPage({ params }: Props) {
           transform: translateY(-2px);
         }
       `}</style>
-    <main style={{ background: 'var(--base-bg)', minHeight: '100vh', fontFamily: 'Inter, system-ui, sans-serif', color: 'var(--text-primary)' }}>
-      <div style={{ maxWidth: 760, margin: '0 auto', padding: '3rem 1.25rem' }}>
-        <div style={{ marginBottom: '0.75rem' }}>
-          <span style={{ color: '#3178c6', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-            Interview Preparation
-          </span>
-        </div>
-        <h1 style={{ fontSize: '2rem', fontWeight: 700, margin: '0 0 0.75rem', color: 'var(--text-primary)' }}>
-          Interview Prep Quizzes
-        </h1>
-        <p style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: 1.65, marginBottom: '2.5rem', maxWidth: 540 }}>
-          Interactive quizzes designed for software engineers preparing for technical interviews.
-          Every answer explains <em>why</em>, what the compiler produces, and what industry professionals do.
-        </p>
-
-        {/* TypeScript */}
-        <div style={{ marginBottom: '0.5rem' }}>
-          <span style={{ color: '#3178c6', fontSize: '0.7rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-            Language
-          </span>
-        </div>
-        <div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', marginBottom: '2.5rem' }}>
-          <Link
-            href={`${lp}/interview/typescript`}
-            className="interview-card"
+      <main
+        style={{
+          background: "var(--base-bg)",
+          minHeight: "100vh",
+          fontFamily: "Inter, system-ui, sans-serif",
+          color: "var(--text-primary)",
+        }}
+      >
+        <div
+          style={{ maxWidth: 760, margin: "0 auto", padding: "3rem 1.25rem" }}
+        >
+          <div style={{ marginBottom: "0.75rem" }}>
+            <span
+              style={{
+                color: "#3178c6",
+                fontSize: "0.75rem",
+                fontWeight: 600,
+                textTransform: "uppercase",
+                letterSpacing: "0.08em",
+              }}
+            >
+              Interview Preparation
+            </span>
+          </div>
+          <h1
+            style={{
+              fontSize: "2rem",
+              fontWeight: 700,
+              margin: "0 0 0.75rem",
+              color: "var(--text-primary)",
+            }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
-              <svg width="36" height="36" viewBox="0 0 256 256" fill="none">
-                <rect width="256" height="256" rx="16" fill="#3178c6" />
-                <path d="M150 200v-27c4.5 2.3 9.8 4 15.8 5.1 6 1 11.7 1.5 17.2 1.5 3.5 0 6.8-.3 9.7-.8 2.9-.6 5.4-1.4 7.4-2.5 2-.9 3.6-2.2 4.7-3.7 1.1-1.5 1.6-3.3 1.6-5.3 0-2.6-.7-4.8-2.2-6.7-1.4-1.9-3.4-3.6-5.8-5.2-2.4-1.6-5.3-3-8.5-4.4-3.2-1.4-6.7-2.8-10.3-4.4-8.8-3.8-15.5-8.3-20-13.6-4.5-5.3-6.8-12-6.8-20 0-6.2 1.3-11.6 3.8-16.1 2.5-4.5 5.9-8.2 10.3-11.2 4.4-3 9.4-5.2 15-6.7 5.6-1.5 11.6-2.2 17.9-2.2 6 0 11.4.3 16.3 1 4.9.7 9.2 1.7 12.9 3.1v25.4c-2.2-1.3-4.6-2.5-7.1-3.4-2.5-.9-5.1-1.7-7.7-2.3-2.6-.6-5.3-1-7.9-1.3-2.6-.3-5-.4-7.2-.4-3.2 0-6.1.3-8.7.9-2.6.6-4.9 1.5-6.7 2.6-1.9 1.1-3.4 2.4-4.4 4-1 1.5-1.6 3.3-1.6 5.1 0 2.2.6 4.2 1.7 5.9 1.2 1.7 2.8 3.3 5 4.7 2.1 1.4 4.7 2.8 7.8 4.1 3 1.3 6.5 2.7 10.3 4.2 4.5 1.8 8.7 3.8 12.4 6 3.8 2.2 7 4.7 9.7 7.5 2.7 2.8 4.8 6.1 6.3 9.8 1.5 3.7 2.2 8 2.2 12.8 0 6.7-1.3 12.4-4 17-2.7 4.6-6.2 8.4-10.7 11.2-4.5 2.8-9.7 4.9-15.6 6.1-5.9 1.2-12.1 1.8-18.7 1.8-6.6 0-12.8-.5-18.6-1.5-5.9-1-10.8-2.5-14.8-4.6zM128 118H88v82H60v-82H20V94h108v24z" fill="white" />
-              </svg>
-              <div>
-                <div style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '1.05rem' }}>TypeScript</div>
-                <div style={{ color: 'var(--text-muted)', fontSize: '0.78rem' }}>30 questions · 3 levels</div>
-              </div>
-            </div>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', lineHeight: 1.6, margin: '0 0 1rem' }}>
-              Type inference, generics, conditional types, mapped types, and TS 5.x features.
-              Covers compilation output and best practices.
-            </p>
-            <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap' }}>
-              {['Beginner', 'Intermediate', 'Advanced'].map(l => (
-                <span key={l} style={{
-                  background: 'var(--base-bg)',
-                  color: 'var(--text-muted)',
-                  padding: '2px 8px',
-                  borderRadius: '4px',
-                  fontSize: '0.7rem',
-                  border: '1px solid var(--base-border)',
-                }}>{l}</span>
-              ))}
-            </div>
-          </Link>
-        </div>
+            Interview Prep Quizzes
+          </h1>
+          <p
+            style={{
+              color: "var(--text-muted)",
+              fontSize: "1rem",
+              lineHeight: 1.65,
+              marginBottom: "2.5rem",
+              maxWidth: 540,
+            }}
+          >
+            Interactive quizzes designed for software engineers preparing for
+            technical interviews. Every answer explains <em>why</em>, what the
+            compiler produces, and what industry professionals do.
+          </p>
 
-        {/* Backend Engineering */}
-        <div style={{ marginBottom: '0.5rem' }}>
-          <span style={{ color: '#22c55e', fontSize: '0.7rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-            Backend Engineering
-          </span>
-        </div>
-        <div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))' }}>
-          {[
-            {
-              slug: 'database-design',
-              flagKey: 'interview-database-design',
-              title: 'Database Design',
-              description: 'Primary keys, normalization, CAP theorem, sharding, CQRS, Event Sourcing, and distributed transaction patterns.',
-              accent: '#f59e0b',
-            },
-            {
-              slug: 'nodejs-fundamentals',
-              flagKey: 'interview-nodejs-fundamentals',
-              title: 'Node.js Fundamentals',
-              description: 'Event loop phases, garbage collection, streams, V8 internals, and CPU profiling.',
-              accent: '#68a063',
-            },
-            {
-              slug: 'database-indexing',
-              flagKey: 'interview-database-indexing',
-              title: 'Database Indexing',
-              description: 'B-Tree internals, composite indexes, covering indexes, and PostgreSQL index types.',
-              accent: '#f59e0b',
-            },
-            {
-              slug: 'messaging-sqs-kafka',
-              flagKey: 'interview-messaging-sqs-kafka',
-              title: 'SQS & Kafka',
-              description: 'Partitions, offsets, delivery semantics, consumer groups, and streaming patterns.',
-              accent: '#ff9900',
-            },
-            {
-              slug: 'rabbitmq-concepts',
-              flagKey: 'interview-rabbitmq-concepts',
-              title: 'RabbitMQ',
-              description: 'Exchange types, routing/binding keys, quorum queues, and AMQP internals.',
-              accent: '#ff6600',
-            },
-            {
-              slug: 'system-architecture',
-              flagKey: 'interview-system-architecture',
-              title: 'System Architecture',
-              description: 'CI/CD, Kubernetes, circuit breakers, Saga pattern, GitOps, and observability.',
-              accent: '#8b5cf6',
-            },
-            {
-              slug: 'vue',
-              flagKey: 'interview-vue',
-              title: 'Vue.js',
-              description: 'Composition API, reactivity internals, composables, Pinia, and SSR hydration.',
-              accent: '#41b883',
-            },
-          ].filter(({ flagKey }) => flags[flagKey] === true)
-           .map(({ slug, title, description, accent }) => {
-            const href =
-              slug === 'database-design'     ? `${lp}/interview/database-design` :
-              slug === 'messaging-sqs-kafka'  ? `${lp}/interview/messaging-sqs-kafka` :
-              slug === 'rabbitmq-concepts'    ? `${lp}/interview/rabbitmq-concepts` :
-              slug === 'database-indexing'    ? `${lp}/interview/database-indexing` :
-              slug === 'nodejs-fundamentals'  ? `${lp}/interview/nodejs-fundamentals` :
-              slug === 'system-architecture'  ? `${lp}/interview/system-architecture` :
-              slug === 'vue'                  ? `${lp}/interview/vue` :
-              `${lp}/quiz/${slug}`
-            return (
-            <Link key={slug} href={href} className="interview-card">
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
-                <div style={{
-                  width: 36, height: 36, borderRadius: 8,
-                  background: accent + '22',
-                  border: `1px solid ${accent}55`,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: '1.1rem', flexShrink: 0,
-                }}>
-                  {'⚙'}
-                </div>
+          {/* TypeScript */}
+          <div style={{ marginBottom: "0.5rem" }}>
+            <span
+              style={{
+                color: "#3178c6",
+                fontSize: "0.7rem",
+                fontWeight: 600,
+                textTransform: "uppercase",
+                letterSpacing: "0.08em",
+              }}
+            >
+              Language
+            </span>
+          </div>
+          <div
+            style={{
+              display: "grid",
+              gap: "1rem",
+              gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
+              marginBottom: "2.5rem",
+            }}
+          >
+            <Link
+              href={`${lp}/interview/typescript`}
+              className="interview-card"
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.75rem",
+                  marginBottom: "0.75rem",
+                }}
+              >
+                <svg width="36" height="36" viewBox="0 0 256 256" fill="none">
+                  <rect width="256" height="256" rx="16" fill="#3178c6" />
+                  <path
+                    d="M150 200v-27c4.5 2.3 9.8 4 15.8 5.1 6 1 11.7 1.5 17.2 1.5 3.5 0 6.8-.3 9.7-.8 2.9-.6 5.4-1.4 7.4-2.5 2-.9 3.6-2.2 4.7-3.7 1.1-1.5 1.6-3.3 1.6-5.3 0-2.6-.7-4.8-2.2-6.7-1.4-1.9-3.4-3.6-5.8-5.2-2.4-1.6-5.3-3-8.5-4.4-3.2-1.4-6.7-2.8-10.3-4.4-8.8-3.8-15.5-8.3-20-13.6-4.5-5.3-6.8-12-6.8-20 0-6.2 1.3-11.6 3.8-16.1 2.5-4.5 5.9-8.2 10.3-11.2 4.4-3 9.4-5.2 15-6.7 5.6-1.5 11.6-2.2 17.9-2.2 6 0 11.4.3 16.3 1 4.9.7 9.2 1.7 12.9 3.1v25.4c-2.2-1.3-4.6-2.5-7.1-3.4-2.5-.9-5.1-1.7-7.7-2.3-2.6-.6-5.3-1-7.9-1.3-2.6-.3-5-.4-7.2-.4-3.2 0-6.1.3-8.7.9-2.6.6-4.9 1.5-6.7 2.6-1.9 1.1-3.4 2.4-4.4 4-1 1.5-1.6 3.3-1.6 5.1 0 2.2.6 4.2 1.7 5.9 1.2 1.7 2.8 3.3 5 4.7 2.1 1.4 4.7 2.8 7.8 4.1 3 1.3 6.5 2.7 10.3 4.2 4.5 1.8 8.7 3.8 12.4 6 3.8 2.2 7 4.7 9.7 7.5 2.7 2.8 4.8 6.1 6.3 9.8 1.5 3.7 2.2 8 2.2 12.8 0 6.7-1.3 12.4-4 17-2.7 4.6-6.2 8.4-10.7 11.2-4.5 2.8-9.7 4.9-15.6 6.1-5.9 1.2-12.1 1.8-18.7 1.8-6.6 0-12.8-.5-18.6-1.5-5.9-1-10.8-2.5-14.8-4.6zM128 118H88v82H60v-82H20V94h108v24z"
+                    fill="white"
+                  />
+                </svg>
                 <div>
-                  <div style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '1.05rem' }}>{title}</div>
-                  <div style={{ color: 'var(--text-muted)', fontSize: '0.78rem' }}>30 questions · 3 levels</div>
+                  <div
+                    style={{
+                      color: "var(--text-primary)",
+                      fontWeight: 700,
+                      fontSize: "1.05rem",
+                    }}
+                  >
+                    TypeScript
+                  </div>
+                  <div
+                    style={{ color: "var(--text-muted)", fontSize: "0.78rem" }}
+                  >
+                    30 questions · 3 levels
+                  </div>
                 </div>
               </div>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', lineHeight: 1.6, margin: '0 0 1rem' }}>
-                {description}
+              <p
+                style={{
+                  color: "var(--text-muted)",
+                  fontSize: "0.85rem",
+                  lineHeight: 1.6,
+                  margin: "0 0 1rem",
+                }}
+              >
+                Type inference, generics, conditional types, mapped types, and
+                TS 5.x features. Covers compilation output and best practices.
               </p>
-              <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap' }}>
-                {['Beginner', 'Intermediate', 'Advanced'].map(l => (
-                  <span key={l} style={{
-                    background: 'var(--base-bg)',
-                    color: 'var(--text-muted)',
-                    padding: '2px 8px',
-                    borderRadius: '4px',
-                    fontSize: '0.7rem',
-                    border: '1px solid var(--base-border)',
-                  }}>{l}</span>
+              <div
+                style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap" }}
+              >
+                {["Beginner", "Intermediate", "Advanced"].map((l) => (
+                  <span
+                    key={l}
+                    style={{
+                      background: "var(--base-bg)",
+                      color: "var(--text-muted)",
+                      padding: "2px 8px",
+                      borderRadius: "4px",
+                      fontSize: "0.7rem",
+                      border: "1px solid var(--base-border)",
+                    }}
+                  >
+                    {l}
+                  </span>
                 ))}
               </div>
             </Link>
-          )})}
+          </div>
+
+          <div style={{ marginBottom: "0.5rem" }}>
+            <span
+              style={{
+                color: "#22c55e",
+                fontSize: "0.7rem",
+                fontWeight: 600,
+                textTransform: "uppercase",
+                letterSpacing: "0.08em",
+              }}
+            >
+              Backend Engineering
+            </span>
+          </div>
+          <div
+            style={{
+              display: "grid",
+              gap: "1rem",
+              gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
+            }}
+          >
+            {[
+              {
+                slug: "database-design",
+                flagKey: "interview-database-design",
+                title: "Database Design",
+                description:
+                  "Primary keys, normalization, CAP theorem, sharding, CQRS, Event Sourcing, and distributed transaction patterns.",
+                accent: "#f59e0b",
+              },
+              {
+                slug: "nodejs-fundamentals",
+                flagKey: "interview-nodejs-fundamentals",
+                title: "Node.js Fundamentals",
+                description:
+                  "Event loop phases, garbage collection, streams, V8 internals, and CPU profiling.",
+                accent: "#68a063",
+              },
+              {
+                slug: "database-indexing",
+                flagKey: "interview-database-indexing",
+                title: "Database Indexing",
+                description:
+                  "B-Tree internals, composite indexes, covering indexes, and PostgreSQL index types.",
+                accent: "#f59e0b",
+              },
+              {
+                slug: "messaging-sqs-kafka",
+                flagKey: "interview-messaging-sqs-kafka",
+                title: "SQS & Kafka",
+                description:
+                  "Partitions, offsets, delivery semantics, consumer groups, and streaming patterns.",
+                accent: "#ff9900",
+              },
+              {
+                slug: "rabbitmq-concepts",
+                flagKey: "interview-rabbitmq-concepts",
+                title: "RabbitMQ",
+                description:
+                  "Exchange types, routing/binding keys, quorum queues, and AMQP internals.",
+                accent: "#ff6600",
+              },
+              {
+                slug: "system-architecture",
+                flagKey: "interview-system-architecture",
+                title: "System Architecture",
+                description:
+                  "CI/CD, Kubernetes, circuit breakers, Saga pattern, GitOps, and observability.",
+                accent: "#8b5cf6",
+              },
+              {
+                slug: "vue",
+                flagKey: "interview-vue",
+                title: "Vue.js",
+                description:
+                  "Composition API, reactivity internals, composables, Pinia, and SSR hydration.",
+                accent: "#41b883",
+              },
+            ]
+              .filter(({ flagKey }) => flags[flagKey] === true)
+              .map(({ slug, title, description, accent }) => {
+                const href =
+                  slug === "database-design"
+                    ? `${lp}/interview/database-design`
+                    : slug === "messaging-sqs-kafka"
+                      ? `${lp}/interview/messaging-sqs-kafka`
+                      : slug === "rabbitmq-concepts"
+                        ? `${lp}/interview/rabbitmq-concepts`
+                        : slug === "database-indexing"
+                          ? `${lp}/interview/database-indexing`
+                          : slug === "nodejs-fundamentals"
+                            ? `${lp}/interview/nodejs-fundamentals`
+                            : slug === "system-architecture"
+                              ? `${lp}/interview/system-architecture`
+                              : slug === "vue"
+                                ? `${lp}/interview/vue`
+                                : `${lp}/quiz/${slug}`;
+                return (
+                  <Link key={slug} href={href} className="interview-card">
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "0.75rem",
+                        marginBottom: "0.75rem",
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: 36,
+                          height: 36,
+                          borderRadius: 8,
+                          background: accent + "22",
+                          border: `1px solid ${accent}55`,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          fontSize: "1.1rem",
+                          flexShrink: 0,
+                        }}
+                      >
+                        {"⚙"}
+                      </div>
+                      <div>
+                        <div
+                          style={{
+                            color: "var(--text-primary)",
+                            fontWeight: 700,
+                            fontSize: "1.05rem",
+                          }}
+                        >
+                          {title}
+                        </div>
+                        <div
+                          style={{
+                            color: "var(--text-muted)",
+                            fontSize: "0.78rem",
+                          }}
+                        >
+                          30 questions · 3 levels
+                        </div>
+                      </div>
+                    </div>
+                    <p
+                      style={{
+                        color: "var(--text-muted)",
+                        fontSize: "0.85rem",
+                        lineHeight: 1.6,
+                        margin: "0 0 1rem",
+                      }}
+                    >
+                      {description}
+                    </p>
+                    <div
+                      style={{
+                        display: "flex",
+                        gap: "0.35rem",
+                        flexWrap: "wrap",
+                      }}
+                    >
+                      {["Beginner", "Intermediate", "Advanced"].map((l) => (
+                        <span
+                          key={l}
+                          style={{
+                            background: "var(--base-bg)",
+                            color: "var(--text-muted)",
+                            padding: "2px 8px",
+                            borderRadius: "4px",
+                            fontSize: "0.7rem",
+                            border: "1px solid var(--base-border)",
+                          }}
+                        >
+                          {l}
+                        </span>
+                      ))}
+                    </div>
+                  </Link>
+                );
+              })}
+          </div>
         </div>
-      </div>
-      <InterviewDepth
-        sections={depthSections}
-        lists={depthLists}
-        faqHeading={t('faqHeading')}
-        faqs={depthFaqs}
-      />
-    </main>
+        <AppInterviewDepth
+          sections={depthSections}
+          lists={depthLists}
+          faqHeading={t("faqHeading")}
+          faqs={depthFaqs}
+        />
+      </main>
     </>
-  )
+  );
 }

@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { buildAlternates } from "@/lib/i18nMeta";
 import { webAppSchema, buildJsonLd } from "@/lib/schema";
 import JpgToPdfTool from "./JpgToPdfTool";
-import type { FaqItem } from "@/components/FaqSection";
+import type { FaqItem } from "@/components/AppFaqSection";
 
 interface RichContent {
   whatIs: string;

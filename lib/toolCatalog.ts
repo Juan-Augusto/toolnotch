@@ -2,7 +2,7 @@
  * Flat, server-renderable catalogue of the indexable tools + quizzes.
  *
  * WS-5 uses it for two things:
- *   1. `components/SiteNavIndex.tsx` — the site-wide crawl-depth floor
+ *   1. `components/AppSiteNavIndex.tsx` — the site-wide crawl-depth floor
  *      (a compact <nav> in the footer linking every entry here).
  *   2. `lib/relatedContent.ts` — the category-sibling fallback so every tool
  *      page can always surface >= 2 contextual related-tool links.

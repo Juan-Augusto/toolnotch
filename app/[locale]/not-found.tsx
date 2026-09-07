@@ -44,7 +44,7 @@ export default function NotFoundPage() {
         <div className="pt-2">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 bg-neon hover:bg-emerald-500 active:scale-95 transition-all text-white dark:text-black text-sm font-semibold py-3 px-8 rounded-full cursor-pointer"
+            className="inline-flex items-center gap-2 bg-primary hover:bg-emerald-500 active:scale-95 transition-all text-white dark:text-black text-sm font-semibold py-3 px-8 rounded-full cursor-pointer"
           >
             <Home size={16} />
             <span>{t("backToHome")}</span>

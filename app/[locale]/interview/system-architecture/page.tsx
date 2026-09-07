@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import { SystemArchitectureQuiz } from '@/components/interview/SystemArchitectureQuiz'
+import { AppSystemArchitectureQuiz } from '@/components/interview/AppSystemArchitectureQuiz'
 import { getFlag } from '@/lib/featureFlags'
 
 const PATH = '/interview/system-architecture'
@@ -104,7 +104,7 @@ export default async function SystemArchitectureQuizPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <SystemArchitectureQuiz />
+      <AppSystemArchitectureQuiz />
     </>
   )
 }

@@ -45,7 +45,7 @@ jest.mock('next/dynamic', () => {
 
 // ── Imports after mocks ───────────────────────────────────────────────────────
 
-import CoinFlip from '@/components/fun/CoinFlip'
+import CoinFlip from '@/components/fun/AppCoinFlip'
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 

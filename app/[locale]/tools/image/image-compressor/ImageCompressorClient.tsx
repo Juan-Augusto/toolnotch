@@ -2,15 +2,15 @@
 
 import { useState, useCallback } from 'react'
 import { useTranslations } from 'next-intl'
-import Button from '@/components/Button'
-import DropZone from '@/components/image/DropZone'
-import FormatSelector from '@/components/image/FormatSelector'
-import ComparisonView from '@/components/image/ComparisonView'
-import DownloadButton from '@/components/image/DownloadButton'
-import ToolWrapper from '@/components/ToolWrapper'
+import AppButton from '@/components/AppButton'
+import AppDropZone from '@/components/image/AppDropZone'
+import AppFormatSelector from '@/components/image/AppFormatSelector'
+import AppComparisonView from '@/components/image/AppComparisonView'
+import AppDownloadButton from '@/components/image/AppDownloadButton'
+import AppToolWrapper from '@/components/AppToolWrapper'
 import { compressImage } from '@/lib/imageConversion'
 import type { SupportedFormat, ConversionResult } from '@/lib/imageTypes'
-import type { FaqItem } from '@/components/FaqSection'
+import type { FaqItem } from '@/components/AppFaqSection'
 
 interface RichContent {
   whatIs: string
@@ -64,7 +64,7 @@ export default function ImageCompressorClient({
   }
 
   return (
-    <ToolWrapper
+    <AppToolWrapper
       title={title}
       description={description}
       breadcrumbLabel={title}
@@ -72,9 +72,9 @@ export default function ImageCompressorClient({
       richContent={richContent}
     >
       <div className="space-y-4">
-        <DropZone onFile={handleFile} currentFile={file} />
+        <AppDropZone onFile={handleFile} currentFile={file} />
 
-        <FormatSelector
+        <AppFormatSelector
           format={format}
           quality={quality}
           maxWidth={maxWidth}
@@ -83,9 +83,9 @@ export default function ImageCompressorClient({
           onMaxWidthChange={setMaxWidth}
         />
 
-        <Button onClick={handleCompress} disabled={!file || isProcessing}>
+        <AppButton onClick={handleCompress} disabled={!file || isProcessing}>
           {isProcessing ? t('button.compressing') : t('button.compress')}
-        </Button>
+        </AppButton>
 
         {error && (
           <p className="text-red-500 text-sm bg-red-50 border border-red-100 rounded-lg px-4 py-3">
@@ -95,11 +95,11 @@ export default function ImageCompressorClient({
 
         {result && file && (
           <>
-            <ComparisonView original={file} result={result} />
-            <DownloadButton blob={result.blob} originalName={file.name} format={format} />
+            <AppComparisonView original={file} result={result} />
+            <AppDownloadButton blob={result.blob} originalName={file.name} format={format} />
           </>
         )}
       </div>
-    </ToolWrapper>
+    </AppToolWrapper>
   )
 }

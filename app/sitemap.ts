@@ -37,7 +37,7 @@ const TRUST_ROUTES = [
   '/privacy',
   '/terms',
   // '/contact', '/partners' — robots:noindex (utility / short transparency
-  // pages, WS-6 audit). Footer-linked and crawlable, just not indexed.
+  // pages, WS-6 audit). AppFooter-linked and crawlable, just not indexed.
   '/disclosure',
 ]
 

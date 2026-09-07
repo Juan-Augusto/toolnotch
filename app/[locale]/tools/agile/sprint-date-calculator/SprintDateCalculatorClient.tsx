@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import ToolWrapper from '@/components/ToolWrapper'
-import type { FaqItem } from '@/components/FaqSection'
+import AppToolWrapper from '@/components/AppToolWrapper'
+import type { FaqItem } from '@/components/AppFaqSection'
 
 interface RichContent {
   whatIs: string
@@ -86,7 +86,7 @@ export default function SprintDateCalculatorClient({ title, description, faqs, l
   }
 
   return (
-    <ToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} richContent={richContent}>
+    <AppToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} richContent={richContent}>
       <div className="max-w-2xl mx-auto space-y-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
@@ -103,7 +103,7 @@ export default function SprintDateCalculatorClient({ title, description, faqs, l
             <select
               value={sprintWeeks}
               onChange={e => setSprintWeeks(Number(e.target.value))}
-              className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500 bg-card dark:bg-card text-gray-900 dark:text-gray-100"
+              className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500 bg-tertiary dark:bg-tertiary text-gray-900 dark:text-gray-100"
             >
               <option value={2}>{labels.twoWeeks}</option>
               <option value={3}>{labels.threeWeeks}</option>
@@ -121,12 +121,12 @@ export default function SprintDateCalculatorClient({ title, description, faqs, l
 
         {result && (
           <div className="space-y-4">
-            <div className="bg-card border border-gray-200 rounded-xl overflow-hidden">
+            <div className="bg-tertiary border border-gray-200 rounded-xl overflow-hidden">
               <div className="bg-violet-600 text-white px-4 py-3 flex items-center justify-between">
                 <span className="font-semibold text-sm">{labels.sprintNumber} — {sprintWeeks}w</span>
                 <button
                   onClick={copy}
-                  className="text-xs bg-card/20 hover:bg-card/30 text-white px-3 py-1 rounded-lg transition-colors"
+                  className="text-xs bg-tertiary/20 hover:bg-tertiary/30 text-white px-3 py-1 rounded-lg transition-colors"
                 >
                   {copied ? labels.copiedButton : labels.copyButton}
                 </button>
@@ -152,7 +152,7 @@ export default function SprintDateCalculatorClient({ title, description, faqs, l
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
                 {result.standups.map(d => (
-                  <span key={d.toISOString()} className="text-xs text-gray-600 bg-card border border-gray-200 rounded px-2 py-1 font-mono">
+                  <span key={d.toISOString()} className="text-xs text-gray-600 bg-tertiary border border-gray-200 rounded px-2 py-1 font-mono">
                     {formatDate(d)}
                   </span>
                 ))}
@@ -161,6 +161,6 @@ export default function SprintDateCalculatorClient({ title, description, faqs, l
           </div>
         )}
       </div>
-    </ToolWrapper>
+    </AppToolWrapper>
   )
 }

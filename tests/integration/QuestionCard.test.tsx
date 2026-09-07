@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import QuestionCard from '@/components/quiz/QuestionCard'
+import QuestionCard from '@/components/quiz/AppQuestionCard'
 import { Question } from '@/lib/quizTypes'
 
 // ─── Mock next-intl ──────────────────────────────────────────────────────────

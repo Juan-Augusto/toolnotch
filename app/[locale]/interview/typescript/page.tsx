@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, faqSchema, breadcrumbSchema, type FaqItem } from '@/lib/schema'
-import { TypeScriptQuiz } from '@/components/interview/TypeScriptQuiz'
-import InterviewDepth from '@/components/interview/InterviewDepth'
+import { AppTypeScriptQuiz } from '@/components/interview/AppTypeScriptQuiz'
+import AppInterviewDepth from '@/components/interview/AppInterviewDepth'
 
 const PATH = '/interview/typescript'
 const TITLE = 'TypeScript Interview Quiz — Beginner to Advanced | ToolNotch'
@@ -88,8 +88,8 @@ export default async function TypeScriptQuizPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <TypeScriptQuiz />
-      <InterviewDepth
+      <AppTypeScriptQuiz />
+      <AppInterviewDepth
         sections={depthSections}
         lists={depthLists}
         faqHeading={t('faqHeading')}

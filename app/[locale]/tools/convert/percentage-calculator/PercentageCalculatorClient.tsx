@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Button from "@/components/Button";
+import AppButton from "@/components/AppButton";
 
 interface Props {
   tabs: Record<string, string>;
@@ -85,13 +85,13 @@ export default function PercentageCalculatorClient({
 
   return (
     <div className="max-w-lg mx-auto">
-      <div className="flex gap-1 bg-elevated rounded-xl p-1 mb-4">
+      <div className="flex gap-1 bg-tertiary rounded-xl p-1 mb-4">
         {tabKeys.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`flex-1 py-2 px-2 rounded-lg text-sm font-semibold transition-colors cursor-pointer hover:text-tx-primary ${
-              activeTab === tab ? "bg-card " : "text-tx-secondary/70"
+            className={`flex-1 py-2 px-2 rounded-lg text-sm font-semibold transition-colors cursor-pointer hover:text-foreground ${
+              activeTab === tab ? "bg-tertiary " : "text-label/70"
             }`}
           >
             {tabLabels[tab]}
@@ -125,21 +125,21 @@ export default function PercentageCalculatorClient({
           </div>
           {poResult !== null && (
             <>
-              <span className="uppercase text-tx-secondary/70 font-semibold tracking-wider mb-2 text-xs">
+              <span className="uppercase text-label/70 font-semibold tracking-wider mb-2 text-xs">
                 {percentOf.resultPrefix}
               </span>
-              <div className="bg-elevated p-4 rounded-xl font-bold text-lg">
+              <div className="bg-tertiary p-4 rounded-xl font-bold text-lg">
                 {poResult}
               </div>
             </>
           )}
           <div className="flex gap-4">
-            <Button onClick={calcPercentOf} color="primary">
+            <AppButton onClick={calcPercentOf} color="primary">
               {calculate}
-            </Button>
-            <Button onClick={clearAll} color="panel" className="flex-0">
+            </AppButton>
+            <AppButton onClick={clearAll} color="panel" className="flex-0">
               {clear}
-            </Button>
+            </AppButton>
           </div>
         </div>
       )}
@@ -170,21 +170,21 @@ export default function PercentageCalculatorClient({
           </div>
           {wpResult !== null && (
             <>
-              <span className="uppercase text-tx-secondary/70 font-semibold tracking-wider mb-2 text-xs">
+              <span className="uppercase text-label/70 font-semibold tracking-wider mb-2 text-xs">
                 {whatPercent.resultPrefix}
               </span>
-              <div className="bg-elevated p-4 rounded-xl font-bold text-lg">
+              <div className="bg-tertiary p-4 rounded-xl font-bold text-lg">
                 {wpResult}
               </div>
             </>
           )}
           <div className="flex gap-4">
-            <Button onClick={calcWhatPercent} color="primary">
+            <AppButton onClick={calcWhatPercent} color="primary">
               {calculate}
-            </Button>
-            <Button color="panel" className="flex-0" onClick={clearAll}>
+            </AppButton>
+            <AppButton color="panel" className="flex-0" onClick={clearAll}>
               {clear}
-            </Button>
+            </AppButton>
           </div>
         </div>
       )}
@@ -215,21 +215,21 @@ export default function PercentageCalculatorClient({
           </div>
           {pcResult !== null && (
             <>
-              <span className="uppercase text-tx-secondary/70 font-semibold tracking-wider mb-2 text-xs">
+              <span className="uppercase text-label/70 font-semibold tracking-wider mb-2 text-xs">
                 {percentChange.resultPrefix}
               </span>
-              <div className="bg-elevated p-4 rounded-xl font-bold text-lg">
+              <div className="bg-tertiary p-4 rounded-xl font-bold text-lg">
                 {pcResult}
               </div>
             </>
           )}
           <div className="flex gap-4">
-            <Button onClick={calcChange} color="primary">
+            <AppButton onClick={calcChange} color="primary">
               {calculate}
-            </Button>
-            <Button color="panel" onClick={clearAll} className="flex-0">
+            </AppButton>
+            <AppButton color="panel" onClick={clearAll} className="flex-0">
               {clear}
-            </Button>
+            </AppButton>
           </div>
         </div>
       )}

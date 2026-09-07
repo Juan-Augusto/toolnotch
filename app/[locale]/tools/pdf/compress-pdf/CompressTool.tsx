@@ -3,10 +3,10 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { saveAs } from "file-saver";
-import ToolWrapper from "@/components/ToolWrapper";
-import Button from "@/components/Button";
+import AppToolWrapper from "@/components/AppToolWrapper";
+import AppButton from "@/components/AppButton";
 import { compressPDF } from "@/lib/pdfCompress";
-import type { FaqItem } from "@/components/FaqSection";
+import type { FaqItem } from "@/components/AppFaqSection";
 
 interface RichContent {
   whatIs: string;
@@ -66,7 +66,7 @@ export default function CompressTool({ title, description, faqs, richContent }: 
       : 0;
 
   return (
-    <ToolWrapper
+    <AppToolWrapper
       title={title}
       description={description}
       breadcrumbLabel={title}
@@ -103,7 +103,7 @@ export default function CompressTool({ title, description, faqs, richContent }: 
       {error && <p className="text-red-600 text-sm mb-3 dark:text-red-400">{error}</p>}
 
       {result && (
-        <div className="mb-4 p-4 bg-gray-50 rounded-xl border border-gray-200 text-sm space-y-1 dark:bg-card dark:border-gray-700">
+        <div className="mb-4 p-4 bg-gray-50 rounded-xl border border-gray-200 text-sm space-y-1 dark:bg-tertiary dark:border-gray-700">
           <div className="flex justify-between">
             <span className="text-gray-500 dark:text-gray-400">{t("result.originalSize")}</span>
             <span className="font-medium">{formatBytes(result.originalSize)}</span>
@@ -122,12 +122,12 @@ export default function CompressTool({ title, description, faqs, richContent }: 
       )}
 
       {result ? (
-        <Button onClick={handleDownload}>{t("button.download")}</Button>
+        <AppButton onClick={handleDownload}>{t("button.download")}</AppButton>
       ) : (
-        <Button onClick={handleCompress} disabled={loading || !file}>
+        <AppButton onClick={handleCompress} disabled={loading || !file}>
           {loading ? t("button.compressing") : t("button.compress")}
-        </Button>
+        </AppButton>
       )}
-    </ToolWrapper>
+    </AppToolWrapper>
   );
 }

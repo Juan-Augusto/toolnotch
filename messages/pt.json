@@ -2475,9 +2475,29 @@
     }
   },
   "home": {
-    "heading": "O único site de <highlight>ferramentas</highlight> que você precisa",
+    "caption": "Mais de 40 ferramentas essenciais",
+    "heading": "O <highlight>único</highlight> site de ferramentas que você precisa",
     "subheading": "100% gratuito, sem cadastros e sem uploads. Tudo processado no seu navegador com total privacidade.",
     "moreComingSoon": "Mais ferramentas em breve",
+    "cards": {
+      "tools": {
+        "title": "FERRAMENTAS",
+        "desc": "Comprima imagens, manipule PDFs, faça cálculos e utilize utilitários rápidos e 100% privados direto no navegador."
+      },
+      "quizzes": {
+        "title": "QUIZZES",
+        "desc": "Testes interativos, trivias de esportes, conhecimentos gerais e testes de perfil para desafiar suas habilidades."
+      },
+      "blog": {
+        "title": "BLOG",
+        "desc": "Artigos práticos, tutoriais passo a passo e dicas essenciais para simplificar suas tarefas e rotina diária."
+      },
+      "interview": {
+        "title": "ENTREVISTA",
+        "desc": "Perguntas técnicas reais, conceitos essenciais e simulados de arquitetura e código para acelerar sua carreira."
+      },
+      "button": "Acessar"
+    },
     "nav": {
       "tools": "Ferramentas",
       "blog": "Blog",
@@ -4577,13 +4597,16 @@
   },
   "footer": {
     "links": {
+      "tools": "Ferramentas",
+      "quizzes": "Quizzes",
       "blog": "Blog",
+      "interview": "Entrevista",
       "about": "Sobre",
-      "privacy": "Política de Privacidade",
       "terms": "Termos de Serviço",
+      "privacy": "Política de Privacidade",
       "contact": "Contato",
-      "partners": "Nossos Parceiros",
       "disclosure": "Divulgação",
+      "partners": "Nossos Parceiros",
       "allTools": "Todas as ferramentas"
     },
     "tagline": "Ferramentas gratuitas direto no seu navegador. Sem cadastro. Sem dados armazenados.",

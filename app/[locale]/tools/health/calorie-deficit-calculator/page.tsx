@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import ToolWrapper from '@/components/ToolWrapper'
+import AppToolWrapper from '@/components/AppToolWrapper'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import type { FaqItem } from '@/components/FaqSection'
-import TdeeCalculator from '@/components/health/TdeeCalculator'
+import type { FaqItem } from '@/components/AppFaqSection'
+import AppTdeeCalculator from '@/components/health/AppTdeeCalculator'
 
 const PATH = '/tools/health/calorie-deficit-calculator'
 
@@ -40,15 +40,15 @@ export default async function CalorieDeficitCalculatorPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper
+      <AppToolWrapper
         title={t('deficitTitle')}
         description={t('deficitDescription')}
         breadcrumbLabel={t('deficitTitle')}
         faqs={faqs}
         richContent={richContentRaw}
       >
-        <TdeeCalculator mode="deficit" locale={locale} />
-      </ToolWrapper>
+        <AppTdeeCalculator mode="deficit" locale={locale} />
+      </AppToolWrapper>
     </>
   )
 }

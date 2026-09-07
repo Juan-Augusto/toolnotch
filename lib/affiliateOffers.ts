@@ -1,8 +1,8 @@
 /**
  * Contextual affiliate offers, keyed by bare (locale-stripped) tool path.
  *
- * Rendered by `components/AffiliateOffers.tsx` (inline card under the tool) and
- * `components/AffiliateStickyBar.tsx` (dismissible sticky bar). Each value is a
+ * Rendered by `components/AppAffiliateOffers.tsx` (inline card under the tool) and
+ * `components/AppAffiliateStickyBar.tsx` (dismissible sticky bar). Each value is a
  * list of partner keys from `lib/affiliatePartners.ts`, which owns the URL and
  * category; copy lives in `messages/*.json` under `affiliate.offers.<key>`.
  *

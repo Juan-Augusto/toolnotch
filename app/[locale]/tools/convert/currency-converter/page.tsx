@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import ToolWrapper from "@/components/ToolWrapper";
+import AppToolWrapper from "@/components/AppToolWrapper";
 import CurrencyConverterClient from "./CurrencyConverterClient";
 import { buildAlternates } from "@/lib/i18nMeta";
 import {
@@ -9,7 +9,7 @@ import {
   faqSchema,
   breadcrumbSchema,
 } from "@/lib/schema";
-import type { FaqItem } from "@/components/FaqSection";
+import type { FaqItem } from "@/components/AppFaqSection";
 
 interface RichContent {
   whatIs: string;
@@ -64,7 +64,7 @@ export default async function CurrencyConverterPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <ToolWrapper
+      <AppToolWrapper
         title={t("title")}
         description={t("description")}
         breadcrumbLabel={t("title")}
@@ -72,7 +72,7 @@ export default async function CurrencyConverterPage({ params }: Props) {
         richContent={richContent}
       >
         <CurrencyConverterClient />
-      </ToolWrapper>
+      </AppToolWrapper>
     </>
   );
 }

@@ -54,7 +54,7 @@ jest.mock('next/dynamic', () => {
 
 // ── Imports after mocks ───────────────────────────────────────────────────────
 
-import DiceRoller from '@/components/fun/DiceRoller'
+import DiceRoller from '@/components/fun/AppDiceRoller'
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 

@@ -2924,9 +2924,29 @@
     }
   },
   "home": {
-    "heading": "The only <highlight>tool site</highlight> you'll ever need",
+    "caption": "Over 40 essential tools",
+    "heading": "The <highlight>only</highlight> tool site you'll ever need",
     "subheading": "100% free, no sign-ups, and no uploads. Everything is processed directly in your browser with total privacy.",
     "moreComingSoon": "More tools coming soon",
+    "cards": {
+      "tools": {
+        "title": "TOOLS",
+        "desc": "Compress images, handle PDFs, calculate finances, and use fast, 100% private utilities directly in your browser."
+      },
+      "quizzes": {
+        "title": "QUIZZES",
+        "desc": "Interactive quizzes, sports trivia, general knowledge, and personality tests to challenge your skills."
+      },
+      "blog": {
+        "title": "BLOG",
+        "desc": "Practical articles, step-by-step tutorials, and essential tips to streamline your daily workflow and tasks."
+      },
+      "interview": {
+        "title": "INTERVIEW",
+        "desc": "Real technical questions, core concepts, and architecture mock tests to accelerate your tech career."
+      },
+      "button": "Access"
+    },
     "nav": {
       "tools": "Tools",
       "blog": "Blog",
@@ -5091,13 +5111,16 @@
   },
   "footer": {
     "links": {
+      "tools": "Tools",
+      "quizzes": "Quizzes",
       "blog": "Blog",
+      "interview": "Interview",
       "about": "About",
-      "privacy": "Privacy Policy",
       "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
       "contact": "Contact",
-      "partners": "Our Partners",
       "disclosure": "Disclosure",
+      "partners": "Our Partners",
       "allTools": "All tools"
     },
     "tagline": "Free tools that run in your browser. No sign-up. No data stored.",

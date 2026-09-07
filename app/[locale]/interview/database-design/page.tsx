@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import { DatabaseDesignQuiz } from '@/components/interview/DatabaseDesignQuiz'
+import { AppDatabaseDesignQuiz } from '@/components/interview/AppDatabaseDesignQuiz'
 import { getFlag } from '@/lib/featureFlags'
 
 const PATH = '/interview/database-design'
@@ -103,7 +103,7 @@ export default async function DatabaseDesignQuizPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <DatabaseDesignQuiz />
+      <AppDatabaseDesignQuiz />
     </>
   )
 }

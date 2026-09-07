@@ -19,7 +19,7 @@ jest.mock('next-intl', () => ({
   useTranslations: () => (key: string) => key,
 }))
 
-jest.mock('@/components/converter/QuickReferenceTable', () => {
+jest.mock('@/components/converter/AppQuickReferenceTable', () => {
   const QuickReferenceTableMock = () => null
   QuickReferenceTableMock.displayName = 'QuickReferenceTableMock'
   return QuickReferenceTableMock
@@ -29,7 +29,7 @@ jest.mock('@/components/converter/QuickReferenceTable', () => {
 // Component under test
 // ---------------------------------------------------------------------------
 
-import ConversionWidget from '@/components/converter/ConversionWidget'
+import ConversionWidget from '@/components/converter/AppConversionWidget'
 
 // ---------------------------------------------------------------------------
 // Helpers

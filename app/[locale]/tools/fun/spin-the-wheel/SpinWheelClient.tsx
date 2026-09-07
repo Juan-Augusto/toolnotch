@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
-import SpinWheel from '@/components/fun/SpinWheel'
+import AppSpinWheel from '@/components/fun/AppSpinWheel'
 
 const DEFAULT_ITEMS = ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5', 'Option 6']
 
@@ -31,7 +31,7 @@ export default function SpinWheelClient() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       <div>
-        <SpinWheel items={items} onResult={setLastWinner} />
+        <AppSpinWheel items={items} onResult={setLastWinner} />
         {lastWinner && (
           <div className="mt-4 text-center">
             <p className="text-sm text-gray-500">Last result:</p>

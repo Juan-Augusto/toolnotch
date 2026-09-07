@@ -7,8 +7,8 @@ import {
   faqSchema,
   breadcrumbSchema,
 } from "@/lib/schema";
-import type { FaqItem } from "@/components/FaqSection";
-import ToolWrapper from "@/components/ToolWrapper";
+import type { FaqItem } from "@/components/AppFaqSection";
+import AppToolWrapper from "@/components/AppToolWrapper";
 import InvoiceBuilder from "../invoice-generator/InvoiceBuilder";
 
 interface RichContent {
@@ -68,7 +68,7 @@ export default async function InvoiceGeneratorUkPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <ToolWrapper
+      <AppToolWrapper
         title={t("title")}
         description={t("description")}
         breadcrumbLabel={t("title")}
@@ -77,7 +77,7 @@ export default async function InvoiceGeneratorUkPage({ params }: Props) {
         noCardWrapper
       >
         <InvoiceBuilder locale="uk" />
-      </ToolWrapper>
+      </AppToolWrapper>
     </>
   );
 }

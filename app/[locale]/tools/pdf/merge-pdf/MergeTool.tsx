@@ -21,11 +21,11 @@ import {
 import { CSS } from "@dnd-kit/utilities";
 import { saveAs } from "file-saver";
 import { GripVertical, X } from "lucide-react";
-import ToolWrapper from "@/components/ToolWrapper";
+import AppToolWrapper from "@/components/AppToolWrapper";
 import { mergePDFs } from "@/lib/pdfMerge";
 import { PDFJob } from "@/lib/pdfTypes";
-import type { FaqItem } from "@/components/FaqSection";
-import Button from "@/components/Button";
+import type { FaqItem } from "@/components/AppFaqSection";
+import AppButton from "@/components/AppButton";
 
 interface RichContent {
   whatIs: string;
@@ -61,7 +61,7 @@ function SortableItem({ id, name, onRemove }: SortableItemProps) {
     <div
       ref={setNodeRef}
       style={style}
-      className="flex items-center gap-3 p-3 bg-gray-50 border border-gray-200 rounded-xl dark:bg-card dark:border-gray-700"
+      className="flex items-center gap-3 p-3 bg-gray-50 border border-gray-200 rounded-xl dark:bg-tertiary dark:border-gray-700"
     >
       <button
         {...attributes}
@@ -137,7 +137,7 @@ export default function MergeTool({ title, description, faqs, richContent }: Pro
   };
 
   return (
-    <ToolWrapper
+    <AppToolWrapper
       title={title}
       description={description}
       breadcrumbLabel={title}
@@ -179,12 +179,12 @@ export default function MergeTool({ title, description, faqs, richContent }: Pro
       {error && <p className="text-red-600 text-sm mb-3 dark:text-red-400">{error}</p>}
       {done && <p className="text-green-600 text-sm mb-3 dark:text-green-400">{t("success")}</p>}
 
-      <Button
+      <AppButton
         onClick={handleMerge}
         disabled={loading || jobs.length < 2}
       >
         {loading ? t("button.merging") : t("button.merge")}
-      </Button>
-    </ToolWrapper>
+      </AppButton>
+    </AppToolWrapper>
   );
 }

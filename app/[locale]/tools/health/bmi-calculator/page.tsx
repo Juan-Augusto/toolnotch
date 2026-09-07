@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
-import ToolWrapper from '@/components/ToolWrapper'
+import AppToolWrapper from '@/components/AppToolWrapper'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import type { FaqItem } from '@/components/FaqSection'
-import BmiCalculator from '@/components/health/BmiCalculator'
+import type { FaqItem } from '@/components/AppFaqSection'
+import AppBmiCalculator from '@/components/health/AppBmiCalculator'
 
 const PATH = '/tools/health/bmi-calculator'
 
@@ -41,7 +41,7 @@ export default async function BmiCalculatorPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper
+      <AppToolWrapper
         title={t('bmiTitle')}
         description={t('bmiDescription')}
         breadcrumbLabel={t('bmiTitle')}
@@ -53,8 +53,8 @@ export default async function BmiCalculatorPage({ params }: Props) {
             Read: BMI vs Body Fat Percentage: What&apos;s the Difference? -&gt;
           </Link>
         </p>
-        <BmiCalculator locale={locale} />
-      </ToolWrapper>
+        <AppBmiCalculator locale={locale} />
+      </AppToolWrapper>
     </>
   )
 }

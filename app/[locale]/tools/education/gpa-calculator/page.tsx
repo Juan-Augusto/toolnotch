@@ -1,14 +1,14 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import ToolWrapper from '@/components/ToolWrapper'
+import AppToolWrapper from '@/components/AppToolWrapper'
 import { buildAlternatesForLocale, localizedPath } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, howToSchema, breadcrumbSchema } from '@/lib/schema'
-import type { FaqItem } from '@/components/FaqSection'
-import GpaCalculator from '@/components/education/GpaCalculator'
-import BrGradeConversionTable, {
+import type { FaqItem } from '@/components/AppFaqSection'
+import AppGpaCalculator from '@/components/education/AppGpaCalculator'
+import AppBrGradeConversionTable, {
   type GradeConversionRow,
   type GradeConversionColumns,
-} from '@/components/education/BrGradeConversionTable'
+} from '@/components/education/AppBrGradeConversionTable'
 import { BLOG_SLUG_GROUPS, type BlogLocale } from '@/data/blog/slugTranslations'
 
 const PATH = '/tools/education/gpa-calculator'
@@ -77,7 +77,7 @@ export default async function GpaCalculatorPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolWrapper
+      <AppToolWrapper
         title={t('title')}
         description={t('description')}
         breadcrumbLabel={t('title')}
@@ -85,7 +85,7 @@ export default async function GpaCalculatorPage({ params }: Props) {
         richContent={richContent}
         suppressHowToSchema
         extraContent={
-          <BrGradeConversionTable
+          <AppBrGradeConversionTable
             heading={brConversion.heading}
             intro={brConversion.intro}
             columns={brConversion.columns}
@@ -98,8 +98,8 @@ export default async function GpaCalculatorPage({ params }: Props) {
           />
         }
       >
-        <GpaCalculator mode="semester" locale={locale} />
-      </ToolWrapper>
+        <AppGpaCalculator mode="semester" locale={locale} />
+      </AppToolWrapper>
     </>
   )
 }

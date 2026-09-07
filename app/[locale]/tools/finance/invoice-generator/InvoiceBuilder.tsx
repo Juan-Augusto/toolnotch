@@ -5,7 +5,7 @@ import { InvoiceData, InvoiceTotals } from "@/lib/invoiceTypes";
 import { calculateTotals } from "@/lib/invoiceCalc";
 import { saveDraft, loadDraft } from "@/lib/invoiceStorage";
 import { LOCALE_CONFIGS, LocaleKey } from "@/data/invoiceLocales";
-import Button from "@/components/Button";
+import AppButton from "@/components/AppButton";
 import InvoiceForm from "./InvoiceForm";
 import InvoicePreview from "./InvoicePreview";
 
@@ -140,10 +140,6 @@ export default function InvoiceBuilder({ locale }: InvoiceBuilderProps) {
   return (
     <>
       <style>{`
-        .card-neon:hover {
-          border-color: var(--base-border) !important;
-          box-shadow: none !important;
-        }
         .invoice-preview {
           background-color: white !important;
           color: #4b5563 !important;
@@ -193,13 +189,7 @@ export default function InvoiceBuilder({ locale }: InvoiceBuilderProps) {
             padding: 0 !important;
             margin: 0 !important;
           }
-          .card-neon {
-            border: none !important;
-            box-shadow: none !important;
-            background: transparent !important;
-            padding: 0 !important;
-            margin: 0 !important;
-          }
+
           .animate-fade-in-up {
             animation: none !important;
             transform: none !important;
@@ -218,16 +208,16 @@ export default function InvoiceBuilder({ locale }: InvoiceBuilderProps) {
           }
         }
       `}</style>
-      <div className="bg-card border border-bd-base rounded-xl p-6 no-print-card">
+      <div className="bg-tertiary border border-border rounded-xl p-6 no-print-card">
         {/* Tab Switcher */}
-        <div className="flex border-b border-bd-base -mx-6 px-6 mb-6 no-print">
+        <div className="flex border-b border-border -mx-6 px-6 mb-6 no-print">
           <button
             type="button"
             onClick={() => setActiveTab("form")}
             className={`flex-1 pb-3 text-center text-sm font-semibold border-b-2 transition-colors cursor-pointer ${
               activeTab === "form"
-                ? "border-neon text-neon"
-                : "border-transparent text-tx-secondary hover:text-tx-primary"
+                ? "border-neon text-primary"
+                : "border-transparent text-label hover:text-foreground"
             }`}
           >
             {t("formTab")}
@@ -237,8 +227,8 @@ export default function InvoiceBuilder({ locale }: InvoiceBuilderProps) {
             onClick={() => setActiveTab("preview")}
             className={`flex-1 pb-3 text-center text-sm font-semibold border-b-2 transition-colors cursor-pointer ${
               activeTab === "preview"
-                ? "border-neon text-neon"
-                : "border-transparent text-tx-secondary hover:text-tx-primary"
+                ? "border-neon text-primary"
+                : "border-transparent text-label hover:text-foreground"
             }`}
           >
             {t("previewTab")}
@@ -268,9 +258,9 @@ export default function InvoiceBuilder({ locale }: InvoiceBuilderProps) {
         <div className={activeTab === "preview" ? "block" : "hidden-print"}>
           <InvoicePreview invoice={invoice} totals={totals} locale={locale} />
           <div className="mt-6 no-print">
-            <Button onClick={handlePrint} className="w-full">
+            <AppButton onClick={handlePrint} className="w-full">
               {t("downloadPrint")}
-            </Button>
+            </AppButton>
           </div>
         </div>
       </div>

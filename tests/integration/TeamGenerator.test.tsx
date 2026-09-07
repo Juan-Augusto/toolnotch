@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
-import TeamGenerator from '@/components/fun/TeamGenerator'
+import TeamGenerator from '@/components/fun/AppTeamGenerator'
 
 jest.mock('next-intl', () => ({
   useTranslations: (namespace?: string) => {

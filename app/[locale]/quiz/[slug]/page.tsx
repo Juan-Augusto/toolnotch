@@ -11,10 +11,10 @@ import {
   faqSchema,
   buildLocalizedUrl,
 } from '@/lib/schema'
-import QuizPlayer from '@/components/quiz/QuizPlayer'
-import TriviaPlayer from '@/components/quiz/TriviaPlayer'
-import QuizDepth, { getQuizDepthContent } from '@/components/quiz/QuizDepth'
-import RelatedQuizzes from '@/components/quiz/RelatedQuizzes'
+import AppQuizPlayer from '@/components/quiz/AppQuizPlayer'
+import AppTriviaPlayer from '@/components/quiz/AppTriviaPlayer'
+import AppQuizDepth, { getQuizDepthContent } from '@/components/quiz/AppQuizDepth'
+import AppRelatedQuizzes from '@/components/quiz/AppRelatedQuizzes'
 
 // ── Static params ─────────────────────────────────────────────────────────────
 export function generateStaticParams() {
@@ -73,17 +73,17 @@ export default async function QuizPage({ params }: { params: Promise<{ locale: s
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="max-w-2xl mx-auto px-4 py-10">
-        <div className="bg-card rounded-2xl shadow-sm border border-gray-200 dark:bg-card dark:border-gray-700 p-8">
+        <div className="bg-tertiary rounded-2xl shadow-sm border border-gray-200 dark:bg-tertiary dark:border-gray-700 p-8">
           {isTriviaQuiz(quiz) ? (
-            <TriviaPlayer quiz={quiz} locale={locale} />
+            <AppTriviaPlayer quiz={quiz} locale={locale} />
           ) : (
-            <QuizPlayer quiz={quiz} locale={locale} />
+            <AppQuizPlayer quiz={quiz} locale={locale} />
           )}
         </div>
       </div>
 
-      {depth && <QuizDepth content={depth} currentSlug={slug} />}
-      {!depth && <RelatedQuizzes slug={slug} locale={locale} />}
+      {depth && <AppQuizDepth content={depth} currentSlug={slug} />}
+      {!depth && <AppRelatedQuizzes slug={slug} locale={locale} />}
     </main>
   )
 }

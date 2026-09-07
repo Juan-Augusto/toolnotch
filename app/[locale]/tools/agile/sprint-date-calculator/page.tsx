@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, webAppSchema, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import type { FaqItem } from '@/components/FaqSection'
+import type { FaqItem } from '@/components/AppFaqSection'
 import SprintDateCalculatorClient from './SprintDateCalculatorClient'
 
 interface RichContent {
