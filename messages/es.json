@@ -138,11 +138,31 @@
         },
         {
           "question": "¿Puedo combinar PDFs protegidos con contraseña?",
-          "answer": "Los PDFs protegidos con contraseña no se pueden combinar. Primero elimina la protección con tu visor de PDF."
+          "answer": "Los PDFs protegidos con contraseña no se pueden combinar. Quita primero la protección en tu visor de PDF y combina el archivo desbloqueado."
+        },
+        {
+          "question": "¿Combinar PDFs reduce la calidad?",
+          "answer": "No. La herramienta combina los PDFs a nivel de estructura del archivo, así que las imágenes, las fuentes y el formato se mantienen tal como estaban en los originales. No hay recompresión ni pérdida."
+        },
+        {
+          "question": "¿Puedo reordenar las páginas antes de combinar?",
+          "answer": "Sí. Arrastra las tarjetas de los archivos al orden que quieras antes de hacer clic en Combinar. El PDF final sigue exactamente ese orden, así que pon la portada o el índice como primer archivo."
+        },
+        {
+          "question": "¿Cuántos archivos puedo combinar a la vez?",
+          "answer": "No hay un límite fijo de cantidad. Puedes combinar dos archivos o veinte; solo las combinaciones muy grandes pueden ir más lentas según la memoria de tu equipo."
+        },
+        {
+          "question": "¿Funciona en cualquier navegador y en el celular?",
+          "answer": "Sí. La herramienta funciona en todos los navegadores modernos — Chrome, Firefox, Safari y Edge — tanto en computadora como en celular, sin instalar nada."
+        },
+        {
+          "question": "¿Mis datos quedan privados al usar la herramienta?",
+          "answer": "Sí. Toda la combinación ocurre en tu navegador con JavaScript. Los archivos PDF no se envían a ningún servidor y se borran de la memoria en cuanto cierras o recargas la página."
         }
       ],
       "richContent": {
-        "whatIs": "La fusión de PDF combina varios archivos PDF en un solo documento con un solo clic. Casos comunes de uso incluyen enviar múltiples documentos como una sola anexación — las solicitudes de trabajo, los envíos de subsidios y las matrículas universitarias a menudo requieren un solo archivo — crear informes combinados desde secciones separadas, archivar documentos relacionados juntos para el almacenamiento a largo plazo, e imprimir múltiples archivos en secuencia sin cambiar entre documentos. El PDF fusionado mantiene la calidad original de cada documento fuente: imágenes, fuentes y formato se preservan exactamente. El orden de las páginas en el archivo fusionado sigue el orden de carga, por lo que puedes arrastrar y reordenar los archivos antes de fusionar para controlar exactamente qué páginas aparecen primero.",
+        "whatIs": "La combinación de PDF une varios archivos PDF en un solo documento con un clic. Los casos de uso más comunes son enviar varios documentos como un único adjunto — las postulaciones de trabajo, las solicitudes de becas y las matrículas universitarias suelen pedir un solo archivo —, armar informes combinados a partir de secciones separadas, archivar documentos relacionados juntos para el largo plazo e imprimir varios archivos en secuencia sin cambiar de documento. El PDF combinado conserva la calidad original de cada documento de origen: imágenes, fuentes y formato se preservan exactamente. El orden de las páginas sigue el orden de carga, así que puedes arrastrar y reordenar los archivos antes de combinar para controlar qué páginas van primero.",
         "howToUse": [
           "Haz clic en el área de carga o arrastra y suelta tus archivos PDF en la zona de soltar.",
           "Arrastra las tarjetas de archivo para reordenarlas — el PDF fusionado seguirá el exacto orden que establezcas.",
@@ -378,19 +398,39 @@
         },
         {
           "question": "¿Qué tamaño tendrán las páginas del PDF?",
-          "answer": "Cada página tiene las dimensiones de la imagen correspondiente, por lo que tus imágenes nunca se escalan ni se recortan."
+          "answer": "Cada página tiene las dimensiones de la imagen correspondiente, así que tus imágenes nunca se escalan, se estiran ni se recortan: se conserva cada píxel del original."
+        },
+        {
+          "question": "¿Se mantiene la calidad de las imágenes?",
+          "answer": "Sí. La herramienta incrusta los datos originales de la imagen directamente en el PDF, sin recodificar, por lo que no hay pérdida de calidad en la conversión."
+        },
+        {
+          "question": "¿Puedo juntar varias imágenes en un mismo PDF?",
+          "answer": "Sí, y es el uso principal. Agrega tantas imágenes como quieras y cada una se convierte en una página del PDF final, en el orden que definas."
+        },
+        {
+          "question": "¿Cómo reordeno las imágenes antes de convertir?",
+          "answer": "Arrastra las miniaturas al orden que quieras antes de hacer clic en Convertir. Las páginas del PDF siguen exactamente esa secuencia."
+        },
+        {
+          "question": "¿Hay un límite de cantidad de imágenes?",
+          "answer": "No hay un límite fijo. Puedes combinar dos imágenes o cincuenta en un solo PDF. Los lotes muy grandes pueden tardar unos segundos más según tu equipo."
+        },
+        {
+          "question": "¿El texto de las fotos queda buscable en el PDF?",
+          "answer": "No. La salida es un PDF basado en imágenes, así que el texto dentro de las fotos no se puede seleccionar ni buscar; para eso habría que aplicar OCR (reconocimiento de texto) aparte."
         }
       ],
       "richContent": {
-        "whatIs": "La conversión de JPG a PDF inserta una o más imágenes JPEG en un documento PDF. Los casos de uso incluyen convertir fotos de notas escritas a mano o formularios llenos de papel en un documento sumitábel, combinar varias imágenes escaneadas en un solo PDF para que todo llegue en un solo archivo, crear un portafolio PDF a partir de una colección de archivos de imagen y enviar documentos de identificación fotográfica en formato PDF según lo requieren muchas formas oficiales, solicitudes de visa y procesos de incorporación de RRHH. Es importante notar que la salida es un PDF basado en imágenes — el texto en cualquier imagen no es legible o searchable por máquina a menos que apliques OCR (recognition óptica de caracteres) por separado.",
+        "whatIs": "La conversión de JPG a PDF incrusta una o más imágenes JPEG en un documento PDF. Sirve para convertir fotos de notas escritas a mano o de formularios de papel completados en un documento que se puede enviar, unir varias imágenes escaneadas en un solo PDF para que todo llegue en un archivo, armar un portafolio en PDF a partir de una colección de imágenes y enviar documentos de identidad en PDF, como piden muchos formularios oficiales, solicitudes de visa y procesos de incorporación de RR. HH. Conviene tener en cuenta que la salida es un PDF de imágenes: el texto que aparezca en las fotos no es legible ni buscable por la máquina a menos que apliques OCR (reconocimiento óptico de caracteres) por separado.",
         "howToUse": [
-          "Sube una o más imágenes JPEG o PNG haciendo clic en el área de soltar o arrastrando los archivos dentro.",
-          "Arrastra las miniaturas de las imágenes para ordenarlas según el orden que deseas que aparezcan en el PDF.",
+          "Sube una o más imágenes JPEG o PNG haciendo clic en el área de soltar o arrastrando los archivos.",
+          "Arrastra las miniaturas para ordenarlas según el orden en que quieres que aparezcan en el PDF.",
           "Haz clic en Convertir a PDF para generar el documento.",
-          "El PDF se descarga instantáneamente a tu dispositivo."
+          "El PDF se descarga al instante a tu dispositivo."
         ],
-        "whyItMatters": "Muchas plataformas de presentación oficial, sistemas de solicitud universitaria y plataformas de RRHH aceptan PDF pero no JPEG. Combinar varias imágenes en un solo PDF también satisface los requisitos de envío de archivos individuales — evitando el problema de una forma que acepta solo una anexión cuando tienes tres páginas escaneadas. El contenedor PDF también soporta metadatos (título, autor), protección con contraseña y firmas digitales que los archivos JPEG raw no tienen, dándote más control sobre cómo se usa el documento después de la entrega.",
-        "proTip": "Todo el procesamiento ocurre completamente en tu navegador — ningún archivo se carga a ningún servidor. Tus documentos nunca salen de tu dispositivo. Si tus imágenes son muy de alta resolución — las fotos del teléfono generalmente son de 4000×3000 píxeles y 6–12 MB cada una — comprime o redimensiona las imágenes antes de convertirlas. Un PDF que contiene tres imágenes no comprimidas de fotos del teléfono puede alcanzar hasta 30–40 MB. Busca imágenes con menos de 2 MB cada una para producir un PDF de salida razonablemente pequeño que pase la mayoría de los límites de tamaño de carga."
+        "whyItMatters": "Muchos portales de presentación oficiales, sistemas de admisión universitaria y plataformas de RR. HH. aceptan PDF pero no JPEG. Unir varias imágenes en un solo PDF también resuelve el requisito de 'un solo archivo': el problema de un formulario que acepta un único adjunto cuando tienes tres páginas escaneadas. El contenedor PDF además admite metadatos (título, autor), protección con contraseña y firmas digitales que un JPEG suelto no ofrece, lo que te da más control sobre cómo se usa el documento después de entregarlo.",
+        "proTip": "Todo el procesamiento ocurre en tu navegador: ningún archivo se sube a un servidor y tus documentos no salen del dispositivo. Si tus imágenes son de muy alta resolución — las fotos de celular suelen ser de 4000×3000 píxeles y de 6 a 12 MB cada una —, comprímelas o rediménsionalas antes de convertir. Un PDF con tres fotos de celular sin comprimir puede llegar a 30–40 MB. Apunta a imágenes de menos de 2 MB cada una para obtener un PDF de tamaño razonable que pase la mayoría de los límites de carga."
       }
     }
   },

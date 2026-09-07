@@ -138,7 +138,27 @@
         },
         {
           "question": "Posso mesclar PDFs com senha?",
-          "answer": "PDFs com senha não podem ser mesclados. Remova a proteção por senha primeiro usando o seu visualizador de PDF."
+          "answer": "PDFs com senha não podem ser mesclados. Remova a proteção por senha primeiro no seu visualizador de PDF e mescle o arquivo desbloqueado."
+        },
+        {
+          "question": "Mesclar PDFs reduz a qualidade?",
+          "answer": "Não. A ferramenta combina os PDFs no nível da estrutura do arquivo, então imagens, fontes e formatação são mantidas exatamente como estavam nos originais. Não há recompressão nem perda."
+        },
+        {
+          "question": "Posso reordenar as páginas antes de mesclar?",
+          "answer": "Pode. Arraste os cartões dos arquivos para a ordem que você quiser antes de clicar em Mesclar. O PDF final segue exatamente essa ordem, então coloque a capa ou o índice como primeiro arquivo."
+        },
+        {
+          "question": "Quantos arquivos posso mesclar de uma vez?",
+          "answer": "Não há limite fixo de quantidade. Dá para mesclar dois arquivos ou vinte — combinações muito grandes só podem ficar mais lentas dependendo da memória do seu aparelho."
+        },
+        {
+          "question": "Funciona em qualquer navegador e no celular?",
+          "answer": "Sim. A ferramenta funciona em todos os navegadores modernos — Chrome, Firefox, Safari e Edge — tanto no computador quanto no celular, sem instalar nada."
+        },
+        {
+          "question": "Meus dados ficam privados ao usar a ferramenta?",
+          "answer": "Ficam. Toda a mesclagem acontece no seu navegador, com JavaScript. Os arquivos PDF não são enviados para nenhum servidor e são apagados da memória assim que você fecha ou atualiza a página."
         }
       ],
       "richContent": {
@@ -215,7 +235,31 @@
         },
         {
           "question": "Como saber quantas páginas meu PDF tem?",
-          "answer": "Abra o PDF em qualquer visualizador (como o navegador ou o Adobe Reader) para ver o total de páginas."
+          "answer": "Abra o PDF em qualquer visualizador (o próprio navegador ou o Adobe Reader) para ver o total de páginas antes de definir os intervalos."
+        },
+        {
+          "question": "Posso dividir por intervalos de páginas?",
+          "answer": "Pode. Informe os intervalos no campo (ex.: 1-3, 4-6, 7) e cada intervalo vira um PDF separado dentro de um arquivo ZIP. Deixe o campo em branco para separar todas as páginas individualmente."
+        },
+        {
+          "question": "O que acontece com o arquivo original?",
+          "answer": "Nada. A ferramenta apenas lê o original para gerar os novos arquivos divididos; o seu PDF de origem continua intacto no dispositivo."
+        },
+        {
+          "question": "Quantas páginas posso dividir de uma vez?",
+          "answer": "Não há limite de páginas. Dá para dividir um PDF de 2 ou de 500 páginas — arquivos maiores só levam alguns segundos a mais para processar."
+        },
+        {
+          "question": "Posso dividir um PDF protegido por senha?",
+          "answer": "Não. A ferramenta não consegue ler PDFs com senha. Remova a proteção primeiro no seu visualizador e depois divida o arquivo desbloqueado."
+        },
+        {
+          "question": "Dividir reduz a qualidade das imagens?",
+          "answer": "Não. A divisão só reorganiza as páginas em arquivos separados. Imagens, texto e formatação de cada página são preservados por completo."
+        },
+        {
+          "question": "A ferramenta é gratuita de verdade?",
+          "answer": "É. O ToolNotch é totalmente gratuito, sem assinatura, sem limite de uso e sem marca d'água nos arquivos de saída."
         }
       ],
       "richContent": {
@@ -271,7 +315,31 @@
         },
         {
           "question": "Meu arquivo é enviado para algum lugar?",
-          "answer": "Não. A compressão funciona inteiramente no seu navegador. Seu arquivo nunca sai do dispositivo."
+          "answer": "Não. A compressão funciona inteiramente no seu navegador. Seu arquivo nunca sai do dispositivo e é apagado da memória quando você fecha a aba."
+        },
+        {
+          "question": "Quanto dá para reduzir o tamanho de um PDF?",
+          "answer": "Depende do arquivo. PDFs com muitos metadados redundantes ou fluxos de objetos não otimizados podem encolher de 20% a 50%. PDFs já otimizados podem reduzir pouco ou nada."
+        },
+        {
+          "question": "A compressão afeta a qualidade do texto?",
+          "answer": "Não. A ferramenta comprime a estrutura do documento, não o texto nem as fontes embutidas. Todo o texto continua legível e pesquisável depois da compressão."
+        },
+        {
+          "question": "O que deixa um PDF pesado?",
+          "answer": "As causas mais comuns são imagens embutidas em alta resolução, fluxos de objetos não otimizados, fontes embutidas e metadados redundantes. PDFs cheios de imagens têm a maior margem de redução."
+        },
+        {
+          "question": "Existe um tamanho máximo de arquivo?",
+          "answer": "Não há limite rígido, mas arquivos muito grandes (acima de 100 MB) podem ficar lentos dependendo do navegador e da memória do aparelho. Para melhor desempenho, recomendamos arquivos abaixo de 50 MB."
+        },
+        {
+          "question": "Posso comprimir vários PDFs de uma vez?",
+          "answer": "Por enquanto a ferramenta comprime um arquivo por vez. Comprima o primeiro, baixe o resultado e envie o próximo."
+        },
+        {
+          "question": "Qual a diferença entre isto e compactar em ZIP?",
+          "answer": "O ZIP cria um contêiner compactado, mas não reduz o tamanho interno do PDF em si. A compressão de PDF diminui a estrutura interna do arquivo, então o próprio PDF fica menor mesmo sem o ZIP — o que facilita anexar direto no e-mail."
         }
       ],
       "richContent": {
@@ -324,19 +392,39 @@
         },
         {
           "question": "Como abro o arquivo ZIP?",
-          "answer": "No Windows, clique com o botão direito no ZIP e escolha Extrair Tudo. No Mac, dê dois cliques. Cada página é um JPEG separado."
+          "answer": "No Windows, clique com o botão direito no ZIP e escolha Extrair Tudo. No Mac, dê dois cliques. Cada página vira um JPEG separado dentro da pasta."
+        },
+        {
+          "question": "Qual será a resolução das imagens JPG?",
+          "answer": "As páginas são renderizadas em resolução 2x com o PDF.js, o que gera imagens nítidas, boas para tela e apresentações. As dimensões exatas em pixels dependem do tamanho original da página."
+        },
+        {
+          "question": "O texto continua legível no JPG?",
+          "answer": "Sim. Como as páginas são renderizadas em 2x, o texto fica nítido nas imagens. Em fontes muito pequenas, basta dar zoom no JPG para ler com clareza."
+        },
+        {
+          "question": "JPG é o melhor formato para converter PDF?",
+          "answer": "O JPG é ideal para PDFs com fotos ou gráficos complexos. Para páginas com texto ou diagramas sobre fundo branco, o PNG dá bordas mais definidas — mas o JPG é a opção mais compatível em qualquer lugar."
+        },
+        {
+          "question": "Qual será o tamanho dos arquivos de saída?",
+          "answer": "Cada página convertida costuma ter entre 200 KB e 1 MB em JPEG, dependendo da complexidade e das imagens. Um PDF de 10 páginas costuma gerar um ZIP de 2 a 10 MB."
+        },
+        {
+          "question": "Dá para converter um PDF digitalizado em JPG?",
+          "answer": "Dá. PDFs digitalizados são basicamente imagens dentro de um contêiner PDF e convertem para JPG como qualquer outra página. A qualidade da saída acompanha a resolução do escaneamento original."
         }
       ],
       "richContent": {
-        "whatIs": "A conversão de PDF para JPG renderiza cada página de um PDF como um arquivo de imagem JPEG. Casos de uso incluem incorporar conteúdo PDF em apresentações ou sites, compartilhar em plataformas de mídia social que não suportam upload de PDF, criar visualizações em miniatura para sistemas de gerenciamento de documentos e extrair diagramas ou gráficos. A resolução é importante: 72 DPI é resolução de tela (arquivos pequenos, adequados para web), 150 DPI é qualidade web (nítido na maioria dos monitores) e 300 DPI é qualidade de impressão (arquivos grandes, detalhe máximo).",
+        "whatIs": "A conversão de PDF para JPG renderiza cada página de um PDF como um arquivo de imagem JPEG. Serve para incorporar conteúdo de PDF em apresentações e sites — nem o PowerPoint nem a tag <img> do HTML exibem PDF direto —, compartilhar páginas em redes sociais que não aceitam upload de PDF, criar miniaturas de pré-visualização para sistemas de gestão de documentos e extrair diagramas ou gráficos de um PDF para usar em outros programas. A resolução importa: 72 DPI é resolução de tela (arquivos pequenos, suficiente para miniaturas na web), 150 DPI é qualidade web (nítido na maioria dos monitores) e 300 DPI é qualidade de impressão (arquivos grandes, detalhe máximo). Quanto maior o DPI, maior o arquivo e mais fino o detalhe de texto capturado.",
         "howToUse": [
           "Envie seu PDF clicando na zona para soltar ou arrastando o arquivo para dentro.",
           "Clique em Converter para JPG para renderizar todas as páginas como imagens JPEG.",
-          "Visualize as imagens convertidas na grade que aparece abaixo do botão.",
-          "Baixe uma única imagem diretamente ou baixe todas as páginas como um arquivo ZIP para PDFs de várias páginas."
+          "Veja as imagens convertidas na grade que aparece abaixo do botão.",
+          "Baixe uma imagem avulsa ou todas as páginas de uma vez em um arquivo ZIP, no caso de PDFs com várias páginas."
         ],
-        "whyItMatters": "Arquivos PDF não podem ser incorporados diretamente em postagens de mídia social, tags de imagem HTML ou slides de apresentação. Converter para JPG torna o conteúdo do documento universalmente compartilhável em todas as plataformas e aplicativos que aceitam imagens. Para documentos de uma única página, como certificados, diplomas e credenciais, um JPEG é mais portátil.",
-        "proTip": "Todo processamento ocorre no navegador — nenhum arquivo é enviado a servidores. Use 150 DPI para exibição na web e e-mail — boa qualidade com tamanho razoável. Use 300 DPI apenas se a saída for impressa. Para slides de apresentação, 96 DPI corresponde à maioria das resoluções de tela e produz o menor arquivo sem perda de qualidade visível."
+        "whyItMatters": "Arquivos PDF não podem ser inseridos direto em posts de redes sociais, em tags de imagem HTML ou em slides de apresentação. Converter para JPG deixa o conteúdo do documento compartilhável em qualquer plataforma e aplicativo que aceite imagem. Para documentos de uma página só — certificados, diplomas, crachás de evento, credenciais profissionais — um JPEG é mais portátil e mais fácil de exibir num portfólio digital ou no perfil do LinkedIn do que um anexo PDF que precisa ser baixado e aberto à parte.",
+        "proTip": "Todo o processamento acontece no seu navegador — nenhum arquivo é enviado para servidor, e seus documentos não saem do dispositivo. Use 150 DPI para tela e e-mail: boa qualidade com tamanho razoável. Reserve 300 DPI para quando a saída for impressa ou muito ampliada. Para slides de apresentação, 96 DPI acompanha a maioria das resoluções de tela e gera o menor arquivo sem perda visível."
       }
     },
     "jpgToPdf": {
@@ -378,19 +466,39 @@
         },
         {
           "question": "Qual será o tamanho das páginas do PDF?",
-          "answer": "Cada página corresponde às dimensões da imagem original, portanto suas imagens nunca são redimensionadas nem cortadas."
+          "answer": "Cada página tem as dimensões da imagem correspondente, então suas imagens nunca são redimensionadas, esticadas nem cortadas — cada pixel do original é preservado."
+        },
+        {
+          "question": "A qualidade das imagens é mantida?",
+          "answer": "Sim. A ferramenta embute os dados originais da imagem direto no PDF, sem recodificar, então não há perda de qualidade na conversão."
+        },
+        {
+          "question": "Posso juntar várias imagens em um PDF só?",
+          "answer": "Pode, e esse é o uso principal. Adicione quantas imagens quiser e cada uma vira uma página do PDF final, na ordem que você definir."
+        },
+        {
+          "question": "Como reordeno as imagens antes de converter?",
+          "answer": "Arraste as miniaturas para a ordem desejada antes de clicar em Converter. As páginas do PDF seguem exatamente essa sequência."
+        },
+        {
+          "question": "Existe limite de quantidade de imagens?",
+          "answer": "Não há limite rígido. Dá para combinar duas imagens ou cinquenta em um único PDF. Lotes muito grandes podem levar alguns segundos a mais dependendo do aparelho."
+        },
+        {
+          "question": "O texto das fotos fica pesquisável no PDF?",
+          "answer": "Não. A saída é um PDF baseado em imagem, então o texto dentro das fotos não é selecionável nem pesquisável — para isso seria preciso aplicar OCR (reconhecimento de texto) à parte."
         }
       ],
       "richContent": {
-        "whatIs": "A conversão de JPG para PDF incorpora uma ou mais imagens JPEG em um documento PDF. Casos de uso incluem converter fotos de notas manuscritas ou formulários de papel preenchidos em um documento submetível, combinar várias imagens digitalizadas em um único PDF para que tudo chegue em um arquivo e enviar documentos de identidade em formato PDF, conforme exigido por muitos formulários oficiais. É importante notar que a saída é um PDF baseado em imagem — o texto não é pesquisável ou legível por máquina a menos que você aplique OCR separadamente.",
+        "whatIs": "A conversão de JPG para PDF embute uma ou mais imagens JPEG em um documento PDF. Serve para transformar fotos de anotações à mão ou de formulários de papel preenchidos em um documento que dá para enviar, juntar várias imagens digitalizadas em um único PDF para que tudo chegue em um arquivo só, montar um portfólio em PDF a partir de uma coleção de imagens e enviar documentos de identidade em PDF, como pedem muitos formulários oficiais, processos de visto e admissões de RH. Vale lembrar que a saída é um PDF de imagem — o texto dentro das fotos não é pesquisável nem legível por máquina a menos que você aplique OCR (reconhecimento óptico de caracteres) separadamente.",
         "howToUse": [
-          "Envie uma ou mais imagens JPEG ou PNG clicando na zona para soltar ou arrastando os arquivos para dentro.",
-          "Arraste as miniaturas das imagens para organizá-las na ordem em que deseja que apareçam no PDF.",
+          "Envie uma ou mais imagens JPEG ou PNG clicando na zona para soltar ou arrastando os arquivos.",
+          "Arraste as miniaturas para organizá-las na ordem em que devem aparecer no PDF.",
           "Clique em Converter para PDF para gerar o documento.",
-          "O PDF é baixado instantaneamente para o seu dispositivo."
+          "O PDF é baixado na hora para o seu dispositivo."
         ],
-        "whyItMatters": "Muitos portais de submissão oficiais aceitam PDF, mas não JPEG. Combinar várias imagens em um PDF também satisfaz o requisito de envio de um único arquivo. O contêiner PDF também suporta metadados (título, autor), proteção por senha e assinaturas digitais que arquivos JPEG brutos não têm.",
-        "proTip": "Todo processamento ocorre no navegador. Se suas imagens forem de altíssima resolução — fotos de câmeras de celular costumam ter 4000x3000 pixels e 6–12 MB cada — comprima ou redimensione antes de converter. Um PDF com três fotos não comprimidas de celular pode chegar a 30–40 MB. Procure imagens com menos de 2 MB cada para produzir um PDF de saída com tamanho razoável."
+        "whyItMatters": "Muitos portais de submissão oficiais, sistemas de inscrição de universidades e plataformas de RH aceitam PDF, mas não JPEG. Juntar várias imagens em um PDF também resolve a exigência de 'arquivo único' — o problema de um formulário que aceita só um anexo quando você tem três páginas digitalizadas. O contêiner PDF ainda suporta metadados (título, autor), proteção por senha e assinatura digital, coisas que um JPEG solto não oferece, o que dá mais controle sobre como o documento é usado depois de entregue.",
+        "proTip": "Todo o processamento acontece no seu navegador — nenhum arquivo é enviado para servidor. Se suas imagens forem de altíssima resolução — fotos de celular costumam ter 4000×3000 pixels e de 6 a 12 MB cada —, comprima ou redimensione antes de converter. Um PDF com três fotos de celular sem compressão pode chegar a 30–40 MB. Mire em imagens abaixo de 2 MB cada para gerar um PDF de tamanho razoável, que passa na maioria dos limites de upload."
       }
     }
   },
