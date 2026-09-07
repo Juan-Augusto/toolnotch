@@ -1,0 +1,454 @@
+{
+  "id": "which-programming-language-are-you",
+  "title": "Qual Linguagem de Programação É Você?",
+  "description": "Descubra qual linguagem de programação melhor reflete seu estilo e raciocínio.",
+  "image": "/images/quizzes/which-programming-language-are-you-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Como você aborda um novo problema?",
+      "options": [
+        {
+          "id": "q1a",
+          "text": "Começo logo a experimentar e descubro no caminho",
+          "scores": {
+            "python": 3,
+            "javascript": 2
+          }
+        },
+        {
+          "id": "q1b",
+          "text": "Planejo cada detalhe antes de escrever uma linha",
+          "scores": {
+            "rust": 3,
+            "go": 2
+          }
+        },
+        {
+          "id": "q1c",
+          "text": "Procuro um padrão que já vi antes e adapto",
+          "scores": {
+            "java": 3,
+            "python": 1
+          }
+        },
+        {
+          "id": "q1d",
+          "text": "Começo dos primeiros princípios e construo com cuidado",
+          "scores": {
+            "rust": 2,
+            "java": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Qual é a sua relação com erros?",
+      "options": [
+        {
+          "id": "q2a",
+          "text": "São mestres — aprendo com cada falha",
+          "scores": {
+            "python": 3,
+            "javascript": 1
+          }
+        },
+        {
+          "id": "q2b",
+          "text": "Prefiro capturá-los antes da execução se possível",
+          "scores": {
+            "rust": 3,
+            "java": 2
+          }
+        },
+        {
+          "id": "q2c",
+          "text": "Lido com eles quando surgirem — sem estresse",
+          "scores": {
+            "javascript": 3,
+            "go": 1
+          }
+        },
+        {
+          "id": "q2d",
+          "text": "Elimino-os sistematicamente através de processos",
+          "scores": {
+            "go": 3,
+            "java": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Escolha seu ambiente de trabalho ideal:",
+      "options": [
+        {
+          "id": "q3a",
+          "text": "Startup dinâmica com múltiplas funções",
+          "scores": {
+            "javascript": 3,
+            "python": 2
+          }
+        },
+        {
+          "id": "q3b",
+          "text": "Grande empresa de tecnologia com processos claros",
+          "scores": {
+            "java": 3,
+            "go": 2
+          }
+        },
+        {
+          "id": "q3c",
+          "text": "Equipe de infraestrutura ou sistemas de baixo nível",
+          "scores": {
+            "rust": 3,
+            "go": 2
+          }
+        },
+        {
+          "id": "q3d",
+          "text": "Laboratório de pesquisa ou equipe de ciência de dados",
+          "scores": {
+            "python": 3,
+            "rust": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "O que você acha de regras e restrições?",
+      "options": [
+        {
+          "id": "q4a",
+          "text": "Regras limitam a criatividade — prefiro liberdade",
+          "scores": {
+            "javascript": 3,
+            "python": 2
+          }
+        },
+        {
+          "id": "q4b",
+          "text": "Regras sólidas geram resultados muito melhores",
+          "scores": {
+            "rust": 3,
+            "java": 2
+          }
+        },
+        {
+          "id": "q4c",
+          "text": "Poucas regras claras é o equilíbrio perfeito",
+          "scores": {
+            "go": 3,
+            "python": 1
+          }
+        },
+        {
+          "id": "q4d",
+          "text": "Regras são boas quando entendo a razão por trás",
+          "scores": {
+            "java": 2,
+            "rust": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "Seus amigos descreveriam você como:",
+      "options": [
+        {
+          "id": "q5a",
+          "text": "Criativo e versátil",
+          "scores": {
+            "python": 2,
+            "javascript": 3
+          }
+        },
+        {
+          "id": "q5b",
+          "text": "Metódico e confiável",
+          "scores": {
+            "java": 3,
+            "go": 2
+          }
+        },
+        {
+          "id": "q5c",
+          "text": "Intenso e fiel aos princípios",
+          "scores": {
+            "rust": 3
+          }
+        },
+        {
+          "id": "q5d",
+          "text": "Prático e eficiente",
+          "scores": {
+            "go": 3,
+            "python": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "Quando você vê um código confuso de outra pessoa, você:",
+      "options": [
+        {
+          "id": "q6a",
+          "text": "Quer refatorar tudo imediatamente",
+          "scores": {
+            "rust": 2,
+            "java": 3
+          }
+        },
+        {
+          "id": "q6b",
+          "text": "Aceita numa boa — funciona, isso é o que importa",
+          "scores": {
+            "javascript": 3,
+            "python": 1
+          }
+        },
+        {
+          "id": "q6c",
+          "text": "Passa um formatador automático e segue em frente",
+          "scores": {
+            "go": 3,
+            "python": 1
+          }
+        },
+        {
+          "id": "q6d",
+          "text": "Adiciona documentação e considera resolvido",
+          "scores": {
+            "python": 3,
+            "java": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "O que mais importa em um software?",
+      "options": [
+        {
+          "id": "q7a",
+          "text": "Velocidade de desenvolvimento",
+          "scores": {
+            "python": 3,
+            "javascript": 2
+          }
+        },
+        {
+          "id": "q7b",
+          "text": "Desempenho em tempo de execução",
+          "scores": {
+            "rust": 3,
+            "go": 2
+          }
+        },
+        {
+          "id": "q7c",
+          "text": "Confiabilidade e previsibilidade",
+          "scores": {
+            "java": 3,
+            "go": 2
+          }
+        },
+        {
+          "id": "q7d",
+          "text": "Interatividade e experiência do usuário",
+          "scores": {
+            "javascript": 3,
+            "python": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "Seu projeto dos sonhos é:",
+      "options": [
+        {
+          "id": "q8a",
+          "text": "Um modelo de IA que prevê algo útil",
+          "scores": {
+            "python": 3,
+            "rust": 1
+          }
+        },
+        {
+          "id": "q8b",
+          "text": "Um app em tempo real com milhões de usuários",
+          "scores": {
+            "javascript": 3,
+            "go": 1
+          }
+        },
+        {
+          "id": "q8c",
+          "text": "Um kernel de SO ou motor de jogo do zero",
+          "scores": {
+            "rust": 3,
+            "go": 1
+          }
+        },
+        {
+          "id": "q8d",
+          "text": "Um sistema corporativo robusto para empresas",
+          "scores": {
+            "java": 3,
+            "go": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "Gerenciamento de memória para você é:",
+      "options": [
+        {
+          "id": "q9a",
+          "text": "Algo que confio que a linguagem resolverá",
+          "scores": {
+            "python": 3,
+            "java": 2
+          }
+        },
+        {
+          "id": "q9b",
+          "text": "Algo sobre o qual quero controle total",
+          "scores": {
+            "rust": 3
+          }
+        },
+        {
+          "id": "q9c",
+          "text": "Trabalho do compilador e do garbage collector",
+          "scores": {
+            "go": 3,
+            "java": 2
+          }
+        },
+        {
+          "id": "q9d",
+          "text": "Sinceramente… não penso muito sobre isso",
+          "scores": {
+            "javascript": 3,
+            "python": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "Escolha uma atividade para o fim de semana:",
+      "options": [
+        {
+          "id": "q10a",
+          "text": "Testar uma nova ferramenta ou API",
+          "scores": {
+            "python": 2,
+            "javascript": 3
+          }
+        },
+        {
+          "id": "q10b",
+          "text": "Ler artigos técnicos ou especificações de linguagens",
+          "scores": {
+            "rust": 3,
+            "java": 1
+          }
+        },
+        {
+          "id": "q10c",
+          "text": "Otimizar um sistema para extrair desempenho",
+          "scores": {
+            "rust": 2,
+            "go": 3
+          }
+        },
+        {
+          "id": "q10d",
+          "text": "Construir algo sólido que durará anos",
+          "scores": {
+            "java": 3,
+            "python": 1
+          }
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "python",
+      "title": "Python",
+      "description": "Você é Python — amigável, versátil e infinitamente adaptável. Você valoriza clareza e legibilidade acima de tudo, preferindo soluções simples e eficientes a malabarismos complexos.",
+      "image": "/images/results/python.jpg",
+      "traits": [
+        "Legível",
+        "Versátil",
+        "Comunitário",
+        "Prático"
+      ],
+      "shareText": "Eu tirei Python no quiz de Linguagem de Programação do ToolNotch!"
+    },
+    {
+      "id": "javascript",
+      "title": "JavaScript",
+      "description": "Você é JavaScript — presente em todo lugar, extremamente dinâmico e criativo. Você adora criar experiências interativas, entrega rápido e encontra soluções mesmo em cenários caóticos.",
+      "image": "/images/results/javascript.jpg",
+      "traits": [
+        "Ubíquo",
+        "Criativo",
+        "Ágil",
+        "Adaptável"
+      ],
+      "shareText": "Eu tirei JavaScript no quiz de Linguagem de Programação do ToolNotch!"
+    },
+    {
+      "id": "rust",
+      "title": "Rust",
+      "description": "Você é Rust — focado em excelência, segurança e máxima performance. Você não aceita atalhos e prefere investir tempo fazendo certo da primeira vez a corrigir bugs em produção.",
+      "image": "/images/results/rust.jpg",
+      "traits": [
+        "Seguro",
+        "Performático",
+        "Principista",
+        "Preciso"
+      ],
+      "shareText": "Eu tirei Rust no quiz de Linguagem de Programação do ToolNotch!"
+    },
+    {
+      "id": "go",
+      "title": "Go",
+      "description": "Você é Go — pragmático, direto ao ponto e focado no que realmente funciona. Você elimina complexidades desnecessárias e constrói sistemas escaláveis e elegantes.",
+      "image": "/images/results/go.jpg",
+      "traits": [
+        "Simples",
+        "Eficiente",
+        "Pragmático",
+        "Escalável"
+      ],
+      "shareText": "Eu tirei Go no quiz de Linguagem de Programação do ToolNotch!"
+    },
+    {
+      "id": "java",
+      "title": "Java",
+      "description": "Você é Java — a base confiável dos grandes sistemas corporativos. Você valoriza arquitetura sólida, padrões consagrados e soluções construídas para durar décadas.",
+      "image": "/images/results/java.jpg",
+      "traits": [
+        "Estruturado",
+        "Confiável",
+        "Corporativo",
+        "Manutenível"
+      ],
+      "shareText": "Eu tirei Java no quiz de Linguagem de Programação do ToolNotch!"
+    }
+  ],
+  "locale": "pt"
+}

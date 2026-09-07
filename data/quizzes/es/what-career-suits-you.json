@@ -1,0 +1,404 @@
+{
+  "id": "what-career-suits-you",
+  "title": "¿Qué Carrera es Ideal para Ti?",
+  "description": "Responde sobre tus fortalezas y preferencias para descubrir tu camino profesional ideal.",
+  "image": "/images/quizzes/what-career-suits-you-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "¿Qué es lo que más te motiva en el trabajo?",
+      "options": [
+        {
+          "id": "q1a",
+          "text": "Crear algo hermoso o expresivo",
+          "scores": {
+            "creative": 3
+          }
+        },
+        {
+          "id": "q1b",
+          "text": "Resolver problemas lógicos y complejos",
+          "scores": {
+            "analytical": 3
+          }
+        },
+        {
+          "id": "q1c",
+          "text": "Liderar un equipo hacia un objetivo común",
+          "scores": {
+            "leadership": 3
+          }
+        },
+        {
+          "id": "q1d",
+          "text": "Ayudar a las personas en momentos difíciles",
+          "scores": {
+            "social": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Tu jornada laboral ideal:",
+      "options": [
+        {
+          "id": "q2a",
+          "text": "Flexible, con libertad creativa y variedad",
+          "scores": {
+            "creative": 3
+          }
+        },
+        {
+          "id": "q2b",
+          "text": "Concentración profunda en un desafío técnico",
+          "scores": {
+            "analytical": 3
+          }
+        },
+        {
+          "id": "q2c",
+          "text": "Reuniones estratégicas, decisiones y liderazgo",
+          "scores": {
+            "leadership": 3
+          }
+        },
+        {
+          "id": "q2d",
+          "text": "Conversaciones individuales que marcan la diferencia",
+          "scores": {
+            "social": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Cuando eras niño, te encantaba:",
+      "options": [
+        {
+          "id": "q3a",
+          "text": "Dibujar, la música, escribir o construir cosas",
+          "scores": {
+            "creative": 3
+          }
+        },
+        {
+          "id": "q3b",
+          "text": "Kits de ciencia, acertijos y entender cómo funcionan las cosas",
+          "scores": {
+            "analytical": 3
+          }
+        },
+        {
+          "id": "q3c",
+          "text": "Organizar juegos y liderar a los demás",
+          "scores": {
+            "leadership": 3
+          }
+        },
+        {
+          "id": "q3d",
+          "text": "Ayudar a tus amigos y escuchar sus historias",
+          "scores": {
+            "social": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "Tu mayor fortaleza:",
+      "options": [
+        {
+          "id": "q4a",
+          "text": "Imaginación y originalidad",
+          "scores": {
+            "creative": 3
+          }
+        },
+        {
+          "id": "q4b",
+          "text": "Pensamiento crítico y atención al detalle",
+          "scores": {
+            "analytical": 3
+          }
+        },
+        {
+          "id": "q4c",
+          "text": "Visión y capacidad de inspirar",
+          "scores": {
+            "leadership": 3
+          }
+        },
+        {
+          "id": "q4d",
+          "text": "Empatía y comunicación",
+          "scores": {
+            "social": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "Prefieres un trabajo que:",
+      "options": [
+        {
+          "id": "q5a",
+          "text": "Produzca un resultado tangible que puedas mostrar",
+          "scores": {
+            "creative": 3
+          }
+        },
+        {
+          "id": "q5b",
+          "text": "Tenga una respuesta clara y comprobable",
+          "scores": {
+            "analytical": 3
+          }
+        },
+        {
+          "id": "q5c",
+          "text": "Genere un impacto medible en la organización",
+          "scores": {
+            "leadership": 3
+          }
+        },
+        {
+          "id": "q5d",
+          "text": "Mejore directamente la vida de alguien",
+          "scores": {
+            "social": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "Un proyecto sale mal. Tú:",
+      "options": [
+        {
+          "id": "q6a",
+          "text": "Rediseñas todo con una visión creativa renovada",
+          "scores": {
+            "creative": 3
+          }
+        },
+        {
+          "id": "q6b",
+          "text": "Analizas lo sucedido paso a paso",
+          "scores": {
+            "analytical": 3
+          }
+        },
+        {
+          "id": "q6c",
+          "text": "Reunes al equipo, ajustas la estrategia y avanzas",
+          "scores": {
+            "leadership": 3
+          }
+        },
+        {
+          "id": "q6d",
+          "text": "Te aseguras de que el equipo se sienta respaldado primero",
+          "scores": {
+            "social": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "¿En qué entorno te sientes más cómodo?",
+      "options": [
+        {
+          "id": "q7a",
+          "text": "Un estudio, taller o espacio creativo abierto",
+          "scores": {
+            "creative": 3
+          }
+        },
+        {
+          "id": "q7b",
+          "text": "Un entorno tranquilo y enfocado con herramientas técnicas",
+          "scores": {
+            "analytical": 3
+          }
+        },
+        {
+          "id": "q7c",
+          "text": "Una sala de juntas o una startup dinámica",
+          "scores": {
+            "leadership": 3
+          }
+        },
+        {
+          "id": "q7d",
+          "text": "Una clínica, aula o centro comunitario",
+          "scores": {
+            "social": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "Tus amigos acuden a ti cuando necesitan:",
+      "options": [
+        {
+          "id": "q8a",
+          "text": "Una idea creativa o nueva perspectiva",
+          "scores": {
+            "creative": 3
+          }
+        },
+        {
+          "id": "q8b",
+          "text": "Ayuda para entender algo complejo",
+          "scores": {
+            "analytical": 3
+          }
+        },
+        {
+          "id": "q8c",
+          "text": "Consejo sobre una decisión importante",
+          "scores": {
+            "leadership": 3
+          }
+        },
+        {
+          "id": "q8d",
+          "text": "Alguien que los escuche sin juzgar",
+          "scores": {
+            "social": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "Dinero versus propósito:",
+      "options": [
+        {
+          "id": "q9a",
+          "text": "Propósito — necesito amar lo que hago",
+          "scores": {
+            "creative": 2,
+            "social": 1
+          }
+        },
+        {
+          "id": "q9b",
+          "text": "Ambos — quiero ser bien compensado por mi especialidad",
+          "scores": {
+            "analytical": 3
+          }
+        },
+        {
+          "id": "q9c",
+          "text": "Ambición — quiero construir algo grande",
+          "scores": {
+            "leadership": 3
+          }
+        },
+        {
+          "id": "q9d",
+          "text": "Impacto — el dinero es secundario frente al impacto",
+          "scores": {
+            "social": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "En cinco años, te gustaría ser:",
+      "options": [
+        {
+          "id": "q10a",
+          "text": "Reconocido por crear algo que la gente adore",
+          "scores": {
+            "creative": 3
+          }
+        },
+        {
+          "id": "q10b",
+          "text": "Un referente técnico al que otros consultan",
+          "scores": {
+            "analytical": 3
+          }
+        },
+        {
+          "id": "q10c",
+          "text": "Líder de un equipo o empresa",
+          "scores": {
+            "leadership": 3
+          }
+        },
+        {
+          "id": "q10d",
+          "text": "Alguien que marque una diferencia real en los demás",
+          "scores": {
+            "social": 3
+          }
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "creative",
+      "title": "Carrera Creativa",
+      "description": "Tus resultados apuntan claramente a una carrera creativa. Necesitas crear y transformar ideas en realidades tangibles.",
+      "image": "/images/results/creative.jpg",
+      "traits": [
+        "Imaginativo",
+        "Original",
+        "Expresivo",
+        "Visionario"
+      ],
+      "shareText": "¡Mi resultado es Carrera Creativa! Haz el test en ToolNotch."
+    },
+    {
+      "id": "analytical",
+      "title": "Carrera Analítica & Técnica",
+      "description": "Tus resultados indican que los campos técnicos y analíticos te brindarán mayor satisfacción. Destacas en lógica, precisión y resolución de problemas.",
+      "image": "/images/results/analytical.jpg",
+      "traits": [
+        "Lógico",
+        "Preciso",
+        "Especialista",
+        "Sistemático"
+      ],
+      "shareText": "¡Mi resultado es Carrera Analítica! Haz el test en ToolNotch."
+    },
+    {
+      "id": "leadership",
+      "title": "Carrera de Liderazgo",
+      "description": "Tus resultados reflejan vocación de liderazgo. Tienes visión estratégica, capacidad para inspirar y facilidad para tomar decisiones.",
+      "image": "/images/results/leadership.jpg",
+      "traits": [
+        "Estratégico",
+        "Decisivo",
+        "Inspirador",
+        "Responsable"
+      ],
+      "shareText": "¡Mi resultado es Carrera de Liderazgo! Haz el test en ToolNotch."
+    },
+    {
+      "id": "social",
+      "title": "Carrera de Impacto Social",
+      "description": "Tus resultados apuntan a una carrera centrada en las personas y el bienestar comunitario. Tu motivación es mejorar la vida de los demás.",
+      "image": "/images/results/social.jpg",
+      "traits": [
+        "Empático",
+        "Comunicativo",
+        "Solidario",
+        "Comprometido"
+      ],
+      "shareText": "¡Mi resultado es Carrera de Impacto Social! Haz el test en ToolNotch."
+    }
+  ],
+  "locale": "es"
+}

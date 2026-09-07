@@ -58,7 +58,7 @@ export function AppMenu({
   return (
     <nav
       aria-label="Sidebar Menu"
-      className={`w-80 shrink-0 flex flex-col border-r-dashed-5 bg-background select-none  ${className}`}
+      className={`w-80 shrink-0 flex flex-col border-r-dashed-5 bg-panel select-none  ${className}`}
     >
       {normalizedGroups.map((grp, groupIdx) => {
         const groupKey = `${grp.name}-${groupIdx}`;
@@ -72,7 +72,7 @@ export function AppMenu({
             <button
               type="button"
               onClick={() => toggleGroup(groupKey)}
-              className={`w-full flex text-base items-center gap-2.5 px-5 py-4 text-left text-foreground bg-tertiary hover:text-primary transition-colors cursor-pointer group ${
+              className={`w-full flex text-base items-center gap-2.5 px-5 py-4 text-left text-foreground bg-background hover:text-primary transition-colors cursor-pointer group ${
                 open ? "border-b-dashed-5" : ""
               }`}
               aria-expanded={open}
