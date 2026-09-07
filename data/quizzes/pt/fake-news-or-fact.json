@@ -3,118 +3,208 @@
   "type": "trivia",
   "category": "civic",
   "title": "Fake News ou Verdade? — Teste de Fake News",
-  "description": "Você sabe identificar uma fake news? Neste teste, você vai avaliar dez afirmações e boatos conhecidos — alguns verdadeiros, outros desmentidos há anos — e decidir o que é real e o que é falso. Os temas vão de mitos de saúde e ciência a correntes que circulam há anos no WhatsApp. Depois de cada resposta, você verá uma explicação curta e o link para a fonte real e verificável, de organizações como OMS, NASA e Harvard Health. Sem política, sem candidatos — apenas afirmações de conhecimento geral que qualquer pessoa pode checar. Veja quantas você acerta e compare seu resultado com os amigos.",
+  "description": "Descubra se você consegue separar mitos populares e boatos de fatos reais verificados.",
   "image": "/images/quizzes/fake-news-or-fact-cover.jpg",
   "questions": [
     {
       "id": "q1",
       "text": "Torres de internet 5G espalham a COVID-19.",
       "options": [
-        { "id": "q1a", "text": "Verdadeiro" },
-        { "id": "q1b", "text": "Falso" }
+        {
+          "id": "q1a",
+          "text": "Verdadeiro"
+        },
+        {
+          "id": "q1b",
+          "text": "Falso"
+        }
       ],
       "correctAnswerId": "q1b",
       "explanation": "Vírus não se transmitem por ondas de rádio, e a COVID-19 se espalhou amplamente em países com pouca ou nenhuma infraestrutura 5G.",
-      "source": { "name": "OPAS/OMS", "url": "https://www.paho.org/pt/cacadores-mitos-sobre-covid-19" }
+      "source": {
+        "name": "OPAS/OMS",
+        "url": "https://www.paho.org/pt/cacadores-mitos-sobre-covid-19"
+      }
     },
     {
       "id": "q2",
       "text": "A Muralha da China é visível do espaço a olho nu.",
       "options": [
-        { "id": "q2a", "text": "Verdadeiro" },
-        { "id": "q2b", "text": "Falso" }
+        {
+          "id": "q2a",
+          "text": "Verdadeiro"
+        },
+        {
+          "id": "q2b",
+          "text": "Falso"
+        }
       ],
       "correctAnswerId": "q2b",
       "explanation": "A NASA e diversos astronautas confirmam que o material da muralha se confunde com a paisagem ao redor, tornando-a indistinguível da órbita sem ampliação.",
-      "source": { "name": "NASA", "url": "https://www.nasa.gov/vision/space/workinginspace/great_wall.html" }
+      "source": {
+        "name": "NASA",
+        "url": "https://www.nasa.gov/vision/space/workinginspace/great_wall.html"
+      }
     },
     {
       "id": "q3",
       "text": "Peixinhos dourados têm apenas 3 segundos de memória.",
       "options": [
-        { "id": "q3a", "text": "Verdadeiro" },
-        { "id": "q3b", "text": "Falso" }
+        {
+          "id": "q3a",
+          "text": "Verdadeiro"
+        },
+        {
+          "id": "q3b",
+          "text": "Falso"
+        }
       ],
       "correctAnswerId": "q3b",
       "explanation": "Pesquisadores de cognição de peixes mostram que peixinhos dourados aprendem e lembram tarefas e locais por semanas ou meses, não segundos.",
-      "source": { "name": "IFLScience", "url": "https://www.iflscience.com/do-goldfish-really-have-a-three-second-memory-75017" }
+      "source": {
+        "name": "IFLScience",
+        "url": "https://www.iflscience.com/do-goldfish-really-have-a-three-second-memory-75017"
+      }
     },
     {
       "id": "q4",
       "text": "Os seres humanos usam apenas 10% do cérebro.",
       "options": [
-        { "id": "q4a", "text": "Verdadeiro" },
-        { "id": "q4b", "text": "Falso" }
+        {
+          "id": "q4a",
+          "text": "Verdadeiro"
+        },
+        {
+          "id": "q4b",
+          "text": "Falso"
+        }
       ],
       "correctAnswerId": "q4b",
       "explanation": "Estudos de neuroimagem mostram que quase todas as regiões do cérebro estão ativas ao longo do dia; não existem 90% inutilizados.",
-      "source": { "name": "Scientific American", "url": "https://www.scientificamerican.com/article/do-people-only-use-10-percent-of-their-brains/" }
+      "source": {
+        "name": "Scientific American",
+        "url": "https://www.scientificamerican.com/article/do-people-only-use-10-percent-of-their-brains/"
+      }
     },
     {
       "id": "q5",
       "text": "Uma mensagem viral afirma que o WhatsApp vai cobrar uma mensalidade, a menos que você a encaminhe para seus contatos.",
       "options": [
-        { "id": "q5a", "text": "Verdadeiro" },
-        { "id": "q5b", "text": "Falso" }
+        {
+          "id": "q5a",
+          "text": "Verdadeiro"
+        },
+        {
+          "id": "q5b",
+          "text": "Falso"
+        }
       ],
       "correctAnswerId": "q5b",
       "explanation": "Esse boato circula desde 2012; o WhatsApp já confirmou várias vezes que é falso e nunca cobrou para enviar mensagens.",
-      "source": { "name": "WhatsApp (Meta)", "url": "https://blog.whatsapp.com/it-is-a-hoax-really-it-is" }
+      "source": {
+        "name": "WhatsApp (Meta)",
+        "url": "https://blog.whatsapp.com/it-is-a-hoax-really-it-is"
+      }
     },
     {
       "id": "q6",
       "text": "Arqueólogos encontraram mel milenar em tumbas egípcias seladas que ainda estava próprio para consumo.",
       "options": [
-        { "id": "q6a", "text": "Verdadeiro" },
-        { "id": "q6b", "text": "Falso" }
+        {
+          "id": "q6a",
+          "text": "Verdadeiro"
+        },
+        {
+          "id": "q6b",
+          "text": "Falso"
+        }
       ],
       "correctAnswerId": "q6a",
       "explanation": "A baixa umidade e a acidez natural do mel impedem o crescimento de bactérias, por isso potes selados há milhares de anos foram encontrados preservados.",
-      "source": { "name": "Smithsonian Magazine", "url": "https://www.smithsonianmag.com/science-nature/the-science-behind-honeys-eternal-shelf-life-1218690/" }
+      "source": {
+        "name": "Smithsonian Magazine",
+        "url": "https://www.smithsonianmag.com/science-nature/the-science-behind-honeys-eternal-shelf-life-1218690/"
+      }
     },
     {
       "id": "q7",
       "text": "A Organização Mundial da Saúde declarou o fim da emergência de saúde global da COVID-19 em maio de 2023.",
       "options": [
-        { "id": "q7a", "text": "Verdadeiro" },
-        { "id": "q7b", "text": "Falso" }
+        {
+          "id": "q7a",
+          "text": "Verdadeiro"
+        },
+        {
+          "id": "q7b",
+          "text": "Falso"
+        }
       ],
       "correctAnswerId": "q7a",
       "explanation": "O Comitê de Emergência da OMS encerrou oficialmente a declaração de Emergência de Saúde Pública de Importância Internacional em 5 de maio de 2023.",
-      "source": { "name": "OPAS/OMS", "url": "https://www.paho.org/pt/noticias/5-5-2023-oms-declara-fim-da-emergencia-saude-publica-importancia-internacional-referente" }
+      "source": {
+        "name": "OPAS/OMS",
+        "url": "https://www.paho.org/pt/noticias/5-5-2023-oms-declara-fim-da-emergencia-saude-publica-importancia-internacional-referente"
+      }
     },
     {
       "id": "q8",
       "text": "Polvos têm três corações.",
       "options": [
-        { "id": "q8a", "text": "Verdadeiro" },
-        { "id": "q8b", "text": "Falso" }
+        {
+          "id": "q8a",
+          "text": "Verdadeiro"
+        },
+        {
+          "id": "q8b",
+          "text": "Falso"
+        }
       ],
       "correctAnswerId": "q8a",
       "explanation": "Dois corações bombeiam sangue para as brânquias e um terceiro bombeia para o resto do corpo — um fato confirmado da biologia marinha.",
-      "source": { "name": "NOAA", "url": "https://oceanservice.noaa.gov/news/feb26/undersea-creatures-valentines-day.html" }
+      "source": {
+        "name": "NOAA",
+        "url": "https://oceanservice.noaa.gov/news/feb26/undersea-creatures-valentines-day.html"
+      }
     },
     {
       "id": "q9",
       "text": "Cozinhar legumes no micro-ondas pode preservar mais nutrientes do que fervê-los.",
       "options": [
-        { "id": "q9a", "text": "Verdadeiro" },
-        { "id": "q9b", "text": "Falso" }
+        {
+          "id": "q9a",
+          "text": "Verdadeiro"
+        },
+        {
+          "id": "q9b",
+          "text": "Falso"
+        }
       ],
       "correctAnswerId": "q9a",
       "explanation": "Tempos de cozimento mais curtos e menos contato com água fazem com que o micro-ondas geralmente preserve mais vitamina C e outros nutrientes do que a fervura.",
-      "source": { "name": "Harvard Health Publishing", "url": "https://www.health.harvard.edu/staying-healthy/microwave-cooking-and-nutrition" }
+      "source": {
+        "name": "Harvard Health Publishing",
+        "url": "https://www.health.harvard.edu/staying-healthy/microwave-cooking-and-nutrition"
+      }
     },
     {
       "id": "q10",
       "text": "Os tubarões existiram na Terra antes das árvores.",
       "options": [
-        { "id": "q10a", "text": "Verdadeiro" },
-        { "id": "q10b", "text": "Falso" }
+        {
+          "id": "q10a",
+          "text": "Verdadeiro"
+        },
+        {
+          "id": "q10b",
+          "text": "Falso"
+        }
       ],
       "correctAnswerId": "q10a",
       "explanation": "Os ancestrais dos tubarões surgiram há cerca de 400 milhões de anos, dezenas de milhões de anos antes das primeiras plantas parecidas com árvores.",
-      "source": { "name": "Smithsonian Magazine", "url": "https://www.smithsonianmag.com/smart-news/respect-sharks-are-older-than-trees-3818/" }
+      "source": {
+        "name": "Smithsonian Magazine",
+        "url": "https://www.smithsonianmag.com/smart-news/respect-sharks-are-older-than-trees-3818/"
+      }
     }
   ],
   "tiers": [

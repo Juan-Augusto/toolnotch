@@ -3,17 +3,29 @@
   "type": "trivia",
   "category": "sports",
   "title": "Quiz: Campeones de la Copa del Mundo FIFA",
-  "description": "¿Creés que conocés la historia de la Copa del Mundo FIFA? Ponés a prueba tus conocimientos sobre campeones, récords y momentos icónicos desde 1930 hasta 2022. Desde el primer título de Uruguay hasta la gloria de Argentina en Qatar, este quiz de trivia de fútbol cubre todos los campeones, goleadores y finales inolvidables. Perfecto para fanáticos del fútbol que disfrutan un buen desafío. ¿Cuántas podés acertar?",
+  "description": "Demuestra cuánto sabes sobre selecciones campeonas, récords y finales históricas de la Copa del Mundo.",
   "image": "/images/quizzes/fifa-world-cup-winners-cover.jpg",
   "questions": [
     {
       "id": "q1",
       "text": "¿Qué país ganó la primera Copa del Mundo FIFA en 1930?",
       "options": [
-        { "id": "q1a", "text": "Argentina" },
-        { "id": "q1b", "text": "Brasil" },
-        { "id": "q1c", "text": "Uruguay" },
-        { "id": "q1d", "text": "Italia" }
+        {
+          "id": "q1a",
+          "text": "Argentina"
+        },
+        {
+          "id": "q1b",
+          "text": "Brasil"
+        },
+        {
+          "id": "q1c",
+          "text": "Uruguay"
+        },
+        {
+          "id": "q1d",
+          "text": "Italia"
+        }
       ],
       "correctAnswerId": "q1c"
     },
@@ -21,10 +33,22 @@
       "id": "q2",
       "text": "¿Qué país ha ganado la mayor cantidad de títulos de la Copa del Mundo FIFA?",
       "options": [
-        { "id": "q2a", "text": "Alemania" },
-        { "id": "q2b", "text": "Brasil" },
-        { "id": "q2c", "text": "Italia" },
-        { "id": "q2d", "text": "Argentina" }
+        {
+          "id": "q2a",
+          "text": "Alemania"
+        },
+        {
+          "id": "q2b",
+          "text": "Brasil"
+        },
+        {
+          "id": "q2c",
+          "text": "Italia"
+        },
+        {
+          "id": "q2d",
+          "text": "Argentina"
+        }
       ],
       "correctAnswerId": "q2b"
     },
@@ -32,10 +56,22 @@
       "id": "q3",
       "text": "¿Qué país fue sede Y ganó la Copa del Mundo FIFA de 1966?",
       "options": [
-        { "id": "q3a", "text": "Francia" },
-        { "id": "q3b", "text": "Alemania Occidental" },
-        { "id": "q3c", "text": "Italia" },
-        { "id": "q3d", "text": "Inglaterra" }
+        {
+          "id": "q3a",
+          "text": "Francia"
+        },
+        {
+          "id": "q3b",
+          "text": "Alemania Occidental"
+        },
+        {
+          "id": "q3c",
+          "text": "Italia"
+        },
+        {
+          "id": "q3d",
+          "text": "Inglaterra"
+        }
       ],
       "correctAnswerId": "q3d"
     },
@@ -43,10 +79,22 @@
       "id": "q4",
       "text": "¿Quién ganó la Copa del Mundo FIFA de 1998 realizada en Francia?",
       "options": [
-        { "id": "q4a", "text": "Francia" },
-        { "id": "q4b", "text": "Brasil" },
-        { "id": "q4c", "text": "Italia" },
-        { "id": "q4d", "text": "Alemania" }
+        {
+          "id": "q4a",
+          "text": "Francia"
+        },
+        {
+          "id": "q4b",
+          "text": "Brasil"
+        },
+        {
+          "id": "q4c",
+          "text": "Italia"
+        },
+        {
+          "id": "q4d",
+          "text": "Alemania"
+        }
       ],
       "correctAnswerId": "q4a"
     },
@@ -54,10 +102,22 @@
       "id": "q5",
       "text": "¿Qué país ganó la Copa del Mundo FIFA de 2010 realizada en Sudáfrica?",
       "options": [
-        { "id": "q5a", "text": "Países Bajos" },
-        { "id": "q5b", "text": "Alemania" },
-        { "id": "q5c", "text": "Argentina" },
-        { "id": "q5d", "text": "España" }
+        {
+          "id": "q5a",
+          "text": "Países Bajos"
+        },
+        {
+          "id": "q5b",
+          "text": "Alemania"
+        },
+        {
+          "id": "q5c",
+          "text": "Argentina"
+        },
+        {
+          "id": "q5d",
+          "text": "España"
+        }
       ],
       "correctAnswerId": "q5d"
     },
@@ -65,10 +125,22 @@
       "id": "q6",
       "text": "¿Qué país ganó la Copa del Mundo FIFA de 2018 realizada en Rusia?",
       "options": [
-        { "id": "q6a", "text": "Croacia" },
-        { "id": "q6b", "text": "Francia" },
-        { "id": "q6c", "text": "Bélgica" },
-        { "id": "q6d", "text": "Inglaterra" }
+        {
+          "id": "q6a",
+          "text": "Croacia"
+        },
+        {
+          "id": "q6b",
+          "text": "Francia"
+        },
+        {
+          "id": "q6c",
+          "text": "Bélgica"
+        },
+        {
+          "id": "q6d",
+          "text": "Inglaterra"
+        }
       ],
       "correctAnswerId": "q6b"
     },
@@ -76,10 +148,22 @@
       "id": "q7",
       "text": "¿Qué país ganó la Copa del Mundo FIFA de 2022 realizada en Qatar?",
       "options": [
-        { "id": "q7a", "text": "Francia" },
-        { "id": "q7b", "text": "Marruecos" },
-        { "id": "q7c", "text": "Argentina" },
-        { "id": "q7d", "text": "Brasil" }
+        {
+          "id": "q7a",
+          "text": "Francia"
+        },
+        {
+          "id": "q7b",
+          "text": "Marruecos"
+        },
+        {
+          "id": "q7c",
+          "text": "Argentina"
+        },
+        {
+          "id": "q7d",
+          "text": "Brasil"
+        }
       ],
       "correctAnswerId": "q7c"
     },
@@ -87,10 +171,22 @@
       "id": "q8",
       "text": "¿Qué país ganó la Copa del Mundo FIFA de 1978 realizada en Argentina?",
       "options": [
-        { "id": "q8a", "text": "Brasil" },
-        { "id": "q8b", "text": "Países Bajos" },
-        { "id": "q8c", "text": "Alemania Occidental" },
-        { "id": "q8d", "text": "Argentina" }
+        {
+          "id": "q8a",
+          "text": "Brasil"
+        },
+        {
+          "id": "q8b",
+          "text": "Países Bajos"
+        },
+        {
+          "id": "q8c",
+          "text": "Alemania Occidental"
+        },
+        {
+          "id": "q8d",
+          "text": "Argentina"
+        }
       ],
       "correctAnswerId": "q8d"
     },
@@ -98,10 +194,22 @@
       "id": "q9",
       "text": "¿Qué país ganó la Copa del Mundo FIFA de 1954 realizada en Suiza?",
       "options": [
-        { "id": "q9a", "text": "Hungría" },
-        { "id": "q9b", "text": "Alemania Occidental" },
-        { "id": "q9c", "text": "Austria" },
-        { "id": "q9d", "text": "Uruguay" }
+        {
+          "id": "q9a",
+          "text": "Hungría"
+        },
+        {
+          "id": "q9b",
+          "text": "Alemania Occidental"
+        },
+        {
+          "id": "q9c",
+          "text": "Austria"
+        },
+        {
+          "id": "q9d",
+          "text": "Uruguay"
+        }
       ],
       "correctAnswerId": "q9b"
     },
@@ -109,10 +217,22 @@
       "id": "q10",
       "text": "¿Qué país ganó la Copa del Mundo FIFA de 1970 realizada en México?",
       "options": [
-        { "id": "q10a", "text": "Italia" },
-        { "id": "q10b", "text": "Uruguay" },
-        { "id": "q10c", "text": "Brasil" },
-        { "id": "q10d", "text": "Alemania Occidental" }
+        {
+          "id": "q10a",
+          "text": "Italia"
+        },
+        {
+          "id": "q10b",
+          "text": "Uruguay"
+        },
+        {
+          "id": "q10c",
+          "text": "Brasil"
+        },
+        {
+          "id": "q10d",
+          "text": "Alemania Occidental"
+        }
       ],
       "correctAnswerId": "q10c"
     },
@@ -120,10 +240,22 @@
       "id": "q11",
       "text": "¿Quién fue el máximo goleador de la Copa del Mundo FIFA de 2022 en Qatar, con 8 goles?",
       "options": [
-        { "id": "q11a", "text": "Lionel Messi" },
-        { "id": "q11b", "text": "Olivier Giroud" },
-        { "id": "q11c", "text": "Kylian Mbappé" },
-        { "id": "q11d", "text": "Julián Álvarez" }
+        {
+          "id": "q11a",
+          "text": "Lionel Messi"
+        },
+        {
+          "id": "q11b",
+          "text": "Olivier Giroud"
+        },
+        {
+          "id": "q11c",
+          "text": "Kylian Mbappé"
+        },
+        {
+          "id": "q11d",
+          "text": "Julián Álvarez"
+        }
       ],
       "correctAnswerId": "q11c"
     },
@@ -131,10 +263,22 @@
       "id": "q12",
       "text": "En la final del Mundial 2014, Alemania venció a Argentina 1 a 0. ¿En qué ciudad se disputó esa final?",
       "options": [
-        { "id": "q12a", "text": "São Paulo" },
-        { "id": "q12b", "text": "Río de Janeiro" },
-        { "id": "q12c", "text": "Brasilia" },
-        { "id": "q12d", "text": "Buenos Aires" }
+        {
+          "id": "q12a",
+          "text": "São Paulo"
+        },
+        {
+          "id": "q12b",
+          "text": "Río de Janeiro"
+        },
+        {
+          "id": "q12c",
+          "text": "Brasilia"
+        },
+        {
+          "id": "q12d",
+          "text": "Buenos Aires"
+        }
       ],
       "correctAnswerId": "q12b"
     },
@@ -142,10 +286,22 @@
       "id": "q13",
       "text": "¿Qué país ganó la Copa del Mundo FIFA de manera consecutiva en 1934 y 1938?",
       "options": [
-        { "id": "q13a", "text": "Brasil" },
-        { "id": "q13b", "text": "Hungría" },
-        { "id": "q13c", "text": "Alemania" },
-        { "id": "q13d", "text": "Italia" }
+        {
+          "id": "q13a",
+          "text": "Brasil"
+        },
+        {
+          "id": "q13b",
+          "text": "Hungría"
+        },
+        {
+          "id": "q13c",
+          "text": "Alemania"
+        },
+        {
+          "id": "q13d",
+          "text": "Italia"
+        }
       ],
       "correctAnswerId": "q13d"
     },
@@ -153,10 +309,22 @@
       "id": "q14",
       "text": "¿Cuántos goles marcó el legendario Ronaldo Nazário a lo largo de su carrera en Copas del Mundo?",
       "options": [
-        { "id": "q14a", "text": "12" },
-        { "id": "q14b", "text": "15" },
-        { "id": "q14c", "text": "14" },
-        { "id": "q14d", "text": "17" }
+        {
+          "id": "q14a",
+          "text": "12"
+        },
+        {
+          "id": "q14b",
+          "text": "15"
+        },
+        {
+          "id": "q14c",
+          "text": "14"
+        },
+        {
+          "id": "q14d",
+          "text": "17"
+        }
       ],
       "correctAnswerId": "q14b"
     },
@@ -164,10 +332,22 @@
       "id": "q15",
       "text": "¿Qué país ganó la Copa del Mundo FIFA de 2006 realizada en Alemania?",
       "options": [
-        { "id": "q15a", "text": "Francia" },
-        { "id": "q15b", "text": "Portugal" },
-        { "id": "q15c", "text": "Italia" },
-        { "id": "q15d", "text": "Alemania" }
+        {
+          "id": "q15a",
+          "text": "Francia"
+        },
+        {
+          "id": "q15b",
+          "text": "Portugal"
+        },
+        {
+          "id": "q15c",
+          "text": "Italia"
+        },
+        {
+          "id": "q15d",
+          "text": "Alemania"
+        }
       ],
       "correctAnswerId": "q15c"
     },
@@ -175,10 +355,22 @@
       "id": "q16",
       "text": "¿Qué país ganó la Copa del Mundo FIFA de 1994 realizada en Estados Unidos?",
       "options": [
-        { "id": "q16a", "text": "Italia" },
-        { "id": "q16b", "text": "Brasil" },
-        { "id": "q16c", "text": "Suecia" },
-        { "id": "q16d", "text": "Argentina" }
+        {
+          "id": "q16a",
+          "text": "Italia"
+        },
+        {
+          "id": "q16b",
+          "text": "Brasil"
+        },
+        {
+          "id": "q16c",
+          "text": "Suecia"
+        },
+        {
+          "id": "q16d",
+          "text": "Argentina"
+        }
       ],
       "correctAnswerId": "q16b"
     },
@@ -186,10 +378,22 @@
       "id": "q17",
       "text": "¿Qué país ganó la Copa del Mundo FIFA de 1974 realizada en Alemania Occidental?",
       "options": [
-        { "id": "q17a", "text": "Países Bajos" },
-        { "id": "q17b", "text": "Polonia" },
-        { "id": "q17c", "text": "Brasil" },
-        { "id": "q17d", "text": "Alemania Occidental" }
+        {
+          "id": "q17a",
+          "text": "Países Bajos"
+        },
+        {
+          "id": "q17b",
+          "text": "Polonia"
+        },
+        {
+          "id": "q17c",
+          "text": "Brasil"
+        },
+        {
+          "id": "q17d",
+          "text": "Alemania Occidental"
+        }
       ],
       "correctAnswerId": "q17d"
     },
@@ -197,10 +401,22 @@
       "id": "q18",
       "text": "¿Qué dos países fueron co-sede de la Copa del Mundo FIFA de 2002?",
       "options": [
-        { "id": "q18a", "text": "China y Japón" },
-        { "id": "q18b", "text": "Japón y Corea del Sur" },
-        { "id": "q18c", "text": "Corea del Sur y China" },
-        { "id": "q18d", "text": "Australia y Japón" }
+        {
+          "id": "q18a",
+          "text": "China y Japón"
+        },
+        {
+          "id": "q18b",
+          "text": "Japón y Corea del Sur"
+        },
+        {
+          "id": "q18c",
+          "text": "Corea del Sur y China"
+        },
+        {
+          "id": "q18d",
+          "text": "Australia y Japón"
+        }
       ],
       "correctAnswerId": "q18b"
     },
@@ -208,10 +424,22 @@
       "id": "q19",
       "text": "¿Qué país ganó la Copa del Mundo FIFA de 1986 realizada en México?",
       "options": [
-        { "id": "q19a", "text": "Brasil" },
-        { "id": "q19b", "text": "Alemania Occidental" },
-        { "id": "q19c", "text": "Francia" },
-        { "id": "q19d", "text": "Argentina" }
+        {
+          "id": "q19a",
+          "text": "Brasil"
+        },
+        {
+          "id": "q19b",
+          "text": "Alemania Occidental"
+        },
+        {
+          "id": "q19c",
+          "text": "Francia"
+        },
+        {
+          "id": "q19d",
+          "text": "Argentina"
+        }
       ],
       "correctAnswerId": "q19d"
     },
@@ -219,10 +447,22 @@
       "id": "q20",
       "text": "¿Quién tiene el récord de más goles en la historia de las Copas del Mundo FIFA, con 16 goles?",
       "options": [
-        { "id": "q20a", "text": "Ronaldo Nazário" },
-        { "id": "q20b", "text": "Just Fontaine" },
-        { "id": "q20c", "text": "Miroslav Klose" },
-        { "id": "q20d", "text": "Gerd Müller" }
+        {
+          "id": "q20a",
+          "text": "Ronaldo Nazário"
+        },
+        {
+          "id": "q20b",
+          "text": "Just Fontaine"
+        },
+        {
+          "id": "q20c",
+          "text": "Miroslav Klose"
+        },
+        {
+          "id": "q20d",
+          "text": "Gerd Müller"
+        }
       ],
       "correctAnswerId": "q20c"
     }

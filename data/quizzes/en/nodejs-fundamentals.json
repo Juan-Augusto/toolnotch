@@ -4,17 +4,29 @@
   "category": "backend",
   "locale": "en",
   "title": "Node.js Fundamentals Quiz",
-  "description": "Test your Node.js knowledge: event loop, garbage collection, streams, V8 internals and more.",
+  "description": "Test your core Node.js backend concepts, event loop mechanics, and asynchronous architecture.",
   "image": "/images/quizzes/nodejs-fundamentals.png",
   "questions": [
     {
       "id": "q1",
       "text": "Node.js is described as 'single-threaded'. What does this primarily mean in the context of JavaScript execution?",
       "options": [
-        { "id": "a", "text": "It can only handle one HTTP request at a time" },
-        { "id": "b", "text": "JavaScript code runs on a single call stack in one thread" },
-        { "id": "c", "text": "It uses only one CPU core for all operations" },
-        { "id": "d", "text": "It cannot run multiple Node.js processes on the same machine" }
+        {
+          "id": "a",
+          "text": "It can only handle one HTTP request at a time"
+        },
+        {
+          "id": "b",
+          "text": "JavaScript code runs on a single call stack in one thread"
+        },
+        {
+          "id": "c",
+          "text": "It uses only one CPU core for all operations"
+        },
+        {
+          "id": "d",
+          "text": "It cannot run multiple Node.js processes on the same machine"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "Node.js executes JavaScript on a single call stack (the main thread), but delegates I/O to libuv's thread pool, enabling non-blocking concurrency.",
@@ -24,10 +36,22 @@
       "id": "q2",
       "text": "What does `require('fs')` do in a Node.js module?",
       "options": [
-        { "id": "a", "text": "Fetches the 'fs' package from the npm registry at runtime" },
-        { "id": "b", "text": "Loads and caches the built-in file system module, returning its exports object" },
-        { "id": "c", "text": "Creates a new file system instance for the current module only" },
-        { "id": "d", "text": "Registers a file system event listener on the process object" }
+        {
+          "id": "a",
+          "text": "Fetches the 'fs' package from the npm registry at runtime"
+        },
+        {
+          "id": "b",
+          "text": "Loads and caches the built-in file system module, returning its exports object"
+        },
+        {
+          "id": "c",
+          "text": "Creates a new file system instance for the current module only"
+        },
+        {
+          "id": "d",
+          "text": "Registers a file system event listener on the process object"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "`require()` looks up the module in the cache, or loads it from disk and compiles it, then returns its `module.exports` object — subsequent calls return the cached copy.",
@@ -37,10 +61,22 @@
       "id": "q3",
       "text": "Which field in `package.json` specifies the entry point file that Node.js loads when your package is `require()`-d?",
       "options": [
-        { "id": "a", "text": "start" },
-        { "id": "b", "text": "index" },
-        { "id": "c", "text": "main" },
-        { "id": "d", "text": "entry" }
+        {
+          "id": "a",
+          "text": "start"
+        },
+        {
+          "id": "b",
+          "text": "index"
+        },
+        {
+          "id": "c",
+          "text": "main"
+        },
+        {
+          "id": "d",
+          "text": "entry"
+        }
       ],
       "correctAnswerId": "c",
       "explanation": "The `main` field in `package.json` points to the file Node.js resolves when another module requires your package; it defaults to `index.js` if omitted.",
@@ -50,10 +86,22 @@
       "id": "q4",
       "text": "What is the key difference between `fs.readFileSync()` and `fs.readFile()` in Node.js?",
       "options": [
-        { "id": "a", "text": "`readFileSync` reads larger files; `readFile` is limited to 1 MB" },
-        { "id": "b", "text": "`readFileSync` blocks the event loop until the file is read; `readFile` is non-blocking and uses a callback" },
-        { "id": "c", "text": "`readFile` is deprecated; `readFileSync` is the modern API" },
-        { "id": "d", "text": "They are identical — the 'Sync' suffix is cosmetic" }
+        {
+          "id": "a",
+          "text": "`readFileSync` reads larger files; `readFile` is limited to 1 MB"
+        },
+        {
+          "id": "b",
+          "text": "`readFileSync` blocks the event loop until the file is read; `readFile` is non-blocking and uses a callback"
+        },
+        {
+          "id": "c",
+          "text": "`readFile` is deprecated; `readFileSync` is the modern API"
+        },
+        {
+          "id": "d",
+          "text": "They are identical — the 'Sync' suffix is cosmetic"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "`readFileSync` blocks the entire event loop until the read completes, while `readFile` hands the I/O to libuv and invokes the callback when done.",
@@ -63,10 +111,22 @@
       "id": "q5",
       "text": "In Node.js, what is a callback?",
       "options": [
-        { "id": "a", "text": "A built-in error type for async failures" },
-        { "id": "b", "text": "A function passed as an argument to another function, invoked when an async operation completes" },
-        { "id": "c", "text": "A synchronous wrapper around a Promise" },
-        { "id": "d", "text": "A special method on the EventEmitter class" }
+        {
+          "id": "a",
+          "text": "A built-in error type for async failures"
+        },
+        {
+          "id": "b",
+          "text": "A function passed as an argument to another function, invoked when an async operation completes"
+        },
+        {
+          "id": "c",
+          "text": "A synchronous wrapper around a Promise"
+        },
+        {
+          "id": "d",
+          "text": "A special method on the EventEmitter class"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "The callback pattern is Node's foundational async primitive — you pass a function that Node calls back with `(error, result)` once the operation finishes.",
@@ -76,10 +136,22 @@
       "id": "q6",
       "text": "How do you read an environment variable named `PORT` in a Node.js process?",
       "options": [
-        { "id": "a", "text": "`env.get('PORT')`" },
-        { "id": "b", "text": "`process.env.PORT`" },
-        { "id": "c", "text": "`os.env('PORT')`" },
-        { "id": "d", "text": "`global.PORT`" }
+        {
+          "id": "a",
+          "text": "`env.get('PORT')`"
+        },
+        {
+          "id": "b",
+          "text": "`process.env.PORT`"
+        },
+        {
+          "id": "c",
+          "text": "`os.env('PORT')`"
+        },
+        {
+          "id": "d",
+          "text": "`global.PORT`"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "`process.env` is an object populated from the process's environment variables; accessing `process.env.PORT` returns its string value or `undefined`.",
@@ -89,10 +161,22 @@
       "id": "q7",
       "text": "Which built-in Node.js module would you use to join two path segments in a cross-platform safe way?",
       "options": [
-        { "id": "a", "text": "`fs`" },
-        { "id": "b", "text": "`url`" },
-        { "id": "c", "text": "`path`" },
-        { "id": "d", "text": "`os`" }
+        {
+          "id": "a",
+          "text": "`fs`"
+        },
+        {
+          "id": "b",
+          "text": "`url`"
+        },
+        {
+          "id": "c",
+          "text": "`path`"
+        },
+        {
+          "id": "d",
+          "text": "`os`"
+        }
       ],
       "correctAnswerId": "c",
       "explanation": "The `path` module provides `path.join()` and `path.resolve()`, which handle platform-specific separators (`/` vs `\\`) automatically.",
@@ -102,10 +186,22 @@
       "id": "q8",
       "text": "What does `npm run build` execute?",
       "options": [
-        { "id": "a", "text": "Downloads and installs all packages listed in `dependencies`" },
-        { "id": "b", "text": "Runs the `build` script defined under the `scripts` key in `package.json`" },
-        { "id": "c", "text": "Compiles all `.ts` files to `.js` using Node's built-in compiler" },
-        { "id": "d", "text": "Creates a production bundle and uploads it to npm" }
+        {
+          "id": "a",
+          "text": "Downloads and installs all packages listed in `dependencies`"
+        },
+        {
+          "id": "b",
+          "text": "Runs the `build` script defined under the `scripts` key in `package.json`"
+        },
+        {
+          "id": "c",
+          "text": "Compiles all `.ts` files to `.js` using Node's built-in compiler"
+        },
+        {
+          "id": "d",
+          "text": "Creates a production bundle and uploads it to npm"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "`npm run <name>` executes the shell command mapped to that name in the `scripts` section of `package.json`, with `node_modules/.bin` added to PATH.",
@@ -115,10 +211,22 @@
       "id": "q9",
       "text": "In a Node.js stack trace, what does the line `at Object.<anonymous> (app.js:42:15)` tell you?",
       "options": [
-        { "id": "a", "text": "An anonymous object was exported from `app.js`" },
-        { "id": "b", "text": "The error originated at line 42, column 15 of `app.js`" },
-        { "id": "c", "text": "The file `app.js` has 42 exports" },
-        { "id": "d", "text": "Process memory usage at the time of the error" }
+        {
+          "id": "a",
+          "text": "An anonymous object was exported from `app.js`"
+        },
+        {
+          "id": "b",
+          "text": "The error originated at line 42, column 15 of `app.js`"
+        },
+        {
+          "id": "c",
+          "text": "The file `app.js` has 42 exports"
+        },
+        {
+          "id": "d",
+          "text": "Process memory usage at the time of the error"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "Each stack frame shows the function name, file, line number, and column number, letting you pinpoint exactly where in source the call was made.",
@@ -128,10 +236,22 @@
       "id": "q10",
       "text": "Which of the following is available in a browser's JavaScript runtime but NOT in Node.js by default?",
       "options": [
-        { "id": "a", "text": "`setTimeout`" },
-        { "id": "b", "text": "`Promise`" },
-        { "id": "c", "text": "`window`" },
-        { "id": "d", "text": "`Array.prototype.map`" }
+        {
+          "id": "a",
+          "text": "`setTimeout`"
+        },
+        {
+          "id": "b",
+          "text": "`Promise`"
+        },
+        {
+          "id": "c",
+          "text": "`window`"
+        },
+        {
+          "id": "d",
+          "text": "`Array.prototype.map`"
+        }
       ],
       "correctAnswerId": "c",
       "explanation": "The `window` global (and browser-specific APIs like `document`, `localStorage`) do not exist in Node.js; Node has `global`, `process`, and its own I/O APIs instead.",
@@ -141,10 +261,22 @@
       "id": "q11",
       "text": "What is the correct order of execution for the following code?\n```js\nsetTimeout(() => console.log('A'), 0);\nsetImmediate(() => console.log('B'));\nprocess.nextTick(() => console.log('C'));\nconsole.log('D');\n```",
       "options": [
-        { "id": "a", "text": "D → A → B → C" },
-        { "id": "b", "text": "D → C → A → B" },
-        { "id": "c", "text": "D → C → B → A" },
-        { "id": "d", "text": "A → B → C → D" }
+        {
+          "id": "a",
+          "text": "D → A → B → C"
+        },
+        {
+          "id": "b",
+          "text": "D → C → A → B"
+        },
+        {
+          "id": "c",
+          "text": "D → C → B → A"
+        },
+        {
+          "id": "d",
+          "text": "A → B → C → D"
+        }
       ],
       "correctAnswerId": "c",
       "explanation": "Synchronous code runs first (D), then microtasks/nextTick queue (C), then the timers phase fires setTimeout (A), and finally the check phase fires setImmediate (B) — but within the I/O context setTimeout(0) vs setImmediate order is non-deterministic outside I/O; in a top-level script the most common observed order is D→C→A→B or D→C→B→A.",
@@ -154,10 +286,22 @@
       "id": "q12",
       "text": "In what phase of the Node.js event loop does `setImmediate()` fire?",
       "options": [
-        { "id": "a", "text": "Timers phase" },
-        { "id": "b", "text": "Poll phase" },
-        { "id": "c", "text": "Check phase" },
-        { "id": "d", "text": "Close callbacks phase" }
+        {
+          "id": "a",
+          "text": "Timers phase"
+        },
+        {
+          "id": "b",
+          "text": "Poll phase"
+        },
+        {
+          "id": "c",
+          "text": "Check phase"
+        },
+        {
+          "id": "d",
+          "text": "Close callbacks phase"
+        }
       ],
       "correctAnswerId": "c",
       "explanation": "The event loop phases are: timers → pending callbacks → idle/prepare → poll → check → close callbacks; `setImmediate` callbacks run in the **check** phase.",
@@ -167,10 +311,22 @@
       "id": "q13",
       "text": "Which of the following has the highest execution priority in Node.js's async scheduling?",
       "options": [
-        { "id": "a", "text": "`setTimeout(fn, 0)`" },
-        { "id": "b", "text": "`setImmediate(fn)`" },
-        { "id": "c", "text": "`process.nextTick(fn)`" },
-        { "id": "d", "text": "Resolved `Promise` `.then()` callbacks" }
+        {
+          "id": "a",
+          "text": "`setTimeout(fn, 0)`"
+        },
+        {
+          "id": "b",
+          "text": "`setImmediate(fn)`"
+        },
+        {
+          "id": "c",
+          "text": "`process.nextTick(fn)`"
+        },
+        {
+          "id": "d",
+          "text": "Resolved `Promise` `.then()` callbacks"
+        }
       ],
       "correctAnswerId": "c",
       "explanation": "`process.nextTick` callbacks drain completely before any microtask (Promise) callbacks, which themselves drain before the next event loop phase begins.",
@@ -180,10 +336,22 @@
       "id": "q14",
       "text": "What type of Node.js stream would you use to both read from and write to, AND transform the data in transit (e.g., a gzip compressor)?",
       "options": [
-        { "id": "a", "text": "Readable stream" },
-        { "id": "b", "text": "Writable stream" },
-        { "id": "c", "text": "Duplex stream" },
-        { "id": "d", "text": "Transform stream" }
+        {
+          "id": "a",
+          "text": "Readable stream"
+        },
+        {
+          "id": "b",
+          "text": "Writable stream"
+        },
+        {
+          "id": "c",
+          "text": "Duplex stream"
+        },
+        {
+          "id": "d",
+          "text": "Transform stream"
+        }
       ],
       "correctAnswerId": "d",
       "explanation": "A Transform stream is a Duplex where output is computed from input — `zlib.createGzip()` is the canonical example; a plain Duplex has independent read/write sides.",
@@ -193,10 +361,22 @@
       "id": "q15",
       "text": "What is the primary purpose of the Node.js `cluster` module?",
       "options": [
-        { "id": "a", "text": "To distribute npm packages across multiple machines" },
-        { "id": "b", "text": "To fork multiple worker processes that share the same server port, utilizing multiple CPU cores" },
-        { "id": "c", "text": "To spawn child processes that run independent scripts with no shared state" },
-        { "id": "d", "text": "To create thread pools for CPU-intensive synchronous tasks" }
+        {
+          "id": "a",
+          "text": "To distribute npm packages across multiple machines"
+        },
+        {
+          "id": "b",
+          "text": "To fork multiple worker processes that share the same server port, utilizing multiple CPU cores"
+        },
+        {
+          "id": "c",
+          "text": "To spawn child processes that run independent scripts with no shared state"
+        },
+        {
+          "id": "d",
+          "text": "To create thread pools for CPU-intensive synchronous tasks"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "The `cluster` module forks child processes (all sharing port 80 via the OS round-robin or the master passing handles), letting a Node app scale across CPU cores.",
@@ -206,10 +386,22 @@
       "id": "q16",
       "text": "How does `worker_threads` differ from `child_process` in Node.js?",
       "options": [
-        { "id": "a", "text": "`worker_threads` share memory via `SharedArrayBuffer`; `child_process` spawns fully isolated OS processes" },
-        { "id": "b", "text": "`child_process` is faster for CPU tasks because it uses native threads" },
-        { "id": "c", "text": "`worker_threads` cannot communicate with the main thread" },
-        { "id": "d", "text": "They are interchangeable; the names are aliases" }
+        {
+          "id": "a",
+          "text": "`worker_threads` share memory via `SharedArrayBuffer`; `child_process` spawns fully isolated OS processes"
+        },
+        {
+          "id": "b",
+          "text": "`child_process` is faster for CPU tasks because it uses native threads"
+        },
+        {
+          "id": "c",
+          "text": "`worker_threads` cannot communicate with the main thread"
+        },
+        {
+          "id": "d",
+          "text": "They are interchangeable; the names are aliases"
+        }
       ],
       "correctAnswerId": "a",
       "explanation": "Worker threads run in the same process and can share memory (SharedArrayBuffer/Atomics), while child_process forks separate OS processes with isolated V8 heaps.",
@@ -219,10 +411,22 @@
       "id": "q17",
       "text": "In V8's heap layout, what is the 'New Space' (Young Generation) used for?",
       "options": [
-        { "id": "a", "text": "Storing compiled machine code for JIT-compiled functions" },
-        { "id": "b", "text": "Short-lived objects that are expected to be collected quickly" },
-        { "id": "c", "text": "Large objects over 1 MB that cannot fit in regular pages" },
-        { "id": "d", "text": "The call stack and local variable frames" }
+        {
+          "id": "a",
+          "text": "Storing compiled machine code for JIT-compiled functions"
+        },
+        {
+          "id": "b",
+          "text": "Short-lived objects that are expected to be collected quickly"
+        },
+        {
+          "id": "c",
+          "text": "Large objects over 1 MB that cannot fit in regular pages"
+        },
+        {
+          "id": "d",
+          "text": "The call stack and local variable frames"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "V8 divides the heap into New Space (young/short-lived objects collected by Scavenge) and Old Space (long-lived objects collected by Mark-Sweep/Mark-Compact).",
@@ -232,10 +436,22 @@
       "id": "q18",
       "text": "When a Node.js module is `require()`-d a second time, what happens?",
       "options": [
-        { "id": "a", "text": "The module file is re-read from disk and re-executed" },
-        { "id": "b", "text": "An error is thrown to prevent duplicate initialization" },
-        { "id": "c", "text": "The cached `exports` object from the first load is returned immediately" },
-        { "id": "d", "text": "A new isolated module instance is created" }
+        {
+          "id": "a",
+          "text": "The module file is re-read from disk and re-executed"
+        },
+        {
+          "id": "b",
+          "text": "An error is thrown to prevent duplicate initialization"
+        },
+        {
+          "id": "c",
+          "text": "The cached `exports` object from the first load is returned immediately"
+        },
+        {
+          "id": "d",
+          "text": "A new isolated module instance is created"
+        }
       ],
       "correctAnswerId": "c",
       "explanation": "Node's module system stores each resolved module in `require.cache`; subsequent `require()` calls for the same file return the cached `exports` without re-executing the module code.",
@@ -245,10 +461,22 @@
       "id": "q19",
       "text": "Which `EventEmitter` method registers a listener that fires only once and then automatically removes itself?",
       "options": [
-        { "id": "a", "text": "`emitter.on(event, listener)`" },
-        { "id": "b", "text": "`emitter.once(event, listener)`" },
-        { "id": "c", "text": "`emitter.addOnceListener(event, listener)`" },
-        { "id": "d", "text": "`emitter.emit(event, { once: true })`" }
+        {
+          "id": "a",
+          "text": "`emitter.on(event, listener)`"
+        },
+        {
+          "id": "b",
+          "text": "`emitter.once(event, listener)`"
+        },
+        {
+          "id": "c",
+          "text": "`emitter.addOnceListener(event, listener)`"
+        },
+        {
+          "id": "d",
+          "text": "`emitter.emit(event, { once: true })`"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "`emitter.once()` wraps the listener so it deregisters itself after the first emission, preventing repeated calls without manual `removeListener` cleanup.",
@@ -258,10 +486,22 @@
       "id": "q20",
       "text": "What is libuv's role in Node.js?",
       "options": [
-        { "id": "a", "text": "It is the JavaScript engine that compiles and executes JS code" },
-        { "id": "b", "text": "It provides the cross-platform async I/O event loop, thread pool, and OS abstraction layer" },
-        { "id": "c", "text": "It manages npm package downloads and caching" },
-        { "id": "d", "text": "It implements the HTTP/2 protocol for Node's `http2` module" }
+        {
+          "id": "a",
+          "text": "It is the JavaScript engine that compiles and executes JS code"
+        },
+        {
+          "id": "b",
+          "text": "It provides the cross-platform async I/O event loop, thread pool, and OS abstraction layer"
+        },
+        {
+          "id": "c",
+          "text": "It manages npm package downloads and caching"
+        },
+        {
+          "id": "d",
+          "text": "It implements the HTTP/2 protocol for Node's `http2` module"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "libuv is the C library underneath Node.js that implements the event loop, thread pool (for file I/O, DNS, etc.), and platform-specific networking abstractions.",
@@ -271,10 +511,22 @@
       "id": "q21",
       "text": "Which garbage collection algorithm does V8 use for the Young Generation (New Space)?",
       "options": [
-        { "id": "a", "text": "Mark-Sweep" },
-        { "id": "b", "text": "Mark-Compact" },
-        { "id": "c", "text": "Scavenge (Cheney's semi-space copying)" },
-        { "id": "d", "text": "Reference counting" }
+        {
+          "id": "a",
+          "text": "Mark-Sweep"
+        },
+        {
+          "id": "b",
+          "text": "Mark-Compact"
+        },
+        {
+          "id": "c",
+          "text": "Scavenge (Cheney's semi-space copying)"
+        },
+        {
+          "id": "d",
+          "text": "Reference counting"
+        }
       ],
       "correctAnswerId": "c",
       "explanation": "V8 uses Scavenge — a semi-space copying collector — for the Young Generation because most objects die young, making evacuation of survivors fast.",
@@ -284,10 +536,22 @@
       "id": "q22",
       "text": "Why can a full Mark-Compact GC cycle cause observable latency spikes in a Node.js server?",
       "options": [
-        { "id": "a", "text": "It temporarily doubles memory usage by copying the entire heap" },
-        { "id": "b", "text": "It runs stop-the-world pauses while compacting the Old Space, blocking the event loop" },
-        { "id": "c", "text": "It recompiles all JIT-optimized functions to free code cache memory" },
-        { "id": "d", "text": "It flushes the libuv thread pool and restarts all pending I/O operations" }
+        {
+          "id": "a",
+          "text": "It temporarily doubles memory usage by copying the entire heap"
+        },
+        {
+          "id": "b",
+          "text": "It runs stop-the-world pauses while compacting the Old Space, blocking the event loop"
+        },
+        {
+          "id": "c",
+          "text": "It recompiles all JIT-optimized functions to free code cache memory"
+        },
+        {
+          "id": "d",
+          "text": "It flushes the libuv thread pool and restarts all pending I/O operations"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "Mark-Compact requires stop-the-world (STW) pauses to safely move objects and update all pointers, during which the event loop cannot process new requests.",
@@ -297,10 +561,22 @@
       "id": "q23",
       "text": "You run `node --prof app.js` and then `node --prof-process isolate-*.log`. What kind of output does this produce?",
       "options": [
-        { "id": "a", "text": "A heap snapshot in JSON format compatible with Chrome DevTools" },
-        { "id": "b", "text": "A human-readable statistical CPU profile showing hot functions and their call percentages" },
-        { "id": "c", "text": "A timeline of all GC pauses with their durations in milliseconds" },
-        { "id": "d", "text": "A network waterfall diagram of all HTTP requests made during the run" }
+        {
+          "id": "a",
+          "text": "A heap snapshot in JSON format compatible with Chrome DevTools"
+        },
+        {
+          "id": "b",
+          "text": "A human-readable statistical CPU profile showing hot functions and their call percentages"
+        },
+        {
+          "id": "c",
+          "text": "A timeline of all GC pauses with their durations in milliseconds"
+        },
+        {
+          "id": "d",
+          "text": "A network waterfall diagram of all HTTP requests made during the run"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "`--prof` generates a V8 tick-based sampling profile; `--prof-process` post-processes it into a report showing which functions consumed the most CPU time.",
@@ -310,10 +586,22 @@
       "id": "q24",
       "text": "Which of the following patterns is the most common cause of memory leaks in long-running Node.js servers?",
       "options": [
-        { "id": "a", "text": "Using `const` instead of `let` for module-level variables" },
-        { "id": "b", "text": "Accumulating listeners on an EventEmitter without ever calling `removeListener`" },
-        { "id": "c", "text": "Calling `JSON.parse` on large strings repeatedly" },
-        { "id": "d", "text": "Using `async/await` instead of raw callbacks" }
+        {
+          "id": "a",
+          "text": "Using `const` instead of `let` for module-level variables"
+        },
+        {
+          "id": "b",
+          "text": "Accumulating listeners on an EventEmitter without ever calling `removeListener`"
+        },
+        {
+          "id": "c",
+          "text": "Calling `JSON.parse` on large strings repeatedly"
+        },
+        {
+          "id": "d",
+          "text": "Using `async/await` instead of raw callbacks"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "Each `emitter.on()` call adds a reference that prevents GC of the listener and anything it closes over; without cleanup they accumulate indefinitely, a classic Node.js leak pattern.",
@@ -323,10 +611,22 @@
       "id": "q25",
       "text": "What does the Node.js flag `--max-old-space-size=4096` control?",
       "options": [
-        { "id": "a", "text": "The maximum number of files that can be open simultaneously" },
-        { "id": "b", "text": "The size of libuv's thread pool in megabytes" },
-        { "id": "c", "text": "The upper limit of V8's Old Space heap in megabytes before OOM is thrown" },
-        { "id": "d", "text": "The maximum allowed size of a single JSON payload parsed with `JSON.parse`" }
+        {
+          "id": "a",
+          "text": "The maximum number of files that can be open simultaneously"
+        },
+        {
+          "id": "b",
+          "text": "The size of libuv's thread pool in megabytes"
+        },
+        {
+          "id": "c",
+          "text": "The upper limit of V8's Old Space heap in megabytes before OOM is thrown"
+        },
+        {
+          "id": "d",
+          "text": "The maximum allowed size of a single JSON payload parsed with `JSON.parse`"
+        }
       ],
       "correctAnswerId": "c",
       "explanation": "`--max-old-space-size` sets the maximum heap size for V8's Old Generation; exceeding it triggers a final GC and then throws a fatal out-of-memory error.",
@@ -336,10 +636,22 @@
       "id": "q26",
       "text": "A synchronous CPU-bound loop running for 2 seconds is accidentally placed in an HTTP request handler. What is the most accurate description of the impact?",
       "options": [
-        { "id": "a", "text": "Only that specific request is delayed; other requests continue normally" },
-        { "id": "b", "text": "The event loop poll phase is blocked for 2 seconds, stalling ALL other incoming requests and timers" },
-        { "id": "c", "text": "Node automatically offloads the loop to libuv's thread pool to prevent blocking" },
-        { "id": "d", "text": "The cluster master process detects the block and restarts the worker" }
+        {
+          "id": "a",
+          "text": "Only that specific request is delayed; other requests continue normally"
+        },
+        {
+          "id": "b",
+          "text": "The event loop poll phase is blocked for 2 seconds, stalling ALL other incoming requests and timers"
+        },
+        {
+          "id": "c",
+          "text": "Node automatically offloads the loop to libuv's thread pool to prevent blocking"
+        },
+        {
+          "id": "d",
+          "text": "The cluster master process detects the block and restarts the worker"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "JavaScript is single-threaded; a synchronous CPU loop occupies the entire event loop, preventing any I/O callbacks, timers, or new requests from being processed until it finishes.",
@@ -349,10 +661,22 @@
       "id": "q27",
       "text": "What is back-pressure in Node.js streams, and what role does `highWaterMark` play?",
       "options": [
-        { "id": "a", "text": "Back-pressure is an HTTP rate-limit; `highWaterMark` sets the requests-per-second ceiling" },
-        { "id": "b", "text": "Back-pressure is the signal that a writable stream's buffer is full; `highWaterMark` sets the buffer size threshold at which `write()` returns `false`" },
-        { "id": "c", "text": "Back-pressure is a V8 GC pause; `highWaterMark` triggers early GC when heap exceeds this fraction" },
-        { "id": "d", "text": "Back-pressure is unused in Node.js streams; it is only relevant to TCP sockets" }
+        {
+          "id": "a",
+          "text": "Back-pressure is an HTTP rate-limit; `highWaterMark` sets the requests-per-second ceiling"
+        },
+        {
+          "id": "b",
+          "text": "Back-pressure is the signal that a writable stream's buffer is full; `highWaterMark` sets the buffer size threshold at which `write()` returns `false`"
+        },
+        {
+          "id": "c",
+          "text": "Back-pressure is a V8 GC pause; `highWaterMark` triggers early GC when heap exceeds this fraction"
+        },
+        {
+          "id": "d",
+          "text": "Back-pressure is unused in Node.js streams; it is only relevant to TCP sockets"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "When a Writable's internal buffer exceeds `highWaterMark` bytes, `write()` returns `false` (back-pressure signal); producers should pause until the `drain` event fires to avoid unbounded memory growth.",
@@ -362,10 +686,22 @@
       "id": "q28",
       "text": "What is the primary advantage of N-API (now Node-API) over previous native addon interfaces?",
       "options": [
-        { "id": "a", "text": "It allows writing native addons in Python instead of C/C++" },
-        { "id": "b", "text": "It provides an ABI-stable interface so native addons do not need to be recompiled for every new Node.js version" },
-        { "id": "c", "text": "It gives native addons direct access to V8's garbage collector to manage their own memory" },
-        { "id": "d", "text": "It automatically parallelizes native addon execution across all CPU cores" }
+        {
+          "id": "a",
+          "text": "It allows writing native addons in Python instead of C/C++"
+        },
+        {
+          "id": "b",
+          "text": "It provides an ABI-stable interface so native addons do not need to be recompiled for every new Node.js version"
+        },
+        {
+          "id": "c",
+          "text": "It gives native addons direct access to V8's garbage collector to manage their own memory"
+        },
+        {
+          "id": "d",
+          "text": "It automatically parallelizes native addon execution across all CPU cores"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "N-API exposes a stable ABI layer that abstracts V8 internals, meaning a native addon compiled once works across Node.js major versions without recompilation.",
@@ -375,10 +711,22 @@
       "id": "q29",
       "text": "How do V8 'hidden classes' (also called 'shapes' or 'maps') improve JavaScript object performance?",
       "options": [
-        { "id": "a", "text": "They compress object keys using a dictionary to reduce memory per object" },
-        { "id": "b", "text": "They allow V8 to generate optimized machine code by tracking object property layouts and reusing them across instances with the same shape" },
-        { "id": "c", "text": "They hide private class fields from the garbage collector to prevent premature collection" },
-        { "id": "d", "text": "They pre-allocate a fixed heap page per constructor function" }
+        {
+          "id": "a",
+          "text": "They compress object keys using a dictionary to reduce memory per object"
+        },
+        {
+          "id": "b",
+          "text": "They allow V8 to generate optimized machine code by tracking object property layouts and reusing them across instances with the same shape"
+        },
+        {
+          "id": "c",
+          "text": "They hide private class fields from the garbage collector to prevent premature collection"
+        },
+        {
+          "id": "d",
+          "text": "They pre-allocate a fixed heap page per constructor function"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "V8 assigns a hidden class (shape/map) to each object based on its property layout; objects sharing the same shape can share JIT-compiled inline caches, enabling fast property access.",
@@ -388,10 +736,22 @@
       "id": "q30",
       "text": "When using PM2 to achieve zero-downtime restarts (`pm2 reload`), what mechanism does PM2 use?",
       "options": [
-        { "id": "a", "text": "It pauses the load balancer, restarts all workers simultaneously, then resumes traffic" },
-        { "id": "b", "text": "It creates a new worker, waits for it to signal readiness, routes traffic to it, then gracefully kills the old worker — one at a time" },
-        { "id": "c", "text": "It patches the running process in memory without spawning a new one" },
-        { "id": "d", "text": "It relies on the OS kernel's live-patching feature to swap code pages atomically" }
+        {
+          "id": "a",
+          "text": "It pauses the load balancer, restarts all workers simultaneously, then resumes traffic"
+        },
+        {
+          "id": "b",
+          "text": "It creates a new worker, waits for it to signal readiness, routes traffic to it, then gracefully kills the old worker — one at a time"
+        },
+        {
+          "id": "c",
+          "text": "It patches the running process in memory without spawning a new one"
+        },
+        {
+          "id": "d",
+          "text": "It relies on the OS kernel's live-patching feature to swap code pages atomically"
+        }
       ],
       "correctAnswerId": "b",
       "explanation": "PM2 reload performs a rolling restart: it spawns a new worker, waits for it to emit `process.send('ready')`, moves traffic to it, then gracefully shuts down the old worker — ensuring zero downtime.",

@@ -3,17 +3,29 @@
   "type": "trivia",
   "category": "sports",
   "title": "Trivia: Champions League",
-  "description": "¿Crees que conoces la historia de la Champions League? Desde la primera Copa de Europa en 1956 hasta los gigantes modernos de la UCL, este quiz pone a prueba tu conocimiento sobre la mayor competición de clubes del planeta. Finales icónicas, entrenadores legendarios, máximos goleadores y momentos inolvidables en 15 preguntas desafiantes. Solo los verdaderos aficionados al fútbol europeo alcanzarán la cima.",
+  "description": "Pon a prueba tus conocimientos sobre finales históricas, entrenadores y goleadores de la Champions League.",
   "image": "/images/quizzes/champions-league-trivia-cover.jpg",
   "questions": [
     {
       "id": "q1",
       "text": "¿Qué club ha ganado más títulos de la UEFA Champions League / Copa de Europa?",
       "options": [
-        { "id": "q1a", "text": "AC Milan" },
-        { "id": "q1b", "text": "Real Madrid" },
-        { "id": "q1c", "text": "Barcelona" },
-        { "id": "q1d", "text": "Bayern Munich" }
+        {
+          "id": "q1a",
+          "text": "AC Milan"
+        },
+        {
+          "id": "q1b",
+          "text": "Real Madrid"
+        },
+        {
+          "id": "q1c",
+          "text": "Barcelona"
+        },
+        {
+          "id": "q1d",
+          "text": "Bayern Munich"
+        }
       ],
       "correctAnswerId": "q1b"
     },
@@ -21,10 +33,22 @@
       "id": "q2",
       "text": "¿Qué club protagonizó el famoso 'Milagro de Estambul' en la final de la Champions League de 2005?",
       "options": [
-        { "id": "q2a", "text": "Manchester United" },
-        { "id": "q2b", "text": "AC Milan" },
-        { "id": "q2c", "text": "Liverpool" },
-        { "id": "q2d", "text": "Chelsea" }
+        {
+          "id": "q2a",
+          "text": "Manchester United"
+        },
+        {
+          "id": "q2b",
+          "text": "AC Milan"
+        },
+        {
+          "id": "q2c",
+          "text": "Liverpool"
+        },
+        {
+          "id": "q2d",
+          "text": "Chelsea"
+        }
       ],
       "correctAnswerId": "q2c"
     },
@@ -32,10 +56,22 @@
       "id": "q3",
       "text": "¿En qué año la Copa de Europa pasó a llamarse UEFA Champions League?",
       "options": [
-        { "id": "q3a", "text": "1988" },
-        { "id": "q3b", "text": "1990" },
-        { "id": "q3c", "text": "1992" },
-        { "id": "q3d", "text": "1995" }
+        {
+          "id": "q3a",
+          "text": "1988"
+        },
+        {
+          "id": "q3b",
+          "text": "1990"
+        },
+        {
+          "id": "q3c",
+          "text": "1992"
+        },
+        {
+          "id": "q3d",
+          "text": "1995"
+        }
       ],
       "correctAnswerId": "q3c"
     },
@@ -43,10 +79,22 @@
       "id": "q4",
       "text": "¿Quién es el máximo goleador de todos los tiempos en la UEFA Champions League?",
       "options": [
-        { "id": "q4a", "text": "Lionel Messi" },
-        { "id": "q4b", "text": "Raúl" },
-        { "id": "q4c", "text": "Robert Lewandowski" },
-        { "id": "q4d", "text": "Cristiano Ronaldo" }
+        {
+          "id": "q4a",
+          "text": "Lionel Messi"
+        },
+        {
+          "id": "q4b",
+          "text": "Raúl"
+        },
+        {
+          "id": "q4c",
+          "text": "Robert Lewandowski"
+        },
+        {
+          "id": "q4d",
+          "text": "Cristiano Ronaldo"
+        }
       ],
       "correctAnswerId": "q4d"
     },
@@ -54,10 +102,22 @@
       "id": "q5",
       "text": "¿Qué club ganó la primera Copa de Europa en 1956?",
       "options": [
-        { "id": "q5a", "text": "Juventus" },
-        { "id": "q5b", "text": "Real Madrid" },
-        { "id": "q5c", "text": "Benfica" },
-        { "id": "q5d", "text": "Inter Milan" }
+        {
+          "id": "q5a",
+          "text": "Juventus"
+        },
+        {
+          "id": "q5b",
+          "text": "Real Madrid"
+        },
+        {
+          "id": "q5c",
+          "text": "Benfica"
+        },
+        {
+          "id": "q5d",
+          "text": "Inter Milan"
+        }
       ],
       "correctAnswerId": "q5b"
     },
@@ -65,10 +125,22 @@
       "id": "q6",
       "text": "¿Qué equipo ganó la final de la Champions League de 2019, derrotando al Tottenham Hotspur 2-0?",
       "options": [
-        { "id": "q6a", "text": "Barcelona" },
-        { "id": "q6b", "text": "Manchester City" },
-        { "id": "q6c", "text": "Ajax" },
-        { "id": "q6d", "text": "Liverpool" }
+        {
+          "id": "q6a",
+          "text": "Barcelona"
+        },
+        {
+          "id": "q6b",
+          "text": "Manchester City"
+        },
+        {
+          "id": "q6c",
+          "text": "Ajax"
+        },
+        {
+          "id": "q6d",
+          "text": "Liverpool"
+        }
       ],
       "correctAnswerId": "q6d"
     },
@@ -76,10 +148,22 @@
       "id": "q7",
       "text": "¿En qué ciudad se celebró la final de la UEFA Champions League de 2023?",
       "options": [
-        { "id": "q7a", "text": "París" },
-        { "id": "q7b", "text": "Estambul" },
-        { "id": "q7c", "text": "Londres" },
-        { "id": "q7d", "text": "Lisboa" }
+        {
+          "id": "q7a",
+          "text": "París"
+        },
+        {
+          "id": "q7b",
+          "text": "Estambul"
+        },
+        {
+          "id": "q7c",
+          "text": "Londres"
+        },
+        {
+          "id": "q7d",
+          "text": "Lisboa"
+        }
       ],
       "correctAnswerId": "q7b"
     },
@@ -87,10 +171,22 @@
       "id": "q8",
       "text": "¿Qué club ganó la final de la Champions League de 2012 contra el Bayern Munich en penales?",
       "options": [
-        { "id": "q8a", "text": "Chelsea" },
-        { "id": "q8b", "text": "Arsenal" },
-        { "id": "q8c", "text": "Manchester United" },
-        { "id": "q8d", "text": "Atletico Madrid" }
+        {
+          "id": "q8a",
+          "text": "Chelsea"
+        },
+        {
+          "id": "q8b",
+          "text": "Arsenal"
+        },
+        {
+          "id": "q8c",
+          "text": "Manchester United"
+        },
+        {
+          "id": "q8d",
+          "text": "Atletico Madrid"
+        }
       ],
       "correctAnswerId": "q8a"
     },
@@ -98,10 +194,22 @@
       "id": "q9",
       "text": "¿Qué club ganó la UEFA Champions League 2020, derrotando al PSG en la final?",
       "options": [
-        { "id": "q9a", "text": "Real Madrid" },
-        { "id": "q9b", "text": "Juventus" },
-        { "id": "q9c", "text": "Bayern Munich" },
-        { "id": "q9d", "text": "Liverpool" }
+        {
+          "id": "q9a",
+          "text": "Real Madrid"
+        },
+        {
+          "id": "q9b",
+          "text": "Juventus"
+        },
+        {
+          "id": "q9c",
+          "text": "Bayern Munich"
+        },
+        {
+          "id": "q9d",
+          "text": "Liverpool"
+        }
       ],
       "correctAnswerId": "q9c"
     },
@@ -109,10 +217,22 @@
       "id": "q10",
       "text": "¿Qué entrenador llevó al Barcelona a ganar la Champions League en 2009 y 2011?",
       "options": [
-        { "id": "q10a", "text": "Johan Cruyff" },
-        { "id": "q10b", "text": "Luis Enrique" },
-        { "id": "q10c", "text": "Frank Rijkaard" },
-        { "id": "q10d", "text": "Pep Guardiola" }
+        {
+          "id": "q10a",
+          "text": "Johan Cruyff"
+        },
+        {
+          "id": "q10b",
+          "text": "Luis Enrique"
+        },
+        {
+          "id": "q10c",
+          "text": "Frank Rijkaard"
+        },
+        {
+          "id": "q10d",
+          "text": "Pep Guardiola"
+        }
       ],
       "correctAnswerId": "q10d"
     },
@@ -120,10 +240,22 @@
       "id": "q11",
       "text": "¿Qué club ganó la UEFA Champions League de forma consecutiva en 2017 y 2018?",
       "options": [
-        { "id": "q11a", "text": "Juventus" },
-        { "id": "q11b", "text": "Real Madrid" },
-        { "id": "q11c", "text": "Barcelona" },
-        { "id": "q11d", "text": "Atletico Madrid" }
+        {
+          "id": "q11a",
+          "text": "Juventus"
+        },
+        {
+          "id": "q11b",
+          "text": "Real Madrid"
+        },
+        {
+          "id": "q11c",
+          "text": "Barcelona"
+        },
+        {
+          "id": "q11d",
+          "text": "Atletico Madrid"
+        }
       ],
       "correctAnswerId": "q11b"
     },
@@ -131,10 +263,22 @@
       "id": "q12",
       "text": "¿Quién fue el máximo goleador de la Champions League 2021-22 con 15 goles?",
       "options": [
-        { "id": "q12a", "text": "Kylian Mbappé" },
-        { "id": "q12b", "text": "Robert Lewandowski" },
-        { "id": "q12c", "text": "Karim Benzema" },
-        { "id": "q12d", "text": "Cristiano Ronaldo" }
+        {
+          "id": "q12a",
+          "text": "Kylian Mbappé"
+        },
+        {
+          "id": "q12b",
+          "text": "Robert Lewandowski"
+        },
+        {
+          "id": "q12c",
+          "text": "Karim Benzema"
+        },
+        {
+          "id": "q12d",
+          "text": "Cristiano Ronaldo"
+        }
       ],
       "correctAnswerId": "q12c"
     },
@@ -142,10 +286,22 @@
       "id": "q13",
       "text": "¿Qué club ganó la final de la Champions League de 2021, venciendo al Manchester City 1-0?",
       "options": [
-        { "id": "q13a", "text": "Real Madrid" },
-        { "id": "q13b", "text": "PSG" },
-        { "id": "q13c", "text": "Inter Milan" },
-        { "id": "q13d", "text": "Chelsea" }
+        {
+          "id": "q13a",
+          "text": "Real Madrid"
+        },
+        {
+          "id": "q13b",
+          "text": "PSG"
+        },
+        {
+          "id": "q13c",
+          "text": "Inter Milan"
+        },
+        {
+          "id": "q13d",
+          "text": "Chelsea"
+        }
       ],
       "correctAnswerId": "q13d"
     },
@@ -153,10 +309,22 @@
       "id": "q14",
       "text": "¿En qué año ganó el Manchester United su título más reciente de la UEFA Champions League?",
       "options": [
-        { "id": "q14a", "text": "1999" },
-        { "id": "q14b", "text": "2003" },
-        { "id": "q14c", "text": "2008" },
-        { "id": "q14d", "text": "2011" }
+        {
+          "id": "q14a",
+          "text": "1999"
+        },
+        {
+          "id": "q14b",
+          "text": "2003"
+        },
+        {
+          "id": "q14c",
+          "text": "2008"
+        },
+        {
+          "id": "q14d",
+          "text": "2011"
+        }
       ],
       "correctAnswerId": "q14c"
     },
@@ -164,10 +332,22 @@
       "id": "q15",
       "text": "¿A qué club dirigió Zinedine Zidane para ganar tres Champions League consecutivas entre 2016 y 2018?",
       "options": [
-        { "id": "q15a", "text": "Juventus" },
-        { "id": "q15b", "text": "Real Madrid" },
-        { "id": "q15c", "text": "Barcelona" },
-        { "id": "q15d", "text": "Atletico Madrid" }
+        {
+          "id": "q15a",
+          "text": "Juventus"
+        },
+        {
+          "id": "q15b",
+          "text": "Real Madrid"
+        },
+        {
+          "id": "q15c",
+          "text": "Barcelona"
+        },
+        {
+          "id": "q15d",
+          "text": "Atletico Madrid"
+        }
       ],
       "correctAnswerId": "q15b"
     }

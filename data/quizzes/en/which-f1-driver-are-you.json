@@ -3,7 +3,7 @@
   "type": "personality",
   "category": "sports",
   "title": "Which F1 Driver Are You?",
-  "description": "Are you the ruthless precision of Max Verstappen, the composed brilliance of Lewis Hamilton, or the passionate soul of Charles Leclerc? Answer 10 questions about your personality, competitive style, and approach to life — and discover which Formula 1 legend matches your spirit. Eight iconic drivers, one result.",
+  "description": "Discover which iconic Formula 1 driver best matches your mindset and competitive personality.",
   "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
   "questions": [
     {
@@ -509,64 +509,96 @@
       "title": "Max Verstappen",
       "description": "You are Max Verstappen — ruthlessly fast, relentlessly competitive, and unapologetically focused on winning. You don't believe in moral victories: you are here to be first, full stop. Under pressure you don't crumble — you accelerate. You have an almost preternatural ability to block out everything except the task directly in front of you, and that singularity of focus is what separates you from everyone else. You hold yourself and everyone around you to the highest possible standards, and you don't apologize for it. Results are everything, and your results speak louder than any words ever could. Some may find you intense, but those who know you best understand that this isn't arrogance — it's an uncompromising belief in your own ability that you've earned through relentless work and commitment.",
       "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
-      "traits": ["Relentless", "Fearless", "Precise"],
-      "shareText": "I got Max Verstappen on the F1 Driver Quiz on ToolNotch! Which driver are you? \ud83c\udfce\ufe0f"
+      "traits": [
+        "Relentless",
+        "Fearless",
+        "Precise"
+      ],
+      "shareText": "I got Max Verstappen on the F1 Driver Quiz on ToolNotch! Which driver are you? 🏎️"
     },
     {
       "id": "lewis-hamilton",
       "title": "Lewis Hamilton",
       "description": "You are Lewis Hamilton — composed under the most intense pressure, a history-maker who uses their platform to stand for something far greater than personal glory. You combine raw talent with extraordinary mental fortitude, and you understand that true greatness is about more than trophies — it's about legacy, character, and the lives you touch beyond your chosen field. You are thoughtful, principled, and deeply aware of your responsibility to the world around you. You inspire people who didn't think someone like them could ever reach the top. Inside the competitive arena you are ferociously focused, but outside it you bring warmth, depth, and purpose that few rivals can match.",
       "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
-      "traits": ["Iconic", "Composed", "Trailblazer"],
-      "shareText": "I got Lewis Hamilton on the F1 Driver Quiz on ToolNotch! Which driver are you? \ud83c\udfce\ufe0f"
+      "traits": [
+        "Iconic",
+        "Composed",
+        "Trailblazer"
+      ],
+      "shareText": "I got Lewis Hamilton on the F1 Driver Quiz on ToolNotch! Which driver are you? 🏎️"
     },
     {
       "id": "ayrton-senna",
       "title": "Ayrton Senna",
       "description": "You are Ayrton Senna — one of the most transcendent figures the sporting world has ever seen. You don't just compete; you exist on a different plane when you're doing what you love. You have a spiritual connection to your craft that borders on mystical, and in your greatest moments you feel something beyond skill taking over. Raw emotion, pure instinct, and an almost frightening intensity make you capable of performances that leave onlookers struggling to explain what they just witnessed. You feel everything deeply — the highs reach heights others can't imagine, and the lows cut just as sharply. You were not made for comfort zones; you were made for the absolute edge of what is possible.",
       "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
-      "traits": ["Legendary", "Passionate", "Transcendent"],
-      "shareText": "I got Ayrton Senna on the F1 Driver Quiz on ToolNotch! Which driver are you? \ud83c\udfce\ufe0f"
+      "traits": [
+        "Legendary",
+        "Passionate",
+        "Transcendent"
+      ],
+      "shareText": "I got Ayrton Senna on the F1 Driver Quiz on ToolNotch! Which driver are you? 🏎️"
     },
     {
       "id": "michael-schumacher",
       "title": "Michael Schumacher",
       "description": "You are Michael Schumacher — methodical, coldly brilliant, and totally dedicated to perfection in everything you do. You are the ultimate preparation machine: you leave nothing to chance, study every variable obsessively, and arrive at every challenge already knowing you've done everything humanly possible to win. Your work ethic is the stuff of legend, and your ability to repeat excellence consistently over a long period sets you apart from mere one-season wonders. You are not flashy or expressive — you simply deliver, again and again and again. Some mistake your quietness for coldness, but it is focus. Pure, unyielding, absolute focus on the task at hand.",
       "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
-      "traits": ["Dedicated", "Methodical", "Dominant"],
-      "shareText": "I got Michael Schumacher on the F1 Driver Quiz on ToolNotch! Which driver are you? \ud83c\udfce\ufe0f"
+      "traits": [
+        "Dedicated",
+        "Methodical",
+        "Dominant"
+      ],
+      "shareText": "I got Michael Schumacher on the F1 Driver Quiz on ToolNotch! Which driver are you? 🏎️"
     },
     {
       "id": "charles-leclerc",
       "title": "Charles Leclerc",
       "description": "You are Charles Leclerc — gifted, passionate, and driven by a pure love of your craft that is as beautiful as it is intense. You feel every moment of competition viscerally, and that emotional connection is both your greatest strength and the thing that occasionally pushes you to the very edge of control. You wear your heart on your sleeve and you are unapologetically yourself, even when vulnerability might feel like weakness. Your talent is undeniable and recognized by everyone in the room — but it's your authenticity that makes people truly root for you. The fire in you never quite goes out, and when you're fully in your element, you are breathtaking to watch.",
       "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
-      "traits": ["Passionate", "Emotional", "Gifted"],
-      "shareText": "I got Charles Leclerc on the F1 Driver Quiz on ToolNotch! Which driver are you? \ud83c\udfce\ufe0f"
+      "traits": [
+        "Passionate",
+        "Emotional",
+        "Gifted"
+      ],
+      "shareText": "I got Charles Leclerc on the F1 Driver Quiz on ToolNotch! Which driver are you? 🏎️"
     },
     {
       "id": "fernando-alonso",
       "title": "Fernando Alonso",
       "description": "You are Fernando Alonso — a strategic genius with iron determination and a refusal to give up that defies logic, age, and circumstance. Where others see dead ends, you see a longer game. Where others accept defeat, you file it away as motivation for a comeback that may take months or years to execute. Your experience and tactical intelligence mean that you are almost always the smartest person on the grid — you have seen it all, survived it all, and come back from things that would have ended most people's careers. You are outspoken, honest, and completely unbothered by what others think of you. You are simply here to prove them wrong, and history suggests you usually do.",
       "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
-      "traits": ["Strategic", "Determined", "Relentless"],
-      "shareText": "I got Fernando Alonso on the F1 Driver Quiz on ToolNotch! Which driver are you? \ud83c\udfce\ufe0f"
+      "traits": [
+        "Strategic",
+        "Determined",
+        "Relentless"
+      ],
+      "shareText": "I got Fernando Alonso on the F1 Driver Quiz on ToolNotch! Which driver are you? 🏎️"
     },
     {
       "id": "oscar-piastri",
       "title": "Oscar Piastri",
       "description": "You are Oscar Piastri — calm, precise, and rising steadily toward the very top of your field. You don't rush, you don't panic, and you don't need the spotlight to do exceptional work. Where others crumble under expectation, you simply get on with the job: analytically, efficiently, without drama. You have extraordinary self-awareness and emotional control for someone still early in their journey, and that maturity is what makes people around you sit up and take notice. You are not the loudest voice in the room, but you're often the most reliable one. Patient, methodical, and consistently improving — you're the definition of a future champion in the making.",
       "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
-      "traits": ["Calm", "Precise", "Rising Star"],
-      "shareText": "I got Oscar Piastri on the F1 Driver Quiz on ToolNotch! Which driver are you? \ud83c\udfce\ufe0f"
+      "traits": [
+        "Calm",
+        "Precise",
+        "Rising Star"
+      ],
+      "shareText": "I got Oscar Piastri on the F1 Driver Quiz on ToolNotch! Which driver are you? 🏎️"
     },
     {
       "id": "lando-norris",
       "title": "Lando Norris",
       "description": "You are Lando Norris — quick, fun, deeply relatable, and proof that you don't have to sacrifice your personality to be genuinely world-class. You bring lightness and good energy to everything you do, and the people around you are better off for it. Behind the humor and the warmth, however, is a fiercely competitive racer who is faster than almost anyone on the planet and knows it. You don't need to be the most intense person in the room to be the most effective — your natural speed and talent do the heavy lifting while your spirit lifts everyone around you. You've shown the world that joy and ambition are not opposites, and that is a genuinely rare combination.",
       "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
-      "traits": ["Fun", "Quick", "Relatable"],
-      "shareText": "I got Lando Norris on the F1 Driver Quiz on ToolNotch! Which driver are you? \ud83c\udfce\ufe0f"
+      "traits": [
+        "Fun",
+        "Quick",
+        "Relatable"
+      ],
+      "shareText": "I got Lando Norris on the F1 Driver Quiz on ToolNotch! Which driver are you? 🏎️"
     }
   ]
 }

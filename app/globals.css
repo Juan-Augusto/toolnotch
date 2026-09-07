@@ -353,6 +353,14 @@ input[type="number"] {
   @apply px-6 md:px-10;
 }
 
+.container-page {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  @apply px-10;
+}
+
 .protip-neon {
   background: var(--primary-dim);
   border-left: 3px solid var(--primary);

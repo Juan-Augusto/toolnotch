@@ -3,7 +3,7 @@
   "type": "personality",
   "category": "sports",
   "title": "¿Qué Piloto de F1 Eres Tú?",
-  "description": "¿Eres la precisión implacable de Max Verstappen, la brillante compostura de Lewis Hamilton, o el alma apasionada de Charles Leclerc? Responde 10 preguntas sobre tu personalidad, estilo competitivo y enfoque de la vida — y descubre qué leyenda de la Fórmula 1 se corresponde con tu espíritu. Ocho pilotos icónicos, un resultado.",
+  "description": "Descubre qué piloto legendario de la Fórmula 1 se adapta mejor a tu estilo competitivo.",
   "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
   "questions": [
     {
@@ -509,64 +509,96 @@
       "title": "Max Verstappen",
       "description": "Eres Max Verstappen — implacablemente rápido, ferozmente competitivo y sin disculparte por estar enfocado en ganar. No crees en las victorias morales: estás aquí para ser el primero, punto final. Bajo presión no te derrumbas — aceleras. Tienes una capacidad casi sobrenatural para bloquear todo excepto la tarea directamente frente a ti, y esa singularidad de enfoque es lo que te separa de todos los demás. Mantienes los estándares más altos posibles para ti mismo y para todos a tu alrededor, y no te disculpas por ello. Los resultados son todo, y tus resultados hablan más alto que cualquier palabra que puedas pronunciar.",
       "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
-      "traits": ["Implacable", "Intrépido", "Preciso"],
-      "shareText": "\u00a1Soy Max Verstappen en el Quiz de Piloto de F1 en ToolNotch! \u00bfQu\u00e9 piloto eres t\u00fa? \ud83c\udfce\ufe0f"
+      "traits": [
+        "Implacable",
+        "Intrépido",
+        "Preciso"
+      ],
+      "shareText": "¡Soy Max Verstappen en el Quiz de Piloto de F1 en ToolNotch! ¿Qué piloto eres tú? 🏎️"
     },
     {
       "id": "lewis-hamilton",
       "title": "Lewis Hamilton",
       "description": "Eres Lewis Hamilton — sereno bajo la presión más intensa, un hacedor de historia que usa su plataforma para defender algo mucho más grande que la gloria personal. Combinas talento bruto con una extraordinaria fortaleza mental, y entiendes que la verdadera grandeza va más allá de los trofeos — se trata de legado, carácter y las vidas que tocas más allá de tu campo. Eres reflexivo/a, con principios y profundamente consciente de tu responsabilidad hacia el mundo que te rodea. Inspiras a personas que no creían que alguien como ellas podría alguna vez alcanzar la cima.",
       "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
-      "traits": ["Icónico", "Sereno", "Pionero"],
-      "shareText": "\u00a1Soy Lewis Hamilton en el Quiz de Piloto de F1 en ToolNotch! \u00bfQu\u00e9 piloto eres t\u00fa? \ud83c\udfce\ufe0f"
+      "traits": [
+        "Icónico",
+        "Sereno",
+        "Pionero"
+      ],
+      "shareText": "¡Soy Lewis Hamilton en el Quiz de Piloto de F1 en ToolNotch! ¿Qué piloto eres tú? 🏎️"
     },
     {
       "id": "ayrton-senna",
       "title": "Ayrton Senna",
       "description": "Eres Ayrton Senna — una de las figuras más trascendentes que el mundo del deporte ha visto jamás. No solo compites; existes en un plano diferente cuando haces lo que amas. Tienes una conexión espiritual con tu oficio que roza lo místico, y en tus mejores momentos sientes que algo más allá de la habilidad toma el control. La emoción bruta, el instinto puro y una intensidad casi aterradora te hacen capaz de actuaciones que dejan a los espectadores sin poder explicar lo que acaban de presenciar. Sientes todo profundamente — los éxitos alcanzan alturas que otros no pueden imaginar, y las derrotas duelen con la misma intensidad.",
       "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
-      "traits": ["Legendario", "Apasionado", "Trascendente"],
-      "shareText": "\u00a1Soy Ayrton Senna en el Quiz de Piloto de F1 en ToolNotch! \u00bfQu\u00e9 piloto eres t\u00fa? \ud83c\udfce\ufe0f"
+      "traits": [
+        "Legendario",
+        "Apasionado",
+        "Trascendente"
+      ],
+      "shareText": "¡Soy Ayrton Senna en el Quiz de Piloto de F1 en ToolNotch! ¿Qué piloto eres tú? 🏎️"
     },
     {
       "id": "michael-schumacher",
       "title": "Michael Schumacher",
       "description": "Eres Michael Schumacher — metódico, fríamente brillante y totalmente dedicado a la perfección en todo lo que haces. Eres la máquina de preparación definitiva: no dejas nada al azar, estudias cada variable obsesivamente y llegas a cada desafío sabiendo ya que has hecho todo lo humanamente posible para ganar. Tu ética de trabajo es legendaria, y tu capacidad para repetir la excelencia de forma consistente a lo largo de un largo período te distingue de los simples campeones de una temporada. No eres llamativo ni expresivo — simplemente entregas, una y otra y otra vez.",
       "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
-      "traits": ["Dedicado", "Metódico", "Dominante"],
-      "shareText": "\u00a1Soy Michael Schumacher en el Quiz de Piloto de F1 en ToolNotch! \u00bfQu\u00e9 piloto eres t\u00fa? \ud83c\udfce\ufe0f"
+      "traits": [
+        "Dedicado",
+        "Metódico",
+        "Dominante"
+      ],
+      "shareText": "¡Soy Michael Schumacher en el Quiz de Piloto de F1 en ToolNotch! ¿Qué piloto eres tú? 🏎️"
     },
     {
       "id": "charles-leclerc",
       "title": "Charles Leclerc",
       "description": "Eres Charles Leclerc — talentoso/a, apasionado/a y movido/a por un amor puro por tu oficio que es tan hermoso como intenso. Sientes cada momento de la competición de forma visceral, y esa conexión emocional es tanto tu mayor fortaleza como lo que a veces te lleva al límite del control. Llevas el corazón en la manga y eres desafiadoramente tú mismo/a, incluso cuando la vulnerabilidad puede parecer debilidad. Tu talento es innegable y reconocido por todos en la sala — pero es tu autenticidad lo que hace que la gente realmente te apoye. El fuego en ti nunca se apaga del todo, y cuando estás en pleno elemento, eres impresionante de contemplar.",
       "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
-      "traits": ["Apasionado", "Emocional", "Dotado"],
-      "shareText": "\u00a1Soy Charles Leclerc en el Quiz de Piloto de F1 en ToolNotch! \u00bfQu\u00e9 piloto eres t\u00fa? \ud83c\udfce\ufe0f"
+      "traits": [
+        "Apasionado",
+        "Emocional",
+        "Dotado"
+      ],
+      "shareText": "¡Soy Charles Leclerc en el Quiz de Piloto de F1 en ToolNotch! ¿Qué piloto eres tú? 🏎️"
     },
     {
       "id": "fernando-alonso",
       "title": "Fernando Alonso",
       "description": "Eres Fernando Alonso — un genio estratégico con determinación de hierro y una negativa a rendirse que desafía la lógica, la edad y las circunstancias. Donde otros ven callejones sin salida, tú ves un juego más largo. Donde otros aceptan la derrota, tú la archivas como motivación para una remontada que puede tardar meses o años en ejecutarse. Tu experiencia e inteligencia táctica significan que casi siempre eres la persona más inteligente en la parrilla. Eres directo/a, honesto/a y completamente indiferente a lo que piensan los demás. Simplemente estás aquí para demostrar que estaban equivocados, y la historia sugiere que generalmente lo consigues.",
       "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
-      "traits": ["Estratégico", "Determinado", "Implacable"],
-      "shareText": "\u00a1Soy Fernando Alonso en el Quiz de Piloto de F1 en ToolNotch! \u00bfQu\u00e9 piloto eres t\u00fa? \ud83c\udfce\ufe0f"
+      "traits": [
+        "Estratégico",
+        "Determinado",
+        "Implacable"
+      ],
+      "shareText": "¡Soy Fernando Alonso en el Quiz de Piloto de F1 en ToolNotch! ¿Qué piloto eres tú? 🏎️"
     },
     {
       "id": "oscar-piastri",
       "title": "Oscar Piastri",
       "description": "Eres Oscar Piastri — tranquilo/a, preciso/a y ascendiendo constantemente hacia la cima de tu campo. No tienes prisa, no entras en pánico y no necesitas los focos para hacer un trabajo excepcional. Donde otros se derrumban bajo las expectativas, tú simplemente haces el trabajo: analíticamente, eficientemente, sin drama. Tienes un autoconocimiento y control emocional extraordinarios para alguien todavía al principio de su camino, y esa madurez es lo que hace que las personas a tu alrededor se paren y presten atención. No eres la voz más alta en la sala, pero frecuentemente eres la más confiable. Paciente, metódico/a y mejorando constantemente — eres la definición de un futuro campeón en proceso.",
       "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
-      "traits": ["Tranquilo", "Preciso", "Estrella en Ascenso"],
-      "shareText": "\u00a1Soy Oscar Piastri en el Quiz de Piloto de F1 en ToolNotch! \u00bfQu\u00e9 piloto eres t\u00fa? \ud83c\udfce\ufe0f"
+      "traits": [
+        "Tranquilo",
+        "Preciso",
+        "Estrella en Ascenso"
+      ],
+      "shareText": "¡Soy Oscar Piastri en el Quiz de Piloto de F1 en ToolNotch! ¿Qué piloto eres tú? 🏎️"
     },
     {
       "id": "lando-norris",
       "title": "Lando Norris",
       "description": "Eres Lando Norris — rápido, divertido, profundamente identificable y prueba de que no tienes que sacrificar tu personalidad para ser genuinamente de talla mundial. Traes ligereza y buena energía a todo lo que haces, y las personas a tu alrededor están mejor por ello. Detrás del humor y la calidez, sin embargo, hay un piloto ferozmente competitivo que es más rápido que casi cualquier persona en el planeta y lo sabe. No necesitas ser la persona más intensa en la sala para ser la más efectiva — tu velocidad y talento naturales hacen el trabajo pesado mientras tu espíritu eleva a todos a tu alrededor. Has demostrado al mundo que la alegría y la ambición no son opuestas.",
       "image": "/images/quizzes/which-f1-driver-are-you-cover.jpg",
-      "traits": ["Divertido", "Rápido", "Identificable"],
-      "shareText": "\u00a1Soy Lando Norris en el Quiz de Piloto de F1 en ToolNotch! \u00bfQu\u00e9 piloto eres t\u00fa? \ud83c\udfce\ufe0f"
+      "traits": [
+        "Divertido",
+        "Rápido",
+        "Identificable"
+      ],
+      "shareText": "¡Soy Lando Norris en el Quiz de Piloto de F1 en ToolNotch! ¿Qué piloto eres tú? 🏎️"
     }
   ]
 }

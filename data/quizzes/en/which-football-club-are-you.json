@@ -1,7 +1,7 @@
 {
   "id": "which-football-club-are-you",
   "title": "Which Football Club Are You?",
-  "description": "Are you the relentless winner of Real Madrid, the creative soul of Barcelona, or the passionate heart of Liverpool? Answer 10 questions and discover which legendary football club perfectly matches your personality, values, and attitude. From the electric atmosphere of Dortmund's Yellow Wall to the carnival spirit of Flamengo, find out where you truly belong.",
+  "description": "Answer questions about your mindset to find which world-famous football club matches your soul.",
   "image": "/images/quizzes/which-football-club-are-you-cover.jpg",
   "questions": [
     {
@@ -392,7 +392,12 @@
       "title": "Real Madrid",
       "description": "You are Real Madrid — the most decorated club in football history and a symbol of timeless greatness. Like Los Blancos, you carry yourself with a quiet confidence that borders on expectation: you don't just hope to win, you believe it is your destiny. You are drawn to the grandest stages and feel most alive when the pressure is at its highest. Setbacks don't discourage you — they fuel a fire that burns even hotter, and you have a remarkable ability to produce magic precisely when the world doubts you most. People around you may see this as arrogance, but those who know you best understand it is simply the mark of someone who has internalized excellence as a way of life. Legacy matters deeply to you. You respect those who came before you and feel a responsibility to add your own chapter to a long, glorious story. You think globally, dream grandly, and rarely settle for second best. The Bernabéu roars — and so do you.",
       "image": "/images/results/real-madrid.jpg",
-      "traits": ["Prestige", "Champions Mentality", "Global Vision", "Legacy"],
+      "traits": [
+        "Prestige",
+        "Champions Mentality",
+        "Global Vision",
+        "Legacy"
+      ],
       "shareText": "I got Real Madrid on the Which Football Club Are You Quiz on ToolNotch!"
     },
     {
@@ -400,7 +405,12 @@
       "title": "FC Barcelona",
       "description": "You are FC Barcelona — a club that has always believed football, and life, is an art form. Like Barça, you are driven by creativity, philosophy, and a deep sense of identity. You don't just want to succeed — you want to succeed beautifully, in a way that reflects your values. You have a strong sense of who you are and where you come from, and that identity shapes every decision you make. Whether in work, relationships, or personal projects, you bring a creative intelligence that others admire and sometimes struggle to fully understand. You are collaborative by nature, believing that a perfectly coordinated collective is more powerful than any single individual. You also care about culture: you appreciate art, ideas, and aesthetic beauty in everyday life. Tiki-taka isn't just a football philosophy for you — it's a metaphor for how you engage with the world. Patient, precise, purposeful. You believe in the power of the pass, the importance of process, and the beauty found in doing things the right way.",
       "image": "/images/results/barcelona.jpg",
-      "traits": ["Creativity", "Identity", "Collective Intelligence", "Artistry"],
+      "traits": [
+        "Creativity",
+        "Identity",
+        "Collective Intelligence",
+        "Artistry"
+      ],
       "shareText": "I got FC Barcelona on the Which Football Club Are You Quiz on ToolNotch!"
     },
     {
@@ -408,7 +418,12 @@
       "title": "Liverpool FC",
       "description": "You are Liverpool FC — a club built on passion, community, and the unbreakable belief that you'll never walk alone. Like the Reds, your greatest strength is your heart. You feel things deeply and your emotional connection to the people and causes you care about gives you a superhuman ability to push through adversity. You are the person who writes the comeback story, who finds the energy for one final push when everyone else has given up. Community is your foundation: you thrive when surrounded by people who share your fire, and you give back as much as you take. The Anfield atmosphere isn't just a setting for you — it's a way of life, a reminder that collective belief can move mountains. You are authentic, loyal, and intensely real in everything you do. You don't perform for others; you simply be, fully and loudly. History matters, but so does the present moment. You celebrate wins with full abandon and mourn losses with equal sincerity. That emotional honesty is your greatest gift.",
       "image": "/images/results/liverpool.jpg",
-      "traits": ["Passion", "Resilience", "Community", "Atmosphere"],
+      "traits": [
+        "Passion",
+        "Resilience",
+        "Community",
+        "Atmosphere"
+      ],
       "shareText": "I got Liverpool FC on the Which Football Club Are You Quiz on ToolNotch!"
     },
     {
@@ -416,7 +431,12 @@
       "title": "Bayern Munich",
       "description": "You are Bayern Munich — the most efficient, dominant, and systematically excellent club in European football. Like the Bavarian giants, you believe that with the right structure, the right people, and the right processes, success becomes almost inevitable. You are not flashy or impulsive — you are methodical, consistent, and relentlessly focused on execution. You plan meticulously, set clear objectives, and hold yourself and others to the highest standards. While others rely on inspiration, you rely on preparation. This doesn't mean you lack passion — far from it — but your fire is cold and controlled, burning steadily rather than explosively. You are the person in the room who has already thought three steps ahead, who delivers on promises reliably and without drama. Others may find your standards high, but you see them as simply necessary. You prize competence and despise waste. At your core, you believe that dominance is earned through discipline, not luck — and your track record proves it every single time.",
       "image": "/images/results/bayern-munich.jpg",
-      "traits": ["Efficiency", "Dominance", "Precision", "Consistency"],
+      "traits": [
+        "Efficiency",
+        "Dominance",
+        "Precision",
+        "Consistency"
+      ],
       "shareText": "I got Bayern Munich on the Which Football Club Are You Quiz on ToolNotch!"
     },
     {
@@ -424,7 +444,12 @@
       "title": "Manchester City",
       "description": "You are Manchester City — the modern football blueprint, where data, talent, and tactical genius combine to create something unstoppable. Like City under Pep Guardiola, you are fascinated by systems, optimization, and the relentless pursuit of improvement. You embrace modern ideas eagerly and are never intimidated by complexity. In fact, you find joy in untangling difficult problems and building better solutions. You are forward-thinking: while others look back, you are already designing the next version of yourself. Your dedication is quiet but intense — you don't need applause to keep working, because internal progress is its own reward. You are also highly adaptable, able to switch strategies mid-course without losing your composure. Some see you as calculating, but those who know you understand that behind the spreadsheets and tactics is someone who genuinely loves the game and wants to play it at the highest possible level. Relentless improvement is not a burden to you — it is your natural state.",
       "image": "/images/results/manchester-city.jpg",
-      "traits": ["Tactical Intelligence", "Relentlessness", "Modern Thinking", "Adaptability"],
+      "traits": [
+        "Tactical Intelligence",
+        "Relentlessness",
+        "Modern Thinking",
+        "Adaptability"
+      ],
       "shareText": "I got Manchester City on the Which Football Club Are You Quiz on ToolNotch!"
     },
     {
@@ -432,7 +457,12 @@
       "title": "Flamengo",
       "description": "You are Flamengo — the heartbeat of Brazilian football and the club of the people. Like Mengão, you carry the spirit of carnival in everything you do: vibrant, passionate, joyful, and completely, unapologetically alive. You don't just participate in life — you celebrate it, loudly and with everyone around you. Your energy is infectious; people are naturally drawn to your enthusiasm, warmth, and unshakable belief that tomorrow will be even better than today. You see football — and life — as a communal feast, best shared with a crowd, with music, with feeling. Where others plan and calculate, you trust the moment, your instincts, and the electric power of collective emotion. Adversity doesn't break you — if anything, it brings out your most spectacular self. You represent an entire culture, a city, a way of being. From the favelas of Rio to the Maracanã, Flamengo belongs to everyone — and so do you. Big, generous, passionate, and impossible to ignore.",
       "image": "/images/results/flamengo.jpg",
-      "traits": ["Joy", "Passion", "Cultural Pride", "Community Spirit"],
+      "traits": [
+        "Joy",
+        "Passion",
+        "Cultural Pride",
+        "Community Spirit"
+      ],
       "shareText": "I got Flamengo on the Which Football Club Are You Quiz on ToolNotch!"
     },
     {
@@ -440,7 +470,12 @@
       "title": "Boca Juniors",
       "description": "You are Boca Juniors — fire, intensity, and an unbreakable bond with the people. Like the Xeneizes from La Bombonera, you feel everything at maximum volume. Rivalries are not background noise for you — they are the centerpiece of your story, the fuel that drives your greatest performances. You are fiercely loyal to your own and just as fiercely competitive against anyone who stands in your way. There is a rawness to you, an authenticity that cannot be manufactured or polished away. You wear your heart on your sleeve and you are proud of it. The streets of La Boca shaped this club, and you too have been shaped by where you come from — by real struggles, real people, and real stakes. You are not interested in pretense or glamour for its own sake. What matters to you is truth, passion, and the electric feeling of a stadium transformed into something primal and alive. When Boca wins, all of Argentina feels it — and when you win, so does everyone around you.",
       "image": "/images/results/boca-juniors.jpg",
-      "traits": ["Intensity", "Loyalty", "Rivalry", "Authenticity"],
+      "traits": [
+        "Intensity",
+        "Loyalty",
+        "Rivalry",
+        "Authenticity"
+      ],
       "shareText": "I got Boca Juniors on the Which Football Club Are You Quiz on ToolNotch!"
     },
     {
@@ -448,7 +483,12 @@
       "title": "Borussia Dortmund",
       "description": "You are Borussia Dortmund — the Yellow Wall, the underdog who never stops believing, the club that turns raw energy into something magical. Like BVB, you are youthful at heart, full of electricity, and powered by an almost irrational optimism that makes the impossible feel reachable. You don't need the biggest budget or the most famous name — you believe in potential, in development, in giving talented young people a chance to become something extraordinary. The Signal Iduna Park is the loudest stadium in Europe because the fans there aren't spectators — they are participants, co-authors of every victory. That is you too: you don't watch life from the sidelines, you throw yourself in. You are relatable, grounded, and fierce — you know what it feels like to be doubted and you use that knowledge as rocket fuel. Your spirit is the Yellow Wall: massive, unified, deafening, and utterly impossible to ignore. You fight for every inch and you love every second of it.",
       "image": "/images/results/borussia-dortmund.jpg",
-      "traits": ["Youthful Energy", "Underdog Spirit", "Passion", "Unity"],
+      "traits": [
+        "Youthful Energy",
+        "Underdog Spirit",
+        "Passion",
+        "Unity"
+      ],
       "shareText": "I got Borussia Dortmund on the Which Football Club Are You Quiz on ToolNotch!"
     }
   ]
