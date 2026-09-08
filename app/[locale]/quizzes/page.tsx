@@ -25,6 +25,7 @@ async function buildQuizCards(locale: string): Promise<QuizCardData[]> {
                 ? 'civic'
                 : 'personality',
         questionCount: quiz?.questions.length ?? 0,
+        type: meta.type,
       };
     })
   );

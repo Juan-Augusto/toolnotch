@@ -32,3 +32,23 @@ export const Default: Story = {
     </div>
   ),
 };
+
+export const WithoutCornerAccents: Story = {
+  render: () => (
+    <div className="max-w-xs">
+      <AppCard
+        cornerAccents={false}
+        className="flex flex-col justify-between p-6 min-h-[280px]"
+      >
+        <div>
+          <h2 className="font-mono text-sm tracking-wider uppercase text-foreground">
+            SEM ACCENTS
+          </h2>
+          <p className="font-mono text-xs text-label/80 mt-3 leading-relaxed">
+            Card limpo com apenas a borda tracejada, sem os acentos de canto.
+          </p>
+        </div>
+      </AppCard>
+    </div>
+  ),
+};

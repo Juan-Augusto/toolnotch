@@ -11,8 +11,7 @@ import {
   faqSchema,
   buildLocalizedUrl,
 } from '@/lib/schema'
-import AppQuizPlayer from '@/components/quiz/AppQuizPlayer'
-import AppTriviaPlayer from '@/components/quiz/AppTriviaPlayer'
+import AppQuiz from '@/components/quiz/AppQuiz'
 import AppQuizDepth, { getQuizDepthContent } from '@/components/quiz/AppQuizDepth'
 import AppRelatedQuizzes from '@/components/quiz/AppRelatedQuizzes'
 
@@ -70,16 +69,10 @@ export default async function QuizPage({ params }: { params: Promise<{ locale: s
     : buildJsonLd(quizEntity, breadcrumb)
 
   return (
-    <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <main className="min-h-screen bg-background text-foreground pb-16">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="max-w-2xl mx-auto px-4 py-10">
-        <div className="bg-tertiary rounded-2xl shadow-sm border border-gray-200 dark:bg-tertiary dark:border-gray-700 p-8">
-          {isTriviaQuiz(quiz) ? (
-            <AppTriviaPlayer quiz={quiz} locale={locale} />
-          ) : (
-            <AppQuizPlayer quiz={quiz} locale={locale} />
-          )}
-        </div>
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 md:py-16">
+        <AppQuiz quiz={quiz} locale={locale} />
       </div>
 
       {depth && <AppQuizDepth content={depth} currentSlug={slug} />}
