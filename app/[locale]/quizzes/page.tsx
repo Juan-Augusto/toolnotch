@@ -5,6 +5,7 @@ import { buildJsonLd, faqSchema, breadcrumbSchema } from '@/lib/schema';
 import { QUIZ_REGISTRY } from '@/lib/quizRegistry';
 import { getQuizBySlug } from '@/lib/content/quizRepository';
 import AppQuizzesHub, { type QuizCardData } from '@/components/quiz/AppQuizzesHub';
+import AppBreadcrumb from '@/components/AppBreadcrumb';
 
 const PATH = '/quizzes';
 
@@ -84,14 +85,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function QuizzesHubPage({ params }: Props) {
   const { locale } = await params;
   const quizCards = await buildQuizCards(locale);
+  const prefix = locale === 'en' ? '' : `/${locale}`;
 
   return (
-    <>
+    <main className="container min-h-[calc(100vh-180px)] bg-background text-foreground py-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <div className="w-full pb-2">
+        <AppBreadcrumb
+          items={[
+            { label: 'Home', href: prefix || '/' },
+            { label: 'Quizzes', current: true },
+          ]}
+        />
+      </div>
       <AppQuizzesHub quizzes={quizCards} locale={locale} />
-    </>
+    </main>
   );
 }

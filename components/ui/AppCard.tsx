@@ -24,7 +24,7 @@ export default function AppCard({
 
   return (
     <div
-      className={`relative bg-tertiary/40 p-6 ${hover ? "hover:bg-tertiary" : ""} ${className}`}
+      className={`relative bg-tertiary p-6 ${hover ? "" : ""} ${className}`}
       {...props}
     >
       {border && (

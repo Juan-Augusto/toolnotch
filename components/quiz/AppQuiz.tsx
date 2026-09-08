@@ -10,7 +10,6 @@ import {
   Check,
   Download,
   RotateCcw,
-  ArrowRight,
   ArrowLeft,
   Clock,
   ExternalLink,
@@ -34,6 +33,8 @@ import {
 } from "@/lib/quizTypes";
 import { calculateResult } from "@/lib/quizEngine";
 import { TriviaResult, calculateTriviaResult } from "@/lib/triviaEngine";
+import { QUIZ_REGISTRY } from "@/lib/quizRegistry";
+import { CATEGORY_CONFIG } from "./quizzesHubConfig";
 
 export interface AppQuizProps {
   quiz: AnyQuiz;
@@ -73,7 +74,6 @@ const QUIZ_LABELS = {
     downloading: "Gerando...",
     retake: "JOGAR NOVAMENTE",
     moreQuizzes: "EXPLORAR OUTROS QUIZZES",
-    perks: ["100% GRATUITO", "SEM CADASTRO", "RESULTADO INSTANTÂNEO"],
     hits: "acertos",
     brandFooter: "toolnotch.com • Quizzes & Ferramentas Gratuitas",
   },
@@ -106,7 +106,6 @@ const QUIZ_LABELS = {
     downloading: "Generating...",
     retake: "RETAKE QUIZ",
     moreQuizzes: "EXPLORE MORE QUIZZES",
-    perks: ["100% FREE", "NO SIGN-UP", "INSTANT RESULTS"],
     hits: "correct",
     brandFooter: "toolnotch.com • Free Quizzes & Tools",
   },
@@ -139,7 +138,6 @@ const QUIZ_LABELS = {
     downloading: "Generando...",
     retake: "REPETIR QUIZ",
     moreQuizzes: "EXPLORAR MÁS QUIZZES",
-    perks: ["100% GRATIS", "SIN REGISTRO", "RESULTADO INSTANTÁNEO"],
     hits: "aciertos",
     brandFooter: "toolnotch.com • Quizzes & Herramientas Gratuitas",
   },
@@ -170,12 +168,31 @@ export function AppQuiz({
   const labels = QUIZ_LABELS[currentLocale] || QUIZ_LABELS.en;
   const isTrivia = isTriviaQuiz(quiz);
 
+  // Category config matched to /quizzes screen
+  const quizMeta = QUIZ_REGISTRY.find((q) => q.id === quiz.id);
+  const categoryKey =
+    (quiz as { category?: string }).category ||
+    quizMeta?.category ||
+    (isTrivia ? "sports" : "personality");
+  const catConfig = CATEGORY_CONFIG[categoryKey];
+  const categoryName =
+    catConfig?.name[currentLocale] ||
+    catConfig?.name.en ||
+    (isTrivia ? labels.triviaBadge : labels.personalityBadge);
+  const CategoryIcon = catConfig?.icon || Sparkles;
+  const badgeBg = catConfig?.badgeBg || "bg-primary";
+  const badgeColor = catConfig?.badgeColor || "text-background";
+
   const [quizState, setQuizState] = useState<"idle" | "active" | "complete">(
-    autoStart ? "active" : "idle"
+    autoStart ? "active" : "idle",
   );
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
-  const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string>>({});
-  const [personalityResult, setPersonalityResult] = useState<QuizResult | null>(null);
+  const [selectedAnswers, setSelectedAnswers] = useState<
+    Record<string, string>
+  >({});
+  const [personalityResult, setPersonalityResult] = useState<QuizResult | null>(
+    null,
+  );
   const [triviaResult, setTriviaResult] = useState<TriviaResult | null>(null);
 
   // Trivia state
@@ -237,7 +254,7 @@ export function AppQuiz({
         });
       }, 1000);
     },
-    [clearTimer]
+    [clearTimer],
   );
 
   // Confetti trigger on completion
@@ -270,7 +287,8 @@ export function AppQuiz({
     if (isTrivia) {
       const triviaQuiz = quiz as TriviaQuiz;
       const limit =
-        triviaQuiz.questions[0]?.timeLimitSeconds ?? triviaQuiz.timeLimitSeconds;
+        triviaQuiz.questions[0]?.timeLimitSeconds ??
+        triviaQuiz.timeLimitSeconds;
       if (limit) startTimer(limit);
     }
   };
@@ -297,13 +315,17 @@ export function AppQuiz({
         onComplete?.(pResult);
       }
     },
-    [quiz, isTrivia, clearTimer, triggerConfetti, onComplete]
+    [quiz, isTrivia, clearTimer, triggerConfetti, onComplete],
   );
 
   // Auto-advance trivia when timer hits 0
   useEffect(() => {
-    if (isTrivia && timeRemaining === 0 && quizState === "active" && !triviaRevealed) {
-      const q = quiz.questions[currentQuestionIndex];
+    if (
+      isTrivia &&
+      timeRemaining === 0 &&
+      quizState === "active" &&
+      !triviaRevealed
+    ) {
       handleSelectOption("__timeout__");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -380,14 +402,14 @@ export function AppQuiz({
   // Social share handlers
   const handleShareWhatsApp = () => {
     const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(
-      `${shareMessage} ${currentUrl}`
+      `${shareMessage} ${currentUrl}`,
     )}`;
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
   const handleShareTwitter = () => {
     const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-      shareMessage
+      shareMessage,
     )}&url=${encodeURIComponent(currentUrl)}`;
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -412,7 +434,7 @@ export function AppQuiz({
           text: shareMessage,
           url: currentUrl,
         });
-      } catch (err) {
+      } catch {
         // User cancelled or share not supported
       }
     } else {
@@ -442,12 +464,13 @@ export function AppQuiz({
   };
 
   // Progress calculations
-  const progressPercent = totalQuestions > 0
-    ? Math.round(((currentQuestionIndex) / totalQuestions) * 100)
-    : 0;
+  const progressPercent =
+    totalQuestions > 0
+      ? Math.round((currentQuestionIndex / totalQuestions) * 100)
+      : 0;
 
   return (
-    <div className={`w-full max-w-3xl mx-auto select-none ${className}`}>
+    <div className={`w-full mx-auto select-none ${className}`}>
       {/* ─────────────────────────────────────────────────────────────────── */}
       {/* 1. START / IDLE SCREEN                                              */}
       {/* ─────────────────────────────────────────────────────────────────── */}
@@ -457,11 +480,11 @@ export function AppQuiz({
             {/* Top Badges */}
             <div className="flex flex-wrap items-center gap-2.5">
               <AppBadge
-                bg="bg-primary"
-                text="text-background"
-                icon={<Sparkles className="w-3.5 h-3.5" />}
+                bg={badgeBg}
+                text={badgeColor}
+                icon={<CategoryIcon className="w-3.5 h-3.5" />}
               >
-                {isTrivia ? labels.triviaBadge : labels.personalityBadge}
+                {categoryName}
               </AppBadge>
 
               <span className="text-[11px] font-mono text-label uppercase">
@@ -472,33 +495,16 @@ export function AppQuiz({
 
             {/* Quiz Title */}
             <div>
-              <div className="flex items-center gap-2.5 mb-2 select-none">
-                <span className="font-mono text-xl sm:text-2xl font-bold text-primary">
-                  ///
-                </span>
-                <h1 className="font-mono text-2xl sm:text-3xl font-bold uppercase tracking-wider text-foreground">
-                  {quiz.title}
-                </h1>
-              </div>
-              <p className="text-label/90 text-sm sm:text-base leading-relaxed max-w-2xl font-mono">
+              <h1 className="font-mono text-2xl sm:text-3xl font-bold uppercase tracking-wider text-foreground mb-2">
+                {quiz.title}
+              </h1>
+              <p className="text-label/90 text-sm sm:text-base leading-relaxed max-w-3xl font-mono">
                 {quiz.description}
               </p>
             </div>
 
-            {/* Perks badges */}
-            <div className="flex flex-wrap gap-2 pt-2">
-              {labels.perks.map((perk) => (
-                <span
-                  key={perk}
-                  className="font-mono text-[11px] text-label/80 bg-tertiary/60 border border-dashed border-border/50 px-2.5 py-1 rounded-[2px]"
-                >
-                  ✓ {perk}
-                </span>
-              ))}
-            </div>
-
             {/* Start Button */}
-            <div className="pt-4">
+            <div className="pt-2">
               <AppButton
                 color="primary"
                 withArrow
@@ -575,7 +581,7 @@ export function AppQuiz({
                 {/* Question Prompt */}
                 <div className="mb-6">
                   <span className="font-mono text-xs text-primary font-bold tracking-wider uppercase block mb-1">
-                    /// {labels.questionOf} {currentQuestionIndex + 1}
+                    {labels.questionOf} {currentQuestionIndex + 1}
                   </span>
                   <h2 className="font-mono text-lg sm:text-xl font-bold text-foreground leading-snug uppercase">
                     {currentQuestion.text}
@@ -642,16 +648,20 @@ export function AppQuiz({
                         {isTrivia && triviaRevealed && (
                           <div className="shrink-0">
                             {option.id ===
-                              (currentQuestion as unknown as {
-                                correctAnswerId: string;
-                              }).correctAnswerId && (
+                              (
+                                currentQuestion as unknown as {
+                                  correctAnswerId: string;
+                                }
+                              ).correctAnswerId && (
                               <CheckCircle2 className="w-5 h-5 text-green-400" />
                             )}
                             {isSelected &&
                               option.id !==
-                                (currentQuestion as unknown as {
-                                  correctAnswerId: string;
-                                }).correctAnswerId && (
+                                (
+                                  currentQuestion as unknown as {
+                                    correctAnswerId: string;
+                                  }
+                                ).correctAnswerId && (
                                 <XCircle className="w-5 h-5 text-red-400" />
                               )}
                           </div>
@@ -672,19 +682,29 @@ export function AppQuiz({
                       className="mt-5 p-4 bg-tertiary/40 border border-dashed border-border/60 rounded-[2px]"
                     >
                       <span className="font-mono text-[11px] font-bold text-primary uppercase block mb-1">
-                        /// {labels.explanation}
+                        {labels.explanation}
                       </span>
                       <p className="font-mono text-xs text-foreground/90 leading-relaxed">
                         {
-                          (currentQuestion as unknown as { explanation?: string })
-                            .explanation
+                          (
+                            currentQuestion as unknown as {
+                              explanation?: string;
+                            }
+                          ).explanation
                         }
                       </p>
-                      {(currentQuestion as unknown as { source?: { name: string; url: string } }).source && (
+                      {(
+                        currentQuestion as unknown as {
+                          source?: { name: string; url: string };
+                        }
+                      ).source && (
                         <a
                           href={
-                            (currentQuestion as unknown as { source: { url: string } })
-                              .source.url
+                            (
+                              currentQuestion as unknown as {
+                                source: { url: string };
+                              }
+                            ).source.url
                           }
                           target="_blank"
                           rel="noopener noreferrer"
@@ -692,8 +712,11 @@ export function AppQuiz({
                         >
                           {labels.source}:{" "}
                           {
-                            (currentQuestion as unknown as { source: { name: string } })
-                              .source.name
+                            (
+                              currentQuestion as unknown as {
+                                source: { name: string };
+                              }
+                            ).source.name
                           }
                           <ExternalLink className="w-3 h-3 ml-0.5" />
                         </a>
@@ -753,13 +776,14 @@ export function AppQuiz({
                     </span>
                   </div>
                   <div className="font-mono text-sm text-primary font-bold uppercase tracking-wider">
-                    {triviaResult.percent}% {labels.hits} • {triviaResult.tier.label}
+                    {triviaResult.percent}% {labels.hits} •{" "}
+                    {triviaResult.tier.label}
                   </div>
                 </div>
               )}
 
               {/* Title and Description */}
-              <div className="max-w-xl mx-auto space-y-3 mb-6">
+              <div className="max-w-2xl mx-auto space-y-3 mb-6">
                 <h2 className="font-mono text-2xl sm:text-3xl font-bold uppercase tracking-wider text-foreground">
                   {isTrivia && triviaResult
                     ? triviaResult.tier.label
@@ -885,7 +909,10 @@ export function AppQuiz({
               {labels.retake}
             </AppButton>
 
-            <Link href={`/${currentLocale}/quizzes`} className="w-full sm:w-auto">
+            <Link
+              href={`/${currentLocale}/quizzes`}
+              className="w-full sm:w-auto"
+            >
               <AppButton
                 color="primary"
                 withArrow

@@ -9,4 +9,5 @@ export { default as AppCornerAccents, type AppCornerAccentsProps, type CornerPos
 export { default as AppTip, type AppTipProps } from './AppTip';
 export { default as AppTabsChips, type AppTabsChipsProps, type AppTabsChipItem } from './AppTabsChips';
 export { default as AppBadge, type AppBadgeProps } from './AppBadge';
+export { default as AppBreadcrumb, type AppBreadcrumbProps, type BreadcrumbItem } from './AppBreadcrumb';
 

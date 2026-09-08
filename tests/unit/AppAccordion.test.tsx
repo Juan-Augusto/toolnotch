@@ -7,7 +7,7 @@ describe('AppAccordion', () => {
     window.scrollTo = jest.fn();
   });
 
-  it('renders single group and displays content by default with border-dashed-5-no-t', () => {
+  it('renders single group and displays content by default with normal border', () => {
     render(
       <AppAccordion
         group={{
@@ -24,7 +24,7 @@ describe('AppAccordion', () => {
     expect(button).toHaveAttribute('aria-expanded', 'true');
 
     const contentBox = screen.getByTestId('accordion-content').parentElement;
-    expect(contentBox).toHaveClass('border-dashed-5-no-t');
+    expect(contentBox).toHaveClass('border-t', 'border-border/60');
   });
 
   it('toggles content visibility when header button is clicked', async () => {

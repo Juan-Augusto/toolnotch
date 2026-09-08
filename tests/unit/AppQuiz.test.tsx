@@ -86,7 +86,7 @@ describe("AppQuiz Component", () => {
     jest.useRealTimers();
   });
 
-  it("renders idle start screen with title, description, perks and start button", () => {
+  it("renders idle start screen with title, description and start button", () => {
     render(<AppQuiz quiz={mockPersonalityQuiz} locale="pt" />);
 
     expect(
@@ -100,7 +100,6 @@ describe("AppQuiz Component", () => {
     ).toBeInTheDocument();
     expect(screen.getByText(/2 perguntas/i)).toBeInTheDocument();
     expect(screen.getByText(/COMEÇAR QUIZ/i)).toBeInTheDocument();
-    expect(screen.getByText(/100% GRATUITO/i)).toBeInTheDocument();
   });
 
   it("transitions to active state and renders progress and randomized options on start", () => {

@@ -113,17 +113,12 @@ export function AppQuizzesHub({ quizzes, locale = "pt" }: AppQuizzesHubProps) {
   }, [labels.allCategories, quizzes.length, groupedCategories]);
 
   return (
-    <div className="w-full min-h-screen bg-background text-foreground pb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <div className="w-full text-foreground pb-12">
+      <div className="w-full pt-4 pb-8">
         <header className="mb-10 md:mb-12">
-          <div className="flex items-center gap-3 mb-2.5 select-none">
-            <span className="font-mono text-2xl sm:text-3xl font-bold text-primary">
-              ///
-            </span>
-            <h1 className="font-mono text-2xl tracking-wide sm:text-3xl md:text-3xl font-bold text-foreground uppercase">
-              {labels.heading}
-            </h1>
-          </div>
+          <h1 className="font-mono text-2xl tracking-wide sm:text-3xl md:text-3xl font-bold text-foreground uppercase mb-2.5">
+            {labels.heading}
+          </h1>
 
           <p className="font-mono text-xs sm:text-sm text-label/90 max-w-2xl leading-relaxed">
             {labels.subtitle}

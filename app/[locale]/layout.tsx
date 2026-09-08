@@ -10,6 +10,7 @@ import AppThemeProvider from "@/components/AppThemeProvider";
 import AppFooter from "@/components/AppFooter";
 import "../globals.css";
 import AppHeader from "@/components/AppHeader";
+import AppScrollToTop from "@/components/AppScrollToTop";
 import { AFFILIATE_PARTNERS } from "@/lib/affiliatePartners";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "";
@@ -170,6 +171,7 @@ export default async function LocaleLayout({
         </noscript>
         <AppThemeProvider>
           <NextIntlClientProvider messages={messages}>
+            <AppScrollToTop />
             <AppHeader navItems={navItems} />
             {children}
           </NextIntlClientProvider>
