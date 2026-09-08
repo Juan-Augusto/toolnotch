@@ -149,7 +149,7 @@ export function AppInput({
             disabled:cursor-not-allowed
             ${
               flat
-                ? "bg-transparent border-0"
+                ? "bg-transparent border-0 bg-transparent! border-0! focus:bg-transparent!"
                 : `bg-tertiary border focus:bg-secondary/3 ${
                     error
                       ? "border-red-500 focus:border-red-500 ring-1 ring-red-500/20"

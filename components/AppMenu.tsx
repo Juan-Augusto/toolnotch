@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -56,7 +56,7 @@ export function AppMenu({
       .map((grp) => {
         const matchesGroupName = grp.name.toLowerCase().includes(query);
         const matchesGroupTags = grp.tags?.some((t) =>
-          t.toLowerCase().includes(query)
+          t.toLowerCase().includes(query),
         );
         const matchesGroup = matchesGroupName || matchesGroupTags;
         if (matchesGroup) {
@@ -65,7 +65,7 @@ export function AppMenu({
         const matchingItems = grp.items.filter(
           (item) =>
             item.name.toLowerCase().includes(query) ||
-            item.tags?.some((t) => t.toLowerCase().includes(query))
+            item.tags?.some((t) => t.toLowerCase().includes(query)),
         );
         return {
           ...grp,
@@ -95,7 +95,7 @@ export function AppMenu({
   return (
     <nav
       aria-label="Sidebar Menu"
-      className={`w-86 shrink-0 flex flex-col border-r-dashed-5 bg-panel select-none ${className}`}
+      className={`w-86 shrink-0 flex flex-col border-r-dashed-5 bg-background select-none ${className}`}
     >
       {search && (
         <div className="border-b-dashed-5 border-r-dashed-5 bg-background">
@@ -114,10 +114,7 @@ export function AppMenu({
         const open = isGroupOpen(groupKey);
 
         return (
-          <div
-            key={groupKey}
-            className="border-b-dashed-5"
-          >
+          <div key={groupKey} className="border-b-dashed-5">
             <button
               type="button"
               onClick={() => toggleGroup(groupKey)}
@@ -185,7 +182,7 @@ export function AppMenu({
                         item.link?.startsWith("https://");
 
                       const itemClasses =
-                        "flex items-center font-light justify-between gap-2.5 w-full px-6 py-5 text-foreground/80 hover:text-foreground hover:bg-tertiary/40 transition-colors text-left";
+                        "flex items-center font-light justify-between gap-2.5 w-full px-6 py-5 text-label hover:text-foreground hover:bg-tertiary/40 transition-colors text-left";
 
                       const content = (
                         <>

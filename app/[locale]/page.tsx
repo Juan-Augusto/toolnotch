@@ -96,6 +96,7 @@ export default async function HomePage({ params }: Props) {
           {cards.map((card) => (
             <AppCard
               key={card.title}
+              border
               className="flex flex-col justify-between p-6 sm:p-7 min-h-[330px]"
             >
               <div>
