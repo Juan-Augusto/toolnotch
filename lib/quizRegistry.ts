@@ -18,19 +18,19 @@ export const QUIZ_REGISTRY: QuizMeta[] = [
   { id: 'political-echo-chamber-quiz',           type: 'personality', category: 'personality', locales: ['en','pt','es'] },
   { id: 'which-historical-figure-matches-you',   type: 'personality', category: 'personality', locales: ['en','pt','es'] },
   { id: 'fake-news-or-fact',                     type: 'trivia',      category: 'civic',       locales: ['en','pt','es'] },
-  // Backend Engineering (English only)
-  { id: 'nodejs-fundamentals',  type: 'trivia', category: 'backend', locales: ['en'] },
-  { id: 'database-design',      type: 'trivia', category: 'backend', locales: ['en'] },
-  { id: 'database-indexing',    type: 'trivia', category: 'backend', locales: ['en'] },
-  { id: 'messaging-sqs-kafka',  type: 'trivia', category: 'backend', locales: ['en'] },
-  { id: 'rabbitmq-concepts',    type: 'trivia', category: 'backend', locales: ['en'] },
-  { id: 'system-architecture',  type: 'trivia', category: 'backend', locales: ['en'] },
-  // Personality (English only)
-  { id: 'what-career-suits-you',           type: 'personality', category: 'personality', locales: ['en'] },
-  { id: 'which-programming-language-are-you', type: 'personality', category: 'personality', locales: ['en'] },
-  { id: 'am-i-introverted-or-extroverted', type: 'personality', category: 'personality', locales: ['en'] },
-  { id: 'what-type-of-traveler-are-you',   type: 'personality', category: 'personality', locales: ['en'] },
-  { id: 'which-decade-do-you-belong-in',   type: 'personality', category: 'personality', locales: ['en'] },
+  // Backend Engineering
+  { id: 'nodejs-fundamentals',  type: 'trivia', category: 'backend', locales: ['en','pt','es'] },
+  { id: 'database-design',      type: 'trivia', category: 'backend', locales: ['en','pt','es'] },
+  { id: 'database-indexing',    type: 'trivia', category: 'backend', locales: ['en','pt','es'] },
+  { id: 'messaging-sqs-kafka',  type: 'trivia', category: 'backend', locales: ['en','pt','es'] },
+  { id: 'rabbitmq-concepts',    type: 'trivia', category: 'backend', locales: ['en','pt','es'] },
+  { id: 'system-architecture',  type: 'trivia', category: 'backend', locales: ['en','pt','es'] },
+  // Personality
+  { id: 'what-career-suits-you',           type: 'personality', category: 'personality', locales: ['en','pt','es'] },
+  { id: 'which-programming-language-are-you', type: 'personality', category: 'personality', locales: ['en','pt','es'] },
+  { id: 'am-i-introverted-or-extroverted', type: 'personality', category: 'personality', locales: ['en','pt','es'] },
+  { id: 'what-type-of-traveler-are-you',   type: 'personality', category: 'personality', locales: ['en','pt','es'] },
+  { id: 'which-decade-do-you-belong-in',   type: 'personality', category: 'personality', locales: ['en','pt','es'] },
 ]
 
 /** Quizzes with no unique indexable body — excluded from the sitemap and marked robots:noindex (AdSense readiness, 2026-09-06). */

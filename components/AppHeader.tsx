@@ -169,7 +169,7 @@ const CollapsedMenu = ({
 };
 
 const linkClass =
-  "text-xs font-medium uppercase tracking-widest text-foreground hover:text-primary transition-colors";
+  "font-medium uppercase tracking-widest text-foreground hover:text-primary transition-colors";
 
 const MenuItemsContainer = ({
   navItems,
@@ -257,7 +257,7 @@ const NavDropdown = ({
                 partnerKey={child.partnerKey ?? "unknown"}
                 placement="nav-dropdown"
                 onClick={close}
-                className="text-xs font-medium uppercase tracking-wider text-label hover:text-foreground transition-colors px-2 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5"
+                className="font-medium uppercase tracking-wider text-label hover:text-foreground transition-colors px-2 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5"
               >
                 {child.label}
               </AppAffiliateLink>
@@ -266,7 +266,7 @@ const NavDropdown = ({
                 key={child.href}
                 href={child.href}
                 onClick={close}
-                className="text-xs font-medium uppercase tracking-wider text-primary hover:underline px-2 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5"
+                className="font-medium uppercase tracking-wider text-primary hover:underline px-2 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5"
               >
                 {child.label}
               </Link>

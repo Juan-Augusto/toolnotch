@@ -1,0 +1,401 @@
+{
+  "id": "am-i-introverted-or-extroverted",
+  "title": "¿Soy Introvertido o Extrovertido?",
+  "description": "Descubre en qué punto del espectro de personalidad te encuentras con 10 preguntas rápidas.",
+  "image": "/images/quizzes/am-i-introverted-or-extroverted-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Tras un largo evento social, te sientes:",
+      "options": [
+        {
+          "id": "q1a",
+          "text": "Con energía y con ganas de seguir socializando",
+          "scores": {
+            "extrovert": 3
+          }
+        },
+        {
+          "id": "q1b",
+          "text": "Bien, pero listo para un momento de tranquilidad",
+          "scores": {
+            "ambivert": 2,
+            "introvert": 1
+          }
+        },
+        {
+          "id": "q1c",
+          "text": "Agotado y necesitando tiempo a solas para recargar",
+          "scores": {
+            "introvert": 3
+          }
+        },
+        {
+          "id": "q1d",
+          "text": "Depende totalmente del evento y de las personas",
+          "scores": {
+            "ambivert": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "En una fiesta donde no conoces a nadie:",
+      "options": [
+        {
+          "id": "q2a",
+          "text": "Te encanta — ¡un lugar lleno de posibles nuevos amigos!",
+          "scores": {
+            "extrovert": 3
+          }
+        },
+        {
+          "id": "q2b",
+          "text": "Buscas a una o dos personas y te quedas con ellas",
+          "scores": {
+            "ambivert": 2,
+            "introvert": 1
+          }
+        },
+        {
+          "id": "q2c",
+          "text": "Desearías marcharte tras una hora",
+          "scores": {
+            "introvert": 3
+          }
+        },
+        {
+          "id": "q2d",
+          "text": "Te adaptas según el ambiente del lugar",
+          "scores": {
+            "ambivert": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Tu sábado ideal consiste en:",
+      "options": [
+        {
+          "id": "q3a",
+          "text": "Lleno de planes y viendo a mucha gente",
+          "scores": {
+            "extrovert": 3
+          }
+        },
+        {
+          "id": "q3b",
+          "text": "Una combinación equilibrada de vida social y personal",
+          "scores": {
+            "ambivert": 3
+          }
+        },
+        {
+          "id": "q3c",
+          "text": "Un día tranquilo en casa disfrutando de lo que te gusta",
+          "scores": {
+            "introvert": 3
+          }
+        },
+        {
+          "id": "q3d",
+          "text": "Espontáneo — decido según cómo me sienta al despertar",
+          "scores": {
+            "ambivert": 2,
+            "extrovert": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "¿Cómo procesas las decisiones difíciles?",
+      "options": [
+        {
+          "id": "q4a",
+          "text": "Hablándolas con tantas personas como sea posible",
+          "scores": {
+            "extrovert": 3
+          }
+        },
+        {
+          "id": "q4b",
+          "text": "Pensando a solas primero y quizás comentándolas después",
+          "scores": {
+            "introvert": 3
+          }
+        },
+        {
+          "id": "q4c",
+          "text": "Escribiendo o reflexionando en silencio",
+          "scores": {
+            "introvert": 2,
+            "ambivert": 1
+          }
+        },
+        {
+          "id": "q4d",
+          "text": "Ambas — según la naturaleza de la decisión",
+          "scores": {
+            "ambivert": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "En conversaciones grupales sueles:",
+      "options": [
+        {
+          "id": "q5a",
+          "text": "Liderar y guiar la conversación con naturalidad",
+          "scores": {
+            "extrovert": 3
+          }
+        },
+        {
+          "id": "q5b",
+          "text": "Escuchar más que hablar y aportar cuando es relevante",
+          "scores": {
+            "introvert": 3
+          }
+        },
+        {
+          "id": "q5c",
+          "text": "Participar cómodamente sin necesidad de protagonismo",
+          "scores": {
+            "ambivert": 3
+          }
+        },
+        {
+          "id": "q5d",
+          "text": "Varía según quién esté presente en el grupo",
+          "scores": {
+            "ambivert": 2,
+            "introvert": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "Tu círculo de amigos cercanos es:",
+      "options": [
+        {
+          "id": "q6a",
+          "text": "Amplio — tengo muchos amigos cercanos",
+          "scores": {
+            "extrovert": 3
+          }
+        },
+        {
+          "id": "q6b",
+          "text": "Reducido y cercano — pocas amistades muy profundas",
+          "scores": {
+            "introvert": 3
+          }
+        },
+        {
+          "id": "q6c",
+          "text": "Medio — un grupo cómodo con el que disfruto",
+          "scores": {
+            "ambivert": 3
+          }
+        },
+        {
+          "id": "q6d",
+          "text": "Mantengo círculos diferentes para distintas facetas",
+          "scores": {
+            "ambivert": 2,
+            "extrovert": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "Cuando te ocurre algo emocionante:",
+      "options": [
+        {
+          "id": "q7a",
+          "text": "Llamas o escribes de inmediato para contarlo",
+          "scores": {
+            "extrovert": 3
+          }
+        },
+        {
+          "id": "q7b",
+          "text": "Lo asimilas a solas antes de compartirlo",
+          "scores": {
+            "introvert": 3
+          }
+        },
+        {
+          "id": "q7c",
+          "text": "Se lo cuentas a una persona en concreto que lo valorará",
+          "scores": {
+            "introvert": 2,
+            "ambivert": 1
+          }
+        },
+        {
+          "id": "q7d",
+          "text": "Lo publicas en redes — compartir me ayuda a procesar",
+          "scores": {
+            "extrovert": 2,
+            "ambivert": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "Teletrabajo frente a oficina presencial:",
+      "options": [
+        {
+          "id": "q8a",
+          "text": "Oficina siempre — me encanta estar rodeado de gente",
+          "scores": {
+            "extrovert": 3
+          }
+        },
+        {
+          "id": "q8b",
+          "text": "En casa — soy mucho más productivo sin distracciones",
+          "scores": {
+            "introvert": 3
+          }
+        },
+        {
+          "id": "q8c",
+          "text": "Híbrido — lo mejor de ambos mundos",
+          "scores": {
+            "ambivert": 3
+          }
+        },
+        {
+          "id": "q8d",
+          "text": "Depende de la tarea y de mi energía del día",
+          "scores": {
+            "ambivert": 2,
+            "introvert": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "Conversaciones casuales con desconocidos:",
+      "options": [
+        {
+          "id": "q9a",
+          "text": "¡Me encantan! Así nacen las buenas amistades",
+          "scores": {
+            "extrovert": 3
+          }
+        },
+        {
+          "id": "q9b",
+          "text": "Las tolero si es necesario, pero me consumen energía",
+          "scores": {
+            "introvert": 3
+          }
+        },
+        {
+          "id": "q9c",
+          "text": "Bien en pequeñas dosis — no tengo problema",
+          "scores": {
+            "ambivert": 3
+          }
+        },
+        {
+          "id": "q9d",
+          "text": "Prefiero pasar directamente a temas profundos",
+          "scores": {
+            "introvert": 2,
+            "ambivert": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "Si diseñaras tu día de trabajo perfecto:",
+      "options": [
+        {
+          "id": "q10a",
+          "text": "Reuniones continuas, lluvia de ideas y colaboración",
+          "scores": {
+            "extrovert": 3
+          }
+        },
+        {
+          "id": "q10b",
+          "text": "Concentración individual profunda y sin interrupciones",
+          "scores": {
+            "introvert": 3
+          }
+        },
+        {
+          "id": "q10c",
+          "text": "Reuniones por la mañana y trabajo individual por la tarde",
+          "scores": {
+            "ambivert": 3
+          }
+        },
+        {
+          "id": "q10d",
+          "text": "Colaboración con un equipo reducido durante el día",
+          "scores": {
+            "ambivert": 2,
+            "extrovert": 1
+          }
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "introvert",
+      "title": "Introvertido",
+      "description": "Eres introvertido. Recargas tu energía en la tranquilidad y la introspección, valorando las conexiones auténticas y profundas.",
+      "image": "/images/results/introvert.jpg",
+      "traits": [
+        "Reflexivo",
+        "Buen oyente",
+        "Independiente",
+        "Creativo"
+      ],
+      "shareText": "¡Soy Introvertido! Haz el test en ToolNotch."
+    },
+    {
+      "id": "extrovert",
+      "title": "Extrovertido",
+      "description": "Eres extrovertido. Te nutres del contacto social, el intercambio de ideas y los ambientes dinámicos y colaborativos.",
+      "image": "/images/results/extrovert.jpg",
+      "traits": [
+        "Enérgico",
+        "Sociable",
+        "Espontáneo",
+        "Entusiasta"
+      ],
+      "shareText": "¡Soy Extrovertido! Haz el test en ToolNotch."
+    },
+    {
+      "id": "ambivert",
+      "title": "Ambivertido",
+      "description": "Eres ambivertido — el perfil más adaptable y equilibrado. Disfrutas tanto de la compañía como de los momentos de soledad según el momento.",
+      "image": "/images/results/ambivert.jpg",
+      "traits": [
+        "Flexible",
+        "Adaptable",
+        "Equilibrado",
+        "Empático"
+      ],
+      "shareText": "¡Soy Ambivertido! Haz el test en ToolNotch."
+    }
+  ],
+  "locale": "es"
+}

@@ -4,6 +4,7 @@ import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import AppInput from "@/components/ui/form/AppInput";
 
 export interface MenuItem {
   name: string;
@@ -22,12 +23,16 @@ export interface AppMenuProps {
   group?: MenuGroup | MenuGroup[];
   groups?: MenuGroup[];
   className?: string;
+  search?: boolean;
+  searchPlaceholder?: string;
 }
 
 export function AppMenu({
   group,
   groups,
   className = "",
+  search = false,
+  searchPlaceholder = "Pesquisar...",
 }: AppMenuProps) {
   const normalizedGroups: MenuGroup[] = useMemo(() => {
     if (groups && groups.length > 0) {
@@ -39,9 +44,41 @@ export function AppMenu({
     return Array.isArray(group) ? group : [group];
   }, [group, groups]);
 
+  const [searchQuery, setSearchQuery] = useState("");
   const [openMap, setOpenMap] = useState<Record<string, boolean>>({});
 
+  const filteredGroups = useMemo(() => {
+    if (!search || !searchQuery.trim()) {
+      return normalizedGroups;
+    }
+    const query = searchQuery.toLowerCase().trim();
+    return normalizedGroups
+      .map((grp) => {
+        const matchesGroupName = grp.name.toLowerCase().includes(query);
+        const matchesGroupTags = grp.tags?.some((t) =>
+          t.toLowerCase().includes(query)
+        );
+        const matchesGroup = matchesGroupName || matchesGroupTags;
+        if (matchesGroup) {
+          return grp;
+        }
+        const matchingItems = grp.items.filter(
+          (item) =>
+            item.name.toLowerCase().includes(query) ||
+            item.tags?.some((t) => t.toLowerCase().includes(query))
+        );
+        return {
+          ...grp,
+          items: matchingItems,
+        };
+      })
+      .filter((grp) => grp.items.length > 0);
+  }, [normalizedGroups, search, searchQuery]);
+
   const isGroupOpen = (key: string) => {
+    if (search && searchQuery.trim().length > 0) {
+      return true;
+    }
     if (openMap[key] !== undefined) {
       return openMap[key];
     }
@@ -58,9 +95,21 @@ export function AppMenu({
   return (
     <nav
       aria-label="Sidebar Menu"
-      className={`w-64 shrink-0 flex flex-col border-r-dashed-5 bg-background select-none font-mono ${className}`}
+      className={`w-86 shrink-0 flex flex-col border-r-dashed-5 bg-panel select-none ${className}`}
     >
-      {normalizedGroups.map((grp, groupIdx) => {
+      {search && (
+        <div className="border-b-dashed-5 border-r-dashed-5 bg-background">
+          <AppInput
+            flat
+            placeholder={searchPlaceholder}
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="h-12 text-sm"
+          />
+        </div>
+      )}
+
+      {filteredGroups.map((grp, groupIdx) => {
         const groupKey = `${grp.name}-${groupIdx}`;
         const open = isGroupOpen(groupKey);
 
@@ -72,15 +121,17 @@ export function AppMenu({
             <button
               type="button"
               onClick={() => toggleGroup(groupKey)}
-              className="w-full flex items-center gap-2 px-4 py-3 text-left text-foreground hover:text-primary transition-colors cursor-pointer group"
+              className={`w-full flex text-base items-center gap-2.5 px-5 py-4 text-left text-foreground bg-background hover:text-primary transition-colors cursor-pointer group border-r-dashed-5 ${
+                open ? "border-b-dashed-5" : ""
+              }`}
               aria-expanded={open}
             >
               <ChevronDown
-                className={`w-4 h-4 shrink-0 text-foreground/70 transition-transform duration-200 ${
+                className={`w-5 h-5 shrink-0 transition-transform duration-200 ${
                   open ? "rotate-0" : "-rotate-90"
                 }`}
               />
-              <span className="font-mono text-xs font-bold uppercase tracking-wider text-foreground group-hover:text-primary transition-colors">
+              <span className="font-bold uppercase tracking-wider text-foreground group-hover:text-primary transition-colors">
                 {grp.name}
               </span>
               {grp.tags && grp.tags.length > 0 && (
@@ -88,7 +139,7 @@ export function AppMenu({
                   {grp.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="font-mono text-[9px] px-1.5 py-0.5 rounded bg-tertiary text-label border border-border/40 uppercase"
+                      className="px-1.5 py-0.5 rounded bg-panel text-label border border-border/40 uppercase"
                     >
                       {tag}
                     </span>
@@ -126,7 +177,7 @@ export function AppMenu({
                   }}
                   className="overflow-hidden"
                 >
-                  <ul className="flex flex-col pb-3 pt-0 px-2 space-y-0.5">
+                  <ul className="flex flex-col">
                     {grp.items.map((item, itemIdx) => {
                       const itemKey = `${item.name}-${itemIdx}`;
                       const isExternal =
@@ -134,17 +185,17 @@ export function AppMenu({
                         item.link?.startsWith("https://");
 
                       const itemClasses =
-                        "flex items-center justify-between gap-2 w-full px-4 py-2 font-mono text-xs text-label hover:text-foreground hover:bg-tertiary/30 rounded-[2px] transition-colors text-left";
+                        "flex items-center font-light justify-between gap-2.5 w-full px-6 py-5 text-foreground/80 hover:text-foreground hover:bg-tertiary/40 transition-colors text-left";
 
                       const content = (
                         <>
-                          <span className="truncate">{item.name}</span>
+                          <span className="break-words">{item.name}</span>
                           {item.tags && item.tags.length > 0 && (
-                            <div className="flex items-center gap-1 shrink-0">
+                            <div className="flex items-center gap-1 shrink-0 ml-2">
                               {item.tags.map((tag) => (
                                 <span
                                   key={tag}
-                                  className="font-mono text-[9px] px-1.5 py-0.5 rounded bg-tertiary/60 text-label/80 border border-border/30 uppercase"
+                                  className="px-1.5 py-0.5 rounded bg-tertiary/60 text-label/80 border border-border/30 uppercase"
                                 >
                                   {tag}
                                 </span>
@@ -197,6 +248,12 @@ export function AppMenu({
           </div>
         );
       })}
+
+      {search && searchQuery.trim() && filteredGroups.length === 0 && (
+        <div className="px-5 py-6 text-xs text-label/60 font-mono uppercase tracking-wider text-center border-r-dashed-5">
+          Nenhum resultado
+        </div>
+      )}
     </nav>
   );
 }

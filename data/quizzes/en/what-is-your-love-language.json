@@ -3,7 +3,7 @@
   "type": "personality",
   "category": "personality",
   "title": "What Is Your Love Language?",
-  "description": "Discover how you give and receive love. Based on the five love languages framework, this quiz reveals whether you're driven by words of affirmation, acts of service, receiving gifts, quality time, or physical touch. Answer 12 questions and find out which love language speaks to your heart.",
+  "description": "Discover your primary way of giving and receiving affection based on the five love languages.",
   "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
   "questions": [
     {
@@ -565,40 +565,60 @@
       "title": "Words of Affirmation",
       "description": "Your love language is Words of Affirmation — you feel most loved and valued when the people you care about express their feelings openly and verbally. Compliments, encouragement, heartfelt messages, and hearing 'I love you' are not just nice to hear; for you, they are essential. You notice when partners make an effort to articulate their feelings, and you remember those words long after the moment has passed. Silence or withheld praise can feel like distance, even when nothing is wrong. You are likely an expressive communicator yourself — someone who naturally tells others what you love about them and lifts the people around you with sincere, specific words. In relationships, you thrive when your partner checks in verbally, leaves notes, sends thoughtful messages, or simply takes a moment to say what you mean to them. The right words from the right person can carry you through difficult times and make ordinary moments feel truly special.",
       "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
-      "traits": ["Expressive", "Encouraging", "Emotionally Articulate"],
-      "shareText": "My love language is Words of Affirmation! What's yours? Take the quiz on ToolNotch \ud83d\udcac"
+      "traits": [
+        "Expressive",
+        "Encouraging",
+        "Emotionally Articulate"
+      ],
+      "shareText": "My love language is Words of Affirmation! What's yours? Take the quiz on ToolNotch 💬"
     },
     {
       "id": "acts-of-service",
       "title": "Acts of Service",
       "description": "Your love language is Acts of Service — you feel most cared for when the people you love show up for you through action. When someone does the dishes without being asked, handles an errand you forgot, or takes care of a task that was weighing on you, that is love made tangible. You pay close attention to effort and follow-through, and you notice when people invest their time and energy to make your life better. For you, actions genuinely speak louder than words. You likely show love the same way — rolling up your sleeves and doing things for the people who matter to you without expecting credit. In relationships, you flourish when your partner is proactive, attentive, and willing to contribute practically to shared life. Being met halfway — or more — fills you with warmth and makes you feel deeply supported. The greatest gift someone can give you is their time and effort, willingly and lovingly given.",
       "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
-      "traits": ["Practical", "Action-Oriented", "Supportive"],
-      "shareText": "My love language is Acts of Service! What's yours? Take the quiz on ToolNotch \ud83d\ude4c"
+      "traits": [
+        "Practical",
+        "Action-Oriented",
+        "Supportive"
+      ],
+      "shareText": "My love language is Acts of Service! What's yours? Take the quiz on ToolNotch 🙌"
     },
     {
       "id": "receiving-gifts",
       "title": "Receiving Gifts",
       "description": "Your love language is Receiving Gifts — and before you think this is about materialism, it's really about something much deeper: thoughtfulness. When someone gives you a gift, what moves you isn't the price tag — it's the fact that they were thinking of you when you weren't there. A wildflower picked on a walk, a book recommended because it reminded them of something you said, a small treat left on your desk — these tokens tell you that you are seen, remembered, and cherished. You are likely a highly sentimental person who keeps meaningful mementos and pays attention to what matters to others. You probably give extraordinarily thoughtful gifts yourself because you understand the emotional weight they carry. In relationships, you feel most loved when partners pay attention to what you mention, remember the details, and occasionally surprise you with something that says, quietly and clearly: I thought of you today.",
       "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
-      "traits": ["Thoughtful", "Appreciative", "Sentimental"],
-      "shareText": "My love language is Receiving Gifts! What's yours? Take the quiz on ToolNotch \ud83c\udf81"
+      "traits": [
+        "Thoughtful",
+        "Appreciative",
+        "Sentimental"
+      ],
+      "shareText": "My love language is Receiving Gifts! What's yours? Take the quiz on ToolNotch 🎁"
     },
     {
       "id": "quality-time",
       "title": "Quality Time",
       "description": "Your love language is Quality Time — you feel most loved when someone gives you their undivided, present attention. Not just being in the same room, but truly being there: no phones, no half-listening, no multitasking. When someone carves out time specifically for you and brings their whole self to the moment, you feel deeply valued. A long walk together, a dinner with no distractions, or a quiet evening side by side doing something you both love — these are the things that fill your emotional tank. You likely have a gift for being genuinely present yourself, and you notice when others are mentally elsewhere even while physically with you. In relationships, your greatest need is for a partner who shows up fully — who prioritizes time with you and makes it clear, through their attention, that you matter. Quality always outweighs quantity, but for you, both genuinely matter.",
       "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
-      "traits": ["Present", "Deep", "Connection-Focused"],
-      "shareText": "My love language is Quality Time! What's yours? Take the quiz on ToolNotch \u23f0"
+      "traits": [
+        "Present",
+        "Deep",
+        "Connection-Focused"
+      ],
+      "shareText": "My love language is Quality Time! What's yours? Take the quiz on ToolNotch ⏰"
     },
     {
       "id": "physical-touch",
       "title": "Physical Touch",
       "description": "Your love language is Physical Touch — for you, physical presence and closeness are the most direct expression of love and safety. A hand on your shoulder, a spontaneous hug, holding hands while walking, or simply sitting close enough to touch — these moments tell you, without words, that you are loved and not alone. You are likely an affectionate person by nature, someone who reaches out naturally when someone you care about is hurting or celebrating. Physical disconnection can feel like emotional distance, even when everything else seems fine. You don't need grand gestures — a gentle touch at the right moment communicates more than a thousand words. In relationships, you thrive with a partner who is physically warm and affectionate, who gravitates toward closeness and understands that a hug is sometimes the most eloquent thing they can offer. Warmth, presence, and physical connection are the foundation of your deepest bonds.",
       "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
-      "traits": ["Warm", "Nurturing", "Present"],
-      "shareText": "My love language is Physical Touch! What's yours? Take the quiz on ToolNotch \ud83e\udd17"
+      "traits": [
+        "Warm",
+        "Nurturing",
+        "Present"
+      ],
+      "shareText": "My love language is Physical Touch! What's yours? Take the quiz on ToolNotch 🤗"
     }
   ]
 }

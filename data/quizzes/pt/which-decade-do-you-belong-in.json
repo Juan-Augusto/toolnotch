@@ -1,0 +1,486 @@
+{
+  "id": "which-decade-do-you-belong-in",
+  "title": "A Qual Década Você Pertence?",
+  "description": "Descubra qual década cultural marcante mais combina com seu estilo e personalidade.",
+  "image": "/images/quizzes/which-decade-do-you-belong-in-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Sua trilha sonora ideal soa como:",
+      "options": [
+        {
+          "id": "q1a",
+          "text": "Rock clássico, funk e soul com energia pura",
+          "scores": {
+            "1970s": 3
+          }
+        },
+        {
+          "id": "q1b",
+          "text": "Synth-pop, new wave e grandes produções",
+          "scores": {
+            "1980s": 3
+          }
+        },
+        {
+          "id": "q1c",
+          "text": "Grunge, rock alternativo e hip-hop dos anos 90",
+          "scores": {
+            "1990s": 3
+          }
+        },
+        {
+          "id": "q1d",
+          "text": "Pop-punk, emo e hits do início dos anos 2000",
+          "scores": {
+            "2000s": 3
+          }
+        },
+        {
+          "id": "q1e",
+          "text": "Lo-fi, bedroom pop e sucessos virais",
+          "scores": {
+            "2010s": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Seu estilo de moda preferido:",
+      "options": [
+        {
+          "id": "q2a",
+          "text": "Boca de sino, tons terrosos e visual livre",
+          "scores": {
+            "1970s": 3
+          }
+        },
+        {
+          "id": "q2b",
+          "text": "Ombreiras marcantes, cores neon e acessórios ousados",
+          "scores": {
+            "1980s": 3
+          }
+        },
+        {
+          "id": "q2c",
+          "text": "Camisas xadrez de flanela, coturnos e atitude despojada",
+          "scores": {
+            "1990s": 3
+          }
+        },
+        {
+          "id": "q2d",
+          "text": "Cintura baixa, bonés icônicos e roupas esportivas",
+          "scores": {
+            "2000s": 3
+          }
+        },
+        {
+          "id": "q2e",
+          "text": "Streetwear minimalista, athleisure e estética moderna",
+          "scores": {
+            "2010s": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Como você prefere se conectar com amigos?",
+      "options": [
+        {
+          "id": "q3a",
+          "text": "Presencialmente em festas, encontros e eventos",
+          "scores": {
+            "1970s": 3
+          }
+        },
+        {
+          "id": "q3b",
+          "text": "Por telefone fixo com conversas longas",
+          "scores": {
+            "1980s": 3
+          }
+        },
+        {
+          "id": "q3c",
+          "text": "Por comunicadores instantâneos e trocas de e-mails",
+          "scores": {
+            "1990s": 3
+          }
+        },
+        {
+          "id": "q3d",
+          "text": "Redes sociais do início da era digital e fóruns",
+          "scores": {
+            "2000s": 3
+          }
+        },
+        {
+          "id": "q3e",
+          "text": "Stories, grupos de mensagens e áudios rápidos",
+          "scores": {
+            "2010s": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "Sua atividade ideal de fim de semana:",
+      "options": [
+        {
+          "id": "q4a",
+          "text": "Um festival de música ao ar livre com amigos",
+          "scores": {
+            "1970s": 3
+          }
+        },
+        {
+          "id": "q4b",
+          "text": "Pista de patinação ou cinema com grandes estreias",
+          "scores": {
+            "1980s": 3
+          }
+        },
+        {
+          "id": "q4c",
+          "text": "Café charmoso, livros e garimpo em sebos ou lojas de vinil",
+          "scores": {
+            "1990s": 3
+          }
+        },
+        {
+          "id": "q4d",
+          "text": "Maratona de filmes, shopping ou locadora",
+          "scores": {
+            "2000s": 3
+          }
+        },
+        {
+          "id": "q4e",
+          "text": "Brunch, produzir conteúdo ou evento cultural",
+          "scores": {
+            "2010s": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "Qual era do cinema mais te encanta?",
+      "options": [
+        {
+          "id": "q5a",
+          "text": "O Poderoso Chefão, Star Wars e cinema clássico",
+          "scores": {
+            "1970s": 3
+          }
+        },
+        {
+          "id": "q5b",
+          "text": "De Volta para o Futuro, E.T. e Os Caça-Fantasmas",
+          "scores": {
+            "1980s": 3
+          }
+        },
+        {
+          "id": "q5c",
+          "text": "Pulp Fiction, Matrix e clássicos dos anos 90",
+          "scores": {
+            "1990s": 3
+          }
+        },
+        {
+          "id": "q5d",
+          "text": "Meninas Malvadas, Harry Potter e grandes franquias",
+          "scores": {
+            "2000s": 3
+          }
+        },
+        {
+          "id": "q5e",
+          "text": "Universo de super-heróis, filmes independentes e A24",
+          "scores": {
+            "2010s": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "Seus valores principais estão focados em:",
+      "options": [
+        {
+          "id": "q6a",
+          "text": "Liberdade, paz e consciência coletiva",
+          "scores": {
+            "1970s": 3
+          }
+        },
+        {
+          "id": "q6b",
+          "text": "Ambição, individualidade e sucesso material",
+          "scores": {
+            "1980s": 3
+          }
+        },
+        {
+          "id": "q6c",
+          "text": "Autenticidade, contracultura e espírito crítico",
+          "scores": {
+            "1990s": 3
+          }
+        },
+        {
+          "id": "q6d",
+          "text": "Diversão, otimismo e descoberta digital",
+          "scores": {
+            "2000s": 3
+          }
+        },
+        {
+          "id": "q6e",
+          "text": "Expressão pessoal, representatividade e inovação",
+          "scores": {
+            "2010s": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "Escolha seu meio de comunicação favorito:",
+      "options": [
+        {
+          "id": "q7a",
+          "text": "Uma carta escrita à mão ou cartaz de festival",
+          "scores": {
+            "1970s": 3
+          }
+        },
+        {
+          "id": "q7b",
+          "text": "Uma ligação telefônica animada",
+          "scores": {
+            "1980s": 3
+          }
+        },
+        {
+          "id": "q7c",
+          "text": "Um e-mail detalhado ou fórum temático",
+          "scores": {
+            "1990s": 3
+          }
+        },
+        {
+          "id": "q7d",
+          "text": "Mensagens de texto curtas e páginas de perfil",
+          "scores": {
+            "2000s": 3
+          }
+        },
+        {
+          "id": "q7e",
+          "text": "Stories rápidos, threads e redes visuais",
+          "scores": {
+            "2010s": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "Sua relação com a tecnologia:",
+      "options": [
+        {
+          "id": "q8a",
+          "text": "Cética — prefiro a natureza e o contato humano direto",
+          "scores": {
+            "1970s": 3
+          }
+        },
+        {
+          "id": "q8b",
+          "text": "Empolgada com os primeiros computadores e videogames",
+          "scores": {
+            "1980s": 3
+          }
+        },
+        {
+          "id": "q8c",
+          "text": "Fascinada pelos primeiros anos da internet discada",
+          "scores": {
+            "1990s": 3
+          }
+        },
+        {
+          "id": "q8d",
+          "text": "Conectada 24/7 customizando páginas e baixando músicas",
+          "scores": {
+            "2000s": 3
+          }
+        },
+        {
+          "id": "q8e",
+          "text": "Não consigo imaginar o dia a dia sem smartphone",
+          "scores": {
+            "2010s": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "Sua definição de sucesso:",
+      "options": [
+        {
+          "id": "q9a",
+          "text": "Viver com liberdade e harmonia com meus valores",
+          "scores": {
+            "1970s": 3
+          }
+        },
+        {
+          "id": "q9b",
+          "text": "Alcançar prosperidade, destaque e conquistas",
+          "scores": {
+            "1980s": 3
+          }
+        },
+        {
+          "id": "q9c",
+          "text": "Criar algo autêntico e de valor duradouro",
+          "scores": {
+            "1990s": 3
+          }
+        },
+        {
+          "id": "q9d",
+          "text": "Aproveitar a vida e ser fiel a quem sou",
+          "scores": {
+            "2000s": 3
+          }
+        },
+        {
+          "id": "q9e",
+          "text": "Construir uma voz própria e impacto relevante",
+          "scores": {
+            "2010s": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "Seu ícone de estilo:",
+      "options": [
+        {
+          "id": "q10a",
+          "text": "Um artista livre dos anos 70",
+          "scores": {
+            "1970s": 3
+          }
+        },
+        {
+          "id": "q10b",
+          "text": "Um executivo ousado e elegante",
+          "scores": {
+            "1980s": 3
+          }
+        },
+        {
+          "id": "q10c",
+          "text": "Um astro do rock alternativo",
+          "scores": {
+            "1990s": 3
+          }
+        },
+        {
+          "id": "q10d",
+          "text": "Um astro pop carismático",
+          "scores": {
+            "2000s": 3
+          }
+        },
+        {
+          "id": "q10e",
+          "text": "Um criador de tendências contemporâneo",
+          "scores": {
+            "2010s": 3
+          }
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "1970s",
+      "title": "Anos 1970",
+      "description": "Você pertence aos anos 1970 — a década da liberdade, do vinil e da busca por autenticidade e conexão humana genuína.",
+      "image": "/images/results/1970s.jpg",
+      "traits": [
+        "Livre",
+        "Autêntico",
+        "Comunitário",
+        "Expressivo"
+      ],
+      "shareText": "Eu pertenço aos anos 1970! Faça o teste no ToolNotch."
+    },
+    {
+      "id": "1980s",
+      "title": "Anos 1980",
+      "description": "Você pertence aos anos 1980 — a era do synth-pop, das cores vibrantes, do otimismo e das grandes ambições.",
+      "image": "/images/results/1980s.jpg",
+      "traits": [
+        "Ambicioso",
+        "Ousado",
+        "Otimista",
+        "Vibrante"
+      ],
+      "shareText": "Eu pertenço aos anos 1980! Faça o teste no ToolNotch."
+    },
+    {
+      "id": "1990s",
+      "title": "Anos 1990",
+      "description": "Você pertence aos anos 1990 — a era de ouro do rock alternativo, do surgimento da web e do valor supremo da autenticidade.",
+      "image": "/images/results/1990s.jpg",
+      "traits": [
+        "Autêntico",
+        "Crítico",
+        "Criativo",
+        "Despojado"
+      ],
+      "shareText": "Eu pertenço aos anos 1990! Faça o teste no ToolNotch."
+    },
+    {
+      "id": "2000s",
+      "title": "Anos 2000",
+      "description": "Você pertence aos anos 2000 — o auge da cultura pop, celulares dobráveis, entusiasmo digital e diversão sem filtros.",
+      "image": "/images/results/2000s.jpg",
+      "traits": [
+        "Divertido",
+        "Otimista",
+        "Sociável",
+        "Pop"
+      ],
+      "shareText": "Eu pertenço aos anos 2000! Faça o teste no ToolNotch."
+    },
+    {
+      "id": "2010s",
+      "title": "Anos 2010",
+      "description": "Você pertence aos anos 2010 — a década da hiperconectividade, do streaming, da estética visual e da consciência social.",
+      "image": "/images/results/2010s.jpg",
+      "traits": [
+        "Conectado",
+        "Consciente",
+        "Inovador",
+        "Estético"
+      ],
+      "shareText": "Eu pertenço aos anos 2010! Faça o teste no ToolNotch."
+    }
+  ],
+  "locale": "pt"
+}

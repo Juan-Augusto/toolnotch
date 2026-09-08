@@ -3,7 +3,7 @@
   "type": "personality",
   "category": "personality",
   "title": "Qual é a Sua Linguagem do Amor?",
-  "description": "Descubra como você dá e recebe amor. Baseado no framework das cinco linguagens do amor, este quiz revela se você é movido por palavras de afirmação, atos de serviço, receber presentes, tempo de qualidade ou toque físico. Responda 12 perguntas e descubra qual linguagem do amor fala ao seu coração.",
+  "description": "Descubra sua forma dominante de dar e receber afeto com base nas cinco linguagens do amor.",
   "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
   "questions": [
     {
@@ -565,40 +565,60 @@
       "title": "Palavras de Afirmação",
       "description": "Sua linguagem do amor são as Palavras de Afirmação — você se sente mais amado(a) e valorizado(a) quando as pessoas com quem se importa expressam seus sentimentos abertamente e verbalmente. Elogios, encorajamento, mensagens carinhosas e ouvir 'eu te amo' não são apenas agradáveis de ouvir; para você, são essenciais. Você percebe quando os parceiros se esforçam para articular seus sentimentos, e lembra dessas palavras muito depois do momento ter passado. O silêncio ou a falta de elogios pode parecer distância, mesmo quando nada está errado. Você provavelmente é um comunicador expressivo por natureza — alguém que naturalmente diz ao outros o que ama neles e levanta as pessoas ao redor com palavras sinceras e específicas. Nos relacionamentos, você floresce quando seu parceiro(a) faz check-in verbalmente, deixa recados, envia mensagens pensativas ou simplesmente toma um momento para dizer o que você significa para eles.",
       "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
-      "traits": ["Expressivo", "Encorajador", "Emocionalmente Articulado"],
-      "shareText": "Minha linguagem do amor é Palavras de Afirma\u00e7\u00e3o! Qual \u00e9 a sua? Fa\u00e7a o quiz no ToolNotch \ud83d\udcac"
+      "traits": [
+        "Expressivo",
+        "Encorajador",
+        "Emocionalmente Articulado"
+      ],
+      "shareText": "Minha linguagem do amor é Palavras de Afirmação! Qual é a sua? Faça o quiz no ToolNotch 💬"
     },
     {
       "id": "acts-of-service",
       "title": "Atos de Serviço",
       "description": "Sua linguagem do amor são os Atos de Serviço — você se sente mais amado(a) quando as pessoas que você ama aparecem por você através de ações. Quando alguém lava a louça sem ser pedido, resolve uma tarefa que você esqueceu ou cuida de algo que estava te pesando, isso é amor tornado tangível. Você presta muita atenção ao esforço e ao que é realmente feito, e percebe quando as pessoas investem seu tempo e energia para tornar sua vida melhor. Para você, ações realmente falam mais alto que palavras. Você provavelmente demonstra amor da mesma forma — arregaçando as mangas e fazendo coisas para as pessoas que importam para você sem esperar crédito. Nos relacionamentos, você floresce quando seu parceiro(a) é proativo, atencioso e disposto a contribuir praticamente para a vida compartilhada.",
       "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
-      "traits": ["Prático", "Orientado à Ação", "Solidário"],
-      "shareText": "Minha linguagem do amor \u00e9 Atos de Servi\u00e7o! Qual \u00e9 a sua? Fa\u00e7a o quiz no ToolNotch \ud83d\ude4c"
+      "traits": [
+        "Prático",
+        "Orientado à Ação",
+        "Solidário"
+      ],
+      "shareText": "Minha linguagem do amor é Atos de Serviço! Qual é a sua? Faça o quiz no ToolNotch 🙌"
     },
     {
       "id": "receiving-gifts",
       "title": "Receber Presentes",
       "description": "Sua linguagem do amor é Receber Presentes — e antes de pensar que isso é sobre materialismo, é realmente sobre algo muito mais profundo: atenção e cuidado. Quando alguém te dá um presente, o que te move não é o preço — é o fato de que eles estavam pensando em você quando você não estava por perto. Uma flor colhida durante uma caminhada, um livro recomendado porque lembrou de algo que você disse, um mimo deixado na sua mesa — esses gestos te dizem que você é visto, lembrado e querido. Você provavelmente é uma pessoa altamente sentimental que guarda lembranças significativas. Nos relacionamentos, você se sente mais amado(a) quando o parceiro presta atenção ao que você menciona e ocasionalmente te surpreende com algo que diz, quietamente: pensei em você hoje.",
       "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
-      "traits": ["Atencioso", "Apreciativo", "Sentimental"],
-      "shareText": "Minha linguagem do amor \u00e9 Receber Presentes! Qual \u00e9 a sua? Fa\u00e7a o quiz no ToolNotch \ud83c\udf81"
+      "traits": [
+        "Atencioso",
+        "Apreciativo",
+        "Sentimental"
+      ],
+      "shareText": "Minha linguagem do amor é Receber Presentes! Qual é a sua? Faça o quiz no ToolNotch 🎁"
     },
     {
       "id": "quality-time",
       "title": "Tempo de Qualidade",
       "description": "Sua linguagem do amor é o Tempo de Qualidade — você se sente mais amado(a) quando alguém te dá atenção total e presente. Não apenas estar na mesma sala, mas realmente estar ali: sem celular, sem meio-ouvir, sem multitarefa. Quando alguém reserva tempo especificamente para você e traz toda a sua presença para o momento, você se sente profundamente valorizado(a). Uma longa caminhada juntos, um jantar sem distrações ou uma tarde tranquila fazendo algo que vocês dois gostam — essas são as coisas que enchem seu tanque emocional. Nos relacionamentos, sua maior necessidade é por um parceiro que apareça completamente — que priorize o tempo com você e deixe claro, por meio de atenção, que você importa. Qualidade sempre supera quantidade, mas para você, ambas genuinamente importam.",
       "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
-      "traits": ["Presente", "Profundo", "Focado em Conexão"],
-      "shareText": "Minha linguagem do amor \u00e9 Tempo de Qualidade! Qual \u00e9 a sua? Fa\u00e7a o quiz no ToolNotch \u23f0"
+      "traits": [
+        "Presente",
+        "Profundo",
+        "Focado em Conexão"
+      ],
+      "shareText": "Minha linguagem do amor é Tempo de Qualidade! Qual é a sua? Faça o quiz no ToolNotch ⏰"
     },
     {
       "id": "physical-touch",
       "title": "Toque Físico",
       "description": "Sua linguagem do amor é o Toque Físico — para você, a presença e a proximidade física são a expressão mais direta de amor e segurança. Uma mão no ombro, um abraço espontâneo, segurar as mãos enquanto caminha ou simplesmente sentar perto o suficiente para se tocar — esses momentos te dizem, sem palavras, que você é amado(a) e não está sozinho(a). Você provavelmente é uma pessoa afetiva por natureza, alguém que estende a mão naturalmente quando alguém com quem se importa está sofrendo ou celebrando. A desconexão física pode parecer distância emocional, mesmo quando tudo o mais parece bem. Nos relacionamentos, você floresce com um parceiro que é fisicamente carinhoso e afetuoso, que gravita em direção à proximidade e entende que um abraço é às vezes a coisa mais eloquente que ele pode oferecer.",
       "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
-      "traits": ["Carinhoso", "Acolhedor", "Presente"],
-      "shareText": "Minha linguagem do amor \u00e9 Toque F\u00edsico! Qual \u00e9 a sua? Fa\u00e7a o quiz no ToolNotch \ud83e\udd17"
+      "traits": [
+        "Carinhoso",
+        "Acolhedor",
+        "Presente"
+      ],
+      "shareText": "Minha linguagem do amor é Toque Físico! Qual é a sua? Faça o quiz no ToolNotch 🤗"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "id": "which-football-club-are-you",
   "title": "¿Qué Equipo de Fútbol Eres?",
-  "description": "¿Eres el ganador implacable del Real Madrid, el alma creativa del Barcelona o el corazón apasionado del Liverpool? Responde 10 preguntas y descubre qué club de fútbol legendario encaja perfectamente con tu personalidad, tus valores y tu actitud. Desde la atmósfera eléctrica del Muro Amarillo del Dortmund hasta el espíritu apasionado de Boca Juniors, descubre dónde realmente perteneces.",
+  "description": "Descubre qué club legendario del fútbol mundial coincide con tu personalidad y actitud.",
   "image": "/images/quizzes/which-football-club-are-you-cover.jpg",
   "questions": [
     {
@@ -392,7 +392,12 @@
       "title": "Real Madrid",
       "description": "Eres el Real Madrid — el club más laureado de la historia del fútbol y símbolo de una grandeza que trasciende generaciones. Como los Merengues, llevas una confianza tranquila que roza la certeza absoluta: no solo esperas ganar, crees que es tu destino. Te atraen los escenarios más grandes y te sientes más vivo cuando la presión está al máximo. Las derrotas no te desaniman — alimentan un fuego que arde aún más fuerte, y tienes una capacidad extraordinaria de producir magia exactamente cuando el mundo duda de ti. La gente a tu alrededor puede ver esto como arrogancia, pero quienes te conocen de verdad entienden que es simplemente la marca de alguien que ha interiorizado la excelencia como forma de vida. El legado te importa profundamente. Piensas de forma global, sueñas a lo grande y rara vez te conformas con el segundo lugar. El Bernabéu retumba — y tú también.",
       "image": "/images/results/real-madrid.jpg",
-      "traits": ["Prestigio", "Mentalidad Ganadora", "Visión Global", "Legado"],
+      "traits": [
+        "Prestigio",
+        "Mentalidad Ganadora",
+        "Visión Global",
+        "Legado"
+      ],
       "shareText": "¡Soy el Real Madrid en el quiz ¿Qué Equipo de Fútbol Eres? en ToolNotch!"
     },
     {
@@ -400,7 +405,12 @@
       "title": "FC Barcelona",
       "description": "Eres el FC Barcelona — un club que siempre ha creído que el fútbol, y la vida, son formas de arte. Como el Barça, te mueve la creatividad, la filosofía y un profundo sentido de identidad. No solo quieres tener éxito — quieres tenerlo de forma bella, de una manera que refleje tus valores. Tienes un fuerte sentido de quién eres y de dónde vienes, y esa identidad moldea cada decisión que tomas. En el trabajo, en las relaciones o en proyectos personales, aportas una inteligencia creativa que los demás admiran y a veces les cuesta comprender del todo. Eres colaborativo por naturaleza, convencido de que un colectivo perfectamente coordinado es más poderoso que cualquier individuo. El tiki-taka no es solo una filosofía de fútbol para ti — es una metáfora de cómo te relacionas con el mundo. Paciente, preciso y con propósito. Crees en el poder del pase, en la importancia del proceso y en la belleza de hacer las cosas bien.",
       "image": "/images/results/barcelona.jpg",
-      "traits": ["Creatividad", "Identidad", "Inteligencia Colectiva", "Arte"],
+      "traits": [
+        "Creatividad",
+        "Identidad",
+        "Inteligencia Colectiva",
+        "Arte"
+      ],
       "shareText": "¡Soy el FC Barcelona en el quiz ¿Qué Equipo de Fútbol Eres? en ToolNotch!"
     },
     {
@@ -408,7 +418,12 @@
       "title": "Liverpool FC",
       "description": "Eres el Liverpool FC — un club construido sobre la pasión, la comunidad y la convicción inquebrantable de que nunca caminarás solo. Como los Reds, tu mayor fortaleza es el corazón. Sientes las cosas con profundidad y tu conexión emocional con las personas y causas que te importan te da una capacidad sobrehumana para superar la adversidad. Eres la persona que escribe la historia de la remontada, que encuentra energía para un último empuje cuando todos ya se han rendido. La comunidad es tu base: prosperas rodeado de personas que comparten tu fuego. La atmósfera de Anfield no es solo un escenario para ti — es una forma de vida, un recordatorio de que la creencia colectiva puede mover montañas. Eres auténtico, leal e intensamente real en todo lo que haces. No actúas para los demás; simplemente eres, de forma plena y apasionada. Esa honestidad emocional es tu mayor regalo.",
       "image": "/images/results/liverpool.jpg",
-      "traits": ["Pasión", "Resiliencia", "Comunidad", "Atmósfera"],
+      "traits": [
+        "Pasión",
+        "Resiliencia",
+        "Comunidad",
+        "Atmósfera"
+      ],
       "shareText": "¡Soy el Liverpool FC en el quiz ¿Qué Equipo de Fútbol Eres? en ToolNotch!"
     },
     {
@@ -416,7 +431,12 @@
       "title": "Bayern Munich",
       "description": "Eres el Bayern Munich — el club más eficiente, dominante y sistemáticamente excelente del fútbol europeo. Como los bávaros, crees que con la estructura correcta, las personas correctas y los procesos correctos, el éxito se vuelve casi inevitable. No eres impulsivo ni exhibicionista — eres metódico, consistente e implacablemente enfocado en la ejecución. Planificas con cuidado, fijas objetivos claros y mantienes los más altos estándares para ti y para los demás. Mientras otros dependen de la inspiración, tú dependes de la preparación. Eso no significa que carezcas de pasión — al contrario — pero tu fuego es frío y controlado, ardiendo de forma constante en lugar de explosiva. Eres la persona en la sala que ya pensó tres pasos adelante, que cumple lo que promete con fiabilidad y sin drama. Aprecias la competencia y detestas el desperdicio. Crees que la dominancia se gana con disciplina, no con suerte — y tu historial lo demuestra.",
       "image": "/images/results/bayern-munich.jpg",
-      "traits": ["Eficiencia", "Dominancia", "Precisión", "Consistencia"],
+      "traits": [
+        "Eficiencia",
+        "Dominancia",
+        "Precisión",
+        "Consistencia"
+      ],
       "shareText": "¡Soy el Bayern Munich en el quiz ¿Qué Equipo de Fútbol Eres? en ToolNotch!"
     },
     {
@@ -424,7 +444,12 @@
       "title": "Manchester City",
       "description": "Eres el Manchester City — el modelo moderno del fútbol, donde datos, talento y genio táctico se combinan para crear algo imparable. Como el City de Pep Guardiola, te fascinan los sistemas, la optimización y la búsqueda implacable de la mejora. Abrazas las ideas modernas con entusiasmo y nunca te intimida la complejidad. De hecho, encuentras placer en desenredar problemas difíciles y construir mejores soluciones. Eres visionario: mientras otros miran atrás, tú ya estás diseñando la próxima versión de ti mismo. Tu dedicación es silenciosa pero intensa — no necesitas aplausos para seguir trabajando, porque el progreso interno ya es su propia recompensa. También eres muy adaptable, capaz de cambiar de estrategia a mitad del camino sin perder la compostura. Algunos te ven como calculador, pero quienes te conocen saben que detrás de los análisis y las tácticas hay alguien que genuinamente ama el juego y quiere jugarlo al más alto nivel posible.",
       "image": "/images/results/manchester-city.jpg",
-      "traits": ["Inteligencia Táctica", "Implacabilidad", "Pensamiento Moderno", "Adaptabilidad"],
+      "traits": [
+        "Inteligencia Táctica",
+        "Implacabilidad",
+        "Pensamiento Moderno",
+        "Adaptabilidad"
+      ],
       "shareText": "¡Soy el Manchester City en el quiz ¿Qué Equipo de Fútbol Eres? en ToolNotch!"
     },
     {
@@ -432,7 +457,12 @@
       "title": "Flamengo",
       "description": "Eres el Flamengo — el latido del fútbol brasileño y el club del pueblo. Como el Mengão, llevas el espíritu del carnaval en todo lo que haces: vibrante, apasionado, alegre y completamente vivo. No solo participas de la vida — la celebras, a todo volumen y con todos a tu alrededor. Tu energía es contagiosa; la gente se siente naturalmente atraída por tu entusiasmo, tu calidez y tu convicción inquebrantable de que mañana será aún mejor que hoy. Para ti, el fútbol — y la vida — es una fiesta colectiva, mejor compartida con mucha gente, con música, con sentimiento. Mientras otros planifican y calculan, tú confías en el momento, en el instinto y en el poder eléctrico de la emoción colectiva. La adversidad no te rompe — al contrario, despierta tu lado más espectacular. Del Maracanã al mundo, el Flamengo siempre perteneció al pueblo — y tú también.",
       "image": "/images/results/flamengo.jpg",
-      "traits": ["Alegría", "Pasión", "Orgullo Cultural", "Espíritu Colectivo"],
+      "traits": [
+        "Alegría",
+        "Pasión",
+        "Orgullo Cultural",
+        "Espíritu Colectivo"
+      ],
       "shareText": "¡Soy el Flamengo en el quiz ¿Qué Equipo de Fútbol Eres? en ToolNotch!"
     },
     {
@@ -440,7 +470,12 @@
       "title": "Boca Juniors",
       "description": "Eres Boca Juniors — fuego, intensidad y un vínculo inquebrantable con la gente. Como los Xeneizes de la Bombonera, lo sientes todo a volumen máximo. Las rivalidades no son ruido de fondo para ti — son el centro de tu historia, el combustible de tus mejores actuaciones. Eres ferozmente leal a los tuyos e igualmente feroz contra cualquiera que se interponga en tu camino. Hay una crudeza en ti, una autenticidad que no puede fabricarse ni pulirse. Llevas el corazón en la manga y te enorgulleces de ello. El barrio de La Boca forjó a este club, y tú también fuiste forjado por de donde vienes — por luchas reales, gente real y apuestas reales. No te interesa la apariencia ni el glamour por sí solos. Lo que importa es la verdad, la pasión y esa sensación eléctrica de un estadio convertido en algo primitivo y vivo. Cuando Boca gana, toda Argentina lo siente — y cuando tú ganas, todos a tu alrededor lo sienten también.",
       "image": "/images/results/boca-juniors.jpg",
-      "traits": ["Intensidad", "Lealtad", "Rivalidad", "Autenticidad"],
+      "traits": [
+        "Intensidad",
+        "Lealtad",
+        "Rivalidad",
+        "Autenticidad"
+      ],
       "shareText": "¡Soy el Boca Juniors en el quiz ¿Qué Equipo de Fútbol Eres? en ToolNotch!"
     },
     {
@@ -448,7 +483,12 @@
       "title": "Borussia Dortmund",
       "description": "Eres el Borussia Dortmund — el Muro Amarillo, el equipo que nunca deja de creer, el club que convierte energía bruta en algo mágico. Como el BVB, eres joven de espíritu, lleno de electricidad y movido por un optimismo casi irracional que hace que lo imposible parezca alcanzable. No necesitas el mayor presupuesto ni el nombre más famoso — crees en el potencial, en el desarrollo, en darle a los jóvenes talentos la oportunidad de convertirse en algo extraordinario. El Signal Iduna Park es el estadio más ruidoso de Europa porque sus aficionados no son espectadores — son participantes, coautores de cada victoria. Tú también eres así: no observas la vida desde la barrera, te lanzas de cabeza. Eres cercano, firme y feroz — sabes lo que se siente que te subestimen y usas ese conocimiento como combustible. Tu espíritu es el Muro Amarillo: inmenso, unido, ensordecedor e imposible de ignorar.",
       "image": "/images/results/borussia-dortmund.jpg",
-      "traits": ["Energía Juvenil", "Espíritu Combativo", "Pasión", "Unidad"],
+      "traits": [
+        "Energía Juvenil",
+        "Espíritu Combativo",
+        "Pasión",
+        "Unidad"
+      ],
       "shareText": "¡Soy el Borussia Dortmund en el quiz ¿Qué Equipo de Fútbol Eres? en ToolNotch!"
     }
   ]

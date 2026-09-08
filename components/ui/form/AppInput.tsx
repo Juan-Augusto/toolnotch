@@ -15,39 +15,15 @@ export interface AppInputProps extends Omit<
   InputHTMLAttributes<HTMLInputElement>,
   "onChange"
 > {
-  /**
-   * Texto ou elemento de rótulo acima do input.
-   */
   label?: ReactNode;
-  /**
-   * Mensagem de erro exibida abaixo do input com estilo de erro.
-   */
   error?: string;
-  /**
-   * Texto de auxílio exibido abaixo do input.
-   */
   helperText?: string;
-  /**
-   * Formatador opcional (ex: CurrencyFormatter, DateFormatter).
-   * Converte valores brutos em strings formatadas e vice-versa.
-   */
   formatter?: Formatter<any>;
-  /**
-   * Callback disparado na alteração do valor com o valor bruto tipado e a string formatada.
-   */
   onValueChange?: (rawValue: any, formattedValue: string) => void;
-  /**
-   * Callback de mudança padrão do React.
-   */
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
-  /**
-   * Classes adicionais para o container do input.
-   */
   containerClassName?: string;
-  /**
-   * Classes adicionais para o label.
-   */
   labelClassName?: string;
+  flat?: boolean;
 }
 
 export function AppInput({
@@ -68,12 +44,12 @@ export function AppInput({
   labelClassName = "",
   id,
   type = "text",
+  flat = false,
   ...props
 }: AppInputProps) {
   const generatedId = useId();
   const inputId = id ?? generatedId;
 
-  // Gerencia o valor interno para suportar formatação
   const [displayValue, setDisplayValue] = useState<string>(() => {
     const initial = value !== undefined ? value : defaultValue;
     if (formatter && initial !== undefined && initial !== null) {
@@ -162,8 +138,6 @@ export function AppInput({
             text-sm
             tracking-wider
             text-foreground
-            bg-tertiary
-            border
             rounded-[2px]
             transition-colors
             duration-150
@@ -173,13 +147,16 @@ export function AppInput({
             placeholder:uppercase
             disabled:opacity-40
             disabled:cursor-not-allowed
-            focus:bg-secondary/3
             ${
-              error
-                ? "border-red-500 focus:border-red-500 ring-1 ring-red-500/20"
-                : isFocused
-                  ? "border-secondary ring-1 ring-secondary/20"
-                  : "border-border hover:border-foreground/30"
+              flat
+                ? "bg-transparent border-0"
+                : `bg-tertiary border focus:bg-secondary/3 ${
+                    error
+                      ? "border-red-500 focus:border-red-500 ring-1 ring-red-500/20"
+                      : isFocused
+                        ? "border-secondary ring-1 ring-secondary/20"
+                        : "border-border hover:border-foreground/30"
+                  }`
             }
             ${className}
           `}

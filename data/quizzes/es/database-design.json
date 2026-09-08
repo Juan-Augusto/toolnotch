@@ -4,7 +4,7 @@
   "locale": "en",
   "category": "backend",
   "title": "Cuestionario de Diseño de Base de Datos",
-  "description": "Prueba tus conocimientos sobre el diseño de bases de datos: normalización, relaciones, teorema CAP, sharding y patrones distribuidos.",
+  "description": "Prueba tus conocimientos sobre normalización, esquemas relacionales y diseño de bases de datos.",
   "image": "/images/quizzes/database-design-cover.jpg",
   "questions": [
     {

@@ -97,4 +97,44 @@ describe('AppMenu', () => {
     expect(screen.getByText('IMAGENS')).toBeInTheDocument();
     expect(screen.getByText('PDF')).toBeInTheDocument();
   });
+
+  it('renders search input when search is true and filters items', () => {
+    render(<AppMenu groups={mockGroups} search searchPlaceholder="Pesquisar ferramentas..." />);
+
+    const searchInput = screen.getByPlaceholderText('Pesquisar ferramentas...');
+    expect(searchInput).toBeInTheDocument();
+    expect(searchInput).toHaveClass('bg-transparent', 'border-0');
+
+    fireEvent.change(searchInput, { target: { value: 'Compressor' } });
+
+    expect(screen.getByText('Compressor de imagem')).toBeInTheDocument();
+    expect(screen.queryByText('Conversor de imagem')).not.toBeInTheDocument();
+    expect(screen.queryByText('Mesclar PDF')).not.toBeInTheDocument();
+  });
+
+  it('displays empty state when search finds no results', () => {
+    render(<AppMenu groups={mockGroups} search />);
+
+    const searchInput = screen.getByPlaceholderText('Pesquisar...');
+    fireEvent.change(searchInput, { target: { value: 'Inexistente XYZ' } });
+
+    expect(screen.getByText('Nenhum resultado')).toBeInTheDocument();
+    expect(screen.queryByText('Compressor de imagem')).not.toBeInTheDocument();
+  });
+
+  it('filters by item tags and group tags', () => {
+    render(<AppMenu groups={mockGroups} search />);
+
+    const searchInput = screen.getByPlaceholderText('Pesquisar...');
+    fireEvent.change(searchInput, { target: { value: 'NOVO' } });
+
+    expect(screen.getByText('Conversor de imagem')).toBeInTheDocument();
+    expect(screen.queryByText('Compressor de imagem')).not.toBeInTheDocument();
+    expect(screen.queryByText('Mesclar PDF')).not.toBeInTheDocument();
+
+    fireEvent.change(searchInput, { target: { value: 'HOT' } });
+    expect(screen.getByText('Compressor de imagem')).toBeInTheDocument();
+    expect(screen.getByText('Conversor de imagem')).toBeInTheDocument();
+    expect(screen.queryByText('Mesclar PDF')).not.toBeInTheDocument();
+  });
 });
