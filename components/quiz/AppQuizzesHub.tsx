@@ -64,9 +64,18 @@ const HEADING_BY_LOCALE: Record<string, string> = {
   en: "ALL QUIZZES",
 };
 
+const SEARCH_PLACEHOLDER_BY_LOCALE: Record<string, string> = {
+  pt: "Pesquisar quizzes...",
+  es: "Buscar quizzes...",
+  en: "Search quizzes...",
+};
+
 export function AppQuizzesHub({ quizzes, locale = "pt" }: AppQuizzesHubProps) {
   const currentLocale = locale === "pt" || locale === "es" ? locale : "en";
   const mainHeading = HEADING_BY_LOCALE[currentLocale] || HEADING_BY_LOCALE.en;
+  const searchPlaceholder =
+    SEARCH_PLACEHOLDER_BY_LOCALE[currentLocale] ||
+    SEARCH_PLACEHOLDER_BY_LOCALE.en;
 
   const categoryKeys: ("sports" | "personality" | "backend" | "civic")[] = [
     "sports",
@@ -100,7 +109,9 @@ export function AppQuizzesHub({ quizzes, locale = "pt" }: AppQuizzesHubProps) {
     <div className="flex flex-col md:flex-row w-full min-h-screen bg-background">
       <AppMenu
         groups={menuGroups}
-        className="md:min-h-screen shrink-0 border-r-dashed-5"
+        search
+        searchPlaceholder={searchPlaceholder}
+        className="w-full md:w-86 md:min-h-screen shrink-0 border-r-dashed-5"
       />
 
       <main className="flex-1 min-w-0 container-page py-10 md:py-16">
@@ -118,7 +129,7 @@ export function AppQuizzesHub({ quizzes, locale = "pt" }: AppQuizzesHubProps) {
             <section key={group.id} id={`category-${group.id}`}>
               <div className="flex items-center gap-2.5 mb-8 select-none">
                 <span className={`w-3.5 h-3.5 ${group.badgeColor} rounded-[1px]`} />
-                <h2 className="font-mono text-sm md:text-base font-bold uppercase tracking-wider text-foreground">
+                <h2 className="md:text-base font-bold uppercase tracking-wider text-foreground">
                   {group.name}
                 </h2>
               </div>
@@ -131,10 +142,10 @@ export function AppQuizzesHub({ quizzes, locale = "pt" }: AppQuizzesHubProps) {
                     className="block group relative z-0 hover:z-10"
                   >
                     <AppCard className="h-full !p-8 md:!p-9 hover:bg-tertiary/40 transition-colors">
-                      <h3 className="font-mono text-sm md:text-base font-bold uppercase tracking-wider text-foreground group-hover:text-primary transition-colors mb-3">
+                      <h3 className="md:text-base font-bold uppercase tracking-wider text-foreground group-hover:text-primary transition-colors mb-3">
                         {quiz.title}
                       </h3>
-                      <p className="font-mono text-sm text-label/80 leading-relaxed line-clamp-2">
+                      <p className="text-label/80 leading-relaxed line-clamp-2">
                         {quiz.description}
                       </p>
                     </AppCard>

@@ -54,7 +54,11 @@ export function AppMenu({
     const query = searchQuery.toLowerCase().trim();
     return normalizedGroups
       .map((grp) => {
-        const matchesGroup = grp.name.toLowerCase().includes(query);
+        const matchesGroupName = grp.name.toLowerCase().includes(query);
+        const matchesGroupTags = grp.tags?.some((t) =>
+          t.toLowerCase().includes(query)
+        );
+        const matchesGroup = matchesGroupName || matchesGroupTags;
         if (matchesGroup) {
           return grp;
         }

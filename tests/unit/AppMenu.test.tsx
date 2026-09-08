@@ -121,4 +121,20 @@ describe('AppMenu', () => {
     expect(screen.getByText('Nenhum resultado')).toBeInTheDocument();
     expect(screen.queryByText('Compressor de imagem')).not.toBeInTheDocument();
   });
+
+  it('filters by item tags and group tags', () => {
+    render(<AppMenu groups={mockGroups} search />);
+
+    const searchInput = screen.getByPlaceholderText('Pesquisar...');
+    fireEvent.change(searchInput, { target: { value: 'NOVO' } });
+
+    expect(screen.getByText('Conversor de imagem')).toBeInTheDocument();
+    expect(screen.queryByText('Compressor de imagem')).not.toBeInTheDocument();
+    expect(screen.queryByText('Mesclar PDF')).not.toBeInTheDocument();
+
+    fireEvent.change(searchInput, { target: { value: 'HOT' } });
+    expect(screen.getByText('Compressor de imagem')).toBeInTheDocument();
+    expect(screen.getByText('Conversor de imagem')).toBeInTheDocument();
+    expect(screen.queryByText('Mesclar PDF')).not.toBeInTheDocument();
+  });
 });
