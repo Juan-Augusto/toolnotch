@@ -3644,6 +3644,40 @@
     "founderBadge": "DESARROLLADOR",
     "githubButton": "GitHub"
   },
+  "privacy": {
+    "metaTitle": "Política de Privacidad: Protección de Datos y Procesamiento Local",
+    "metaDescription": "Conozca cómo ToolNotch protege su privacidad con procesamiento local en el navegador, sin subida de archivos a nuestros servidores y sin registro.",
+    "title": "Política de Privacidad",
+    "subtitle": "Cómo protegemos sus datos, su seguridad y su anonimato al utilizar ToolNotch.",
+    "lastUpdated": "Última actualización: septiembre de 2026",
+    "badge": "PRIVACIDAD Y DATOS",
+    "highlightTitle": "Privacidad por diseño",
+    "highlightP1": "ToolNotch fue concebido bajo el principio de privacidad por diseño: la mayoría de las herramientas procesan archivos y datos directamente en su navegador, sin enviar ningún documento a servidores externos.",
+    "s1Title": "1. Información General",
+    "s1P1": "ToolNotch ofrece herramientas útiles y gratuitas en línea para manipulación de archivos, conversión de formatos, cálculos y pruebas de conocimiento. Esta Política de Privacidad describe de manera transparente qué información se gestiona al usar nuestro sitio.",
+    "s2Title": "2. Procesamiento Local y Archivos",
+    "s2P1": "La gran mayoría de utilidades de ToolNotch, como compresores de imágenes, convertidores de formato y herramientas de PDF, funcionan completamente en su navegador (client-side) utilizando WebAssembly, Canvas API y tecnologías web nativas.",
+    "s2P2": "Sus archivos no se transfieren a servidores externos ni se almacenan en la nube. El procesamiento tiene lugar en la memoria de su propio dispositivo y se elimina al cerrar la pestaña.",
+    "s3Title": "3. Métricas y Analítica",
+    "s3P1": "Utilizamos Google Analytics 4 para entender de manera anónima y agregada el rendimiento del sitio, qué herramientas son las más utilizadas y detectar incidencias técnicas.",
+    "s3P2": "Los datos recopilados por Analytics son impersonales e incluyen tipo de navegador, páginas visitadas, duración de la sesión y ubicación aproximada por país o ciudad. Puede inhabilitar este seguimiento instalando el <optOutLink>complemento de inhabilitación de Google Analytics</optOutLink>.",
+    "s4Title": "4. Cookies y Almacenamiento Local",
+    "s4P1": "ToolNotch utiliza almacenamiento local del navegador (como localStorage) únicamente para conservar preferencias funcionales, como el idioma elegido, el tema visual o borradores temporales de las utilidades en uso.",
+    "s4P2": "No utilizamos cookies propias de seguimiento publicitario ni comercializamos información de usuarios con terceros.",
+    "s5Title": "5. Proveedores e Infraestructura",
+    "s5P1": "Nuestro sitio se aloja en infraestructura en la nube moderna como Vercel, entregando contenido cifrado y seguro a través de HTTPS. Cada proveedor cuenta con sus propias políticas de seguridad y cumplimiento técnico.",
+    "s6Title": "6. Sus Derechos y Control de Datos",
+    "s6P1": "Conforme a las normativas de protección de datos (como GDPR y LGPD), usted tiene derecho a gestionar su información. Dado que ToolNotch no exige registro ni guarda perfiles de usuarios en servidores, puede eliminar cualquier dato almacenado simplemente limpiando las cookies y el almacenamiento de su navegador.",
+    "s7Title": "7. Seguridad de la Información",
+    "s7P1": "Toda la navegación en ToolNotch está protegida por cifrado en tránsito HTTPS y TLS. La ejecución client-side elimina el riesgo de filtraciones de archivos durante el procesamiento en servidores externos.",
+    "s8Title": "8. Actualizaciones de esta Política",
+    "s8P1": "Podemos actualizar esta Política de Privacidad periódicamente para adaptarla a nuevas utilidades o exigencias legales. Cada actualización reflejará la nueva fecha de revisión en la parte superior.",
+    "s9Title": "9. Contacto y Consultas",
+    "s9P1": "Si tiene alguna pregunta sobre esta Política de Privacidad o el tratamiento de datos en ToolNotch, puede escribirnos directamente a juanaugusto1@live.com o a través de nuestra página de contacto.",
+    "exploreTools": "Explorar Herramientas",
+    "aboutButton": "Sobre el Proyecto",
+    "contactButton": "Contacto"
+  },
   "terms": {
     "metaTitle": "Términos de Servicio | ToolNotch",
     "metaDescription": "Lee los Términos de Servicio de ToolNotch — tus derechos, nuestras limitaciones de responsabilidad y las reglas que rigen el uso de nuestras herramientas gratuitas en línea.",
@@ -4789,27 +4823,9 @@
           "Resultado de la final"
         ],
         "rows": [
-          [
-            "1930",
-            "Uruguay",
-            "Uruguay",
-            "Argentina",
-            "4–2"
-          ],
-          [
-            "1934",
-            "Italia",
-            "Italia",
-            "Checoslovaquia",
-            "2–1 (pró.)"
-          ],
-          [
-            "1938",
-            "Francia",
-            "Italia",
-            "Hungría",
-            "4–2"
-          ],
+          ["1930", "Uruguay", "Uruguay", "Argentina", "4–2"],
+          ["1934", "Italia", "Italia", "Checoslovaquia", "2–1 (pró.)"],
+          ["1938", "Francia", "Italia", "Hungría", "4–2"],
           [
             "1942",
             "No disputada",
@@ -4824,34 +4840,10 @@
             "-",
             "Segunda Guerra Mundial"
           ],
-          [
-            "1950",
-            "Brasil",
-            "Uruguay",
-            "Brasil",
-            "2–1 (partido decisivo)"
-          ],
-          [
-            "1954",
-            "Suiza",
-            "Alemania Occidental",
-            "Hungría",
-            "3–2"
-          ],
-          [
-            "1958",
-            "Suecia",
-            "Brasil",
-            "Suecia",
-            "5–2"
-          ],
-          [
-            "1962",
-            "Chile",
-            "Brasil",
-            "Checoslovaquia",
-            "3–1"
-          ],
+          ["1950", "Brasil", "Uruguay", "Brasil", "2–1 (partido decisivo)"],
+          ["1954", "Suiza", "Alemania Occidental", "Hungría", "3–2"],
+          ["1958", "Suecia", "Brasil", "Suecia", "5–2"],
+          ["1962", "Chile", "Brasil", "Checoslovaquia", "3–1"],
           [
             "1966",
             "Inglaterra",
@@ -4859,13 +4851,7 @@
             "Alemania Occidental",
             "4–2 (pró.)"
           ],
-          [
-            "1970",
-            "México",
-            "Brasil",
-            "Italia",
-            "4–1"
-          ],
+          ["1970", "México", "Brasil", "Italia", "4–1"],
           [
             "1974",
             "Alemania Occidental",
@@ -4873,90 +4859,18 @@
             "Países Bajos",
             "2–1"
           ],
-          [
-            "1978",
-            "Argentina",
-            "Argentina",
-            "Países Bajos",
-            "3–1 (pró.)"
-          ],
-          [
-            "1982",
-            "España",
-            "Italia",
-            "Alemania Occidental",
-            "3–1"
-          ],
-          [
-            "1986",
-            "México",
-            "Argentina",
-            "Alemania Occidental",
-            "3–2"
-          ],
-          [
-            "1990",
-            "Italia",
-            "Alemania Occidental",
-            "Argentina",
-            "1–0"
-          ],
-          [
-            "1994",
-            "Estados Unidos",
-            "Brasil",
-            "Italia",
-            "0–0 (3–2 pen.)"
-          ],
-          [
-            "1998",
-            "Francia",
-            "Francia",
-            "Brasil",
-            "3–0"
-          ],
-          [
-            "2002",
-            "Corea del Sur y Japón",
-            "Brasil",
-            "Alemania",
-            "2–0"
-          ],
-          [
-            "2006",
-            "Alemania",
-            "Italia",
-            "Francia",
-            "1–1 (5–3 pen.)"
-          ],
-          [
-            "2010",
-            "Sudáfrica",
-            "España",
-            "Países Bajos",
-            "1–0 (pró.)"
-          ],
-          [
-            "2014",
-            "Brasil",
-            "Alemania",
-            "Argentina",
-            "1–0 (pró.)"
-          ],
-          [
-            "2018",
-            "Rusia",
-            "Francia",
-            "Croacia",
-            "4–2"
-          ],
-          [
-            "2022",
-            "Catar",
-            "Argentina",
-            "Francia",
-            "3–3 (4–2 pen.)"
-          ]
+          ["1978", "Argentina", "Argentina", "Países Bajos", "3–1 (pró.)"],
+          ["1982", "España", "Italia", "Alemania Occidental", "3–1"],
+          ["1986", "México", "Argentina", "Alemania Occidental", "3–2"],
+          ["1990", "Italia", "Alemania Occidental", "Argentina", "1–0"],
+          ["1994", "Estados Unidos", "Brasil", "Italia", "0–0 (3–2 pen.)"],
+          ["1998", "Francia", "Francia", "Brasil", "3–0"],
+          ["2002", "Corea del Sur y Japón", "Brasil", "Alemania", "2–0"],
+          ["2006", "Alemania", "Italia", "Francia", "1–1 (5–3 pen.)"],
+          ["2010", "Sudáfrica", "España", "Países Bajos", "1–0 (pró.)"],
+          ["2014", "Brasil", "Alemania", "Argentina", "1–0 (pró.)"],
+          ["2018", "Rusia", "Francia", "Croacia", "4–2"],
+          ["2022", "Catar", "Argentina", "Francia", "3–3 (4–2 pen.)"]
         ]
       },
       "faqHeading": "Campeones de la Copa del Mundo: preguntas frecuentes",
@@ -5045,49 +4959,14 @@
       "table": {
         "heading": "Más títulos de Copa de Europa y Liga de Campeones",
         "note": "Títulos de Copa de Europa / Liga de Campeones de la UEFA, competición masculina. Cifras hasta la final de 2024.",
-        "cols": [
-          "Club",
-          "País",
-          "Títulos",
-          "Más reciente"
-        ],
+        "cols": ["Club", "País", "Títulos", "Más reciente"],
         "rows": [
-          [
-            "Real Madrid",
-            "España",
-            "15",
-            "2024"
-          ],
-          [
-            "Milan",
-            "Italia",
-            "7",
-            "2007"
-          ],
-          [
-            "Bayern de Múnich",
-            "Alemania",
-            "6",
-            "2020"
-          ],
-          [
-            "Liverpool",
-            "Inglaterra",
-            "6",
-            "2019"
-          ],
-          [
-            "Barcelona",
-            "España",
-            "5",
-            "2015"
-          ],
-          [
-            "Ajax",
-            "Países Bajos",
-            "4",
-            "1995"
-          ]
+          ["Real Madrid", "España", "15", "2024"],
+          ["Milan", "Italia", "7", "2007"],
+          ["Bayern de Múnich", "Alemania", "6", "2020"],
+          ["Liverpool", "Inglaterra", "6", "2019"],
+          ["Barcelona", "España", "5", "2015"],
+          ["Ajax", "Países Bajos", "4", "1995"]
         ]
       },
       "faqHeading": "¿Qué club de fútbol eres? Preguntas frecuentes",
@@ -5150,49 +5029,14 @@
       "table": {
         "heading": "Clubes con más títulos de Copa de Europa / Liga de Campeones",
         "note": "Competición masculina, títulos hasta la final de 2024.",
-        "cols": [
-          "Club",
-          "País",
-          "Títulos",
-          "Años"
-        ],
+        "cols": ["Club", "País", "Títulos", "Años"],
         "rows": [
-          [
-            "Real Madrid",
-            "España",
-            "15",
-            "1956–2024"
-          ],
-          [
-            "Milan",
-            "Italia",
-            "7",
-            "1963–2007"
-          ],
-          [
-            "Bayern de Múnich",
-            "Alemania",
-            "6",
-            "1974–2020"
-          ],
-          [
-            "Liverpool",
-            "Inglaterra",
-            "6",
-            "1977–2019"
-          ],
-          [
-            "Barcelona",
-            "España",
-            "5",
-            "1992–2015"
-          ],
-          [
-            "Ajax",
-            "Países Bajos",
-            "4",
-            "1971–1995"
-          ]
+          ["Real Madrid", "España", "15", "1956–2024"],
+          ["Milan", "Italia", "7", "1963–2007"],
+          ["Bayern de Múnich", "Alemania", "6", "1974–2020"],
+          ["Liverpool", "Inglaterra", "6", "1977–2019"],
+          ["Barcelona", "España", "5", "1992–2015"],
+          ["Ajax", "Países Bajos", "4", "1971–1995"]
         ]
       },
       "faqHeading": "Trivia de la Liga de Campeones: preguntas frecuentes",
@@ -5255,49 +5099,14 @@
       "table": {
         "heading": "Pilotos de Fórmula 1 con más títulos mundiales",
         "note": "Títulos de pilotos conseguidos, hasta el final de la temporada 2024.",
-        "cols": [
-          "Piloto",
-          "País",
-          "Títulos",
-          "Temporadas"
-        ],
+        "cols": ["Piloto", "País", "Títulos", "Temporadas"],
         "rows": [
-          [
-            "Lewis Hamilton",
-            "Reino Unido",
-            "7",
-            "2008–2020"
-          ],
-          [
-            "Michael Schumacher",
-            "Alemania",
-            "7",
-            "1994–2004"
-          ],
-          [
-            "Juan Manuel Fangio",
-            "Argentina",
-            "5",
-            "1951–1957"
-          ],
-          [
-            "Alain Prost",
-            "Francia",
-            "4",
-            "1985–1993"
-          ],
-          [
-            "Sebastian Vettel",
-            "Alemania",
-            "4",
-            "2010–2013"
-          ],
-          [
-            "Max Verstappen",
-            "Países Bajos",
-            "4",
-            "2021–2024"
-          ]
+          ["Lewis Hamilton", "Reino Unido", "7", "2008–2020"],
+          ["Michael Schumacher", "Alemania", "7", "1994–2004"],
+          ["Juan Manuel Fangio", "Argentina", "5", "1951–1957"],
+          ["Alain Prost", "Francia", "4", "1985–1993"],
+          ["Sebastian Vettel", "Alemania", "4", "2010–2013"],
+          ["Max Verstappen", "Países Bajos", "4", "2021–2024"]
         ]
       },
       "faqHeading": "Trivia de Fórmula 1: preguntas frecuentes",
@@ -5360,25 +5169,10 @@
       "table": {
         "heading": "Los ocho pilotos con los que te pueden emparejar",
         "note": "Títulos de Campeonato Mundial de Pilotos, hasta el final de la temporada 2024.",
-        "cols": [
-          "Piloto",
-          "País",
-          "Títulos en F1",
-          "Conocido por"
-        ],
+        "cols": ["Piloto", "País", "Títulos en F1", "Conocido por"],
         "rows": [
-          [
-            "Max Verstappen",
-            "Países Bajos",
-            "4",
-            "Ritmo agresivo y obstinado"
-          ],
-          [
-            "Lewis Hamilton",
-            "Reino Unido",
-            "7",
-            "Constancia y longevidad"
-          ],
+          ["Max Verstappen", "Países Bajos", "4", "Ritmo agresivo y obstinado"],
+          ["Lewis Hamilton", "Reino Unido", "7", "Constancia y longevidad"],
           [
             "Ayrton Senna",
             "Brasil",
@@ -5391,24 +5185,9 @@
             "7",
             "Preparación implacable y volumen de trabajo"
           ],
-          [
-            "Charles Leclerc",
-            "Mónaco",
-            "0",
-            "Velocidad natural y emoción"
-          ],
-          [
-            "Fernando Alonso",
-            "España",
-            "2",
-            "Oficio y negativa a rendirse"
-          ],
-          [
-            "Oscar Piastri",
-            "Australia",
-            "0",
-            "Cabeza fría, aprende rápido"
-          ],
+          ["Charles Leclerc", "Mónaco", "0", "Velocidad natural y emoción"],
+          ["Fernando Alonso", "España", "2", "Oficio y negativa a rendirse"],
+          ["Oscar Piastri", "Australia", "0", "Cabeza fría, aprende rápido"],
           [
             "Lando Norris",
             "Reino Unido",
@@ -5477,11 +5256,7 @@
       "table": {
         "heading": "Los cinco lenguajes del amor en resumen",
         "note": "Modelo de Gary Chapman, Los cinco lenguajes del amor (1992).",
-        "cols": [
-          "Lenguaje del amor",
-          "Qué significa",
-          "Ejemplo cotidiano"
-        ],
+        "cols": ["Lenguaje del amor", "Qué significa", "Ejemplo cotidiano"],
         "rows": [
           [
             "Palabras de afirmación",
