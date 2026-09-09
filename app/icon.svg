@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tn-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#060911"/>
+    </linearGradient>
+  </defs>
+  <!-- Notched Squircle Badge -->
+  <path d="M14 2 h30 l18 18 v30 a12 12 0 0 1 -12 12 h-36 a12 12 0 0 1 -12 -12 v-36 a12 12 0 0 1 12 -12 z" fill="url(#tn-bg)"/>
+  <path d="M14 2 h30 l18 18 v30 a12 12 0 0 1 -12 12 h-36 a12 12 0 0 1 -12 -12 v-36 a12 12 0 0 1 12 -12 z" fill="none" stroke="#1e293b" stroke-width="2"/>
+  <!-- Cyan Notch Accent -->
+  <line x1="45" y1="3" x2="61" y2="19" stroke="#5ce4dd" stroke-width="4" stroke-linecap="round"/>
+  <!-- Notched Letter T in Brand Lime -->
+  <path d="M14 17 h30 l6 6 v5 h-13 v23 h-11 v-23 h-12 z" fill="#c3e652"/>
+</svg>
