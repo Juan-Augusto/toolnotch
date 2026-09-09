@@ -134,7 +134,7 @@ export default async function PrivacyPolicyPage({ params }: Props) {
               {t("title")}
             </h1>
             <p className="leading-relaxed text-label mt-3">{t("subtitle")}</p>
-            <p className="text-xs sm:text-sm text-label/80 mt-2 font-mono">
+            <p className="text-xs text-label/80 mt-2 font-mono">
               {t("lastUpdated")}
             </p>
           </header>

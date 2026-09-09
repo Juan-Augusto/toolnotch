@@ -75,6 +75,13 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
     },
+    icons: {
+      icon: [
+        { url: "/icon.svg", type: "image/svg+xml" },
+        { url: "/favicon.ico", sizes: "any" },
+      ],
+      apple: "/apple-touch-icon.png",
+    },
   };
 }
 
