@@ -2,7 +2,7 @@
   "id": "fake-news-or-fact",
   "type": "trivia",
   "category": "civic",
-  "title": "¿Fake News o Verdad? — Test de Noticias Falsas",
+  "title": "¿Fake News o Verdad? Test de Noticias Falsas",
   "description": "Descubre si puedes distinguir mitos virales y bulos de internet de hechos reales verificados.",
   "image": "/images/quizzes/fake-news-or-fact-cover.jpg",
   "questions": [
@@ -219,7 +219,7 @@
       "id": "expert",
       "minPercent": 60,
       "label": "Experto en Verificación",
-      "description": "Se te da muy bien detectar la desinformación, aunque alguna afirmación se te haya escapado. Es un resultado sólido: la mayoría de los bulos y mitos virales están diseñados para sonar lo bastante creíbles como para engañar a cualquiera. Los hábitos que te trajeron hasta aquí importan: pausar antes de compartir, comprobar si una afirmación tiene una fuente real e identificable, y desconfiar un poco más de todo lo que parezca diseñado para provocar una reacción fuerte. Sigue afinando ese instinto. Un poco más de atención —revisar la fecha, la fuente y si algún verificador ya cubrió el tema— suele bastar para pasar de experto a leyenda.",
+      "description": "Se te da muy bien detectar la desinformación, aunque alguna afirmación se te haya escapado. Es un resultado sólido: la mayoría de los bulos y mitos virales están diseñados para sonar lo bastante creíbles como para engañar a cualquiera. Los hábitos que te trajeron hasta aquí importan: pausar antes de compartir, comprobar si una afirmación tiene una fuente real e identificable, y desconfiar un poco más de todo lo que parezca diseñado para provocar una reacción fuerte. Sigue afinando ese instinto. Un poco más de atención (revisar la fecha, la fuente y si algún verificador ya cubrió el tema) suele bastar para pasar de experto a leyenda.",
       "shareText": "¡Obtuve el nivel Experto en Verificación en el test Fake News o Verdad! Buen ojo para la desinformación. ¿Puedes superarme?"
     },
     {
@@ -233,8 +233,8 @@
       "id": "rookie",
       "minPercent": 0,
       "label": "Novato en Verificación",
-      "description": "La desinformación está diseñada para ser convincente, así que una puntuación más baja aquí solo significa que hay margen para desarrollar tu instinto de verificación — todos empiezan por algún lado. El hábito más fiable es simple: antes de creer o compartir una afirmación sorprendente, busca quién la está diciendo realmente. Una noticia real tiene una fuente identificable y verificable; un bulo normalmente no la tiene. Prueba una búsqueda rápida de la afirmación junto con la palabra 'verificación' antes de reenviar algo por WhatsApp o redes sociales. Repite este test cuando quieras practicar: cuanto más cuestiones las afirmaciones sorprendentes, más agudo será tu instinto.",
-      "shareText": "Acabo de hacer el test Fake News o Verdad — todavía tengo que afinar mi instinto de verificación. ¿Puedes puntuar más que yo?"
+      "description": "La desinformación está diseñada para ser convincente, así que una puntuación más baja aquí solo significa que hay margen para desarrollar tu instinto de verificación, todos empiezan por algún lado. El hábito más fiable es simple: antes de creer o compartir una afirmación sorprendente, busca quién la está diciendo realmente. Una noticia real tiene una fuente identificable y verificable; un bulo normalmente no la tiene. Prueba una búsqueda rápida de la afirmación junto con la palabra 'verificación' antes de reenviar algo por WhatsApp o redes sociales. Repite este test cuando quieras practicar: cuanto más cuestiones las afirmaciones sorprendentes, más agudo será tu instinto.",
+      "shareText": "Acabo de hacer el test Fake News o Verdad: todavía tengo que afinar mi instinto de verificación. ¿Puedes puntuar más que yo?"
     }
   ]
 }

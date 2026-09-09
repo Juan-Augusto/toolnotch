@@ -2679,7 +2679,7 @@
       },
       "worldCupQuiz": {
         "label": "Quiz: Campeones de la Copa del Mundo",
-        "desc": "Adivina los campeones de la Copa del Mundo de 1930 a 2022 — cada campeón, sede y final"
+        "desc": "Adivina los campeones de la Copa del Mundo de 1930 a 2022: cada campeón, sede y final"
       },
       "footballClubQuiz": {
         "label": "¿Qué Equipo de Fútbol Eres?",
@@ -2695,7 +2695,7 @@
       },
       "formula1TriviaQuiz": {
         "label": "Quiz de Fórmula 1",
-        "desc": "Pon a prueba tu conocimiento de F1 — circuitos, campeones y récords"
+        "desc": "Pon a prueba tu conocimiento de F1: circuitos, campeones y récords"
       },
       "f1DriverQuiz": {
         "label": "¿Qué Piloto de F1 Eres Tú?",
@@ -2703,7 +2703,7 @@
       },
       "politicalProfileQuiz": {
         "label": "¿Cuál Es Tu Perfil Político?",
-        "desc": "Un quiz neutral y divertido sobre valores — descubre tu perfil político"
+        "desc": "Un quiz neutral y divertido sobre valores: descubre tu perfil político"
       },
       "echoChamberQuiz": {
         "label": "Quiz: Burbuja Política",
@@ -2711,7 +2711,7 @@
       },
       "fakeNewsQuiz": {
         "label": "¿Fake News o Realidad?",
-        "desc": "10 afirmaciones virales — ¿puedes distinguir cuáles son reales?"
+        "desc": "10 afirmaciones virales: ¿puedes distinguir cuáles son reales?"
       },
       "retroBoard": {
         "label": "Tablero de Retrospectiva",
@@ -4765,7 +4765,7 @@
   },
   "quizDepth": {
     "fifaWorldCupWinners": {
-      "metaTitle": "Quiz de Campeones de la Copa del Mundo — Adivina Cada Campeón 1930–2022",
+      "metaTitle": "Quiz de Campeones de la Copa del Mundo: Adivina Cada Campeón 1930–2022",
       "metaDescription": "Juega el quiz de campeones de la Copa del Mundo: 20 preguntas sobre cada campeón de 1930 a 2022, más la lista completa de ganadores por año.",
       "about": "Copa Mundial de la FIFA",
       "introHeading": "Sobre el Quiz de Campeones de la Copa del Mundo",
@@ -4810,14 +4810,14 @@
             "1942",
             "No disputada",
             "No disputada",
-            "—",
+            "-",
             "Segunda Guerra Mundial"
           ],
           [
             "1946",
             "No disputada",
             "No disputada",
-            "—",
+            "-",
             "Segunda Guerra Mundial"
           ],
           [
@@ -5133,7 +5133,7 @@
       ]
     },
     "championsLeagueTrivia": {
-      "metaTitle": "Trivia de la Liga de Campeones — 15 Preguntas",
+      "metaTitle": "Trivia de la Liga de Campeones: 15 Preguntas",
       "metaDescription": "Pon a prueba tu conocimiento de la Liga de Campeones de la UEFA: 15 preguntas sobre finales, goleadores, máximos campeones y noches históricas, de 1956 a hoy.",
       "about": "Liga de Campeones de la UEFA",
       "introHeading": "Sobre la Trivia de la Liga de Campeones",
@@ -5238,7 +5238,7 @@
       ]
     },
     "formula1Trivia": {
-      "metaTitle": "Trivia de Fórmula 1 — 15 Preguntas de Historia",
+      "metaTitle": "Trivia de Fórmula 1: 15 Preguntas de Historia",
       "metaDescription": "Pon a prueba tu conocimiento de la Fórmula 1: 15 preguntas sobre campeones del mundo, récords de victorias, circuitos famosos y momentos clásicos, de 1950 a hoy.",
       "about": "Fórmula 1",
       "introHeading": "Sobre la Trivia de Fórmula 1",

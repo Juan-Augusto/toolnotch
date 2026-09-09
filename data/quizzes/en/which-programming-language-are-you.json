@@ -10,7 +10,7 @@
       "options": [
         {
           "id": "q1a",
-          "text": "Jump in and experiment — figure it out as I go",
+          "text": "Jump in and experiment: figure it out as I go",
           "scores": {
             "python": 3,
             "javascript": 2
@@ -48,7 +48,7 @@
       "options": [
         {
           "id": "q2a",
-          "text": "They're teachers — I learn from every mistake",
+          "text": "They're teachers: I learn from every mistake",
           "scores": {
             "python": 3,
             "javascript": 1
@@ -64,7 +64,7 @@
         },
         {
           "id": "q2c",
-          "text": "I handle them when they come up — no big deal",
+          "text": "I handle them when they come up: no big deal",
           "scores": {
             "javascript": 3,
             "go": 1
@@ -86,7 +86,7 @@
       "options": [
         {
           "id": "q3a",
-          "text": "Flexible startup — wear many hats",
+          "text": "Flexible startup: wear many hats",
           "scores": {
             "javascript": 3,
             "python": 2
@@ -124,7 +124,7 @@
       "options": [
         {
           "id": "q4a",
-          "text": "Rules stifle creativity — I prefer freedom",
+          "text": "Rules stifle creativity: I prefer freedom",
           "scores": {
             "javascript": 3,
             "python": 2
@@ -207,7 +207,7 @@
         },
         {
           "id": "q6b",
-          "text": "Accept it — it works, that's what matters",
+          "text": "Accept it: it works, that's what matters",
           "scores": {
             "javascript": 3,
             "python": 1
@@ -328,7 +328,7 @@
         },
         {
           "id": "q9c",
-          "text": "The compiler's job — that's what GC is for",
+          "text": "The compiler's job: that's what GC is for",
           "scores": {
             "go": 3,
             "java": 2
@@ -387,7 +387,7 @@
     {
       "id": "python",
       "title": "Python",
-      "description": "You are Python — the friendly, versatile, and endlessly adaptable language that has conquered everything from web development to machine learning. Like Python, you value clarity and readability over cleverness. You believe that code should be easy to understand, and you'd rather write something obvious than impressive. You have a broad set of interests and adapt easily to new domains — today you're analyzing data, tomorrow you're building a web scraper, and next week you might be training a neural network. You're the person everyone goes to when they need something done quickly and reliably. You value a large, supportive community and love the feeling of finding the perfect library for any problem. Your motto: 'There should be one obvious way to do it.' You make difficult things feel simple, and that's a rare and valuable gift.",
+      "description": "You are Python, the friendly, versatile, and endlessly adaptable language that has conquered everything from web development to machine learning. Like Python, you value clarity and readability over cleverness. You believe that code should be easy to understand, and you'd rather write something obvious than impressive. You have a broad set of interests and adapt easily to new domains, today you're analyzing data, tomorrow you're building a web scraper, and next week you might be training a neural network. You're the person everyone goes to when they need something done quickly and reliably. You value a large, supportive community and love the feeling of finding the perfect library for any problem. Your motto: 'There should be one obvious way to do it.' You make difficult things feel simple, and that's a rare and valuable gift.",
       "image": "/images/results/python.jpg",
       "traits": [
         "Readable",
@@ -400,7 +400,7 @@
     {
       "id": "javascript",
       "title": "JavaScript",
-      "description": "You are JavaScript — everywhere, for better or worse, and absolutely indispensable. Like JavaScript, you are adaptable to the point of being unpredictable, endlessly creative, and you have a remarkable ability to do things you probably shouldn't. You thrive in fast-moving environments, love building things people can see and interact with, and you're never afraid to ship something imperfect and iterate quickly. You have strong opinions about how things should be done — but you also respect that there are many ways to get there. You embrace the messy, dynamic nature of the real world and you find a way to make things work regardless of constraints. Sometimes you move so fast you break things, but you fix them just as quickly. The web wouldn't exist without you, and neither would half the world's apps.",
+      "description": "You are JavaScript, everywhere, for better or worse, and absolutely indispensable. Like JavaScript, you are adaptable to the point of being unpredictable, endlessly creative, and you have a remarkable ability to do things you probably shouldn't. You thrive in fast-moving environments, love building things people can see and interact with, and you're never afraid to ship something imperfect and iterate quickly. You have strong opinions about how things should be done, but you also respect that there are many ways to get there. You embrace the messy, dynamic nature of the real world and you find a way to make things work regardless of constraints. Sometimes you move so fast you break things, but you fix them just as quickly. The web wouldn't exist without you, and neither would half the world's apps.",
       "image": "/images/results/javascript.jpg",
       "traits": [
         "Ubiquitous",
@@ -413,7 +413,7 @@
     {
       "id": "rust",
       "title": "Rust",
-      "description": "You are Rust — the principled, performance-obsessed, 'if it compiles it works' language that refuses to let you get away with anything sloppy. Like Rust, you have high standards for yourself and others, and you're not afraid to push back when something is done wrong. You believe that catching problems early is always worth the extra effort, even if it slows you down initially. You care deeply about doing things right — not just getting them done. You are reliable, safe, and precise, and people who work with you come to appreciate your exacting nature even if it takes some adjustment. You have a growing following of passionate advocates who see you as the future. You are not the easiest to work with at first, but those who invest the time discover something genuinely exceptional.",
+      "description": "You are Rust, the principled, performance-obsessed, 'if it compiles it works' language that refuses to let you get away with anything sloppy. Like Rust, you have high standards for yourself and others, and you're not afraid to push back when something is done wrong. You believe that catching problems early is always worth the extra effort, even if it slows you down initially. You care deeply about doing things right, not just getting them done. You are reliable, safe, and precise, and people who work with you come to appreciate your exacting nature even if it takes some adjustment. You have a growing following of passionate advocates who see you as the future. You are not the easiest to work with at first, but those who invest the time discover something genuinely exceptional.",
       "image": "/images/results/rust.jpg",
       "traits": [
         "Safe",
@@ -426,7 +426,7 @@
     {
       "id": "go",
       "title": "Go",
-      "description": "You are Go — practical, opinionated, and refreshingly boring in the best possible way. Like Go, you don't chase trends or try to be clever. You value simplicity, consistency, and getting things done efficiently without unnecessary ceremony. You have strong opinions about how a codebase should look — and you're perfectly happy to let a formatter make those decisions so you don't have to argue about them. You build things that scale, that are easy for teams to maintain, and that just work in production. You are the colleague everyone wants on their infrastructure or backend team because you bring calm clarity to complex systems. You have no time for complexity theater — if something can be expressed simply, it should be.",
+      "description": "You are Go, practical, opinionated, and refreshingly boring in the best possible way. Like Go, you don't chase trends or try to be clever. You value simplicity, consistency, and getting things done efficiently without unnecessary ceremony. You have strong opinions about how a codebase should look, and you're perfectly happy to let a formatter make those decisions so you don't have to argue about them. You build things that scale, that are easy for teams to maintain, and that just work in production. You are the colleague everyone wants on their infrastructure or backend team because you bring calm clarity to complex systems. You have no time for complexity theater, if something can be expressed simply, it should be.",
       "image": "/images/results/go.jpg",
       "traits": [
         "Simple",
@@ -439,7 +439,7 @@
     {
       "id": "java",
       "title": "Java",
-      "description": "You are Java — the foundation of enterprise software, the backbone of Android, and the language that proves verbose doesn't mean wrong. Like Java, you value structure, predictability, and long-term maintainability over quick wins. You write code that could be read and modified by a team of 50 people five years from now, and you consider that a feature, not a limitation. You have strong typing in your personality — you like knowing exactly what type of person or situation you're dealing with before committing. You may have been the subject of jokes over the years, but you outlast your critics. You're the person who's still there when everyone else has moved on, because you built something that actually lasts.",
+      "description": "You are Java, the foundation of enterprise software, the backbone of Android, and the language that proves verbose doesn't mean wrong. Like Java, you value structure, predictability, and long-term maintainability over quick wins. You write code that could be read and modified by a team of 50 people five years from now, and you consider that a feature, not a limitation. You have strong typing in your personality, you like knowing exactly what type of person or situation you're dealing with before committing. You may have been the subject of jokes over the years, but you outlast your critics. You're the person who's still there when everyone else has moved on, because you built something that actually lasts.",
       "image": "/images/results/java.jpg",
       "traits": [
         "Structured",

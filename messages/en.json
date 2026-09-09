@@ -3127,7 +3127,7 @@
       },
       "worldCupQuiz": {
         "label": "FIFA World Cup Winners Quiz",
-        "desc": "Guess the World Cup winners from 1930 to 2022 — every champion, host and final"
+        "desc": "Guess the World Cup winners from 1930 to 2022: every champion, host and final"
       },
       "footballClubQuiz": {
         "label": "Which Football Club Are You?",
@@ -3143,7 +3143,7 @@
       },
       "formula1TriviaQuiz": {
         "label": "Formula 1 Trivia Quiz",
-        "desc": "Test your F1 knowledge — circuits, champions, and records"
+        "desc": "Test your F1 knowledge: circuits, champions, and records"
       },
       "f1DriverQuiz": {
         "label": "Which F1 Driver Are You?",
@@ -3151,7 +3151,7 @@
       },
       "politicalProfileQuiz": {
         "label": "What's Your Political Profile?",
-        "desc": "A fun, neutral values quiz — discover your political archetype"
+        "desc": "A fun, neutral values quiz: discover your political archetype"
       },
       "echoChamberQuiz": {
         "label": "Political Echo Chamber Quiz",
@@ -3159,7 +3159,7 @@
       },
       "fakeNewsQuiz": {
         "label": "Fake News or Fact?",
-        "desc": "10 viral claims — can you spot which ones are true?"
+        "desc": "10 viral claims: can you spot which ones are true?"
       },
       "retroBoard": {
         "label": "Retrospective Board",
@@ -5279,14 +5279,14 @@
   },
   "quizDepth": {
     "fifaWorldCupWinners": {
-      "metaTitle": "FIFA World Cup Winners Quiz — Guess Every Champion 1930–2022",
+      "metaTitle": "FIFA World Cup Winners Quiz: Guess Every Champion 1930–2022",
       "metaDescription": "Play the FIFA World Cup winners quiz: 20 questions on every champion from 1930 to 2022, plus a full winners-by-year list. Guess the World Cup winners now.",
       "about": "FIFA World Cup",
       "introHeading": "About the FIFA World Cup Winners Quiz",
       "intro": [
         "The FIFA World Cup has crowned a champion every four years since 1930, pausing only in 1942 and 1946 for the Second World War. Just eight nations have ever lifted the trophy. Brazil leads with five titles, followed by Italy and Germany with four each, Argentina with three, and Uruguay and France with two. England and Spain have each won once, both in tournaments that turned on a single unforgettable final. The prize has changed too: the Jules Rimet Trophy was awarded through 1970, and the current FIFA World Cup Trophy has been lifted since 1974.",
         "This quiz runs through 22 tournaments of history. You are asked to name the winner of specific editions, from Uruguay’s home triumph in 1930 to Argentina’s penalty-shootout victory in Qatar 2022, and to recall host nations, record goalscorers such as Miroslav Klose, and the finals that defined each era. Twenty multiple-choice questions cover champions, runners-up, and the moments every football fan argues about.",
-        "Answer each question and your score is tallied instantly, then matched to a tier: World Cup Legend, Football Expert, Football Fan, or World Cup Rookie. There is no sign-up and no time pressure. Use the winners-by-year table below to revise before you play, or to settle a debate about who won which World Cup — every result in it matches the official FIFA record."
+        "Answer each question and your score is tallied instantly, then matched to a tier: World Cup Legend, Football Expert, Football Fan, or World Cup Rookie. There is no sign-up and no time pressure. Use the winners-by-year table below to revise before you play, or to settle a debate about who won which World Cup, as every result in it matches the official FIFA record."
       ],
       "table": {
         "heading": "Every FIFA World Cup Winner (1930–2022)",
@@ -5324,14 +5324,14 @@
             "1942",
             "Not held",
             "Not held",
-            "—",
+            "-",
             "World War II"
           ],
           [
             "1946",
             "Not held",
             "Not held",
-            "—",
+            "-",
             "World War II"
           ],
           [
@@ -5647,7 +5647,7 @@
       ]
     },
     "championsLeagueTrivia": {
-      "metaTitle": "Champions League Trivia Quiz — 15 Questions",
+      "metaTitle": "Champions League Trivia Quiz: 15 Questions",
       "metaDescription": "Test your UEFA Champions League knowledge: 15 questions on finals, top scorers, record winners and famous nights, from the 1956 European Cup to today.",
       "about": "UEFA Champions League",
       "introHeading": "About the Champions League Trivia Quiz",
@@ -5752,7 +5752,7 @@
       ]
     },
     "formula1Trivia": {
-      "metaTitle": "Formula 1 Trivia Quiz — 15 Questions on F1 History",
+      "metaTitle": "Formula 1 Trivia Quiz: 15 Questions on F1 History",
       "metaDescription": "Test your Formula 1 knowledge: 15 questions on world champions, race-win records, famous circuits and classic moments, from the 1950 season to the modern era.",
       "about": "Formula One",
       "introHeading": "About the Formula 1 Trivia Quiz",

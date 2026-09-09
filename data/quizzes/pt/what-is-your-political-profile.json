@@ -40,7 +40,7 @@
         },
         {
           "id": "q1e",
-          "text": "Adaptar-se a cada caso — nenhuma regra única serve para tudo",
+          "text": "Adaptar-se a cada caso: nenhuma regra única serve para tudo",
           "scores": {
             "balancer": 3
           }
@@ -74,14 +74,14 @@
         },
         {
           "id": "q2d",
-          "text": "Impostos mínimos — cada um deveria decidir como gastar o próprio dinheiro",
+          "text": "Impostos mínimos: cada um deveria decidir como gastar o próprio dinheiro",
           "scores": {
             "free-thinker": 3
           }
         },
         {
           "id": "q2e",
-          "text": "Uma combinação equilibrada — o que importa é usar bem o dinheiro arrecadado",
+          "text": "Uma combinação equilibrada: o que importa é usar bem o dinheiro arrecadado",
           "scores": {
             "balancer": 3
           }
@@ -122,7 +122,7 @@
         },
         {
           "id": "q3e",
-          "text": "Os mercados precisam de algumas regras, mas não em excesso — depende do setor",
+          "text": "Os mercados precisam de algumas regras, mas não em excesso: depende do setor",
           "scores": {
             "balancer": 3
           }
@@ -217,7 +217,7 @@
       "options": [
         {
           "id": "q6a",
-          "text": "Respeita — regras existem por um motivo, mesmo as que você não gosta",
+          "text": "Respeita: regras existem por um motivo, mesmo as que você não gosta",
           "scores": {
             "guardian": 3
           }
@@ -238,7 +238,7 @@
         },
         {
           "id": "q6d",
-          "text": "Reage com firmeza — restrições à liberdade incomodam você",
+          "text": "Reage com firmeza: restrições à liberdade incomodam você",
           "scores": {
             "free-thinker": 3
           }
@@ -265,21 +265,21 @@
         },
         {
           "id": "q7b",
-          "text": "O mínimo possível — as pessoas se viram melhor sozinhas",
+          "text": "O mínimo possível: as pessoas se viram melhor sozinhas",
           "scores": {
             "builder": 3
           }
         },
         {
           "id": "q7c",
-          "text": "Bastante — o governo pode ser uma ferramenta poderosa para a igualdade",
+          "text": "Bastante: o governo pode ser uma ferramenta poderosa para a igualdade",
           "scores": {
             "reformer": 3
           }
         },
         {
           "id": "q7d",
-          "text": "Quase nenhum — isso é decisão de cada indivíduo",
+          "text": "Quase nenhum: isso é decisão de cada indivíduo",
           "scores": {
             "free-thinker": 3
           }
@@ -339,7 +339,7 @@
     {
       "id": "guardian",
       "title": "O Guardião",
-      "description": "Seu resultado aponta para O Guardião — alguém que valoriza estabilidade, ordem e a força de instituições consolidadas. Você acredita que caminhos testados e comprovados funcionam melhor do que mudanças repentinas, e que regras e estrutura compartilhadas são o que mantêm uma comunidade funcionando bem. Você se sente mais seguro com o previsível: prefere construir sobre algo que já provou seu valor ao longo do tempo do que apostar em uma ideia ainda não testada, mesmo que ela pareça empolgante no papel. No dia a dia, você tende a priorizar confiabilidade em vez de velocidade, e cautela em vez de risco — antes de perguntar 'quão rápido conseguimos fazer isso?', você pergunta 'isso ainda vai funcionar daqui a dez anos?'. Na vida cívica, você costuma se sentir mais à vontade participando por meios já estabelecidos: comparecendo, seguindo os processos e confiando que as instituições se corrigem com o tempo, em vez de derrubar tudo e recomeçar do zero. Isso não significa que você resista a qualquer mudança — significa que você quer que a mudança seja conquistada, testada e gradual, não reativa. Pessoas como você costumam ser a mão firme do grupo, que se lembra do que aconteceu da última vez e planeja com base nisso. Esse instinto pela ordem não é rigidez; é uma forma discreta de cuidado com quem depende das coisas funcionando como deveriam.",
+      "description": "Seu resultado aponta para O Guardião, alguém que valoriza estabilidade, ordem e a força de instituições consolidadas. Você acredita que caminhos testados e comprovados funcionam melhor do que mudanças repentinas, e que regras e estrutura compartilhadas são o que mantêm uma comunidade funcionando bem. Você se sente mais seguro com o previsível: prefere construir sobre algo que já provou seu valor ao longo do tempo do que apostar em uma ideia ainda não testada, mesmo que ela pareça empolgante no papel. No dia a dia, você tende a priorizar confiabilidade em vez de velocidade, e cautela em vez de risco, antes de perguntar 'quão rápido conseguimos fazer isso?', você pergunta 'isso ainda vai funcionar daqui a dez anos?'. Na vida cívica, você costuma se sentir mais à vontade participando por meios já estabelecidos: comparecendo, seguindo os processos e confiando que as instituições se corrigem com o tempo, em vez de derrubar tudo e recomeçar do zero. Isso não significa que você resista a qualquer mudança, significa que você quer que a mudança seja conquistada, testada e gradual, não reativa. Pessoas como você costumam ser a mão firme do grupo, que se lembra do que aconteceu da última vez e planeja com base nisso. Esse instinto pela ordem não é rigidez; é uma forma discreta de cuidado com quem depende das coisas funcionando como deveriam.",
       "image": "/images/results/guardian.jpg",
       "traits": [
         "Estável",
@@ -352,7 +352,7 @@
     {
       "id": "builder",
       "title": "O Construtor",
-      "description": "Seu resultado aponta para O Construtor — alguém que valoriza a autossuficiência, a livre iniciativa e a liberdade de criar sem interferências desnecessárias. Você acredita que pessoas e comunidades produzem seu melhor trabalho quando têm espaço para construir, experimentar e assumir a responsabilidade pelos resultados, em vez de esperar autorização ou orientação de cima. Eficiência importa muito para você: você prefere ver um problema resolvido rapidamente por quem está mais perto dele do que vê-lo se arrastar por camadas de burocracia. No dia a dia, você tende a preferir manter mais controle nas mãos das pessoas e das comunidades locais — você confia que, em geral, cada um sabe o que é melhor para sua própria vida e seus próprios negócios melhor do que qualquer autoridade externa. Na vida cívica, você provavelmente se energiza com a ação direta: começar algo, resolver algo com as próprias mãos ou apoiar iniciativas que recompensam esforço e resultado. Você não é contra estrutura alguma — só quer que ela realmente se justifique, ficando fora do caminho quando não é necessária. Pessoas como você costumam ser as que colocam as coisas em movimento enquanto todo mundo ainda está debatendo o plano. Esse impulso não é sobre agir sozinho; é a crença de que confiança, liberdade e iniciativa trazem o melhor das pessoas e das comunidades que elas constroem juntas.",
+      "description": "Seu resultado aponta para O Construtor, alguém que valoriza a autossuficiência, a livre iniciativa e a liberdade de criar sem interferências desnecessárias. Você acredita que pessoas e comunidades produzem seu melhor trabalho quando têm espaço para construir, experimentar e assumir a responsabilidade pelos resultados, em vez de esperar autorização ou orientação de cima. Eficiência importa muito para você: você prefere ver um problema resolvido rapidamente por quem está mais perto dele do que vê-lo se arrastar por camadas de burocracia. No dia a dia, você tende a preferir manter mais controle nas mãos das pessoas e das comunidades locais, você confia que, em geral, cada um sabe o que é melhor para sua própria vida e seus próprios negócios melhor do que qualquer autoridade externa. Na vida cívica, você provavelmente se energiza com a ação direta: começar algo, resolver algo com as próprias mãos ou apoiar iniciativas que recompensam esforço e resultado. Você não é contra estrutura alguma, só quer que ela realmente se justifique, ficando fora do caminho quando não é necessária. Pessoas como você costumam ser as que colocam as coisas em movimento enquanto todo mundo ainda está debatendo o plano. Esse impulso não é sobre agir sozinho; é a crença de que confiança, liberdade e iniciativa trazem o melhor das pessoas e das comunidades que elas constroem juntas.",
       "image": "/images/results/builder.jpg",
       "traits": [
         "Autossuficiente",
@@ -365,7 +365,7 @@
     {
       "id": "reformer",
       "title": "O Reformista",
-      "description": "Seu resultado aponta para O Reformista — alguém que valoriza a justiça e acredita que políticas públicas bem pensadas podem ser uma força real de mudança positiva. Você costuma notar quando um sistema não está funcionando para todo mundo, e seu instinto é resolver o problema pela raiz, não apenas remendar a situação. A equidade importa muito para você: você acredita que a ação coletiva, bem conduzida, pode erguer as pessoas de formas que o esforço individual sozinho muitas vezes não consegue. No dia a dia, você costuma estar disposto a investir mais — tempo, recursos ou estrutura — se isso significar um resultado mais justo para mais pessoas, mesmo quando esse caminho é mais lento ou mais complicado do que a alternativa. Na vida cívica, você provavelmente se sente atraído por organização social, ativismo ou serviço público — qualquer espaço que permita transformar um 'isso deveria mudar' em 'isso mudou'. Você lida bem com a ambição; problemas grandes não te afastam, eles te motivam. Isso não significa que você queira mudança pela mudança — significa que você acredita que a inércia também tem um custo, e que esperar os problemas se resolverem sozinhos raramente funciona. Pessoas como você costumam ser as que perguntam 'mas isso é realmente justo?' em salas onde ninguém mais pensou em perguntar. Esse instinto não é idealismo vazio; é a crença genuína de que as coisas podem, e devem, melhorar.",
+      "description": "Seu resultado aponta para O Reformista, alguém que valoriza a justiça e acredita que políticas públicas bem pensadas podem ser uma força real de mudança positiva. Você costuma notar quando um sistema não está funcionando para todo mundo, e seu instinto é resolver o problema pela raiz, não apenas remendar a situação. A equidade importa muito para você: você acredita que a ação coletiva, bem conduzida, pode erguer as pessoas de formas que o esforço individual sozinho muitas vezes não consegue. No dia a dia, você costuma estar disposto a investir mais, tempo, recursos ou estrutura, se isso significar um resultado mais justo para mais pessoas, mesmo quando esse caminho é mais lento ou mais complicado do que a alternativa. Na vida cívica, você provavelmente se sente atraído por organização social, ativismo ou serviço público, qualquer espaço que permita transformar um 'isso deveria mudar' em 'isso mudou'. Você lida bem com a ambição; problemas grandes não te afastam, eles te motivam. Isso não significa que você queira mudança pela mudança, significa que você acredita que a inércia também tem um custo, e que esperar os problemas se resolverem sozinhos raramente funciona. Pessoas como você costumam ser as que perguntam 'mas isso é realmente justo?' em salas onde ninguém mais pensou em perguntar. Esse instinto não é idealismo vazio; é a crença genuína de que as coisas podem, e devem, melhorar.",
       "image": "/images/results/reformer.jpg",
       "traits": [
         "Justo",
@@ -378,7 +378,7 @@
     {
       "id": "free-thinker",
       "title": "O Livre-Pensador",
-      "description": "Seu resultado aponta para O Livre-Pensador — alguém que valoriza a liberdade individual acima de quase tudo. Você acredita que as pessoas devem ser livres para viver, escolher e gastar seus próprios recursos como acharem melhor, sem que outra pessoa decida o que é bom para elas. Autonomia não é só uma preferência para você — é quase um princípio fundamental: seus direitos terminam onde começam os de outra pessoa, e nem um segundo antes disso. No dia a dia, você tende a questionar regras ou restrições que limitam a escolha pessoal, mesmo quando elas são apresentadas como sendo para o bem comum — você quer ver a justificativa específica, não apenas aceitar por fé. Na vida cívica, você provavelmente se sente mais confortável como uma voz independente: questionando suposições, resistindo ao pensamento de manada e defendendo suas próprias conclusões mesmo quando elas são impopulares. Isso não significa que você seja indiferente aos outros — significa que você acredita que respeitar a autonomia das pessoas é, em si, uma forma de respeito, talvez a mais fundamental de todas. Pessoas como você costumam ser as que perguntam 'por que essa regra existe, afinal?' quando todo mundo já parou de questionar. Esse instinto não é sobre rejeitar responsabilidade — é a convicção de que a liberdade, a liberdade de verdade, vale a pena ser defendida mesmo quando é inconveniente.",
+      "description": "Seu resultado aponta para O Livre-Pensador, alguém que valoriza a liberdade individual acima de quase tudo. Você acredita que as pessoas devem ser livres para viver, escolher e gastar seus próprios recursos como acharem melhor, sem que outra pessoa decida o que é bom para elas. Autonomia não é só uma preferência para você, é quase um princípio fundamental: seus direitos terminam onde começam os de outra pessoa, e nem um segundo antes disso. No dia a dia, você tende a questionar regras ou restrições que limitam a escolha pessoal, mesmo quando elas são apresentadas como sendo para o bem comum, você quer ver a justificativa específica, não apenas aceitar por fé. Na vida cívica, você provavelmente se sente mais confortável como uma voz independente: questionando suposições, resistindo ao pensamento de manada e defendendo suas próprias conclusões mesmo quando elas são impopulares. Isso não significa que você seja indiferente aos outros, significa que você acredita que respeitar a autonomia das pessoas é, em si, uma forma de respeito, talvez a mais fundamental de todas. Pessoas como você costumam ser as que perguntam 'por que essa regra existe, afinal?' quando todo mundo já parou de questionar. Esse instinto não é sobre rejeitar responsabilidade, é a convicção de que a liberdade, a liberdade de verdade, vale a pena ser defendida mesmo quando é inconveniente.",
       "image": "/images/results/free-thinker.jpg",
       "traits": [
         "Independente",
@@ -391,7 +391,7 @@
     {
       "id": "balancer",
       "title": "O Equilibrista",
-      "description": "Seu resultado aponta para O Equilibrista — alguém que valoriza o pragmatismo, a nuance e a disposição de analisar cada situação em seus próprios termos, em vez de seguir uma ideologia fixa. Você é genuinamente cético em relação a respostas prontas que servem para tudo; seu instinto é perguntar o que realmente funcionou antes, pesar as vantagens e desvantagens com honestidade e adaptar a partir daí. Consistência importa menos para você do que acertar na questão específica que está diante de você. No dia a dia, você se sente confortável em manter opiniões que não se encaixam perfeitamente em um único grupo — cauteloso aqui, ousado ali — porque você julga cada questão pelo seu próprio mérito, em vez de recorrer a uma posição pré-definida. Na vida cívica, você provavelmente é a pessoa que faz perguntas para esclarecer antes de tomar um lado, que consegue enxergar a versão mais forte de mais de um argumento e que está genuinamente aberta a mudar de ideia quando as evidências mudam. Isso não significa que você seja indeciso — significa que você prefere estar certo a ser consistente. Pessoas como você costumam ser as que mantêm uma conversa equilibrada quando ela começa a escorregar para os extremos de qualquer lado. Esse instinto não é ficar em cima do muro; é uma confiança tranquila de que a verdade costuma ser mais complicada do que qualquer um dos lados quer admitir.",
+      "description": "Seu resultado aponta para O Equilibrista, alguém que valoriza o pragmatismo, a nuance e a disposição de analisar cada situação em seus próprios termos, em vez de seguir uma ideologia fixa. Você é genuinamente cético em relação a respostas prontas que servem para tudo; seu instinto é perguntar o que realmente funcionou antes, pesar as vantagens e desvantagens com honestidade e adaptar a partir daí. Consistência importa menos para você do que acertar na questão específica que está diante de você. No dia a dia, você se sente confortável em manter opiniões que não se encaixam perfeitamente em um único grupo, cauteloso aqui, ousado ali, porque você julga cada questão pelo seu próprio mérito, em vez de recorrer a uma posição pré-definida. Na vida cívica, você provavelmente é a pessoa que faz perguntas para esclarecer antes de tomar um lado, que consegue enxergar a versão mais forte de mais de um argumento e que está genuinamente aberta a mudar de ideia quando as evidências mudam. Isso não significa que você seja indeciso, significa que você prefere estar certo a ser consistente. Pessoas como você costumam ser as que mantêm uma conversa equilibrada quando ela começa a escorregar para os extremos de qualquer lado. Esse instinto não é ficar em cima do muro; é uma confiança tranquila de que a verdade costuma ser mais complicada do que qualquer um dos lados quer admitir.",
       "image": "/images/results/balancer.jpg",
       "traits": [
         "Pragmático",

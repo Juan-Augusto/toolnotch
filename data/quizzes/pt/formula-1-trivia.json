@@ -357,28 +357,28 @@
       "id": "legend",
       "minPercent": 80,
       "label": "Lenda",
-      "description": "Você é uma verdadeira lenda da Fórmula 1! Seu conhecimento enciclopédico do esporte abrange décadas de história do automobilismo — da genialidade de Senna à dominância de Schumacher e ao reinado moderno de Verstappen. Você conhece os circuitos, os campeões, as mudanças de regulamento e os momentos lendários que definem o esporte. Seja acompanhando cada corrida ao vivo ou estudando os livros de história, você conquistou o respeito de cada fã de F1. Você consegue nomear os vencedores de cada título de construtores, identificar um circuito pelo nome de suas curvas e lembrar estatísticas que a maioria dos fãs já esqueceu há muito tempo. Os boxes teriam sorte em ter você na garagem.",
+      "description": "Você é uma verdadeira lenda da Fórmula 1! Seu conhecimento enciclopédico do esporte abrange décadas de história do automobilismo, da genialidade de Senna à dominância de Schumacher e ao reinado moderno de Verstappen. Você conhece os circuitos, os campeões, as mudanças de regulamento e os momentos lendários que definem o esporte. Seja acompanhando cada corrida ao vivo ou estudando os livros de história, você conquistou o respeito de cada fã de F1. Você consegue nomear os vencedores de cada título de construtores, identificar um circuito pelo nome de suas curvas e lembrar estatísticas que a maioria dos fãs já esqueceu há muito tempo. Os boxes teriam sorte em ter você na garagem.",
       "shareText": "Acertei {percent}% no Quiz de Fórmula 1 no ToolNotch! Consegue me superar? 🏎️"
     },
     {
       "id": "expert",
       "minPercent": 60,
       "label": "Especialista",
-      "description": "Impressionante! Você tem um domínio de especialista sobre a Fórmula 1 — conhece os grandes campeonatos, os pilotos icônicos e os principais regulamentos técnicos que moldam o esporte. Alguns fatos obscuros ou detalhes históricos escaparam, mas seu conhecimento geral está bem acima da média. Você é a pessoa que seus amigos procuram quando querem entender o que está acontecendo no grid, explicar uma penalidade ou resolver uma discussão sobre quem é o maior de todos os tempos. Com um pouco mais de estudo sobre a história mais profunda do esporte, você estará logo atrás do título de Lenda.",
+      "description": "Impressionante! Você tem um domínio de especialista sobre a Fórmula 1, conhece os grandes campeonatos, os pilotos icônicos e os principais regulamentos técnicos que moldam o esporte. Alguns fatos obscuros ou detalhes históricos escaparam, mas seu conhecimento geral está bem acima da média. Você é a pessoa que seus amigos procuram quando querem entender o que está acontecendo no grid, explicar uma penalidade ou resolver uma discussão sobre quem é o maior de todos os tempos. Com um pouco mais de estudo sobre a história mais profunda do esporte, você estará logo atrás do título de Lenda.",
       "shareText": "Acertei {percent}% no Quiz de Fórmula 1 no ToolNotch! Consegue me superar? 🏎️"
     },
     {
       "id": "fan",
       "minPercent": 40,
       "label": "Fã",
-      "description": "Você claramente ama a Fórmula 1 e conhece os grandes nomes e momentos que definem o esporte. Alguns detalhes técnicos ou históricos te pegaram de surpresa, mas sua paixão pelas corridas é inegável. Você conhece os pilotos superestrelas, os circuitos lendários e o panorama geral do campeonato — e isso já é mais do que a maioria. Continue assistindo às corridas, explore a rica história do esporte por meio de documentários e use onboards clássicos, e você estará subindo nas classificações rapidamente. Cada especialista em F1 foi fã primeiro. A porta da garagem está aberta e a equipe está pronta.",
+      "description": "Você claramente ama a Fórmula 1 e conhece os grandes nomes e momentos que definem o esporte. Alguns detalhes técnicos ou históricos te pegaram de surpresa, mas sua paixão pelas corridas é inegável. Você conhece os pilotos superestrelas, os circuitos lendários e o panorama geral do campeonato, e isso já é mais do que a maioria. Continue assistindo às corridas, explore a rica história do esporte por meio de documentários e use onboards clássicos, e você estará subindo nas classificações rapidamente. Cada especialista em F1 foi fã primeiro. A porta da garagem está aberta e a equipe está pronta.",
       "shareText": "Acertei {percent}% no Quiz de Fórmula 1 no ToolNotch! Consegue me superar? 🏎️"
     },
     {
       "id": "rookie",
       "minPercent": 0,
       "label": "Iniciante",
-      "description": "Todo campeão começa em algum lugar! Você pode ser novo na Fórmula 1 ou estar começando a se interessar pelo esporte agora, mas a paixão está claramente lá. O mundo da F1 está cheio de histórias incríveis: as rivalidades lendárias entre Senna e Prost, a dinastia dos sete títulos de Schumacher, o reinado recordista de Hamilton e a domínio impressionante de Verstappen. Assista a algumas corridas clássicas, explore as histórias das grandes equipes e aprenda os circuitos que moldaram o esporte por mais de 70 anos. Volte e faça o quiz novamente — com um pouco mais de conhecimento na viseira, você logo estará saindo da classe rookie.",
+      "description": "Todo campeão começa em algum lugar! Você pode ser novo na Fórmula 1 ou estar começando a se interessar pelo esporte agora, mas a paixão está claramente lá. O mundo da F1 está cheio de histórias incríveis: as rivalidades lendárias entre Senna e Prost, a dinastia dos sete títulos de Schumacher, o reinado recordista de Hamilton e a domínio impressionante de Verstappen. Assista a algumas corridas clássicas, explore as histórias das grandes equipes e aprenda os circuitos que moldaram o esporte por mais de 70 anos. Volte e faça o quiz novamente, com um pouco mais de conhecimento na viseira, você logo estará saindo da classe rookie.",
       "shareText": "Acertei {percent}% no Quiz de Fórmula 1 no ToolNotch! Consegue me superar? 🏎️"
     }
   ]

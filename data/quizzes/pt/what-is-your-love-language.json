@@ -66,7 +66,7 @@
         },
         {
           "id": "q2b",
-          "text": "Ele(a) planejou um dia inteiro só para nós dois — com muito cuidado.",
+          "text": "Ele(a) planejou um dia inteiro só para nós dois: com muito cuidado.",
           "scores": {
             "quality-time": 3,
             "acts-of-service": 1
@@ -112,7 +112,7 @@
         },
         {
           "id": "q3b",
-          "text": "Que ele(a) resolva algo por mim — cozinhe, limpe ou faça uma tarefa.",
+          "text": "Que ele(a) resolva algo por mim: cozinhe, limpe ou faça uma tarefa.",
           "scores": {
             "acts-of-service": 3,
             "receiving-gifts": 1
@@ -120,7 +120,7 @@
         },
         {
           "id": "q3c",
-          "text": "Uma surpresa pequena — até flores ou meu petisco favorito — para me animar.",
+          "text": "Uma surpresa pequena: até flores ou meu petisco favorito: para me animar.",
           "scores": {
             "receiving-gifts": 3,
             "acts-of-service": 1
@@ -182,7 +182,7 @@
         },
         {
           "id": "q4e",
-          "text": "Da presença física — abraços, toque, simplesmente estar perto.",
+          "text": "Da presença física: abraços, toque, simplesmente estar perto.",
           "scores": {
             "physical-touch": 3,
             "quality-time": 1
@@ -204,7 +204,7 @@
         },
         {
           "id": "q5b",
-          "text": "Ajudo — tomo atitudes para tornar a vida deles mais fácil.",
+          "text": "Ajudo: tomo atitudes para tornar a vida deles mais fácil.",
           "scores": {
             "acts-of-service": 3,
             "receiving-gifts": 1
@@ -258,7 +258,7 @@
         },
         {
           "id": "q6c",
-          "text": "Uma pequena surpresa — um chocolate, uma flor ou algo que trouxeram para mim.",
+          "text": "Uma pequena surpresa: um chocolate, uma flor ou algo que trouxeram para mim.",
           "scores": {
             "receiving-gifts": 3,
             "acts-of-service": 1
@@ -266,7 +266,7 @@
         },
         {
           "id": "q6d",
-          "text": "Jantar juntos sem celular — totalmente presentes.",
+          "text": "Jantar juntos sem celular: totalmente presentes.",
           "scores": {
             "quality-time": 3,
             "physical-touch": 1
@@ -304,7 +304,7 @@
         },
         {
           "id": "q7c",
-          "text": "Um presente surpresa — mesmo pequeno — para me lembrar que está pensando em mim.",
+          "text": "Um presente surpresa: mesmo pequeno: para me lembrar que está pensando em mim.",
           "scores": {
             "receiving-gifts": 3,
             "words-of-affirmation": 1
@@ -320,7 +320,7 @@
         },
         {
           "id": "q7e",
-          "text": "Proximidade física — sentar juntos, um abraço ou simplesmente de mãos dadas.",
+          "text": "Proximidade física: sentar juntos, um abraço ou simplesmente de mãos dadas.",
           "scores": {
             "physical-touch": 3,
             "quality-time": 1
@@ -342,7 +342,7 @@
         },
         {
           "id": "q8b",
-          "text": "Ele(a) resolveu algo que eu estava preocupado(a) — uma tarefa ou compromisso.",
+          "text": "Ele(a) resolveu algo que eu estava preocupado(a): uma tarefa ou compromisso.",
           "scores": {
             "acts-of-service": 3,
             "quality-time": 1
@@ -358,7 +358,7 @@
         },
         {
           "id": "q8d",
-          "text": "Ele(a) planejou um dia especial — só nós dois.",
+          "text": "Ele(a) planejou um dia especial: só nós dois.",
           "scores": {
             "quality-time": 3,
             "words-of-affirmation": 1
@@ -396,7 +396,7 @@
         },
         {
           "id": "q9c",
-          "text": "Um gesto de reconciliação — algo pequeno para quebrar a tensão.",
+          "text": "Um gesto de reconciliação: algo pequeno para quebrar a tensão.",
           "scores": {
             "receiving-gifts": 3,
             "words-of-affirmation": 1
@@ -412,7 +412,7 @@
         },
         {
           "id": "q9e",
-          "text": "Um abraço genuíno — reconexão física que diz que tudo está bem.",
+          "text": "Um abraço genuíno: reconexão física que diz que tudo está bem.",
           "scores": {
             "physical-touch": 3,
             "words-of-affirmation": 1
@@ -458,7 +458,7 @@
         },
         {
           "id": "q10e",
-          "text": "Iniciasse carinho físico — abraços, beijos, ficar perto.",
+          "text": "Iniciasse carinho físico: abraços, beijos, ficar perto.",
           "scores": {
             "physical-touch": 3,
             "quality-time": 1
@@ -526,7 +526,7 @@
         },
         {
           "id": "q12b",
-          "text": "Mais ajuda e esforço — meu parceiro(a) demonstrando amor por ação.",
+          "text": "Mais ajuda e esforço: meu parceiro(a) demonstrando amor por ação.",
           "scores": {
             "acts-of-service": 3,
             "physical-touch": 1
@@ -550,7 +550,7 @@
         },
         {
           "id": "q12e",
-          "text": "Mais carinho físico — toque, proximidade e calor.",
+          "text": "Mais carinho físico: toque, proximidade e calor.",
           "scores": {
             "physical-touch": 3,
             "quality-time": 1
@@ -563,7 +563,7 @@
     {
       "id": "words-of-affirmation",
       "title": "Palavras de Afirmação",
-      "description": "Sua linguagem do amor são as Palavras de Afirmação — você se sente mais amado(a) e valorizado(a) quando as pessoas com quem se importa expressam seus sentimentos abertamente e verbalmente. Elogios, encorajamento, mensagens carinhosas e ouvir 'eu te amo' não são apenas agradáveis de ouvir; para você, são essenciais. Você percebe quando os parceiros se esforçam para articular seus sentimentos, e lembra dessas palavras muito depois do momento ter passado. O silêncio ou a falta de elogios pode parecer distância, mesmo quando nada está errado. Você provavelmente é um comunicador expressivo por natureza — alguém que naturalmente diz ao outros o que ama neles e levanta as pessoas ao redor com palavras sinceras e específicas. Nos relacionamentos, você floresce quando seu parceiro(a) faz check-in verbalmente, deixa recados, envia mensagens pensativas ou simplesmente toma um momento para dizer o que você significa para eles.",
+      "description": "Sua linguagem do amor são as Palavras de Afirmação, você se sente mais amado(a) e valorizado(a) quando as pessoas com quem se importa expressam seus sentimentos abertamente e verbalmente. Elogios, encorajamento, mensagens carinhosas e ouvir 'eu te amo' não são apenas agradáveis de ouvir; para você, são essenciais. Você percebe quando os parceiros se esforçam para articular seus sentimentos, e lembra dessas palavras muito depois do momento ter passado. O silêncio ou a falta de elogios pode parecer distância, mesmo quando nada está errado. Você provavelmente é um comunicador expressivo por natureza, alguém que naturalmente diz ao outros o que ama neles e levanta as pessoas ao redor com palavras sinceras e específicas. Nos relacionamentos, você floresce quando seu parceiro(a) faz check-in verbalmente, deixa recados, envia mensagens pensativas ou simplesmente toma um momento para dizer o que você significa para eles.",
       "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
       "traits": [
         "Expressivo",
@@ -575,7 +575,7 @@
     {
       "id": "acts-of-service",
       "title": "Atos de Serviço",
-      "description": "Sua linguagem do amor são os Atos de Serviço — você se sente mais amado(a) quando as pessoas que você ama aparecem por você através de ações. Quando alguém lava a louça sem ser pedido, resolve uma tarefa que você esqueceu ou cuida de algo que estava te pesando, isso é amor tornado tangível. Você presta muita atenção ao esforço e ao que é realmente feito, e percebe quando as pessoas investem seu tempo e energia para tornar sua vida melhor. Para você, ações realmente falam mais alto que palavras. Você provavelmente demonstra amor da mesma forma — arregaçando as mangas e fazendo coisas para as pessoas que importam para você sem esperar crédito. Nos relacionamentos, você floresce quando seu parceiro(a) é proativo, atencioso e disposto a contribuir praticamente para a vida compartilhada.",
+      "description": "Sua linguagem do amor são os Atos de Serviço, você se sente mais amado(a) quando as pessoas que você ama aparecem por você através de ações. Quando alguém lava a louça sem ser pedido, resolve uma tarefa que você esqueceu ou cuida de algo que estava te pesando, isso é amor tornado tangível. Você presta muita atenção ao esforço e ao que é realmente feito, e percebe quando as pessoas investem seu tempo e energia para tornar sua vida melhor. Para você, ações realmente falam mais alto que palavras. Você provavelmente demonstra amor da mesma forma, arregaçando as mangas e fazendo coisas para as pessoas que importam para você sem esperar crédito. Nos relacionamentos, você floresce quando seu parceiro(a) é proativo, atencioso e disposto a contribuir praticamente para a vida compartilhada.",
       "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
       "traits": [
         "Prático",
@@ -587,7 +587,7 @@
     {
       "id": "receiving-gifts",
       "title": "Receber Presentes",
-      "description": "Sua linguagem do amor é Receber Presentes — e antes de pensar que isso é sobre materialismo, é realmente sobre algo muito mais profundo: atenção e cuidado. Quando alguém te dá um presente, o que te move não é o preço — é o fato de que eles estavam pensando em você quando você não estava por perto. Uma flor colhida durante uma caminhada, um livro recomendado porque lembrou de algo que você disse, um mimo deixado na sua mesa — esses gestos te dizem que você é visto, lembrado e querido. Você provavelmente é uma pessoa altamente sentimental que guarda lembranças significativas. Nos relacionamentos, você se sente mais amado(a) quando o parceiro presta atenção ao que você menciona e ocasionalmente te surpreende com algo que diz, quietamente: pensei em você hoje.",
+      "description": "Sua linguagem do amor é Receber Presentes, e antes de pensar que isso é sobre materialismo, é realmente sobre algo muito mais profundo: atenção e cuidado. Quando alguém te dá um presente, o que te move não é o preço, é o fato de que eles estavam pensando em você quando você não estava por perto. Uma flor colhida durante uma caminhada, um livro recomendado porque lembrou de algo que você disse, um mimo deixado na sua mesa, esses gestos te dizem que você é visto, lembrado e querido. Você provavelmente é uma pessoa altamente sentimental que guarda lembranças significativas. Nos relacionamentos, você se sente mais amado(a) quando o parceiro presta atenção ao que você menciona e ocasionalmente te surpreende com algo que diz, quietamente: pensei em você hoje.",
       "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
       "traits": [
         "Atencioso",
@@ -599,7 +599,7 @@
     {
       "id": "quality-time",
       "title": "Tempo de Qualidade",
-      "description": "Sua linguagem do amor é o Tempo de Qualidade — você se sente mais amado(a) quando alguém te dá atenção total e presente. Não apenas estar na mesma sala, mas realmente estar ali: sem celular, sem meio-ouvir, sem multitarefa. Quando alguém reserva tempo especificamente para você e traz toda a sua presença para o momento, você se sente profundamente valorizado(a). Uma longa caminhada juntos, um jantar sem distrações ou uma tarde tranquila fazendo algo que vocês dois gostam — essas são as coisas que enchem seu tanque emocional. Nos relacionamentos, sua maior necessidade é por um parceiro que apareça completamente — que priorize o tempo com você e deixe claro, por meio de atenção, que você importa. Qualidade sempre supera quantidade, mas para você, ambas genuinamente importam.",
+      "description": "Sua linguagem do amor é o Tempo de Qualidade, você se sente mais amado(a) quando alguém te dá atenção total e presente. Não apenas estar na mesma sala, mas realmente estar ali: sem celular, sem meio-ouvir, sem multitarefa. Quando alguém reserva tempo especificamente para você e traz toda a sua presença para o momento, você se sente profundamente valorizado(a). Uma longa caminhada juntos, um jantar sem distrações ou uma tarde tranquila fazendo algo que vocês dois gostam, essas são as coisas que enchem seu tanque emocional. Nos relacionamentos, sua maior necessidade é por um parceiro que apareça completamente, que priorize o tempo com você e deixe claro, por meio de atenção, que você importa. Qualidade sempre supera quantidade, mas para você, ambas genuinamente importam.",
       "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
       "traits": [
         "Presente",
@@ -611,7 +611,7 @@
     {
       "id": "physical-touch",
       "title": "Toque Físico",
-      "description": "Sua linguagem do amor é o Toque Físico — para você, a presença e a proximidade física são a expressão mais direta de amor e segurança. Uma mão no ombro, um abraço espontâneo, segurar as mãos enquanto caminha ou simplesmente sentar perto o suficiente para se tocar — esses momentos te dizem, sem palavras, que você é amado(a) e não está sozinho(a). Você provavelmente é uma pessoa afetiva por natureza, alguém que estende a mão naturalmente quando alguém com quem se importa está sofrendo ou celebrando. A desconexão física pode parecer distância emocional, mesmo quando tudo o mais parece bem. Nos relacionamentos, você floresce com um parceiro que é fisicamente carinhoso e afetuoso, que gravita em direção à proximidade e entende que um abraço é às vezes a coisa mais eloquente que ele pode oferecer.",
+      "description": "Sua linguagem do amor é o Toque Físico, para você, a presença e a proximidade física são a expressão mais direta de amor e segurança. Uma mão no ombro, um abraço espontâneo, segurar as mãos enquanto caminha ou simplesmente sentar perto o suficiente para se tocar, esses momentos te dizem, sem palavras, que você é amado(a) e não está sozinho(a). Você provavelmente é uma pessoa afetiva por natureza, alguém que estende a mão naturalmente quando alguém com quem se importa está sofrendo ou celebrando. A desconexão física pode parecer distância emocional, mesmo quando tudo o mais parece bem. Nos relacionamentos, você floresce com um parceiro que é fisicamente carinhoso e afetuoso, que gravita em direção à proximidade e entende que um abraço é às vezes a coisa mais eloquente que ele pode oferecer.",
       "image": "/images/quizzes/what-is-your-love-language-cover.jpg",
       "traits": [
         "Carinhoso",

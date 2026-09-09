@@ -26,14 +26,13 @@ export function AppFeaturedQuizCard({
   const CategoryIcon = categoryConfig?.icon;
   const estimatedMin = Math.max(2, Math.round(quiz.questionCount * 0.4));
 
+  const quizHref =
+    currentLocale === "en" ? `/quiz/${quiz.id}` : `/${currentLocale}/quiz/${quiz.id}`;
+
   return (
     <section className="mb-14" aria-label="Featured Quiz">
-      <Link href={`/quiz/${quiz.id}`} className="block group select-none">
-        <AppCard
-          border
-          hover
-          className="p-7 sm:p-9 transition-all hover:border-secondary"
-        >
+      <Link href={quizHref} className="block group select-none">
+        <AppCard border hover className="p-7 sm:p-9 transition-all">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div className="space-y-3.5 max-w-3xl">
               <div className="flex flex-wrap items-center gap-2.5">

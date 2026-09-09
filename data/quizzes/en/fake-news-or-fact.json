@@ -2,7 +2,7 @@
   "id": "fake-news-or-fact",
   "type": "trivia",
   "category": "civic",
-  "title": "Fake News or Fact? — Media Literacy Quiz",
+  "title": "Fake News or Fact? Media Literacy Quiz",
   "description": "See how well you can separate widespread internet myths and misinformation from verified facts.",
   "image": "/images/quizzes/fake-news-or-fact-cover.jpg",
   "questions": [
@@ -160,7 +160,7 @@
         }
       ],
       "correctAnswerId": "q8a",
-      "explanation": "Two hearts pump blood to the gills and a third pumps it to the rest of the body — confirmed marine biology.",
+      "explanation": "Two hearts pump blood to the gills and a third pumps it to the rest of the body, confirmed marine biology.",
       "source": {
         "name": "NOAA",
         "url": "https://oceanservice.noaa.gov/news/feb26/undersea-creatures-valentines-day.html"
@@ -212,29 +212,29 @@
       "id": "legend",
       "minPercent": 80,
       "label": "Fact-Check Legend",
-      "description": "You have a sharp eye for misinformation. In a world where hoaxes, urban legends, and viral chain messages spread faster than the truth, you consistently know how to pause, question the source, and separate fact from fiction. Media literacy like yours is a real skill — it means checking who's making a claim, looking for a named source, and not sharing something just because it sounds convincing or scary. Keep applying that same instinct outside the quiz: verify before you share, especially on WhatsApp and social media, and you'll keep being the friend who catches the fake story before it spreads.",
+      "description": "You have a sharp eye for misinformation. In a world where hoaxes, urban legends, and viral chain messages spread faster than the truth, you consistently know how to pause, question the source, and separate fact from fiction. Media literacy like yours is a real skill, it means checking who's making a claim, looking for a named source, and not sharing something just because it sounds convincing or scary. Keep applying that same instinct outside the quiz: verify before you share, especially on WhatsApp and social media, and you'll keep being the friend who catches the fake story before it spreads.",
       "shareText": "I scored Fact-Check Legend on the Fake News or Fact quiz! Think you can spot misinformation as well as I can?"
     },
     {
       "id": "expert",
       "minPercent": 60,
       "label": "Fact-Check Expert",
-      "description": "You're clearly good at spotting misinformation, even if a claim or two slipped past you. That's a strong result — most viral hoaxes and myths are designed to sound just plausible enough to catch people off guard. The habits that got you this far matter: pausing before you share, checking whether a claim has a real named source, and being a little more skeptical of anything that seems built to provoke a strong reaction. Keep sharpening that instinct. A little extra scrutiny — checking the date, the source, and whether a fact-checker has already covered a story — is often all it takes to go from expert to legend.",
+      "description": "You're clearly good at spotting misinformation, even if a claim or two slipped past you. That's a strong result, most viral hoaxes and myths are designed to sound just plausible enough to catch people off guard. The habits that got you this far matter: pausing before you share, checking whether a claim has a real named source, and being a little more skeptical of anything that seems built to provoke a strong reaction. Keep sharpening that instinct. A little extra scrutiny, checking the date, the source, and whether a fact-checker has already covered a story, is often all it takes to go from expert to legend.",
       "shareText": "I scored Fact-Check Expert on the Fake News or Fact quiz! Pretty solid at spotting misinformation. Can you beat me?"
     },
     {
       "id": "fan",
       "minPercent": 40,
       "label": "Fact-Check Fan",
-      "description": "You're engaged and curious about telling fact from fiction, but a few well-crafted hoaxes still got the better of you — and that's completely normal, since misinformation is often designed to feel true. The good news is that spotting it is a learnable skill. Before sharing anything surprising, try checking who first reported it, whether a real news outlet or fact-checking organization has covered it, and whether the claim uses vague language like 'experts say' without naming anyone. A little extra pause before hitting share can make a big difference in slowing the spread of misinformation online.",
+      "description": "You're engaged and curious about telling fact from fiction, but a few well-crafted hoaxes still got the better of you, and that's completely normal, since misinformation is often designed to feel true. The good news is that spotting it is a learnable skill. Before sharing anything surprising, try checking who first reported it, whether a real news outlet or fact-checking organization has covered it, and whether the claim uses vague language like 'experts say' without naming anyone. A little extra pause before hitting share can make a big difference in slowing the spread of misinformation online.",
       "shareText": "I scored Fact-Check Fan on the Fake News or Fact quiz. Some hoaxes got me! How will you do?"
     },
     {
       "id": "rookie",
       "minPercent": 0,
       "label": "Fact-Check Rookie",
-      "description": "Misinformation is designed to be convincing, so a lower score here just means there's room to build up your fact-checking instincts — everyone starts somewhere. The most reliable habit is a simple one: before you believe or share a surprising claim, look for who is actually saying it. A real story has a named, checkable source; a hoax usually doesn't. Try a quick search for the claim plus the word 'fact check' before forwarding anything on WhatsApp or social media. Retake this quiz anytime to practice — the more you question surprising claims, the sharper your instincts will get.",
-      "shareText": "I just took the Fake News or Fact quiz — plenty of room to sharpen my fact-checking skills. Can you score higher?"
+      "description": "Misinformation is designed to be convincing, so a lower score here just means there's room to build up your fact-checking instincts, everyone starts somewhere. The most reliable habit is a simple one: before you believe or share a surprising claim, look for who is actually saying it. A real story has a named, checkable source; a hoax usually doesn't. Try a quick search for the claim plus the word 'fact check' before forwarding anything on WhatsApp or social media. Retake this quiz anytime to practice, the more you question surprising claims, the sharper your instincts will get.",
+      "shareText": "I just took the Fake News or Fact quiz: plenty of room to sharpen my fact-checking skills. Can you score higher?"
     }
   ]
 }

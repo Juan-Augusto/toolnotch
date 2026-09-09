@@ -135,7 +135,7 @@ export function AppQuizzesHub({ quizzes, locale = "pt" }: AppQuizzesHubProps) {
 
           <div
             data-testid="quizzes-search-container"
-            className={`relative transition-all duration-300 ease-in-out border rounded-[2px] bg-tertiary/40 border-border/60 hover:border-border focus-within:border-border shrink-0 self-start lg:self-center ${
+            className={`relative transition-all duration-300 ease-in-out border rounded-[2px] bg-tertiary border-border hover:border-foreground/30 focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary/20 shrink-0 self-start lg:self-center ${
               isExpanded ? "w-full sm:w-72 lg:w-80" : "w-40 sm:w-44"
             }`}
           >

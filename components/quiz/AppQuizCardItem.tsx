@@ -24,11 +24,15 @@ export function AppQuizCardItem({
   const estimatedMin = Math.max(2, Math.round((quiz.questionCount || 8) * 0.4));
   const Icon = config?.icon;
 
+  const quizHref =
+    currentLocale === "en" ? `/quiz/${quiz.id}` : `/${currentLocale}/quiz/${quiz.id}`;
+
   return (
-    <Link href={`/quiz/${quiz.id}`} className="block group h-full select-none">
+    <Link href={quizHref} className="block group h-full select-none">
       <AppCard
         withCornerAccents={false}
         hover
+        border
         className="h-full flex flex-col justify-between !p-6 sm:!p-7 transition-all"
       >
         <div>
@@ -37,11 +41,12 @@ export function AppQuizCardItem({
               bg={config?.badgeBg}
               text={config?.badgeColor}
               icon={Icon && <Icon className="w-4 h-4 shrink-0" />}
+              className="whitespace-nowrap shrink-0"
             >
               {categoryName}
             </AppBadge>
 
-            <span className="font-mono text-[11px] text-label/80 uppercase">
+            <span className="font-mono text-[11px] text-label/80 uppercase whitespace-nowrap shrink-0">
               {quiz.questionCount > 0
                 ? `${quiz.questionCount} ${labels.questionsLabel} • ~${estimatedMin} ${labels.minLabel}`
                 : `~${estimatedMin} ${labels.minLabel}`}

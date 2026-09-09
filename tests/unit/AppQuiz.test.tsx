@@ -133,9 +133,20 @@ describe("AppQuiz Component", () => {
       />
     );
 
-    // Question 1
+    // Question 1: Select option and verify it does NOT advance immediately
     const optionFront1 = screen.getByText("Interfaces e CSS");
     fireEvent.click(optionFront1);
+
+    expect(
+      screen.getByRole("heading", {
+        level: 2,
+        name: /O QUE VOCÊ PREFERE CONSTRUIR\?/i,
+      })
+    ).toBeInTheDocument();
+
+    // Advance to Question 2 using the PRÓXIMO button
+    const nextBtn1 = screen.getByRole("button", { name: /PRÓXIMO/i });
+    fireEvent.click(nextBtn1);
 
     // Question 2
     expect(
@@ -147,6 +158,10 @@ describe("AppQuiz Component", () => {
 
     const optionFront2 = screen.getByText("React e Tailwind");
     fireEvent.click(optionFront2);
+
+    // Finalize quiz using the VER RESULTADO button
+    const finishBtn = screen.getByRole("button", { name: /VER RESULTADO/i });
+    fireEvent.click(finishBtn);
 
     // Result screen
     expect(screen.getByText(/SEU RESULTADO/i)).toBeInTheDocument();
@@ -172,7 +187,7 @@ describe("AppQuiz Component", () => {
     );
   });
 
-  it("handles trivia quiz with score breakdown and explanation", () => {
+  it("handles trivia quiz with score breakdown and explanation without auto-advancing", () => {
     render(<AppQuiz quiz={mockTriviaQuiz} locale="pt" autoStart />);
 
     expect(
@@ -191,9 +206,15 @@ describe("AppQuiz Component", () => {
       screen.getByText("O Brasil venceu a Alemanha por 2 a 0 na final.")
     ).toBeInTheDocument();
 
+    // Advancing timers should NOT advance to results automatically
     act(() => {
-      jest.advanceTimersByTime(1300);
+      jest.advanceTimersByTime(2000);
     });
+    expect(screen.queryByText(/PONTUAÇÃO FINAL/i)).not.toBeInTheDocument();
+
+    // Click VER RESULTADO to finalize
+    const finishBtn = screen.getByRole("button", { name: /VER RESULTADO/i });
+    fireEvent.click(finishBtn);
 
     // Result screen for trivia
     expect(screen.getByText(/PONTUAÇÃO FINAL/i)).toBeInTheDocument();
@@ -201,14 +222,76 @@ describe("AppQuiz Component", () => {
     expect(screen.getByText(/100% acertos • Lenda do Futebol/i)).toBeInTheDocument();
   });
 
+  it("disables PRÓXIMO until an option is selected and disables VOLTAR on first question", () => {
+    render(<AppQuiz quiz={mockPersonalityQuiz} locale="pt" autoStart />);
+
+    const backBtn = screen.getByRole("button", { name: /VOLTAR/i });
+    const nextBtn = screen.getByRole("button", { name: /PRÓXIMO/i });
+
+    // On question 1 without selection: VOLTAR and PRÓXIMO are disabled
+    expect(backBtn).toBeDisabled();
+    expect(nextBtn).toBeDisabled();
+
+    // Select option
+    fireEvent.click(screen.getByText("Interfaces e CSS"));
+
+    // VOLTAR remains disabled on question 1, PRÓXIMO is now enabled
+    expect(backBtn).toBeDisabled();
+    expect(nextBtn).toBeEnabled();
+  });
+
+  it("allows going back with VOLTAR, preserving and changing previous selection", () => {
+    render(<AppQuiz quiz={mockPersonalityQuiz} locale="pt" autoStart />);
+
+    // Q1: Select first option and advance
+    fireEvent.click(screen.getByText("Interfaces e CSS"));
+    fireEvent.click(screen.getByRole("button", { name: /PRÓXIMO/i }));
+
+    // Now on Q2
+    expect(
+      screen.getByRole("heading", {
+        level: 2,
+        name: /QUAL FERRAMENTA VOCÊ MAIS USA\?/i,
+      })
+    ).toBeInTheDocument();
+
+    // Click VOLTAR to go back to Q1
+    const backBtn = screen.getByRole("button", { name: /VOLTAR/i });
+    expect(backBtn).toBeEnabled();
+    fireEvent.click(backBtn);
+
+    // Back on Q1
+    expect(
+      screen.getByRole("heading", {
+        level: 2,
+        name: /O QUE VOCÊ PREFERE CONSTRUIR\?/i,
+      })
+    ).toBeInTheDocument();
+
+    // Change answer on Q1
+    fireEvent.click(screen.getByText("APIs e Bancos de Dados"));
+
+    // Advance back to Q2
+    fireEvent.click(screen.getByRole("button", { name: /PRÓXIMO/i }));
+
+    expect(
+      screen.getByRole("heading", {
+        level: 2,
+        name: /QUAL FERRAMENTA VOCÊ MAIS USA\?/i,
+      })
+    ).toBeInTheDocument();
+  });
+
   it("restarts quiz and reshuffles when JOGAR NOVAMENTE is clicked", () => {
     render(<AppQuiz quiz={mockPersonalityQuiz} locale="pt" autoStart />);
 
     // Answer Q1
     fireEvent.click(screen.getByText("Interfaces e CSS"));
+    fireEvent.click(screen.getByRole("button", { name: /PRÓXIMO/i }));
 
     // Answer Q2
     fireEvent.click(screen.getByText("React e Tailwind"));
+    fireEvent.click(screen.getByRole("button", { name: /VER RESULTADO/i }));
 
     // On result screen
     const retakeBtn = screen.getByRole("button", { name: /JOGAR NOVAMENTE/i });
@@ -223,5 +306,45 @@ describe("AppQuiz Component", () => {
         name: /O QUE VOCÊ PREFERE CONSTRUIR\?/i,
       })
     ).toBeInTheDocument();
+  });
+
+  it("generates story card image without error when Baixar Card (Story) is clicked", () => {
+    const mockContext = {
+      createLinearGradient: jest.fn(() => ({ addColorStop: jest.fn() })),
+      fillRect: jest.fn(),
+      beginPath: jest.fn(),
+      moveTo: jest.fn(),
+      lineTo: jest.fn(),
+      stroke: jest.fn(),
+      fill: jest.fn(),
+      fillText: jest.fn(),
+      measureText: jest.fn(() => ({ width: 100 })),
+      closePath: jest.fn(),
+      roundRect: jest.fn(),
+      quadraticCurveTo: jest.fn(),
+    };
+    const origGetContext = HTMLCanvasElement.prototype.getContext;
+    const origToDataUrl = HTMLCanvasElement.prototype.toDataURL;
+    HTMLCanvasElement.prototype.getContext = jest.fn(() => mockContext as unknown as CanvasRenderingContext2D);
+    HTMLCanvasElement.prototype.toDataURL = jest.fn(() => "data:image/png;base64,fake");
+
+    render(<AppQuiz quiz={mockPersonalityQuiz} locale="pt" autoStart />);
+
+    fireEvent.click(screen.getByText("Interfaces e CSS"));
+    fireEvent.click(screen.getByRole("button", { name: /PRÓXIMO/i }));
+    fireEvent.click(screen.getByText("React e Tailwind"));
+    fireEvent.click(screen.getByRole("button", { name: /VER RESULTADO/i }));
+
+    const origAnchorClick = HTMLAnchorElement.prototype.click;
+    HTMLAnchorElement.prototype.click = jest.fn();
+
+    const downloadBtn = screen.getByRole("button", { name: /Baixar Card \(Story\)/i });
+    expect(downloadBtn).toBeInTheDocument();
+
+    expect(() => fireEvent.click(downloadBtn)).not.toThrow();
+
+    HTMLCanvasElement.prototype.getContext = origGetContext;
+    HTMLCanvasElement.prototype.toDataURL = origToDataUrl;
+    HTMLAnchorElement.prototype.click = origAnchorClick;
   });
 });

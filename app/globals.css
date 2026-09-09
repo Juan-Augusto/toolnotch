@@ -21,14 +21,14 @@
 }
 
 :root {
-  --primary: #e86298;
+  --primary: #3186f5;
   --primary-dim: rgba(232, 98, 152, 0.1);
   --primary-glow: 0 0 10px rgba(232, 98, 152, 0.4);
   --primary-text-glow: 0 0 8px rgba(232, 98, 152, 0.5);
 
-  --secondary: #3f3f3f;
+  --secondary: #d83e9d;
   --tertiary: #ffffff;
-  --border: #a4a9b1;
+  --border: rgb(218, 221, 228);
   --foreground: #2c2c2c;
   --background: #f9f9f9;
   --panel: #eeeeee;
@@ -47,7 +47,7 @@
 
   --secondary: #5ce4dd;
   --tertiary: #232529;
-  --border: #5c6269;
+  --border: #3e4247;
   --foreground: #f5f5f5;
   --background: #1f2124;
   --panel: #131416;

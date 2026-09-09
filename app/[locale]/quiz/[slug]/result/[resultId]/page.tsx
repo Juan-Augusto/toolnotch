@@ -58,11 +58,11 @@ export async function generateMetadata({
     const tier = quiz.tiers.find((t) => t.id === resultId);
     if (!tier) return {};
     return {
-      title: `${tier.label} — ${quiz.title} | ToolNotch`,
+      title: `${tier.label}: ${quiz.title} | ToolNotch`,
       description: tier.description.slice(0, 155),
       alternates: buildAlternates(`/quiz/${slug}/result/${resultId}`),
       openGraph: {
-        title: `${tier.label} — ${quiz.title}`,
+        title: `${tier.label}: ${quiz.title}`,
         description: tier.description.slice(0, 155),
         url: `/quiz/${slug}/result/${resultId}`,
       },
@@ -78,7 +78,7 @@ export async function generateMetadata({
     description: result.description.slice(0, 155),
     alternates: { canonical: `/quiz/${slug}/result/${resultId}` },
     openGraph: {
-      title: `I got "${result.title}" — ${quiz.title}`,
+      title: `I got "${result.title}" on ${quiz.title}`,
       description: result.description.slice(0, 155),
       url: `/quiz/${slug}/result/${resultId}`,
     },
@@ -109,7 +109,7 @@ export default async function QuizResultPage({
     const jsonLd = buildJsonLd(
       {
         "@type": "Article",
-        headline: `${tier.label} — ${quiz.title} Result`,
+        headline: `${tier.label}: ${quiz.title} Result`,
         description: tier.description.slice(0, 155),
         url: `${process.env.NEXT_PUBLIC_BASE_URL ?? "https://toolnotch.com"}/quiz/${slug}/result/${resultId}`,
       },
@@ -194,7 +194,7 @@ export default async function QuizResultPage({
   const jsonLd = buildJsonLd(
     {
       "@type": "Article",
-      headline: `${result.title} — ${quiz.title} Result`,
+      headline: `${result.title}: ${quiz.title} Result`,
       description: result.description.slice(0, 155),
       url: `${process.env.NEXT_PUBLIC_BASE_URL ?? "https://toolnotch.com"}/quiz/${slug}/result/${resultId}`,
     },
@@ -224,7 +224,7 @@ export default async function QuizResultPage({
           />
         </div>
         <div className="w-full py-6">
-          {/* Result detail — indexable content */}
+          {/* Result detail: indexable content */}
           <div className="bg-card rounded-[2px] border border-border/60 p-8 mb-8">
             <div className="font-mono text-xs text-primary font-bold uppercase mb-1">
               {quiz.title}

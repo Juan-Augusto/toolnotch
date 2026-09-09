@@ -91,7 +91,7 @@ interface Props {
 /**
  * Server-rendered SEO depth block shown below the quiz player: intro prose,
  * an optional generic data table, a topic FAQ, and a cross-link cluster.
- * No H1 here — the quiz player renders the page H1.
+ * No H1 here: the quiz player renders the page H1.
  */
 export default function AppQuizDepth({ content, currentSlug }: Props) {
   const { table } = content;

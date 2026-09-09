@@ -48,7 +48,7 @@
       "options": [
         {
           "id": "q2a",
-          "text": "São mestres — aprendo com cada falha",
+          "text": "São mestres: aprendo com cada falha",
           "scores": {
             "python": 3,
             "javascript": 1
@@ -64,7 +64,7 @@
         },
         {
           "id": "q2c",
-          "text": "Lido com eles quando surgirem — sem estresse",
+          "text": "Lido com eles quando surgirem: sem estresse",
           "scores": {
             "javascript": 3,
             "go": 1
@@ -124,7 +124,7 @@
       "options": [
         {
           "id": "q4a",
-          "text": "Regras limitam a criatividade — prefiro liberdade",
+          "text": "Regras limitam a criatividade: prefiro liberdade",
           "scores": {
             "javascript": 3,
             "python": 2
@@ -207,7 +207,7 @@
         },
         {
           "id": "q6b",
-          "text": "Aceita numa boa — funciona, isso é o que importa",
+          "text": "Aceita numa boa: funciona, isso é o que importa",
           "scores": {
             "javascript": 3,
             "python": 1
@@ -387,7 +387,7 @@
     {
       "id": "python",
       "title": "Python",
-      "description": "Você é Python — amigável, versátil e infinitamente adaptável. Você valoriza clareza e legibilidade acima de tudo, preferindo soluções simples e eficientes a malabarismos complexos.",
+      "description": "Você é Python, amigável, versátil e infinitamente adaptável. Você valoriza clareza e legibilidade acima de tudo, preferindo soluções simples e eficientes a malabarismos complexos.",
       "image": "/images/results/python.jpg",
       "traits": [
         "Legível",
@@ -400,7 +400,7 @@
     {
       "id": "javascript",
       "title": "JavaScript",
-      "description": "Você é JavaScript — presente em todo lugar, extremamente dinâmico e criativo. Você adora criar experiências interativas, entrega rápido e encontra soluções mesmo em cenários caóticos.",
+      "description": "Você é JavaScript, presente em todo lugar, extremamente dinâmico e criativo. Você adora criar experiências interativas, entrega rápido e encontra soluções mesmo em cenários caóticos.",
       "image": "/images/results/javascript.jpg",
       "traits": [
         "Ubíquo",
@@ -413,7 +413,7 @@
     {
       "id": "rust",
       "title": "Rust",
-      "description": "Você é Rust — focado em excelência, segurança e máxima performance. Você não aceita atalhos e prefere investir tempo fazendo certo da primeira vez a corrigir bugs em produção.",
+      "description": "Você é Rust, focado em excelência, segurança e máxima performance. Você não aceita atalhos e prefere investir tempo fazendo certo da primeira vez a corrigir bugs em produção.",
       "image": "/images/results/rust.jpg",
       "traits": [
         "Seguro",
@@ -426,7 +426,7 @@
     {
       "id": "go",
       "title": "Go",
-      "description": "Você é Go — pragmático, direto ao ponto e focado no que realmente funciona. Você elimina complexidades desnecessárias e constrói sistemas escaláveis e elegantes.",
+      "description": "Você é Go, pragmático, direto ao ponto e focado no que realmente funciona. Você elimina complexidades desnecessárias e constrói sistemas escaláveis e elegantes.",
       "image": "/images/results/go.jpg",
       "traits": [
         "Simples",
@@ -439,7 +439,7 @@
     {
       "id": "java",
       "title": "Java",
-      "description": "Você é Java — a base confiável dos grandes sistemas corporativos. Você valoriza arquitetura sólida, padrões consagrados e soluções construídas para durar décadas.",
+      "description": "Você é Java, a base confiável dos grandes sistemas corporativos. Você valoriza arquitetura sólida, padrões consagrados e soluções construídas para durar décadas.",
       "image": "/images/results/java.jpg",
       "traits": [
         "Estruturado",

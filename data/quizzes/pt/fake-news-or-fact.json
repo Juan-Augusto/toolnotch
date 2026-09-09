@@ -2,7 +2,7 @@
   "id": "fake-news-or-fact",
   "type": "trivia",
   "category": "civic",
-  "title": "Fake News ou Verdade? — Teste de Fake News",
+  "title": "Fake News ou Verdade? Teste de Fake News",
   "description": "Descubra se você consegue separar mitos populares e boatos de fatos reais verificados.",
   "image": "/images/quizzes/fake-news-or-fact-cover.jpg",
   "questions": [
@@ -160,7 +160,7 @@
         }
       ],
       "correctAnswerId": "q8a",
-      "explanation": "Dois corações bombeiam sangue para as brânquias e um terceiro bombeia para o resto do corpo — um fato confirmado da biologia marinha.",
+      "explanation": "Dois corações bombeiam sangue para as brânquias e um terceiro bombeia para o resto do corpo, um fato confirmado da biologia marinha.",
       "source": {
         "name": "NOAA",
         "url": "https://oceanservice.noaa.gov/news/feb26/undersea-creatures-valentines-day.html"
@@ -219,22 +219,22 @@
       "id": "expert",
       "minPercent": 60,
       "label": "Especialista em Checagem de Fatos",
-      "description": "Você é claramente bom em identificar desinformação, mesmo que uma ou outra afirmação tenha passado despercebida. É um resultado forte — a maioria dos boatos e mitos virais é criada para parecer plausível o suficiente para enganar as pessoas. Os hábitos que te trouxeram até aqui importam: parar antes de compartilhar, verificar se uma afirmação tem uma fonte real e nomeada, e desconfiar um pouco mais de qualquer coisa feita para provocar uma reação forte. Continue afiando esse instinto. Um pouco mais de atenção — checando a data, a fonte e se algum checador de fatos já cobriu o assunto — costuma ser o suficiente para virar uma lenda.",
+      "description": "Você é claramente bom em identificar desinformação, mesmo que uma ou outra afirmação tenha passado despercebida. É um resultado forte, a maioria dos boatos e mitos virais é criada para parecer plausível o suficiente para enganar as pessoas. Os hábitos que te trouxeram até aqui importam: parar antes de compartilhar, verificar se uma afirmação tem uma fonte real e nomeada, e desconfiar um pouco mais de qualquer coisa feita para provocar uma reação forte. Continue afiando esse instinto. Um pouco mais de atenção, checando a data, a fonte e se algum checador de fatos já cobriu o assunto, costuma ser o suficiente para virar uma lenda.",
       "shareText": "Consegui o nível Especialista em Checagem de Fatos no teste Fake News ou Verdade! Um bom faro para desinformação. Você consegue superar isso?"
     },
     {
       "id": "fan",
       "minPercent": 40,
       "label": "Fã de Checagem de Fatos",
-      "description": "Você é curioso e se interessa por separar fato de ficção, mas alguns boatos bem construídos ainda conseguiram te enganar — e isso é normal, já que a desinformação costuma ser feita para parecer verdadeira. A boa notícia é que identificá-la é uma habilidade que se aprende. Antes de compartilhar algo surpreendente, tente verificar quem divulgou primeiro, se um veículo de notícias ou um checador de fatos já cobriu o assunto, e se a afirmação usa termos vagos como 'especialistas dizem' sem nomear ninguém. Uma pausa extra antes de compartilhar pode fazer muita diferença para conter a desinformação online.",
+      "description": "Você é curioso e se interessa por separar fato de ficção, mas alguns boatos bem construídos ainda conseguiram te enganar, e isso é normal, já que a desinformação costuma ser feita para parecer verdadeira. A boa notícia é que identificá-la é uma habilidade que se aprende. Antes de compartilhar algo surpreendente, tente verificar quem divulgou primeiro, se um veículo de notícias ou um checador de fatos já cobriu o assunto, e se a afirmação usa termos vagos como 'especialistas dizem' sem nomear ninguém. Uma pausa extra antes de compartilhar pode fazer muita diferença para conter a desinformação online.",
       "shareText": "Consegui o nível Fã de Checagem de Fatos no teste Fake News ou Verdade. Alguns boatos me pegaram! Como você vai se sair?"
     },
     {
       "id": "rookie",
       "minPercent": 0,
       "label": "Iniciante em Checagem de Fatos",
-      "description": "A desinformação é feita para ser convincente, então uma pontuação mais baixa aqui só significa que há espaço para desenvolver seus instintos de checagem — todo mundo começa de algum lugar. O hábito mais confiável é simples: antes de acreditar ou compartilhar uma afirmação surpreendente, procure quem realmente está dizendo isso. Uma notícia real tem uma fonte nomeada e verificável; um boato geralmente não tem. Tente uma busca rápida pela afirmação junto com a palavra 'checagem' antes de encaminhar qualquer coisa no WhatsApp ou nas redes sociais. Refaça este teste quando quiser praticar — quanto mais você questionar afirmações surpreendentes, mais afiados ficarão seus instintos.",
-      "shareText": "Acabei de fazer o teste Fake News ou Verdade — ainda tenho o que aprender sobre checagem de fatos. Consegue pontuar mais que eu?"
+      "description": "A desinformação é feita para ser convincente, então uma pontuação mais baixa aqui só significa que há espaço para desenvolver seus instintos de checagem, todo mundo começa de algum lugar. O hábito mais confiável é simples: antes de acreditar ou compartilhar uma afirmação surpreendente, procure quem realmente está dizendo isso. Uma notícia real tem uma fonte nomeada e verificável; um boato geralmente não tem. Tente uma busca rápida pela afirmação junto com a palavra 'checagem' antes de encaminhar qualquer coisa no WhatsApp ou nas redes sociais. Refaça este teste quando quiser praticar, quanto mais você questionar afirmações surpreendentes, mais afiados ficarão seus instintos.",
+      "shareText": "Acabei de fazer o teste Fake News ou Verdade: ainda tenho o que aprender sobre checagem de fatos. Consegue pontuar mais que eu?"
     }
   ]
 }

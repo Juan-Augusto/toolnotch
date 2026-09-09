@@ -357,28 +357,28 @@
       "id": "legend",
       "minPercent": 80,
       "label": "Leyenda",
-      "description": "¡Eres una verdadera leyenda de la Fórmula 1! Tu conocimiento enciclopédico del deporte abarca décadas de historia del automovilismo — desde la brillantez de Senna hasta la dominancia de Schumacher y el reinado moderno de Verstappen. Conoces los circuitos, los campeones, los cambios de reglamento y los momentos legendarios que definen el deporte. Ya sea siguiendo cada carrera en vivo o estudiando los libros de historia, te has ganado el respeto de cada fan de la F1. Puedes nombrar al ganador de cada título de constructores, identificar un circuito por el nombre de sus curvas y recordar estadísticas que la mayoría de los fans hace tiempo que olvidaron. El paddock tendría suerte de tenerte en el garaje.",
+      "description": "¡Eres una verdadera leyenda de la Fórmula 1! Tu conocimiento enciclopédico del deporte abarca décadas de historia del automovilismo, desde la brillantez de Senna hasta la dominancia de Schumacher y el reinado moderno de Verstappen. Conoces los circuitos, los campeones, los cambios de reglamento y los momentos legendarios que definen el deporte. Ya sea siguiendo cada carrera en vivo o estudiando los libros de historia, te has ganado el respeto de cada fan de la F1. Puedes nombrar al ganador de cada título de constructores, identificar un circuito por el nombre de sus curvas y recordar estadísticas que la mayoría de los fans hace tiempo que olvidaron. El paddock tendría suerte de tenerte en el garaje.",
       "shareText": "Obtuve {percent}% en el Quiz de Fórmula 1 en ToolNotch! ¿Puedes superarme? 🏎️"
     },
     {
       "id": "expert",
       "minPercent": 60,
       "label": "Experto",
-      "description": "¡Impresionante! Tienes el dominio de un experto en Fórmula 1 — conoces los grandes campeonatos, los pilotos icónicos y los principales reglamentos técnicos que dan forma al deporte. Algunos datos oscuros o detalles históricos se escaparon, pero tu conocimiento general está muy por encima de la media. Eres la persona a la que tus amigos acuden cuando quieren entender lo que está pasando en la parrilla, explicar una sanción o resolver una discusión sobre quién es el más grande de todos los tiempos. Con un poco más de estudio sobre la historia más profunda del deporte, estarás persiguiendo el título de Leyenda en poco tiempo.",
+      "description": "¡Impresionante! Tienes el dominio de un experto en Fórmula 1, conoces los grandes campeonatos, los pilotos icónicos y los principales reglamentos técnicos que dan forma al deporte. Algunos datos oscuros o detalles históricos se escaparon, pero tu conocimiento general está muy por encima de la media. Eres la persona a la que tus amigos acuden cuando quieren entender lo que está pasando en la parrilla, explicar una sanción o resolver una discusión sobre quién es el más grande de todos los tiempos. Con un poco más de estudio sobre la historia más profunda del deporte, estarás persiguiendo el título de Leyenda en poco tiempo.",
       "shareText": "Obtuve {percent}% en el Quiz de Fórmula 1 en ToolNotch! ¿Puedes superarme? 🏎️"
     },
     {
       "id": "fan",
       "minPercent": 40,
       "label": "Fanático",
-      "description": "Claramente amas la Fórmula 1 y conoces los grandes nombres y momentos que definen el deporte. Algunos detalles técnicos o históricos te sorprendieron, pero tu pasión por las carreras es innegable. Conoces a los pilotos superestrella, los circuitos legendarios y el panorama general del campeonato — y eso ya es más que la mayoría. Sigue viendo esas carreras, explora la rica historia del deporte a través de documentariales y onboards clásicos, y estarás escalando posiciones rápidamente. Todo experto en F1 fue fan primero. La puerta del garaje está abierta y el equipo está listo.",
+      "description": "Claramente amas la Fórmula 1 y conoces los grandes nombres y momentos que definen el deporte. Algunos detalles técnicos o históricos te sorprendieron, pero tu pasión por las carreras es innegable. Conoces a los pilotos superestrella, los circuitos legendarios y el panorama general del campeonato, y eso ya es más que la mayoría. Sigue viendo esas carreras, explora la rica historia del deporte a través de documentariales y onboards clásicos, y estarás escalando posiciones rápidamente. Todo experto en F1 fue fan primero. La puerta del garaje está abierta y el equipo está listo.",
       "shareText": "Obtuve {percent}% en el Quiz de Fórmula 1 en ToolNotch! ¿Puedes superarme? 🏎️"
     },
     {
       "id": "rookie",
       "minPercent": 0,
       "label": "Novato",
-      "description": "¡Todo campeón empieza en algún lugar! Puede que seas nuevo en la Fórmula 1 o simplemente que estés empezando a interesarte por el deporte, pero la pasión está claramente ahí. El mundo de la F1 está lleno de historias increíbles: las rivalidades legendarias entre Senna y Prost, la dinastía de los siete títulos de Schumacher, el reinado récord de Hamilton y la impresionante dominancia de Verstappen. Mira algunas carreras clásicas, explora las historias de los grandes equipos y aprende los circuitos que han dado forma al deporte durante más de 70 años. Vuelve y realiza el quiz de nuevo — con un poco más de conocimiento en la visera, pronto estarás saliendo de la clase novato.",
+      "description": "¡Todo campeón empieza en algún lugar! Puede que seas nuevo en la Fórmula 1 o simplemente que estés empezando a interesarte por el deporte, pero la pasión está claramente ahí. El mundo de la F1 está lleno de historias increíbles: las rivalidades legendarias entre Senna y Prost, la dinastía de los siete títulos de Schumacher, el reinado récord de Hamilton y la impresionante dominancia de Verstappen. Mira algunas carreras clásicas, explora las historias de los grandes equipos y aprende los circuitos que han dado forma al deporte durante más de 70 años. Vuelve y realiza el quiz de nuevo, con un poco más de conocimiento en la visera, pronto estarás saliendo de la clase novato.",
       "shareText": "Obtuve {percent}% en el Quiz de Fórmula 1 en ToolNotch! ¿Puedes superarme? 🏎️"
     }
   ]

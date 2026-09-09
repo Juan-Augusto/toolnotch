@@ -354,7 +354,7 @@
         }
       ],
       "correctAnswerId": "q14b",
-      "explanation": "A Pod is Kubernetes's atomic unit of deployment — containers within the same Pod share an IP address, localhost network, and mounted volumes.",
+      "explanation": "A Pod is Kubernetes's atomic unit of deployment, containers within the same Pod share an IP address, localhost network, and mounted volumes.",
       "level": "intermediate"
     },
     {
@@ -375,7 +375,7 @@
         },
         {
           "id": "q15d",
-          "text": "There is no practical difference — both achieve exactly the same result"
+          "text": "There is no practical difference: both achieve exactly the same result"
         }
       ],
       "correctAnswerId": "q15b",
@@ -471,7 +471,7 @@
         },
         {
           "id": "q19c",
-          "text": "They are identical — just different names used by different vendors"
+          "text": "They are identical: just different names used by different vendors"
         },
         {
           "id": "q19d",
@@ -529,7 +529,7 @@
         }
       ],
       "correctAnswerId": "q21b",
-      "explanation": "Kubernetes gates traffic on readiness probes to guarantee zero-downtime rolling updates — a pod only joins the load balancer rotation once it passes the probe.",
+      "explanation": "Kubernetes gates traffic on readiness probes to guarantee zero-downtime rolling updates, a pod only joins the load balancer rotation once it passes the probe.",
       "level": "advanced"
     },
     {
@@ -579,7 +579,7 @@
         }
       ],
       "correctAnswerId": "q23b",
-      "explanation": "Idempotency is essential for safe retries in unreliable networks — if the client cannot tell whether a request succeeded, re-sending it must not cause duplicate side effects.",
+      "explanation": "Idempotency is essential for safe retries in unreliable networks, if the client cannot tell whether a request succeeded, re-sending it must not cause duplicate side effects.",
       "level": "advanced"
     },
     {
@@ -654,7 +654,7 @@
         }
       ],
       "correctAnswerId": "q26b",
-      "explanation": "Chaos engineering deliberately introduces turbulence — killing instances, dropping network packets, exhausting CPU — to verify that a system's resilience mechanisms work before a real incident occurs.",
+      "explanation": "Chaos engineering deliberately introduces turbulence, killing instances, dropping network packets, exhausting CPU, to verify that a system's resilience mechanisms work before a real incident occurs.",
       "level": "advanced"
     },
     {
@@ -679,7 +679,7 @@
         }
       ],
       "correctAnswerId": "q27b",
-      "explanation": "A service mesh operates at the east-west (service-to-service) layer via sidecar proxies, providing mTLS encryption, circuit breaking, and telemetry for all internal communication — beyond what a north-south API gateway handles.",
+      "explanation": "A service mesh operates at the east-west (service-to-service) layer via sidecar proxies, providing mTLS encryption, circuit breaking, and telemetry for all internal communication, beyond what a north-south API gateway handles.",
       "level": "advanced"
     },
     {
@@ -763,28 +763,28 @@
       "id": "legend",
       "minPercent": 80,
       "label": "Legend",
-      "description": "Outstanding — you have the system design knowledge of a senior engineer or solutions architect. You command the full stack of modern deployment practices: from Docker and Kubernetes fundamentals through advanced patterns like the Saga, Strangler Fig, and expand-contract migration, all the way to multi-region active-active consistency and GitOps. You understand not just what these patterns are but why they exist and what trade-offs they carry. You are the person teams turn to when designing for reliability, scalability, and observability. Whether you are architecting a greenfield platform or safely decomposing a legacy monolith, your decisions are grounded in deep, practical knowledge. The industry needs architects like you.",
+      "description": "Outstanding: you have the system design knowledge of a senior engineer or solutions architect. You command the full stack of modern deployment practices: from Docker and Kubernetes fundamentals through advanced patterns like the Saga, Strangler Fig, and expand-contract migration, all the way to multi-region active-active consistency and GitOps. You understand not just what these patterns are but why they exist and what trade-offs they carry. You are the person teams turn to when designing for reliability, scalability, and observability. Whether you are architecting a greenfield platform or safely decomposing a legacy monolith, your decisions are grounded in deep, practical knowledge. The industry needs architects like you.",
       "shareText": "I scored {percent}% on the System Architecture & Deployment Quiz on ToolNotch! Can you beat me? 🏗️"
     },
     {
       "id": "expert",
       "minPercent": 60,
       "label": "Expert",
-      "description": "Excellent work — you have a strong grasp of modern system architecture and deployment practices. You are comfortable with microservices, CI/CD pipelines, Kubernetes, and key resilience patterns such as the circuit breaker and canary deployments. A few advanced topics — perhaps multi-region consistency or the nuances of Saga orchestration vs choreography — caught you out, but your overall knowledge is well above average. You are the engineer colleagues ask when debating architectural decisions or reviewing a deployment runbook. Keep diving into service mesh internals, chaos engineering, and FinOps to close those gaps and reach Legend status.",
+      "description": "Excellent work, you have a strong grasp of modern system architecture and deployment practices. You are comfortable with microservices, CI/CD pipelines, Kubernetes, and key resilience patterns such as the circuit breaker and canary deployments. A few advanced topics, perhaps multi-region consistency or the nuances of Saga orchestration vs choreography, caught you out, but your overall knowledge is well above average. You are the engineer colleagues ask when debating architectural decisions or reviewing a deployment runbook. Keep diving into service mesh internals, chaos engineering, and FinOps to close those gaps and reach Legend status.",
       "shareText": "I scored {percent}% on the System Architecture & Deployment Quiz on ToolNotch! Can you beat me? 🏗️"
     },
     {
       "id": "fan",
       "minPercent": 40,
       "label": "Fan",
-      "description": "You have a solid foundation in system architecture — you know the core ideas behind microservices, load balancing, and containerisation, and you understand why practices like CI/CD and health checks matter. Some of the intermediate and advanced concepts, such as the 12-Factor App, circuit breaker states, or the Saga pattern, are still developing. That is perfectly normal. System design is a broad field and every expert builds knowledge incrementally through hands-on experience. Pick one advanced topic per week, build a small demo, and revisit this quiz. You are closer to Expert than you think.",
+      "description": "You have a solid foundation in system architecture, you know the core ideas behind microservices, load balancing, and containerisation, and you understand why practices like CI/CD and health checks matter. Some of the intermediate and advanced concepts, such as the 12-Factor App, circuit breaker states, or the Saga pattern, are still developing. That is perfectly normal. System design is a broad field and every expert builds knowledge incrementally through hands-on experience. Pick one advanced topic per week, build a small demo, and revisit this quiz. You are closer to Expert than you think.",
       "shareText": "I scored {percent}% on the System Architecture & Deployment Quiz on ToolNotch! Can you beat me? 🏗️"
     },
     {
       "id": "rookie",
       "minPercent": 0,
       "label": "Rookie",
-      "description": "Everyone starts somewhere, and system architecture is genuinely one of the most complex areas of software engineering. This quiz covers a wide range of topics — from Docker basics and REST conventions through Kubernetes, service meshes, chaos engineering, and multi-region distributed systems. If many of these concepts were unfamiliar, that is a great sign that you have an exciting learning journey ahead. Start with Docker and basic CI/CD, then work up to Kubernetes and the 12-Factor App. Hands-on projects and cloud free-tier experiments will teach you more than any book alone. Come back and try again — your score will surprise you.",
+      "description": "Everyone starts somewhere, and system architecture is genuinely one of the most complex areas of software engineering. This quiz covers a wide range of topics, from Docker basics and REST conventions through Kubernetes, service meshes, chaos engineering, and multi-region distributed systems. If many of these concepts were unfamiliar, that is a great sign that you have an exciting learning journey ahead. Start with Docker and basic CI/CD, then work up to Kubernetes and the 12-Factor App. Hands-on projects and cloud free-tier experiments will teach you more than any book alone. Come back and try again, your score will surprise you.",
       "shareText": "I scored {percent}% on the System Architecture & Deployment Quiz on ToolNotch! Can you beat me? 🏗️"
     }
   ]

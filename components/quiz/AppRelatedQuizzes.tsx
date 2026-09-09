@@ -49,7 +49,7 @@ const ABOUT_TEXT: Record<
   },
 };
 
-const FAQ_DATA: Record<
+export const FAQ_DATA: Record<
   string,
   { heading: string; items: { question: string; answer: string }[] }
 > = {
@@ -131,7 +131,7 @@ const FAQ_DATA: Record<
 };
 
 /**
- * WS-5 item 1 — topical-sibling cross-links for quizzes that don't have the
+ * WS-5 item 1: topical-sibling cross-links for quizzes that don't have the
  * bespoke WS-3 depth cluster. Server-rendered <a href>, locale-prefixed,
  * anchored with the quiz name. Picks siblings in the same registry category,
  * limited to quizzes that have a localised label in `home.tools.*`.

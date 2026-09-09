@@ -1,3 +1,5 @@
+import { AnyQuiz, isTriviaQuiz, isTriviaQuestion } from '@/lib/quizTypes'
+
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com'
 
 export interface FaqItem {
@@ -104,6 +106,49 @@ export function authorSchema() {
       'https://www.linkedin.com/in/juan--ximenes',
       'https://github.com/Juan-Augusto',
     ],
+  }
+}
+
+export function quizDetailSchema(
+  quiz: AnyQuiz,
+  url: string,
+  locale = 'en',
+  about?: string,
+) {
+  const isTrivia = isTriviaQuiz(quiz)
+  return {
+    '@type': 'Quiz' as const,
+    name: quiz.title,
+    url,
+    description: quiz.description,
+    inLanguage: LANG_MAP[locale] ?? locale,
+    educationalUse: 'Assessment',
+    ...(about ? { about: { '@type': 'Thing', name: about } } : {}),
+    hasPart: quiz.questions.map((q) => {
+      if (isTrivia && isTriviaQuestion(q)) {
+        const correctOpt = q.options.find((o) => o.id === q.correctAnswerId)
+        const otherOpts = q.options.filter((o) => o.id !== q.correctAnswerId)
+        return {
+          '@type': 'Question',
+          name: q.text,
+          ...(correctOpt
+            ? { acceptedAnswer: { '@type': 'Answer', text: correctOpt.text } }
+            : {}),
+          suggestedAnswer: otherOpts.map((o) => ({
+            '@type': 'Answer',
+            text: o.text,
+          })),
+        }
+      }
+      return {
+        '@type': 'Question',
+        name: q.text,
+        suggestedAnswer: q.options.map((o) => ({
+          '@type': 'Answer',
+          text: o.text,
+        })),
+      }
+    }),
   }
 }
 
