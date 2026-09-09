@@ -159,9 +159,7 @@ export default async function AboutPage({ params }: Props) {
             >
               {t("title")}
             </h1>
-            <p className="text-sm sm:text-base leading-relaxed text-label mt-3">
-              {t("subtitle")}
-            </p>
+            <p className="leading-relaxed text-label mt-3">{t("subtitle")}</p>
           </header>
 
           <article className="space-y-10">
@@ -170,9 +168,9 @@ export default async function AboutPage({ params }: Props) {
                 {t("whyTitle")}
               </h2>
               <div className="space-y-4">
-                <p className="text-sm sm:text-base leading-relaxed text-label">{t("whyP1")}</p>
-                <p className="text-sm sm:text-base leading-relaxed text-label">{t("whyP2")}</p>
-                <p className="text-sm sm:text-base leading-relaxed text-label">{t("whyP3")}</p>
+                <p className="leading-relaxed text-label">{t("whyP1")}</p>
+                <p className="leading-relaxed text-label">{t("whyP2")}</p>
+                <p className="leading-relaxed text-label">{t("whyP3")}</p>
               </div>
             </section>
 
@@ -181,8 +179,8 @@ export default async function AboutPage({ params }: Props) {
                 {t("believeTitle")}
               </h2>
               <div className="space-y-4">
-                <p className="text-sm sm:text-base leading-relaxed text-label">{t("believeP1")}</p>
-                <p className="text-sm sm:text-base leading-relaxed text-label">{t("believeP2")}</p>
+                <p className="leading-relaxed text-label">{t("believeP1")}</p>
+                <p className="leading-relaxed text-label">{t("believeP2")}</p>
               </div>
             </section>
 
@@ -198,7 +196,7 @@ export default async function AboutPage({ params }: Props) {
                 <h3 className="text-lg sm:text-xl font-bold uppercase">
                   Juan Soares
                 </h3>
-                <p className="text-sm sm:text-base leading-relaxed text-label">{t("whoP1")}</p>
+                <p className="leading-relaxed text-label">{t("whoP1")}</p>
               </div>
 
               <div className="shrink-0">
@@ -225,8 +223,8 @@ export default async function AboutPage({ params }: Props) {
                 {t("toolsTitle")}
               </h2>
               <div className="space-y-4">
-                <p className="text-sm sm:text-base leading-relaxed text-label">{t("toolsP1")}</p>
-                <p className="text-sm sm:text-base leading-relaxed text-label">{t("toolsP2")}</p>
+                <p className="leading-relaxed text-label">{t("toolsP1")}</p>
+                <p className="leading-relaxed text-label">{t("toolsP2")}</p>
               </div>
             </section>
 
@@ -235,8 +233,8 @@ export default async function AboutPage({ params }: Props) {
                 {t("fundedTitle")}
               </h2>
               <div className="space-y-4">
-                <p className="text-sm sm:text-base leading-relaxed text-label">{t("fundedP1")}</p>
-                <p className="text-sm sm:text-base leading-relaxed text-label">{t("fundedP2")}</p>
+                <p className="leading-relaxed text-label">{t("fundedP1")}</p>
+                <p className="leading-relaxed text-label">{t("fundedP2")}</p>
                 <div className="pt-1">
                   <Link
                     href={`${prefix}/privacy`}
