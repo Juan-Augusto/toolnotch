@@ -3631,11 +3631,11 @@
     "whoTitle": "Quién lo desarrolla",
     "whoP1": "ToolNotch fue creado y es mantenido por Juan Soares, desarrollador de software. El proyecto nació de la necesidad de contar con utilidades web rápidas, limpias y confiables en un solo lugar. Las sugerencias y mejoras de código se gestionan a través de GitHub.",
     "toolsTitle": "Herramientas disponibles",
-    "toolsP1": "El catálogo incluye herramientas para PDF (combinar, dividir, comprimir), imágenes (conversión y optimización), texto, calculadoras y cuestionarios interactivos.",
+    "toolsP1": "El catálogo reúne utilidades para PDF (unir, dividir, comprimir), imágenes (conversión y optimización), texto, calculadoras de productividad y finanzas, además de cuestionarios interactivos.",
     "toolsP2": "Se añaden nuevas herramientas con frecuencia. Puedes enviar sugerencias de nuevas funciones a través del repositorio de GitHub.",
     "partnersTitle": "Transparencia",
     "partnersNote": "El sitio no cobra por el uso de las herramientas y busca ofrecer una experiencia limpia y directa.",
-    "partnersLink": "Ver socios y divulgación",
+    "partnersLink": "Ver socios y transparencia",
     "fundedTitle": "Gratuito e independiente",
     "fundedP1": "ToolNotch es un proyecto independiente mantenido por Juan Soares. Todas las herramientas son totalmente gratuitas, sin planes de pago, sin funciones bloqueadas y sin necesidad de crear una cuenta.",
     "fundedP2": "El procesamiento se realiza localmente en tu dispositivo y nunca comercializamos datos de usuarios. Nuestra Política de Privacidad detalla nuestro compromiso con la transparencia.",
@@ -4830,9 +4830,27 @@
           "Resultado de la final"
         ],
         "rows": [
-          ["1930", "Uruguay", "Uruguay", "Argentina", "4–2"],
-          ["1934", "Italia", "Italia", "Checoslovaquia", "2–1 (pró.)"],
-          ["1938", "Francia", "Italia", "Hungría", "4–2"],
+          [
+            "1930",
+            "Uruguay",
+            "Uruguay",
+            "Argentina",
+            "4–2"
+          ],
+          [
+            "1934",
+            "Italia",
+            "Italia",
+            "Checoslovaquia",
+            "2–1 (pró.)"
+          ],
+          [
+            "1938",
+            "Francia",
+            "Italia",
+            "Hungría",
+            "4–2"
+          ],
           [
             "1942",
             "No disputada",
@@ -4847,10 +4865,34 @@
             "-",
             "Segunda Guerra Mundial"
           ],
-          ["1950", "Brasil", "Uruguay", "Brasil", "2–1 (partido decisivo)"],
-          ["1954", "Suiza", "Alemania Occidental", "Hungría", "3–2"],
-          ["1958", "Suecia", "Brasil", "Suecia", "5–2"],
-          ["1962", "Chile", "Brasil", "Checoslovaquia", "3–1"],
+          [
+            "1950",
+            "Brasil",
+            "Uruguay",
+            "Brasil",
+            "2–1 (partido decisivo)"
+          ],
+          [
+            "1954",
+            "Suiza",
+            "Alemania Occidental",
+            "Hungría",
+            "3–2"
+          ],
+          [
+            "1958",
+            "Suecia",
+            "Brasil",
+            "Suecia",
+            "5–2"
+          ],
+          [
+            "1962",
+            "Chile",
+            "Brasil",
+            "Checoslovaquia",
+            "3–1"
+          ],
           [
             "1966",
             "Inglaterra",
@@ -4858,7 +4900,13 @@
             "Alemania Occidental",
             "4–2 (pró.)"
           ],
-          ["1970", "México", "Brasil", "Italia", "4–1"],
+          [
+            "1970",
+            "México",
+            "Brasil",
+            "Italia",
+            "4–1"
+          ],
           [
             "1974",
             "Alemania Occidental",
@@ -4866,18 +4914,90 @@
             "Países Bajos",
             "2–1"
           ],
-          ["1978", "Argentina", "Argentina", "Países Bajos", "3–1 (pró.)"],
-          ["1982", "España", "Italia", "Alemania Occidental", "3–1"],
-          ["1986", "México", "Argentina", "Alemania Occidental", "3–2"],
-          ["1990", "Italia", "Alemania Occidental", "Argentina", "1–0"],
-          ["1994", "Estados Unidos", "Brasil", "Italia", "0–0 (3–2 pen.)"],
-          ["1998", "Francia", "Francia", "Brasil", "3–0"],
-          ["2002", "Corea del Sur y Japón", "Brasil", "Alemania", "2–0"],
-          ["2006", "Alemania", "Italia", "Francia", "1–1 (5–3 pen.)"],
-          ["2010", "Sudáfrica", "España", "Países Bajos", "1–0 (pró.)"],
-          ["2014", "Brasil", "Alemania", "Argentina", "1–0 (pró.)"],
-          ["2018", "Rusia", "Francia", "Croacia", "4–2"],
-          ["2022", "Catar", "Argentina", "Francia", "3–3 (4–2 pen.)"]
+          [
+            "1978",
+            "Argentina",
+            "Argentina",
+            "Países Bajos",
+            "3–1 (pró.)"
+          ],
+          [
+            "1982",
+            "España",
+            "Italia",
+            "Alemania Occidental",
+            "3–1"
+          ],
+          [
+            "1986",
+            "México",
+            "Argentina",
+            "Alemania Occidental",
+            "3–2"
+          ],
+          [
+            "1990",
+            "Italia",
+            "Alemania Occidental",
+            "Argentina",
+            "1–0"
+          ],
+          [
+            "1994",
+            "Estados Unidos",
+            "Brasil",
+            "Italia",
+            "0–0 (3–2 pen.)"
+          ],
+          [
+            "1998",
+            "Francia",
+            "Francia",
+            "Brasil",
+            "3–0"
+          ],
+          [
+            "2002",
+            "Corea del Sur y Japón",
+            "Brasil",
+            "Alemania",
+            "2–0"
+          ],
+          [
+            "2006",
+            "Alemania",
+            "Italia",
+            "Francia",
+            "1–1 (5–3 pen.)"
+          ],
+          [
+            "2010",
+            "Sudáfrica",
+            "España",
+            "Países Bajos",
+            "1–0 (pró.)"
+          ],
+          [
+            "2014",
+            "Brasil",
+            "Alemania",
+            "Argentina",
+            "1–0 (pró.)"
+          ],
+          [
+            "2018",
+            "Rusia",
+            "Francia",
+            "Croacia",
+            "4–2"
+          ],
+          [
+            "2022",
+            "Catar",
+            "Argentina",
+            "Francia",
+            "3–3 (4–2 pen.)"
+          ]
         ]
       },
       "faqHeading": "Campeones de la Copa del Mundo: preguntas frecuentes",
@@ -4966,14 +5086,49 @@
       "table": {
         "heading": "Más títulos de Copa de Europa y Liga de Campeones",
         "note": "Títulos de Copa de Europa / Liga de Campeones de la UEFA, competición masculina. Cifras hasta la final de 2024.",
-        "cols": ["Club", "País", "Títulos", "Más reciente"],
+        "cols": [
+          "Club",
+          "País",
+          "Títulos",
+          "Más reciente"
+        ],
         "rows": [
-          ["Real Madrid", "España", "15", "2024"],
-          ["Milan", "Italia", "7", "2007"],
-          ["Bayern de Múnich", "Alemania", "6", "2020"],
-          ["Liverpool", "Inglaterra", "6", "2019"],
-          ["Barcelona", "España", "5", "2015"],
-          ["Ajax", "Países Bajos", "4", "1995"]
+          [
+            "Real Madrid",
+            "España",
+            "15",
+            "2024"
+          ],
+          [
+            "Milan",
+            "Italia",
+            "7",
+            "2007"
+          ],
+          [
+            "Bayern de Múnich",
+            "Alemania",
+            "6",
+            "2020"
+          ],
+          [
+            "Liverpool",
+            "Inglaterra",
+            "6",
+            "2019"
+          ],
+          [
+            "Barcelona",
+            "España",
+            "5",
+            "2015"
+          ],
+          [
+            "Ajax",
+            "Países Bajos",
+            "4",
+            "1995"
+          ]
         ]
       },
       "faqHeading": "¿Qué club de fútbol eres? Preguntas frecuentes",
@@ -5036,14 +5191,49 @@
       "table": {
         "heading": "Clubes con más títulos de Copa de Europa / Liga de Campeones",
         "note": "Competición masculina, títulos hasta la final de 2024.",
-        "cols": ["Club", "País", "Títulos", "Años"],
+        "cols": [
+          "Club",
+          "País",
+          "Títulos",
+          "Años"
+        ],
         "rows": [
-          ["Real Madrid", "España", "15", "1956–2024"],
-          ["Milan", "Italia", "7", "1963–2007"],
-          ["Bayern de Múnich", "Alemania", "6", "1974–2020"],
-          ["Liverpool", "Inglaterra", "6", "1977–2019"],
-          ["Barcelona", "España", "5", "1992–2015"],
-          ["Ajax", "Países Bajos", "4", "1971–1995"]
+          [
+            "Real Madrid",
+            "España",
+            "15",
+            "1956–2024"
+          ],
+          [
+            "Milan",
+            "Italia",
+            "7",
+            "1963–2007"
+          ],
+          [
+            "Bayern de Múnich",
+            "Alemania",
+            "6",
+            "1974–2020"
+          ],
+          [
+            "Liverpool",
+            "Inglaterra",
+            "6",
+            "1977–2019"
+          ],
+          [
+            "Barcelona",
+            "España",
+            "5",
+            "1992–2015"
+          ],
+          [
+            "Ajax",
+            "Países Bajos",
+            "4",
+            "1971–1995"
+          ]
         ]
       },
       "faqHeading": "Trivia de la Liga de Campeones: preguntas frecuentes",
@@ -5106,14 +5296,49 @@
       "table": {
         "heading": "Pilotos de Fórmula 1 con más títulos mundiales",
         "note": "Títulos de pilotos conseguidos, hasta el final de la temporada 2024.",
-        "cols": ["Piloto", "País", "Títulos", "Temporadas"],
+        "cols": [
+          "Piloto",
+          "País",
+          "Títulos",
+          "Temporadas"
+        ],
         "rows": [
-          ["Lewis Hamilton", "Reino Unido", "7", "2008–2020"],
-          ["Michael Schumacher", "Alemania", "7", "1994–2004"],
-          ["Juan Manuel Fangio", "Argentina", "5", "1951–1957"],
-          ["Alain Prost", "Francia", "4", "1985–1993"],
-          ["Sebastian Vettel", "Alemania", "4", "2010–2013"],
-          ["Max Verstappen", "Países Bajos", "4", "2021–2024"]
+          [
+            "Lewis Hamilton",
+            "Reino Unido",
+            "7",
+            "2008–2020"
+          ],
+          [
+            "Michael Schumacher",
+            "Alemania",
+            "7",
+            "1994–2004"
+          ],
+          [
+            "Juan Manuel Fangio",
+            "Argentina",
+            "5",
+            "1951–1957"
+          ],
+          [
+            "Alain Prost",
+            "Francia",
+            "4",
+            "1985–1993"
+          ],
+          [
+            "Sebastian Vettel",
+            "Alemania",
+            "4",
+            "2010–2013"
+          ],
+          [
+            "Max Verstappen",
+            "Países Bajos",
+            "4",
+            "2021–2024"
+          ]
         ]
       },
       "faqHeading": "Trivia de Fórmula 1: preguntas frecuentes",
@@ -5176,10 +5401,25 @@
       "table": {
         "heading": "Los ocho pilotos con los que te pueden emparejar",
         "note": "Títulos de Campeonato Mundial de Pilotos, hasta el final de la temporada 2024.",
-        "cols": ["Piloto", "País", "Títulos en F1", "Conocido por"],
+        "cols": [
+          "Piloto",
+          "País",
+          "Títulos en F1",
+          "Conocido por"
+        ],
         "rows": [
-          ["Max Verstappen", "Países Bajos", "4", "Ritmo agresivo y obstinado"],
-          ["Lewis Hamilton", "Reino Unido", "7", "Constancia y longevidad"],
+          [
+            "Max Verstappen",
+            "Países Bajos",
+            "4",
+            "Ritmo agresivo y obstinado"
+          ],
+          [
+            "Lewis Hamilton",
+            "Reino Unido",
+            "7",
+            "Constancia y longevidad"
+          ],
           [
             "Ayrton Senna",
             "Brasil",
@@ -5192,9 +5432,24 @@
             "7",
             "Preparación implacable y volumen de trabajo"
           ],
-          ["Charles Leclerc", "Mónaco", "0", "Velocidad natural y emoción"],
-          ["Fernando Alonso", "España", "2", "Oficio y negativa a rendirse"],
-          ["Oscar Piastri", "Australia", "0", "Cabeza fría, aprende rápido"],
+          [
+            "Charles Leclerc",
+            "Mónaco",
+            "0",
+            "Velocidad natural y emoción"
+          ],
+          [
+            "Fernando Alonso",
+            "España",
+            "2",
+            "Oficio y negativa a rendirse"
+          ],
+          [
+            "Oscar Piastri",
+            "Australia",
+            "0",
+            "Cabeza fría, aprende rápido"
+          ],
           [
             "Lando Norris",
             "Reino Unido",
@@ -5263,7 +5518,11 @@
       "table": {
         "heading": "Los cinco lenguajes del amor en resumen",
         "note": "Modelo de Gary Chapman, Los cinco lenguajes del amor (1992).",
-        "cols": ["Lenguaje del amor", "Qué significa", "Ejemplo cotidiano"],
+        "cols": [
+          "Lenguaje del amor",
+          "Qué significa",
+          "Ejemplo cotidiano"
+        ],
         "rows": [
           [
             "Palabras de afirmación",
@@ -5366,47 +5625,64 @@
     "partners": {
       "navLabel": "Nuestros Socios",
       "viewAll": "Ver todos los socios",
-      "metaTitle": "Nuestros Socios — Herramientas que Recomendamos",
-      "metaDescription": "Las herramientas de pago que recomendamos y con las que colaboramos. Los enlaces de afiliado ayudan a mantener ToolNotch gratis.",
+      "metaTitle": "Nuestros Socios: Herramientas Recomendadas y Transparencia",
+      "metaDescription": "Conoce las herramientas asociadas que usamos y recomendamos. Descubre nuestros rigurosos criterios y cómo mantenemos ToolNotch 100% gratuito.",
       "title": "Nuestros Socios",
-      "subtitle": "Herramientas de pago que usamos, en las que confiamos y que recomendamos.",
-      "intro": "ToolNotch es gratis y no tiene muro de pago. Algunas de las herramientas que te recomendamos son productos de pago de empresas con las que tenemos un acuerdo de afiliado: si te registras a través de un enlace de esta página, nos pagan una comisión sin costo adicional para ti. Solo incluimos herramientas que recomendaríamos de todos modos, y esta página crecerá a medida que sumemos socios.",
-      "howTitle": "Cómo elegimos a los socios",
-      "howP1": "Una herramienta solo aparece aquí después de haberla usado y de que la recomendaríamos a un amigo que nos preguntara. Partimos de las tareas que nuestros propios visitantes intentan terminar —reescribir un párrafo, revisar una cita, enviar dinero entre países, ordenar un PDF— y buscamos el producto de pago que hace mejor ese trabajo. Un plan gratuito real, precios transparentes y una prueba sin compromiso importan; un producto que oculta su precio o dificulta la cancelación no se añade, pague lo que pague.",
-      "howP2": "Cada enlace de socio es un enlace de afiliado, marcado con rel=\"sponsored\", y nos genera una comisión si te suscribes: sin costo adicional para ti y al mismo precio que pagarías yendo directamente. La comisión no influye en si una herramienta se incluye, en qué lugar aparece en esta página ni en lo que dicen nuestras guías sobre ella. Si el producto de un socio empeora, la recomendación se retira.",
-      "independenceTitle": "Independencia editorial",
-      "independenceP1": "Las calculadoras y conversores del propio ToolNotch se ejecutan por completo en tu navegador con fórmulas publicadas, así que una relación comercial no puede cambiar un resultado. Nuestras comparativas y recomendaciones reflejan pruebas honestas. Preferimos no incluir nada en una categoría antes que incluir un producto en el que no creemos; por eso esta página es corta y crece despacio.",
-      "backHome": "Volver a todas las herramientas",
+      "subtitle": "Servicios y herramientas complementarias que probamos, confiamos y recomendamos.",
+      "lastUpdated": "Última actualización: septiembre de 2026",
+      "badge": "TRANSPARENCIA Y SOCIOS",
+      "highlightTitle": "Criterio Riguroso de Selección",
+      "highlightP1": "Recomendamos exclusivamente soluciones y servicios que probamos y respaldamos en la práctica. Ninguna comisión altera las fórmulas, la precisión ni el funcionamiento gratuito de las utilidades de ToolNotch.",
+      "intro": "ToolNotch ofrece herramientas 100% gratuitas sin muros de pago. Para sugerir soluciones avanzadas que complementan nuestro catálogo, mantenemos acuerdos transparentes con socios seleccionados. Si decides contratar un servicio a través de nuestros enlaces, el proveedor nos paga una comisión sin costo adicional para ti.",
+      "howTitle": "1. Cómo Evaluamos a Nuestros Socios",
+      "howP1": "Cada producto pasa por pruebas prácticas continuas y un análisis técnico riguroso. Priorizamos herramientas con planes gratuitos viables, precios claros y procesos sencillos de cancelación. Se descartan de inmediato los servicios con cobros ocultos o políticas confusas.",
+      "howP2": "Todos los enlaces salientes llevan el atributo rel=\"sponsored\" y nos generan una comisión si te suscribes, exactamente al mismo precio que al visitar la web oficial directamente. Las comisiones nunca condicionan qué utilidades recomendamos ni modifican nuestras valoraciones técnicas.",
+      "independenceTitle": "2. Independencia Editorial y Ética",
+      "independenceP1": "Las calculadoras, conversores y utilidades de ToolNotch operan localmente en tu navegador y no tienen dependencia comercial alguna con terceros. Mantenemos total libertad para revisar, suspender o retirar cualquier recomendación si deja de cumplir nuestros estándares de calidad.",
+      "catalogTitle": "3. Directorio de Herramientas Recomendadas",
+      "backHome": "Volver al Inicio",
+      "disclosure": "Algunos enlaces en esta página son enlaces de afiliado. Si te registras a través de ellos, podemos recibir una comisión sin costo adicional para ti.",
+      "exploreTools": "Explorar Herramientas",
+      "disclosureButton": "Divulgación y Afiliados",
+      "privacyButton": "Política de Privacidad",
+      "termsButton": "Términos de Servicio",
       "categories": {
-        "writing": "Escritura y edición",
-        "study": "Estudios e investigación",
-        "finance": "Dinero y finanzas",
+        "writing": "Escritura y Edición",
+        "study": "Estudios e Investigación",
+        "finance": "Dinero y Finanzas",
         "productivity": "Productividad"
       }
     }
   },
   "disclosure": {
-    "metaTitle": "Divulgación — Enlaces de Afiliado y Publicidad",
-    "metaDescription": "Cómo se financia ToolNotch: enlaces de afiliado, publicidad y nuestro compromiso con resultados imparciales.",
-    "title": "Divulgación",
-    "subtitle": "Cómo gana dinero ToolNotch, y qué afecta eso — y qué no.",
-    "backHome": "Volver a todas las herramientas",
-    "intro": "ToolNotch es gratis, no tiene muro de pago y no almacena tus datos. Mantenerlo cuesta dinero, así que se financia de dos maneras: publicidad y comisiones de afiliado. Esta página explica ambas.",
-    "affiliateTitle": "Enlaces de afiliado",
-    "affiliateP1": "Algunos enlaces salientes a herramientas de pago de terceros son enlaces de afiliado. Si visitas uno y te registras en un plan de pago, la empresa nos paga una comisión, siempre sin costo adicional para ti, y el precio que pagas es el mismo que si fueras directamente. Los enlaces de afiliado llevan rel=\"sponsored\" y, cuando aparecen en la página de una herramienta, se identifican como recomendación.",
-    "affiliateP2": "Solo añadimos un socio cuyo producto recomendaríamos al margen de cualquier comisión, y una comisión nunca cambia qué herramienta sugerimos ni lo que devuelve una calculadora. La lista completa de socios actuales está aquí:",
-    "affiliatePartnersLink": "nuestros socios",
-    "adsTitle": "Publicidad",
-    "adsP1": "Podemos mostrar anuncios de redes publicitarias de terceros como Google AdSense. Los anuncios están claramente separados del contenido de la herramienta, nunca interrumpen su uso, y no controlamos qué anunciantes concretos aparecen. Las redes publicitarias pueden usar cookies según se describe en nuestra Política de Privacidad.",
-    "editorialTitle": "Independencia editorial",
-    "editorialP1": "Cada calculadora y conversor de ToolNotch se ejecuta por completo en tu navegador con fórmulas publicadas: los resultados no están influidos por ninguna relación comercial. Las recomendaciones y clasificaciones reflejan nuestra evaluación honesta. Si eso deja de ser cierto, esta página lo dirá.",
-    "cookiesTitle": "Cookies y analítica",
-    "cookiesP1": "ToolNotch usa Google Analytics 4 para entender qué herramientas usa la gente y cómo llega al sitio, y Google AdSense para mostrar publicidad. Ambos guardan cookies en tu navegador: cookies de analítica para contar visitas y medir de dónde viene el tráfico, y cookies de publicidad para limitar cuántas veces ves el mismo anuncio y medir si un anuncio llevó a una visita. No guardamos cookies de rastreo propias, no creamos perfiles publicitarios por nuestra cuenta y no vendemos ningún dato. Las herramientas en sí —cada calculadora, conversor y utilidad de archivos— funcionan sin guardar una sola cookie.",
-    "optOutTitle": "Cómo darte de baja",
-    "optOutP1": "Puedes desactivar la publicidad personalizada de tu Cuenta de Google en la página de Configuración de anuncios de Google, y rechazar las cookies de redes publicitarias de terceros en las páginas del sector en aboutads.info y youronlinechoices.eu. Todos los navegadores permiten además bloquear o borrar las cookies de un sitio concreto en sus ajustes de privacidad, y las extensiones que bloquean rastreadores funcionan aquí con normalidad. Bloquear las cookies de publicidad o de analítica no rompe ninguna herramienta del sitio.",
-    "changesTitle": "Cambios en esta página",
-    "changesP1": "Si añadimos una red publicitaria, nos unimos a un programa de afiliados en una categoría nueva o cambiamos cómo funciona algo de esto, esta página se actualiza primero y el cambio se refleja en el pie de cada página. Esta divulgación se revisó por última vez en septiembre de 2026. Cualquier duda sobre lo aquí descrito puede enviarse a la dirección de nuestra página de contacto.",
-    "rightsTitle": "Tus opciones, en resumen",
-    "rightsP1": "Nunca tienes que aceptar un enlace de afiliado ni un anuncio para usar una herramienta: cada calculadora, conversor y utilidad de archivos funciona igual, hagas clic o no en algo patrocinado, bloquees o no las cookies de publicidad. Puedes llegar a todas las páginas del sitio desde el pie, sin JavaScript. Nada en ToolNotch requiere una cuenta, y no hay ninguna cuenta que eliminar."
+    "metaTitle": "Divulgación: Transparencia y Afiliados",
+    "metaDescription": "Descubre cómo ToolNotch se mantiene sostenible: colaboraciones transparentes, enlaces de afiliado y compromiso absoluto con resultados imparciales.",
+    "title": "Divulgación y Transparencia",
+    "subtitle": "Cómo ToolNotch se mantiene sostenible y nuestro compromiso inquebrantable con herramientas gratuitas e imparciales.",
+    "lastUpdated": "Última actualización: septiembre de 2026",
+    "badge": "TRANSPARENCIA E INDEPENDENCIA",
+    "highlightTitle": "Compromiso con Resultados Imparciales",
+    "highlightP1": "ToolNotch no requiere registro, no almacena archivos y ofrece todas las herramientas de forma gratuita. Ninguna relación comercial altera los resultados de las calculadoras ni la precisión de las utilidades.",
+    "s1Title": "1. Enlaces de Afiliado",
+    "s1P1": "Algunos enlaces a herramientas de pago de terceros son enlaces de afiliado. Si haces clic en uno de ellos y contratas un servicio o plan de pago, el proveedor nos remunera con una comisión sin costo adicional para ti, manteniendo exactamente el mismo precio que en su web oficial. Los enlaces de afiliado utilizan el atributo rel=\"sponsored\" y están debidamente señalizados donde aparecen.",
+    "s1P2": "Recomendamos únicamente servicios y herramientas que utilizaríamos e indicaríamos con total independencia de cualquier comisión. Ningún acuerdo comercial altera la selección de utilidades recomendadas ni las fórmulas de cálculo. Puedes consultar el listado completo en la",
+    "s1PartnersLink": "página de socios",
+    "s2Title": "2. Publicidad y Patrocinios",
+    "s2P1": "Podemos mostrar anuncios o patrocinios debidamente identificados procedentes de redes colaboradoras. Los espacios publicitarios están claramente delimitados y separados de las herramientas interactivas, nunca interrumpen tu productividad y operan estrictamente bajo nuestra Política de Privacidad.",
+    "s3Title": "3. Independencia Editorial",
+    "s3P1": "Cada calculadora, conversor y utilidad de ToolNotch opera directamente en tu navegador con fórmulas transparentes. Ningún resultado o recomendación se ve alterado por intereses comerciales. Nuestras valoraciones reflejan análisis técnicos objetivos e imparciales.",
+    "s4Title": "4. Cookies y Analítica de Uso",
+    "s4P1": "Empleamos herramientas de analítica anónima (como Google Analytics) para comprender los patrones de tráfico y optimizar el rendimiento de la plataforma. No elaboramos perfiles individuales de comportamiento y nunca comercializamos información de usuarios. Las utilidades funcionan sin requerir cookies propias.",
+    "s5Title": "5. Cómo Darse de Baja",
+    "s5P1": "Puedes gestionar tus preferencias de privacidad en la configuración de tu navegador, bloquear rastreadores de terceros o emplear extensiones de protección. La desactivación de cookies analíticas o publicitarias no afecta al funcionamiento de ninguna herramienta de ToolNotch.",
+    "s6Title": "6. Actualizaciones y Contacto",
+    "s6P1": "Si incorporamos nuevos colaboradores o actualizamos nuestros modelos de sostenibilidad, esta página reflejará las novedades inmediatamente. Cualquier consulta, duda o sugerencia puede enviarse a través de nuestra",
+    "s6ContactLink": "página de contacto",
+    "s7Title": "7. Resumen de tus Garantías",
+    "s7P1": "El uso de cualquier herramienta de ToolNotch es 100% gratuito y no depende de hacer clic en enlaces patrocinados ni de aceptar anuncios. Nuestro compromiso es ofrecer un catálogo abierto, directo y accesible a cualquier persona, sin registro obligatorio, sin muros de pago y con tu privacidad protegida.",
+    "exploreTools": "Explorar Herramientas",
+    "partnersButton": "Nuestros Socios",
+    "privacyButton": "Política de Privacidad",
+    "termsButton": "Términos de Servicio"
   }
 }
