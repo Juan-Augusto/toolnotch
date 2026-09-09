@@ -357,28 +357,28 @@
       "id": "legend",
       "minPercent": 80,
       "label": "Legend",
-      "description": "You're a true Formula 1 legend! Your encyclopedic knowledge of the sport spans decades of racing history — from Senna's brilliance to Schumacher's dominance and Verstappen's modern mastery. You know the circuits, the champions, the rule changes, and the legendary moments that define the sport. Whether you follow every race live or study the history books, you've earned the respect of every F1 fan. You can name the winner of each constructors' title, identify a circuit by its corner names alone, and recall statistics that most fans have long forgotten. The paddock would be lucky to have you in the garage. Lights out, and away you go — at the very front of the grid.",
+      "description": "You're a true Formula 1 legend! Your encyclopedic knowledge of the sport spans decades of racing history, from Senna's brilliance to Schumacher's dominance and Verstappen's modern mastery. You know the circuits, the champions, the rule changes, and the legendary moments that define the sport. Whether you follow every race live or study the history books, you've earned the respect of every F1 fan. You can name the winner of each constructors' title, identify a circuit by its corner names alone, and recall statistics that most fans have long forgotten. The paddock would be lucky to have you in the garage. Lights out, and away you go, at the very front of the grid.",
       "shareText": "I scored {percent}% on the Formula 1 Trivia Quiz on ToolNotch! Can you beat me? 🏎️"
     },
     {
       "id": "expert",
       "minPercent": 60,
       "label": "Expert",
-      "description": "Impressive! You have an expert's command of Formula 1 — you know the big championships, the iconic drivers, and the key technical regulations that shape the sport. A few obscure facts or historical details slipped by, but your overall knowledge is well above average. You're the person your friends turn to when they want to understand what's happening on the grid, explain a penalty decision, or settle an argument about who's the greatest of all time. You follow the championship closely and appreciate the nuance behind the headlines. With a little more study of the sport's deeper history, you'll be chasing that Legend title in no time.",
+      "description": "Impressive! You have an expert's command of Formula 1, you know the big championships, the iconic drivers, and the key technical regulations that shape the sport. A few obscure facts or historical details slipped by, but your overall knowledge is well above average. You're the person your friends turn to when they want to understand what's happening on the grid, explain a penalty decision, or settle an argument about who's the greatest of all time. You follow the championship closely and appreciate the nuance behind the headlines. With a little more study of the sport's deeper history, you'll be chasing that Legend title in no time.",
       "shareText": "I scored {percent}% on the Formula 1 Trivia Quiz on ToolNotch! Can you beat me? 🏎️"
     },
     {
       "id": "fan",
       "minPercent": 40,
       "label": "Fan",
-      "description": "You clearly love Formula 1 and know the big names and moments that define the sport. A few technical or historical details tripped you up, but your passion for racing is undeniable. You know the superstar drivers, the legendary circuits, and the broad shape of the championship — and that's already more than most. Keep watching those races, explore the sport's rich history through documentaries and classic onboards, and you'll be climbing the ranks fast. Every F1 expert was a fan first. The garage door is open and the team is ready — your Expert status is just a few more races away.",
+      "description": "You clearly love Formula 1 and know the big names and moments that define the sport. A few technical or historical details tripped you up, but your passion for racing is undeniable. You know the superstar drivers, the legendary circuits, and the broad shape of the championship, and that's already more than most. Keep watching those races, explore the sport's rich history through documentaries and classic onboards, and you'll be climbing the ranks fast. Every F1 expert was a fan first. The garage door is open and the team is ready, your Expert status is just a few more races away.",
       "shareText": "I scored {percent}% on the Formula 1 Trivia Quiz on ToolNotch! Can you beat me? 🏎️"
     },
     {
       "id": "rookie",
       "minPercent": 0,
       "label": "Rookie",
-      "description": "Every champion starts somewhere! You might be new to Formula 1 or just getting into the sport, but the passion is clearly there. The world of F1 is full of incredible stories: legendary rivalries between Senna and Prost, Schumacher's seven-title dynasty, Hamilton's record-breaking reign, and Verstappen's breathtaking dominance. Watch a few classic races, explore the histories of the great teams, and learn the tracks that have shaped the sport for over 70 years. Come back and take the quiz again — with a bit more knowledge in your visor, you'll be clearing the rookie class and setting your sights on Expert before long.",
+      "description": "Every champion starts somewhere! You might be new to Formula 1 or just getting into the sport, but the passion is clearly there. The world of F1 is full of incredible stories: legendary rivalries between Senna and Prost, Schumacher's seven-title dynasty, Hamilton's record-breaking reign, and Verstappen's breathtaking dominance. Watch a few classic races, explore the histories of the great teams, and learn the tracks that have shaped the sport for over 70 years. Come back and take the quiz again, with a bit more knowledge in your visor, you'll be clearing the rookie class and setting your sights on Expert before long.",
       "shareText": "I scored {percent}% on the Formula 1 Trivia Quiz on ToolNotch! Can you beat me? 🏎️"
     }
   ]

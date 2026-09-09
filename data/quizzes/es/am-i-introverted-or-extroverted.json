@@ -45,7 +45,7 @@
       "options": [
         {
           "id": "q2a",
-          "text": "Te encanta — ¡un lugar lleno de posibles nuevos amigos!",
+          "text": "Te encanta: ¡un lugar lleno de posibles nuevos amigos!",
           "scores": {
             "extrovert": 3
           }
@@ -101,7 +101,7 @@
         },
         {
           "id": "q3d",
-          "text": "Espontáneo — decido según cómo me sienta al despertar",
+          "text": "Espontáneo: decido según cómo me sienta al despertar",
           "scores": {
             "ambivert": 2,
             "extrovert": 1
@@ -137,7 +137,7 @@
         },
         {
           "id": "q4d",
-          "text": "Ambas — según la naturaleza de la decisión",
+          "text": "Ambas: según la naturaleza de la decisión",
           "scores": {
             "ambivert": 3
           }
@@ -185,21 +185,21 @@
       "options": [
         {
           "id": "q6a",
-          "text": "Amplio — tengo muchos amigos cercanos",
+          "text": "Amplio: tengo muchos amigos cercanos",
           "scores": {
             "extrovert": 3
           }
         },
         {
           "id": "q6b",
-          "text": "Reducido y cercano — pocas amistades muy profundas",
+          "text": "Reducido y cercano: pocas amistades muy profundas",
           "scores": {
             "introvert": 3
           }
         },
         {
           "id": "q6c",
-          "text": "Medio — un grupo cómodo con el que disfruto",
+          "text": "Medio: un grupo cómodo con el que disfruto",
           "scores": {
             "ambivert": 3
           }
@@ -242,7 +242,7 @@
         },
         {
           "id": "q7d",
-          "text": "Lo publicas en redes — compartir me ayuda a procesar",
+          "text": "Lo publicas en redes: compartir me ayuda a procesar",
           "scores": {
             "extrovert": 2,
             "ambivert": 1
@@ -256,21 +256,21 @@
       "options": [
         {
           "id": "q8a",
-          "text": "Oficina siempre — me encanta estar rodeado de gente",
+          "text": "Oficina siempre: me encanta estar rodeado de gente",
           "scores": {
             "extrovert": 3
           }
         },
         {
           "id": "q8b",
-          "text": "En casa — soy mucho más productivo sin distracciones",
+          "text": "En casa: soy mucho más productivo sin distracciones",
           "scores": {
             "introvert": 3
           }
         },
         {
           "id": "q8c",
-          "text": "Híbrido — lo mejor de ambos mundos",
+          "text": "Híbrido: lo mejor de ambos mundos",
           "scores": {
             "ambivert": 3
           }
@@ -305,7 +305,7 @@
         },
         {
           "id": "q9c",
-          "text": "Bien en pequeñas dosis — no tengo problema",
+          "text": "Bien en pequeñas dosis: no tengo problema",
           "scores": {
             "ambivert": 3
           }
@@ -386,7 +386,7 @@
     {
       "id": "ambivert",
       "title": "Ambivertido",
-      "description": "Eres ambivertido — el perfil más adaptable y equilibrado. Disfrutas tanto de la compañía como de los momentos de soledad según el momento.",
+      "description": "Eres ambivertido, el perfil más adaptable y equilibrado. Disfrutas tanto de la compañía como de los momentos de soledad según el momento.",
       "image": "/images/results/ambivert.jpg",
       "traits": [
         "Flexible",

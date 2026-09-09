@@ -82,7 +82,7 @@ export default function AppHeader({ navItems }: { navItems: NavItem[] }) {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b-dashed-5 transition-all duration-300 ${isScrolled ? " bg-background/80 backdrop-blur-md" : ""}`}
+      className={`sticky top-0 z-50 bg-tertiary dark:bg-background border-b border-b-border transition-all duration-300 ${isScrolled ? " bg-background/80 backdrop-blur-md" : ""}`}
     >
       <nav
         className={`flex justify-between items-center gap-4 px-6 md:px-10 transition-all duration-300 py-4 ${!isScrolled ? "min-[1100px]:py-6" : "min-[1100px]:py-4"} flex-row`}

@@ -75,7 +75,7 @@
         },
         {
           "id": "d",
-          "text": "There is no practical difference — the terms are interchangeable"
+          "text": "There is no practical difference: the terms are interchangeable"
         }
       ],
       "correctAnswerId": "b",
@@ -154,7 +154,7 @@
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "A UNIQUE index enforces a uniqueness constraint — the database rejects any INSERT or UPDATE that would produce a duplicate value in the indexed column(s).",
+      "explanation": "A UNIQUE index enforces a uniqueness constraint, the database rejects any INSERT or UPDATE that would produce a duplicate value in the indexed column(s).",
       "level": "beginner"
     },
     {
@@ -238,7 +238,7 @@
       "options": [
         {
           "id": "a",
-          "text": "Nothing — indexes are refreshed only during the next VACUUM"
+          "text": "Nothing: indexes are refreshed only during the next VACUUM"
         },
         {
           "id": "b",
@@ -263,19 +263,19 @@
       "options": [
         {
           "id": "a",
-          "text": "O(n) — linear in the number of rows"
+          "text": "O(n): linear in the number of rows"
         },
         {
           "id": "b",
-          "text": "O(log n) — logarithmic in the number of rows"
+          "text": "O(log n): logarithmic in the number of rows"
         },
         {
           "id": "c",
-          "text": "O(1) — constant time regardless of table size"
+          "text": "O(1): constant time regardless of table size"
         },
         {
           "id": "d",
-          "text": "O(n²) — quadratic in the number of rows"
+          "text": "O(n²): quadratic in the number of rows"
         }
       ],
       "correctAnswerId": "b",
@@ -321,7 +321,7 @@
         },
         {
           "id": "c",
-          "text": "`WHERE first_name = 'Alice' AND last_name = 'Smith'` — only when both columns appear"
+          "text": "`WHERE first_name = 'Alice' AND last_name = 'Smith'`: only when both columns appear"
         },
         {
           "id": "d",
@@ -463,7 +463,7 @@
       "options": [
         {
           "id": "a",
-          "text": "PostgreSQL never ignores an index once it is created — it is always used"
+          "text": "PostgreSQL never ignores an index once it is created: it is always used"
         },
         {
           "id": "b",
@@ -500,7 +500,7 @@
         },
         {
           "id": "d",
-          "text": "None — LIKE never uses a B-Tree index"
+          "text": "None: LIKE never uses a B-Tree index"
         }
       ],
       "correctAnswerId": "c",
@@ -629,7 +629,7 @@
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "`CREATE INDEX CONCURRENTLY` performs multiple passes over the table data and only holds brief locks, so the table remains fully accessible during the build — essential for production tables that cannot tolerate downtime.",
+      "explanation": "`CREATE INDEX CONCURRENTLY` performs multiple passes over the table data and only holds brief locks, so the table remains fully accessible during the build, essential for production tables that cannot tolerate downtime.",
       "level": "advanced"
     },
     {
@@ -675,7 +675,7 @@
         },
         {
           "id": "d",
-          "text": "MVCC has no effect on indexes — only heap pages accumulate dead tuples"
+          "text": "MVCC has no effect on indexes: only heap pages accumulate dead tuples"
         }
       ],
       "correctAnswerId": "b",
@@ -696,7 +696,7 @@
         },
         {
           "id": "c",
-          "text": "When the table has no heap pages — data is stored in the index itself"
+          "text": "When the table has no heap pages: data is stored in the index itself"
         },
         {
           "id": "d",
@@ -704,7 +704,7 @@
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "A Bitmap Index Scan collects all matching TIDs into a bitmap in memory, sorts them by physical location, then reads the heap pages once in order — efficient for moderate result sets and multi-index queries that plain index scans cannot combine.",
+      "explanation": "A Bitmap Index Scan collects all matching TIDs into a bitmap in memory, sorts them by physical location, then reads the heap pages once in order, efficient for moderate result sets and multi-index queries that plain index scans cannot combine.",
       "level": "advanced"
     },
     {
@@ -763,21 +763,21 @@
       "id": "legend",
       "minPercent": 80,
       "label": "Legend",
-      "description": "Outstanding result — you have a deep, expert-level understanding of database indexing. You can navigate B-Tree internals, design covering and partial indexes, interpret query plans, and work confidently with PostgreSQL-specific index types like GiST, GIN, and BRIN. You understand the subtle interplay between MVCC, VACUUM, and index bloat, and you know when to reach for advanced tools such as CREATE INDEX CONCURRENTLY or pg_stat_user_indexes to monitor production systems. Your indexing skills would translate directly into measurable query performance improvements in large-scale production databases.",
+      "description": "Outstanding result, you have a deep, expert-level understanding of database indexing. You can navigate B-Tree internals, design covering and partial indexes, interpret query plans, and work confidently with PostgreSQL-specific index types like GiST, GIN, and BRIN. You understand the subtle interplay between MVCC, VACUUM, and index bloat, and you know when to reach for advanced tools such as CREATE INDEX CONCURRENTLY or pg_stat_user_indexes to monitor production systems. Your indexing skills would translate directly into measurable query performance improvements in large-scale production databases.",
       "shareText": "I scored Legend on the Database Indexing Quiz at ToolNotch! 🗂️"
     },
     {
       "id": "expert",
       "minPercent": 60,
       "label": "Expert",
-      "description": "Great performance — you have a solid, working knowledge of database indexing that goes well beyond the basics. You understand composite index column order, covering indexes, selectivity, partial indexes, and the difference between hash and B-Tree indexes. You may want to deepen your knowledge of advanced PostgreSQL index types (GiST, GIN, BRIN), LSM-tree internals, and operational concerns like MVCC-related bloat and pg_stat_user_indexes monitoring to reach the Legend tier.",
+      "description": "Great performance, you have a solid, working knowledge of database indexing that goes well beyond the basics. You understand composite index column order, covering indexes, selectivity, partial indexes, and the difference between hash and B-Tree indexes. You may want to deepen your knowledge of advanced PostgreSQL index types (GiST, GIN, BRIN), LSM-tree internals, and operational concerns like MVCC-related bloat and pg_stat_user_indexes monitoring to reach the Legend tier.",
       "shareText": "I scored Expert on the Database Indexing Quiz at ToolNotch! 🗂️"
     },
     {
       "id": "fan",
       "minPercent": 40,
       "label": "Fan",
-      "description": "Decent effort — you grasp the fundamentals of database indexing, including what an index is, the read/write trade-off, and how WHERE clauses interact with indexes. To level up, focus on composite index leading-column rules, covering indexes, selectivity, and why the planner sometimes ignores available indexes. Studying PostgreSQL's EXPLAIN output and experimenting with partial and function-based indexes will quickly strengthen your practical indexing skills.",
+      "description": "Decent effort, you grasp the fundamentals of database indexing, including what an index is, the read/write trade-off, and how WHERE clauses interact with indexes. To level up, focus on composite index leading-column rules, covering indexes, selectivity, and why the planner sometimes ignores available indexes. Studying PostgreSQL's EXPLAIN output and experimenting with partial and function-based indexes will quickly strengthen your practical indexing skills.",
       "shareText": "I scored Fan on the Database Indexing Quiz at ToolNotch! 🗂️"
     },
     {
@@ -785,7 +785,7 @@
       "minPercent": 0,
       "label": "Rookie",
       "description": "Everyone starts somewhere! Database indexing is a rich topic that rewards hands-on practice. Begin with the basics: what an index is, how B-Trees store sorted data, and the trade-off between read speed and write overhead. Then explore how to read EXPLAIN output in PostgreSQL, when to use composite indexes, and how selectivity affects whether the planner uses your index. Revisit this quiz after some practice and you will be surprised how quickly you improve.",
-      "shareText": "I just took the Database Indexing Quiz at ToolNotch — time to study up! 🗂️"
+      "shareText": "I just took the Database Indexing Quiz at ToolNotch: time to study up! 🗂️"
     }
   ]
 }

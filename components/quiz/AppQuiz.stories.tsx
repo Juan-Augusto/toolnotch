@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import AppQuiz from "./AppQuiz";
 import { Quiz, TriviaQuiz } from "@/lib/quizTypes";
 
@@ -240,7 +240,7 @@ export const PersonalityStartScreen: Story = {
     autoStart: false,
   },
   render: (args) => (
-    <div className="max-w-3xl mx-auto py-8">
+    <div className="container py-8">
       <AppQuiz {...args} />
     </div>
   ),
@@ -253,7 +253,7 @@ export const PersonalityActiveQuestions: Story = {
     autoStart: true,
   },
   render: (args) => (
-    <div className="max-w-3xl mx-auto py-8">
+    <div className="container py-8">
       <AppQuiz {...args} />
     </div>
   ),
@@ -266,7 +266,7 @@ export const TriviaWithTimer: Story = {
     autoStart: true,
   },
   render: (args) => (
-    <div className="max-w-3xl mx-auto py-8">
+    <div className="container py-8">
       <AppQuiz {...args} />
     </div>
   ),
@@ -279,7 +279,7 @@ export const EnglishLocale: Story = {
     autoStart: false,
   },
   render: (args) => (
-    <div className="max-w-3xl mx-auto py-8">
+    <div className="container py-8">
       <AppQuiz {...args} />
     </div>
   ),

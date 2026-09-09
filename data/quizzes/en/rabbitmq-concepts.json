@@ -254,7 +254,7 @@
         }
       ],
       "correctAnswerId": "q10b",
-      "explanation": "A message broker like RabbitMQ delivers messages via push, manages acknowledgements and retries natively, and supports back-pressure — eliminating the need for costly database polling loops."
+      "explanation": "A message broker like RabbitMQ delivers messages via push, manages acknowledgements and retries natively, and supports back-pressure, eliminating the need for costly database polling loops."
     },
     {
       "id": "q11",
@@ -329,7 +329,7 @@
         }
       ],
       "correctAnswerId": "q13c",
-      "explanation": "In a topic exchange, '#' matches zero or more dot-delimited words, while '*' matches exactly one word — enabling flexible routing hierarchies."
+      "explanation": "In a topic exchange, '#' matches zero or more dot-delimited words, while '*' matches exactly one word, enabling flexible routing hierarchies."
     },
     {
       "id": "q14",
@@ -363,7 +363,7 @@
       "options": [
         {
           "id": "q15a",
-          "text": "They are identical — both terms refer to the same string set by the producer"
+          "text": "They are identical: both terms refer to the same string set by the producer"
         },
         {
           "id": "q15b",
@@ -379,7 +379,7 @@
         }
       ],
       "correctAnswerId": "q15b",
-      "explanation": "Producers stamp each published message with a routing key; separately, an administrator (or code) sets a binding key when connecting a queue to an exchange — the exchange compares them to decide delivery."
+      "explanation": "Producers stamp each published message with a routing key; separately, an administrator (or code) sets a binding key when connecting a queue to an exchange, the exchange compares them to decide delivery."
     },
     {
       "id": "q16",
@@ -425,7 +425,7 @@
         },
         {
           "id": "q17d",
-          "text": "There is no difference — both cause identical broker behaviour"
+          "text": "There is no difference: both cause identical broker behaviour"
         }
       ],
       "correctAnswerId": "q17a",
@@ -500,7 +500,7 @@
         },
         {
           "id": "q20d",
-          "text": "There is no difference — quorum queues are simply renamed mirrored queues"
+          "text": "There is no difference: quorum queues are simply renamed mirrored queues"
         }
       ],
       "correctAnswerId": "q20a",
@@ -517,7 +517,7 @@
         },
         {
           "id": "q21b",
-          "text": "Through channels — lightweight virtual connections multiplexed over a single TCP connection"
+          "text": "Through channels: lightweight virtual connections multiplexed over a single TCP connection"
         },
         {
           "id": "q21c",
@@ -600,7 +600,7 @@
         },
         {
           "id": "q24d",
-          "text": "They are functionally identical — Federation is just the newer name for Shovel"
+          "text": "They are functionally identical: Federation is just the newer name for Shovel"
         }
       ],
       "correctAnswerId": "q24b",
@@ -650,7 +650,7 @@
         },
         {
           "id": "q26d",
-          "text": "The terms are deprecated — all modern RabbitMQ nodes are identical"
+          "text": "The terms are deprecated: all modern RabbitMQ nodes are identical"
         }
       ],
       "correctAnswerId": "q26a",
@@ -700,7 +700,7 @@
         },
         {
           "id": "q28d",
-          "text": "Both are merged additively — neither overrides the other"
+          "text": "Both are merged additively: neither overrides the other"
         }
       ],
       "correctAnswerId": "q28c",
@@ -713,19 +713,19 @@
       "options": [
         {
           "id": "q29a",
-          "text": "publish_rate and deliver_rate — when publish_rate consistently exceeds deliver_rate, messages_ready will grow"
+          "text": "publish_rate and deliver_rate: when publish_rate consistently exceeds deliver_rate, messages_ready will grow"
         },
         {
           "id": "q29b",
-          "text": "memory_used and disk_free — a rising memory_used with falling disk_free shows consumer lag"
+          "text": "memory_used and disk_free: a rising memory_used with falling disk_free shows consumer lag"
         },
         {
           "id": "q29c",
-          "text": "connection_count and channel_count — too many channels indicates consumer backlog"
+          "text": "connection_count and channel_count: too many channels indicates consumer backlog"
         },
         {
           "id": "q29d",
-          "text": "node_uptime and gc_reclaim_rate — high GC activity confirms consumer lag"
+          "text": "node_uptime and gc_reclaim_rate: high GC activity confirms consumer lag"
         }
       ],
       "correctAnswerId": "q29a",
@@ -738,7 +738,7 @@
       "options": [
         {
           "id": "q30a",
-          "text": "Kill the process immediately — RabbitMQ will automatically requeue any unacknowledged messages"
+          "text": "Kill the process immediately: RabbitMQ will automatically requeue any unacknowledged messages"
         },
         {
           "id": "q30b",
@@ -762,28 +762,28 @@
       "id": "legend",
       "minPercent": 80,
       "label": "Legend",
-      "description": "Outstanding — you have a deep, professional mastery of RabbitMQ. You understand the full AMQP 0-9-1 protocol stack from TCP channel multiplexing and flow control all the way up to advanced exchange types, Raft-based quorum queues, and cluster topology decisions. You can design resilient messaging architectures that handle back-pressure, dead-lettering, TTL policies, and graceful consumer shutdown without hesitation. You know when to reach for Shovel versus Federation, how consistent hash exchanges enable ordered partitioning, and exactly which metrics to watch when a queue depth starts climbing. Whether you're debugging a split-brain scenario or fine-tuning prefetch for maximum throughput, you operate with the confidence of someone who has run RabbitMQ in production under real load.",
+      "description": "Outstanding: you have a deep, professional mastery of RabbitMQ. You understand the full AMQP 0-9-1 protocol stack from TCP channel multiplexing and flow control all the way up to advanced exchange types, Raft-based quorum queues, and cluster topology decisions. You can design resilient messaging architectures that handle back-pressure, dead-lettering, TTL policies, and graceful consumer shutdown without hesitation. You know when to reach for Shovel versus Federation, how consistent hash exchanges enable ordered partitioning, and exactly which metrics to watch when a queue depth starts climbing. Whether you're debugging a split-brain scenario or fine-tuning prefetch for maximum throughput, you operate with the confidence of someone who has run RabbitMQ in production under real load.",
       "shareText": "I scored {percent}% on the RabbitMQ Concepts Quiz on ToolNotch! Can you beat me?"
     },
     {
       "id": "expert",
       "minPercent": 60,
       "label": "Expert",
-      "description": "Impressive work — you have a strong command of RabbitMQ concepts and can confidently design and operate messaging systems in production. You understand the core exchange types and their routing semantics, know how to configure dead-letter exchanges and message TTLs, and grasp the reliability guarantees that publisher confirms and quorum queues provide. A few advanced internals — such as Raft consensus details, consistent hash exchanges, or the precise precedence rules for policy versus argument — may still catch you off guard, but you have the solid foundation needed to look them up quickly. Keep experimenting with clustering and advanced plugins and the Legend tier is well within reach.",
+      "description": "Impressive work, you have a strong command of RabbitMQ concepts and can confidently design and operate messaging systems in production. You understand the core exchange types and their routing semantics, know how to configure dead-letter exchanges and message TTLs, and grasp the reliability guarantees that publisher confirms and quorum queues provide. A few advanced internals, such as Raft consensus details, consistent hash exchanges, or the precise precedence rules for policy versus argument, may still catch you off guard, but you have the solid foundation needed to look them up quickly. Keep experimenting with clustering and advanced plugins and the Legend tier is well within reach.",
       "shareText": "I scored {percent}% on the RabbitMQ Concepts Quiz on ToolNotch! Can you beat me?"
     },
     {
       "id": "fan",
       "minPercent": 40,
       "label": "Fan",
-      "description": "Good effort — you understand the fundamentals of RabbitMQ and can work with it day-to-day on basic tasks. You know what a message broker is, how producers and consumers interact through exchanges and queues, and the importance of acknowledgements. Some of the intermediate and advanced topics — like topic exchange wildcards, DLX configuration, publisher confirms, quorum queue replication, or AMQP channel multiplexing — are still fuzzy, but that's completely normal at this stage. Spend some time with the official RabbitMQ documentation, set up a local cluster, and experiment with the management UI. Hands-on practice with exchange types and queue arguments will move you to Expert faster than you might expect.",
+      "description": "Good effort, you understand the fundamentals of RabbitMQ and can work with it day-to-day on basic tasks. You know what a message broker is, how producers and consumers interact through exchanges and queues, and the importance of acknowledgements. Some of the intermediate and advanced topics, like topic exchange wildcards, DLX configuration, publisher confirms, quorum queue replication, or AMQP channel multiplexing, are still fuzzy, but that's completely normal at this stage. Spend some time with the official RabbitMQ documentation, set up a local cluster, and experiment with the management UI. Hands-on practice with exchange types and queue arguments will move you to Expert faster than you might expect.",
       "shareText": "I scored {percent}% on the RabbitMQ Concepts Quiz on ToolNotch! Can you beat me?"
     },
     {
       "id": "rookie",
       "minPercent": 0,
       "label": "Rookie",
-      "description": "Everyone starts somewhere — and RabbitMQ has a steeper learning curve than it first appears. The good news is that the core concepts are logical once they click: a producer publishes to an exchange, the exchange routes to queues via bindings, and consumers pull from those queues. Start by reading the official RabbitMQ getting-started guide, install the management plugin locally, and publish your first few messages using the built-in UI. Once direct and fanout exchanges feel natural, move on to topic exchange wildcards and then DLX. Take your time with the AMQP fundamentals — channels, acknowledgements, and durability — and you will build a solid foundation that makes the advanced material much easier to absorb.",
+      "description": "Everyone starts somewhere, and RabbitMQ has a steeper learning curve than it first appears. The good news is that the core concepts are logical once they click: a producer publishes to an exchange, the exchange routes to queues via bindings, and consumers pull from those queues. Start by reading the official RabbitMQ getting-started guide, install the management plugin locally, and publish your first few messages using the built-in UI. Once direct and fanout exchanges feel natural, move on to topic exchange wildcards and then DLX. Take your time with the AMQP fundamentals, channels, acknowledgements, and durability, and you will build a solid foundation that makes the advanced material much easier to absorb.",
       "shareText": "I scored {percent}% on the RabbitMQ Concepts Quiz on ToolNotch! Can you beat me?"
     }
   ]

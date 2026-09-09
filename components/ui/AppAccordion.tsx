@@ -3,7 +3,6 @@
 import { useState, useMemo, type ReactNode } from "react";
 import { Plus, Minus } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import AppCornerAccents from "./AppCornerAccents";
 
 export interface AccordionGroup {
   name: string;
@@ -76,24 +75,27 @@ export function AppAccordion({
   };
 
   return (
-    <div className={`w-full flex flex-col gap-4 ${className}`}>
+    <div className={`w-full flex flex-col gap-3 ${className}`}>
       {normalizedGroups.map((grp, idx) => {
         const key = grp.id ?? `${grp.name}-${idx}`;
         const open = isItemOpen(key);
 
         return (
-          <div key={key} className={`relative ${itemClassName}`}>
-            <AppCornerAccents />
-
+          <div
+            key={key}
+            className={`border border-border/60 bg-card rounded-[2px] transition-colors ${
+              open ? " border-secondary" : "hover:border-border "
+            } ${itemClassName}`}
+          >
             <button
               type="button"
               onClick={() => toggleItem(key)}
               aria-expanded={open}
-              className={`relative w-full border-dashed-5 flex items-center justify-between px-6 py-4 text-left select-none cursor-pointer bg-panel hover:text-primary transition-colors ${headerClassName}`}
+              className={`w-full flex items-center justify-between px-6 py-4 text-left select-none cursor-pointer bg-tertiary hover:text-foreground transition-colors ${
+                open ? "text-secondary hover:text-secondary" : "text-label"
+              } ${headerClassName}`}
             >
-              <span className="font-mono text-xs md:text-sm font-bold uppercase tracking-wider text-foreground">
-                {grp.name}
-              </span>
+              <span className=" uppercase tracking-wider">{grp.name}</span>
 
               <motion.span
                 animate={{ rotate: open ? 180 : 0 }}
@@ -106,8 +108,6 @@ export function AppAccordion({
                   <Plus className="w-3.5 h-3.5 stroke-[3]" />
                 )}
               </motion.span>
-
-              {open && <AppCornerAccents position="bottom" />}
             </button>
 
             <AnimatePresence initial={false}>
@@ -140,7 +140,7 @@ export function AppAccordion({
                   className="overflow-hidden"
                 >
                   <div
-                    className={`p-6 border-dashed-5-no-t font-mono text-xs md:text-sm text-label/90 leading-relaxed ${contentClassName}`}
+                    className={`p-6 border-t border-border/60 font-mono text-xs md:text-sm text-label/90 leading-relaxed ${contentClassName}`}
                   >
                     {grp.content}
                   </div>

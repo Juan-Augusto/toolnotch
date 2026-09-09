@@ -57,10 +57,10 @@ export default function AppButton({
   return (
     <button
       disabled={disabled}
-      className={`inline-flex items-center justify-center gap-2.5 font-bold tracking-wider uppercase transition-all duration-200 cursor-pointer select-none active:not-disabled:scale-[0.98] disabled:cursor-not-allowed ${sizeClasses} ${radiusClasses} ${colorStyles[variant]} ${opacity ? "opacity-80" : ""} ${className}`}
+      className={`inline-flex items-center justify-center gap-2.5 font-bold tracking-wider uppercase whitespace-nowrap transition-all duration-200 cursor-pointer select-none active:not-disabled:scale-[0.98] disabled:cursor-not-allowed ${sizeClasses} ${radiusClasses} ${colorStyles[variant]} ${opacity ? "opacity-80" : ""} ${className}`}
       {...props}
     >
-      <span>{children}</span>
+      <span className="inline-flex items-center gap-2">{children}</span>
       {withArrow && (
         <ArrowRight className={small ? "w-3.5 h-3.5" : "w-4 h-4"} />
       )}

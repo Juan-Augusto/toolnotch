@@ -45,7 +45,7 @@
       "options": [
         {
           "id": "q2a",
-          "text": "Love it — a room full of potential new friends!",
+          "text": "Love it: a room full of potential new friends!",
           "scores": {
             "extrovert": 3
           }
@@ -101,7 +101,7 @@
         },
         {
           "id": "q3d",
-          "text": "Spontaneous — I see how I feel when I wake up",
+          "text": "Spontaneous: I see how I feel when I wake up",
           "scores": {
             "ambivert": 2,
             "extrovert": 1
@@ -137,7 +137,7 @@
         },
         {
           "id": "q4d",
-          "text": "Both — depending on the decision",
+          "text": "Both: depending on the decision",
           "scores": {
             "ambivert": 3
           }
@@ -185,21 +185,21 @@
       "options": [
         {
           "id": "q6a",
-          "text": "Large — I have many close friends",
+          "text": "Large: I have many close friends",
           "scores": {
             "extrovert": 3
           }
         },
         {
           "id": "q6b",
-          "text": "Small and tight-knit — a few deep friendships",
+          "text": "Small and tight-knit: a few deep friendships",
           "scores": {
             "introvert": 3
           }
         },
         {
           "id": "q6c",
-          "text": "Medium — a comfortable circle I genuinely enjoy",
+          "text": "Medium: a comfortable circle I genuinely enjoy",
           "scores": {
             "ambivert": 3
           }
@@ -242,7 +242,7 @@
         },
         {
           "id": "q7d",
-          "text": "Post it somewhere — sharing is how I process things",
+          "text": "Post it somewhere: sharing is how I process things",
           "scores": {
             "extrovert": 2,
             "ambivert": 1
@@ -256,21 +256,21 @@
       "options": [
         {
           "id": "q8a",
-          "text": "Office, always — I love being around people",
+          "text": "Office, always: I love being around people",
           "scores": {
             "extrovert": 3
           }
         },
         {
           "id": "q8b",
-          "text": "Home — I'm so much more productive without interruptions",
+          "text": "Home: I'm so much more productive without interruptions",
           "scores": {
             "introvert": 3
           }
         },
         {
           "id": "q8c",
-          "text": "Hybrid — the best of both worlds",
+          "text": "Hybrid: the best of both worlds",
           "scores": {
             "ambivert": 3
           }
@@ -305,7 +305,7 @@
         },
         {
           "id": "q9c",
-          "text": "Fine in small doses — I can do it without issue",
+          "text": "Fine in small doses: I can do it without issue",
           "scores": {
             "ambivert": 3
           }
@@ -360,7 +360,7 @@
     {
       "id": "introvert",
       "title": "Introvert",
-      "description": "You are a true introvert — and that's something to embrace, not apologize for. Introverts are some of the most thoughtful, creative, and perceptive people in the world. You draw your energy from within, not from the crowd around you. Solitude isn't loneliness for you — it's where you do your best thinking, create your best work, and recharge for the world ahead. You form deep, meaningful connections rather than broad, shallow ones. You listen more than you speak, which means when you do speak, people pay attention. Your inner world is rich and complex. You notice things others miss. You process ideas deeply before sharing them. Famous introverts include Einstein, J.K. Rowling, Warren Buffett, and Barack Obama — not because introversion made them great, but because they used their natural gifts. Your quiet confidence is a superpower. Own it.",
+      "description": "You are a true introvert, and that's something to embrace, not apologize for. Introverts are some of the most thoughtful, creative, and perceptive people in the world. You draw your energy from within, not from the crowd around you. Solitude isn't loneliness for you, it's where you do your best thinking, create your best work, and recharge for the world ahead. You form deep, meaningful connections rather than broad, shallow ones. You listen more than you speak, which means when you do speak, people pay attention. Your inner world is rich and complex. You notice things others miss. You process ideas deeply before sharing them. Famous introverts include Einstein, J.K. Rowling, Warren Buffett, and Barack Obama, not because introversion made them great, but because they used their natural gifts. Your quiet confidence is a superpower. Own it.",
       "image": "/images/results/introvert.jpg",
       "traits": [
         "Thoughtful",
@@ -373,7 +373,7 @@
     {
       "id": "extrovert",
       "title": "Extrovert",
-      "description": "You are an extrovert — and the world is your stage. You gain energy from people, conversations, and new experiences. You think out loud, which means your ideas get refined through dialogue and debate. You're the one who makes events come alive, who draws out the quieter people in the room, and who seems to know everyone within an hour of arriving. You're direct, enthusiastic, and you embrace change and variety. Social connections fuel you rather than drain you — a quiet weekend alone might feel more like a punishment than a reward. Famous extroverts include Oprah Winfrey, Winston Churchill, and Richard Branson. You excel in roles that require communication, leadership, and motivating others. Your energy is contagious, your enthusiasm is inspiring, and your openness makes people feel welcome. The world needs your spark.",
+      "description": "You are an extrovert, and the world is your stage. You gain energy from people, conversations, and new experiences. You think out loud, which means your ideas get refined through dialogue and debate. You're the one who makes events come alive, who draws out the quieter people in the room, and who seems to know everyone within an hour of arriving. You're direct, enthusiastic, and you embrace change and variety. Social connections fuel you rather than drain you, a quiet weekend alone might feel more like a punishment than a reward. Famous extroverts include Oprah Winfrey, Winston Churchill, and Richard Branson. You excel in roles that require communication, leadership, and motivating others. Your energy is contagious, your enthusiasm is inspiring, and your openness makes people feel welcome. The world needs your spark.",
       "image": "/images/results/extrovert.jpg",
       "traits": [
         "Energetic",
@@ -386,7 +386,7 @@
     {
       "id": "ambivert",
       "title": "Ambivert",
-      "description": "You are an ambivert — the rarest and most adaptable personality type on the spectrum. You sit comfortably in the middle, able to draw energy from both solitude and social interaction depending on your needs and circumstances. You can be the life of the party on Friday and deeply content reading alone on Saturday. You adapt your communication style to the person in front of you — more reserved with quieter people, more energetic with high-energy ones. Research suggests ambiverts make the most effective salespeople, leaders, and communicators precisely because they can flex. You know when to listen and when to speak. You know when to be bold and when to step back. You're not 'neither introvert nor extrovert' — you're both, and you can choose which mode serves you best. That flexibility is genuinely rare and genuinely powerful.",
+      "description": "You are an ambivert, the rarest and most adaptable personality type on the spectrum. You sit comfortably in the middle, able to draw energy from both solitude and social interaction depending on your needs and circumstances. You can be the life of the party on Friday and deeply content reading alone on Saturday. You adapt your communication style to the person in front of you, more reserved with quieter people, more energetic with high-energy ones. Research suggests ambiverts make the most effective salespeople, leaders, and communicators precisely because they can flex. You know when to listen and when to speak. You know when to be bold and when to step back. You're not 'neither introvert nor extrovert', you're both, and you can choose which mode serves you best. That flexibility is genuinely rare and genuinely powerful.",
       "image": "/images/results/ambivert.jpg",
       "traits": [
         "Flexible",

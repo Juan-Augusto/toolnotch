@@ -104,7 +104,7 @@
         }
       ],
       "correctAnswerId": "q4b",
-      "explanation": "CRUD stands for Create, Read, Update, and Delete — the four fundamental operations performed on database records.",
+      "explanation": "CRUD stands for Create, Read, Update, and Delete, the four fundamental operations performed on database records.",
       "level": "beginner"
     },
     {
@@ -129,7 +129,7 @@
         }
       ],
       "correctAnswerId": "q5c",
-      "explanation": "NULL in SQL represents the absence of a value or an unknown value — it is distinct from zero or an empty string.",
+      "explanation": "NULL in SQL represents the absence of a value or an unknown value, it is distinct from zero or an empty string.",
       "level": "beginner"
     },
     {
@@ -204,7 +204,7 @@
         }
       ],
       "correctAnswerId": "q8c",
-      "explanation": "Atomicity guarantees that all operations within a transaction are treated as a single unit — they either all succeed or all roll back.",
+      "explanation": "Atomicity guarantees that all operations within a transaction are treated as a single unit, they either all succeed or all roll back.",
       "level": "beginner"
     },
     {
@@ -304,7 +304,7 @@
         }
       ],
       "correctAnswerId": "q12b",
-      "explanation": "1NF requires that each column contains only atomic, indivisible values and that each column holds values of a single data type — no repeating groups.",
+      "explanation": "1NF requires that each column contains only atomic, indivisible values and that each column holds values of a single data type, no repeating groups.",
       "level": "intermediate"
     },
     {
@@ -379,7 +379,7 @@
         }
       ],
       "correctAnswerId": "q15b",
-      "explanation": "A double line (total participation) in an ER diagram means every entity instance must participate in that relationship — there are no optional members on that side.",
+      "explanation": "A double line (total participation) in an ER diagram means every entity instance must participate in that relationship, there are no optional members on that side.",
       "level": "intermediate"
     },
     {
@@ -400,7 +400,7 @@
         },
         {
           "id": "q16d",
-          "text": "None — they are always in conflict"
+          "text": "None: they are always in conflict"
         }
       ],
       "correctAnswerId": "q16c",
@@ -500,7 +500,7 @@
         },
         {
           "id": "q20d",
-          "text": "They are equivalent — both enforce the schema at insertion time"
+          "text": "They are equivalent: both enforce the schema at insertion time"
         }
       ],
       "correctAnswerId": "q20a",
@@ -763,28 +763,28 @@
       "id": "legend",
       "minPercent": 80,
       "label": "Legend",
-      "description": "Outstanding — you have a mastery-level command of database design. From first principles like primary keys and ACID properties all the way up to advanced distributed systems patterns like CQRS, Event Sourcing, Saga, and Two-Phase Commit, your knowledge spans the full depth of the discipline. You understand not just how to model data but why each design decision carries trade-offs in consistency, performance, and scalability. Whether you are designing a high-throughput sharded OLTP system, choosing between sync and async replication, or architecting a multi-tenant platform with strict isolation, you approach each problem with the confidence and nuance of a seasoned database architect. Engineers on any team would be fortunate to have you reviewing their schema designs.",
+      "description": "Outstanding: you have a mastery-level command of database design. From first principles like primary keys and ACID properties all the way up to advanced distributed systems patterns like CQRS, Event Sourcing, Saga, and Two-Phase Commit, your knowledge spans the full depth of the discipline. You understand not just how to model data but why each design decision carries trade-offs in consistency, performance, and scalability. Whether you are designing a high-throughput sharded OLTP system, choosing between sync and async replication, or architecting a multi-tenant platform with strict isolation, you approach each problem with the confidence and nuance of a seasoned database architect. Engineers on any team would be fortunate to have you reviewing their schema designs.",
       "shareText": "I scored {percent}% on the Database Design Quiz on ToolNotch! Can you beat me?"
     },
     {
       "id": "expert",
       "minPercent": 60,
       "label": "Expert",
-      "description": "Impressive work — you have a strong, well-rounded foundation in database design. You're comfortable with normalization up through 3NF, understand the CAP theorem and transaction isolation levels, and can reason about trade-offs like denormalization and soft deletes. A few of the more advanced distributed patterns may have tripped you up, but you clearly have the depth to grow into them quickly. You're the kind of engineer who asks the right schema questions early in a project, catches data integrity issues before they hit production, and understands why index design matters. Keep diving into distributed systems and storage engine internals and the Legend tier will be well within reach.",
+      "description": "Impressive work, you have a strong, well-rounded foundation in database design. You're comfortable with normalization up through 3NF, understand the CAP theorem and transaction isolation levels, and can reason about trade-offs like denormalization and soft deletes. A few of the more advanced distributed patterns may have tripped you up, but you clearly have the depth to grow into them quickly. You're the kind of engineer who asks the right schema questions early in a project, catches data integrity issues before they hit production, and understands why index design matters. Keep diving into distributed systems and storage engine internals and the Legend tier will be well within reach.",
       "shareText": "I scored {percent}% on the Database Design Quiz on ToolNotch! Can you beat me?"
     },
     {
       "id": "fan",
       "minPercent": 40,
       "label": "Fan",
-      "description": "You have a solid working knowledge of database fundamentals and you're building in the right direction. You know your way around relational concepts, understand what normalization is trying to achieve, and can reason about basic query patterns. Some of the trickier territory — isolation levels, sharding strategies, distributed consistency patterns — still needs more exposure, but that's exactly where the most interesting engineering challenges live. Spend time with topics like the CAP theorem, CQRS, and transaction isolation, and work through real schema design exercises to cement your intuition. Come back and take the quiz again — your Expert result is closer than you think.",
+      "description": "You have a solid working knowledge of database fundamentals and you're building in the right direction. You know your way around relational concepts, understand what normalization is trying to achieve, and can reason about basic query patterns. Some of the trickier territory, isolation levels, sharding strategies, distributed consistency patterns, still needs more exposure, but that's exactly where the most interesting engineering challenges live. Spend time with topics like the CAP theorem, CQRS, and transaction isolation, and work through real schema design exercises to cement your intuition. Come back and take the quiz again, your Expert result is closer than you think.",
       "shareText": "I scored {percent}% on the Database Design Quiz on ToolNotch! Can you beat me?"
     },
     {
       "id": "rookie",
       "minPercent": 0,
       "label": "Rookie",
-      "description": "Everyone starts here — database design is a rich discipline that takes real practice to master. You've got the most important thing: curiosity. Start by getting comfortable with the relational model, primary and foreign keys, and basic normalization. Then move on to ACID transactions, indexing, and common query patterns. From there, the world of distributed databases, CAP theorem, sharding, and consistency models opens up. There are fantastic resources online — from database documentation to system design courses — that will take you from the basics to advanced architecture quickly. Keep learning, take the quiz again, and watch your score climb.",
+      "description": "Everyone starts here, database design is a rich discipline that takes real practice to master. You've got the most important thing: curiosity. Start by getting comfortable with the relational model, primary and foreign keys, and basic normalization. Then move on to ACID transactions, indexing, and common query patterns. From there, the world of distributed databases, CAP theorem, sharding, and consistency models opens up. There are fantastic resources online, from database documentation to system design courses, that will take you from the basics to advanced architecture quickly. Keep learning, take the quiz again, and watch your score climb.",
       "shareText": "I scored {percent}% on the Database Design Quiz on ToolNotch! Can you beat me?"
     }
   ]

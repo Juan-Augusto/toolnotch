@@ -4,316 +4,316 @@
   "category": "backend",
   "locale": "pt",
   "title": "Quiz de Indexação de Banco de Dados",
-  "description": "Teste seus conhecimentos sobre árvores B, estratégias de índices e performance SQL.",
+  "description": "Teste seus conhecimentos sobre árvores B, estratégias de indexação e otimização de consultas.",
   "image": "/images/quizzes/database-indexing.png",
   "questions": [
     {
       "id": "q1",
-      "text": "What is a database index?",
+      "text": "O que é um índice de banco de dados?",
       "options": [
         {
           "id": "a",
-          "text": "A backup copy of the entire table stored on a separate disk"
+          "text": "Uma cópia de backup de toda a tabela armazenada em um disco separado"
         },
         {
           "id": "b",
-          "text": "A separate data structure that maps column values to row locations, speeding up data retrieval"
+          "text": "Uma estrutura de dados separada que mapeia valores de colunas para as localizações dos registros, acelerando a recuperação de dados"
         },
         {
           "id": "c",
-          "text": "A constraint that enforces row uniqueness across a table"
+          "text": "Uma restrição (constraint) que garante a unicidade dos registros em uma tabela"
         },
         {
           "id": "d",
-          "text": "A transaction log that records every INSERT, UPDATE, and DELETE"
+          "text": "Um log de transações que registra cada INSERT, UPDATE e DELETE"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "An index is an auxiliary data structure (commonly a B-Tree) that stores a sorted subset of column values alongside pointers to the corresponding heap rows, allowing the engine to locate rows without scanning the entire table.",
+      "explanation": "Um índice é uma estrutura de dados auxiliar (geralmente uma árvore B) que armazena um subconjunto ordenado de valores de colunas junto a ponteiros para as linhas correspondentes na heap, permitindo que o mecanismo localize registros sem varrer a tabela inteira.",
       "level": "beginner"
     },
     {
       "id": "q2",
-      "text": "Which of the following best describes the read vs. write trade-off of adding an index?",
+      "text": "Qual das seguintes alternativas melhor descreve o trade-off entre leitura e escrita ao adicionar um índice?",
       "options": [
         {
           "id": "a",
-          "text": "Indexes speed up both reads and writes equally"
+          "text": "Índices aceleram leituras e escritas igualmente"
         },
         {
           "id": "b",
-          "text": "Indexes slow down reads because the planner must check the index first"
+          "text": "Índices tornam as leituras mais lentas porque o planejador precisa verificar o índice primeiro"
         },
         {
           "id": "c",
-          "text": "Indexes speed up reads but add overhead to INSERT, UPDATE, and DELETE operations"
+          "text": "Índices aceleram as leituras, mas adicionam sobrecarga às operações de INSERT, UPDATE e DELETE"
         },
         {
           "id": "d",
-          "text": "Indexes only affect DELETE performance, not SELECT"
+          "text": "Índices afetam apenas o desempenho do DELETE, não do SELECT"
         }
       ],
       "correctAnswerId": "c",
-      "explanation": "Every write must update both the table data and every index on it, so indexes trade write throughput for faster read (SELECT) performance.",
+      "explanation": "Cada escrita precisa atualizar os dados da tabela e todos os índices existentes nela; dessa forma, os índices trocam vazão de escrita por consultas de leitura (SELECT) mais rápidas.",
       "level": "beginner"
     },
     {
       "id": "q3",
-      "text": "What distinguishes a primary index from a secondary index?",
+      "text": "O que distingue um índice primário de um índice secundário?",
       "options": [
         {
           "id": "a",
-          "text": "A primary index is always a hash index; secondary indexes are always B-Trees"
+          "text": "Um índice primário é sempre um índice hash; índices secundários são sempre árvores B"
         },
         {
           "id": "b",
-          "text": "A primary index is built on the primary key and typically determines physical row order; secondary indexes are on other columns"
+          "text": "Um índice primário é construído sobre a chave primária e normalmente determina a ordem física dos registros; índices secundários são criados sobre outras colunas"
         },
         {
           "id": "c",
-          "text": "A primary index can only be defined at table creation; secondary indexes can be added at any time"
+          "text": "Um índice primário só pode ser definido na criação da tabela; índices secundários podem ser adicionados a qualquer momento"
         },
         {
           "id": "d",
-          "text": "There is no practical difference — the terms are interchangeable"
+          "text": "Não há diferença prática: os termos são intercambiáveis"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "A primary index is associated with the primary key (and in clustered storage defines physical ordering), while secondary indexes cover additional columns to support other query patterns.",
+      "explanation": "O índice primário é associado à chave primária (e em estruturas clusterizadas define a ordenação física), enquanto índices secundários cobrem colunas adicionais para atender a outros padrões de consulta.",
       "level": "beginner"
     },
     {
       "id": "q4",
-      "text": "What is a full table scan, and when does the database use one?",
+      "text": "O que é uma varredura completa da tabela (full table scan) e quando o banco de dados a utiliza?",
       "options": [
         {
           "id": "a",
-          "text": "Reading every row in a table sequentially; used when no suitable index exists or when the planner estimates it is cheaper than an index scan"
+          "text": "A leitura sequencial de todos os registros da tabela; utilizada quando não há índice adequado ou quando o planejador estima que seja mais barata que a busca por índice"
         },
         {
           "id": "b",
-          "text": "Reading only the first and last rows of a table to estimate table size"
+          "text": "A leitura apenas dos primeiros e últimos registros da tabela para estimar seu tamanho"
         },
         {
           "id": "c",
-          "text": "A special operation that rebuilds all indexes on the table"
+          "text": "Uma operação especial que reconstrói todos os índices da tabela"
         },
         {
           "id": "d",
-          "text": "A scan that only reads rows matching a WHERE clause"
+          "text": "Uma varredura que lê apenas registros correspondentes a uma cláusula WHERE"
         }
       ],
       "correctAnswerId": "a",
-      "explanation": "A sequential (full table) scan reads every data page from disk; the planner chooses it when there is no usable index or when the selectivity is so low that random I/O via an index would be more expensive.",
+      "explanation": "A varredura sequencial (full table scan) lê todas as páginas de dados do disco; o planejador a escolhe quando não existe índice utilizável ou quando a seletividade é tão baixa que o custo de I/O aleatório via índice superaria o da leitura sequencial.",
       "level": "beginner"
     },
     {
       "id": "q5",
-      "text": "Given the query `SELECT * FROM orders WHERE customer_id = 42`, which condition allows the database to use an index on `customer_id`?",
+      "text": "Dada a consulta `SELECT * FROM orders WHERE customer_id = 42`, qual condição permite ao banco de dados utilizar um índice em `customer_id`?",
       "options": [
         {
           "id": "a",
-          "text": "The table must have fewer than 1,000 rows"
+          "text": "A tabela deve ter menos de 1.000 linhas"
         },
         {
           "id": "b",
-          "text": "An index must exist on the `customer_id` column"
+          "text": "Deve existir um índice na coluna `customer_id`"
         },
         {
           "id": "c",
-          "text": "`customer_id` must be the first column defined in the table"
+          "text": "`customer_id` deve ser a primeira coluna definida na tabela"
         },
         {
           "id": "d",
-          "text": "The query must use `LIMIT 1`"
+          "text": "A consulta precisa usar `LIMIT 1`"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "The query planner can only use an index on `customer_id` if such an index has been created; otherwise it falls back to a sequential scan.",
+      "explanation": "O planejador de consultas só pode usar um índice em `customer_id` se esse índice tiver sido criado; caso contrário, recorrerá a uma varredura sequencial.",
       "level": "beginner"
     },
     {
       "id": "q6",
-      "text": "What does a UNIQUE index guarantee?",
+      "text": "O que um índice UNIQUE garante?",
       "options": [
         {
           "id": "a",
-          "text": "That the indexed column is never NULL"
+          "text": "Que a coluna indexada nunca contenha NULL"
         },
         {
           "id": "b",
-          "text": "That no two rows share the same value in the indexed column(s)"
+          "text": "Que nenhum par de registros compartilhe o mesmo valor na(s) coluna(s) indexada(s)"
         },
         {
           "id": "c",
-          "text": "That the index is stored in a separate tablespace from the table data"
+          "text": "Que o índice seja armazenado em uma tablespace separada dos dados da tabela"
         },
         {
           "id": "d",
-          "text": "That SELECT queries on that column always return results in sorted order"
+          "text": "Que consultas SELECT nessa coluna sempre retornem resultados ordenados"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "A UNIQUE index enforces a uniqueness constraint — the database rejects any INSERT or UPDATE that would produce a duplicate value in the indexed column(s).",
+      "explanation": "Um índice UNIQUE impõe uma restrição de unicidade: o banco rejeita qualquer INSERT ou UPDATE que resulte em valores duplicados na(s) coluna(s) indexada(s).",
       "level": "beginner"
     },
     {
       "id": "q7",
-      "text": "In PostgreSQL, what does the `EXPLAIN` command show you?",
+      "text": "No PostgreSQL, o que o comando `EXPLAIN` exibe?",
       "options": [
         {
           "id": "a",
-          "text": "The SQL standard version of your query after automatic rewriting"
+          "text": "A versão no padrão SQL da sua consulta após a reescrita automática"
         },
         {
           "id": "b",
-          "text": "The query execution plan the planner intends to use, including node types, estimated costs, and row counts"
+          "text": "O plano de execução que o planejador pretende usar, incluindo tipos de nós, custos estimados e contagens de linhas"
         },
         {
           "id": "c",
-          "text": "A list of all indexes on the tables referenced in the query"
+          "text": "Uma lista de todos os índices nas tabelas referenciadas na consulta"
         },
         {
           "id": "d",
-          "text": "The wall-clock time the query took to execute"
+          "text": "O tempo real de relógio que a consulta levou para ser executada"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "`EXPLAIN` outputs the planner's chosen execution plan tree with cost estimates; `EXPLAIN ANALYZE` also executes the query and reports actual timings.",
+      "explanation": "O comando `EXPLAIN` exibe a árvore do plano de execução escolhida pelo planejador com estimativas de custo; já o `EXPLAIN ANALYZE` também executa a consulta e relata os tempos reais observados.",
       "level": "beginner"
     },
     {
       "id": "q8",
-      "text": "What is the key difference between a clustered and a non-clustered index?",
+      "text": "Qual é a principal diferença entre um índice clusterizado (clustered) e um não clusterizado (non-clustered)?",
       "options": [
         {
           "id": "a",
-          "text": "A clustered index stores the actual row data in index order; a non-clustered index stores only pointers to the data rows"
+          "text": "O índice clusterizado armazena os dados reais das linhas na ordem do índice; o índice não clusterizado armazena apenas ponteiros para as linhas de dados"
         },
         {
           "id": "b",
-          "text": "A clustered index can only be on a single column; non-clustered indexes support multiple columns"
+          "text": "O índice clusterizado só pode ser criado em uma única coluna; índices não clusterizados suportam múltiplas colunas"
         },
         {
           "id": "c",
-          "text": "Non-clustered indexes are faster for all query types"
+          "text": "Índices não clusterizados são mais rápidos para todos os tipos de consulta"
         },
         {
           "id": "d",
-          "text": "Clustered indexes require more disk space than non-clustered indexes"
+          "text": "Índices clusterizados exigem mais espaço em disco do que índices não clusterizados"
         }
       ],
       "correctAnswerId": "a",
-      "explanation": "A clustered index physically orders the heap (or stores data in the leaf level of the index itself), so range scans are very fast; a non-clustered index is a separate structure that holds key values and row-location pointers.",
+      "explanation": "Um índice clusterizado ordena fisicamente os dados (ou armazena os dados no nível folha do próprio índice), tornando buscas por intervalo muito rápidas; já um índice não clusterizado é uma estrutura separada com valores de chave e ponteiros para as linhas.",
       "level": "beginner"
     },
     {
       "id": "q9",
-      "text": "Why are indexes on low-cardinality columns (e.g., a boolean `is_active`) often ineffective?",
+      "text": "Por que índices em colunas de baixa cardinalidade (como um booleano `is_active`) costumam ser ineficazes?",
       "options": [
         {
           "id": "a",
-          "text": "The database cannot build B-Tree indexes on boolean columns"
+          "text": "O banco de dados não consegue construir índices em árvore B em colunas booleanas"
         },
         {
           "id": "b",
-          "text": "When a column has very few distinct values, an index scan may touch most of the table, making a sequential scan cheaper"
+          "text": "Quando uma coluna possui pouquíssimos valores distintos, a busca por índice pode acessar grande parte da tabela, tornando a varredura sequencial mais barata"
         },
         {
           "id": "c",
-          "text": "Low-cardinality indexes are automatically dropped by the database engine"
+          "text": "Índices de baixa cardinalidade são descartados automaticamente pelo mecanismo do banco de dados"
         },
         {
           "id": "d",
-          "text": "Indexes on booleans require a special storage engine not available in standard PostgreSQL"
+          "text": "Índices em booleanos exigem um mecanismo de armazenamento especial não disponível no PostgreSQL padrão"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "With only a handful of distinct values, each value appears in a large fraction of rows; the cost of random I/O through the index often exceeds the cost of a sequential scan.",
+      "explanation": "Com poucos valores distintos, cada valor aparece em uma fração considerável das linhas; o custo de I/O aleatório ao percorrer o índice frequentemente supera o custo de uma varredura sequencial.",
       "level": "beginner"
     },
     {
       "id": "q10",
-      "text": "What happens to an index when you update a row's indexed column?",
+      "text": "O que acontece com um índice quando você atualiza a coluna indexada de um registro?",
       "options": [
         {
           "id": "a",
-          "text": "Nothing — indexes are refreshed only during the next VACUUM"
+          "text": "Nada: os índices são atualizados apenas durante o próximo comando VACUUM"
         },
         {
           "id": "b",
-          "text": "The old index entry is deleted and a new entry is inserted to reflect the updated value"
+          "text": "A entrada antiga no índice é removida e uma nova entrada é inserida para refletir o valor atualizado"
         },
         {
           "id": "c",
-          "text": "The entire index is rebuilt from scratch after every UPDATE"
+          "text": "O índice inteiro é reconstruído do zero após cada UPDATE"
         },
         {
           "id": "d",
-          "text": "The index entry is marked as invalid until the next SELECT is executed"
+          "text": "A entrada do índice é marcada como inválida até a execução do próximo SELECT"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "Updating an indexed column causes the engine to remove the old key entry and insert a new one, which is why heavy UPDATE workloads on indexed columns incur write amplification.",
+      "explanation": "Atualizar uma coluna indexada faz com que o mecanismo remova a entrada da chave antiga e insira uma nova, motivo pelo qual cargas intensas de UPDATE em colunas indexadas geram amplificação de escrita.",
       "level": "beginner"
     },
     {
       "id": "q11",
-      "text": "When the B-Tree index is traversed to find a key value, what is the time complexity of the search?",
+      "text": "Ao percorrer um índice em árvore B para localizar o valor de uma chave, qual é a complexidade de tempo da busca?",
       "options": [
         {
           "id": "a",
-          "text": "O(n) — linear in the number of rows"
+          "text": "O(n): linear em relação ao número de registros"
         },
         {
           "id": "b",
-          "text": "O(log n) — logarithmic in the number of rows"
+          "text": "O(log n): logarítmica em relação ao número de registros"
         },
         {
           "id": "c",
-          "text": "O(1) — constant time regardless of table size"
+          "text": "O(1): tempo constante independentemente do tamanho da tabela"
         },
         {
           "id": "d",
-          "text": "O(n²) — quadratic in the number of rows"
+          "text": "O(n²): quadrática em relação ao número de registros"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "A B-Tree is a balanced tree; each level halves the search space, so locating a key requires at most O(log n) node reads.",
+      "explanation": "A árvore B é uma árvore balanceada; cada nível reduz pela metade o espaço de busca, portanto localizar uma chave requer no máximo O(log n) leituras de nós.",
       "level": "intermediate"
     },
     {
       "id": "q12",
-      "text": "Which statement correctly contrasts a hash index with a B-Tree index?",
+      "text": "Qual afirmação compara corretamente um índice hash e um índice em árvore B?",
       "options": [
         {
           "id": "a",
-          "text": "Hash indexes support range queries (>, <, BETWEEN); B-Trees do not"
+          "text": "Índices hash suportam consultas por intervalo (>, <, BETWEEN); árvores B não"
         },
         {
           "id": "b",
-          "text": "Hash indexes offer O(1) equality lookups but cannot support range queries or ORDER BY; B-Trees support all of these"
+          "text": "Índices hash oferecem buscas por igualdade em O(1), mas não suportam consultas por intervalo nem ORDER BY; árvores B suportam todos eles"
         },
         {
           "id": "c",
-          "text": "Hash indexes store data in sorted order, making range scans very fast"
+          "text": "Índices hash armazenam dados de forma ordenada, tornando varreduras por faixa muito rápidas"
         },
         {
           "id": "d",
-          "text": "B-Tree and hash indexes have identical performance characteristics; the choice is purely cosmetic"
+          "text": "Índices hash e árvores B possuem características idênticas de desempenho; a escolha é meramente estética"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "Hash indexes bucket values by hash, giving O(1) equality lookups, but the hash destroys ordering so they cannot satisfy range predicates or sort requirements.",
+      "explanation": "Índices hash agrupam valores por hash, oferecendo buscas por igualdade em O(1), mas o cálculo de hash elimina a ordenação, impossibilitando consultas por intervalo ou cláusulas de ordenação.",
       "level": "intermediate"
     },
     {
       "id": "q13",
-      "text": "Given a composite index on `(last_name, first_name)`, which WHERE clause can use the index efficiently?",
+      "text": "Dado um índice composto em `(last_name, first_name)`, qual cláusula WHERE pode utilizar o índice de forma eficiente?",
       "options": [
         {
           "id": "a",
-          "text": "`WHERE first_name = 'Alice'` (skipping `last_name`)"
+          "text": "`WHERE first_name = 'Alice'` (ignorando `last_name`)"
         },
         {
           "id": "b",
@@ -321,195 +321,195 @@
         },
         {
           "id": "c",
-          "text": "`WHERE first_name = 'Alice' AND last_name = 'Smith'` — only when both columns appear"
+          "text": "`WHERE first_name = 'Alice' AND last_name = 'Smith'`: apenas quando ambas as colunas aparecem"
         },
         {
           "id": "d",
-          "text": "Neither column can use the index unless the query includes all indexed columns"
+          "text": "Nenhuma das colunas pode usar o índice a menos que a consulta inclua todas as colunas indexadas"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "A composite B-Tree index is sorted by the leftmost column first; queries that filter on `last_name` (the leading column) can seek into the index, but queries on `first_name` alone cannot.",
+      "explanation": "Um índice composto em árvore B é ordenado primeiramente pela coluna mais à esquerda; consultas que filtram por `last_name` (a coluna inicial) podem navegar no índice, mas filtros apenas em `first_name` não conseguem.",
       "level": "intermediate"
     },
     {
       "id": "q14",
-      "text": "What is a covering index?",
+      "text": "O que é um índice de cobertura (covering index)?",
       "options": [
         {
           "id": "a",
-          "text": "An index that spans every column in the table"
+          "text": "Um índice que abrange todas as colunas da tabela"
         },
         {
           "id": "b",
-          "text": "An index that contains all columns needed to satisfy a query, allowing the engine to return results from the index alone without accessing the table heap"
+          "text": "Um índice que contém todas as colunas necessárias para responder a uma consulta, permitindo que o mecanismo retorne resultados apenas pelo índice, sem acessar a heap da tabela"
         },
         {
           "id": "c",
-          "text": "An index that automatically expands to cover new columns as they are added to the table"
+          "text": "Um índice que se expande automaticamente para cobrir novas colunas conforme são adicionadas à tabela"
         },
         {
           "id": "d",
-          "text": "An index that covers NULL values that standard indexes would normally skip"
+          "text": "Um índice que cobre valores NULL que índices comuns normalmente ignorariam"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "When an index includes every column referenced by a query (in the key or via INCLUDE), the database can answer the query entirely from the index pages, eliminating heap fetches.",
+      "explanation": "Quando um índice inclui todas as colunas referenciadas por uma consulta (na própria chave ou via INCLUDE), o banco de dados responde à consulta exclusivamente pelas páginas do índice, eliminando acessos à heap.",
       "level": "intermediate"
     },
     {
       "id": "q15",
-      "text": "What is index selectivity, and why does it matter to the query planner?",
+      "text": "O que é seletividade de índice e por que ela é importante para o planejador de consultas?",
       "options": [
         {
           "id": "a",
-          "text": "The number of pages the index occupies on disk; higher page counts mean faster scans"
+          "text": "O número de páginas que o índice ocupa no disco; mais páginas significam varreduras mais velozes"
         },
         {
           "id": "b",
-          "text": "The ratio of distinct values to total rows; high selectivity means few rows per key value, making the index more useful for lookups"
+          "text": "A razão entre valores distintos e o total de registros; alta seletividade significa poucas linhas por valor de chave, tornando o índice mais eficiente para buscas"
         },
         {
           "id": "c",
-          "text": "Whether the index was created on a primary key column"
+          "text": "Indica se o índice foi criado ou não na coluna de chave primária"
         },
         {
           "id": "d",
-          "text": "The percentage of queries in the workload that reference the indexed column"
+          "text": "A porcentagem de consultas na carga de trabalho que referenciam a coluna indexada"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "High selectivity (close to 1.0) means each key value identifies very few rows, so the index efficiently narrows the result set; low selectivity means many rows per key and the planner may prefer a sequential scan.",
+      "explanation": "Alta seletividade (próxima a 1,0) significa que cada valor de chave identifica pouquíssimos registros, refinando o resultado de forma eficiente; baixa seletividade gera muitos registros por chave e o planejador tende a preferir a varredura sequencial.",
       "level": "intermediate"
     },
     {
       "id": "q16",
-      "text": "What is a partial index in PostgreSQL?",
+      "text": "O que é um índice parcial no PostgreSQL?",
       "options": [
         {
           "id": "a",
-          "text": "An index built on only the first N bytes of a text column"
+          "text": "Um índice construído apenas sobre os primeiros N bytes de uma coluna de texto"
         },
         {
           "id": "b",
-          "text": "An index that includes only rows satisfying a WHERE predicate, reducing its size and maintenance cost"
+          "text": "Um índice que inclui apenas os registros que atendem a um predicado WHERE, reduzindo seu tamanho e custo de manutenção"
         },
         {
           "id": "c",
-          "text": "An index that covers only half of a composite key"
+          "text": "Um índice que cobre apenas a metade de uma chave composta"
         },
         {
           "id": "d",
-          "text": "An index automatically created by the planner for a single query execution"
+          "text": "Um índice criado automaticamente pelo planejador para a execução de uma única consulta"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "A partial index is created with a WHERE clause (e.g., `CREATE INDEX … WHERE status = 'active'`), so it indexes only matching rows, resulting in a smaller, faster-to-maintain structure.",
+      "explanation": "Um índice parcial é criado com uma cláusula WHERE (por exemplo, `CREATE INDEX ... WHERE status = 'active'`), indexando apenas linhas que atendem à condição e gerando uma estrutura menor e mais rápida de manter.",
       "level": "intermediate"
     },
     {
       "id": "q17",
-      "text": "What is a function-based (expression) index?",
+      "text": "O que é um índice baseado em função (índice de expressão)?",
       "options": [
         {
           "id": "a",
-          "text": "An index stored as a stored procedure that regenerates itself nightly"
+          "text": "Um índice armazenado como uma procedure que se reconstrói todas as noites"
         },
         {
           "id": "b",
-          "text": "An index built on the result of an expression or function applied to one or more columns, enabling index scans on computed predicates"
+          "text": "Um índice construído sobre o resultado de uma expressão ou função aplicada a uma ou mais colunas, permitindo buscas indexadas em predicados calculados"
         },
         {
           "id": "c",
-          "text": "An index that triggers a user-defined function whenever a row is inserted"
+          "text": "Um índice que dispara uma função definida pelo usuário sempre que uma linha é inserida"
         },
         {
           "id": "d",
-          "text": "An index whose key values are encrypted using a hash function for security"
+          "text": "Um índice cujos valores de chave são criptografados com uma função hash para segurança"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "A function-based index (e.g., `CREATE INDEX ON users (lower(email))`) stores the pre-computed function result, so a query like `WHERE lower(email) = '…'` can use the index instead of scanning all rows.",
+      "explanation": "Um índice baseado em função (por exemplo, `CREATE INDEX ON users (lower(email))`) armazena o resultado pré-computado da expressão, permitindo que consultas como `WHERE lower(email) = '...'` utilizem o índice em vez de escanear toda a tabela.",
       "level": "intermediate"
     },
     {
       "id": "q18",
-      "text": "What is index bloat and how does VACUUM help in PostgreSQL?",
+      "text": "O que é inchaço de índice (index bloat) e como o comando VACUUM ajuda no PostgreSQL?",
       "options": [
         {
           "id": "a",
-          "text": "Index bloat occurs when an index has too many columns; VACUUM removes extra columns automatically"
+          "text": "O inchaço ocorre quando o índice possui colunas em excesso; o VACUUM remove as colunas adicionais automaticamente"
         },
         {
           "id": "b",
-          "text": "Index bloat is the accumulation of dead tuple references in index pages from UPDATEs and DELETEs; VACUUM reclaims those pages and marks them reusable"
+          "text": "O inchaço é o acúmulo de referências a tuplas mortas nas páginas do índice resultantes de UPDATEs e DELETEs; o VACUUM recupera essas páginas e as marca como reutilizáveis"
         },
         {
           "id": "c",
-          "text": "Index bloat means the index file exceeds the size of the table; VACUUM compresses both to the same size"
+          "text": "O inchaço significa que o arquivo de índice ultrapassou o tamanho da tabela; o VACUUM compacta ambos para o mesmo tamanho"
         },
         {
           "id": "d",
-          "text": "Index bloat is caused by too many concurrent reads; VACUUM resets read counters"
+          "text": "O inchaço decorre de leituras concorrentes excessivas; o VACUUM reinicia os contadores de leitura"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "PostgreSQL's MVCC model leaves dead tuple versions in the heap and old index entries pointing to them; VACUUM removes those dead entries, freeing space and keeping the index lean.",
+      "explanation": "O modelo MVCC do PostgreSQL deixa versões de tuplas mortas na heap e entradas antigas de índice apontando para elas; o VACUUM remove essas entradas mortas, liberando espaço e mantendo o índice enxuto.",
       "level": "intermediate"
     },
     {
       "id": "q19",
-      "text": "Why might the PostgreSQL query planner ignore an index even when one exists on the filtered column?",
+      "text": "Por que o planejador de consultas do PostgreSQL pode ignorar um índice mesmo quando ele existe na coluna filtrada?",
       "options": [
         {
           "id": "a",
-          "text": "PostgreSQL never ignores an index once it is created — it is always used"
+          "text": "O PostgreSQL nunca ignora um índice depois de criado: ele é sempre utilizado"
         },
         {
           "id": "b",
-          "text": "The planner's cost model estimates that a sequential scan is cheaper, often because the predicate matches a large fraction of rows or table statistics are stale"
+          "text": "O modelo de custo do planejador estima que uma varredura sequencial é mais barata, frequentemente porque o filtro corresponde a uma grande parcela dos registros ou as estatísticas estão desatualizadas"
         },
         {
           "id": "c",
-          "text": "The index can only be used if the query includes an ORDER BY clause on the indexed column"
+          "text": "O índice só pode ser utilizado se a consulta contiver uma cláusula ORDER BY na coluna indexada"
         },
         {
           "id": "d",
-          "text": "Indexes are only used for JOIN operations, never for WHERE clause filtering"
+          "text": "Índices são utilizados apenas para operações de JOIN, nunca para filtragem com cláusula WHERE"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "The planner compares estimated costs; if row estimates (based on table statistics) suggest most rows match, random I/O through the index is more expensive than a sequential scan, so the index is skipped.",
+      "explanation": "O planejador compara os custos estimados: se as estatísticas indicarem que a maioria das linhas corresponde ao filtro, o custo de I/O aleatório do índice será superior ao de uma varredura sequencial, fazendo com que o índice seja ignorado.",
       "level": "intermediate"
     },
     {
       "id": "q20",
-      "text": "Given a B-Tree index on a `name` column, which LIKE pattern can use the index?",
+      "text": "Dado um índice em árvore B em uma coluna `name`, qual padrão de busca com LIKE pode utilizar o índice?",
       "options": [
         {
           "id": "a",
-          "text": "`WHERE name LIKE '%smith'` (suffix wildcard)"
+          "text": "`WHERE name LIKE '%smith'` (curinga no início / sufixo)"
         },
         {
           "id": "b",
-          "text": "`WHERE name LIKE '%smith%'` (both sides wildcard)"
+          "text": "`WHERE name LIKE '%smith%'` (curingas em ambos os lados)"
         },
         {
           "id": "c",
-          "text": "`WHERE name LIKE 'smith%'` (prefix wildcard)"
+          "text": "`WHERE name LIKE 'smith%'` (curinga no final / prefixo)"
         },
         {
           "id": "d",
-          "text": "None — LIKE never uses a B-Tree index"
+          "text": "Nenhum: o operador LIKE nunca utiliza índices em árvore B"
         }
       ],
       "correctAnswerId": "c",
-      "explanation": "A B-Tree index is sorted lexicographically; a prefix wildcard (`'smith%'`) maps to a range scan on the index, while a leading wildcard forces a full index scan because the common prefix is unknown.",
+      "explanation": "O índice em árvore B é ordenado lexicograficamente; buscas por prefixo (`'smith%'`) mapeiam diretamente para uma varredura por intervalo no índice, enquanto curingas no início forçam uma varredura completa porque o prefixo comum é desconhecido.",
       "level": "intermediate"
     },
     {
       "id": "q21",
-      "text": "Which PostgreSQL index type is designed for geometric and spatial data types such as points, boxes, and polygons?",
+      "text": "Qual tipo de índice do PostgreSQL é projetado para tipos de dados geométricos e espaciais, como pontos, caixas (boxes) e polígonos?",
       "options": [
         {
           "id": "a",
@@ -529,212 +529,212 @@
         }
       ],
       "correctAnswerId": "c",
-      "explanation": "GiST is an extensible index framework that supports non-scalar data types including geometric shapes, full-text `tsvector`, and range types, enabling operations like containment and overlap queries.",
+      "explanation": "GiST é uma estrutura de indexação extensível que suporta tipos de dados não escalares, incluindo formas geométricas, busca textual com `tsvector` e tipos de intervalo, permitindo consultas de contenção e sobreposição.",
       "level": "advanced"
     },
     {
       "id": "q22",
-      "text": "A GIN (Generalized Inverted Index) is most appropriate for which type of column?",
+      "text": "Um índice GIN (Generalized Inverted Index) é mais adequado para qual tipo de coluna?",
       "options": [
         {
           "id": "a",
-          "text": "A single-value integer primary key"
+          "text": "Uma chave primária inteira de valor único"
         },
         {
           "id": "b",
-          "text": "A column containing composite values such as arrays, JSONB, or `tsvector` full-text search documents"
+          "text": "Uma coluna contendo valores compostos, como arrays, JSONB ou documentos de busca textual `tsvector`"
         },
         {
           "id": "c",
-          "text": "A monotonically increasing timestamp column in an append-only table"
+          "text": "Uma coluna de timestamp monotonicamente crescente em uma tabela append-only"
         },
         {
           "id": "d",
-          "text": "A low-cardinality boolean column"
+          "text": "Uma coluna booleana de baixa cardinalidade"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "GIN builds an inverted index over the individual elements of composite values (array elements, JSON keys, lexemes), making it ideal for containment operators like `@>` or full-text search with `@@`.",
+      "explanation": "O índice GIN constrói um índice invertido sobre elementos individuais de valores compostos (elementos de array, chaves JSON, lexemas), sendo ideal para operadores de contenção como `@>` ou busca textual com `@@`.",
       "level": "advanced"
     },
     {
       "id": "q23",
-      "text": "What is a BRIN index and for which table characteristic is it best suited?",
+      "text": "O que é um índice BRIN e para qual característica de tabela ele é mais indicado?",
       "options": [
         {
           "id": "a",
-          "text": "A block range index that stores min/max values per range of pages; best for large, physically ordered (correlated) columns like `created_at` in append-only tables"
+          "text": "Um índice de intervalo de blocos que armazena valores mínimos/máximos por intervalo de páginas; ideal para tabelas grandes com colunas correlacionadas à ordem física, como `created_at` em tabelas append-only"
         },
         {
           "id": "b",
-          "text": "A balanced range index that replaces B-Trees for all numeric columns"
+          "text": "Um índice de intervalo balanceado que substitui árvores B em todas as colunas numéricas"
         },
         {
           "id": "c",
-          "text": "A bitmap range index used to speed up bitmap heap scans on random data"
+          "text": "Um índice de intervalo por bitmap usado para acelerar varreduras bitmap na heap em dados aleatórios"
         },
         {
           "id": "d",
-          "text": "A binary range index that only works with UUID primary keys"
+          "text": "Um índice de intervalo binário que funciona apenas com chaves primárias UUID"
         }
       ],
       "correctAnswerId": "a",
-      "explanation": "BRIN records only the minimum and maximum values for each page range, making it extremely small and cheap to maintain; it works well when column values naturally correlate with physical storage order.",
+      "explanation": "O BRIN registra apenas os valores mínimo e máximo de cada conjunto de páginas, tornando-se extremamente compacto e de baixo custo de manutenção; ele funciona perfeitamente quando os valores da coluna estão correlacionados à ordenação física no disco.",
       "level": "advanced"
     },
     {
       "id": "q24",
-      "text": "What is 'write amplification' in the context of LSM-tree (Log-Structured Merge-tree) indexes?",
+      "text": "O que é 'amplificação de escrita' (write amplification) no contexto de índices LSM-tree (Log-Structured Merge-tree)?",
       "options": [
         {
           "id": "a",
-          "text": "Each logical write is physically written multiple times across different levels of the LSM tree during compaction"
+          "text": "Cada escrita lógica é gravada fisicamente múltiplas vezes através dos diferentes níveis da LSM-tree durante os processos de compactação"
         },
         {
           "id": "b",
-          "text": "The database writes a redundant copy of every row to the transaction log"
+          "text": "O banco de dados grava uma cópia redundante de cada linha no log de transações"
         },
         {
           "id": "c",
-          "text": "Write amplification refers to the overhead of updating a B-Tree's parent nodes after a leaf split"
+          "text": "A amplificação de escrita refere-se à sobrecarga de atualizar nós pais de uma árvore B após a divisão de uma folha (leaf split)"
         },
         {
           "id": "d",
-          "text": "It is the extra latency caused by flushing the write-ahead log to disk"
+          "text": "É a latência adicional gerada pela persistência do log de escrita prévia (write-ahead log) no disco"
         }
       ],
       "correctAnswerId": "a",
-      "explanation": "In LSM trees, data flows through multiple levels (L0 → L1 → … → Ln) via compaction; a single logical key may be rewritten many times, so the ratio of physical bytes written to logical bytes written is the write amplification factor.",
+      "explanation": "Nas árvores LSM, os dados fluem por múltiplos níveis (L0 para L1 até Ln) através da compactação; uma mesma chave lógica pode ser reescrita várias vezes, sendo a amplificação de escrita a proporção entre bytes físicos gravados e bytes lógicos solicitados.",
       "level": "advanced"
     },
     {
       "id": "q25",
-      "text": "What is the purpose of `CREATE INDEX CONCURRENTLY` in PostgreSQL?",
+      "text": "Qual é a finalidade do comando `CREATE INDEX CONCURRENTLY` no PostgreSQL?",
       "options": [
         {
           "id": "a",
-          "text": "It builds the index on multiple CPU cores simultaneously to reduce build time"
+          "text": "Ele constrói o índice em múltiplos núcleos de CPU simultaneamente para acelerar a criação"
         },
         {
           "id": "b",
-          "text": "It builds the index without taking an exclusive table lock, allowing concurrent reads and writes during index creation at the cost of a longer build time"
+          "text": "Ele constrói o índice sem adquirir um bloqueio exclusivo na tabela, permitindo leituras e escritas concorrentes durante a criação ao custo de um tempo de construção maior"
         },
         {
           "id": "c",
-          "text": "It creates the index on a replica before promoting it to the primary, avoiding downtime"
+          "text": "Ele cria o índice em uma réplica antes de promovê-la a primária, evitando tempo de inatividade"
         },
         {
           "id": "d",
-          "text": "It defers index enforcement until after a COMMIT, improving transaction throughput"
+          "text": "Ele posterga a aplicação do índice até após o COMMIT, melhorando a taxa de transações"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "`CREATE INDEX CONCURRENTLY` performs multiple passes over the table data and only holds brief locks, so the table remains fully accessible during the build — essential for production tables that cannot tolerate downtime.",
+      "explanation": "O `CREATE INDEX CONCURRENTLY` realiza múltiplas leituras na tabela adquirindo apenas bloqueios curtos, mantendo a tabela totalmente acessível durante a criação, algo fundamental para tabelas em produção que não toleram indisponibilidade.",
       "level": "advanced"
     },
     {
       "id": "q26",
-      "text": "What is an 'invisible index' (supported in MySQL 8+ and Oracle) and what is its primary use case?",
+      "text": "O que é um 'índice invisível' (suportado no MySQL 8+ e Oracle) e qual é seu principal caso de uso?",
       "options": [
         {
           "id": "a",
-          "text": "An index encrypted at rest so its contents cannot be read by unauthorized users"
+          "text": "Um índice criptografado em repouso para que seu conteúdo não seja lido por usuários não autorizados"
         },
         {
           "id": "b",
-          "text": "An index that is maintained by the engine but hidden from the query planner, used to safely test the impact of dropping an index before actually removing it"
+          "text": "Um índice que continua sendo atualizado pelo mecanismo, mas fica oculto para o planejador de consultas, usado para testar com segurança o impacto de remover um índice antes do DROP definitivo"
         },
         {
           "id": "c",
-          "text": "An index stored in memory only, never persisted to disk"
+          "text": "Um índice armazenado exclusivamente na memória, nunca gravado em disco"
         },
         {
           "id": "d",
-          "text": "An index on system catalog tables that is not exposed in information_schema views"
+          "text": "Um índice em tabelas do catálogo do sistema que não é exibido nas views do information_schema"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "Invisible indexes are still updated on writes but the optimizer ignores them by default; this lets DBAs simulate index removal and verify query plans before committing to a potentially disruptive DROP INDEX.",
+      "explanation": "Índices invisíveis continuam sendo atualizados em operações de escrita, mas o otimizador os ignora por padrão; isso permite que DBAs simulem a remoção do índice e verifiquem os planos de consulta antes de executar um DROP INDEX definitivo.",
       "level": "advanced"
     },
     {
       "id": "q27",
-      "text": "How does PostgreSQL's MVCC (Multi-Version Concurrency Control) model contribute to index bloat over time?",
+      "text": "De que maneira o modelo MVCC (Multi-Version Concurrency Control) do PostgreSQL contribui para o inchaço de índices (index bloat) ao longo do tempo?",
       "options": [
         {
           "id": "a",
-          "text": "MVCC compresses old row versions, causing indexes to fragment over time"
+          "text": "O MVCC compacta versões antigas de linhas, fragmentando os índices ao longo do tempo"
         },
         {
           "id": "b",
-          "text": "Every UPDATE creates a new heap tuple version while leaving the old version in place; both the old and new index entries coexist until VACUUM reclaims the dead tuples"
+          "text": "Cada UPDATE cria uma nova versão da tupla na heap mantendo a versão anterior; as entradas antigas e novas coexistem no índice até que o VACUUM colete as tuplas mortas"
         },
         {
           "id": "c",
-          "text": "MVCC forces the index to store the transaction ID alongside every key, doubling its size"
+          "text": "O MVCC força o índice a armazenar o identificador de transação ao lado de cada chave, dobrando seu tamanho"
         },
         {
           "id": "d",
-          "text": "MVCC has no effect on indexes — only heap pages accumulate dead tuples"
+          "text": "O MVCC não tem efeito em índices: apenas páginas da heap acumulam tuplas mortas"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "Because PostgreSQL never updates a row in-place (it writes a new version), the index must point to the new version while the old index entry lingers until VACUUM removes the now-invisible dead tuple.",
+      "explanation": "Como o PostgreSQL nunca atualiza um registro in-place (ele grava uma nova versão), o índice precisa apontar para a nova versão enquanto a entrada antiga permanece até que o VACUUM colete a tupla morta que já não é mais visível.",
       "level": "advanced"
     },
     {
       "id": "q28",
-      "text": "When does the PostgreSQL planner choose a Bitmap Index Scan over a plain Index Scan?",
+      "text": "Quando o planejador do PostgreSQL opta por um Bitmap Index Scan em vez de um Index Scan convencional?",
       "options": [
         {
           "id": "a",
-          "text": "When the query returns only a single row"
+          "text": "Quando a consulta retorna exatamente um único registro"
         },
         {
           "id": "b",
-          "text": "When multiple indexes must be combined (AND/OR) or when the estimated row count is moderate, allowing heap pages to be read once in physical order rather than via many random seeks"
+          "text": "Quando múltiplos índices precisam ser combinados (AND/OR) ou quando a contagem estimada de linhas é moderada, permitindo ler as páginas da heap em ordem física em vez de fazer buscas aleatórias repetidas"
         },
         {
           "id": "c",
-          "text": "When the table has no heap pages — data is stored in the index itself"
+          "text": "Quando a tabela não possui páginas de heap: os dados ficam no próprio índice"
         },
         {
           "id": "d",
-          "text": "Bitmap Index Scan is always faster and is always preferred over a plain Index Scan"
+          "text": "O Bitmap Index Scan é sempre mais rápido e preferido em relação ao Index Scan comum"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "A Bitmap Index Scan collects all matching TIDs into a bitmap in memory, sorts them by physical location, then reads the heap pages once in order — efficient for moderate result sets and multi-index queries that plain index scans cannot combine.",
+      "explanation": "O Bitmap Index Scan reúne todos os TIDs correspondentes em um bitmap em memória, ordena-os pela localização física e lê as páginas da heap de forma sequencial, sendo ideal para resultados moderados e consultas que combinam múltiplos índices que o Index Scan simples não consegue unir.",
       "level": "advanced"
     },
     {
       "id": "q29",
-      "text": "In a partitioned table, what is a key consideration when creating indexes to ensure all partitions benefit?",
+      "text": "Em uma tabela particionada, qual é a consideração fundamental ao criar índices para assegurar que todas as partições sejam beneficiadas?",
       "options": [
         {
           "id": "a",
-          "text": "Indexes must be created on the partition key column only; other columns cannot be indexed"
+          "text": "Índices devem ser criados apenas na coluna da chave de partição; outras colunas não podem ser indexadas"
         },
         {
           "id": "b",
-          "text": "Creating an index on the parent partitioned table in PostgreSQL 11+ automatically propagates the index to all existing and future partitions"
+          "text": "Criar um índice na tabela particionada pai no PostgreSQL 11+ propaga o índice automaticamente para todas as partições existentes e futuras"
         },
         {
           "id": "c",
-          "text": "Each partition requires a manually created index with a unique name; there is no automatic propagation"
+          "text": "Cada partição exige um índice criado manualmente com nome exclusivo; não existe propagação automática"
         },
         {
           "id": "d",
-          "text": "Partitioned tables do not support B-Tree indexes; only BRIN indexes are available"
+          "text": "Tabelas particionadas não suportam índices em árvore B; apenas índices BRIN estão disponíveis"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "Since PostgreSQL 11, `CREATE INDEX` on a partitioned table creates a corresponding local index on each partition and automatically creates indexes on new partitions as they are attached.",
+      "explanation": "Desde o PostgreSQL 11, executar `CREATE INDEX` na tabela particionada cria um índice local correspondente em cada partição e gera índices automaticamente em novas partições conforme forem anexadas.",
       "level": "advanced"
     },
     {
       "id": "q30",
-      "text": "Which PostgreSQL system view would you query to find the number of index scans, sequential scans, and tuples fetched for user-created indexes?",
+      "text": "Qual view de sistema do PostgreSQL você consultaria para descobrir o número de varreduras por índice, varreduras sequenciais e tuplas recuperadas para índices criados por usuários?",
       "options": [
         {
           "id": "a",
@@ -754,7 +754,7 @@
         }
       ],
       "correctAnswerId": "c",
-      "explanation": "`pg_stat_user_indexes` exposes cumulative statistics per index including `idx_scan` (number of scans initiated), `idx_tup_read`, and `idx_tup_fetch`, making it the primary view for identifying unused or heavily-used indexes.",
+      "explanation": "A view `pg_stat_user_indexes` expõe estatísticas acumuladas por índice, incluindo `idx_scan` (número de varreduras iniciadas), `idx_tup_read` e `idx_tup_fetch`, sendo a principal view para identificar índices sem uso ou com uso intenso.",
       "level": "advanced"
     }
   ],
@@ -762,30 +762,30 @@
     {
       "id": "legend",
       "minPercent": 80,
-      "label": "Legend",
-      "description": "Outstanding result — you have a deep, expert-level understanding of database indexing. You can navigate B-Tree internals, design covering and partial indexes, interpret query plans, and work confidently with PostgreSQL-specific index types like GiST, GIN, and BRIN. You understand the subtle interplay between MVCC, VACUUM, and index bloat, and you know when to reach for advanced tools such as CREATE INDEX CONCURRENTLY or pg_stat_user_indexes to monitor production systems. Your indexing skills would translate directly into measurable query performance improvements in large-scale production databases.",
-      "shareText": "Fiz o Quiz de Indexação de Banco de Dados no ToolNotch!"
+      "label": "Lenda",
+      "description": "Resultado excepcional, você possui um conhecimento profundo e de nível especialista sobre indexação de bancos de dados. Você compreende a estrutura interna de árvores B, projeta índices de cobertura e parciais, interpreta planos de execução e trabalha com confiança em tipos de índices específicos do PostgreSQL como GiST, GIN e BRIN. Você entende a sutil interação entre MVCC, VACUUM e inchaço de índices (bloat), além de saber quando usar ferramentas avançadas como CREATE INDEX CONCURRENTLY ou pg_stat_user_indexes para monitorar ambientes de produção. Suas habilidades de indexação se traduzem diretamente em ganhos mensuráveis de performance em bancos de dados de larga escala.",
+      "shareText": "Alcancei o nível Lenda no Quiz de Indexação de Banco de Dados do ToolNotch! 🗂️"
     },
     {
       "id": "expert",
       "minPercent": 60,
-      "label": "Expert",
-      "description": "Great performance — you have a solid, working knowledge of database indexing that goes well beyond the basics. You understand composite index column order, covering indexes, selectivity, partial indexes, and the difference between hash and B-Tree indexes. You may want to deepen your knowledge of advanced PostgreSQL index types (GiST, GIN, BRIN), LSM-tree internals, and operational concerns like MVCC-related bloat and pg_stat_user_indexes monitoring to reach the Legend tier.",
-      "shareText": "Fiz o Quiz de Indexação de Banco de Dados no ToolNotch!"
+      "label": "Especialista",
+      "description": "Ótimo desempenho, você possui uma base sólida e prática sobre indexação de bancos de dados que vai muito além do básico. Você domina a ordem das colunas em índices compostos, índices de cobertura, seletividade, índices parciais e as diferenças entre índices hash e árvores B. Para alcançar o nível Lenda, vale aprofundar seu domínio sobre tipos avançados de índices no PostgreSQL (GiST, GIN, BRIN), funcionamento interno de LSM-trees e práticas operacionais como inchaço de índices associado a MVCC e monitoramento via pg_stat_user_indexes.",
+      "shareText": "Alcancei o nível Especialista no Quiz de Indexação de Banco de Dados do ToolNotch! 🗂️"
     },
     {
       "id": "fan",
       "minPercent": 40,
-      "label": "Fan",
-      "description": "Decent effort — you grasp the fundamentals of database indexing, including what an index is, the read/write trade-off, and how WHERE clauses interact with indexes. To level up, focus on composite index leading-column rules, covering indexes, selectivity, and why the planner sometimes ignores available indexes. Studying PostgreSQL's EXPLAIN output and experimenting with partial and function-based indexes will quickly strengthen your practical indexing skills.",
-      "shareText": "Fiz o Quiz de Indexação de Banco de Dados no ToolNotch!"
+      "label": "Praticante",
+      "description": "Bom trabalho, você compreende os fundamentos da indexação de banco de dados, incluindo o que é um índice, o trade-off entre leitura e escrita e a interação de cláusulas WHERE com índices. Para avançar, foque nas regras da coluna inicial em índices compostos, índices de cobertura, seletividade e nas razões pelas quais o planejador por vezes ignora índices disponíveis. Analisar saídas de EXPLAIN no PostgreSQL e praticar com índices parciais e baseados em funções fortalecerá rapidamente suas habilidades práticas.",
+      "shareText": "Alcancei o nível Praticante no Quiz de Indexação de Banco de Dados do ToolNotch! 🗂️"
     },
     {
       "id": "rookie",
       "minPercent": 0,
-      "label": "Rookie",
-      "description": "Everyone starts somewhere! Database indexing is a rich topic that rewards hands-on practice. Begin with the basics: what an index is, how B-Trees store sorted data, and the trade-off between read speed and write overhead. Then explore how to read EXPLAIN output in PostgreSQL, when to use composite indexes, and how selectivity affects whether the planner uses your index. Revisit this quiz after some practice and you will be surprised how quickly you improve.",
-      "shareText": "Fiz o Quiz de Indexação de Banco de Dados no ToolNotch!"
+      "label": "Iniciante",
+      "description": "Todo mundo começa de algum lugar! A indexação de banco de dados é um tema rico que recompensa a prática constante. Comece pelo básico: o conceito de índice, como árvores B armazenam dados ordenados e o equilíbrio entre velocidade de leitura e custo de escrita. Em seguida, explore a leitura de saídas EXPLAIN no PostgreSQL, quando aplicar índices compostos e como a seletividade influencia a escolha do planejador. Refaça este quiz após estudar e você verá como seu progresso será rápido.",
+      "shareText": "Acabei de fazer o Quiz de Indexação de Banco de Dados no ToolNotch: hora de estudar! 🗂️"
     }
   ]
 }

@@ -14,22 +14,21 @@ export const AD_PROVIDER: AdProvider =
 // 3. Replace the placeholders below. 4. Set NEXT_PUBLIC_ADSENSE_CLIENT.
 // Format: slot IDs are numbers only (not the ca-pub prefix).
 export const AD_SLOTS = {
-  TOOL_TOP: '1111111111',          // leaderboard above tool — used in AppToolWrapper
-  TOOL_BOTTOM: '2222222222',       // rectangle below FAQ — to be added post-approval
-  BLOG_ARTICLE_BOTTOM: '3333333333', // rectangle below blog articles
-  BLOG_INDEX_TOP: '4444444444',    // leaderboard above blog index
-  CONVERT_SLUG: '5555555555',      // leaderboard on /tools/convert/[slug] pages
+  TOOL_TOP: '1111111111',
+  TOOL_BOTTOM: '2222222222',
+  BLOG_ARTICLE_BOTTOM: '3333333333',
+  BLOG_INDEX_TOP: '4444444444',
+  CONVERT_SLUG: '5555555555',
+  QUIZ_TOP: '6666666666',
+  QUIZ_BOTTOM: '7777777777',
 } as const
 
-// ── Adsterra / Monetag zone IDs ───────────────────────────────────────────
-// Fallback display network, used only when NEXT_PUBLIC_AD_PROVIDER=adsterra.
-// Create the zones in the Adsterra dashboard, replace the placeholders, then
-// wire the per-zone async script in the layout (banner + native only — no
-// popunder / interstitial). Keys mirror AD_SLOTS so callers pass the same key.
 export const ADSTERRA_ZONES: Record<keyof typeof AD_SLOTS, string> = {
   TOOL_TOP: '0000000000',
   TOOL_BOTTOM: '0000000001',
   BLOG_ARTICLE_BOTTOM: '0000000002',
   BLOG_INDEX_TOP: '0000000003',
   CONVERT_SLUG: '0000000004',
+  QUIZ_TOP: '0000000005',
+  QUIZ_BOTTOM: '0000000006',
 }

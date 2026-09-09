@@ -48,7 +48,7 @@
       "options": [
         {
           "id": "q2a",
-          "text": "Son maestros — aprendo de cada equivocación",
+          "text": "Son maestros: aprendo de cada equivocación",
           "scores": {
             "python": 3,
             "javascript": 1
@@ -64,7 +64,7 @@
         },
         {
           "id": "q2c",
-          "text": "Los soluciono cuando aparecen — sin complicaciones",
+          "text": "Los soluciono cuando aparecen: sin complicaciones",
           "scores": {
             "javascript": 3,
             "go": 1
@@ -124,7 +124,7 @@
       "options": [
         {
           "id": "q4a",
-          "text": "Las reglas limitan la creatividad — prefiero libertad",
+          "text": "Las reglas limitan la creatividad: prefiero libertad",
           "scores": {
             "javascript": 3,
             "python": 2
@@ -207,7 +207,7 @@
         },
         {
           "id": "q6b",
-          "text": "Lo aceptas — funciona y eso es lo que cuenta",
+          "text": "Lo aceptas: funciona y eso es lo que cuenta",
           "scores": {
             "javascript": 3,
             "python": 1
@@ -387,7 +387,7 @@
     {
       "id": "python",
       "title": "Python",
-      "description": "Eres Python — accesible, polivalente y adaptable. Valoras la claridad y legibilidad por encima de trucos complejos.",
+      "description": "Eres Python, accesible, polivalente y adaptable. Valoras la claridad y legibilidad por encima de trucos complejos.",
       "image": "/images/results/python.jpg",
       "traits": [
         "Legible",
@@ -400,7 +400,7 @@
     {
       "id": "javascript",
       "title": "JavaScript",
-      "description": "Eres JavaScript — omnipresente, dinámico y creativo. Disfrutas creando experiencias visuales e interactivas que conectan con millones.",
+      "description": "Eres JavaScript, omnipresente, dinámico y creativo. Disfrutas creando experiencias visuales e interactivas que conectan con millones.",
       "image": "/images/results/javascript.jpg",
       "traits": [
         "Ubícuo",
@@ -413,7 +413,7 @@
     {
       "id": "rust",
       "title": "Rust",
-      "description": "Eres Rust — riguroso, seguro y obsesionado con el rendimiento. Prefieres la excelencia desde el principio antes que corregir fallos luego.",
+      "description": "Eres Rust, riguroso, seguro y obsesionado con el rendimiento. Prefieres la excelencia desde el principio antes que corregir fallos luego.",
       "image": "/images/results/rust.jpg",
       "traits": [
         "Seguro",
@@ -426,7 +426,7 @@
     {
       "id": "go",
       "title": "Go",
-      "description": "Eres Go — pragmático, directo y enfocado en la simplicidad. Creas sistemas escalables sin artificios innecesarios.",
+      "description": "Eres Go, pragmático, directo y enfocado en la simplicidad. Creas sistemas escalables sin artificios innecesarios.",
       "image": "/images/results/go.jpg",
       "traits": [
         "Simple",
@@ -439,7 +439,7 @@
     {
       "id": "java",
       "title": "Java",
-      "description": "Eres Java — la sólida columna vertebral de la tecnología empresarial. Diseñas arquitecturas duraderas y altamente mantenibles.",
+      "description": "Eres Java, la sólida columna vertebral de la tecnología empresarial. Diseñas arquitecturas duraderas y altamente mantenibles.",
       "image": "/images/results/java.jpg",
       "traits": [
         "Estructurado",

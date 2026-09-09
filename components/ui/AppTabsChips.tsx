@@ -77,7 +77,7 @@ export function AppTabsChips({
             className={`relative shrink-0 flex items-center gap-2 px-3.5 sm:px-4 py-2 text-xs font-base uppercase tracking-wider rounded-[2px] transition-colors cursor-pointer disabled:cursor-not-allowed disabled:opacity-40 outline-none focus-visible:ring-1 focus-visible:ring-primary ${
               isActive
                 ? "text-background font-bold"
-                : "text-label/90 hover:text-foreground bg-tertiary/40 border border-border/60 hover:border-border hover:bg-tertiary/70"
+                : "text-label hover:text-foreground bg-tertiary border border-border hover:border-foreground/20 hover:bg-tertiary/70"
             }`}
           >
             {isActive && (

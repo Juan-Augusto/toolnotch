@@ -66,7 +66,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryDisplayConfig> = {
     name: {
       pt: "CÍVICO & MÍDIA",
       es: "CÍVICO Y MEDIOS",
-      en: "CIVIC & MEDIA LITERACY",
+      en: "CIVIC & MEDIA",
     },
     badgeColor: "text-background",
     badgeBg: "bg-blue-400",

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import AppTabsChips, { AppTabsChipItem } from "./AppTabsChips";
-import { Sparkles, Volleyball, Brain, Server, Landmark } from "lucide-react";
+import { Volleyball, Brain, Server, Landmark } from "lucide-react";
 
 const meta: Meta<typeof AppTabsChips> = {
   title: "UI/AppTabsChips",

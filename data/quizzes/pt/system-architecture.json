@@ -9,32 +9,32 @@
   "questions": [
     {
       "id": "q1",
-      "text": "What is the primary difference between a monolithic and a microservices architecture?",
+      "text": "Qual é a principal diferença entre uma arquitetura monolítica e uma de microsserviços?",
       "options": [
         {
           "id": "q1a",
-          "text": "A monolith uses containers; microservices do not"
+          "text": "Um monólito usa contêineres; microsserviços não"
         },
         {
           "id": "q1b",
-          "text": "A monolith is deployed as a single unit; microservices are deployed as independent services"
+          "text": "Um monólito é implantado como uma única unidade; microsserviços são implantados como serviços independentes"
         },
         {
           "id": "q1c",
-          "text": "Microservices must share a single database; a monolith cannot"
+          "text": "Microsserviços devem compartilhar um único banco de dados; um monólito não pode"
         },
         {
           "id": "q1d",
-          "text": "A monolith can only run on one server; microservices run on many"
+          "text": "Um monólito só pode rodar em um servidor; microsserviços rodam em vários"
         }
       ],
       "correctAnswerId": "q1b",
-      "explanation": "In a monolithic architecture all functionality is bundled and deployed together, while microservices decompose the application into independently deployable services.",
+      "explanation": "Em uma arquitetura monolítica, todas as funcionalidades são agrupadas e implantadas juntas, enquanto os microsserviços decompõem a aplicação em serviços que podem ser implantados de forma independente.",
       "level": "beginner"
     },
     {
       "id": "q2",
-      "text": "Which HTTP method is conventionally used to UPDATE an existing resource in a REST API?",
+      "text": "Qual método HTTP é convencionalmente utilizado para ATUALIZAR um recurso existente em uma API REST?",
       "options": [
         {
           "id": "q2a",
@@ -54,37 +54,37 @@
         }
       ],
       "correctAnswerId": "q2c",
-      "explanation": "PUT (or PATCH for partial updates) is the RESTful convention for updating an existing resource identified by its URI.",
+      "explanation": "O método PUT (ou PATCH para atualizações parciais) é a convenção RESTful para atualizar um recurso existente identificado por sua URI.",
       "level": "beginner"
     },
     {
       "id": "q3",
-      "text": "In one sentence, what does Docker do?",
+      "text": "Em uma frase, o que o Docker faz?",
       "options": [
         {
           "id": "q3a",
-          "text": "It provisions virtual machines on cloud providers"
+          "text": "Provisiona máquinas virtuais em provedores de nuvem"
         },
         {
           "id": "q3b",
-          "text": "It packages an application and its dependencies into a portable container that runs consistently anywhere"
+          "text": "Empacota uma aplicação e suas dependências em um contêiner portátil que roda de forma consistente em qualquer lugar"
         },
         {
           "id": "q3c",
-          "text": "It replaces the operating system kernel for better performance"
+          "text": "Substitui o kernel do sistema operacional para obter melhor desempenho"
         },
         {
           "id": "q3d",
-          "text": "It orchestrates clusters of servers across data centers"
+          "text": "Orquestra clusters de servidores em vários data centers"
         }
       ],
       "correctAnswerId": "q3b",
-      "explanation": "Docker uses OS-level virtualisation to package code and its runtime into lightweight, reproducible containers.",
+      "explanation": "O Docker utiliza virtualização em nível de sistema operacional para empacotar o código e seu ambiente de execução em contêineres leves e reproduzíveis.",
       "level": "beginner"
     },
     {
       "id": "q4",
-      "text": "What does CI/CD stand for?",
+      "text": "O que significa a sigla CI/CD?",
       "options": [
         {
           "id": "q4a",
@@ -96,7 +96,7 @@
         },
         {
           "id": "q4c",
-          "text": "Continuous Integration / Continuous Delivery (or Deployment)"
+          "text": "Continuous Integration / Continuous Delivery (ou Deployment)"
         },
         {
           "id": "q4d",
@@ -104,657 +104,657 @@
         }
       ],
       "correctAnswerId": "q4c",
-      "explanation": "CI/CD stands for Continuous Integration and Continuous Delivery (or Deployment), automating build, test, and release pipelines.",
+      "explanation": "CI/CD significa Integração Contínua e Entrega Contínua (ou Implantação Contínua), automatizando pipelines de compilação, testes e lançamento.",
       "level": "beginner"
     },
     {
       "id": "q5",
-      "text": "Why are environment variables preferred over hard-coded values for secrets in an application?",
+      "text": "Por que variáveis de ambiente são preferíveis em relação a valores embutidos no código para segredos de uma aplicação?",
       "options": [
         {
           "id": "q5a",
-          "text": "They make the application run faster"
+          "text": "Fazem a aplicação rodar mais rápido"
         },
         {
           "id": "q5b",
-          "text": "They keep sensitive values out of source code and allow configuration per environment"
+          "text": "Mantêm informações sensíveis fora do código-fonte e permitem configurações específicas por ambiente"
         },
         {
           "id": "q5c",
-          "text": "They are automatically encrypted at the OS level"
+          "text": "São automaticamente criptografadas no nível do sistema operacional"
         },
         {
           "id": "q5d",
-          "text": "They are required by the Docker runtime"
+          "text": "São exigidas pelo ambiente de execução do Docker"
         }
       ],
       "correctAnswerId": "q5b",
-      "explanation": "Externalising secrets as environment variables prevents them being committed to version control and allows the same image to run in dev, staging, and production.",
+      "explanation": "Externalizar segredos como variáveis de ambiente evita que sejam adicionados ao controle de versão e permite que a mesma imagem execute em desenvolvimento, homologação e produção.",
       "level": "beginner"
     },
     {
       "id": "q6",
-      "text": "What is the main job of a load balancer?",
+      "text": "Qual é o principal papel de um balanceador de carga?",
       "options": [
         {
           "id": "q6a",
-          "text": "Compressing HTTP responses before they reach the client"
+          "text": "Comprimir respostas HTTP antes que cheguem ao cliente"
         },
         {
           "id": "q6b",
-          "text": "Distributing incoming network traffic across multiple servers"
+          "text": "Distribuir o tráfego de rede de entrada entre múltiplos servidores"
         },
         {
           "id": "q6c",
-          "text": "Caching database query results"
+          "text": "Armazenar em cache os resultados de consultas ao banco de dados"
         },
         {
           "id": "q6d",
-          "text": "Monitoring application logs in real time"
+          "text": "Monitorar logs da aplicação em tempo real"
         }
       ],
       "correctAnswerId": "q6b",
-      "explanation": "A load balancer routes incoming requests across a pool of servers to maximise throughput, minimise latency, and avoid overloading any single node.",
+      "explanation": "Um balanceador de carga encaminha as requisições recebidas para um pool de servidores a fim de maximizar a vazão, minimizar a latência e evitar a sobrecarga de qualquer nó individual.",
       "level": "beginner"
     },
     {
       "id": "q7",
-      "text": "What is the difference between horizontal and vertical scaling?",
+      "text": "Qual é a diferença entre escalabilidade horizontal e vertical?",
       "options": [
         {
           "id": "q7a",
-          "text": "Horizontal scaling adds more CPU/RAM to a single server; vertical scaling adds more servers"
+          "text": "Escalabilidade horizontal adiciona mais CPU/RAM a um único servidor; escalabilidade vertical adiciona mais servidores"
         },
         {
           "id": "q7b",
-          "text": "Horizontal scaling adds more servers; vertical scaling adds more CPU/RAM to an existing server"
+          "text": "Escalabilidade horizontal adiciona mais servidores; escalabilidade vertical adiciona mais CPU/RAM a um servidor existente"
         },
         {
           "id": "q7c",
-          "text": "They are the same concept but used in different cloud providers"
+          "text": "São o mesmo conceito, mas com nomes diferentes em cada provedor de nuvem"
         },
         {
           "id": "q7d",
-          "text": "Horizontal scaling only applies to databases; vertical scaling only applies to web servers"
+          "text": "Escalabilidade horizontal aplica-se apenas a bancos de dados; escalabilidade vertical aplica-se apenas a servidores web"
         }
       ],
       "correctAnswerId": "q7b",
-      "explanation": "Scaling out (horizontal) means adding more instances, while scaling up (vertical) means increasing the resources of an existing instance.",
+      "explanation": "Escalar horizontalmente (scale out) significa adicionar mais instâncias, enquanto escalar verticalmente (scale up) significa aumentar os recursos de uma instância existente.",
       "level": "beginner"
     },
     {
       "id": "q8",
-      "text": "When Nginx is used as a reverse proxy, which traffic direction does it primarily handle?",
+      "text": "Quando o Nginx é usado como proxy reverso, qual direção de tráfego ele gerencia principalmente?",
       "options": [
         {
           "id": "q8a",
-          "text": "Requests from internal services to the database"
+          "text": "Requisições de serviços internos para o banco de dados"
         },
         {
           "id": "q8b",
-          "text": "Outbound requests from the server to external APIs"
+          "text": "Requisições de saída do servidor para APIs externas"
         },
         {
           "id": "q8c",
-          "text": "Inbound client requests forwarded to backend application servers"
+          "text": "Requisições de clientes recebidas que são encaminhadas para servidores de aplicação backend"
         },
         {
           "id": "q8d",
-          "text": "Traffic between microservices inside a Kubernetes cluster"
+          "text": "Tráfego entre microsserviços dentro de um cluster Kubernetes"
         }
       ],
       "correctAnswerId": "q8c",
-      "explanation": "A reverse proxy like Nginx sits in front of backend servers, receiving client requests and forwarding them to the appropriate upstream service.",
+      "explanation": "Um proxy reverso como o Nginx fica posicionado à frente dos servidores backend, recebendo as requisições dos clientes e encaminhando-as para o serviço upstream apropriado.",
       "level": "beginner"
     },
     {
       "id": "q9",
-      "text": "What is the purpose of a health check endpoint (e.g., GET /health) in a web service?",
+      "text": "Qual é o propósito de um endpoint de health check (por exemplo, GET /health) em um serviço web?",
       "options": [
         {
           "id": "q9a",
-          "text": "To return the current CPU and memory usage to the end user"
+          "text": "Retornar o uso atual de CPU e memória para o usuário final"
         },
         {
           "id": "q9b",
-          "text": "To allow load balancers and orchestrators to verify that the service is running correctly"
+          "text": "Permitir que balanceadores de carga e orquestradores verifiquem se o serviço está funcionando corretamente"
         },
         {
           "id": "q9c",
-          "text": "To trigger a manual restart of the service"
+          "text": "Disparar uma reinicialização manual do serviço"
         },
         {
           "id": "q9d",
-          "text": "To expose internal API documentation"
+          "text": "Expor a documentação interna da API"
         }
       ],
       "correctAnswerId": "q9b",
-      "explanation": "Health check endpoints give orchestration tools like Kubernetes and load balancers a reliable signal to decide whether traffic should be sent to a given instance.",
+      "explanation": "Endpoints de verificação de integridade (health check) fornecem a ferramentas de orquestração como o Kubernetes e balanceadores de carga um sinal confiável para decidir se o tráfego deve ser enviado a uma determinada instância.",
       "level": "beginner"
     },
     {
       "id": "q10",
-      "text": "In a deployment pipeline, what does a rollback accomplish?",
+      "text": "Em um pipeline de implantação, o que um rollback realiza?",
       "options": [
         {
           "id": "q10a",
-          "text": "It deletes all data written since the last release"
+          "text": "Exclui todos os dados gravados desde o último lançamento"
         },
         {
           "id": "q10b",
-          "text": "It reverts the running application to a previously known-good version"
+          "text": "Reverte a aplicação em execução para uma versão estável anterior conhecida"
         },
         {
           "id": "q10c",
-          "text": "It scales the number of instances back to zero"
+          "text": "Reduz o número de instâncias de volta para zero"
         },
         {
           "id": "q10d",
-          "text": "It resets environment variables to their default values"
+          "text": "Redefine variáveis de ambiente para seus valores padrão"
         }
       ],
       "correctAnswerId": "q10b",
-      "explanation": "A rollback redeploys a previous stable artifact or image when the current release is found to be defective.",
+      "explanation": "Um rollback implanta novamente um artefato ou imagem estável anterior quando a versão atual apresenta defeitos.",
       "level": "beginner"
     },
     {
       "id": "q11",
-      "text": "The 12-Factor App methodology's 'Config' factor states that configuration should be stored in:",
+      "text": "O fator 'Configurações' da metodologia The Twelve-Factor App estabelece que as configurações devem ser armazenadas em:",
       "options": [
         {
           "id": "q11a",
-          "text": "A config file committed alongside the source code"
+          "text": "Um arquivo de configuração commitado junto ao código-fonte"
         },
         {
           "id": "q11b",
-          "text": "The environment"
+          "text": "Variáveis de ambiente"
         },
         {
           "id": "q11c",
-          "text": "A dedicated configuration microservice"
+          "text": "Um microsserviço dedicado a configurações"
         },
         {
           "id": "q11d",
-          "text": "A relational database table"
+          "text": "Uma tabela de banco de dados relacional"
         }
       ],
       "correctAnswerId": "q11b",
-      "explanation": "Factor III of the 12-Factor App says anything that varies between deploys (credentials, resource handles) must be stored in environment variables, not in code.",
+      "explanation": "O fator III do 12-Factor App determina que qualquer elemento que varie entre implantações (credenciais, handles de recursos) deve ser armazenado em variáveis de ambiente, nunca no código.",
       "level": "intermediate"
     },
     {
       "id": "q12",
-      "text": "In a blue/green deployment, what happens to the 'blue' environment after a successful switch to 'green'?",
+      "text": "Em uma implantação blue/green, o que acontece com o ambiente 'blue' após a troca bem-sucedida para o 'green'?",
       "options": [
         {
           "id": "q12a",
-          "text": "It is permanently deleted to save cost"
+          "text": "É excluído permanentemente para reduzir custos"
         },
         {
           "id": "q12b",
-          "text": "It continues to receive 50 % of production traffic"
+          "text": "Continua recebendo 50% do tráfego de produção"
         },
         {
           "id": "q12c",
-          "text": "It is kept idle and can serve as a rollback target"
+          "text": "Permanece ocioso e pode servir como alvo de rollback"
         },
         {
           "id": "q12d",
-          "text": "It is automatically upgraded to match the green environment"
+          "text": "É atualizado automaticamente para corresponder ao ambiente green"
         }
       ],
       "correctAnswerId": "q12c",
-      "explanation": "The old blue environment remains on standby so that traffic can be instantly switched back if a critical defect is discovered in green.",
+      "explanation": "O ambiente blue antigo permanece em espera (standby) para que o tráfego possa ser revertido instantaneamente caso um defeito crítico seja identificado no green.",
       "level": "intermediate"
     },
     {
       "id": "q13",
-      "text": "What differentiates a canary deployment from a blue/green deployment?",
+      "text": "O que diferencia uma implantação canário (canary) de uma implantação blue/green?",
       "options": [
         {
           "id": "q13a",
-          "text": "Canary deployments require two identical environments; blue/green requires only one"
+          "text": "Implantações canário exigem dois ambientes idênticos; blue/green exige apenas um"
         },
         {
           "id": "q13b",
-          "text": "Canary deployments gradually shift a small percentage of traffic to the new version before a full rollout"
+          "text": "Implantações canário direcionam gradualmente uma pequena porcentagem do tráfego para a nova versão antes de uma implantação completa"
         },
         {
           "id": "q13c",
-          "text": "Canary deployments are only used for database migrations"
+          "text": "Implantações canário são usadas apenas para migrações de banco de dados"
         },
         {
           "id": "q13d",
-          "text": "Blue/green deployments are always faster than canary deployments"
+          "text": "Implantações blue/green são sempre mais rápidas do que implantações canário"
         }
       ],
       "correctAnswerId": "q13b",
-      "explanation": "A canary release exposes the new version to a small slice of users first, allowing teams to catch problems with limited blast radius before rolling out fully.",
+      "explanation": "Uma implantação canário expõe a nova versão a uma pequena parcela de usuários inicialmente, permitindo que a equipe identifique falhas com raio de impacto reduzido antes da liberação total.",
       "level": "intermediate"
     },
     {
       "id": "q14",
-      "text": "In Kubernetes, what is the role of a Pod?",
+      "text": "No Kubernetes, qual é o papel de um Pod?",
       "options": [
         {
           "id": "q14a",
-          "text": "It is the control plane component that schedules containers onto nodes"
+          "text": "É o componente do control plane que agenda contêineres nos nós"
         },
         {
           "id": "q14b",
-          "text": "It is the smallest deployable unit, wrapping one or more co-located containers that share network and storage"
+          "text": "É a menor unidade implantável, agrupando um ou mais contêineres co-localizados que compartilham rede e armazenamento"
         },
         {
           "id": "q14c",
-          "text": "It is the Kubernetes equivalent of a virtual machine"
+          "text": "É o equivalente no Kubernetes a uma máquina virtual"
         },
         {
           "id": "q14d",
-          "text": "It is the configuration manifest for a Kubernetes cluster"
+          "text": "É o manifesto de configuração de um cluster Kubernetes"
         }
       ],
       "correctAnswerId": "q14b",
-      "explanation": "A Pod is Kubernetes's atomic unit of deployment — containers within the same Pod share an IP address, localhost network, and mounted volumes.",
+      "explanation": "Um Pod é a unidade atômica de implantação no Kubernetes: contêineres dentro do mesmo Pod compartilham um endereço IP, rede localhost e volumes montados.",
       "level": "intermediate"
     },
     {
       "id": "q15",
-      "text": "What is the key difference between DNS-based and registry-based service discovery?",
+      "text": "Qual é a principal diferença entre a descoberta de serviços (service discovery) baseada em DNS e baseada em registro?",
       "options": [
         {
           "id": "q15a",
-          "text": "DNS-based discovery works only inside a single host; registry-based works across hosts"
+          "text": "A descoberta por DNS funciona apenas dentro de um único host; a baseada em registro funciona entre múltiplos hosts"
         },
         {
           "id": "q15b",
-          "text": "DNS-based discovery resolves service names to IPs via standard DNS; registry-based services query a dedicated registry (e.g., Consul) for live instance lists"
+          "text": "A descoberta por DNS resolve nomes de serviços para IPs via DNS padrão; serviços baseados em registro consultam um registro dedicado (como Consul) para obter listas de instâncias ativas"
         },
         {
           "id": "q15c",
-          "text": "Registry-based discovery is slower because it requires a round trip to the registry on every request"
+          "text": "A descoberta baseada em registro é mais lenta porque exige uma viagem de ida e volta ao registro a cada requisição"
         },
         {
           "id": "q15d",
-          "text": "There is no practical difference — both achieve exactly the same result"
+          "text": "Não há diferença prática: ambas alcançam exatamente o mesmo resultado"
         }
       ],
       "correctAnswerId": "q15b",
-      "explanation": "DNS-based discovery leverages standard DNS records for routing, while client-side registry discovery queries a service like Consul or Eureka to get a fresh list of healthy instances.",
+      "explanation": "A descoberta por DNS utiliza registros DNS convencionais para roteamento, enquanto a descoberta via registro consulta serviços como Consul ou Eureka para obter uma lista atualizada de instâncias saudáveis.",
       "level": "intermediate"
     },
     {
       "id": "q16",
-      "text": "What problem does an API gateway pattern solve in a microservices architecture?",
+      "text": "Qual problema o padrão API Gateway resolve em uma arquitetura de microsserviços?",
       "options": [
         {
           "id": "q16a",
-          "text": "It replaces the need for a message broker between services"
+          "text": "Substitui a necessidade de um broker de mensagens entre os serviços"
         },
         {
           "id": "q16b",
-          "text": "It provides a single entry point for clients, handling cross-cutting concerns like auth, rate limiting, and routing"
+          "text": "Fornece um único ponto de entrada para clientes, gerenciando preocupações transversais como autenticação, limitação de taxa e roteamento"
         },
         {
           "id": "q16c",
-          "text": "It synchronises databases across services automatically"
+          "text": "Sincroniza automaticamente os bancos de dados entre os serviços"
         },
         {
           "id": "q16d",
-          "text": "It eliminates the need for service health checks"
+          "text": "Elimina a necessidade de verificações de integridade nos serviços"
         }
       ],
       "correctAnswerId": "q16b",
-      "explanation": "An API gateway acts as the front door for all client requests, centralising concerns such as authentication, SSL termination, and request routing away from individual services.",
+      "explanation": "Um API Gateway funciona como porta de entrada para todas as requisições de clientes, centralizando aspectos como autenticação, terminação SSL e roteamento de requisições fora dos serviços individuais.",
       "level": "intermediate"
     },
     {
       "id": "q17",
-      "text": "Why should microservices be designed to be stateless?",
+      "text": "Por que os microsserviços devem ser projetados para serem sem estado (stateless)?",
       "options": [
         {
           "id": "q17a",
-          "text": "Stateless services run faster because they never write to disk"
+          "text": "Serviços stateless rodam mais rápido porque nunca gravam no disco"
         },
         {
           "id": "q17b",
-          "text": "Stateless services can be freely scaled out and replaced without migrating session data"
+          "text": "Serviços stateless podem ser escalados horizontalmente e substituídos sem necessidade de migrar dados de sessão"
         },
         {
           "id": "q17c",
-          "text": "Stateless services do not need a load balancer"
+          "text": "Serviços stateless não necessitam de balanceador de carga"
         },
         {
           "id": "q17d",
-          "text": "Kubernetes only supports stateless workloads"
+          "text": "O Kubernetes oferece suporte apenas a cargas de trabalho stateless"
         }
       ],
       "correctAnswerId": "q17b",
-      "explanation": "When a service holds no local state, any instance can handle any request, making horizontal scaling and fault recovery straightforward.",
+      "explanation": "Quando um serviço não mantém estado local, qualquer instância pode atender a qualquer requisição, tornando a escalabilidade horizontal e a recuperação de falhas muito mais simples.",
       "level": "intermediate"
     },
     {
       "id": "q18",
-      "text": "In the circuit breaker pattern, what does the 'Half-Open' state represent?",
+      "text": "No padrão Circuit Breaker, o que o estado 'Half-Open' representa?",
       "options": [
         {
           "id": "q18a",
-          "text": "The circuit is permanently disabled and traffic is rejected"
+          "text": "O circuito fica permanentemente desativado e o tráfego é rejeitado"
         },
         {
           "id": "q18b",
-          "text": "The circuit allows a limited number of test requests through to see whether the downstream service has recovered"
+          "text": "O circuito permite a passagem de um número limitado de requisições de teste para verificar se o serviço downstream se recuperou"
         },
         {
           "id": "q18c",
-          "text": "The circuit is passing all traffic normally after a successful recovery"
+          "text": "O circuito está passando todo o tráfego normalmente após uma recuperação bem-sucedida"
         },
         {
           "id": "q18d",
-          "text": "The circuit is blocked but still logging requests for audit purposes"
+          "text": "O circuito está bloqueado, mas continua registrando requisições em log para fins de auditoria"
         }
       ],
       "correctAnswerId": "q18b",
-      "explanation": "The Half-Open state is a probe phase: a small number of requests are forwarded; if they succeed the circuit closes again, otherwise it re-opens.",
+      "explanation": "O estado Half-Open é uma fase de teste: um pequeno volume de requisições é encaminhado; se forem bem-sucedidas, o circuito fecha novamente; caso contrário, reabre.",
       "level": "intermediate"
     },
     {
       "id": "q19",
-      "text": "How does the token bucket algorithm differ from the leaky bucket algorithm for rate limiting?",
+      "text": "Como o algoritmo de balde de tokens (token bucket) se diferencia do algoritmo de balde furado (leaky bucket) no controle de taxa?",
       "options": [
         {
           "id": "q19a",
-          "text": "Token bucket enforces a strict constant output rate; leaky bucket allows bursts up to the bucket capacity"
+          "text": "O token bucket impõe uma taxa de saída rigorosamente constante; o leaky bucket permite picos de tráfego até a capacidade do balde"
         },
         {
           "id": "q19b",
-          "text": "Token bucket allows bursts up to the bucket capacity; leaky bucket enforces a strict constant output rate"
+          "text": "O token bucket permite picos de tráfego até a capacidade do balde; o leaky bucket impõe uma taxa de saída rigorosamente constante"
         },
         {
           "id": "q19c",
-          "text": "They are identical — just different names used by different vendors"
+          "text": "Eles são idênticos: apenas nomes distintos utilizados por diferentes fornecedores"
         },
         {
           "id": "q19d",
-          "text": "Leaky bucket is only used for UDP traffic; token bucket is for HTTP"
+          "text": "O leaky bucket é usado apenas para tráfego UDP; o token bucket é para HTTP"
         }
       ],
       "correctAnswerId": "q19b",
-      "explanation": "Token bucket accumulates tokens over time and permits bursts by spending multiple tokens at once, whereas leaky bucket drains at a fixed rate regardless of input speed.",
+      "explanation": "O token bucket acumula tokens ao longo do tempo e permite rajadas de tráfego ao consumir múltiplos tokens de uma vez, enquanto o leaky bucket esvazia a uma taxa fixa constante, independentemente da taxa de entrada.",
       "level": "intermediate"
     },
     {
       "id": "q20",
-      "text": "What does 'immutable infrastructure' mean?",
+      "text": "O que significa 'infraestrutura imutável'?",
       "options": [
         {
           "id": "q20a",
-          "text": "Servers are patched in place and never restarted"
+          "text": "Servidores recebem patches diretamente no local e nunca são reiniciados"
         },
         {
           "id": "q20b",
-          "text": "Servers are never modified after deployment; changes are applied by replacing instances with new ones built from updated images"
+          "text": "Servidores nunca são modificados após a implantação; alterações são aplicadas substituindo instâncias por novas criadas a partir de imagens atualizadas"
         },
         {
           "id": "q20c",
-          "text": "Infrastructure configuration files are stored in a read-only S3 bucket"
+          "text": "Arquivos de configuração de infraestrutura são armazenados em um bucket S3 somente leitura"
         },
         {
           "id": "q20d",
-          "text": "All servers in a cluster must have identical hardware specifications"
+          "text": "Todos os servidores de um cluster devem possuir especificações de hardware idênticas"
         }
       ],
       "correctAnswerId": "q20b",
-      "explanation": "Immutable infrastructure treats servers like disposable artefacts: instead of patching live hosts, you build a new image and roll out fresh instances, eliminating configuration drift.",
+      "explanation": "A infraestrutura imutável trata servidores como artefatos descartáveis: em vez de aplicar patches em máquinas ativas, cria-se uma nova imagem e implantam-se instâncias novas, eliminando desvios de configuração.",
       "level": "intermediate"
     },
     {
       "id": "q21",
-      "text": "Why does a rolling update in Kubernetes use readiness probes before routing traffic to new pods?",
+      "text": "Por que uma atualização progressiva (rolling update) no Kubernetes usa readiness probes antes de direcionar tráfego para novos pods?",
       "options": [
         {
           "id": "q21a",
-          "text": "To check that the container image was signed by a trusted registry"
+          "text": "Para verificar se a imagem do contêiner foi assinada por um registro confiável"
         },
         {
           "id": "q21b",
-          "text": "To ensure the new pod is fully initialised and ready to serve requests before old pods are removed"
+          "text": "Para garantir que o novo pod esteja totalmente inicializado e pronto para atender requisições antes que os pods antigos sejam removidos"
         },
         {
           "id": "q21c",
-          "text": "To throttle the deployment speed to avoid overwhelming the scheduler"
+          "text": "Para limitar a velocidade da implantação e evitar sobrecarregar o scheduler"
         },
         {
           "id": "q21d",
-          "text": "To run database migrations inside the new pod before traffic is sent"
+          "text": "Para rodar migrações de banco de dados dentro do novo pod antes do envio de tráfego"
         }
       ],
       "correctAnswerId": "q21b",
-      "explanation": "Kubernetes gates traffic on readiness probes to guarantee zero-downtime rolling updates — a pod only joins the load balancer rotation once it passes the probe.",
+      "explanation": "O Kubernetes condiciona o tráfego às sondas de prontidão (readiness probes) para garantir atualizações contínuas sem indisponibilidade: um pod só entra no rodízio do balanceador após passar na validação da sonda.",
       "level": "advanced"
     },
     {
       "id": "q22",
-      "text": "What is the expand-contract (parallel change) pattern for database migrations?",
+      "text": "O que é o padrão expand-contract (mudança paralela) para migrações de banco de dados?",
       "options": [
         {
           "id": "q22a",
-          "text": "Run a full database backup before and after every schema change"
+          "text": "Executar um backup completo do banco de dados antes e depois de cada alteração de esquema"
         },
         {
           "id": "q22b",
-          "text": "First expand the schema to support both old and new shapes, deploy code that works with both, then contract the schema by removing the old shape"
+          "text": "Primeiro expandir o esquema para dar suporte a ambas as estruturas (antiga e nova), implantar o código compatível com ambas e depois contrair o esquema removendo a estrutura antiga"
         },
         {
           "id": "q22c",
-          "text": "Scale the database cluster horizontally before applying a migration, then scale it back down afterwards"
+          "text": "Escalar o cluster de banco de dados horizontalmente antes de aplicar uma migração e reduzi-lo depois"
         },
         {
           "id": "q22d",
-          "text": "Use feature flags to hide new columns from users until the migration is complete"
+          "text": "Usar feature flags para ocultar novas colunas dos usuários até que a migração esteja concluída"
         }
       ],
       "correctAnswerId": "q22b",
-      "explanation": "Expand-contract decouples schema changes from code deployments so both old and new application versions can run simultaneously, enabling zero-downtime migrations.",
+      "explanation": "O padrão expand-contract desacopla as alterações de esquema das implantações de código para que tanto a versão antiga quanto a nova da aplicação possam executar simultaneamente, permitindo migrações sem indisponibilidade.",
       "level": "advanced"
     },
     {
       "id": "q23",
-      "text": "In the context of distributed systems, what does API idempotency guarantee?",
+      "text": "No contexto de sistemas distribuídos, o que a idempotência de uma API garante?",
       "options": [
         {
           "id": "q23a",
-          "text": "A request will always be processed in under 100 ms"
+          "text": "Que uma requisição sempre será processada em menos de 100 ms"
         },
         {
           "id": "q23b",
-          "text": "Making the same request multiple times produces the same result as making it once"
+          "text": "Que fazer a mesma requisição múltiplas vezes produz o mesmo resultado que realizá-la uma única vez"
         },
         {
           "id": "q23c",
-          "text": "The API will automatically retry failed requests on behalf of the client"
+          "text": "Que a API repetirá automaticamente requisições que falharam em nome do cliente"
         },
         {
           "id": "q23d",
-          "text": "Each request is processed by exactly one server instance"
+          "text": "Que cada requisição é processada exatamente por uma instância de servidor"
         }
       ],
       "correctAnswerId": "q23b",
-      "explanation": "Idempotency is essential for safe retries in unreliable networks — if the client cannot tell whether a request succeeded, re-sending it must not cause duplicate side effects.",
+      "explanation": "A idempotência é essencial para tentativas de reenvio seguras em redes instáveis: se o cliente não souber se uma requisição teve sucesso, reenviá-la não deve provocar efeitos colaterais duplicados.",
       "level": "advanced"
     },
     {
       "id": "q24",
-      "text": "In the Saga pattern, what is the key difference between choreography and orchestration?",
+      "text": "No padrão Saga, qual é a principal diferença entre coreografia e orquestração?",
       "options": [
         {
           "id": "q24a",
-          "text": "Choreography uses a central coordinator to call each service in order; orchestration uses events emitted by each service"
+          "text": "A coreografia usa um coordenador central para chamar cada serviço em ordem; a orquestração usa eventos emitidos por cada serviço"
         },
         {
           "id": "q24b",
-          "text": "Choreography has each service react to domain events and publish new ones; orchestration uses a central saga orchestrator to command each step"
+          "text": "Na coreografia, cada serviço reage a eventos de domínio e publica novos eventos; na orquestração, um orquestrador central de sagas comanda explicitamente cada etapa"
         },
         {
           "id": "q24c",
-          "text": "Choreography is only used for read operations; orchestration is only for write operations"
+          "text": "A coreografia é usada apenas para operações de leitura; a orquestração é apenas para operações de escrita"
         },
         {
           "id": "q24d",
-          "text": "They are equivalent implementations with different naming conventions"
+          "text": "São implementações equivalentes com apenas convenções de nomes distintas"
         }
       ],
       "correctAnswerId": "q24b",
-      "explanation": "In choreography services communicate through events with no central brain, while in orchestration a dedicated process explicitly drives each step and handles compensating transactions.",
+      "explanation": "Na coreografia, os serviços se comunicam por meio de eventos sem um controlador central, enquanto na orquestração um processo dedicado conduz explicitamente cada passo e gerencia as transações de compensação.",
       "level": "advanced"
     },
     {
       "id": "q25",
-      "text": "The Strangler Fig pattern is used to:",
+      "text": "O padrão Strangler Fig é utilizado para:",
       "options": [
         {
           "id": "q25a",
-          "text": "Gradually replace a legacy monolith by routing specific features to new microservices until the monolith can be retired"
+          "text": "Substituir gradualmente um monólito legado roteando funcionalidades específicas para novos microsserviços até que o monólito possa ser aposentado"
         },
         {
           "id": "q25b",
-          "text": "Throttle traffic to a legacy system to force users onto a new platform faster"
+          "text": "Limitar o tráfego de um sistema legado para forçar os usuários a migrarem para a nova plataforma mais rapidamente"
         },
         {
           "id": "q25c",
-          "text": "Inject faults into a legacy system to find hidden dependencies before migration"
+          "text": "Injetar falhas em um sistema legado para descobrir dependências ocultas antes da migração"
         },
         {
           "id": "q25d",
-          "text": "Wrap a legacy database with an ORM to decouple it from the application layer"
+          "text": "Envolver um banco de dados legado com um ORM para desacoplá-lo da camada de aplicação"
         }
       ],
       "correctAnswerId": "q25a",
-      "explanation": "Inspired by the strangler fig tree, the pattern intercepts calls to the old system and redirects them incrementally to new services until the legacy system can be decommissioned.",
+      "explanation": "Inspirado na figueira estranguladora, o padrão intercepta chamadas ao sistema antigo e as redireciona incrementalmente para novos serviços até que o sistema legado possa ser completamente desativado.",
       "level": "advanced"
     },
     {
       "id": "q26",
-      "text": "What is the primary goal of chaos engineering tools like Chaos Monkey and Gremlin?",
+      "text": "Qual é o principal objetivo de ferramentas de engenharia do caos como Chaos Monkey e Gremlin?",
       "options": [
         {
           "id": "q26a",
-          "text": "To stress-test databases by generating millions of random write operations"
+          "text": "Realizar testes de estresse em bancos de dados gerando milhões de operações aleatórias de escrita"
         },
         {
           "id": "q26b",
-          "text": "To proactively inject failures into production systems to expose weaknesses before they cause unplanned outages"
+          "text": "Injetar falhas proativamente em sistemas de produção para expor fraquezas antes que provoquem indisponibilidades não planejadas"
         },
         {
           "id": "q26c",
-          "text": "To simulate high network latency during load testing in staging environments only"
+          "text": "Simular alta latência de rede durante testes de carga exclusivamente em ambientes de homologação"
         },
         {
           "id": "q26d",
-          "text": "To fuzz API inputs and detect security vulnerabilities in microservices"
+          "text": "Fazer fuzzing de entradas de API e identificar vulnerabilidades de segurança em microsserviços"
         }
       ],
       "correctAnswerId": "q26b",
-      "explanation": "Chaos engineering deliberately introduces turbulence — killing instances, dropping network packets, exhausting CPU — to verify that a system's resilience mechanisms work before a real incident occurs.",
+      "explanation": "A engenharia do caos introduz turbulências deliberadamente (derrubando instâncias, descartando pacotes de rede, esgotando CPU) para validar se os mecanismos de resiliência do sistema funcionam antes que ocorra um incidente real.",
       "level": "advanced"
     },
     {
       "id": "q27",
-      "text": "What does a service mesh like Istio or Linkerd provide that a traditional API gateway does not?",
+      "text": "O que uma malha de serviços (service mesh) como Istio ou Linkerd oferece que um API Gateway tradicional não oferece?",
       "options": [
         {
           "id": "q27a",
-          "text": "A single external entry point for all client-facing HTTP traffic"
+          "text": "Um único ponto de entrada externo para todo o tráfego HTTP voltado aos clientes"
         },
         {
           "id": "q27b",
-          "text": "Mutual TLS, traffic observability, and fine-grained routing between every service-to-service call inside the cluster"
+          "text": "TLS mútuo (mTLS), observabilidade de tráfego e roteamento granular entre todas as chamadas de serviço para serviço dentro do cluster"
         },
         {
           "id": "q27c",
-          "text": "Automatic horizontal pod autoscaling based on network throughput"
+          "text": "Autoescalabilidade horizontal de pods automática baseada no tráfego de rede"
         },
         {
           "id": "q27d",
-          "text": "DNS resolution for services that span multiple Kubernetes namespaces"
+          "text": "Resolução de DNS para serviços que abrangem múltiplos namespaces do Kubernetes"
         }
       ],
       "correctAnswerId": "q27b",
-      "explanation": "A service mesh operates at the east-west (service-to-service) layer via sidecar proxies, providing mTLS encryption, circuit breaking, and telemetry for all internal communication — beyond what a north-south API gateway handles.",
+      "explanation": "Uma service mesh atua na camada leste-oeste (serviço a serviço) por meio de proxies sidecar, fornecendo criptografia mTLS, circuit breaker e telemetria para toda a comunicação interna, além do que um API Gateway norte-sul abrange.",
       "level": "advanced"
     },
     {
       "id": "q28",
-      "text": "In GitOps (using ArgoCD or Flux), what is the single source of truth for the desired cluster state?",
+      "text": "No GitOps (utilizando ArgoCD ou Flux), qual é a fonte única da verdade para o estado desejado do cluster?",
       "options": [
         {
           "id": "q28a",
-          "text": "The running containers in the Kubernetes cluster"
+          "text": "Os contêineres em execução no cluster Kubernetes"
         },
         {
           "id": "q28b",
-          "text": "A Git repository containing declarative infrastructure and application manifests"
+          "text": "Um repositório Git contendo manifestos declarativos de infraestrutura e aplicação"
         },
         {
           "id": "q28c",
-          "text": "The CI pipeline's most recently published artifact"
+          "text": "O artefato publicado mais recentemente pelo pipeline de CI"
         },
         {
           "id": "q28d",
-          "text": "An operations runbook stored in a wiki"
+          "text": "Um runbook de operações armazenado em uma wiki"
         }
       ],
       "correctAnswerId": "q28b",
-      "explanation": "GitOps mandates that a Git repository is the authoritative record of desired state; the GitOps controller continuously reconciles the live cluster to match what is declared in that repo.",
+      "explanation": "O GitOps estabelece que um repositório Git é o registro definitivo do estado desejado; o controlador GitOps reconcilia continuamente o cluster em tempo real para corresponder ao que está declarado nesse repositório.",
       "level": "advanced"
     },
     {
       "id": "q29",
-      "text": "In a multi-region active-active architecture, which consistency challenge must be explicitly addressed?",
+      "text": "Em uma arquitetura ativo-ativo multirregião, qual desafio de consistência deve ser explicitamente tratado?",
       "options": [
         {
           "id": "q29a",
-          "text": "Ensuring all regions use the same container image digest"
+          "text": "Garantir que todas as regiões usem o mesmo digest de imagem de contêiner"
         },
         {
           "id": "q29b",
-          "text": "Handling write conflicts and replication lag when the same data can be modified concurrently in different regions"
+          "text": "Lidar com conflitos de escrita e atraso de replicação quando o mesmo dado puder ser modificado simultaneamente em regiões distintas"
         },
         {
           "id": "q29c",
-          "text": "Routing all writes through a single primary region to avoid latency"
+          "text": "Roteamento de todas as escritas através de uma única região primária para evitar latência"
         },
         {
           "id": "q29d",
-          "text": "Synchronising Kubernetes node clocks across regions via NTP"
+          "text": "Sincronizar relógios de nós Kubernetes entre regiões via NTP"
         }
       ],
       "correctAnswerId": "q29b",
-      "explanation": "Active-active setups allow writes in every region, so the system must implement a conflict-resolution strategy (e.g., last-write-wins, CRDTs, or vector clocks) and tolerate transient replication lag.",
+      "explanation": "Configurações ativo-ativo permitem escritas em todas as regiões; portanto, o sistema deve implementar uma estratégia de resolução de conflitos (como last-write-wins, CRDTs ou relógios vetoriais) e tolerar o atraso transitório de replicação.",
       "level": "advanced"
     },
     {
       "id": "q30",
-      "text": "Which three pillars make up full observability in a distributed system, and why are correlation IDs important?",
+      "text": "Quais são os três pilares da observabilidade completa em um sistema distribuído e por que IDs de correlação são importantes?",
       "options": [
         {
           "id": "q30a",
-          "text": "Uptime, latency, and error rate; correlation IDs link SLO alerts to on-call schedules"
+          "text": "Disponibilidade (uptime), latência e taxa de erros; IDs de correlação associam alertas de SLO a escalas de plantão"
         },
         {
           "id": "q30b",
-          "text": "Logs, metrics, and traces; correlation IDs allow a single request to be tracked end-to-end across all services and their telemetry"
+          "text": "Logs, métricas e rastreamentos (traces); IDs de correlação permitem rastrear uma única requisição de ponta a ponta por todos os serviços e sua telemetria"
         },
         {
           "id": "q30c",
-          "text": "Dashboards, alerts, and runbooks; correlation IDs replace the need for distributed tracing"
+          "text": "Painéis (dashboards), alertas e runbooks; IDs de correlação substituem a necessidade de rastreamento distribuído"
         },
         {
           "id": "q30d",
-          "text": "CPU, memory, and disk; correlation IDs map infrastructure metrics to application deployments"
+          "text": "CPU, memória e disco; IDs de correlação mapeiam métricas de infraestrutura para implantações de aplicações"
         }
       ],
       "correctAnswerId": "q30b",
-      "explanation": "Logs, metrics, and distributed traces are the three observability pillars; a correlation ID propagated through every service call ties all three signals together, making it possible to reconstruct the full journey of a request across a microservices system.",
+      "explanation": "Logs, métricas e rastreamentos distribuídos são os três pilares da observabilidade; um ID de correlação propagado em cada chamada de serviço conecta os três sinais, tornando possível reconstituir toda a trajetória de uma requisição em um sistema de microsserviços.",
       "level": "advanced"
     }
   ],
@@ -762,30 +762,30 @@
     {
       "id": "legend",
       "minPercent": 80,
-      "label": "Legend",
-      "description": "Outstanding — you have the system design knowledge of a senior engineer or solutions architect. You command the full stack of modern deployment practices: from Docker and Kubernetes fundamentals through advanced patterns like the Saga, Strangler Fig, and expand-contract migration, all the way to multi-region active-active consistency and GitOps. You understand not just what these patterns are but why they exist and what trade-offs they carry. You are the person teams turn to when designing for reliability, scalability, and observability. Whether you are architecting a greenfield platform or safely decomposing a legacy monolith, your decisions are grounded in deep, practical knowledge. The industry needs architects like you.",
-      "shareText": "Fiz o Quiz de Arquitetura de Sistemas no ToolNotch!"
+      "label": "Lenda",
+      "description": "Excepcional: você possui o conhecimento de design de sistemas de um engenheiro sênior ou arquiteto de soluções. Você domina todo o conjunto de práticas modernas de implantação: desde os fundamentos de Docker e Kubernetes até padrões avançados como Saga, Strangler Fig e migração expand-contract, indo até consistência ativo-ativo multirregião e GitOps. Você compreende não apenas o que são esses padrões, mas por que eles existem e quais trade-offs envolvem. Você é a referência a quem as equipes recorrem ao projetar para confiabilidade, escalabilidade e observabilidade. Seja arquitetando uma nova plataforma do zero ou decompondo um monólito legado com segurança, suas decisões são fundamentadas em um conhecimento prático e profundo. A indústria precisa de arquitetos como você.",
+      "shareText": "Acertei {percent}% no Quiz de Arquitetura de Sistemas no ToolNotch! Consegue me superar? 🏗️"
     },
     {
       "id": "expert",
       "minPercent": 60,
-      "label": "Expert",
-      "description": "Excellent work — you have a strong grasp of modern system architecture and deployment practices. You are comfortable with microservices, CI/CD pipelines, Kubernetes, and key resilience patterns such as the circuit breaker and canary deployments. A few advanced topics — perhaps multi-region consistency or the nuances of Saga orchestration vs choreography — caught you out, but your overall knowledge is well above average. You are the engineer colleagues ask when debating architectural decisions or reviewing a deployment runbook. Keep diving into service mesh internals, chaos engineering, and FinOps to close those gaps and reach Legend status.",
-      "shareText": "Fiz o Quiz de Arquitetura de Sistemas no ToolNotch!"
+      "label": "Especialista",
+      "description": "Excelente trabalho, você possui um sólido entendimento de arquitetura de sistemas moderna e práticas de implantação. Sente-se à vontade com microsserviços, pipelines de CI/CD, Kubernetes e padrões essenciais de resiliência, como circuit breaker e implantações canário (canary). Alguns tópicos avançados, como consistência multirregião ou as nuances entre orquestração e coreografia na Saga, podem ter sido desafiadores, mas seu conhecimento geral está bem acima da média. Você é o engenheiro que seus colegas consultam ao debater decisões arquiteturais ou revisar runbooks de implantação. Continue se aprofundando em service mesh, engenharia do caos e FinOps para fechar essas lacunas e alcançar o status de Lenda.",
+      "shareText": "Acertei {percent}% no Quiz de Arquitetura de Sistemas no ToolNotch! Consegue me superar? 🏗️"
     },
     {
       "id": "fan",
       "minPercent": 40,
-      "label": "Fan",
-      "description": "You have a solid foundation in system architecture — you know the core ideas behind microservices, load balancing, and containerisation, and you understand why practices like CI/CD and health checks matter. Some of the intermediate and advanced concepts, such as the 12-Factor App, circuit breaker states, or the Saga pattern, are still developing. That is perfectly normal. System design is a broad field and every expert builds knowledge incrementally through hands-on experience. Pick one advanced topic per week, build a small demo, and revisit this quiz. You are closer to Expert than you think.",
-      "shareText": "Fiz o Quiz de Arquitetura de Sistemas no ToolNotch!"
+      "label": "Praticante",
+      "description": "Você tem uma base sólida em arquitetura de sistemas: conhece as ideias centrais por trás de microsserviços, balanceamento de carga e conteinerização, e compreende por que práticas como CI/CD e verificações de integridade (health checks) são importantes. Alguns conceitos intermediários e avançados, como o 12-Factor App, estados do circuit breaker ou o padrão Saga, ainda estão em desenvolvimento. Isso é perfeitamente normal. O design de sistemas é uma área ampla e todo especialista constrói seu conhecimento passo a passo por meio da prática. Escolha um tópico avançado por semana, construa uma pequena demonstração e refaça este quiz. Você está mais perto de Especialista do que imagina.",
+      "shareText": "Acertei {percent}% no Quiz de Arquitetura de Sistemas no ToolNotch! Consegue me superar? 🏗️"
     },
     {
       "id": "rookie",
       "minPercent": 0,
-      "label": "Rookie",
-      "description": "Everyone starts somewhere, and system architecture is genuinely one of the most complex areas of software engineering. This quiz covers a wide range of topics — from Docker basics and REST conventions through Kubernetes, service meshes, chaos engineering, and multi-region distributed systems. If many of these concepts were unfamiliar, that is a great sign that you have an exciting learning journey ahead. Start with Docker and basic CI/CD, then work up to Kubernetes and the 12-Factor App. Hands-on projects and cloud free-tier experiments will teach you more than any book alone. Come back and try again — your score will surprise you.",
-      "shareText": "Fiz o Quiz de Arquitetura de Sistemas no ToolNotch!"
+      "label": "Iniciante",
+      "description": "Todo mundo começa de algum lugar, e a arquitetura de sistemas é genuinamente uma das áreas mais complexas da engenharia de software. Este quiz abrange uma ampla variedade de tópicos, desde o básico de Docker e convenções REST até Kubernetes, service mesh, engenharia do caos e sistemas distribuídos multirregião. Se muitos desses conceitos pareceram novos, isso é um ótimo sinal de que você tem uma jornada de aprendizado empolgante pela frente. Comece com Docker e CI/CD básico, avançando depois para Kubernetes e o 12-Factor App. Projetos práticos e experimentos na camada gratuita da nuvem ensinarão mais do que qualquer livro isolado. Volte e tente novamente: sua pontuação vai te surpreender.",
+      "shareText": "Acertei {percent}% no Quiz de Arquitetura de Sistemas no ToolNotch! Consegue me superar? 🏗️"
     }
   ]
 }

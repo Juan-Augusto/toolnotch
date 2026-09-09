@@ -162,7 +162,7 @@
       "options": [
         {
           "id": "q5a",
-          "text": "Almost never — I avoid that kind of conversation",
+          "text": "Almost never: I avoid that kind of conversation",
           "scores": {
             "bolha_extrema": 3,
             "bolha_moderada": 1
@@ -186,7 +186,7 @@
         },
         {
           "id": "q5d",
-          "text": "Frequently — I like understanding why the person thinks that way",
+          "text": "Frequently: I like understanding why the person thinks that way",
           "scores": {
             "exposicao_ampla": 3,
             "visao_equilibrada": 1
@@ -352,7 +352,7 @@
       "options": [
         {
           "id": "q10a",
-          "text": "Only content that confirms what I already think — it's more relaxing",
+          "text": "Only content that confirms what I already think: it's more relaxing",
           "scores": {
             "bolha_extrema": 3,
             "bolha_moderada": 1
@@ -389,7 +389,7 @@
     {
       "id": "bolha_extrema",
       "title": "Deep Echo Chamber",
-      "description": "Based on your answers, your feed and your social circle revolve almost entirely around voices that already think like you. That's extremely common — it's how most social algorithms and friend groups work by default — and it's nothing to feel bad about. But it does mean that, day to day, you're likely seeing a fairly narrow slice of the public conversation, with little chance of running into an argument that makes you reconsider something. This says nothing about whether your views are right or wrong — only about how much variety reaches you. Practical tip: pick one source or person you know thinks differently and follow them for a week, just to understand their reasoning — you don't have to agree with any of it.",
+      "description": "Based on your answers, your feed and your social circle revolve almost entirely around voices that already think like you. That's extremely common, it's how most social algorithms and friend groups work by default, and it's nothing to feel bad about. But it does mean that, day to day, you're likely seeing a fairly narrow slice of the public conversation, with little chance of running into an argument that makes you reconsider something. This says nothing about whether your views are right or wrong, only about how much variety reaches you. Practical tip: pick one source or person you know thinks differently and follow them for a week, just to understand their reasoning, you don't have to agree with any of it.",
       "image": "/images/results/bolha-extrema.jpg",
       "traits": [
         "Consistent feed",
@@ -401,7 +401,7 @@
     {
       "id": "bolha_moderada",
       "title": "Moderate Bubble",
-      "description": "Your answers show a political environment that's mostly similar to what you already think, but not completely closed off — every so often a different viewpoint shows up in your feed or in a conversation. You've had some exposure to other opinions, but it tends to be occasional rather than a regular habit. This is a very common pattern and says nothing about how informed or open-minded you are — it just describes the mix of voices reaching you right now. Practical tip: over the next week, try noticing how many times a different political opinion shows up in your feed or a conversation without just scrolling past it — simply paying attention to that already starts to shift the habit.",
+      "description": "Your answers show a political environment that's mostly similar to what you already think, but not completely closed off, every so often a different viewpoint shows up in your feed or in a conversation. You've had some exposure to other opinions, but it tends to be occasional rather than a regular habit. This is a very common pattern and says nothing about how informed or open-minded you are, it just describes the mix of voices reaching you right now. Practical tip: over the next week, try noticing how many times a different political opinion shows up in your feed or a conversation without just scrolling past it, simply paying attention to that already starts to shift the habit.",
       "image": "/images/results/bolha-moderada.jpg",
       "traits": [
         "Mostly similar",
@@ -413,7 +413,7 @@
     {
       "id": "visao_equilibrada",
       "title": "Balanced View",
-      "description": "You keep a healthy balance between voices that agree with you and voices that don't — you're neither surrounded only by people who think the same way, nor exposed to absolutely everything all the time. That kind of mix tends to be a solid starting point for forming an opinion with more context, since you regularly encounter more than one way of looking at things before drawing your own conclusions. This isn't about having the \"right\" opinion — it's about the variety of voices shaping your point of view. Practical tip: keep varying your sources, and every so often read a full article — not just the headline — from an outlet you don't normally follow.",
+      "description": "You keep a healthy balance between voices that agree with you and voices that don't, you're neither surrounded only by people who think the same way, nor exposed to absolutely everything all the time. That kind of mix tends to be a solid starting point for forming an opinion with more context, since you regularly encounter more than one way of looking at things before drawing your own conclusions. This isn't about having the \"right\" opinion, it's about the variety of voices shaping your point of view. Practical tip: keep varying your sources, and every so often read a full article, not just the headline, from an outlet you don't normally follow.",
       "image": "/images/results/visao-equilibrada.jpg",
       "traits": [
         "Varied sources",
@@ -425,7 +425,7 @@
     {
       "id": "exposicao_ampla",
       "title": "Wide Exposure",
-      "description": "Based on your answers, you actively seek out viewpoints different from your own — on social media, in the news, and in everyday conversations. That broadens the range of voices reaching you and tends to give you a fuller picture of the public conversation. It's worth remembering, though, that seeing many sides isn't the same as checking whether each one is well-informed — opinion diversity and information quality are two different things. Practical tip: put that habit of hearing many sides to use by also checking the credibility of the sources you consume — from every side — since not every differing voice is necessarily well-researched.",
+      "description": "Based on your answers, you actively seek out viewpoints different from your own, on social media, in the news, and in everyday conversations. That broadens the range of voices reaching you and tends to give you a fuller picture of the public conversation. It's worth remembering, though, that seeing many sides isn't the same as checking whether each one is well-informed, opinion diversity and information quality are two different things. Practical tip: put that habit of hearing many sides to use by also checking the credibility of the sources you consume, from every side, since not every differing voice is necessarily well-researched.",
       "image": "/images/results/exposicao-ampla.jpg",
       "traits": [
         "Active seeker",

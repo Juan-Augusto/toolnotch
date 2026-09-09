@@ -9,57 +9,57 @@
   "questions": [
     {
       "id": "q1",
-      "text": "Node.js is described as 'single-threaded'. What does this primarily mean in the context of JavaScript execution?",
+      "text": "Node.js se describe como 'single-threaded'. ¿Qué significa esto principalmente en el contexto de la ejecución de JavaScript?",
       "options": [
         {
           "id": "a",
-          "text": "It can only handle one HTTP request at a time"
+          "text": "Solo puede procesar una solicitud HTTP a la vez"
         },
         {
           "id": "b",
-          "text": "JavaScript code runs on a single call stack in one thread"
+          "text": "El código JavaScript se ejecuta en una única pila de llamadas en un solo hilo"
         },
         {
           "id": "c",
-          "text": "It uses only one CPU core for all operations"
+          "text": "Utiliza solo un núcleo de CPU para todas las operaciones"
         },
         {
           "id": "d",
-          "text": "It cannot run multiple Node.js processes on the same machine"
+          "text": "No puede ejecutar múltiples procesos de Node.js en la misma máquina"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "Node.js executes JavaScript on a single call stack (the main thread), but delegates I/O to libuv's thread pool, enabling non-blocking concurrency.",
+      "explanation": "Node.js ejecuta JavaScript en una única pila de llamadas (el hilo principal), pero delega las operaciones de E/S al grupo de hilos de libuv, lo que permite concurrencia no bloqueante.",
       "level": "beginner"
     },
     {
       "id": "q2",
-      "text": "What does `require('fs')` do in a Node.js module?",
+      "text": "¿Qué hace `require('fs')` en un módulo de Node.js?",
       "options": [
         {
           "id": "a",
-          "text": "Fetches the 'fs' package from the npm registry at runtime"
+          "text": "Descarga el paquete 'fs' desde el registro de npm en tiempo de ejecución"
         },
         {
           "id": "b",
-          "text": "Loads and caches the built-in file system module, returning its exports object"
+          "text": "Carga y almacena en caché el módulo nativo de sistema de archivos, devolviendo su objeto exports"
         },
         {
           "id": "c",
-          "text": "Creates a new file system instance for the current module only"
+          "text": "Crea una nueva instancia del sistema de archivos únicamente para el módulo actual"
         },
         {
           "id": "d",
-          "text": "Registers a file system event listener on the process object"
+          "text": "Registra un escuchador de eventos del sistema de archivos en el objeto process"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "`require()` looks up the module in the cache, or loads it from disk and compiles it, then returns its `module.exports` object — subsequent calls return the cached copy.",
+      "explanation": "`require()` busca el módulo en la caché o lo carga del disco y lo compila, retornando luego su objeto `module.exports`. Las llamadas posteriores devuelven la copia almacenada en caché.",
       "level": "beginner"
     },
     {
       "id": "q3",
-      "text": "Which field in `package.json` specifies the entry point file that Node.js loads when your package is `require()`-d?",
+      "text": "¿Qué campo en `package.json` especifica el archivo de punto de entrada que Node.js carga cuando tu paquete es importado con `require()`?",
       "options": [
         {
           "id": "a",
@@ -79,62 +79,62 @@
         }
       ],
       "correctAnswerId": "c",
-      "explanation": "The `main` field in `package.json` points to the file Node.js resolves when another module requires your package; it defaults to `index.js` if omitted.",
+      "explanation": "El campo `main` en `package.json` apunta al archivo que Node.js resuelve cuando otro módulo importa tu paquete; por defecto es `index.js` si se omite.",
       "level": "beginner"
     },
     {
       "id": "q4",
-      "text": "What is the key difference between `fs.readFileSync()` and `fs.readFile()` in Node.js?",
+      "text": "¿Cuál es la principal diferencia entre `fs.readFileSync()` y `fs.readFile()` en Node.js?",
       "options": [
         {
           "id": "a",
-          "text": "`readFileSync` reads larger files; `readFile` is limited to 1 MB"
+          "text": "`readFileSync` lee archivos más grandes; `readFile` está limitado a 1 MB"
         },
         {
           "id": "b",
-          "text": "`readFileSync` blocks the event loop until the file is read; `readFile` is non-blocking and uses a callback"
+          "text": "`readFileSync` bloquea el event loop hasta leer el archivo; `readFile` no es bloqueante y utiliza un callback"
         },
         {
           "id": "c",
-          "text": "`readFile` is deprecated; `readFileSync` is the modern API"
+          "text": "`readFile` está obsoleto; `readFileSync` es la API moderna"
         },
         {
           "id": "d",
-          "text": "They are identical — the 'Sync' suffix is cosmetic"
+          "text": "Son idénticos: el sufijo 'Sync' es puramente cosmético"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "`readFileSync` blocks the entire event loop until the read completes, while `readFile` hands the I/O to libuv and invokes the callback when done.",
+      "explanation": "`readFileSync` bloquea todo el event loop hasta que finaliza la lectura, mientras que `readFile` delega la E/S a libuv e invoca el callback al terminar.",
       "level": "beginner"
     },
     {
       "id": "q5",
-      "text": "In Node.js, what is a callback?",
+      "text": "En Node.js, ¿qué es un callback?",
       "options": [
         {
           "id": "a",
-          "text": "A built-in error type for async failures"
+          "text": "Un tipo de error nativo para fallos asíncronos"
         },
         {
           "id": "b",
-          "text": "A function passed as an argument to another function, invoked when an async operation completes"
+          "text": "Una función pasada como argumento a otra función, invocada cuando se completa una operación asíncrona"
         },
         {
           "id": "c",
-          "text": "A synchronous wrapper around a Promise"
+          "text": "Un contenedor síncrono alrededor de una Promise"
         },
         {
           "id": "d",
-          "text": "A special method on the EventEmitter class"
+          "text": "Un método especial en la clase EventEmitter"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "The callback pattern is Node's foundational async primitive — you pass a function that Node calls back with `(error, result)` once the operation finishes.",
+      "explanation": "El patrón de callback es la primitiva asíncrona fundamental de Node.js: pasas una función que Node ejecuta con `(error, result)` una vez finalizada la operación.",
       "level": "beginner"
     },
     {
       "id": "q6",
-      "text": "How do you read an environment variable named `PORT` in a Node.js process?",
+      "text": "¿Cómo se lee una variable de entorno llamada `PORT` en un proceso de Node.js?",
       "options": [
         {
           "id": "a",
@@ -154,12 +154,12 @@
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "`process.env` is an object populated from the process's environment variables; accessing `process.env.PORT` returns its string value or `undefined`.",
+      "explanation": "`process.env` es un objeto que contiene las variables de entorno del proceso; acceder a `process.env.PORT` devuelve su valor en string o `undefined`.",
       "level": "beginner"
     },
     {
       "id": "q7",
-      "text": "Which built-in Node.js module would you use to join two path segments in a cross-platform safe way?",
+      "text": "¿Qué módulo nativo de Node.js usarías para unir dos segmentos de ruta de manera segura y multiplataforma?",
       "options": [
         {
           "id": "a",
@@ -179,62 +179,62 @@
         }
       ],
       "correctAnswerId": "c",
-      "explanation": "The `path` module provides `path.join()` and `path.resolve()`, which handle platform-specific separators (`/` vs `\\`) automatically.",
+      "explanation": "El módulo `path` proporciona `path.join()` y `path.resolve()`, que gestionan automáticamente los separadores específicos de cada plataforma (`/` frente a `\\`).",
       "level": "beginner"
     },
     {
       "id": "q8",
-      "text": "What does `npm run build` execute?",
+      "text": "¿Qué ejecuta el comando `npm run build`?",
       "options": [
         {
           "id": "a",
-          "text": "Downloads and installs all packages listed in `dependencies`"
+          "text": "Descarga e instala todos los paquetes listados en `dependencies`"
         },
         {
           "id": "b",
-          "text": "Runs the `build` script defined under the `scripts` key in `package.json`"
+          "text": "Ejecuta el script `build` definido bajo la clave `scripts` en `package.json`"
         },
         {
           "id": "c",
-          "text": "Compiles all `.ts` files to `.js` using Node's built-in compiler"
+          "text": "Compila todos los archivos `.ts` a `.js` usando el compilador nativo de Node"
         },
         {
           "id": "d",
-          "text": "Creates a production bundle and uploads it to npm"
+          "text": "Crea un paquete de producción y lo sube a npm"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "`npm run <name>` executes the shell command mapped to that name in the `scripts` section of `package.json`, with `node_modules/.bin` added to PATH.",
+      "explanation": "`npm run <nombre>` ejecuta el comando de terminal mapeado con ese nombre en la sección `scripts` de `package.json`, agregando `node_modules/.bin` al PATH.",
       "level": "beginner"
     },
     {
       "id": "q9",
-      "text": "In a Node.js stack trace, what does the line `at Object.<anonymous> (app.js:42:15)` tell you?",
+      "text": "En una traza de pila (stack trace) de Node.js, ¿qué indica la línea `at Object.<anonymous> (app.js:42:15)`?",
       "options": [
         {
           "id": "a",
-          "text": "An anonymous object was exported from `app.js`"
+          "text": "Se exportó un objeto anónimo desde `app.js`"
         },
         {
           "id": "b",
-          "text": "The error originated at line 42, column 15 of `app.js`"
+          "text": "El error se originó en la línea 42, columna 15 de `app.js`"
         },
         {
           "id": "c",
-          "text": "The file `app.js` has 42 exports"
+          "text": "El archivo `app.js` tiene 42 exportaciones"
         },
         {
           "id": "d",
-          "text": "Process memory usage at the time of the error"
+          "text": "El uso de memoria del proceso en el momento del error"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "Each stack frame shows the function name, file, line number, and column number, letting you pinpoint exactly where in source the call was made.",
+      "explanation": "Cada marco de la pila muestra el nombre de la función, el archivo, el número de línea y el número de columna, permitiendo localizar con exactitud el punto del código fuente donde ocurrió la llamada.",
       "level": "beginner"
     },
     {
       "id": "q10",
-      "text": "Which of the following is available in a browser's JavaScript runtime but NOT in Node.js by default?",
+      "text": "¿Cuál de los siguientes elementos está disponible en el entorno JavaScript de un navegador, pero NO en Node.js por defecto?",
       "options": [
         {
           "id": "a",
@@ -254,12 +254,12 @@
         }
       ],
       "correctAnswerId": "c",
-      "explanation": "The `window` global (and browser-specific APIs like `document`, `localStorage`) do not exist in Node.js; Node has `global`, `process`, and its own I/O APIs instead.",
+      "explanation": "El objeto global `window` (y APIs específicas del navegador como `document` o `localStorage`) no existen en Node.js; en su lugar, Node dispone de `global`, `process` y sus propias APIs de E/S.",
       "level": "beginner"
     },
     {
       "id": "q11",
-      "text": "What is the correct order of execution for the following code?\n```js\nsetTimeout(() => console.log('A'), 0);\nsetImmediate(() => console.log('B'));\nprocess.nextTick(() => console.log('C'));\nconsole.log('D');\n```",
+      "text": "¿Cuál es el orden correcto de ejecución para el siguiente código?\n```js\nsetTimeout(() => console.log('A'), 0);\nsetImmediate(() => console.log('B'));\nprocess.nextTick(() => console.log('C'));\nconsole.log('D');\n```",
       "options": [
         {
           "id": "a",
@@ -279,37 +279,37 @@
         }
       ],
       "correctAnswerId": "c",
-      "explanation": "Synchronous code runs first (D), then microtasks/nextTick queue (C), then the timers phase fires setTimeout (A), and finally the check phase fires setImmediate (B) — but within the I/O context setTimeout(0) vs setImmediate order is non-deterministic outside I/O; in a top-level script the most common observed order is D→C→A→B or D→C→B→A.",
+      "explanation": "El código síncrono se ejecuta primero (D), seguido por la cola de microtareas/nextTick (C); luego la fase de temporizadores (timers) dispara setTimeout (A) y la fase check ejecuta setImmediate (B). Fuera de un ciclo de E/S, el orden entre setTimeout(0) y setImmediate es no determinista; en un script principal el orden típico observado es D→C→A→B o D→C→B→A.",
       "level": "intermediate"
     },
     {
       "id": "q12",
-      "text": "In what phase of the Node.js event loop does `setImmediate()` fire?",
+      "text": "¿En qué fase del event loop de Node.js se ejecuta `setImmediate()`?",
       "options": [
         {
           "id": "a",
-          "text": "Timers phase"
+          "text": "Fase de timers"
         },
         {
           "id": "b",
-          "text": "Poll phase"
+          "text": "Fase de poll"
         },
         {
           "id": "c",
-          "text": "Check phase"
+          "text": "Fase de check"
         },
         {
           "id": "d",
-          "text": "Close callbacks phase"
+          "text": "Fase de close callbacks"
         }
       ],
       "correctAnswerId": "c",
-      "explanation": "The event loop phases are: timers → pending callbacks → idle/prepare → poll → check → close callbacks; `setImmediate` callbacks run in the **check** phase.",
+      "explanation": "Las fases del event loop son: timers → pending callbacks → idle/prepare → poll → check → close callbacks. Los callbacks de `setImmediate` se ejecutan en la fase check.",
       "level": "intermediate"
     },
     {
       "id": "q13",
-      "text": "Which of the following has the highest execution priority in Node.js's async scheduling?",
+      "text": "¿Cuál de las siguientes opciones tiene la mayor prioridad de ejecución en la planificación asíncrona de Node.js?",
       "options": [
         {
           "id": "a",
@@ -325,141 +325,141 @@
         },
         {
           "id": "d",
-          "text": "Resolved `Promise` `.then()` callbacks"
+          "text": "Callbacks de `.then()` en una `Promise` resuelta"
         }
       ],
       "correctAnswerId": "c",
-      "explanation": "`process.nextTick` callbacks drain completely before any microtask (Promise) callbacks, which themselves drain before the next event loop phase begins.",
+      "explanation": "Los callbacks de `process.nextTick` se procesan por completo antes que cualquier callback de microtarea (Promise), y estas últimas se procesan antes de que inicie la siguiente fase del event loop.",
       "level": "intermediate"
     },
     {
       "id": "q14",
-      "text": "What type of Node.js stream would you use to both read from and write to, AND transform the data in transit (e.g., a gzip compressor)?",
+      "text": "¿Qué tipo de stream de Node.js usarías para leer y escribir datos Y transformar los datos en tránsito (por ejemplo, un compresor gzip)?",
       "options": [
         {
           "id": "a",
-          "text": "Readable stream"
+          "text": "Stream Readable"
         },
         {
           "id": "b",
-          "text": "Writable stream"
+          "text": "Stream Writable"
         },
         {
           "id": "c",
-          "text": "Duplex stream"
+          "text": "Stream Duplex"
         },
         {
           "id": "d",
-          "text": "Transform stream"
+          "text": "Stream Transform"
         }
       ],
       "correctAnswerId": "d",
-      "explanation": "A Transform stream is a Duplex where output is computed from input — `zlib.createGzip()` is the canonical example; a plain Duplex has independent read/write sides.",
+      "explanation": "Un stream Transform es un tipo de Duplex donde la salida se calcula a partir de la entrada; `zlib.createGzip()` es el ejemplo canónico. Un Duplex simple mantiene extremos de lectura y escritura independientes.",
       "level": "intermediate"
     },
     {
       "id": "q15",
-      "text": "What is the primary purpose of the Node.js `cluster` module?",
+      "text": "¿Cuál es el propósito principal del módulo `cluster` en Node.js?",
       "options": [
         {
           "id": "a",
-          "text": "To distribute npm packages across multiple machines"
+          "text": "Distribuir paquetes de npm entre múltiples máquinas"
         },
         {
           "id": "b",
-          "text": "To fork multiple worker processes that share the same server port, utilizing multiple CPU cores"
+          "text": "Crear múltiples procesos worker que comparten el mismo puerto de servidor, aprovechando múltiples núcleos de CPU"
         },
         {
           "id": "c",
-          "text": "To spawn child processes that run independent scripts with no shared state"
+          "text": "Lanzar procesos secundarios que ejecutan scripts independientes sin estado compartido"
         },
         {
           "id": "d",
-          "text": "To create thread pools for CPU-intensive synchronous tasks"
+          "text": "Crear grupos de hilos para tareas síncronas con uso intensivo de CPU"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "The `cluster` module forks child processes (all sharing port 80 via the OS round-robin or the master passing handles), letting a Node app scale across CPU cores.",
+      "explanation": "El módulo `cluster` bifurca procesos secundarios (que comparten puertos mediante round-robin del SO o paso de descriptores por el proceso maestro), permitiendo que una aplicación Node escale entre los núcleos de CPU.",
       "level": "intermediate"
     },
     {
       "id": "q16",
-      "text": "How does `worker_threads` differ from `child_process` in Node.js?",
+      "text": "¿En qué se diferencia `worker_threads` de `child_process` en Node.js?",
       "options": [
         {
           "id": "a",
-          "text": "`worker_threads` share memory via `SharedArrayBuffer`; `child_process` spawns fully isolated OS processes"
+          "text": "`worker_threads` comparten memoria mediante `SharedArrayBuffer`; `child_process` inicia procesos de sistema operativo totalmente aislados"
         },
         {
           "id": "b",
-          "text": "`child_process` is faster for CPU tasks because it uses native threads"
+          "text": "`child_process` es más rápido para tareas de CPU porque usa hilos nativos"
         },
         {
           "id": "c",
-          "text": "`worker_threads` cannot communicate with the main thread"
+          "text": "`worker_threads` no puede comunicarse con el hilo principal"
         },
         {
           "id": "d",
-          "text": "They are interchangeable; the names are aliases"
+          "text": "Son intercambiables: los nombres son simplemente alias"
         }
       ],
       "correctAnswerId": "a",
-      "explanation": "Worker threads run in the same process and can share memory (SharedArrayBuffer/Atomics), while child_process forks separate OS processes with isolated V8 heaps.",
+      "explanation": "Los worker threads se ejecutan en el mismo proceso y pueden compartir memoria (SharedArrayBuffer/Atomics), mientras que child_process bifurca procesos independientes del SO con heaps de V8 aisladas.",
       "level": "intermediate"
     },
     {
       "id": "q17",
-      "text": "In V8's heap layout, what is the 'New Space' (Young Generation) used for?",
+      "text": "¿Para qué se utiliza el 'New Space' (Generación Joven) en la distribución de la heap de V8?",
       "options": [
         {
           "id": "a",
-          "text": "Storing compiled machine code for JIT-compiled functions"
+          "text": "Almacenar código máquina compilado para funciones optimizadas por JIT"
         },
         {
           "id": "b",
-          "text": "Short-lived objects that are expected to be collected quickly"
+          "text": "Objetos de vida corta que se espera sean recolectados rápidamente"
         },
         {
           "id": "c",
-          "text": "Large objects over 1 MB that cannot fit in regular pages"
+          "text": "Objetos grandes de más de 1 MB que no caben en páginas normales"
         },
         {
           "id": "d",
-          "text": "The call stack and local variable frames"
+          "text": "La pila de llamadas y los marcos de variables locales"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "V8 divides the heap into New Space (young/short-lived objects collected by Scavenge) and Old Space (long-lived objects collected by Mark-Sweep/Mark-Compact).",
+      "explanation": "V8 divide la heap en New Space (objetos jóvenes de vida corta recolectados por Scavenge) y Old Space (objetos de larga duración recolectados por Mark-Sweep/Mark-Compact).",
       "level": "intermediate"
     },
     {
       "id": "q18",
-      "text": "When a Node.js module is `require()`-d a second time, what happens?",
+      "text": "¿Qué sucede cuando un módulo de Node.js se importa con `require()` por segunda vez?",
       "options": [
         {
           "id": "a",
-          "text": "The module file is re-read from disk and re-executed"
+          "text": "El archivo del módulo se vuelve a leer del disco y se reejecuta"
         },
         {
           "id": "b",
-          "text": "An error is thrown to prevent duplicate initialization"
+          "text": "Se lanza un error para prevenir inicializaciones duplicadas"
         },
         {
           "id": "c",
-          "text": "The cached `exports` object from the first load is returned immediately"
+          "text": "El objeto `exports` almacenado en caché desde la primera carga se devuelve de inmediato"
         },
         {
           "id": "d",
-          "text": "A new isolated module instance is created"
+          "text": "Se crea una nueva instancia aislada del módulo"
         }
       ],
       "correctAnswerId": "c",
-      "explanation": "Node's module system stores each resolved module in `require.cache`; subsequent `require()` calls for the same file return the cached `exports` without re-executing the module code.",
+      "explanation": "El sistema de módulos de Node almacena cada módulo resuelto en `require.cache`; las llamadas posteriores a `require()` para el mismo archivo devuelven el `exports` en caché sin volver a ejecutar el código.",
       "level": "intermediate"
     },
     {
       "id": "q19",
-      "text": "Which `EventEmitter` method registers a listener that fires only once and then automatically removes itself?",
+      "text": "¿Qué método de `EventEmitter` registra un escuchador que se ejecuta solo una vez y se elimina automáticamente después?",
       "options": [
         {
           "id": "a",
@@ -479,37 +479,37 @@
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "`emitter.once()` wraps the listener so it deregisters itself after the first emission, preventing repeated calls without manual `removeListener` cleanup.",
+      "explanation": "`emitter.once()` envuelve el escuchador para que se desregistre tras la primera emisión, evitando ejecuciones repetidas sin necesidad de limpieza manual mediante `removeListener`.",
       "level": "intermediate"
     },
     {
       "id": "q20",
-      "text": "What is libuv's role in Node.js?",
+      "text": "¿Cuál es la función de libuv en Node.js?",
       "options": [
         {
           "id": "a",
-          "text": "It is the JavaScript engine that compiles and executes JS code"
+          "text": "Es el motor de JavaScript que compila y ejecuta código JS"
         },
         {
           "id": "b",
-          "text": "It provides the cross-platform async I/O event loop, thread pool, and OS abstraction layer"
+          "text": "Proporciona el event loop de E/S asíncrona multiplataforma, el grupo de hilos y la capa de abstracción del sistema operativo"
         },
         {
           "id": "c",
-          "text": "It manages npm package downloads and caching"
+          "text": "Gestiona las descargas y el almacenamiento en caché de paquetes npm"
         },
         {
           "id": "d",
-          "text": "It implements the HTTP/2 protocol for Node's `http2` module"
+          "text": "Implementa el protocolo HTTP/2 para el módulo `http2` de Node"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "libuv is the C library underneath Node.js that implements the event loop, thread pool (for file I/O, DNS, etc.), and platform-specific networking abstractions.",
+      "explanation": "libuv es la biblioteca en C que subyace a Node.js y que implementa el event loop, el grupo de hilos (para E/S de archivos, DNS, etc.) y las abstracciones de red específicas de cada plataforma.",
       "level": "intermediate"
     },
     {
       "id": "q21",
-      "text": "Which garbage collection algorithm does V8 use for the Young Generation (New Space)?",
+      "text": "¿Qué algoritmo de recolección de basura (garbage collection) utiliza V8 para la Generación Joven (New Space)?",
       "options": [
         {
           "id": "a",
@@ -521,240 +521,240 @@
         },
         {
           "id": "c",
-          "text": "Scavenge (Cheney's semi-space copying)"
+          "text": "Scavenge (copia semi-space de Cheney)"
         },
         {
           "id": "d",
-          "text": "Reference counting"
+          "text": "Conteo de referencias"
         }
       ],
       "correctAnswerId": "c",
-      "explanation": "V8 uses Scavenge — a semi-space copying collector — for the Young Generation because most objects die young, making evacuation of survivors fast.",
+      "explanation": "V8 utiliza Scavenge, un recolector por copia semi-space, para la Generación Joven debido a que la mayoría de los objetos mueren jóvenes, agilizando la evacuación de los supervivientes.",
       "level": "advanced"
     },
     {
       "id": "q22",
-      "text": "Why can a full Mark-Compact GC cycle cause observable latency spikes in a Node.js server?",
+      "text": "¿Por qué un ciclo completo de GC Mark-Compact puede provocar picos de latencia notables en un servidor Node.js?",
       "options": [
         {
           "id": "a",
-          "text": "It temporarily doubles memory usage by copying the entire heap"
+          "text": "Duplica temporalmente el uso de memoria al copiar toda la heap"
         },
         {
           "id": "b",
-          "text": "It runs stop-the-world pauses while compacting the Old Space, blocking the event loop"
+          "text": "Ejecuta pausas Stop-The-World mientras compacta el Old Space, bloqueando el event loop"
         },
         {
           "id": "c",
-          "text": "It recompiles all JIT-optimized functions to free code cache memory"
+          "text": "Recompila todas las funciones optimizadas por JIT para liberar memoria de la caché de código"
         },
         {
           "id": "d",
-          "text": "It flushes the libuv thread pool and restarts all pending I/O operations"
+          "text": "Vacía el grupo de hilos de libuv y reinicia todas las operaciones de E/S pendientes"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "Mark-Compact requires stop-the-world (STW) pauses to safely move objects and update all pointers, during which the event loop cannot process new requests.",
+      "explanation": "Mark-Compact requiere pausas Stop-The-World (STW) para mover objetos y actualizar todos los punteros con seguridad, intervalo durante el cual el event loop no puede procesar nuevas solicitudes.",
       "level": "advanced"
     },
     {
       "id": "q23",
-      "text": "You run `node --prof app.js` and then `node --prof-process isolate-*.log`. What kind of output does this produce?",
+      "text": "Ejecutas `node --prof app.js` y luego `node --prof-process isolate-*.log`. ¿Qué tipo de salida genera esto?",
       "options": [
         {
           "id": "a",
-          "text": "A heap snapshot in JSON format compatible with Chrome DevTools"
+          "text": "Una instantánea de la heap en formato JSON compatible con Chrome DevTools"
         },
         {
           "id": "b",
-          "text": "A human-readable statistical CPU profile showing hot functions and their call percentages"
+          "text": "Un perfil estadístico de CPU legible que muestra las funciones más activas y sus porcentajes de llamada"
         },
         {
           "id": "c",
-          "text": "A timeline of all GC pauses with their durations in milliseconds"
+          "text": "Una cronología de todas las pausas de GC con sus duraciones en milisegundos"
         },
         {
           "id": "d",
-          "text": "A network waterfall diagram of all HTTP requests made during the run"
+          "text": "Un diagrama de cascada de red de todas las solicitudes HTTP realizadas durante la ejecución"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "`--prof` generates a V8 tick-based sampling profile; `--prof-process` post-processes it into a report showing which functions consumed the most CPU time.",
+      "explanation": "`--prof` genera un perfil de muestreo basado en ticks de V8; `--prof-process` procesa este log generando un informe que detalla qué funciones consumieron mayor tiempo de CPU.",
       "level": "advanced"
     },
     {
       "id": "q24",
-      "text": "Which of the following patterns is the most common cause of memory leaks in long-running Node.js servers?",
+      "text": "¿Cuál de los siguientes patrones es la causa más común de fugas de memoria en servidores Node.js de larga duración?",
       "options": [
         {
           "id": "a",
-          "text": "Using `const` instead of `let` for module-level variables"
+          "text": "Usar `const` en lugar de `let` para variables a nivel de módulo"
         },
         {
           "id": "b",
-          "text": "Accumulating listeners on an EventEmitter without ever calling `removeListener`"
+          "text": "Acumular listeners en un EventEmitter sin llamar nunca a `removeListener`"
         },
         {
           "id": "c",
-          "text": "Calling `JSON.parse` on large strings repeatedly"
+          "text": "Llamar a `JSON.parse` repetidamente sobre strings grandes"
         },
         {
           "id": "d",
-          "text": "Using `async/await` instead of raw callbacks"
+          "text": "Usar `async/await` en lugar de callbacks directos"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "Each `emitter.on()` call adds a reference that prevents GC of the listener and anything it closes over; without cleanup they accumulate indefinitely, a classic Node.js leak pattern.",
+      "explanation": "Cada llamada a `emitter.on()` añade una referencia que impide la recolección de basura del listener y de cualquier elemento en su clausura; sin limpieza se acumulan indefinidamente, un patrón clásico de fuga en Node.js.",
       "level": "advanced"
     },
     {
       "id": "q25",
-      "text": "What does the Node.js flag `--max-old-space-size=4096` control?",
+      "text": "¿Qué controla la opción de Node.js `--max-old-space-size=4096`?",
       "options": [
         {
           "id": "a",
-          "text": "The maximum number of files that can be open simultaneously"
+          "text": "El número máximo de archivos abiertos simultáneamente"
         },
         {
           "id": "b",
-          "text": "The size of libuv's thread pool in megabytes"
+          "text": "El tamaño del grupo de hilos de libuv en megabytes"
         },
         {
           "id": "c",
-          "text": "The upper limit of V8's Old Space heap in megabytes before OOM is thrown"
+          "text": "El límite superior de la heap Old Space de V8 en megabytes antes de lanzar un error de falta de memoria"
         },
         {
           "id": "d",
-          "text": "The maximum allowed size of a single JSON payload parsed with `JSON.parse`"
+          "text": "El tamaño máximo permitido para un payload JSON procesado con `JSON.parse`"
         }
       ],
       "correctAnswerId": "c",
-      "explanation": "`--max-old-space-size` sets the maximum heap size for V8's Old Generation; exceeding it triggers a final GC and then throws a fatal out-of-memory error.",
+      "explanation": "`--max-old-space-size` establece el tamaño máximo de heap para la Old Generation de V8; superarlo provoca un GC final y luego un error fatal de memoria insuficiente (OOM).",
       "level": "advanced"
     },
     {
       "id": "q26",
-      "text": "A synchronous CPU-bound loop running for 2 seconds is accidentally placed in an HTTP request handler. What is the most accurate description of the impact?",
+      "text": "Un bucle síncrono con uso intensivo de CPU que tarda 2 segundos se incluye accidentalmente en un manejador de solicitudes HTTP. ¿Cuál es la descripción más precisa del impacto?",
       "options": [
         {
           "id": "a",
-          "text": "Only that specific request is delayed; other requests continue normally"
+          "text": "Solo se retrasa esa solicitud específica; las demás continúan con normalidad"
         },
         {
           "id": "b",
-          "text": "The event loop poll phase is blocked for 2 seconds, stalling ALL other incoming requests and timers"
+          "text": "La fase de poll del event loop queda bloqueada durante 2 segundos, paralizando TODAS las demás solicitudes entrantes y temporizadores"
         },
         {
           "id": "c",
-          "text": "Node automatically offloads the loop to libuv's thread pool to prevent blocking"
+          "text": "Node delega automáticamente el bucle al grupo de hilos de libuv para evitar el bloqueo"
         },
         {
           "id": "d",
-          "text": "The cluster master process detects the block and restarts the worker"
+          "text": "El proceso maestro del cluster detecta el bloqueo y reinicia el worker"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "JavaScript is single-threaded; a synchronous CPU loop occupies the entire event loop, preventing any I/O callbacks, timers, or new requests from being processed until it finishes.",
+      "explanation": "JavaScript es single-threaded: un bucle síncrono de CPU ocupa por completo el event loop, impidiendo procesar callbacks de E/S, temporizadores o nuevas solicitudes hasta su finalización.",
       "level": "advanced"
     },
     {
       "id": "q27",
-      "text": "What is back-pressure in Node.js streams, and what role does `highWaterMark` play?",
+      "text": "¿Qué es la contrapresión (back-pressure) en streams de Node.js y qué rol cumple `highWaterMark`?",
       "options": [
         {
           "id": "a",
-          "text": "Back-pressure is an HTTP rate-limit; `highWaterMark` sets the requests-per-second ceiling"
+          "text": "La contrapresión es un límite de tasa HTTP; `highWaterMark` fija el techo de solicitudes por segundo"
         },
         {
           "id": "b",
-          "text": "Back-pressure is the signal that a writable stream's buffer is full; `highWaterMark` sets the buffer size threshold at which `write()` returns `false`"
+          "text": "La contrapresión es la señal de que el buffer de un stream writable está lleno; `highWaterMark` define el umbral de tamaño del buffer en el que `write()` devuelve `false`"
         },
         {
           "id": "c",
-          "text": "Back-pressure is a V8 GC pause; `highWaterMark` triggers early GC when heap exceeds this fraction"
+          "text": "La contrapresión es una pausa de GC de V8; `highWaterMark` activa un GC anticipado cuando la heap supera esa proporción"
         },
         {
           "id": "d",
-          "text": "Back-pressure is unused in Node.js streams; it is only relevant to TCP sockets"
+          "text": "La contrapresión no se usa en streams de Node.js; solo aplica a sockets TCP"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "When a Writable's internal buffer exceeds `highWaterMark` bytes, `write()` returns `false` (back-pressure signal); producers should pause until the `drain` event fires to avoid unbounded memory growth.",
+      "explanation": "Cuando el buffer interno de un Writable supera los bytes de `highWaterMark`, `write()` devuelve `false` (señal de contrapresión); los productores deben pausar hasta que se emita el evento `drain` para evitar un consumo desmedido de memoria.",
       "level": "advanced"
     },
     {
       "id": "q28",
-      "text": "What is the primary advantage of N-API (now Node-API) over previous native addon interfaces?",
+      "text": "¿Cuál es la principal ventaja de N-API (ahora Node-API) sobre las interfaces previas de complementos nativos (addons)?",
       "options": [
         {
           "id": "a",
-          "text": "It allows writing native addons in Python instead of C/C++"
+          "text": "Permite escribir addons nativos en Python en lugar de C/C++"
         },
         {
           "id": "b",
-          "text": "It provides an ABI-stable interface so native addons do not need to be recompiled for every new Node.js version"
+          "text": "Proporciona una interfaz estable a nivel de ABI, por lo que los addons nativos no necesitan recompilarse con cada nueva versión de Node.js"
         },
         {
           "id": "c",
-          "text": "It gives native addons direct access to V8's garbage collector to manage their own memory"
+          "text": "Otorga a los addons nativos acceso directo al recolector de basura de V8 para gestionar su propia memoria"
         },
         {
           "id": "d",
-          "text": "It automatically parallelizes native addon execution across all CPU cores"
+          "text": "Paraleliza automáticamente la ejecución de addons nativos en todos los núcleos de CPU"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "N-API exposes a stable ABI layer that abstracts V8 internals, meaning a native addon compiled once works across Node.js major versions without recompilation.",
+      "explanation": "N-API expone una capa de ABI estable que abstrae los componentes internos de V8, lo que significa que un addon nativo compilado una vez funciona entre distintas versiones principales de Node.js sin recompilar.",
       "level": "advanced"
     },
     {
       "id": "q29",
-      "text": "How do V8 'hidden classes' (also called 'shapes' or 'maps') improve JavaScript object performance?",
+      "text": "¿Cómo mejoran el rendimiento de los objetos JavaScript las clases ocultas de V8 ('hidden classes', también llamadas 'shapes' o 'maps')?",
       "options": [
         {
           "id": "a",
-          "text": "They compress object keys using a dictionary to reduce memory per object"
+          "text": "Comprimen las claves de los objetos usando un diccionario para reducir memoria por objeto"
         },
         {
           "id": "b",
-          "text": "They allow V8 to generate optimized machine code by tracking object property layouts and reusing them across instances with the same shape"
+          "text": "Permiten que V8 genere código máquina optimizado rastreando la distribución de propiedades de los objetos y reutilizándola en instancias con la misma estructura"
         },
         {
           "id": "c",
-          "text": "They hide private class fields from the garbage collector to prevent premature collection"
+          "text": "Ocultan campos de clase privados del recolector de basura para evitar su recolección prematura"
         },
         {
           "id": "d",
-          "text": "They pre-allocate a fixed heap page per constructor function"
+          "text": "Preasignan una página fija de heap por cada función constructora"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "V8 assigns a hidden class (shape/map) to each object based on its property layout; objects sharing the same shape can share JIT-compiled inline caches, enabling fast property access.",
+      "explanation": "V8 asocia una clase oculta (shape/map) a cada objeto según la estructura de sus propiedades; los objetos que comparten la misma estructura aprovechan inline caches compiladas por JIT, agilizando el acceso a propiedades.",
       "level": "advanced"
     },
     {
       "id": "q30",
-      "text": "When using PM2 to achieve zero-downtime restarts (`pm2 reload`), what mechanism does PM2 use?",
+      "text": "Al usar PM2 para lograr reinicios sin tiempo de inactividad (`pm2 reload`), ¿qué mecanismo utiliza PM2?",
       "options": [
         {
           "id": "a",
-          "text": "It pauses the load balancer, restarts all workers simultaneously, then resumes traffic"
+          "text": "Pausa el balanceador de carga, reinicia todos los workers simultáneamente y luego reanuda el tráfico"
         },
         {
           "id": "b",
-          "text": "It creates a new worker, waits for it to signal readiness, routes traffic to it, then gracefully kills the old worker — one at a time"
+          "text": "Crea un nuevo worker, espera que emita señal de disponibilidad, le dirige el tráfico y luego finaliza de forma controlada el worker antiguo: uno por uno"
         },
         {
           "id": "c",
-          "text": "It patches the running process in memory without spawning a new one"
+          "text": "Aplica parches en el proceso en ejecución en memoria sin lanzar uno nuevo"
         },
         {
           "id": "d",
-          "text": "It relies on the OS kernel's live-patching feature to swap code pages atomically"
+          "text": "Se apoya en la función de live-patching del kernel del SO para cambiar páginas de código atómicamente"
         }
       ],
       "correctAnswerId": "b",
-      "explanation": "PM2 reload performs a rolling restart: it spawns a new worker, waits for it to emit `process.send('ready')`, moves traffic to it, then gracefully shuts down the old worker — ensuring zero downtime.",
+      "explanation": "El reload de PM2 realiza un reinicio progresivo (rolling restart): inicia un nuevo worker, espera a que emita `process.send('ready')`, le envía el tráfico y detiene de forma limpia el worker anterior, garantizando cero tiempo de inactividad.",
       "level": "advanced"
     }
   ],
@@ -762,30 +762,30 @@
     {
       "id": "legend",
       "minPercent": 80,
-      "label": "Node.js Legend",
-      "description": "Outstanding work — you have a deep mastery of Node.js internals. You understand exactly how the event loop phases interact, why process.nextTick drains before Promises, and how V8's Scavenge and Mark-Compact collectors affect latency. You can diagnose memory leaks caused by retained listeners, tune heap sizes with --max-old-space-size, and design back-pressure-aware stream pipelines. Your knowledge of N-API, hidden classes, and PM2 zero-downtime reloads puts you firmly in the top tier of Node.js engineers. Whether you are profiling CPU hot paths with --prof or architecting cluster-based multi-core servers, you do it with confidence.",
-      "shareText": "¡Completé el Quiz de Fundamentos de Node.js en ToolNotch!"
+      "label": "Leyenda de Node.js",
+      "description": "Trabajo sobresaliente, dominas con profundidad los aspectos internos de Node.js. Entiendes con precisión cómo interactúan las fases del event loop, por qué process.nextTick se vacía antes de las Promises y cómo los recolectores Scavenge y Mark-Compact de V8 afectan la latencia. Puedes diagnosticar fugas de memoria provocadas por listeners retenidos, ajustar el tamaño de la heap con --max-old-space-size y diseñar pipelines de streams con control de contrapresión (back-pressure). Tu dominio de N-API, clases ocultas (hidden classes) y recargas sin tiempo de inactividad con PM2 te posiciona con firmeza en el nivel superior de los ingenieros de Node.js. Ya sea perfilando rutas críticas de CPU con --prof o diseñando servidores multinúcleo basados en cluster, lo haces con total confianza.",
+      "shareText": "¡Obtuve el nivel Leyenda en el Quiz de Fundamentos de Node.js en ToolNotch! 🚀"
     },
     {
       "id": "expert",
       "minPercent": 60,
-      "label": "Node.js Expert",
-      "description": "Great performance — you have a solid command of Node.js beyond the basics. You are comfortable with the event loop phases, understand the difference between setImmediate and process.nextTick, and can reason about stream types and back-pressure. You know how the cluster module distributes connections and how worker_threads differ from child_process. A few advanced V8 internals and GC details are still areas to sharpen, but your foundation is strong and you are well-equipped to build and debug production Node.js applications.",
-      "shareText": "¡Completé el Quiz de Fundamentos de Node.js en ToolNotch!"
+      "label": "Experto en Node.js",
+      "description": "Gran desempeño, cuentas con un sólido dominio de Node.js mucho más allá de los fundamentos. Te desenvuelves con comodidad en las fases del event loop, comprendes la diferencia entre setImmediate y process.nextTick, y puedes razonar sobre tipos de streams y contrapresión (back-pressure). Sabes cómo el módulo cluster distribuye conexiones y cómo worker_threads se diferencia de child_process. Algunos detalles avanzados de aspectos internos de V8 y GC aún pueden pulirse, pero tu base es sólida y estás muy bien capacitado para desarrollar y depurar aplicaciones Node.js en producción.",
+      "shareText": "¡Obtuve el nivel Experto en el Quiz de Fundamentos de Node.js en ToolNotch!"
     },
     {
       "id": "fan",
       "minPercent": 40,
-      "label": "Node.js Practitioner",
-      "description": "Good effort — you have a working knowledge of Node.js fundamentals. You understand the single-threaded model, how require works, and the basics of async patterns. Some of the deeper topics — event loop phases, V8 heap segments, stream back-pressure — are areas where more study will pay off. Reading the official Node.js documentation on the event loop and spending time with the stream and cluster modules will help you level up to Expert and beyond.",
-      "shareText": "¡Completé el Quiz de Fundamentos de Node.js en ToolNotch!"
+      "label": "Practicante de Node.js",
+      "description": "Buen esfuerzo, posees un conocimiento práctico de los fundamentos de Node.js. Comprendes el modelo single-threaded, el funcionamiento de require y las bases de los patrones asíncronos. Algunos temas más profundos: fases del event loop, segmentos de la heap de V8 y contrapresión en streams, son áreas donde dedicar más estudio dará frutos. Leer la documentación oficial de Node.js sobre el event loop y dedicar tiempo a los módulos stream y cluster te ayudará a subir al nivel Experto y más allá.",
+      "shareText": "¡Hice el Quiz de Fundamentos de Node.js en ToolNotch y obtuve el nivel Practicante!"
     },
     {
       "id": "rookie",
       "minPercent": 0,
-      "label": "Node.js Rookie",
-      "description": "You are just getting started with Node.js, and that is perfectly fine — everyone begins somewhere. Focus on the core concepts first: the single-threaded event loop, how require and module.exports work, the difference between synchronous and asynchronous file I/O, and how to use process.env for configuration. Once those are solid, explore callbacks and Promises, then move on to streams and the cluster module. With consistent practice and the right resources, you will be moving up the tiers quickly.",
-      "shareText": "¡Completé el Quiz de Fundamentos de Node.js en ToolNotch!"
+      "label": "Novato en Node.js",
+      "description": "Estás comenzando tu camino con Node.js, y eso está totalmente bien: todo el mundo empieza por algún lugar. Concéntrate primero en los conceptos principales: el event loop single-threaded, cómo funcionan require y module.exports, la diferencia entre E/S de archivos síncrona y asíncrona, y cómo usar process.env para configuración. Una vez consolidados, explora callbacks y Promises, y luego avanza hacia streams y el módulo cluster. Con práctica constante y los recursos adecuados, subirás de nivel rápidamente.",
+      "shareText": "¡Acabo de comenzar mi viaje con Node.js! Hice el Quiz de Fundamentos en ToolNotch."
     }
   ]
 }

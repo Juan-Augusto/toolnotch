@@ -162,7 +162,7 @@
       "options": [
         {
           "id": "q5a",
-          "text": "Casi nunca — evito ese tipo de conversación",
+          "text": "Casi nunca: evito ese tipo de conversación",
           "scores": {
             "bolha_extrema": 3,
             "bolha_moderada": 1
@@ -186,7 +186,7 @@
         },
         {
           "id": "q5d",
-          "text": "Con frecuencia — me gusta entender por qué la persona piensa así",
+          "text": "Con frecuencia: me gusta entender por qué la persona piensa así",
           "scores": {
             "exposicao_ampla": 3,
             "visao_equilibrada": 1
@@ -352,7 +352,7 @@
       "options": [
         {
           "id": "q10a",
-          "text": "Solo contenido que confirma lo que ya pienso — es más tranquilo",
+          "text": "Solo contenido que confirma lo que ya pienso: es más tranquilo",
           "scores": {
             "bolha_extrema": 3,
             "bolha_moderada": 1
@@ -389,7 +389,7 @@
     {
       "id": "bolha_extrema",
       "title": "Burbuja Extrema",
-      "description": "Según tus respuestas, tu feed y tu círculo social giran casi por completo en torno a voces que ya piensan como tú. Esto es sumamente común — así es como funcionan por defecto la mayoría de los algoritmos de redes sociales y los grupos de amigos — y no es motivo de vergüenza. Pero significa que, en el día a día, probablemente estás en contacto con una porción bastante específica del debate público, con pocas probabilidades de toparte con un argumento que te haga replantear algo. Esto no dice nada sobre si tus opiniones son correctas o no — solo sobre la diversidad de lo que te llega. Consejo práctico: elige una fuente o persona que sepas que piensa distinto y síguela durante una semana, solo para entender su razonamiento — no hace falta que estés de acuerdo con nada.",
+      "description": "Según tus respuestas, tu feed y tu círculo social giran casi por completo en torno a voces que ya piensan como tú. Esto es sumamente común, así es como funcionan por defecto la mayoría de los algoritmos de redes sociales y los grupos de amigos, y no es motivo de vergüenza. Pero significa que, en el día a día, probablemente estás en contacto con una porción bastante específica del debate público, con pocas probabilidades de toparte con un argumento que te haga replantear algo. Esto no dice nada sobre si tus opiniones son correctas o no, solo sobre la diversidad de lo que te llega. Consejo práctico: elige una fuente o persona que sepas que piensa distinto y síguela durante una semana, solo para entender su razonamiento, no hace falta que estés de acuerdo con nada.",
       "image": "/images/results/bolha-extrema.jpg",
       "traits": [
         "Feed consistente",
@@ -401,7 +401,7 @@
     {
       "id": "bolha_moderada",
       "title": "Burbuja Moderada",
-      "description": "Tus respuestas muestran un entorno político mayormente parecido a lo que ya piensas, pero no del todo cerrado — de vez en cuando aparece un punto de vista diferente en tu feed o en una conversación. Ya tuviste cierto contacto con otras opiniones, pero suele ser algo ocasional, no un hábito constante. Es un patrón muy común y no dice nada sobre qué tan informado o abierto eres — solo describe la mezcla de voces que llegan a ti hoy. Consejo práctico: durante la próxima semana, intenta notar cuántas veces aparece una opinión política diferente a la tuya en tu feed o en una charla, sin simplemente pasarla de largo — solo prestar atención a eso ya empieza a cambiar el hábito.",
+      "description": "Tus respuestas muestran un entorno político mayormente parecido a lo que ya piensas, pero no del todo cerrado, de vez en cuando aparece un punto de vista diferente en tu feed o en una conversación. Ya tuviste cierto contacto con otras opiniones, pero suele ser algo ocasional, no un hábito constante. Es un patrón muy común y no dice nada sobre qué tan informado o abierto eres, solo describe la mezcla de voces que llegan a ti hoy. Consejo práctico: durante la próxima semana, intenta notar cuántas veces aparece una opinión política diferente a la tuya en tu feed o en una charla, sin simplemente pasarla de largo, solo prestar atención a eso ya empieza a cambiar el hábito.",
       "image": "/images/results/bolha-moderada.jpg",
       "traits": [
         "Mayoría parecida",
@@ -413,7 +413,7 @@
     {
       "id": "visao_equilibrada",
       "title": "Visión Equilibrada",
-      "description": "Mantienes un equilibrio saludable entre voces parecidas y voces distintas a la tuya — no vives rodeado solo de quienes piensan como tú, ni estás expuesto a absolutamente todo todo el tiempo. Ese tipo de mezcla suele ser un buen punto de partida para formar una opinión con más contexto, porque tienes contacto regular con más de una forma de ver las cosas antes de sacar tus propias conclusiones. Esto no se trata de tener la opinión \"correcta\" — se trata de la variedad de voces que dan forma a tu punto de vista. Consejo práctico: sigue variando tus fuentes y, de vez en cuando, lee una nota completa — no solo el titular — de un medio que normalmente no sigues.",
+      "description": "Mantienes un equilibrio saludable entre voces parecidas y voces distintas a la tuya, no vives rodeado solo de quienes piensan como tú, ni estás expuesto a absolutamente todo todo el tiempo. Ese tipo de mezcla suele ser un buen punto de partida para formar una opinión con más contexto, porque tienes contacto regular con más de una forma de ver las cosas antes de sacar tus propias conclusiones. Esto no se trata de tener la opinión \"correcta\", se trata de la variedad de voces que dan forma a tu punto de vista. Consejo práctico: sigue variando tus fuentes y, de vez en cuando, lee una nota completa, no solo el titular, de un medio que normalmente no sigues.",
       "image": "/images/results/visao-equilibrada.jpg",
       "traits": [
         "Fuentes variadas",
@@ -425,7 +425,7 @@
     {
       "id": "exposicao_ampla",
       "title": "Exposición Amplia",
-      "description": "Según tus respuestas, buscas activamente puntos de vista distintos al tuyo — en redes sociales, en las noticias y en las conversaciones del día a día. Eso amplía bastante el rango de voces que te llegan y suele darte una visión más completa del debate público. Vale la pena recordar, sin embargo, que ver muchos lados distintos no es lo mismo que verificar si cada uno está bien informado — la diversidad de opinión y la calidad de la información son cosas distintas. Consejo práctico: aprovecha ese hábito de escuchar varios lados para también revisar la credibilidad de las fuentes que consumes — de todos los lados —, porque no toda voz diferente a la tuya está necesariamente bien documentada.",
+      "description": "Según tus respuestas, buscas activamente puntos de vista distintos al tuyo, en redes sociales, en las noticias y en las conversaciones del día a día. Eso amplía bastante el rango de voces que te llegan y suele darte una visión más completa del debate público. Vale la pena recordar, sin embargo, que ver muchos lados distintos no es lo mismo que verificar si cada uno está bien informado, la diversidad de opinión y la calidad de la información son cosas distintas. Consejo práctico: aprovecha ese hábito de escuchar varios lados para también revisar la credibilidad de las fuentes que consumes (de todos los lados), porque no toda voz diferente a la tuya está necesariamente bien documentada.",
       "image": "/images/results/exposicao-ampla.jpg",
       "traits": [
         "Búsqueda activa",

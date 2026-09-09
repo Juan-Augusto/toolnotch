@@ -26,7 +26,7 @@
         },
         {
           "id": "q1c",
-          "text": "I stay composed, rely on experience, and expect to come out on top — I always do.",
+          "text": "I stay composed, rely on experience, and expect to come out on top: I always do.",
           "scores": {
             "real-madrid": 3,
             "liverpool": 1
@@ -56,7 +56,7 @@
         },
         {
           "id": "q2b",
-          "text": "A global stage — grand, prestigious, with millions watching.",
+          "text": "A global stage: grand, prestigious, with millions watching.",
           "scores": {
             "real-madrid": 3,
             "manchester-city": 1
@@ -86,7 +86,7 @@
       "options": [
         {
           "id": "q3a",
-          "text": "I lead by example — my work rate and intensity inspire everyone around me.",
+          "text": "I lead by example: my work rate and intensity inspire everyone around me.",
           "scores": {
             "liverpool": 3,
             "boca-juniors": 2
@@ -94,7 +94,7 @@
         },
         {
           "id": "q3b",
-          "text": "I use systems, structure, and clear roles — everyone knows exactly what to do.",
+          "text": "I use systems, structure, and clear roles: everyone knows exactly what to do.",
           "scores": {
             "bayern-munich": 3,
             "manchester-city": 2
@@ -102,7 +102,7 @@
         },
         {
           "id": "q3c",
-          "text": "I empower creativity — I give talented people freedom and trust them to shine.",
+          "text": "I empower creativity: I give talented people freedom and trust them to shine.",
           "scores": {
             "barcelona": 3,
             "borussia-dortmund": 2
@@ -110,7 +110,7 @@
         },
         {
           "id": "q3d",
-          "text": "I demand the best — winners mentality, high standards, no excuses.",
+          "text": "I demand the best: winners mentality, high standards, no excuses.",
           "scores": {
             "real-madrid": 3,
             "bayern-munich": 1
@@ -132,7 +132,7 @@
         },
         {
           "id": "q4b",
-          "text": "I use pure emotion as fuel — nothing motivates me more than being knocked down.",
+          "text": "I use pure emotion as fuel: nothing motivates me more than being knocked down.",
           "scores": {
             "liverpool": 3,
             "flamengo": 2
@@ -140,7 +140,7 @@
         },
         {
           "id": "q4c",
-          "text": "I dig deep into tradition and legacy — past greatness reminds me who I am.",
+          "text": "I dig deep into tradition and legacy: past greatness reminds me who I am.",
           "scores": {
             "real-madrid": 3,
             "boca-juniors": 2
@@ -162,7 +162,7 @@
       "options": [
         {
           "id": "q5a",
-          "text": "Shared identity and deep roots — we know who we are and where we come from.",
+          "text": "Shared identity and deep roots: we know who we are and where we come from.",
           "scores": {
             "barcelona": 3,
             "boca-juniors": 2
@@ -170,7 +170,7 @@
         },
         {
           "id": "q5b",
-          "text": "Collective intensity — when we are together, nothing can stop us.",
+          "text": "Collective intensity: when we are together, nothing can stop us.",
           "scores": {
             "liverpool": 3,
             "borussia-dortmund": 2
@@ -178,7 +178,7 @@
         },
         {
           "id": "q5c",
-          "text": "World-class talent — I want the best players and the biggest names.",
+          "text": "World-class talent: I want the best players and the biggest names.",
           "scores": {
             "real-madrid": 3,
             "manchester-city": 2
@@ -186,7 +186,7 @@
         },
         {
           "id": "q5d",
-          "text": "Tactical excellence — everyone plays their role and the system wins.",
+          "text": "Tactical excellence: everyone plays their role and the system wins.",
           "scores": {
             "bayern-munich": 3,
             "manchester-city": 1
@@ -200,7 +200,7 @@
       "options": [
         {
           "id": "q6a",
-          "text": "Tradition is everything — legacy, history, and culture define who you are.",
+          "text": "Tradition is everything: legacy, history, and culture define who you are.",
           "scores": {
             "real-madrid": 2,
             "boca-juniors": 3
@@ -208,7 +208,7 @@
         },
         {
           "id": "q6b",
-          "text": "Innovation wins — I embrace new ideas, technology, and modern approaches.",
+          "text": "Innovation wins: I embrace new ideas, technology, and modern approaches.",
           "scores": {
             "manchester-city": 3,
             "borussia-dortmund": 1
@@ -216,7 +216,7 @@
         },
         {
           "id": "q6c",
-          "text": "I blend both — I honor roots while evolving the philosophy over time.",
+          "text": "I blend both: I honor roots while evolving the philosophy over time.",
           "scores": {
             "barcelona": 3,
             "liverpool": 2
@@ -224,7 +224,7 @@
         },
         {
           "id": "q6d",
-          "text": "I build systems that last — efficient, reliable, and consistent over decades.",
+          "text": "I build systems that last: efficient, reliable, and consistent over decades.",
           "scores": {
             "bayern-munich": 3,
             "real-madrid": 1
@@ -238,7 +238,7 @@
       "options": [
         {
           "id": "q7a",
-          "text": "Out dancing, surrounded by friends, music loud — life is a celebration.",
+          "text": "Out dancing, surrounded by friends, music loud: life is a celebration.",
           "scores": {
             "flamengo": 3,
             "boca-juniors": 1
@@ -246,7 +246,7 @@
         },
         {
           "id": "q7b",
-          "text": "Laser-focused on a goal — I'm training, studying, or optimizing something.",
+          "text": "Laser-focused on a goal: I'm training, studying, or optimizing something.",
           "scores": {
             "manchester-city": 3,
             "bayern-munich": 2
@@ -254,7 +254,7 @@
         },
         {
           "id": "q7c",
-          "text": "At a cultural event — art, music, food — I love beauty and creativity.",
+          "text": "At a cultural event: art, music, food: I love beauty and creativity.",
           "scores": {
             "barcelona": 3,
             "flamengo": 1
@@ -262,7 +262,7 @@
         },
         {
           "id": "q7d",
-          "text": "In the thick of it with my crew — loud, energetic, maybe a little chaotic.",
+          "text": "In the thick of it with my crew: loud, energetic, maybe a little chaotic.",
           "scores": {
             "borussia-dortmund": 3,
             "liverpool": 2
@@ -276,7 +276,7 @@
       "options": [
         {
           "id": "q8a",
-          "text": "Rivalry is everything — I live for those matches. Nothing beats the intensity.",
+          "text": "Rivalry is everything: I live for those matches. Nothing beats the intensity.",
           "scores": {
             "boca-juniors": 3,
             "real-madrid": 2
@@ -293,7 +293,7 @@
         },
         {
           "id": "q8c",
-          "text": "Rivalry fuels our spirit — but unity and community matter more to me.",
+          "text": "Rivalry fuels our spirit: but unity and community matter more to me.",
           "scores": {
             "liverpool": 3,
             "borussia-dortmund": 2
@@ -315,7 +315,7 @@
       "options": [
         {
           "id": "q9a",
-          "text": "With the whole city — streets, fireworks, singing until dawn.",
+          "text": "With the whole city: streets, fireworks, singing until dawn.",
           "scores": {
             "flamengo": 3,
             "liverpool": 2
@@ -323,7 +323,7 @@
         },
         {
           "id": "q9b",
-          "text": "Quietly satisfied — I knew we'd win. Time to prepare for the next one.",
+          "text": "Quietly satisfied: I knew we'd win. Time to prepare for the next one.",
           "scores": {
             "manchester-city": 3,
             "real-madrid": 1
@@ -331,7 +331,7 @@
         },
         {
           "id": "q9c",
-          "text": "With raw, unrestrained emotion — screaming, hugging, tears of joy.",
+          "text": "With raw, unrestrained emotion: screaming, hugging, tears of joy.",
           "scores": {
             "boca-juniors": 3,
             "borussia-dortmund": 2
@@ -339,7 +339,7 @@
         },
         {
           "id": "q9d",
-          "text": "With deep pride and reverence — another chapter added to the greatest story.",
+          "text": "With deep pride and reverence: another chapter added to the greatest story.",
           "scores": {
             "real-madrid": 3,
             "barcelona": 2
@@ -353,7 +353,7 @@
       "options": [
         {
           "id": "q10a",
-          "text": "Resilience — I always find a way back, no matter how bad it looks.",
+          "text": "Resilience: I always find a way back, no matter how bad it looks.",
           "scores": {
             "liverpool": 3,
             "borussia-dortmund": 2
@@ -361,7 +361,7 @@
         },
         {
           "id": "q10b",
-          "text": "Brilliance — I do things others cannot and I make it look beautiful.",
+          "text": "Brilliance: I do things others cannot and I make it look beautiful.",
           "scores": {
             "barcelona": 3,
             "flamengo": 2
@@ -369,7 +369,7 @@
         },
         {
           "id": "q10c",
-          "text": "Discipline — I outwork everyone through structure, consistency, and focus.",
+          "text": "Discipline: I outwork everyone through structure, consistency, and focus.",
           "scores": {
             "bayern-munich": 3,
             "manchester-city": 2
@@ -377,7 +377,7 @@
         },
         {
           "id": "q10d",
-          "text": "Greatness — I carry the weight of expectations and still deliver.",
+          "text": "Greatness: I carry the weight of expectations and still deliver.",
           "scores": {
             "real-madrid": 3,
             "boca-juniors": 1
@@ -390,7 +390,7 @@
     {
       "id": "real-madrid",
       "title": "Real Madrid",
-      "description": "You are Real Madrid — the most decorated club in football history and a symbol of timeless greatness. Like Los Blancos, you carry yourself with a quiet confidence that borders on expectation: you don't just hope to win, you believe it is your destiny. You are drawn to the grandest stages and feel most alive when the pressure is at its highest. Setbacks don't discourage you — they fuel a fire that burns even hotter, and you have a remarkable ability to produce magic precisely when the world doubts you most. People around you may see this as arrogance, but those who know you best understand it is simply the mark of someone who has internalized excellence as a way of life. Legacy matters deeply to you. You respect those who came before you and feel a responsibility to add your own chapter to a long, glorious story. You think globally, dream grandly, and rarely settle for second best. The Bernabéu roars — and so do you.",
+      "description": "You are Real Madrid, the most decorated club in football history and a symbol of timeless greatness. Like Los Blancos, you carry yourself with a quiet confidence that borders on expectation: you don't just hope to win, you believe it is your destiny. You are drawn to the grandest stages and feel most alive when the pressure is at its highest. Setbacks don't discourage you, they fuel a fire that burns even hotter, and you have a remarkable ability to produce magic precisely when the world doubts you most. People around you may see this as arrogance, but those who know you best understand it is simply the mark of someone who has internalized excellence as a way of life. Legacy matters deeply to you. You respect those who came before you and feel a responsibility to add your own chapter to a long, glorious story. You think globally, dream grandly, and rarely settle for second best. The Bernabéu roars, and so do you.",
       "image": "/images/results/real-madrid.jpg",
       "traits": [
         "Prestige",
@@ -403,7 +403,7 @@
     {
       "id": "barcelona",
       "title": "FC Barcelona",
-      "description": "You are FC Barcelona — a club that has always believed football, and life, is an art form. Like Barça, you are driven by creativity, philosophy, and a deep sense of identity. You don't just want to succeed — you want to succeed beautifully, in a way that reflects your values. You have a strong sense of who you are and where you come from, and that identity shapes every decision you make. Whether in work, relationships, or personal projects, you bring a creative intelligence that others admire and sometimes struggle to fully understand. You are collaborative by nature, believing that a perfectly coordinated collective is more powerful than any single individual. You also care about culture: you appreciate art, ideas, and aesthetic beauty in everyday life. Tiki-taka isn't just a football philosophy for you — it's a metaphor for how you engage with the world. Patient, precise, purposeful. You believe in the power of the pass, the importance of process, and the beauty found in doing things the right way.",
+      "description": "You are FC Barcelona, a club that has always believed football, and life, is an art form. Like Barça, you are driven by creativity, philosophy, and a deep sense of identity. You don't just want to succeed, you want to succeed beautifully, in a way that reflects your values. You have a strong sense of who you are and where you come from, and that identity shapes every decision you make. Whether in work, relationships, or personal projects, you bring a creative intelligence that others admire and sometimes struggle to fully understand. You are collaborative by nature, believing that a perfectly coordinated collective is more powerful than any single individual. You also care about culture: you appreciate art, ideas, and aesthetic beauty in everyday life. Tiki-taka isn't just a football philosophy for you, it's a metaphor for how you engage with the world. Patient, precise, purposeful. You believe in the power of the pass, the importance of process, and the beauty found in doing things the right way.",
       "image": "/images/results/barcelona.jpg",
       "traits": [
         "Creativity",
@@ -416,7 +416,7 @@
     {
       "id": "liverpool",
       "title": "Liverpool FC",
-      "description": "You are Liverpool FC — a club built on passion, community, and the unbreakable belief that you'll never walk alone. Like the Reds, your greatest strength is your heart. You feel things deeply and your emotional connection to the people and causes you care about gives you a superhuman ability to push through adversity. You are the person who writes the comeback story, who finds the energy for one final push when everyone else has given up. Community is your foundation: you thrive when surrounded by people who share your fire, and you give back as much as you take. The Anfield atmosphere isn't just a setting for you — it's a way of life, a reminder that collective belief can move mountains. You are authentic, loyal, and intensely real in everything you do. You don't perform for others; you simply be, fully and loudly. History matters, but so does the present moment. You celebrate wins with full abandon and mourn losses with equal sincerity. That emotional honesty is your greatest gift.",
+      "description": "You are Liverpool FC, a club built on passion, community, and the unbreakable belief that you'll never walk alone. Like the Reds, your greatest strength is your heart. You feel things deeply and your emotional connection to the people and causes you care about gives you a superhuman ability to push through adversity. You are the person who writes the comeback story, who finds the energy for one final push when everyone else has given up. Community is your foundation: you thrive when surrounded by people who share your fire, and you give back as much as you take. The Anfield atmosphere isn't just a setting for you, it's a way of life, a reminder that collective belief can move mountains. You are authentic, loyal, and intensely real in everything you do. You don't perform for others; you simply be, fully and loudly. History matters, but so does the present moment. You celebrate wins with full abandon and mourn losses with equal sincerity. That emotional honesty is your greatest gift.",
       "image": "/images/results/liverpool.jpg",
       "traits": [
         "Passion",
@@ -429,7 +429,7 @@
     {
       "id": "bayern-munich",
       "title": "Bayern Munich",
-      "description": "You are Bayern Munich — the most efficient, dominant, and systematically excellent club in European football. Like the Bavarian giants, you believe that with the right structure, the right people, and the right processes, success becomes almost inevitable. You are not flashy or impulsive — you are methodical, consistent, and relentlessly focused on execution. You plan meticulously, set clear objectives, and hold yourself and others to the highest standards. While others rely on inspiration, you rely on preparation. This doesn't mean you lack passion — far from it — but your fire is cold and controlled, burning steadily rather than explosively. You are the person in the room who has already thought three steps ahead, who delivers on promises reliably and without drama. Others may find your standards high, but you see them as simply necessary. You prize competence and despise waste. At your core, you believe that dominance is earned through discipline, not luck — and your track record proves it every single time.",
+      "description": "You are Bayern Munich, the most efficient, dominant, and systematically excellent club in European football. Like the Bavarian giants, you believe that with the right structure, the right people, and the right processes, success becomes almost inevitable. You are not flashy or impulsive, you are methodical, consistent, and relentlessly focused on execution. You plan meticulously, set clear objectives, and hold yourself and others to the highest standards. While others rely on inspiration, you rely on preparation. This doesn't mean you lack passion, far from it, but your fire is cold and controlled, burning steadily rather than explosively. You are the person in the room who has already thought three steps ahead, who delivers on promises reliably and without drama. Others may find your standards high, but you see them as simply necessary. You prize competence and despise waste. At your core, you believe that dominance is earned through discipline, not luck, and your track record proves it every single time.",
       "image": "/images/results/bayern-munich.jpg",
       "traits": [
         "Efficiency",
@@ -442,7 +442,7 @@
     {
       "id": "manchester-city",
       "title": "Manchester City",
-      "description": "You are Manchester City — the modern football blueprint, where data, talent, and tactical genius combine to create something unstoppable. Like City under Pep Guardiola, you are fascinated by systems, optimization, and the relentless pursuit of improvement. You embrace modern ideas eagerly and are never intimidated by complexity. In fact, you find joy in untangling difficult problems and building better solutions. You are forward-thinking: while others look back, you are already designing the next version of yourself. Your dedication is quiet but intense — you don't need applause to keep working, because internal progress is its own reward. You are also highly adaptable, able to switch strategies mid-course without losing your composure. Some see you as calculating, but those who know you understand that behind the spreadsheets and tactics is someone who genuinely loves the game and wants to play it at the highest possible level. Relentless improvement is not a burden to you — it is your natural state.",
+      "description": "You are Manchester City, the modern football blueprint, where data, talent, and tactical genius combine to create something unstoppable. Like City under Pep Guardiola, you are fascinated by systems, optimization, and the relentless pursuit of improvement. You embrace modern ideas eagerly and are never intimidated by complexity. In fact, you find joy in untangling difficult problems and building better solutions. You are forward-thinking: while others look back, you are already designing the next version of yourself. Your dedication is quiet but intense, you don't need applause to keep working, because internal progress is its own reward. You are also highly adaptable, able to switch strategies mid-course without losing your composure. Some see you as calculating, but those who know you understand that behind the spreadsheets and tactics is someone who genuinely loves the game and wants to play it at the highest possible level. Relentless improvement is not a burden to you, it is your natural state.",
       "image": "/images/results/manchester-city.jpg",
       "traits": [
         "Tactical Intelligence",
@@ -455,7 +455,7 @@
     {
       "id": "flamengo",
       "title": "Flamengo",
-      "description": "You are Flamengo — the heartbeat of Brazilian football and the club of the people. Like Mengão, you carry the spirit of carnival in everything you do: vibrant, passionate, joyful, and completely, unapologetically alive. You don't just participate in life — you celebrate it, loudly and with everyone around you. Your energy is infectious; people are naturally drawn to your enthusiasm, warmth, and unshakable belief that tomorrow will be even better than today. You see football — and life — as a communal feast, best shared with a crowd, with music, with feeling. Where others plan and calculate, you trust the moment, your instincts, and the electric power of collective emotion. Adversity doesn't break you — if anything, it brings out your most spectacular self. You represent an entire culture, a city, a way of being. From the favelas of Rio to the Maracanã, Flamengo belongs to everyone — and so do you. Big, generous, passionate, and impossible to ignore.",
+      "description": "You are Flamengo, the heartbeat of Brazilian football and the club of the people. Like Mengão, you carry the spirit of carnival in everything you do: vibrant, passionate, joyful, and completely, unapologetically alive. You don't just participate in life, you celebrate it, loudly and with everyone around you. Your energy is infectious; people are naturally drawn to your enthusiasm, warmth, and unshakable belief that tomorrow will be even better than today. You see football, and life, as a communal feast, best shared with a crowd, with music, with feeling. Where others plan and calculate, you trust the moment, your instincts, and the electric power of collective emotion. Adversity doesn't break you, if anything, it brings out your most spectacular self. You represent an entire culture, a city, a way of being. From the favelas of Rio to the Maracanã, Flamengo belongs to everyone, and so do you. Big, generous, passionate, and impossible to ignore.",
       "image": "/images/results/flamengo.jpg",
       "traits": [
         "Joy",
@@ -468,7 +468,7 @@
     {
       "id": "boca-juniors",
       "title": "Boca Juniors",
-      "description": "You are Boca Juniors — fire, intensity, and an unbreakable bond with the people. Like the Xeneizes from La Bombonera, you feel everything at maximum volume. Rivalries are not background noise for you — they are the centerpiece of your story, the fuel that drives your greatest performances. You are fiercely loyal to your own and just as fiercely competitive against anyone who stands in your way. There is a rawness to you, an authenticity that cannot be manufactured or polished away. You wear your heart on your sleeve and you are proud of it. The streets of La Boca shaped this club, and you too have been shaped by where you come from — by real struggles, real people, and real stakes. You are not interested in pretense or glamour for its own sake. What matters to you is truth, passion, and the electric feeling of a stadium transformed into something primal and alive. When Boca wins, all of Argentina feels it — and when you win, so does everyone around you.",
+      "description": "You are Boca Juniors, fire, intensity, and an unbreakable bond with the people. Like the Xeneizes from La Bombonera, you feel everything at maximum volume. Rivalries are not background noise for you, they are the centerpiece of your story, the fuel that drives your greatest performances. You are fiercely loyal to your own and just as fiercely competitive against anyone who stands in your way. There is a rawness to you, an authenticity that cannot be manufactured or polished away. You wear your heart on your sleeve and you are proud of it. The streets of La Boca shaped this club, and you too have been shaped by where you come from, by real struggles, real people, and real stakes. You are not interested in pretense or glamour for its own sake. What matters to you is truth, passion, and the electric feeling of a stadium transformed into something primal and alive. When Boca wins, all of Argentina feels it, and when you win, so does everyone around you.",
       "image": "/images/results/boca-juniors.jpg",
       "traits": [
         "Intensity",
@@ -481,7 +481,7 @@
     {
       "id": "borussia-dortmund",
       "title": "Borussia Dortmund",
-      "description": "You are Borussia Dortmund — the Yellow Wall, the underdog who never stops believing, the club that turns raw energy into something magical. Like BVB, you are youthful at heart, full of electricity, and powered by an almost irrational optimism that makes the impossible feel reachable. You don't need the biggest budget or the most famous name — you believe in potential, in development, in giving talented young people a chance to become something extraordinary. The Signal Iduna Park is the loudest stadium in Europe because the fans there aren't spectators — they are participants, co-authors of every victory. That is you too: you don't watch life from the sidelines, you throw yourself in. You are relatable, grounded, and fierce — you know what it feels like to be doubted and you use that knowledge as rocket fuel. Your spirit is the Yellow Wall: massive, unified, deafening, and utterly impossible to ignore. You fight for every inch and you love every second of it.",
+      "description": "You are Borussia Dortmund, the Yellow Wall, the underdog who never stops believing, the club that turns raw energy into something magical. Like BVB, you are youthful at heart, full of electricity, and powered by an almost irrational optimism that makes the impossible feel reachable. You don't need the biggest budget or the most famous name, you believe in potential, in development, in giving talented young people a chance to become something extraordinary. The Signal Iduna Park is the loudest stadium in Europe because the fans there aren't spectators, they are participants, co-authors of every victory. That is you too: you don't watch life from the sidelines, you throw yourself in. You are relatable, grounded, and fierce, you know what it feels like to be doubted and you use that knowledge as rocket fuel. Your spirit is the Yellow Wall: massive, unified, deafening, and utterly impossible to ignore. You fight for every inch and you love every second of it.",
       "image": "/images/results/borussia-dortmund.jpg",
       "traits": [
         "Youthful Energy",

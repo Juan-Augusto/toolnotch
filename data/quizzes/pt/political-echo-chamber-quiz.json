@@ -162,7 +162,7 @@
       "options": [
         {
           "id": "q5a",
-          "text": "Quase nunca — evito esse tipo de conversa",
+          "text": "Quase nunca: evito esse tipo de conversa",
           "scores": {
             "bolha_extrema": 3,
             "bolha_moderada": 1
@@ -186,7 +186,7 @@
         },
         {
           "id": "q5d",
-          "text": "Com frequência — gosto de entender por que a pessoa pensa assim",
+          "text": "Com frequência: gosto de entender por que a pessoa pensa assim",
           "scores": {
             "exposicao_ampla": 3,
             "visao_equilibrada": 1
@@ -352,7 +352,7 @@
       "options": [
         {
           "id": "q10a",
-          "text": "Só conteúdo que confirma o que eu já penso — é mais tranquilo",
+          "text": "Só conteúdo que confirma o que eu já penso: é mais tranquilo",
           "scores": {
             "bolha_extrema": 3,
             "bolha_moderada": 1
@@ -389,7 +389,7 @@
     {
       "id": "bolha_extrema",
       "title": "Bolha Extrema",
-      "description": "Pelas suas respostas, seu feed e o seu círculo social giram quase inteiramente em torno de vozes que já pensam como você. Isso é extremamente comum — é assim que a maioria dos algoritmos de redes sociais e das nossas rodas de amizade funciona por padrão — e não é motivo de vergonha. Mas significa que, no dia a dia, você provavelmente está em contato com uma fatia bem específica do debate público, com pouca chance de esbarrar em um argumento que te faça repensar algo. Isso não diz nada sobre suas opiniões estarem certas ou erradas — só sobre a diversidade do que chega até você. Dica prática: escolha uma fonte ou uma pessoa que você sabe que pensa diferente e siga por uma semana, só para entender o raciocínio dela — não precisa concordar com nada.",
+      "description": "Pelas suas respostas, seu feed e o seu círculo social giram quase inteiramente em torno de vozes que já pensam como você. Isso é extremamente comum, é assim que a maioria dos algoritmos de redes sociais e das nossas rodas de amizade funciona por padrão, e não é motivo de vergonha. Mas significa que, no dia a dia, você provavelmente está em contato com uma fatia bem específica do debate público, com pouca chance de esbarrar em um argumento que te faça repensar algo. Isso não diz nada sobre suas opiniões estarem certas ou erradas, só sobre a diversidade do que chega até você. Dica prática: escolha uma fonte ou uma pessoa que você sabe que pensa diferente e siga por uma semana, só para entender o raciocínio dela, não precisa concordar com nada.",
       "image": "/images/results/bolha-extrema.jpg",
       "traits": [
         "Feed consistente",
@@ -401,7 +401,7 @@
     {
       "id": "bolha_moderada",
       "title": "Bolha Moderada",
-      "description": "Suas respostas mostram um ambiente político majoritariamente parecido com o que você pensa, mas não totalmente fechado — de vez em quando um ponto de vista diferente aparece no seu feed ou numa conversa. Você já teve algum contato com opiniões distintas, só que ele tende a ser esporádico, não uma prática constante. É um padrão muito comum e não indica nada sobre o quão bem informado ou aberto você é — só descreve a mistura de vozes que passam pelo seu dia a dia hoje. Dica prática: na próxima semana, tente notar quantas vezes uma opinião política diferente da sua aparece no seu feed ou numa conversa, sem simplesmente pular ela — só prestar atenção nisso já muda o hábito aos poucos.",
+      "description": "Suas respostas mostram um ambiente político majoritariamente parecido com o que você pensa, mas não totalmente fechado, de vez em quando um ponto de vista diferente aparece no seu feed ou numa conversa. Você já teve algum contato com opiniões distintas, só que ele tende a ser esporádico, não uma prática constante. É um padrão muito comum e não indica nada sobre o quão bem informado ou aberto você é, só descreve a mistura de vozes que passam pelo seu dia a dia hoje. Dica prática: na próxima semana, tente notar quantas vezes uma opinião política diferente da sua aparece no seu feed ou numa conversa, sem simplesmente pular ela, só prestar atenção nisso já muda o hábito aos poucos.",
       "image": "/images/results/bolha-moderada.jpg",
       "traits": [
         "Maioria parecida",
@@ -413,7 +413,7 @@
     {
       "id": "visao_equilibrada",
       "title": "Visão Equilibrada",
-      "description": "Você mantém um equilíbrio saudável entre vozes parecidas e vozes diferentes das suas — nem vive cercado só de quem concorda com você, nem está exposto a absolutamente tudo o tempo todo. Esse tipo de mistura costuma ser um bom ponto de partida para formar opinião com mais contexto, porque você tem contato regular com mais de um jeito de ver as coisas antes de tirar suas conclusões. Isso não é sobre ter a opinião \"certa\" — é sobre a variedade de vozes que moldam o seu ponto de vista. Dica prática: continue variando suas fontes e, de vez em quando, leia uma reportagem inteira — não só a manchete — de um veículo que normalmente você não segue.",
+      "description": "Você mantém um equilíbrio saudável entre vozes parecidas e vozes diferentes das suas, nem vive cercado só de quem concorda com você, nem está exposto a absolutamente tudo o tempo todo. Esse tipo de mistura costuma ser um bom ponto de partida para formar opinião com mais contexto, porque você tem contato regular com mais de um jeito de ver as coisas antes de tirar suas conclusões. Isso não é sobre ter a opinião \"certa\", é sobre a variedade de vozes que moldam o seu ponto de vista. Dica prática: continue variando suas fontes e, de vez em quando, leia uma reportagem inteira, não só a manchete, de um veículo que normalmente você não segue.",
       "image": "/images/results/visao-equilibrada.jpg",
       "traits": [
         "Fontes variadas",
@@ -425,7 +425,7 @@
     {
       "id": "exposicao_ampla",
       "title": "Exposição Ampla",
-      "description": "Pelas suas respostas, você busca ativamente pontos de vista diferentes do seu — nas redes, nas notícias e nas conversas do dia a dia. Isso amplia bastante o alcance de vozes que chegam até você e tende a te dar uma visão mais completa do debate público. Vale lembrar, porém, que ver muitos lados diferentes não é a mesma coisa que checar se cada um deles está bem informado — diversidade de opinião e qualidade da informação são coisas distintas. Dica prática: aproveite esse hábito de ouvir vários lados para também conferir a credibilidade das fontes que você consome — de todos os lados —, porque nem toda voz diferente da sua é necessariamente bem apurada.",
+      "description": "Pelas suas respostas, você busca ativamente pontos de vista diferentes do seu, nas redes, nas notícias e nas conversas do dia a dia. Isso amplia bastante o alcance de vozes que chegam até você e tende a te dar uma visão mais completa do debate público. Vale lembrar, porém, que ver muitos lados diferentes não é a mesma coisa que checar se cada um deles está bem informado, diversidade de opinião e qualidade da informação são coisas distintas. Dica prática: aproveite esse hábito de ouvir vários lados para também conferir a credibilidade das fontes que você consome (de todos os lados), porque nem toda voz diferente da sua é necessariamente bem apurada.",
       "image": "/images/results/exposicao-ampla.jpg",
       "traits": [
         "Busca ativa",

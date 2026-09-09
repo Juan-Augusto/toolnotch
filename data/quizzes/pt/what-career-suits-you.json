@@ -282,7 +282,7 @@
       "options": [
         {
           "id": "q9a",
-          "text": "Propósito — preciso amar o que crio",
+          "text": "Propósito: preciso amar o que crio",
           "scores": {
             "creative": 2,
             "social": 1
@@ -290,21 +290,21 @@
         },
         {
           "id": "q9b",
-          "text": "Ambos — quero ser bem remunerado pela minha expertise",
+          "text": "Ambos: quero ser bem remunerado pela minha expertise",
           "scores": {
             "analytical": 3
           }
         },
         {
           "id": "q9c",
-          "text": "Ambição — quero construir algo grandioso",
+          "text": "Ambição: quero construir algo grandioso",
           "scores": {
             "leadership": 3
           }
         },
         {
           "id": "q9d",
-          "text": "Impacto — dinheiro é secundário ao impacto social",
+          "text": "Impacto: dinheiro é secundário ao impacto social",
           "scores": {
             "social": 3
           }
@@ -350,7 +350,7 @@
     {
       "id": "creative",
       "title": "Carreira Criativa",
-      "description": "Seus resultados apontam fortemente para uma carreira criativa. Você precisa criar — seja escrevendo, desenhando, construindo ou produzindo. Você se sente mais vivo quando traduz ideias internas em algo tangível no mundo.",
+      "description": "Seus resultados apontam fortemente para uma carreira criativa. Você precisa criar, seja escrevendo, desenhando, construindo ou produzindo. Você se sente mais vivo quando traduz ideias internas em algo tangível no mundo.",
       "image": "/images/results/creative.jpg",
       "traits": [
         "Imaginativo",

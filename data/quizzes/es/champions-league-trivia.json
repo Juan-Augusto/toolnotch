@@ -364,14 +364,14 @@
       "id": "expert",
       "minPercent": 60,
       "label": "Experto",
-      "description": "Impresionante — claramente sigues la Champions League de cerca y tienes un sólido dominio de sus momentos más importantes. Conoces las finales icónicas, los jugadores récord y los clubes que han dominado el fútbol europeo. Algunos detalles se te escaparon, pero en general tu conocimiento de la UCL está muy por encima de la media. Sigue viendo las noches de martes y miércoles y te acercarás al nivel Leyenda en poco tiempo. El fútbol europeo es claramente tu pasión.",
+      "description": "Impresionante: claramente sigues la Champions League de cerca y tienes un sólido dominio de sus momentos más importantes. Conoces las finales icónicas, los jugadores récord y los clubes que han dominado el fútbol europeo. Algunos detalles se te escaparon, pero en general tu conocimiento de la UCL está muy por encima de la media. Sigue viendo las noches de martes y miércoles y te acercarás al nivel Leyenda en poco tiempo. El fútbol europeo es claramente tu pasión.",
       "shareText": "¡Saqué el nivel Experto en el Trivia de la Champions League! Sólido conocimiento de UCL. ¿Crees que puedes hacerlo mejor?"
     },
     {
       "id": "fan",
       "minPercent": 40,
       "label": "Fanático",
-      "description": "Eres un verdadero fanático de la Champions League que disfruta la emoción y el drama del fútbol europeo. Has vivido algunos momentos memorables y conoces los grandes nombres, pero la historia más profunda y las estadísticas de la UCL todavía se te escapan un poco. Sin vergüenza — la Champions League tiene décadas de historia increíble por explorar. Ve más finales clásicas, investiga sobre los clubes icónicos y tu puntuación subirá rápidamente. La pasión está claramente ahí.",
+      "description": "Eres un verdadero fanático de la Champions League que disfruta la emoción y el drama del fútbol europeo. Has vivido algunos momentos memorables y conoces los grandes nombres, pero la historia más profunda y las estadísticas de la UCL todavía se te escapan un poco. Sin vergüenza, la Champions League tiene décadas de historia increíble por explorar. Ve más finales clásicas, investiga sobre los clubes icónicos y tu puntuación subirá rápidamente. La pasión está claramente ahí.",
       "shareText": "Saqué el nivel Fanático en el Trivia de la Champions League. ¡Conozco mi fútbol europeo! ¿Cómo te irá a ti?"
     },
     {
@@ -379,7 +379,7 @@
       "minPercent": 0,
       "label": "Novato",
       "description": "Estás comenzando tu recorrido por la Champions League, ¡pero todo el mundo empieza desde algún lugar! La UCL es la competición de clubes más prestigiosa del mundo, con los mejores equipos de Europa luchando por la gloria. Desde el récord de títulos del Real Madrid hasta finales inolvidables en Estambul, Lisboa y más allá, hay una rica historia por descubrir. Sumérgete en partidos clásicos, conoce los clubes más históricos y vuelve a desafiar este quiz. Tu viaje por la UCL comienza ahora.",
-      "shareText": "Acabo de hacer el Trivia de la Champions League. Tengo mucho que aprender — ¿puedes puntuar más que yo?"
+      "shareText": "Acabo de hacer el Trivia de la Champions League. Tengo mucho que aprender: ¿puedes puntuar más que yo?"
     }
   ]
 }

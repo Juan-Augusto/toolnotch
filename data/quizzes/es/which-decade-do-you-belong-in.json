@@ -297,7 +297,7 @@
       "options": [
         {
           "id": "q8a",
-          "text": "Escéptica — prefiero la naturaleza y el trato humano",
+          "text": "Escéptica: prefiero la naturaleza y el trato humano",
           "scores": {
             "1970s": 3
           }
@@ -419,7 +419,7 @@
     {
       "id": "1970s",
       "title": "Años 1970",
-      "description": "Perteneces a los años 70 — la década de la libertad, el vinilo y la búsqueda de autenticidad y comunidad.",
+      "description": "Perteneces a los años 70, la década de la libertad, el vinilo y la búsqueda de autenticidad y comunidad.",
       "image": "/images/results/1970s.jpg",
       "traits": [
         "Libre",
@@ -432,7 +432,7 @@
     {
       "id": "1980s",
       "title": "Años 1980",
-      "description": "Perteneces a los años 80 — la era del synth-pop, el color, el optimismo y las grandes metas.",
+      "description": "Perteneces a los años 80, la era del synth-pop, el color, el optimismo y las grandes metas.",
       "image": "/images/results/1980s.jpg",
       "traits": [
         "Ambicioso",
@@ -445,7 +445,7 @@
     {
       "id": "1990s",
       "title": "Años 1990",
-      "description": "Perteneces a los años 90 — la época dorada del rock alternativo, el nacimiento de la web y el valor de lo genuino.",
+      "description": "Perteneces a los años 90, la época dorada del rock alternativo, el nacimiento de la web y el valor de lo genuino.",
       "image": "/images/results/1990s.jpg",
       "traits": [
         "Auténtico",
@@ -458,7 +458,7 @@
     {
       "id": "2000s",
       "title": "Años 2000",
-      "description": "Perteneces a los años 2000 — el apogeo del pop, los móviles plegables y la explosión digital inicial.",
+      "description": "Perteneces a los años 2000, el apogeo del pop, los móviles plegables y la explosión digital inicial.",
       "image": "/images/results/2000s.jpg",
       "traits": [
         "Divertido",
@@ -471,7 +471,7 @@
     {
       "id": "2010s",
       "title": "Años 2010",
-      "description": "Perteneces a los años 2010 — la era del streaming, la hiperconectividad y el impacto estético y social.",
+      "description": "Perteneces a los años 2010, la era del streaming, la hiperconectividad y el impacto estético y social.",
       "image": "/images/results/2010s.jpg",
       "traits": [
         "Conectado",
