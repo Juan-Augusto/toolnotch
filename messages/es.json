@@ -3791,32 +3791,32 @@
     ]
   },
   "contact": {
-    "metaTitle": "Contacto | ToolNotch",
-    "metaDescription": "Ponte en contacto con ToolNotch. Reporta un error, sugiere una herramienta, consulta sobre publicidad o envía una solicitud de privacidad.",
-    "backHome": "Volver a ToolNotch",
-    "heading": "Contáctanos",
-    "intro": "ToolNotch está creado y gestionado por un solo desarrollador, Juan Soares. El correo electrónico es el único canal: no hay portal de soporte, ni cola de tickets, ni cuenta con la que iniciar sesión. Cada mensaje llega directamente a una persona, y casi todas las herramientas, correcciones y funciones del sitio empezaron como un correo de alguien que lo usa.",
-    "emailLabel": "Escríbenos a",
-    "categories": {
-      "bugs": {
-        "title": "Reportes de Errores",
-        "description": "Indícanos qué herramienta falló, qué navegador y sistema operativo usabas y los pasos exactos que llevaron al problema. Una captura de pantalla o una grabación breve del error hace mucho más rápido reproducirlo y corregirlo."
-      },
-      "features": {
-        "title": "Solicitudes de Funcionalidades",
-        "description": "Describe la tarea que intentas terminar, no solo el nombre de la función. Conocer el objetivo de fondo suele llevar a una herramienta mejor que la imaginada al principio. Las solicitudes que responden a una necesidad real y recurrente suelen publicarse en unas pocas semanas."
-      },
-      "business": {
-        "title": "Publicidad y Colaboraciones",
-        "description": "ToolNotch se financia por completo con publicidad gráfica. Para patrocinios, colaboraciones de contenido o consultas sobre publicidad, escribe a la dirección de arriba con una breve descripción de tu empresa y de lo que tienes en mente."
-      }
-    },
-    "noFilesTitle": "No podemos recuperar tus archivos",
-    "noFilesBody": "Todas las herramientas basadas en archivos de ToolNotch —el compresor de imágenes, unir y dividir PDF, los conversores de formato y las demás— se ejecutan por completo dentro de tu navegador. Los archivos nunca se suben ni se guardan en nuestros servidores, así que, si has perdido un documento, no hay nada de nuestro lado que recuperar. Guarda siempre tu propia copia de todo lo importante antes de procesarlo.",
-    "privacyTitle": "Privacidad y solicitudes de datos",
-    "privacyBody": "Como las herramientas se ejecutan en el navegador y no almacenamos cuentas ni archivos subidos, hay muy pocos datos personales que solicitar o eliminar. Los datos de analítica y de publicidad los gestiona Google. Para cualquier solicitud de acceso o eliminación, escríbenos y te indicaremos el proceso correcto. Todos los detalles están en nuestra",
-    "privacyLinkLabel": "Política de Privacidad",
-    "responseTime": "Una sola persona lee cada correo. Normalmente respondemos en un plazo de 1 a 2 días hábiles; los reportes de error detallados pueden tardar más mientras reproducimos el problema."
+    "metaTitle": "Contacto y Soporte Directo",
+    "metaDescription": "Ponte en contacto con ToolNotch. Reporta errores, sugiere nuevas herramientas, consulta sobre privacidad o colaboraciones técnicas.",
+    "title": "Contacto",
+    "subtitle": "Canal de comunicación directa, envío de sugerencias y soporte de ToolNotch.",
+    "lastUpdated": "Última actualización: septiembre de 2026",
+    "badge": "CANAL DE CONTACTO DIRECTO",
+    "highlightTitle": "Atención Directa por Correo Electrónico",
+    "highlightP1": "ToolNotch está desarrollado y mantenido de forma independiente por Juan Soares. No hay intermediarios, portales de soporte impersonales ni respuestas automáticas de bots: cada mensaje llega directamente a la bandeja de entrada del desarrollador.",
+    "s1Title": "1. Reportes de Errores e Incidencias",
+    "s1P1": "Indícanos qué herramienta presentó fallas, qué navegador y sistema operativo usabas y los pasos exactos que provocaron el problema. Capturas de pantalla o vídeos breves facilitan enormemente la reproducción rápida y la solución.",
+    "s1P2": "Los errores críticos que afectan el procesamiento local de archivos o bloquean funciones reciben máxima prioridad de resolución.",
+    "s2Title": "2. Sugerencias de Nuevas Herramientas",
+    "s2P1": "Describe el flujo de trabajo o cálculo práctico que intentas resolver a diario, más allá del nombre de la función. Comprender la necesidad de fondo suele llevar a mejores herramientas que las previstas en un principio.",
+    "s2P2": "Las sugerencias viables y de utilidad recurrente suelen implementarse y publicarse de forma gratuita en pocas semanas.",
+    "s3Title": "3. Colaboraciones y Proyectos",
+    "s3P1": "Para iniciativas educativas, colaboraciones de contenido, proyectos técnicos conjuntos o dudas institucionales, envía un mensaje con un breve resumen de tu iniciativa y de cómo podemos cooperar.",
+    "s4Title": "4. Privacidad Local: No Recuperamos Archivos",
+    "s4P1": "Todas las herramientas de archivos de ToolNotch (como el compresor de imágenes, unir y dividir PDF y los conversores de formatos) operan exclusivamente dentro de tu navegador mediante JavaScript. Los archivos nunca se transfieren a servidores remotos, por lo que no conservamos copias de tus datos. Mantén siempre una copia de seguridad de tus documentos originales antes de realizar cambios.",
+    "s5Title": "5. Privacidad y Solicitudes de Datos (RGPD)",
+    "s5P1": "Dado que las herramientas funcionan localmente y no requerimos registro de usuarios, no recopilamos datos personales ni archivos subidos. Si tienes dudas sobre analítica anónima o ejercicio de derechos de privacidad, escríbenos directamente y te orientaremos. Más detalles en nuestra",
+    "s5ContactLink": "Política de Privacidad",
+    "s6Title": "6. Tiempo Medio de Respuesta",
+    "s6P1": "Una persona real lee y responde cada correo. Normalmente respondemos en un plazo de 1 a 2 días hábiles; los reportes técnicos detallados pueden tardar un poco más mientras reproducimos el escenario en entornos idénticos.",
+    "exploreTools": "Explorar Herramientas",
+    "privacyButton": "Política de Privacidad",
+    "termsButton": "Términos de Servicio"
   },
   "blog": {
     "indexTitle": "Blog — Guías Gratuitas y Tutoriales de Calculadoras",
