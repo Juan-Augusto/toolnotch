@@ -4233,6 +4233,40 @@
     "founderBadge": "DEVELOPER",
     "githubButton": "GitHub"
   },
+  "privacy": {
+    "metaTitle": "Privacy Policy: Data Protection and In-Browser Processing",
+    "metaDescription": "Learn how ToolNotch protects your privacy with local browser-based processing, zero file uploads to external servers, and no accounts required.",
+    "title": "Privacy Policy",
+    "subtitle": "How we protect your data, security, and anonymity when using ToolNotch.",
+    "lastUpdated": "Last updated: September 2026",
+    "badge": "PRIVACY & DATA",
+    "highlightTitle": "Privacy by default",
+    "highlightP1": "ToolNotch was built following the principle of privacy by design: most utilities process your files and inputs directly inside your web browser, without transmitting files to external servers.",
+    "s1Title": "1. Overview",
+    "s1P1": "ToolNotch provides free online utilities for file manipulation, format conversion, calculations, and technical quizzes. This Privacy Policy clearly outlines what information is handled when you visit our website.",
+    "s2Title": "2. Client-Side Processing and Files",
+    "s2P1": "Most tools on ToolNotch, including image compressors, format converters, and PDF document utilities, run completely client-side in your web browser using WebAssembly, Canvas API, and native web standards.",
+    "s2P2": "Your files and inputs are never uploaded to our servers or stored remotely. Processing occurs in your device's memory and is discarded as soon as you close or refresh the tab.",
+    "s3Title": "3. Analytics and Usage Metrics",
+    "s3P1": "We use Google Analytics 4 to collect aggregated, anonymized statistics about site performance, popular tools, and technical errors.",
+    "s3P2": "Data gathered by Analytics is non-personal and includes browser type, viewed pages, session duration, and approximate country or city location. You can opt out at any time using the <optOutLink>official Google Analytics Opt-out browser add-on</optOutLink>.",
+    "s4Title": "4. Cookies and Local Storage",
+    "s4P1": "ToolNotch uses minimal browser storage (such as localStorage) solely to remember functional settings, including your preferred language, visual theme, and active in-progress tool drafts.",
+    "s4P2": "We do not use first-party tracking cookies for user profiling and we never sell user data to advertising networks.",
+    "s5Title": "5. Third-Party Infrastructure",
+    "s5P1": "Our website is hosted on modern cloud infrastructure platforms such as Vercel, which deliver pages securely over encrypted HTTPS connections. Each infrastructure provider maintains its own technical compliance and security standards.",
+    "s6Title": "6. Your Rights and Data Control",
+    "s6P1": "In accordance with data protection regulations (such as GDPR, CCPA, and LGPD), you have the right to control your personal data. Because ToolNotch does not require user accounts or store personal records on servers, you can reset all local data by clearing your browser cache and cookies.",
+    "s7Title": "7. Data Security",
+    "s7P1": "All communications between your device and ToolNotch are secured using HTTPS and TLS transport encryption. Our client-side processing model eliminates the security risks associated with uploading sensitive documents to cloud servers.",
+    "s8Title": "8. Updates to This Policy",
+    "s8P1": "We may update this Privacy Policy periodically to reflect new features or legal requirements. When changes are made, the revision date at the top of this page will be updated accordingly.",
+    "s9Title": "9. Contact and Inquiries",
+    "s9P1": "If you have questions regarding this Privacy Policy or data handling practices on ToolNotch, please contact us at juanaugusto1@live.com or visit our contact page.",
+    "exploreTools": "Explore Tools",
+    "aboutButton": "About the Project",
+    "contactButton": "Contact Us"
+  },
   "terms": {
     "metaTitle": "Terms of Service | ToolNotch",
     "metaDescription": "Read ToolNotch's Terms of Service — your rights, our disclaimers, and the rules governing use of our free online tools.",
@@ -5295,182 +5329,32 @@
       "table": {
         "heading": "Every FIFA World Cup Winner (1930–2022)",
         "note": "aet = after extra time; pens = decided on penalties.",
-        "cols": [
-          "Year",
-          "Host",
-          "Winner",
-          "Runner-up",
-          "Final score"
-        ],
+        "cols": ["Year", "Host", "Winner", "Runner-up", "Final score"],
         "rows": [
-          [
-            "1930",
-            "Uruguay",
-            "Uruguay",
-            "Argentina",
-            "4–2"
-          ],
-          [
-            "1934",
-            "Italy",
-            "Italy",
-            "Czechoslovakia",
-            "2–1 (aet)"
-          ],
-          [
-            "1938",
-            "France",
-            "Italy",
-            "Hungary",
-            "4–2"
-          ],
-          [
-            "1942",
-            "Not held",
-            "Not held",
-            "-",
-            "World War II"
-          ],
-          [
-            "1946",
-            "Not held",
-            "Not held",
-            "-",
-            "World War II"
-          ],
-          [
-            "1950",
-            "Brazil",
-            "Uruguay",
-            "Brazil",
-            "2–1 (deciding match)"
-          ],
-          [
-            "1954",
-            "Switzerland",
-            "West Germany",
-            "Hungary",
-            "3–2"
-          ],
-          [
-            "1958",
-            "Sweden",
-            "Brazil",
-            "Sweden",
-            "5–2"
-          ],
-          [
-            "1962",
-            "Chile",
-            "Brazil",
-            "Czechoslovakia",
-            "3–1"
-          ],
-          [
-            "1966",
-            "England",
-            "England",
-            "West Germany",
-            "4–2 (aet)"
-          ],
-          [
-            "1970",
-            "Mexico",
-            "Brazil",
-            "Italy",
-            "4–1"
-          ],
-          [
-            "1974",
-            "West Germany",
-            "West Germany",
-            "Netherlands",
-            "2–1"
-          ],
-          [
-            "1978",
-            "Argentina",
-            "Argentina",
-            "Netherlands",
-            "3–1 (aet)"
-          ],
-          [
-            "1982",
-            "Spain",
-            "Italy",
-            "West Germany",
-            "3–1"
-          ],
-          [
-            "1986",
-            "Mexico",
-            "Argentina",
-            "West Germany",
-            "3–2"
-          ],
-          [
-            "1990",
-            "Italy",
-            "West Germany",
-            "Argentina",
-            "1–0"
-          ],
-          [
-            "1994",
-            "United States",
-            "Brazil",
-            "Italy",
-            "0–0 (3–2 pens)"
-          ],
-          [
-            "1998",
-            "France",
-            "France",
-            "Brazil",
-            "3–0"
-          ],
-          [
-            "2002",
-            "South Korea & Japan",
-            "Brazil",
-            "Germany",
-            "2–0"
-          ],
-          [
-            "2006",
-            "Germany",
-            "Italy",
-            "France",
-            "1–1 (5–3 pens)"
-          ],
-          [
-            "2010",
-            "South Africa",
-            "Spain",
-            "Netherlands",
-            "1–0 (aet)"
-          ],
-          [
-            "2014",
-            "Brazil",
-            "Germany",
-            "Argentina",
-            "1–0 (aet)"
-          ],
-          [
-            "2018",
-            "Russia",
-            "France",
-            "Croatia",
-            "4–2"
-          ],
-          [
-            "2022",
-            "Qatar",
-            "Argentina",
-            "France",
-            "3–3 (4–2 pens)"
-          ]
+          ["1930", "Uruguay", "Uruguay", "Argentina", "4–2"],
+          ["1934", "Italy", "Italy", "Czechoslovakia", "2–1 (aet)"],
+          ["1938", "France", "Italy", "Hungary", "4–2"],
+          ["1942", "Not held", "Not held", "-", "World War II"],
+          ["1946", "Not held", "Not held", "-", "World War II"],
+          ["1950", "Brazil", "Uruguay", "Brazil", "2–1 (deciding match)"],
+          ["1954", "Switzerland", "West Germany", "Hungary", "3–2"],
+          ["1958", "Sweden", "Brazil", "Sweden", "5–2"],
+          ["1962", "Chile", "Brazil", "Czechoslovakia", "3–1"],
+          ["1966", "England", "England", "West Germany", "4–2 (aet)"],
+          ["1970", "Mexico", "Brazil", "Italy", "4–1"],
+          ["1974", "West Germany", "West Germany", "Netherlands", "2–1"],
+          ["1978", "Argentina", "Argentina", "Netherlands", "3–1 (aet)"],
+          ["1982", "Spain", "Italy", "West Germany", "3–1"],
+          ["1986", "Mexico", "Argentina", "West Germany", "3–2"],
+          ["1990", "Italy", "West Germany", "Argentina", "1–0"],
+          ["1994", "United States", "Brazil", "Italy", "0–0 (3–2 pens)"],
+          ["1998", "France", "France", "Brazil", "3–0"],
+          ["2002", "South Korea & Japan", "Brazil", "Germany", "2–0"],
+          ["2006", "Germany", "Italy", "France", "1–1 (5–3 pens)"],
+          ["2010", "South Africa", "Spain", "Netherlands", "1–0 (aet)"],
+          ["2014", "Brazil", "Germany", "Argentina", "1–0 (aet)"],
+          ["2018", "Russia", "France", "Croatia", "4–2"],
+          ["2022", "Qatar", "Argentina", "France", "3–3 (4–2 pens)"]
         ]
       },
       "faqHeading": "World Cup winners: frequently asked questions",
@@ -5559,49 +5443,14 @@
       "table": {
         "heading": "Most European Cup and Champions League titles",
         "note": "European Cup / UEFA Champions League titles, men’s competition. Figures as of the 2024 final.",
-        "cols": [
-          "Club",
-          "Country",
-          "Titles",
-          "Most recent"
-        ],
+        "cols": ["Club", "Country", "Titles", "Most recent"],
         "rows": [
-          [
-            "Real Madrid",
-            "Spain",
-            "15",
-            "2024"
-          ],
-          [
-            "AC Milan",
-            "Italy",
-            "7",
-            "2007"
-          ],
-          [
-            "Bayern Munich",
-            "Germany",
-            "6",
-            "2020"
-          ],
-          [
-            "Liverpool",
-            "England",
-            "6",
-            "2019"
-          ],
-          [
-            "Barcelona",
-            "Spain",
-            "5",
-            "2015"
-          ],
-          [
-            "Ajax",
-            "Netherlands",
-            "4",
-            "1995"
-          ]
+          ["Real Madrid", "Spain", "15", "2024"],
+          ["AC Milan", "Italy", "7", "2007"],
+          ["Bayern Munich", "Germany", "6", "2020"],
+          ["Liverpool", "England", "6", "2019"],
+          ["Barcelona", "Spain", "5", "2015"],
+          ["Ajax", "Netherlands", "4", "1995"]
         ]
       },
       "faqHeading": "Which football club are you? Common questions",
@@ -5664,49 +5513,14 @@
       "table": {
         "heading": "Clubs with the most European Cup / Champions League titles",
         "note": "Men’s competition, titles through the 2024 final.",
-        "cols": [
-          "Club",
-          "Country",
-          "Titles",
-          "Years"
-        ],
+        "cols": ["Club", "Country", "Titles", "Years"],
         "rows": [
-          [
-            "Real Madrid",
-            "Spain",
-            "15",
-            "1956–2024"
-          ],
-          [
-            "AC Milan",
-            "Italy",
-            "7",
-            "1963–2007"
-          ],
-          [
-            "Bayern Munich",
-            "Germany",
-            "6",
-            "1974–2020"
-          ],
-          [
-            "Liverpool",
-            "England",
-            "6",
-            "1977–2019"
-          ],
-          [
-            "Barcelona",
-            "Spain",
-            "5",
-            "1992–2015"
-          ],
-          [
-            "Ajax",
-            "Netherlands",
-            "4",
-            "1971–1995"
-          ]
+          ["Real Madrid", "Spain", "15", "1956–2024"],
+          ["AC Milan", "Italy", "7", "1963–2007"],
+          ["Bayern Munich", "Germany", "6", "1974–2020"],
+          ["Liverpool", "England", "6", "1977–2019"],
+          ["Barcelona", "Spain", "5", "1992–2015"],
+          ["Ajax", "Netherlands", "4", "1971–1995"]
         ]
       },
       "faqHeading": "Champions League trivia: common questions",
@@ -5769,49 +5583,14 @@
       "table": {
         "heading": "Formula 1 drivers with the most World Championships",
         "note": "Drivers' titles won, as of the end of the 2024 season.",
-        "cols": [
-          "Driver",
-          "Country",
-          "Titles",
-          "Seasons"
-        ],
+        "cols": ["Driver", "Country", "Titles", "Seasons"],
         "rows": [
-          [
-            "Lewis Hamilton",
-            "United Kingdom",
-            "7",
-            "2008–2020"
-          ],
-          [
-            "Michael Schumacher",
-            "Germany",
-            "7",
-            "1994–2004"
-          ],
-          [
-            "Juan Manuel Fangio",
-            "Argentina",
-            "5",
-            "1951–1957"
-          ],
-          [
-            "Alain Prost",
-            "France",
-            "4",
-            "1985–1993"
-          ],
-          [
-            "Sebastian Vettel",
-            "Germany",
-            "4",
-            "2010–2013"
-          ],
-          [
-            "Max Verstappen",
-            "Netherlands",
-            "4",
-            "2021–2024"
-          ]
+          ["Lewis Hamilton", "United Kingdom", "7", "2008–2020"],
+          ["Michael Schumacher", "Germany", "7", "1994–2004"],
+          ["Juan Manuel Fangio", "Argentina", "5", "1951–1957"],
+          ["Alain Prost", "France", "4", "1985–1993"],
+          ["Sebastian Vettel", "Germany", "4", "2010–2013"],
+          ["Max Verstappen", "Netherlands", "4", "2021–2024"]
         ]
       },
       "faqHeading": "Formula 1 trivia: common questions",
@@ -5874,12 +5653,7 @@
       "table": {
         "heading": "The eight drivers you can be matched with",
         "note": "World Drivers' Championships, as of the end of the 2024 season.",
-        "cols": [
-          "Driver",
-          "Country",
-          "F1 titles",
-          "Known for"
-        ],
+        "cols": ["Driver", "Country", "F1 titles", "Known for"],
         "rows": [
           [
             "Max Verstappen",
@@ -5893,36 +5667,16 @@
             "7",
             "Calm consistency and longevity"
           ],
-          [
-            "Ayrton Senna",
-            "Brazil",
-            "3",
-            "Qualifying genius and intensity"
-          ],
+          ["Ayrton Senna", "Brazil", "3", "Qualifying genius and intensity"],
           [
             "Michael Schumacher",
             "Germany",
             "7",
             "Relentless preparation and work rate"
           ],
-          [
-            "Charles Leclerc",
-            "Monaco",
-            "0",
-            "Natural speed and emotion"
-          ],
-          [
-            "Fernando Alonso",
-            "Spain",
-            "2",
-            "Racecraft and refusal to quit"
-          ],
-          [
-            "Oscar Piastri",
-            "Australia",
-            "0",
-            "Cool head, quick learner"
-          ],
+          ["Charles Leclerc", "Monaco", "0", "Natural speed and emotion"],
+          ["Fernando Alonso", "Spain", "2", "Racecraft and refusal to quit"],
+          ["Oscar Piastri", "Australia", "0", "Cool head, quick learner"],
           [
             "Lando Norris",
             "United Kingdom",
@@ -5991,11 +5745,7 @@
       "table": {
         "heading": "The five love languages at a glance",
         "note": "Framework from Gary Chapman, The Five Love Languages (1992).",
-        "cols": [
-          "Love language",
-          "What it means",
-          "Everyday example"
-        ],
+        "cols": ["Love language", "What it means", "Everyday example"],
         "rows": [
           [
             "Words of affirmation",

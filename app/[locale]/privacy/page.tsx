@@ -1,161 +1,289 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
+import type { Metadata } from "next";
+import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { ArrowRight } from "lucide-react";
+import { buildAlternatesForLocale, localizedPath } from "@/lib/i18nMeta";
+import { buildJsonLd, breadcrumbSchema, buildLocalizedUrl } from "@/lib/schema";
+import AppBreadcrumb from "@/components/AppBreadcrumb";
+import AppCard from "@/components/ui/AppCard";
+import AppButton from "@/components/ui/AppButton";
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy | ToolNotch',
-  description: 'Privacy Policy for ToolNotch — how we collect, use, and protect your information.',
-  alternates: { canonical: '/privacy' },
+const PATH = "/privacy";
+
+interface Props {
+  params: Promise<{ locale: string }>;
 }
 
-export default function PrivacyPolicyPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "privacy" });
+  const currentLocale = locale === "pt" || locale === "es" ? locale : "en";
+  const localizedUrl = buildLocalizedUrl(PATH, locale);
+  const ogLocale =
+    locale === "pt" ? "pt_BR" : locale === "es" ? "es_ES" : "en_US";
+
+  const keywordsByLocale = {
+    pt: [
+      "ToolNotch privacidade",
+      "política de privacidade",
+      "ferramentas client-side",
+      "processamento local",
+      "segurança de dados",
+      "sem cadastro",
+      "LGPD privacidade",
+    ],
+    es: [
+      "ToolNotch privacidad",
+      "política de privacidad",
+      "herramientas client-side",
+      "procesamiento local",
+      "seguridad de datos",
+      "sin registro",
+      "protección de datos",
+    ],
+    en: [
+      "ToolNotch privacy",
+      "privacy policy",
+      "client-side tools",
+      "in-browser processing",
+      "data security",
+      "no sign-up tools",
+      "GDPR privacy",
+    ],
+  };
+
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    keywords: keywordsByLocale[currentLocale],
+    alternates: buildAlternatesForLocale(PATH, locale),
+    openGraph: {
+      title: `${t("metaTitle")} | ToolNotch`,
+      description: t("metaDescription"),
+      url: localizedUrl,
+      siteName: "ToolNotch",
+      locale: ogLocale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${t("metaTitle")} | ToolNotch`,
+      description: t("metaDescription"),
+    },
+  };
+}
+
+export default async function PrivacyPolicyPage({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "privacy" });
+  const prefix = locale === "en" ? "" : `/${locale}`;
+  const homeLabel =
+    locale === "pt" ? "Início" : locale === "es" ? "Inicio" : "Home";
+  const localizedUrl = buildLocalizedUrl(PATH, locale);
+
+  const jsonLd = buildJsonLd(
+    breadcrumbSchema([
+      { name: homeLabel, url: localizedPath("/", locale) },
+      { name: t("title"), url: localizedPath(PATH, locale) },
+    ]),
+    {
+      "@type": "WebPage",
+      "@id": `${localizedUrl}#webpage`,
+      url: localizedUrl,
+      name: t("title"),
+      description: t("metaDescription"),
+      inLanguage: locale,
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://toolnotch.com/#website",
+        name: "ToolNotch",
+        url: "https://toolnotch.com",
+      },
+      about: {
+        "@type": "Thing",
+        name: "Privacy Policy",
+      },
+    },
+  );
+
   return (
-    <main className="min-h-screen bg-gray-50">
-      <div className="max-w-3xl mx-auto px-4 py-12">
-        <div className="mb-8">
-          <Link href="/" className="text-sm text-blue-600 hover:underline">← Back to ToolNotch</Link>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main
+        aria-labelledby="privacy-heading"
+        className="container min-h-[calc(100vh-180px)] bg-background py-8"
+      >
+        <div className="max-w-3xl">
+          <div className="w-full pb-4">
+            <AppBreadcrumb
+              items={[
+                { label: homeLabel, href: prefix || "/" },
+                { label: t("title"), current: true },
+              ]}
+            />
+          </div>
+
+          <header className="mb-10 pt-4 pb-6 border-b border-border">
+            <h1
+              id="privacy-heading"
+              className="text-2xl sm:text-3xl font-bold uppercase tracking-wide"
+            >
+              {t("title")}
+            </h1>
+            <p className="leading-relaxed text-label mt-3">{t("subtitle")}</p>
+            <p className="text-xs sm:text-sm text-label/80 mt-2 font-mono">
+              {t("lastUpdated")}
+            </p>
+          </header>
+
+          <AppCard
+            border
+            withCornerAccents={false}
+            className="p-6 bg-tertiary mb-10"
+          >
+            <span className="font-bold text-secondary uppercase tracking-wider text-xs">
+              {t("badge")}
+            </span>
+            <h3 className="text-lg sm:text-xl font-bold uppercase mt-2 mb-3">
+              {t("highlightTitle")}
+            </h3>
+            <p className="leading-relaxed text-label">{t("highlightP1")}</p>
+          </AppCard>
+
+          <article className="space-y-10">
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold uppercase mb-4">
+                {t("s1Title")}
+              </h2>
+              <div className="space-y-4">
+                <p className="leading-relaxed text-label">{t("s1P1")}</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold uppercase mb-4">
+                {t("s2Title")}
+              </h2>
+              <div className="space-y-4">
+                <p className="leading-relaxed text-label">{t("s2P1")}</p>
+                <p className="leading-relaxed text-label">{t("s2P2")}</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold uppercase mb-4">
+                {t("s3Title")}
+              </h2>
+              <div className="space-y-4">
+                <p className="leading-relaxed text-label">{t("s3P1")}</p>
+                <p className="leading-relaxed text-label">
+                  {t.rich("s3P2", {
+                    optOutLink: (chunks) => (
+                      <a
+                        href="https://tools.google.com/dlpage/gaoptout"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline underline-offset-2 hover:text-foreground"
+                      >
+                        {chunks}
+                      </a>
+                    ),
+                  })}
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold uppercase mb-4">
+                {t("s4Title")}
+              </h2>
+              <div className="space-y-4">
+                <p className="leading-relaxed text-label">{t("s4P1")}</p>
+                <p className="leading-relaxed text-label">{t("s4P2")}</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold uppercase mb-4">
+                {t("s5Title")}
+              </h2>
+              <div className="space-y-4">
+                <p className="leading-relaxed text-label">{t("s5P1")}</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold uppercase mb-4">
+                {t("s6Title")}
+              </h2>
+              <div className="space-y-4">
+                <p className="leading-relaxed text-label">{t("s6P1")}</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold uppercase mb-4">
+                {t("s7Title")}
+              </h2>
+              <div className="space-y-4">
+                <p className="leading-relaxed text-label">{t("s7P1")}</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold uppercase mb-4">
+                {t("s8Title")}
+              </h2>
+              <div className="space-y-4">
+                <p className="leading-relaxed text-label">{t("s8P1")}</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold uppercase mb-4">
+                {t("s9Title")}
+              </h2>
+              <div className="space-y-4">
+                <p className="leading-relaxed text-label">{t("s9P1")}</p>
+                <div className="pt-1">
+                  <Link
+                    href={`${prefix}/contact`}
+                    className="text-secondary hover:underline inline-flex items-center gap-1.5 font-bold uppercase text-sm"
+                  >
+                    {t("contactButton")}
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            </section>
+
+            <nav
+              aria-label={
+                locale === "pt"
+                  ? "Navegação rápida"
+                  : locale === "es"
+                    ? "Navegación rápida"
+                    : "Quick navigation"
+              }
+              className="pt-6 border-t border-border flex flex-wrap gap-3"
+            >
+              <Link href={prefix || "/"}>
+                <AppButton color="primary" small withArrow>
+                  {t("exploreTools")}
+                </AppButton>
+              </Link>
+              <Link href={`${prefix}/about`}>
+                <AppButton color="secondary" small>
+                  {t("aboutButton")}
+                </AppButton>
+              </Link>
+            </nav>
+          </article>
         </div>
-
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Privacy Policy</h1>
-        <p className="text-sm text-gray-500 mb-10">Last updated: March 18, 2026</p>
-
-        <div className="prose prose-gray max-w-none space-y-8 text-gray-700">
-
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">1. Overview</h2>
-            <p>
-              ToolNotch (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) operates the website{' '}
-              <a href="https://toolnotch.com" className="text-blue-600 hover:underline">toolnotch.com</a>{' '}
-              and provides free online tools for productivity, conversion, finance, and more.
-              This Privacy Policy explains what information we collect, how we use it, and your rights regarding your data.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">2. Information We Collect</h2>
-
-            <h3 className="font-semibold text-gray-800 mb-2">a) Files and user input</h3>
-            <p>
-              Most ToolNotch tools (image compressor, PDF merger, PDF splitter, etc.) process files entirely
-              in your browser using client-side JavaScript. <strong>Your files are never uploaded to our servers.</strong>
-              They remain on your device at all times.
-            </p>
-
-            <h3 className="font-semibold text-gray-800 mt-4 mb-2">b) Usage data (Google Analytics)</h3>
-            <p>
-              We use Google Analytics 4 (GA4) to understand how visitors use the site. GA4 collects anonymized
-              data including pages visited, time on site, browser type, and approximate geographic location (country/city level).
-              This data does not identify you personally. You can opt out via the{' '}
-              <a href="https://tools.google.com/dlpage/gaoptout" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                Google Analytics Opt-out Browser Add-on
-              </a>.
-            </p>
-
-            <h3 className="font-semibold text-gray-800 mt-4 mb-2">c) Advertising (Google AdSense)</h3>
-            <p>
-              We use Google AdSense to display advertisements. Google AdSense uses cookies and similar technologies
-              to serve ads based on your prior visits to our site and other sites on the internet. Google&apos;s use
-              of advertising cookies enables it and its partners to serve ads based on your visit to ToolNotch and/or
-              other sites on the internet.
-            </p>
-            <p className="mt-2">
-              You may opt out of personalized advertising by visiting{' '}
-              <a href="https://www.google.com/settings/ads" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                Google Ads Settings
-              </a>{' '}
-              or{' '}
-              <a href="https://www.aboutads.info/choices/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                aboutads.info
-              </a>.
-            </p>
-
-            <h3 className="font-semibold text-gray-800 mt-4 mb-2">d) Cookies</h3>
-            <p>
-              ToolNotch itself uses minimal cookies — primarily to remember your language preference.
-              Third-party services (Google Analytics, Google AdSense) set their own cookies as described
-              in their respective privacy policies.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">3. How We Use Your Information</h2>
-            <ul className="list-disc pl-5 space-y-1">
-              <li>To operate and improve ToolNotch tools and features</li>
-              <li>To understand how users interact with the site (via GA4)</li>
-              <li>To display relevant advertisements (via Google AdSense)</li>
-              <li>To remember your preferences (e.g., language selection)</li>
-            </ul>
-            <p className="mt-3">We do not sell, trade, or rent your personal information to third parties.</p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">4. Third-Party Services</h2>
-            <p>We use the following third-party services, each with their own privacy policies:</p>
-            <ul className="list-disc pl-5 mt-2 space-y-1">
-              <li>
-                <a href="https://policies.google.com/privacy" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                  Google Privacy Policy
-                </a>{' '}(Analytics + AdSense)
-              </li>
-              <li>
-                <a href="https://vercel.com/legal/privacy-policy" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                  Vercel Privacy Policy
-                </a>{' '}(hosting)
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">5. Children&apos;s Privacy</h2>
-            <p>
-              ToolNotch is not directed to children under 13 years of age. We do not knowingly collect
-              personal information from children under 13. If you believe a child has provided us with
-              personal information, please contact us and we will delete it.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">6. Your Rights</h2>
-            <p>
-              Depending on your location, you may have rights under applicable privacy law (such as GDPR or CCPA)
-              including the right to access, correct, or delete personal data we hold about you.
-              Since we collect minimal personal data and no files are stored on our servers,
-              most requests can be addressed by clearing your browser cookies and local storage.
-            </p>
-            <p className="mt-2">
-              For any privacy-related requests, contact us at the email address below.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">7. Data Security</h2>
-            <p>
-              Because most tool processing happens entirely in your browser and no files are transmitted to
-              our servers, the risk of data breach is minimal. Network traffic to the site is encrypted
-              via HTTPS.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">8. Changes to This Policy</h2>
-            <p>
-              We may update this Privacy Policy from time to time. Changes will be posted on this page
-              with an updated &ldquo;Last updated&rdquo; date. Continued use of the site after changes
-              constitutes acceptance of the updated policy.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">9. Contact</h2>
-            <p>
-              If you have questions about this Privacy Policy, please contact us at{' '}
-              <a href="mailto:juanaugusto1@live.com" className="text-blue-600 hover:underline">
-                juanaugusto1@live.com
-              </a>.
-            </p>
-          </section>
-
-        </div>
-      </div>
-    </main>
-  )
+      </main>
+    </>
+  );
 }

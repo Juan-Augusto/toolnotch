@@ -3644,6 +3644,40 @@
     "founderBadge": "DESENVOLVEDOR",
     "githubButton": "GitHub"
   },
+  "privacy": {
+    "metaTitle": "Política de Privacidade: Proteção de Dados e Processamento Local",
+    "metaDescription": "Saiba como o ToolNotch protege sua privacidade com processamento local no navegador, sem upload de arquivos em nossos servidores e sem necessidade de cadastro.",
+    "title": "Política de Privacidade",
+    "subtitle": "Como tratamos seus dados, sua segurança e seu anonimato ao usar o ToolNotch.",
+    "lastUpdated": "Última atualização: setembro de 2026",
+    "badge": "PRIVACIDADE E DADOS",
+    "highlightTitle": "Privacidade por padrão",
+    "highlightP1": "O ToolNotch foi projetado com o princípio de privacidade por design: a maior parte das ferramentas processa arquivos e dados diretamente no seu navegador, sem enviar nenhum arquivo para servidores externos.",
+    "s1Title": "1. Visão Geral",
+    "s1P1": "O ToolNotch disponibiliza utilitários online gratuitos para manipulação de arquivos, conversão de formatos, cálculos e testes de conhecimento. Esta Política de Privacidade descreve de forma clara e transparente quais informações são tratadas ao acessar nosso site.",
+    "s2Title": "2. Processamento Local e Arquivos",
+    "s2P1": "A maior parte das ferramentas do ToolNotch, incluindo compressores de imagem, conversores de dados e utilitários para documentos PDF, funciona inteiramente no seu navegador (client-side) utilizando tecnologias como WebAssembly, Canvas API e APIs nativas.",
+    "s2P2": "Seus arquivos e dados não são enviados para nossos servidores nem armazenados externamente. O processamento acontece na memória do seu próprio dispositivo e é descartado ao fechar a aba.",
+    "s3Title": "3. Coleta de Métricas e Análise",
+    "s3P1": "Utilizamos o Google Analytics 4 para compreender de forma anônima e agregada como o site é utilizado, quais ferramentas são mais acessadas e identificar eventuais erros técnicos de navegação.",
+    "s3P2": "Os dados coletados pelo Analytics são impessoais e incluem tipo de navegador, páginas visualizadas, tempo de permanência e localização aproximada por país ou cidade. Você pode desativar essa coleta a qualquer momento através do <optOutLink>complemento de desativação do Google Analytics</optOutLink>.",
+    "s4Title": "4. Cookies e Armazenamento no Navegador",
+    "s4P1": "O ToolNotch utiliza armazenamento local do navegador (como localStorage) de forma restrita para guardar suas preferências de navegação, como o idioma selecionado, tema visual e rascunhos temporários de ferramentas em uso.",
+    "s4P2": "Não utilizamos cookies próprios para rastreamento comportamental de usuários nem comercializamos informações para redes de publicidade.",
+    "s5Title": "5. Serviços de Terceiros",
+    "s5P1": "Nosso site é hospedado em provedores de infraestrutura modernos como a Vercel, que processam requisições de rede para entrega rápida e segura de conteúdo via HTTPS. Cada parceiro de infraestrutura possui políticas próprias de segurança e conformidade técnica.",
+    "s6Title": "6. Seus Direitos e Controle de Dados",
+    "s6P1": "Em conformidade com legislações de proteção de dados (como LGPD e GDPR), você tem o direito de controlar suas informações. Como o ToolNotch não exige cadastro nem armazena bancos de dados com identificação de usuários, você pode eliminar todos os dados locais simplesmente limpando os cookies e dados do site no seu navegador.",
+    "s7Title": "7. Segurança da Informação",
+    "s7P1": "Todo o tráfego do ToolNotch é protegido por criptografia em trânsito via protocolo HTTPS e TLS. O modelo de execução client-side elimina os riscos de vazamento de arquivos durante o processamento em servidores externos.",
+    "s8Title": "8. Alterações nesta Política",
+    "s8P1": "Esta política pode ser atualizada periodicamente para refletir novas ferramentas ou exigências legais. Sempre que houver alterações, a data de revisão no topo desta página será atualizada.",
+    "s9Title": "9. Contato e Dúvidas",
+    "s9P1": "Se você tiver qualquer dúvida sobre esta Política de Privacidade ou sobre o tratamento de dados no ToolNotch, entre em contato diretamente pelo e-mail juanaugusto1@live.com ou através da nossa página de contato.",
+    "exploreTools": "Explorar Ferramentas",
+    "aboutButton": "Sobre o Projeto",
+    "contactButton": "Fale Conosco"
+  },
   "terms": {
     "metaTitle": "Termos de Uso | ToolNotch",
     "metaDescription": "Leia os Termos de Uso do ToolNotch — seus direitos, nossas isenções de responsabilidade e as regras que regem o uso de nossas ferramentas online gratuitas.",
@@ -4786,35 +4820,11 @@
       "table": {
         "heading": "Todos os Campeões da Copa do Mundo da FIFA (1930–2022)",
         "note": "pro. = prorrogação; pên. = decidida nos pênaltis.",
-        "cols": [
-          "Ano",
-          "Sede",
-          "Campeão",
-          "Vice",
-          "Placar da final"
-        ],
+        "cols": ["Ano", "Sede", "Campeão", "Vice", "Placar da final"],
         "rows": [
-          [
-            "1930",
-            "Uruguai",
-            "Uruguai",
-            "Argentina",
-            "4–2"
-          ],
-          [
-            "1934",
-            "Itália",
-            "Itália",
-            "Tchecoslováquia",
-            "2–1 (pro.)"
-          ],
-          [
-            "1938",
-            "França",
-            "Itália",
-            "Hungria",
-            "4–2"
-          ],
+          ["1930", "Uruguai", "Uruguai", "Argentina", "4–2"],
+          ["1934", "Itália", "Itália", "Tchecoslováquia", "2–1 (pro.)"],
+          ["1938", "França", "Itália", "Hungria", "4–2"],
           [
             "1942",
             "Não realizada",
@@ -4829,34 +4839,10 @@
             "-",
             "Segunda Guerra Mundial"
           ],
-          [
-            "1950",
-            "Brasil",
-            "Uruguai",
-            "Brasil",
-            "2–1 (jogo decisivo)"
-          ],
-          [
-            "1954",
-            "Suíça",
-            "Alemanha Ocidental",
-            "Hungria",
-            "3–2"
-          ],
-          [
-            "1958",
-            "Suécia",
-            "Brasil",
-            "Suécia",
-            "5–2"
-          ],
-          [
-            "1962",
-            "Chile",
-            "Brasil",
-            "Tchecoslováquia",
-            "3–1"
-          ],
+          ["1950", "Brasil", "Uruguai", "Brasil", "2–1 (jogo decisivo)"],
+          ["1954", "Suíça", "Alemanha Ocidental", "Hungria", "3–2"],
+          ["1958", "Suécia", "Brasil", "Suécia", "5–2"],
+          ["1962", "Chile", "Brasil", "Tchecoslováquia", "3–1"],
           [
             "1966",
             "Inglaterra",
@@ -4864,13 +4850,7 @@
             "Alemanha Ocidental",
             "4–2 (pro.)"
           ],
-          [
-            "1970",
-            "México",
-            "Brasil",
-            "Itália",
-            "4–1"
-          ],
+          ["1970", "México", "Brasil", "Itália", "4–1"],
           [
             "1974",
             "Alemanha Ocidental",
@@ -4878,90 +4858,18 @@
             "Países Baixos",
             "2–1"
           ],
-          [
-            "1978",
-            "Argentina",
-            "Argentina",
-            "Países Baixos",
-            "3–1 (pro.)"
-          ],
-          [
-            "1982",
-            "Espanha",
-            "Itália",
-            "Alemanha Ocidental",
-            "3–1"
-          ],
-          [
-            "1986",
-            "México",
-            "Argentina",
-            "Alemanha Ocidental",
-            "3–2"
-          ],
-          [
-            "1990",
-            "Itália",
-            "Alemanha Ocidental",
-            "Argentina",
-            "1–0"
-          ],
-          [
-            "1994",
-            "Estados Unidos",
-            "Brasil",
-            "Itália",
-            "0–0 (3–2 pên.)"
-          ],
-          [
-            "1998",
-            "França",
-            "França",
-            "Brasil",
-            "3–0"
-          ],
-          [
-            "2002",
-            "Coreia do Sul e Japão",
-            "Brasil",
-            "Alemanha",
-            "2–0"
-          ],
-          [
-            "2006",
-            "Alemanha",
-            "Itália",
-            "França",
-            "1–1 (5–3 pên.)"
-          ],
-          [
-            "2010",
-            "África do Sul",
-            "Espanha",
-            "Países Baixos",
-            "1–0 (pro.)"
-          ],
-          [
-            "2014",
-            "Brasil",
-            "Alemanha",
-            "Argentina",
-            "1–0 (pro.)"
-          ],
-          [
-            "2018",
-            "Rússia",
-            "França",
-            "Croácia",
-            "4–2"
-          ],
-          [
-            "2022",
-            "Catar",
-            "Argentina",
-            "França",
-            "3–3 (4–2 pên.)"
-          ]
+          ["1978", "Argentina", "Argentina", "Países Baixos", "3–1 (pro.)"],
+          ["1982", "Espanha", "Itália", "Alemanha Ocidental", "3–1"],
+          ["1986", "México", "Argentina", "Alemanha Ocidental", "3–2"],
+          ["1990", "Itália", "Alemanha Ocidental", "Argentina", "1–0"],
+          ["1994", "Estados Unidos", "Brasil", "Itália", "0–0 (3–2 pên.)"],
+          ["1998", "França", "França", "Brasil", "3–0"],
+          ["2002", "Coreia do Sul e Japão", "Brasil", "Alemanha", "2–0"],
+          ["2006", "Alemanha", "Itália", "França", "1–1 (5–3 pên.)"],
+          ["2010", "África do Sul", "Espanha", "Países Baixos", "1–0 (pro.)"],
+          ["2014", "Brasil", "Alemanha", "Argentina", "1–0 (pro.)"],
+          ["2018", "Rússia", "França", "Croácia", "4–2"],
+          ["2022", "Catar", "Argentina", "França", "3–3 (4–2 pên.)"]
         ]
       },
       "faqHeading": "Campeões da Copa do Mundo: perguntas frequentes",
@@ -5050,49 +4958,14 @@
       "table": {
         "heading": "Mais títulos de Copa dos Campeões da Europa e Liga dos Campeões",
         "note": "Títulos da Copa dos Campeões da Europa / Liga dos Campeões da UEFA, competição masculina. Números até a final de 2024.",
-        "cols": [
-          "Clube",
-          "País",
-          "Títulos",
-          "Mais recente"
-        ],
+        "cols": ["Clube", "País", "Títulos", "Mais recente"],
         "rows": [
-          [
-            "Real Madrid",
-            "Espanha",
-            "15",
-            "2024"
-          ],
-          [
-            "Milan",
-            "Itália",
-            "7",
-            "2007"
-          ],
-          [
-            "Bayern de Munique",
-            "Alemanha",
-            "6",
-            "2020"
-          ],
-          [
-            "Liverpool",
-            "Inglaterra",
-            "6",
-            "2019"
-          ],
-          [
-            "Barcelona",
-            "Espanha",
-            "5",
-            "2015"
-          ],
-          [
-            "Ajax",
-            "Países Baixos",
-            "4",
-            "1995"
-          ]
+          ["Real Madrid", "Espanha", "15", "2024"],
+          ["Milan", "Itália", "7", "2007"],
+          ["Bayern de Munique", "Alemanha", "6", "2020"],
+          ["Liverpool", "Inglaterra", "6", "2019"],
+          ["Barcelona", "Espanha", "5", "2015"],
+          ["Ajax", "Países Baixos", "4", "1995"]
         ]
       },
       "faqHeading": "Qual time de futebol você é? Perguntas frequentes",
@@ -5155,49 +5028,14 @@
       "table": {
         "heading": "Clubes com mais títulos de Copa dos Campeões da Europa / Liga dos Campeões",
         "note": "Competição masculina, títulos até a final de 2024.",
-        "cols": [
-          "Clube",
-          "País",
-          "Títulos",
-          "Anos"
-        ],
+        "cols": ["Clube", "País", "Títulos", "Anos"],
         "rows": [
-          [
-            "Real Madrid",
-            "Espanha",
-            "15",
-            "1956–2024"
-          ],
-          [
-            "Milan",
-            "Itália",
-            "7",
-            "1963–2007"
-          ],
-          [
-            "Bayern de Munique",
-            "Alemanha",
-            "6",
-            "1974–2020"
-          ],
-          [
-            "Liverpool",
-            "Inglaterra",
-            "6",
-            "1977–2019"
-          ],
-          [
-            "Barcelona",
-            "Espanha",
-            "5",
-            "1992–2015"
-          ],
-          [
-            "Ajax",
-            "Países Baixos",
-            "4",
-            "1971–1995"
-          ]
+          ["Real Madrid", "Espanha", "15", "1956–2024"],
+          ["Milan", "Itália", "7", "1963–2007"],
+          ["Bayern de Munique", "Alemanha", "6", "1974–2020"],
+          ["Liverpool", "Inglaterra", "6", "1977–2019"],
+          ["Barcelona", "Espanha", "5", "1992–2015"],
+          ["Ajax", "Países Baixos", "4", "1971–1995"]
         ]
       },
       "faqHeading": "Quiz da Liga dos Campeões: perguntas frequentes",
@@ -5260,49 +5098,14 @@
       "table": {
         "heading": "Pilotos de Fórmula 1 com mais títulos mundiais",
         "note": "Títulos de pilotos conquistados, até o fim da temporada de 2024.",
-        "cols": [
-          "Piloto",
-          "País",
-          "Títulos",
-          "Temporadas"
-        ],
+        "cols": ["Piloto", "País", "Títulos", "Temporadas"],
         "rows": [
-          [
-            "Lewis Hamilton",
-            "Reino Unido",
-            "7",
-            "2008–2020"
-          ],
-          [
-            "Michael Schumacher",
-            "Alemanha",
-            "7",
-            "1994–2004"
-          ],
-          [
-            "Juan Manuel Fangio",
-            "Argentina",
-            "5",
-            "1951–1957"
-          ],
-          [
-            "Alain Prost",
-            "França",
-            "4",
-            "1985–1993"
-          ],
-          [
-            "Sebastian Vettel",
-            "Alemanha",
-            "4",
-            "2010–2013"
-          ],
-          [
-            "Max Verstappen",
-            "Países Baixos",
-            "4",
-            "2021–2024"
-          ]
+          ["Lewis Hamilton", "Reino Unido", "7", "2008–2020"],
+          ["Michael Schumacher", "Alemanha", "7", "1994–2004"],
+          ["Juan Manuel Fangio", "Argentina", "5", "1951–1957"],
+          ["Alain Prost", "França", "4", "1985–1993"],
+          ["Sebastian Vettel", "Alemanha", "4", "2010–2013"],
+          ["Max Verstappen", "Países Baixos", "4", "2021–2024"]
         ]
       },
       "faqHeading": "Quiz de Fórmula 1: perguntas frequentes",
@@ -5365,12 +5168,7 @@
       "table": {
         "heading": "Os oito pilotos com quem você pode ser combinado",
         "note": "Títulos de Campeonato Mundial de Pilotos, até o fim da temporada de 2024.",
-        "cols": [
-          "Piloto",
-          "País",
-          "Títulos na F1",
-          "Conhecido por"
-        ],
+        "cols": ["Piloto", "País", "Títulos na F1", "Conhecido por"],
         "rows": [
           [
             "Max Verstappen",
@@ -5378,12 +5176,7 @@
             "4",
             "Ritmo agressivo e obstinado"
           ],
-          [
-            "Lewis Hamilton",
-            "Reino Unido",
-            "7",
-            "Constância e longevidade"
-          ],
+          ["Lewis Hamilton", "Reino Unido", "7", "Constância e longevidade"],
           [
             "Ayrton Senna",
             "Brasil",
@@ -5396,24 +5189,9 @@
             "7",
             "Preparação implacável e volume de trabalho"
           ],
-          [
-            "Charles Leclerc",
-            "Mônaco",
-            "0",
-            "Velocidade natural e emoção"
-          ],
-          [
-            "Fernando Alonso",
-            "Espanha",
-            "2",
-            "Pilotagem e recusa em desistir"
-          ],
-          [
-            "Oscar Piastri",
-            "Austrália",
-            "0",
-            "Cabeça fria, aprende rápido"
-          ],
+          ["Charles Leclerc", "Mônaco", "0", "Velocidade natural e emoção"],
+          ["Fernando Alonso", "Espanha", "2", "Pilotagem e recusa em desistir"],
+          ["Oscar Piastri", "Austrália", "0", "Cabeça fria, aprende rápido"],
           [
             "Lando Norris",
             "Reino Unido",
