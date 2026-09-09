@@ -4305,32 +4305,32 @@
     "contactButton": "Contact Us"
   },
   "contact": {
-    "metaTitle": "Contact | ToolNotch",
-    "metaDescription": "Get in touch with ToolNotch. Report a bug, suggest a tool, ask about advertising, or send a data-privacy request.",
-    "backHome": "Back to ToolNotch",
-    "heading": "Contact Us",
-    "intro": "ToolNotch is built and run by one developer, Juan Soares. Email is the only channel — there is no support portal, no ticket queue, and no account to sign in to. Every message reaches a person directly, and almost every tool, fix, and feature on the site started as an email from someone who uses it.",
-    "emailLabel": "Write to us at",
-    "categories": {
-      "bugs": {
-        "title": "Bug Reports",
-        "description": "Tell us which tool failed, which browser and operating system you were using, and the exact steps that led to the problem. A screenshot or short screen recording of the error makes it far faster to reproduce and fix."
-      },
-      "features": {
-        "title": "Feature Requests",
-        "description": "Describe the task you are trying to finish, not only the feature name. Knowing the underlying goal often points to a better tool than the one first imagined. Requests that match a real, recurring need are usually shipped within a few weeks."
-      },
-      "business": {
-        "title": "Advertising & Partnerships",
-        "description": "ToolNotch is funded entirely by display advertising. For sponsorship, content partnerships, or advertising questions, email the address above with a short description of your company and what you have in mind."
-      }
-    },
-    "noFilesTitle": "We cannot recover your files",
-    "noFilesBody": "Every file-based tool on ToolNotch — the image compressor, PDF merge and split, the format converters, and the rest — runs entirely inside your browser. Files are never uploaded to or stored on our servers, so if you have lost a document there is nothing on our side to retrieve. Always keep your own copy of anything important before processing it.",
-    "privacyTitle": "Privacy and data requests",
-    "privacyBody": "Because the tools run client-side and we store no accounts and no uploaded files, there is very little personal data to request or delete. Analytics and advertising data is handled by Google. For any access or deletion request, email us and we will point you to the right process. Full details are in our",
-    "privacyLinkLabel": "Privacy Policy",
-    "responseTime": "One person reads every email. We usually reply within one to two business days; detailed bug reports can take longer while we reproduce the issue."
+    "metaTitle": "Direct Contact & Support",
+    "metaDescription": "Get in touch with ToolNotch. Report bugs, suggest new tools, inquire about privacy, or discuss technical partnerships.",
+    "title": "Contact",
+    "subtitle": "Direct communication channel, tool suggestions, and support for ToolNotch.",
+    "lastUpdated": "Last updated: September 2026",
+    "badge": "DIRECT CONTACT CHANNEL",
+    "highlightTitle": "Direct Email Support",
+    "highlightP1": "ToolNotch is independently built and maintained by Juan Soares. There are no middlemen, impersonal support queues, or automated bot responses: every message goes directly to the developer's inbox.",
+    "s1Title": "1. Bug Reports and Technical Issues",
+    "s1P1": "Tell us which tool encountered an error, which browser and operating system you were using, and the exact steps that led to the issue. Screenshots or short video recordings make reproducing and fixing issues significantly faster.",
+    "s1P2": "Critical bugs affecting local file processing or freezing client-side computations receive top resolution priority.",
+    "s2Title": "2. Feature Requests and Tool Suggestions",
+    "s2P1": "Describe the real-world workflow or practical calculation you are trying to solve, not just a feature title. Understanding the underlying use case frequently yields more practical tools than originally envisioned.",
+    "s2P2": "Feasible and recurring tool suggestions are routinely developed and shipped free of charge within a few weeks.",
+    "s3Title": "3. Partnerships and Collaborations",
+    "s3P1": "For educational initiatives, content partnerships, joint tools, or institutional questions, email the address above with a brief overview of your proposal and how we can collaborate.",
+    "s4Title": "4. Local Privacy: We Cannot Recover Lost Files",
+    "s4P1": "Every file-handling utility on ToolNotch (including image compression, PDF merge and split, and document converters) operates strictly in your browser via JavaScript. Files are never uploaded to remote servers, meaning we keep no copies of your data. Always keep a secure backup of your original documents.",
+    "s5Title": "5. Privacy and GDPR / LGPD Requests",
+    "s5P1": "Because all tools run locally and require no user accounts, we store no personal identity records and no uploaded files. For questions regarding anonymous site analytics or data privacy rights, send us an email and we will provide full guidance. Read our full",
+    "s5ContactLink": "Privacy Policy",
+    "s6Title": "6. Average Response Time",
+    "s6P1": "A real person reads and replies to every message. We typically respond within 1 to 2 business days; detailed technical reports may take additional time while we reproduce the issue across matching environments.",
+    "exploreTools": "Explore Tools",
+    "privacyButton": "Privacy Policy",
+    "termsButton": "Terms of Service"
   },
   "blog": {
     "indexTitle": "Blog — Free Tool Guides & Calculator Tutorials",

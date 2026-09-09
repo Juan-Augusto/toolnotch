@@ -3791,32 +3791,32 @@
     ]
   },
   "contact": {
-    "metaTitle": "Contato | ToolNotch",
-    "metaDescription": "Entre em contato com o ToolNotch. Reporte um bug, sugira uma ferramenta, pergunte sobre publicidade ou envie uma solicitação de privacidade.",
-    "backHome": "Voltar para o ToolNotch",
-    "heading": "Fale Conosco",
-    "intro": "O ToolNotch é criado e mantido por um único desenvolvedor, Juan Soares. O e-mail é o único canal — não há portal de suporte, fila de chamados nem conta para acessar. Cada mensagem chega diretamente a uma pessoa, e quase toda ferramenta, correção e recurso do site começou como um e-mail de quem usa.",
-    "emailLabel": "Envie um e-mail para",
-    "categories": {
-      "bugs": {
-        "title": "Relatório de Bugs",
-        "description": "Diga qual ferramenta falhou, qual navegador e sistema operacional você usava e os passos exatos que levaram ao problema. Uma captura de tela ou uma gravação curta do erro torna muito mais rápido reproduzir e corrigir."
-      },
-      "features": {
-        "title": "Sugestões de Funcionalidades",
-        "description": "Descreva a tarefa que você quer concluir, não apenas o nome do recurso. Conhecer o objetivo por trás costuma apontar para uma ferramenta melhor do que a imaginada no início. Pedidos que refletem uma necessidade real e recorrente geralmente são lançados em poucas semanas."
-      },
-      "business": {
-        "title": "Publicidade e Parcerias",
-        "description": "O ToolNotch é mantido inteiramente por publicidade gráfica. Para patrocínio, parcerias de conteúdo ou dúvidas sobre anúncios, escreva para o endereço acima com uma breve descrição da sua empresa e do que você tem em mente."
-      }
-    },
-    "noFilesTitle": "Não conseguimos recuperar seus arquivos",
-    "noFilesBody": "Toda ferramenta baseada em arquivos do ToolNotch — o compressor de imagens, o unir e dividir PDF, os conversores de formato e as demais — roda inteiramente dentro do seu navegador. Os arquivos nunca são enviados nem armazenados em nossos servidores, então, se você perdeu um documento, não há nada do nosso lado para recuperar. Guarde sempre a sua própria cópia de qualquer coisa importante antes de processá-la.",
-    "privacyTitle": "Privacidade e solicitações de dados",
-    "privacyBody": "Como as ferramentas rodam no navegador e não armazenamos contas nem arquivos enviados, há muito pouco dado pessoal para solicitar ou excluir. Os dados de análise e de publicidade são tratados pelo Google. Para qualquer solicitação de acesso ou exclusão, escreva para nós e indicaremos o processo correto. Todos os detalhes estão na nossa",
-    "privacyLinkLabel": "Política de Privacidade",
-    "responseTime": "Uma única pessoa lê cada e-mail. Normalmente respondemos em 1 a 2 dias úteis; relatórios de bug detalhados podem levar mais tempo enquanto reproduzimos o problema."
+    "metaTitle": "Contato e Suporte Direto",
+    "metaDescription": "Entre em contato com o ToolNotch. Reporte bugs, sugira novas ferramentas online, tire dúvidas sobre privacidade ou converse sobre parcerias.",
+    "title": "Contato",
+    "subtitle": "Canal de comunicação direta, envio de sugestões e suporte do ToolNotch.",
+    "lastUpdated": "Última atualização: setembro de 2026",
+    "badge": "CANAL DE CONTATO DIRETO",
+    "highlightTitle": "Atendimento Direto por E-mail",
+    "highlightP1": "O ToolNotch é desenvolvido e mantido de forma independente por Juan Soares. Não há intermediários, portais impessoais ou respostas automáticas de bots: cada mensagem chega diretamente à caixa de entrada do desenvolvedor.",
+    "s1Title": "1. Relatório de Inconsistências e Bugs",
+    "s1P1": "Diga qual ferramenta apresentou falha, qual navegador e sistema operacional você usava e os passos exatos que levaram ao problema. Capturas de tela ou gravações curtas facilitam muito a reprodução rápida e a correção.",
+    "s1P2": "Bugs críticos que afetam o processamento local ou travam arquivos recebem prioridade máxima de resolução.",
+    "s2Title": "2. Sugestões de Novas Ferramentas e Recursos",
+    "s2P1": "Descreva o fluxo de trabalho ou cálculo prático que você precisa resolver no seu dia a dia, além do nome do recurso. Compreender a necessidade por trás costuma gerar ferramentas melhores do que o planejado inicialmente.",
+    "s2P2": "Sugestões de ferramentas viáveis e de utilidade recorrente costumam ser implementadas e disponibilizadas gratuitamente em poucas semanas.",
+    "s3Title": "3. Parcerias e Colaborações",
+    "s3P1": "Para iniciativas educacionais, parcerias de conteúdo, projetos técnicos conjuntos ou dúvidas institucionais, envie uma mensagem com um resumo da sua iniciativa e de como podemos colaborar.",
+    "s4Title": "4. Privacidade Local: Não Recuperamos Arquivos",
+    "s4P1": "Todas as ferramentas de arquivos do ToolNotch (como o compressor de imagens, o unir e dividir PDF e os conversores de formatos) operam exclusivamente no seu próprio navegador via JavaScript. Nenhum arquivo é transferido para servidores remotos, portanto não mantemos cópias dos seus dados. Mantenha sempre um backup seguro dos seus documentos originais antes de realizar alterações.",
+    "s5Title": "5. Privacidade e Solicitações sob a LGPD",
+    "s5P1": "Como as ferramentas operam de forma estritamente local e o site não exige cadastro, não coletamos dados cadastrais nem documentos enviados. Para dúvidas sobre dados anônimos de navegação ou exercício de direitos, entre em contato e forneceremos as orientações necessárias. Saiba mais na nossa",
+    "s5ContactLink": "Política de Privacidade",
+    "s6Title": "6. Tempo Médio de Resposta",
+    "s6P1": "Uma pessoa lê e responde cada e-mail. Normalmente respondemos em 1 a 2 dias úteis; relatórios técnicos detalhados podem demandar um tempo extra enquanto reproduzimos o cenário nos mesmos ambientes.",
+    "exploreTools": "Explorar Ferramentas",
+    "privacyButton": "Política de Privacidade",
+    "termsButton": "Termos de Uso"
   },
   "blog": {
     "indexTitle": "Blog — Guias e Tutoriais de Calculadoras Gratuitas",
