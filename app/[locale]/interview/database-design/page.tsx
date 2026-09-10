@@ -6,17 +6,16 @@ import {
   faqSchema,
   breadcrumbSchema,
   buildLocalizedUrl,
+  interviewQuizSchema,
   type FaqItem,
 } from "@/lib/schema";
 import { AppDatabaseDesignQuiz } from "@/components/interview/AppDatabaseDesignQuiz";
 import AppInterviewDepth from "@/components/interview/AppInterviewDepth";
 import AppBreadcrumb from "@/components/AppBreadcrumb";
+import AppRelatedInterviewDrills from "@/components/interview/AppRelatedInterviewDrills";
+import { getInterviewQuestions } from "@/data/interview/interviewQuestionsProvider";
 
 const PATH = "/interview/database-design";
-const TITLE =
-  "Database Design Interview Quiz: Beginner to Advanced | ToolNotch";
-const DESCRIPTION =
-  "Test your database design knowledge with 30 in-depth interview questions across Beginner, Intermediate, and Advanced levels. Covers normalization, ACID, CAP theorem, sharding, CQRS, Event Sourcing, and distributed transaction patterns.";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -40,16 +39,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: buildAlternatesForLocale(PATH, locale),
     keywords: [
       "database design interview questions",
-      "database design quiz",
-      "SQL interview prep",
-      "normalization quiz",
-      "CAP theorem explained",
-      "ACID properties quiz",
-      "sharding vs partitioning",
-      "CQRS event sourcing",
-      "saga pattern interview",
-      "PostgreSQL interview questions",
-      "backend engineer interview prep",
+      "database normalization quiz",
+      "ACID transactions interview",
+      "CAP theorem quiz",
+      "database sharding interview prep",
+      "CQRS Event Sourcing quiz",
+      "database schema design test",
+      "data engineer interview prep",
+      "backend database architecture",
     ],
     openGraph: {
       title,
@@ -74,6 +71,7 @@ export default async function DatabaseDesignQuizPage({ params }: Props) {
     locale,
     namespace: "interview.databaseDesign",
   });
+  const questions = getInterviewQuestions("database-design", locale);
 
   const depthFaqs = t.raw("faqs") as FaqItem[];
   const depthSections = [
@@ -100,17 +98,14 @@ export default async function DatabaseDesignQuizPage({ params }: Props) {
   const prefix = locale === "en" ? "" : `/${locale}`;
 
   const jsonLd = buildJsonLd(
-    {
-      "@type": "Quiz",
-      name: t("title"),
+    interviewQuizSchema({
+      title: t("title"),
       description: t("metaDescription"),
       url: localizedUrl,
-      educationalLevel: ["Beginner", "Intermediate", "Advanced"],
-      about: {
-        "@type": "Thing",
-        name: "Database Design",
-      },
-    },
+      locale,
+      about: "Database Design & Relational Modeling",
+      questions,
+    }),
     faqSchema(depthFaqs),
     breadcrumbSchema([
       { name: homeLabel, url: prefix || "/" },
@@ -150,6 +145,7 @@ export default async function DatabaseDesignQuizPage({ params }: Props) {
           faqHeading={t("faqHeading")}
           faqs={depthFaqs}
         />
+        <AppRelatedInterviewDrills currentSlug="database-design" locale={locale} />
       </div>
     </main>
   );

@@ -1,14 +1,21 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { buildAlternatesForLocale } from '@/lib/i18nMeta'
-import { buildJsonLd, faqSchema, breadcrumbSchema, buildLocalizedUrl, type FaqItem } from '@/lib/schema'
+import {
+  buildJsonLd,
+  faqSchema,
+  breadcrumbSchema,
+  buildLocalizedUrl,
+  interviewQuizSchema,
+  type FaqItem,
+} from '@/lib/schema'
 import { AppDatabaseIndexingQuiz } from '@/components/interview/AppDatabaseIndexingQuiz'
 import AppInterviewDepth from '@/components/interview/AppInterviewDepth'
 import AppBreadcrumb from '@/components/AppBreadcrumb'
+import AppRelatedInterviewDrills from '@/components/interview/AppRelatedInterviewDrills'
+import { getInterviewQuestions } from '@/data/interview/interviewQuestionsProvider'
 
 const PATH = '/interview/database-indexing'
-const TITLE = 'Database Indexing Interview Quiz: Beginner to Advanced | ToolNotch'
-const DESCRIPTION = 'Test your database indexing knowledge with 30 in-depth interview questions across Beginner, Intermediate, and Advanced levels. Covers B-Tree internals, composite indexes, covering indexes, partial indexes, and execution plans.'
 
 interface Props {
   params: Promise<{ locale: string }>
@@ -28,12 +35,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: buildAlternatesForLocale(PATH, locale),
     keywords: [
       "database indexing interview questions",
-      "database indexing quiz",
-      "B-Tree index interview",
-      "covering index PostgreSQL",
-      "composite index leftmost prefix",
-      "EXPLAIN ANALYZE interview",
-      "backend engineer interview prep"
+      "B-Tree index quiz",
+      "composite index selectivity",
+      "covering index index only scan",
+      "partial index database quiz",
+      "EXPLAIN ANALYZE interview questions",
+      "SQL query optimization quiz"
     ],
     openGraph: {
       title,
@@ -55,6 +62,7 @@ export default async function DatabaseIndexingQuizPage({ params }: Props) {
   const { locale } = await params
   const localizedUrl = buildLocalizedUrl(PATH, locale)
   const t = await getTranslations({ locale, namespace: 'interview.databaseIndexing' })
+  const questions = getInterviewQuestions('database-indexing', locale)
 
   const depthFaqs = t.raw('faqs') as FaqItem[]
   const depthSections = [
@@ -71,17 +79,14 @@ export default async function DatabaseIndexingQuizPage({ params }: Props) {
   const prefix = locale === 'en' ? '' : `/${locale}`
 
   const jsonLd = buildJsonLd(
-    {
-      '@type': 'Quiz',
-      name: t('title'),
+    interviewQuizSchema({
+      title: t('title'),
       description: t('metaDescription'),
       url: localizedUrl,
-      educationalLevel: ['Beginner', 'Intermediate', 'Advanced'],
-      about: {
-        "@type": "Thing",
-        "name": "Database Indexing"
-},
-    },
+      locale,
+      about: 'Database Indexing & Query Optimization',
+      questions,
+    }),
     faqSchema(depthFaqs),
     breadcrumbSchema([
       { name: homeLabel, url: prefix || '/' },
@@ -121,6 +126,7 @@ export default async function DatabaseIndexingQuizPage({ params }: Props) {
           faqHeading={t('faqHeading')}
           faqs={depthFaqs}
         />
+        <AppRelatedInterviewDrills currentSlug="database-indexing" locale={locale} />
       </div>
     </main>
   )

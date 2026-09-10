@@ -1,14 +1,21 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { buildAlternatesForLocale } from '@/lib/i18nMeta'
-import { buildJsonLd, faqSchema, breadcrumbSchema, buildLocalizedUrl, type FaqItem } from '@/lib/schema'
+import {
+  buildJsonLd,
+  faqSchema,
+  breadcrumbSchema,
+  buildLocalizedUrl,
+  interviewQuizSchema,
+  type FaqItem,
+} from '@/lib/schema'
 import { AppTypeScriptQuiz } from '@/components/interview/AppTypeScriptQuiz'
 import AppInterviewDepth from '@/components/interview/AppInterviewDepth'
 import AppBreadcrumb from '@/components/AppBreadcrumb'
+import AppRelatedInterviewDrills from '@/components/interview/AppRelatedInterviewDrills'
+import { getInterviewQuestions } from '@/data/interview/interviewQuestionsProvider'
 
 const PATH = '/interview/typescript'
-const TITLE = 'TypeScript Interview Quiz: Beginner to Advanced | ToolNotch'
-const DESCRIPTION = 'Test your TypeScript knowledge with 30 in-depth interview questions across Beginner, Intermediate, and Advanced levels. Covers inference, generics, conditional types, mapped types, and compiled JS output.'
 
 interface Props {
   params: Promise<{ locale: string }>
@@ -58,6 +65,7 @@ export default async function TypeScriptQuizPage({ params }: Props) {
   const { locale } = await params
   const localizedUrl = buildLocalizedUrl(PATH, locale)
   const t = await getTranslations({ locale, namespace: 'interview.typescript' })
+  const questions = getInterviewQuestions('typescript', locale)
 
   const depthFaqs = t.raw('faqs') as FaqItem[]
   const depthSections = [
@@ -74,18 +82,14 @@ export default async function TypeScriptQuizPage({ params }: Props) {
   const prefix = locale === 'en' ? '' : `/${locale}`
 
   const jsonLd = buildJsonLd(
-    {
-      '@type': 'Quiz',
-      name: t('title'),
+    interviewQuizSchema({
+      title: t('title'),
       description: t('metaDescription'),
       url: localizedUrl,
-      educationalLevel: ['Beginner', 'Intermediate', 'Advanced'],
-      about: {
-        "@type": "Thing",
-        "name": "TypeScript",
-        "description": "A strongly typed programming language that builds on JavaScript."
-},
-    },
+      locale,
+      about: 'TypeScript',
+      questions,
+    }),
     faqSchema(depthFaqs),
     breadcrumbSchema([
       { name: homeLabel, url: prefix || '/' },
@@ -125,6 +129,7 @@ export default async function TypeScriptQuizPage({ params }: Props) {
           faqHeading={t('faqHeading')}
           faqs={depthFaqs}
         />
+        <AppRelatedInterviewDrills currentSlug="typescript" locale={locale} />
       </div>
     </main>
   )

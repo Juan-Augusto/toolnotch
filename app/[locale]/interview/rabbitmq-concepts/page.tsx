@@ -1,14 +1,21 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { buildAlternatesForLocale } from '@/lib/i18nMeta'
-import { buildJsonLd, faqSchema, breadcrumbSchema, buildLocalizedUrl, type FaqItem } from '@/lib/schema'
+import {
+  buildJsonLd,
+  faqSchema,
+  breadcrumbSchema,
+  buildLocalizedUrl,
+  interviewQuizSchema,
+  type FaqItem,
+} from '@/lib/schema'
 import { AppRabbitMQConceptsQuiz } from '@/components/interview/AppRabbitMQConceptsQuiz'
 import AppInterviewDepth from '@/components/interview/AppInterviewDepth'
 import AppBreadcrumb from '@/components/AppBreadcrumb'
+import AppRelatedInterviewDrills from '@/components/interview/AppRelatedInterviewDrills'
+import { getInterviewQuestions } from '@/data/interview/interviewQuestionsProvider'
 
 const PATH = '/interview/rabbitmq-concepts'
-const TITLE = 'RabbitMQ Concepts Interview Quiz: Beginner to Advanced | ToolNotch'
-const DESCRIPTION = 'Test your RabbitMQ messaging knowledge with 30 in-depth interview questions across Beginner, Intermediate, and Advanced levels. Covers exchanges, routing keys, Quorum queues, AMQP confirmations, and topology design.'
 
 interface Props {
   params: Promise<{ locale: string }>
@@ -28,12 +35,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: buildAlternatesForLocale(PATH, locale),
     keywords: [
       "RabbitMQ interview questions",
-      "AMQP interview quiz",
-      "RabbitMQ exchange types",
-      "RabbitMQ quorum queues",
-      "RabbitMQ dead letter exchange",
-      "RabbitMQ vs Kafka interview",
-      "backend engineer interview prep"
+      "AMQP protocol quiz",
+      "RabbitMQ exchanges routing keys",
+      "Quorum queues RabbitMQ",
+      "publisher confirms RabbitMQ",
+      "dead letter exchange DLX",
+      "message broker interview prep"
     ],
     openGraph: {
       title,
@@ -55,6 +62,7 @@ export default async function RabbitMQConceptsQuizPage({ params }: Props) {
   const { locale } = await params
   const localizedUrl = buildLocalizedUrl(PATH, locale)
   const t = await getTranslations({ locale, namespace: 'interview.rabbitmqConcepts' })
+  const questions = getInterviewQuestions('rabbitmq-concepts', locale)
 
   const depthFaqs = t.raw('faqs') as FaqItem[]
   const depthSections = [
@@ -71,22 +79,19 @@ export default async function RabbitMQConceptsQuizPage({ params }: Props) {
   const prefix = locale === 'en' ? '' : `/${locale}`
 
   const jsonLd = buildJsonLd(
-    {
-      '@type': 'Quiz',
-      name: t('title'),
+    interviewQuizSchema({
+      title: t('title'),
       description: t('metaDescription'),
       url: localizedUrl,
-      educationalLevel: ['Beginner', 'Intermediate', 'Advanced'],
-      about: {
-        "@type": "Thing",
-        "name": "RabbitMQ & AMQP Message Brokering"
-},
-    },
+      locale,
+      about: 'RabbitMQ Message Broker & AMQP',
+      questions,
+    }),
     faqSchema(depthFaqs),
     breadcrumbSchema([
       { name: homeLabel, url: prefix || '/' },
       { name: simuladosLabel, url: `${prefix}/interview` },
-      { name: 'RabbitMQ', url: localizedUrl },
+      { name: 'RabbitMQ Concepts', url: localizedUrl },
     ]),
   )
 
@@ -102,7 +107,7 @@ export default async function RabbitMQConceptsQuizPage({ params }: Props) {
             { label: homeLabel, href: prefix || '/' },
             { label: simuladosLabel, href: `${prefix}/interview` },
             {
-              label: 'RabbitMQ',
+              label: 'RabbitMQ Concepts',
               href: `${prefix}${PATH}`,
               current: true,
             },
@@ -121,6 +126,7 @@ export default async function RabbitMQConceptsQuizPage({ params }: Props) {
           faqHeading={t('faqHeading')}
           faqs={depthFaqs}
         />
+        <AppRelatedInterviewDrills currentSlug="rabbitmq-concepts" locale={locale} />
       </div>
     </main>
   )

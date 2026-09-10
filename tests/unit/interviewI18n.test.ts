@@ -1,6 +1,7 @@
 import { getInterviewQuestions } from '@/data/interview/interviewQuestionsProvider'
 import { getInterviewQuizMeta } from '@/data/interview/interviewMeta'
 import { getInterviewQuizLabels } from '@/components/interview/interviewQuizLabels'
+import { interviewQuizSchema } from '@/lib/schema'
 
 const ALL_SLUGS = [
   'typescript',
@@ -137,6 +138,35 @@ describe('Interview I18n & Trivia Provider', () => {
       expect(seenIndices.has(1)).toBe(true)
       expect(seenIndices.has(2)).toBe(true)
       expect(seenIndices.has(3)).toBe(true)
+    })
+  })
+
+  describe('interviewQuizSchema (Google Practice Problems / Quiz structured data)', () => {
+    it('generates a valid schema.org Quiz with hasPart and educationalLevel', () => {
+      const questions = getInterviewQuestions('typescript', 'pt')
+      const schema = interviewQuizSchema({
+        title: 'TypeScript Interview Drill',
+        description: '30 technical questions',
+        url: 'https://toolnotch.com/pt/interview/typescript',
+        locale: 'pt',
+        about: 'TypeScript',
+        questions,
+      })
+
+      expect(schema['@type']).toBe('Quiz')
+      expect(schema.name).toBe('TypeScript Interview Drill')
+      expect(schema.educationalLevel).toEqual(['Beginner', 'Intermediate', 'Advanced'])
+      expect(schema.learningResourceType).toBe('Practice quiz')
+      expect(schema.about).toEqual({ '@type': 'Thing', name: 'TypeScript' })
+      expect(schema.hasPart).toHaveLength(30)
+
+      const firstQ = schema.hasPart[0]
+      expect(firstQ['@type']).toBe('Question')
+      expect(firstQ.eduQuestionType).toBe('Multiple choice')
+      expect(firstQ.name).toBeTruthy()
+      expect(firstQ.acceptedAnswer).toBeDefined()
+      expect(firstQ.acceptedAnswer.text).toBeTruthy()
+      expect(firstQ.suggestedAnswer).toHaveLength(3)
     })
   })
 })

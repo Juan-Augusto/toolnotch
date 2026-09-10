@@ -1,14 +1,21 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { buildAlternatesForLocale } from '@/lib/i18nMeta'
-import { buildJsonLd, faqSchema, breadcrumbSchema, buildLocalizedUrl, type FaqItem } from '@/lib/schema'
+import {
+  buildJsonLd,
+  faqSchema,
+  breadcrumbSchema,
+  buildLocalizedUrl,
+  interviewQuizSchema,
+  type FaqItem,
+} from '@/lib/schema'
 import { AppMessagingSqsKafkaQuiz } from '@/components/interview/AppMessagingSqsKafkaQuiz'
 import AppInterviewDepth from '@/components/interview/AppInterviewDepth'
 import AppBreadcrumb from '@/components/AppBreadcrumb'
+import AppRelatedInterviewDrills from '@/components/interview/AppRelatedInterviewDrills'
+import { getInterviewQuestions } from '@/data/interview/interviewQuestionsProvider'
 
 const PATH = '/interview/messaging-sqs-kafka'
-const TITLE = 'SQS & Kafka Interview Quiz: Beginner to Advanced | ToolNotch'
-const DESCRIPTION = 'Test your distributed messaging and streaming knowledge with 30 in-depth interview questions across Beginner, Intermediate, and Advanced levels. Covers partitions, offsets, delivery semantics, consumer groups, and stream processing.'
 
 interface Props {
   params: Promise<{ locale: string }>
@@ -55,6 +62,7 @@ export default async function MessagingSqsKafkaQuizPage({ params }: Props) {
   const { locale } = await params
   const localizedUrl = buildLocalizedUrl(PATH, locale)
   const t = await getTranslations({ locale, namespace: 'interview.messagingSqsKafka' })
+  const questions = getInterviewQuestions('messaging-sqs-kafka', locale)
 
   const depthFaqs = t.raw('faqs') as FaqItem[]
   const depthSections = [
@@ -71,22 +79,19 @@ export default async function MessagingSqsKafkaQuizPage({ params }: Props) {
   const prefix = locale === 'en' ? '' : `/${locale}`
 
   const jsonLd = buildJsonLd(
-    {
-      '@type': 'Quiz',
-      name: t('title'),
+    interviewQuizSchema({
+      title: t('title'),
       description: t('metaDescription'),
       url: localizedUrl,
-      educationalLevel: ['Beginner', 'Intermediate', 'Advanced'],
-      about: {
-        "@type": "Thing",
-        "name": "Distributed Messaging & Streaming"
-},
-    },
+      locale,
+      about: 'Apache Kafka & AWS SQS Messaging',
+      questions,
+    }),
     faqSchema(depthFaqs),
     breadcrumbSchema([
       { name: homeLabel, url: prefix || '/' },
       { name: simuladosLabel, url: `${prefix}/interview` },
-      { name: 'SQS & Kafka', url: localizedUrl },
+      { name: 'Messaging SQS & Kafka', url: localizedUrl },
     ]),
   )
 
@@ -102,7 +107,7 @@ export default async function MessagingSqsKafkaQuizPage({ params }: Props) {
             { label: homeLabel, href: prefix || '/' },
             { label: simuladosLabel, href: `${prefix}/interview` },
             {
-              label: 'SQS & Kafka',
+              label: 'Messaging SQS & Kafka',
               href: `${prefix}${PATH}`,
               current: true,
             },
@@ -121,6 +126,7 @@ export default async function MessagingSqsKafkaQuizPage({ params }: Props) {
           faqHeading={t('faqHeading')}
           faqs={depthFaqs}
         />
+        <AppRelatedInterviewDrills currentSlug="messaging-sqs-kafka" locale={locale} />
       </div>
     </main>
   )

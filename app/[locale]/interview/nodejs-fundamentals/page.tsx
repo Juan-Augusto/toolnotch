@@ -1,14 +1,21 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { buildAlternatesForLocale } from '@/lib/i18nMeta'
-import { buildJsonLd, faqSchema, breadcrumbSchema, buildLocalizedUrl, type FaqItem } from '@/lib/schema'
+import {
+  buildJsonLd,
+  faqSchema,
+  breadcrumbSchema,
+  buildLocalizedUrl,
+  interviewQuizSchema,
+  type FaqItem,
+} from '@/lib/schema'
 import { AppNodejsFundamentalsQuiz } from '@/components/interview/AppNodejsFundamentalsQuiz'
 import AppInterviewDepth from '@/components/interview/AppInterviewDepth'
 import AppBreadcrumb from '@/components/AppBreadcrumb'
+import AppRelatedInterviewDrills from '@/components/interview/AppRelatedInterviewDrills'
+import { getInterviewQuestions } from '@/data/interview/interviewQuestionsProvider'
 
 const PATH = '/interview/nodejs-fundamentals'
-const TITLE = 'Node.js Fundamentals Interview Quiz: Beginner to Advanced | ToolNotch'
-const DESCRIPTION = 'Test your Node.js runtime knowledge with 30 in-depth interview questions across Beginner, Intermediate, and Advanced levels. Covers Event Loop phases, libuv, garbage collection, streams, and CPU profiling.'
 
 interface Props {
   params: Promise<{ locale: string }>
@@ -55,6 +62,7 @@ export default async function NodejsFundamentalsQuizPage({ params }: Props) {
   const { locale } = await params
   const localizedUrl = buildLocalizedUrl(PATH, locale)
   const t = await getTranslations({ locale, namespace: 'interview.nodejsFundamentals' })
+  const questions = getInterviewQuestions('nodejs-fundamentals', locale)
 
   const depthFaqs = t.raw('faqs') as FaqItem[]
   const depthSections = [
@@ -71,17 +79,14 @@ export default async function NodejsFundamentalsQuizPage({ params }: Props) {
   const prefix = locale === 'en' ? '' : `/${locale}`
 
   const jsonLd = buildJsonLd(
-    {
-      '@type': 'Quiz',
-      name: t('title'),
+    interviewQuizSchema({
+      title: t('title'),
       description: t('metaDescription'),
       url: localizedUrl,
-      educationalLevel: ['Beginner', 'Intermediate', 'Advanced'],
-      about: {
-        "@type": "Thing",
-        "name": "Node.js Runtime & Architecture"
-},
-    },
+      locale,
+      about: 'Node.js Runtime & Architecture',
+      questions,
+    }),
     faqSchema(depthFaqs),
     breadcrumbSchema([
       { name: homeLabel, url: prefix || '/' },
@@ -121,6 +126,7 @@ export default async function NodejsFundamentalsQuizPage({ params }: Props) {
           faqHeading={t('faqHeading')}
           faqs={depthFaqs}
         />
+        <AppRelatedInterviewDrills currentSlug="nodejs-fundamentals" locale={locale} />
       </div>
     </main>
   )

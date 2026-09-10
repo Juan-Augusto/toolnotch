@@ -1,14 +1,21 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { buildAlternatesForLocale } from '@/lib/i18nMeta'
-import { buildJsonLd, faqSchema, breadcrumbSchema, buildLocalizedUrl, type FaqItem } from '@/lib/schema'
+import {
+  buildJsonLd,
+  faqSchema,
+  breadcrumbSchema,
+  buildLocalizedUrl,
+  interviewQuizSchema,
+  type FaqItem,
+} from '@/lib/schema'
 import { AppSystemArchitectureQuiz } from '@/components/interview/AppSystemArchitectureQuiz'
 import AppInterviewDepth from '@/components/interview/AppInterviewDepth'
 import AppBreadcrumb from '@/components/AppBreadcrumb'
+import AppRelatedInterviewDrills from '@/components/interview/AppRelatedInterviewDrills'
+import { getInterviewQuestions } from '@/data/interview/interviewQuestionsProvider'
 
 const PATH = '/interview/system-architecture'
-const TITLE = 'System Architecture Interview Quiz: Beginner to Advanced | ToolNotch'
-const DESCRIPTION = 'Test your system design and distributed architecture knowledge with 30 in-depth interview questions across Beginner, Intermediate, and Advanced levels. Covers microservices, Circuit Breaker, Saga, rate limiting, and observability.'
 
 interface Props {
   params: Promise<{ locale: string }>
@@ -29,11 +36,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: [
       "system architecture interview questions",
       "system design quiz",
-      "microservices interview",
-      "circuit breaker pattern interview",
-      "saga pattern distributed transactions",
-      "distributed tracing OpenTelemetry",
-      "staff engineer system design prep"
+      "microservices architecture interview",
+      "Circuit Breaker pattern quiz",
+      "Saga distributed transactions",
+      "rate limiting algorithms interview",
+      "distributed systems prep"
     ],
     openGraph: {
       title,
@@ -55,6 +62,7 @@ export default async function SystemArchitectureQuizPage({ params }: Props) {
   const { locale } = await params
   const localizedUrl = buildLocalizedUrl(PATH, locale)
   const t = await getTranslations({ locale, namespace: 'interview.systemArchitecture' })
+  const questions = getInterviewQuestions('system-architecture', locale)
 
   const depthFaqs = t.raw('faqs') as FaqItem[]
   const depthSections = [
@@ -71,17 +79,14 @@ export default async function SystemArchitectureQuizPage({ params }: Props) {
   const prefix = locale === 'en' ? '' : `/${locale}`
 
   const jsonLd = buildJsonLd(
-    {
-      '@type': 'Quiz',
-      name: t('title'),
+    interviewQuizSchema({
+      title: t('title'),
       description: t('metaDescription'),
       url: localizedUrl,
-      educationalLevel: ['Beginner', 'Intermediate', 'Advanced'],
-      about: {
-        "@type": "Thing",
-        "name": "System Architecture & Distributed Systems"
-},
-    },
+      locale,
+      about: 'Distributed System Architecture & Microservices',
+      questions,
+    }),
     faqSchema(depthFaqs),
     breadcrumbSchema([
       { name: homeLabel, url: prefix || '/' },
@@ -121,6 +126,7 @@ export default async function SystemArchitectureQuizPage({ params }: Props) {
           faqHeading={t('faqHeading')}
           faqs={depthFaqs}
         />
+        <AppRelatedInterviewDrills currentSlug="system-architecture" locale={locale} />
       </div>
     </main>
   )
