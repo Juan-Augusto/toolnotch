@@ -20,7 +20,7 @@ export default function AppAffiliateOffers() {
   return (
     <div className="mt-6  p-5 no-print">
       <p
-        className="text-[10px] font-bold mb-2 uppercase tracking-widest"
+        className="text-[10px] font-bold mb-2 uppercase st"
         style={{ color: "var(--neon)" }}
       >
         {t("label")}

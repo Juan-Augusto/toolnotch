@@ -84,8 +84,7 @@ export function AppQuizResultScreen({
           text: shareMessage,
           url: currentUrl,
         });
-      } catch {
-      }
+      } catch {}
     } else {
       handleCopyLink();
     }
@@ -128,145 +127,143 @@ export function AppQuizResultScreen({
   return (
     <div className="space-y-6">
       <AppCard border hover={false} className="p-7 sm:p-10">
-          <div className="flex items-center justify-between gap-3 mb-6 pb-4 border-b border-border/50">
-            <span className="text-xs font-bold tracking-wider text-secondary uppercase">
-              {isTrivia ? labels.scoreBadge : labels.resultBadge}
-            </span>
-            <span className="text-[11px] text-label uppercase">
-              {quizTitle}
-            </span>
-          </div>
+        <div className="flex items-center justify-between gap-3 mb-6 pb-4 border-b border-border/50">
+          <span className="text-xs font-semibold uppercase">
+            {isTrivia ? labels.scoreBadge : labels.resultBadge}
+          </span>
+          <span className="text-[11px] text-label uppercase">{quizTitle}</span>
+        </div>
 
-          {isTrivia && triviaResult && (
-            <div className="mb-6">
-              <div className="text-4xl sm:text-5xl font-black text-foreground tracking-tight mb-2">
-                {triviaResult.score}{" "}
-                <span className="text-xl sm:text-2xl text-label font-normal">
-                  / {triviaResult.total}
+        {isTrivia && triviaResult && (
+          <div className="mb-6">
+            <div className="text-4xl sm:text-5xl font-bold text-foreground tracking-tight mb-2">
+              {triviaResult.score}{" "}
+              <span className="text-xl sm:text-2xl text-label font-normal">
+                / {triviaResult.total}
+              </span>
+            </div>
+            <div className="text-xs text-secondary font-semibold uppercase ">
+              {triviaResult.percent}% {labels.hits} • {triviaResult.tier.label}
+            </div>
+          </div>
+        )}
+
+        <div className="space-y-3 mb-6">
+          <h2 className="text-2xl sm:text-3xl font-bold uppercase  text-foreground">
+            {isTrivia && triviaResult
+              ? triviaResult.tier.label
+              : personalityResult?.title}
+          </h2>
+          <p className=" text-label/90 leading-relaxed max-w-3xl">
+            {isTrivia && triviaResult
+              ? triviaResult.tier.description
+              : personalityResult?.description}
+          </p>
+        </div>
+
+        {!isTrivia &&
+          personalityResult?.traits &&
+          personalityResult.traits.length > 0 && (
+            <div className="flex flex-wrap gap-2 mb-8">
+              {personalityResult.traits.map((trait) => (
+                <span
+                  key={trait}
+                  className="text-xs font-semibold px-2.5 py-1 rounded-[2px] bg-tertiary/80 border border-border text-secondary"
+                >
+                  #{trait}
                 </span>
-              </div>
-              <div className="text-xs text-secondary font-bold uppercase tracking-wider">
-                {triviaResult.percent}% {labels.hits} • {triviaResult.tier.label}
-              </div>
+              ))}
             </div>
           )}
 
-          <div className="space-y-3 mb-6">
-            <h2 className="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-foreground">
-              {isTrivia && triviaResult
-                ? triviaResult.tier.label
-                : personalityResult?.title}
-            </h2>
-            <p className="text-xs sm:text-sm text-label/90 leading-relaxed max-w-3xl">
-              {isTrivia && triviaResult
-                ? triviaResult.tier.description
-                : personalityResult?.description}
-            </p>
-          </div>
+        <div className="pt-6 border-t border-border/50 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <AppButton
+              color="secondary"
+              small
+              onClick={onRetake}
+              className="w-full sm:w-auto whitespace-nowrap"
+            >
+              <RotateCcw className="w-3.5 h-3.5 shrink-0" />
+              <span>{labels.retake}</span>
+            </AppButton>
 
-          {!isTrivia &&
-            personalityResult?.traits &&
-            personalityResult.traits.length > 0 && (
-              <div className="flex flex-wrap gap-2 mb-8">
-                {personalityResult.traits.map((trait) => (
-                  <span
-                    key={trait}
-                    className="text-xs font-semibold px-2.5 py-1 rounded-[2px] bg-tertiary/80 border border-border text-secondary"
-                  >
-                    #{trait}
-                  </span>
-                ))}
-              </div>
-            )}
-
-          <div className="pt-6 border-t border-border/50 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
+            <Link
+              href={`/${currentLocale}/quizzes`}
+              className="w-full sm:w-auto"
+            >
               <AppButton
-                color="secondary"
+                color="primary"
+                withArrow
                 small
-                onClick={onRetake}
                 className="w-full sm:w-auto whitespace-nowrap"
               >
-                <RotateCcw className="w-3.5 h-3.5 shrink-0" />
-                <span>{labels.retake}</span>
+                {labels.moreQuizzes}
               </AppButton>
-
-              <Link
-                href={`/${currentLocale}/quizzes`}
-                className="w-full sm:w-auto"
-              >
-                <AppButton
-                  color="primary"
-                  withArrow
-                  small
-                  className="w-full sm:w-auto whitespace-nowrap"
-                >
-                  {labels.moreQuizzes}
-                </AppButton>
-              </Link>
-            </div>
-
-            <div className="flex items-center gap-2 flex-wrap">
-              <button
-                type="button"
-                onClick={handleShareWhatsApp}
-                className="text-xs font-medium px-3 py-2 rounded-[2px] bg-tertiary border border-border/70 text-foreground hover:border-secondary hover:text-secondary transition-colors cursor-pointer"
-              >
-                {labels.shareWhatsApp}
-              </button>
-
-              <button
-                type="button"
-                onClick={handleShareTwitter}
-                className="text-xs font-medium px-3 py-2 rounded-[2px] bg-tertiary border border-border/70 text-foreground hover:border-secondary hover:text-secondary transition-colors cursor-pointer"
-              >
-                {labels.shareTwitter}
-              </button>
-
-              <button
-                type="button"
-                onClick={handleCopyLink}
-                className="text-xs font-medium px-3 py-2 rounded-[2px] bg-tertiary border border-border/70 text-foreground hover:border-secondary hover:text-secondary transition-colors inline-flex items-center gap-1.5 cursor-pointer"
-              >
-                {copiedLink ? (
-                  <>
-                    <Check className="w-3.5 h-3.5 text-secondary" />
-                    <span>{labels.copied}</span>
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-3.5 h-3.5 text-label" />
-                    <span>{labels.shareCopy}</span>
-                  </>
-                )}
-              </button>
-
-              <button
-                type="button"
-                onClick={handleDownloadCard}
-                disabled={isGeneratingImage}
-                className="text-xs font-medium px-3 py-2 rounded-[2px] bg-tertiary border border-border/70 text-foreground hover:border-secondary hover:text-secondary transition-colors inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
-              >
-                <Download className="w-3.5 h-3.5" />
-                <span>
-                  {isGeneratingImage ? labels.downloading : labels.downloadCard}
-                </span>
-              </button>
-            </div>
+            </Link>
           </div>
 
-          {typeof navigator !== "undefined" && "share" in navigator && (
-            <div className="pt-3 sm:hidden">
-              <button
-                type="button"
-                onClick={handleNativeShare}
-                className="w-full text-xs font-bold uppercase tracking-wider py-2 rounded-[2px] bg-tertiary/40 border border-border/60 text-label hover:text-foreground transition-colors cursor-pointer"
-              >
-                {labels.shareNative}
-              </button>
-            </div>
-          )}
-        </AppCard>
+          <div className="flex items-center gap-2 flex-wrap">
+            <button
+              type="button"
+              onClick={handleShareWhatsApp}
+              className="text-xs font-medium px-3 py-2 rounded-[2px] bg-tertiary border border-border/70 text-foreground hover:border-secondary hover:text-secondary transition-colors cursor-pointer"
+            >
+              {labels.shareWhatsApp}
+            </button>
+
+            <button
+              type="button"
+              onClick={handleShareTwitter}
+              className="text-xs font-medium px-3 py-2 rounded-[2px] bg-tertiary border border-border/70 text-foreground hover:border-secondary hover:text-secondary transition-colors cursor-pointer"
+            >
+              {labels.shareTwitter}
+            </button>
+
+            <button
+              type="button"
+              onClick={handleCopyLink}
+              className="text-xs font-medium px-3 py-2 rounded-[2px] bg-tertiary border border-border/70 text-foreground hover:border-secondary hover:text-secondary transition-colors inline-flex items-center gap-1.5 cursor-pointer"
+            >
+              {copiedLink ? (
+                <>
+                  <Check className="w-3.5 h-3.5 text-secondary" />
+                  <span>{labels.copied}</span>
+                </>
+              ) : (
+                <>
+                  <Copy className="w-3.5 h-3.5 text-label" />
+                  <span>{labels.shareCopy}</span>
+                </>
+              )}
+            </button>
+
+            <button
+              type="button"
+              onClick={handleDownloadCard}
+              disabled={isGeneratingImage}
+              className="text-xs font-medium px-3 py-2 rounded-[2px] bg-tertiary border border-border/70 text-foreground hover:border-secondary hover:text-secondary transition-colors inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>
+                {isGeneratingImage ? labels.downloading : labels.downloadCard}
+              </span>
+            </button>
+          </div>
+        </div>
+
+        {typeof navigator !== "undefined" && "share" in navigator && (
+          <div className="pt-3 sm:hidden">
+            <button
+              type="button"
+              onClick={handleNativeShare}
+              className="w-full text-xs font-bold uppercase  py-2 rounded-[2px] bg-tertiary/40 border border-border/60 text-label hover:text-foreground transition-colors cursor-pointer"
+            >
+              {labels.shareNative}
+            </button>
+          </div>
+        )}
+      </AppCard>
     </div>
   );
 }

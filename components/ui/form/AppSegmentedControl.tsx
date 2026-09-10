@@ -104,7 +104,7 @@ export function AppSegmentedControl<T = string>({
 
     const enabledOptions = normalizedOptions.filter((opt) => !opt.disabled);
     const currentIndex = enabledOptions.findIndex(
-      (opt) => opt.value === currentValue
+      (opt) => opt.value === currentValue,
     );
 
     let nextIndex = -1;
@@ -131,15 +131,15 @@ export function AppSegmentedControl<T = string>({
   > = {
     sm: {
       button: "h-8 px-2.5",
-      text: "text-xs tracking-wider",
+      text: "text-xs ",
     },
     md: {
       button: "h-11 px-4",
-      text: "text-xs sm:text-sm tracking-wider",
+      text: " ",
     },
     lg: {
       button: "h-13 px-5",
-      text: "text-sm sm:text-base tracking-widest",
+      text: "text-sm sm:text-base st",
     },
   };
 
@@ -150,7 +150,7 @@ export function AppSegmentedControl<T = string>({
       {label && (
         <label
           id={labelId}
-          className={`font-mono text-xs font-semibold uppercase tracking-wider text-foreground mb-2 select-none ${
+          className={`font-mono text-xs font-semibold uppercase  text-foreground mb-2 select-none ${
             disabled ? "opacity-50" : ""
           } ${labelClassName}`}
         >
@@ -233,11 +233,7 @@ export function AppSegmentedControl<T = string>({
                     inset-0
                     rounded-[2px]
                     z-0
-                    ${
-                      isSecondary
-                        ? "bg-secondary"
-                        : "bg-primary"
-                    }
+                    ${isSecondary ? "bg-secondary" : "bg-primary"}
                   `}
                   transition={{
                     type: "spring",
@@ -259,8 +255,8 @@ export function AppSegmentedControl<T = string>({
                   ${sizeClasses[size].text}
                   ${
                     isSelected
-                      ? "text-background font-black tracking-wider"
-                      : "text-foreground font-bold tracking-wider"
+                      ? "text-background font-black "
+                      : "text-foreground font-bold "
                   }
                 `}
               >
@@ -295,13 +291,11 @@ export function AppSegmentedControl<T = string>({
       </div>
 
       {error && (
-        <span className="font-mono text-xs text-red-500 mt-1.5 tracking-wide">
-          {error}
-        </span>
+        <span className="font-mono text-xs text-red-500 mt-1.5 ">{error}</span>
       )}
 
       {helperText && !error && (
-        <span className="font-mono text-xs text-label/70 mt-1.5 tracking-wide">
+        <span className="font-mono text-xs text-label/70 mt-1.5 ">
           {helperText}
         </span>
       )}

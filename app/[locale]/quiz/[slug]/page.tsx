@@ -17,7 +17,9 @@ import AppQuiz from "@/components/quiz/AppQuiz";
 import AppQuizDepth, {
   getQuizDepthContent,
 } from "@/components/quiz/AppQuizDepth";
-import AppRelatedQuizzes, { FAQ_DATA } from "@/components/quiz/AppRelatedQuizzes";
+import AppRelatedQuizzes, {
+  FAQ_DATA,
+} from "@/components/quiz/AppRelatedQuizzes";
 import AppBreadcrumb from "@/components/AppBreadcrumb";
 
 export function generateStaticParams() {
@@ -106,12 +108,7 @@ export default async function QuizPage({
   ]);
 
   const quizUrl = buildLocalizedUrl(`/quiz/${slug}`, locale);
-  const quizEntity = quizDetailSchema(
-    quiz,
-    quizUrl,
-    locale,
-    depth?.about,
-  );
+  const quizEntity = quizDetailSchema(quiz, quizUrl, locale, depth?.about);
 
   const commonFaqs = FAQ_DATA[locale]?.items ?? FAQ_DATA.en.items;
   const faqsToUse = depth?.faqs ?? commonFaqs;
@@ -143,7 +140,7 @@ export default async function QuizPage({
         <AppAdUnit slot={AD_SLOTS.QUIZ_TOP} />
       </div>
 
-      <div className="w-full max-w-4xl mx-auto pt-4 pb-8 md:pb-12">
+      <div className="w-full max-w-4xl mx-auto pt-4 pb-4">
         <AppQuiz quiz={quiz} locale={locale} />
       </div>
 

@@ -4,8 +4,11 @@
 
 @theme inline {
   --color-primary: var(--primary);
+  --color-primary-shadow: var(--primary-shadow);
   --color-secondary: var(--secondary);
+  --color-secondary-shadow: var(--secondary-shadow);
   --color-tertiary: var(--tertiary);
+  --color-tertiary-shadow: var(--tertiary-shadow);
   --color-border: var(--border);
   --color-foreground: var(--foreground);
   --color-background: var(--background);
@@ -13,26 +16,29 @@
   --color-panel: var(--panel);
 
   --font-sans:
-    "Azeret Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  --font-display: var(--font-syne), "Azeret Mono", ui-monospace, monospace;
+    var(--font-poppins), "Poppins", system-ui, -apple-system, sans-serif;
+  --font-display:
+    var(--font-poppins), "Poppins", system-ui, -apple-system, sans-serif;
   --font-mono:
-    var(--font-geist-mono), "JetBrains Mono", ui-monospace, monospace;
+    var(--font-poppins), "Poppins", system-ui, -apple-system, sans-serif;
 }
 
 :root {
   --primary: #3186f5;
+  --primary-shadow: #2364b9;
   --primary-dim: rgba(232, 98, 152, 0.1);
   --primary-glow: 0 0 10px rgba(232, 98, 152, 0.4);
   --primary-text-glow: 0 0 8px rgba(232, 98, 152, 0.5);
 
   --secondary: #d83e9d;
+  --secondary-shadow: #a32b75;
   --tertiary: #ffffff;
+  --tertiary-shadow: #dadde4;
   --border: rgb(218, 221, 228);
   --foreground: #2c2c2c;
-  --background: #f9f9f9;
+  --background: #f8f8f8;
   --panel: #eeeeee;
-  --label: #464646;
+  --label: #696969;
 
   --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.06), 0 1px 2px rgb(0 0 0 / 0.04);
   --shadow: 0 4px 16px rgb(0 0 0 / 0.08);
@@ -41,17 +47,20 @@
 
 .dark {
   --primary: #c3e652;
+  --primary-shadow: rgb(130, 155, 50);
   --primary-dim: rgba(213, 255, 74, 0.1);
   --primary-glow: 0 0 10px rgba(213, 255, 74, 0.4);
   --primary-text-glow: 0 0 8px rgba(213, 255, 74, 0.5);
 
   --secondary: #5ce4dd;
+  --secondary-shadow: #318f8a;
   --tertiary: #232529;
+  --tertiary-shadow: #3e4247;
   --border: #3e4247;
   --foreground: #f5f5f5;
   --background: #1f2124;
   --panel: #131416;
-  --label: #a8a8a8;
+  --label: #b1b1b1;
 }
 
 html {
@@ -64,12 +73,32 @@ html {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+html,
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family:
+    var(--font-poppins),
+    "Poppins",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), system-ui, sans-serif;
-  font-size: 14px;
-  font-weight: 300;
+  font-family:
+    var(--font-poppins),
+    "Poppins",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -81,8 +110,22 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-display), var(--font-sans), sans-serif;
+  font-family:
+    var(--font-poppins),
+    "Poppins",
+    system-ui,
+    -apple-system,
+    sans-serif;
   @apply font-semibold;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
 }
 
 select {
@@ -380,7 +423,12 @@ input[type="number"] {
 }
 
 .section-heading {
-  font-family: var(--font-display), sans-serif;
+  font-family:
+    var(--font-poppins),
+    "Poppins",
+    system-ui,
+    -apple-system,
+    sans-serif;
   font-weight: 700;
   letter-spacing: -0.025em;
   color: var(--foreground);

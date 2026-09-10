@@ -1,7 +1,10 @@
 import type { HTMLAttributes, ReactNode } from "react";
 import { Siren } from "lucide-react";
 
-export interface AppTipProps extends Omit<HTMLAttributes<HTMLDivElement>, "title"> {
+export interface AppTipProps extends Omit<
+  HTMLAttributes<HTMLDivElement>,
+  "title"
+> {
   title?: ReactNode;
   description?: ReactNode;
   icon?: ReactNode;
@@ -30,7 +33,7 @@ export function AppTip({
             {icon ?? <Siren className="w-5 h-5 stroke-[2]" />}
           </div>
           {title && (
-            <span className="font-mono text-xs md:text-sm font-bold uppercase tracking-wider text-foreground">
+            <span className="font-mono text-xs md:text-sm font-bold uppercase  text-foreground">
               {title}
             </span>
           )}

@@ -158,7 +158,7 @@ export default async function QuizResultPage({
                     {tierDepth.body.map((paragraph, i) => (
                       <p
                         key={i}
-                        className="font-mono text-xs sm:text-sm text-label leading-relaxed"
+                        className="font-mono  text-label leading-relaxed"
                       >
                         {paragraph}
                       </p>

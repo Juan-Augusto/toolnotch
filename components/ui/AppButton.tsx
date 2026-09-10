@@ -44,11 +44,11 @@ export default function AppButton({
 
   const colorStyles: Record<"primary" | "secondary" | "tertiary", string> = {
     primary:
-      "bg-primary text-background  disabled:bg-primary/25 disabled:text-background/40",
+      "bg-primary text-white dark:text-black hover:shadow-[0px_4px_0px_var(--color-primary-shadow)] active:bg-primary-shadow disabled:bg-primary/25 disabled:text-background/40",
     secondary:
-      "bg-secondary text-background disabled:bg-secondary/25 disabled:text-background/40",
+      "bg-secondary text-white dark:text-black hover:shadow-[0px_4px_0px_var(--color-secondary-shadow)] active:bg-secondary-shadow disabled:bg-secondary/25 disabled:text-background/40",
     tertiary:
-      "bg-tertiary text-foreground hover:not-disabled:border-border disabled:bg-tertiary/40 disabled:text-label/40",
+      "bg-tertiary text-foreground hover:shadow-[0px_4px_0px_var(--color-tertiary-shadow)] active:bg-tertiary-shadow disabled:bg-tertiary/40 disabled:text-label/40",
   };
 
   const sizeClasses = small ? "px-5 py-3 text-xs" : "px-6 py-3.5 text-sm";
@@ -57,7 +57,7 @@ export default function AppButton({
   return (
     <button
       disabled={disabled}
-      className={`inline-flex items-center justify-center gap-2.5 font-bold tracking-wider uppercase whitespace-nowrap transition-all duration-200 cursor-pointer select-none active:not-disabled:scale-[0.98] disabled:cursor-not-allowed ${sizeClasses} ${radiusClasses} ${colorStyles[variant]} ${opacity ? "opacity-80" : ""} ${className}`}
+      className={`inline-flex items-center justify-center hover:-translate-y-1 active:translate-y-0 active:shadow-none disabled:hover:translate-y-0 disabled:hover:shadow-none disabled:active:translate-y-0 gap-2.5 font-semibold uppercase whitespace-nowrap transition-all duration-200 cursor-pointer select-none disabled:cursor-not-allowed ${sizeClasses} ${radiusClasses} ${colorStyles[variant]} ${opacity ? "opacity-80" : ""} ${className}`}
       {...props}
     >
       <span className="inline-flex items-center gap-2">{children}</span>

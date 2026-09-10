@@ -42,12 +42,15 @@ const TRUST_ROUTES = [
 ]
 
 const ALL_ROUTES = [
-  // Interview prep — only routes that render without a feature flag.
-  // database-design / database-indexing / messaging-sqs-kafka / rabbitmq-concepts
-  // / nodejs-fundamentals / system-architecture / vue redirect (307) to /interview
-  // until `interview-<name>` flags ship — kept out of the sitemap (WS-6 audit §7).
   '/interview',
   '/interview/typescript',
+  '/interview/vue',
+  '/interview/nodejs-fundamentals',
+  '/interview/database-design',
+  '/interview/database-indexing',
+  '/interview/messaging-sqs-kafka',
+  '/interview/rabbitmq-concepts',
+  '/interview/system-architecture',
   // Legal / info (moved to TRUST_ROUTES above — rendered at priority 0.6)
   // PDF tools
   '/tools/pdf',

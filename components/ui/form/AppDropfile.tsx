@@ -108,7 +108,7 @@ export function AppDropfile({
 
   const [isDragging, setIsDragging] = useState(false);
   const [internalFiles, setInternalFiles] = useState<File[]>(() =>
-    normalizeFiles(value !== undefined ? value : defaultValue)
+    normalizeFiles(value !== undefined ? value : defaultValue),
   );
 
   const isControlled = value !== undefined;
@@ -162,7 +162,7 @@ export function AppDropfile({
             (item) =>
               item.name === file.name &&
               item.size === file.size &&
-              item.lastModified === file.lastModified
+              item.lastModified === file.lastModified,
           );
           if (!isDuplicate) {
             newFiles.push(file);
@@ -211,7 +211,7 @@ export function AppDropfile({
       onFilesChange,
       onFileChange,
       onReject,
-    ]
+    ],
   );
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -276,7 +276,7 @@ export function AppDropfile({
       {label && (
         <label
           htmlFor={inputId}
-          className={`font-mono text-xs font-semibold uppercase tracking-wider text-foreground mb-2 select-none ${
+          className={`font-mono text-xs font-semibold uppercase  text-foreground mb-2 select-none ${
             disabled ? "opacity-50" : ""
           } ${labelClassName}`}
         >
@@ -346,14 +346,14 @@ export function AppDropfile({
           {icon ?? <FileUp className="w-8 h-8 stroke-[1.75]" />}
         </div>
 
-        <p className="font-mono text-xs md:text-sm font-bold uppercase tracking-wider text-foreground mb-1">
+        <p className="font-mono text-xs md:text-sm font-bold uppercase  text-foreground mb-1">
           {title ??
             (multiple
               ? "CLIQUE OU ARRASTE ARQUIVOS AQUI"
               : "CLIQUE OU ARRASTE O ARQUIVO AQUI")}
         </p>
 
-        <p className="font-mono text-xs text-label/80 tracking-wide">
+        <p className="font-mono text-xs text-label/80 ">
           {description ??
             (multiple
               ? "Clique ou arraste arquivos aqui"
@@ -397,13 +397,11 @@ export function AppDropfile({
       )}
 
       {error && (
-        <span className="font-mono text-xs text-red-500 mt-1.5 tracking-wide">
-          {error}
-        </span>
+        <span className="font-mono text-xs text-red-500 mt-1.5 ">{error}</span>
       )}
 
       {helperText && !error && (
-        <span className="font-mono text-xs text-label/70 mt-1.5 tracking-wide">
+        <span className="font-mono text-xs text-label/70 mt-1.5 ">
           {helperText}
         </span>
       )}

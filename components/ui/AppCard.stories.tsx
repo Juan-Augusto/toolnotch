@@ -1,11 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import AppCard from './AppCard';
-import AppButton from './AppButton';
+import type { Meta, StoryObj } from "@storybook/react";
+import AppCard from "./AppCard";
+import AppButton from "./AppButton";
 
 const meta: Meta<typeof AppCard> = {
-  title: 'UI/AppCard',
+  title: "UI/AppCard",
   component: AppCard,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 };
 
 export default meta;
@@ -16,11 +16,12 @@ export const Default: Story = {
     <div className="max-w-xs">
       <AppCard className="flex flex-col justify-between p-6 min-h-[280px]">
         <div>
-          <h2 className="font-mono text-sm tracking-wider uppercase text-foreground">
+          <h2 className="font-mono text-sm  uppercase text-foreground">
             FERRAMENTAS
           </h2>
           <p className="font-mono text-xs text-label/80 mt-3 leading-relaxed">
-            Comprima imagens, manipule PDFs, faça cálculos e utilize utilitários rápidos direto no navegador.
+            Comprima imagens, manipule PDFs, faça cálculos e utilize utilitários
+            rápidos direto no navegador.
           </p>
         </div>
         <div className="mt-6">
@@ -41,7 +42,7 @@ export const WithoutCornerAccents: Story = {
         className="flex flex-col justify-between p-6 min-h-[280px]"
       >
         <div>
-          <h2 className="font-mono text-sm tracking-wider uppercase text-foreground">
+          <h2 className="font-mono text-sm  uppercase text-foreground">
             SEM ACCENTS
           </h2>
           <p className="font-mono text-xs text-label/80 mt-3 leading-relaxed">

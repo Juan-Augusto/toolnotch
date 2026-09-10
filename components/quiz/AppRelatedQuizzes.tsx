@@ -173,9 +173,7 @@ export default async function AppRelatedQuizzes({ slug, locale }: Props) {
     id: `quiz-faq-${idx}`,
     name: item.question,
     content: (
-      <p className=" text-xs sm:text-sm text-foreground/85 leading-relaxed">
-        {item.answer}
-      </p>
+      <p className="  text-foreground/85 leading-relaxed">{item.answer}</p>
     ),
     defaultOpen: idx === 0,
   }));
@@ -183,16 +181,14 @@ export default async function AppRelatedQuizzes({ slug, locale }: Props) {
   return (
     <section className="w-full pb-16 max-w-4xl mx-auto space-y-12">
       <div className="space-y-3">
-        <h2 className=" text-lg sm:text-xl font-bold uppercase tracking-wider text-foreground">
+        <h2 className=" text-lg sm:text-xl font-bold uppercase  text-foreground">
           {localizedAbout.heading}
         </h2>
 
-        <p className=" text-xs sm:text-sm text-label leading-relaxed">
-          {localizedAbout.about}
-        </p>
+        <p className="  text-label leading-relaxed">{localizedAbout.about}</p>
 
         <div className="pt-2">
-          <span className="text-primary font-semibold uppercase block mb-2 tracking-wide">
+          <span className="text-primary font-semibold uppercase block mb-2 ">
             {localizedAbout.rulesHeading}
           </span>
           <ul className="space-y-1.5  text-label">
@@ -207,7 +203,7 @@ export default async function AppRelatedQuizzes({ slug, locale }: Props) {
       </div>
 
       <div className="space-y-4">
-        <h2 className=" text-lg sm:text-xl font-bold uppercase tracking-wider text-foreground">
+        <h2 className=" text-lg sm:text-xl font-bold uppercase  text-foreground">
           {faqData.heading}
         </h2>
 
@@ -216,7 +212,7 @@ export default async function AppRelatedQuizzes({ slug, locale }: Props) {
 
       {picks.length >= 2 && (
         <nav aria-label="Related quizzes" className="space-y-4">
-          <h2 className=" text-lg sm:text-xl font-bold uppercase tracking-wider text-foreground">
+          <h2 className=" text-lg sm:text-xl font-bold uppercase  text-foreground">
             {t("categories.quizzes")}
           </h2>
 
@@ -231,10 +227,10 @@ export default async function AppRelatedQuizzes({ slug, locale }: Props) {
                     className="h-full flex flex-col justify-between p-5 transition-all"
                   >
                     <div>
-                      <span className=" text-[10px] text-primary font-semibold tracking-wide uppercase mb-1.5 block">
+                      <span className=" text-[10px] text-primary font-semibold  uppercase mb-1.5 block">
                         QUIZ
                       </span>
-                      <span className="font-semibold tracking-wide text-xs sm:text-sm text-foreground uppercase group-hover:text-secondary transition-colors block">
+                      <span className="font-semibold   text-foreground uppercase group-hover:text-secondary transition-colors block">
                         {p.label}
                       </span>
                     </div>

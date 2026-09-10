@@ -4540,73 +4540,73 @@
   },
   "interview": {
     "hub": {
-      "aboutHeading": "Sobre a preparação para entrevistas no ToolNotch",
+      "metaTitle": "Simulados para Entrevistas Técnicas: Frontend, Backend e Arquitetura | ToolNotch",
+      "metaDescription": "Pratique com 240 questões em 8 simulados técnicos: TypeScript, Vue, Node.js, Bancos de Dados, Kafka, RabbitMQ e Arquitetura de Sistemas. 100% gratuito.",
+      "title": "Simulados para Entrevistas Técnicas",
+      "aboutHeading": "Sobre os simulados de entrevista do ToolNotch",
       "about": [
-        "A preparação para entrevistas do ToolNotch é uma coleção de quizzes interativos e gratuitos para pessoas desenvolvedoras que estão se preparando para uma entrevista técnica. Cada quiz roda inteiramente no navegador: não há conta para criar, nada para instalar e nenhum paywall. Você escolhe um tema, seleciona um nível de dificuldade e responde a questões de múltipla escolha que refletem o tipo de raciocínio que quem entrevista está tentando ouvir.",
-        "O que diferencia esses quizzes de um baralho de flashcards é a explicação anexada a cada questão. Em vez de apenas dizer qual alternativa está correta, cada resposta explica por que ela está correta, mostra o mecanismo por trás e acrescenta uma nota curta sobre como equipes experientes aplicam a ideia em código de produção. O objetivo é um entendimento que você consiga defender sob perguntas de acompanhamento, não trivialidades decoradas que desmoronam no instante em que alguém pergunta por quê.",
-        "Os bancos de questões são escritos a partir de fontes primárias — manuais oficiais das linguagens, documentos de especificação e referências de engenharia amplamente usadas — e revisados quanto à precisão, em vez de montados a partir de sites de quiz raspados. A cobertura hoje se concentra em TypeScript, com trilhas adicionais de linguagens e de engenharia de back-end sendo lançadas conforme ficam prontas."
+        "Os simulados de entrevista do ToolNotch foram desenvolvidos para quem deseja testar e aprofundar conhecimentos técnicos antes de processos seletivos. Todo o conteúdo roda diretamente no navegador: sem necessidade de cadastro, login ou download.",
+        "Cada pergunta acompanha justificativas conceituais, snippets de código compilado ou planos de consulta e recomendações de produção aplicadas por times experientes de engenharia.",
+        "O catálogo reúne 240 questões distribuídas em 8 temas fundamentais: TypeScript, Vue.js, Node.js, Modelagem de Bancos de Dados, Indexação SQL, SQS vs Kafka, RabbitMQ e Arquitetura de Sistemas."
       ],
-      "formatHeading": "Como os quizzes são estruturados",
+      "formatHeading": "Estrutura e dinâmica dos simulados",
       "format": [
-        "Cada trilha é dividida em níveis Iniciante, Intermediário e Avançado, com cerca de dez questões cada. As questões Iniciante confirmam que os fundamentos estão sólidos, as Intermediário testam os casos-limite que confundem as pessoas no dia a dia, e as Avançado vão atrás do comportamento profundo que separa uma pessoa candidata sênior de uma de nível pleno. A ordem das questões é embaralhada a cada execução, então não dá para passar decorando posições.",
-        "Como tudo roda no lado do cliente, suas respostas e pontuações nunca saem do seu dispositivo. Você pode refazer um nível quantas vezes quiser, ir direto para a dificuldade que interessa e usar o teclado para agilizar: teclas numéricas para escolher uma alternativa, Enter para avançar e Tab para alternar entre as abas de explicação nas questões que as têm."
+        "Cada simulado conta com 30 questões divididas em três níveis: Iniciante (sintaxe e conceitos básicos), Intermediário (desafios práticos de produção) e Avançado (concorrência, internals e escalabilidade).",
+        "O estado do teste fica armazenado apenas na memória da sua sessão no navegador. Você pode refazer qualquer trilha quantas vezes quiser e utilizar atalhos de teclado (teclas 1 a 4, Enter e Tab) para agilizar o treino."
       ],
-      "howHeading": "Como praticar de forma eficaz",
+      "howHeading": "Como aproveitar melhor os treinos",
       "how": [
-        "Comece um nível abaixo de onde você acha que está. Passar rápido pelo conjunto Iniciante confirma seus fundamentos e cria ritmo antes de chegar ao material mais difícil.",
-        "Leia a explicação de todas as questões, inclusive as que você acertou. Uma resposta certa pelo motivo errado ainda é uma lacuna que quem entrevista pode encontrar.",
-        "Quando uma explicação mencionar a saída compilada ou uma regra da especificação, pare e reproduza você mesmo em um editor ou REPL. A recuperação ativa vence a releitura.",
-        "Refaça um nível um ou dois dias depois, em vez de na hora. Espaçar a repetição é o que move uma ideia para a memória de longo prazo.",
-        "Quando estiver pontuando de forma consistente acima de cerca de 80% no Avançado, passe a explicar cada resposta em voz alta como se quem entrevista estivesse na sala. É essa a habilidade que a entrevista de fato mede."
+        "Comece pelo nível intermediário para calibrar seu nível e avance para o avançado nos temas mais relevantes para a vaga desejada.",
+        "Leia atentamente as explicações técnicas, inclusive nas questões que acertou, para validar seus fundamentos teóricos.",
+        "Pratique explicar o raciocínio em voz alta antes de marcar a resposta, simulando o formato real de uma entrevista com a liderança técnica."
       ],
-      "faqHeading": "Perguntas frequentes sobre preparação para entrevistas",
+      "faqHeading": "Perguntas frequentes sobre os simulados de entrevista",
       "faqs": [
         {
-          "question": "Os quizzes de entrevista do ToolNotch são gratuitos?",
-          "answer": "Sim. Todo quiz é totalmente gratuito, sem conta, cadastro ou download. Todas as questões e explicações rodam no lado do cliente, no seu navegador, e suas pontuações nunca são enviadas para lugar nenhum."
+          "question": "Os simulados de entrevista do ToolNotch são gratuitos?",
+          "answer": "Sim. Todos os 8 simulados são 100% gratuitos e funcionam inteiramente no navegador, sem exigir cadastro nem login."
         },
         {
-          "question": "Quais temas já estão cobertos?",
-          "answer": "A trilha de TypeScript é a mais completa, com 30 questões nos níveis Iniciante, Intermediário e Avançado. Trilhas de engenharia de back-end — internals do Node.js, projeto e indexação de banco de dados, sistemas de mensageria e arquitetura de sistemas — estão sendo finalizadas e lançadas uma de cada vez."
+          "question": "Quais tópicos técnicos estão disponíveis?",
+          "answer": "Temos 8 simulados completos: TypeScript, Vue.js, Node.js Fundamentals, Database Design, Database Indexing, SQS e Kafka, RabbitMQ e System Architecture."
         },
         {
-          "question": "Essas questões são voltadas para pessoas juniores ou seniores?",
-          "answer": "Ambas. O nível Iniciante serve para quem se prepara para a primeira ou segunda vaga, enquanto o nível Avançado mira na profundidade esperada de engenheiros seniores e staff. A maioria das pessoas se beneficia de percorrer os três níveis em ordem."
+          "question": "Posso navegar pelos simulados usando o teclado?",
+          "answer": "Sim. Você pode utilizar as teclas 1 a 4 para escolher alternativas, Enter para confirmar ou avançar e Tab para navegar nas abas de explicação."
         },
         {
-          "question": "Como devo usar um quiz no dia anterior a uma entrevista?",
-          "answer": "Faça uma passagem tranquila no nível que combina com a vaga, foque em ler as explicações em vez de buscar uma pontuação alta e pare cedo o suficiente para dormir. Estudar material novo na véspera costuma atrapalhar mais do que ajudar."
-        },
-        {
-          "question": "Os quizzes salvam meu progresso?",
-          "answer": "As pontuações aparecem no fim de cada nível, mas não são armazenadas em um servidor. Como tudo fica local no seu navegador, você pode refazer qualquer nível quantas vezes quiser sem afetar um registro salvo."
+          "question": "Minhas respostas ou pontuações são gravadas em algum servidor?",
+          "answer": "Não. Todo o processamento acontece de forma estritamente local na memória do navegador. Nenhuma informação pessoal ou pontuação é transmitida externamente."
         }
       ]
     },
     "typescript": {
+      "metaTitle": "Simulado de Entrevista TypeScript: do Iniciante ao Avançado | ToolNotch",
+      "metaDescription": "Teste seus conhecimentos em TypeScript com 30 questões aprofundadas de entrevista nos níveis Iniciante, Intermediário e Avançado. Cobre inferência de tipos, generics, tipos condicionais e mapped types.",
+      "title": "Simulado Técnico de TypeScript",
       "coversHeading": "O que o quiz de entrevista de TypeScript cobre",
       "covers": [
-        "Este quiz percorre as partes de TypeScript que quem entrevista realmente investiga: como o compilador infere tipos quando você não os anota, como generics deixam uma função continuar type-safe em muitos formatos de entrada e como o sistema de tipos calcula tipos novos a partir dos existentes com tipos condicionais, tipos mapeados e a palavra-chave infer. Também cobre narrowing — como o TypeScript usa fluxo de controle, typeof, instanceof, unions discriminadas e type guards definidos pelo usuário para reduzir uma union a um único tipo dentro de um ramo.",
-        "Um recurso distintivo é que toda resposta inclui o JavaScript compilado. Tipos, interfaces e imports somente de tipo são apagados no build e não produzem código de runtime, enquanto enums, propriedades de parâmetro de classe e decorators de fato emitem algo. Ver a saída emitida ao lado do código-fonte deixa óbvio quais construções são puramente um contrato de tempo de compilação e quais têm custo em runtime — uma distinção que aparece o tempo todo em entrevistas sobre tamanho de bundle e desempenho.",
-        "Os utility types — Partial, Required, Readonly, Pick, Omit, Record, ReturnType, Parameters, Awaited e os demais — são tratados como coisas que você deve conseguir reimplementar, não apenas chamar. Várias questões pedem que você preveja o resultado de um tipo mapeado escrito à mão que espelha um dos embutidos, um exercício comum de quadro branco."
+        "Este quiz percorre as partes de TypeScript que quem entrevista realmente investiga: como o compilador infere tipos quando você não os anota, como generics deixam uma função continuar type-safe em muitos formatos de entrada e como o sistema de tipos calcula tipos novos a partir dos existentes com tipos condicionais, tipos mapeados e a palavra-chave infer. Também cobre narrowing, como o TypeScript usa fluxo de controle, typeof, instanceof, unions discriminadas e type guards definidos pelo usuário para reduzir uma union a um único tipo dentro de um ramo.",
+        "Um recurso distintivo é que toda resposta inclui o JavaScript compilado. Tipos, interfaces e imports somente de tipo são apagados no build e não produzem código de runtime, enquanto enums, propriedades de parâmetro de classe e decorators de fato emitem algo. Ver a saída emitida ao lado do código-fonte deixa óbvio quais construções são puramente um contrato de tempo de compilação e quais têm custo em runtime, uma distinção que aparece o tempo todo em entrevistas sobre tamanho de bundle e desempenho.",
+        "Os utility types, Partial, Required, Readonly, Pick, Omit, Record, ReturnType, Parameters, Awaited e os demais, são tratados como coisas que você deve conseguir reimplementar, não apenas chamar. Várias questões pedem que você preveja o resultado de um tipo mapeado escrito à mão que espelha um dos embutidos, um exercício comum de quadro branco."
       ],
       "levelsHeading": "Níveis de dificuldade",
       "levels": [
         "O Iniciante cobre o sistema de tipos do dia a dia: tipos primitivos e literais, arrays e tuplas, tipos union e intersection, interfaces versus type aliases, propriedades opcionais e readonly, tipos de função e a diferença entre any, unknown e never. São as questões com que uma ligação de triagem tem mais chance de começar.",
-        "O Intermediário avança para generics com constraints, keyof e tipos de acesso indexado, typeof usado como consulta de tipo, tipos mapeados e condicionais básicos e narrowing por fluxo de controle. O Avançado empurra para tipos condicionais recursivos, a palavra-chave infer, tipos de literal de template, tipos de tupla variádicos, o operador satisfies, parâmetros de tipo const, NoInfer e module augmentation — o material que distingue uma resposta sênior de TypeScript."
+        "O Intermediário avança para generics com constraints, keyof e tipos de acesso indexado, typeof usado como consulta de tipo, tipos mapeados e condicionais básicos e narrowing por fluxo de controle. O Avançado empurra para tipos condicionais recursivos, a palavra-chave infer, tipos de literal de template, tipos de tupla variádicos, o operador satisfies, parâmetros de tipo const, NoInfer e module augmentation, o material que distingue uma resposta sênior de TypeScript."
       ],
       "topicsHeading": "Tópicos do banco de questões",
       "topics": [
-        "Inferência de tipos — como o TypeScript atribui tipos a variáveis, valores de retorno e parâmetros genéricos quando não há anotação, e quando ele alarga ou estreita um literal.",
-        "Generics — escrever funções, classes e tipos parametrizados por um tipo, adicionar constraints com extends e fornecer valores padrão.",
-        "Tipos condicionais e mapeados — calcular um tipo a partir de outro com T extends U ? X : Y, remapeamento de chaves, adicionar ou remover modificadores e distribuição sobre unions.",
-        "Narrowing — reduzir uma union dentro de um ramo usando typeof, instanceof, in, verificações de igualdade, unions discriminadas e funções que retornam um type predicate.",
-        "Utility types — Partial, Pick, Omit, Record, ReturnType, Parameters, Awaited e afins, além de como montar equivalentes à mão.",
-        "Saída em JavaScript compilado — qual sintaxe de TypeScript é apagada no build e não gera código de runtime, e qual sintaxe realmente emite."
+        "Inferência de tipos, como o TypeScript atribui tipos a variáveis, valores de retorno e parâmetros genéricos quando não há anotação, e quando ele alarga ou estreita um literal.",
+        "Generics, escrever funções, classes e tipos parametrizados por um tipo, adicionar constraints com extends e fornecer valores padrão.",
+        "Tipos condicionais e mapeados, calcular um tipo a partir de outro com T extends U ? X : Y, remapeamento de chaves, adicionar ou remover modificadores e distribuição sobre unions.",
+        "Narrowing, reduzir uma union dentro de um ramo usando typeof, instanceof, in, verificações de igualdade, unions discriminadas e funções que retornam um type predicate.",
+        "Utility types, Partial, Pick, Omit, Record, ReturnType, Parameters, Awaited e afins, além de como montar equivalentes à mão.",
+        "Saída em JavaScript compilado, qual sintaxe de TypeScript é apagada no build e não gera código de runtime, e qual sintaxe realmente emite."
       ],
       "howHeading": "Como usar o quiz de TypeScript",
       "how": [
-        "Escolha um nível — Iniciante, Intermediário ou Avançado — na tela inicial. Você pode fazê-los em qualquer ordem e refazer cada um quantas vezes quiser.",
+        "Escolha um nível, Iniciante, Intermediário ou Avançado, na tela inicial. Você pode fazê-los em qualquer ordem e refazer cada um quantas vezes quiser.",
         "Responda a cada questão de múltipla escolha. Use as teclas numéricas de 1 a 4 para selecionar e Enter ou a seta para a direita para avançar.",
         "Depois de responder, leia as três abas de explicação: Por Que Esta Resposta, JS Compilado e Boa Prática. A aba JS Compilado mostra exatamente o que o compilador de TypeScript emite para aquele trecho.",
         "Revise sua pontuação no fim e refaça o nível um dia depois para checar o que realmente ficou."
@@ -4615,7 +4615,7 @@
       "faqs": [
         {
           "question": "Quantas questões de entrevista de TypeScript existem?",
-          "answer": "São 30 questões no total — 10 Iniciante, 10 Intermediário e 10 Avançado. Cada nível é embaralhado a cada tentativa, então você recebe uma ordem nova toda vez."
+          "answer": "São 30 questões no total, 10 Iniciante, 10 Intermediário e 10 Avançado. Cada nível é embaralhado a cada tentativa, então você recebe uma ordem nova toda vez."
         },
         {
           "question": "Quais tópicos o quiz de TypeScript cobre?",
@@ -4636,6 +4636,328 @@
         {
           "question": "Preciso de uma conta para fazer o quiz?",
           "answer": "Não. O quiz é totalmente gratuito, sem conta, login ou download. Tudo roda no seu navegador e nenhuma resposta ou pontuação é enviada para lugar nenhum."
+        }
+      ]
+    },
+    "vue": {
+      "metaTitle": "Simulado de Entrevista Vue.js: do Iniciante ao Avançado | ToolNotch",
+      "metaDescription": "Teste seus conhecimentos em Vue.js com 30 questões de entrevista técnica cobrindo Composition API, reatividade com Proxy, composables, Pinia e SSR.",
+      "title": "Simulado Técnico de Vue.js",
+      "coversHeading": "O que o simulado de Vue.js cobre",
+      "covers": [
+        "Este simulado aborda a fundo o ecossistema moderno do Vue 3: a Composition API, a mecânica interna de reatividade baseada em JavaScript Proxies, a estruturação de composables reutilizáveis e o gerenciamento de estado com Pinia.",
+        "Também são explorados temas críticos de produção como Server-Side Rendering (SSR), prevenção de erros de hydration mismatch e otimizações de performance em renderização de listas e componentes dinâmicos."
+      ],
+      "levelsHeading": "Níveis de dificuldade",
+      "levels": [
+        "Iniciante foca na sintaxe fundamental da Composition API, reatividade com ref e reactive, two-way binding com v-model e o ciclo de vida dos componentes.",
+        "Intermediário explora a criação de composables, watchEffect, gerenciamento global de estado com Pinia e isolamento de estilos.",
+        "Avançado desafia seu conhecimento sobre os internals do sistema de reatividade, diretivas customizadas, Teleport, KeepAlive e resolução de falhas de hidratação em SSR."
+      ],
+      "topicsHeading": "Tópicos do banco de questões",
+      "topics": [
+        "ref vs reactive e desestruturação de estado reativo",
+        "watch vs computed e gerenciamento de efeitos colaterais",
+        "Ciclo de vida no Vue 3 (onMounted, onUnmounted, etc.)",
+        "Arquitetura de stores e ações com Pinia",
+        "Internals de reatividade com Proxies e rastreamento de dependências",
+        "Hydration mismatch em SSR e otimizações de bundle"
+      ],
+      "howHeading": "Como usar o simulado de Vue.js",
+      "how": [
+        "Selecione um nível de dificuldade ou faça o simulado completo com as 30 questões.",
+        "Responda a cada questão observando o snippet de código com atenção aos detalhes de reatividade.",
+        "Leia a explicação técnica após cada resposta para fixar as boas práticas recomendadas pela documentação oficial."
+      ],
+      "faqHeading": "Perguntas frequentes sobre o simulado de Vue.js",
+      "faqs": [
+        {
+          "question": "Quantas questões compõem o simulado de Vue.js?",
+          "answer": "São 30 questões no total, distribuídas em 10 de nível Iniciante, 10 de Intermediário e 10 de Avançado, embaralhadas a cada rodada."
+        },
+        {
+          "question": "O simulado é focado em Vue 2 ou Vue 3?",
+          "answer": "O foco é 100% no Vue 3 moderno, com forte ênfase na Composition API, TypeScript e padrões arquiteturais atuais."
+        },
+        {
+          "question": "Preciso pagar ou criar conta para praticar?",
+          "answer": "Não. Todos os simulados do ToolNotch são 100% gratuitos e rodam diretamente no navegador sem necessidade de cadastro."
+        }
+      ]
+    },
+    "nodejsFundamentals": {
+      "metaTitle": "Simulado de Entrevista Node.js: do Event Loop aos Internals do V8 | ToolNotch",
+      "metaDescription": "30 questões aprofundadas de entrevista em Node.js sobre Event Loop (libuv), streams assíncronas, gerenciamento de memória e motor V8.",
+      "title": "Simulado Técnico de Node.js",
+      "coversHeading": "O que o simulado de Node.js Fundamentals cobre",
+      "covers": [
+        "Este simulado explora a fundo a arquitetura do Node.js: fases do Event Loop na libuv, prioridade de execução com process.nextTick vs setImmediate, streams e backpressure.",
+        "Também detalha a gerência de memória no motor V8, detecção de memory leaks, garbage collection e uso balanceado de Worker Threads vs instâncias clusterizadas."
+      ],
+      "levelsHeading": "Níveis de dificuldade",
+      "levels": [
+        "Iniciante foca no modelo single-threaded assíncrono, buffers, módulos CommonJS vs ESM e tratamento de erros com Promises.",
+        "Intermediário explora as fases da libuv (timers, poll, check, close), pipelines de streams e controle de backpressure em I/O intensivo.",
+        "Avançado desafia seu domínio sobre o heap do V8, estratégias de Garbage Collection (Scavenge, Mark-Sweep), profiling de CPU e concorrência com Worker Threads."
+      ],
+      "topicsHeading": "Tópicos do banco de questões",
+      "topics": [
+        "Event Loop e libuv (Timers, I/O Polling, Check, Close)",
+        "Diferença entre microtasks (process.nextTick) e macrotasks",
+        "Pipelines de streams legíveis, graváveis e transform",
+        "Gerenciamento de memória e estrutura de heap no V8",
+        "Identificação de memory leaks e análise de heap dumps",
+        "Workers Threads vs Clusters em cenários CPU-bound"
+      ],
+      "howHeading": "Como usar o simulado de Node.js",
+      "how": [
+        "Escolha seu nível de experiência ou enfrente as 30 questões de uma vez.",
+        "Analise a ordem de execução do Event Loop antes de marcar sua alternativa.",
+        "Confira as explicações e dicas práticas de arquitetura de alta performance."
+      ],
+      "faqHeading": "Perguntas frequentes sobre o simulado de Node.js",
+      "faqs": [
+        {
+          "question": "Quantas questões compõem o simulado de Node.js?",
+          "answer": "São 30 questões distribuídas em 10 Iniciante, 10 Intermediário e 10 Avançado, geradas em ordem dinâmica."
+        },
+        {
+          "question": "Quais versões do Node.js são abordadas?",
+          "answer": "O conteúdo foca nos padrões das versões LTS modernas (Node.js 18, 20 e 22), incluindo ESM nativo e APIs modernas."
+        },
+        {
+          "question": "O simulado funciona em dispositivos móveis?",
+          "answer": "Sim, a interface é totalmente responsiva e pode ser executada em smartphones, tablets ou desktops."
+        }
+      ]
+    },
+    "databaseDesign": {
+      "metaTitle": "Simulado de Entrevista de Modelagem de Banco de Dados | ToolNotch",
+      "metaDescription": "30 questões de entrevista sobre modelagem relacional, transações ACID, normalização (1NF a 3NF), particionamento e bancos distribuídos.",
+      "title": "Simulado Técnico de Modelagem de Dados",
+      "coversHeading": "O que o simulado de Database Design cobre",
+      "covers": [
+        "Este simulado avalia conhecimentos fundamentais e avançados de modelagem de dados: normalização de 1NF a 3NF, garantias ACID, teorema CAP e integridade relacional.",
+        "Aborda também padrões arquiteturais distribuídos de alta escala, incluindo estratégias de sharding, replicação, isolamento de transações, CQRS, Event Sourcing e Saga Pattern."
+      ],
+      "levelsHeading": "Níveis de dificuldade",
+      "levels": [
+        "Iniciante foca em fundamentos relacionais, chaves primárias e estrangeiras, normalização e semântica de valores NULL.",
+        "Intermediário explora o teorema CAP, níveis de isolamento de transação (Read Committed vs Serializable) e particionamento horizontal (sharding).",
+        "Avançado desafia sua capacidade de projetar sistemas distribuídos com Event Sourcing, CQRS, Saga Pattern, Two-Phase Commit e controle de concorrência otimista vs pessimista."
+      ],
+      "topicsHeading": "Tópicos do banco de questões",
+      "topics": [
+        "Normalização relacional (1NF, 2NF, 3NF e BCNF)",
+        "Garantias ACID e semântica transacional",
+        "Teorema CAP e trade-offs entre consistência e disponibilidade",
+        "Níveis de isolamento SQL e anomalias de concorrência",
+        "Estratégias de particionamento e sharding horizontal",
+        "Padrões CQRS, Event Sourcing e consistência eventual com Sagas"
+      ],
+      "howHeading": "Como usar o simulado de Database Design",
+      "how": [
+        "Selecione um nível de dificuldade ou teste todas as 30 perguntas.",
+        "Pense no impacto arquitetural de cada decisão de modelo antes de responder.",
+        "Revise as explicações para validar trade-offs comuns de escala e consistência."
+      ],
+      "faqHeading": "Perguntas frequentes sobre o simulado de Database Design",
+      "faqs": [
+        {
+          "question": "Quantas questões compõem o simulado de Database Design?",
+          "answer": "São 30 questões divididas em 10 Iniciante, 10 Intermediário e 10 Avançado, com alternativas e ordem aleatórias."
+        },
+        {
+          "question": "O simulado serve para bancos SQL e NoSQL?",
+          "answer": "Sim. Abrange conceitos relacionais clássicos (PostgreSQL, MySQL) e modelos distribuídos aplicáveis a sistemas NoSQL e NewSQL."
+        },
+        {
+          "question": "O simulado é gratuito?",
+          "answer": "Sim, 100% gratuito e executado localmente no seu navegador, sem necessidade de login."
+        }
+      ]
+    },
+    "databaseIndexing": {
+      "metaTitle": "Simulado de Entrevista de Índices de Banco de Dados | ToolNotch",
+      "metaDescription": "30 questões técnicas sobre estruturas de índices B-Tree, índices compostos, covering indexes, análise de planos EXPLAIN e otimização SQL.",
+      "title": "Simulado Técnico de Índices e Otimização",
+      "coversHeading": "O que o simulado de Database Indexing cobre",
+      "covers": [
+        "Este simulado analisa profundamente o funcionamento de índices em bancos de dados relacionais: estrutura interna de B-Trees, árvores balanceadas, custos de escrita vs leitura e seletividade de colunas.",
+        "Examina também o uso de índices compostos (regra do leftmost prefix), covering indexes, índices parciais, índices de expressão e interpretação precisa de planos EXPLAIN ANALYZE."
+      ],
+      "levelsHeading": "Níveis de dificuldade",
+      "levels": [
+        "Iniciante foca no conceito de B-Tree, trade-off de escrita em tabelas indexadas, seletividade e índices primários vs secundários.",
+        "Intermediário explora índices compostos, a regra do prefixo mais à esquerda, covering indexes com cláusula INCLUDE e filtros com índices parciais.",
+        "Avançado desafia seu domínio sobre ordenação sem SORT, bloat de índices, predição de sequential scan pelo otimizador de custos e leitura de EXPLAIN ANALYZE."
+      ],
+      "topicsHeading": "Tópicos do banco de questões",
+      "topics": [
+        "Mecânica interna de nós e ponteiros em B-Tree",
+        "Regra do leftmost prefix em índices multicoluna",
+        "Covering indexes e eliminação de leituras em tabela (Heap Fetches)",
+        "Índices parciais para colunas com alta assimetria de dados",
+        "Índices de expressão baseados em funções (LOWER, DATE, etc.)",
+        "Análise de planos de execução com EXPLAIN e EXPLAIN ANALYZE"
+      ],
+      "howHeading": "Como usar o simulado de Database Indexing",
+      "how": [
+        "Escolha um nível ou resolva as 30 questões consecutivas.",
+        "Preste atenção nos planos de consulta e instruções SQL fornecidas.",
+        "Revise as dicas de indexação para evitar índices inúteis e degradação de performance em produção."
+      ],
+      "faqHeading": "Perguntas frequentes sobre o simulado de Database Indexing",
+      "faqs": [
+        {
+          "question": "Quantas questões compõem o simulado de Indexação de Banco de Dados?",
+          "answer": "São 30 questões divididas em 3 níveis (10 Iniciante, 10 Intermediário e 10 Avançado), com ordem aleatória a cada tentativa."
+        },
+        {
+          "question": "As questões se aplicam a quais bancos?",
+          "answer": "Os conceitos são universais para bancos relacionais como PostgreSQL, MySQL e SQL Server, com sintaxes exemplares em PostgreSQL."
+        },
+        {
+          "question": "Preciso de cadastro para utilizar?",
+          "answer": "Não. O simulado roda 100% no seu navegador sem cadastro ou download."
+        }
+      ]
+    },
+    "messagingSqsKafka": {
+      "metaTitle": "Simulado de Entrevista SQS & Kafka: Filas e Streaming Distribuído | ToolNotch",
+      "metaDescription": "30 questões sobre mensageria distribuída, filas vs logs de eventos, consumer groups, rebalanceamento de partições e semânticas de entrega.",
+      "title": "Simulado Técnico de SQS & Kafka",
+      "coversHeading": "O que o simulado de SQS e Kafka cobre",
+      "covers": [
+        "Este simulado aborda a fundo sistemas de mensageria assíncrona e streaming de eventos: filas pontuais com AWS SQS versus logs distribuídos particionados com Apache Kafka.",
+        "Analisa semânticas de entrega (at-least-once, at-most-once e exactly-once), gerenciamento de partições, grupos de consumidores, rebalanceamento e tolerância a falhas."
+      ],
+      "levelsHeading": "Níveis de dificuldade",
+      "levels": [
+        "Iniciante compara os paradigmas fundamentais de fila de mensagens (SQS) versus log imutável de eventos (Kafka) e retenção de dados.",
+        "Intermediário explora partições no Kafka, offset commit manual, SQS Visibility Timeout, Dead Letter Queues (DLQ) e ordenação por partition key.",
+        "Avançado desafia seu entendimento sobre consumer group rebalances, semântica idempotente e transacional, compactação de tópicos e backpressure distribuído."
+      ],
+      "topicsHeading": "Tópicos do banco de questões",
+      "topics": [
+        "Diferenças arquiteturais entre filas (Queue) e logs de eventos (Stream)",
+        "Semânticas de entrega (At-Least-Once, Exactly-Once)",
+        "Estratégias de particionamento e preservação de ordem",
+        "Consumer groups, commit de offset e rebalanceamento",
+        "Dead Letter Queue (DLQ) e tratamento de poison pills",
+        "Configuração de Visibility Timeout e retenção em disco"
+      ],
+      "howHeading": "Como usar o simulado de SQS e Kafka",
+      "how": [
+        "Selecione um nível de dificuldade ou realize todas as 30 questões.",
+        "Avalie os requisitos de ordenação e throughput antes de escolher a resposta.",
+        "Consulte as explicações para entender como arquitetar mensageria resiliente em produção."
+      ],
+      "faqHeading": "Perguntas frequentes sobre o simulado de SQS e Kafka",
+      "faqs": [
+        {
+          "question": "Quantas questões compõem o simulado de SQS e Kafka?",
+          "answer": "São 30 questões divididas em 3 níveis (10 Iniciante, 10 Intermediário e 10 Avançado), com ordem aleatória a cada tentativa."
+        },
+        {
+          "question": "O simulado foca apenas na AWS ou em Kafka genérico?",
+          "answer": "Ele cobre os serviços gerenciados da AWS (SQS Standard e FIFO) e a arquitetura padrão do Apache Kafka aplicável a qualquer provedor."
+        },
+        {
+          "question": "É gratuito?",
+          "answer": "Sim, 100% gratuito, sem anúncios invasivos ou necessidade de cadastro."
+        }
+      ]
+    },
+    "rabbitmqConcepts": {
+      "metaTitle": "Simulado de Entrevista RabbitMQ: de AMQP a Filas Quorum | ToolNotch",
+      "metaDescription": "30 questões sobre arquitetura RabbitMQ, tipos de exchanges, routing keys, confirmações de publicação, ACKs e alta disponibilidade com Quorum Queues.",
+      "title": "Simulado Técnico de RabbitMQ",
+      "coversHeading": "O que o simulado de RabbitMQ cobre",
+      "covers": [
+        "Este simulado aborda a fundo o protocolo AMQP 0-9-1 e a arquitetura do RabbitMQ: funcionamento de Exchanges, Bindings e Queues, além do roteamento de mensagens.",
+        "Explora os tipos de exchange (Direct, Fanout, Topic, Headers), filas Quorum com algoritmo Raft, confirmações de mensagens (Publisher Confirms e Consumer Acks) e Dead Letter Exchanges (DLX)."
+      ],
+      "levelsHeading": "Níveis de dificuldade",
+      "levels": [
+        "Iniciante foca nos componentes básicos do AMQP: produtores, exchanges, bindings, filas e consumidores.",
+        "Intermediário explora os padrões de roteamento por wildcard em Topic Exchanges, Dead Letter Exchanges, TTL de mensagens e prefetch count.",
+        "Avançado desafia seu conhecimento sobre filas Quorum com consenso Raft, clusters tolerantes a partições de rede, publisher confirms e alta disponibilidade."
+      ],
+      "topicsHeading": "Tópicos do banco de questões",
+      "topics": [
+        "Tipos de exchanges: Direct, Fanout, Topic e Headers",
+        "Roteamento flexível com wildcards (* e #) em Topic Exchanges",
+        "Confirmação de recebimento: manual acks vs auto-ack",
+        "Controle de concorrência com basic.qos e prefetch count",
+        "Dead Letter Exchanges (DLX) e políticas de expiração (TTL)",
+        "Filas Quorum com Raft vs Classic Mirrored Queues"
+      ],
+      "howHeading": "Como usar o simulado de RabbitMQ",
+      "how": [
+        "Selecione um nível de dificuldade ou encare o simulado de 30 questões.",
+        "Preste atenção nos padrões de routing key e binding key apresentados nas questões.",
+        "Leia as explicações para dominar topologias eficientes de mensageria corporativa."
+      ],
+      "faqHeading": "Perguntas frequentes sobre o simulado de RabbitMQ",
+      "faqs": [
+        {
+          "question": "Quantas questões compõem o simulado de RabbitMQ?",
+          "answer": "São 30 questões divididas em 3 níveis (10 Iniciante, 10 Intermediário e 10 Avançado), com ordem aleatória a cada tentativa."
+        },
+        {
+          "question": "O simulado cobre as versões mais recentes do RabbitMQ?",
+          "answer": "Sim, enfatiza filas Quorum, consenso Raft e as práticas recomendadas pelo time do RabbitMQ para produção."
+        },
+        {
+          "question": "Preciso de cadastro?",
+          "answer": "Não, todo o simulado é livre e gratuito sem exigir autenticação."
+        }
+      ]
+    },
+    "systemArchitecture": {
+      "metaTitle": "Simulado de Entrevista de Arquitetura de Sistemas | ToolNotch",
+      "metaDescription": "30 questões técnicas sobre design de sistemas distribuídos, padrões de resiliência, Kubernetes, Saga, Circuit Breaker e observabilidade.",
+      "title": "Simulado Técnico de Arquitetura de Sistemas",
+      "coversHeading": "O que o simulado de System Architecture cobre",
+      "covers": [
+        "Este simulado avalia conhecimentos fundamentais de arquitetura de sistemas distribuídos e engenharia de software de alta escala: microsserviços, desacoplamento e protocolos de rede.",
+        "Abrange padrões de resiliência (Circuit Breaker, Rate Limiting, Retry com Backoff e Jitter), consistência em transações distribuídas (Saga Pattern), observabilidade (OpenTelemetry) e caching multicamadas."
+      ],
+      "levelsHeading": "Níveis de dificuldade",
+      "levels": [
+        "Iniciante foca em fundamentos de arquitetura de serviços, trade-offs entre REST e gRPC, balanceadores de carga e estratégias de cache (Cache-Aside, Write-Through).",
+        "Intermediário explora padrões de resiliência, Circuit Breakers, controle de taxa com algoritmos Token Bucket e Leaky Bucket, idempotência e backpressure.",
+        "Avançado desafia seu raciocínio em governança de microsserviços em larga escala, Service Mesh, Chaos Engineering, rastreamento distribuído e tolerância a falhas complexas."
+      ],
+      "topicsHeading": "Tópicos do banco de questões",
+      "topics": [
+        "Trade-offs entre monólito modular e microsserviços",
+        "Protocolos de comunicação: REST vs gRPC vs GraphQL",
+        "Padrão Circuit Breaker e estados Closed, Open e Half-Open",
+        "Algoritmos de Rate Limiting (Token Bucket, Leaky Bucket, Sliding Window)",
+        "Garantia de idempotência com chaves idempotentes em APIs",
+        "Observabilidade com métricas, logs estruturados e distributed tracing"
+      ],
+      "howHeading": "Como usar o simulado de System Architecture",
+      "how": [
+        "Escolha um nível ou faça o simulado com as 30 questões completas.",
+        "Avalie trade-offs de latência, disponibilidade e custo antes de escolher a resposta.",
+        "Estude as justificativas conceituais para defender decisões arquiteturais com segurança em entrevistas sênior."
+      ],
+      "faqHeading": "Perguntas frequentes sobre o simulado de System Architecture",
+      "faqs": [
+        {
+          "question": "Quantas questões compõem o simulado de System Architecture?",
+          "answer": "São 30 questões divididas em 3 níveis (10 Iniciante, 10 Intermediário e 10 Avançado), com ordem aleatória a cada tentativa."
+        },
+        {
+          "question": "O simulado é indicado para posições sênior ou de liderança?",
+          "answer": "Sim, aborda desde conceitos fundamentais até cenários práticos exigidos em entrevistas de Staff Engineer e arquitetura de sistemas."
+        },
+        {
+          "question": "É gratuito?",
+          "answer": "Sim, 100% gratuito e executado diretamente no navegador."
         }
       ]
     }
@@ -4827,11 +5149,35 @@
       "table": {
         "heading": "Todos os Campeões da Copa do Mundo da FIFA (1930–2022)",
         "note": "pro. = prorrogação; pên. = decidida nos pênaltis.",
-        "cols": ["Ano", "Sede", "Campeão", "Vice", "Placar da final"],
+        "cols": [
+          "Ano",
+          "Sede",
+          "Campeão",
+          "Vice",
+          "Placar da final"
+        ],
         "rows": [
-          ["1930", "Uruguai", "Uruguai", "Argentina", "4–2"],
-          ["1934", "Itália", "Itália", "Tchecoslováquia", "2–1 (pro.)"],
-          ["1938", "França", "Itália", "Hungria", "4–2"],
+          [
+            "1930",
+            "Uruguai",
+            "Uruguai",
+            "Argentina",
+            "4–2"
+          ],
+          [
+            "1934",
+            "Itália",
+            "Itália",
+            "Tchecoslováquia",
+            "2–1 (pro.)"
+          ],
+          [
+            "1938",
+            "França",
+            "Itália",
+            "Hungria",
+            "4–2"
+          ],
           [
             "1942",
             "Não realizada",
@@ -4846,10 +5192,34 @@
             "-",
             "Segunda Guerra Mundial"
           ],
-          ["1950", "Brasil", "Uruguai", "Brasil", "2–1 (jogo decisivo)"],
-          ["1954", "Suíça", "Alemanha Ocidental", "Hungria", "3–2"],
-          ["1958", "Suécia", "Brasil", "Suécia", "5–2"],
-          ["1962", "Chile", "Brasil", "Tchecoslováquia", "3–1"],
+          [
+            "1950",
+            "Brasil",
+            "Uruguai",
+            "Brasil",
+            "2–1 (jogo decisivo)"
+          ],
+          [
+            "1954",
+            "Suíça",
+            "Alemanha Ocidental",
+            "Hungria",
+            "3–2"
+          ],
+          [
+            "1958",
+            "Suécia",
+            "Brasil",
+            "Suécia",
+            "5–2"
+          ],
+          [
+            "1962",
+            "Chile",
+            "Brasil",
+            "Tchecoslováquia",
+            "3–1"
+          ],
           [
             "1966",
             "Inglaterra",
@@ -4857,7 +5227,13 @@
             "Alemanha Ocidental",
             "4–2 (pro.)"
           ],
-          ["1970", "México", "Brasil", "Itália", "4–1"],
+          [
+            "1970",
+            "México",
+            "Brasil",
+            "Itália",
+            "4–1"
+          ],
           [
             "1974",
             "Alemanha Ocidental",
@@ -4865,18 +5241,90 @@
             "Países Baixos",
             "2–1"
           ],
-          ["1978", "Argentina", "Argentina", "Países Baixos", "3–1 (pro.)"],
-          ["1982", "Espanha", "Itália", "Alemanha Ocidental", "3–1"],
-          ["1986", "México", "Argentina", "Alemanha Ocidental", "3–2"],
-          ["1990", "Itália", "Alemanha Ocidental", "Argentina", "1–0"],
-          ["1994", "Estados Unidos", "Brasil", "Itália", "0–0 (3–2 pên.)"],
-          ["1998", "França", "França", "Brasil", "3–0"],
-          ["2002", "Coreia do Sul e Japão", "Brasil", "Alemanha", "2–0"],
-          ["2006", "Alemanha", "Itália", "França", "1–1 (5–3 pên.)"],
-          ["2010", "África do Sul", "Espanha", "Países Baixos", "1–0 (pro.)"],
-          ["2014", "Brasil", "Alemanha", "Argentina", "1–0 (pro.)"],
-          ["2018", "Rússia", "França", "Croácia", "4–2"],
-          ["2022", "Catar", "Argentina", "França", "3–3 (4–2 pên.)"]
+          [
+            "1978",
+            "Argentina",
+            "Argentina",
+            "Países Baixos",
+            "3–1 (pro.)"
+          ],
+          [
+            "1982",
+            "Espanha",
+            "Itália",
+            "Alemanha Ocidental",
+            "3–1"
+          ],
+          [
+            "1986",
+            "México",
+            "Argentina",
+            "Alemanha Ocidental",
+            "3–2"
+          ],
+          [
+            "1990",
+            "Itália",
+            "Alemanha Ocidental",
+            "Argentina",
+            "1–0"
+          ],
+          [
+            "1994",
+            "Estados Unidos",
+            "Brasil",
+            "Itália",
+            "0–0 (3–2 pên.)"
+          ],
+          [
+            "1998",
+            "França",
+            "França",
+            "Brasil",
+            "3–0"
+          ],
+          [
+            "2002",
+            "Coreia do Sul e Japão",
+            "Brasil",
+            "Alemanha",
+            "2–0"
+          ],
+          [
+            "2006",
+            "Alemanha",
+            "Itália",
+            "França",
+            "1–1 (5–3 pên.)"
+          ],
+          [
+            "2010",
+            "África do Sul",
+            "Espanha",
+            "Países Baixos",
+            "1–0 (pro.)"
+          ],
+          [
+            "2014",
+            "Brasil",
+            "Alemanha",
+            "Argentina",
+            "1–0 (pro.)"
+          ],
+          [
+            "2018",
+            "Rússia",
+            "França",
+            "Croácia",
+            "4–2"
+          ],
+          [
+            "2022",
+            "Catar",
+            "Argentina",
+            "França",
+            "3–3 (4–2 pên.)"
+          ]
         ]
       },
       "faqHeading": "Campeões da Copa do Mundo: perguntas frequentes",
@@ -4965,14 +5413,49 @@
       "table": {
         "heading": "Mais títulos de Copa dos Campeões da Europa e Liga dos Campeões",
         "note": "Títulos da Copa dos Campeões da Europa / Liga dos Campeões da UEFA, competição masculina. Números até a final de 2024.",
-        "cols": ["Clube", "País", "Títulos", "Mais recente"],
+        "cols": [
+          "Clube",
+          "País",
+          "Títulos",
+          "Mais recente"
+        ],
         "rows": [
-          ["Real Madrid", "Espanha", "15", "2024"],
-          ["Milan", "Itália", "7", "2007"],
-          ["Bayern de Munique", "Alemanha", "6", "2020"],
-          ["Liverpool", "Inglaterra", "6", "2019"],
-          ["Barcelona", "Espanha", "5", "2015"],
-          ["Ajax", "Países Baixos", "4", "1995"]
+          [
+            "Real Madrid",
+            "Espanha",
+            "15",
+            "2024"
+          ],
+          [
+            "Milan",
+            "Itália",
+            "7",
+            "2007"
+          ],
+          [
+            "Bayern de Munique",
+            "Alemanha",
+            "6",
+            "2020"
+          ],
+          [
+            "Liverpool",
+            "Inglaterra",
+            "6",
+            "2019"
+          ],
+          [
+            "Barcelona",
+            "Espanha",
+            "5",
+            "2015"
+          ],
+          [
+            "Ajax",
+            "Países Baixos",
+            "4",
+            "1995"
+          ]
         ]
       },
       "faqHeading": "Qual time de futebol você é? Perguntas frequentes",
@@ -5035,14 +5518,49 @@
       "table": {
         "heading": "Clubes com mais títulos de Copa dos Campeões da Europa / Liga dos Campeões",
         "note": "Competição masculina, títulos até a final de 2024.",
-        "cols": ["Clube", "País", "Títulos", "Anos"],
+        "cols": [
+          "Clube",
+          "País",
+          "Títulos",
+          "Anos"
+        ],
         "rows": [
-          ["Real Madrid", "Espanha", "15", "1956–2024"],
-          ["Milan", "Itália", "7", "1963–2007"],
-          ["Bayern de Munique", "Alemanha", "6", "1974–2020"],
-          ["Liverpool", "Inglaterra", "6", "1977–2019"],
-          ["Barcelona", "Espanha", "5", "1992–2015"],
-          ["Ajax", "Países Baixos", "4", "1971–1995"]
+          [
+            "Real Madrid",
+            "Espanha",
+            "15",
+            "1956–2024"
+          ],
+          [
+            "Milan",
+            "Itália",
+            "7",
+            "1963–2007"
+          ],
+          [
+            "Bayern de Munique",
+            "Alemanha",
+            "6",
+            "1974–2020"
+          ],
+          [
+            "Liverpool",
+            "Inglaterra",
+            "6",
+            "1977–2019"
+          ],
+          [
+            "Barcelona",
+            "Espanha",
+            "5",
+            "1992–2015"
+          ],
+          [
+            "Ajax",
+            "Países Baixos",
+            "4",
+            "1971–1995"
+          ]
         ]
       },
       "faqHeading": "Quiz da Liga dos Campeões: perguntas frequentes",
@@ -5105,14 +5623,49 @@
       "table": {
         "heading": "Pilotos de Fórmula 1 com mais títulos mundiais",
         "note": "Títulos de pilotos conquistados, até o fim da temporada de 2024.",
-        "cols": ["Piloto", "País", "Títulos", "Temporadas"],
+        "cols": [
+          "Piloto",
+          "País",
+          "Títulos",
+          "Temporadas"
+        ],
         "rows": [
-          ["Lewis Hamilton", "Reino Unido", "7", "2008–2020"],
-          ["Michael Schumacher", "Alemanha", "7", "1994–2004"],
-          ["Juan Manuel Fangio", "Argentina", "5", "1951–1957"],
-          ["Alain Prost", "França", "4", "1985–1993"],
-          ["Sebastian Vettel", "Alemanha", "4", "2010–2013"],
-          ["Max Verstappen", "Países Baixos", "4", "2021–2024"]
+          [
+            "Lewis Hamilton",
+            "Reino Unido",
+            "7",
+            "2008–2020"
+          ],
+          [
+            "Michael Schumacher",
+            "Alemanha",
+            "7",
+            "1994–2004"
+          ],
+          [
+            "Juan Manuel Fangio",
+            "Argentina",
+            "5",
+            "1951–1957"
+          ],
+          [
+            "Alain Prost",
+            "França",
+            "4",
+            "1985–1993"
+          ],
+          [
+            "Sebastian Vettel",
+            "Alemanha",
+            "4",
+            "2010–2013"
+          ],
+          [
+            "Max Verstappen",
+            "Países Baixos",
+            "4",
+            "2021–2024"
+          ]
         ]
       },
       "faqHeading": "Quiz de Fórmula 1: perguntas frequentes",
@@ -5175,7 +5728,12 @@
       "table": {
         "heading": "Os oito pilotos com quem você pode ser combinado",
         "note": "Títulos de Campeonato Mundial de Pilotos, até o fim da temporada de 2024.",
-        "cols": ["Piloto", "País", "Títulos na F1", "Conhecido por"],
+        "cols": [
+          "Piloto",
+          "País",
+          "Títulos na F1",
+          "Conhecido por"
+        ],
         "rows": [
           [
             "Max Verstappen",
@@ -5183,7 +5741,12 @@
             "4",
             "Ritmo agressivo e obstinado"
           ],
-          ["Lewis Hamilton", "Reino Unido", "7", "Constância e longevidade"],
+          [
+            "Lewis Hamilton",
+            "Reino Unido",
+            "7",
+            "Constância e longevidade"
+          ],
           [
             "Ayrton Senna",
             "Brasil",
@@ -5196,9 +5759,24 @@
             "7",
             "Preparação implacável e volume de trabalho"
           ],
-          ["Charles Leclerc", "Mônaco", "0", "Velocidade natural e emoção"],
-          ["Fernando Alonso", "Espanha", "2", "Pilotagem e recusa em desistir"],
-          ["Oscar Piastri", "Austrália", "0", "Cabeça fria, aprende rápido"],
+          [
+            "Charles Leclerc",
+            "Mônaco",
+            "0",
+            "Velocidade natural e emoção"
+          ],
+          [
+            "Fernando Alonso",
+            "Espanha",
+            "2",
+            "Pilotagem e recusa em desistir"
+          ],
+          [
+            "Oscar Piastri",
+            "Austrália",
+            "0",
+            "Cabeça fria, aprende rápido"
+          ],
           [
             "Lando Norris",
             "Reino Unido",

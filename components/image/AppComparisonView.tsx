@@ -1,61 +1,64 @@
-'use client'
+"use client";
 
-import { useEffect, useState, useRef, useCallback } from 'react'
-import { useTranslations } from 'next-intl'
-import type { ConversionResult } from '@/lib/imageTypes'
-import { formatBytes } from '@/lib/imageConversion'
+import { useEffect, useState, useRef, useCallback } from "react";
+import { useTranslations } from "next-intl";
+import type { ConversionResult } from "@/lib/imageTypes";
+import { formatBytes } from "@/lib/imageConversion";
 
 interface Props {
-  original: File
-  result: ConversionResult
+  original: File;
+  result: ConversionResult;
 }
 
 export default function AppComparisonView({ original, result }: Props) {
-  const t = useTranslations('image.shared')
-  const [originalUrl, setOriginalUrl] = useState<string | null>(null)
-  const [compressedUrl, setCompressedUrl] = useState<string | null>(null)
-  const [sliderPct, setSliderPct] = useState(50)
-  const [dragging, setDragging] = useState(false)
-  const containerRef = useRef<HTMLDivElement>(null)
+  const t = useTranslations("image.shared");
+  const [originalUrl, setOriginalUrl] = useState<string | null>(null);
+  const [compressedUrl, setCompressedUrl] = useState<string | null>(null);
+  const [sliderPct, setSliderPct] = useState(50);
+  const [dragging, setDragging] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const url = URL.createObjectURL(original)
+    const url = URL.createObjectURL(original);
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    setOriginalUrl(url)
-    return () => URL.revokeObjectURL(url)
-  }, [original])
+    setOriginalUrl(url);
+    return () => URL.revokeObjectURL(url);
+  }, [original]);
 
   useEffect(() => {
-    const url = URL.createObjectURL(result.blob)
+    const url = URL.createObjectURL(result.blob);
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    setCompressedUrl(url)
-    return () => URL.revokeObjectURL(url)
-  }, [result.blob])
+    setCompressedUrl(url);
+    return () => URL.revokeObjectURL(url);
+  }, [result.blob]);
 
   const updateSlider = useCallback((clientX: number) => {
-    if (!containerRef.current) return
-    const rect = containerRef.current.getBoundingClientRect()
-    const pct = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100))
-    setSliderPct(pct)
-  }, [])
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const pct = Math.max(
+      0,
+      Math.min(100, ((clientX - rect.left) / rect.width) * 100),
+    );
+    setSliderPct(pct);
+  }, []);
 
   const onPointerDown = (e: React.PointerEvent) => {
-    setDragging(true)
-    ;(e.target as HTMLElement).setPointerCapture(e.pointerId)
-    updateSlider(e.clientX)
-  }
+    setDragging(true);
+    (e.target as HTMLElement).setPointerCapture(e.pointerId);
+    updateSlider(e.clientX);
+  };
 
   const onPointerMove = (e: React.PointerEvent) => {
-    if (!dragging) return
-    updateSlider(e.clientX)
-  }
+    if (!dragging) return;
+    updateSlider(e.clientX);
+  };
 
-  const onPointerUp = () => setDragging(false)
+  const onPointerUp = () => setDragging(false);
 
   const onKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'ArrowLeft') setSliderPct(p => Math.max(0, p - 5))
-    if (e.key === 'ArrowRight') setSliderPct(p => Math.min(100, p + 5))
-  }
+    if (e.key === "ArrowLeft") setSliderPct((p) => Math.max(0, p - 5));
+    if (e.key === "ArrowRight") setSliderPct((p) => Math.min(100, p + 5));
+  };
 
   return (
     <div className="space-y-3">
@@ -73,9 +76,13 @@ export default function AppComparisonView({ original, result }: Props) {
           {/* Compressed (bottom layer — full width) */}
           <img
             src={compressedUrl}
-            alt={t('compare.compressed')}
+            alt={t("compare.compressed")}
             className="w-full object-contain block"
-            style={{ maxHeight: 300, userSelect: 'none', pointerEvents: 'none' }}
+            style={{
+              maxHeight: 300,
+              userSelect: "none",
+              pointerEvents: "none",
+            }}
             draggable={false}
           />
 
@@ -86,9 +93,13 @@ export default function AppComparisonView({ original, result }: Props) {
           >
             <img
               src={originalUrl}
-              alt={t('compare.original')}
+              alt={t("compare.original")}
               className="w-full object-contain block"
-              style={{ maxHeight: 300, userSelect: 'none', pointerEvents: 'none' }}
+              style={{
+                maxHeight: 300,
+                userSelect: "none",
+                pointerEvents: "none",
+              }}
               draggable={false}
             />
           </div>
@@ -105,23 +116,29 @@ export default function AppComparisonView({ original, result }: Props) {
             aria-valuenow={Math.round(sliderPct)}
             aria-valuemin={0}
             aria-valuemax={100}
-            aria-label={t('compare.sliderAriaLabel')}
+            aria-label={t("compare.sliderAriaLabel")}
             tabIndex={0}
             onKeyDown={onKeyDown}
             className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-tertiary rounded-full shadow-lg border-2 border-gray-300 flex items-center justify-center cursor-col-resize focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600"
             style={{ left: `${sliderPct}%` }}
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M5 3L2 7L5 11M9 3L12 7L9 11" stroke="#6b7280" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path
+                d="M5 3L2 7L5 11M9 3L12 7L9 11"
+                stroke="#6b7280"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </div>
 
           {/* Labels */}
           <div className="absolute top-2 left-2 px-2 py-0.5 bg-black/50 text-white text-xs rounded font-medium pointer-events-none">
-            {t('compare.original')}
+            {t("compare.original")}
           </div>
           <div className="absolute top-2 right-2 px-2 py-0.5 bg-black/50 text-white text-xs rounded font-medium pointer-events-none">
-            {t('compare.compressed')}
+            {t("compare.compressed")}
           </div>
         </div>
       )}
@@ -129,12 +146,20 @@ export default function AppComparisonView({ original, result }: Props) {
       {/* Stats row */}
       <div className="grid grid-cols-2 gap-3 text-sm">
         <div className="bg-zinc-50 rounded-lg px-3 py-2 dark:bg-zinc-700">
-          <span className="text-zinc-400 text-xs uppercase tracking-wide block">{t('compare.original')}</span>
-          <span className="font-semibold text-zinc-700 dark:text-zinc-200">{formatBytes(result.originalSize)}</span>
+          <span className="text-zinc-400 text-xs uppercase  block">
+            {t("compare.original")}
+          </span>
+          <span className="font-semibold text-zinc-700 dark:text-zinc-200">
+            {formatBytes(result.originalSize)}
+          </span>
         </div>
         <div className="bg-zinc-50 rounded-lg px-3 py-2 dark:bg-zinc-700">
-          <span className="text-zinc-400 text-xs uppercase tracking-wide block">{t('compare.compressed')}</span>
-          <span className="font-semibold text-zinc-700 dark:text-zinc-200">{formatBytes(result.compressedSize)}</span>
+          <span className="text-zinc-400 text-xs uppercase  block">
+            {t("compare.compressed")}
+          </span>
+          <span className="font-semibold text-zinc-700 dark:text-zinc-200">
+            {formatBytes(result.compressedSize)}
+          </span>
         </div>
       </div>
 
@@ -142,16 +167,21 @@ export default function AppComparisonView({ original, result }: Props) {
       <div
         className={`text-center py-3 rounded-lg font-semibold text-sm ${
           result.savings > 0
-            ? 'bg-green-50 text-green-700 border border-green-100 dark:bg-green-900/30 dark:text-green-400 dark:border-green-800'
-            : 'bg-yellow-50 text-yellow-700 border border-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400 dark:border-yellow-800'
+            ? "bg-green-50 text-green-700 border border-green-100 dark:bg-green-900/30 dark:text-green-400 dark:border-green-800"
+            : "bg-yellow-50 text-yellow-700 border border-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400 dark:border-yellow-800"
         }`}
       >
         {result.savings > 0
-          ? t('compare.savings', { pct: result.savings, bytes: formatBytes(result.originalSize - result.compressedSize) })
-          : t('compare.noSavings')}
+          ? t("compare.savings", {
+              pct: result.savings,
+              bytes: formatBytes(result.originalSize - result.compressedSize),
+            })
+          : t("compare.noSavings")}
       </div>
 
-      <p className="text-xs text-zinc-400 dark:text-zinc-500 text-center">{t('compare.dragHint')}</p>
+      <p className="text-xs text-zinc-400 dark:text-zinc-500 text-center">
+        {t("compare.dragHint")}
+      </p>
     </div>
-  )
+  );
 }

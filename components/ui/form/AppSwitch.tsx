@@ -65,7 +65,7 @@ export function AppSwitch({
 
   const labelElement = label ? (
     <span
-      className={`font-mono text-sm font-semibold uppercase tracking-wider text-foreground ${labelClassName}`}
+      className={`font-mono text-sm font-semibold uppercase  text-foreground ${labelClassName}`}
     >
       {label}
     </span>
@@ -145,13 +145,11 @@ export function AppSwitch({
       </label>
 
       {error && (
-        <span className="font-mono text-xs text-red-500 mt-1.5 tracking-wide">
-          {error}
-        </span>
+        <span className="font-mono text-xs text-red-500 mt-1.5 ">{error}</span>
       )}
 
       {helperText && !error && (
-        <span className="font-mono text-xs text-label/70 mt-1.5 tracking-wide">
+        <span className="font-mono text-xs text-label/70 mt-1.5 ">
           {helperText}
         </span>
       )}

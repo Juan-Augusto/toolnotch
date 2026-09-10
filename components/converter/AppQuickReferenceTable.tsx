@@ -29,14 +29,20 @@ export default function AppQuickReferenceTable({
     }));
   }, [fromUnit, toUnit, category]);
 
-  const fromLabel = (typeof tu.has === 'function' && tu.has(fromUnit)) ? tu(fromUnit) : (UNIT_LABELS[fromUnit] ?? fromUnit);
-  const toLabel = (typeof tu.has === 'function' && tu.has(toUnit)) ? tu(toUnit) : (UNIT_LABELS[toUnit] ?? toUnit);
+  const fromLabel =
+    typeof tu.has === "function" && tu.has(fromUnit)
+      ? tu(fromUnit)
+      : (UNIT_LABELS[fromUnit] ?? fromUnit);
+  const toLabel =
+    typeof tu.has === "function" && tu.has(toUnit)
+      ? tu(toUnit)
+      : (UNIT_LABELS[toUnit] ?? toUnit);
 
   return (
     <div className="mt-8 bg-tertiary border border-border rounded-2xl overflow-hidden">
       <div className="bg-gray-50/80 dark:bg-background px-5 py-3 border-b border-border flex items-center gap-2">
         <Zap className="w-4 h-4 text-primary" />
-        <h3 className="text-xs font-bold text-label uppercase tracking-wider!">
+        <h3 className="text-xs font-bold text-label uppercase !">
           {t("quickReference")}
         </h3>
       </div>

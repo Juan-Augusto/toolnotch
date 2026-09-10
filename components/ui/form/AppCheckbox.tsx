@@ -1,6 +1,6 @@
 "use client";
 
-import  {
+import {
   useState,
   useId,
   useRef,
@@ -11,8 +11,10 @@ import  {
 } from "react";
 import { Check, Minus } from "lucide-react";
 
-export interface AppCheckboxProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, "type" | "onChange"> {
+export interface AppCheckboxProps extends Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  "type" | "onChange"
+> {
   checked?: boolean;
   defaultChecked?: boolean;
   onChange?: (checked: boolean, event?: ChangeEvent<HTMLInputElement>) => void;
@@ -48,7 +50,7 @@ export function AppCheckbox({
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [internalChecked, setInternalChecked] = useState<boolean>(
-    checked !== undefined ? checked : defaultChecked
+    checked !== undefined ? checked : defaultChecked,
   );
 
   const isControlled = checked !== undefined;
@@ -124,7 +126,7 @@ export function AppCheckbox({
 
         {label && (
           <span
-            className={`font-mono text-sm font-semibold uppercase tracking-wider text-foreground ${labelClassName}`}
+            className={`font-mono text-sm font-semibold uppercase  text-foreground ${labelClassName}`}
           >
             {label}
           </span>
@@ -132,13 +134,11 @@ export function AppCheckbox({
       </label>
 
       {error && (
-        <span className="font-mono text-xs text-red-500 mt-1.5 tracking-wide">
-          {error}
-        </span>
+        <span className="font-mono text-xs text-red-500 mt-1.5 ">{error}</span>
       )}
 
       {helperText && !error && (
-        <span className="font-mono text-xs text-label/70 mt-1.5 tracking-wide">
+        <span className="font-mono text-xs text-label/70 mt-1.5 ">
           {helperText}
         </span>
       )}

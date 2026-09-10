@@ -10,10 +10,10 @@ export const SYSTEM_ARCHITECTURE_QUESTIONS: InterviewQuestion[] = [
       'What is the primary difference between a monolithic and a microservices architecture?',
     code: null,
     options: [
-      'A monolith uses containers; microservices do not',
-      'A monolith is deployed as a single unit; microservices are deployed as independent services',
-      'Microservices must share a single database; a monolith cannot',
-      'A monolith can only run on one server; microservices run on many',
+      "A monolith runs inside Docker; microservices use bare-metal machines",
+      "A monolith deploys as a single unit; microservices deploy independently",
+      "Microservices must share a single database; a monolith isolates tables",
+      "A monolith scales strictly vertically; microservices scale on one server"
     ],
     correctIndex: 1,
     explanation:
@@ -99,10 +99,10 @@ CMD ["node", "dist/index.js"]
 docker build -t my-api:1.0.0 .
 docker run --rm -p 3000:3000 --env-file .env my-api:1.0.0`,
     options: [
-      'It provisions virtual machines on cloud providers',
-      'It packages an application and its dependencies into a portable container that runs consistently anywhere',
-      'It replaces the operating system kernel for better performance',
-      'It orchestrates clusters of servers across data centers',
+      "It provisions bare-metal virtual servers across global public clouds",
+      "It bundles code and dependencies into portable, isolated containers",
+      "It replaces the underlying host operating system kernel for agility",
+      "It orchestrates multi-datacenter server clusters and networking mesh"
     ],
     correctIndex: 1,
     explanation:
@@ -148,10 +148,10 @@ jobs:
       - name: Deploy to staging
         run: kubectl set image deployment/api api=my-api:\${{ github.sha }}`,
     options: [
-      'Container Integration / Container Delivery',
-      'Continuous Inspection / Continuous Deployment',
-      'Continuous Integration / Continuous Delivery (or Deployment)',
-      'Code Integration / Code Distribution',
+      "Container Integration / Container Delivery",
+      "Continuous Inspection / Continuous Deployment",
+      "Continuous Integration / Continuous Delivery",
+      "Centralized Infrastructure / Cloud Deployment"
     ],
     correctIndex: 2,
     explanation:
@@ -189,10 +189,10 @@ docker run -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \\
            -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \\
            my-api:1.0.0`,
     options: [
-      'They make the application run faster',
-      'They keep sensitive values out of source code and allow configuration per environment',
-      'They are automatically encrypted at the OS level',
-      'They are required by the Docker runtime',
+      "They accelerate compilation speed and optimize binary memory layout",
+      "They keep secrets out of source code and allow per-environment setups",
+      "They enforce automatic hardware encryption at operating system layers",
+      "They are mandatory constraints imposed directly by the Docker daemon"
     ],
     correctIndex: 1,
     explanation:
@@ -377,10 +377,10 @@ app.get('/health', async (req, res) => {
   })
 })`,
     options: [
-      'To return the current CPU and memory usage to the end user',
-      'To allow load balancers and orchestrators to verify that the service is running correctly',
-      'To trigger a manual restart of the service',
-      'To expose internal API documentation',
+      "To report real-time CPU percentages and heap allocation to end users",
+      "To enable load balancers and orchestrators to check service viability",
+      "To trigger automated diagnostic core dumps and reboot hung instances",
+      "To expose OpenAPI specifications and internal service documentation"
     ],
     correctIndex: 1,
     explanation:
@@ -425,10 +425,10 @@ kubectl rollout undo deployment/api --to-revision=1
 # Monitor rollback progress
 kubectl rollout status deployment/api`,
     options: [
-      'It deletes all data written since the last release',
-      'It reverts the running application to a previously known-good version',
-      'It scales the number of instances back to zero',
-      'It resets environment variables to their default values',
+      "It purges all records written to the database since the last deploy",
+      "It reverts a running deployment back to a known-stable earlier version",
+      "It drops container instance counts to zero to interrupt user traffic",
+      "It restores environment variables and secrets back to default values"
     ],
     correctIndex: 1,
     explanation:
@@ -565,10 +565,10 @@ spec:
     - name: log-sidecar        # second container shares same network
       image: fluentd:v1.16`,
     options: [
-      'It is the control plane component that schedules containers onto nodes',
-      'It is the smallest deployable unit, wrapping one or more co-located containers that share network and storage',
-      'It is the Kubernetes equivalent of a virtual machine',
-      'It is the configuration manifest for a Kubernetes cluster',
+      "The master control plane binary scheduling workload pods across nodes",
+      "The smallest deployable unit wrapping co-located containers with shared net",
+      "A virtual machine abstraction layer running inside the cluster hypervisor",
+      "The declarative YAML manifest declaring global cluster security policies"
     ],
     correctIndex: 1,
     explanation:
@@ -616,10 +616,10 @@ const { Address, Port } = services[0].Service
 const res = await fetch(\`http://\${Address}:\${Port}/pay\`)
 # → client queries Consul for a live, healthy instance`,
     options: [
-      'DNS-based discovery works only inside a single host; registry-based works across hosts',
-      'DNS-based discovery resolves service names to IPs via standard DNS; registry-based services query a dedicated registry (e.g., Consul) for live instance lists',
-      'Registry-based discovery is slower because it requires a round trip to the registry on every request',
-      'There is no practical difference — both achieve exactly the same result',
+      "DNS discovery is intra-host only; registry discovery operates cross-host",
+      "DNS discovery resolves names to IPs; registries query live instance maps",
+      "Registry discovery causes latency bottlenecks on every HTTP network request",
+      "Both mechanisms achieve identical results and share the same internal API"
     ],
     correctIndex: 1,
     explanation:
@@ -666,10 +666,10 @@ services:
           add:
             headers: ["X-Request-ID:$(uuid)"]`,
     options: [
-      'It replaces the need for a message broker between services',
-      'It provides a single entry point for clients, handling cross-cutting concerns like auth, rate limiting, and routing',
-      'It synchronises databases across services automatically',
-      'It eliminates the need for service health checks',
+      "Replaces message brokers between microservices through direct peer-to-peer low-latency UDP streaming sockets",
+      "Provides a single client entry point handling cross-cutting concerns like routing, authentication, and rate limiting",
+      "Coordinates distributed ACID transactions across isolated microservice relational databases using two-phase commit",
+      "Eliminates the requirement for cluster operators to configure pod readiness probes and automated health checks"
     ],
     correctIndex: 1,
     explanation:
@@ -710,10 +710,10 @@ app.use(session({
 }))
 # → any pod can handle any request`,
     options: [
-      'Stateless services run faster because they never write to disk',
-      'Stateless services can be freely scaled out and replaced without migrating session data',
-      'Stateless services do not need a load balancer',
-      'Kubernetes only supports stateless workloads',
+      "Stateless services process faster by bypassing persistent physical writes",
+      "Stateless services scale horizontally and recover without migrating state",
+      "Stateless services do not require reverse proxies or layer 7 balancers",
+      "Stateless services are the sole workload pattern permitted on Kubernetes"
     ],
     correctIndex: 1,
     explanation:
@@ -770,10 +770,10 @@ class CircuitBreaker {
   private reset() { this.state = 'Closed'; this.failureCount = 0 }
 }`,
     options: [
-      'The circuit is permanently disabled and traffic is rejected',
-      'The circuit allows a limited number of test requests through to see whether the downstream service has recovered',
-      'The circuit is passing all traffic normally after a successful recovery',
-      'The circuit is blocked but still logging requests for audit purposes',
+      "The circuit is permanently disabled by operators and immediately drops all inbound network traffic to downstream nodes",
+      "The circuit allows a limited trial of requests through to verify whether the downstream dependency has successfully recovered",
+      "The circuit processes maximum production request throughput following full confirmation of downstream service health",
+      "The circuit blocks external traffic while continuing to stream audit logs and telemetry metrics to local agent daemons"
     ],
     correctIndex: 1,
     explanation:
@@ -869,10 +869,10 @@ kubectl set image deployment/app app=registry/my-app:1.5.0
 # 3. Old pods are terminated; new ones spin up from the immutable image
 # → every running instance is in a known, tested state`,
     options: [
-      'Servers are patched in place and never restarted',
-      'Servers are never modified after deployment; changes are applied by replacing instances with new ones built from updated images',
-      'Infrastructure configuration files are stored in a read-only S3 bucket',
-      'All servers in a cluster must have identical hardware specifications',
+      "Virtual servers are updated in-place and never rebooted or decommissioned",
+      "Servers are never modified; changes deploy by replacing with fresh images",
+      "Configuration YAML templates reside permanently in read-only cloud buckets",
+      "All physical servers in the pool must maintain identical hardware chipsets"
     ],
     correctIndex: 1,
     explanation:
@@ -931,10 +931,10 @@ spec:
             periodSeconds: 5
             failureThreshold: 2`,
     options: [
-      'To check that the container image was signed by a trusted registry',
-      'To ensure the new pod is fully initialised and ready to serve requests before old pods are removed',
-      'To throttle the deployment speed to avoid overwhelming the scheduler',
-      'To run database migrations inside the new pod before traffic is sent',
+      "To verify that the container cryptographic signature matches the registry",
+      "To ensure the new pod is ready to serve traffic before old pods terminate",
+      "To throttle deployment speed to prevent overwhelming cluster API workers",
+      "To execute SQL database migrations prior to routing live user requests"
     ],
     correctIndex: 1,
     explanation:
@@ -973,10 +973,10 @@ WHERE full_name IS NULL AND id BETWEEN 1 AND 100000;
 -- Phase 3: CONTRACT — once old code is fully replaced, drop old column
 ALTER TABLE users DROP COLUMN first_name, DROP COLUMN last_name;`,
     options: [
-      'Run a full database backup before and after every schema change',
-      'First expand the schema to support both old and new shapes, deploy code that works with both, then contract the schema by removing the old shape',
-      'Scale the database cluster horizontally before applying a migration, then scale it back down afterwards',
-      'Use feature flags to hide new columns from users until the migration is complete',
+      "Execute a full snapshot backup before and after every schema alteration",
+      "Expand schema to support both shapes, deploy code, then contract the old",
+      "Scale the database cluster horizontally prior to running migration steps",
+      "Use feature toggles to hide schema columns until table indexing completes"
     ],
     correctIndex: 1,
     explanation:
@@ -1075,10 +1075,10 @@ class OrderSagaOrchestrator {
 // InventoryReserved → PaymentService → PaymentCharged
 // PaymentFailed → InventoryService listens → releases reservation`,
     options: [
-      'Choreography uses a central coordinator to call each service in order; orchestration uses events emitted by each service',
-      'Choreography has each service react to domain events and publish new ones; orchestration uses a central saga orchestrator to command each step',
-      'Choreography is only used for read operations; orchestration is only for write operations',
-      'They are equivalent implementations with different naming conventions',
+      "Choreography relies on a centralized master coordinator; orchestration uses pub/sub",
+      "Choreography has services react to events; orchestration coordinates via orchestrator",
+      "Choreography is restricted to queries; orchestration is dedicated to transactional writes",
+      "Both patterns are equivalent implementations sharing identical coordinator engines"
     ],
     correctIndex: 1,
     explanation:
@@ -1131,10 +1131,10 @@ server {
 
 # Step 2: Migrate /orders → Step 3: Migrate /users → retire monolith`,
     options: [
-      'Gradually replace a legacy monolith by routing specific features to new microservices until the monolith can be retired',
-      'Throttle traffic to a legacy system to force users onto a new platform faster',
-      'Inject faults into a legacy system to find hidden dependencies before migration',
-      'Wrap a legacy database with an ORM to decouple it from the application layer',
+      "Gradually replaces legacy monolithic systems by routing specific capabilities to microservices until retirement",
+      "Throttles network traffic directed at legacy backend systems to force consumers to adopt updated APIs prematurely",
+      "Injects deliberate network failures into legacy production nodes to uncover circular dependencies before migrations",
+      "Wraps legacy database tables with an ORM persistence layer to isolate SQL execution from domain application logic"
     ],
     correctIndex: 0,
     explanation:
@@ -1180,10 +1180,10 @@ spec:
   scheduler:
     cron: "@every 1h"   # kill a random api pod every hour`,
     options: [
-      'To stress-test databases by generating millions of random write operations',
-      'To proactively inject failures into production systems to expose weaknesses before they cause unplanned outages',
-      'To simulate high network latency during load testing in staging environments only',
-      'To fuzz API inputs and detect security vulnerabilities in microservices',
+      "To stress-test SQL databases by dispatching millions of mock write calls",
+      "To inject production failures to expose weaknesses before outages occur",
+      "To simulate packet latency strictly during staging environment test runs",
+      "To fuzz API payloads and identify security holes across microservices"
     ],
     correctIndex: 1,
     explanation:
@@ -1245,10 +1245,10 @@ spec:
         - destination: { host: orders, subset: v2 }
           weight: 10`,
     options: [
-      'A single external entry point for all client-facing HTTP traffic',
-      'Mutual TLS, traffic observability, and fine-grained routing between every service-to-service call inside the cluster',
-      'Automatic horizontal pod autoscaling based on network throughput',
-      'DNS resolution for services that span multiple Kubernetes namespaces',
+      "A solitary external gateway routing all public client HTTP requests inward",
+      "Mutual TLS, observability, and fine-grained routing between cluster services",
+      "Automated horizontal pod autoscaling governed by socket traffic throughput",
+      "DNS resolution across clusters that span multi-tenant Kubernetes partitions"
     ],
     correctIndex: 1,
     explanation:
@@ -1297,10 +1297,10 @@ spec:
       prune: true      # remove resources deleted from Git
       selfHeal: true   # revert manual cluster changes`,
     options: [
-      'The running containers in the Kubernetes cluster',
-      'A Git repository containing declarative infrastructure and application manifests',
-      "The CI pipeline's most recently published artifact",
-      'An operations runbook stored in a wiki',
+      "The active container state running inside the production Kubernetes nodes",
+      "A Git repository holding declarative manifests for infrastructure and apps",
+      "The compiled container artifact registry output from the latest CI pipeline",
+      "A centralized operational runbook markdown document stored on internal wikis"
     ],
     correctIndex: 1,
     explanation:
@@ -1348,10 +1348,10 @@ interface WriteIntent {
 }
 // On conflict: compare timestamps; if equal, region name is tie-breaker`,
     options: [
-      'Ensuring all regions use the same container image digest',
-      'Handling write conflicts and replication lag when the same data can be modified concurrently in different regions',
-      'Routing all writes through a single primary region to avoid latency',
-      'Synchronising Kubernetes node clocks across regions via NTP',
+      "Ensuring all regional clusters adopt identical container image sha digests",
+      "Handling write conflicts and replication lag when regions mutate data in parallel",
+      "Routing write mutations strictly to a solitary leader region to bypass delays",
+      "Synchronizing host hardware real-time clocks across regions using precise NTP"
     ],
     correctIndex: 1,
     explanation:
@@ -1395,10 +1395,10 @@ spec:
   updatePolicy:
     updateMode: "Off"   # recommendation-only; apply manually in prod`,
     options: [
-      'Commit to 3-year reserved instances for all workloads to minimise per-hour cost',
-      'Use spot/preemptible instances for stateless workloads, right-size based on actual utilisation metrics, and apply auto-scaling to match demand',
-      'Over-provision all services by 3x to ensure headroom and avoid performance incidents',
-      'Migrate all workloads to the cheapest cloud region regardless of user geography',
+      "Purchasing 3-year reserved instances for all services to lower hourly bills",
+      "Right-sizing instances on metrics, using spot nodes and demand auto-scaling",
+      "Over-provisioning hardware by three times to ensure generous traffic headroom",
+      "Migrating all cluster workloads to the lowest-cost region regardless of users"
     ],
     correctIndex: 1,
     explanation:
@@ -1448,10 +1448,10 @@ app.use((req, res, next) => {
   res.on('finish', () => span.end())
 })`,
     options: [
-      'Uptime, latency, and error rate; correlation IDs link SLO alerts to on-call schedules',
-      'Logs, metrics, and traces; correlation IDs allow a single request to be tracked end-to-end across all services and their telemetry',
-      'Dashboards, alerts, and runbooks; correlation IDs replace the need for distributed tracing',
-      'CPU, memory, and disk; correlation IDs map infrastructure metrics to application deployments',
+      "Uptime, latency, error rate; correlation IDs bind alerts to duty on-calls",
+      "Logs, metrics, traces; correlation IDs track requests across all services",
+      "Dashboards, alerts, runbooks; correlation IDs replace distributed tracing",
+      "CPU, memory, storage; correlation IDs tie metrics to cluster deployments"
     ],
     correctIndex: 1,
     explanation:

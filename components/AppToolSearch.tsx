@@ -62,7 +62,7 @@ export default function AppToolSearch({
 
           <button
             type="submit"
-            className="bg-primary cursor-pointer hover:bg-emerald-500 transition-colors text-white dark:text-black text-xs sm:text-sm font-semibold py-1.5 px-4 sm:py-2.5 sm:px-6 rounded-full shadow-sm shrink-0"
+            className="bg-primary cursor-pointer hover:bg-emerald-500 transition-colors text-white dark:text-black  font-semibold py-1.5 px-4 sm:py-2.5 sm:px-6 rounded-full shadow-sm shrink-0"
           >
             {t("searchButton")}
           </button>

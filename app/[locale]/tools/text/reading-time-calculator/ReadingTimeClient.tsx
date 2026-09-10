@@ -153,7 +153,7 @@ function SpeedReaderWidget({
   return (
     <div className="bg-tertiary border border-border rounded-xl p-6 relative overflow-hidden flex flex-col items-center space-y-6 animate-fade-in-up">
       <div className="w-full flex justify-between items-center pb-3 border-b border-border">
-        <span className="text-xs font-semibold uppercase tracking-wider text-label flex items-center gap-1.5">
+        <span className="text-xs font-semibold uppercase  text-label flex items-center gap-1.5">
           {tr("ui.speedReaderTitle")}
         </span>
         <button
@@ -303,7 +303,7 @@ function HeroStats({
           <BookOpen size={48} />
         </div>
         <div>
-          <div className="text-xs font-semibold text-label uppercase tracking-wider mb-1">
+          <div className="text-xs font-semibold text-label uppercase  mb-1">
             {tr("ui.estimatedReadingTime")}
           </div>
           <div className="text-3xl font-black text-primary">
@@ -335,7 +335,7 @@ function HeroStats({
           <Mic size={48} />
         </div>
         <div>
-          <div className="text-xs font-semibold text-label uppercase tracking-wider mb-1">
+          <div className="text-xs font-semibold text-label uppercase  mb-1">
             {tr("ui.estimatedSpeakingTime")}
           </div>
           <div className="text-3xl font-black text-blue-600 dark:text-blue-400">
@@ -386,12 +386,12 @@ function SecondaryStats({
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       <div className="bg-tertiary border border-border rounded-xl p-5 space-y-3">
-        <p className="text-xs font-semibold text-label uppercase tracking-wider mb-1">
+        <p className="text-xs font-semibold text-label uppercase  mb-1">
           {t("stats.readabilityScores")}
         </p>
         <div className="grid grid-cols-2 gap-4 pt-1">
           <div>
-            <div className="text-[10px] font-semibold tracking-wide text-label uppercase">
+            <div className="text-[10px] font-semibold  text-label uppercase">
               {t("stats.words")}
             </div>
             <div className="text-lg font-bold text-foreground">
@@ -399,7 +399,7 @@ function SecondaryStats({
             </div>
           </div>
           <div>
-            <div className="text-[10px] font-semibold tracking-wide text-label uppercase">
+            <div className="text-[10px] font-semibold  text-label uppercase">
               {t("stats.characters")}
             </div>
             <div className="text-lg font-bold text-foreground">
@@ -407,7 +407,7 @@ function SecondaryStats({
             </div>
           </div>
           <div>
-            <div className="text-[10px] font-semibold tracking-wide text-label uppercase">
+            <div className="text-[10px] font-semibold  text-label uppercase">
               {t("stats.sentences")}
             </div>
             <div className="text-lg font-bold text-foreground">
@@ -415,7 +415,7 @@ function SecondaryStats({
             </div>
           </div>
           <div>
-            <div className="text-[10px] font-semibold tracking-wide text-label uppercase">
+            <div className="text-[10px] font-semibold  text-label uppercase">
               {t("stats.paragraphs")}
             </div>
             <div className="text-lg font-bold text-foreground">
@@ -427,7 +427,7 @@ function SecondaryStats({
 
       <div className="bg-tertiary border border-border rounded-xl p-5 flex flex-col justify-between">
         <div>
-          <p className="text-xs font-semibold text-label uppercase tracking-wider mb-1">
+          <p className="text-xs font-semibold text-label uppercase  mb-1">
             {tr("ui.complexityNote")}
           </p>
           <div className="flex items-baseline gap-2">

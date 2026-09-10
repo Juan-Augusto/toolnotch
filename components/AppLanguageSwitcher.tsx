@@ -52,7 +52,7 @@ export default function AppLanguageSwitcher() {
         onClick={() => setOpen((o) => !o)}
         aria-label="Change language"
         aria-expanded={open}
-        className="flex items-center gap-1.5 text-label hover:text-foreground text-xs font-medium tracking-widest uppercase transition-colors"
+        className="flex items-center gap-1.5 text-label hover:text-foreground text-xs font-medium st uppercase transition-colors"
       >
         {current.short}
         <Globe size={15} />

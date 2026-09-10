@@ -54,17 +54,15 @@ export function AppQuizQuestionScreen({
   const hasCurrentAnswer = Boolean(selectedAnswerId);
 
   const progressPercent =
-    totalQuestions > 0
-      ? Math.round((questionIndex / totalQuestions) * 100)
-      : 0;
+    totalQuestions > 0 ? Math.round((questionIndex / totalQuestions) * 100) : 0;
 
   return (
     <div className="space-y-6">
       <div className="space-y-2.5">
         <div className="flex items-center justify-between text-xs">
-          <span className="text-foreground font-bold tracking-wider">
+          <span className="text-foreground font-semibold ">
             {labels.questionOf}{" "}
-            <span className="text-primary font-bold">
+            <span className="text-primary font-semibold">
               {String(questionIndex + 1).padStart(2, "0")}
             </span>{" "}
             <span className="text-label">
@@ -85,7 +83,7 @@ export function AppQuizQuestionScreen({
                 {timeRemaining}s
               </span>
             )}
-            <span className="text-label tracking-wider">
+            <span className="text-label ">
               {progressPercent}% {labels.completed}
             </span>
           </div>
@@ -110,10 +108,10 @@ export function AppQuizQuestionScreen({
         className="p-6 sm:p-8"
       >
         <div className="mb-6">
-          <span className="text-xs text-primary font-bold tracking-wider uppercase block mb-1">
+          <span className="text-xs text-primary font-semibold  uppercase block mb-1">
             {labels.questionOf} {questionIndex + 1}
           </span>
-          <h2 className="text-lg sm:text-xl font-bold text-foreground leading-snug uppercase">
+          <h2 className="text-lg sm:text-xl font-semibold text-foreground leading-snug">
             {question.text}
           </h2>
         </div>
@@ -165,7 +163,7 @@ export function AppQuizQuestionScreen({
                   >
                     {OPTION_LETTERS[index] || index + 1}
                   </span>
-                  <span className="text-xs sm:text-sm font-medium break-words">
+                  <span className=" font-medium break-words">
                     {option.text}
                   </span>
                 </div>
@@ -189,12 +187,12 @@ export function AppQuizQuestionScreen({
           <motion.div
             initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mt-5 p-4 bg-tertiary/40 border border-dashed border-border/60 rounded-[2px]"
+            className="mt-5 p-4 bg-tertiary/40 border-dashed-5 border-border/60 rounded-[2px]"
           >
-            <span className="text-[11px] font-bold text-primary uppercase block mb-1">
+            <span className="text-sm font-semibold text-primary uppercase block mb-1">
               {labels.explanation}
             </span>
-            <p className="text-xs text-foreground/90 leading-relaxed">
+            <p className="text-sm text-foreground/90 leading-relaxed">
               {question.explanation}
             </p>
             {question.source && (

@@ -41,10 +41,10 @@ export const TYPESCRIPT_QUESTIONS: InterviewQuestion[] = [
     question: 'Which feature is exclusive to `interface` and unavailable with `type` aliases?',
     code: 'interface User { name: string; }\ninterface User { age: number; }\n// Merges to: { name: string; age: number }',
     options: [
-      'Extending other types with `extends`',
-      'Declaration merging — multiple declarations combine into one type',
-      'Being used as a function parameter type',
-      'Being implemented by a class',
+      "Extending existing object types using the `extends` keyword",
+      "Declaration merging — multiple interfaces merge into one type",
+      "Being referenced as a parameter type in generic function calls",
+      "Being implemented by modern ES6 classes in application code"
     ],
     correctIndex: 1,
     explanation:
@@ -134,10 +134,10 @@ export const TYPESCRIPT_QUESTIONS: InterviewQuestion[] = [
     question: 'What happens when you access index `2` on a tuple typed as `[string, number]`?',
     code: 'const pair: [string, number] = ["hello", 42];\nconst third = pair[2]; // ???',
     options: [
-      'undefined — same as JavaScript array behaviour',
-      'string | number — TypeScript widens to the union',
-      'any — out-of-bounds accesses return any',
-      'TypeScript compile error — index 2 is out of bounds for this tuple',
+      "undefined — following standard dynamic JavaScript array access",
+      "string | number — TypeScript widens the result to element union",
+      "any — out-of-bounds array reads fall back to dynamic any typing",
+      "Compile error — index 2 is out of bounds for the defined tuple"
     ],
     correctIndex: 3,
     explanation:
@@ -154,10 +154,10 @@ export const TYPESCRIPT_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the purpose of `assertExhaustive` in the pattern below?',
     code: 'function assertExhaustive(x: never): never {\n  throw new Error("Unhandled case: " + x);\n}\n\nfunction handle(shape: Circle | Square) {\n  switch (shape.kind) {\n    case "circle": return;\n    case "square": return;\n    default: return assertExhaustive(shape);\n  }\n}',
     options: [
-      'It provides a runtime fallback for unknown shapes',
-      'It narrows the type in the default branch to never, giving a compile error when a new union member is unhandled',
-      'It converts the union type to any in the default branch',
-      'It is equivalent to a no-op — the default branch is never reached',
+      "Provides a generic runtime fallback object so JavaScript does not throw unexpected runtime exceptions on unknown shapes",
+      "Narrows the default branch type to `never`, triggering a compile error whenever an unhandled union case is omitted",
+      "Converts the union type to `any` dynamically inside default blocks, allowing arbitrary property accesses on variables",
+      "Acts as a purely cosmetic comment for engineers since the TypeScript compiler guarantees default branches never run"
     ],
     correctIndex: 1,
     explanation:
@@ -216,10 +216,10 @@ export const TYPESCRIPT_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the return type of `getProp(obj, key)` for the call below?',
     code: 'function getProp<T, K extends keyof T>(obj: T, key: K): T[K] {\n  return obj[key];\n}\n\nconst val = getProp({ age: 30 }, "age");',
     options: [
-      'any',
-      'unknown',
-      'number — the exact type of { age: number }["age"]',
-      'keyof { age: number }',
+      "The primitive `any` type",
+      "The top type `unknown`",
+      "The indexed `number` type",
+      "The union type `keyof T`"
     ],
     correctIndex: 2,
     explanation:
@@ -326,10 +326,10 @@ export const TYPESCRIPT_QUESTIONS: InterviewQuestion[] = [
     question: 'Why does the following `interface Mixed` produce a TypeScript error?',
     code: 'interface Mixed {\n  [key: string]: number;\n  name: string; // Error!\n}',
     options: [
-      'Index signatures and named properties can never coexist',
-      '`name: string` is incompatible with the index signature value type `number`',
-      'Index signatures require numeric keys, not string keys',
-      'Named properties must appear before index signatures',
+      "Index signatures and declared named properties cannot ever coexist",
+      "`name: string` conflicts with the index signature value type `number`",
+      "Index signatures mandate numeric integer keys, rejecting string keys",
+      "Named properties must strictly precede index signature declarations"
     ],
     correctIndex: 1,
     explanation:
@@ -345,10 +345,10 @@ export const TYPESCRIPT_QUESTIONS: InterviewQuestion[] = [
     question: 'Why is `typeof myFn` required in `ReturnType<typeof myFn>`?',
     code: 'function myFn(x: number): string {\n  return String(x);\n}\n\ntype R = ReturnType<typeof myFn>; // R = string',
     options: [
-      'It is redundant — `ReturnType<myFn>` works the same way',
-      'It gets myFn\'s runtime type for reflection',
-      'It converts the function value to a function type, which `ReturnType` requires as its type parameter',
-      'It narrows overloaded signatures to the last one',
+      "It is an obsolete syntax; `ReturnType<myFn>` works identically today",
+      "It retrieves myFn's runtime metadata object for reflection inspection",
+      "It lifts value `myFn` into the type space required by `ReturnType<T>`",
+      "It forces TypeScript to resolve overloaded signatures to the last one"
     ],
     correctIndex: 2,
     explanation:
@@ -365,10 +365,10 @@ export const TYPESCRIPT_QUESTIONS: InterviewQuestion[] = [
     question: 'What constraint does the intersection type `A & B` place on a value?',
     code: 'type A = { name: string };\ntype B = { age: number };\ntype AB = A & B;\n\nconst merged: AB = { name: "Alice", age: 30 };',
     options: [
-      '{ name: string } | { age: number } — either shape is valid',
-      '{ name: string } & { age: number } — the value must satisfy both simultaneously',
-      '{ name: string; age?: number } — B properties become optional',
-      'any — intersection of distinct shapes resolves to any',
+      "{ name: string } | { age: number } — satisfying either object is valid",
+      "{ name: string } & { age: number } — the value must satisfy both shapes",
+      "{ name: string; age?: number } — properties of B turn into optionals",
+      "any — intersecting disparate distinct object shapes reduces to any"
     ],
     correctIndex: 1,
     explanation:
@@ -425,10 +425,10 @@ export const TYPESCRIPT_QUESTIONS: InterviewQuestion[] = [
     question: 'What advantage does `satisfies` have over a plain type annotation?',
     code: 'const palette = {\n  red: [255, 0, 0],\n  green: "#00ff00",\n} satisfies Record<string, string | number[]>;\n\n// palette.red is number[] — not string | number[]',
     options: [
-      'It enforces the type at runtime',
-      'It validates against the type while preserving the inferred literal structure for IntelliSense',
-      'It makes all properties readonly automatically',
-      'It is identical to a type annotation — no practical difference',
+      "Validates and enforces type constraints at application runtime in browsers, throwing exceptions when fields are missing",
+      "Validates values against the target type while preserving inferred literal types, ensuring precise IntelliSense support",
+      "Freezes objects recursively during compilation, converting all nested properties to immutable readonly members in runtime",
+      "Behaves identically to a standard colon type annotation (`:`), representing strictly a stylistic alternative syntax"
     ],
     correctIndex: 1,
     explanation:
@@ -484,10 +484,10 @@ export const TYPESCRIPT_QUESTIONS: InterviewQuestion[] = [
     question: 'Why do recursive type aliases require an object or array wrapper to avoid errors?',
     code: '// Works — array hop introduces laziness:\ntype JSONArray = JSONValue[];\ntype JSONValue = string | number | boolean | null | JSONArray | JSONObject;\ntype JSONObject = { [k: string]: JSONValue };',
     options: [
-      'Recursive types are not allowed in TypeScript at all',
-      'Direct self-reference is evaluated eagerly, causing infinite expansion; object/array types are resolved lazily',
-      'It is a formatting convention — both are functionally identical',
-      'Only `interface` supports recursion; `type` aliases cannot be self-referential',
+      "Recursive types are strictly disallowed under all TypeScript versions",
+      "Eager self-references cause infinite recursion; objects evaluate lazily",
+      "It is a stylistic preference; both forms compile to identical byte code",
+      "Only `interface` permits recursion; `type` aliases reject recursive keys"
     ],
     correctIndex: 1,
     explanation:
@@ -522,10 +522,10 @@ export const TYPESCRIPT_QUESTIONS: InterviewQuestion[] = [
     question: 'What does this module augmentation achieve without editing `node_modules`?',
     code: '// express-augment.d.ts\nimport { User } from "./types";\n\ndeclare module "express-serve-static-core" {\n  interface Request {\n    user?: User;\n  }\n}',
     options: [
-      'Creates a new module that replaces the express module',
-      'Adds the `user` property to Express\'s Request interface without editing node_modules',
-      'Converts the Request interface to a class',
-      'Works only if you re-export the entire express module',
+      "Creates an isolated replacement module masking the original express pkg",
+      "Augments Express's Request interface with `user` without touching files",
+      "Converts Express's Request interface dynamically into a concrete class",
+      "Functions only when explicitly re-exporting the whole express package"
     ],
     correctIndex: 1,
     explanation:
@@ -561,10 +561,10 @@ export const TYPESCRIPT_QUESTIONS: InterviewQuestion[] = [
     question: 'What problem does `NoInfer<T>` solve in the function signature below?',
     code: 'function createStore<T>(\n  initial: T,\n  fallback: NoInfer<T>\n): T {\n  return initial ?? fallback;\n}\n\nconst s = createStore(42, "oops"); // Error!',
     options: [
-      'Nothing — it is identical to using `T` directly',
-      'Prevents `fallback` from contributing to T\'s inference, so the call errors because "oops" does not match the inferred number',
-      'Forces T to be inferred from `fallback` instead of `initial`',
-      'Makes `fallback` optional at the call site',
+      "Nothing — it behaves identically to using naked generic parameter `T`",
+      "Blocks `fallback` from inferring `T`, catching mismatch types at build",
+      "Forces TypeScript to infer `T` solely from `fallback` instead of `init`",
+      "Marks `fallback` as an optional parameter at application call sites"
     ],
     correctIndex: 1,
     explanation:

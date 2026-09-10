@@ -205,9 +205,7 @@ export default function RetroBoardTool({
             className={`rounded-xl border ${col.headerBg} flex flex-col overflow-hidden`}
           >
             <div className={`px-4 py-3 border-b ${col.headerBg}`}>
-              <h2
-                className={`font-bold text-sm uppercase tracking-wide ${col.accent}`}
-              >
+              <h2 className={`font-bold text-sm uppercase  ${col.accent}`}>
                 {col.label}
                 {board[col.key].length > 0 && (
                   <span className="ml-2 font-normal text-xs opacity-70">

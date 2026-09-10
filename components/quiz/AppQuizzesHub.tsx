@@ -116,11 +116,11 @@ export function AppQuizzesHub({ quizzes, locale = "pt" }: AppQuizzesHubProps) {
     <div className="w-full text-foreground pb-12">
       <div className="w-full pt-4 pb-8">
         <header className="mb-10 md:mb-12">
-          <h1 className="font-mono text-2xl tracking-wide sm:text-3xl md:text-3xl font-bold text-foreground uppercase mb-2.5">
+          <h1 className="font-mono text-2xl sm:text-3xl md:text-3xl font-bold text-foreground uppercase mb-2.5">
             {labels.heading}
           </h1>
 
-          <p className="font-mono text-xs sm:text-sm text-label/90 max-w-2xl leading-relaxed">
+          <p className="font-mono  text-label/90 max-w-2xl leading-relaxed">
             {labels.subtitle}
           </p>
         </header>
@@ -135,7 +135,7 @@ export function AppQuizzesHub({ quizzes, locale = "pt" }: AppQuizzesHubProps) {
 
           <div
             data-testid="quizzes-search-container"
-            className={`relative transition-all duration-300 ease-in-out border rounded-[2px] bg-tertiary border-border hover:border-foreground/30 focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary/20 shrink-0 self-start lg:self-center ${
+            className={`relative transition-all duration-300 ease-in-out border rounded-[2px] bg-tertiary border-border focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary/20 shrink-0 self-start lg:self-center ${
               isExpanded ? "w-full sm:w-72 lg:w-80" : "w-40 sm:w-44"
             }`}
           >
@@ -149,7 +149,7 @@ export function AppQuizzesHub({ quizzes, locale = "pt" }: AppQuizzesHubProps) {
               onKeyDown={handleKeyDown}
               placeholder={labels.searchPlaceholder}
               containerClassName="w-full"
-              className={`h-10 text-xs sm:text-sm pl-9 transition-[padding] duration-200 ${
+              className={`h-10  pl-9 transition-[padding] duration-200 ${
                 isExpanded ? (searchQuery ? "pr-16" : "pr-12") : "pr-3"
               }`}
             />
@@ -209,7 +209,7 @@ export function AppQuizzesHub({ quizzes, locale = "pt" }: AppQuizzesHubProps) {
                     <span
                       className={`w-3 h-3 ${group.badgeBg} rounded-[1px]`}
                     />
-                    <h2 className="font-mono text-sm sm:text-base font-bold uppercase tracking-wider text-foreground">
+                    <h2 className="font-mono text-sm sm:text-base font-bold uppercase  text-foreground">
                       {group.name}
                     </h2>
                   </div>
@@ -245,7 +245,7 @@ export function AppQuizzesHub({ quizzes, locale = "pt" }: AppQuizzesHubProps) {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-20 border border-dashed border-border/50 rounded-[2px] bg-tertiary/20">
+              <div className="text-center py-20 border-dashed-5 border-border/50 rounded-[2px] bg-tertiary/20">
                 <p className="font-mono text-sm text-label mb-4">
                   {labels.noResults}
                 </p>

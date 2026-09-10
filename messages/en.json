@@ -5054,73 +5054,73 @@
   },
   "interview": {
     "hub": {
-      "aboutHeading": "About interview prep on ToolNotch",
+      "metaTitle": "Technical Interview Drills: Frontend, Backend & System Design | ToolNotch",
+      "metaDescription": "Practice with 240 questions across 8 technical drills: TypeScript, Vue, Node.js, Databases, Kafka, RabbitMQ, and System Architecture. 100% free.",
+      "title": "Technical Interview Drills",
+      "aboutHeading": "About ToolNotch Interview Drills",
       "about": [
-        "ToolNotch interview prep is a collection of free, interactive quizzes for software engineers getting ready for a technical interview. Every quiz runs entirely in your browser: there is no account to create, nothing to install, and no paywall. You pick a topic, choose a difficulty level, and work through multiple-choice questions that mirror the kind of reasoning an interviewer is listening for.",
-        "What sets these quizzes apart from a flashcard deck is the explanation attached to every question. Instead of only telling you which option is correct, each answer explains why it is correct, shows the underlying mechanism, and adds a short note on how experienced teams apply the idea in production code. The goal is understanding you can defend under follow-up questions, not memorised trivia that collapses the moment an interviewer asks why.",
-        "The question banks are written from primary sources — official language handbooks, specification documents, and widely used engineering references — and are reviewed for accuracy rather than assembled from scraped quiz sites. Coverage currently centres on TypeScript, with further language and backend-engineering tracks released as they are finished."
+        "ToolNotch interview drills are crafted for software engineers looking to test and deepen their knowledge before technical loops. Everything runs client-side in your browser: no sign-ups, no paywalls, and no downloads required.",
+        "Every question features technical explanations, compiled code snippets or query execution plans, and production-tested decisions used by senior engineering teams.",
+        "The library features 240 questions across 8 core topics: TypeScript, Vue.js, Node.js, Database Design, SQL Indexing, SQS vs Kafka, RabbitMQ, and System Architecture."
       ],
-      "formatHeading": "How the quizzes are structured",
+      "formatHeading": "Structure and mechanics of the drills",
       "format": [
-        "Each track is split into Beginner, Intermediate, and Advanced levels of roughly ten questions each. Beginner questions confirm that the fundamentals are solid, Intermediate questions test the edge cases that trip people up in day-to-day work, and Advanced questions go after the deep behaviour that separates a senior candidate from a mid-level one. Question order is shuffled on every run, so you cannot pass by memorising positions.",
-        "Because everything is client-side, your answers and scores never leave your device. You can retake a level as many times as you want, jump straight to the difficulty you care about, and use the keyboard to move quickly: number keys to pick an option, Enter to advance, and Tab to cycle through the explanation tabs on questions that have them."
+        "Each drill contains 30 questions partitioned into three tiers: Beginner (syntax and fundamentals), Intermediate (production challenges), and Advanced (concurrency, internals, and scale).",
+        "Session state lives entirely in your browser memory. You can replay any level anytime and navigate smoothly using keyboard shortcuts (keys 1 to 4, Enter, and Tab)."
       ],
-      "howHeading": "How to practise effectively",
+      "howHeading": "How to get the most out of your practice",
       "how": [
-        "Start one level below where you think you are. Clearing the Beginner set quickly confirms your fundamentals and builds momentum before you reach the harder material.",
-        "Read the explanation on every question, including the ones you answered correctly. A right answer for the wrong reason is still a gap an interviewer can find.",
-        "When an explanation mentions compiled output or a specification rule, pause and reproduce it yourself in an editor or REPL. Active recall beats re-reading.",
-        "Retake a level a day or two later rather than immediately. Spacing the repetition is what moves an idea into long-term memory.",
-        "Once you are consistently scoring above roughly 80% on Advanced, switch to explaining each answer out loud as if the interviewer were in the room. That is the skill the interview actually measures."
+        "Start at the intermediate level to calibrate your knowledge, then tackle advanced questions on topics most relevant to your target role.",
+        "Read through technical explanations even when you answer correctly to solidify underlying architectural principles.",
+        "Practice speaking through your reasoning out loud before picking an answer to simulate real technical screen discussions."
       ],
-      "faqHeading": "Interview prep FAQ",
+      "faqHeading": "Frequently asked questions about interview drills",
       "faqs": [
         {
-          "question": "Are the ToolNotch interview quizzes free?",
-          "answer": "Yes. Every quiz is completely free with no account, sign-up, or download. All questions and explanations run client-side in your browser, and your scores are never uploaded anywhere."
+          "question": "Are ToolNotch interview drills really free?",
+          "answer": "Yes. All 8 drills are completely free, with no account registration or downloads required. Everything runs locally in your browser."
         },
         {
-          "question": "Which topics are covered so far?",
-          "answer": "The TypeScript track is the most complete, with 30 questions across Beginner, Intermediate, and Advanced levels. Backend-engineering tracks — Node.js internals, database design and indexing, messaging systems, and system architecture — are being finished and released one at a time."
+          "question": "Which technical topics are covered?",
+          "answer": "We offer 8 full drills: TypeScript, Vue.js, Node.js Fundamentals, Database Design, Database Indexing, SQS and Kafka, RabbitMQ, and System Architecture."
         },
         {
-          "question": "Are these questions aimed at junior or senior engineers?",
-          "answer": "Both. The Beginner level suits candidates preparing for their first or second role, while the Advanced level targets the depth expected of senior and staff engineers. Most people benefit from working through all three levels in order."
+          "question": "Can I navigate through questions using keyboard shortcuts?",
+          "answer": "Yes. Use keys 1 to 4 to select choices, Enter to submit and proceed, and Tab to switch between explanation tabs."
         },
         {
-          "question": "How should I use a quiz the day before an interview?",
-          "answer": "Do one relaxed pass at the level that matches the role, focus on reading the explanations rather than chasing a high score, and stop early enough to sleep. Cramming new material the night before tends to hurt more than it helps."
-        },
-        {
-          "question": "Do the quizzes save my progress?",
-          "answer": "Scores are shown at the end of each level but are not stored on a server. Because everything is local to your browser, you can retake any level as often as you like without affecting a saved record."
+          "question": "Is any user performance data sent to external servers?",
+          "answer": "No. All question evaluations and scores remain strictly inside your browser memory. No telemetry or score data is ever transmitted."
         }
       ]
     },
     "typescript": {
+      "metaTitle": "TypeScript Interview Quiz: Beginner to Advanced | ToolNotch",
+      "metaDescription": "Test your TypeScript knowledge with 30 in-depth interview questions across Beginner, Intermediate, and Advanced levels. Covers inference, generics, conditional types, and mapped types.",
+      "title": "TypeScript Deep-Dive Interview Quiz",
       "coversHeading": "What the TypeScript interview quiz covers",
       "covers": [
-        "This quiz works through the parts of TypeScript that interviewers actually probe: how the compiler infers types when you do not annotate them, how generics let a function stay type-safe across many input shapes, and how the type system computes new types from existing ones with conditional types, mapped types, and the infer keyword. It also covers narrowing — how TypeScript uses control flow, typeof, instanceof, discriminated unions, and user-defined type guards to shrink a union down to a single type inside a branch.",
-        "A distinctive feature is that every answer includes the compiled JavaScript. Types, interfaces, and type-only imports are erased at build time and produce no runtime code, while enums, class parameter properties, and decorators do emit something. Seeing the emitted output next to the source makes it obvious which constructs are purely a compile-time contract and which carry a runtime cost — a distinction that comes up constantly in interviews about bundle size and performance.",
-        "The utility types — Partial, Required, Readonly, Pick, Omit, Record, ReturnType, Parameters, Awaited, and the rest — are treated as things you should be able to reimplement, not just call. Several questions ask you to predict the result of a hand-written mapped type that mirrors one of the built-ins, which is a common whiteboard exercise."
+        "This quiz works through the parts of TypeScript that interviewers actually probe: how the compiler infers types when you do not annotate them, how generics let a function stay type-safe across many input shapes, and how the type system computes new types from existing ones with conditional types, mapped types, and the infer keyword. It also covers narrowing, how TypeScript uses control flow, typeof, instanceof, discriminated unions, and user-defined type guards to shrink a union down to a single type inside a branch.",
+        "A distinctive feature is that every answer includes the compiled JavaScript. Types, interfaces, and type-only imports are erased at build time and produce no runtime code, while enums, class parameter properties, and decorators do emit something. Seeing the emitted output next to the source makes it obvious which constructs are purely a compile-time contract and which carry a runtime cost, a distinction that comes up constantly in interviews about bundle size and performance.",
+        "The utility types, Partial, Required, Readonly, Pick, Omit, Record, ReturnType, Parameters, Awaited, and the rest, are treated as things you should be able to reimplement, not just call. Several questions ask you to predict the result of a hand-written mapped type that mirrors one of the built-ins, which is a common whiteboard exercise."
       ],
       "levelsHeading": "Difficulty levels",
       "levels": [
         "Beginner covers the everyday type system: primitive and literal types, arrays and tuples, union and intersection types, interfaces versus type aliases, optional and readonly properties, function types, and the difference between any, unknown, and never. These are the questions a screening call is most likely to open with.",
-        "Intermediate moves into generics with constraints, keyof and indexed access types, typeof used as a type query, basic mapped and conditional types, and control-flow narrowing. Advanced pushes into recursive conditional types, the infer keyword, template literal types, variadic tuple types, the satisfies operator, const type parameters, NoInfer, and module augmentation — the material that distinguishes a senior TypeScript answer."
+        "Intermediate moves into generics with constraints, keyof and indexed access types, typeof used as a type query, basic mapped and conditional types, and control-flow narrowing. Advanced pushes into recursive conditional types, the infer keyword, template literal types, variadic tuple types, the satisfies operator, const type parameters, NoInfer, and module augmentation, the material that distinguishes a senior TypeScript answer."
       ],
       "topicsHeading": "Topics in the question bank",
       "topics": [
-        "Type inference — how TypeScript assigns types to variables, return values, and generic parameters when no annotation is present, and when it widens or narrows a literal.",
-        "Generics — writing functions, classes, and types that are parameterised over a type, adding extends constraints, and supplying defaults.",
-        "Conditional and mapped types — computing one type from another with T extends U ? X : Y, key remapping, adding or removing modifiers, and distribution over unions.",
-        "Narrowing — reducing a union inside a branch using typeof, instanceof, in, equality checks, discriminated unions, and functions that return a type predicate.",
-        "Utility types — Partial, Pick, Omit, Record, ReturnType, Parameters, Awaited and friends, plus how to build equivalents by hand.",
-        "Compiled JavaScript output — which TypeScript syntax is erased at build time and produces no runtime code, and which syntax actually emits."
+        "Type inference, how TypeScript assigns types to variables, return values, and generic parameters when no annotation is present, and when it widens or narrows a literal.",
+        "Generics, writing functions, classes, and types that are parameterised over a type, adding extends constraints, and supplying defaults.",
+        "Conditional and mapped types, computing one type from another with T extends U ? X : Y, key remapping, adding or removing modifiers, and distribution over unions.",
+        "Narrowing, reducing a union inside a branch using typeof, instanceof, in, equality checks, discriminated unions, and functions that return a type predicate.",
+        "Utility types, Partial, Pick, Omit, Record, ReturnType, Parameters, Awaited and friends, plus how to build equivalents by hand.",
+        "Compiled JavaScript output, which TypeScript syntax is erased at build time and produces no runtime code, and which syntax actually emits."
       ],
       "howHeading": "How to use the TypeScript quiz",
       "how": [
-        "Pick a level — Beginner, Intermediate, or Advanced — from the start screen. You can take them in any order and retake each as many times as you want.",
+        "Pick a level, Beginner, Intermediate, or Advanced, from the start screen. You can take them in any order and retake each as many times as you want.",
         "Answer each multiple-choice question. Use the number keys 1 to 4 to select and Enter or the right arrow to advance.",
         "After answering, read the three explanation tabs: Why This Answer, Compiled JS, and Best Practice. The Compiled JS tab shows exactly what the TypeScript compiler emits for that snippet.",
         "Review your score at the end, then retake the level a day later to check what actually stuck."
@@ -5129,7 +5129,7 @@
       "faqs": [
         {
           "question": "How many TypeScript interview questions are there?",
-          "answer": "There are 30 questions in total — 10 Beginner, 10 Intermediate, and 10 Advanced. Each level is shuffled on every playthrough, so you get a fresh order each time."
+          "answer": "There are 30 questions in total, 10 Beginner, 10 Intermediate, and 10 Advanced. Each level is shuffled on every playthrough, so you get a fresh order each time."
         },
         {
           "question": "What topics does the TypeScript quiz cover?",
@@ -5150,6 +5150,328 @@
         {
           "question": "Do I need an account to take the quiz?",
           "answer": "No. The quiz is completely free with no account, login, or download. Everything runs in your browser and no answers or scores are sent anywhere."
+        }
+      ]
+    },
+    "vue": {
+      "metaTitle": "Vue.js Interview Quiz: Beginner to Advanced | ToolNotch",
+      "metaDescription": "Test your Vue.js and frontend architecture knowledge with 30 in-depth interview questions. Covers Composition API, reactivity internals, composables, Pinia, and SSR hydration.",
+      "title": "Vue.js Deep-Dive Interview Quiz",
+      "coversHeading": "What the Vue.js interview quiz covers",
+      "covers": [
+        "This quiz thoroughly explores the modern Vue 3 ecosystem: Composition API, the internal reactivity engine based on JavaScript Proxies, structuring reusable composables, and global state management with Pinia.",
+        "It also covers critical production topics such as Server-Side Rendering (SSR), preventing hydration mismatch errors, and performance optimizations for lists and dynamic components."
+      ],
+      "levelsHeading": "Difficulty levels",
+      "levels": [
+        "Beginner focuses on core Composition API syntax, reactivity with ref and reactive, two-way binding with v-model, and component lifecycle hooks.",
+        "Intermediate delves into building custom composables, watchEffect, application architecture with Pinia, and scoped styling.",
+        "Advanced challenges your grasp of Vue reactivity internals, custom directives, Teleport, KeepAlive, and debugging SSR hydration mismatches."
+      ],
+      "topicsHeading": "Question topics covered",
+      "topics": [
+        "ref vs reactive and reactive destructuring caveats",
+        "watch vs computed and side-effect management",
+        "Vue 3 component lifecycle hooks",
+        "Pinia store architecture and state mutations",
+        "Reactivity engine internals with Proxies and dependency tracking",
+        "SSR hydration mismatch and rendering performance"
+      ],
+      "howHeading": "How to use the Vue.js quiz",
+      "how": [
+        "Select your preferred difficulty or practice all 30 questions at once.",
+        "Answer each question carefully reviewing the code snippet and reactivity nuances.",
+        "Review the technical explanation and best practices after each choice to reinforce your understanding."
+      ],
+      "faqHeading": "Frequently asked questions about the Vue.js quiz",
+      "faqs": [
+        {
+          "question": "How many questions are in the Vue.js quiz?",
+          "answer": "There are 30 questions in total: 10 Beginner, 10 Intermediate, and 10 Advanced, shuffled on every attempt."
+        },
+        {
+          "question": "Is this quiz tailored for Vue 2 or Vue 3?",
+          "answer": "It is 100% tailored for modern Vue 3, focusing on the Composition API, TypeScript integration, and current best practices."
+        },
+        {
+          "question": "Is there any cost or registration needed?",
+          "answer": "No. All ToolNotch drills are completely free and run entirely in your browser without requiring an account."
+        }
+      ]
+    },
+    "nodejsFundamentals": {
+      "metaTitle": "Node.js Fundamentals Interview Quiz: Event Loop to V8 Internals | ToolNotch",
+      "metaDescription": "30 in-depth Node.js interview questions covering the libuv event loop, streams, memory management, and V8 engine internals.",
+      "title": "Node.js Fundamentals Interview Quiz",
+      "coversHeading": "What the Node.js Fundamentals interview quiz covers",
+      "covers": [
+        "This quiz explores Node.js architecture in depth: libuv Event Loop phases, execution order with process.nextTick vs setImmediate, streams, and backpressure handling.",
+        "It also dives into V8 memory management, memory leak diagnostics, garbage collection stages, and choosing between Worker Threads and cluster instances."
+      ],
+      "levelsHeading": "Difficulty levels",
+      "levels": [
+        "Beginner covers the single-threaded asynchronous model, Buffers, CommonJS vs ESM modules, and Promise error handling.",
+        "Intermediate explores libuv phases (timers, poll, check, close), stream pipelines, and managing backpressure during heavy I/O.",
+        "Advanced challenges your mastery of V8 heap structures, Garbage Collection algorithms (Scavenge, Mark-Sweep), CPU profiling, and Worker Threads concurrency."
+      ],
+      "topicsHeading": "Question topics covered",
+      "topics": [
+        "Event Loop and libuv phases (Timers, I/O Poll, Check, Close)",
+        "Microtasks (process.nextTick) vs macrotasks prioritization",
+        "Readable, Writable, and Transform stream pipelines",
+        "V8 memory heap organization and garbage collection",
+        "Detecting memory leaks and inspecting heap snapshots",
+        "Worker Threads vs Cluster processes for CPU-bound tasks"
+      ],
+      "howHeading": "How to use the Node.js quiz",
+      "how": [
+        "Choose your target difficulty or practice all 30 questions at once.",
+        "Analyze Event Loop execution order before submitting your answer.",
+        "Review explanations and practical guidance for high-throughput backends."
+      ],
+      "faqHeading": "Frequently asked questions about the Node.js quiz",
+      "faqs": [
+        {
+          "question": "How many questions are in the Node.js quiz?",
+          "answer": "There are 30 questions total: 10 Beginner, 10 Intermediate, and 10 Advanced, randomized on each playthrough."
+        },
+        {
+          "question": "Which Node.js versions are tested?",
+          "answer": "The questions align with modern LTS releases (Node.js 18, 20, and 22), covering native ESM and current core APIs."
+        },
+        {
+          "question": "Does the quiz work on mobile?",
+          "answer": "Yes, the interface is fully responsive across mobile phones, tablets, and desktop browsers."
+        }
+      ]
+    },
+    "databaseDesign": {
+      "metaTitle": "Database Design Interview Quiz: Normalization to Distributed DBs | ToolNotch",
+      "metaDescription": "30 technical interview questions on relational database design, ACID transactions, normalization (1NF-3NF), sharding, and distributed data modeling.",
+      "title": "Database Design Interview Quiz",
+      "coversHeading": "What the Database Design interview quiz covers",
+      "covers": [
+        "This quiz evaluates core and advanced database modeling concepts: 1NF to 3NF normalization, ACID guarantees, the CAP theorem, and relational integrity constraints.",
+        "It also covers high-scale distributed architectural patterns including sharding strategies, replication topology, transaction isolation levels, CQRS, Event Sourcing, and the Saga Pattern."
+      ],
+      "levelsHeading": "Difficulty levels",
+      "levels": [
+        "Beginner focuses on relational fundamentals, primary and foreign keys, schema normalization, and NULL value semantics.",
+        "Intermediate explores the CAP theorem, SQL isolation levels (Read Committed through Serializable), and horizontal data sharding.",
+        "Advanced tests your architecture chops with Event Sourcing, CQRS, Saga patterns, Two-Phase Commit, and optimistic vs pessimistic locking."
+      ],
+      "topicsHeading": "Question topics covered",
+      "topics": [
+        "Relational normalization rules (1NF, 2NF, 3NF, BCNF)",
+        "ACID properties and transactional boundary design",
+        "CAP theorem trade-offs between consistency and availability",
+        "SQL transaction isolation levels and concurrency anomalies",
+        "Horizontal partitioning, partition keys, and sharding strategies",
+        "CQRS, Event Sourcing, and eventual consistency via Sagas"
+      ],
+      "howHeading": "How to use the Database Design quiz",
+      "how": [
+        "Choose a difficulty level or complete all 30 questions.",
+        "Consider real-world architectural trade-offs before locking in your choice.",
+        "Read the detailed explanation and best-practice insights for every question."
+      ],
+      "faqHeading": "Frequently asked questions about the Database Design quiz",
+      "faqs": [
+        {
+          "question": "How many questions are in the Database Design quiz?",
+          "answer": "There are 30 questions in total: 10 Beginner, 10 Intermediate, and 10 Advanced, with randomized question order."
+        },
+        {
+          "question": "Does this apply to SQL and NoSQL engines?",
+          "answer": "Yes. It covers relational fundamentals (PostgreSQL, MySQL) alongside distributed patterns seen in modern NoSQL and NewSQL engines."
+        },
+        {
+          "question": "Is this interview quiz completely free?",
+          "answer": "Yes, 100% free with no sign-up or download required."
+        }
+      ]
+    },
+    "databaseIndexing": {
+      "metaTitle": "Database Indexing Interview Quiz: B-Trees to Query Optimization | ToolNotch",
+      "metaDescription": "30 technical interview questions on database index structures, composite indexes, covering indexes, EXPLAIN plans, and PostgreSQL/MySQL tuning.",
+      "title": "Database Indexing Interview Quiz",
+      "coversHeading": "What the Database Indexing interview quiz covers",
+      "covers": [
+        "This quiz takes a deep look at database indexing mechanics: B-Tree internals, leaf node traversal, write vs read performance trade-offs, and column cardinality.",
+        "It also tests your mastery of composite indexes (leftmost prefix rule), covering indexes, partial indexes, expression indexes, and reading EXPLAIN ANALYZE execution plans."
+      ],
+      "levelsHeading": "Difficulty levels",
+      "levels": [
+        "Beginner focuses on B-Tree fundamentals, write amplification on indexed tables, selectivity, and primary vs secondary index types.",
+        "Intermediate covers composite indexes, leftmost prefix matching, covering indexes using INCLUDE clauses, and partial indexing.",
+        "Advanced tests index-backed sorting, index bloat remediation, cost-based optimizer heuristics, and interpreting EXPLAIN ANALYZE execution nodes."
+      ],
+      "topicsHeading": "Question topics covered",
+      "topics": [
+        "B-Tree internals: branching factor, root, internal, and leaf pages",
+        "The leftmost prefix rule for composite indexes",
+        "Covering indexes and eliminating heap fetches",
+        "Partial indexes for skewed or status-flag columns",
+        "Expression indexes on computed values (LOWER, DATE_TRUNC)",
+        "Query execution plan analysis with EXPLAIN and EXPLAIN ANALYZE"
+      ],
+      "howHeading": "How to use the Database Indexing quiz",
+      "how": [
+        "Select your difficulty level or tackle all 30 questions.",
+        "Carefully analyze the query plan snippets before picking your answer.",
+        "Read the comprehensive explanations to prevent anti-patterns in production."
+      ],
+      "faqHeading": "Frequently asked questions about the Database Indexing quiz",
+      "faqs": [
+        {
+          "question": "How many questions are in the Database Indexing quiz?",
+          "answer": "There are 30 questions in total: 10 Beginner, 10 Intermediate, and 10 Advanced, randomized every run."
+        },
+        {
+          "question": "Which database engines do these concepts apply to?",
+          "answer": "The concepts apply to standard relational databases such as PostgreSQL, MySQL, and SQL Server, with code examples emphasizing PostgreSQL."
+        },
+        {
+          "question": "Do I need to create an account?",
+          "answer": "No, the tool runs entirely client-side without registration."
+        }
+      ]
+    },
+    "messagingSqsKafka": {
+      "metaTitle": "SQS & Kafka Interview Quiz: Message Queues to Distributed Streaming | ToolNotch",
+      "metaDescription": "30 technical interview questions on distributed messaging, queue vs log semantics, consumer groups, partition rebalancing, and exactly-once delivery.",
+      "title": "SQS & Kafka Interview Quiz",
+      "coversHeading": "What the SQS and Kafka interview quiz covers",
+      "covers": [
+        "This quiz provides an in-depth comparison of distributed message queues and event streaming: ephemeral message queuing with AWS SQS versus partitioned append-only logs with Apache Kafka.",
+        "It covers delivery semantics (at-least-once, at-most-once, exactly-once), partition management, consumer group offsets, rebalances, and failure recovery."
+      ],
+      "levelsHeading": "Difficulty levels",
+      "levels": [
+        "Beginner covers the architectural difference between point-to-point queues and event logs, message retention, and decoupling services.",
+        "Intermediate dives into Kafka partitions, manual offset commits, SQS Visibility Timeouts, Dead Letter Queues (DLQ), and key-based ordering.",
+        "Advanced tests consumer group rebalance protocols, idempotent producers, transactional pipelines, log compaction, and backpressure management."
+      ],
+      "topicsHeading": "Question topics covered",
+      "topics": [
+        "Queue-based vs Log-based messaging paradigm differences",
+        "Delivery semantics: At-Least-Once vs Exactly-Once guarantees",
+        "Partition key hashing and per-partition ordering guarantees",
+        "Consumer groups, lag monitoring, and rebalancing protocols",
+        "Dead Letter Queues (DLQ) and handling poison pill payloads",
+        "SQS Visibility Timeout mechanics vs Kafka retention policies"
+      ],
+      "howHeading": "How to use the SQS and Kafka quiz",
+      "how": [
+        "Choose a difficulty level or complete the full 30-question drill.",
+        "Weigh throughput, latency, and ordering requirements before selecting an answer.",
+        "Review explanations for practical insights into production event architecture."
+      ],
+      "faqHeading": "Frequently asked questions about the SQS and Kafka quiz",
+      "faqs": [
+        {
+          "question": "How many questions are in the SQS and Kafka quiz?",
+          "answer": "There are 30 questions in total: 10 Beginner, 10 Intermediate, and 10 Advanced, randomized on each attempt."
+        },
+        {
+          "question": "Does it cover AWS SQS specifically or general messaging?",
+          "answer": "It covers AWS SQS (Standard and FIFO queues) alongside standard Apache Kafka distributed streaming concepts."
+        },
+        {
+          "question": "Is there any cost?",
+          "answer": "No, all ToolNotch drills are 100% free and client-side."
+        }
+      ]
+    },
+    "rabbitmqConcepts": {
+      "metaTitle": "RabbitMQ Concepts Interview Quiz: AMQP to Quorum Queues | ToolNotch",
+      "metaDescription": "30 technical interview questions on RabbitMQ architecture, exchange types, routing keys, publisher confirms, consumer acknowledgements, and quorum queues.",
+      "title": "RabbitMQ Concepts Interview Quiz",
+      "coversHeading": "What the RabbitMQ Concepts interview quiz covers",
+      "covers": [
+        "This quiz delves into the AMQP 0-9-1 protocol and RabbitMQ architecture: how Exchanges, Bindings, and Queues work together to route messages.",
+        "It covers exchange types (Direct, Fanout, Topic, Headers), Raft-backed Quorum queues, publisher confirms, consumer manual acknowledgements, and Dead Letter Exchanges (DLX)."
+      ],
+      "levelsHeading": "Difficulty levels",
+      "levels": [
+        "Beginner tests fundamental AMQP building blocks: producers, exchanges, routing keys, queues, and consumers.",
+        "Intermediate explores wildcard routing patterns in Topic exchanges, Dead Letter Exchanges, message TTLs, and basic.qos prefetch counts.",
+        "Advanced challenges your grasp of Raft consensus in Quorum queues, network partition handling in clusters, publisher confirms, and high availability topologies."
+      ],
+      "topicsHeading": "Question topics covered",
+      "topics": [
+        "Exchange types: Direct, Fanout, Topic, and Headers mechanics",
+        "Topic exchange wildcard matching with asterisks (*) and hashes (#)",
+        "Consumer acknowledgements: manual ack vs auto-ack pitfalls",
+        "Flow control using basic.qos and optimal prefetch counts",
+        "Dead Letter Exchanges (DLX) and message time-to-live (TTL)",
+        "Quorum queues with Raft consensus vs deprecated Mirrored Queues"
+      ],
+      "howHeading": "How to use the RabbitMQ quiz",
+      "how": [
+        "Pick a difficulty tier or practice the full 30-question catalog.",
+        "Pay close attention to routing keys and binding pattern rules.",
+        "Review explanations to learn production-grade topology configurations."
+      ],
+      "faqHeading": "Frequently asked questions about the RabbitMQ quiz",
+      "faqs": [
+        {
+          "question": "How many questions are in the RabbitMQ quiz?",
+          "answer": "There are 30 questions in total: 10 Beginner, 10 Intermediate, and 10 Advanced, with randomized presentation."
+        },
+        {
+          "question": "Does it cover current RabbitMQ features?",
+          "answer": "Yes, it highlights modern Quorum queues, Raft-based consensus, and current production deployment standards."
+        },
+        {
+          "question": "Is registration required?",
+          "answer": "No, the drill is completely free without any login or account creation."
+        }
+      ]
+    },
+    "systemArchitecture": {
+      "metaTitle": "System Architecture Interview Quiz: Microservices to Distributed Systems | ToolNotch",
+      "metaDescription": "30 technical interview questions on distributed systems design, resilience patterns, Kubernetes, Saga, Circuit Breaker, and observability.",
+      "title": "System Architecture Interview Quiz",
+      "coversHeading": "What the System Architecture interview quiz covers",
+      "covers": [
+        "This quiz tests your knowledge of distributed system design and high-scale software engineering: microservices, service decoupling, and network protocols.",
+        "It covers resilience patterns (Circuit Breaker, Rate Limiting, Retry with exponential backoff and jitter), distributed transaction consistency (Saga Pattern), distributed observability (OpenTelemetry), and multi-layer caching."
+      ],
+      "levelsHeading": "Difficulty levels",
+      "levels": [
+        "Beginner covers service architecture fundamentals, REST vs gRPC trade-offs, load balancers, and caching patterns (Cache-Aside, Write-Through).",
+        "Intermediate explores resilience design, Circuit Breakers, rate limiting algorithms (Token Bucket, Leaky Bucket), idempotency, and backpressure.",
+        "Advanced challenges your ability to design large-scale microservice ecosystems, Service Meshes, Chaos Engineering, distributed tracing, and fault-tolerant backends."
+      ],
+      "topicsHeading": "Question topics covered",
+      "topics": [
+        "Modular monolith vs microservices trade-offs",
+        "Communication protocols: REST vs gRPC vs GraphQL",
+        "Circuit Breaker states: Closed, Open, and Half-Open transitions",
+        "Rate limiting algorithms (Token Bucket, Leaky Bucket, Sliding Window)",
+        "Idempotency guarantees with idempotent API keys",
+        "Observability pillars: metrics, structured logging, and distributed tracing"
+      ],
+      "howHeading": "How to use the System Architecture quiz",
+      "how": [
+        "Choose your target level or take the entire 30-question test.",
+        "Weigh latency, fault tolerance, and operational complexity before answering.",
+        "Review explanations to refine your rationale for Senior and Staff design interviews."
+      ],
+      "faqHeading": "Frequently asked questions about the System Architecture quiz",
+      "faqs": [
+        {
+          "question": "How many questions are in the System Architecture quiz?",
+          "answer": "There are 30 questions in total: 10 Beginner, 10 Intermediate, and 10 Advanced, shuffled every session."
+        },
+        {
+          "question": "Is this suitable for Senior or Staff Engineer interviews?",
+          "answer": "Yes, it covers core foundational concepts as well as real-world scenarios asked in Staff and Principal System Design interviews."
+        },
+        {
+          "question": "Is it completely free?",
+          "answer": "Yes, 100% free with no registration or download needed."
         }
       ]
     }
@@ -5336,32 +5658,182 @@
       "table": {
         "heading": "Every FIFA World Cup Winner (1930–2022)",
         "note": "aet = after extra time; pens = decided on penalties.",
-        "cols": ["Year", "Host", "Winner", "Runner-up", "Final score"],
+        "cols": [
+          "Year",
+          "Host",
+          "Winner",
+          "Runner-up",
+          "Final score"
+        ],
         "rows": [
-          ["1930", "Uruguay", "Uruguay", "Argentina", "4–2"],
-          ["1934", "Italy", "Italy", "Czechoslovakia", "2–1 (aet)"],
-          ["1938", "France", "Italy", "Hungary", "4–2"],
-          ["1942", "Not held", "Not held", "-", "World War II"],
-          ["1946", "Not held", "Not held", "-", "World War II"],
-          ["1950", "Brazil", "Uruguay", "Brazil", "2–1 (deciding match)"],
-          ["1954", "Switzerland", "West Germany", "Hungary", "3–2"],
-          ["1958", "Sweden", "Brazil", "Sweden", "5–2"],
-          ["1962", "Chile", "Brazil", "Czechoslovakia", "3–1"],
-          ["1966", "England", "England", "West Germany", "4–2 (aet)"],
-          ["1970", "Mexico", "Brazil", "Italy", "4–1"],
-          ["1974", "West Germany", "West Germany", "Netherlands", "2–1"],
-          ["1978", "Argentina", "Argentina", "Netherlands", "3–1 (aet)"],
-          ["1982", "Spain", "Italy", "West Germany", "3–1"],
-          ["1986", "Mexico", "Argentina", "West Germany", "3–2"],
-          ["1990", "Italy", "West Germany", "Argentina", "1–0"],
-          ["1994", "United States", "Brazil", "Italy", "0–0 (3–2 pens)"],
-          ["1998", "France", "France", "Brazil", "3–0"],
-          ["2002", "South Korea & Japan", "Brazil", "Germany", "2–0"],
-          ["2006", "Germany", "Italy", "France", "1–1 (5–3 pens)"],
-          ["2010", "South Africa", "Spain", "Netherlands", "1–0 (aet)"],
-          ["2014", "Brazil", "Germany", "Argentina", "1–0 (aet)"],
-          ["2018", "Russia", "France", "Croatia", "4–2"],
-          ["2022", "Qatar", "Argentina", "France", "3–3 (4–2 pens)"]
+          [
+            "1930",
+            "Uruguay",
+            "Uruguay",
+            "Argentina",
+            "4–2"
+          ],
+          [
+            "1934",
+            "Italy",
+            "Italy",
+            "Czechoslovakia",
+            "2–1 (aet)"
+          ],
+          [
+            "1938",
+            "France",
+            "Italy",
+            "Hungary",
+            "4–2"
+          ],
+          [
+            "1942",
+            "Not held",
+            "Not held",
+            "-",
+            "World War II"
+          ],
+          [
+            "1946",
+            "Not held",
+            "Not held",
+            "-",
+            "World War II"
+          ],
+          [
+            "1950",
+            "Brazil",
+            "Uruguay",
+            "Brazil",
+            "2–1 (deciding match)"
+          ],
+          [
+            "1954",
+            "Switzerland",
+            "West Germany",
+            "Hungary",
+            "3–2"
+          ],
+          [
+            "1958",
+            "Sweden",
+            "Brazil",
+            "Sweden",
+            "5–2"
+          ],
+          [
+            "1962",
+            "Chile",
+            "Brazil",
+            "Czechoslovakia",
+            "3–1"
+          ],
+          [
+            "1966",
+            "England",
+            "England",
+            "West Germany",
+            "4–2 (aet)"
+          ],
+          [
+            "1970",
+            "Mexico",
+            "Brazil",
+            "Italy",
+            "4–1"
+          ],
+          [
+            "1974",
+            "West Germany",
+            "West Germany",
+            "Netherlands",
+            "2–1"
+          ],
+          [
+            "1978",
+            "Argentina",
+            "Argentina",
+            "Netherlands",
+            "3–1 (aet)"
+          ],
+          [
+            "1982",
+            "Spain",
+            "Italy",
+            "West Germany",
+            "3–1"
+          ],
+          [
+            "1986",
+            "Mexico",
+            "Argentina",
+            "West Germany",
+            "3–2"
+          ],
+          [
+            "1990",
+            "Italy",
+            "West Germany",
+            "Argentina",
+            "1–0"
+          ],
+          [
+            "1994",
+            "United States",
+            "Brazil",
+            "Italy",
+            "0–0 (3–2 pens)"
+          ],
+          [
+            "1998",
+            "France",
+            "France",
+            "Brazil",
+            "3–0"
+          ],
+          [
+            "2002",
+            "South Korea & Japan",
+            "Brazil",
+            "Germany",
+            "2–0"
+          ],
+          [
+            "2006",
+            "Germany",
+            "Italy",
+            "France",
+            "1–1 (5–3 pens)"
+          ],
+          [
+            "2010",
+            "South Africa",
+            "Spain",
+            "Netherlands",
+            "1–0 (aet)"
+          ],
+          [
+            "2014",
+            "Brazil",
+            "Germany",
+            "Argentina",
+            "1–0 (aet)"
+          ],
+          [
+            "2018",
+            "Russia",
+            "France",
+            "Croatia",
+            "4–2"
+          ],
+          [
+            "2022",
+            "Qatar",
+            "Argentina",
+            "France",
+            "3–3 (4–2 pens)"
+          ]
         ]
       },
       "faqHeading": "World Cup winners: frequently asked questions",
@@ -5450,14 +5922,49 @@
       "table": {
         "heading": "Most European Cup and Champions League titles",
         "note": "European Cup / UEFA Champions League titles, men’s competition. Figures as of the 2024 final.",
-        "cols": ["Club", "Country", "Titles", "Most recent"],
+        "cols": [
+          "Club",
+          "Country",
+          "Titles",
+          "Most recent"
+        ],
         "rows": [
-          ["Real Madrid", "Spain", "15", "2024"],
-          ["AC Milan", "Italy", "7", "2007"],
-          ["Bayern Munich", "Germany", "6", "2020"],
-          ["Liverpool", "England", "6", "2019"],
-          ["Barcelona", "Spain", "5", "2015"],
-          ["Ajax", "Netherlands", "4", "1995"]
+          [
+            "Real Madrid",
+            "Spain",
+            "15",
+            "2024"
+          ],
+          [
+            "AC Milan",
+            "Italy",
+            "7",
+            "2007"
+          ],
+          [
+            "Bayern Munich",
+            "Germany",
+            "6",
+            "2020"
+          ],
+          [
+            "Liverpool",
+            "England",
+            "6",
+            "2019"
+          ],
+          [
+            "Barcelona",
+            "Spain",
+            "5",
+            "2015"
+          ],
+          [
+            "Ajax",
+            "Netherlands",
+            "4",
+            "1995"
+          ]
         ]
       },
       "faqHeading": "Which football club are you? Common questions",
@@ -5520,14 +6027,49 @@
       "table": {
         "heading": "Clubs with the most European Cup / Champions League titles",
         "note": "Men’s competition, titles through the 2024 final.",
-        "cols": ["Club", "Country", "Titles", "Years"],
+        "cols": [
+          "Club",
+          "Country",
+          "Titles",
+          "Years"
+        ],
         "rows": [
-          ["Real Madrid", "Spain", "15", "1956–2024"],
-          ["AC Milan", "Italy", "7", "1963–2007"],
-          ["Bayern Munich", "Germany", "6", "1974–2020"],
-          ["Liverpool", "England", "6", "1977–2019"],
-          ["Barcelona", "Spain", "5", "1992–2015"],
-          ["Ajax", "Netherlands", "4", "1971–1995"]
+          [
+            "Real Madrid",
+            "Spain",
+            "15",
+            "1956–2024"
+          ],
+          [
+            "AC Milan",
+            "Italy",
+            "7",
+            "1963–2007"
+          ],
+          [
+            "Bayern Munich",
+            "Germany",
+            "6",
+            "1974–2020"
+          ],
+          [
+            "Liverpool",
+            "England",
+            "6",
+            "1977–2019"
+          ],
+          [
+            "Barcelona",
+            "Spain",
+            "5",
+            "1992–2015"
+          ],
+          [
+            "Ajax",
+            "Netherlands",
+            "4",
+            "1971–1995"
+          ]
         ]
       },
       "faqHeading": "Champions League trivia: common questions",
@@ -5590,14 +6132,49 @@
       "table": {
         "heading": "Formula 1 drivers with the most World Championships",
         "note": "Drivers' titles won, as of the end of the 2024 season.",
-        "cols": ["Driver", "Country", "Titles", "Seasons"],
+        "cols": [
+          "Driver",
+          "Country",
+          "Titles",
+          "Seasons"
+        ],
         "rows": [
-          ["Lewis Hamilton", "United Kingdom", "7", "2008–2020"],
-          ["Michael Schumacher", "Germany", "7", "1994–2004"],
-          ["Juan Manuel Fangio", "Argentina", "5", "1951–1957"],
-          ["Alain Prost", "France", "4", "1985–1993"],
-          ["Sebastian Vettel", "Germany", "4", "2010–2013"],
-          ["Max Verstappen", "Netherlands", "4", "2021–2024"]
+          [
+            "Lewis Hamilton",
+            "United Kingdom",
+            "7",
+            "2008–2020"
+          ],
+          [
+            "Michael Schumacher",
+            "Germany",
+            "7",
+            "1994–2004"
+          ],
+          [
+            "Juan Manuel Fangio",
+            "Argentina",
+            "5",
+            "1951–1957"
+          ],
+          [
+            "Alain Prost",
+            "France",
+            "4",
+            "1985–1993"
+          ],
+          [
+            "Sebastian Vettel",
+            "Germany",
+            "4",
+            "2010–2013"
+          ],
+          [
+            "Max Verstappen",
+            "Netherlands",
+            "4",
+            "2021–2024"
+          ]
         ]
       },
       "faqHeading": "Formula 1 trivia: common questions",
@@ -5660,7 +6237,12 @@
       "table": {
         "heading": "The eight drivers you can be matched with",
         "note": "World Drivers' Championships, as of the end of the 2024 season.",
-        "cols": ["Driver", "Country", "F1 titles", "Known for"],
+        "cols": [
+          "Driver",
+          "Country",
+          "F1 titles",
+          "Known for"
+        ],
         "rows": [
           [
             "Max Verstappen",
@@ -5674,16 +6256,36 @@
             "7",
             "Calm consistency and longevity"
           ],
-          ["Ayrton Senna", "Brazil", "3", "Qualifying genius and intensity"],
+          [
+            "Ayrton Senna",
+            "Brazil",
+            "3",
+            "Qualifying genius and intensity"
+          ],
           [
             "Michael Schumacher",
             "Germany",
             "7",
             "Relentless preparation and work rate"
           ],
-          ["Charles Leclerc", "Monaco", "0", "Natural speed and emotion"],
-          ["Fernando Alonso", "Spain", "2", "Racecraft and refusal to quit"],
-          ["Oscar Piastri", "Australia", "0", "Cool head, quick learner"],
+          [
+            "Charles Leclerc",
+            "Monaco",
+            "0",
+            "Natural speed and emotion"
+          ],
+          [
+            "Fernando Alonso",
+            "Spain",
+            "2",
+            "Racecraft and refusal to quit"
+          ],
+          [
+            "Oscar Piastri",
+            "Australia",
+            "0",
+            "Cool head, quick learner"
+          ],
           [
             "Lando Norris",
             "United Kingdom",
@@ -5752,7 +6354,11 @@
       "table": {
         "heading": "The five love languages at a glance",
         "note": "Framework from Gary Chapman, The Five Love Languages (1992).",
-        "cols": ["Love language", "What it means", "Everyday example"],
+        "cols": [
+          "Love language",
+          "What it means",
+          "Everyday example"
+        ],
         "rows": [
           [
             "Words of affirmation",

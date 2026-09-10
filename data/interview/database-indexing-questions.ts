@@ -9,10 +9,10 @@ export const DATABASE_INDEXING_QUESTIONS: InterviewQuestion[] = [
     question: 'What is a database index?',
     code: null,
     options: [
-      'A backup copy of the entire table stored on a separate disk',
-      'A separate data structure that maps column values to row locations, speeding up data retrieval',
-      'A constraint that enforces row uniqueness across a table',
-      'A transaction log that records every INSERT, UPDATE, and DELETE',
+      "A compressed snapshot backup stored on secondary tape media",
+      "A data structure that accelerates lookups at the cost of write overhead",
+      "A security constraint that hashes column values against injection attacks",
+      "A temporary in-memory cursor created during complex analytical joins"
     ],
     correctIndex: 1,
     explanation:
@@ -71,10 +71,10 @@ SELECT count(*) FROM pg_indexes WHERE tablename = 'orders';`,
     question: 'What distinguishes a primary index from a secondary index?',
     code: null,
     options: [
-      'A primary index is always a hash index; secondary indexes are always B-Trees',
-      'A primary index is built on the primary key and typically determines physical row order; secondary indexes are on other columns',
-      'A primary index can only be defined at table creation; secondary indexes can be added at any time',
-      'There is no practical difference — the terms are interchangeable',
+      "Primary indexes allow duplicates; secondary indexes enforce uniqueness",
+      "Primary indexes determine table layout or PK; secondary indexes index other fields",
+      "Primary indexes are stored in RAM; secondary indexes reside on disk storage",
+      "Primary indexes support range filters; secondary indexes only support equality"
     ],
     correctIndex: 1,
     explanation:
@@ -103,10 +103,10 @@ WHERE tablename = 'orders';`,
     question: 'What is a full table scan, and when does the database use one?',
     code: null,
     options: [
-      'Reading every row in a table sequentially; used when no suitable index exists or when the planner estimates it is cheaper than an index scan',
-      'Reading only the first and last rows of a table to estimate table size',
-      'A special operation that rebuilds all indexes on the table',
-      'A scan that only reads rows matching a WHERE clause',
+      "Reading only the first and last storage blocks to compute row approximations",
+      "Reading all table rows sequentially when no index fits or costs are lower",
+      "Scanning all secondary indexes concurrently before accessing table records",
+      "Validating foreign key constraints sequentially across parent table pages"
     ],
     correctIndex: 0,
     explanation:
@@ -199,10 +199,10 @@ INSERT INTO users (email) VALUES (NULL);  -- also succeeds`,
     question: 'In PostgreSQL, what does the `EXPLAIN` command show you?',
     code: `EXPLAIN SELECT * FROM orders WHERE customer_id = 42;`,
     options: [
-      'The SQL standard version of your query after automatic rewriting',
-      'The query execution plan the planner intends to use, including node types, estimated costs, and row counts',
-      'A list of all indexes on the tables referenced in the query',
-      'The wall-clock time the query took to execute',
+      "The rewritten SQL query text after applying view and rule substitutions",
+      "The planned execution tree with operator nodes, costs, and estimated rows",
+      "A comprehensive report detailing all existing table constraints and indexes",
+      "The total elapsed wall-clock time and CPU utilization for query completion"
     ],
     correctIndex: 1,
     explanation:
@@ -231,10 +231,10 @@ Execution Time: 0.063 ms
     question: 'What is the key difference between a clustered and a non-clustered index?',
     code: null,
     options: [
-      'A clustered index stores the actual row data in index order; a non-clustered index stores only pointers to the data rows',
-      'A clustered index can only be on a single column; non-clustered indexes support multiple columns',
-      'Non-clustered indexes are faster for all query types',
-      'Clustered indexes require more disk space than non-clustered indexes',
+      "Clustered index stores rows in index order; non-clustered stores row pointers",
+      "Clustered index supports single columns; non-clustered supports multi-columns",
+      "Clustered index requires memory cache; non-clustered lives on disk storage",
+      "Clustered index is for joins; non-clustered index is solely for aggregations"
     ],
     correctIndex: 0,
     explanation:
@@ -258,10 +258,10 @@ WHERE tablename = 'orders' AND attname = 'created_at';
     question: 'Why are indexes on low-cardinality columns (e.g., a boolean `is_active`) often ineffective?',
     code: null,
     options: [
-      'The database cannot build B-Tree indexes on boolean columns',
-      'When a column has very few distinct values, an index scan may touch most of the table, making a sequential scan cheaper',
-      'Low-cardinality indexes are automatically dropped by the database engine',
-      'Indexes on booleans require a special storage engine not available in standard PostgreSQL',
+      "B-Tree indexes cannot be constructed on columns using boolean data types",
+      "Few distinct values mean an index scan touches most pages, beating no seeks",
+      "Low-cardinality index structures are automatically purged by engine workers",
+      "Boolean columns require specialized columnar engines absent in PostgreSQL"
     ],
     correctIndex: 1,
     explanation:
@@ -290,10 +290,10 @@ EXPLAIN SELECT * FROM users WHERE is_active = false;
     question: "What happens to an index when you update a row's indexed column?",
     code: null,
     options: [
-      'Nothing — indexes are refreshed only during the next VACUUM',
-      'The old index entry is deleted and a new entry is inserted to reflect the updated value',
-      'The entire index is rebuilt from scratch after every UPDATE',
-      'The index entry is marked as invalid until the next SELECT is executed',
+      "Nothing — index modifications are deferred to the subsequent VACUUM run",
+      "The old index key entry is deleted and a new key entry is inserted",
+      "The entire table index is rebuilt asynchronously from scratch by engine",
+      "The corresponding index node is flagged invalid until the next read scan"
     ],
     correctIndex: 1,
     explanation:
@@ -353,10 +353,10 @@ FROM bt_page_stats('idx_orders_customer_id', 1);
     question: 'Which statement correctly contrasts a hash index with a B-Tree index?',
     code: null,
     options: [
-      'Hash indexes support range queries (>, <, BETWEEN); B-Trees do not',
-      'Hash indexes offer O(1) equality lookups but cannot support range queries or ORDER BY; B-Trees support all of these',
-      'Hash indexes store data in sorted order, making range scans very fast',
-      'B-Tree and hash indexes have identical performance characteristics; the choice is purely cosmetic',
+      "Hash indexes excel at range filters; B-Trees only handle point lookups",
+      "Hash indexes offer O(1) equality but no ranges; B-Trees support both",
+      "Hash indexes store entries in physical sorted order for range lookups",
+      "Hash and B-Tree indexes provide identical performance characteristics"
     ],
     correctIndex: 1,
     explanation:
@@ -414,10 +414,10 @@ EXPLAIN SELECT * FROM users WHERE first_name = 'Alice';
     question: 'What is a covering index?',
     code: null,
     options: [
-      'An index that spans every column in the table',
-      'An index that contains all columns needed to satisfy a query, allowing the engine to return results from the index alone without accessing the table heap',
-      'An index that automatically expands to cover new columns as they are added to the table',
-      'An index that covers NULL values that standard indexes would normally skip',
+      "An index that automatically spans every physical column in the table to eliminate the need for table heap storage",
+      "An index that contains all columns needed by a query, allowing the engine to return results without touching the heap",
+      "A dynamic index that detects slow queries and adds new columns automatically to its B-Tree structure during runtime",
+      "A clustered index that reorganizes table rows physically on disk to ensure range queries avoid random storage seeks"
     ],
     correctIndex: 1,
     explanation:
@@ -449,10 +449,10 @@ Index Only Scan using idx_orders_covering on orders
     question: 'What is index selectivity, and why does it matter to the query planner?',
     code: null,
     options: [
-      'The number of pages the index occupies on disk; higher page counts mean faster scans',
-      'The ratio of distinct values to total rows; high selectivity means few rows per key value, making the index more useful for lookups',
-      'Whether the index was created on a primary key column',
-      'The percentage of queries in the workload that reference the indexed column',
+      "The total disk blocks occupied by index pages; larger sizes scan faster",
+      "The ratio of distinct values to rows; high selectivity favors index use",
+      "Whether the index definition was applied directly to a primary key column",
+      "The historical percentage of SQL queries that reference the index keys"
     ],
     correctIndex: 1,
     explanation:
@@ -484,10 +484,10 @@ most_common_freqs | {0.0001,...}  -- each customer ≈ 0.01% of rows → high se
     question: 'What is a partial index in PostgreSQL?',
     code: null,
     options: [
-      'An index built on only the first N bytes of a text column',
-      'An index that includes only rows satisfying a WHERE predicate, reducing its size and maintenance cost',
-      'An index that covers only half of a composite key',
-      'An index automatically created by the planner for a single query execution',
+      "An index indexing only the prefix bytes of lengthy text fields",
+      "An index containing rows that satisfy a specific WHERE filter",
+      "An index covering the leading column of a composite key pair",
+      "An index synthesized temporarily for a single query execution"
     ],
     correctIndex: 1,
     explanation:
@@ -522,10 +522,10 @@ EXPLAIN SELECT * FROM orders WHERE status = 'shipped' ORDER BY created_at;
     question: 'What is a function-based (expression) index?',
     code: null,
     options: [
-      'An index stored as a stored procedure that regenerates itself nightly',
-      'An index built on the result of an expression or function applied to one or more columns, enabling index scans on computed predicates',
-      'An index that triggers a user-defined function whenever a row is inserted',
-      "An index whose key values are encrypted using a hash function for security",
+      "An index defined as a database stored procedure rebuilt nightly",
+      "An index on column expressions or functions enabling computed lookups",
+      "An index executing a trigger function whenever row mutations happen",
+      "An index hashing key values cryptographically for tenant protection"
     ],
     correctIndex: 1,
     explanation:
@@ -555,10 +555,10 @@ Index Scan using idx_users_lower_email on users
     question: 'What is index bloat and how does VACUUM help in PostgreSQL?',
     code: null,
     options: [
-      'Index bloat occurs when an index has too many columns; VACUUM removes extra columns automatically',
-      'Index bloat is the accumulation of dead tuple references in index pages from UPDATEs and DELETEs; VACUUM reclaims those pages and marks them reusable',
-      'Index bloat means the index file exceeds the size of the table; VACUUM compresses both to the same size',
-      'Index bloat is caused by too many concurrent reads; VACUUM resets read counters',
+      "Bloat means too many index columns; VACUUM drops extra columns automatically",
+      "Bloat is dead tuple space from updates/deletes; VACUUM frees reusable pages",
+      "Bloat means index size exceeds heap; VACUUM compresses both to equal sizes",
+      "Bloat stems from concurrent connections; VACUUM flushes connection pools"
     ],
     correctIndex: 1,
     explanation:
@@ -593,10 +593,10 @@ REINDEX INDEX CONCURRENTLY idx_orders_customer_id;`,
     question: 'Why might the PostgreSQL query planner ignore an index even when one exists on the filtered column?',
     code: null,
     options: [
-      'PostgreSQL never ignores an index once it is created — it is always used',
-      'The planner\'s cost model estimates that a sequential scan is cheaper, often because the predicate matches a large fraction of rows or table statistics are stale',
-      'The index can only be used if the query includes an ORDER BY clause on the indexed column',
-      'Indexes are only used for JOIN operations, never for WHERE clause filtering',
+      "The database engine strictly never bypasses an active defined B-Tree index",
+      "The optimizer estimates a sequential scan is cheaper for matching row volumes",
+      "The index is only accessible if the query includes an explicit ORDER BY sort",
+      "B-Tree indexes are evaluated solely during relational JOIN table conditions"
     ],
     correctIndex: 1,
     explanation:
@@ -710,10 +710,10 @@ SELECT * FROM reservations WHERE period && '[2024-01-01,2024-01-07)';`,
     question: 'A GIN (Generalized Inverted Index) is most appropriate for which type of column?',
     code: null,
     options: [
-      'A single-value integer primary key',
-      'A column containing composite values such as arrays, JSONB, or `tsvector` full-text search documents',
-      'A monotonically increasing timestamp column in an append-only table',
-      'A low-cardinality boolean column',
+      "A single-value auto-increment integer primary key",
+      "Composite columns like arrays, JSONB, or tsvector",
+      "A strictly increasing timestamp in append tables",
+      "A low-cardinality two-state boolean status flag"
     ],
     correctIndex: 1,
     explanation:
@@ -786,10 +786,10 @@ SELECT * FROM events WHERE payload @> '{"type": "click"}';`,
     code: `CREATE INDEX CONCURRENTLY idx_orders_customer_id
 ON orders (customer_id);`,
     options: [
-      'It builds the index on multiple CPU cores simultaneously to reduce build time',
-      'It builds the index without taking an exclusive table lock, allowing concurrent reads and writes during index creation at the cost of a longer build time',
-      'It creates the index on a replica before promoting it to the primary, avoiding downtime',
-      'It defers index enforcement until after a COMMIT, improving transaction throughput',
+      "Builds the index across all available CPU cores simultaneously to minimize the total creation time for B-Tree pages",
+      "Builds the index without taking an exclusive write lock on the table, allowing concurrent reads and writes at build time",
+      "Builds the index structure on a read replica before promoting it to master status, eliminating I/O on the primary node",
+      "Defers uniqueness constraint validation until the transaction commit, maximizing ingestion throughput for batch jobs"
     ],
     correctIndex: 1,
     explanation:
@@ -824,10 +824,10 @@ WHERE tablename = 'orders';
     question: "What is an 'invisible index' (supported in MySQL 8+ and Oracle) and what is its primary use case?",
     code: null,
     options: [
-      'An index encrypted at rest so its contents cannot be read by unauthorized users',
-      'An index that is maintained by the engine but hidden from the query planner, used to safely test the impact of dropping an index before actually removing it',
-      'An index stored in memory only, never persisted to disk',
-      'An index on system catalog tables that is not exposed in information_schema views',
+      "An index encrypted on disk so contents cannot be inspected by system admins",
+      "An index maintained by engine but hidden from planner to test drop impacts",
+      "An ephemeral index resident in RAM that is never serialized to table storage",
+      "An internal index on system tables hidden from information_schema metadata"
     ],
     correctIndex: 1,
     explanation:
@@ -860,10 +860,10 @@ RESET enable_bitmapscan;`,
     question: "How does PostgreSQL's MVCC (Multi-Version Concurrency Control) model contribute to index bloat over time?",
     code: null,
     options: [
-      'MVCC compresses old row versions, causing indexes to fragment over time',
-      'Every UPDATE creates a new heap tuple version while leaving the old version in place; both the old and new index entries coexist until VACUUM reclaims the dead tuples',
-      'MVCC forces the index to store the transaction ID alongside every key, doubling its size',
-      'MVCC has no effect on indexes — only heap pages accumulate dead tuples',
+      "MVCC compresses historical rows causing index B-Tree pages to split apart",
+      "UPDATEs create new tuple versions; both old and new index keys stay until VACUUM",
+      "MVCC appends 64-bit transaction IDs to every leaf index key, doubling disk footprint",
+      "MVCC isolates index pages so dead rows remain strictly confined to table heap data"
     ],
     correctIndex: 1,
     explanation:
@@ -896,10 +896,10 @@ REINDEX TABLE CONCURRENTLY orders;`,
     question: 'When does the PostgreSQL planner choose a Bitmap Index Scan over a plain Index Scan?',
     code: null,
     options: [
-      'When the query returns only a single row',
-      'When multiple indexes must be combined (AND/OR) or when the estimated row count is moderate, allowing heap pages to be read once in physical order rather than via many random seeks',
-      'When the table has no heap pages — data is stored in the index itself',
-      'Bitmap Index Scan is always faster and is always preferred over a plain Index Scan',
+      "When queries return a solitary row identified by a unique index constraint, bypassing heap validation checks",
+      "When combining multiple indexes or reading moderate row counts in physical heap page order to eliminate random seeks",
+      "When tables lack physical heap pages because records are stored entirely inside the leaves of a clustered index",
+      "When the cost optimizer forces bitmap scans because they are unconditionally faster than plain index scans"
     ],
     correctIndex: 1,
     explanation:
@@ -929,10 +929,10 @@ Bitmap Heap Scan on orders
     question: 'In a partitioned table, what is a key consideration when creating indexes to ensure all partitions benefit?',
     code: null,
     options: [
-      'Indexes must be created on the partition key column only; other columns cannot be indexed',
-      'Creating an index on the parent partitioned table in PostgreSQL 11+ automatically propagates the index to all existing and future partitions',
-      'Each partition requires a manually created index with a unique name; there is no automatic propagation',
-      'Partitioned tables do not support B-Tree indexes; only BRIN indexes are available',
+      "Indexes must reside strictly on partition keys; other columns cannot index",
+      "Indexes created on parent tables automatically apply across all partitions",
+      "Every individual partition mandates manual index declaration with unique tags",
+      "Partitioned tables reject standard B-Trees and exclusively permit BRIN types"
     ],
     correctIndex: 1,
     explanation:
@@ -969,10 +969,10 @@ WHERE tablename LIKE 'orders%' AND indexname LIKE '%customer%';
     question: 'What is a BRIN index and for which table characteristic is it best suited?',
     code: null,
     options: [
-      'A block range index that stores min/max values per range of pages; best for large, physically ordered (correlated) columns like `created_at` in append-only tables',
-      'A balanced range index that replaces B-Trees for all numeric columns',
-      'A bitmap range index used to speed up bitmap heap scans on random data',
-      'A binary range index that only works with UUID primary keys',
+      "A block range index storing min/max values for physically sorted columns",
+      "A balanced range index engineered to replace B-Trees across numeric fields",
+      "A bitmap range index designed to accelerate random heap data lookups",
+      "A binary radix index restricted to UUID and primary key identity lookups"
     ],
     correctIndex: 0,
     explanation:

@@ -111,7 +111,7 @@ export function AppInput({
       {label && (
         <label
           htmlFor={inputId}
-          className={`font-mono text-xs font-semibold uppercase tracking-wider text-foreground mb-2 select-none ${
+          className={` text-xs font-semibold uppercase  text-foreground mb-2 select-none ${
             disabled ? "opacity-50" : ""
           } ${labelClassName}`}
         >
@@ -134,16 +134,14 @@ export function AppInput({
             h-12
             px-4
             py-3
-            font-mono
             text-sm
-            tracking-wider
             text-foreground
             rounded-[2px]
             transition-colors
             duration-150
             outline-none
             placeholder:text-label/50
-            placeholder:font-mono
+            placeholder:
             placeholder:uppercase
             disabled:opacity-40
             disabled:cursor-not-allowed
@@ -164,16 +162,10 @@ export function AppInput({
         />
       </div>
 
-      {error && (
-        <span className="font-mono text-xs text-red-500 mt-1.5 tracking-wide">
-          {error}
-        </span>
-      )}
+      {error && <span className=" text-xs text-red-500 mt-1.5 ">{error}</span>}
 
       {helperText && !error && (
-        <span className="font-mono text-xs text-label/70 mt-1.5 tracking-wide">
-          {helperText}
-        </span>
+        <span className=" text-xs text-label/70 mt-1.5 ">{helperText}</span>
       )}
     </div>
   );
