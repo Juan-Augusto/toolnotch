@@ -25,7 +25,9 @@ export function AppQuizCardItem({
   const Icon = config?.icon;
 
   const quizHref =
-    currentLocale === "en" ? `/quiz/${quiz.id}` : `/${currentLocale}/quiz/${quiz.id}`;
+    currentLocale === "en"
+      ? `/quiz/${quiz.id}`
+      : `/${currentLocale}/quiz/${quiz.id}`;
 
   return (
     <Link href={quizHref} className="block group h-full select-none">
@@ -53,17 +55,17 @@ export function AppQuizCardItem({
             </span>
           </div>
 
-          <h3 className="uppercase text-base sm:text-lg font-bold tracking-wide text-foreground group-hover:text-secondary transition-colors leading-snug mb-2.5">
+          <h3 className="uppercase text-base sm:text-lg font-bold  text-foreground group-hover:text-secondary transition-colors leading-snug mb-2.5">
             {quiz.title}
           </h3>
 
-          <p className="text-xs sm:text-sm text-label/85 leading-relaxed line-clamp-2">
+          <p className=" text-label/85 leading-relaxed line-clamp-2">
             {quiz.description}
           </p>
         </div>
 
         <div className="mt-6 pt-4 border-t border-border/40 flex items-center justify-between">
-          <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-label group-hover:text-secondary transition-colors">
+          <span className="font-mono text-[11px] font-bold uppercase  text-label group-hover:text-secondary transition-colors">
             {labels.playQuiz}
           </span>
           <ArrowRight className="w-4 h-4 text-label group-hover:text-secondary group-hover:translate-x-1 transition-all" />

@@ -48,7 +48,7 @@ export function AppQuizStartScreen({
         </div>
 
         <div>
-          <h1 className="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-foreground mb-2">
+          <h1 className="text-2xl sm:text-3xl font-bold uppercase  text-foreground mb-2">
             {title}
           </h1>
           <p className="text-label/90 text-sm sm:text-base leading-relaxed max-w-3xl">

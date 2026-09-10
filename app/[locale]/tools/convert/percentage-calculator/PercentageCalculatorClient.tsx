@@ -125,7 +125,7 @@ export default function PercentageCalculatorClient({
           </div>
           {poResult !== null && (
             <>
-              <span className="uppercase text-label/70 font-semibold tracking-wider mb-2 text-xs">
+              <span className="uppercase text-label/70 font-semibold  mb-2 text-xs">
                 {percentOf.resultPrefix}
               </span>
               <div className="bg-tertiary p-4 rounded-xl font-bold text-lg">
@@ -170,7 +170,7 @@ export default function PercentageCalculatorClient({
           </div>
           {wpResult !== null && (
             <>
-              <span className="uppercase text-label/70 font-semibold tracking-wider mb-2 text-xs">
+              <span className="uppercase text-label/70 font-semibold  mb-2 text-xs">
                 {whatPercent.resultPrefix}
               </span>
               <div className="bg-tertiary p-4 rounded-xl font-bold text-lg">
@@ -215,7 +215,7 @@ export default function PercentageCalculatorClient({
           </div>
           {pcResult !== null && (
             <>
-              <span className="uppercase text-label/70 font-semibold tracking-wider mb-2 text-xs">
+              <span className="uppercase text-label/70 font-semibold  mb-2 text-xs">
                 {percentChange.resultPrefix}
               </span>
               <div className="bg-tertiary p-4 rounded-xl font-bold text-lg">

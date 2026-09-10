@@ -9,8 +9,7 @@ import {
   type FocusEvent,
 } from "react";
 
-export interface AppTextareaProps
-  extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface AppTextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   /**
    * Texto ou elemento de rótulo acima do textarea.
    */
@@ -85,7 +84,7 @@ export function AppTextarea({
       {label && (
         <label
           htmlFor={textareaId}
-          className={`font-mono text-xs font-semibold uppercase tracking-wider text-foreground mb-2 select-none ${
+          className={`font-mono text-xs font-semibold uppercase  text-foreground mb-2 select-none ${
             disabled ? "opacity-50" : ""
           } ${labelClassName}`}
         >
@@ -110,7 +109,7 @@ export function AppTextarea({
             py-3
             font-mono
             text-sm
-            tracking-wider
+            
             text-foreground
             bg-tertiary
             border
@@ -139,13 +138,11 @@ export function AppTextarea({
       </div>
 
       {error && (
-        <span className="font-mono text-xs text-red-500 mt-1.5 tracking-wide">
-          {error}
-        </span>
+        <span className="font-mono text-xs text-red-500 mt-1.5 ">{error}</span>
       )}
 
       {helperText && !error && (
-        <span className="font-mono text-xs text-label/70 mt-1.5 tracking-wide">
+        <span className="font-mono text-xs text-label/70 mt-1.5 ">
           {helperText}
         </span>
       )}

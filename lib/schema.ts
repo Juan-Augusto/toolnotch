@@ -1,4 +1,5 @@
 import { AnyQuiz, isTriviaQuiz, isTriviaQuestion } from '@/lib/quizTypes'
+import type { InterviewQuestion } from '@/lib/interviewTypes'
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com'
 
@@ -146,6 +147,59 @@ export function quizDetailSchema(
         suggestedAnswer: q.options.map((o) => ({
           '@type': 'Answer',
           text: o.text,
+        })),
+      }
+    }),
+  }
+}
+
+export function interviewQuizSchema({
+  title,
+  description,
+  url,
+  locale = 'en',
+  about,
+  questions = [],
+}: {
+  title: string
+  description: string
+  url: string
+  locale?: string
+  about?: string
+  questions?: InterviewQuestion[]
+}) {
+  return {
+    '@type': 'Quiz' as const,
+    name: title,
+    url,
+    description,
+    inLanguage: LANG_MAP[locale] ?? locale,
+    educationalLevel: ['Beginner', 'Intermediate', 'Advanced'],
+    learningResourceType: 'Practice quiz',
+    ...(about ? { about: { '@type': 'Thing', name: about } } : {}),
+    hasPart: questions.map((q) => {
+      const acceptedText = q.options[q.correctIndex] ?? ''
+      const distractors = q.options.filter((_, idx) => idx !== q.correctIndex)
+      return {
+        '@type': 'Question',
+        eduQuestionType: 'Multiple choice',
+        name: q.question,
+        text: q.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: acceptedText,
+          ...(q.explanation
+            ? {
+                comment: {
+                  '@type': 'Comment',
+                  text: q.explanation,
+                },
+              }
+            : {}),
+        },
+        suggestedAnswer: distractors.map((optText) => ({
+          '@type': 'Answer',
+          text: optText,
         })),
       }
     }),

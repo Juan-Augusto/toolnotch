@@ -88,7 +88,10 @@ export function AppTabs({
     onChange?.(tab.id);
   };
 
-  const handleKeyDown = (e: KeyboardEvent<HTMLButtonElement>, index: number) => {
+  const handleKeyDown = (
+    e: KeyboardEvent<HTMLButtonElement>,
+    index: number,
+  ) => {
     const enabledTabs = normalizedTabs.filter((t) => !t.disabled);
     const currentIndex = enabledTabs.findIndex((t) => t.id === activeId);
 
@@ -109,20 +112,21 @@ export function AppTabs({
     }
   };
 
-  const sizeClasses: Record<"sm" | "md" | "lg", { tab: string; text: string }> = {
-    sm: {
-      tab: "pb-1.5 pt-0.5 px-0.5",
-      text: "text-xs tracking-wider",
-    },
-    md: {
-      tab: "pb-2 pt-1 px-1",
-      text: "text-xs md:text-sm tracking-wider",
-    },
-    lg: {
-      tab: "pb-2.5 pt-1.5 px-1.5",
-      text: "text-sm md:text-base tracking-widest",
-    },
-  };
+  const sizeClasses: Record<"sm" | "md" | "lg", { tab: string; text: string }> =
+    {
+      sm: {
+        tab: "pb-1.5 pt-0.5 px-0.5",
+        text: "text-xs ",
+      },
+      md: {
+        tab: "pb-2 pt-1 px-1",
+        text: "text-xs md:text-sm ",
+      },
+      lg: {
+        tab: "pb-2.5 pt-1.5 px-1.5",
+        text: "text-sm md:text-base st",
+      },
+    };
 
   const isSecondary = color === "secondary";
   const activeTextColor = isSecondary ? "text-secondary" : "text-primary";
@@ -160,11 +164,9 @@ export function AppTabs({
               onClick={() => handleTabClick(tab)}
               onKeyDown={(e) => handleKeyDown(e, idx)}
               tabIndex={isActive ? 0 : -1}
-              className={`relative inline-flex items-center justify-center gap-1.5 font-mono font-bold uppercase transition-colors duration-200 cursor-pointer disabled:cursor-not-allowed disabled:opacity-40 whitespace-nowrap outline-none focus-visible:ring-1 ${focusRingColor} rounded-xs ${
+              className={`relative inline-flex items-center justify-center gap-1.5 font-mono font-semibold uppercase transition-colors duration-200 cursor-pointer disabled:cursor-not-allowed disabled:opacity-40 whitespace-nowrap outline-none focus-visible:ring-1 ${focusRingColor} rounded-xs ${
                 sizeClasses[size].tab
-              } ${sizeClasses[size].text} ${
-                fullWidth ? "flex-1" : ""
-              } ${
+              } ${sizeClasses[size].text} ${fullWidth ? "flex-1" : ""} ${
                 isActive
                   ? `${activeTextColor} ${activeTabClassName}`
                   : `text-label/70 hover:text-foreground ${inactiveTabClassName}`

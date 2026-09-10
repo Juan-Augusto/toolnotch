@@ -128,7 +128,7 @@ export function AppMenu({
                   open ? "rotate-0" : "-rotate-90"
                 }`}
               />
-              <span className="font-bold uppercase tracking-wider text-foreground group-hover:text-primary transition-colors">
+              <span className="font-bold uppercase  text-foreground group-hover:text-primary transition-colors">
                 {grp.name}
               </span>
               {grp.tags && grp.tags.length > 0 && (
@@ -247,7 +247,7 @@ export function AppMenu({
       })}
 
       {search && searchQuery.trim() && filteredGroups.length === 0 && (
-        <div className="px-5 py-6 text-xs text-label/60 font-mono uppercase tracking-wider text-center border-r-dashed-5">
+        <div className="px-5 py-6 text-xs text-label/60 font-mono uppercase  text-center border-r-dashed-5">
           Nenhum resultado
         </div>
       )}

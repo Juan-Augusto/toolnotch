@@ -144,7 +144,7 @@ export default async function ContactPage({ params }: Props) {
           <header className="mb-10 pt-4 pb-6 border-b border-border">
             <h1
               id="contact-heading"
-              className="text-2xl sm:text-3xl font-bold uppercase tracking-wide"
+              className="text-2xl sm:text-3xl font-bold uppercase "
             >
               {t("title")}
             </h1>
@@ -159,7 +159,7 @@ export default async function ContactPage({ params }: Props) {
             withCornerAccents={false}
             className="p-6 bg-tertiary mb-10"
           >
-            <span className="font-bold text-secondary uppercase tracking-wider text-xs">
+            <span className="font-bold text-secondary uppercase  text-xs">
               {t("badge")}
             </span>
             <h2 className="text-lg sm:text-xl font-bold uppercase mt-2 mb-3">

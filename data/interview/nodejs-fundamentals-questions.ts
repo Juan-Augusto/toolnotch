@@ -28,10 +28,10 @@ export const NODEJS_FUNDAMENTALS_QUESTIONS: InterviewQuestion[] = [
     question: 'What does `require(\'fs\')` do in a Node.js module?',
     code: null,
     options: [
-      'Fetches the \'fs\' package from the npm registry at runtime',
-      'Loads and caches the built-in file system module, returning its exports object',
-      'Creates a new file system instance for the current module only',
-      'Registers a file system event listener on the process object',
+      "Fetches the 'fs' package from the public npm repository at runtime",
+      "Loads the built-in file system module and returns its cached exports",
+      "Allocates an isolated file system thread instance for this module",
+      "Registers a global file system event subscriber on the process loop"
     ],
     correctIndex: 1,
     explanation:
@@ -68,10 +68,10 @@ export const NODEJS_FUNDAMENTALS_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the key difference between `fs.readFileSync()` and `fs.readFile()` in Node.js?',
     code: null,
     options: [
-      '`readFileSync` reads larger files; `readFile` is limited to 1 MB',
-      '`readFileSync` blocks the event loop until the file is read; `readFile` is non-blocking and uses a callback',
-      '`readFile` is deprecated; `readFileSync` is the modern API',
-      'They are identical — the \'Sync\' suffix is cosmetic',
+      "`readFileSync` reads bigger files; `readFile` caps sizes to 1 megabyte",
+      "`readFileSync` blocks the event loop; `readFile` is non-blocking and async",
+      "`readFile` has been deprecated; `readFileSync` is the recommended standard",
+      "Both methods are identical; the 'Sync' suffix is solely syntactic sugar"
     ],
     correctIndex: 1,
     explanation:
@@ -88,10 +88,10 @@ export const NODEJS_FUNDAMENTALS_QUESTIONS: InterviewQuestion[] = [
     question: 'In Node.js, what is a callback?',
     code: null,
     options: [
-      'A built-in error type for async failures',
-      'A function passed as an argument to another function, invoked when an async operation completes',
-      'A synchronous wrapper around a Promise',
-      'A special method on the EventEmitter class',
+      "A built-in system error class for capturing asynchronous stream faults",
+      "A function passed to another function, invoked when async work completes",
+      "A synchronous wrapper that mimics Promise resolution in legacy modules",
+      "A specialized lifecycle hook available on the EventEmitter base class"
     ],
     correctIndex: 1,
     explanation:
@@ -290,10 +290,10 @@ export const NODEJS_FUNDAMENTALS_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the primary purpose of the Node.js `cluster` module?',
     code: null,
     options: [
-      'To distribute npm packages across multiple machines',
-      'To fork multiple worker processes that share the same server port, utilizing multiple CPU cores',
-      'To spawn child processes that run independent scripts with no shared state',
-      'To create thread pools for CPU-intensive synchronous tasks',
+      "To mirror npm packages across distributed cluster compute machines",
+      "To fork processes sharing a port, utilizing multiple CPU cores",
+      "To spawn isolated child processes that run scripts without shared state",
+      "To spawn dedicated thread pools for compute-heavy synchronous tasks"
     ],
     correctIndex: 1,
     explanation:
@@ -310,10 +310,10 @@ export const NODEJS_FUNDAMENTALS_QUESTIONS: InterviewQuestion[] = [
     question: 'How does `worker_threads` differ from `child_process` in Node.js?',
     code: null,
     options: [
-      '`worker_threads` share memory via `SharedArrayBuffer`; `child_process` spawns fully isolated OS processes',
-      '`child_process` is faster for CPU tasks because it uses native threads',
-      '`worker_threads` cannot communicate with the main thread',
-      'They are interchangeable; the names are aliases',
+      "`worker_threads` share memory buffers; `child_process` spawns OS processes",
+      "`child_process` processes CPU work faster by adopting native system threads",
+      "`worker_threads` cannot exchange messages with the main execution thread",
+      "Both modules are interchangeable and share identical underlying engines"
     ],
     correctIndex: 0,
     explanation:
@@ -350,10 +350,10 @@ export const NODEJS_FUNDAMENTALS_QUESTIONS: InterviewQuestion[] = [
     question: 'When a Node.js module is `require()`-d a second time, what happens?',
     code: null,
     options: [
-      'The module file is re-read from disk and re-executed',
-      'An error is thrown to prevent duplicate initialization',
-      'The cached `exports` object from the first load is returned immediately',
-      'A new isolated module instance is created',
+      "The module source file is parsed from storage and re-executed in memory",
+      "An initialization error is thrown to stop duplicate module allocations",
+      "The cached `exports` reference from the initial load returns immediately",
+      "A separate isolated execution context is initialized for the module"
     ],
     correctIndex: 2,
     explanation:
@@ -390,10 +390,10 @@ export const NODEJS_FUNDAMENTALS_QUESTIONS: InterviewQuestion[] = [
     question: 'What is libuv\'s role in Node.js?',
     code: null,
     options: [
-      'It is the JavaScript engine that compiles and executes JS code',
-      'It provides the cross-platform async I/O event loop, thread pool, and OS abstraction layer',
-      'It manages npm package downloads and caching',
-      'It implements the HTTP/2 protocol for Node\'s `http2` module',
+      "The JavaScript engine compiling source syntax into native machine code",
+      "The C library providing async I/O event loops, thread pools, and OS layers",
+      "The package management client orchestrating dependency resolution trees",
+      "The protocol module implementing HTTP/2 framing and multiplexed sockets"
     ],
     correctIndex: 1,
     explanation:
@@ -412,10 +412,10 @@ export const NODEJS_FUNDAMENTALS_QUESTIONS: InterviewQuestion[] = [
     question: 'Which garbage collection algorithm does V8 use for the Young Generation (New Space)?',
     code: null,
     options: [
-      'Mark-Sweep',
-      'Mark-Compact',
-      'Scavenge (Cheney\'s semi-space copying)',
-      'Reference counting',
+      "Generational Mark-Sweep",
+      "Concurrent Mark-Compact",
+      "Scavenge (semi-space copy)",
+      "Reference counting cycle"
     ],
     correctIndex: 2,
     explanation:
@@ -472,10 +472,10 @@ export const NODEJS_FUNDAMENTALS_QUESTIONS: InterviewQuestion[] = [
     question: 'Which of the following patterns is the most common cause of memory leaks in long-running Node.js servers?',
     code: null,
     options: [
-      'Using `const` instead of `let` for module-level variables',
-      'Accumulating listeners on an EventEmitter without ever calling `removeListener`',
-      'Calling `JSON.parse` on large strings repeatedly',
-      'Using `async/await` instead of raw callbacks',
+      "Declaring immutable variables with `const` instead of `let` in root scope",
+      "Accumulating listeners on an EventEmitter without removing old handlers",
+      "Invoking `JSON.parse` continuously on moderately sized payload objects",
+      "Adopting `async/await` syntax instead of traditional Node error callbacks"
     ],
     correctIndex: 1,
     explanation:
@@ -512,10 +512,10 @@ export const NODEJS_FUNDAMENTALS_QUESTIONS: InterviewQuestion[] = [
     question: 'A synchronous CPU-bound loop running for 2 seconds is accidentally placed in an HTTP request handler. What is the most accurate description of the impact?',
     code: "// In an HTTP handler:\nfor (let i = 0; i < 2_000_000_000; i++) { /* busy wait */ }",
     options: [
-      'Only that specific request is delayed; other requests continue normally',
-      'The event loop poll phase is blocked for 2 seconds, stalling ALL other incoming requests and timers',
-      'Node automatically offloads the loop to libuv\'s thread pool to prevent blocking',
-      'The cluster master process detects the block and restarts the worker',
+      "Only the caller request halts; remaining incoming requests process fine",
+      "The poll phase is blocked, stalling all concurrent requests and timers",
+      "Libuv offloads the loop to background worker threads to protect sockets",
+      "The primary cluster process detects the loop and restarts the instance"
     ],
     correctIndex: 1,
     explanation:
@@ -532,10 +532,10 @@ export const NODEJS_FUNDAMENTALS_QUESTIONS: InterviewQuestion[] = [
     question: 'What is back-pressure in Node.js streams, and what role does `highWaterMark` play?',
     code: null,
     options: [
-      'Back-pressure is an HTTP rate-limit; `highWaterMark` sets the requests-per-second ceiling',
-      'Back-pressure is the signal that a writable stream\'s buffer is full; `highWaterMark` sets the buffer size threshold at which `write()` returns `false`',
-      'Back-pressure is a V8 GC pause; `highWaterMark` triggers early GC when heap exceeds this fraction',
-      'Back-pressure is unused in Node.js streams; it is only relevant to TCP sockets',
+      "Back-pressure is an HTTP rate limiter; `highWaterMark` sets RPS ceilings",
+      "Back-pressure signals full buffers; `highWaterMark` sets write threshold",
+      "Back-pressure signals GC delays; `highWaterMark` triggers heap compacts",
+      "Back-pressure is unused in streams; it is only relevant to TCP socket tiers"
     ],
     correctIndex: 1,
     explanation:
@@ -552,10 +552,10 @@ export const NODEJS_FUNDAMENTALS_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the primary advantage of N-API (now Node-API) over previous native addon interfaces?',
     code: null,
     options: [
-      'It allows writing native addons in Python instead of C/C++',
-      'It provides an ABI-stable interface so native addons do not need to be recompiled for every new Node.js version',
-      'It gives native addons direct access to V8\'s garbage collector to manage their own memory',
-      'It automatically parallelizes native addon execution across all CPU cores',
+      "It permits writing high-performance addons in Python instead of C++ code",
+      "It provides ABI stability so addons do not require rebuilds per Node release",
+      "It exposes direct internal hooks into the V8 engine heap memory allocations",
+      "It automatically multi-threads addon functions across all host machine cores"
     ],
     correctIndex: 1,
     explanation:
@@ -572,10 +572,10 @@ export const NODEJS_FUNDAMENTALS_QUESTIONS: InterviewQuestion[] = [
     question: 'How do V8 "hidden classes" (also called "shapes" or "maps") improve JavaScript object performance?',
     code: null,
     options: [
-      'They compress object keys using a dictionary to reduce memory per object',
-      'They allow V8 to generate optimized machine code by tracking object property layouts and reusing them across instances with the same shape',
-      'They hide private class fields from the garbage collector to prevent premature collection',
-      'They pre-allocate a fixed heap page per constructor function',
+      "They compress object hash keys in memory using shared byte dictionaries",
+      "They let V8 generate optimized code by tracking object property layouts",
+      "They hide private class members from the garbage collector mark phase",
+      "They pre-allocate static fixed memory heaps for each constructor call"
     ],
     correctIndex: 1,
     explanation:
@@ -592,10 +592,10 @@ export const NODEJS_FUNDAMENTALS_QUESTIONS: InterviewQuestion[] = [
     question: 'When using PM2 to achieve zero-downtime restarts (`pm2 reload`), what mechanism does PM2 use?',
     code: null,
     options: [
-      'It pauses the load balancer, restarts all workers simultaneously, then resumes traffic',
-      'It creates a new worker, waits for it to signal readiness, routes traffic to it, then gracefully kills the old worker — one at a time',
-      'It patches the running process in memory without spawning a new one',
-      'It relies on the OS kernel\'s live-patching feature to swap code pages atomically',
+      "It pauses load balancers, reboots all workers at once, then resumes traffic",
+      "It spawns a worker, waits for readiness, shifts traffic, then kills the old",
+      "It dynamically patches byte code in memory without spawning child processes",
+      "It relies on kernel memory page swaps to replace running application code"
     ],
     correctIndex: 1,
     explanation:

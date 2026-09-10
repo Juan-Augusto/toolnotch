@@ -155,7 +155,7 @@ export default async function AboutPage({ params }: Props) {
           <header className="mb-10 pt-4 pb-6 border-b border-border">
             <h1
               id="about-heading"
-              className="text-2xl sm:text-3xl font-bold uppercase tracking-wide"
+              className="text-2xl sm:text-3xl font-bold uppercase "
             >
               {t("title")}
             </h1>
@@ -190,7 +190,7 @@ export default async function AboutPage({ params }: Props) {
               className="p-6 bg-tertiary flex flex-col sm:flex-row sm:items-center justify-between gap-6"
             >
               <div className="space-y-2">
-                <span className="font-bold text-secondary uppercase tracking-wider">
+                <span className="font-bold text-secondary uppercase ">
                   {t("founderBadge")}
                 </span>
                 <h3 className="text-lg sm:text-xl font-bold uppercase">

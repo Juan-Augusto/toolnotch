@@ -79,7 +79,7 @@ export function AppBreadcrumb({ items, className = "" }: AppBreadcrumbProps) {
   return (
     <nav
       aria-label="Breadcrumb"
-      className={`flex items-center flex-wrap gap-2 font-mono text-xs sm:text-sm text-label py-1 ${className}`}
+      className={`flex items-center flex-wrap gap-2 font-mono  text-label py-1 ${className}`}
     >
       {resolvedItems.map((item, index) => {
         const isLast = index === resolvedItems.length - 1 || item.current;

@@ -100,7 +100,7 @@ export default function AppQuizDepth({ content, currentSlug }: Props) {
     <section className="w-full max-w-4xl mx-auto pb-16 space-y-12">
       {/* ── Intro Prose ── */}
       <div className="space-y-3">
-        <h2 className=" text-lg sm:text-xl font-bold uppercase tracking-wider text-foreground">
+        <h2 className=" text-lg sm:text-xl font-bold uppercase  text-foreground">
           {content.introHeading}
         </h2>
 
@@ -114,13 +114,13 @@ export default function AppQuizDepth({ content, currentSlug }: Props) {
       {/* ── Optional Data Table (e.g. World Cup Winners 1930-2022) ── */}
       {table && (
         <div className="space-y-4">
-          <h2 className=" text-lg sm:text-xl font-bold uppercase tracking-wider text-foreground">
+          <h2 className=" text-lg sm:text-xl font-bold uppercase  text-foreground">
             {table.heading}
           </h2>
 
           <div className="overflow-x-auto rounded-[2px] border border-border/60 bg-card shadow-sm">
-            <table className="w-full text-left border-collapse  text-xs sm:text-sm">
-              <thead className="bg-tertiary/80 border-b border-border/60 text-foreground font-bold uppercase tracking-wider">
+            <table className="w-full text-left border-collapse  ">
+              <thead className="bg-tertiary/80 border-b border-border/60 text-foreground font-bold uppercase ">
                 <tr>
                   {table.cols.map((col, idx) => (
                     <th
@@ -175,7 +175,7 @@ export default function AppQuizDepth({ content, currentSlug }: Props) {
 
       {/* ── Topic FAQ ── */}
       <div className="space-y-4">
-        <h2 className=" text-lg sm:text-xl font-bold uppercase tracking-wider text-foreground">
+        <h2 className=" text-lg sm:text-xl font-bold uppercase  text-foreground">
           {content.faqHeading}
         </h2>
 
@@ -184,7 +184,7 @@ export default function AppQuizDepth({ content, currentSlug }: Props) {
             id: `depth-faq-${i}`,
             name: faq.question,
             content: (
-              <p className=" text-xs sm:text-sm leading-relaxed text-foreground/85">
+              <p className="  leading-relaxed text-foreground/85">
                 {faq.answer}
               </p>
             ),
@@ -195,7 +195,7 @@ export default function AppQuizDepth({ content, currentSlug }: Props) {
       </div>
 
       <nav aria-label={content.relatedHeading} className="space-y-4">
-        <h2 className=" text-lg sm:text-xl font-bold uppercase tracking-wider text-foreground">
+        <h2 className=" text-lg sm:text-xl font-bold uppercase  text-foreground">
           {content.relatedHeading}
         </h2>
 
@@ -228,7 +228,7 @@ export default function AppQuizDepth({ content, currentSlug }: Props) {
                           </span>
                         )}
                       </div>
-                      <span className=" font-bold text-xs sm:text-sm text-foreground uppercase group-hover:text-secondary transition-colors block">
+                      <span className=" font-bold  text-foreground uppercase group-hover:text-secondary transition-colors block">
                         {link.label}
                       </span>
                       <span className="mt-1.5  text-xs text-label leading-relaxed block">

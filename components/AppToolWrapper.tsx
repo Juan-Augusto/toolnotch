@@ -206,7 +206,7 @@ export default function AppToolWrapper({
 
             <div>
               <p
-                className="text-xs font-bold mb-1.5 uppercase tracking-widest"
+                className="text-xs font-bold mb-1.5 uppercase st"
                 style={{ color: "var(--neon)" }}
               >
                 {t("proTip")}

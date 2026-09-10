@@ -119,7 +119,7 @@ export default function DesignSystemPage() {
                   color: "var(--text-primary)",
                 }}
               >
-                Syne
+                Poppins
               </div>
             </div>
             <div>
@@ -128,7 +128,7 @@ export default function DesignSystemPage() {
                 className="text-2xl font-bold"
                 style={{ color: "var(--text-primary)" }}
               >
-                Plus Jakarta Sans
+                Poppins
               </div>
             </div>
           </div>
@@ -312,7 +312,7 @@ export default function DesignSystemPage() {
               <hr className="" />
 
               <div>
-                <div className=" mb-2">Mono — JetBrains Mono (fallback)</div>
+                <div className=" mb-2">Mono — Poppins</div>
                 <code
                   className="text-sm"
                   style={{
@@ -429,7 +429,7 @@ export default function DesignSystemPage() {
               <div className=" mb-4">Pro-tip block</div>
               <div>
                 <p
-                  className="text-xs font-bold mb-1.5 uppercase tracking-widest"
+                  className="text-xs font-bold mb-1.5 uppercase st"
                   style={{ color: "var(--neon)" }}
                 >
                   Pro tip

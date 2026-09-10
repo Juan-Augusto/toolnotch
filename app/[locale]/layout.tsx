@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Azeret_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Script from "next/script";
 import { cookies } from "next/headers";
 import { NextIntlClientProvider } from "next-intl";
@@ -16,17 +16,10 @@ import { AFFILIATE_PARTNERS } from "@/lib/affiliatePartners";
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "";
 const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 
-const azeretMono = Azeret_Mono({
-  variable: "--font-sans",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  display: "swap",
-});
-
-const azeretMonoDisplay = Azeret_Mono({
-  variable: "--font-syne",
-  subsets: ["latin"],
-  weight: ["700", "800"],
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin", "latin-ext"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -123,7 +116,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={isDark ? "dark" : ""}
+      className={`${poppins.className} ${poppins.variable} ${isDark ? "dark" : ""}`}
       suppressHydrationWarning
     >
       <head>
@@ -166,7 +159,7 @@ export default async function LocaleLayout({
       </head>
 
       <body
-        className={`${azeretMono.variable} ${azeretMonoDisplay.variable} antialiased`}
+        className={`${poppins.className} ${poppins.variable} antialiased`}
       >
         <noscript>
           <iframe

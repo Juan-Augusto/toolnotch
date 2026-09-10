@@ -4540,73 +4540,73 @@
   },
   "interview": {
     "hub": {
-      "aboutHeading": "Sobre la preparación de entrevistas en ToolNotch",
+      "metaTitle": "Simuladores de Entrevistas Técnicas: Frontend, Backend y Arquitectura | ToolNotch",
+      "metaDescription": "Practica con 240 preguntas en 8 simuladores técnicos: TypeScript, Vue, Node.js, Bases de Datos, Kafka, RabbitMQ y Arquitectura. 100% gratis.",
+      "title": "Simuladores para Entrevistas Técnicas",
+      "aboutHeading": "Sobre los simuladores de entrevistas de ToolNotch",
       "about": [
-        "La preparación de entrevistas de ToolNotch es una colección de cuestionarios interactivos y gratuitos para personas que programan y se están preparando para una entrevista técnica. Cada cuestionario se ejecuta por completo en el navegador: no hay cuenta que crear, nada que instalar y ningún muro de pago. Eliges un tema, seleccionas un nivel de dificultad y respondes preguntas de opción múltiple que reflejan el tipo de razonamiento que quien entrevista está tratando de escuchar.",
-        "Lo que distingue estos cuestionarios de un mazo de tarjetas es la explicación adjunta a cada pregunta. En lugar de decirte solo qué opción es correcta, cada respuesta explica por qué lo es, muestra el mecanismo que hay detrás y añade una nota corta sobre cómo los equipos con experiencia aplican la idea en código de producción. El objetivo es una comprensión que puedas defender bajo preguntas de seguimiento, no datos memorizados que se derrumban en el instante en que alguien pregunta por qué.",
-        "Los bancos de preguntas se escriben a partir de fuentes primarias — manuales oficiales de los lenguajes, documentos de especificación y referencias de ingeniería de uso extendido — y se revisan por su exactitud, en lugar de armarse a partir de sitios de cuestionarios copiados. La cobertura hoy se centra en TypeScript, con pistas adicionales de lenguajes e ingeniería de back-end que se lanzan a medida que se terminan."
+        "Los simuladores de entrevistas de ToolNotch están diseñados para profesionales que desean reforzar sus conocimientos antes de procesos de selección técnica. Todo funciona directamente en el navegador: sin registros, sin pagos y sin descargas.",
+        "Cada pregunta incluye explicaciones técnicas, código compilado o planes de consulta y criterios prácticos aplicados por equipos sénior en producción.",
+        "El catálogo incluye 240 preguntas repartidas en 8 temas fundamentales: TypeScript, Vue.js, Node.js, Modelado de Bases de Datos, Indexación SQL, SQS vs Kafka, RabbitMQ y Arquitectura de Sistemas."
       ],
-      "formatHeading": "Cómo están estructurados los cuestionarios",
+      "formatHeading": "Estructura y dinámica de las pruebas",
       "format": [
-        "Cada pista se divide en niveles Principiante, Intermedio y Avanzado, con alrededor de diez preguntas cada uno. Las preguntas de Principiante confirman que los fundamentos son sólidos, las de Intermedio ponen a prueba los casos límite que confunden a la gente en el día a día, y las de Avanzado van tras el comportamiento profundo que separa a una persona candidata sénior de una de nivel medio. El orden de las preguntas se baraja en cada ejecución, así que no se puede aprobar memorizando posiciones.",
-        "Como todo se ejecuta en el lado del cliente, tus respuestas y puntuaciones nunca salen de tu dispositivo. Puedes repetir un nivel las veces que quieras, ir directo a la dificultad que te interesa y usar el teclado para avanzar rápido: teclas numéricas para elegir una opción, Enter para avanzar y Tab para alternar entre las pestañas de explicación en las preguntas que las tienen."
+        "Cada tema cuenta con 30 preguntas divididas en tres niveles: Principiante (sintaxis y fundamentos), Intermedio (desafíos reales en producción) y Avanzado (concurrencia, internals y escala).",
+        "El estado de cada prueba reside exclusivamente en la memoria del navegador. Puedes repetir cualquier nivel tantas veces como desees y utilizar atajos de teclado (teclas 1 a 4, Enter y Tab)."
       ],
-      "howHeading": "Cómo practicar de forma eficaz",
+      "howHeading": "Cómo aprovechar al máximo las prácticas",
       "how": [
-        "Empieza un nivel por debajo de donde crees que estás. Pasar rápido por el conjunto de Principiante confirma tus fundamentos y crea impulso antes de llegar al material más difícil.",
-        "Lee la explicación de todas las preguntas, incluidas las que acertaste. Una respuesta correcta por el motivo equivocado sigue siendo una brecha que quien entrevista puede encontrar.",
-        "Cuando una explicación mencione la salida compilada o una regla de la especificación, detente y reprodúcela tú mismo en un editor o REPL. La recuperación activa gana a la relectura.",
-        "Repite un nivel uno o dos días después, en lugar de al momento. Espaciar la repetición es lo que mueve una idea a la memoria de largo plazo.",
-        "Cuando estés puntuando de forma consistente por encima de alrededor del 80% en Avanzado, pasa a explicar cada respuesta en voz alta como si quien entrevista estuviera en la sala. Esa es la habilidad que la entrevista mide de verdad."
+        "Comienza por el nivel intermedio para calibrar tu base y avanza al nivel avanzado en los temas clave para el rol que buscas.",
+        "Revisa las explicaciones técnicas con detenimiento, incluso en las respuestas correctas, para reforzar los fundamentos.",
+        "Practica explicando tu razonamiento en voz alta antes de seleccionar la alternativa, simulando la conversación real con el equipo técnico."
       ],
-      "faqHeading": "Preguntas frecuentes sobre la preparación de entrevistas",
+      "faqHeading": "Preguntas frecuentes sobre los simuladores de entrevista",
       "faqs": [
         {
-          "question": "¿Los cuestionarios de entrevista de ToolNotch son gratuitos?",
-          "answer": "Sí. Todos los cuestionarios son completamente gratuitos, sin cuenta, registro ni descarga. Todas las preguntas y explicaciones se ejecutan en el lado del cliente, en tu navegador, y tus puntuaciones nunca se suben a ningún sitio."
+          "question": "¿Los simuladores de entrevista de ToolNotch son gratuitos?",
+          "answer": "Sí. Los 8 simuladores son 100% gratuitos y operan íntegramente en el navegador sin necesidad de crear cuenta ni iniciar sesión."
         },
         {
-          "question": "¿Qué temas están cubiertos hasta ahora?",
-          "answer": "La pista de TypeScript es la más completa, con 30 preguntas en los niveles Principiante, Intermedio y Avanzado. Las pistas de ingeniería de back-end — internals de Node.js, diseño e indexación de bases de datos, sistemas de mensajería y arquitectura de sistemas — se están terminando y se lanzan de una en una."
+          "question": "¿Qué temas técnicos están disponibles?",
+          "answer": "Ofrecemos 8 simuladores completos: TypeScript, Vue.js, Node.js Fundamentals, Database Design, Database Indexing, SQS y Kafka, RabbitMQ y System Architecture."
         },
         {
-          "question": "¿Estas preguntas están dirigidas a perfiles junior o senior?",
-          "answer": "A ambos. El nivel Principiante sirve para quien se prepara para su primer o segundo puesto, mientras que el nivel Avanzado apunta a la profundidad que se espera de ingenieros senior y staff. La mayoría de las personas se benefician de recorrer los tres niveles en orden."
+          "question": "¿Se pueden utilizar atajos de teclado?",
+          "answer": "Sí. Puedes usar los números 1 al 4 para responder, Enter para avanzar y Tab para alternar entre pestañas de explicación."
         },
         {
-          "question": "¿Cómo debería usar un cuestionario el día antes de una entrevista?",
-          "answer": "Haz una pasada tranquila en el nivel que corresponde al puesto, céntrate en leer las explicaciones en vez de buscar una puntuación alta y detente lo bastante temprano para dormir. Estudiar material nuevo la víspera suele perjudicar más que ayudar."
-        },
-        {
-          "question": "¿Los cuestionarios guardan mi progreso?",
-          "answer": "Las puntuaciones aparecen al final de cada nivel, pero no se almacenan en un servidor. Como todo queda local en tu navegador, puedes repetir cualquier nivel tantas veces como quieras sin afectar a un registro guardado."
+          "question": "¿Mis respuestas o puntuaciones se envían a algún servidor?",
+          "answer": "No. Toda la evaluación se realiza de forma local en tu navegador. Ninguna respuesta ni resultado se envía al exterior."
         }
       ]
     },
     "typescript": {
+      "metaTitle": "Simulador de Entrevista de TypeScript: de Principiante a Avanzado | ToolNotch",
+      "metaDescription": "Pon a prueba tus conocimientos en TypeScript con 30 preguntas de entrevista en profundidad en niveles Principiante, Intermedio y Avanzado. Cubre inferencia de tipos, generics y tipos condicionales.",
+      "title": "Simulador Técnico de TypeScript",
       "coversHeading": "Qué cubre el cuestionario de entrevista de TypeScript",
       "covers": [
-        "Este cuestionario recorre las partes de TypeScript que quien entrevista realmente indaga: cómo el compilador infiere tipos cuando no los anotas, cómo los generics permiten que una función siga siendo type-safe con muchas formas de entrada y cómo el sistema de tipos calcula tipos nuevos a partir de los existentes con tipos condicionales, tipos mapeados y la palabra clave infer. También cubre el narrowing — cómo TypeScript usa el flujo de control, typeof, instanceof, uniones discriminadas y type guards definidos por el usuario para reducir una unión a un único tipo dentro de una rama.",
-        "Un rasgo distintivo es que toda respuesta incluye el JavaScript compilado. Los tipos, las interfaces y los imports de solo tipo se borran en la compilación y no producen código de runtime, mientras que los enums, las propiedades de parámetro de clase y los decorators sí emiten algo. Ver la salida emitida junto al código fuente deja claro qué construcciones son puramente un contrato de tiempo de compilación y cuáles tienen coste en runtime — una distinción que aparece todo el tiempo en entrevistas sobre tamaño de bundle y rendimiento.",
-        "Los utility types — Partial, Required, Readonly, Pick, Omit, Record, ReturnType, Parameters, Awaited y los demás — se tratan como cosas que deberías poder reimplementar, no solo llamar. Varias preguntas te piden predecir el resultado de un tipo mapeado escrito a mano que replica uno de los integrados, un ejercicio común de pizarra."
+        "Este cuestionario recorre las partes de TypeScript que quien entrevista realmente indaga: cómo el compilador infiere tipos cuando no los anotas, cómo los generics permiten que una función siga siendo type-safe con muchas formas de entrada y cómo el sistema de tipos calcula tipos nuevos a partir de los existentes con tipos condicionales, tipos mapeados y la palabra clave infer. También cubre el narrowing, cómo TypeScript usa el flujo de control, typeof, instanceof, uniones discriminadas y type guards definidos por el usuario para reducir una unión a un único tipo dentro de una rama.",
+        "Un rasgo distintivo es que toda respuesta incluye el JavaScript compilado. Los tipos, las interfaces y los imports de solo tipo se borran en la compilación y no producen código de runtime, mientras que los enums, las propiedades de parámetro de clase y los decorators sí emiten algo. Ver la salida emitida junto al código fuente deja claro qué construcciones son puramente un contrato de tiempo de compilación y cuáles tienen coste en runtime, una distinción que aparece todo el tiempo en entrevistas sobre tamaño de bundle y rendimiento.",
+        "Los utility types, Partial, Required, Readonly, Pick, Omit, Record, ReturnType, Parameters, Awaited y los demás, se tratan como cosas que deberías poder reimplementar, no solo llamar. Varias preguntas te piden predecir el resultado de un tipo mapeado escrito a mano que replica uno de los integrados, un ejercicio común de pizarra."
       ],
       "levelsHeading": "Niveles de dificultad",
       "levels": [
         "El nivel Principiante cubre el sistema de tipos del día a día: tipos primitivos y literales, arrays y tuplas, tipos unión e intersección, interfaces frente a type aliases, propiedades opcionales y readonly, tipos de función y la diferencia entre any, unknown y never. Son las preguntas con las que una llamada de criba tiene más probabilidad de empezar.",
-        "El nivel Intermedio avanza hacia generics con constraints, keyof y tipos de acceso indexado, typeof usado como consulta de tipo, tipos mapeados y condicionales básicos y narrowing por flujo de control. El nivel Avanzado empuja hacia tipos condicionales recursivos, la palabra clave infer, tipos de literal de plantilla, tipos de tupla variádicos, el operador satisfies, parámetros de tipo const, NoInfer y module augmentation — el material que distingue una respuesta sénior de TypeScript."
+        "El nivel Intermedio avanza hacia generics con constraints, keyof y tipos de acceso indexado, typeof usado como consulta de tipo, tipos mapeados y condicionales básicos y narrowing por flujo de control. El nivel Avanzado empuja hacia tipos condicionales recursivos, la palabra clave infer, tipos de literal de plantilla, tipos de tupla variádicos, el operador satisfies, parámetros de tipo const, NoInfer y module augmentation, el material que distingue una respuesta sénior de TypeScript."
       ],
       "topicsHeading": "Temas del banco de preguntas",
       "topics": [
-        "Inferencia de tipos — cómo TypeScript asigna tipos a variables, valores de retorno y parámetros genéricos cuando no hay anotación, y cuándo amplía o estrecha un literal.",
-        "Generics — escribir funciones, clases y tipos parametrizados por un tipo, añadir constraints con extends y aportar valores por defecto.",
-        "Tipos condicionales y mapeados — calcular un tipo a partir de otro con T extends U ? X : Y, remapeo de claves, añadir o quitar modificadores y distribución sobre uniones.",
-        "Narrowing — reducir una unión dentro de una rama usando typeof, instanceof, in, comprobaciones de igualdad, uniones discriminadas y funciones que devuelven un type predicate.",
-        "Utility types — Partial, Pick, Omit, Record, ReturnType, Parameters, Awaited y afines, además de cómo construir equivalentes a mano.",
-        "Salida en JavaScript compilado — qué sintaxis de TypeScript se borra en la compilación y no genera código de runtime, y qué sintaxis sí emite."
+        "Inferencia de tipos, cómo TypeScript asigna tipos a variables, valores de retorno y parámetros genéricos cuando no hay anotación, y cuándo amplía o estrecha un literal.",
+        "Generics, escribir funciones, clases y tipos parametrizados por un tipo, añadir constraints con extends y aportar valores por defecto.",
+        "Tipos condicionales y mapeados, calcular un tipo a partir de otro con T extends U ? X : Y, remapeo de claves, añadir o quitar modificadores y distribución sobre uniones.",
+        "Narrowing, reducir una unión dentro de una rama usando typeof, instanceof, in, comprobaciones de igualdad, uniones discriminadas y funciones que devuelven un type predicate.",
+        "Utility types, Partial, Pick, Omit, Record, ReturnType, Parameters, Awaited y afines, además de cómo construir equivalentes a mano.",
+        "Salida en JavaScript compilado, qué sintaxis de TypeScript se borra en la compilación y no genera código de runtime, y qué sintaxis sí emite."
       ],
       "howHeading": "Cómo usar el cuestionario de TypeScript",
       "how": [
-        "Elige un nivel — Principiante, Intermedio o Avanzado — en la pantalla de inicio. Puedes hacerlos en cualquier orden y repetir cada uno tantas veces como quieras.",
+        "Elige un nivel, Principiante, Intermedio o Avanzado, en la pantalla de inicio. Puedes hacerlos en cualquier orden y repetir cada uno tantas veces como quieras.",
         "Responde cada pregunta de opción múltiple. Usa las teclas numéricas del 1 al 4 para seleccionar y Enter o la flecha derecha para avanzar.",
         "Después de responder, lee las tres pestañas de explicación: Por Qué Esta Respuesta, JS Compilado y Buena Práctica. La pestaña JS Compilado muestra exactamente lo que el compilador de TypeScript emite para ese fragmento.",
         "Revisa tu puntuación al final y repite el nivel un día después para comprobar qué se quedó de verdad."
@@ -4615,7 +4615,7 @@
       "faqs": [
         {
           "question": "¿Cuántas preguntas de entrevista de TypeScript hay?",
-          "answer": "Hay 30 preguntas en total — 10 Principiante, 10 Intermedio y 10 Avanzado. Cada nivel se baraja en cada intento, así que recibes un orden nuevo cada vez."
+          "answer": "Hay 30 preguntas en total, 10 Principiante, 10 Intermedio y 10 Avanzado. Cada nivel se baraja en cada intento, así que recibes un orden nuevo cada vez."
         },
         {
           "question": "¿Qué temas cubre el cuestionario de TypeScript?",
@@ -4636,6 +4636,328 @@
         {
           "question": "¿Necesito una cuenta para hacer el cuestionario?",
           "answer": "No. El cuestionario es completamente gratuito, sin cuenta, inicio de sesión ni descarga. Todo se ejecuta en tu navegador y no se envía ninguna respuesta ni puntuación a ningún sitio."
+        }
+      ]
+    },
+    "vue": {
+      "metaTitle": "Simulador de Entrevista de Vue.js: de Principiante a Avanzado | ToolNotch",
+      "metaDescription": "Evalúa tus conocimientos de Vue.js con 30 preguntas técnicas de entrevista sobre Composition API, reactividad interna con Proxy, composables, Pinia y SSR.",
+      "title": "Simulador Técnico de Vue.js",
+      "coversHeading": "Qué cubre el cuestionario de entrevista de Vue.js",
+      "covers": [
+        "Este cuestionario explora a fondo el ecosistema moderno de Vue 3: la Composition API, el motor interno de reactividad basado en Proxies de JavaScript, la estructuración de composables reutilizables y la gestión de estado con Pinia.",
+        "También aborda temas críticos de producción como Server-Side Rendering (SSR), prevención de errores de hydration mismatch y optimizaciones de rendimiento en listas y componentes dinámicos."
+      ],
+      "levelsHeading": "Niveles de dificultad",
+      "levels": [
+        "Principiante se centra en la sintaxis fundamental de la Composition API, reactividad con ref y reactive, two-way binding con v-model y ciclo de vida de componentes.",
+        "Intermedio explora la creación de composables, watchEffect, arquitectura global de estado con Pinia y estilos encapsulados.",
+        "Avanzado evalúa el conocimiento de los internals del sistema de reactividad, directivas personalizadas, Teleport, KeepAlive y resolución de fallos de hidratación en SSR."
+      ],
+      "topicsHeading": "Temas del banco de preguntas",
+      "topics": [
+        "ref vs reactive y desestructuración reactiva",
+        "watch vs computed y gestión de efectos secundarios",
+        "Ciclo de vida en Vue 3 (onMounted, onUnmounted, etc.)",
+        "Arquitectura de stores con Pinia",
+        "Internals de reactividad con Proxies y seguimiento de dependencias",
+        "Hydration mismatch en SSR y optimizaciones de renderizado"
+      ],
+      "howHeading": "Cómo aprovechar el simulado de Vue.js",
+      "how": [
+        "Elige un nivel de dificultad o realiza el simulado completo con las 30 preguntas.",
+        "Responde cada pregunta prestando atención a los detalles de reactividad en el código.",
+        "Lee la explicación técnica después de cada respuesta para consolidar las buenas prácticas recomendadas."
+      ],
+      "faqHeading": "Preguntas frecuentes sobre el simulado de Vue.js",
+      "faqs": [
+        {
+          "question": "Cuántas preguntas tiene el simulado de Vue.js?",
+          "answer": "Tiene 30 preguntas en total: 10 de nivel Principiante, 10 de Intermedio y 10 de Avanzado, barajadas en cada intento."
+        },
+        {
+          "question": "El simulado está enfocado en Vue 2 o Vue 3?",
+          "answer": "Está enfocado 100% en Vue 3 moderno, con especial énfasis en Composition API, TypeScript y estándares actuales."
+        },
+        {
+          "question": "Es necesario registrarse o pagar?",
+          "answer": "No. Todos los simulados de ToolNotch son 100% gratuitos y se ejecutan directamente en tu navegador sin registro."
+        }
+      ]
+    },
+    "nodejsFundamentals": {
+      "metaTitle": "Simulador de Entrevista de Node.js: del Event Loop a Internals de V8 | ToolNotch",
+      "metaDescription": "30 preguntas técnicas de entrevista en Node.js sobre Event Loop (libuv), streams asíncronos, gestión de memoria e internals de V8.",
+      "title": "Simulador Técnico de Node.js",
+      "coversHeading": "Qué cubre el cuestionario de entrevista de Node.js Fundamentals",
+      "covers": [
+        "Este cuestionario profundiza en la arquitectura interna de Node.js: fases del Event Loop en libuv, orden de ejecución con process.nextTick vs setImmediate, streams y control de backpressure.",
+        "También analiza la gestión de memoria en el motor V8, diagnóstico de memory leaks, recolección de basura y concurrencia con Worker Threads y clusters."
+      ],
+      "levelsHeading": "Niveles de dificultad",
+      "levels": [
+        "Principiante cubre el modelo asíncrono single-threaded, Buffers, módulos CommonJS vs ESM y control de errores con Promises.",
+        "Intermedio explora las fases de libuv (timers, poll, check, close), tuberías de streams y gestión de contrapresión en I/O pesado.",
+        "Avanzado evalúa el dominio del heap de V8, algoritmos de Garbage Collection (Scavenge, Mark-Sweep), profiling de CPU y Worker Threads."
+      ],
+      "topicsHeading": "Temas del banco de preguntas",
+      "topics": [
+        "Event Loop y fases de libuv (Timers, Poll, Check, Close)",
+        "Prioridad de microtasks (process.nextTick) frente a macrotasks",
+        "Tuberías de streams legibles, escribibles y transform",
+        "Estructura del heap y recolección de basura en V8",
+        "Detección de fugas de memoria y análisis de heap snapshots",
+        "Worker Threads frente a clusters en procesos CPU-bound"
+      ],
+      "howHeading": "Cómo aprovechar el simulado de Node.js",
+      "how": [
+        "Elige tu nivel de experiencia o realiza las 30 preguntas de corrido.",
+        "Examina el orden de ejecución del Event Loop antes de seleccionar tu opción.",
+        "Consulta las explicaciones y consejos de arquitectura para sistemas de alto rendimiento."
+      ],
+      "faqHeading": "Preguntas frecuentes sobre el simulado de Node.js",
+      "faqs": [
+        {
+          "question": "Cuántas preguntas componen el simulado de Node.js?",
+          "answer": "Son 30 preguntas en total: 10 de nivel Principiante, 10 de Intermedio y 10 de Avanzado, generadas en orden dinámico."
+        },
+        {
+          "question": "Qué versiones de Node.js se evalúan?",
+          "answer": "Se enfoca en las versiones LTS modernas (Node.js 18, 20 y 22), incluyendo ESM nativo y APIs actuales."
+        },
+        {
+          "question": "Funciona en dispositivos móviles?",
+          "answer": "Sí, la interfaz se adapta de forma fluida a teléfonos móviles, tabletas y ordenadores."
+        }
+      ]
+    },
+    "databaseDesign": {
+      "metaTitle": "Simulador de Entrevista de Diseño de Bases de Datos | ToolNotch",
+      "metaDescription": "30 preguntas técnicas sobre diseño relacional, transacciones ACID, normalización (1NF a 3NF), particionamiento y bases de datos distribuidas.",
+      "title": "Simulador Técnico de Diseño de Bases de Datos",
+      "coversHeading": "Qué cubre el cuestionario de entrevista de Database Design",
+      "covers": [
+        "Este cuestionario evalúa conocimientos fundamentales y avanzados de diseño de bases de datos: normalización de 1NF a 3NF, garantías ACID, teorema CAP e integridad relacional.",
+        "También aborda patrones arquitectónicos distribuidos de gran escala, como sharding, replicación, niveles de aislamiento, CQRS, Event Sourcing y el patrón Saga."
+      ],
+      "levelsHeading": "Niveles de dificultad",
+      "levels": [
+        "Principiante se enfoca en fundamentos relacionales, claves primarias y foráneas, normalización y semántica de valores NULL.",
+        "Intermedio examina el teorema CAP, niveles de aislamiento de transacciones y particionamiento horizontal de datos.",
+        "Avanzado desafía tu capacidad para diseñar arquitecturas con Event Sourcing, CQRS, patrón Saga, Two-Phase Commit y bloqueo optimista frente a pesimista."
+      ],
+      "topicsHeading": "Temas del banco de preguntas",
+      "topics": [
+        "Normalización relacional (1NF, 2NF, 3NF y BCNF)",
+        "Garantías ACID y diseño de límites transaccionales",
+        "Teorema CAP y equilibrio entre consistencia y disponibilidad",
+        "Niveles de aislamiento SQL y anomalías de concurrencia",
+        "Estrategias de sharding y claves de partición",
+        "CQRS, Event Sourcing y consistencia eventual con Sagas"
+      ],
+      "howHeading": "Cómo aprovechar el simulado de Database Design",
+      "how": [
+        "Selecciona un nivel o responde las 30 preguntas completas.",
+        "Evalúa los trade-offs de escalabilidad y consistencia antes de marcar tu opción.",
+        "Lee las justificaciones técnicas para consolidar tu criterio arquitectónico."
+      ],
+      "faqHeading": "Preguntas frecuentes sobre el simulado de Database Design",
+      "faqs": [
+        {
+          "question": "Cuántas preguntas componen el simulado de Database Design?",
+          "answer": "Son 30 preguntas divididas en 10 de nivel Principiante, 10 de Intermedio y 10 de Avanzado, con orden aleatorio."
+        },
+        {
+          "question": "Aplica tanto para SQL como para NoSQL?",
+          "answer": "Sí, abarca principios relacionales clásicos y patrones distribuidos presentes en motores modernos."
+        },
+        {
+          "question": "Es gratuito?",
+          "answer": "Sí, 100% gratuito y ejecutado directamente en tu navegador sin registro."
+        }
+      ]
+    },
+    "databaseIndexing": {
+      "metaTitle": "Simulador de Entrevista de Indexación de Bases de Datos | ToolNotch",
+      "metaDescription": "30 preguntas técnicas sobre estructuras B-Tree, índices compuestos, covering indexes, análisis de planes EXPLAIN y optimización SQL.",
+      "title": "Simulador Técnico de Indexación y Optimización",
+      "coversHeading": "Qué cubre el cuestionario de entrevista de Database Indexing",
+      "covers": [
+        "Este cuestionario profundiza en el funcionamiento de índices: estructura de B-Trees, equilibrio de árboles, coste de escritura frente a lectura y selectividad de columnas.",
+        "Evalúa además el uso de índices compuestos (regla del leftmost prefix), covering indexes, índices parciales, índices basados en expresiones y análisis de planes EXPLAIN ANALYZE."
+      ],
+      "levelsHeading": "Niveles de dificultad",
+      "levels": [
+        "Principiante se centra en fundamentos de B-Tree, sobrecoste de escritura en tablas indexadas, cardinalidad e índices secundarios.",
+        "Intermedio explora índices multicolumna, regla del prefijo más a la izquierda, covering indexes con cláusula INCLUDE e índices parciales.",
+        "Avanzado evalúa ordenación asistida por índices, mitigación de bloat, decisiones del optimizador de costes y análisis de planes de ejecución."
+      ],
+      "topicsHeading": "Temas del banco de preguntas",
+      "topics": [
+        "Mecánica interna de nodos y páginas en B-Tree",
+        "Regla del leftmost prefix en índices compuestos",
+        "Covering indexes y supresión de accesos al heap",
+        "Índices parciales para conjuntos de datos asimétricos",
+        "Índices de expresión basados en funciones (LOWER, DATE)",
+        "Análisis de planes de ejecución con EXPLAIN ANALYZE"
+      ],
+      "howHeading": "Cómo aprovechar el simulado de Database Indexing",
+      "how": [
+        "Selecciona un nivel o responde las 30 preguntas completas.",
+        "Examina con atención los fragmentos de planes de consulta antes de responder.",
+        "Consulta las explicaciones técnicas para diseñar esquemas de indexación eficientes."
+      ],
+      "faqHeading": "Preguntas frecuentes sobre el simulado de Database Indexing",
+      "faqs": [
+        {
+          "question": "Cuántas preguntas tiene el simulado de Database Indexing?",
+          "answer": "Son 30 preguntas en total: 10 de nivel Principiante, 10 de Intermedio y 10 de Avanzado, con orden dinámico."
+        },
+        {
+          "question": "A qué motores aplica?",
+          "answer": "Los conceptos son universales para bases relacionales como PostgreSQL, MySQL y SQL Server."
+        },
+        {
+          "question": "Es necesario registrarse?",
+          "answer": "No, se ejecuta 100% en tu navegador de forma gratuita."
+        }
+      ]
+    },
+    "messagingSqsKafka": {
+      "metaTitle": "Simulador de Entrevista de SQS y Kafka: Colas y Streaming Distribuido | ToolNotch",
+      "metaDescription": "30 preguntas técnicas sobre mensajería distribuida, colas vs logs, grupos de consumidores, rebalanceo de particiones y entrega exactly-once.",
+      "title": "Simulador Técnico de SQS y Kafka",
+      "coversHeading": "Qué cubre el cuestionario de entrevista de SQS y Kafka",
+      "covers": [
+        "Este cuestionario compara en profundidad colas de mensajes y streaming de eventos: colas efímeras con AWS SQS frente a logs distribuidos particionados con Apache Kafka.",
+        "Examina semánticas de entrega (at-least-once, at-most-once y exactly-once), gestión de particiones, grupos de consumidores, rebalances y tolerancia a fallos."
+      ],
+      "levelsHeading": "Niveles de dificultad",
+      "levels": [
+        "Principiante compara los paradigmas de colas frente a logs de eventos, retención de mensajes y desacoplamiento de servicios.",
+        "Intermedio explora particiones en Kafka, confirmación manual de offsets, Visibility Timeout en SQS, Dead Letter Queues (DLQ) y orden por clave.",
+        "Avanzado evalúa protocolos de rebalanceo de consumidores, productores idempotentes, transacciones distribuidas, compactación de logs y contrapresión."
+      ],
+      "topicsHeading": "Temas del banco de preguntas",
+      "topics": [
+        "Diferencias entre colas (Queue) y streaming de logs (Kafka)",
+        "Semánticas de entrega (At-Least-Once y Exactly-Once)",
+        "Estrategias de partición y garantía de orden",
+        "Grupos de consumidores, monitorización de lag y rebalanceos",
+        "Dead Letter Queue (DLQ) y gestión de mensajes fallidos",
+        "Visibility Timeout en SQS frente a retención en disco en Kafka"
+      ],
+      "howHeading": "Cómo aprovechar el simulado de SQS y Kafka",
+      "how": [
+        "Elige un nivel o realiza las 30 preguntas completas.",
+        "Considera el volumen de mensajes y requisitos de orden antes de responder.",
+        "Consulta las explicaciones para afianzar criterios de diseño en sistemas distribuidos."
+      ],
+      "faqHeading": "Preguntas frecuentes sobre el simulado de SQS y Kafka",
+      "faqs": [
+        {
+          "question": "Cuántas preguntas componen el simulado de SQS y Kafka?",
+          "answer": "Son 30 preguntas divididas en 10 de nivel Principiante, 10 de Intermedio y 10 de Avanzado, con orden dinámico."
+        },
+        {
+          "question": "Se enfoca solo en AWS o en Kafka general?",
+          "answer": "Cubre tanto AWS SQS (Standard y FIFO) como los conceptos fundamentales de Apache Kafka."
+        },
+        {
+          "question": "Es gratuito?",
+          "answer": "Sí, 100% gratuito y ejecutado directamente en tu navegador."
+        }
+      ]
+    },
+    "rabbitmqConcepts": {
+      "metaTitle": "Simulador de Entrevista de RabbitMQ: de AMQP a Colas Quorum | ToolNotch",
+      "metaDescription": "30 preguntas técnicas sobre arquitectura RabbitMQ, tipos de exchanges, routing keys, confirmaciones de publicación, ACKs y colas quorum.",
+      "title": "Simulador Técnico de RabbitMQ",
+      "coversHeading": "Qué cubre el cuestionario de entrevista de RabbitMQ",
+      "covers": [
+        "Este cuestionario explora el protocolo AMQP 0-9-1 y la arquitectura de RabbitMQ: funcionamiento de Exchanges, Bindings y Queues para enrutar mensajes.",
+        "Examina tipos de exchange (Direct, Fanout, Topic, Headers), colas Quorum con consenso Raft, confirmaciones (Publisher Confirms y Consumer Acks) y Dead Letter Exchanges (DLX)."
+      ],
+      "levelsHeading": "Niveles de dificultad",
+      "levels": [
+        "Principiante evalúa los componentes esenciales de AMQP: productores, exchanges, bindings, colas y consumidores.",
+        "Intermedio profundiza en enrutamiento por comodines en Topic Exchanges, Dead Letter Exchanges, TTL de mensajes y prefetch count.",
+        "Avanzado evalúa colas Quorum con algoritmo Raft, tolerancia a particiones de red, publisher confirms y alta disponibilidad."
+      ],
+      "topicsHeading": "Temas del banco de preguntas",
+      "topics": [
+        "Tipos de exchanges: Direct, Fanout, Topic y Headers",
+        "Enrutamiento con comodines (* y #) en Topic Exchanges",
+        "Confirmación de recepción: manual acks frente a auto-ack",
+        "Control de flujo con basic.qos y ajuste de prefetch",
+        "Dead Letter Exchanges (DLX) y políticas de expiración (TTL)",
+        "Colas Quorum con consenso Raft frente a colas espejadas"
+      ],
+      "howHeading": "Cómo aprovechar el simulado de RabbitMQ",
+      "how": [
+        "Selecciona un nivel o responde las 30 preguntas completas.",
+        "Examina con atención las claves de enrutamiento y patrones de binding.",
+        "Consulta las explicaciones para diseñar topologías de mensajería resilientes."
+      ],
+      "faqHeading": "Preguntas frecuentes sobre el simulado de RabbitMQ",
+      "faqs": [
+        {
+          "question": "Cuántas preguntas componen el simulado de RabbitMQ?",
+          "answer": "Son 30 preguntas divididas en 10 de nivel Principiante, 10 de Intermedio y 10 de Avanzado, con orden aleatorio."
+        },
+        {
+          "question": "Cubre las versiones más recientes de RabbitMQ?",
+          "answer": "Sí, hace énfasis en colas Quorum, consenso Raft y recomendaciones actuales de producción."
+        },
+        {
+          "question": "Requiere registro?",
+          "answer": "No, el acceso es totalmente libre y gratuito sin registro."
+        }
+      ]
+    },
+    "systemArchitecture": {
+      "metaTitle": "Simulador de Entrevista de Arquitectura de Sistemas | ToolNotch",
+      "metaDescription": "30 preguntas sobre diseño de sistemas distribuidos, patrones de resiliencia, Kubernetes, Saga, Circuit Breaker y observabilidad.",
+      "title": "Simulador Técnico de Arquitectura de Sistemas",
+      "coversHeading": "Qué cubre el cuestionario de entrevista de System Architecture",
+      "covers": [
+        "Este cuestionario evalúa conocimientos de diseño de sistemas distribuidos e ingeniería de software a gran escala: microservicios, desacoplamiento y protocolos de red.",
+        "Abarca patrones de resiliencia (Circuit Breaker, Rate Limiting, reintentos con backoff y jitter), consistencia transaccional (Saga Pattern), observabilidad (OpenTelemetry) y caching multicapa."
+      ],
+      "levelsHeading": "Niveles de dificultad",
+      "levels": [
+        "Principiante cubre fundamentos de arquitectura de servicios, trade-offs entre REST y gRPC, balanceadores de carga y patrones de caché (Cache-Aside, Write-Through).",
+        "Intermedio explora patrones de resiliencia, Circuit Breakers, algoritmos de limitación de tasa (Token Bucket, Leaky Bucket), idempotencia y contrapresión.",
+        "Avanzado evalúa gobierno de microservicios a gran escala, Service Mesh, Chaos Engineering, trazabilidad distribuida y tolerancia a fallos complejos."
+      ],
+      "topicsHeading": "Temas del banco de preguntas",
+      "topics": [
+        "Trade-offs entre monolito modular y microservicios",
+        "Protocolos de comunicación: REST frente a gRPC y GraphQL",
+        "Estados del Circuit Breaker: Closed, Open y Half-Open",
+        "Algoritmos de Rate Limiting (Token Bucket, Leaky Bucket, Sliding Window)",
+        "Garantías de idempotencia con claves idempotentes en APIs",
+        "Pilares de observabilidad: métricas, logs estructurados y distributed tracing"
+      ],
+      "howHeading": "Cómo aprovechar el simulado de System Architecture",
+      "how": [
+        "Elige un nivel o realiza las 30 preguntas completas.",
+        "Evalúa los compromisos de latencia, disponibilidad y coste antes de responder.",
+        "Consulta las justificaciones técnicas para fundamentar decisiones en entrevistas técnicas."
+      ],
+      "faqHeading": "Preguntas frecuentes sobre el simulado de System Architecture",
+      "faqs": [
+        {
+          "question": "Cuántas preguntas componen el simulado de System Architecture?",
+          "answer": "Son 30 preguntas divididas en 10 de nivel Principiante, 10 de Intermedio y 10 de Avanzado, con orden dinámico."
+        },
+        {
+          "question": "Es adecuado para puestos de nivel sénior o liderazgo?",
+          "answer": "Sí, abarca desde conceptos clave hasta escenarios avanzados requeridos en entrevistas de Staff Engineer."
+        },
+        {
+          "question": "Es gratuito?",
+          "answer": "Sí, 100% gratuito y ejecutado directamente en tu navegador."
         }
       ]
     }

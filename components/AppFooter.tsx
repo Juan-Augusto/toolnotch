@@ -30,7 +30,7 @@ export default function AppFooter({ locale }: FooterProps) {
     <footer className="w-full border-t border-t-border bg-background">
       <div className="container py-12 sm:py-16 flex flex-col items-center text-center">
         <nav
-          className="flex flex-wrap justify-center items-center gap-x-8 sm:gap-x-12 gap-y-3 font-mono font-medium text-xs sm:text-sm tracking-wider uppercase text-foreground dark:text-white"
+          className="flex flex-wrap justify-center items-center gap-x-8 sm:gap-x-12 gap-y-3 font-mono font-medium   uppercase text-foreground dark:text-white"
           aria-label="Footer primary navigation"
         >
           {mainLinks.map(({ label, href }) => (
@@ -45,7 +45,7 @@ export default function AppFooter({ locale }: FooterProps) {
         </nav>
 
         <nav
-          className="flex flex-wrap justify-center items-center gap-x-6 sm:gap-x-10 gap-y-3 font-mono font-medium text-xs sm:text-sm tracking-wider uppercase text-foreground dark:text-white mt-4 sm:mt-6"
+          className="flex flex-wrap justify-center items-center gap-x-6 sm:gap-x-10 gap-y-3 font-mono font-medium   uppercase text-foreground dark:text-white mt-4 sm:mt-6"
           aria-label="Footer secondary navigation"
         >
           {secondaryLinks.map(({ label, href }) => (

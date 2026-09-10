@@ -91,11 +91,11 @@ export function AppAccordion({
               type="button"
               onClick={() => toggleItem(key)}
               aria-expanded={open}
-              className={`w-full flex items-center justify-between px-6 py-4 text-left select-none cursor-pointer bg-tertiary hover:text-foreground transition-colors ${
+              className={`w-full flex font-medium items-center justify-between px-6 py-4 text-left select-none cursor-pointer bg-tertiary hover:text-foreground transition-colors ${
                 open ? "text-secondary hover:text-secondary" : "text-label"
               } ${headerClassName}`}
             >
-              <span className=" uppercase tracking-wider">{grp.name}</span>
+              <span className=" uppercase ">{grp.name}</span>
 
               <motion.span
                 animate={{ rotate: open ? 180 : 0 }}
@@ -140,7 +140,7 @@ export function AppAccordion({
                   className="overflow-hidden"
                 >
                   <div
-                    className={`p-6 border-t border-border/60 font-mono text-xs md:text-sm text-label/90 leading-relaxed ${contentClassName}`}
+                    className={`p-6 border-t border-border/60 text-label leading-relaxed ${contentClassName}`}
                   >
                     {grp.content}
                   </div>

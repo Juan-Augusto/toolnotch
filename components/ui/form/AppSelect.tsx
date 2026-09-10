@@ -138,7 +138,7 @@ export function AppSelect<T = string>({
         <label
           id={labelId}
           htmlFor={selectId}
-          className={`font-mono text-xs font-semibold uppercase tracking-wider text-foreground mb-2 select-none ${
+          className={`font-mono text-xs font-semibold uppercase  text-foreground mb-2 select-none ${
             disabled ? "opacity-50" : ""
           } ${labelClassName}`}
         >
@@ -175,7 +175,7 @@ export function AppSelect<T = string>({
             py-3
             font-mono
             text-sm
-            tracking-wider
+            
             text-foreground
             border
             rounded-[2px]
@@ -254,7 +254,7 @@ export function AppSelect<T = string>({
                     font-mono
                     text-sm
                     uppercase
-                    tracking-wider
+                    
                     text-left
                     transition-colors
                     select-none
@@ -279,13 +279,11 @@ export function AppSelect<T = string>({
       </div>
 
       {error && (
-        <span className="font-mono text-xs text-red-500 mt-1.5 tracking-wide">
-          {error}
-        </span>
+        <span className="font-mono text-xs text-red-500 mt-1.5 ">{error}</span>
       )}
 
       {helperText && !error && (
-        <span className="font-mono text-xs text-label/70 mt-1.5 tracking-wide">
+        <span className="font-mono text-xs text-label/70 mt-1.5 ">
           {helperText}
         </span>
       )}

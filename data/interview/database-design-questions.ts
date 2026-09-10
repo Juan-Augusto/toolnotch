@@ -8,10 +8,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the primary purpose of a primary key in a relational database?',
     code: null,
     options: [
-      'To sort rows alphabetically',
-      'To uniquely identify each row in a table',
-      'To link two tables together',
-      'To enforce NOT NULL on all columns',
+      "To sort table rows automatically in ascending alphabetical order",
+      "To uniquely identify each distinct row record in a table",
+      "To establish a foreign referential link between two tables",
+      "To enforce NOT NULL constraints across all columns of a table"
     ],
     correctIndex: 1,
     explanation:
@@ -28,10 +28,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'What does a foreign key do in a relational database?',
     code: null,
     options: [
-      'Encrypts column values for security',
-      'References the primary key of another table to enforce referential integrity',
-      'Speeds up SELECT queries on large tables',
-      'Prevents duplicate rows within a single table',
+      "Encrypts sensitive column values using AES-256 keys to guarantee cryptographic data security at rest",
+      "References the primary key of another table, ensuring the database enforces referential integrity across rows",
+      "Accelerates analytical SELECT queries by indexing foreign key columns into specialized in-memory B-Trees",
+      "Prevents duplicate row records from being inserted into a single table without requiring unique constraints"
     ],
     correctIndex: 1,
     explanation:
@@ -48,10 +48,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'Which of the following best describes a NoSQL database?',
     code: null,
     options: [
-      'A database that never uses indexes',
-      'A database that only stores numbers',
-      'A non-relational database that stores data in formats like documents, key-value pairs, or graphs',
-      'A database that forbids SQL syntax entirely',
+      "A storage engine restricted to flat files without index capability",
+      "A relational database storing numeric and tabular metrics exclusively",
+      "A non-relational database supporting document, key-value, or graph models",
+      "A traditional relational engine that forbids standard SQL query syntax"
     ],
     correctIndex: 2,
     explanation:
@@ -87,10 +87,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'What value does a NULL represent in SQL?',
     code: null,
     options: [
-      'Zero',
-      'An empty string',
-      'The absence of a value or unknown',
-      'False',
+      "A numerical zero integer value (`0`)",
+      "An empty character text string (`''`)",
+      "The absence of a value or an unknown state",
+      "A boolean false condition evaluation (`FALSE`)"
     ],
     correctIndex: 2,
     explanation:
@@ -166,10 +166,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the main difference between the SQL and NoSQL query models?',
     code: null,
     options: [
-      'SQL uses JSON while NoSQL uses XML',
-      'SQL uses structured query language on fixed schemas; NoSQL databases use flexible, often API-based query patterns',
-      'SQL can only run on Windows servers',
-      'NoSQL databases never support indexing',
+      "SQL uses fixed JSON schemas; NoSQL uses dynamic XML hierarchies",
+      "SQL uses structured schemas with SQL; NoSQL uses flexible data models",
+      "SQL is restricted to Windows; NoSQL runs only in Linux containers",
+      "SQL requires clustered indexes; NoSQL forbids any secondary indexes"
     ],
     correctIndex: 1,
     explanation:
@@ -185,10 +185,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the purpose of a database migration?',
     code: null,
     options: [
-      'Moving the database server to a different data center',
-      'Exporting data to a CSV file',
-      'Applying versioned, incremental changes to a database schema over time',
-      'Switching from SQL to NoSQL',
+      "Moving database storage volumes to an alternate cloud data center",
+      "Exporting relational table rows to flat compressed CSV archive files",
+      "Applying versioned, incremental schema changes across database environments",
+      "Converting all relational tables and constraints into NoSQL collections"
     ],
     correctIndex: 2,
     explanation:
@@ -227,10 +227,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'What does First Normal Form (1NF) require?',
     code: null,
     options: [
-      'No transitive dependencies between non-key columns',
-      'All columns contain atomic (indivisible) values and each column holds values of a single type',
-      'All foreign keys reference existing rows',
-      'The table has a composite primary key',
+      "No transitive dependencies between non-key columns in the table",
+      "Atomic column values with each column containing a single data type",
+      "All foreign keys referencing existing primary keys in parent tables",
+      "A composite primary key containing at least two or more entity columns"
     ],
     correctIndex: 1,
     explanation:
@@ -247,10 +247,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'Which of the following is a valid reason to intentionally denormalize a database?',
     code: null,
     options: [
-      'To satisfy foreign key constraints',
-      'To improve read query performance by reducing the number of joins',
-      'To enforce stricter data integrity',
-      'To ensure every table is in 3NF',
+      "To satisfy strict foreign key cascading delete constraints",
+      "To improve read query throughput by reducing relational joins",
+      "To enforce stricter multi-column business domain validations",
+      "To guarantee that all application entities conform to 3NF rules"
     ],
     correctIndex: 1,
     explanation:
@@ -267,10 +267,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'What is a surrogate key?',
     code: null,
     options: [
-      'A key derived from business data such as an email address',
-      'A system-generated key (e.g., auto-increment integer or UUID) with no business meaning',
-      'A key that spans multiple columns',
-      'A foreign key that references itself',
+      "A natural key derived from customer attributes like an email",
+      "A system-generated key (UUID or identity) with no business value",
+      "A multi-column composite key identifying junction table relations",
+      "A recursive foreign key pointing to the same table's primary key"
     ],
     correctIndex: 1,
     explanation:
@@ -287,10 +287,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'In an ER diagram, what does a double-line (total participation) on an entity side of a relationship indicate?',
     code: null,
     options: [
-      'The entity has a composite primary key',
-      'Every instance of that entity must participate in the relationship',
-      'The relationship is Many-to-Many',
-      'The entity is a weak entity',
+      "The entity possesses a multi-column composite primary key",
+      "Every entity instance must participate in the relationship",
+      "The entity establishes a Many-to-Many junction association",
+      "The entity represents a weak entity with partial key identity"
     ],
     correctIndex: 1,
     explanation:
@@ -326,10 +326,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the key distinction between OLTP and OLAP workloads?',
     code: null,
     options: [
-      'OLTP stores only structured data; OLAP stores only unstructured data',
-      'OLTP handles many short transactional read/write operations; OLAP handles complex analytical queries over large historical datasets',
-      'OLAP requires ACID transactions; OLTP does not',
-      'OLTP is cloud-only; OLAP is on-premises only',
+      "OLTP processes unstructured JSON; OLAP manages structured tabular schemas",
+      "OLTP handles fast transactional writes; OLAP runs complex analytical queries",
+      "OLAP enforces strict ACID locks; OLTP relies on eventual consistency models",
+      "OLTP runs exclusively on cloud nodes; OLAP runs only on on-premises storage"
     ],
     correctIndex: 1,
     explanation:
@@ -365,10 +365,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the difference between a soft delete and a hard delete?',
     code: null,
     options: [
-      'Soft delete removes the row immediately; hard delete marks it with a timestamp',
-      'Soft delete marks a row as deleted (e.g., with an is_deleted flag) without removing it; hard delete permanently removes the row',
-      'Soft delete applies only to indexes; hard delete applies to table rows',
-      'They are two names for the same SQL DELETE operation',
+      "Soft delete deletes rows immediately; hard delete sets an expiration TTL",
+      "Soft delete flags rows as inactive; hard delete permanently removes rows",
+      "Soft delete drops secondary indexes; hard delete deletes underlying heap rows",
+      "Both terms represent equivalent operations executed by database background jobs"
     ],
     correctIndex: 1,
     explanation:
@@ -385,10 +385,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: "What does 'schema-on-write' mean compared to 'schema-on-read'?",
     code: null,
     options: [
-      'Schema-on-write applies the schema when data is written; schema-on-read applies it when data is queried',
-      'Schema-on-write is used only by NoSQL databases',
-      'Schema-on-read requires strict column definitions before inserting data',
-      'They are equivalent — both enforce the schema at insertion time',
+      "Schema-on-write validates at insertion; schema-on-read validates at query time",
+      "Schema-on-write is exclusive to NoSQL; schema-on-read is exclusive to SQL engines",
+      "Schema-on-read requires static column types prior to inserting any table payloads",
+      "Both models enforce identical compile-time constraint validation during inserts"
     ],
     correctIndex: 0,
     explanation:
@@ -406,10 +406,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'In hash-based sharding, what is the main advantage over range-based sharding?',
     code: null,
     options: [
-      'Hash sharding makes range queries faster',
-      'Hash sharding distributes data more evenly across shards, reducing hotspots',
-      'Hash sharding allows unlimited shards without rebalancing',
-      'Hash sharding requires no shard key',
+      "Hash sharding optimizes sequential range queries over key intervals",
+      "Hash sharding distributes writes evenly across shards to avoid hotspots",
+      "Hash sharding allows adding cluster nodes without any shard rebalancing",
+      "Hash sharding completely eliminates the need for selecting a partition key"
     ],
     correctIndex: 1,
     explanation:
@@ -425,10 +425,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the main trade-off of synchronous replication compared to asynchronous replication?',
     code: null,
     options: [
-      'Synchronous replication is faster but loses data on failure',
-      'Synchronous replication guarantees no data loss but increases write latency because the primary waits for replica acknowledgment',
-      'Asynchronous replication guarantees zero data loss',
-      'Synchronous replication only works with document databases',
+      "Synchronous replication increases throughput but drops data on failover",
+      "Synchronous replication guarantees zero data loss at higher write latency",
+      "Asynchronous replication guarantees zero data loss under crash scenarios",
+      "Synchronous replication is restricted to document databases like MongoDB"
     ],
     correctIndex: 1,
     explanation:
@@ -445,10 +445,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'What distinguishes Event Sourcing from a traditional CRUD data model?',
     code: null,
     options: [
-      'Event Sourcing stores only the latest state; CRUD stores a full event log',
-      'Event Sourcing stores an immutable log of all state-changing events; current state is derived by replaying them',
-      'Event Sourcing requires a relational database; CRUD works with any database',
-      'They are functionally identical but use different SQL syntax',
+      "Event Sourcing persists only current state; CRUD logs every historical change",
+      "Event Sourcing logs immutable state events; current state is derived by replay",
+      "Event Sourcing requires relational tables; CRUD functions only in NoSQL stores",
+      "Event Sourcing updates records in place; CRUD appends new versions sequentially"
     ],
     correctIndex: 1,
     explanation:
@@ -465,10 +465,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'What problem does CQRS (Command Query Responsibility Segregation) primarily solve?',
     code: null,
     options: [
-      'It eliminates the need for database indexes',
-      'It separates the write model (commands) from the read model (queries), allowing each to be optimized independently',
-      'It replaces transactions with eventual consistency',
-      'It enforces strict 3NF normalization on all tables',
+      "It eliminates secondary indexes by maintaining an in-memory document cache",
+      "It separates read and write models so each can be scaled and optimized apart",
+      "It replaces database transactions with distributed eventual consistency locks",
+      "It enforces 3NF relational normalization across all microservice database nodes"
     ],
     correctIndex: 1,
     explanation:
@@ -484,10 +484,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the key difference between optimistic and pessimistic locking?',
     code: null,
     options: [
-      'Optimistic locking prevents all concurrent reads; pessimistic locking allows them',
-      'Optimistic locking assumes conflicts are rare and detects them at commit time; pessimistic locking acquires locks upfront to prevent concurrent modification',
-      'Pessimistic locking is only available in NoSQL databases',
-      'They differ only in syntax, not in behavior',
+      "Optimistic locking prevents all concurrent reads; pessimistic locking tolerates dirty reads under relaxed isolation",
+      "Optimistic locking validates versions at commit assuming conflicts are rare; pessimistic acquires locks upfront",
+      "Pessimistic locking is the sole model in relational engines; optimistic locking is restricted to NoSQL engines",
+      "Both approaches share identical table-level hardware locks, differing exclusively in the SQL invocation syntax"
     ],
     correctIndex: 1,
     explanation:
@@ -504,10 +504,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the difference between horizontal partitioning (sharding) and vertical partitioning?',
     code: null,
     options: [
-      'Horizontal partitioning splits rows across multiple nodes; vertical partitioning splits columns into separate tables or stores',
-      'Horizontal partitioning splits columns; vertical partitioning splits rows',
-      'They are the same concept with different names',
-      'Vertical partitioning applies only to NoSQL databases',
+      "Horizontal splits rows across nodes; vertical splits columns into distinct tables",
+      "Horizontal splits columns across tables; vertical splits rows across cluster nodes",
+      "Horizontal partitioning applies to SQL; vertical partitioning applies to NoSQL",
+      "Both approaches represent identical physical storage reorganizations in memory"
     ],
     correctIndex: 0,
     explanation:
@@ -524,10 +524,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'What problem does the Two-Phase Commit (2PC) protocol solve in distributed databases?',
     code: null,
     options: [
-      'It speeds up read queries across multiple shards',
-      'It coordinates an atomic commit across multiple participating nodes so all commit or all abort',
-      'It replicates data from primary to read replicas',
-      'It compresses transaction logs to save disk space',
+      "It accelerates read queries across multiple sharded relational database nodes",
+      "It ensures atomic commit across nodes so all participants commit or all abort",
+      "It replicates write-ahead logs from primary instances to read-only replicas",
+      "It compresses transaction logs to minimize disk storage consumption on nodes"
     ],
     correctIndex: 1,
     explanation:
@@ -543,10 +543,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'Which data modeling technique is best suited for time-series data with high write throughput and range-based time queries?',
     code: null,
     options: [
-      'Storing all events in a single normalized row per entity',
-      'Using an append-only table partitioned by time range, with a monotonically increasing timestamp as part of the primary key',
-      'Using a Many-to-Many junction table',
-      'Applying 3NF normalization to eliminate all redundancy',
+      "Storing all events inside a single denormalized JSON row per customer entity",
+      "Using append-only tables partitioned by time ranges with timestamp primary keys",
+      "Designing Many-to-Many junction tables with recursive foreign key references",
+      "Enforcing strict 3NF normalization to eliminate redundant timestamp attributes"
     ],
     correctIndex: 1,
     explanation:
@@ -563,10 +563,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: "In a multi-tenant SaaS application, what is the main advantage of the 'database-per-tenant' isolation strategy over a shared schema?",
     code: null,
     options: [
-      'It uses less total storage than a shared schema',
-      'It provides stronger data isolation, simplifies per-tenant backups, and avoids noisy-neighbor query contention',
-      'It requires no schema migrations when adding new tenants',
-      'It is the only approach that supports ACID transactions',
+      "It consumes less overall disk storage and shared memory than a shared schema",
+      "It ensures strong data isolation, simple tenant backups, and avoids noisy neighbors",
+      "It eliminates the need for schema migration scripts when onboarding new clients",
+      "It is the only multi-tenant architecture pattern supporting ACID transactions"
     ],
     correctIndex: 1,
     explanation:
@@ -582,10 +582,10 @@ export const DATABASE_DESIGN_QUESTIONS: InterviewQuestion[] = [
     question: 'How does the Saga pattern address distributed transaction consistency without using 2PC?',
     code: null,
     options: [
-      'It locks all involved services until the transaction completes',
-      'It breaks a distributed transaction into a sequence of local transactions, each publishing an event; compensating transactions undo completed steps on failure',
-      'It relies on a central coordinator to hold a global lock',
-      'It buffers all writes in memory until the entire operation succeeds',
+      "Locks database tables across all microservices using XA distributed transactions until a coordinator confirms success",
+      "Breaks a distributed transaction into local transactions, with events triggering compensating transactions on failure",
+      "Persists all pending state mutations in a shared relational database that centralizes row locks across microservices",
+      "Queues mutations in temporary node memory until an asynchronous worker executes a single unified ACID commit at destination"
     ],
     correctIndex: 1,
     explanation:

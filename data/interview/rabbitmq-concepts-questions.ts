@@ -305,10 +305,10 @@ export const RABBITMQ_CONCEPTS_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the conceptual difference between a routing key and a binding key in RabbitMQ?',
     code: null,
     options: [
-      'They are identical — both terms refer to the same string set by the producer',
-      'The routing key is set by the producer on the message; the binding key is set when a queue is bound to an exchange',
-      'The binding key is set by the producer; the routing key is set on the queue',
-      'Routing keys are only used by direct exchanges; binding keys are only used by topic exchanges',
+      "They are identical terms referencing the same string parameter on producers",
+      "Routing key is set by producers on messages; binding key is set on queue bounds",
+      "Binding key is published on payloads; routing key is defined on consumer workers",
+      "Routing keys belong to direct exchanges; binding keys belong to fanout exchanges"
     ],
     correctIndex: 1,
     explanation:
@@ -347,10 +347,10 @@ export const RABBITMQ_CONCEPTS_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the difference between setting a message TTL per-queue versus per-message?',
     code: null,
     options: [
-      'Per-queue TTL applies to all messages in that queue via x-message-ttl; per-message TTL is set in the message expiration property and may vary per message',
-      'Per-message TTL is always higher priority and overrides any queue TTL',
-      'Per-queue TTL requires a plugin; per-message TTL is built-in',
-      'There is no difference — both cause identical broker behaviour',
+      "Queue TTL sets limits on all queue messages; message TTL sets per-item expiry",
+      "Message TTL takes strict precedence, overriding any existing queue-level TTL",
+      "Queue TTL requires specialized plugins; message TTL is built into the broker",
+      "Both mechanisms trigger identical broker reactions with no behavioral difference"
     ],
     correctIndex: 0,
     explanation:
@@ -368,10 +368,10 @@ export const RABBITMQ_CONCEPTS_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the key advantage of publisher confirms over AMQP transactions (tx.select/tx.commit) in RabbitMQ?',
     code: null,
     options: [
-      'Publisher confirms are synchronous and block the channel until the broker commits',
-      'Publisher confirms provide asynchronous, lightweight acknowledgement without the heavyweight two-phase commit overhead of transactions',
-      'AMQP transactions support batch commits; publisher confirms do not',
-      'Publisher confirms are only available for quorum queues',
+      "Publisher confirms block client channels until the broker commits to storage",
+      "Publisher confirms give async, lightweight acks without two-phase commit weight",
+      "AMQP transactions support batching commits; publisher confirms handle singles",
+      "Publisher confirms are restricted exclusively to high-durability quorum queues"
     ],
     correctIndex: 1,
     explanation:
@@ -389,10 +389,10 @@ export const RABBITMQ_CONCEPTS_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the primary purpose of the RabbitMQ Shovel plugin?',
     code: null,
     options: [
-      'To mirror queues across cluster nodes for high availability',
-      'To reliably move or copy messages from a source queue/exchange to a destination queue/exchange, potentially across brokers',
-      'To expose queues via an HTTP REST API',
-      'To compress message payloads before storage',
+      "To mirror queues across broker cluster nodes to maintain high availability",
+      "To reliably move messages between source and destination queues or exchanges",
+      "To expose internal queue payloads as public HTTP REST endpoints for clients",
+      "To compress message payloads using zstandard algorithms before disk writes"
     ],
     correctIndex: 1,
     explanation:
@@ -410,10 +410,10 @@ export const RABBITMQ_CONCEPTS_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the main architectural difference between quorum queues and classic mirrored queues?',
     code: null,
     options: [
-      'Quorum queues use Raft consensus for replication; classic mirrored queues use asynchronous master-mirror replication',
-      'Classic mirrored queues are faster because they use Raft; quorum queues use two-phase commit',
-      'Quorum queues can only exist on a single node; mirrored queues span the whole cluster',
-      'There is no difference — quorum queues are simply renamed mirrored queues',
+      "Quorum queues use Raft consensus; mirrored queues use master-mirror copies",
+      "Classic mirrored queues use Raft consensus; quorum queues use two-phase locks",
+      "Quorum queues reside on solitary nodes; mirrored queues span across clusters",
+      "Both queues use identical replication engines, differing only in naming tags"
     ],
     correctIndex: 0,
     explanation:
@@ -433,10 +433,10 @@ export const RABBITMQ_CONCEPTS_QUESTIONS: InterviewQuestion[] = [
     question: 'How does AMQP 0-9-1 enable multiple logical communication streams over a single TCP connection in RabbitMQ?',
     code: null,
     options: [
-      'By opening multiple TCP sockets bundled into one connection object',
-      'Through channels — lightweight virtual connections multiplexed over a single TCP connection',
-      'By using HTTP/2 stream multiplexing within the AMQP framing',
-      'By encoding each logical stream as a separate virtual host',
+      "By binding multiple TCP sockets concurrently into a single pooled connection",
+      "Through channels — lightweight virtual streams multiplexed over a single TCP",
+      "By adopting HTTP/2 streaming frames inside custom AMQP protocol handshakes",
+      "By segregating each individual communication stream into dedicated vhosts"
     ],
     correctIndex: 1,
     explanation:
@@ -454,10 +454,10 @@ export const RABBITMQ_CONCEPTS_QUESTIONS: InterviewQuestion[] = [
     question: 'What does the AMQP 0-9-1 channel.flow mechanism do?',
     code: null,
     options: [
-      'It increases the prefetch window dynamically when the consumer is idle',
-      'It allows the broker or client to pause/resume message delivery on a channel to apply back-pressure',
-      'It migrates a channel from one TCP connection to another without interruption',
-      "It flushes all pending messages from a channel's internal buffer to disk",
+      "It expands consumer prefetch window sizes dynamically during low queue loads",
+      "It allows pausing and resuming channel message delivery to apply back-pressure",
+      "It transfers a running channel to an alternate TCP connection without drops",
+      "It flushes all pending channel memory buffers to persistent storage blocks"
     ],
     correctIndex: 1,
     explanation:
@@ -475,10 +475,10 @@ export const RABBITMQ_CONCEPTS_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the primary operational benefit of declaring a queue as a lazy queue?',
     code: null,
     options: [
-      'Lazy queues skip acknowledgement processing to increase throughput',
-      'Lazy queues write messages directly to disk as they arrive rather than keeping them in memory, reducing RAM usage for deep queues',
-      'Lazy queues replicate to disk only when the node restarts',
-      'Lazy queues defer binding evaluation until a consumer connects',
+      "Lazy queues bypass consumer acknowledgements to maximize ingestion throughput",
+      "Lazy queues flush messages directly to disk, reducing RAM consumption in queues",
+      "Lazy queues write copies to disk only during planned broker restart sequences",
+      "Lazy queues defer exchange binding calculations until a consumer connects in"
     ],
     correctIndex: 1,
     explanation:
@@ -496,10 +496,10 @@ export const RABBITMQ_CONCEPTS_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the key architectural difference between the Federation plugin and the Shovel plugin?',
     code: null,
     options: [
-      'Federation links are permanent; Shovel links are temporary and delete themselves after a single message',
-      'Federation provides loosely coupled, broker-to-broker exchange/queue linking with autonomous nodes; Shovel is a simple point-to-point message mover that requires tight coupling',
-      'Shovel supports AMQP 1.0; Federation only supports AMQP 0-9-1',
-      'They are functionally identical — Federation is just the newer name for Shovel',
+      "Federation links are immutable; Shovel connections delete after each message",
+      "Federation links autonomous brokers loosely; Shovel performs point-to-point moves",
+      "Shovel supports AMQP 1.0 protocols; Federation is restricted to AMQP 0-9-1 only",
+      "Both plugins perform identical routing tasks, with Federation being the newer API"
     ],
     correctIndex: 1,
     explanation:
@@ -517,10 +517,10 @@ export const RABBITMQ_CONCEPTS_QUESTIONS: InterviewQuestion[] = [
     question: 'What does the consistent hash exchange plugin accomplish that a standard direct or topic exchange cannot?',
     code: null,
     options: [
-      'It routes messages to exactly one queue chosen by a consistent hash of the routing key, distributing load while keeping messages with the same key on the same queue',
-      'It replicates messages to all bound queues using a hash-based deduplication mechanism',
-      'It hashes the message body for integrity verification before routing',
-      'It ensures round-robin delivery across queues regardless of routing key',
+      "It routes to a single queue chosen by key hash, keeping same keys grouped",
+      "It duplicates messages to all bound queues using hash deduplication rules",
+      "It verifies message payload hashes for corruption before routing decisions",
+      "It balances messages round-robin regardless of routing key configurations"
     ],
     correctIndex: 0,
     explanation:
@@ -538,10 +538,10 @@ export const RABBITMQ_CONCEPTS_QUESTIONS: InterviewQuestion[] = [
     question: 'In a RabbitMQ cluster, what is the functional difference between disc nodes and RAM nodes?',
     code: null,
     options: [
-      'Disc nodes persist broker metadata (queues, exchanges, bindings, users) to disk; RAM nodes keep all metadata only in memory for lower latency writes',
-      'RAM nodes handle message routing; disc nodes handle only persistent message storage',
-      'Disc nodes can host quorum queues; RAM nodes cannot',
-      'The terms are deprecated — all modern RabbitMQ nodes are identical',
+      "Disc nodes store metadata on disk; RAM nodes keep metadata in memory for speed",
+      "RAM nodes handle message routing; disc nodes handle solely persistent messages",
+      "Disc nodes host quorum queues; RAM nodes reject quorum queue cluster bindings",
+      "Both node classifications are deprecated and modern RabbitMQ nodes are identical"
     ],
     correctIndex: 0,
     explanation:
@@ -559,10 +559,10 @@ export const RABBITMQ_CONCEPTS_QUESTIONS: InterviewQuestion[] = [
     question: 'How do quorum queues use the Raft consensus algorithm to guarantee data safety?',
     code: null,
     options: [
-      'A message is considered confirmed only after a majority (quorum) of replicas have written it, ensuring no data loss even if a minority of nodes fail',
-      'Raft is used only for leader election; message storage uses a separate two-phase commit protocol',
-      'Quorum queues write to all replicas synchronously and require unanimous acknowledgement',
-      'Raft ensures messages are deduplicated across all cluster nodes',
+      "Messages confirm only when a quorum majority of replicas write to storage",
+      "Raft handles leader election only; storage uses two-phase commit protocols",
+      "Quorum queues require synchronous unanimous confirmation across all replicas",
+      "Raft guarantees automatic deduplication across all broker cluster nodes"
     ],
     correctIndex: 0,
     explanation:
@@ -580,10 +580,10 @@ export const RABBITMQ_CONCEPTS_QUESTIONS: InterviewQuestion[] = [
     question: 'When both a per-queue policy and a queue declaration argument (e.g., x-message-ttl) are set for the same queue, which takes precedence in RabbitMQ?',
     code: null,
     options: [
-      'Policies always win over declaration arguments',
-      'Declaration arguments always win over policies',
-      'Declaration arguments (set at queue creation) take precedence over policies for the same key',
-      'Both are merged additively — neither overrides the other',
+      "Queue policies strictly take precedence over declaration argument parameters",
+      "Declaration arguments always take precedence over configured broker policies",
+      "Declaration arguments set at queue creation override policies for that key",
+      "Both configurations merge additively without either taking clear precedence"
     ],
     correctIndex: 2,
     explanation:
@@ -622,10 +622,10 @@ export const RABBITMQ_CONCEPTS_QUESTIONS: InterviewQuestion[] = [
     question: 'What is the recommended approach for graceful consumer shutdown in RabbitMQ to avoid message loss?',
     code: null,
     options: [
-      'Kill the process immediately — RabbitMQ will automatically requeue any unacknowledged messages',
-      'Cancel the consumer subscription, finish processing all in-flight messages, send ACKs or NACKs for each, then close the channel and connection',
-      'Call basic.reject on all messages, then close the TCP connection without sending a connection.close frame',
-      'Set prefetch to 0 and wait for the broker to drain the queue before closing',
+      "Terminate consumer processes instantly; the broker automatically requeues items",
+      "Cancel subscriptions, finish in-flight processing, send ACKs, then close down",
+      "Call basic.reject on messages and sever the socket without close handshake frames",
+      "Reset prefetch to zero and wait for the broker to drain pending queues completely"
     ],
     correctIndex: 1,
     explanation:

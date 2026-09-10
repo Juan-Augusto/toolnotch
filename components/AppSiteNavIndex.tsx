@@ -16,7 +16,7 @@ export default function AppSiteNavIndex({ locale }: Props) {
       aria-label={tf("siteIndexHeading")}
       className="w-full border-t border-[color:var(--base-border)] pt-8 mt-2 text-label"
     >
-      <h2 className="text-xs font-bold uppercase tracking-widest mb-4 text-center">
+      <h2 className="text-xs font-bold uppercase st mb-4 text-center">
         {tf("siteIndexHeading")}
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-5 text-xs">

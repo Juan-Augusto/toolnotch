@@ -27,7 +27,9 @@ export function AppFeaturedQuizCard({
   const estimatedMin = Math.max(2, Math.round(quiz.questionCount * 0.4));
 
   const quizHref =
-    currentLocale === "en" ? `/quiz/${quiz.id}` : `/${currentLocale}/quiz/${quiz.id}`;
+    currentLocale === "en"
+      ? `/quiz/${quiz.id}`
+      : `/${currentLocale}/quiz/${quiz.id}`;
 
   return (
     <section className="mb-14" aria-label="Featured Quiz">
@@ -65,7 +67,7 @@ export function AppFeaturedQuizCard({
                 </span>
               </div>
 
-              <h2 className="text-xl sm:text-2xl tracking-wide font-bold text-foreground uppercase group-hover:text-secondary transition-colors">
+              <h2 className="text-xl sm:text-2xl  font-bold text-foreground uppercase group-hover:text-secondary transition-colors">
                 {quiz.title}
               </h2>
 

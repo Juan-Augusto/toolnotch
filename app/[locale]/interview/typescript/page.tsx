@@ -1,50 +1,71 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import { buildAlternates } from '@/lib/i18nMeta'
-import { buildJsonLd, faqSchema, breadcrumbSchema, type FaqItem } from '@/lib/schema'
+import { buildAlternatesForLocale } from '@/lib/i18nMeta'
+import {
+  buildJsonLd,
+  faqSchema,
+  breadcrumbSchema,
+  buildLocalizedUrl,
+  interviewQuizSchema,
+  type FaqItem,
+} from '@/lib/schema'
 import { AppTypeScriptQuiz } from '@/components/interview/AppTypeScriptQuiz'
 import AppInterviewDepth from '@/components/interview/AppInterviewDepth'
+import AppBreadcrumb from '@/components/AppBreadcrumb'
+import AppRelatedInterviewDrills from '@/components/interview/AppRelatedInterviewDrills'
+import { getInterviewQuestions } from '@/data/interview/interviewQuestionsProvider'
 
 const PATH = '/interview/typescript'
-const TITLE = 'TypeScript Interview Quiz — Beginner to Advanced | ToolNotch'
-const DESCRIPTION =
-  'Test your TypeScript knowledge with 30 in-depth interview questions across Beginner, Intermediate, and Advanced levels. Every answer explains why it is correct, what TypeScript compiles to in JavaScript, and the industry best practice.'
-
-export const metadata: Metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
-  alternates: buildAlternates(PATH),
-  keywords: [
-    'TypeScript interview questions',
-    'TypeScript quiz',
-    'TypeScript interview prep',
-    'TypeScript generics quiz',
-    'TypeScript conditional types',
-    'TypeScript mapped types',
-    'TypeScript type system',
-    'TypeScript beginner to advanced',
-    'TypeScript compiled JavaScript',
-    'TypeScript best practices',
-  ],
-  openGraph: {
-    title: 'TypeScript Deep-Dive Interview Quiz | ToolNotch',
-    description: '30 questions — Beginner to Advanced. See compiled JS output and industry best practices on every answer.',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'TypeScript Interview Quiz — 30 Questions | ToolNotch',
-    description: 'Test your TypeScript knowledge. Covers generics, conditional types, mapped types, satisfies, NoInfer and more.',
-  },
-}
 
 interface Props {
   params: Promise<{ locale: string }>
 }
 
-export default async function TypeScriptQuizPage({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'interview.typescript' })
+  const localizedUrl = buildLocalizedUrl(PATH, locale)
+  const ogLocale = locale === 'pt' ? 'pt_BR' : locale === 'es' ? 'es_ES' : 'en_US'
+  const title = t('metaTitle')
+  const description = t('metaDescription')
+
+  return {
+    title,
+    description,
+    alternates: buildAlternatesForLocale(PATH, locale),
+    keywords: [
+      "TypeScript interview questions",
+      "TypeScript quiz",
+      "TypeScript interview prep",
+      "TypeScript generics quiz",
+      "TypeScript conditional types",
+      "TypeScript mapped types",
+      "TypeScript type system",
+      "TypeScript beginner to advanced",
+      "TypeScript compiled JavaScript",
+      "TypeScript best practices"
+    ],
+    openGraph: {
+      title,
+      description,
+      url: localizedUrl,
+      siteName: 'ToolNotch',
+      locale: ogLocale,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+  }
+}
+
+export default async function TypeScriptQuizPage({ params }: Props) {
+  const { locale } = await params
+  const localizedUrl = buildLocalizedUrl(PATH, locale)
+  const t = await getTranslations({ locale, namespace: 'interview.typescript' })
+  const questions = getInterviewQuestions('typescript', locale)
 
   const depthFaqs = t.raw('faqs') as FaqItem[]
   const depthSections = [
@@ -56,45 +77,60 @@ export default async function TypeScriptQuizPage({ params }: Props) {
     { heading: t('howHeading'), ordered: true, items: t.raw('how') as string[] },
   ]
 
+  const homeLabel = locale === 'pt' ? 'Início' : locale === 'es' ? 'Inicio' : 'Home'
+  const simuladosLabel = locale === 'pt' ? 'Simulados' : locale === 'es' ? 'Simulados' : 'Interview Drills'
+  const prefix = locale === 'en' ? '' : `/${locale}`
+
   const jsonLd = buildJsonLd(
-    {
-      '@type': 'Quiz',
-      name: 'TypeScript Deep-Dive Interview Quiz',
-      description: DESCRIPTION,
-      url: 'https://toolnotch.com/interview/typescript',
-      educationalLevel: ['Beginner', 'Intermediate', 'Advanced'],
-      about: {
-        '@type': 'Thing',
-        name: 'TypeScript',
-        description: 'A strongly typed programming language that builds on JavaScript.',
-      },
-      teaches: [
-        'Type Inference', 'Generics', 'Conditional Types', 'Mapped Types',
-        'Discriminated Unions', 'Template Literal Types', 'Type Predicates',
-        'Variadic Tuples', 'infer keyword', 'satisfies operator',
-      ],
-    },
+    interviewQuizSchema({
+      title: t('title'),
+      description: t('metaDescription'),
+      url: localizedUrl,
+      locale,
+      about: 'TypeScript',
+      questions,
+    }),
     faqSchema(depthFaqs),
     breadcrumbSchema([
-      { name: 'Home', url: '/' },
-      { name: 'Interview Prep', url: '/interview' },
-      { name: 'TypeScript Quiz', url: PATH },
+      { name: homeLabel, url: prefix || '/' },
+      { name: simuladosLabel, url: `${prefix}/interview` },
+      { name: 'TypeScript', url: localizedUrl },
     ]),
   )
 
   return (
-    <>
+    <main className="min-h-[calc(100vh-180px)] bg-background text-foreground py-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <AppTypeScriptQuiz />
-      <AppInterviewDepth
-        sections={depthSections}
-        lists={depthLists}
-        faqHeading={t('faqHeading')}
-        faqs={depthFaqs}
-      />
-    </>
+      <div className="w-full pb-2 container">
+        <AppBreadcrumb
+          items={[
+            { label: homeLabel, href: prefix || '/' },
+            { label: simuladosLabel, href: `${prefix}/interview` },
+            {
+              label: 'TypeScript',
+              href: `${prefix}${PATH}`,
+              current: true,
+            },
+          ]}
+        />
+      </div>
+
+      <div className="w-full max-w-4xl mx-auto pt-4 pb-8 md:pb-12 px-4 sm:px-0">
+        <AppTypeScriptQuiz locale={locale} />
+      </div>
+
+      <div className="w-full max-w-4xl mx-auto px-4 sm:px-0">
+        <AppInterviewDepth
+          sections={depthSections}
+          lists={depthLists}
+          faqHeading={t('faqHeading')}
+          faqs={depthFaqs}
+        />
+        <AppRelatedInterviewDrills currentSlug="typescript" locale={locale} />
+      </div>
+    </main>
   )
 }
