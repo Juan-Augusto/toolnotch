@@ -217,7 +217,7 @@ export function AppQuizzesHub({ quizzes, locale = "pt" }: AppQuizzesHubProps) {
                   {labels.noResults}
                 </p>
                 <AppButton
-                  color="tertiary"
+                  color="primary"
                   small
                   onClick={() => {
                     setSelectedCategory("all");

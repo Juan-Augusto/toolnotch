@@ -1,10 +1,7 @@
 import React from "react";
 import AppCard from "@/components/ui/AppCard";
 import AppBadge from "@/components/ui/AppBadge";
-import {
-  BLOG_CATEGORY_CONFIG,
-  type BlogCategoryKey,
-} from "./blogHubConfig";
+import { BLOG_CATEGORY_CONFIG, type BlogCategoryKey } from "./blogHubConfig";
 
 export interface AppBlogDepthProps {
   introTitle?: string;
@@ -55,7 +52,6 @@ export function AppBlogDepth({
                 key={catKey}
                 border
                 hover={false}
-                withCornerAccents={false}
                 className="p-5 space-y-2.5"
               >
                 <div className="flex items-center gap-2">

@@ -94,7 +94,7 @@ export default async function LocaleLayout({
   const isDark = cookieStore.get("theme")?.value === "dark";
 
   const navItems = [
-    { href: "/", label: t("nav.tools") },
+    { href: "/tools", label: t("nav.tools") },
     { href: "/interview", label: t("nav.interview") },
     { href: "/quizzes", label: t("nav.quizzes") },
     { href: "/blog", label: t("nav.blog") },

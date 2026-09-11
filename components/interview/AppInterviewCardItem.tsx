@@ -39,7 +39,6 @@ export function AppInterviewCardItem({
   return (
     <Link href={quizHref} className="block group h-full select-none">
       <AppCard
-        withCornerAccents={false}
         hover
         border
         className="h-full flex flex-col justify-between !p-6 sm:!p-7 transition-all"

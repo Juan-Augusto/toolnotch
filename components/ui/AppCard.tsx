@@ -19,15 +19,12 @@ export default function AppCard({
   hover,
   ...props
 }: AppCardProps) {
-  const showCornerAccents =
-    withCornerAccents !== undefined ? withCornerAccents : cornerAccents;
-
   return (
     <div
       className={`relative bg-tertiary p-6 ${hover ? "hover:border-foreground/20" : ""} ${border ? "border border-border" : ""} ${className}`}
       {...props}
     >
-      {showCornerAccents && <AppCornerAccents />}
+      {withCornerAccents && <AppCornerAccents />}
 
       {children}
     </div>

@@ -41,7 +41,7 @@ export default async function HomePage({ params }: Props) {
       title: t("cards.tools.title"),
       desc: t("cards.tools.desc"),
       color: "primary" as const,
-      href: "/",
+      href: "/tools",
     },
     {
       title: t("cards.quizzes.title"),

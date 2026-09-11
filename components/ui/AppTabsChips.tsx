@@ -83,7 +83,7 @@ export function AppTabsChips({
             {isActive && (
               <motion.div
                 layoutId={layoutId}
-                className="absolute inset-0 bg-primary rounded-[2px] z-0 shadow-sm"
+                className="absolute inset-0 bg-secondary dark:bg-primary rounded-[2px] z-0"
                 transition={{
                   type: "spring",
                   stiffness: 500,

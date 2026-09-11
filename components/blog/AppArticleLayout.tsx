@@ -219,7 +219,6 @@ export default async function AppArticleLayout({
                   <AppCard
                     border
                     hover
-                    withCornerAccents={false}
                     className="p-4 sm:p-5 flex items-center justify-between transition-all"
                   >
                     <span className=" text-xs sm:text-sm font-bold uppercase text-foreground group-hover:text-primary transition-colors">
@@ -253,7 +252,6 @@ export default async function AppArticleLayout({
                     <AppCard
                       border
                       hover
-                      withCornerAccents={false}
                       className="h-full p-5 flex flex-col justify-between space-y-4 transition-all"
                     >
                       <h3 className=" text-xs sm:text-sm font-bold uppercase text-foreground group-hover:text-secondary transition-colors line-clamp-2 leading-snug">
@@ -275,12 +273,7 @@ export default async function AppArticleLayout({
 
         {showAuthorBio && (
           <section className="mt-12 pt-8 border-t-dashed-5 not-prose">
-            <AppCard
-              border
-              hover={false}
-              withCornerAccents={false}
-              className="p-6 sm:p-8 bg-tertiary/20"
-            >
+            <AppCard border hover={false} className="p-6 sm:p-8 bg-tertiary/20">
               <div className="flex flex-col sm:flex-row items-start  gap-5">
                 <div className="w-12 h-12 mt-1 rounded-[2px] bg-purple-500 text-background font-semibold text-base flex items-center justify-center shrink-0 select-none">
                   J

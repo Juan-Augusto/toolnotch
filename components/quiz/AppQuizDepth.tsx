@@ -212,7 +212,6 @@ export default function AppQuizDepth({ content, currentSlug }: Props) {
                   <AppCard
                     hover
                     border
-                    withCornerAccents={false}
                     className={`h-full flex flex-col justify-between p-5 transition-all ${
                       isCurrent ? "!border-primary bg-primary/10" : ""
                     }`}

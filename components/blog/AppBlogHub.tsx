@@ -194,12 +194,12 @@ export function AppBlogHub({ posts, locale = "pt" }: AppBlogHubProps) {
             ))}
           </div>
         ) : (
-          <div className="text-center py-20 border border-dashed border-border/50 rounded-[2px] bg-tertiary/20">
+          <div className="text-center py-20 border-dashed-5 border-border/50 rounded-[2px] bg-tertiary/20">
             <p className="text-sm text-label mb-4">
               {labels.noResults}
             </p>
             <AppButton
-              color="tertiary"
+              color="primary"
               small
               onClick={() => {
                 setSelectedCategory("all");
