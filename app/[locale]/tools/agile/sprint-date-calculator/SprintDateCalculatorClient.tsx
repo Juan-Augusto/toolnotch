@@ -168,7 +168,7 @@ export default function SprintDateCalculatorClient({
                     <span className="text-sm font-medium text-gray-700">
                       {label}
                     </span>
-                    <span className="text-sm text-gray-600 font-mono">
+                    <span className="text-sm text-gray-600">
                       {formatDate(date)}
                     </span>
                   </div>
@@ -187,7 +187,7 @@ export default function SprintDateCalculatorClient({
                 {result.standups.map((d) => (
                   <span
                     key={d.toISOString()}
-                    className="text-xs text-gray-600 bg-tertiary border border-gray-200 rounded px-2 py-1 font-mono"
+                    className="text-xs text-gray-600 bg-tertiary border border-gray-200 rounded px-2 py-1"
                   >
                     {formatDate(d)}
                   </span>

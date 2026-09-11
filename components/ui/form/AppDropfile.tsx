@@ -276,7 +276,7 @@ export function AppDropfile({
       {label && (
         <label
           htmlFor={inputId}
-          className={`font-mono text-xs font-semibold uppercase  text-foreground mb-2 select-none ${
+          className={`text-xs font-semibold uppercase  text-foreground mb-2 select-none ${
             disabled ? "opacity-50" : ""
           } ${labelClassName}`}
         >
@@ -346,14 +346,14 @@ export function AppDropfile({
           {icon ?? <FileUp className="w-8 h-8 stroke-[1.75]" />}
         </div>
 
-        <p className="font-mono text-xs md:text-sm font-bold uppercase  text-foreground mb-1">
+        <p className="text-xs md:text-sm font-bold uppercase  text-foreground mb-1">
           {title ??
             (multiple
               ? "CLIQUE OU ARRASTE ARQUIVOS AQUI"
               : "CLIQUE OU ARRASTE O ARQUIVO AQUI")}
         </p>
 
-        <p className="font-mono text-xs text-label/80 ">
+        <p className="text-xs text-label/80 ">
           {description ??
             (multiple
               ? "Clique ou arraste arquivos aqui"
@@ -370,10 +370,10 @@ export function AppDropfile({
             >
               <div className="flex items-center gap-2.5 min-w-0">
                 <FileIcon className="w-4 h-4 text-secondary shrink-0" />
-                <span className="font-mono text-xs text-foreground truncate max-w-[200px] md:max-w-xs">
+                <span className="text-xs text-foreground truncate max-w-[200px] md:max-w-xs">
                   {file.name}
                 </span>
-                <span className="font-mono text-[11px] text-label shrink-0">
+                <span className="text-[11px] text-label shrink-0">
                   ({formatFileSize(file.size)})
                 </span>
               </div>
@@ -397,11 +397,11 @@ export function AppDropfile({
       )}
 
       {error && (
-        <span className="font-mono text-xs text-red-500 mt-1.5 ">{error}</span>
+        <span className="text-xs text-red-500 mt-1.5 ">{error}</span>
       )}
 
       {helperText && !error && (
-        <span className="font-mono text-xs text-label/70 mt-1.5 ">
+        <span className="text-xs text-label/70 mt-1.5 ">
           {helperText}
         </span>
       )}

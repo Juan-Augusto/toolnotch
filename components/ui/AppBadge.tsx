@@ -18,7 +18,7 @@ export function AppBadge({
 }: AppBadgeProps) {
   return (
     <span
-      className={`inline-flex items-center gap-2 px-2.5 py-0.5 text-[12px] font-mono font-bold uppercase  rounded-[2px] whitespace-nowrap ${bg} ${text} ${className}`}
+      className={`inline-flex items-center gap-2 px-2.5 py-0.5 text-[12px] font-semibold tracking-wide uppercase rounded-[2px] whitespace-nowrap ${bg} ${text} ${className}`}
       {...props}
     >
       {icon && (

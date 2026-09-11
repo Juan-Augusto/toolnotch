@@ -48,7 +48,7 @@ export default function AppButton({
     secondary:
       "bg-secondary text-white dark:text-black hover:shadow-[0px_4px_0px_var(--color-secondary-shadow)] active:bg-secondary-shadow disabled:bg-secondary/25 disabled:text-background/40",
     tertiary:
-      "bg-tertiary text-foreground hover:shadow-[0px_4px_0px_var(--color-tertiary-shadow)] active:bg-tertiary-shadow disabled:bg-tertiary/40 disabled:text-label/40",
+      "bg-tertiary text-foreground hover:shadow-[0px_4px_0px_var(--color-border)] active:bg-tertiary-shadow disabled:bg-tertiary/40 disabled:text-label/40",
   };
 
   const sizeClasses = small ? "px-5 py-3 text-xs" : "px-6 py-3.5 text-sm";

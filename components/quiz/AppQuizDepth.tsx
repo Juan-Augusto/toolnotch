@@ -104,7 +104,7 @@ export default function AppQuizDepth({ content, currentSlug }: Props) {
           {content.introHeading}
         </h2>
 
-        <div className="space-y-3s text-label leading-loose">
+        <div className="space-y-4 text-label leading-relaxed">
           {content.intro.map((paragraph, i) => (
             <p key={i}>{paragraph}</p>
           ))}

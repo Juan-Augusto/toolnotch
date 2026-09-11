@@ -97,7 +97,7 @@ export default async function LocaleLayout({
     { href: "/", label: t("nav.tools") },
     { href: "/interview", label: t("nav.interview") },
     { href: "/quizzes", label: t("nav.quizzes") },
-    { href: "/about", label: t("nav.about") },
+    { href: "/blog", label: t("nav.blog") },
     {
       href: "/partners",
       label: tAff("partners.navLabel"),

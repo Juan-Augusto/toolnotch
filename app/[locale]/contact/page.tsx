@@ -149,7 +149,7 @@ export default async function ContactPage({ params }: Props) {
               {t("title")}
             </h1>
             <p className="leading-relaxed text-label mt-3">{t("subtitle")}</p>
-            <p className="text-xs text-label/80 mt-2 font-mono">
+            <p className="text-xs text-label/80 mt-2">
               {t("lastUpdated")}
             </p>
           </header>
@@ -170,7 +170,7 @@ export default async function ContactPage({ params }: Props) {
               <div>
                 <a
                   href="mailto:contact@toolnotch.com"
-                  className="text-lg sm:text-xl font-bold text-primary hover:underline font-mono inline-block break-all"
+                  className="text-lg sm:text-xl font-bold text-primary hover:underline inline-block break-all"
                 >
                   contact@toolnotch.com
                 </a>

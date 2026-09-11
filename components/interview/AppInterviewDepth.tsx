@@ -30,7 +30,7 @@ export default function AppInterviewDepth({
     <section className="w-full pt-10 pb-16 space-y-12 border-t-dashed-5">
       {sections.map((s, i) => (
         <div key={`s${i}`} className="space-y-3">
-          <h2 className="font-mono text-lg sm:text-xl font-bold uppercase  text-foreground">
+          <h2 className="text-lg sm:text-xl font-bold uppercase  text-foreground">
             {s.heading}
           </h2>
           <div className="space-y-3 text-sm text-label leading-relaxed">
@@ -49,7 +49,7 @@ export default function AppInterviewDepth({
         ));
         return (
           <div key={`l${i}`} className="space-y-3">
-            <h2 className="font-mono text-lg sm:text-xl font-bold uppercase  text-foreground">
+            <h2 className="text-lg sm:text-xl font-bold uppercase  text-foreground">
               {l.heading}
             </h2>
             {l.ordered ? (
@@ -66,7 +66,7 @@ export default function AppInterviewDepth({
       })}
 
       <div className="space-y-4">
-        <h2 className="font-mono text-lg sm:text-xl font-bold uppercase  text-foreground">
+        <h2 className="text-lg sm:text-xl font-bold uppercase  text-foreground">
           {faqHeading}
         </h2>
 

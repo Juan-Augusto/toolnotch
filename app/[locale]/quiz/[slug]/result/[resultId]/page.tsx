@@ -140,25 +140,25 @@ export default async function QuizResultPage({
           </div>
           <div className="w-full py-6">
             <div className="bg-card rounded-[2px] border border-border/60 p-8 mb-8">
-              <div className="font-mono text-xs text-primary font-bold uppercase mb-1">
+              <div className="text-xs text-primary font-bold uppercase mb-1">
                 {quiz.title}
               </div>
-              <h1 className="font-mono text-2xl sm:text-3xl font-bold uppercase text-foreground mb-4">
+              <h1 className="text-2xl sm:text-3xl font-bold uppercase text-foreground mb-4">
                 {tier.label}
               </h1>
-              <p className="font-mono text-sm text-label leading-relaxed mb-6">
+              <p className="text-sm text-label leading-relaxed mb-6">
                 {tier.description}
               </p>
               {tierDepth && (
                 <div className="mb-6">
-                  <h2 className="font-mono text-base font-bold uppercase text-foreground mb-3">
+                  <h2 className="text-base font-bold uppercase text-foreground mb-3">
                     {tierDepth.heading}
                   </h2>
                   <div className="space-y-4">
                     {tierDepth.body.map((paragraph, i) => (
                       <p
                         key={i}
-                        className="font-mono  text-label leading-relaxed"
+                        className=" text-label leading-relaxed"
                       >
                         {paragraph}
                       </p>
@@ -168,7 +168,7 @@ export default async function QuizResultPage({
               )}
               <Link
                 href={`${prefix}/quiz/${slug}`}
-                className="inline-block px-6 py-3 bg-primary text-background rounded-[2px] font-mono font-bold text-sm uppercase hover:opacity-90 transition-opacity"
+                className="inline-block px-6 py-3 bg-primary text-background rounded-[2px] font-bold text-sm uppercase hover:opacity-90 transition-opacity"
               >
                 Take this quiz →
               </Link>
@@ -176,7 +176,7 @@ export default async function QuizResultPage({
             <div className="text-center">
               <Link
                 href={`${prefix}/quizzes`}
-                className="font-mono text-xs text-label hover:text-primary transition-colors"
+                className="text-xs text-label hover:text-primary transition-colors"
               >
                 Browse all quizzes →
               </Link>
@@ -226,13 +226,13 @@ export default async function QuizResultPage({
         <div className="w-full py-6">
           {/* Result detail: indexable content */}
           <div className="bg-card rounded-[2px] border border-border/60 p-8 mb-8">
-            <div className="font-mono text-xs text-primary font-bold uppercase mb-1">
+            <div className="text-xs text-primary font-bold uppercase mb-1">
               {quiz.title}
             </div>
-            <h1 className="font-mono text-2xl sm:text-3xl font-bold uppercase text-foreground mb-4">
+            <h1 className="text-2xl sm:text-3xl font-bold uppercase text-foreground mb-4">
               {result.title}
             </h1>
-            <p className="font-mono text-sm text-label leading-relaxed mb-6">
+            <p className="text-sm text-label leading-relaxed mb-6">
               {result.description}
             </p>
             {result.traits.length > 0 && (
@@ -240,7 +240,7 @@ export default async function QuizResultPage({
                 {result.traits.map((trait) => (
                   <span
                     key={trait}
-                    className="px-2.5 py-1 bg-tertiary border border-border/50 text-foreground font-mono rounded-[2px] text-xs font-medium"
+                    className="px-2.5 py-1 bg-tertiary border border-border/50 text-foreground rounded-[2px] text-xs font-medium"
                   >
                     #{trait}
                   </span>
@@ -249,7 +249,7 @@ export default async function QuizResultPage({
             )}
             <Link
               href={`${prefix}/quiz/${slug}`}
-              className="inline-block px-6 py-3 bg-primary text-background rounded-[2px] font-mono font-bold text-sm uppercase hover:opacity-90 transition-opacity"
+              className="inline-block px-6 py-3 bg-primary text-background rounded-[2px] font-bold text-sm uppercase hover:opacity-90 transition-opacity"
             >
               Take this quiz →
             </Link>
@@ -259,7 +259,7 @@ export default async function QuizResultPage({
           <div className="text-center">
             <Link
               href={`${prefix}/quizzes`}
-              className="font-mono text-xs text-label hover:text-primary transition-colors"
+              className="text-xs text-label hover:text-primary transition-colors"
             >
               Browse all quizzes →
             </Link>

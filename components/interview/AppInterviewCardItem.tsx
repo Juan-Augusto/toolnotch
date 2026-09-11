@@ -66,11 +66,11 @@ export function AppInterviewCardItem({
         </div>
 
         <div className="mt-6 pt-4 border-t border-border/40 flex items-center justify-between gap-3">
-          <span className="font-mono text-[11px] text-label/80 uppercase whitespace-nowrap">
+          <span className="text-xs text-label/80 uppercase whitespace-nowrap">
             {quiz.questionCount} {labels.questionsLabel} • 3{" "}
             {labels.levelsLabel}
           </span>
-          <div className="flex items-center gap-1 font-mono text-[11px] font-bold uppercase  text-label group-hover:text-secondary transition-colors shrink-0">
+          <div className="flex items-center gap-1 text-xs font-semibold uppercase text-label group-hover:text-secondary transition-colors shrink-0">
             <span>{labels.playQuiz}</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-all" />
           </div>

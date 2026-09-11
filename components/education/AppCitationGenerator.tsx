@@ -188,7 +188,7 @@ export default function AppCitationGenerator({ locale }: Props) {
           )}
         </div>
         {citation ? (
-          <div className="p-4 rounded-lg bg-gray-50 dark:bg-tertiary border border-gray-200 dark:border-gray-700 text-sm font-mono whitespace-pre-wrap break-words select-all">
+          <div className="p-4 rounded-lg bg-gray-50 dark:bg-tertiary border border-gray-200 dark:border-gray-700 text-sm whitespace-pre-wrap break-words select-all">
             {citation}
           </div>
         ) : (

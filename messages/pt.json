@@ -3819,9 +3819,9 @@
     "termsButton": "Termos de Uso"
   },
   "blog": {
-    "indexTitle": "Blog — Guias e Tutoriais de Calculadoras Gratuitas",
+    "indexTitle": "Blog: Guias e Tutoriais de Calculadoras Gratuitas",
     "indexDescription": "Aprenda a usar as ferramentas do ToolNotch com guias passo a passo, tutoriais de calculadoras e dicas práticas sobre finanças, saúde, educação e produtividade.",
-    "readArticle": "Ler artigo →",
+    "readArticle": "Ler artigo",
     "minRead": "{n} min de leitura",
     "categories": {
       "finance": "Finanças",
@@ -3834,410 +3834,473 @@
     },
     "breadcrumbBlog": "Blog",
     "relatedTool": "Experimente o {toolName} gratuito →",
-    "indexIntro": "O blog do ToolNotch é onde cada ferramenta ganha a explicação completa que não cabe na própria página da ferramenta. Todo artigo é escrito para se sustentar sozinho: a fórmula ou o método por trás de uma ferramenta, um exemplo prático que você pode reproduzir, os casos-limite e os erros comuns a observar, e um link para a ferramenta gratuita quando você quiser fazer as contas. Não há cadastro nem paywall — os guias estão aqui para ajudar você a entender o resultado, não só a obtê-lo.",
+    "indexIntro": "O blog do ToolNotch é onde cada ferramenta ganha a explicação completa que não cabe na própria página da ferramenta. Todo artigo é escrito para se sustentar sozinho: a fórmula ou o método por trás de uma ferramenta, um exemplo prático que você pode reproduzir, os casos-limite e os erros comuns a observar, e um link para a ferramenta gratuita quando você quiser fazer as contas. Não há cadastro nem paywall; os guias estão aqui para ajudar você a entender o resultado, não só a obtê-lo.",
     "indexGuideHeading": "O que você encontra aqui",
     "indexCategoryBlurbs": {
-      "finance": "Finanças — como funcionam de verdade as contas de empréstimo, financiamento, juros e quitação de dívidas, com exemplos práticos que você pode conferir na calculadora correspondente.",
-      "health": "Saúde — explicações em linguagem simples sobre IMC, TDEE e metas de calorias, incluindo de onde vem cada fórmula e o que ela deixa de fora.",
-      "text": "Texto — orientação prática sobre contagem de palavras e caracteres, tempo de leitura, índices de legibilidade e densidade de palavras-chave para quem escreve e estuda.",
-      "education": "Educação — como se calculam a média geral, as notas ponderadas e os principais estilos de citação, e como evitar os erros que fazem perder pontos.",
-      "productivity": "Produtividade — como tirar mais proveito das ferramentas do dia a dia de planejamento, datas e prazos, e encaixá-las num fluxo de trabalho real.",
-      "engineering": "Engenharia — o contexto por trás das ferramentas voltadas para desenvolvedores e dos quizzes de entrevista, da formatação às perguntas de sistema de tipos.",
-      "fun": "Diversão — como funciona a aleatoriedade das roletas, sorteadores e geradores, e como conduzir um sorteio em que todos que assistem vão confiar."
+      "finance": "Finanças: como funcionam de verdade as contas de empréstimo, financiamento, juros e quitação de dívidas, com exemplos práticos que você pode conferir na calculadora correspondente.",
+      "health": "Saúde: explicações em linguagem simples sobre IMC, TDEE e metas de calorias, incluindo de onde vem cada fórmula e o que ela deixa de fora.",
+      "text": "Texto: orientação prática sobre contagem de palavras e caracteres, tempo de leitura, índices de legibilidade e densidade de palavras-chave para quem escreve e estuda.",
+      "education": "Educação: como se calculam a média geral, as notas ponderadas e os principais estilos de citação, e como evitar os erros que fazem perder pontos.",
+      "productivity": "Produtividade: como tirar mais proveito das ferramentas do dia a dia de planejamento, datas e prazos, e encaixá-las num fluxo de trabalho real.",
+      "engineering": "Engenharia: o contexto por trás das ferramentas voltadas para desenvolvedores e dos quizzes de entrevista, da formatação às perguntas de sistema de tipos.",
+      "fun": "Diversão: como funciona a aleatoriedade das roletas, sorteadores e geradores, e como conduzir um sorteio em que todos que assistem vão confiar."
     },
     "posts": {
       "how-to-calculate-mortgage-payment": {
         "title": "Como Calcular a Parcela Mensal do Financiamento Imobiliário",
-        "description": "Aprenda a fórmula por trás das parcelas do financiamento, entenda a amortização e veja como taxa de juros e prazo afetam o que você paga por mês.",
+        "description": "Aprenda a fórmula por trás da parcela do financiamento imobiliário, os fatores que alteram o valor mensal e os erros mais comuns a evitar.",
         "relatedToolName": "Calculadora de Financiamento",
         "relatedToolPath": "/tools/finance/mortgage-calculator",
         "body": [
           {
             "type": "paragraph",
-            "text": "Comprar um imóvel é provavelmente a maior decisão financeira que a maioria de nós já tomará — e, ainda assim, a parcela mensal que aparece na proposta do banco pode parecer um número saído do nada. De onde vem esse valor? Por que uma diferença mínima na taxa de juros muda tanto o que você paga? E por que a parcela do banco é sempre maior do que a que você vê em uma calculadora de financiamento?"
+            "text": "Comprar um imóvel é a maior decisão financeira na vida da maioria das pessoas. Mesmo assim, o valor da parcela mensal que aparece nas simulações dos bancos muitas vezes soa como um mistério indecifrável."
           },
           {
             "type": "paragraph",
-            "text": "Este guia explica a matemática por trás da parcela do financiamento imobiliário, detalha cada fator que pode aumentar ou reduzir o seu custo mensal e ajuda você a identificar os erros mais comuns que pegam de surpresa quem está comprando o primeiro imóvel."
+            "text": "Por que uma variação aparentemente pequena na taxa de juros encarece tanto o custo total? E por que o valor final do boleto quase sempre supera o resultado de uma calculadora simples?"
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "A Fórmula Principal: Principal e Juros"
+            "text": "A Fórmula Principal: Amortização e Juros"
           },
           {
             "type": "paragraph",
-            "text": "A parcela de um financiamento de taxa fixa é calculada por uma fórmula de amortização que distribui tanto o principal da dívida quanto os juros de forma igual ao longo de todos os meses do prazo. A fórmula é esta:"
+            "text": "Em contratos com parcelas fixas (como no sistema da Tabela Price), a prestação que cobre o valor principal e os juros mensais segue a fórmula padrão de amortização:"
           },
           {
             "type": "callout",
-            "text": "M = P × [r(1+r)^n] / [(1+r)^n − 1]\n\nOnde: M = parcela mensal, P = valor principal do empréstimo, r = taxa de juros mensal (taxa anual ÷ 12), n = número total de parcelas (anos × 12)"
-          },
-          {
-            "type": "paragraph",
-            "text": "Veja um exemplo concreto. Suponha que você tome emprestado R$ 300.000 a uma taxa anual de 10,5% por 30 anos. Sua taxa mensal r é 10,5% ÷ 12 = 0,875%, ou 0,00875 na forma decimal. Seu n é 30 × 12 = 360 parcelas."
-          },
-          {
-            "type": "paragraph",
-            "text": "Aplicando na fórmula: M = 300.000 × [0,00875 × (1,00875)^360] / [(1,00875)^360 − 1]. O resultado é aproximadamente R$ 2.740 por mês — apenas de principal e juros. Esse número já pode parecer alto, mas ainda não é o valor completo da prestação."
+            "text": "**Fórmula:** M = P × [r(1+r)^n] ÷ [(1+r)^n - 1] onde **M** é a parcela mensal, **P** é o saldo devedor financiado, **r** é a taxa de juros mensal e **n** é o número total de meses."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "O Que Mais Compõe a Sua Parcela Mensal?"
+            "text": "Exemplo Real: Financiamento de R$ 300.000 em 30 Anos"
           },
           {
             "type": "paragraph",
-            "text": "Os bancos geralmente agrupam custos adicionais em uma única prestação mensal, por isso o valor real é maior do que o que a fórmula de principal + juros indica. Os principais encargos extras são:"
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "Seguro habitacional — Obrigatório nos financiamentos pelo SFH, cobre danos físicos ao imóvel e invalidez permanente ou morte do mutuário. Em geral adiciona de R$ 80 a R$ 300 por mês, dependendo do valor do imóvel e da idade do comprador.",
-              "Taxas administrativas — Cobradas mensalmente pela instituição financeira pela administração do contrato. Variam conforme o banco, mas costumam girar em torno de R$ 25 a R$ 50 por mês.",
-              "Seguro de prestação (MIP/DFI) — O MIP cobre morte e invalidez permanente; o DFI cobre danos físicos ao imóvel. Ambos são exigidos em financiamentos pelo SFH.",
-              "Taxa de condomínio e IPTU — Não fazem parte da parcela do financiamento, mas são custos reais de moradia que precisam entrar no seu planejamento mensal."
-            ]
-          },
-          {
-            "type": "paragraph",
-            "text": "Quando todos esses encargos são incluídos, aqueles R$ 2.740 de principal + juros podem se tornar facilmente R$ 3.200 a R$ 3.500 por mês. Sempre solicite ao banco o CET (Custo Efetivo Total) — é ele que mostra o verdadeiro custo do financiamento, não apenas a taxa nominal."
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "Como a Taxa de Juros Afeta a Sua Parcela"
-          },
-          {
-            "type": "paragraph",
-            "text": "Muita gente subestima o impacto de meio ponto percentual na taxa de juros. Em um financiamento de R$ 300.000 por 30 anos, a diferença entre uma taxa de 10,0% e 10,5% ao ano pode representar mais de R$ 100 a mais por mês — e dezenas de milhares de reais ao longo do contrato. Por isso, pesquisar em diferentes bancos e melhorar seu relacionamento com a instituição antes de fechar o contrato pode fazer uma diferença enorme."
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "A 10,0% a.a.: parcela de principal+juros ≈ R$ 2.633",
-              "A 10,5% a.a.: parcela de principal+juros ≈ R$ 2.740",
-              "A 11,0% a.a.: parcela de principal+juros ≈ R$ 2.849"
-            ]
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "Prazo: 30 Anos vs. 15 Anos"
-          },
-          {
-            "type": "paragraph",
-            "text": "Um financiamento de 15 anos tem uma parcela mensal bem maior do que o de 30 anos, mas o total de juros pago ao longo do contrato pode ser menos da metade. Usando R$ 300.000 a 10,0% a.a.:"
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "30 anos: ~R$ 2.633/mês, ~R$ 647.880 no total (juros de ~R$ 347.880)",
-              "15 anos: ~R$ 3.224/mês, ~R$ 580.320 no total (juros de ~R$ 280.320)"
-            ]
-          },
-          {
-            "type": "paragraph",
-            "text": "O prazo mais curto economiza uma quantia expressiva em juros, mas exige uma parcela mensal significativamente maior. A escolha certa depende do seu fluxo de caixa, da estabilidade profissional e do que mais você faria com esse dinheiro a cada mês."
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "Erros Comuns a Evitar"
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "Ignorar o seguro e as taxas administrativas — A fórmula de P+J é só o ponto de partida. Sempre calcule o custo total da moradia: principal, juros, seguros, taxas e condomínio/IPTU.",
-              "Comparar apenas a parcela mensal, não o custo total — Um prazo mais longo reduz a parcela, mas aumenta drasticamente o total pago em juros.",
-              "Não verificar o tipo de correção — Financiamentos corrigidos pelo IPCA podem ter parcelas menores no início, mas sobem com a inflação. Certifique-se de que consegue pagar nos cenários mais adversos.",
-              "Não analisar a tabela de amortização — Nos primeiros anos de um financiamento longo, a maior parte da parcela vai para juros, não para o principal. Entender isso ajuda a decidir se vale a pena fazer amortizações extras.",
-              "Esquecer os custos de cartório e impostos — ITBI, escritura e registro geralmente representam de 3% a 5% do valor do imóvel e precisam ser pagos à vista."
-            ]
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "Simule os Seus Números"
-          },
-          {
-            "type": "paragraph",
-            "text": "A fórmula é importante para entender a lógica, mas não há necessidade de fazer essa conta na mão toda vez que quiser simular um cenário. Use nossa Calculadora de Financiamento gratuita para testar qualquer combinação de valor financiado, taxa de juros e prazo — e obter instantaneamente a parcela mensal, o total de juros e a tabela de amortização."
-          },
-          {
-            "type": "toolCta",
-            "toolName": "Calculadora de Financiamento",
-            "toolPath": "/tools/finance/mortgage-calculator"
-          },
-          {
-            "type": "paragraph",
-            "text": "Entender como a parcela do financiamento é formada dá a você real poder de negociação e planejamento. Você saberá por que travar uma taxa 0,25% menor vale a pena insistir, por que dar mais de entrada economiza muito além do seguro e por que aquele financiamento de taxa variável pode ser um risco que você não precisa correr. Simule os números, compare cenários e entre na compra do seu imóvel com os olhos bem abertos."
-          }
-        ]
-      },
-      "bmi-vs-body-fat-percentage": {
-        "title": "IMC vs Percentual de Gordura Corporal: Qual é a Diferença?",
-        "description": "IMC e percentual de gordura medem saúde de formas diferentes. Saiba qual métrica importa mais para seus objetivos e como interpretar seus resultados.",
-        "relatedToolName": "Calculadora de IMC",
-        "relatedToolPath": "/tools/health/bmi-calculator",
-        "body": [
-          {
-            "type": "paragraph",
-            "text": "Se você já fez um check-up de rotina, seu médico provavelmente calculou o seu IMC. E se você frequenta academia, certamente já ouviu alguém dizer que o IMC não vale nada e que o percentual de gordura é o único número que importa. A verdade, como quase sempre, é mais complexa do que isso."
-          },
-          {
-            "type": "paragraph",
-            "text": "As duas métricas medem algo real — só que medem coisas diferentes. Entender o que cada uma realmente diz sobre você, e onde cada uma falha, ajuda a tomar decisões mais inteligentes sobre saúde sem se obcecar com um único número."
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "O Que o IMC Mede (e o Que Ele Não Mede)"
-          },
-          {
-            "type": "paragraph",
-            "text": "O IMC, ou Índice de Massa Corporal, é calculado dividindo o seu peso em quilogramas pelo quadrado da sua altura em metros (kg/m²). É uma ferramenta de triagem populacional desenvolvida no século XIX pelo matemático belga Adolphe Quetelet — não por um médico, vale ressaltar. Ela foi criada para descrever as proporções corporais médias de homens europeus, não para diagnosticar a saúde de indivíduos."
-          },
-          {
-            "type": "paragraph",
-            "text": "As categorias padrão de IMC para adultos são:"
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "Abaixo de 18,5 — Abaixo do peso",
-              "18,5–24,9 — Peso normal",
-              "25,0–29,9 — Sobrepeso",
-              "30,0 ou mais — Obesidade"
-            ]
-          },
-          {
-            "type": "paragraph",
-            "text": "O que o IMC faz bem: é gratuito, instantâneo, não exige equipamentos e, no nível populacional, correlaciona-se razoavelmente bem com riscos de saúde como diabetes tipo 2, doenças cardiovasculares e alguns tipos de câncer. Por isso continua sendo uma ferramenta padrão de triagem clínica."
-          },
-          {
-            "type": "paragraph",
-            "text": "O que o IMC não mede: composição corporal. O IMC não tem como saber se o seu peso vem de músculo, gordura, osso ou água. Um quilo de músculo e um quilo de gordura pesam exatamente igual — o IMC os trata de forma idêntica."
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "Quando o IMC Pode Enganar"
-          },
-          {
-            "type": "paragraph",
-            "text": "Existem grupos específicos para os quais o IMC é um indicador genuinamente ruim de saúde:"
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "Atletas e pessoas muito musculosas — Um jogador de rúgbi competitivo ou um fisiculturista pode ter IMC na faixa de \"sobrepeso\" ou \"obesidade\" com percentual de gordura muito baixo e ótima saúde cardiovascular. O alto volume de massa muscular infla o IMC sem que haja os riscos de saúde associados.",
-              "Pessoas idosas — O envelhecimento tende a reduzir a massa muscular (sarcopenia) enquanto aumenta a gordura, muitas vezes sem grande variação no peso. Uma pessoa idosa pode ter IMC \"normal\" e, ao mesmo tempo, carregar uma proporção perigosamente alta de gordura corporal.",
-              "Diferentes etnias — Pesquisas mostram que, no mesmo IMC, pessoas de ascendência sul-asiática e do Leste Asiático tendem a carregar mais gordura e enfrentar maior risco metabólico. Algumas organizações de saúde já recomendam pontos de corte mais baixos para populações asiáticas.",
-              "Mulheres vs. homens — Mulheres naturalmente carregam mais gordura corporal do que homens com o mesmo IMC, devido a diferenças hormonais e reprodutivas. Duas pessoas com IMC idêntico podem ter percentuais de gordura significativamente diferentes."
-            ]
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "O Que o Percentual de Gordura Realmente Diz"
-          },
-          {
-            "type": "paragraph",
-            "text": "O percentual de gordura corporal é exatamente o que parece: a proporção do seu peso total que vem de tecido adiposo. O restante — músculos, ossos, órgãos, água — é chamado de massa magra ou massa livre de gordura."
-          },
-          {
-            "type": "paragraph",
-            "text": "As faixas saudáveis de gordura variam por sexo e idade, mas referências gerais para adultos são:"
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "Mulheres: 20–35% é geralmente considerado saudável; atletas costumam ficar na faixa de 14–20%",
-              "Homens: 10–25% é geralmente saudável; atletas do sexo masculino costumam ficar entre 6–13%",
-              "Gordura essencial (mínimo necessário para o funcionamento dos órgãos): cerca de 3–5% para homens, 10–13% para mulheres"
-            ]
-          },
-          {
-            "type": "paragraph",
-            "text": "Percentual elevado de gordura — especialmente a gordura visceral acumulada ao redor dos órgãos, e não a subcutânea sob a pele — está mais diretamente associado à resistência à insulina, inflamação crônica, doenças cardíacas e síndrome metabólica do que o IMC. Por isso, o percentual de gordura é considerado um marcador mais significativo da saúde cardiometabólica."
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "O Problema: Medir Gordura Corporal é Difícil"
-          },
-          {
-            "type": "paragraph",
-            "text": "A principal razão pela qual o IMC não foi substituído pelo percentual de gordura em ambientes clínicos é que medir a gordura com precisão é muito mais difícil e caro. Os métodos mais precisos incluem densitometria óssea por dupla emissão de raios-X (DEXA), pesagem hidrostática (pesagem submerso em água) e Bod Pod por deslocamento de ar — nenhum deles disponível em uma consulta de rotina."
-          },
-          {
-            "type": "paragraph",
-            "text": "Ferramentas de consumo, como balanças de bioimpedância e aparelhos manuais, são convenientes, mas notoriamente inconsistentes — nível de hidratação, alimentação recente e horário do dia podem alterar os resultados em 3 a 5 pontos percentuais. A dobra cutânea com adipômetro, feita por um profissional treinado, é razoavelmente precisa, mas muito dependente da técnica do avaliador."
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "Usando as Duas Métricas em Conjunto"
-          },
-          {
-            "type": "paragraph",
-            "text": "A abordagem mais prática é tratar o IMC e o percentual de gordura como ferramentas complementares, não concorrentes:"
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "Use o IMC como uma triagem inicial rápida e gratuita. Se o seu IMC está na faixa normal e você não tem outros fatores de risco, é um sinal tranquilizador — embora não conclusivo.",
-              "Use o percentual de gordura (ou a circunferência da cintura como proxy) quando o IMC parecer inconsistente com como você se sente ou parece, ou quando quiser acompanhar mudanças na composição corporal durante o treinamento.",
-              "Preste atenção à relação cintura-altura — manter a circunferência da cintura abaixo de metade da sua altura é um marcador simples e validado que captura melhor o risco de gordura visceral do que o IMC isoladamente."
-            ]
-          },
-          {
-            "type": "callout",
-            "text": "Nenhum número conta a história completa. Pressão arterial, glicemia, colesterol, qualidade do sono e condicionamento físico são marcadores de saúde igualmente importantes — o contexto sempre importa."
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "Calcule o Seu IMC Agora"
-          },
-          {
-            "type": "paragraph",
-            "text": "Quer saber onde você está? Use nossa Calculadora de IMC gratuita para obter o seu IMC instantaneamente, ver em qual categoria ele se enquadra e entender o que o número significa para a sua situação específica — incluindo os limites importantes dessa métrica."
-          },
-          {
-            "type": "toolCta",
-            "toolName": "Calculadora de IMC",
-            "toolPath": "/tools/health/bmi-calculator"
-          },
-          {
-            "type": "paragraph",
-            "text": "No fim das contas, o objetivo não é otimizar um número em um gráfico — é se sentir forte, ter energia e reduzir o risco de doenças crônicas no longo prazo. IMC e percentual de gordura são métricas imperfeitas para esse objetivo. Use-os como ponto de partida para uma conversa, não como veredictos."
-          }
-        ]
-      },
-      "how-to-cite-website-apa": {
-        "title": "Como Citar um Site no Formato APA (7ª Edição)",
-        "description": "Um guia claro e passo a passo para citar sites, artigos online e páginas da web no formato APA 7ª edição, com exemplos para cada tipo de fonte.",
-        "relatedToolName": "Gerador de Citações",
-        "relatedToolPath": "/tools/education/citation-generator",
-        "body": [
-          {
-            "type": "paragraph",
-            "text": "Citar um site no formato APA é uma das maiores fontes de dúvida entre estudantes, mesmo os mais experientes. A 7ª edição (lançada em 2020 e ainda vigente em 2025) alterou várias regras em relação à 6ª edição — incluindo como tratar URLs, autores ausentes e datas de acesso. Se você aprendeu APA há alguns anos, há uma boa chance de que parte do que você sabe esteja desatualizada."
-          },
-          {
-            "type": "paragraph",
-            "text": "Se você estuda em uma instituição brasileira, é provável que a ABNT (Associação Brasileira de Normas Técnicas) seja o padrão exigido. No entanto, cursos com orientação internacional — especialmente na área de psicologia, ciências da saúde e ciências sociais — frequentemente adotam a APA. Nosso Gerador de Citações suporta tanto APA quanto ABNT, além de MLA e Chicago."
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "O Modelo APA 7ª Edição para Sites"
-          },
-          {
-            "type": "paragraph",
-            "text": "A estrutura básica para uma página da web ou artigo online na APA 7ª edição é:"
-          },
-          {
-            "type": "callout",
-            "text": "Sobrenome do Autor, Inicial do Nome. (Ano, Mês Dia). Título da página. Nome do Site. URL"
-          },
-          {
-            "type": "paragraph",
-            "text": "Alguns detalhes importantes: o título da página é escrito em caixa sentença (apenas a primeira palavra e substantivos próprios em maiúsculo) e em itálico. O nome do site vem em seguida, em texto normal, e não há ponto após a URL."
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "Exemplo Passo a Passo"
-          },
-          {
-            "type": "paragraph",
-            "text": "Veja um exemplo real. Suponha que você queira citar um artigo com os seguintes dados — Autor: Flávia Oliveira. Data: 12 de março de 2024. Título: Pesquisadores descobrem sistema fluvial antigo sob a Antártida. Site: G1 Ciência."
+            "text": "Para entender na prática, imagine um empréstimo imobiliário de **R$ 300.000**, com taxa de juros anual de **6,5%** ao longo de **30 anos (360 meses)**:"
           },
           {
             "type": "list",
             "ordered": true,
             "items": [
-              "Autor: Escreva o sobrenome, depois uma vírgula e a inicial do nome seguida de ponto. → Oliveira, F.",
-              "Data: Coloque o ano primeiro, depois mês e dia entre parênteses, seguido de ponto. → (2024, março 12).",
-              "Título: Escreva o título completo em caixa sentença e em itálico. → Pesquisadores descobrem sistema fluvial antigo sob a Antártida.",
-              "Nome do site: Escreva o nome do site em texto normal (sem itálico), seguido de ponto. → G1 Ciência.",
-              "URL: Cole a URL completa. Sem colchetes angulares, sem ponto no final."
+              "**Taxa mensal (r):** 6,5% ÷ 12 = **0,5417% ao mês** (0,005417 em notação decimal).",
+              "**Prazo em meses (n):** 30 anos × 12 = **360 prestações mensais**.",
+              "**Resultado da parcela base:** aplicando a fórmula, a prestação de amortização e juros fica em aproximadamente **R$ 1.896 por mês**."
             ]
           },
           {
-            "type": "callout",
-            "text": "Oliveira, F. (2024, março 12). Pesquisadores descobrem sistema fluvial antigo sob a Antártida. G1 Ciência. https://g1.globo.com/ciencia"
+            "type": "paragraph",
+            "text": "Na sua primeira parcela de **R$ 1.896**, cerca de **R$ 1.625** cobrem apenas os juros do mês, e somente **R$ 271** abatem a dívida do imóvel. Com o passar dos anos, o saldo diminui e a proporção se inverte, acelerando a amortização real."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "O Que Fazer Quando Não Há Autor"
+            "text": "O Impacto da Taxa de Juros no Custo Final"
           },
           {
             "type": "paragraph",
-            "text": "Muitos sites não indicam um autor individual. Na APA 7ª edição, quando não há autor, o título assume a posição de autor. Mantenha o itálico e simplesmente omita o campo de autor."
+            "text": "Nunca aceite a primeira taxa do banco sem pesquisar. Uma diferença de apenas meio ponto percentual (0,5%) provoca um impacto financeiro expressivo ao longo de 30 anos em um financiamento de **R$ 300.000**:"
           },
           {
-            "type": "callout",
-            "text": "Tipos de auxílio estudantil disponíveis. (2024, 10 de janeiro). Ministério da Educação. https://www.gov.br/mec/pt-br"
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "O Que Fazer Quando Não Há Data"
-          },
-          {
-            "type": "paragraph",
-            "text": "Se uma página não tiver data de publicação ou atualização, use \"s.d.\" (sem data) na posição da data:"
-          },
-          {
-            "type": "callout",
-            "text": "Sobrenome do Autor, Inicial do Nome. (s.d.). Título da página. Nome do Site. URL"
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "É Necessário Incluir a Data de Acesso?"
+            "type": "table",
+            "headers": [
+              "Taxa Anual de Juros",
+              "Parcela Mensal (A+J)",
+              "Total Pago em 30 Anos",
+              "Custo Somente de Juros"
+            ],
+            "rows": [
+              ["6,0% ao ano", "R$ 1.799 / mês", "R$ 647.500", "R$ 347.500"],
+              ["6,5% ao ano", "R$ 1.896 / mês", "R$ 682.500", "R$ 382.500"],
+              ["7,0% ao ano", "R$ 1.996 / mês", "R$ 718.500", "R$ 418.500"],
+              ["8,0% ao ano", "R$ 2.201 / mês", "R$ 792.400", "R$ 492.400"]
+            ]
           },
           {
             "type": "paragraph",
-            "text": "Na APA 6ª edição, era comum incluir a data de acesso (\"Recuperado em 10 de março de 2024, de...\"). A APA 7ª edição eliminou essa exigência para a maioria das fontes. Você só precisa da data de acesso se o conteúdo for projetado para mudar ao longo do tempo e não houver arquivo — como entradas em bancos de dados dinâmicos ou páginas wiki atualizadas com frequência. Para artigos e páginas convencionais, dispense a data de acesso."
+            "text": "Um aumento de 1 ponto percentual na taxa (de 6,0% para 7,0%) acrescenta quase **R$ 200 por mês** na prestação e acumula mais de **R$ 70.000 em juros extras** ao longo do contrato."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Erros Comuns nas Citações APA"
+            "text": "O Que Mais Entra na Sua Parcela Mensal?"
+          },
+          {
+            "type": "paragraph",
+            "text": "O boleto mensal emitido pelo banco quase nunca se limita a amortização e juros. Ele inclui custos acessórios obrigatórios por lei:"
           },
           {
             "type": "list",
             "ordered": false,
             "items": [
-              "Capitalização errada no título — APA usa caixa sentença, não caixa título. \"Como Escrever uma Revisão de Literatura\" deve ser \"Como escrever uma revisão de literatura\" (exceto substantivos próprios).",
-              "Esquecer de colocar o título da página em itálico — O título da página vai em itálico; o nome do site, não.",
-              "Colocar ponto após a URL — A URL é o elemento final e não leva ponto.",
-              "Usar as regras da 6ª edição — A APA 7ª edição removeu a localidade do editor para livros e mudou a formatação de DOIs e URLs. Se o seu guia de estilo for anterior a 2020, revise-o.",
-              "Usar \"Anônimo\" para fontes sem autor — A APA 7ª edição não usa [Anônimo] como substituto de autor. Se não há autor, o título assume a posição de autor."
+              "**Seguro MIP (Morte e Invalidez Permanente):** Obrigatório em financiamentos habitacionais para quitar o saldo caso o titular faleça ou sofra invalidez.",
+              "**Seguro DFI (Danos Físicos ao Imóvel):** Cobertura obrigatória para reconstrução ou reparo do imóvel em caso de incêndios e sinistros estruturais.",
+              "**Tarifa de administração do banco:** Custo mensal cobrado pela instituição para manutenção do contrato (geralmente entre R$ 25 e R$ 40).",
+              "**Despesas de IPTU e condomínio:** Embora não venham no mesmo boleto, devem sempre ser somadas ao seu orçamento de moradia."
             ]
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "APA vs. ABNT: Qual Usar?"
+            "text": "Comparativo de Prazo: 30 Anos vs 15 Anos"
           },
           {
             "type": "paragraph",
-            "text": "No Brasil, a ABNT é o padrão adotado pela maioria das instituições de ensino superior para trabalhos acadêmicos. Já a APA é amplamente utilizada internacionalmente, especialmente em psicologia, ciências da saúde e ciências sociais. Se o seu curso ou orientador exige um formato específico, use esse — eles não são intercambiáveis. Fique em dúvida? Consulte o manual da sua instituição ou pergunte ao professor."
+            "text": "Um financiamento em 15 anos exige uma prestação mensal maior, mas economiza uma quantia substancial em juros:"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Prazo do Financiamento",
+              "Parcela Mensal Estimada",
+              "Total de Juros Pagos",
+              "Economia em Juros"
+            ],
+            "rows": [
+              [
+                "30 anos (360 meses)",
+                "R$ 1.799 / mês",
+                "R$ 347.500",
+                "Referência inicial"
+              ],
+              [
+                "15 anos (180 meses)",
+                "R$ 2.532 / mês",
+                "R$ 155.700",
+                "Economia de R$ 191.800 em juros"
+              ]
+            ]
+          },
+          {
+            "type": "callout",
+            "text": "**Estratégia recomendada:** Se a parcela de 15 anos comprometer sua segurança financeira, contrate em 30 anos para ter folga mensal e faça **amortizações extraordinárias voluntárias** todo ano (com 13º salário ou FGTS) para liquidar o contrato em tempo recorde."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Simule Seu Financiamento em Segundos"
+          },
+          {
+            "type": "paragraph",
+            "text": "Utilize nossa calculadora de financiamento gratuita para simular diferentes prazos, valores de entrada e taxas de juros em tempo real antes de negociar com os bancos."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Calculadora de Financiamento",
+            "toolPath": "/tools/finance/mortgage-calculator"
+          }
+        ]
+      },
+      "bmi-vs-body-fat-percentage": {
+        "title": "IMC vs Percentual de Gordura Corporal: Qual é a Diferença?",
+        "description": "IMC e percentual de gordura corporal medem aspectos diferentes da sua saúde. Saiba quando usar cada métrica e quando o IMC pode ser enganoso.",
+        "relatedToolName": "Calculadora de IMC",
+        "relatedToolPath": "/tools/health/bmi-calculator",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Em consultas de rotina, médicos e nutricionistas frequentemente calculam o seu IMC. Por outro lado, em academias e centros esportivos, é comum ouvir que o IMC é inútil e que o percentual de gordura corporal é a única métrica que conta."
+          },
+          {
+            "type": "paragraph",
+            "text": "A realidade é que **ambos os indicadores têm valor prático**, mas avaliam aspectos complementares do corpo humano. Entender o que cada métrica informa e quais são seus limites ajuda você a tomar decisões mais inteligentes sobre sua saúde."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "O Que o IMC Mede (e O Que Ele Ignora)"
+          },
+          {
+            "type": "paragraph",
+            "text": "O **Índice de Massa Corporal (IMC)** é um cálculo que relaciona o peso de uma pessoa à sua altura. Criado no século XIX pelo matemático Adolphe Quetelet, o método foi desenhado originalmente para estudar proporções corporais em grandes populações:"
+          },
+          {
+            "type": "callout",
+            "text": "**Fórmula do IMC:** IMC = peso (kg) ÷ [altura (m) × altura (m)]"
+          },
+          {
+            "type": "paragraph",
+            "text": "Por exemplo, uma pessoa com **70 kg** e **1,75 m** de altura realiza o seguinte cálculo: 70 ÷ (1,75 × 1,75) = 70 ÷ 3,06 = **IMC 22,9**."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Tabela Oficial de Classificação do IMC (OMS)"
+          },
+          {
+            "type": "paragraph",
+            "text": "A Organização Mundial da Saúde (OMS) estabelece as seguintes faixas de referência para adultos:"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Faixa de IMC",
+              "Classificação",
+              "Risco Metabólico Associado"
+            ],
+            "rows": [
+              [
+                "Menor que 18,5",
+                "Abaixo do peso",
+                "Elevado (risco nutricional e baixa imunidade)"
+              ],
+              [
+                "18,5 a 24,9",
+                "Peso adequado (eutrofia)",
+                "Menor risco para doenças crônicas"
+              ],
+              [
+                "25,0 a 29,9",
+                "Sobrepeso (pré-obesidade)",
+                "Moderado (alerta para hábitos de vida)"
+              ],
+              [
+                "30,0 a 34,9",
+                "Obesidade Grau I",
+                "Alto risco cardiovascular e metabólico"
+              ],
+              ["35,0 a 39,9", "Obesidade Grau II", "Muito alto risco"],
+              ["40,0 ou superior", "Obesidade Grau III (mórbida)", "Gravíssimo"]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "**Pontos fortes do IMC:** é gratuito, instantâneo, não requer nenhum aparelho especial e possui correlação estatística comprovada com riscos de diabetes tipo 2 e hipertensão arterial em grandes estudos populacionais."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Principal limitação do IMC:** ele **não avalia a composição corporal**. O IMC não sabe se o peso da pessoa é composto por músculos, ossos densos, água ou gordura. Um quilo de massa magra e um quilo de tecido adiposo pesam exatamente o mesmo na balança."
+          },
+          {
+            "type": "callout",
+            "text": "**Atenção:** O IMC é uma ferramenta de triagem inicial, nunca um diagnóstico clínico definitivo. Um IMC fora da faixa ideal indica a necessidade de investigar com exames mais detalhados."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Quando o IMC Pode Enganar Você"
+          },
+          {
+            "type": "paragraph",
+            "text": "Existem perfis em que o IMC isolado gera conclusões completamente equivocadas:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "**Atletas e praticantes de musculação:** O alto volume de massa muscular eleva o peso na balança, fazendo com que pessoas atléticas caiam na faixa de \"sobrepeso\" com excelente saúde cardiovascular.",
+              "**Idosos:** O envelhecimento natural reduz a massa muscular (sarcopenia), o que pode manter o IMC em nível normal mesmo com acúmulo excessivo de gordura perigosa.",
+              "**Diferenças étnicas:** Pesquisas médicas comprovam que descendentes do leste e sul asiático apresentam maior risco cardiometabólico em faixas mais baixas de IMC.",
+              "**Homens vs Mulheres:** Mulheres possuem naturalmente maior proporção de gordura essencial devido a fatores biológicos e hormonais, o que o cálculo simples de peso por altura não diferencia."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "O Que o Percentual de Gordura Realmente Mostra"
+          },
+          {
+            "type": "paragraph",
+            "text": "O **percentual de gordura corporal** mede a proporção do seu peso total que é composta por tecido adiposo. O restante do corpo (músculos, ossos, órgãos e líquidos) forma a chamada massa magra."
+          },
+          {
+            "type": "paragraph",
+            "text": "Além da quantidade total, o local de acúmulo é determinante: a **gordura visceral** (armazenada ao redor dos órgãos internos no abdômen) é diretamente associada a inflamação crônica, resistência à insulina e problemas cardíacos."
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "**Mulheres:** 20% a 35% é a faixa saudável geral; atletas costumam manter entre 14% e 20%.",
+              "**Homens:** 10% a 25% é considerado saudável; atletas masculinos geralmente situam-se entre 6% e 13%.",
+              "**Gordura essencial mínima:** 3% a 5% para homens e 10% a 13% para mulheres (necessária para proteção de órgãos vitais)."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Comparativo Direto: IMC vs Percentual de Gordura"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Critério",
+              "IMC (Índice de Massa Corporal)",
+              "Percentual de Gordura Corporal"
+            ],
+            "rows": [
+              [
+                "O que avalia",
+                "Peso total proporcional à altura",
+                "Proporção de tecido adiposo no organismo"
+              ],
+              [
+                "Equipamentos",
+                "Apenas balança comum e fita métrica",
+                "Bioimpedância, adipômetro ou DEXA scan"
+              ],
+              [
+                "Custo de medição",
+                "100% gratuito e imediato",
+                "De acessível a exames laboratoriais pagos"
+              ],
+              [
+                "Precisão individual",
+                "Baixa para atletas e idosos",
+                "Alta quando realizada com métodos validados"
+              ],
+              [
+                "Principal benefício",
+                "Triagem rápida em consultas gerais",
+                "Acompanhamento real da evolução física"
+              ],
+              [
+                "Quem deve priorizar",
+                "População geral em exames periódicos",
+                "Pessoas em processo de perda de gordura ou ganho de massa"
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Como Usar os Dois Indicadores Juntos"
+          },
+          {
+            "type": "paragraph",
+            "text": "A abordagem mais inteligente é tratar o IMC e o percentual de gordura como **ferramentas complementares**, e não concorrentes. O IMC funciona como um primeiro alerta rápido, enquanto o percentual de gordura e a circunferência abdominal revelam o quadro real da sua composição física."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Calculadora de IMC",
+            "toolPath": "/tools/health/bmi-calculator"
+          }
+        ]
+      },
+      "how-to-cite-website-apa": {
+        "title": "Como Citar um Site no Formato APA (7ª Edição)",
+        "description": "Guia passo a passo para citar sites no formato APA 7ª edição com exemplos práticos, erros comuns e gerador gratuito de referências.",
+        "relatedToolName": "Gerador de Citações APA",
+        "relatedToolPath": "/tools/education/citation-generator",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Citar páginas da internet nas normas da APA é um dos pontos que mais gera dúvidas em trabalhos acadêmicos e pesquisas. A 7ª edição oficial atualizou regras cruciais em relação à versão anterior, simplificando links e retirando termos desnecessários."
+          },
+          {
+            "type": "paragraph",
+            "text": "Este guia apresenta a estrutura oficial completa, exemplos práticos para cada caso do dia a dia e os cuidados necessários para não perder pontos na formatação da bibliografia."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Estrutura Oficial da Citação de Site (Normas APA 7)"
+          },
+          {
+            "type": "paragraph",
+            "text": "A fórmula padronizada para referenciar páginas e artigos online na 7ª edição é:"
+          },
+          {
+            "type": "callout",
+            "text": "**Estrutura APA 7:** Sobrenome do Autor, Inicial do Nome. (Ano, Dia Mês). *Título da página em itálico*. Nome do Site. URL"
+          },
+          {
+            "type": "paragraph",
+            "text": "Observe duas regras essenciais: o **título da página fica em itálico** e usa estilo de frase (*sentence case*, com maiúscula apenas na primeira palavra e em nomes próprios). O nome do site permanece em texto comum e **nunca coloque ponto final após a URL**."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Tabela Rápida de Casos Frequentes"
+          },
+          {
+            "type": "paragraph",
+            "text": "Nem todo site informa o nome de um autor específico ou a data de publicação. Veja como estruturar sua referência para cada situação:"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Situação da Página",
+              "Estrutura Recomendada",
+              "Exemplo Prático"
+            ],
+            "rows": [
+              [
+                "Com autor individual",
+                "Autor, A. A. (Ano, Dia Mês). *Título*. Site. URL",
+                "Alves, M. (2024, 15 março). *Guia de investimentos*. Valor Econômico. https://..."
+              ],
+              [
+                "Sem autor identificado",
+                "*Título da página*. (Data). Nome do Site. URL",
+                "*História da computação moderna*. (2023, 10 maio). Museu Tech. https://..."
+              ],
+              [
+                "Sem data de publicação",
+                "Autor, A. A. (s.d.). *Título da página*. Site. URL",
+                "Carvalho, L. (s.d.). *Dicas de ergonomia no trabalho*. Saúde Total. https://..."
+              ],
+              [
+                "Autor institucional",
+                "Nome da Instituição. (Ano). *Título*. URL",
+                "Ministério da Educação. (2023). *Censo escolar da educação básica*. https://..."
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Passo a Passo Para Montar Sua Referência"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "**1. Identifique a autoria:** Escreva o sobrenome seguido de vírgula e a inicial do nome (`Silva, J.`). Se for um órgão oficial (como OMS ou IBGE), utilize o nome corporativo por extenso.",
+              "**2. Insira a data de publicação:** Indique o ano primeiro, seguido do dia e mês entre parênteses: `(2024, 15 agosto)`. Se não houver data, utilize `(s.d.)` para indicar \"sem data\".",
+              "**3. Formate o título do artigo:** Digite o título completo em **itálico**, utilizando letra maiúscula apenas no início e em nomes próprios.",
+              "**4. Adicione o nome do portal:** Escreva o nome do site em formato de texto normal, seguido de ponto final.",
+              "**5. Cole a URL limpa:** Finalize com o endereço completo da página. Não insira ponto final após o link para não desconfigurar o hiperlink no documento digital."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Citação no Corpo do Texto: Direta vs Indireta"
+          },
+          {
+            "type": "paragraph",
+            "text": "Ao citar o autor no decorrer dos seus parágrafos, utilize um destes dois formatos:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "**Citação parentética (ao final da frase):** (Alves, 2024) ou (*História da computação moderna*, 2023) quando a obra não possui autor individual.",
+              "**Citação narrativa (incorporada ao texto):** Segundo Alves (2024), a correta gestão financeira corporativa reduz riscos de mercado."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Erros Mais Comuns Que Descontam Nota"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "**Letras maiúsculas em todas as palavras:** O formato APA 7 adota estilo de frase, e não maiúsculas em cada vocábulo do título.",
+              "**Inserir \"Recuperado de\" sem necessidade:** A 7ª edição dispensou a menção de \"Recuperado de\" para páginas estáveis. O termo só é usado em conteúdos que mudam constantemente sem histórico de versões, como páginas wiki.",
+              "**Esquecer o itálico no título:** Em páginas de internet, o itálico recai sobre o título do artigo, e não sobre o nome do site.",
+              "**Ponto final após a URL:** O endereço web deve permanecer limpo para facilitar o clique do leitor."
+            ]
+          },
+          {
+            "type": "callout",
+            "text": "**Recomendação:** Mantenha os dados originais anotados ao consultar qualquer fonte. Ter o link, data e autores salvos poupa horas na entrega final do trabalho."
           },
           {
             "type": "heading",
@@ -4246,178 +4309,193 @@
           },
           {
             "type": "paragraph",
-            "text": "Quando o trabalho tem várias fontes, fazer cada referência manualmente consome muito tempo. Use nosso Gerador de Citações gratuito para criar citações formatadas corretamente em APA 7ª edição, ABNT, MLA e Chicago em segundos."
+            "text": "Em vez de se preocupar com cada vírgula e itálico, utilize nosso gerador gratuito de citações APA da ToolNotch e gere suas referências formatadas em poucos segundos."
           },
           {
             "type": "toolCta",
-            "toolName": "Gerador de Citações",
+            "toolName": "Gerador de Citações APA",
             "toolPath": "/tools/education/citation-generator"
-          },
-          {
-            "type": "paragraph",
-            "text": "Fazer as referências corretamente importa — não apenas porque o professor vai verificar, mas porque a atribuição adequada é a base da honestidade acadêmica e dá ao leitor um caminho claro de volta às suas fontes. Dedique um minuto a mais para fazer isso direito."
           }
         ]
       },
       "word-count-guide": {
         "title": "Guia de Contagem de Palavras: Quantas Palavras Deve Ter o Seu Texto?",
-        "description": "De posts de blog a redações e romances, descubra a contagem ideal de palavras para cada tipo de escrita e como atingir suas metas sem enrolação.",
+        "description": "O tamanho ideal de um texto varia com seu objetivo. Confira metas baseadas em dados para artigos de blog, redações acadêmicas, e-mails e redes sociais.",
         "relatedToolName": "Contador de Palavras",
         "relatedToolPath": "/tools/text/word-counter",
         "body": [
           {
             "type": "paragraph",
-            "text": "Pergunte a dez especialistas em conteúdo digital qual deve ser o tamanho ideal de um post de blog e você vai receber dez respostas diferentes. Alguns dirão que o mínimo é 1.500 palavras; outros vão citar pesquisas que mostram que conteúdos acima de 3.000 palavras dominam a primeira página do Google. Enquanto isso, seu professor de redação insiste em exatamente 1.000 palavras, e todos os guias de e-mail que você já leu dizem para não passar de 200."
+            "text": "Pergunte a vários redatores qual é o tamanho ideal de um artigo e cada um dará uma resposta diferente. Alguns recomendam textos curtos para leitura dinâmica, enquanto especialistas em SEO apontam que artigos acima de 2.500 palavras costumam liderar os resultados do Google."
           },
           {
             "type": "paragraph",
-            "text": "A verdade, por mais frustrante que seja, é que todos podem estar certos — porque a contagem ideal de palavras depende inteiramente do que você está escrevendo, para quem você está escrevendo e o que você quer que aconteça quando o leitor terminar. Aqui está um guia prático para os tipos de conteúdo que as pessoas mais escrevem."
+            "text": "A realidade é que **não existe uma quantidade única perfeita**: o tamanho recomendado depende do objetivo do texto, do público leitor e do canal de publicação. Veja a seguir as metas recomendadas para cada formato."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Posts de Blog e Artigos de Longa Extensão"
+            "text": "Artigos de Blog e Conteúdo Digital"
           },
           {
             "type": "paragraph",
-            "text": "Para conteúdo focado em SEO, textos mais longos tendem a ter melhor desempenho — até certo ponto. Análises das páginas mais bem ranqueadas do Google mostram consistentemente que posts entre 1.500 e 2.500 palavras se saem bem em palavras-chave competitivas, e posts acima de 3.000 palavras conquistam mais backlinks em média, provavelmente por serem mais completos e, por isso, mais compartilháveis entre outros escritores."
-          },
-          {
-            "type": "paragraph",
-            "text": "Porém, textos mais longos só ajudam se as palavras extras agregarem valor real. O guia de conteúdo útil do Google penaliza explicitamente textos inflados para atingir uma meta de tamanho. Enrolação — repetir o mesmo ponto, adicionar seções de preenchimento, enterrar a resposta no quinto parágrafo — prejudica tanto o ranqueamento quanto a experiência do leitor."
+            "text": "Em estratégias de SEO e marketing de conteúdo, textos mais aprofundados tendem a conquistar mais links e posições de destaque no Google:"
           },
           {
             "type": "list",
             "ordered": false,
             "items": [
-              "Notícia ou artigo de opinião: 400–800 palavras — diga o que precisa ser dito e pare",
-              "Tutorial ou guia passo a passo: 1.200–2.000 palavras — suficiente para detalhar cada etapa sem enrolação",
-              "Conteúdo pilar ou guia definitivo: 2.500–4.000 palavras — só se o tema realmente exigir essa profundidade",
-              "Listicle: 1.000–1.500 palavras — descrições curtas por item, fácil de escanear"
+              "**Notícias e opiniões rápidas:** 400 a 800 palavras (objetivas e focadas na informação principal)",
+              "**Guias tutoriais passo a passo:** 1.200 a 2.000 palavras (detalhamento técnico com foco prático)",
+              "**Artigos pilares e guias definitivos:** 2.500 a 4.000 palavras (análise aprofundada cobrindo todas as dúvidas do tema)",
+              "**Listas e recomendações:** 1.000 a 1.500 palavras (formato escaneável com resumos rápidos)"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Porém, mais palavras só ajudam se agregarem valor real. As diretrizes do Google penalizam expressamente conteúdos inflados com repetições e enrolação cujo único objetivo seja atingir metas arbitrárias."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Tabela de Equivalência: Palavras, Páginas e Tempo de Leitura"
+          },
+          {
+            "type": "paragraph",
+            "text": "Uma dúvida clássica de quem escreve é estimar quantas páginas um determinado número de palavras ocupa. Esta tabela considera fontes padrão (Times New Roman 12pt), margens de 2,5 cm e ritmo médio de leitura de 220 palavras por minuto:"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Contagem de Palavras",
+              "Páginas (Espaço Duplo)",
+              "Páginas (Espaço Simples)",
+              "Tempo Médio de Leitura"
+            ],
+            "rows": [
+              ["250 palavras", "~1 página", "~0,5 página", "~1 minuto"],
+              ["500 palavras", "~2 páginas", "~1 página", "~2 minutos"],
+              ["1.000 palavras", "~4 páginas", "~2 páginas", "~4 a 5 minutos"],
+              ["1.500 palavras", "~6 páginas", "~3 páginas", "~6 a 7 minutos"],
+              [
+                "2.500 palavras",
+                "~10 páginas",
+                "~5 páginas",
+                "~10 a 12 minutos"
+              ],
+              [
+                "5.000 palavras",
+                "~20 páginas",
+                "~10 páginas",
+                "~20 a 25 minutos"
+              ],
+              [
+                "8.000 palavras",
+                "~32 páginas",
+                "~16 páginas",
+                "~35 a 40 minutos"
+              ],
+              [
+                "10.000 palavras",
+                "~40 páginas",
+                "~20 páginas",
+                "~45 a 50 minutos"
+              ]
             ]
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Redações e Trabalhos Acadêmicos"
+            "text": "Textos Acadêmicos e Universitários"
           },
           {
             "type": "paragraph",
-            "text": "A escrita acadêmica tem uma prioridade diferente da escrita para blog: demonstrar profundidade de argumento, não ranquear no Google. A maioria dos professores define contagens de palavras explícitas, e a abordagem certa é acertar a faixa — nem muito abaixo, nem muito acima."
+            "text": "Na produção acadêmica, o foco é a consistência da argumentação e o rigor conceitual, e não métricas de mecanismos de busca:"
           },
           {
             "type": "list",
             "ordered": false,
             "items": [
-              "Resposta curta ou reflexão: 250–500 palavras",
-              "Redação de vestibular (ENEM): 7 linhas de rascunho até aproximadamente 30 linhas — ou 300 a 500 palavras de conteúdo",
-              "Trabalho de graduação padrão: 1.000–3.000 palavras",
-              "Artigo científico ou monografia: 5.000–15.000 palavras",
-              "Dissertação de mestrado ou tese de doutorado: 20.000–80.000 palavras dependendo da área e nível"
+              "**Resenhas críticas e fichamentos:** 500 a 1.000 palavras",
+              "**Artigos científicos para periódicos:** 4.000 a 8.000 palavras",
+              "**Capítulos de dissertação de mestrado:** 6.000 a 10.000 palavras por capítulo",
+              "**Teses de doutorado completas:** 30.000 a 80.000+ palavras conforme a área"
             ]
           },
           {
-            "type": "paragraph",
-            "text": "Uma regra subestimada na escrita acadêmica: nunca repita a introdução na conclusão. Retomar o que você acabou de dizer é a forma mais fácil de inflar a contagem de palavras, e leitores experientes sempre percebem. Se você está ficando consistentemente abaixo do mínimo, o seu argumento provavelmente precisa de mais evidências — não de mais resumo."
+            "type": "callout",
+            "text": "**Dica de redação acadêmica:** Jamais repita na conclusão o que já foi dito na introdução apenas para preencher espaço. Leitores acadêmicos identificam enrolação de imediato. Se o texto estiver curto, amplie as evidências e o referencial bibliográfico."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "E-mails"
+            "text": "E-mails e Comunicação Profissional"
           },
           {
             "type": "paragraph",
-            "text": "O e-mail é o tipo de conteúdo em que mais curto é quase sempre melhor — e onde a maioria dos profissionais escreve de mais consistentemente. Pesquisas sobre taxas de resposta mostram que e-mails entre 50 e 125 palavras recebem as maiores taxas de retorno. Isso equivale a cerca de quatro a oito frases curtas."
+            "text": "No e-mail profissional, textos enxutos obtêm os melhores resultados. Pesquisas sobre taxas de resposta corporativa comprovam que mensagens entre **50 e 125 palavras** recebem a maior taxa de retorno:"
           },
           {
             "type": "list",
             "ordered": false,
             "items": [
-              "Solicitação rápida ou pergunta: 50–100 palavras",
-              "Proposta comercial ou e-mail de pitch: 150–250 palavras",
-              "Newsletter (tema único): 200–400 palavras",
-              "Newsletter (compilação com múltiplas seções): 500–800 palavras"
+              "**Alinhamento rápido ou pergunta direta:** 50 a 100 palavras",
+              "**Proposta comercial e vendas:** 150 a 250 palavras",
+              "**Newsletter com tema único:** 250 a 450 palavras",
+              "**Informativo executivo semanal:** 500 a 800 palavras estruturado em tópicos"
             ]
-          },
-          {
-            "type": "paragraph",
-            "text": "O erro mais comum em e-mails é enterrar o pedido. Coloque o que você precisa logo na primeira frase. Se você quer que alguém revise um documento, diga isso na frase um — não depois de três parágrafos de contexto."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Posts em Redes Sociais"
+            "text": "Redes Sociais e Limites de Caracteres"
           },
           {
             "type": "paragraph",
-            "text": "Cada plataforma tem seu próprio ritmo, e contagens de palavras que funcionam em uma podem fracassar em outra:"
+            "text": "Cada plataforma possui um comportamento próprio de atenção do usuário:"
           },
           {
             "type": "list",
             "ordered": false,
             "items": [
-              "X / X: posts com 71–100 caracteres geram mais engajamento do que os de 280 caracteres — mais curto vence",
-              "LinkedIn: 1.300–2.000 caracteres para um post nativo que gera comentários (cerca de 200–300 palavras)",
-              "Instagram: os primeiros 138–150 caracteres são o que a maioria dos usuários lê; a legenda completa pode ser mais longa para hashtags",
-              "Facebook: 40–80 palavras para o maior engajamento em posts orgânicos"
+              "**LinkedIn:** Publicações nativas entre 1.300 e 2.000 caracteres (cerca de 200 a 300 palavras) geram o maior engajamento e comentários.",
+              "**Twitter / X:** Postagens com 70 a 120 caracteres têm melhor desempenho do que textos longos que chegam ao limite de 280.",
+              "**Instagram:** O trecho visível na legenda antes do botão de expansão tem cerca de 140 caracteres. Prenda o leitor nas primeiras linhas."
             ]
+          },
+          {
+            "type": "callout",
+            "text": "**Palavras vs Caracteres:** Lembre-se de que palavras e caracteres são grandezas diferentes. Ao escrever para redes sociais ou metatags de SEO, monitore sempre o total de **caracteres com espaços** para não ter seu conteúdo cortado."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Por Que a Legibilidade Importa Mais do Que a Contagem Bruta de Palavras"
+            "text": "Acompanhe Sua Contagem em Tempo Real"
           },
           {
             "type": "paragraph",
-            "text": "Contagem de palavras é um indicador de esforço, não de qualidade. Um artigo de 500 palavras bem estruturado, com subtítulos claros e linguagem acessível, vai superar uma parede de texto de 2.000 palavras em qualquer cenário — tanto no ranqueamento quanto na satisfação do leitor."
-          },
-          {
-            "type": "paragraph",
-            "text": "Fatores que fazem um texto parecer mais longo ou mais curto do que realmente é:"
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "Tamanho dos parágrafos — Parágrafos de duas frases são lidos mais rápido e parecem menos intimidantes do que blocos de oito frases",
-              "Tamanho das frases — Variar frases curtas e longas mantém o leitor engajado",
-              "Subtítulos — Permitem que leitores que escaneiam o texto decidam quais seções realmente querem ler",
-              "Voz passiva — Adiciona palavras sem adicionar significado: \"O relatório foi escrito pela equipe\" vs. \"A equipe escreveu o relatório\""
-            ]
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "Acompanhe Sua Contagem Enquanto Escreve"
-          },
-          {
-            "type": "paragraph",
-            "text": "Seja para atingir uma meta de palavras para SEO, ficar dentro do limite de um trabalho acadêmico ou evitar que um e-mail vire um ensaio, acompanhar a contagem de palavras enquanto você escreve é mais fácil do que cortar depois. Use nosso Contador de Palavras gratuito para obter em tempo real a contagem de palavras, caracteres, frases e parágrafos de qualquer texto."
+            "text": "Cole seu texto no Contador de Palavras gratuito da ToolNotch e visualize contagem de palavras, caracteres com e sem espaços, parágrafos e tempo estimado de leitura em tempo real."
           },
           {
             "type": "toolCta",
             "toolName": "Contador de Palavras",
             "toolPath": "/tools/text/word-counter"
-          },
-          {
-            "type": "paragraph",
-            "text": "A melhor contagem de palavras para qualquer texto é o número mínimo de palavras necessário para servir o leitor completamente. Todo o resto é só enrolação."
           }
         ]
       },
       "average-typing-speed": {
         "title": "Qual é a Velocidade Média de Digitação? (E Como Melhorar a Sua)",
-        "description": "A pessoa comum digita 40 PPM. Descubra o que é considerado rápido, como a velocidade de digitação é medida e dicas práticas para digitar mais rápido.",
+        "description": "A velocidade média de digitação é de 40 PPM. Descubra como você se compara, o que profissionais alcançam e técnicas práticas para digitar mais rápido.",
         "relatedToolName": "Teste de Digitação",
         "relatedToolPath": "/tools/fun/typing-test",
         "body": [
           {
             "type": "paragraph",
-            "text": "A maioria de nós passa várias horas por dia digitando — e-mails, documentos, mensagens, código — e, ainda assim, pouquíssimas pessoas já tentaram deliberadamente melhorar essa habilidade. A velocidade de digitação é uma daquelas competências que parece fixa, como a caligrafia, quando na realidade é altamente treinável. Algumas semanas de prática focada podem adicionar 20 a 30 PPM à sua velocidade, o que se acumula em horas economizadas ao longo do ano."
+            "text": "A maioria dos profissionais passa várias horas por dia digitando e-mails, documentos, relatórios e código. Mesmo assim, pouquíssimas pessoas já tentaram deliberadamente treinar essa habilidade."
           },
           {
             "type": "paragraph",
-            "text": "Antes de melhorar, é útil saber onde você está e o que significa ser \"rápido\" nos diferentes contextos profissionais e faixas etárias."
+            "text": "A velocidade no teclado parece uma característica fixa, mas na realidade é altamente treinável. Algumas semanas de prática focada podem adicionar de **20 a 30 PPM** à sua velocidade habitual, o que se traduz em dezenas de horas economizadas ao longo do ano."
           },
           {
             "type": "heading",
@@ -4426,117 +4504,504 @@
           },
           {
             "type": "paragraph",
-            "text": "A velocidade média de digitação de um adulto é de aproximadamente 40 palavras por minuto (PPM) com cerca de 92% de precisão. Esse valor varia conforme a faixa etária, a profissão e a frequência com que a pessoa digita na rotina:"
+            "text": "A velocidade média de um adulto é de aproximadamente **40 palavras por minuto (PPM)** com cerca de **92% de precisão**. No entanto, esse número varia bastante conforme a profissão e a rotina de escrita:"
           },
           {
             "type": "list",
             "ordered": false,
             "items": [
-              "Adultos em geral: 38–44 PPM",
-              "Universitários: 40–50 PPM (mais digitação diária por conta dos estudos)",
-              "Funcionários de escritório e profissionais: 55–70 PPM",
-              "Programadores e desenvolvedores: 50–70 PPM (um pouco abaixo do esperado por causa de caracteres especiais e pausas de raciocínio)",
-              "Transcritores e especialistas em entrada de dados: 70–100+ PPM (exigência profissional)",
-              "Recordistas mundiais: 200–300+ PPM (pico em rajadas, não velocidade sustentada)"
+              "**Adultos em geral:** 38 a 44 PPM (média global da população adulta)",
+              "**Estudantes universitários:** 40 a 50 PPM (maior volume diário com trabalhos e redação acadêmica)",
+              "**Profissionais de escritório:** 55 a 70 PPM (rotina constante com e-mails, planilhas e relatórios)",
+              "**Programadores e desenvolvedores:** 50 a 70 PPM (um pouco menor devido à pontuação especial e pausas lógicas)",
+              "**Transcritores e operadores de dados:** 70 a 100+ PPM (exigência técnica da carreira)",
+              "**Digitadores de alta performance:** 120 a 180+ PPM (picos em competições e testes de velocidade)"
             ]
           },
           {
             "type": "paragraph",
-            "text": "Para a maioria dos profissionais do conhecimento, atingir 60–70 PPM com alta precisão é uma meta prática que reduz visivelmente o atrito no trabalho diário. Acima de 80 PPM, a digitação deixa de ser um gargalo para a maioria das tarefas — o raciocínio passa a ser o fator limitante, não os dedos."
+            "text": "Para a grande maioria das pessoas que trabalham no computador, atingir **60 a 70 PPM** com alta precisão elimina o atrito diário. Acima de **80 PPM**, a digitação deixa de ser um gargalo: seus dedos acompanham perfeitamente o ritmo do seu raciocínio."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Como a Velocidade de Digitação Afeta a Produtividade"
+            "text": "Tabela de Classificação de Nível de Digitação"
           },
           {
             "type": "paragraph",
-            "text": "A 40 PPM, digitar 1.000 palavras leva cerca de 25 minutos. A 80 PPM, leva de 12 a 13 minutos. Ao longo de um dia de trabalho com muitas tarefas de escrita, essa diferença pode representar uma hora ou mais de tempo recuperado."
+            "text": "Veja em qual faixa de habilidade você se encontra atualmente e qual é o próximo marco a ser alcançado:"
+          },
+          {
+            "type": "table",
+            "headers": ["Nível de Habilidade", "Faixa de PPM", "Perfil Típico"],
+            "rows": [
+              [
+                "Iniciante",
+                "< 30 PPM",
+                "Digitação com dois dedos, procurando teclas no teclado"
+              ],
+              [
+                "Médio",
+                "40 a 60 PPM",
+                "Maioria dos adultos e usuários casuais de computador"
+              ],
+              [
+                "Proficiente",
+                "60 a 80 PPM",
+                "Profissionais de escritório e redatores frequentes"
+              ],
+              [
+                "Rápido",
+                "80 a 100 PPM",
+                "Usuários avançados e programadores experientes"
+              ],
+              [
+                "Profissional",
+                "100+ PPM",
+                "Transcritores, estenógrafos e digitadores de competição"
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Como o PPM é Calculado"
           },
           {
             "type": "paragraph",
-            "text": "Mas a velocidade bruta não é tudo. A precisão é igualmente — e talvez mais — importante. Um digitador que atinge 80 PPM com 95% de precisão precisará parar e corrigir com frequência, o que quebra o foco e reduz a produção efetiva. Priorize a precisão primeiro; a velocidade virá naturalmente."
+            "text": "O termo PPM significa **palavras por minuto**, mas a medição segue uma fórmula padronizada internacionalmente para garantir comparações justas:"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "**Padrão de 5 toques:** Cada \"palavra\" é contabilizada como **5 toques de tecla**, incluindo espaços e pontuações. Isso padroniza a medida tanto para palavras curtas quanto longas.",
+              "**PPM Bruto:** Representa a quantidade total de toques dividida por 5 e depois pelo tempo decorrido em minutos.",
+              "**PPM Líquido:** É o PPM Bruto subtraído da penalidade por erros não corrigidos (geralmente 1 PPM por erro pendente)."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Por esse motivo, testes modernos utilizam o **PPM Líquido**. Um ritmo acelerado cheio de erros reduz diretamente a sua nota final."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "O Impacto da Velocidade na Produtividade"
+          },
+          {
+            "type": "paragraph",
+            "text": "A **40 PPM**, redigir um texto de 1.000 palavras leva cerca de **25 minutos**. A **80 PPM**, o mesmo texto leva apenas **12 a 13 minutos**. Ao longo de semanas e meses com demandas frequentes de escrita, essa evolução recupera dezenas de horas."
+          },
+          {
+            "type": "paragraph",
+            "text": "Porém, velocidade sem precisão causa perda de foco. Um digitador que bate 80 PPM com 92% de precisão precisa parar constantemente para apagar e reescrever, quebrando o fluxo criativo."
           },
           {
             "type": "callout",
-            "text": "Uma boa meta: precisão acima de 98% na sua velocidade atual antes de tentar aumentar o ritmo. Forçar a velocidade antes de ter precisão só treina vícios de digitação."
+            "text": "**Regra de ouro:** Mantenha uma **precisão acima de 98%** na sua velocidade atual antes de tentar acelerar o ritmo. Acelerar com erros apenas reforça vícios musculares difíceis de corrigir depois."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "As Técnicas Que Realmente Funcionam"
+            "text": "5 Técnicas Comprovadas Para Digitar Mais Rápido"
           },
           {
             "type": "heading",
             "level": 3,
-            "text": "1. Adote a Posição Base"
+            "text": "1. Domine a Linha Inicial (Home Row)"
           },
           {
             "type": "paragraph",
-            "text": "A linha de base — ASDF na mão esquerda, JKL; na mão direita — é o fundamento da digitação por tato. Cada dedo tem uma posição inicial designada e um conjunto de teclas sob sua responsabilidade. Digitar sem esse sistema significa que você está procurando as teclas, o que limita sua velocidade em torno de 30–40 PPM permanentemente."
-          },
-          {
-            "type": "paragraph",
-            "text": "Se você ainda não digita sem olhar para o teclado, a transição vai parecer dolorosamente lenta por duas a quatro semanas. Você vai cair da sua velocidade atual para 15–20 PPM antes de subir de volta e superar o ponto de partida. Essa queda vale a pena — quem digita por tato atinge patamares muito mais altos do que quem \"cata milho\"."
+            "text": "Posicione os dedos indicadores sobre as teclas **F** e **J**, que possuem pequenas marcas em relevo. Seus dedos da mão esquerda repousam em **ASDF** e os da direita em **JKLÇ**. Cada dedo é responsável por uma coluna específica de teclas."
           },
           {
             "type": "heading",
             "level": 3,
-            "text": "2. Pare de Olhar para o Teclado"
+            "text": "2. Pare de Olhar Para o Teclado"
           },
           {
             "type": "paragraph",
-            "text": "Olhar para as mãos enquanto digita obriga você a dividir a atenção entre a tela e o teclado, o que reduz a velocidade e aumenta os erros. Cobrir as mãos com um pano, usar um teclado sem marcações nas teclas ou simplesmente se forçar a manter os olhos na tela são técnicas que aceleram a formação da memória muscular."
+            "text": "Olhar para os dedos divide sua atenção entre a tela e o teclado, aumentando a taxa de erros. Mantenha os olhos fixos na tela para que o cérebro desenvolva **memória muscular** tátil duradoura."
           },
           {
             "type": "heading",
             "level": 3,
-            "text": "3. Pratique em Sessões Curtas, Não em Blocos Longos"
+            "text": "3. Treine em Sessões Curtas e Diárias"
           },
           {
             "type": "paragraph",
-            "text": "A repetição espaçada funciona para digitação assim como funciona para aprender idiomas. Três sessões focadas de 10 minutos ao longo do dia produzem melhoras mais rápidas do que um único bloco de 30 minutos, porque a memória motora se consolida entre as sessões. Isso torna a prática de digitação altamente compatível com uma rotina agitada — alguns minutos durante uma pausa para o café são genuinamente eficazes."
+            "text": "A prática espaçada funciona perfeitamente para digitação. Três sessões curtas de **10 minutos ao longo do dia** produzem muito mais resultados do que uma sessão exaustiva de uma hora no fim de semana."
           },
           {
             "type": "heading",
             "level": 3,
-            "text": "4. Diminua a Velocidade Para Aumentar a Velocidade"
+            "text": "4. Diminua o Ritmo Para Ganhar Constância"
           },
           {
             "type": "paragraph",
-            "text": "Parece contraditório, mas é verdade: a forma mais rápida de aumentar sua velocidade máxima é praticar em um ritmo ligeiramente abaixo do seu limite confortável e focar completamente na precisão. Tentar ganhar velocidade antes de ter precisão é o erro mais comum em quem pratica digitação por conta própria. O cérebro registra o que você repete — incluindo os erros."
+            "text": "Acelerar antes da hora é o erro mais comum. Digite em um ritmo compassado e sem pressa, concentrando-se em acertar cada tecla de primeira sem hesitação."
           },
           {
             "type": "heading",
             "level": 3,
-            "text": "5. Identifique e Treine Suas Teclas Problemáticas"
+            "text": "5. Isole e Treine Suas Teclas Problemáticas"
           },
           {
             "type": "paragraph",
-            "text": "A maioria das pessoas tem de cinco a dez combinações de teclas que consistentemente as fazem errar — combinações comuns incluem alcançar o \"b\" com o dedo errado, digitar \"qeu\" em vez de \"que\", ou tropeçar em pontos de interrogação e acentos. Praticar especificamente nos seus pontos fracos produz ganhos mais rápidos do que a prática geral."
+            "text": "Identifique quais letras, números ou caracteres especiais causam travamentos na sua digitação. Treinar especificamente os pontos fracos acelera o progresso."
+          },
+          {
+            "type": "callout",
+            "text": "**Plano prático para começar:** Faça um teste de 1 minuto hoje para registrar sua linha de base. Treine 10 minutos diários em textos reais e meça sua evolução uma vez por semana."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Meça Onde Você Está Agora"
+            "text": "Descubra a Sua Velocidade Atual"
           },
           {
             "type": "paragraph",
-            "text": "Você não consegue melhorar o que não mede. Use nosso Teste de Digitação gratuito para descobrir agora seu PPM exato e sua taxa de precisão — e use isso como referência enquanto pratica. O teste leva 60 segundos e dá uma leitura imediata de velocidade e precisão."
+            "text": "Você não pode melhorar aquilo que não mede. Faça agora o nosso teste gratuito de digitação, descubra seu PPM exato com nível de precisão e use esse número como referência para os seus treinos."
           },
           {
             "type": "toolCta",
             "toolName": "Teste de Digitação",
             "toolPath": "/tools/fun/typing-test"
+          }
+        ]
+      },
+      "understanding-nodejs-event-loop": {
+        "title": "Entendendo o Event Loop do Node.js",
+        "description": "Uma explicação clara sobre o funcionamento do event loop no Node.js, fases da libuv, I/O assíncrono e arquitetura não bloqueante.",
+        "relatedToolName": "Simulado de Node.js",
+        "relatedToolPath": "/interview/nodejs-fundamentals",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "O **Node.js** revolucionou o desenvolvimento web ao permitir a criação de aplicações de servidor escaláveis e eficientes usando JavaScript. Para compreender o real poder do Node.js, é fundamental entender como funciona o seu **Event Loop** e em que pontos a execução no servidor se diferencia do JavaScript tradicional nos navegadores."
           },
           {
             "type": "paragraph",
-            "text": "Digitação é uma habilidade, não uma característica fixa. Com 40 PPM, você está na média. Com 70 PPM, você é visivelmente mais rápido do que a maioria dos colegas. Com 90+ PPM, digitação simplesmente deixa de ser algo em que você precisa pensar. Adote a posição base, pare de olhar para o teclado e dedique algumas semanas de prática deliberada — a melhora vai te surpreender."
+            "text": "Essa arquitetura orientada a eventos e I/O não bloqueante é a peça central que sustenta aplicações capazes de processar dezenas de milhares de conexões simultâneas com baixo consumo de memória."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "JavaScript no Navegador vs. Node.js"
+          },
+          {
+            "type": "paragraph",
+            "text": "O JavaScript nasceu como uma linguagem cliente para navegadores, focada em tornar páginas web interativas. Com a criação do Node.js por Ryan Dahl em 2009, a engine V8 do Google Chrome foi combinada com a biblioteca **libuv**, abrindo caminho para o desenvolvimento no backend:"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Ambiente de Execução"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "**Navegador:** O código roda dentro da sandbox do browser, manipulando a DOM (Document Object Model) e a CSSOM. As tarefas assíncronas dependem das Web APIs fornecidas pelo navegador, como manipuladores de cliques, timers e requisições HTTP via `fetch` ou `XMLHttpRequest`.",
+              "**Node.js:** O JavaScript executa diretamente no sistema operacional do servidor. Ele acessa o sistema de arquivos (`fs`), abre sockets de rede, gerencia streams binários e manipula conexões HTTP de forma nativa por meio dos módulos internos da plataforma."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Modelo de Concorrência"
+          },
+          {
+            "type": "list",
+            "items": [
+              "**No Navegador:** O Event Loop lida primordialmente com eventos de interface, animações de tela, temporizadores e respostas de requisições AJAX, garantindo que a renderização da tela não trave.",
+              "**No Node.js:** O Event Loop é otimizado para operações de entrada e saída (I/O de rede e de disco), delegando o processamento pesado de baixo nível para a pool de threads da libuv."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "O Que é o Event Loop na Prática"
+          },
+          {
+            "type": "paragraph",
+            "text": "O **Event Loop** é um ciclo contínuo que monitora a fila de tarefas assíncronas, despacha seus callbacks de volta para a pilha de execução quando ela está livre e aguarda novos eventos do sistema operacional."
+          },
+          {
+            "type": "paragraph",
+            "text": "Ao contrário dos servidores web tradicionais (como o Apache clássico), que alocam uma thread separada para cada conexão recebida, o Node.js roda em uma **thread principal única**. Essa característica elimina o custo de troca de contexto de memória entre threads e permite uma densidade de requisições expressivamente superior."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Componentes Fundamentais da Arquitetura"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "**Call Stack (Pilha de Chamadas):** Onde o código JavaScript síncrono é processado linha por linha. Uma função é empilhada quando invocada e desempilhada quando retorna.",
+              "**Memory Heap (Memória Heap):** Região de memória não estruturada alocada para armazenar objetos, variáveis, closures e referências vivas da aplicação.",
+              "**Task Queues (Filas de Callbacks):** Filas em memória onde são enfileirados os callbacks prontos para execução assim que a Call Stack estiver completamente vazia.",
+              "**Fases do Ciclo da libuv:** Timers, Pending Callbacks, Idle / Prepare, Poll, Check e Close Callbacks."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Como Funciona o Ciclo de Execução"
+          },
+          {
+            "type": "paragraph",
+            "text": "Quando uma aplicação Node.js é iniciada, a thread principal executa todo o código síncrono do arquivo de entrada. Uma vez limpa a Call Stack, o Event Loop cicla pelas seguintes etapas:"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "**Timers:** Checa se algum temporizador (`setTimeout` ou `setInterval`) atingiu o tempo limite estipulado. Se sim, despacha o callback para execução.",
+              "**I/O Callbacks:** Processa retornos de chamadas de sistema, como erros de conexão TCP.",
+              "**Poll Phase:** Se a fila contiver eventos pendentes, processa-os sequencialmente. Se a fila estiver vazia e houver chamadas de `setImmediate()`, avança imediatamente para a fase Check. Caso contrário, aguarda novos pacotes de rede ou eventos de disco.",
+              "**Check Phase:** Processa exclusivamente as funções registradas por `setImmediate()`.",
+              "**Close Callbacks:** Libera recursos de handles finalizados e dispara eventos de encerramento, como `socket.on('close', ...)`."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Programação Assíncrona e Modelo Não Bloqueante"
+          },
+          {
+            "type": "paragraph",
+            "text": "O comportamento não bloqueante significa que funções de longa duração, como consultas a bancos de dados ou leituras de disco, não impedem que outros usuários continuem sendo atendidos no mesmo servidor. Em vez de travar o fluxo, essas operações registram um callback e devolvem o controle imediatamente ao Event Loop."
+          },
+          {
+            "type": "callout",
+            "text": "**Ordem de Prioridade das Filas:** O `process.nextTick()` tem prioridade máxima absoluta e roda imediatamente após a operação corrente terminar. Em seguida, os callbacks de Promises resolvidas (`.then()` e `async/await`) são esvaziados antes que o Event Loop avance de fase. Callbacks de timers e I/O pertencem às fases normais da libuv."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Simulado Técnico de Node.js",
+            "toolPath": "/interview/nodejs-fundamentals"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Conclusão"
+          },
+          {
+            "type": "paragraph",
+            "text": "O Event Loop é o motor que possibilita ao Node.js entregar alta performance e escalabilidade operando sobre uma única thread de aplicação. Compreender o papel de cada fase, o funcionamento das microtasks e evitar bloquear a thread principal são os passos essenciais para qualquer desenvolvedor que deseja construir serviços confiáveis e prontos para produção."
+          }
+        ]
+      },
+      "wheel-of-names-alternatives": {
+        "title": "Melhores Alternativas à Roleta de Nomes (Wheel of Names)",
+        "description": "Compare as melhores ferramentas gratuitas de sorteio e roleta aleatória para eventos, salas de aula e sorteios online.",
+        "relatedToolName": "Roleta de Nomes",
+        "relatedToolPath": "/tools/fun/wheel-of-names",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "O **Wheel of Names** (o conhecido site wheelofnames.com) é a ferramenta mais procurada na hora de sortear um nome ao vivo em apresentações, reuniões ou transmissões. Ele funciona muito bem, mas não é a única opção disponível. Dependendo da sua necessidade (dispensar cadastro, não exibir anúncios invasivos ou garantir privacidade offline), outra roleta pode ser muito mais conveniente."
+          },
+          {
+            "type": "paragraph",
+            "text": "Reunimos sete alternativas gratuitas, destacando os pontos fortes e as limitações práticas de cada uma para ajudar na sua escolha."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "O Que Realmente Muda Entre as Roletas"
+          },
+          {
+            "type": "list",
+            "items": [
+              "**Necessidade de cadastro:** A maior parte permite girar sem criar conta. Algumas exigem login para salvar listas para uso futuro.",
+              "**Exibição de anúncios:** Ferramentas gratuitas geralmente contêm propagandas. O incômodo real surge quando banners ou vídeos aparecem bem entre o clique e o resultado do sorteio.",
+              "**Destino dos seus dados:** Algumas roletas rodam 100% no seu próprio navegador. Outras salvam os nomes dos participantes em servidores externos, o que exige cautela ao lidar com dados sensíveis de alunos ou clientes.",
+              "**Reutilização da lista:** Se você realiza o mesmo sorteio toda semana, precisa de uma forma prática de reabrir a lista sem ter que digitar tudo de novo."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "1. Roleta de Nomes da ToolNotch"
+          },
+          {
+            "type": "paragraph",
+            "text": "Esta é a nossa própria ferramenta, desenvolvida para rodar 100% no navegador: não requer conta de usuário e não exibe anúncios intrusivos na hora de rodar a roleta. A lista de participantes é codificada diretamente na URL da página, permitindo salvar ou compartilhar a lista apenas guardando o link. Além disso, você pode remover o participante vencedor a cada rodada para sortear todos os integrantes sem repetição."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Acessar a Roleta de Nomes da ToolNotch",
+            "toolPath": "/tools/fun/wheel-of-names"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "2. Wheelofnames.com"
+          },
+          {
+            "type": "paragraph",
+            "text": "O serviço mais tradicional da categoria. Apresenta uma roleta ampla, efeitos sonoros de torcida e confetes, além de um endereço web familiar. Permite girar sem conta, mas o login com o Google é necessário para salvar roletas na nuvem. A página exibe anúncios publicitários ao redor da área de giro."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "3. Picker Wheel"
+          },
+          {
+            "type": "paragraph",
+            "text": "Uma roleta versátil com modalidades extras além de nomes: sorteio de números, modo sim ou não, divisão de equipes e sorteio por imagens. Não exige conta para giros imediatos e oferece salvamento mediante login gratuito."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "4. Wheel Decide"
+          },
+          {
+            "type": "paragraph",
+            "text": "Uma das pioneiras em roletas de decisão online. Você digita as opções, gira e gera um link compartilhável. Possui um visual mais clássico e contém anúncios, mas é rápida e direta ao ponto."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "5. Flippity Random Name Picker"
+          },
+          {
+            "type": "paragraph",
+            "text": "O Flippity transforma planilhas do Google Sheets em aplicativos interativos. Você copia um modelo oficial para o seu Google Drive, cola os nomes e gera uma página com a roleta pronta. Ideal para educadores que já organizam turmas no Google Workspace."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "6. Classtools.net"
+          },
+          {
+            "type": "paragraph",
+            "text": "Criado com foco em salas de aula. Oferece animações lúdicas em estilo de máquina caça-níqueis ou máquina de escrever, com salvamento da lista por código simples."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "7. Roleta Embutida do Google"
+          },
+          {
+            "type": "paragraph",
+            "text": "Ao pesquisar por spinner no Google, surge um widget nativo de roleta numérica. Não aceita nomes diretamente, servindo como uma solução rápida de contingência numerando sua lista."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Tabela Comparativa das 7 Roletas"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Ferramenta",
+              "Exige Conta",
+              "Sem Anúncios",
+              "Armazenamento",
+              "Ideal Para"
+            ],
+            "rows": [
+              [
+                "ToolNotch Roleta",
+                "Não",
+                "Sim",
+                "Codificado na URL (100% privado)",
+                "Sorteios rápidos e privados sem login"
+              ],
+              [
+                "Wheelofnames.com",
+                "Opcional",
+                "Não",
+                "Nuvem com login Google",
+                "Visual clássico com efeitos de som"
+              ],
+              [
+                "Picker Wheel",
+                "Opcional",
+                "Não",
+                "Conta gratuita opcional",
+                "Modos mistos (números, equipes, imagens)"
+              ],
+              [
+                "Wheel Decide",
+                "Não",
+                "Não",
+                "Links salvos no servidor",
+                "Decisões rápidas e enquetes informais"
+              ],
+              [
+                "Flippity",
+                "Conta Google",
+                "Sim",
+                "Sua planilha no Google Drive",
+                "Professores no Google Workspace"
+              ],
+              [
+                "Classtools.net",
+                "Não",
+                "Não",
+                "Código de recuperação simples",
+                "Animações lúdicas para alunos"
+              ],
+              [
+                "Roleta do Google",
+                "Não",
+                "Sim",
+                "Nenhum dado retido",
+                "Sorteio numérico rápido de emergência"
+              ]
+            ]
+          },
+          {
+            "type": "callout",
+            "text": "**Dica para sorteios oficiais:** Em sorteios com entrega de prêmios, grave a tela ou faça uma captura com a URL visível logo após o giro. Na Roleta da ToolNotch, a URL reflete exatamente o estado da lista no momento da rodada."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Como Escolher a Melhor Opção"
+          },
+          {
+            "type": "list",
+            "items": [
+              "**Privacidade total, sem cadastro e sem anúncios:** Roleta de Nomes da ToolNotch.",
+              "**Visual mais tradicional com efeitos sonoros:** Wheelofnames.com.",
+              "**Multiuso com números e equipes:** Picker Wheel.",
+              "**Turmas organizadas em planilhas:** Flippity com Google Sheets.",
+              "**Estilo lúdico arcade para estudantes:** Classtools.net.",
+              "**Sem acessar nenhum site específico:** Roleta numérica rápida do Google."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Caso precise realizar sorteios diretos em lista sem animação de roleta, nosso [Sorteador de Nomes](/pt/tools/fun/random-name-picker) entrega o resultado de forma instantânea. E para dividir grupos e formar pares de trabalho, experimente o [Gerador de Times Aleatórios](/pt/tools/fun/random-team-generator)."
           }
         ]
       }
     },
-    "relatedToolsHeading": "Ferramentas gratuitas para este tema"
+    "relatedToolsHeading": "Ferramentas gratuitas para este tema",
+    "breadcrumbHome": "Início",
+    "backToBlog": "Voltar ao Blog",
+    "allArticles": "Todos os artigos",
+    "publishedOn": "Publicado em {date}",
+    "updatedOn": "Atualizado em {date}",
+    "putIntoPractice": "Coloque em prática",
+    "tryTool": "Acessar ferramenta",
+    "tryToolDescription": "Experimente a ferramenta gratuita e aplique na prática os conceitos deste guia.",
+    "relatedArticlesHeading": "Artigos Relacionados",
+    "author": "Autor",
+    "authorRole": "Engenheiro de Software",
+    "authorBio": "Juan Soares é engenheiro de software e criador do ToolNotch, desenvolvendo ferramentas úteis e acessíveis para o dia a dia.",
+    "followOnLinkedIn": "Seguir no LinkedIn",
+    "share": "Compartilhar",
+    "copyLink": "Copiar link",
+    "linkCopied": "Link copiado!"
   },
   "interview": {
     "hub": {

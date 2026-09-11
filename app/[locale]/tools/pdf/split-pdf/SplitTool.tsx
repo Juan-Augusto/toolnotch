@@ -161,25 +161,25 @@ export default function SplitTool({ title, description, faqs, richContent }: Pro
           </p>
           <ul className="space-y-1.5">
             <li className="flex items-center gap-2">
-              <code className="font-mono bg-gray-200 dark:bg-gray-800 px-1.5 py-0.5 rounded text-gray-800 dark:text-gray-200 font-medium whitespace-nowrap">
+              <code className="bg-gray-200 dark:bg-gray-800 px-1.5 py-0.5 rounded text-gray-800 dark:text-gray-200 font-medium whitespace-nowrap">
                 {t("examples.empty.label")}
               </code>
               <span>{t("examples.empty.desc")}</span>
             </li>
             <li className="flex items-center gap-2">
-              <code className="font-mono bg-gray-200 dark:bg-gray-800 px-1.5 py-0.5 rounded text-gray-800 dark:text-gray-200 font-medium whitespace-nowrap">
+              <code className="bg-gray-200 dark:bg-gray-800 px-1.5 py-0.5 rounded text-gray-800 dark:text-gray-200 font-medium whitespace-nowrap">
                 5
               </code>
               <span>{t("examples.single.desc")}</span>
             </li>
             <li className="flex items-center gap-2">
-              <code className="font-mono bg-gray-200 dark:bg-gray-800 px-1.5 py-0.5 rounded text-gray-800 dark:text-gray-200 font-medium whitespace-nowrap">
+              <code className="bg-gray-200 dark:bg-gray-800 px-1.5 py-0.5 rounded text-gray-800 dark:text-gray-200 font-medium whitespace-nowrap">
                 2-5
               </code>
               <span>{t("examples.range.desc")}</span>
             </li>
             <li className="flex items-center gap-2">
-              <code className="font-mono bg-gray-200 dark:bg-gray-800 px-1.5 py-0.5 rounded text-gray-800 dark:text-gray-200 font-medium whitespace-nowrap">
+              <code className="bg-gray-200 dark:bg-gray-800 px-1.5 py-0.5 rounded text-gray-800 dark:text-gray-200 font-medium whitespace-nowrap">
                 1-3, 5, 8-10
               </code>
               <span>{t("examples.combined.desc")}</span>

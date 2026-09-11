@@ -9,7 +9,7 @@ export default function AppLogo({ href = "/", className = "" }: AppLogoProps) {
   return (
     <Link
       href={href}
-      className={`font-mono font-bold text-lg sm:text-xl text-primary st inline-flex items-center gap-0.5 select-none ${className}`}
+      className={`font-bold text-lg sm:text-xl text-primary st inline-flex items-center gap-0.5 select-none ${className}`}
     >
       [TOOLNOTCH]<span className="text-primary">*</span>
     </Link>

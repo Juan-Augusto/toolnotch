@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
@@ -79,7 +79,7 @@ export function AppBreadcrumb({ items, className = "" }: AppBreadcrumbProps) {
   return (
     <nav
       aria-label="Breadcrumb"
-      className={`flex items-center flex-wrap gap-2 font-mono  text-label py-1 ${className}`}
+      className={`flex items-center flex-wrap gap-2  text-label py-1 ${className}`}
     >
       {resolvedItems.map((item, index) => {
         const isLast = index === resolvedItems.length - 1 || item.current;
@@ -101,7 +101,7 @@ export function AppBreadcrumb({ items, className = "" }: AppBreadcrumbProps) {
             ) : (
               <span
                 aria-current={isLast ? "page" : undefined}
-                className={`truncate max-w-[220px] sm:max-w-md ${
+                className={`truncate max-w-[280px] sm:max-w-none ${
                   isLast
                     ? "text-foreground font-semibold"
                     : "hover:text-secondary transition-colors"

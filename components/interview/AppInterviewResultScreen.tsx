@@ -55,19 +55,19 @@ export function AppInterviewResultScreen({
           <span className="text-xs font-semibold uppercase">
             {labels.resultBadge}
           </span>
-          <span className="text-[11px] text-label uppercase">
+          <span className="text-xs font-medium text-label uppercase">
             {title} | {levelLabel}
           </span>
         </div>
 
         <div className="mb-6">
-          <div className="text-4xl sm:text-5xl font-bold text-foreground tracking-tight mb-2">
+          <div className="text-4xl sm:text-5xl font-semibold text-foreground tracking-tight mb-2">
             {correctCount}{" "}
             <span className="text-xl sm:text-2xl text-label font-normal">
               / {totalQuestions}
             </span>
           </div>
-          <div className="text-xs text-secondary font-semibold uppercase">
+          <div className="text-xs text-label font-medium uppercase">
             {labels.scoreSummary(scoreRatio, evaluation.title)}
           </div>
         </div>
@@ -97,7 +97,7 @@ export function AppInterviewResultScreen({
               color="tertiary"
               small
               onClick={onChooseLevel}
-              className="w-full sm:w-auto whitespace-nowrap"
+              className="w-full sm:w-auto whitespace-nowrap border border-border"
             >
               {labels.chooseLevel}
             </AppButton>

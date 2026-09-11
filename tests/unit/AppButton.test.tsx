@@ -30,7 +30,7 @@ describe('AppButton', () => {
     render(<AppButton color="tertiary">Tertiary</AppButton>);
     const button = screen.getByRole('button', { name: /tertiary/i });
     expect(button).toHaveClass('bg-tertiary');
-    expect(button).toHaveClass('hover:shadow-[0px_4px_0px_var(--color-tertiary-shadow)]');
+    expect(button).toHaveClass('hover:shadow-[0px_4px_0px_var(--color-border)]');
     expect(button).toHaveClass('active:bg-tertiary-shadow');
     expect(button).toHaveClass('active:shadow-none');
   });
@@ -39,7 +39,7 @@ describe('AppButton', () => {
     render(<AppButton color="panel">Panel</AppButton>);
     const button = screen.getByRole('button', { name: /panel/i });
     expect(button).toHaveClass('bg-tertiary');
-    expect(button).toHaveClass('hover:shadow-[0px_4px_0px_var(--color-tertiary-shadow)]');
+    expect(button).toHaveClass('hover:shadow-[0px_4px_0px_var(--color-border)]');
     expect(button).toHaveClass('active:bg-tertiary-shadow');
   });
 

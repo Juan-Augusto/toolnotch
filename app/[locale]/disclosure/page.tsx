@@ -142,7 +142,7 @@ export default async function DisclosurePage({ params }: Props) {
               {t("title")}
             </h1>
             <p className="leading-relaxed text-label mt-3">{t("subtitle")}</p>
-            <p className="text-xs text-label/80 mt-2 font-mono">
+            <p className="text-xs text-label/80 mt-2">
               {t("lastUpdated")}
             </p>
           </header>

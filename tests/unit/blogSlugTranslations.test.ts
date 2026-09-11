@@ -8,6 +8,11 @@ import {
   translateSlug,
   localizedSlugsFor,
 } from '@/data/blog/slugTranslations'
+import {
+  BLOG_CATEGORY_CONFIG,
+  DEFAULT_BLOG_CATEGORY_KEYS,
+  BLOG_I18N_LABELS,
+} from '@/components/blog/blogHubConfig'
 
 const CONTENT_DIR = path.join(process.cwd(), 'data', 'blog', 'content')
 
@@ -93,5 +98,37 @@ describe('localized MDX files on disk', () => {
         expect(fm.category).toBeTruthy()
       }
     }
+  })
+
+  describe('blogHubConfig', () => {
+    it('defines display metadata for every category key', () => {
+      for (const catKey of DEFAULT_BLOG_CATEGORY_KEYS) {
+        const config = BLOG_CATEGORY_CONFIG[catKey]
+        expect(config).toBeDefined()
+        expect(config.icon).toBeDefined()
+        expect(config.badgeBg).toBeTruthy()
+        expect(config.badgeColor).toBeTruthy()
+        expect(config.name.pt).toBeTruthy()
+        expect(config.name.en).toBeTruthy()
+        expect(config.name.es).toBeTruthy()
+      }
+    })
+
+    it('provides complete localized labels for pt, en, and es', () => {
+      for (const loc of ['pt', 'en', 'es']) {
+        const labels = BLOG_I18N_LABELS[loc]
+        expect(labels).toBeDefined()
+        expect(labels.heading).toBeTruthy()
+        expect(labels.subtitle).toBeTruthy()
+        expect(labels.allCategories).toBeTruthy()
+        expect(labels.searchPlaceholder).toBeTruthy()
+        expect(labels.noResults).toBeTruthy()
+        expect(labels.clearFilters).toBeTruthy()
+        expect(labels.readArticle).toBeTruthy()
+        expect(labels.minRead(5)).toContain('5')
+        expect(labels.featured).toBeTruthy()
+        expect(labels.articlesCount).toBeTruthy()
+      }
+    })
   })
 })

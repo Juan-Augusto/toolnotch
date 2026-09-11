@@ -142,7 +142,7 @@ function SpeedReaderWidget({
     const right = word.substring(orpIndex + 1);
 
     return (
-      <span className="font-mono text-3xl sm:text-5xl font-extrabold tracking-tight select-none">
+      <span className="text-3xl sm:text-5xl font-extrabold tracking-tight select-none">
         <span className="text-foreground">{left}</span>
         <span className="text-red-500 dark:text-red-400">{middle}</span>
         <span className="text-foreground">{right}</span>

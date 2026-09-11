@@ -48,7 +48,7 @@ export function AppQuizCardItem({
               {categoryName}
             </AppBadge>
 
-            <span className="font-mono text-[11px] text-label/80 uppercase whitespace-nowrap shrink-0">
+            <span className="text-xs text-label/80 uppercase whitespace-nowrap shrink-0">
               {quiz.questionCount > 0
                 ? `${quiz.questionCount} ${labels.questionsLabel} • ~${estimatedMin} ${labels.minLabel}`
                 : `~${estimatedMin} ${labels.minLabel}`}
@@ -65,7 +65,7 @@ export function AppQuizCardItem({
         </div>
 
         <div className="mt-6 pt-4 border-t border-border/40 flex items-center justify-between">
-          <span className="font-mono text-[11px] font-bold uppercase  text-label group-hover:text-secondary transition-colors">
+          <span className="text-xs font-semibold uppercase text-label group-hover:text-secondary transition-colors">
             {labels.playQuiz}
           </span>
           <ArrowRight className="w-4 h-4 text-label group-hover:text-secondary group-hover:translate-x-1 transition-all" />

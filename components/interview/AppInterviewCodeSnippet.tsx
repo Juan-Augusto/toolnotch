@@ -181,7 +181,7 @@ export function AppInterviewCodeSnippet({
   const tokens = tokenizeCode(code);
   return (
     <pre
-      className={`bg-[#0f172a] text-slate-200 rounded-[2px] p-4 overflow-x-auto font-mono leading-relaxed border border-slate-800 ${className}`}
+      className={`bg-[#0f172a] text-slate-200 rounded-[2px] p-4 overflow-x-auto leading-relaxed border border-slate-800 ${className}`}
     >
       <code>
         {tokens.map((tok, index) => (

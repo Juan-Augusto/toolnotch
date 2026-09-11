@@ -144,7 +144,7 @@ export default async function PartnersPage({ params }: Props) {
             <p className="leading-relaxed text-label mt-3">
               {t("partners.subtitle")}
             </p>
-            <p className="text-xs text-label/80 mt-2 font-mono">
+            <p className="text-xs text-label/80 mt-2">
               {t("partners.lastUpdated")}
             </p>
           </header>
@@ -215,7 +215,7 @@ export default async function PartnersPage({ params }: Props) {
                             <h4 className="font-bold text-foreground text-base">
                               {t(`offers.${p.key}.name`)}
                             </h4>
-                            <span className="text-[11px] font-mono uppercase px-2 py-0.5 rounded bg-muted text-muted-foreground w-fit">
+                            <span className="text-[11px] uppercase px-2 py-0.5 rounded bg-muted text-muted-foreground w-fit">
                               {p.brand}
                             </span>
                           </div>
@@ -239,7 +239,7 @@ export default async function PartnersPage({ params }: Props) {
               </div>
             </section>
 
-            <p className="text-xs text-label/80 font-mono pt-4 border-t border-border">
+            <p className="text-xs text-label/80 pt-4 border-t border-border">
               {t("partners.disclosure")}
             </p>
 
