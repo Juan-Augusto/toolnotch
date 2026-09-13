@@ -68,4 +68,13 @@ describe('AppButton', () => {
     expect(button).toHaveClass('disabled:cursor-not-allowed');
     expect(button).toHaveClass('disabled:hover:shadow-none');
   });
+
+  it('renders custom icon when icon prop is provided', () => {
+    render(
+      <AppButton icon={<span data-testid="custom-icon">icon</span>}>
+        Download
+      </AppButton>
+    );
+    expect(screen.getByTestId('custom-icon')).toBeInTheDocument();
+  });
 });

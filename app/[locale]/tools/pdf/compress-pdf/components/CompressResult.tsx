@@ -1,5 +1,6 @@
 "use client";
 
+import { Download } from "lucide-react";
 import { AppButton } from "@/components/ui";
 
 interface CompressResultProps {
@@ -43,14 +44,14 @@ export default function CompressResult({
             ✓
           </div>
           <div>
-            <p className="text-xs sm:text-sm font-bold uppercase text-foreground">
+            <p className="text-sm sm:text-base font-bold uppercase text-foreground">
               {locale === "pt"
                 ? "PDF Comprimido com Sucesso!"
                 : locale === "es"
                   ? "¡PDF Comprimido con Éxito!"
                   : "PDF Successfully Compressed!"}
             </p>
-            <p className="text-[11px] text-label mt-0.5">
+            <p className="text-xs text-label mt-1">
               {savings > 0
                 ? locale === "pt"
                   ? `Seu documento ficou ${savings}% menor sem perder a estrutura interna.`
@@ -85,7 +86,7 @@ export default function CompressResult({
               {formatBytes(originalSize)}
             </span>
           </div>
-          <span className="text-[10px] text-label/70">
+          <span className="text-xs text-label">
             {locale === "pt"
               ? "100% do tamanho inicial"
               : locale === "es"
@@ -103,7 +104,7 @@ export default function CompressResult({
               {savings > 0 ? `-${savings}%` : "0%"}
             </span>
           </div>
-          <span className="text-[10px] text-label/70">
+          <span className="text-xs text-label">
             {savings > 0
               ? `${formatBytes(bytesSaved)} ${
                   locale === "pt"
@@ -129,7 +130,7 @@ export default function CompressResult({
               {formatBytes(compressedSize)}
             </span>
           </div>
-          <span className="text-[10px] text-label/70">
+          <span className="text-xs text-label">
             {locale === "pt"
               ? "Novo tamanho otimizado"
               : locale === "es"
@@ -177,7 +178,11 @@ export default function CompressResult({
       </div>
 
       <div className="flex flex-wrap items-center gap-4 pt-2">
-        <AppButton onClick={onDownload} color="primary" withArrow>
+        <AppButton
+          onClick={onDownload}
+          color="primary"
+          icon={<Download className="w-4 h-4" />}
+        >
           {t("button.download")}
         </AppButton>
         <AppButton onClick={onReset} color="tertiary">
