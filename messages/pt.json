@@ -340,18 +340,18 @@
       }
     },
     "jpgToPdf": {
-      "metaTitle": "JPG para PDF — Converter Imagens em PDF Grátis | ToolNotch",
-      "metaDescription": "Transforme imagens JPEG ou PNG em um PDF. Arraste para reordenar páginas. Grátis, sem upload, funciona inteiramente no seu navegador.",
-      "title": "JPG para PDF — Converter Imagens em PDF",
-      "description": "Transforme imagens JPEG ou PNG em um PDF. Arraste para reordenar. Sem upload necessário.",
+      "metaTitle": "JPG para PDF Online Grátis — Converter Imagens e PNG em PDF | ToolNotch",
+      "metaDescription": "Transforme imagens JPG, PNG ou JPEG em um documento PDF de alta qualidade. Arraste para reordenar páginas. Grátis, seguro e 100% no seu navegador.",
+      "title": "Converter Imagens para PDF",
+      "description": "Transforme imagens JPG, PNG ou JPEG em um documento PDF único. Arraste para reordenar páginas. Sem upload necessário.",
       "dropZone": {
         "label": "Clique ou arraste imagens aqui",
-        "hint": "JPEG ou PNG — vários arquivos suportados"
+        "hint": "JPG, PNG ou JPEG — vários arquivos suportados"
       },
       "filename": {
         "label": "Nome personalizado do PDF",
         "hint": "opcional",
-        "placeholder": "images"
+        "placeholder": "ex: meu-documento"
       },
       "button": {
         "convert": "Converter para PDF",

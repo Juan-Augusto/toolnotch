@@ -8,7 +8,7 @@ import { PDFDocument } from "pdf-lib";
 import { ShieldCheck, Scissors, Sparkles, Info, CheckCircle2 } from "lucide-react";
 import AppBreadcrumb from "@/components/AppBreadcrumb";
 import AppDropfile from "@/components/AppDropfile";
-import { AppCard, AppButton, AppBadge } from "@/components/ui";
+import { AppCard, AppButton, AppBadge, AppInput } from "@/components/ui";
 import { splitPDF, validateAndParsePageRanges } from "@/lib/pdfSplit";
 import type { PageRange } from "@/lib/pdfTypes";
 import type { FaqItem } from "@/components/AppFaqSection";
@@ -298,34 +298,27 @@ export default function SplitTool({
                 )}
 
                 <div className="space-y-4 pt-1">
-                  <div className="space-y-1.5 font-mono">
-                    <label
-                      htmlFor="page-ranges-input"
-                      className="flex flex-wrap items-center justify-between gap-1 text-xs font-bold uppercase text-foreground"
-                    >
-                      <span>{t("pageRanges.label")}</span>
-                      <span className="text-label/70 text-[11px] normal-case">
-                        {t("pageRanges.hint")}
-                      </span>
-                    </label>
-                    <input
+                  <div className="space-y-2 font-mono">
+                    <AppInput
                       id="page-ranges-input"
-                      type="text"
+                      variant="background"
+                      containerClassName="font-mono"
+                      labelClassName="flex flex-wrap items-center justify-between gap-1 text-xs font-bold uppercase text-foreground"
+                      label={
+                        <>
+                          <span>{t("pageRanges.label")}</span>
+                          <span className="text-label/70 text-[11px] normal-case font-normal">
+                            {t("pageRanges.hint")}
+                          </span>
+                        </>
+                      }
                       value={rangeInput}
                       onChange={(e) => setRangeInput(e.target.value)}
                       placeholder={t("pageRanges.placeholder")}
-                      className={`w-full bg-background border rounded-[2px] px-3.5 py-2.5 font-mono text-xs sm:text-sm text-foreground placeholder:text-label/50 focus:outline-hidden transition-colors ${
-                        rangeError
-                          ? "border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500"
-                          : "border-border focus:border-secondary focus:ring-1 focus:ring-secondary"
-                      }`}
+                      error={rangeError || undefined}
                       aria-invalid={Boolean(rangeError)}
+                      className="font-mono text-xs sm:text-sm placeholder:normal-case"
                     />
-                    {rangeError && (
-                      <p className="font-mono text-xs text-red-500 mt-1">
-                        {rangeError}
-                      </p>
-                    )}
                     {extractionSummary && (
                       <div className="p-3 bg-secondary/10 border border-secondary/30 rounded-[2px] font-mono text-xs flex items-center gap-2.5 text-foreground animate-fade-in mt-2">
                         <CheckCircle2 className="w-4 h-4 text-secondary shrink-0" />
