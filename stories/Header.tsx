@@ -12,6 +12,16 @@ export interface HeaderProps {
   onCreateAccount?: () => void;
 }
 
+const getInitials = (name: string) => {
+  return name
+    .split(' ')
+    .filter(Boolean)
+    .map((part) => part[0])
+    .join('')
+    .toUpperCase()
+    .slice(0, 2);
+};
+
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
   <header>
     <div className="storybook-header">
@@ -34,9 +44,16 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps
         </svg>
         <h1>Acme</h1>
       </div>
-      <div>
+      <div className="storybook-header-right">
         {user ? (
           <>
+            <button
+              type="button"
+              className="storybook-header-avatar"
+              aria-label={user.name}
+            >
+              {getInitials(user.name)}
+            </button>
             <span className="welcome">
               Welcome, <b>{user.name}</b>!
             </span>
