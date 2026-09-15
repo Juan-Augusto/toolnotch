@@ -58,7 +58,7 @@ export function AppTabsChips({
     <div
       role="tablist"
       aria-orientation="horizontal"
-      className={`flex flex-wrap items-center gap-2 p-0.5 select-none ${className}`}
+      className={`flex flex-wrap items-center gap-1.5 sm:gap-2 p-0.5 select-none ${className}`}
     >
       {items.map((item, idx) => {
         const isActive = item.id === value;
@@ -74,7 +74,7 @@ export function AppTabsChips({
             onClick={() => !item.disabled && onChange(item.id)}
             onKeyDown={(e) => handleKeyDown(e, idx)}
             tabIndex={isActive ? 0 : -1}
-            className={`relative shrink-0 flex font-medium items-center gap-2 px-3.5 sm:px-4 py-2 text-xs font-base uppercase rounded-[2px] transition-colors cursor-pointer disabled:cursor-not-allowed disabled:opacity-40 outline-none focus-visible:ring-1 focus-visible:ring-primary ${
+            className={`relative shrink-0 flex font-medium items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-xs font-base uppercase rounded-[2px] transition-colors cursor-pointer disabled:cursor-not-allowed disabled:opacity-40 outline-none focus-visible:ring-1 focus-visible:ring-primary ${
               isActive
                 ? "text-background font-semibold"
                 : "text-label hover:text-foreground bg-tertiary border border-border hover:border-foreground/20 hover:bg-tertiary/70"

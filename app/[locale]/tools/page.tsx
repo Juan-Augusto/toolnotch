@@ -220,12 +220,12 @@ export default async function ToolsHubPage({ params }: Props) {
   );
 
   return (
-    <main className="container min-h-[calc(100vh-180px)] bg-background text-foreground py-8">
+    <main className="container min-h-[calc(100vh-180px)] bg-background text-foreground py-3 sm:py-6 md:py-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="w-full pb-2">
+      <div className="w-full pb-2 sm:pb-3">
         <AppBreadcrumb
           items={[
             { label: homeLabel, href: prefix || "/" },

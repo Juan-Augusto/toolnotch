@@ -31,10 +31,10 @@ export function AppToolCardItem({
       <AppCard
         hover
         border
-        className="h-full flex flex-col justify-between !p-6 sm:!p-7 transition-all"
+        className="h-full flex flex-col justify-between p-3.5 sm:p-5 md:p-6 transition-all"
       >
         <div>
-          <div className="flex items-center justify-between gap-2 mb-4">
+          <div className="flex items-center justify-between gap-2 mb-2 sm:mb-3.5">
             <AppBadge
               bg={catConfig?.badgeBg}
               text={catConfig?.badgeColor}
@@ -49,21 +49,21 @@ export function AppToolCardItem({
             </AppBadge>
           </div>
 
-          <h3 className="uppercase text-base sm:text-lg font-bold text-foreground group-hover:text-secondary transition-colors leading-snug mb-2.5">
+          <h3 className="uppercase text-sm sm:text-base font-bold text-foreground group-hover:text-secondary transition-colors leading-snug mb-1.5 sm:mb-2">
             {tool.title}
           </h3>
 
-          <p className="text-label/85 leading-relaxed line-clamp-2">
+          <p className="text-xs sm:text-sm text-label/85 leading-relaxed line-clamp-2">
             {tool.description}
           </p>
         </div>
 
-        <div className="mt-6 pt-4 border-t border-border/40 flex items-center justify-between gap-3">
-          <span className="text-xs text-label/80 uppercase font-medium">
+        <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-border/40 flex items-center justify-between gap-3">
+          <span className="text-[11px] sm:text-xs text-label/80 uppercase font-medium">
             {categoryName}
           </span>
 
-          <div className="flex items-center gap-1 text-xs font-semibold uppercase text-label group-hover:text-secondary transition-colors shrink-0">
+          <div className="flex items-center gap-1 text-[11px] sm:text-xs font-semibold uppercase text-label group-hover:text-secondary transition-colors shrink-0">
             <span>{labels.useTool}</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
           </div>

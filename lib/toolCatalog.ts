@@ -51,6 +51,10 @@ export const TOOL_CATALOG: CatalogEntry[] = [
   { path: '/tools/pdf/compress-pdf', labelKey: 'compressPdf', category: 'pdf', kind: 'tool' },
   { path: '/tools/pdf/pdf-to-jpg', labelKey: 'pdfToJpg', category: 'pdf', kind: 'tool' },
   { path: '/tools/pdf/jpg-to-pdf', labelKey: 'jpgToPdf', category: 'pdf', kind: 'tool' },
+  { path: '/tools/pdf/organize-pdf', labelKey: 'organizePdf', category: 'pdf', kind: 'tool' },
+  { path: '/tools/pdf/delete-pdf-pages', labelKey: 'deletePdfPages', category: 'pdf', kind: 'tool' },
+  { path: '/tools/pdf/pdf-to-text', labelKey: 'pdfToText', category: 'pdf', kind: 'tool' },
+  { path: '/tools/pdf/extract-pdf-images', labelKey: 'extractPdfImages', category: 'pdf', kind: 'tool' },
   // Convert
   { path: '/tools/convert/unit-converter', labelKey: 'unitConverter', category: 'convert', kind: 'tool' },
   { path: '/tools/convert/currency-converter', labelKey: 'currencyConverter', category: 'convert', kind: 'tool' },

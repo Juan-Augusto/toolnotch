@@ -34,6 +34,7 @@ describe("JpgToPdfTool Integration", () => {
     title: "JPG to PDF",
     description: "Convert images to PDF",
     faqs: [],
+    locale: "pt",
   };
 
   beforeAll(() => {
@@ -45,8 +46,12 @@ describe("JpgToPdfTool Integration", () => {
     jest.clearAllMocks();
   });
 
-  test("renders dropzone and convert button initially disabled", () => {
+  test("renders dropzone, badges, and convert button initially disabled", () => {
     render(<JpgToPdfTool {...defaultProps} />);
+
+    expect(screen.getByText("Sem upload para servidores")).toBeInTheDocument();
+    expect(screen.getByText("Suporta JPG, PNG & JPEG")).toBeInTheDocument();
+    expect(screen.getByText("Ilimitado & Gratuito")).toBeInTheDocument();
 
     expect(screen.getByText("pdf.jpgToPdf.dropZone.label")).toBeInTheDocument();
     expect(screen.getByText("pdf.jpgToPdf.dropZone.hint")).toBeInTheDocument();
@@ -72,7 +77,42 @@ describe("JpgToPdfTool Integration", () => {
     expect(button).not.toBeDisabled();
   });
 
-  test("converts with default filename if custom filename is blank", async () => {
+  test("does not duplicate images when adding another image sequentially", async () => {
+    const { container } = render(<JpgToPdfTool {...defaultProps} />);
+
+    const fileInput = container.querySelector("#imgpdf-file-input") as HTMLInputElement;
+    const file1 = new File(["fake-image1"], "photo1.jpg", { type: "image/jpeg" });
+    fireEvent.change(fileInput, { target: { files: [file1] } });
+
+    expect(screen.getAllByText("photo1.jpg")).toHaveLength(1);
+
+    // Select second file sequentially
+    const file2 = new File(["fake-image2"], "photo2.png", { type: "image/png" });
+    fireEvent.change(fileInput, { target: { files: [file2] } });
+
+    expect(screen.getAllByText("photo1.jpg")).toHaveLength(1);
+    expect(screen.getAllByText("photo2.png")).toHaveLength(1);
+  });
+
+  test("removes an image when remove button is clicked", async () => {
+    const { container } = render(<JpgToPdfTool {...defaultProps} />);
+
+    const fileInput = container.querySelector("#imgpdf-file-input") as HTMLInputElement;
+    const file1 = new File(["fake-image"], "photo1.jpg", { type: "image/jpeg" });
+    const file2 = new File(["fake-image2"], "photo2.png", { type: "image/png" });
+
+    fireEvent.change(fileInput, { target: { files: [file1, file2] } });
+    expect(screen.getByText("photo1.jpg")).toBeInTheDocument();
+    expect(screen.getByText("photo2.png")).toBeInTheDocument();
+
+    const removeButtons = screen.getAllByRole("button", { name: "Remover imagem" });
+    fireEvent.click(removeButtons[0]);
+
+    expect(screen.queryByText("photo1.jpg")).not.toBeInTheDocument();
+    expect(screen.getByText("photo2.png")).toBeInTheDocument();
+  });
+
+  test("converts with default filename and downloads upon clicking download button", async () => {
     const { container } = render(<JpgToPdfTool {...defaultProps} />);
 
     const fileInput = container.querySelector("#imgpdf-file-input") as HTMLInputElement;
@@ -83,9 +123,17 @@ describe("JpgToPdfTool Integration", () => {
     fireEvent.click(button);
 
     await waitFor(() => {
-      expect(saveAs).toHaveBeenCalledWith(expect.any(Blob), "images.pdf");
-      expect(screen.getByText("pdf.jpgToPdf.success")).toBeInTheDocument();
+      expect(screen.getByText("PDF Criado com Sucesso!")).toBeInTheDocument();
+      expect(screen.getByRole("button", { name: "Baixar PDF" })).toBeInTheDocument();
     });
+
+    expect(saveAs).not.toHaveBeenCalled();
+
+    const downloadBtn = screen.getByRole("button", { name: "Baixar PDF" });
+    fireEvent.click(downloadBtn);
+
+    expect(saveAs).toHaveBeenCalledTimes(1);
+    expect(saveAs).toHaveBeenCalledWith(expect.any(Blob), "images.pdf");
   });
 
   test("converts with custom filename and appends .pdf extension if missing", async () => {
@@ -102,8 +150,13 @@ describe("JpgToPdfTool Integration", () => {
     fireEvent.click(button);
 
     await waitFor(() => {
-      expect(saveAs).toHaveBeenCalledWith(expect.any(Blob), "my-custom-doc.pdf");
+      expect(screen.getByText("PDF Criado com Sucesso!")).toBeInTheDocument();
     });
+
+    const downloadBtn = screen.getByRole("button", { name: "Baixar PDF" });
+    fireEvent.click(downloadBtn);
+
+    expect(saveAs).toHaveBeenCalledWith(expect.any(Blob), "my-custom-doc.pdf");
   });
 
   test("converts with custom filename without double .pdf if already provided", async () => {
@@ -120,8 +173,34 @@ describe("JpgToPdfTool Integration", () => {
     fireEvent.click(button);
 
     await waitFor(() => {
-      expect(saveAs).toHaveBeenCalledWith(expect.any(Blob), "report.pdf");
+      expect(screen.getByText("PDF Criado com Sucesso!")).toBeInTheDocument();
     });
+
+    const downloadBtn = screen.getByRole("button", { name: "Baixar PDF" });
+    fireEvent.click(downloadBtn);
+
+    expect(saveAs).toHaveBeenCalledWith(expect.any(Blob), "report.pdf");
+  });
+
+  test("resets tool when reset button is clicked", async () => {
+    const { container } = render(<JpgToPdfTool {...defaultProps} />);
+
+    const fileInput = container.querySelector("#imgpdf-file-input") as HTMLInputElement;
+    const file1 = new File(["fake-image"], "photo.jpg", { type: "image/jpeg" });
+    fireEvent.change(fileInput, { target: { files: [file1] } });
+
+    const button = screen.getByRole("button", { name: /pdf\.jpgToPdf\.button\.convert/i });
+    fireEvent.click(button);
+
+    await waitFor(() => {
+      expect(screen.getByText("PDF Criado com Sucesso!")).toBeInTheDocument();
+    });
+
+    const resetBtn = screen.getByRole("button", { name: "Converter outras imagens" });
+    fireEvent.click(resetBtn);
+
+    expect(screen.queryByText("PDF Criado com Sucesso!")).not.toBeInTheDocument();
+    expect(screen.getByText("pdf.jpgToPdf.dropZone.label")).toBeInTheDocument();
   });
 
   test("displays error and disables convert button when filename has invalid format", async () => {
@@ -155,4 +234,3 @@ describe("JpgToPdfTool Integration", () => {
     expect(button).not.toBeDisabled();
   });
 });
-

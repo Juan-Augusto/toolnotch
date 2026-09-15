@@ -30,7 +30,7 @@ describe('AppButton', () => {
     render(<AppButton color="tertiary">Tertiary</AppButton>);
     const button = screen.getByRole('button', { name: /tertiary/i });
     expect(button).toHaveClass('bg-tertiary');
-    expect(button).toHaveClass('hover:shadow-[0px_4px_0px_var(--color-border)]');
+    expect(button).toHaveClass('hover:shadow-[0px_4px_0px_var(--color-tertiary-shadow)]');
     expect(button).toHaveClass('active:bg-tertiary-shadow');
     expect(button).toHaveClass('active:shadow-none');
   });
@@ -39,7 +39,7 @@ describe('AppButton', () => {
     render(<AppButton color="panel">Panel</AppButton>);
     const button = screen.getByRole('button', { name: /panel/i });
     expect(button).toHaveClass('bg-tertiary');
-    expect(button).toHaveClass('hover:shadow-[0px_4px_0px_var(--color-border)]');
+    expect(button).toHaveClass('hover:shadow-[0px_4px_0px_var(--color-tertiary-shadow)]');
     expect(button).toHaveClass('active:bg-tertiary-shadow');
   });
 
@@ -67,5 +67,14 @@ describe('AppButton', () => {
     expect(button).toBeDisabled();
     expect(button).toHaveClass('disabled:cursor-not-allowed');
     expect(button).toHaveClass('disabled:hover:shadow-none');
+  });
+
+  it('renders custom icon when icon prop is provided', () => {
+    render(
+      <AppButton icon={<span data-testid="custom-icon">icon</span>}>
+        Download
+      </AppButton>
+    );
+    expect(screen.getByTestId('custom-icon')).toBeInTheDocument();
   });
 });

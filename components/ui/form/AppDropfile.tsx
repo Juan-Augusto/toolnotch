@@ -302,6 +302,7 @@ export function AppDropfile({
         }
         className={`
           relative
+          group
           w-full
           flex
           flex-col
@@ -329,6 +330,11 @@ export function AppDropfile({
           ${className}
         `}
       >
+        <span className="absolute top-2.5 left-2.5 w-2 h-2 border-t-2 border-l-2 border-secondary/40 pointer-events-none group-hover:border-secondary transition-colors" />
+        <span className="absolute top-2.5 right-2.5 w-2 h-2 border-t-2 border-r-2 border-secondary/40 pointer-events-none group-hover:border-secondary transition-colors" />
+        <span className="absolute bottom-2.5 left-2.5 w-2 h-2 border-b-2 border-l-2 border-secondary/40 pointer-events-none group-hover:border-secondary transition-colors" />
+        <span className="absolute bottom-2.5 right-2.5 w-2 h-2 border-b-2 border-r-2 border-secondary/40 pointer-events-none group-hover:border-secondary transition-colors" />
+
         <input
           ref={inputRef}
           id={inputId}
@@ -342,18 +348,20 @@ export function AppDropfile({
           tabIndex={-1}
         />
 
-        <div className="text-secondary mb-3 flex items-center justify-center transition-transform duration-150">
-          {icon ?? <FileUp className="w-8 h-8 stroke-[1.75]" />}
+        <div className="relative mb-4 flex items-center justify-center">
+          <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary shadow-xs">
+            {icon ?? <FileUp className="w-7 h-7 md:w-8 md:h-8 stroke-[1.75]" />}
+          </div>
         </div>
 
-        <p className="text-xs md:text-sm font-bold uppercase  text-foreground mb-1">
+        <p className="font-mono text-xs md:text-sm font-bold uppercase text-foreground mb-1">
           {title ??
             (multiple
               ? "CLIQUE OU ARRASTE ARQUIVOS AQUI"
               : "CLIQUE OU ARRASTE O ARQUIVO AQUI")}
         </p>
 
-        <p className="text-xs text-label/80 ">
+        <p className="font-mono text-xs text-label/80 max-w-sm">
           {description ??
             (multiple
               ? "Clique ou arraste arquivos aqui"
@@ -362,20 +370,24 @@ export function AppDropfile({
       </div>
 
       {showSelectedFiles && currentFiles.length > 0 && (
-        <div className="flex flex-col gap-2 mt-3 w-full">
+        <div className="flex flex-col gap-2.5 mt-4 w-full">
           {currentFiles.map((file, idx) => (
             <div
               key={`${file.name}-${file.size}-${idx}`}
-              className="flex items-center justify-between px-3.5 py-2.5 bg-tertiary/40 border border-border rounded-[2px]"
+              className="flex items-center justify-between p-3.5 bg-background border border-border rounded-[2px]"
             >
-              <div className="flex items-center gap-2.5 min-w-0">
-                <FileIcon className="w-4 h-4 text-secondary shrink-0" />
-                <span className="text-xs text-foreground truncate max-w-[200px] md:max-w-xs">
-                  {file.name}
-                </span>
-                <span className="text-[11px] text-label shrink-0">
-                  ({formatFileSize(file.size)})
-                </span>
+              <div className="flex items-center gap-3 min-w-0">
+                <div className="w-9 h-9 rounded-[2px] bg-secondary text-background flex items-center justify-center shrink-0">
+                  <FileIcon className="w-4.5 h-4.5" />
+                </div>
+                <div className="flex flex-col min-w-0 text-left">
+                  <span className="font-mono text-xs font-semibold text-foreground truncate max-w-[200px] sm:max-w-xs md:max-w-md">
+                    {file.name}
+                  </span>
+                  <span className="font-mono text-[11px] text-label mt-0.5">
+                    ({formatFileSize(file.size)})
+                  </span>
+                </div>
               </div>
 
               {!disabled && (
@@ -385,10 +397,10 @@ export function AppDropfile({
                     e.stopPropagation();
                     handleRemoveFile(idx);
                   }}
-                  className="text-label hover:text-red-500 transition-colors p-1 rounded-xs cursor-pointer"
+                  className="text-label hover:text-red-500 hover:bg-red-500/10 transition-colors p-1.5 rounded-[2px] cursor-pointer"
                   aria-label={`Remover ${file.name}`}
                 >
-                  <X className="w-3.5 h-3.5" />
+                  <X className="w-4 h-4" />
                 </button>
               )}
             </div>
@@ -396,14 +408,10 @@ export function AppDropfile({
         </div>
       )}
 
-      {error && (
-        <span className="text-xs text-red-500 mt-1.5 ">{error}</span>
-      )}
+      {error && <span className="text-xs text-red-500 mt-1.5 ">{error}</span>}
 
       {helperText && !error && (
-        <span className="text-xs text-label/70 mt-1.5 ">
-          {helperText}
-        </span>
+        <span className="text-xs text-label/70 mt-1.5 ">{helperText}</span>
       )}
     </div>
   );

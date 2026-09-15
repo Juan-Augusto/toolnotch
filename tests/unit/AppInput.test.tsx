@@ -132,4 +132,12 @@ describe('AppInput', () => {
     const label = screen.getByText('Desabilitado');
     expect(label).toHaveClass('opacity-50');
   });
+
+  it('renders with background variant styling', () => {
+    render(<AppInput placeholder="Com fundo" variant="background" />);
+
+    const input = screen.getByPlaceholderText('Com fundo');
+    expect(input).toHaveClass('bg-background');
+    expect(input).not.toHaveClass('bg-tertiary');
+  });
 });

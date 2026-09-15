@@ -199,19 +199,19 @@ export function AppToolsHub({
   };
 
   return (
-    <div className="w-full text-foreground pb-12">
-      <div className="w-full pt-4 pb-8">
-        <header className="mb-10 md:mb-12">
-          <h1 className="text-2xl sm:text-3xl md:text-3xl font-bold text-foreground uppercase mb-2.5">
+    <div className="w-full text-foreground pb-8 sm:pb-12">
+      <div className="w-full pt-1 sm:pt-4 pb-4 sm:pb-8">
+        <header className="mb-6 sm:mb-8 md:mb-12">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground uppercase mb-1.5 sm:mb-2.5">
             {labels.heading}
           </h1>
 
-          <p className="text-label/90 max-w-2xl leading-relaxed">
+          <p className="text-xs sm:text-sm text-label/90 max-w-2xl leading-relaxed">
             {labels.subtitle}
           </p>
         </header>
 
-        <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 mb-6 pb-6 border-b-dashed-5">
+        <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-6 pb-4 sm:pb-6 border-b-dashed-5">
           <AppTabsChips
             items={tabItems}
             value={selectedCategory}
@@ -255,8 +255,8 @@ export function AppToolsHub({
         </div>
 
         {/* Sub-toolbar: contagem à esquerda, seletor de layout discreto à direita */}
-        <div className="flex items-center justify-between gap-4 mb-8 select-none">
-          <span className="text-xs font-medium uppercase text-label">
+        <div className="flex flex-wrap items-center justify-between gap-2.5 sm:gap-4 mb-4 sm:mb-6 md:mb-8 select-none">
+          <span className="text-[11px] sm:text-xs font-medium uppercase text-label">
             {filteredTools.length} {labels.toolsCount}
             {selectedCategory !== "all" && (
               <>
@@ -279,7 +279,7 @@ export function AppToolsHub({
               onClick={() => setViewMode("cards")}
               aria-pressed={viewMode === "cards"}
               title={labels.viewCards}
-              className={`flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium uppercase rounded-[2px] transition-all cursor-pointer ${
+              className={`flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-1 text-[11px] sm:text-xs font-medium uppercase rounded-[2px] transition-all cursor-pointer ${
                 viewMode === "cards"
                   ? "bg-primary dark:bg-secondary text-background"
                   : "text-label hover:text-foreground hover:bg-background/40"
@@ -295,7 +295,7 @@ export function AppToolsHub({
               onClick={() => setViewMode("list")}
               aria-pressed={viewMode === "list"}
               title={labels.viewList}
-              className={`flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium uppercase rounded-[2px] transition-all cursor-pointer ${
+              className={`flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-1 text-[11px] sm:text-xs font-medium uppercase rounded-[2px] transition-all cursor-pointer ${
                 viewMode === "list"
                   ? "bg-primary dark:bg-secondary text-background"
                   : "text-label hover:text-foreground hover:bg-background/40"
@@ -319,24 +319,24 @@ export function AppToolsHub({
             )}
 
             {groupedCategorySections ? (
-              <div className="space-y-16">
+              <div className="space-y-8 sm:space-y-12 md:space-y-16">
                 {groupedCategorySections.map((group) => (
                   <section key={group.key} aria-label={group.name}>
-                    <div className="flex items-center justify-between gap-3 mb-6 pb-2.5 border-b-dashed-5 select-none">
-                      <div className="flex items-center gap-2.5">
+                    <div className="flex items-center justify-between gap-3 mb-3.5 sm:mb-6 pb-2 sm:pb-2.5 border-b-dashed-5 select-none">
+                      <div className="flex items-center gap-2 sm:gap-2.5">
                         <span
-                          className={`w-3 h-3 ${group.badgeBg} rounded-[1px]`}
+                          className={`w-2.5 h-2.5 sm:w-3 sm:h-3 ${group.badgeBg} rounded-[1px] shrink-0`}
                         />
-                        <h2 className="text-sm sm:text-base font-bold uppercase text-foreground">
+                        <h2 className="text-xs sm:text-sm md:text-base font-bold uppercase text-foreground">
                           {group.name}
                         </h2>
                       </div>
-                      <span className="text-xs text-label">
+                      <span className="text-[11px] sm:text-xs text-label shrink-0">
                         {group.tools.length} {labels.toolsCount}
                       </span>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                       {group.tools.map((tool) => (
                         <AppToolCardItem
                           key={tool.path}
@@ -352,7 +352,7 @@ export function AppToolsHub({
             ) : (
               <div>
                 {filteredTools.length > 0 ? (
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                     {filteredTools.map((tool) => (
                       <AppToolCardItem
                         key={tool.path}
@@ -363,8 +363,8 @@ export function AppToolsHub({
                     ))}
                   </div>
                 ) : (
-                  <div className="text-center py-20 border-dashed-5 border-border/50 rounded-[2px] bg-tertiary/20">
-                    <p className="text-sm text-label mb-4">
+                  <div className="text-center py-12 sm:py-20 border-dashed-5 border-border/50 rounded-[2px] bg-tertiary/20">
+                    <p className="text-xs sm:text-sm text-label mb-3.5 sm:mb-4">
                       {labels.noResults}
                     </p>
                     <AppButton
@@ -383,35 +383,35 @@ export function AppToolsHub({
           /* View Mode: Lista (3 colunas por categoria) */
           <div>
             {filteredTools.length === 0 ? (
-              <div className="text-center py-20 border-dashed-5 border-border/50 rounded-[2px] bg-tertiary/20">
-                <p className="text-sm text-label mb-4">{labels.noResults}</p>
+              <div className="text-center py-12 sm:py-20 border-dashed-5 border-border/50 rounded-[2px] bg-tertiary/20">
+                <p className="text-xs sm:text-sm text-label mb-3.5 sm:mb-4">{labels.noResults}</p>
                 <AppButton color="primary" small onClick={handleResetFilters}>
                   {labels.clearFilters}
                 </AppButton>
               </div>
             ) : selectedCategory !== "all" && !searchQuery ? (
               /* Categoria única selecionada: ferramentas distribuídas em 3 colunas de linhas compactas */
-              <div className="space-y-6">
-                <div className="flex items-center justify-between gap-3 mb-6 pb-2.5 border-b-dashed-5 select-none">
-                  <div className="flex items-center gap-2.5">
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-center justify-between gap-3 mb-3.5 sm:mb-6 pb-2 sm:pb-2.5 border-b-dashed-5 select-none">
+                  <div className="flex items-center gap-2 sm:gap-2.5">
                     <span
-                      className={`w-3 h-3 ${
+                      className={`w-2.5 h-2.5 sm:w-3 sm:h-3 ${
                         TOOL_CATEGORY_CONFIG[
                           selectedCategory as ToolCategoryKey
                         ]?.badgeBg || "bg-primary"
-                      } rounded-[1px]`}
+                      } rounded-[1px] shrink-0`}
                     />
-                    <h2 className="text-sm sm:text-base font-bold uppercase text-foreground">
+                    <h2 className="text-xs sm:text-sm md:text-base font-bold uppercase text-foreground">
                       {TOOL_CATEGORY_CONFIG[selectedCategory as ToolCategoryKey]
                         ?.name[locale] || selectedCategory}
                     </h2>
                   </div>
-                  <span className="text-xs text-label">
+                  <span className="text-[11px] sm:text-xs text-label shrink-0">
                     {filteredTools.length} {labels.toolsCount}
                   </span>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3">
                   {filteredTools.map((tool) => {
                     const toolHref =
                       locale === "en" ? tool.path : `/${locale}${tool.path}`;
@@ -419,13 +419,13 @@ export function AppToolsHub({
                       <Link
                         key={tool.path}
                         href={toolHref}
-                        className="group flex items-center justify-between p-3.5 rounded-[2px] border border-border bg-tertiary hover:border-foreground/20 hover:bg-tertiary/70 transition-all select-none"
+                        className="group flex items-center justify-between p-2.5 sm:p-3.5 rounded-[2px] border border-border bg-tertiary hover:border-foreground/20 hover:bg-tertiary/70 transition-all select-none"
                       >
                         <div className="min-w-0 pr-3">
                           <div className="text-xs sm:text-sm font-semibold uppercase text-foreground group-hover:text-secondary transition-colors truncate">
                             {tool.title}
                           </div>
-                          <div className="text-xs text-label/80 line-clamp-1 mt-0.5">
+                          <div className="text-[11px] sm:text-xs text-label/80 line-clamp-1 mt-0.5">
                             {tool.description}
                           </div>
                         </div>
@@ -437,7 +437,7 @@ export function AppToolsHub({
               </div>
             ) : (
               /* Todas as categorias ou busca: grid de 3 colunas (coluna 1 PDF, coluna 2 Imagem, coluna 3 Conversores...) */
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                 {matchingCategoriesList.map((group) => (
                   <AppToolCategoryListCard
                     key={group.key}

@@ -20,16 +20,16 @@ export function AppToolCategoryListCard({
   labels,
 }: AppToolCategoryListCardProps) {
   return (
-    <AppCard border className="h-full flex flex-col transition-all">
+    <AppCard border className="h-full flex flex-col p-3.5 sm:p-5 md:p-6 transition-all">
       {/* Category Header */}
-      <div className="flex items-center justify-between gap-2.5 pb-3 mb-2 border-b border-b-border/60 select-none">
-        <div className="flex items-center gap-2.5 min-w-0">
-          <span className={`w-3 h-3 ${badgeBg} rounded-[1px] shrink-0`} />
-          <h2 className="text-sm sm:text-base font-bold uppercase text-foreground truncate">
+      <div className="flex items-center justify-between gap-2.5 pb-2.5 sm:pb-3 mb-2 border-b border-b-border/60 select-none">
+        <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
+          <span className={`w-2.5 h-2.5 sm:w-3 sm:h-3 ${badgeBg} rounded-[1px] shrink-0`} />
+          <h2 className="text-xs sm:text-sm md:text-base font-bold uppercase text-foreground truncate">
             {categoryName}
           </h2>
         </div>
-        <span className="text-xs text-label shrink-0">
+        <span className="text-[11px] sm:text-xs text-label shrink-0">
           {tools.length} {labels.toolsCount}
         </span>
       </div>

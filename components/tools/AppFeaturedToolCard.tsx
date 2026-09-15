@@ -28,12 +28,12 @@ export function AppFeaturedToolCard({
   const toolHref = locale === "en" ? tool.path : `/${locale}${tool.path}`;
 
   return (
-    <section className="mb-14" aria-label={labels.featured}>
+    <section className="mb-8 sm:mb-12 md:mb-14" aria-label={labels.featured}>
       <Link href={toolHref} className="block group select-none">
-        <AppCard border hover className="p-7 sm:p-9 transition-all">
-          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-            <div className="space-y-3.5 max-w-3xl">
-              <div className="flex flex-wrap items-center gap-2.5">
+        <AppCard border hover className="p-3.5 sm:p-6 md:p-8 transition-all">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 sm:gap-6">
+            <div className="space-y-2 sm:space-y-3.5 max-w-3xl">
+              <div className="flex flex-wrap items-center gap-1.5 sm:gap-2.5">
                 <AppBadge
                   bg="bg-primary"
                   text="text-background"
@@ -57,11 +57,11 @@ export function AppFeaturedToolCard({
                 )}
               </div>
 
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground uppercase group-hover:text-secondary transition-colors leading-snug">
+              <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-foreground uppercase group-hover:text-secondary transition-colors leading-snug">
                 {tool.title}
               </h2>
 
-              <p className="text-label leading-relaxed max-w-2xl">
+              <p className="text-xs sm:text-sm text-label leading-relaxed max-w-2xl">
                 {tool.description}
               </p>
             </div>

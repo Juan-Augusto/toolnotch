@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { buildAlternates } from "@/lib/i18nMeta";
-import { buildJsonLd, webAppSchema, faqSchema } from "@/lib/schema";
+import { buildAlternatesForLocale, localizedPath } from "@/lib/i18nMeta";
+import {
+  buildJsonLd,
+  webAppSchema,
+  faqSchema,
+  howToSchema,
+  breadcrumbSchema,
+  buildLocalizedUrl,
+} from "@/lib/schema";
 import type { FaqItem } from "@/components/AppFaqSection";
 import CompressTool from "./CompressTool";
+
+const PATH = "/tools/pdf/compress-pdf";
 
 interface RichContent {
   whatIs: string;
@@ -19,10 +28,72 @@ interface Props {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "pdf.compress" });
+  const localizedUrl = buildLocalizedUrl(PATH, locale);
+  const ogLocale =
+    locale === "pt" ? "pt_BR" : locale === "es" ? "es_ES" : "en_US";
+
+  const keywords =
+    locale === "pt"
+      ? [
+          "comprimir pdf",
+          "reduzir tamanho pdf",
+          "otimizar pdf online",
+          "comprimir pdf gratis",
+          "diminuir pdf",
+          "compressor de pdf online",
+          "reduzir pdf sem perder qualidade",
+          "ferramentas pdf",
+        ]
+      : locale === "es"
+        ? [
+            "comprimir pdf",
+            "reducir tamano pdf",
+            "optimizar pdf online gratis",
+            "comprimir pdf gratis",
+            "disminuir pdf",
+            "compresor pdf",
+            "herramientas pdf",
+          ]
+        : [
+            "compress pdf",
+            "reduce pdf size",
+            "optimize pdf online",
+            "free pdf compressor",
+            "shrink pdf file",
+            "lossless pdf compression",
+            "online pdf tools",
+          ];
+
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
-    alternates: buildAlternates("/tools/pdf/compress-pdf"),
+    keywords,
+    alternates: buildAlternatesForLocale(PATH, locale),
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    openGraph: {
+      title: `${t("title")} | ToolNotch`,
+      description: t("metaDescription"),
+      url: localizedUrl,
+      siteName: "ToolNotch",
+      locale: ogLocale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${t("title")} | ToolNotch`,
+      description: t("metaDescription"),
+    },
+    category: "technology",
   };
 }
 
@@ -32,9 +103,40 @@ export default async function CompressPDFPage({ params }: Props) {
   const faqs = t.raw("faqs") as FaqItem[];
   const richContent = t.raw("richContent") as RichContent;
 
+  const homeLabel =
+    locale === "pt" ? "Início" : locale === "es" ? "Inicio" : "Home";
+  const toolsLabel =
+    locale === "pt" ? "Ferramentas" : locale === "es" ? "Herramientas" : "Tools";
+  const pdfToolsLabel =
+    locale === "pt"
+      ? "Ferramentas PDF"
+      : locale === "es"
+        ? "Herramientas PDF"
+        : "PDF Tools";
+  const localizedUrl = buildLocalizedUrl(PATH, locale);
+
+  const howToSteps = Array.isArray(richContent?.howToUse)
+    ? richContent.howToUse.filter((s) => typeof s === "string" && s.trim().length > 0)
+    : [];
+
+  const howToJsonLd =
+    howToSteps.length >= 2 ? howToSchema(t("title"), howToSteps) : null;
+
   const jsonLd = buildJsonLd(
-    webAppSchema(t("title"), "/tools/pdf/compress-pdf", t("metaDescription"), locale),
+    breadcrumbSchema([
+      { name: homeLabel, url: localizedPath("/", locale) },
+      { name: toolsLabel, url: localizedPath("/tools", locale) },
+      { name: pdfToolsLabel, url: localizedPath("/tools/pdf", locale) },
+      { name: t("title"), url: localizedUrl },
+    ]),
+    webAppSchema(
+      t("title"),
+      PATH,
+      t("metaDescription"),
+      locale,
+    ),
     faqSchema(faqs),
+    ...(howToJsonLd ? [howToJsonLd] : []),
   );
 
   return (
@@ -48,6 +150,7 @@ export default async function CompressPDFPage({ params }: Props) {
         description={t("description")}
         faqs={faqs}
         richContent={richContent}
+        locale={locale}
       />
     </>
   );

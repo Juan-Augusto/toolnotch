@@ -116,11 +116,38 @@
       },
       "button": {
         "merge": "Mesclar PDFs",
-        "merging": "Mesclando…"
+        "merging": "Mesclando…",
+        "download": "Baixar PDF Mesclado",
+        "reset": "Mesclar outros arquivos",
+        "clearAll": "Limpar todos",
+        "addMore": "Adicionar mais PDFs"
+      },
+      "reorderHint": "Arraste os arquivos para ordenar as páginas no PDF final.",
+      "filename": {
+        "label": "Nome do arquivo mesclado",
+        "placeholder": "documento_mesclado.pdf",
+        "hint": "opcional"
+      },
+      "result": {
+        "title": "PDFs Mesclados com Sucesso!",
+        "description": "Seus arquivos foram combinados em um único documento pronto para download.",
+        "filesMerged": "Arquivos combinados",
+        "totalPages": "Total de páginas",
+        "finalSize": "Tamanho final"
+      },
+      "badges": {
+        "noUpload": "Sem upload para servidores",
+        "quality": "Qualidade original preservada",
+        "free": "Ilimitado & Gratuito"
+      },
+      "processing": {
+        "status": "Combinando páginas do PDF...",
+        "local": "Processando no navegador"
       },
       "errors": {
         "tooFewFiles": "Adicione pelo menos 2 arquivos PDF para mesclar.",
-        "mergeFailed": "Falha ao mesclar."
+        "mergeFailed": "Falha ao mesclar.",
+        "invalidFilename": "Formato de arquivo ou nome inválido. Somente .pdf é suportado."
       },
       "success": "PDF mesclado baixado!",
       "faqs": [
@@ -156,7 +183,7 @@
     "split": {
       "metaTitle": "Dividir PDF Online Grátis — Extrair Páginas | ToolNotch",
       "metaDescription": "Divida um PDF em vários arquivos por intervalo de páginas. Grátis, sem upload, funciona inteiramente no seu navegador.",
-      "title": "Dividir PDF Online Grátis",
+      "title": "Dividir PDF Online",
       "description": "Extraia páginas ou divida um PDF em vários arquivos. Sem upload necessário.",
       "dropZone": {
         "label": "Clique ou arraste um PDF aqui",
@@ -186,7 +213,8 @@
       },
       "button": {
         "split": "Dividir PDF",
-        "splitting": "Dividindo…"
+        "splitting": "Dividindo…",
+        "reset": "Dividir outro PDF"
       },
       "errors": {
         "noFile": "Selecione um arquivo PDF.",
@@ -195,7 +223,9 @@
         "startGreaterThanEnd": "A página inicial não pode ser maior que a página final (ex.: 1-3).",
         "zeroPage": "Os números de página devem ser maiores que 0.",
         "pageOutOfBounds": "O intervalo de páginas excede o total do documento ({total} páginas).",
-        "invalidFile": "Não foi possível carregar o PDF. Ele pode estar corrompido ou protegido por senha."
+        "invalidFile": "Não foi possível carregar o PDF. Ele pode estar corrompido ou protegido por senha.",
+        "invalidFileType": "Formato de arquivo inválido. Selecione um arquivo PDF.",
+        "pdfCorrupted": "Não foi possível carregar o PDF. Ele pode estar corrompido ou protegido por senha."
       },
       "pageCountSingular": "página",
       "pageCountPlural": "páginas",
@@ -234,7 +264,7 @@
     "compress": {
       "metaTitle": "Comprimir PDF Online Grátis — Reduzir Tamanho | ToolNotch",
       "metaDescription": "Reduza o tamanho do arquivo PDF sem perda de qualidade. Funciona inteiramente no seu navegador — sem upload necessário.",
-      "title": "Comprimir PDF Online Grátis",
+      "title": "Comprimir PDF Online",
       "description": "Reduza o tamanho do arquivo PDF sem perda de qualidade. Funciona no seu navegador.",
       "dropZone": {
         "label": "Clique ou arraste um PDF aqui",
@@ -283,13 +313,13 @@
           "Clique em Baixar PDF Comprimido para salvar o arquivo menor no seu dispositivo."
         ],
         "whyItMatters": "Anexos de e-mail são comumente limitados a 10–25 MB por servidores de correio, e muitos campos de upload de formulários impõem um limite de 5 MB ou 10 MB. Um documento digitalizado na qualidade original pode exceder facilmente esses limites. Comprimir antes de enviar evita envios rejeitados e evita a necessidade de pedir aos destinatários para usarem serviços de compartilhamento de arquivos. Para PDFs hospedados em sites, arquivos menores também carregam mais rápido.",
-        "proTip": "Todo o processamento acontece inteiramente no seu navegador — nenhum arquivo é enviado para qualquer servidor. Seus documentos nunca saem do seu dispositivo. Se o seu PDF contiver páginas apenas com texto ao lado de imagens digitalizadas, tente comprimir uma vez e avalie se a qualidade é aceitável."
+        "proTip": "Todo o processamento acontece inteiramente no seu navegador - nenhum arquivo é enviado para qualquer servidor. Seus documentos nunca saem do seu dispositivo. Se o seu PDF contiver páginas apenas com texto ao lado de imagens digitalizadas, tente comprimir uma vez e avalie se a qualidade é aceitável."
       }
     },
     "pdfToJpg": {
-      "metaTitle": "PDF para JPG — Converter Páginas PDF em Imagens Grátis | ToolNotch",
+      "metaTitle": "PDF para JPG - Converter Páginas PDF em Imagens Grátis | ToolNotch",
       "metaDescription": "Converta cada página PDF em uma imagem JPEG de alta qualidade. Grátis, sem upload, funciona inteiramente no seu navegador.",
-      "title": "PDF para JPG — Converter Páginas PDF em Imagens",
+      "title": "PDF para JPG - Converter Páginas PDF em Imagens",
       "description": "Converta cada página PDF em uma imagem JPEG de alta qualidade. Sem upload necessário.",
       "dropZone": {
         "label": "Clique ou arraste um PDF aqui",
@@ -299,7 +329,11 @@
         "convert": "Converter para JPG",
         "converting": "Convertendo…",
         "downloadAll": "Baixar {count} Imagens",
-        "downloadOne": "Baixar Imagem"
+        "downloadOne": "Baixar Imagem",
+        "reset": "Converter outro PDF",
+        "clearFile": "Limpar arquivo",
+        "downloadZip": "Baixar ZIP ({count} imagens)",
+        "downloadPage": "Baixar JPG"
       },
       "progress": {
         "loading": "Carregando PDF…",
@@ -337,21 +371,42 @@
         ],
         "whyItMatters": "Arquivos PDF não podem ser incorporados diretamente em postagens de mídia social, tags de imagem HTML ou slides de apresentação. Converter para JPG torna o conteúdo do documento universalmente compartilhável em todas as plataformas e aplicativos que aceitam imagens. Para documentos de uma única página, como certificados, diplomas e credenciais, um JPEG é mais portátil.",
         "proTip": "Todo processamento ocorre no navegador — nenhum arquivo é enviado a servidores. Use 150 DPI para exibição na web e e-mail — boa qualidade com tamanho razoável. Use 300 DPI apenas se a saída for impressa. Para slides de apresentação, 96 DPI corresponde à maioria das resoluções de tela e produz o menor arquivo sem perda de qualidade visível."
-      }
+      },
+      "badges": {
+        "noUpload": "Sem upload para servidores",
+        "quality": "Imagens em alta resolução (2x)",
+        "free": "Ilimitado & Gratuito"
+      },
+      "processing": {
+        "status": "Renderizando páginas do PDF...",
+        "local": "Processando no navegador"
+      },
+      "result": {
+        "title": "PDF Convertido com Sucesso!",
+        "description": "Todas as páginas foram convertidas em imagens JPEG de alta qualidade prontas para download.",
+        "pagesConverted": "Páginas convertidas",
+        "format": "Formato de saída",
+        "package": "Pacote para download",
+        "singleJpg": "Imagem JPG única",
+        "zipArchive": "Arquivo ZIP completo",
+        "pageBadge": "Página {number}"
+      },
+      "pageCountSingular": "página",
+      "pageCountPlural": "páginas"
     },
     "jpgToPdf": {
-      "metaTitle": "JPG para PDF — Converter Imagens em PDF Grátis | ToolNotch",
-      "metaDescription": "Transforme imagens JPEG ou PNG em um PDF. Arraste para reordenar páginas. Grátis, sem upload, funciona inteiramente no seu navegador.",
-      "title": "JPG para PDF — Converter Imagens em PDF",
-      "description": "Transforme imagens JPEG ou PNG em um PDF. Arraste para reordenar. Sem upload necessário.",
+      "metaTitle": "JPG para PDF Online Grátis — Converter Imagens e PNG em PDF | ToolNotch",
+      "metaDescription": "Transforme imagens JPG, PNG ou JPEG em um documento PDF de alta qualidade. Arraste para reordenar páginas. Grátis, seguro e 100% no seu navegador.",
+      "title": "Converter Imagens para PDF",
+      "description": "Transforme imagens JPG, PNG ou JPEG em um documento PDF único. Arraste para reordenar páginas. Sem upload necessário.",
       "dropZone": {
         "label": "Clique ou arraste imagens aqui",
-        "hint": "JPEG ou PNG — vários arquivos suportados"
+        "hint": "JPG, PNG ou JPEG — vários arquivos suportados"
       },
       "filename": {
         "label": "Nome personalizado do PDF",
         "hint": "opcional",
-        "placeholder": "images"
+        "placeholder": "ex: meu-documento"
       },
       "button": {
         "convert": "Converter para PDF",
@@ -391,6 +446,342 @@
         ],
         "whyItMatters": "Muitos portais de submissão oficiais aceitam PDF, mas não JPEG. Combinar várias imagens em um PDF também satisfaz o requisito de envio de um único arquivo. O contêiner PDF também suporta metadados (título, autor), proteção por senha e assinaturas digitais que arquivos JPEG brutos não têm.",
         "proTip": "Todo processamento ocorre no navegador. Se suas imagens forem de altíssima resolução — fotos de câmeras de celular costumam ter 4000x3000 pixels e 6–12 MB cada — comprima ou redimensione antes de converter. Um PDF com três fotos não comprimidas de celular pode chegar a 30–40 MB. Procure imagens com menos de 2 MB cada para produzir um PDF de saída com tamanho razoável."
+      }
+    },
+    "organize": {
+      "metaTitle": "Organizar Páginas do PDF Online Grátis | ToolNotch",
+      "metaDescription": "Reordene, gire e exclua páginas de arquivos PDF facilmente no navegador. Arraste e solte para ordenar. 100% privado, sem envio para servidores.",
+      "title": "Organizar Páginas do PDF",
+      "description": "Reordene visualmente as páginas do seu documento, gire páginas invertidas e remova folhas indesejadas antes de salvar.",
+      "badges": {
+        "noUpload": "Sem upload para servidores",
+        "visual": "Reordenação visual",
+        "reorder": "Reordenação visual",
+        "free": "100% Gratuito"
+      },
+      "dropZone": {
+        "label": "Selecione ou arraste seu arquivo PDF aqui",
+        "hint": "Documentos PDF de qualquer tamanho"
+      },
+      "actions": {
+        "rotateAll": "Girar todas 90°",
+        "resetOrder": "Restaurar ordem",
+        "summary": "{selected} de {total} páginas selecionadas",
+        "gridSize": "Tamanho das miniaturas",
+        "gridSizeMd": "Médio",
+        "gridSizeLg": "Grande"
+      },
+      "card": {
+        "pageLabel": "Pág. {number}",
+        "originalLabel": "Orig. {number}",
+        "rotateHint": "Girar 90°",
+        "deleteHint": "Remover da ordem",
+        "previewHint": "Ampliar e visualizar página"
+      },
+      "previewModal": {
+        "title": "Visualizar Página",
+        "pageIndicator": "Página {current} de {total}",
+        "originalLabel": "Original: Pág. {number}",
+        "zoomIn": "Aumentar zoom",
+        "zoomOut": "Diminuir zoom",
+        "resetZoom": "Ajustar à tela",
+        "rotate": "Girar 90°",
+        "remove": "Remover página",
+        "prevPage": "Página anterior",
+        "nextPage": "Próxima página",
+        "close": "Fechar visualização",
+        "shortcuts": "Atalhos: ← / → navegar • R girar • Esc fechar"
+      },
+      "button": {
+        "save": "Salvar e Baixar PDF",
+        "saving": "Gerando PDF organizado...",
+        "reset": "Organizar outro PDF",
+        "clearFile": "Limpar arquivo"
+      },
+      "processing": {
+        "rendering": "Carregando miniaturas das páginas...",
+        "generating": "Montando documento organizado..."
+      },
+      "errors": {
+        "noPages": "Selecione pelo menos uma página para compor o PDF.",
+        "failed": "Falha ao organizar o PDF. Verifique se o arquivo não está corrompido."
+      },
+      "result": {
+        "title": "PDF Organizado com Sucesso!",
+        "description": "Suas páginas foram reordenadas e o documento está pronto para download.",
+        "download": "Baixar PDF Organizado",
+        "pagesIncluded": "Páginas incluídas",
+        "finalFile": "Arquivo final"
+      },
+      "faqs": [
+        {
+          "question": "Como funciona a reordenação de páginas?",
+          "answer": "Basta clicar e arrastar qualquer miniatura para a posição desejada. Você também pode girar páginas de lado ou de cabeça para baixo e excluir as folhas que não quiser incluir."
+        },
+        {
+          "question": "Meus arquivos são enviados para algum servidor?",
+          "answer": "Não. Todo o processamento visual e a criação do novo documento acontecem 100% no seu navegador através de bibliotecas JavaScript modernas. Seus documentos nunca saem do seu dispositivo."
+        },
+        {
+          "question": "Posso girar apenas uma página específica?",
+          "answer": "Sim! Cada card possui um botão de giro individual de 90° no sentido horário, permitindo corrigir orientações pontuais de páginas sem afetar o restante."
+        },
+        {
+          "question": "Existe limite de páginas para organizar?",
+          "answer": "Não há limite imposto pelo ToolNotch. O processamento depende apenas da memória do seu navegador e do dispositivo."
+        }
+      ],
+      "richContent": {
+        "whatIs": "A ferramenta de Organizar Páginas do PDF do ToolNotch permite reordenar, girar e excluir páginas de documentos PDF de forma totalmente visual e instantânea no seu próprio dispositivo.",
+        "howToUse": [
+          "Envie seu arquivo PDF na área de soltar acima.",
+          "Arraste as páginas para a ordem desejada na grade visual.",
+          "Use os botões de rotação ou lixeira nos cards de cada página se necessário.",
+          "Clique em Salvar e Baixar PDF para gerar seu novo documento."
+        ],
+        "whyItMatters": "Documentos digitalizados frequentemente terminam com páginas fora de ordem, folhas em branco ou páginas deitadas. Corrigir isso antes de enviar relatórios, contratos ou trabalhos acadêmicos garante profissionalismo e economiza tempo de quem lê.",
+        "proTip": "Use o botão 'Girar todas 90°' caso um documento escaneado inteiro tenha vindo em formato paisagem incorreto."
+      }
+    },
+    "deletePages": {
+      "metaTitle": "Remover Páginas de PDF Online Grátis | ToolNotch",
+      "metaDescription": "Exclua páginas específicas ou em branco de documentos PDF diretamente no seu navegador. Rápido, seguro e 100% gratuito.",
+      "title": "Remover Páginas do PDF",
+      "description": "Selecione as páginas que deseja remover clicando sobre elas ou digitando os intervalos. Baixe um novo PDF limpo.",
+      "badges": {
+        "noUpload": "Sem upload para servidores",
+        "visual": "Seleção visual e por texto",
+        "free": "100% Gratuito"
+      },
+      "dropZone": {
+        "label": "Selecione ou arraste seu arquivo PDF aqui",
+        "hint": "Documentos PDF de qualquer tamanho"
+      },
+      "input": {
+        "label": "Páginas a remover",
+        "placeholder": "Ex: 1, 3-5, 8",
+        "hint": "Digite os números das páginas ou intervalos separados por vírgula"
+      },
+      "actions": {
+        "selectAll": "Marcar todas",
+        "clearSelection": "Desmarcar todas",
+        "invertSelection": "Inverter seleção",
+        "summary": "{toDelete} marcadas para remoção, {remaining} restantes",
+        "gridSize": "Tamanho das miniaturas",
+        "gridSizeMd": "Médio",
+        "gridSizeLg": "Grande"
+      },
+      "card": {
+        "pageLabel": "Pág. {number}",
+        "marked": "Remover",
+        "keep": "Manter página",
+        "previewHint": "Ampliar e visualizar página",
+        "previewAction": "Visualizar",
+        "statusOk": "OK"
+      },
+      "previewModal": {
+        "title": "Visualizar Página",
+        "pageIndicator": "Página {current} de {total}",
+        "zoomIn": "Aumentar zoom",
+        "zoomOut": "Diminuir zoom",
+        "resetZoom": "Ajustar à tela",
+        "markForDeletion": "Marcar para remoção",
+        "keepPage": "Manter página",
+        "markedBadge": "Marcada para remoção",
+        "keepBadge": "Página mantida",
+        "prevPage": "Página anterior",
+        "nextPage": "Próxima página",
+        "close": "Fechar visualização",
+        "shortcuts": "Atalhos: ← / → navegar • Espaço alternar remoção • Esc fechar"
+      },
+      "button": {
+        "delete": "Remover Páginas e Baixar",
+        "deleting": "Removendo páginas...",
+        "reset": "Processar outro PDF",
+        "clearFile": "Limpar arquivo"
+      },
+      "processing": {
+        "rendering": "Carregando páginas...",
+        "generating": "Criando novo PDF..."
+      },
+      "errors": {
+        "cannotDeleteAll": "Não é possível remover todas as páginas do PDF. Deixe pelo menos uma página no documento.",
+        "failed": "Falha ao remover páginas do PDF. Verifique se o arquivo não está corrompido."
+      },
+      "result": {
+        "title": "Páginas Removidas com Sucesso!",
+        "description": "O novo PDF foi gerado sem as páginas selecionadas e está pronto para download.",
+        "download": "Baixar PDF Limpo",
+        "pagesRemoved": "Páginas removidas",
+        "pagesRemaining": "Páginas restantes",
+        "finalFile": "Arquivo final"
+      },
+      "faqs": [
+        {
+          "question": "Como seleciono as páginas que quero remover?",
+          "answer": "Você pode simplesmente clicar nos cards visuais de cada página para marcá-las, ou digitar os números e intervalos no campo de texto (ex: 2, 4-6)."
+        },
+        {
+          "question": "O arquivo original é alterado?",
+          "answer": "Não. O arquivo original no seu computador permanece intacto. A ferramenta gera um novo arquivo contendo apenas as páginas que você escolheu manter."
+        },
+        {
+          "question": "Existe risco para documentos confidenciais?",
+          "answer": "Nenhum. A ferramenta executa localmente no seu navegador web, sem upload para nenhum servidor. Seus dados nunca saem da sua máquina."
+        }
+      ],
+      "richContent": {
+        "whatIs": "O Removedor de Páginas de PDF do ToolNotch permite excluir páginas desnecessárias, em branco ou confidenciais de qualquer PDF de forma segura e imediata.",
+        "howToUse": [
+          "Carregue seu documento PDF.",
+          "Selecione as páginas que deseja excluir clicando nelas ou digitando o intervalo.",
+          "Verifique o total de páginas restantes no resumo.",
+          "Clique em Remover Páginas e Baixar para salvar o novo PDF."
+        ],
+        "whyItMatters": "Compartilhar páginas em branco ou folhas com dados sigilosos pode causar constrangimento e vazamento de informações. Remover páginas indesejadas antes de enviar um PDF reduz o tamanho do arquivo e protege sua privacidade.",
+        "proTip": "Use a sintaxe de intervalos como '3-7' no campo de texto para remover rapidamente capítulos ou blocos inteiros de uma só vez."
+      }
+    },
+    "pdfToText": {
+      "metaTitle": "PDF para Texto Online Grátis — Extrair Texto de PDF | ToolNotch",
+      "metaDescription": "Extraia todo o texto de arquivos PDF instantaneamente no navegador. Copie para a área de transferência ou baixe em .txt. 100% privado.",
+      "title": "PDF para Texto",
+      "description": "Converta documentos PDF em texto puro legível. Copie trechos com um clique ou baixe o arquivo de texto formatado por páginas.",
+      "badges": {
+        "noUpload": "Sem upload para servidores",
+        "accuracy": "Texto fiel à estrutura",
+        "free": "100% Gratuito"
+      },
+      "dropZone": {
+        "label": "Selecione ou arraste seu arquivo PDF aqui",
+        "hint": "Documentos com texto digital nativo"
+      },
+      "stats": {
+        "pages": "Total de Páginas",
+        "words": "Palavras",
+        "chars": "Caracteres"
+      },
+      "tabs": {
+        "full": "Texto Completo",
+        "byPage": "Por Página"
+      },
+      "pageHeader": "--- Página {number} ---",
+      "button": {
+        "extract": "Extrair Texto",
+        "extracting": "Extraindo texto...",
+        "copy": "Copiar Texto",
+        "copied": "Copiado!",
+        "downloadTxt": "Baixar arquivo .txt",
+        "reset": "Converter outro PDF",
+        "clearFile": "Limpar arquivo"
+      },
+      "processing": {
+        "status": "Lendo camadas de texto do PDF...",
+        "local": "Processando no navegador"
+      },
+      "errors": {
+        "noTextFound": "Nenhum texto selecionável foi encontrado neste PDF. O arquivo pode conter apenas páginas escaneadas como imagem pura (sem camada OCR).",
+        "failed": "Falha ao extrair texto do PDF."
+      },
+      "result": {
+        "title": "Texto Extraído com Sucesso!",
+        "description": "O conteúdo textual do seu PDF foi extraído e está pronto para ser copiado ou baixado.",
+        "previewTitle": "Prévia do Texto Extraído"
+      },
+      "faqs": [
+        {
+          "question": "Por que alguns PDFs não têm texto extraível?",
+          "answer": "PDFs criados a partir de fotos ou scanners antigos contêm apenas imagens de páginas, sem camada de texto digital embutida. Documentos gerados no Word, Docs ou impressos em PDF funcionam perfeitamente."
+        },
+        {
+          "question": "A formatação de parágrafos é mantida?",
+          "answer": "Sim! A ferramenta detecta mudanças nas coordenadas verticais das linhas para criar quebras de parágrafo naturais e legíveis."
+        },
+        {
+          "question": "Meus dados confidenciais estão protegidos?",
+          "answer": "Totalmente. O processamento acontece direto na memória do seu navegador através do motor PDF.js, sem qualquer envio de dados para servidores externos."
+        }
+      ],
+      "richContent": {
+        "whatIs": "O conversor de PDF para Texto do ToolNotch extrai instantaneamente todo o conteúdo textual de arquivos PDF digitais, permitindo edição rápida em qualquer editor de texto.",
+        "howToUse": [
+          "Faça o upload do seu documento PDF.",
+          "Aguarde a extração do texto em tempo real.",
+          "Visualize o texto completo ou dividido página por página com estatísticas de palavras.",
+          "Clique em Copiar Texto ou Baixar arquivo .txt."
+        ],
+        "whyItMatters": "Copiar manualmente texto de um PDF muitas vezes resulta em quebras de linha quebradas e palavras coladas. Nossa ferramenta organiza o texto em parágrafos limpos e fornece métricas instantâneas de palavras e caracteres.",
+        "proTip": "Use o modo 'Por Página' se você precisa citar ou transferir apenas uma seção ou página específica do documento."
+      }
+    },
+    "extractImages": {
+      "metaTitle": "Extrair Imagens de PDF Online Grátis | ToolNotch",
+      "metaDescription": "Extraia todas as fotos e ilustrações embutidas em arquivos PDF na resolução original. Baixe individualmente ou em um arquivo ZIP.",
+      "title": "Extrair Imagens do PDF",
+      "description": "Isole todas as imagens, fotos e figuras contidas dentro do seu PDF. Baixe cada imagem individualmente ou todas juntas em formato ZIP.",
+      "badges": {
+        "noUpload": "Sem upload para servidores",
+        "quality": "Resolução original preservada",
+        "free": "100% Gratuito"
+      },
+      "dropZone": {
+        "label": "Selecione ou arraste seu arquivo PDF aqui",
+        "hint": "PDFs contendo ilustrações, gráficos ou fotos"
+      },
+      "stats": {
+        "found": "{count} imagens encontradas"
+      },
+      "empty": {
+        "title": "Nenhuma imagem embutida encontrada",
+        "description": "Este documento parece conter apenas texto vetorial ou linhas sem imagens bitmap embutidas."
+      },
+      "button": {
+        "extract": "Extrair Imagens",
+        "extracting": "Extraindo imagens...",
+        "downloadZip": "Baixar Todas em ZIP ({count})",
+        "downloadImage": "Baixar Imagem",
+        "reset": "Processar outro PDF",
+        "clearFile": "Limpar arquivo"
+      },
+      "processing": {
+        "status": "Buscando imagens nos objetos do PDF...",
+        "local": "Processando no navegador"
+      },
+      "errors": {
+        "failed": "Falha ao extrair imagens do PDF. Verifique se o arquivo não está corrompido."
+      },
+      "result": {
+        "title": "Imagens Extraídas com Sucesso!",
+        "description": "Todas as figuras e ilustrações encontradas foram isoladas na resolução nativa.",
+        "imagesFound": "Imagens encontradas",
+        "package": "Pacote para download",
+        "zipArchive": "Arquivo ZIP completo",
+        "dimension": "{width}x{height} px"
+      },
+      "faqs": [
+        {
+          "question": "Qual a diferença entre 'PDF para JPG' e 'Extrair Imagens'?",
+          "answer": "O 'PDF para JPG' renderiza a página inteira como uma foto (incluindo margens e textos). Já o 'Extrair Imagens' retira apenas os arquivos de fotos, logotipos e ilustrações que foram colocados dentro do documento, na qualidade e dimensões originais."
+        },
+        {
+          "question": "Qual o formato das imagens baixadas?",
+          "answer": "As imagens são preservadas em PNG ou JPEG, mantendo transparência (canal alpha) e nitidez máxima."
+        },
+        {
+          "question": "As fotos perdem qualidade na extração?",
+          "answer": "Não. A ferramenta extrai o fluxo de imagem bruto embutido no PDF sem recompactação com perdas."
+        }
+      ],
+      "richContent": {
+        "whatIs": "A ferramenta de Extrair Imagens do PDF do ToolNotch analisa o documento e isola todos os objetos de imagem embutidos, permitindo salvá-los individualmente ou em um arquivo ZIP consolidado.",
+        "howToUse": [
+          "Selecione o arquivo PDF que contém as imagens.",
+          "Aguarde o leitor escanear as páginas e detectar as ilustrações.",
+          "Visualize a galeria com as dimensões de cada imagem encontrada.",
+          "Baixe qualquer imagem com um clique ou todas de uma vez em arquivo ZIP."
+        ],
+        "whyItMatters": "Tirar prints de tela para obter imagens de um PDF resulta em imagens de baixa resolução e com partes cortadas. A extração nativa garante a resolução original do arquivo original.",
+        "proTip": "Se você precisa apenas de um logotipo ou gráfico de um relatório, o botão de download individual em cada card poupa o tempo de descompactar arquivos."
       }
     }
   },
@@ -2852,6 +3243,22 @@
       },
       "worldCupResult": {
         "label": "Resultados do Quiz da Copa do Mundo"
+      },
+      "organizePdf": {
+        "label": "Organizar PDF",
+        "desc": "Reordene, gire e exclua páginas de arquivos PDF."
+      },
+      "deletePdfPages": {
+        "label": "Remover Páginas PDF",
+        "desc": "Remova páginas específicas ou intervalos de páginas de um PDF."
+      },
+      "pdfToText": {
+        "label": "PDF para Texto",
+        "desc": "Extraia todo o texto de arquivos PDF para copiar ou baixar em .txt."
+      },
+      "extractPdfImages": {
+        "label": "Extrair Imagens do PDF",
+        "desc": "Extraia todas as fotos e ilustrações embutidas em PDFs e baixe em ZIP."
       }
     },
     "badge": "Toolnotch | Mais de 40 ferramentas essenciais",
@@ -5614,35 +6021,11 @@
       "table": {
         "heading": "Todos os Campeões da Copa do Mundo da FIFA (1930–2022)",
         "note": "pro. = prorrogação; pên. = decidida nos pênaltis.",
-        "cols": [
-          "Ano",
-          "Sede",
-          "Campeão",
-          "Vice",
-          "Placar da final"
-        ],
+        "cols": ["Ano", "Sede", "Campeão", "Vice", "Placar da final"],
         "rows": [
-          [
-            "1930",
-            "Uruguai",
-            "Uruguai",
-            "Argentina",
-            "4–2"
-          ],
-          [
-            "1934",
-            "Itália",
-            "Itália",
-            "Tchecoslováquia",
-            "2–1 (pro.)"
-          ],
-          [
-            "1938",
-            "França",
-            "Itália",
-            "Hungria",
-            "4–2"
-          ],
+          ["1930", "Uruguai", "Uruguai", "Argentina", "4–2"],
+          ["1934", "Itália", "Itália", "Tchecoslováquia", "2–1 (pro.)"],
+          ["1938", "França", "Itália", "Hungria", "4–2"],
           [
             "1942",
             "Não realizada",
@@ -5657,34 +6040,10 @@
             "-",
             "Segunda Guerra Mundial"
           ],
-          [
-            "1950",
-            "Brasil",
-            "Uruguai",
-            "Brasil",
-            "2–1 (jogo decisivo)"
-          ],
-          [
-            "1954",
-            "Suíça",
-            "Alemanha Ocidental",
-            "Hungria",
-            "3–2"
-          ],
-          [
-            "1958",
-            "Suécia",
-            "Brasil",
-            "Suécia",
-            "5–2"
-          ],
-          [
-            "1962",
-            "Chile",
-            "Brasil",
-            "Tchecoslováquia",
-            "3–1"
-          ],
+          ["1950", "Brasil", "Uruguai", "Brasil", "2–1 (jogo decisivo)"],
+          ["1954", "Suíça", "Alemanha Ocidental", "Hungria", "3–2"],
+          ["1958", "Suécia", "Brasil", "Suécia", "5–2"],
+          ["1962", "Chile", "Brasil", "Tchecoslováquia", "3–1"],
           [
             "1966",
             "Inglaterra",
@@ -5692,13 +6051,7 @@
             "Alemanha Ocidental",
             "4–2 (pro.)"
           ],
-          [
-            "1970",
-            "México",
-            "Brasil",
-            "Itália",
-            "4–1"
-          ],
+          ["1970", "México", "Brasil", "Itália", "4–1"],
           [
             "1974",
             "Alemanha Ocidental",
@@ -5706,90 +6059,18 @@
             "Países Baixos",
             "2–1"
           ],
-          [
-            "1978",
-            "Argentina",
-            "Argentina",
-            "Países Baixos",
-            "3–1 (pro.)"
-          ],
-          [
-            "1982",
-            "Espanha",
-            "Itália",
-            "Alemanha Ocidental",
-            "3–1"
-          ],
-          [
-            "1986",
-            "México",
-            "Argentina",
-            "Alemanha Ocidental",
-            "3–2"
-          ],
-          [
-            "1990",
-            "Itália",
-            "Alemanha Ocidental",
-            "Argentina",
-            "1–0"
-          ],
-          [
-            "1994",
-            "Estados Unidos",
-            "Brasil",
-            "Itália",
-            "0–0 (3–2 pên.)"
-          ],
-          [
-            "1998",
-            "França",
-            "França",
-            "Brasil",
-            "3–0"
-          ],
-          [
-            "2002",
-            "Coreia do Sul e Japão",
-            "Brasil",
-            "Alemanha",
-            "2–0"
-          ],
-          [
-            "2006",
-            "Alemanha",
-            "Itália",
-            "França",
-            "1–1 (5–3 pên.)"
-          ],
-          [
-            "2010",
-            "África do Sul",
-            "Espanha",
-            "Países Baixos",
-            "1–0 (pro.)"
-          ],
-          [
-            "2014",
-            "Brasil",
-            "Alemanha",
-            "Argentina",
-            "1–0 (pro.)"
-          ],
-          [
-            "2018",
-            "Rússia",
-            "França",
-            "Croácia",
-            "4–2"
-          ],
-          [
-            "2022",
-            "Catar",
-            "Argentina",
-            "França",
-            "3–3 (4–2 pên.)"
-          ]
+          ["1978", "Argentina", "Argentina", "Países Baixos", "3–1 (pro.)"],
+          ["1982", "Espanha", "Itália", "Alemanha Ocidental", "3–1"],
+          ["1986", "México", "Argentina", "Alemanha Ocidental", "3–2"],
+          ["1990", "Itália", "Alemanha Ocidental", "Argentina", "1–0"],
+          ["1994", "Estados Unidos", "Brasil", "Itália", "0–0 (3–2 pên.)"],
+          ["1998", "França", "França", "Brasil", "3–0"],
+          ["2002", "Coreia do Sul e Japão", "Brasil", "Alemanha", "2–0"],
+          ["2006", "Alemanha", "Itália", "França", "1–1 (5–3 pên.)"],
+          ["2010", "África do Sul", "Espanha", "Países Baixos", "1–0 (pro.)"],
+          ["2014", "Brasil", "Alemanha", "Argentina", "1–0 (pro.)"],
+          ["2018", "Rússia", "França", "Croácia", "4–2"],
+          ["2022", "Catar", "Argentina", "França", "3–3 (4–2 pên.)"]
         ]
       },
       "faqHeading": "Campeões da Copa do Mundo: perguntas frequentes",
@@ -5878,49 +6159,14 @@
       "table": {
         "heading": "Mais títulos de Copa dos Campeões da Europa e Liga dos Campeões",
         "note": "Títulos da Copa dos Campeões da Europa / Liga dos Campeões da UEFA, competição masculina. Números até a final de 2024.",
-        "cols": [
-          "Clube",
-          "País",
-          "Títulos",
-          "Mais recente"
-        ],
+        "cols": ["Clube", "País", "Títulos", "Mais recente"],
         "rows": [
-          [
-            "Real Madrid",
-            "Espanha",
-            "15",
-            "2024"
-          ],
-          [
-            "Milan",
-            "Itália",
-            "7",
-            "2007"
-          ],
-          [
-            "Bayern de Munique",
-            "Alemanha",
-            "6",
-            "2020"
-          ],
-          [
-            "Liverpool",
-            "Inglaterra",
-            "6",
-            "2019"
-          ],
-          [
-            "Barcelona",
-            "Espanha",
-            "5",
-            "2015"
-          ],
-          [
-            "Ajax",
-            "Países Baixos",
-            "4",
-            "1995"
-          ]
+          ["Real Madrid", "Espanha", "15", "2024"],
+          ["Milan", "Itália", "7", "2007"],
+          ["Bayern de Munique", "Alemanha", "6", "2020"],
+          ["Liverpool", "Inglaterra", "6", "2019"],
+          ["Barcelona", "Espanha", "5", "2015"],
+          ["Ajax", "Países Baixos", "4", "1995"]
         ]
       },
       "faqHeading": "Qual time de futebol você é? Perguntas frequentes",
@@ -5983,49 +6229,14 @@
       "table": {
         "heading": "Clubes com mais títulos de Copa dos Campeões da Europa / Liga dos Campeões",
         "note": "Competição masculina, títulos até a final de 2024.",
-        "cols": [
-          "Clube",
-          "País",
-          "Títulos",
-          "Anos"
-        ],
+        "cols": ["Clube", "País", "Títulos", "Anos"],
         "rows": [
-          [
-            "Real Madrid",
-            "Espanha",
-            "15",
-            "1956–2024"
-          ],
-          [
-            "Milan",
-            "Itália",
-            "7",
-            "1963–2007"
-          ],
-          [
-            "Bayern de Munique",
-            "Alemanha",
-            "6",
-            "1974–2020"
-          ],
-          [
-            "Liverpool",
-            "Inglaterra",
-            "6",
-            "1977–2019"
-          ],
-          [
-            "Barcelona",
-            "Espanha",
-            "5",
-            "1992–2015"
-          ],
-          [
-            "Ajax",
-            "Países Baixos",
-            "4",
-            "1971–1995"
-          ]
+          ["Real Madrid", "Espanha", "15", "1956–2024"],
+          ["Milan", "Itália", "7", "1963–2007"],
+          ["Bayern de Munique", "Alemanha", "6", "1974–2020"],
+          ["Liverpool", "Inglaterra", "6", "1977–2019"],
+          ["Barcelona", "Espanha", "5", "1992–2015"],
+          ["Ajax", "Países Baixos", "4", "1971–1995"]
         ]
       },
       "faqHeading": "Quiz da Liga dos Campeões: perguntas frequentes",
@@ -6088,49 +6299,14 @@
       "table": {
         "heading": "Pilotos de Fórmula 1 com mais títulos mundiais",
         "note": "Títulos de pilotos conquistados, até o fim da temporada de 2024.",
-        "cols": [
-          "Piloto",
-          "País",
-          "Títulos",
-          "Temporadas"
-        ],
+        "cols": ["Piloto", "País", "Títulos", "Temporadas"],
         "rows": [
-          [
-            "Lewis Hamilton",
-            "Reino Unido",
-            "7",
-            "2008–2020"
-          ],
-          [
-            "Michael Schumacher",
-            "Alemanha",
-            "7",
-            "1994–2004"
-          ],
-          [
-            "Juan Manuel Fangio",
-            "Argentina",
-            "5",
-            "1951–1957"
-          ],
-          [
-            "Alain Prost",
-            "França",
-            "4",
-            "1985–1993"
-          ],
-          [
-            "Sebastian Vettel",
-            "Alemanha",
-            "4",
-            "2010–2013"
-          ],
-          [
-            "Max Verstappen",
-            "Países Baixos",
-            "4",
-            "2021–2024"
-          ]
+          ["Lewis Hamilton", "Reino Unido", "7", "2008–2020"],
+          ["Michael Schumacher", "Alemanha", "7", "1994–2004"],
+          ["Juan Manuel Fangio", "Argentina", "5", "1951–1957"],
+          ["Alain Prost", "França", "4", "1985–1993"],
+          ["Sebastian Vettel", "Alemanha", "4", "2010–2013"],
+          ["Max Verstappen", "Países Baixos", "4", "2021–2024"]
         ]
       },
       "faqHeading": "Quiz de Fórmula 1: perguntas frequentes",
@@ -6193,12 +6369,7 @@
       "table": {
         "heading": "Os oito pilotos com quem você pode ser combinado",
         "note": "Títulos de Campeonato Mundial de Pilotos, até o fim da temporada de 2024.",
-        "cols": [
-          "Piloto",
-          "País",
-          "Títulos na F1",
-          "Conhecido por"
-        ],
+        "cols": ["Piloto", "País", "Títulos na F1", "Conhecido por"],
         "rows": [
           [
             "Max Verstappen",
@@ -6206,12 +6377,7 @@
             "4",
             "Ritmo agressivo e obstinado"
           ],
-          [
-            "Lewis Hamilton",
-            "Reino Unido",
-            "7",
-            "Constância e longevidade"
-          ],
+          ["Lewis Hamilton", "Reino Unido", "7", "Constância e longevidade"],
           [
             "Ayrton Senna",
             "Brasil",
@@ -6224,24 +6390,9 @@
             "7",
             "Preparação implacável e volume de trabalho"
           ],
-          [
-            "Charles Leclerc",
-            "Mônaco",
-            "0",
-            "Velocidade natural e emoção"
-          ],
-          [
-            "Fernando Alonso",
-            "Espanha",
-            "2",
-            "Pilotagem e recusa em desistir"
-          ],
-          [
-            "Oscar Piastri",
-            "Austrália",
-            "0",
-            "Cabeça fria, aprende rápido"
-          ],
+          ["Charles Leclerc", "Mônaco", "0", "Velocidade natural e emoção"],
+          ["Fernando Alonso", "Espanha", "2", "Pilotagem e recusa em desistir"],
+          ["Oscar Piastri", "Austrália", "0", "Cabeça fria, aprende rápido"],
           [
             "Lando Norris",
             "Reino Unido",

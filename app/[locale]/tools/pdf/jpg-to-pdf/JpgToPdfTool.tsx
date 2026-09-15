@@ -14,75 +14,38 @@ import {
   arrayMove,
   SortableContext,
   sortableKeyboardCoordinates,
-  useSortable,
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities";
 import { saveAs } from "file-saver";
-import { GripVertical, X } from "lucide-react";
+import { ShieldCheck, Images, Sparkles, Info } from "lucide-react";
 import { useTranslations } from "next-intl";
-import AppToolWrapper from "@/components/AppToolWrapper";
-import AppButton from "@/components/AppButton";
+import {
+  AppCard,
+  AppButton,
+  AppInput,
+  AppDropfile,
+} from "@/components/ui";
 import { imagesToPDF, validatePdfFilename } from "@/lib/imageToPdf";
 import type { FaqItem } from "@/components/AppFaqSection";
-
-interface SortableImageItemProps {
-  id: string;
-  name: string;
-  preview: string;
-  onRemove: (id: string) => void;
-}
-
-function SortableImageItem({ id, name, preview, onRemove }: SortableImageItemProps) {
-  const { attributes, listeners, setNodeRef, transform, transition, isDragging } =
-    useSortable({ id });
-
-  const style = {
-    transform: CSS.Transform.toString(transform),
-    transition,
-    opacity: isDragging ? 0.5 : 1,
-  };
-
-  return (
-    <div
-      ref={setNodeRef}
-      style={style}
-      className="flex items-center gap-3 p-3 bg-gray-50 border border-gray-200 rounded-xl dark:bg-tertiary dark:border-gray-700"
-    >
-      <button
-        {...attributes}
-        {...listeners}
-        className="text-gray-400 hover:text-gray-600 cursor-grab active:cursor-grabbing dark:text-gray-600 dark:hover:text-gray-400"
-        aria-label="Drag to reorder"
-      >
-        <GripVertical size={16} />
-      </button>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={preview} alt={name} className="h-12 w-12 object-cover rounded" />
-      <span className="flex-1 text-sm text-gray-700 truncate dark:text-gray-300">{name}</span>
-      <button
-        onClick={() => onRemove(id)}
-        className="text-gray-400 hover:text-red-500 dark:text-gray-600 dark:hover:text-red-400"
-        aria-label="Remove image"
-      >
-        <X size={16} />
-      </button>
-    </div>
-  );
-}
+import PdfToolHeader from "../components/PdfToolHeader";
+import SortableImageItem from "./components/SortableImageItem";
+import JpgToPdfResult from "./components/JpgToPdfResult";
+import JpgToPdfContent, { type RichContent } from "./components/JpgToPdfContent";
+import { restrictToVerticalAxis } from "@/lib/dndModifiers";
 
 interface ImageEntry {
   id: string;
   file: File;
   name: string;
+  size: number;
   preview: string;
 }
 
-interface RichContent {
-  whatIs: string;
-  howToUse: string[];
-  whyItMatters: string;
-  proTip: string;
+interface PdfOutput {
+  blob: Blob;
+  fileName: string;
+  sizeBytes: number;
+  imageCount: number;
 }
 
 interface Props {
@@ -90,15 +53,30 @@ interface Props {
   description: string;
   faqs: FaqItem[];
   richContent?: RichContent;
+  locale?: string;
 }
 
-export default function JpgToPdfTool({ title, description, faqs, richContent }: Props) {
+export default function JpgToPdfTool({
+  title,
+  description,
+  faqs,
+  richContent,
+  locale = "pt",
+}: Props) {
   const t = useTranslations("pdf.jpgToPdf");
   const [images, setImages] = useState<ImageEntry[]>([]);
   const [filename, setFilename] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [done, setDone] = useState(false);
+  const [pdfOutput, setPdfOutput] = useState<PdfOutput | null>(null);
+
+  const resetLabel =
+    locale === "pt"
+      ? "Converter outras imagens"
+      : locale === "es"
+        ? "Convertir otras imágenes"
+        : "Convert more images";
 
   const filenameValidation = useMemo(() => {
     return validatePdfFilename(filename);
@@ -114,28 +92,42 @@ export default function JpgToPdfTool({ title, description, faqs, richContent }: 
     useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
   );
 
-  const addFiles = useCallback((files: FileList | null) => {
+  const addFiles = useCallback((files: FileList | File[] | null) => {
     if (!files) return;
-    const entries: ImageEntry[] = Array.from(files)
-      .filter((f) => f.type === "image/jpeg" || f.type === "image/png")
-      .map((f) => ({
-        id: `${f.name}-${Date.now()}-${Math.random()}`,
-        file: f,
-        name: f.name,
-        preview: URL.createObjectURL(f),
-      }));
-    setImages((prev) => [...prev, ...entries]);
-    setDone(false);
+    const fileList = Array.from(files);
+    const valid = fileList.filter((f) => {
+      const isImg = f.type.startsWith("image/");
+      const hasExt = /\.(jpe?g|png)$/i.test(f.name);
+      return isImg || hasExt;
+    });
+
+    if (valid.length === 0) return;
+
+    setImages((prev) => {
+      const existingMap = new Map(prev.map((item) => [`${item.name}-${item.size}`, item]));
+      return valid.map((f) => {
+        const key = `${f.name}-${f.size}`;
+        const existing = existingMap.get(key);
+        if (existing) return existing;
+        return {
+          id: `${f.name}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+          file: f,
+          name: f.name,
+          size: f.size,
+          preview: URL.createObjectURL(f),
+        };
+      });
+    });
     setError(null);
   }, []);
 
-  const removeImage = (id: string) => {
+  const removeImage = useCallback((id: string) => {
     setImages((prev) => {
-      const entry = prev.find((e) => e.id === id);
-      if (entry) URL.revokeObjectURL(entry.preview);
-      return prev.filter((e) => e.id !== id);
+      const target = prev.find((img) => img.id === id);
+      if (target) URL.revokeObjectURL(target.preview);
+      return prev.filter((img) => img.id !== id);
     });
-  };
+  }, []);
 
   const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
@@ -153,18 +145,35 @@ export default function JpgToPdfTool({ title, description, faqs, richContent }: 
       setError(t("errors.noImages"));
       return;
     }
+
     if (!filenameValidation.valid) {
+      setError(filenameError);
       return;
     }
+
     setLoading(true);
     setError(null);
+
     try {
-      const bytes = await imagesToPDF(images.map((e) => e.file));
+      const files = images.map((img) => img.file);
+      const bytes = await imagesToPDF(files);
+
       const trimmed = filename.trim();
       const finalName = trimmed
-        ? (trimmed.toLowerCase().endsWith(".pdf") ? trimmed : `${trimmed}.pdf`)
+        ? trimmed.toLowerCase().endsWith(".pdf")
+          ? trimmed
+          : `${trimmed}.pdf`
         : "images.pdf";
-      saveAs(new Blob([new Uint8Array(bytes)], { type: "application/pdf" }), finalName);
+      const blob = new Blob([new Uint8Array(bytes)], {
+        type: "application/pdf",
+      });
+
+      setPdfOutput({
+        blob,
+        fileName: finalName,
+        sizeBytes: blob.size,
+        imageCount: images.length,
+      });
       setDone(true);
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : t("errors.conversionFailed"));
@@ -173,88 +182,203 @@ export default function JpgToPdfTool({ title, description, faqs, richContent }: 
     }
   };
 
+  const handleDownload = () => {
+    if (!pdfOutput) return;
+    saveAs(pdfOutput.blob, pdfOutput.fileName);
+  };
+
+  const handleReset = () => {
+    images.forEach((img) => URL.revokeObjectURL(img.preview));
+    setImages([]);
+    setFilename("");
+    setError(null);
+    setDone(false);
+    setPdfOutput(null);
+  };
+
   return (
-    <AppToolWrapper
-      title={title}
-      description={description}
-      breadcrumbLabel={title}
-      faqs={faqs}
-      richContent={richContent}
-    >
-      <div
-        className="border-2 border-dashed border-blue-300 rounded-xl p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-4 dark:border-blue-700 dark:hover:bg-blue-900/20"
-        onClick={() => document.getElementById("imgpdf-file-input")?.click()}
-        onDragOver={(e) => e.preventDefault()}
-        onDrop={(e) => {
-          e.preventDefault();
-          addFiles(e.dataTransfer.files);
-        }}
-      >
-        <p className="text-blue-600 font-medium dark:text-blue-400">{t("dropZone.label")}</p>
-        <p className="text-gray-400 text-sm mt-1 dark:text-gray-500">{t("dropZone.hint")}</p>
-        <input
-          id="imgpdf-file-input"
-          type="file"
-          accept="image/jpeg,image/png,.jpg,.jpeg,.png"
-          multiple
-          className="hidden"
-          onChange={(e) => addFiles(e.target.files)}
+    <main className="container min-h-[calc(100vh-180px)] bg-background py-3 sm:py-6 md:py-8">
+      <div className="w-full">
+        <PdfToolHeader
+          title={title}
+          description={description}
+          locale={locale}
+          badges={[
+            {
+              text:
+                locale === "pt"
+                  ? "Sem upload para servidores"
+                  : locale === "es"
+                    ? "Sin subida a servidores"
+                    : "Zero server upload",
+              bg: "bg-primary",
+              textColor: "text-background",
+              icon: <ShieldCheck className="w-3.5 h-3.5 shrink-0" />,
+            },
+            {
+              text:
+                locale === "pt"
+                  ? "Suporta JPG, PNG & JPEG"
+                  : locale === "es"
+                    ? "Soporta JPG, PNG y JPEG"
+                    : "Supports JPG, PNG & JPEG",
+              bg: "bg-secondary",
+              textColor: "text-background",
+              icon: <Images className="w-3.5 h-3.5 shrink-0" />,
+            },
+            {
+              text:
+                locale === "pt"
+                  ? "Ilimitado & Gratuito"
+                  : locale === "es"
+                    ? "Ilimitado y Gratis"
+                    : "Unlimited & Free",
+              bg: "bg-foreground",
+              textColor: "text-background",
+              icon: <Sparkles className="w-3.5 h-3.5 shrink-0" />,
+            },
+          ]}
         />
-      </div>
 
-      {images.length > 0 && (
-        <>
-          <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-            <SortableContext items={images.map((i) => i.id)} strategy={verticalListSortingStrategy}>
-              <div className="space-y-2 mb-4">
-                {images.map((img) => (
-                  <SortableImageItem
-                    key={img.id}
-                    id={img.id}
-                    name={img.name}
-                    preview={img.preview}
-                    onRemove={removeImage}
-                  />
-                ))}
-              </div>
-            </SortableContext>
-          </DndContext>
+        <AppCard
+          border
+          cornerAccents={true}
+          className="p-1.5 sm:p-4 md:p-6 lg:p-8 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto shadow-xs"
+        >
+          <div className="space-y-3 sm:space-y-5">
+            {!done || !pdfOutput ? (
+              <>
+                <AppDropfile
+                  id="imgpdf-file-input"
+                  accept="image/jpeg,image/png,image/jpg"
+                  multiple={true}
+                  value={images.map((img) => img.file)}
+                  title={t("dropZone.label")}
+                  description={t("dropZone.hint")}
+                  onFilesChange={addFiles}
+                  showSelectedFiles={false}
+                  disabled={loading}
+                  error={error || undefined}
+                />
 
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">
-              {t("filename.label")}{" "}
-              <span className="text-gray-400 font-normal dark:text-gray-500">
-                ({t("filename.hint")})
-              </span>
-            </label>
-            <input
-              type="text"
-              value={filename}
-              onChange={(e) => setFilename(e.target.value)}
-              placeholder={t("filename.placeholder")}
-              className={`w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 bg-tertiary dark:bg-tertiary text-gray-900 dark:text-gray-100 ${
-                filenameError
-                  ? "border-red-500 focus:ring-red-400 dark:border-red-500"
-                  : "border-gray-300 focus:ring-blue-400 dark:border-gray-600"
-              }`}
-              aria-invalid={Boolean(filenameError)}
-            />
-            {filenameError && (
-              <p className="text-xs text-red-600 mt-1 dark:text-red-400">{filenameError}</p>
+                {images.length > 0 && (
+                  <div className="space-y-4 pt-2">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border/80 pb-3">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs font-bold uppercase tracking-wider text-foreground">
+                          {locale === "pt"
+                            ? "Imagens Selecionadas"
+                            : locale === "es"
+                              ? "Imágenes Seleccionadas"
+                              : "Selected Images"}
+                        </span>
+                        <span className="px-2 py-0.5 text-xs font-bold bg-primary text-background rounded-[2px]">
+                          {images.length}
+                        </span>
+                      </div>
+
+                      <div className="flex items-center gap-2 text-xs text-label">
+                        <Info className="w-3.5 h-3.5 shrink-0 text-primary" />
+                        <span>
+                          {locale === "pt"
+                            ? "Arraste para reorganizar a ordem das páginas"
+                            : locale === "es"
+                              ? "Arrastra para reorganizar el orden de las páginas"
+                              : "Drag items to reorder pages"}
+                        </span>
+                      </div>
+                    </div>
+
+                    <DndContext
+                      sensors={sensors}
+                      collisionDetection={closestCenter}
+                      modifiers={[restrictToVerticalAxis]}
+                      onDragEnd={handleDragEnd}
+                    >
+                      <SortableContext
+                        items={images.map((img) => img.id)}
+                        strategy={verticalListSortingStrategy}
+                      >
+                        <div className="space-y-2 max-h-72 sm:max-h-96 overflow-y-auto overflow-x-hidden p-1">
+                          {images.map((img, index) => (
+                            <SortableImageItem
+                              key={img.id}
+                              id={img.id}
+                              name={img.name}
+                              size={img.size}
+                              preview={img.preview}
+                              index={index}
+                              onRemove={removeImage}
+                            />
+                          ))}
+                        </div>
+                      </SortableContext>
+                    </DndContext>
+
+                    <div className="pt-2">
+                      <AppInput
+                        id="jpg-to-pdf-filename"
+                        label={
+                          <span>
+                            {t("filename.label")}{" "}
+                            <span className="text-label lowercase font-normal">
+                              ({t("filename.hint")})
+                            </span>
+                          </span>
+                        }
+                        value={filename}
+                        onChange={(e) => setFilename(e.target.value)}
+                        placeholder={t("filename.placeholder")}
+                        error={filenameError || undefined}
+                        aria-invalid={Boolean(filenameError)}
+                      />
+                    </div>
+                  </div>
+                )}
+
+                {error && (
+                  <div className="p-3 bg-red-500/10 border border-red-500/30 rounded-[2px] text-xs text-red-500">
+                    {error}
+                  </div>
+                )}
+
+                <div className="pt-3 border-t border-border">
+                  <AppButton
+                    onClick={handleConvert}
+                    disabled={
+                      loading ||
+                      images.length === 0 ||
+                      !filenameValidation.valid
+                    }
+                    color="primary"
+                    className="w-full sm:w-auto"
+                  >
+                    {loading
+                      ? t("button.converting")
+                      : t("button.convert")}
+                  </AppButton>
+                </div>
+              </>
+            ) : (
+              <JpgToPdfResult
+                fileName={pdfOutput.fileName}
+                sizeBytes={pdfOutput.sizeBytes}
+                imageCount={pdfOutput.imageCount}
+                onDownload={handleDownload}
+                onReset={handleReset}
+                resetLabel={resetLabel}
+                locale={locale}
+              />
             )}
           </div>
-        </>
-      )}
+        </AppCard>
 
-      {error && <p className="text-red-600 text-sm mb-3 dark:text-red-400">{error}</p>}
-      {done && <p className="text-green-600 text-sm mb-3 dark:text-green-400">{t("success")}</p>}
-
-      <AppButton
-        onClick={handleConvert}
-        disabled={loading || images.length === 0 || !filenameValidation.valid}
-      >
-        {loading ? t("button.converting") : t("button.convert")}
-      </AppButton>
-    </AppToolWrapper>
+        <JpgToPdfContent
+          richContent={richContent}
+          faqs={faqs}
+          locale={locale}
+        />
+      </div>
+    </main>
   );
 }

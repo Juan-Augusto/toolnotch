@@ -286,33 +286,33 @@ export function AppToolsDepth({ locale = "pt" }: AppToolsDepthProps) {
   return (
     <section
       aria-label="Editorial depth and tool guide"
-      className="mt-16 pt-12 border-t-dashed-5"
+      className="mt-8 sm:mt-12 md:mt-16 pt-6 sm:pt-10 md:pt-12 border-t-dashed-5"
     >
-      <div className="space-y-12 max-w-4xl">
-        <header className="space-y-3">
-          <h2 className="text-xl sm:text-2xl font-bold uppercase text-foreground">
+      <div className="space-y-6 sm:space-y-10 md:space-y-12 max-w-4xl">
+        <header className="space-y-1.5 sm:space-y-3">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold uppercase text-foreground">
             {content.heading}
           </h2>
-          <p className="text-label leading-relaxed">
+          <p className="text-xs sm:text-sm text-label leading-relaxed">
             {content.subheading}
           </p>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
           {content.pillars.map((pillar) => {
             const Icon = pillar.icon;
             return (
               <AppCard
                 key={pillar.title}
                 border
-                className="p-5 sm:p-6 flex flex-col justify-between"
+                className="p-3.5 sm:p-5 md:p-6 flex flex-col justify-between"
               >
-                <div className="space-y-2.5">
-                  <div className="flex items-center gap-2.5">
-                    <span className="p-2 rounded-[2px] bg-primary/10 text-primary">
-                      <Icon className="w-4 h-4" />
+                <div className="space-y-2 sm:space-y-2.5">
+                  <div className="flex items-center gap-2 sm:gap-2.5">
+                    <span className="p-1.5 sm:p-2 rounded-[2px] bg-primary/10 text-primary">
+                      <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </span>
-                    <h3 className="text-sm sm:text-base font-bold uppercase text-foreground">
+                    <h3 className="text-xs sm:text-sm md:text-base font-bold uppercase text-foreground">
                       {pillar.title}
                     </h3>
                   </div>
@@ -325,26 +325,26 @@ export function AppToolsDepth({ locale = "pt" }: AppToolsDepthProps) {
           })}
         </div>
 
-        <div className="pt-4">
+        <div className="pt-2 sm:pt-4">
           <AppTip>
-            <p className="font-semibold text-foreground mb-1">{content.tipTitle}</p>
+            <p className="font-semibold text-foreground text-xs sm:text-sm mb-1">{content.tipTitle}</p>
             <p className="text-xs sm:text-sm text-label leading-relaxed">
               {content.tipContent}
             </p>
           </AppTip>
         </div>
 
-        <div className="space-y-6 pt-4">
-          <h2 className="text-lg sm:text-xl font-bold uppercase text-foreground">
+        <div className="space-y-3.5 sm:space-y-6 pt-2 sm:pt-4">
+          <h2 className="text-base sm:text-lg md:text-xl font-bold uppercase text-foreground">
             {content.categoriesTitle}
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {content.categories.map((cat) => (
               <div
                 key={cat.name}
-                className="p-5 rounded-[2px] border border-border/60 bg-tertiary/40 space-y-1.5"
+                className="p-3.5 sm:p-5 rounded-[2px] border border-border/60 bg-tertiary/40 space-y-1 sm:space-y-1.5"
               >
-                <h3 className="text-sm font-bold uppercase text-foreground">
+                <h3 className="text-xs sm:text-sm font-bold uppercase text-foreground">
                   {cat.name}
                 </h3>
                 <p className="text-xs text-label leading-relaxed">
@@ -355,17 +355,17 @@ export function AppToolsDepth({ locale = "pt" }: AppToolsDepthProps) {
           </div>
         </div>
 
-        <div className="space-y-6 pt-4">
-          <h2 className="text-lg sm:text-xl font-bold uppercase text-foreground">
+        <div className="space-y-3.5 sm:space-y-6 pt-2 sm:pt-4">
+          <h2 className="text-base sm:text-lg md:text-xl font-bold uppercase text-foreground">
             {content.faqTitle}
           </h2>
-          <div className="space-y-4">
+          <div className="space-y-2.5 sm:space-y-4">
             {content.faqs.map((faq) => (
               <div
                 key={faq.question}
-                className="p-5 rounded-[2px] border border-border/50 bg-tertiary/30 space-y-2"
+                className="p-3.5 sm:p-5 rounded-[2px] border border-border/50 bg-tertiary/30 space-y-1.5 sm:space-y-2"
               >
-                <h3 className="text-sm sm:text-base font-semibold text-foreground">
+                <h3 className="text-xs sm:text-sm md:text-base font-semibold text-foreground">
                   {faq.question}
                 </h3>
                 <p className="text-xs sm:text-sm text-label leading-relaxed">

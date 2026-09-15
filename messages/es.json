@@ -116,11 +116,38 @@
       },
       "button": {
         "merge": "Combinar PDFs",
-        "merging": "Combinando…"
+        "merging": "Combinando…",
+        "download": "Descargar PDF Combinado",
+        "reset": "Combinar otros archivos",
+        "clearAll": "Limpiar todos",
+        "addMore": "Agregar más PDFs"
+      },
+      "reorderHint": "Arrastra los archivos para ordenar las páginas en el PDF final.",
+      "filename": {
+        "label": "Nombre del archivo combinado",
+        "placeholder": "documento_combinado.pdf",
+        "hint": "opcional"
+      },
+      "result": {
+        "title": "¡PDFs Combinados con Éxito!",
+        "description": "Tus archivos fueron combinados en un único documento listo para descargar.",
+        "filesMerged": "Archivos combinados",
+        "totalPages": "Total de páginas",
+        "finalSize": "Tamaño final"
+      },
+      "badges": {
+        "noUpload": "Sin subida a servidores",
+        "quality": "Calidad original preservada",
+        "free": "Ilimitado y Gratis"
+      },
+      "processing": {
+        "status": "Combinando páginas del PDF...",
+        "local": "Procesando en tu navegador"
       },
       "errors": {
         "tooFewFiles": "Agrega al menos 2 archivos PDF para combinar.",
-        "mergeFailed": "Error al combinar."
+        "mergeFailed": "Error al combinar.",
+        "invalidFilename": "Formato de archivo o nombre no válido. Solo se admite .pdf."
       },
       "success": "¡PDF combinado descargado!",
       "faqs": [
@@ -156,7 +183,7 @@
     "split": {
       "metaTitle": "Dividir PDF Gratis en Línea — Extraer Páginas | ToolNotch",
       "metaDescription": "Divide un PDF en varios archivos por rango de páginas. Gratis, sin subida, se ejecuta completamente en tu navegador.",
-      "title": "Dividir PDF Gratis en Línea",
+      "title": "Dividir PDF en Línea",
       "description": "Extrae páginas o divide un PDF en varios archivos. Sin subida requerida.",
       "dropZone": {
         "label": "Haz clic o arrastra un PDF aquí",
@@ -186,7 +213,8 @@
       },
       "button": {
         "split": "Dividir PDF",
-        "splitting": "Dividiendo…"
+        "splitting": "Dividiendo…",
+        "reset": "Dividir otro PDF"
       },
       "errors": {
         "noFile": "Por favor selecciona un archivo PDF.",
@@ -195,7 +223,9 @@
         "startGreaterThanEnd": "La página inicial no puede ser mayor que la final (ej.: 1-3).",
         "zeroPage": "Los números de página deben ser mayores que 0.",
         "pageOutOfBounds": "El rango de páginas supera el total del documento ({total} páginas).",
-        "invalidFile": "No se pudo cargar el PDF. Puede estar dañado o protegido con contraseña."
+        "invalidFile": "No se pudo cargar el PDF. Puede estar dañado o protegido con contraseña.",
+        "invalidFileType": "Formato de archivo no válido. Seleccione un archivo PDF.",
+        "pdfCorrupted": "No se pudo cargar el PDF. Puede estar dañado o protegido con contraseña."
       },
       "pageCountSingular": "página",
       "pageCountPlural": "páginas",
@@ -234,7 +264,7 @@
     "compress": {
       "metaTitle": "Comprimir PDF Gratis en Línea — Reducir Tamaño | ToolNotch",
       "metaDescription": "Reduce el tamaño de un PDF sin pérdida de calidad. Se ejecuta completamente en tu navegador — sin subida requerida.",
-      "title": "Comprimir PDF Gratis en Línea",
+      "title": "Comprimir PDF en Línea",
       "description": "Reduce el tamaño del PDF sin pérdida de calidad. Se ejecuta en tu navegador.",
       "dropZone": {
         "label": "Haz clic o arrastra un PDF aquí",
@@ -299,7 +329,11 @@
         "convert": "Convertir a JPG",
         "converting": "Convirtiendo…",
         "downloadAll": "Descargar las {count} imágenes",
-        "downloadOne": "Descargar imagen"
+        "downloadOne": "Descargar imagen",
+        "reset": "Convertir otro PDF",
+        "clearFile": "Limpiar archivo",
+        "downloadZip": "Descargar ZIP ({count} imágenes)",
+        "downloadPage": "Descargar JPG"
       },
       "progress": {
         "loading": "Cargando PDF…",
@@ -337,21 +371,42 @@
         ],
         "whyItMatters": "Los archivos PDF no pueden ser incrustados directamente en publicaciones de redes sociales, etiquetas img HTML o diapositivas de presentación. Convertir a JPG hace que el contenido del documento sea universalmente compartible en todos los plataformas y aplicaciones que aceptan imágenes. Para documentos de una sola página como certificados, diplomas, badges de eventos o calificaciones profesionales, un JPEG es más portátil y fácil de mostrar en una cartera digital o en un perfil de LinkedIn que un archivo PDF adjunto que debe descargarse e abrir por separado.",
         "proTip": "Todo el procesamiento ocurre completamente en tu navegador — no se suben archivos a ningún servidor. Tus documentos nunca salen de tu dispositivo. Usa 150 DPI para la visualización en pantalla y correo electrónico — buena calidad con un tamaño de archivo razonable. Usa solo 300 DPI si la salida será impresa o ampliamente zoomada. Para diapositivas de presentación, 96 DPI coincide con la mayoría de las resoluciones de pantalla y produce el menor archivo sin pérdida de calidad visible."
-      }
+      },
+      "badges": {
+        "noUpload": "Sin subida a servidores",
+        "quality": "Imágenes en alta resolución (2x)",
+        "free": "Ilimitado y Gratis"
+      },
+      "processing": {
+        "status": "Renderizando páginas del PDF...",
+        "local": "Procesando en tu navegador"
+      },
+      "result": {
+        "title": "¡PDF Convertido con Éxito!",
+        "description": "Todas las páginas fueron convertidas en imágenes JPEG de alta calidad listas para descargar.",
+        "pagesConverted": "Páginas convertidas",
+        "format": "Formato de salida",
+        "package": "Paquete de descarga",
+        "singleJpg": "Imagen JPG única",
+        "zipArchive": "Archivo ZIP completo",
+        "pageBadge": "Página {number}"
+      },
+      "pageCountSingular": "página",
+      "pageCountPlural": "páginas"
     },
     "jpgToPdf": {
-      "metaTitle": "JPG a PDF — Convertir Imágenes a PDF Gratis | ToolNotch",
-      "metaDescription": "Convierte imágenes JPEG o PNG en un PDF. Arrastra para reordenar páginas. Gratis, sin subida, se ejecuta completamente en tu navegador.",
-      "title": "JPG a PDF — Convertir Imágenes a PDF",
-      "description": "Convierte imágenes JPEG o PNG en un PDF. Arrastra para reordenar. Sin subida requerida.",
+      "metaTitle": "JPG a PDF Online Gratis — Convertir Imágenes y PNG a PDF | ToolNotch",
+      "metaDescription": "Convierte imágenes JPG, PNG o JPEG en un documento PDF de alta calidad. Arrastra para reordenar páginas. Gratis, seguro y 100% en tu navegador.",
+      "title": "Convertir Imágenes a PDF",
+      "description": "Transforma imágenes JPG, PNG o JPEG en un único documento PDF. Arrastra para reordenar páginas. Sin subida requerida.",
       "dropZone": {
         "label": "Haz clic o arrastra imágenes aquí",
-        "hint": "JPEG o PNG — se admiten varios archivos"
+        "hint": "JPG, PNG o JPEG — se admiten varios archivos"
       },
       "filename": {
         "label": "Nombre personalizado del PDF",
         "hint": "opcional",
-        "placeholder": "images"
+        "placeholder": "ej: mi-documento"
       },
       "button": {
         "convert": "Convertir a PDF",
@@ -391,6 +446,342 @@
         ],
         "whyItMatters": "Muchas plataformas de presentación oficial, sistemas de solicitud universitaria y plataformas de RRHH aceptan PDF pero no JPEG. Combinar varias imágenes en un solo PDF también satisface los requisitos de envío de archivos individuales — evitando el problema de una forma que acepta solo una anexión cuando tienes tres páginas escaneadas. El contenedor PDF también soporta metadatos (título, autor), protección con contraseña y firmas digitales que los archivos JPEG raw no tienen, dándote más control sobre cómo se usa el documento después de la entrega.",
         "proTip": "Todo el procesamiento ocurre completamente en tu navegador — ningún archivo se carga a ningún servidor. Tus documentos nunca salen de tu dispositivo. Si tus imágenes son muy de alta resolución — las fotos del teléfono generalmente son de 4000×3000 píxeles y 6–12 MB cada una — comprime o redimensiona las imágenes antes de convertirlas. Un PDF que contiene tres imágenes no comprimidas de fotos del teléfono puede alcanzar hasta 30–40 MB. Busca imágenes con menos de 2 MB cada una para producir un PDF de salida razonablemente pequeño que pase la mayoría de los límites de tamaño de carga."
+      }
+    },
+    "organize": {
+      "metaTitle": "Organizar Páginas de PDF Online Gratis | ToolNotch",
+      "metaDescription": "Reordena, gira y elimina páginas de archivos PDF en tu navegador. Arrastra y suelta para ordenar. 100% privado, sin subir archivos.",
+      "title": "Organizar Páginas del PDF",
+      "description": "Reordena visualmente las páginas de tu documento, gira páginas volteadas y elimina hojas no deseadas antes de guardar.",
+      "badges": {
+        "noUpload": "Sin subidas al servidor",
+        "visual": "Reordenación visual",
+        "reorder": "Reordenación visual",
+        "free": "100% Gratis"
+      },
+      "dropZone": {
+        "label": "Selecciona o arrastra tu archivo PDF aquí",
+        "hint": "Documentos PDF de cualquier tamaño"
+      },
+      "actions": {
+        "rotateAll": "Girar todas 90°",
+        "resetOrder": "Restaurar orden",
+        "summary": "{selected} de {total} páginas seleccionadas",
+        "gridSize": "Tamaño de miniaturas",
+        "gridSizeMd": "Mediano",
+        "gridSizeLg": "Grande"
+      },
+      "card": {
+        "pageLabel": "Pág. {number}",
+        "originalLabel": "Orig. {number}",
+        "rotateHint": "Girar 90°",
+        "deleteHint": "Eliminar del orden",
+        "previewHint": "Ampliar y previsualizar página"
+      },
+      "previewModal": {
+        "title": "Vista Previa de la Página",
+        "pageIndicator": "Página {current} de {total}",
+        "originalLabel": "Original: Pág. {number}",
+        "zoomIn": "Acercar",
+        "zoomOut": "Alejar",
+        "resetZoom": "Ajustar a la pantalla",
+        "rotate": "Girar 90°",
+        "remove": "Eliminar página",
+        "prevPage": "Página anterior",
+        "nextPage": "Página siguiente",
+        "close": "Cerrar vista previa",
+        "shortcuts": "Atajos: ← / → navegar • R girar • Esc cerrar"
+      },
+      "button": {
+        "save": "Guardar y Descargar PDF",
+        "saving": "Generando PDF organizado...",
+        "reset": "Organizar otro PDF",
+        "clearFile": "Limpiar archivo"
+      },
+      "processing": {
+        "rendering": "Cargando miniaturas de las páginas...",
+        "generating": "Creando documento organizado..."
+      },
+      "errors": {
+        "noPages": "Selecciona al menos una página para el PDF.",
+        "failed": "Error al organizar el PDF. Verifica que el archivo no esté corrupto."
+      },
+      "result": {
+        "title": "¡PDF Organizado con Éxito!",
+        "description": "Tus páginas fueron reordenadas y el documento está listo para descargar.",
+        "download": "Descargar PDF Organizado",
+        "pagesIncluded": "Páginas incluidas",
+        "finalFile": "Archivo final"
+      },
+      "faqs": [
+        {
+          "question": "¿Cómo funciona el reordenamiento de páginas?",
+          "answer": "Simplemente arrastra y suelta cualquier miniatura a la posición deseada. También puedes girar páginas y eliminar hojas no deseadas."
+        },
+        {
+          "question": "¿Se suben mis archivos a un servidor?",
+          "answer": "No. Todo el procesamiento y la generación del nuevo PDF ocurren 100% en tu navegador con JavaScript. Tus archivos nunca salen de tu dispositivo."
+        },
+        {
+          "question": "¿Puedo girar solo una página específica?",
+          "answer": "¡Sí! Cada tarjeta tiene un botón de giro de 90° en sentido horario para corregir orientaciones puntuales sin alterar las demás páginas."
+        },
+        {
+          "question": "¿Existe límite de páginas?",
+          "answer": "No hay límites impuestos por ToolNotch. El rendimiento depende de la memoria de tu dispositivo."
+        }
+      ],
+      "richContent": {
+        "whatIs": "La herramienta Organizar PDF de ToolNotch te permite reordenar, girar y eliminar páginas de documentos PDF de forma visual e instantánea en tu navegador.",
+        "howToUse": [
+          "Sube tu archivo PDF en la zona superior.",
+          "Arrastra las páginas para colocarlas en el orden que prefieras.",
+          "Usa los botones de giro o papelera en cada página si es necesario.",
+          "Haz clic en Guardar y Descargar PDF para obtener tu nuevo documento."
+        ],
+        "whyItMatters": "Los documentos escaneados a menudo terminan desordenados o con páginas volteadas. Organizar las páginas antes de enviar presupuestos o contratos asegura una presentación impecable.",
+        "proTip": "Usa el botón 'Girar todas 90°' si un documento escaneado entero vino en formato apaisado incorrecto."
+      }
+    },
+    "deletePages": {
+      "metaTitle": "Eliminar Páginas de PDF Online Gratis | ToolNotch",
+      "metaDescription": "Elimina páginas específicas o en blanco de documentos PDF directamente en tu navegador. Rápido, seguro y 100% gratis.",
+      "title": "Eliminar Páginas del PDF",
+      "description": "Selecciona las páginas que deseas eliminar haciendo clic sobre ellas o escribiendo los intervalos. Descarga un nuevo PDF limpio.",
+      "badges": {
+        "noUpload": "Sin subidas al servidor",
+        "visual": "Selección visual y por texto",
+        "free": "100% Gratis"
+      },
+      "dropZone": {
+        "label": "Selecciona o arrastra tu archivo PDF aquí",
+        "hint": "Documentos PDF de cualquier tamaño"
+      },
+      "input": {
+        "label": "Páginas a eliminar",
+        "placeholder": "Ej: 1, 3-5, 8",
+        "hint": "Escribe números de página o intervalos separados por coma"
+      },
+      "actions": {
+        "selectAll": "Marcar todas",
+        "clearSelection": "Desmarcar todas",
+        "invertSelection": "Invertir selección",
+        "summary": "{toDelete} marcadas para eliminación, {remaining} restantes",
+        "gridSize": "Tamaño de miniaturas",
+        "gridSizeMd": "Mediano",
+        "gridSizeLg": "Grande"
+      },
+      "card": {
+        "pageLabel": "Pág. {number}",
+        "marked": "Eliminar",
+        "keep": "Mantener página",
+        "previewHint": "Ampliar y previsualizar página",
+        "previewAction": "Vista previa",
+        "statusOk": "OK"
+      },
+      "previewModal": {
+        "title": "Vista Previa de la Página",
+        "pageIndicator": "Página {current} de {total}",
+        "zoomIn": "Acercar",
+        "zoomOut": "Alejar",
+        "resetZoom": "Ajustar a la pantalla",
+        "markForDeletion": "Marcar para eliminación",
+        "keepPage": "Mantener página",
+        "markedBadge": "Marcada para eliminación",
+        "keepBadge": "Página mantenida",
+        "prevPage": "Página anterior",
+        "nextPage": "Página siguiente",
+        "close": "Cerrar vista previa",
+        "shortcuts": "Atajos: ← / → navegar • Espacio alternar eliminación • Esc cerrar"
+      },
+      "button": {
+        "delete": "Eliminar Páginas y Descargar",
+        "deleting": "Eliminando páginas...",
+        "reset": "Procesar otro PDF",
+        "clearFile": "Limpiar archivo"
+      },
+      "processing": {
+        "rendering": "Cargando páginas...",
+        "generating": "Creando nuevo PDF..."
+      },
+      "errors": {
+        "cannotDeleteAll": "No es posible eliminar todas las páginas del PDF. Deja al menos una página en el documento.",
+        "failed": "Error al eliminar páginas del PDF. Verifica que el archivo no esté corrupto."
+      },
+      "result": {
+        "title": "¡Páginas Eliminadas con Éxito!",
+        "description": "El nuevo PDF se generó sin las páginas seleccionadas y está listo para descargar.",
+        "download": "Descargar PDF Limpio",
+        "pagesRemoved": "Páginas eliminadas",
+        "pagesRemaining": "Páginas restantes",
+        "finalFile": "Archivo final"
+      },
+      "faqs": [
+        {
+          "question": "¿Cómo selecciono las páginas que quiero borrar?",
+          "answer": "Haz clic directamente en las tarjetas visuales de las páginas o escribe los números e intervalos en el campo de texto (ej: 2, 4-6)."
+        },
+        {
+          "question": "¿Se modifica el archivo original?",
+          "answer": "No. Tu archivo original permanece intacto. La herramienta genera un nuevo PDF limpio con solo las páginas que decidiste conservar."
+        },
+        {
+          "question": "¿Es seguro para documentos confidenciales?",
+          "answer": "Totalmente seguro. Todo se ejecuta localmente en tu navegador sin enviar datos a servidores externos."
+        }
+      ],
+      "richContent": {
+        "whatIs": "El eliminador de páginas PDF de ToolNotch te permite borrar páginas innecesarias, en blanco o confidenciales de cualquier PDF de forma segura.",
+        "howToUse": [
+          "Carga tu documento PDF.",
+          "Selecciona las páginas que deseas eliminar haciendo clic o escribiendo el intervalo.",
+          "Revisa el total de páginas restantes en el resumen.",
+          "Haz clic en Eliminar Páginas y Descargar para guardar tu nuevo PDF."
+        ],
+        "whyItMatters": "Compartir páginas en blanco o información sensible por descuido compromete la privacidad. Limpiar el documento antes de enviarlo ahorra espacio y evita errores.",
+        "proTip": "Usa la sintaxis de intervalos como '3-7' en el campo de texto para remover capítulos completos de una sola vez."
+      }
+    },
+    "pdfToText": {
+      "metaTitle": "PDF a Texto Online Gratis — Extraer Texto de PDF | ToolNotch",
+      "metaDescription": "Extrae todo el texto de archivos PDF al instante en tu navegador. Copia al portapapeles o descarga en .txt. 100% privado.",
+      "title": "PDF a Texto",
+      "description": "Convierte documentos PDF en texto plano legible. Copia fragmentos con un clic o descarga el archivo de texto formateado por páginas.",
+      "badges": {
+        "noUpload": "Sin subidas al servidor",
+        "accuracy": "Estructura de texto fiel",
+        "free": "100% Gratis"
+      },
+      "dropZone": {
+        "label": "Selecciona o arrastra tu archivo PDF aquí",
+        "hint": "Documentos con texto digital nativo"
+      },
+      "stats": {
+        "pages": "Total de Páginas",
+        "words": "Palabras",
+        "chars": "Caracteres"
+      },
+      "tabs": {
+        "full": "Texto Completo",
+        "byPage": "Por Página"
+      },
+      "pageHeader": "--- Página {number} ---",
+      "button": {
+        "extract": "Extraer Texto",
+        "extracting": "Extrayendo texto...",
+        "copy": "Copiar Texto",
+        "copied": "¡Copiado!",
+        "downloadTxt": "Descargar archivo .txt",
+        "reset": "Convertir otro PDF",
+        "clearFile": "Limpiar archivo"
+      },
+      "processing": {
+        "status": "Leyendo capas de texto del PDF...",
+        "local": "Procesando en el navegador"
+      },
+      "errors": {
+        "noTextFound": "No se encontró texto seleccionable en este PDF. El documento podría contener solo imágenes escaneadas sin OCR.",
+        "failed": "Error al extraer texto del PDF."
+      },
+      "result": {
+        "title": "¡Texto Extraído con Éxito!",
+        "description": "El contenido textual de tu PDF ha sido extraído y está listo para copiar o descargar.",
+        "previewTitle": "Vista Previa del Texto Extraído"
+      },
+      "faqs": [
+        {
+          "question": "¿Por qué algunos PDFs no tienen texto extraíble?",
+          "answer": "Los PDFs creados a partir de fotos o escaneos antiguos solo contienen mapas de bits de páginas sin fuentes digitales. Los archivos generados en Word o Docs funcionan al instante."
+        },
+        {
+          "question": "¿Se mantienen los párrafos legibles?",
+          "answer": "Sí. La herramienta detecta saltos de coordenadas verticales para mantener saltos de línea y párrafos ordenados."
+        },
+        {
+          "question": "¿Están protegidos mis datos confidenciales?",
+          "answer": "Absolutamente. El procesamiento ocurre dentro de la memoria de tu navegador con PDF.js sin envíos externos."
+        }
+      ],
+      "richContent": {
+        "whatIs": "El conversor de PDF a Texto de ToolNotch extrae instantáneamente todo el contenido textual de archivos PDF digitales para editarlo en cualquier procesador de texto.",
+        "howToUse": [
+          "Sube tu documento PDF.",
+          "Observa la extracción de texto en tiempo real.",
+          "Revisa el texto completo o página por página con conteo de palabras.",
+          "Haz clic en Copiar Texto o Descargar archivo .txt."
+        ],
+        "whyItMatters": "Copiar texto directamente de visores PDF suele desordenar los renglones. Esta herramienta normaliza el espaciado y te da estadísticas inmediatas.",
+        "proTip": "Usa la vista 'Por Página' si solo necesitas citar una sección específica de un informe largo."
+      }
+    },
+    "extractImages": {
+      "metaTitle": "Extraer Imágenes de PDF Online Gratis | ToolNotch",
+      "metaDescription": "Extrae todas las fotos e ilustraciones incrustadas en archivos PDF en su resolución original. Descarga individualmente o en archivo ZIP.",
+      "title": "Extraer Imágenes del PDF",
+      "description": "Aísla todas las imágenes, fotos y gráficos dentro de tu PDF. Descarga cada imagen individualmente o todas juntas en formato ZIP.",
+      "badges": {
+        "noUpload": "Sin subidas al servidor",
+        "quality": "Resolución original preservada",
+        "free": "100% Gratis"
+      },
+      "dropZone": {
+        "label": "Selecciona o arrastra tu archivo PDF aquí",
+        "hint": "PDFs que contengan ilustraciones, gráficos o fotos"
+      },
+      "stats": {
+        "found": "{count} imágenes encontradas"
+      },
+      "empty": {
+        "title": "No se encontraron imágenes incrustadas",
+        "description": "Este documento parece contener solo texto vectorial o formas sin imágenes de mapa de bits incrustadas."
+      },
+      "button": {
+        "extract": "Extraer Imágenes",
+        "extracting": "Extrayendo imágenes...",
+        "downloadZip": "Descargar Todas en ZIP ({count})",
+        "downloadImage": "Descargar Imagen",
+        "reset": "Procesar otro PDF",
+        "clearFile": "Limpiar archivo"
+      },
+      "processing": {
+        "status": "Buscando imágenes en los objetos del PDF...",
+        "local": "Procesando en el navegador"
+      },
+      "errors": {
+        "failed": "Error al extraer imágenes del PDF. Verifica que el archivo no esté corrupto."
+      },
+      "result": {
+        "title": "¡Imágenes Extraídas con Éxito!",
+        "description": "Todas las imágenes y fotos encontradas fueron aisladas en su resolución nativa.",
+        "imagesFound": "Imágenes encontradas",
+        "package": "Paquete de descarga",
+        "zipArchive": "Archivo ZIP completo",
+        "dimension": "{width}x{height} px"
+      },
+      "faqs": [
+        {
+          "question": "¿Cuál es la diferencia entre 'PDF a JPG' y 'Extraer Imágenes'?",
+          "answer": "'PDF a JPG' convierte la página entera en una foto con márgenes y texto. 'Extraer Imágenes' extrae solo los archivos de fotos, logos e ilustraciones originales incrustados dentro del PDF."
+        },
+        {
+          "question": "¿En qué formato se descargan las imágenes?",
+          "answer": "Las imágenes se exportan en PNG o JPEG, conservando transparencia y nitidez originales."
+        },
+        {
+          "question": "¿Pierden calidad las imágenes?",
+          "answer": "No. Se extrae el flujo de imagen original del PDF sin recompresión degradante."
+        }
+      ],
+      "richContent": {
+        "whatIs": "La herramienta Extraer Imágenes de PDF de ToolNotch escanea el documento y aísla los objetos de imagen incrustados para descargarlos individualmente o en ZIP.",
+        "howToUse": [
+          "Selecciona el archivo PDF con imágenes.",
+          "Espera mientras se analizan las páginas y se localizan las ilustraciones.",
+          "Explora la galería con las dimensiones de cada imagen encontrada.",
+          "Descarga cualquier imagen individualmente o todas en un archivo ZIP."
+        ],
+        "whyItMatters": "Hacer capturas de pantalla de fotos en un PDF reduce su calidad y corta bordes. La extracción nativa recupera el archivo original exacto.",
+        "proTip": "Si solo necesitas un logotipo, el botón de descarga individual en cada tarjeta te ahorra descomprimir archivos ZIP."
       }
     }
   },
@@ -2853,6 +3244,22 @@
       },
       "worldCupResult": {
         "label": "Resultados del Quiz del Mundial"
+      },
+      "organizePdf": {
+        "label": "Organizar PDF",
+        "desc": "Reordena, gira y elimina páginas de archivos PDF."
+      },
+      "deletePdfPages": {
+        "label": "Eliminar Páginas PDF",
+        "desc": "Elimina páginas específicas o rangos de páginas de un PDF."
+      },
+      "pdfToText": {
+        "label": "PDF a Texto",
+        "desc": "Extrae todo el texto de archivos PDF para copiar o descargar en .txt."
+      },
+      "extractPdfImages": {
+        "label": "Extraer Imágenes del PDF",
+        "desc": "Extrae todas las fotos e ilustraciones incrustadas en PDFs y descarga en ZIP."
       }
     },
     "badge": "Toolnotch | Más de 40 herramientas esenciales",
@@ -3913,10 +4320,30 @@
               "Coste Exclusivo de Intereses"
             ],
             "rows": [
-              ["6,0% anual", "1.799 € / mes", "647.500 €", "347.500 €"],
-              ["6,5% anual", "1.896 € / mes", "682.500 €", "382.500 €"],
-              ["7,0% anual", "1.996 € / mes", "718.500 €", "418.500 €"],
-              ["8,0% anual", "2.201 € / mes", "792.400 €", "492.400 €"]
+              [
+                "6,0% anual",
+                "1.799 € / mes",
+                "647.500 €",
+                "347.500 €"
+              ],
+              [
+                "6,5% anual",
+                "1.896 € / mes",
+                "682.500 €",
+                "382.500 €"
+              ],
+              [
+                "7,0% anual",
+                "1.996 € / mes",
+                "718.500 €",
+                "418.500 €"
+              ],
+              [
+                "8,0% anual",
+                "2.201 € / mes",
+                "792.400 €",
+                "492.400 €"
+              ]
             ]
           },
           {
@@ -4062,8 +4489,16 @@
                 "Obesidad Grado I",
                 "Alto riesgo cardiovascular y metabólico"
               ],
-              ["35,0 a 39,9", "Obesidad Grado II", "Muy alto riesgo"],
-              ["40,0 o superior", "Obesidad Grado III", "Riesgo extremo"]
+              [
+                "35,0 a 39,9",
+                "Obesidad Grado II",
+                "Muy alto riesgo"
+              ],
+              [
+                "40,0 o superior",
+                "Obesidad Grado III",
+                "Riesgo extremo"
+              ]
             ]
           },
           {
@@ -4373,10 +4808,30 @@
               "Tiempo Promedio de Lectura"
             ],
             "rows": [
-              ["250 palabras", "~1 página", "~0,5 página", "~1 minuto"],
-              ["500 palabras", "~2 páginas", "~1 página", "~2 minutos"],
-              ["1.000 palabras", "~4 páginas", "~2 páginas", "~4 a 5 minutos"],
-              ["1.500 palabras", "~6 páginas", "~3 páginas", "~6 a 7 minutos"],
+              [
+                "250 palabras",
+                "~1 página",
+                "~0,5 página",
+                "~1 minuto"
+              ],
+              [
+                "500 palabras",
+                "~2 páginas",
+                "~1 página",
+                "~2 minutos"
+              ],
+              [
+                "1.000 palabras",
+                "~4 páginas",
+                "~2 páginas",
+                "~4 a 5 minutos"
+              ],
+              [
+                "1.500 palabras",
+                "~6 páginas",
+                "~3 páginas",
+                "~6 a 7 minutos"
+              ],
               [
                 "2.500 palabras",
                 "~10 páginas",
@@ -4533,7 +4988,11 @@
           },
           {
             "type": "table",
-            "headers": ["Nivel de Habilidad", "Rango de PPM", "Perfil Típico"],
+            "headers": [
+              "Nivel de Habilidad",
+              "Rango de PPM",
+              "Perfil Típico"
+            ],
             "rows": [
               [
                 "Principiante",

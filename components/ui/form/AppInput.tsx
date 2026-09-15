@@ -24,6 +24,7 @@ export interface AppInputProps extends Omit<
   containerClassName?: string;
   labelClassName?: string;
   flat?: boolean;
+  variant?: "tertiary" | "background";
 }
 
 export function AppInput({
@@ -45,6 +46,7 @@ export function AppInput({
   id,
   type = "text",
   flat = false,
+  variant = "background",
   ...props
 }: AppInputProps) {
   const generatedId = useId();
@@ -148,7 +150,12 @@ export function AppInput({
             ${
               flat
                 ? "bg-transparent border-0 bg-transparent! border-0! focus:bg-transparent!"
-                : `bg-tertiary border focus:bg-secondary/3 ${
+                : `${
+                    variant === "background" ||
+                    className.includes("bg-background")
+                      ? "bg-background"
+                      : "bg-tertiary"
+                  } border focus:bg-secondary/3 ${
                     error
                       ? "border-red-500 focus:border-red-500 ring-1 ring-red-500/20"
                       : isFocused
