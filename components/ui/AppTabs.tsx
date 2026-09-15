@@ -164,7 +164,7 @@ export function AppTabs({
               onClick={() => handleTabClick(tab)}
               onKeyDown={(e) => handleKeyDown(e, idx)}
               tabIndex={isActive ? 0 : -1}
-              className={`relative inline-flex items-center justify-center gap-1.5 font-mono font-semibold uppercase transition-colors duration-200 cursor-pointer disabled:cursor-not-allowed disabled:opacity-40 whitespace-nowrap outline-none focus-visible:ring-1 ${focusRingColor} rounded-xs ${
+              className={`relative inline-flex items-center justify-center gap-1.5 font-semibold uppercase transition-colors duration-200 cursor-pointer disabled:cursor-not-allowed disabled:opacity-40 whitespace-nowrap outline-none focus-visible:ring-1 ${focusRingColor} rounded-xs ${
                 sizeClasses[size].tab
               } ${sizeClasses[size].text} ${fullWidth ? "flex-1" : ""} ${
                 isActive
@@ -180,7 +180,7 @@ export function AppTabs({
 
               {tab.badge !== undefined && (
                 <span
-                  className={`ml-1 px-1.5 py-0.2 rounded font-mono text-[10px] uppercase border ${
+                  className={`ml-1 px-1.5 py-0.2 rounded text-[10px] uppercase border ${
                     isActive
                       ? activeBadgeClasses
                       : "bg-tertiary text-label/80 border-border/40"

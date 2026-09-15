@@ -186,7 +186,7 @@ export default async function ConversionSlugPage({ params }: Props) {
                 {t("slugPages.formulaHeading")}
               </h2>
               <p
-                className=" p-4 my-4 text-center font-mono text-base"
+                className=" p-4 my-4 text-center text-base"
                 style={{ color: "var(--text-primary)" }}
               >
                 {content.formula}

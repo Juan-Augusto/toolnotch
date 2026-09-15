@@ -42,6 +42,7 @@ const TRUST_ROUTES = [
 ]
 
 const ALL_ROUTES = [
+  '/tools',
   '/interview',
   '/interview/typescript',
   '/interview/vue',

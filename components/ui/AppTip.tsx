@@ -33,7 +33,7 @@ export function AppTip({
             {icon ?? <Siren className="w-5 h-5 stroke-[2]" />}
           </div>
           {title && (
-            <span className="font-mono text-xs md:text-sm font-bold uppercase  text-foreground">
+            <span className="text-xs md:text-sm font-bold uppercase  text-foreground">
               {title}
             </span>
           )}
@@ -41,7 +41,7 @@ export function AppTip({
       )}
 
       {content && (
-        <div className="font-mono text-xs md:text-sm text-label/90 leading-relaxed">
+        <div className="text-xs md:text-sm text-label/90 leading-relaxed">
           {content}
         </div>
       )}

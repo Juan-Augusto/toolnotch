@@ -104,7 +104,7 @@ export default function AppQuizDepth({ content, currentSlug }: Props) {
           {content.introHeading}
         </h2>
 
-        <div className="space-y-3s text-label leading-loose">
+        <div className="space-y-4 text-label leading-relaxed">
           {content.intro.map((paragraph, i) => (
             <p key={i}>{paragraph}</p>
           ))}
@@ -212,7 +212,6 @@ export default function AppQuizDepth({ content, currentSlug }: Props) {
                   <AppCard
                     hover
                     border
-                    withCornerAccents={false}
                     className={`h-full flex flex-col justify-between p-5 transition-all ${
                       isCurrent ? "!border-primary bg-primary/10" : ""
                     }`}

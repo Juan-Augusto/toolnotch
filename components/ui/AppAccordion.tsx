@@ -75,7 +75,7 @@ export function AppAccordion({
   };
 
   return (
-    <div className={`w-full flex flex-col gap-3 ${className}`}>
+    <div className={`w-full flex flex-col gap-2 sm:gap-2.5 ${className}`.trim()}>
       {normalizedGroups.map((grp, idx) => {
         const key = grp.id ?? `${grp.name}-${idx}`;
         const open = isItemOpen(key);
@@ -91,16 +91,16 @@ export function AppAccordion({
               type="button"
               onClick={() => toggleItem(key)}
               aria-expanded={open}
-              className={`w-full flex font-medium items-center justify-between px-6 py-4 text-left select-none cursor-pointer bg-tertiary hover:text-foreground transition-colors ${
+              className={`w-full flex font-medium items-center justify-between px-3.5 sm:px-5 py-2.5 sm:py-3.5 text-left select-none cursor-pointer bg-tertiary hover:text-foreground transition-colors ${
                 open ? "text-secondary hover:text-secondary" : "text-label"
-              } ${headerClassName}`}
+              } ${headerClassName}`.trim()}
             >
-              <span className=" uppercase ">{grp.name}</span>
+              <span className="text-xs sm:text-sm font-medium leading-snug">{grp.name}</span>
 
               <motion.span
                 animate={{ rotate: open ? 180 : 0 }}
                 transition={{ duration: 0.25, ease: "easeInOut" }}
-                className="shrink-0 ml-4 flex items-center justify-center text-foreground"
+                className="shrink-0 ml-3 sm:ml-4 flex items-center justify-center text-foreground"
               >
                 {open ? (
                   <Minus className="w-3.5 h-3.5 stroke-[3]" />
@@ -140,7 +140,7 @@ export function AppAccordion({
                   className="overflow-hidden"
                 >
                   <div
-                    className={`p-6 border-t border-border/60 text-label leading-relaxed ${contentClassName}`}
+                    className={`px-3.5 sm:px-5 py-3 sm:py-4 border-t border-border/60 text-label leading-relaxed text-xs sm:text-sm ${contentClassName}`.trim()}
                   >
                     {grp.content}
                   </div>

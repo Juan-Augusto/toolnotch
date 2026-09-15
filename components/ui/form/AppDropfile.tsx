@@ -276,7 +276,7 @@ export function AppDropfile({
       {label && (
         <label
           htmlFor={inputId}
-          className={`font-mono text-xs font-semibold uppercase  text-foreground mb-2 select-none ${
+          className={`text-xs font-semibold uppercase  text-foreground mb-2 select-none ${
             disabled ? "opacity-50" : ""
           } ${labelClassName}`}
         >
@@ -408,14 +408,10 @@ export function AppDropfile({
         </div>
       )}
 
-      {error && (
-        <span className="font-mono text-xs text-red-500 mt-1.5 ">{error}</span>
-      )}
+      {error && <span className="text-xs text-red-500 mt-1.5 ">{error}</span>}
 
       {helperText && !error && (
-        <span className="font-mono text-xs text-label/70 mt-1.5 ">
-          {helperText}
-        </span>
+        <span className="text-xs text-label/70 mt-1.5 ">{helperText}</span>
       )}
     </div>
   );

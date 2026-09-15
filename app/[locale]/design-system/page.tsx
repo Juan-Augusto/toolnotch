@@ -34,7 +34,7 @@ function Swatch({
           {label}
         </div>
         <div
-          className="text-xs font-mono"
+          className="text-xs"
           style={{ color: "var(--text-muted)" }}
         >
           {value}
@@ -104,7 +104,7 @@ export default function DesignSystemPage() {
             <div>
               <div className="">Primary neon</div>
               <div
-                className="text-2xl font-bold font-mono"
+                className="text-2xl font-bold"
                 style={{ color: "var(--neon)", fontFamily: "var(--font-mono)" }}
               >
                 #00e5a0
@@ -477,7 +477,7 @@ export default function DesignSystemPage() {
                     {label}
                   </span>
                   <span
-                    className="text-xs font-mono"
+                    className="text-xs"
                     style={{
                       color: "var(--text-muted)",
                       fontFamily: "var(--font-mono)",

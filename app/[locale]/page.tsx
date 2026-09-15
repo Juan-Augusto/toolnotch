@@ -41,7 +41,7 @@ export default async function HomePage({ params }: Props) {
       title: t("cards.tools.title"),
       desc: t("cards.tools.desc"),
       color: "primary" as const,
-      href: "/",
+      href: "/tools",
     },
     {
       title: t("cards.quizzes.title"),
@@ -67,9 +67,9 @@ export default async function HomePage({ params }: Props) {
     <main className="container min-h-[calc(100vh-180px)] bg-background py-8">
       <div className="w-full flex flex-col md:flex-row items-start md:items-end justify-between gap-8 pt-14 pb-20">
         <div className="flex-1 max-w-4xl space-y-5 sm:space-y-6">
-          <p className="font-mono   text-secondary">{t("caption")}</p>
+          <p className="  text-secondary">{t("caption")}</p>
 
-          <h1 className="font-mono text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-foreground dark:text-foreground leading-[1.2]">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-foreground dark:text-foreground leading-[1.2]">
             {t.rich("heading", {
               highlight: (chunks) => (
                 <span className="text-primary">{chunks}</span>
@@ -77,13 +77,13 @@ export default async function HomePage({ params }: Props) {
             })}
           </h1>
 
-          <p className="font-mono  text-label/90 dark:text-[#A8A8A8] max-w-lg leading-relaxed">
+          <p className=" text-label/90 dark:text-[#A8A8A8] max-w-lg leading-relaxed">
             {t("subheading")}
           </p>
         </div>
 
         <div className="shrink-0 self-end md:self-end pb-1 pr-2 sm:pr-8 md:pr-14 select-none">
-          <span className="font-mono font-black text-6xl sm:text-7xl md:text-9xl text-secondary leading-0 inline-block">
+          <span className="font-black text-6xl sm:text-7xl md:text-9xl text-secondary leading-0 inline-block">
             *
           </span>
         </div>
@@ -98,10 +98,10 @@ export default async function HomePage({ params }: Props) {
               className="flex flex-col justify-between p-6 sm:p-7 min-h-[330px]"
             >
               <div>
-                <h2 className="font-mono text-sm sm:text-base  text-foreground dark:text-foreground uppercase">
+                <h2 className="text-sm sm:text-base  text-foreground dark:text-foreground uppercase">
                   {card.title}
                 </h2>
-                <p className="font-mono  text-label/80 dark:text-label mt-3 leading-relaxed">
+                <p className=" text-label/80 dark:text-label mt-3 leading-relaxed">
                   {card.desc}
                 </p>
               </div>

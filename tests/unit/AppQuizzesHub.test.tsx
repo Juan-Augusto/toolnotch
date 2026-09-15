@@ -115,13 +115,12 @@ describe('AppQuizzesHub', () => {
     ).toBeInTheDocument();
   });
 
-  it('filters quizzes using flat search input', async () => {
+  it('filters quizzes using search input', async () => {
     const { fireEvent } = await import('@testing-library/react');
     render(<AppQuizzesHub quizzes={mockQuizzes} locale="pt" />);
 
     const searchInput = screen.getByPlaceholderText('pesquisar...');
     expect(searchInput).toBeInTheDocument();
-    expect(searchInput).toHaveClass('bg-transparent', 'border-0');
 
     fireEvent.change(searchInput, { target: { value: 'FIFA' } });
     expect(screen.getByText('FIFA World Cup Winners')).toBeInTheDocument();
@@ -132,44 +131,35 @@ describe('AppQuizzesHub', () => {
     expect(screen.getByText('Node.js Fundamentals')).toBeInTheDocument();
   });
 
-  it('expands search input and displays esc badge when focused, and collapses on Escape key', async () => {
+  it('renders fixed-size search input and clears search on Escape key', async () => {
     const { fireEvent } = await import('@testing-library/react');
     render(<AppQuizzesHub quizzes={mockQuizzes} locale="pt" />);
 
     const container = screen.getByTestId('quizzes-search-container');
-    expect(container).toHaveClass('w-40', 'sm:w-44');
-    expect(screen.queryByText('esc')).not.toBeInTheDocument();
+    expect(container).toHaveClass('w-full', 'sm:w-64', 'md:w-72');
 
     const searchInput = screen.getByPlaceholderText('pesquisar...');
-    fireEvent.focus(searchInput);
-
-    expect(container).toHaveClass('w-full', 'sm:w-72', 'lg:w-80');
-    expect(screen.getByText('esc')).toBeInTheDocument();
+    fireEvent.change(searchInput, { target: { value: 'FIFA' } });
+    expect(searchInput).toHaveValue('FIFA');
 
     fireEvent.keyDown(searchInput, { key: 'Escape', code: 'Escape' });
-
-    expect(container).toHaveClass('w-40', 'sm:w-44');
-    expect(screen.queryByText('esc')).not.toBeInTheDocument();
+    expect(searchInput).toHaveValue('');
+    expect(screen.getByText('Node.js Fundamentals')).toBeInTheDocument();
   });
 
-  it('collapses search input and clears search query when esc badge is clicked', async () => {
+  it('renders clear button when query is present and clears query on click', async () => {
     const { fireEvent } = await import('@testing-library/react');
     render(<AppQuizzesHub quizzes={mockQuizzes} locale="pt" />);
 
-    const container = screen.getByTestId('quizzes-search-container');
     const searchInput = screen.getByPlaceholderText('pesquisar...');
+    expect(screen.queryByLabelText('Clear search')).not.toBeInTheDocument();
 
     fireEvent.change(searchInput, { target: { value: 'FIFA' } });
-    expect(container).toHaveClass('w-full', 'sm:w-72', 'lg:w-80');
+    const clearBtn = screen.getByLabelText('Clear search');
+    expect(clearBtn).toBeInTheDocument();
 
-    const escBadge = screen.getByText('esc');
-    expect(escBadge).toBeInTheDocument();
-
-    fireEvent.click(escBadge);
-
+    fireEvent.click(clearBtn);
     expect(searchInput).toHaveValue('');
-    expect(container).toHaveClass('w-40', 'sm:w-44');
-    expect(screen.queryByText('esc')).not.toBeInTheDocument();
     expect(screen.getByText('Node.js Fundamentals')).toBeInTheDocument();
   });
 });

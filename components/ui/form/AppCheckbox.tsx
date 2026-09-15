@@ -126,7 +126,7 @@ export function AppCheckbox({
 
         {label && (
           <span
-            className={`font-mono text-sm font-semibold uppercase  text-foreground ${labelClassName}`}
+            className={`text-sm font-semibold uppercase  text-foreground ${labelClassName}`}
           >
             {label}
           </span>
@@ -134,11 +134,11 @@ export function AppCheckbox({
       </label>
 
       {error && (
-        <span className="font-mono text-xs text-red-500 mt-1.5 ">{error}</span>
+        <span className="text-xs text-red-500 mt-1.5 ">{error}</span>
       )}
 
       {helperText && !error && (
-        <span className="font-mono text-xs text-label/70 mt-1.5 ">
+        <span className="text-xs text-label/70 mt-1.5 ">
           {helperText}
         </span>
       )}

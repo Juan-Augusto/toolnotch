@@ -84,7 +84,7 @@ export function AppTextarea({
       {label && (
         <label
           htmlFor={textareaId}
-          className={`font-mono text-xs font-semibold uppercase  text-foreground mb-2 select-none ${
+          className={`text-xs font-semibold uppercase  text-foreground mb-2 select-none ${
             disabled ? "opacity-50" : ""
           } ${labelClassName}`}
         >
@@ -107,7 +107,7 @@ export function AppTextarea({
             w-full
             px-4
             py-3
-            font-mono
+           
             text-sm
             
             text-foreground
@@ -118,7 +118,7 @@ export function AppTextarea({
             duration-150
             outline-none
             placeholder:text-label/50
-            placeholder:font-mono
+            
             placeholder:uppercase
             disabled:opacity-40
             disabled:cursor-not-allowed
@@ -138,11 +138,11 @@ export function AppTextarea({
       </div>
 
       {error && (
-        <span className="font-mono text-xs text-red-500 mt-1.5 ">{error}</span>
+        <span className="text-xs text-red-500 mt-1.5 ">{error}</span>
       )}
 
       {helperText && !error && (
-        <span className="font-mono text-xs text-label/70 mt-1.5 ">
+        <span className="text-xs text-label/70 mt-1.5 ">
           {helperText}
         </span>
       )}

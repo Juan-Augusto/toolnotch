@@ -3,12 +3,11 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { saveAs } from "file-saver";
-import { ShieldCheck, Zap, Sparkles } from "lucide-react";
-import AppBreadcrumb from "@/components/AppBreadcrumb";
-import AppDropfile from "@/components/AppDropfile";
-import { AppCard, AppButton, AppBadge } from "@/components/ui";
+import { ShieldCheck, Zap, Sparkles, Loader2 } from "lucide-react";
+import { AppCard, AppButton, AppDropfile } from "@/components/ui";
 import { compressPDF } from "@/lib/pdfCompress";
 import type { FaqItem } from "@/components/AppFaqSection";
+import PdfToolHeader from "../components/PdfToolHeader";
 import CompressResult from "./components/CompressResult";
 import CompressContent, { type RichContent } from "./components/CompressContent";
 
@@ -36,16 +35,6 @@ export default function CompressTool({
     compressedSize: number;
   } | null>(null);
   const [compressedBytes, setCompressedBytes] = useState<Uint8Array | null>(null);
-
-  const homeLabel =
-    locale === "pt" ? "Início" : locale === "es" ? "Inicio" : "Home";
-  const pdfToolsLabel =
-    locale === "pt"
-      ? "Ferramentas PDF"
-      : locale === "es"
-        ? "Herramientas PDF"
-        : "PDF Tools";
-  const prefix = locale === "en" ? "" : `/${locale}`;
 
   const resetLabel =
     locale === "pt"
@@ -98,69 +87,55 @@ export default function CompressTool({
       : 0;
 
   return (
-    <main className="container min-h-[calc(100vh-180px)] bg-background py-8">
+    <main className="container min-h-[calc(100vh-180px)] bg-background py-3 sm:py-6 md:py-8">
       <div className="w-full">
-        <div className="w-full pb-4">
-          <AppBreadcrumb
-            items={[
-              { label: homeLabel, href: prefix || "/" },
-              { label: pdfToolsLabel, href: `${prefix}/tools/pdf` },
-              { label: title, current: true },
-            ]}
-          />
-        </div>
-
-        <header className="mb-10 pt-2 pb-8 border-b border-border/80 relative">
-          <h1 className="font-mono text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-tight text-foreground">
-            {title}
-          </h1>
-          <p className="leading-relaxed text-label mt-3 max-w-3xl font-mono text-xs sm:text-sm">
-            {description}
-          </p>
-
-          <div className="flex flex-wrap items-center gap-2 sm:gap-3 mt-5">
-            <AppBadge
-              bg="bg-primary"
-              text="text-background"
-              icon={<ShieldCheck className="w-3.5 h-3.5 shrink-0" />}
-            >
-              {locale === "pt"
-                ? "Sem upload para servidores"
-                : locale === "es"
-                  ? "Sin subida a servidores"
-                  : "Zero server upload"}
-            </AppBadge>
-            <AppBadge
-              bg="bg-secondary"
-              text="text-background"
-              icon={<Zap className="w-3.5 h-3.5 shrink-0" />}
-            >
-              {locale === "pt"
-                ? "Preserva textos e imagens"
-                : locale === "es"
-                  ? "Preserva textos e imágenes"
-                  : "Preserves text & graphics"}
-            </AppBadge>
-            <AppBadge
-              bg="bg-foreground"
-              text="text-background"
-              icon={<Sparkles className="w-3.5 h-3.5 shrink-0" />}
-            >
-              {locale === "pt"
-                ? "Ilimitado & Gratuito"
-                : locale === "es"
-                  ? "Ilimitado y Gratis"
-                  : "Unlimited & Free"}
-            </AppBadge>
-          </div>
-        </header>
+        <PdfToolHeader
+          title={title}
+          description={description}
+          locale={locale}
+          badges={[
+            {
+              text:
+                locale === "pt"
+                  ? "Sem upload para servidores"
+                  : locale === "es"
+                    ? "Sin subida a servidores"
+                    : "Zero server upload",
+              bg: "bg-primary",
+              textColor: "text-background",
+              icon: <ShieldCheck className="w-3.5 h-3.5 shrink-0" />,
+            },
+            {
+              text:
+                locale === "pt"
+                  ? "Preserva textos e imagens"
+                  : locale === "es"
+                    ? "Preserva textos e imágenes"
+                    : "Preserves text & graphics",
+              bg: "bg-secondary",
+              textColor: "text-background",
+              icon: <Zap className="w-3.5 h-3.5 shrink-0" />,
+            },
+            {
+              text:
+                locale === "pt"
+                  ? "Ilimitado & Gratuito"
+                  : locale === "es"
+                    ? "Ilimitado y Gratis"
+                    : "Unlimited & Free",
+              bg: "bg-foreground",
+              textColor: "text-background",
+              icon: <Sparkles className="w-3.5 h-3.5 shrink-0" />,
+            },
+          ]}
+        />
 
         <AppCard
           border
           cornerAccents={true}
-          className="p-6 md:p-8 bg-tertiary mb-10 max-w-4xl mx-auto shadow-xs"
+          className="p-1.5 sm:p-4 md:p-6 lg:p-8 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto shadow-xs"
         >
-          <div className="space-y-6">
+          <div className="space-y-3 sm:space-y-5">
             {!result ? (
               <>
                 <AppDropfile
@@ -181,17 +156,19 @@ export default function CompressTool({
                 />
 
                 {loading && (
-                  <div className="p-4 bg-background border border-secondary/30 rounded-[2px] space-y-2.5 font-mono">
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="text-secondary font-semibold uppercase flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-secondary animate-ping" />
-                        {locale === "pt"
-                          ? "Otimizando estrutura do PDF..."
-                          : locale === "es"
-                            ? "Optimizando estructura del PDF..."
-                            : "Optimizing PDF structure..."}
-                      </span>
-                      <span className="text-label text-[11px] animate-pulse">
+                  <div className="p-3.5 sm:p-4 bg-background border border-border rounded-[2px] space-y-2.5 sm:space-y-3">
+                    <div className="flex items-center justify-between text-xs gap-2">
+                      <div className="flex items-center gap-2 font-semibold text-foreground min-w-0">
+                        <Loader2 className="w-3.5 h-3.5 animate-spin text-primary shrink-0" />
+                        <span className="truncate">
+                          {locale === "pt"
+                            ? "Otimizando estrutura do PDF..."
+                            : locale === "es"
+                              ? "Optimizando estructura del PDF..."
+                              : "Optimizing PDF structure..."}
+                        </span>
+                      </div>
+                      <span className="text-xs text-label font-medium shrink-0">
                         {locale === "pt"
                           ? "Processando no navegador"
                           : locale === "es"
@@ -199,18 +176,19 @@ export default function CompressTool({
                             : "Processing locally"}
                       </span>
                     </div>
-                    <div className="w-full bg-tertiary h-1.5 rounded-full overflow-hidden border border-border/40">
-                      <div className="bg-gradient-to-r from-secondary to-primary h-full w-full animate-[neon-pulse_1.5s_ease-in-out_infinite]" />
+                    <div className="w-full bg-tertiary h-2 rounded-[2px] overflow-hidden border border-border">
+                      <div className="bg-primary h-full w-full animate-pulse" />
                     </div>
                   </div>
                 )}
 
-                <div className="flex flex-wrap items-center gap-4 pt-2">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-3 border-t border-border">
                   <AppButton
                     onClick={handleCompress}
                     disabled={loading || !file}
                     color="primary"
                     withArrow
+                    className="w-full sm:w-auto"
                   >
                     {loading ? t("button.compressing") : t("button.compress")}
                   </AppButton>
@@ -218,7 +196,7 @@ export default function CompressTool({
                     <button
                       type="button"
                       onClick={handleReset}
-                      className="font-mono text-xs text-label hover:text-foreground transition-colors uppercase tracking-wider underline underline-offset-4 cursor-pointer"
+                      className="text-xs text-label hover:text-foreground transition-colors uppercase tracking-wider underline underline-offset-4 cursor-pointer self-center sm:self-auto py-2 sm:py-0"
                     >
                       {locale === "pt"
                         ? "Limpar arquivo"

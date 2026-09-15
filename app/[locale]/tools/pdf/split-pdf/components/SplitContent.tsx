@@ -24,12 +24,12 @@ export default function SplitContent({
   return (
     <>
       {richContent && (
-        <article className="space-y-10 mb-12 max-w-4xl mx-auto">
+        <article className="space-y-6 sm:space-y-8 md:space-y-10 mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto">
           {richContent.howToUse && richContent.howToUse.length > 0 && (
             <section aria-labelledby="how-to-use-heading">
               <h2
                 id="how-to-use-heading"
-                className="text-lg sm:text-xl font-bold uppercase text-foreground font-mono mb-4"
+                className="text-base sm:text-lg md:text-xl font-bold uppercase text-foreground mb-2.5 sm:mb-3.5"
               >
                 {locale === "pt"
                   ? "Como Usar"
@@ -37,16 +37,16 @@ export default function SplitContent({
                     ? "Cómo Usar"
                     : "How to Use"}
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3.5">
                 {richContent.howToUse.map((step, idx) => (
                   <div
                     key={idx}
-                    className="p-4 bg-tertiary border border-border rounded-[2px] flex items-start gap-3.5"
+                    className="p-2.5 sm:p-3.5 md:p-4 bg-tertiary border border-border rounded-[2px] flex items-start gap-2.5 sm:gap-3.5"
                   >
-                    <div className="w-7 h-7 rounded-[2px] bg-primary text-background font-mono font-bold text-xs flex items-center justify-center shrink-0">
+                    <div className="w-7 h-7 rounded-[2px] bg-primary text-background font-bold text-xs flex items-center justify-center shrink-0">
                       {String(idx + 1).padStart(2, "0")}
                     </div>
-                    <p className="leading-relaxed text-label font-mono text-xs sm:text-sm">
+                    <p className="leading-relaxed text-label text-xs sm:text-sm">
                       {step}
                     </p>
                   </div>
@@ -59,7 +59,7 @@ export default function SplitContent({
             <section aria-labelledby="what-is-heading">
               <h2
                 id="what-is-heading"
-                className="text-lg sm:text-xl font-bold uppercase text-foreground font-mono mb-3"
+                className="text-base sm:text-lg md:text-xl font-bold uppercase text-foreground mb-2 sm:mb-3"
               >
                 {locale === "pt"
                   ? "O que é Divisão de PDF?"
@@ -67,7 +67,7 @@ export default function SplitContent({
                     ? "¿Qué es la División de PDF?"
                     : "What Is PDF Splitting?"}
               </h2>
-              <p className="leading-relaxed text-label font-mono text-xs sm:text-sm">
+              <p className="leading-relaxed text-label text-xs sm:text-sm">
                 {richContent.whatIs}
               </p>
             </section>
@@ -77,7 +77,7 @@ export default function SplitContent({
             <section aria-labelledby="why-it-matters-heading">
               <h2
                 id="why-it-matters-heading"
-                className="text-lg sm:text-xl font-bold uppercase text-foreground font-mono mb-3"
+                className="text-base sm:text-lg md:text-xl font-bold uppercase text-foreground mb-2 sm:mb-3"
               >
                 {locale === "pt"
                   ? "Por que Isso Importa"
@@ -85,7 +85,7 @@ export default function SplitContent({
                     ? "Por Qué Es Importante"
                     : "Why It Matters"}
               </h2>
-              <p className="leading-relaxed text-label font-mono text-xs sm:text-sm">
+              <p className="leading-relaxed text-label text-xs sm:text-sm">
                 {richContent.whyItMatters}
               </p>
             </section>
@@ -108,10 +108,10 @@ export default function SplitContent({
       )}
 
       {faqs && faqs.length > 0 && (
-        <section aria-labelledby="faqs-heading" className="mb-12 mx-auto max-w-4xl">
+        <section aria-labelledby="faqs-heading" className="mb-6 sm:mb-8 md:mb-12 mx-auto max-w-4xl">
           <h2
             id="faqs-heading"
-            className="text-lg sm:text-xl font-bold uppercase text-foreground font-mono mb-6"
+            className="text-base sm:text-lg md:text-xl font-bold uppercase text-foreground mb-3 sm:mb-4 md:mb-6"
           >
             {locale === "pt"
               ? "Perguntas Frequentes"
@@ -124,7 +124,7 @@ export default function SplitContent({
               id: `faq-${index}`,
               name: faq.question,
               content: (
-                <p className="leading-relaxed text-label font-mono text-xs sm:text-sm">
+                <p className="leading-relaxed text-label text-xs sm:text-sm">
                   {faq.answer}
                 </p>
               ),

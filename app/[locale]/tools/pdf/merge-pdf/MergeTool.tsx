@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo, useRef } from "react";
 import { useTranslations } from "next-intl";
 import {
   DndContext,
@@ -15,23 +15,48 @@ import {
   arrayMove,
   SortableContext,
   sortableKeyboardCoordinates,
-  useSortable,
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities";
 import { saveAs } from "file-saver";
-import { GripVertical, X } from "lucide-react";
-import AppToolWrapper from "@/components/AppToolWrapper";
+import { PDFDocument } from "pdf-lib";
+import {
+  ShieldCheck,
+  Layers,
+  Sparkles,
+  Info,
+  Trash2,
+  Loader2,
+} from "lucide-react";
+import {
+  AppCard,
+  AppButton,
+  AppInput,
+  AppDropfile,
+} from "@/components/ui";
 import { mergePDFs } from "@/lib/pdfMerge";
-import { PDFJob } from "@/lib/pdfTypes";
+import type { PDFJob } from "@/lib/pdfTypes";
+import { validatePdfFilename } from "@/lib/imageToPdf";
 import type { FaqItem } from "@/components/AppFaqSection";
-import AppButton from "@/components/AppButton";
+import PdfToolHeader from "../components/PdfToolHeader";
+import MergeFileItem from "./components/MergeFileItem";
+import MergeResult from "./components/MergeResult";
+import MergeContent, { type RichContent } from "./components/MergeContent";
+import { restrictToVerticalAxis } from "@/lib/dndModifiers";
 
-interface RichContent {
-  whatIs: string;
-  howToUse: string[];
-  whyItMatters: string;
-  proTip: string;
+interface MergeFileEntry {
+  id: string;
+  file: File;
+  name: string;
+  size: number;
+  pageCount: number | null;
+}
+
+interface MergeOutput {
+  bytes: Uint8Array;
+  fileName: string;
+  sizeBytes: number;
+  filesCount: number;
+  totalPages: number;
 }
 
 interface Props {
@@ -39,78 +64,117 @@ interface Props {
   description: string;
   faqs: FaqItem[];
   richContent?: RichContent;
+  locale?: string;
 }
 
-interface SortableItemProps {
-  id: string;
-  name: string;
-  onRemove: (id: string) => void;
-}
-
-function SortableItem({ id, name, onRemove }: SortableItemProps) {
-  const { attributes, listeners, setNodeRef, transform, transition, isDragging } =
-    useSortable({ id });
-
-  const style = {
-    transform: CSS.Transform.toString(transform),
-    transition,
-    opacity: isDragging ? 0.5 : 1,
-  };
-
-  return (
-    <div
-      ref={setNodeRef}
-      style={style}
-      className="flex items-center gap-3 p-3 bg-gray-50 border border-gray-200 rounded-xl dark:bg-tertiary dark:border-gray-700"
-    >
-      <button
-        {...attributes}
-        {...listeners}
-        className="text-gray-400 hover:text-gray-600 cursor-grab active:cursor-grabbing dark:text-gray-600 dark:hover:text-gray-400"
-        aria-label="Drag to reorder"
-      >
-        <GripVertical size={16} />
-      </button>
-      <span className="flex-1 text-sm text-gray-700 truncate dark:text-gray-300">{name}</span>
-      <button
-        onClick={() => onRemove(id)}
-        className="text-gray-400 hover:text-red-500 dark:text-gray-600"
-        aria-label="Remove file"
-      >
-        <X size={16} />
-      </button>
-    </div>
-  );
-}
-
-export default function MergeTool({ title, description, faqs, richContent }: Props) {
+export default function MergeTool({
+  title,
+  description,
+  faqs,
+  richContent,
+  locale = "pt",
+}: Props) {
   const t = useTranslations("pdf.merge");
-  const [jobs, setJobs] = useState<(PDFJob & { id: string })[]>([]);
+  const [files, setFiles] = useState<MergeFileEntry[]>([]);
+  const filesRef = useRef<MergeFileEntry[]>(files);
+  filesRef.current = files;
+
+  const [filename, setFilename] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [done, setDone] = useState(false);
+  const [result, setResult] = useState<MergeOutput | null>(null);
+
+  const resetLabel = t("button.reset");
+
+  const filenameValidation = useMemo(() => {
+    return validatePdfFilename(filename);
+  }, [filename]);
+
+  const filenameError = useMemo(() => {
+    if (filenameValidation.valid) return null;
+    return t("errors.invalidFilename");
+  }, [filenameValidation, t]);
+
+  const totalPages = useMemo(() => {
+    return files.reduce((acc, f) => acc + (f.pageCount ?? 0), 0);
+  }, [files]);
 
   const sensors = useSensors(
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
   );
 
-  const addFiles = useCallback((files: FileList | null) => {
-    if (!files) return;
-    const newJobs = Array.from(files)
-      .filter((f) => f.type === "application/pdf")
-      .map((f) => ({ id: `${f.name}-${Date.now()}-${Math.random()}`, file: f, name: f.name }));
-    setJobs((prev) => [...prev, ...newJobs]);
-    setDone(false);
+  const addFiles = useCallback(async (incoming: FileList | File[] | null) => {
+    if (!incoming) return;
+    const fileList = Array.from(incoming);
+    const valid = fileList.filter(
+      (f) =>
+        f.type === "application/pdf" ||
+        f.name.toLowerCase().endsWith(".pdf")
+    );
+
+    if (valid.length === 0) return;
+
+    const existingKeys = new Set(
+      filesRef.current.map(
+        (item) => `${item.name}-${item.size}-${item.file.lastModified ?? ""}`
+      )
+    );
+
+    const trulyNewFiles = valid.filter(
+      (f) => !existingKeys.has(`${f.name}-${f.size}-${f.lastModified ?? ""}`)
+    );
+
+    if (trulyNewFiles.length === 0) return;
+
+    const newEntries: MergeFileEntry[] = trulyNewFiles.map((f) => ({
+      id: `${f.name}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      file: f,
+      name: f.name,
+      size: f.size,
+      pageCount: null,
+    }));
+
+    setFiles((prev) => [...prev, ...newEntries]);
+    setError(null);
+    setResult(null);
+
+    for (const entry of newEntries) {
+      try {
+        const buffer = await entry.file.arrayBuffer();
+        const doc = await PDFDocument.load(buffer);
+        const count = doc.getPageCount();
+        setFiles((prev) =>
+          prev.map((item) =>
+            item.id === entry.id ? { ...item, pageCount: count } : item
+          )
+        );
+      } catch {
+        setFiles((prev) =>
+          prev.map((item) =>
+            item.id === entry.id ? { ...item, pageCount: null } : item
+          )
+        );
+      }
+    }
+  }, []);
+
+  const removeFile = useCallback((id: string) => {
+    setFiles((prev) => prev.filter((f) => f.id !== id));
     setError(null);
   }, []);
 
-  const removeJob = (id: string) => setJobs((prev) => prev.filter((j) => j.id !== id));
+  const handleClearAll = () => {
+    setFiles([]);
+    setResult(null);
+    setError(null);
+    setFilename("");
+  };
 
   const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
     if (over && active.id !== over.id) {
-      setJobs((items) => {
+      setFiles((items) => {
         const oldIndex = items.findIndex((i) => i.id === active.id);
         const newIndex = items.findIndex((i) => i.id === over.id);
         return arrayMove(items, oldIndex, newIndex);
@@ -119,16 +183,37 @@ export default function MergeTool({ title, description, faqs, richContent }: Pro
   };
 
   const handleMerge = async () => {
-    if (jobs.length < 2) {
+    if (files.length < 2) {
       setError(t("errors.tooFewFiles"));
       return;
     }
+
+    if (!filenameValidation.valid) {
+      setError(filenameError);
+      return;
+    }
+
     setLoading(true);
     setError(null);
+    setResult(null);
+
     try {
-      const bytes = await mergePDFs(jobs);
-      saveAs(new Blob([new Uint8Array(bytes)], { type: "application/pdf" }), "merged.pdf");
-      setDone(true);
+      const actualJobs: PDFJob[] = files.map((f) => ({
+        file: f.file,
+        name: f.name,
+      }));
+      const mergedBytes = await mergePDFs(actualJobs);
+
+      const cleanBase = filename.trim().replace(/\.pdf$/i, "");
+      const outputName = cleanBase ? `${cleanBase}.pdf` : "documento_mesclado.pdf";
+
+      setResult({
+        bytes: mergedBytes,
+        fileName: outputName,
+        sizeBytes: mergedBytes.byteLength,
+        filesCount: files.length,
+        totalPages,
+      });
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : t("errors.mergeFailed"));
     } finally {
@@ -136,55 +221,220 @@ export default function MergeTool({ title, description, faqs, richContent }: Pro
     }
   };
 
+  const handleDownload = () => {
+    if (!result) return;
+    saveAs(
+      new Blob([result.bytes as unknown as BlobPart], {
+        type: "application/pdf",
+      }),
+      result.fileName
+    );
+  };
+
+  const handleReset = () => {
+    setFiles([]);
+    setResult(null);
+    setError(null);
+    setFilename("");
+  };
+
   return (
-    <AppToolWrapper
-      title={title}
-      description={description}
-      breadcrumbLabel={title}
-      faqs={faqs}
-      richContent={richContent}
-    >
-      {/* Drop Zone */}
-      <div
-        className="border-2 border-dashed border-blue-300 rounded-xl p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-4 dark:border-blue-700 dark:hover:bg-blue-900/20"
-        onClick={() => document.getElementById("merge-file-input")?.click()}
-        onDragOver={(e) => e.preventDefault()}
-        onDrop={(e) => { e.preventDefault(); addFiles(e.dataTransfer.files); }}
-      >
-        <p className="text-blue-600 font-medium dark:text-blue-400">{t("dropZone.label")}</p>
-        <p className="text-gray-400 text-sm mt-1 dark:text-gray-500">{t("dropZone.hint")}</p>
-        <input
-          id="merge-file-input"
-          type="file"
-          accept=".pdf,application/pdf"
-          multiple
-          className="hidden"
-          onChange={(e) => addFiles(e.target.files)}
+    <main className="container min-h-[calc(100vh-180px)] bg-background py-3 sm:py-6 md:py-8">
+      <div className="w-full">
+        <PdfToolHeader
+          title={title}
+          description={description}
+          locale={locale}
+          badges={[
+            {
+              text: t("badges.noUpload"),
+              bg: "bg-primary",
+              textColor: "text-background",
+              icon: <ShieldCheck className="w-3.5 h-3.5 shrink-0" />,
+            },
+            {
+              text: t("badges.quality"),
+              bg: "bg-secondary",
+              textColor: "text-background",
+              icon: <Layers className="w-3.5 h-3.5 shrink-0" />,
+            },
+            {
+              text: t("badges.free"),
+              bg: "bg-foreground",
+              textColor: "text-background",
+              icon: <Sparkles className="w-3.5 h-3.5 shrink-0" />,
+            },
+          ]}
         />
+
+        <AppCard
+          border
+          cornerAccents={true}
+          className="p-1.5 sm:p-4 md:p-6 lg:p-8 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto shadow-xs"
+        >
+          <div className="space-y-3 sm:space-y-5">
+            {!result ? (
+              <>
+                <AppDropfile
+                  id="merge-dropfile"
+                  accept=".pdf,application/pdf"
+                  multiple={true}
+                  value={files.map((f) => f.file)}
+                  title={t("dropZone.label")}
+                  description={t("dropZone.hint")}
+                  onFilesChange={addFiles}
+                  showSelectedFiles={false}
+                  disabled={loading}
+                  error={error || undefined}
+                />
+
+                {files.length > 0 && (
+                  <div className="space-y-4 pt-2">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border/80 pb-3">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs font-bold uppercase tracking-wider text-foreground">
+                          {locale === "pt"
+                            ? "Arquivos Selecionados"
+                            : locale === "es"
+                              ? "Archivos Seleccionados"
+                              : "Selected Files"}
+                        </span>
+                        <span className="px-2 py-0.5 text-xs font-bold bg-primary text-background rounded-[2px]">
+                          {files.length}
+                        </span>
+                        {totalPages > 0 && (
+                          <span className="text-xs text-label">
+                            ({totalPages}{" "}
+                            {totalPages === 1
+                              ? locale === "en"
+                                ? "page"
+                                : "página"
+                              : locale === "en"
+                                ? "pages"
+                                : "páginas"}
+                            )
+                          </span>
+                        )}
+                      </div>
+
+                      <div className="flex items-center gap-2 text-xs text-label">
+                        <Info className="w-3.5 h-3.5 shrink-0 text-primary" />
+                        <span>
+                          {locale === "pt"
+                            ? "Arraste para definir a ordem final"
+                            : locale === "es"
+                              ? "Arrastra para definir el orden final"
+                              : "Drag items to set merge order"}
+                        </span>
+                      </div>
+                    </div>
+
+                    <DndContext
+                      sensors={sensors}
+                      collisionDetection={closestCenter}
+                      modifiers={[restrictToVerticalAxis]}
+                      onDragEnd={handleDragEnd}
+                    >
+                      <SortableContext
+                        items={files.map((f) => f.id)}
+                        strategy={verticalListSortingStrategy}
+                      >
+                        <div className="space-y-2 max-h-72 sm:max-h-96 overflow-y-auto overflow-x-hidden p-1">
+                          {files.map((entry, index) => (
+                            <MergeFileItem
+                              key={entry.id}
+                              id={entry.id}
+                              name={entry.name}
+                              size={entry.size}
+                              pageCount={entry.pageCount}
+                              index={index}
+                              onRemove={removeFile}
+                              locale={locale}
+                            />
+                          ))}
+                        </div>
+                      </SortableContext>
+                    </DndContext>
+
+                    <div className="pt-2">
+                      <AppInput
+                        id="merge-filename-input"
+                        label={
+                          <span>
+                            {t("filename.label")}{" "}
+                            <span className="text-label lowercase font-normal">
+                              ({t("filename.hint")})
+                            </span>
+                          </span>
+                        }
+                        value={filename}
+                        onChange={(e) => setFilename(e.target.value)}
+                        placeholder={t("filename.placeholder")}
+                        error={filenameError || undefined}
+                        aria-invalid={Boolean(filenameError)}
+                      />
+                    </div>
+                  </div>
+                )}
+
+                {loading && (
+                  <div className="p-3.5 sm:p-4 bg-background border border-border rounded-[2px] space-y-2.5 sm:space-y-3">
+                    <div className="flex items-center justify-between text-xs gap-2">
+                      <div className="flex items-center gap-2 font-semibold text-foreground min-w-0">
+                        <Loader2 className="w-3.5 h-3.5 animate-spin text-primary shrink-0" />
+                        <span className="truncate">{t("processing.status")}</span>
+                      </div>
+                      <span className="text-xs text-label font-medium shrink-0">
+                        {t("processing.local")}
+                      </span>
+                    </div>
+                    <div className="w-full bg-tertiary h-2 rounded-[2px] overflow-hidden border border-border">
+                      <div className="bg-primary h-full w-full animate-pulse" />
+                    </div>
+                  </div>
+                )}
+
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-3 border-t border-border">
+                  <AppButton
+                    onClick={handleMerge}
+                    disabled={loading || files.length < 2 || Boolean(filenameError)}
+                    color="primary"
+                    withArrow
+                    className="w-full sm:w-auto"
+                  >
+                    {loading ? t("button.merging") : t("button.merge")}
+                  </AppButton>
+
+                  {files.length > 0 && !loading && (
+                    <button
+                      type="button"
+                      onClick={handleClearAll}
+                      className="text-xs text-label hover:text-foreground transition-colors uppercase tracking-wider underline underline-offset-4 cursor-pointer flex items-center gap-1.5 self-center sm:self-auto py-2 sm:py-0"
+                    >
+                      <Trash2 className="w-3.5 h-3.5" />
+                      <span>{t("button.clearAll")}</span>
+                    </button>
+                  )}
+                </div>
+              </>
+            ) : (
+              <MergeResult
+                fileName={result.fileName}
+                sizeBytes={result.sizeBytes}
+                filesCount={result.filesCount}
+                totalPages={result.totalPages}
+                onDownload={handleDownload}
+                onReset={handleReset}
+                resetLabel={resetLabel}
+                locale={locale}
+                t={t}
+              />
+            )}
+          </div>
+        </AppCard>
+
+        <MergeContent richContent={richContent} faqs={faqs} locale={locale} />
       </div>
-
-      {/* File List */}
-      {jobs.length > 0 && (
-        <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-          <SortableContext items={jobs.map((j) => j.id)} strategy={verticalListSortingStrategy}>
-            <div className="space-y-2 mb-4">
-              {jobs.map((job) => (
-                <SortableItem key={job.id} id={job.id} name={job.name} onRemove={removeJob} />
-              ))}
-            </div>
-          </SortableContext>
-        </DndContext>
-      )}
-
-      {error && <p className="text-red-600 text-sm mb-3 dark:text-red-400">{error}</p>}
-      {done && <p className="text-green-600 text-sm mb-3 dark:text-green-400">{t("success")}</p>}
-
-      <AppButton
-        onClick={handleMerge}
-        disabled={loading || jobs.length < 2}
-      >
-        {loading ? t("button.merging") : t("button.merge")}
-      </AppButton>
-    </AppToolWrapper>
+    </main>
   );
 }

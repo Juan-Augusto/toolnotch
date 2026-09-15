@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
@@ -76,10 +76,13 @@ export function AppBreadcrumb({ items, className = "" }: AppBreadcrumbProps) {
     return null;
   }
 
+  const hasCustomTextSize = /(?:^|\s|\w+:)text-/.test(className);
+  const textSize = hasCustomTextSize ? "" : "text-xs sm:text-sm";
+
   return (
     <nav
       aria-label="Breadcrumb"
-      className={`flex items-center flex-wrap gap-2 font-mono  text-label py-1 ${className}`}
+      className={`flex items-center flex-wrap gap-1.5 sm:gap-2 ${textSize} text-label py-1 ${className}`.trim()}
     >
       {resolvedItems.map((item, index) => {
         const isLast = index === resolvedItems.length - 1 || item.current;
@@ -87,9 +90,11 @@ export function AppBreadcrumb({ items, className = "" }: AppBreadcrumbProps) {
         return (
           <div
             key={`${item.label}-${index}`}
-            className="flex items-center gap-2"
+            className="flex items-center gap-1.5 sm:gap-2"
           >
-            {index > 0 && <ChevronRight size={16} />}
+            {index > 0 && (
+              <ChevronRight size={13} className="text-label/50 shrink-0" />
+            )}
 
             {item.href && !isLast ? (
               <Link
@@ -101,9 +106,9 @@ export function AppBreadcrumb({ items, className = "" }: AppBreadcrumbProps) {
             ) : (
               <span
                 aria-current={isLast ? "page" : undefined}
-                className={`truncate max-w-[220px] sm:max-w-md ${
+                className={`truncate max-w-[240px] sm:max-w-none ${
                   isLast
-                    ? "text-foreground font-semibold"
+                    ? "text-foreground font-medium"
                     : "hover:text-secondary transition-colors"
                 }`}
               >

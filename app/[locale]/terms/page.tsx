@@ -140,16 +140,10 @@ export default async function TermsPage({ params }: Props) {
               {t("title")}
             </h1>
             <p className="leading-relaxed text-label mt-3">{t("subtitle")}</p>
-            <p className="text-xs text-label/80 mt-2 font-mono">
-              {t("lastUpdated")}
-            </p>
+            <p className="text-xs text-label/80 mt-2">{t("lastUpdated")}</p>
           </header>
 
-          <AppCard
-            border
-            withCornerAccents={false}
-            className="p-6 bg-tertiary mb-10"
-          >
+          <AppCard border className="p-6 bg-tertiary mb-10">
             <span className="font-bold text-secondary uppercase  text-xs">
               {t("badge")}
             </span>

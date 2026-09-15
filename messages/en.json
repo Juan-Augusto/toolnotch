@@ -144,11 +144,38 @@
       },
       "button": {
         "merge": "Merge PDFs",
-        "merging": "Merging…"
+        "merging": "Merging…",
+        "download": "Download Merged PDF",
+        "reset": "Merge other files",
+        "clearAll": "Clear all",
+        "addMore": "Add more PDFs"
+      },
+      "reorderHint": "Drag files to set page order in the final PDF.",
+      "filename": {
+        "label": "Merged file name",
+        "placeholder": "merged_document.pdf",
+        "hint": "optional"
+      },
+      "result": {
+        "title": "PDFs Successfully Merged!",
+        "description": "Your files were combined into a single document ready for download.",
+        "filesMerged": "Files combined",
+        "totalPages": "Total pages",
+        "finalSize": "Final size"
+      },
+      "badges": {
+        "noUpload": "Zero server upload",
+        "quality": "Original quality preserved",
+        "free": "Unlimited & Free"
+      },
+      "processing": {
+        "status": "Combining PDF pages...",
+        "local": "Processing in browser"
       },
       "errors": {
         "tooFewFiles": "Add at least 2 PDF files to merge.",
-        "mergeFailed": "Merge failed."
+        "mergeFailed": "Merge failed.",
+        "invalidFilename": "Invalid file format or name. Only .pdf is supported."
       },
       "success": "Merged PDF downloaded!",
       "faqs": [
@@ -234,7 +261,8 @@
       },
       "button": {
         "split": "Split PDF",
-        "splitting": "Splitting…"
+        "splitting": "Splitting…",
+        "reset": "Split another PDF"
       },
       "errors": {
         "noFile": "Please select a PDF file.",
@@ -243,7 +271,9 @@
         "startGreaterThanEnd": "Start page cannot be greater than end page (e.g. 1-3).",
         "zeroPage": "Page numbers must be greater than 0.",
         "pageOutOfBounds": "Page range exceeds document page count ({total} pages).",
-        "invalidFile": "Could not load PDF. It may be password-protected or corrupted."
+        "invalidFile": "Could not load PDF. It may be password-protected or corrupted.",
+        "invalidFileType": "Invalid file format. Please select a PDF file.",
+        "pdfCorrupted": "Could not load PDF. It may be password-protected or corrupted."
       },
       "pageCountSingular": "page",
       "pageCountPlural": "pages",
@@ -395,7 +425,11 @@
         "convert": "Convert to JPG",
         "converting": "Converting…",
         "downloadAll": "Download All {count} Images",
-        "downloadOne": "Download Image"
+        "downloadOne": "Download Image",
+        "reset": "Convert another PDF",
+        "clearFile": "Clear file",
+        "downloadZip": "Download ZIP ({count} images)",
+        "downloadPage": "Download JPG"
       },
       "progress": {
         "loading": "Loading PDF…",
@@ -457,7 +491,28 @@
         ],
         "whyItMatters": "PDF files cannot be embedded directly in social media posts, HTML image tags, or presentation slides. Converting to JPG makes document content universally shareable across every platform and application that accepts images. For single-page documents such as certificates, diplomas, event badges, or professional credentials, a JPEG is more portable and easier to display in a digital portfolio or on a LinkedIn profile than a PDF attachment that must be downloaded and opened separately.",
         "proTip": "All processing happens entirely in your browser — no files are uploaded to any server. Your documents never leave your device. Use 150 DPI for web display and email — good quality with a reasonable file size. Use 300 DPI only if the output will be printed or significantly zoomed in. For presentation slides, 96 DPI matches most screen resolutions and produces the smallest file without visible quality loss."
-      }
+      },
+      "badges": {
+        "noUpload": "Zero server upload",
+        "quality": "High resolution images (2x)",
+        "free": "Unlimited & Free"
+      },
+      "processing": {
+        "status": "Rendering PDF pages...",
+        "local": "Processing locally"
+      },
+      "result": {
+        "title": "PDF Successfully Converted!",
+        "description": "All pages were converted into high quality JPEG images ready for download.",
+        "pagesConverted": "Pages converted",
+        "format": "Output format",
+        "package": "Download package",
+        "singleJpg": "Single JPG image",
+        "zipArchive": "Complete ZIP archive",
+        "pageBadge": "Page {number}"
+      },
+      "pageCountSingular": "page",
+      "pageCountPlural": "pages"
     },
     "jpgToPdf": {
       "metaTitle": "JPG to PDF Online Free — Convert Images and PNG to PDF | ToolNotch",
@@ -535,6 +590,342 @@
         ],
         "whyItMatters": "Many official submission portals, university application systems, and HR platforms accept PDF but not JPEG. Combining multiple images into one PDF also satisfies single-file submission requirements — avoiding the problem of a form that accepts only one attachment when you have three scanned pages. The PDF container also supports metadata (title, author), password protection, and digital signatures that raw JPEG files do not, giving you more control over how the document is used after delivery.",
         "proTip": "All processing happens entirely in your browser — no files are uploaded to any server. Your documents never leave your device. If your images are very high resolution — phone camera photos are often 4000×3000 pixels and 6–12 MB each — compress or resize them before converting. A PDF containing three uncompressed phone photos can reach 30–40 MB. Aim for images under 2 MB each to produce a reasonably sized output PDF that passes most upload size limits."
+      }
+    },
+    "organize": {
+      "metaTitle": "Organize PDF Pages Online Free | ToolNotch",
+      "metaDescription": "Reorder, rotate, and delete PDF pages easily in your browser. Drag and drop to sort. 100% private, no file uploads.",
+      "title": "Organize PDF Pages",
+      "description": "Visually reorder document pages, rotate sideways pages, and delete unwanted sheets before saving.",
+      "badges": {
+        "noUpload": "No server upload",
+        "visual": "Visual reordering",
+        "reorder": "Visual reordering",
+        "free": "100% Free"
+      },
+      "dropZone": {
+        "label": "Select or drop your PDF file here",
+        "hint": "PDF documents of any size"
+      },
+      "actions": {
+        "rotateAll": "Rotate all 90°",
+        "resetOrder": "Reset order",
+        "summary": "{selected} of {total} pages selected",
+        "gridSize": "Thumbnail size",
+        "gridSizeMd": "Medium",
+        "gridSizeLg": "Large"
+      },
+      "card": {
+        "pageLabel": "Page {number}",
+        "originalLabel": "Orig. {number}",
+        "rotateHint": "Rotate 90°",
+        "deleteHint": "Remove from order",
+        "previewHint": "Enlarge and preview page"
+      },
+      "previewModal": {
+        "title": "Page Preview",
+        "pageIndicator": "Page {current} of {total}",
+        "originalLabel": "Original: Page {number}",
+        "zoomIn": "Zoom in",
+        "zoomOut": "Zoom out",
+        "resetZoom": "Fit to screen",
+        "rotate": "Rotate 90°",
+        "remove": "Remove page",
+        "prevPage": "Previous page",
+        "nextPage": "Next page",
+        "close": "Close preview",
+        "shortcuts": "Shortcuts: ← / → navigate • R rotate • Esc close"
+      },
+      "button": {
+        "save": "Save and Download PDF",
+        "saving": "Generating organized PDF...",
+        "reset": "Organize another PDF",
+        "clearFile": "Clear file"
+      },
+      "processing": {
+        "rendering": "Loading page thumbnails...",
+        "generating": "Assembling organized document..."
+      },
+      "errors": {
+        "noPages": "Select at least one page for the PDF.",
+        "failed": "Failed to organize PDF. Please verify the file is not corrupted."
+      },
+      "result": {
+        "title": "PDF Organized Successfully!",
+        "description": "Your pages were reordered and the document is ready for download.",
+        "download": "Download Organized PDF",
+        "pagesIncluded": "Pages included",
+        "finalFile": "Final file"
+      },
+      "faqs": [
+        {
+          "question": "How does page reordering work?",
+          "answer": "Simply drag and drop any thumbnail to your desired position. You can also rotate individual pages and delete sheets you do not want in the final PDF."
+        },
+        {
+          "question": "Are my files uploaded to a server?",
+          "answer": "No. All visual processing and PDF generation occur 100% in your browser using modern client-side JavaScript. Your files never leave your device."
+        },
+        {
+          "question": "Can I rotate a single page?",
+          "answer": "Yes! Each page card has an individual 90° clockwise rotation button so you can fix specific orientations without altering other pages."
+        },
+        {
+          "question": "Is there a page limit?",
+          "answer": "There are no artificial limits in ToolNotch. Processing depends solely on your device and browser memory."
+        }
+      ],
+      "richContent": {
+        "whatIs": "ToolNotch's Organize PDF tool lets you visually reorder, rotate, and remove pages from PDF documents instantly in your browser.",
+        "howToUse": [
+          "Upload your PDF file in the dropzone above.",
+          "Drag pages to arrange them in your preferred order.",
+          "Use the rotate and delete buttons on each page card if needed.",
+          "Click Save and Download PDF to get your new document."
+        ],
+        "whyItMatters": "Scanned documents often end up out of order, upside-down, or cluttered with blank pages. Organizing them before sharing contracts or reports ensures a polished, professional presentation.",
+        "proTip": "Use the 'Rotate all 90°' action if an entire scanned document came in sideways."
+      }
+    },
+    "deletePages": {
+      "metaTitle": "Delete PDF Pages Online Free | ToolNotch",
+      "metaDescription": "Delete specific or blank pages from PDF documents directly in your browser. Fast, secure, and 100% free.",
+      "title": "Delete PDF Pages",
+      "description": "Select the pages you want to remove by clicking on them or entering page ranges. Download a clean new PDF.",
+      "badges": {
+        "noUpload": "No server upload",
+        "visual": "Visual & text selection",
+        "free": "100% Free"
+      },
+      "dropZone": {
+        "label": "Select or drop your PDF file here",
+        "hint": "PDF documents of any size"
+      },
+      "input": {
+        "label": "Pages to remove",
+        "placeholder": "e.g. 1, 3-5, 8",
+        "hint": "Type page numbers or ranges separated by comma"
+      },
+      "actions": {
+        "selectAll": "Select all",
+        "clearSelection": "Deselect all",
+        "invertSelection": "Invert selection",
+        "summary": "{toDelete} marked for deletion, {remaining} remaining",
+        "gridSize": "Thumbnail size",
+        "gridSizeMd": "Medium",
+        "gridSizeLg": "Large"
+      },
+      "card": {
+        "pageLabel": "Page {number}",
+        "marked": "Delete",
+        "keep": "Keep page",
+        "previewHint": "Enlarge and preview page",
+        "previewAction": "Preview",
+        "statusOk": "OK"
+      },
+      "previewModal": {
+        "title": "Page Preview",
+        "pageIndicator": "Page {current} of {total}",
+        "zoomIn": "Zoom in",
+        "zoomOut": "Zoom out",
+        "resetZoom": "Fit to screen",
+        "markForDeletion": "Mark for deletion",
+        "keepPage": "Keep page",
+        "markedBadge": "Marked for deletion",
+        "keepBadge": "Page kept",
+        "prevPage": "Previous page",
+        "nextPage": "Next page",
+        "close": "Close preview",
+        "shortcuts": "Shortcuts: ← / → navigate • Space toggle deletion • Esc close"
+      },
+      "button": {
+        "delete": "Delete Pages and Download",
+        "deleting": "Deleting pages...",
+        "reset": "Process another PDF",
+        "clearFile": "Clear file"
+      },
+      "processing": {
+        "rendering": "Loading pages...",
+        "generating": "Creating new PDF..."
+      },
+      "errors": {
+        "cannotDeleteAll": "Cannot delete all pages from the PDF. Keep at least one page in the document.",
+        "failed": "Failed to delete PDF pages. Please verify the file is not corrupted."
+      },
+      "result": {
+        "title": "Pages Deleted Successfully!",
+        "description": "The new PDF was generated without the selected pages and is ready for download.",
+        "download": "Download Clean PDF",
+        "pagesRemoved": "Pages deleted",
+        "pagesRemaining": "Pages remaining",
+        "finalFile": "Final file"
+      },
+      "faqs": [
+        {
+          "question": "How do I choose which pages to remove?",
+          "answer": "Click directly on the visual page cards or type page numbers and ranges (e.g. 2, 4-6) into the input field."
+        },
+        {
+          "question": "Is my original file modified?",
+          "answer": "No. Your original file remains untouched. The tool generates a brand-new clean PDF containing only the pages you chose to keep."
+        },
+        {
+          "question": "Are confidential documents safe?",
+          "answer": "Absolutely. Everything runs locally in your web browser. No files or data are ever transmitted to external servers."
+        }
+      ],
+      "richContent": {
+        "whatIs": "ToolNotch's Delete PDF Pages tool allows you to safely and quickly remove unwanted, blank, or sensitive pages from any PDF document.",
+        "howToUse": [
+          "Upload your PDF document.",
+          "Select the pages to delete by clicking cards or entering ranges.",
+          "Review the remaining page count in the summary bar.",
+          "Click Delete Pages and Download to save your clean PDF."
+        ],
+        "whyItMatters": "Sharing confidential or accidental blank pages looks sloppy and risks leaking private information. Pruning unnecessary pages keeps documents concise and secure.",
+        "proTip": "Use ranges like '4-10' in the text field to remove entire chapters or sections instantly."
+      }
+    },
+    "pdfToText": {
+      "metaTitle": "PDF to Text Online Free — Extract Text from PDF | ToolNotch",
+      "metaDescription": "Extract all text from PDF files instantly in your browser. Copy to clipboard or download as .txt. 100% private.",
+      "title": "PDF to Text",
+      "description": "Convert PDF documents into readable plain text. Copy excerpts with one click or download the text file formatted by pages.",
+      "badges": {
+        "noUpload": "No server upload",
+        "accuracy": "Faithful structure extraction",
+        "free": "100% Free"
+      },
+      "dropZone": {
+        "label": "Select or drop your PDF file here",
+        "hint": "Documents with native digital text"
+      },
+      "stats": {
+        "pages": "Total Pages",
+        "words": "Words",
+        "chars": "Characters"
+      },
+      "tabs": {
+        "full": "Full Text",
+        "byPage": "By Page"
+      },
+      "pageHeader": "--- Page {number} ---",
+      "button": {
+        "extract": "Extract Text",
+        "extracting": "Extracting text...",
+        "copy": "Copy Text",
+        "copied": "Copied!",
+        "downloadTxt": "Download .txt file",
+        "reset": "Convert another PDF",
+        "clearFile": "Clear file"
+      },
+      "processing": {
+        "status": "Reading PDF text layers...",
+        "local": "Processing in browser"
+      },
+      "errors": {
+        "noTextFound": "No selectable text was found in this PDF. The document may consist solely of scanned images without an OCR layer.",
+        "failed": "Failed to extract text from PDF."
+      },
+      "result": {
+        "title": "Text Extracted Successfully!",
+        "description": "The text content of your PDF has been extracted and is ready to copy or download.",
+        "previewTitle": "Extracted Text Preview"
+      },
+      "faqs": [
+        {
+          "question": "Why do some PDFs have no extractable text?",
+          "answer": "PDFs made from camera photos or old scanners contain bitmap pictures of pages rather than embedded digital font characters. Files exported from Word, Docs, or printers work immediately."
+        },
+        {
+          "question": "Does it preserve paragraphs?",
+          "answer": "Yes! The parser evaluates vertical coordinate line changes to maintain natural, readable paragraph structure."
+        },
+        {
+          "question": "Is my text data private?",
+          "answer": "Completely. Processing runs directly in your browser memory via PDF.js with zero server uploads."
+        }
+      ],
+      "richContent": {
+        "whatIs": "ToolNotch's PDF to Text converter extracts textual content from digital PDF files, ready for quick copying or saving into plain text documents.",
+        "howToUse": [
+          "Upload your PDF document.",
+          "Watch the text extract in real time.",
+          "Review the text in full view or page-by-page with word statistics.",
+          "Click Copy Text or Download .txt file."
+        ],
+        "whyItMatters": "Copying text manually from PDF readers often copies awkward line breaks and hyphenations. This tool formats the text into smooth paragraphs and gives instant word counts.",
+        "proTip": "Use 'By Page' view if you only need to cite or extract a specific segment of a long report."
+      }
+    },
+    "extractImages": {
+      "metaTitle": "Extract Images from PDF Online Free | ToolNotch",
+      "metaDescription": "Extract all embedded photos and illustrations from PDF files in their original resolution. Download individually or as a ZIP archive.",
+      "title": "Extract Images from PDF",
+      "description": "Isolate all images, photos, and graphics inside your PDF. Download each image individually or all together as a ZIP.",
+      "badges": {
+        "noUpload": "No server upload",
+        "quality": "Original resolution preserved",
+        "free": "100% Free"
+      },
+      "dropZone": {
+        "label": "Select or drop your PDF file here",
+        "hint": "PDFs containing illustrations, graphics, or photos"
+      },
+      "stats": {
+        "found": "{count} images found"
+      },
+      "empty": {
+        "title": "No embedded images found",
+        "description": "This document appears to contain only vector text or shapes without embedded bitmap images."
+      },
+      "button": {
+        "extract": "Extract Images",
+        "extracting": "Extracting images...",
+        "downloadZip": "Download All as ZIP ({count})",
+        "downloadImage": "Download Image",
+        "reset": "Process another PDF",
+        "clearFile": "Clear file"
+      },
+      "processing": {
+        "status": "Searching PDF objects for images...",
+        "local": "Processing in browser"
+      },
+      "errors": {
+        "failed": "Failed to extract images from PDF. Please verify the file is not corrupted."
+      },
+      "result": {
+        "title": "Images Extracted Successfully!",
+        "description": "All embedded graphics were extracted in their native resolution.",
+        "imagesFound": "Images found",
+        "package": "Download package",
+        "zipArchive": "Complete ZIP archive",
+        "dimension": "{width}x{height} px"
+      },
+      "faqs": [
+        {
+          "question": "What is the difference between 'PDF to JPG' and 'Extract Images'?",
+          "answer": "'PDF to JPG' rasterizes the full page as a picture (including margins and headers). 'Extract Images' pulls only the original photo or logo asset files embedded inside the PDF."
+        },
+        {
+          "question": "What image formats are exported?",
+          "answer": "Images are preserved as PNG or JPEG, keeping alpha transparency and full sharpness intact."
+        },
+        {
+          "question": "Do images lose quality during extraction?",
+          "answer": "No. The tool extracts the raw image stream stored in the PDF without lossy recompression."
+        }
+      ],
+      "richContent": {
+        "whatIs": "ToolNotch's Extract Images from PDF tool scans documents for embedded image objects and lets you save them individually or in a single ZIP file.",
+        "howToUse": [
+          "Select a PDF file containing images.",
+          "Wait while pages are scanned for embedded artwork.",
+          "Inspect the gallery showing dimensions for every image.",
+          "Download any image individually or all at once in a ZIP."
+        ],
+        "whyItMatters": "Taking screenshots of PDF graphics produces low-resolution images with cut-off borders. Native extraction retrieves the exact file that was originally placed into the document.",
+        "proTip": "Use individual image download buttons when you only need a single logo from a multi-page document."
       }
     }
   },
@@ -3301,6 +3692,22 @@
       },
       "worldCupResult": {
         "label": "World Cup Quiz Results"
+      },
+      "organizePdf": {
+        "label": "Organize PDF",
+        "desc": "Reorder, rotate, and delete PDF pages."
+      },
+      "deletePdfPages": {
+        "label": "Delete PDF Pages",
+        "desc": "Remove specific pages or page ranges from a PDF."
+      },
+      "pdfToText": {
+        "label": "PDF to Text",
+        "desc": "Extract all text from PDF files to copy or download as .txt."
+      },
+      "extractPdfImages": {
+        "label": "Extract Images from PDF",
+        "desc": "Extract all embedded photos and illustrations from PDFs and download as ZIP."
       }
     },
     "badge": "Toolnotch | Over 40 essential tools",
@@ -4333,9 +4740,9 @@
     "termsButton": "Terms of Service"
   },
   "blog": {
-    "indexTitle": "Blog — Free Tool Guides & Calculator Tutorials",
+    "indexTitle": "Blog: Free Tool Guides & Calculator Tutorials",
     "indexDescription": "Learn how to use ToolNotch tools with step-by-step guides, calculator tutorials, and practical tips for finance, health, education, and productivity.",
-    "readArticle": "Read article →",
+    "readArticle": "Read article",
     "minRead": "{n} min read",
     "categories": {
       "finance": "Finance",
@@ -4348,16 +4755,16 @@
     },
     "breadcrumbBlog": "Blog",
     "relatedTool": "Try the free {toolName} →",
-    "indexIntro": "The ToolNotch blog is where each tool gets the full explanation that will not fit on the tool page itself. Every article is written to stand on its own: the formula or method behind a tool, a worked example you can reproduce, the edge cases and common mistakes to watch for, and a link to the free tool when you are ready to run the numbers yourself. There is no sign-up and no paywall — the guides are here to help you understand the result, not just get one.",
+    "indexIntro": "The ToolNotch blog is where each tool gets the full explanation that will not fit on the tool page itself. Every article is written to stand on its own: the formula or method behind a tool, a worked example you can reproduce, the edge cases and common mistakes to watch for, and a link to the free tool when you are ready to run the numbers yourself. There is no sign-up and no paywall: the guides are here to help you understand the result, not just get one.",
     "indexGuideHeading": "What you'll find here",
     "indexCategoryBlurbs": {
-      "finance": "Finance — how loan, mortgage, interest, and debt-payoff math actually works, with worked examples you can check against the matching calculator.",
-      "health": "Health — plain-language explanations of BMI, TDEE, and calorie targets, including where each formula comes from and what it leaves out.",
-      "text": "Text — practical guidance on word and character counts, reading time, readability scores, and keyword density for writers and students.",
-      "education": "Education — how GPA, weighted grades, and the main citation styles are calculated, and how to avoid the mistakes that quietly cost marks.",
-      "productivity": "Productivity — getting more out of the everyday planning, date, and timing tools, and fitting them into a real workflow.",
-      "engineering": "Engineering — the background behind the developer-focused tools and interview quizzes, from formatting to type-system questions.",
-      "fun": "Fun — how the randomness in wheels, pickers, and generators works, and how to run a draw that everyone watching will trust."
+      "finance": "Finance: how loan, mortgage, interest, and debt-payoff math actually works, with worked examples you can check against the matching calculator.",
+      "health": "Health: plain-language explanations of BMI, TDEE, and calorie targets, including where each formula comes from and what it leaves out.",
+      "text": "Text: practical guidance on word and character counts, reading time, readability scores, and keyword density for writers and students.",
+      "education": "Education: how GPA, weighted grades, and the main citation styles are calculated, and how to avoid the mistakes that quietly cost marks.",
+      "productivity": "Productivity: getting more out of the everyday planning, date, and timing tools, and fitting them into a real workflow.",
+      "engineering": "Engineering: the background behind the developer-focused tools and interview quizzes, from formatting to type-system questions.",
+      "fun": "Fun: how the randomness in wheels, pickers, and generators works, and how to run a draw that everyone watching will trust."
     },
     "posts": {
       "how-to-calculate-mortgage-payment": {
@@ -4368,11 +4775,11 @@
         "body": [
           {
             "type": "paragraph",
-            "text": "Buying a home is probably the largest financial decision most of us will ever make — and yet the monthly payment that shows up on a lender's quote can feel like a mystery. Where does that number come from? Why does a tiny difference in interest rate change it so much? And why is the payment your lender quotes always higher than what you see on a mortgage calculator?"
+            "text": "Purchasing a home is the single largest financial commitment most people will ever make. Yet the monthly payment quote provided by lenders often feels mysterious."
           },
           {
             "type": "paragraph",
-            "text": "This guide walks you through the actual math behind a mortgage payment, explains every factor that can push your monthly cost up or down, and helps you spot the common mistakes that catch first-time buyers off guard."
+            "text": "Why does a slight interest rate variation alter the total loan cost so drastically? And why is your final monthly bill consistently higher than basic calculator estimates?"
           },
           {
             "type": "heading",
@@ -4381,131 +4788,166 @@
           },
           {
             "type": "paragraph",
-            "text": "A standard fixed-rate mortgage payment is calculated using a formula that amortizes — or spreads — both the loan principal and the interest evenly across every month of the loan term. The formula looks like this:"
+            "text": "Fixed-rate mortgage payments use a standardized amortization formula that spreads principal and interest across equal monthly payments:"
           },
           {
             "type": "callout",
-            "text": "M = P × [r(1+r)^n] / [(1+r)^n − 1]\n\nWhere: M = monthly payment, P = loan principal (amount borrowed), r = monthly interest rate (annual rate ÷ 12), n = total number of payments (years × 12)"
-          },
-          {
-            "type": "paragraph",
-            "text": "Let's make that concrete. Suppose you borrow $300,000 at a 6.5% annual interest rate for 30 years. Your monthly rate r is 6.5% ÷ 12 = 0.5417%, or 0.005417 as a decimal. Your n is 30 × 12 = 360 payments."
-          },
-          {
-            "type": "paragraph",
-            "text": "Plugging in: M = 300,000 × [0.005417 × (1.005417)^360] / [(1.005417)^360 − 1]. The result is approximately $1,896 per month — just for principal and interest. That number might already feel high, but here's the thing: it's not the whole picture."
+            "text": "**Formula:** M = P × [r(1+r)^n] ÷ [(1+r)^n - 1] where **M** is monthly payment, **P** is loan principal, **r** is monthly interest rate, and **n** is total payment count."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "What Else Goes Into Your Monthly Payment?"
+            "text": "Worked Example: $300,000 Loan at 6.5% for 30 Years"
           },
           {
             "type": "paragraph",
-            "text": "Lenders almost always bundle additional costs into one monthly payment, which is why your actual bill is higher than what the P+I formula gives you. The main add-ons are:"
+            "text": "Consider a **$300,000** mortgage at a **6.5% annual interest rate** over **30 years (360 months)**:"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "**Monthly interest rate (r):** 6.5% ÷ 12 = **0.5417% monthly** (0.005417 as a decimal).",
+              "**Payment count (n):** 30 years × 12 = **360 total payments**.",
+              "**Base monthly P+I payment:** calculation results in approximately **$1,896 per month**."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "On that first **$1,896** payment, roughly **$1,625** pays interest charges alone, while only **$271** reduces the loan balance. Over time, principal paydown accelerates substantially as the remaining balance declines."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "How Interest Rates Impact Total Cost"
+          },
+          {
+            "type": "paragraph",
+            "text": "Never underestimate a 0.5% rate spread. On a **$300,000, 30-year loan**, rate differences compound dramatically:"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Annual Interest Rate",
+              "Monthly P+I Payment",
+              "Total Paid Over 30 Years",
+              "Total Interest Cost"
+            ],
+            "rows": [
+              [
+                "6.0% annual",
+                "$1,799 / month",
+                "$647,500",
+                "$347,500"
+              ],
+              [
+                "6.5% annual",
+                "$1,896 / month",
+                "$682,500",
+                "$382,500"
+              ],
+              [
+                "7.0% annual",
+                "$1,996 / month",
+                "$718,500",
+                "$418,500"
+              ],
+              [
+                "8.0% annual",
+                "$2,201 / month",
+                "$792,400",
+                "$492,400"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "A 1 percentage point increase (from 6.0% to 7.0%) adds almost **$200 per month** and amounts to over **$70,000 in additional interest charges** over the loan life."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "What Else Goes Into Your Monthly Bill?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Lenders package several escrow and protection expenses into your single monthly payment:"
           },
           {
             "type": "list",
             "ordered": false,
             "items": [
-              "Property taxes — Typically collected monthly by the lender and held in escrow, then paid to your local government annually. On a $400,000 home in many U.S. states, this alone can add $300–$700 per month.",
-              "Homeowners insurance — Your lender requires coverage to protect the property. Budget roughly $100–$200 per month for most homes, though coastal and high-risk areas cost more.",
-              "Private mortgage insurance (PMI) — If your down payment is less than 20%, the lender will require PMI to protect themselves if you default. PMI typically runs 0.5%–1.5% of the loan amount per year, which on a $300,000 loan is $125–$375 added to your monthly bill.",
-              "HOA fees — If you're buying a condo or a home in a managed community, homeowners association fees are separate but still part of your real monthly housing cost."
-            ]
-          },
-          {
-            "type": "paragraph",
-            "text": "When all of these are included, that $1,896 P+I payment on our $300,000 example could realistically become $2,500–$2,800 per month. Always ask your lender for a full loan estimate that includes the escrow breakdown — comparing just the interest rate between lenders without looking at total payment is one of the most common mistakes buyers make."
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "How Interest Rate Affects Your Payment"
-          },
-          {
-            "type": "paragraph",
-            "text": "Many people assume a 0.5% difference in interest rate is trivial. It isn't. On a $300,000 loan over 30 years, the difference between a 6.0% and a 6.5% rate adds roughly $97 per month — or nearly $35,000 over the life of the loan. This is why improving your credit score before applying, shopping at least three lenders, and timing your lock carefully can pay off enormously."
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "At 6.0%: monthly P+I ≈ $1,799",
-              "At 6.5%: monthly P+I ≈ $1,896",
-              "At 7.0%: monthly P+I ≈ $1,996"
+              "**Property taxes:** Collected into escrow and paid annually to local tax authorities.",
+              "**Homeowners insurance:** Mandatory coverage required by lenders to protect the physical asset.",
+              "**Private mortgage insurance (PMI):** Typically required when putting down less than 20% equity.",
+              "**HOA dues:** Separate community fees that must be factored into real housing overhead."
             ]
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Loan Term: 30 Years vs. 15 Years"
+            "text": "Term Comparison: 30 Years vs 15 Years"
           },
           {
             "type": "paragraph",
-            "text": "A 15-year mortgage has a much higher monthly payment than a 30-year, but the total interest you pay over the life of the loan can be less than half. Using the same $300,000 at 6.0%:"
+            "text": "A 15-year loan carries higher monthly payments but cuts lifetime interest by more than half:"
           },
           {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "30-year: ~$1,799/month, ~$347,000 in total interest",
-              "15-year: ~$2,532/month, ~$155,000 in total interest"
+            "type": "table",
+            "headers": [
+              "Loan Term",
+              "Estimated Monthly Payment",
+              "Total Interest Paid",
+              "Interest Savings"
+            ],
+            "rows": [
+              [
+                "30-Year Loan (360 months)",
+                "$1,799 / month",
+                "$347,500",
+                "Baseline reference"
+              ],
+              [
+                "15-Year Loan (180 months)",
+                "$2,532 / month",
+                "$155,700",
+                "Saves $191,800 in lifetime interest"
+              ]
             ]
           },
           {
-            "type": "paragraph",
-            "text": "The 15-year saves you nearly $200,000 in interest, but your monthly payment is $733 higher. The right choice depends on your cash flow, job stability, and what else you'd do with that extra money each month."
+            "type": "callout",
+            "text": "**Actionable strategy:** If 15-year payments stretch your cash flow, secure a 30-year mortgage and make **voluntary extra principal payments** whenever your budget permits."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Common Mistakes to Avoid"
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "Forgetting taxes and insurance — The P+I formula is just the starting point. Always calculate total housing cost: principal, interest, taxes, insurance, plus PMI and HOA if applicable.",
-              "Shopping by monthly payment instead of total cost — A longer term lowers your monthly payment but dramatically increases total interest paid.",
-              "Not accounting for rate type — Adjustable-rate mortgages (ARMs) start lower but can reset significantly. Make sure you can afford the worst-case adjusted payment.",
-              "Skipping the amortization schedule — In the early years of a 30-year loan, most of your payment goes toward interest, not principal. Knowing this helps you decide whether making extra principal payments makes sense.",
-              "Ignoring closing costs — These typically run 2%–5% of the loan amount and need to be paid upfront or rolled into the loan."
-            ]
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "Run Your Own Numbers"
+            "text": "Calculate Your Mortgage in Seconds"
           },
           {
             "type": "paragraph",
-            "text": "The formula is useful to understand, but there's no need to do this math by hand every time you want to test a scenario. Use our free Mortgage Calculator to model any combination of loan amount, interest rate, term, taxes, and insurance — and get an instant breakdown of your monthly payment, total interest, and amortization schedule."
+            "text": "Use our free mortgage calculator to experiment with loan terms, down payments, and interest rates before negotiating with lenders."
           },
           {
             "type": "toolCta",
             "toolName": "Mortgage Calculator",
             "toolPath": "/tools/finance/mortgage-calculator"
-          },
-          {
-            "type": "paragraph",
-            "text": "Understanding how your mortgage payment is built gives you real power in negotiations and planning. You'll know why locking in a rate that's 0.25% lower is worth fighting for, why putting down 20% saves you more than just the PMI, and why that attractive ARM might be a risk you don't need to take. Run the numbers, compare scenarios, and go into your home purchase with eyes open."
           }
         ]
       },
       "bmi-vs-body-fat-percentage": {
         "title": "BMI vs Body Fat Percentage: What Actually Matters for Your Health",
-        "description": "BMI and body fat percentage measure different things. Here's when each one matters — and when BMI can mislead you.",
+        "description": "BMI and body fat percentage measure different things. Here's when each one matters, and when BMI can mislead you.",
         "relatedToolName": "BMI Calculator",
         "relatedToolPath": "/tools/health/bmi-calculator",
         "body": [
           {
             "type": "paragraph",
-            "text": "If you've ever had a routine checkup, your doctor probably calculated your BMI. And if you've ever spent time in a gym, you've probably heard someone argue that BMI is meaningless and body fat percentage is the only number that counts. The truth, as is often the case, is more nuanced."
+            "text": "During routine doctor visits, your physician routinely calculates your BMI. In fitness centers, you will often hear that BMI is useless and that body fat percentage is the only metric that counts."
           },
           {
             "type": "paragraph",
-            "text": "Both metrics measure something real — they just measure different things. Knowing what each one actually tells you, and where each one breaks down, helps you make smarter decisions about your health without obsessing over a single number."
+            "text": "The truth is that **both metrics have practical value**, but they assess complementary aspects of human health. Knowing what each tells you helps you make informed choices without fixating on a single number."
           },
           {
             "type": "heading",
@@ -4514,29 +4956,76 @@
           },
           {
             "type": "paragraph",
-            "text": "BMI, or Body Mass Index, is calculated by dividing your weight in kilograms by the square of your height in meters (kg/m²). It's a population-level screening tool developed in the 19th century by Belgian mathematician Adolphe Quetelet — not a doctor, notably. It was designed to describe the average body proportions of European men, not to diagnose individual health."
+            "text": "**Body Mass Index (BMI)** divides weight by height squared. Developed in the 19th century by mathematician Adolphe Quetelet, it was designed to study average body proportions in large populations:"
+          },
+          {
+            "type": "callout",
+            "text": "**BMI Formula:** BMI = weight (kg) ÷ [height (m) × height (m)]"
           },
           {
             "type": "paragraph",
-            "text": "The standard adult BMI categories are:"
+            "text": "For instance, a person weighing **70 kg** at **1.75 m** tall calculates: 70 ÷ (1.75 × 1.75) = 70 ÷ 3.06 = **BMI 22.9**."
           },
           {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "Under 18.5 — Underweight",
-              "18.5–24.9 — Normal weight",
-              "25.0–29.9 — Overweight",
-              "30.0 and above — Obese"
+            "type": "heading",
+            "level": 2,
+            "text": "Standard WHO BMI Classification Table"
+          },
+          {
+            "type": "paragraph",
+            "text": "The World Health Organization (WHO) outlines the following adult reference categories:"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "BMI Category",
+              "Classification",
+              "Associated Health Risk"
+            ],
+            "rows": [
+              [
+                "Under 18.5",
+                "Underweight",
+                "Elevated (nutritional deficiency and immune risk)"
+              ],
+              [
+                "18.5 to 24.9",
+                "Normal weight",
+                "Lowest risk for chronic metabolic illness"
+              ],
+              [
+                "25.0 to 29.9",
+                "Overweight (pre-obesity)",
+                "Moderate risk"
+              ],
+              [
+                "30.0 to 34.9",
+                "Obesity Class I",
+                "High cardiovascular and metabolic risk"
+              ],
+              [
+                "35.0 to 39.9",
+                "Obesity Class II",
+                "Very high risk"
+              ],
+              [
+                "40.0 and above",
+                "Obesity Class III",
+                "Severe risk"
+              ]
             ]
           },
           {
             "type": "paragraph",
-            "text": "What BMI does well: it's free, instant, requires no equipment, and at the population level it correlates reasonably well with health risks like type 2 diabetes, heart disease, and certain cancers. That's why it remains a standard screening tool in clinical settings."
+            "text": "**What BMI does well:** it is free, instant, requires no specialized equipment, and correlates reasonably well with diabetes and heart disease risks across population studies."
           },
           {
             "type": "paragraph",
-            "text": "What BMI doesn't measure: body composition. BMI has no idea whether your weight comes from muscle, fat, bone, or water. A pound of muscle and a pound of fat weigh exactly the same — BMI treats them identically."
+            "text": "**Where BMI fails:** it **cannot measure body composition**. It cannot tell whether weight is muscle, bone density, water, or fat. A pound of muscle weighs exactly the same as a pound of fat."
+          },
+          {
+            "type": "callout",
+            "text": "**Important:** BMI is a screening tool, not a clinical diagnosis. An out-of-range BMI simply highlights the need for a comprehensive health evaluation."
           },
           {
             "type": "heading",
@@ -4545,56 +5034,84 @@
           },
           {
             "type": "paragraph",
-            "text": "There are specific groups for whom BMI is a genuinely poor indicator of health:"
+            "text": "There are specific populations where BMI is an unreliable health marker:"
           },
           {
             "type": "list",
             "ordered": false,
             "items": [
-              "Athletes and highly muscular individuals — A competitive rugby player or bodybuilder may have a BMI in the 'overweight' or 'obese' range with very low body fat and excellent cardiovascular health. Their high muscle mass inflates BMI without the associated health risks.",
-              "Older adults — Aging tends to reduce muscle mass (sarcopenia) while fat increases, often without much change in weight. An elderly person might have a 'normal' BMI while carrying a dangerously high proportion of body fat.",
-              "Different ethnic groups — Research has shown that at the same BMI, people of South and East Asian descent tend to carry more body fat and face higher metabolic risk. Some health organizations now recommend lower BMI cutoffs for Asian populations.",
-              "Women vs. men — Women naturally carry more body fat than men at the same BMI due to hormonal and reproductive differences. Two people with identical BMIs may have meaningfully different body fat percentages."
+              "**Muscular athletes:** High lean muscle mass elevates weight, categorizing lean athletes as \"overweight\" or \"obese\" despite outstanding cardiac health.",
+              "**Older adults:** Natural age-related muscle loss (sarcopenia) can leave BMI in the normal range while body fat percentage rises to risky levels.",
+              "**Ethnic differences:** Research demonstrates that people of Asian descent face elevated metabolic risk at lower BMI thresholds.",
+              "**Women vs Men:** Women naturally hold higher essential fat percentages due to endocrine and biological factors, which simple BMI formulas overlook."
             ]
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "What Body Fat Percentage Actually Tells You"
+            "text": "What Body Fat Percentage Actually Reveals"
           },
           {
             "type": "paragraph",
-            "text": "Body fat percentage is exactly what it sounds like: the proportion of your total body weight that comes from fat tissue. The rest — muscle, bone, organs, water — is called lean mass or fat-free mass."
+            "text": "**Body fat percentage** represents the fraction of total body weight made of adipose tissue. The remainder is lean mass (muscle, bone, organs, and water)."
           },
           {
             "type": "paragraph",
-            "text": "Healthy body fat ranges vary by sex and age, but rough benchmarks for adults are:"
+            "text": "Fat location is vital: **visceral fat** (surrounding internal abdominal organs) is far more hazardous to arterial and metabolic health than subcutaneous fat under the skin."
           },
           {
             "type": "list",
             "ordered": false,
             "items": [
-              "Women: 20–35% is generally considered healthy; athletes typically fall in the 14–20% range",
-              "Men: 10–25% is generally healthy; male athletes often sit at 6–13%",
-              "Essential fat (minimum needed for organ function): roughly 3–5% for men, 10–13% for women"
+              "**Women:** 20% to 35% is generally healthy; athletes often sit between 14% and 20%.",
+              "**Men:** 10% to 25% is healthy; male athletes commonly maintain 6% to 13%.",
+              "**Essential fat minimum:** 3% to 5% for men and 10% to 13% for women (required for physiological organ function)."
             ]
-          },
-          {
-            "type": "paragraph",
-            "text": "High body fat — particularly visceral fat stored around the organs rather than subcutaneous fat under the skin — is more directly linked to insulin resistance, inflammation, heart disease, and metabolic syndrome than BMI is. This is why body fat percentage is considered a more meaningful marker of cardiometabolic health."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "The Catch: Measuring Body Fat Is Hard"
+            "text": "Side-by-Side Comparison: BMI vs Body Fat Percentage"
           },
           {
-            "type": "paragraph",
-            "text": "The main reason BMI hasn't been replaced by body fat percentage in clinical settings is that accurate body fat measurement is much more difficult and expensive. The most accurate methods include DEXA scan (a low-dose X-ray), hydrostatic weighing (underwater weighing), and Bod Pod air displacement — none of which are available during a routine checkup."
-          },
-          {
-            "type": "paragraph",
-            "text": "Consumer tools like bioelectrical impedance scales and handheld devices are convenient but notoriously inconsistent — hydration levels, food intake, and time of day can all swing readings by 3–5 percentage points. Skinfold calipers, done by a trained professional, are reasonably accurate but highly user-dependent."
+            "type": "table",
+            "headers": [
+              "Feature",
+              "BMI (Body Mass Index)",
+              "Body Fat Percentage"
+            ],
+            "rows": [
+              [
+                "What it measures",
+                "Total weight relative to height",
+                "Proportion of weight that is adipose tissue"
+              ],
+              [
+                "Equipment needed",
+                "Standard scale and height tape",
+                "Bioimpedance, calipers, or DEXA scan"
+              ],
+              [
+                "Cost",
+                "100% free and instant",
+                "From low-cost calipers to paid clinical scans"
+              ],
+              [
+                "Individual accuracy",
+                "Low for athletes and elderly individuals",
+                "High when tested with calibrated methods"
+              ],
+              [
+                "Primary strength",
+                "Fast population screening",
+                "Accurately tracks body recomposition"
+              ],
+              [
+                "Who should prioritize",
+                "General checkups and clinical screenings",
+                "Athletes and individuals tracking fitness goals"
+              ]
+            ]
           },
           {
             "type": "heading",
@@ -4603,38 +5120,12 @@
           },
           {
             "type": "paragraph",
-            "text": "The most practical approach is to treat BMI and body fat percentage as complementary tools, not competing ones:"
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "Use BMI as a quick, free first screen. If your BMI is in the normal range and you have no other risk factors, that's reassuring — though not conclusive.",
-              "Use body fat percentage (or waist circumference as a proxy) when BMI seems inconsistent with how you look or feel, or when you want to track body composition changes during training.",
-              "Pay attention to waist-to-height ratio — keeping your waist circumference to less than half your height is a simple, validated marker that captures visceral fat risk better than BMI alone."
-            ]
-          },
-          {
-            "type": "callout",
-            "text": "Neither number tells the complete story. Blood pressure, blood glucose, cholesterol, sleep quality, and physical fitness are all equally important health markers — context always matters."
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "Check Your Own BMI"
-          },
-          {
-            "type": "paragraph",
-            "text": "Want to see where you stand? Use our free BMI Calculator to get your BMI instantly, see which category it falls into, and understand what the number means for your specific situation — including the important caveats."
+            "text": "The most practical strategy is to use BMI and body fat percentage as **complementary tools**: treat BMI as a quick initial baseline, and use body fat metrics to track real physical progress."
           },
           {
             "type": "toolCta",
             "toolName": "BMI Calculator",
             "toolPath": "/tools/health/bmi-calculator"
-          },
-          {
-            "type": "paragraph",
-            "text": "Ultimately, the goal isn't to optimize a number on a chart — it's to feel strong, have energy, and reduce your long-term risk of chronic disease. BMI and body fat percentage are both imperfect proxies for that goal. Use them as conversation starters, not verdicts."
           }
         ]
       },
@@ -4646,130 +5137,133 @@
         "body": [
           {
             "type": "paragraph",
-            "text": "Citing a website in APA format trips up even experienced students. The 7th edition (released in 2020 and still current in 2025) changed several rules from the 6th edition — including how to handle URLs, missing authors, and retrieval dates. If you learned APA a few years ago, there's a good chance some of what you know is now out of date."
+            "text": "Citing online articles in APA style often trips up students and academic writers. The official 7th edition modernized key guidelines, eliminating outdated retrieval tags and clarifying authorless sources."
           },
           {
             "type": "paragraph",
-            "text": "This guide covers everything you need: the correct template, a real step-by-step example, the most common mistakes, and how APA handles the situations that come up most often."
+            "text": "This reference guide covers the standard citation format, concrete examples for common edge cases, and mistakes to avoid."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "The APA 7th Edition Template for Websites"
+            "text": "The APA 7th Edition Webpage Template"
           },
           {
             "type": "paragraph",
-            "text": "The basic structure for a webpage or online article in APA 7th edition is:"
+            "text": "The standardized format for citing online articles and web pages is:"
           },
           {
             "type": "callout",
-            "text": "Author Last Name, First Initial. (Year, Month Day). Title of the page. Site Name. URL"
+            "text": "**APA 7 Format:** Author Last Name, Initials. (Year, Month Day). *Page title in italics*. Website Name. URL"
           },
           {
             "type": "paragraph",
-            "text": "A few things to note right away: the title of the page is in sentence case (only capitalize the first word and proper nouns), and it is italicized. The site name follows in plain text, and no period goes after the URL."
+            "text": "Two rules are critical: the **page title is italicized** and formatted in sentence case. The website name appears in plain text, and **no period follows the URL**."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Step-by-Step Example"
+            "text": "Quick Reference Table by Scenario"
           },
           {
             "type": "paragraph",
-            "text": "Let's walk through a real example. Say you want to cite an article with the following details — Author: Jonathan Amos. Date: March 15, 2024. Title: Scientists find ancient river system under Antarctica. Site: BBC News."
+            "text": "Not all web sources list individual authors or publication dates. Use these structures for each common case:"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Source Scenario",
+              "Recommended Pattern",
+              "Concrete Example"
+            ],
+            "rows": [
+              [
+                "Named individual author",
+                "Author, A. A. (Year, Month Day). *Title*. Site. URL",
+                "Smith, J. (2024, March 15). *Economic trends*. Financial Daily. https://..."
+              ],
+              [
+                "No individual author",
+                "*Page title in italics*. (Date). Website Name. URL",
+                "*History of personal computers*. (2023, May 10). Tech Museum. https://..."
+              ],
+              [
+                "No publication date",
+                "Author, A. A. (n.d.). *Page title*. Site Name. URL",
+                "Davis, K. (n.d.). *Workplace ergonomics guide*. Health Hub. https://..."
+              ],
+              [
+                "Organizational author",
+                "Organization Name. (Year). *Page title*. URL",
+                "World Health Organization. (2023). *Global health report*. https://..."
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Step-by-Step Construction Guide"
           },
           {
             "type": "list",
             "ordered": true,
             "items": [
-              "Author: Write the last name, then a comma, then the first initial followed by a period. → Amos, J.",
-              "Date: Put the year first, then month and day in parentheses, followed by a period. → (2024, March 15).",
-              "Title: Write the full title in sentence case and italicize it. → Scientists find ancient river system under Antarctica.",
-              "Site name: Write the name of the website in plain (non-italic) text, followed by a period. → BBC News.",
-              "URL: Paste the full URL. No angle brackets, no period at the end."
+              "**1. Identify authorship:** Last name first, comma, then initials (`Miller, R.`). For corporate sources, spell out the organization name.",
+              "**2. Format the date:** Year first, followed by month and day in parentheses: `(2024, August 15)`. Use `(n.d.)` when no date is provided.",
+              "**3. Italicize the title:** Provide the full title in **italics**, capitalizing only the first word and proper nouns.",
+              "**4. List the website:** Write the site name in standard non-italic font, followed by a period.",
+              "**5. Insert the direct URL:** Paste the active link without a concluding period to prevent broken links."
             ]
           },
           {
-            "type": "callout",
-            "text": "Amos, J. (2024, March 15). Scientists find ancient river system under Antarctica. BBC News. https://www.bbc.com/news/science-environment-68593472"
-          },
-          {
             "type": "heading",
             "level": 2,
-            "text": "What to Do When There's No Author"
+            "text": "In-Text Citations: Parenthetical vs Narrative"
           },
           {
             "type": "paragraph",
-            "text": "Many websites don't list an individual author. In APA 7th edition, when there is no author, move the title to the author position. Keep it italicized, and skip the author field entirely."
-          },
-          {
-            "type": "callout",
-            "text": "Federal student aid overview. (2024, January 10). U.S. Department of Education. https://studentaid.gov/understand-aid/types"
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "What to Do When There's No Date"
-          },
-          {
-            "type": "paragraph",
-            "text": "If a webpage has no publication or update date, use \"n.d.\" (which stands for \"no date\") in the date position:"
-          },
-          {
-            "type": "callout",
-            "text": "Author Last Name, First Initial. (n.d.). Title of the page. Site Name. URL"
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "Do You Need a Retrieval Date?"
-          },
-          {
-            "type": "paragraph",
-            "text": "In APA 6th edition, you often included a retrieval date (\"Retrieved March 10, 2024, from...\"). APA 7th edition dropped this requirement for most sources. You only need a retrieval date if the content is designed to change over time and there is no archive — things like live database entries or wiki pages that are frequently updated. For standard articles and web pages, leave it out."
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "Common APA Citation Mistakes"
+            "text": "When referencing sources within your prose, use one of two conventions:"
           },
           {
             "type": "list",
             "ordered": false,
             "items": [
-              "Wrong capitalization in the title — APA uses sentence case, not title case. 'How to Write a Literature Review' should be 'How to write a literature review' (except for proper nouns).",
-              "Forgetting to italicize the page title — Webpage titles are italicized; the site name is not.",
-              "Adding a period after the URL — The URL is the final element and takes no period.",
-              "Using 6th edition rules — APA 7th edition removed the publisher location for books and changed how DOIs and URLs are formatted. If your style guide was written before 2020, double-check it.",
-              "Treating 'no author' as 'Anonymous' — APA 7th edition does not use [Anonymous] as an author placeholder. If there is genuinely no author, move the title to the author position."
+              "**Parenthetical citation (end of sentence):** (Miller, 2024) or (*History of personal computers*, 2023) when authorless.",
+              "**Narrative citation (in-sentence flow):** According to Miller (2024), strategic asset allocation mitigates systemic volatility."
             ]
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "APA vs. MLA: The Quick Difference"
+            "text": "Frequent Formatting Pitfalls"
           },
           {
-            "type": "paragraph",
-            "text": "Students frequently confuse APA and MLA format. The key differences for websites: APA puts the year right after the author and uses initials for first names; MLA puts the full first name and puts the date at the end. APA italicizes the page title; MLA puts it in quotation marks. If your class or institution specifies a style, use that one — they are not interchangeable."
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "**Title-casing every word:** APA 7 utilizes sentence case for article titles.",
+              "**Including \"Retrieved from\":** The 7th edition eliminated this phrase for static pages. Only continuously updated wikis still require retrieval dates.",
+              "**Forgetting title italics:** The webpage title takes italics, not the publishing portal name.",
+              "**Ending URLs with periods:** The link is the concluding item and must remain clean."
+            ]
+          },
+          {
+            "type": "callout",
+            "text": "**Best practice:** Save citation data at the moment you research. Keeping links and dates organized prevents last-minute bibliographical scrambles."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Generate Your Citation Automatically"
+            "text": "Generate Citations Instantly"
           },
           {
             "type": "paragraph",
-            "text": "If you're working on a paper with multiple sources, doing this manually for every citation gets tedious fast. Use our free Citation Generator to create properly formatted APA 7th edition citations — as well as MLA, Chicago, and ABNT — in seconds."
+            "text": "Skip manual formatting by generating compliant APA 7 citations in seconds with our free ToolNotch Citation Generator."
           },
           {
             "type": "toolCta",
             "toolName": "Citation Generator",
             "toolPath": "/tools/education/citation-generator"
-          },
-          {
-            "type": "paragraph",
-            "text": "Getting citations right matters — not just because your professor checks them, but because proper attribution is the foundation of academic honesty and gives readers a clear path back to your sources. Take the extra minute to do it correctly."
           }
         ]
       },
@@ -4781,157 +5275,196 @@
         "body": [
           {
             "type": "paragraph",
-            "text": "Ask ten content strategists how long a blog post should be and you'll get ten different answers. Some will say 1,500 words minimum, others will cite research showing that long-form posts above 3,000 words dominate Google's first page. Meanwhile, your English professor insists on exactly 1,000 words, and every piece of email advice you've ever read says keep it under 200."
+            "text": "Ask content strategists for the ideal article length and you will receive conflicting guidelines. Some champion 500-word summaries, while SEO studies show that comprehensive articles above 2,500 words rank highest."
           },
           {
             "type": "paragraph",
-            "text": "The frustrating truth is that all of them can be right — because ideal word count depends entirely on what you're writing, who you're writing for, and what you want to happen when they read it. Here's a practical breakdown for the content types most people write."
+            "text": "The reality is that **no single word count fits all scenarios**: ideal length depends entirely on reader intent, subject depth, and platform format. Here are empirical guidelines for major writing types."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Blog Posts and Long-Form Articles"
+            "text": "Blog Posts and Online Articles"
           },
           {
             "type": "paragraph",
-            "text": "For SEO-focused content, longer tends to perform better — up to a point. Analysis of Google's top-ranking pages consistently shows that posts between 1,500 and 2,500 words rank well for competitive keywords, and posts over 3,000 words earn more backlinks on average, likely because they're more comprehensive and thus more shareable among other writers."
-          },
-          {
-            "type": "paragraph",
-            "text": "However, longer only helps if the extra words add genuine value. Google's helpful content guidance explicitly penalizes content that's padded to hit a length target. Padding — repeating the same point, adding filler sections, burying the answer in the fifth paragraph — hurts both your ranking and your reader's experience."
+            "text": "For search visibility and backlinks, substantive content usually outperforms brief notes, provided every paragraph delivers clear substance:"
           },
           {
             "type": "list",
             "ordered": false,
             "items": [
-              "News or opinion piece: 400–800 words — say the thing and stop",
-              "How-to guide or tutorial: 1,200–2,000 words — enough for step-by-step detail without padding",
-              "Comprehensive pillar content or ultimate guide: 2,500–4,000 words — only if the topic genuinely requires it",
-              "Listicle: 1,000–1,500 words — brief per-item descriptions, skimmable"
+              "**News reports and commentary:** 400 to 800 words (concise and immediately informative)",
+              "**Step-by-step tutorials:** 1,200 to 2,000 words (practical guidance without fluff)",
+              "**Pillar posts and ultimate guides:** 2,500 to 4,000 words (exhaustive coverage of complex subjects)",
+              "**Listicles and curated roundups:** 1,000 to 1,500 words (scannable format with brief takeaways)"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Crucially, length alone does not rank. Google algorithms explicitly downrank artificially padded text created solely to satisfy arbitrary word counts."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Word Count to Pages Conversion Reference"
+          },
+          {
+            "type": "paragraph",
+            "text": "Writers often need to convert word counts to page lengths. The following table assumes standard 12pt fonts, 1-inch margins, and an average reading cadence of 220 words per minute:"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Word Count",
+              "Double-Spaced Pages",
+              "Single-Spaced Pages",
+              "Average Reading Time"
+            ],
+            "rows": [
+              [
+                "250 words",
+                "~1 page",
+                "~0.5 page",
+                "~1 minute"
+              ],
+              [
+                "500 words",
+                "~2 pages",
+                "~1 page",
+                "~2 minutes"
+              ],
+              [
+                "1,000 words",
+                "~4 pages",
+                "~2 pages",
+                "~4 to 5 minutes"
+              ],
+              [
+                "1,500 words",
+                "~6 pages",
+                "~3 pages",
+                "~6 to 7 minutes"
+              ],
+              [
+                "2,500 words",
+                "~10 pages",
+                "~5 pages",
+                "~10 to 12 minutes"
+              ],
+              [
+                "5,000 words",
+                "~20 pages",
+                "~10 pages",
+                "~20 to 25 minutes"
+              ],
+              [
+                "8,000 words",
+                "~32 pages",
+                "~16 pages",
+                "~35 to 40 minutes"
+              ],
+              [
+                "10,000 words",
+                "~40 pages",
+                "~20 pages",
+                "~45 to 50 minutes"
+              ]
             ]
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Academic Essays"
+            "text": "Academic Writing"
           },
           {
             "type": "paragraph",
-            "text": "Academic writing has a different priority than blog writing: demonstrating depth of argument, not ranking on Google. Most professors set explicit word counts, and the right approach is to hit the range — not significantly under, not significantly over."
+            "text": "Academic assignments prioritize logical rigor and thorough citation over search engine visibility:"
           },
           {
             "type": "list",
             "ordered": false,
             "items": [
-              "Short response or reflection: 250–500 words",
-              "Standard undergraduate essay: 1,000–2,000 words",
-              "Research paper: 3,000–6,000 words",
-              "Dissertation chapter: 8,000–12,000 words per chapter",
-              "Full dissertation or thesis: 15,000–80,000 words depending on level and discipline"
+              "**Critical reflections and short essays:** 500 to 1,000 words",
+              "**Undergraduate research papers:** 3,000 to 6,000 words",
+              "**Master thesis chapters:** 6,000 to 10,000 words per chapter",
+              "**Doctoral dissertations:** 30,000 to 80,000+ words depending on field"
             ]
           },
           {
-            "type": "paragraph",
-            "text": "One underrated rule for academic writing: never repeat your introduction in your conclusion. Restating what you just said is the easiest way to inflate a word count, and experienced readers always notice. If you're consistently coming up short, your argument probably needs more evidence, not more summary."
+            "type": "callout",
+            "text": "**Academic writing tip:** Never restate your introduction in your conclusion merely to inflate word count. If your draft falls short, add empirical support and strengthen your literature review."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Emails"
+            "text": "Workplace and Business Emails"
           },
           {
             "type": "paragraph",
-            "text": "Email is the one content type where shorter is almost always better — and where most professionals consistently write too much. Research on email response rates shows that emails between 50 and 125 words receive the highest reply rates. That's roughly four to eight short sentences."
+            "text": "In professional correspondence, brevity reliably wins. Studies show emails containing **50 to 125 words** produce the highest response rates:"
           },
           {
             "type": "list",
             "ordered": false,
             "items": [
-              "Quick request or question: 50–100 words",
-              "Business proposal or pitch email: 150–250 words",
-              "Newsletter (single topic): 200–400 words",
-              "Newsletter (multi-section digest): 500–800 words"
+              "**Quick requests and status questions:** 50 to 100 words",
+              "**Proposals and sales outreach:** 150 to 250 words",
+              "**Single-topic newsletters:** 250 to 450 words",
+              "**Executive weekly digests:** 500 to 800 words organized with concise bullet points"
             ]
-          },
-          {
-            "type": "paragraph",
-            "text": "The most common email mistake is burying the request. Front-load what you need. If you want someone to review a document, say so in sentence one — not after three paragraphs of context."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Social Media Posts"
+            "text": "Social Media Character Benchmarks"
           },
           {
             "type": "paragraph",
-            "text": "Social platforms have their own rhythms, and word counts that work on one platform bomb on another:"
+            "text": "Each social platform rewards different reader behaviors:"
           },
           {
             "type": "list",
             "ordered": false,
             "items": [
-              "X / X: 71–100 characters gets higher engagement than full 280-character posts — shorter wins",
-              "LinkedIn: 1,300–2,000 characters for a native post that drives comments (about 200–300 words)",
-              "Instagram caption: 138–150 characters above the fold is what most users read; the full caption can be longer for hashtags",
-              "Facebook: 40–80 words for highest engagement on organic posts"
+              "**LinkedIn:** Posts between 1,300 and 2,000 characters (200 to 300 words) spark the strongest comment engagement.",
+              "**Twitter / X:** Posts spanning 70 to 120 characters outperform those maxing out the 280-character ceiling.",
+              "**Instagram:** The visible caption snippet before the \"...more\" link covers roughly 140 characters. Hook readers in line one."
             ]
+          },
+          {
+            "type": "callout",
+            "text": "**Words vs Characters:** Word count and character count differ significantly. When preparing social posts or SEO metadata, always check **character count with spaces**."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Why Readability Matters More Than Raw Word Count"
+            "text": "Track Your Word Count in Real Time"
           },
           {
             "type": "paragraph",
-            "text": "Word count is a proxy for effort, not quality. A 500-word article written at an eighth-grade reading level with clear subheadings will outperform a 2,000-word wall of text every time — in both search rankings and reader satisfaction."
-          },
-          {
-            "type": "paragraph",
-            "text": "Things that make a piece feel longer or shorter than its actual word count:"
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "items": [
-              "Paragraph length — Two-sentence paragraphs read faster and feel less intimidating than eight-sentence blocks",
-              "Sentence length — Varying short and long sentences keeps readers from scanning past you",
-              "Subheadings — They let skimmers decide which sections to actually read",
-              "Passive voice — It adds words without adding meaning: 'The report was written by the team' vs. 'The team wrote the report'"
-            ]
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "Track Your Word Count as You Write"
-          },
-          {
-            "type": "paragraph",
-            "text": "Whether you're targeting a specific count for SEO, staying within a professor's assignment limit, or trying to keep an email from becoming an essay, keeping an eye on word count while you write is easier than editing down afterward. Use our free Word Counter to get a real-time word, character, sentence, and paragraph count for any text."
+            "text": "Paste your draft into our free ToolNotch Word Counter to track words, characters, paragraphs, and reading duration instantaneously."
           },
           {
             "type": "toolCta",
             "toolName": "Word Counter",
             "toolPath": "/tools/text/word-counter"
-          },
-          {
-            "type": "paragraph",
-            "text": "The best word count for any piece of writing is the minimum number of words needed to serve the reader completely. Everything else is just noise."
           }
         ]
       },
       "average-typing-speed": {
         "title": "What's a Good Typing Speed? (And How to Actually Improve It)",
         "description": "The average typing speed is 40 WPM. Here's how you compare, what professionals achieve, and practical techniques to type faster.",
-        "relatedToolName": "Typing Test",
+        "relatedToolName": "Typing Speed Test",
         "relatedToolPath": "/tools/fun/typing-test",
         "body": [
           {
             "type": "paragraph",
-            "text": "Most of us spend several hours a day typing — emails, documents, messages, code — and yet very few people have ever deliberately tried to get better at it. Typing speed is one of those skills that seems fixed, like handwriting, when in reality it's highly trainable. A few focused weeks of practice can add 20–30 WPM to your speed, which compounds into hours saved every year."
+            "text": "Most of us spend several hours a day typing: emails, documents, messages, code. Yet very few people have ever deliberately trained to improve this skill."
           },
           {
             "type": "paragraph",
-            "text": "Before you can improve, it helps to know where you stand and what 'good' actually looks like across different professions and age groups."
+            "text": "Typing speed seems fixed, like handwriting, but in reality it is highly trainable. A few focused weeks of practice can add **20 to 30 WPM** to your speed, compounding into dozens of saved hours every year."
           },
           {
             "type": "heading",
@@ -4940,23 +5473,89 @@
           },
           {
             "type": "paragraph",
-            "text": "The average typing speed for an adult is approximately 40 words per minute (WPM) with around 92% accuracy. This varies by age group, profession, and how much someone types as part of their daily routine:"
+            "text": "The average adult typing speed is approximately **40 words per minute (WPM)** with around **92% accuracy**. This varies considerably depending on profession and daily keyboard time:"
           },
           {
             "type": "list",
             "ordered": false,
             "items": [
-              "General adults: 38–44 WPM",
-              "College students: 40–50 WPM (more daily typing from coursework)",
-              "Office workers and professionals: 55–70 WPM",
-              "Programmers and developers: 50–70 WPM (lower than expected due to special characters and syntax pauses)",
-              "Transcriptionists and data entry specialists: 70–100+ WPM (professional requirement)",
-              "World record holders: 200–300+ WPM (peak burst speeds, not sustained)"
+              "**General adults:** 38 to 44 WPM (global average for computer users)",
+              "**College students:** 40 to 50 WPM (higher daily typing from coursework)",
+              "**Office workers and professionals:** 55 to 70 WPM (routine email and reporting work)",
+              "**Programmers and developers:** 50 to 70 WPM (lower due to special characters and syntax pauses)",
+              "**Transcriptionists and data specialists:** 70 to 100+ WPM (professional job requirement)",
+              "**Competitive typists:** 120 to 180+ WPM (peak speed in bursts and tournaments)"
             ]
           },
           {
             "type": "paragraph",
-            "text": "For most knowledge workers, hitting 60–70 WPM with high accuracy is a practical goal that noticeably reduces friction in daily work. Above 80 WPM, typing stops being a bottleneck for most tasks — your thinking becomes the limiting factor, not your fingers."
+            "text": "For most knowledge workers, hitting **60 to 70 WPM** with high accuracy noticeably reduces daily friction. Above **80 WPM**, typing stops being a bottleneck: your fingers effortlessly match your train of thought."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Typing Speed Benchmarks by Skill Level"
+          },
+          {
+            "type": "paragraph",
+            "text": "Use this benchmark table to identify your current tier and what the next milestone looks like:"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Skill Level",
+              "WPM Range",
+              "Typical Profile"
+            ],
+            "rows": [
+              [
+                "Beginner",
+                "< 30 WPM",
+                "Hunt-and-peck typists, two fingers, new keyboard users"
+              ],
+              [
+                "Average",
+                "40 to 60 WPM",
+                "Most adults and casual computer users"
+              ],
+              [
+                "Proficient",
+                "60 to 80 WPM",
+                "Regular office workers and frequent writers"
+              ],
+              [
+                "Fast",
+                "80 to 100 WPM",
+                "Power users and experienced programmers"
+              ],
+              [
+                "Professional",
+                "100+ WPM",
+                "Transcriptionists, court reporters, competitive typists"
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "How WPM Is Calculated"
+          },
+          {
+            "type": "paragraph",
+            "text": "WPM stands for **words per minute**, but standardized testing follows a specific formula:"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "**Standard 5-keystroke word:** Each \"word\" counts as **5 keystrokes** (including spaces and punctuation). This standardizes scoring across short and long words.",
+              "**Gross WPM:** Total keystrokes typed divided by 5, then divided by elapsed minutes.",
+              "**Net WPM:** Gross WPM minus an error penalty (typically 1 WPM deducted per uncorrected error per minute)."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Modern tests emphasize **Net WPM**, which is why accuracy matters as much as speed. Rushing through mistakes directly lowers your reported score."
           },
           {
             "type": "heading",
@@ -4965,20 +5564,20 @@
           },
           {
             "type": "paragraph",
-            "text": "At 40 WPM, typing 1,000 words takes about 25 minutes. At 80 WPM, it takes about 12–13 minutes. Over a full workday of writing-heavy tasks, that difference can add up to an hour or more of recovered time."
+            "text": "At **40 WPM**, writing a 1,000-word document takes about **25 minutes**. At **80 WPM**, it takes **12 to 13 minutes**. Over a full week of writing-heavy tasks, that difference recovers multiple hours of focus time."
           },
           {
             "type": "paragraph",
-            "text": "But raw speed isn't the only thing that matters. Accuracy is equally — arguably more — important. A typist who hits 80 WPM with 95% accuracy will need to stop and correct frequently, which breaks focus and slows effective output. Aim for accuracy first, then let speed follow naturally."
+            "text": "Speed without accuracy breaks mental flow. A typist hitting 80 WPM with 92% accuracy must constantly stop to hit Backspace, degrading true output."
           },
           {
             "type": "callout",
-            "text": "A good target ratio: accuracy over 98% at your current speed before trying to push faster. Rushing before you're accurate just trains bad habits."
+            "text": "**Golden rule:** Maintain **accuracy above 98%** at your current speed before attempting to push faster. Rushing ahead of accuracy only ingrains persistent motor errors."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "The Techniques That Actually Work"
+            "text": "5 Proven Techniques to Type Faster"
           },
           {
             "type": "heading",
@@ -4987,11 +5586,7 @@
           },
           {
             "type": "paragraph",
-            "text": "The home row — ASDF on the left hand, JKL; on the right — is the foundation of touch typing. Every finger has a designated starting position and a set of keys it's responsible for. Typing without this system means you're hunting for keys, which caps your speed around 30–40 WPM permanently."
-          },
-          {
-            "type": "paragraph",
-            "text": "If you don't already touch-type, transitioning will feel painfully slow for two to four weeks. You will go from your current speed down to 15–20 WPM before climbing back up past where you started. That dip is worth it — touch typists plateau significantly higher than hunt-and-peck typists."
+            "text": "Rest your index fingers on the **F** and **J** keys (noting the tactile ridges). Left fingers rest on **ASDF** and right fingers on **JKL;**. Each finger manages its assigned columns of keys."
           },
           {
             "type": "heading",
@@ -5000,57 +5595,386 @@
           },
           {
             "type": "paragraph",
-            "text": "Looking down at your hands while you type forces you to split your attention between the screen and the keyboard, which slows you down and increases errors. Covering your hands with a cloth, using a blank keyboard, or simply forcing yourself to keep your eyes on the screen are all techniques that accelerate muscle memory formation."
+            "text": "Looking down forces you to split visual attention between screen and fingers. Keep your eyes on the screen to build genuine **muscle memory**."
           },
           {
             "type": "heading",
             "level": 3,
-            "text": "3. Practice in Short Bursts, Not Long Sessions"
+            "text": "3. Practice in Short Daily Bursts"
           },
           {
             "type": "paragraph",
-            "text": "Spaced repetition works for typing just as it does for language learning. Three focused 10-minute sessions throughout the day produce faster improvement than one 30-minute block, because your motor memory consolidates between sessions. This makes typing practice highly compatible with a busy schedule — a few minutes during a coffee break is genuinely effective."
+            "text": "Motor learning consolidates during rest. Three **10-minute sessions throughout the day** yield far better progress than one exhausting weekend marathon."
           },
           {
             "type": "heading",
             "level": 3,
-            "text": "4. Slow Down to Speed Up"
+            "text": "4. Slow Down to Build Cadence"
           },
           {
             "type": "paragraph",
-            "text": "Counter-intuitive but true: the fastest way to increase your top speed is to practice at a pace just below your comfortable limit and focus entirely on accuracy. Reaching for speed before accuracy is the single most common mistake in self-taught typing practice. Your brain encodes whatever you repeat — including errors."
+            "text": "Counterintuitively, typing at an even, rhythmic tempo just below your speed ceiling builds consistency and prevents stuttering."
           },
           {
             "type": "heading",
             "level": 3,
-            "text": "5. Identify and Drill Your Problem Keys"
+            "text": "5. Isolate and Drill Your Weak Keys"
           },
           {
             "type": "paragraph",
-            "text": "Most people have five to ten key combinations that consistently trip them up — common ones include reaching for 'b' with the wrong finger, mistyping 'the' as 'teh', or fumbling on quotation marks and semicolons. Targeted practice on your personal weak spots produces faster gains than general practice."
+            "text": "Pinpoint which letter pairs or punctuation marks cause hesitation. Deliberate practice on weak fingers produces the fastest score jumps."
+          },
+          {
+            "type": "callout",
+            "text": "**Actionable starter plan:** Take a 1-minute benchmark test today. Practice 10 minutes daily on real sentences, and review your weekly trend."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Measure Where You Are Now"
+            "text": "Measure Where You Are Right Now"
           },
           {
             "type": "paragraph",
-            "text": "You can't improve what you don't measure. Use our free Typing Test to find out your exact WPM and accuracy score right now, then use it as a benchmark as you practice. The test takes 60 seconds and gives you an immediate read on both speed and accuracy."
+            "text": "You cannot improve what you do not measure. Take our free Typing Speed Test to discover your exact WPM and accuracy rate in 60 seconds."
           },
           {
             "type": "toolCta",
-            "toolName": "Typing Test",
+            "toolName": "Typing Speed Test",
             "toolPath": "/tools/fun/typing-test"
+          }
+        ]
+      },
+      "understanding-nodejs-event-loop": {
+        "title": "Understanding the Node.js Event Loop",
+        "description": "A clear breakdown of how the Node.js event loop works, covering its phases, async I/O model, and why it makes Node fast and non-blocking.",
+        "relatedToolName": "Node.js Fundamentals Quiz",
+        "relatedToolPath": "/interview/nodejs-fundamentals",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "**Node.js** revolutionized web development by allowing developers to build scalable, efficient server-side applications using JavaScript. To grasp its real power, it is essential to understand how the **Event Loop** works and how server-side execution differs from JavaScript in browsers."
           },
           {
             "type": "paragraph",
-            "text": "Typing is a skill, not a fixed trait. At 40 WPM, you're average. At 70 WPM, you're noticeably faster than most colleagues. At 90+ WPM, typing simply stops being something you think about. Pick up the home row, stop peeking at the keyboard, and give it a few deliberate weeks — the improvement will surprise you."
+            "text": "This event-driven, non-blocking I/O architecture is the core foundation that allows Node.js applications to handle tens of thousands of concurrent connections with low memory overhead."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "JavaScript in the Browser vs. Node.js"
+          },
+          {
+            "type": "paragraph",
+            "text": "JavaScript started as a client-side browser scripting language for interactive web pages. With the release of Node.js in 2009 by Ryan Dahl, the Google Chrome V8 engine was coupled with the **libuv** library, expanding JavaScript to the backend:"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Environment"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "**Browser:** Runs inside the browser sandbox, interacting with the DOM and CSSOM. Asynchronous tasks rely on Web APIs like event handlers, timers, and HTTP requests via `fetch` or `XMLHttpRequest`.",
+              "**Node.js:** JavaScript executes directly on the server operating system, accessing the filesystem (`fs`), opening network sockets, and handling HTTP connections through core modules."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Concurrency Model"
+          },
+          {
+            "type": "list",
+            "items": [
+              "**In the Browser:** The Event Loop manages UI interactions, screen animations, timers, and AJAX responses to prevent interface freezes.",
+              "**In Node.js:** The Event Loop is optimized for network and filesystem I/O operations, offloading heavy low-level tasks to the libuv thread pool."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "What the Event Loop Is in Practice"
+          },
+          {
+            "type": "paragraph",
+            "text": "The **Event Loop** is a continuous loop that monitors the task queue, executes callback functions onto the call stack when it is empty, and waits for new OS events."
+          },
+          {
+            "type": "paragraph",
+            "text": "Unlike traditional multi-threaded web servers that spawn a thread per connection, Node.js runs on a **single main thread**. This design eliminates thread context-switching overhead and enables superior connection density."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Core Architecture Components"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "**Call Stack:** Where synchronous JavaScript code executes line by line. Functions are pushed when called and popped when returning.",
+              "**Memory Heap:** The unstructured memory space where objects, variables, and closures are stored.",
+              "**Task Queues:** In-memory queues where callbacks ready for execution wait until the Call Stack is empty.",
+              "**libuv Cycle Phases:** Timers, Pending Callbacks, Idle / Prepare, Poll, Check, and Close Callbacks."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "How the Event Loop Executes"
+          },
+          {
+            "type": "paragraph",
+            "text": "When a Node.js application starts, the main thread executes synchronous script code. Once the stack clears, the Event Loop cycles through these phases:"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "**Timers:** Checks if any `setTimeout` or `setInterval` threshold has expired and executes their callbacks.",
+              "**I/O Callbacks:** Processes deferred system operation callbacks, such as TCP errors.",
+              "**Poll Phase:** Processes pending I/O events sequentially. If the queue is empty and `setImmediate` callbacks exist, it advances to Check.",
+              "**Check Phase:** Executes functions scheduled by `setImmediate()`.",
+              "**Close Callbacks:** Emits close events and cleans up finished resource handles."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Asynchronous Programming and Non-Blocking I/O"
+          },
+          {
+            "type": "paragraph",
+            "text": "The non-blocking model ensures long-running tasks like database queries or file reads do not halt other incoming requests. Operations register a callback and yield control immediately back to the Event Loop."
+          },
+          {
+            "type": "callout",
+            "text": "**Queue Priority Order:** `process.nextTick()` has highest priority and runs immediately after the current synchronous operation concludes. Resolved Promise callbacks (`.then()`, `async/await`) execute next before changing phases. Timers and I/O run in their respective libuv phases."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Node.js Interview Practice",
+            "toolPath": "/interview/nodejs-fundamentals"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Conclusion"
+          },
+          {
+            "type": "paragraph",
+            "text": "The Event Loop is the engine that allows Node.js to achieve exceptional performance and scale on a single application thread. Understanding each phase, microtask priority, and keeping the main thread unblocked are key to building reliable production services."
+          }
+        ]
+      },
+      "wheel-of-names-alternatives": {
+        "title": "Best Wheel of Names Alternatives for Giveaways & Classrooms",
+        "description": "Compare the best free random picker and wheel spinner tools for events, classrooms, and online giveaways.",
+        "relatedToolName": "Wheel of Names",
+        "relatedToolPath": "/tools/fun/wheel-of-names",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "**Wheel of Names** (the popular site at wheelofnames.com) is the tool most people reach for when drawing a random name in front of an audience. It works well, but it is not the only option. Depending on your needs (no account, zero ads, offline privacy, classroom integration, or verifiable giveaways), another spinner may fit you better."
+          },
+          {
+            "type": "paragraph",
+            "text": "Here are seven free alternatives, what each one does best, and where it falls short."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "What actually differs between spinner wheels"
+          },
+          {
+            "type": "list",
+            "items": [
+              "**Sign-up:** Most let you spin without an account. A few ask you to log in before you can save a wheel for reuse.",
+              "**Ads:** Free tools are usually ad-supported. What matters is whether an ad can appear between your click and the result.",
+              "**Where your list goes:** Some wheels run entirely in your browser. Others save your entries to a server, which matters when the names are students, employees, or customers.",
+              "**Reuse:** If you run the same draw every week, you want the list saved or encoded somewhere you can reopen."
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "1. ToolNotch Wheel of Names"
+          },
+          {
+            "type": "paragraph",
+            "text": "This is our own tool, developed to run 100% in the browser: needs no account and shows no ads during a spin. The name list is encoded into the page URL, so saving a wheel is just bookmarking or copying a link. You can remove the winner after each spin to cycle through everyone once before anyone repeats."
+          },
+          {
+            "type": "toolCta",
+            "toolName": "Open the ToolNotch Wheel of Names",
+            "toolPath": "/tools/fun/wheel-of-names"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "2. Wheelofnames.com"
+          },
+          {
+            "type": "paragraph",
+            "text": "The incumbent. Large, readable wheel, sound effects, and a familiar URL. You can spin without an account; signing in with Google lets you save named wheels to their service. The page carries ads around the wheel."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "3. Picker Wheel"
+          },
+          {
+            "type": "paragraph",
+            "text": "A flexible spinner with modes beyond names: numbers, yes/no, team split, and image entries. No account is needed for basic spins; a free account unlocks saving."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "4. Wheel Decide"
+          },
+          {
+            "type": "paragraph",
+            "text": "One of the older decision wheels. Type options, spin, and build a shareable wheel with a custom URL. Dated interface with ads, but fast and straightforward."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "5. Flippity Random Name Picker"
+          },
+          {
+            "type": "paragraph",
+            "text": "Flippity turns a Google Sheet into simple web apps. You copy a template sheet, paste your names, and it generates a picker page. Ideal for teachers managing rosters in Google Workspace."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "6. Classtools.net"
+          },
+          {
+            "type": "paragraph",
+            "text": "Built for classrooms with engaging fruit-machine arcade animations and simple code-based list saving."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "7. Google Spinner"
+          },
+          {
+            "type": "paragraph",
+            "text": "Search Google for spinner to get an instant numeric wheel widget. Does not take names directly, working as a quick fallback by numbering your roster."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Comparison Table: 7 Spinner Wheels Side by Side"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Tool",
+              "Account Required",
+              "Ad-Free",
+              "Data Storage",
+              "Best For"
+            ],
+            "rows": [
+              [
+                "ToolNotch Wheel of Names",
+                "None",
+                "Yes",
+                "URL-encoded (100% private)",
+                "Fast, private draws without login"
+              ],
+              [
+                "Wheelofnames.com",
+                "Optional",
+                "No",
+                "Cloud with Google login",
+                "Classic look with audio sound effects"
+              ],
+              [
+                "Picker Wheel",
+                "Optional",
+                "No",
+                "Optional free account",
+                "Multi-mode picks (numbers, teams, images)"
+              ],
+              [
+                "Wheel Decide",
+                "None",
+                "No",
+                "Server-hosted URLs",
+                "Quick one-off decision making"
+              ],
+              [
+                "Flippity",
+                "Google Drive",
+                "Yes",
+                "Your Google Sheet",
+                "Teachers managing rosters in Google Workspace"
+              ],
+              [
+                "Classtools.net",
+                "None",
+                "No",
+                "Code-based save",
+                "Playful classroom arcade animations"
+              ],
+              [
+                "Google Spinner",
+                "None",
+                "Yes",
+                "None",
+                "Quick fallback number draw"
+              ]
+            ]
+          },
+          {
+            "type": "callout",
+            "text": "**Auditing Tip:** For verifiable giveaways, screenshot or record the screen with the URL visible after the spin. On ToolNotch, the URL exactly reflects the active roster at the moment of the draw."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "A quick way to choose"
+          },
+          {
+            "type": "list",
+            "items": [
+              "**No account, no ads, nothing stored:** ToolNotch Wheel of Names.",
+              "**Most familiar, ads are fine:** Wheelofnames.com.",
+              "**One tool for names, numbers and teams:** Picker Wheel.",
+              "**Roster stays in your own Google Drive:** Flippity.",
+              "**Classroom animation with a saved list:** Classtools.",
+              "**No website at all:** Google spinner, with a numbered list."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "If you need a plain draw without the wheel animation, our [Random Name Picker](/tools/fun/random-name-picker) is instant, and for splitting a group into sides try the [Random Team Generator](/tools/fun/random-team-generator)."
           }
         ]
       }
     },
-    "relatedToolsHeading": "Free tools for this topic"
+    "relatedToolsHeading": "Free tools for this topic",
+    "breadcrumbHome": "Home",
+    "backToBlog": "Back to Blog",
+    "allArticles": "All articles",
+    "publishedOn": "Published on {date}",
+    "updatedOn": "Updated on {date}",
+    "putIntoPractice": "Put it into practice",
+    "tryTool": "Try tool",
+    "tryToolDescription": "Try the free tool and apply the concepts from this guide in practice.",
+    "relatedArticlesHeading": "Related Articles",
+    "author": "Author",
+    "authorRole": "Software Engineer",
+    "authorBio": "Juan Soares is a software engineer and creator of ToolNotch, developing useful and accessible tools for everyday workflows.",
+    "followOnLinkedIn": "Follow on LinkedIn",
+    "share": "Share",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied!"
   },
   "interview": {
     "hub": {

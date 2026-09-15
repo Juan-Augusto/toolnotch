@@ -5,14 +5,25 @@ import { useTranslations } from "next-intl";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
 import { PDFDocument } from "pdf-lib";
-import { ShieldCheck, Scissors, Sparkles, Info, CheckCircle2 } from "lucide-react";
-import AppBreadcrumb from "@/components/AppBreadcrumb";
-import AppDropfile from "@/components/AppDropfile";
-import { AppCard, AppButton, AppBadge, AppInput } from "@/components/ui";
+import {
+  ShieldCheck,
+  Scissors,
+  Sparkles,
+  Info,
+  CheckCircle2,
+  Loader2,
+} from "lucide-react";
+import {
+  AppCard,
+  AppButton,
+  AppInput,
+  AppDropfile,
+} from "@/components/ui";
 import { splitPDF, validateAndParsePageRanges } from "@/lib/pdfSplit";
 import type { PageRange } from "@/lib/pdfTypes";
 import type { FaqItem } from "@/components/AppFaqSection";
-import SplitResult from "./components/SplitResult";
+import PdfToolHeader from "../components/PdfToolHeader";
+import SplitResult, { type SplitResultItem } from "./components/SplitResult";
 import SplitContent, { type RichContent } from "./components/SplitContent";
 
 function formatExtractionSummary(ranges: PageRange[], locale: string): string {
@@ -58,6 +69,7 @@ interface SplitOutput {
   isZip: boolean;
   blob: Blob;
   fileName: string;
+  items: SplitResultItem[];
 }
 
 export default function SplitTool({
@@ -76,36 +88,19 @@ export default function SplitTool({
   const [done, setDone] = useState(false);
   const [splitOutput, setSplitOutput] = useState<SplitOutput | null>(null);
 
-  const homeLabel =
-    locale === "pt" ? "Início" : locale === "es" ? "Inicio" : "Home";
-  const pdfToolsLabel =
-    locale === "pt"
-      ? "Ferramentas PDF"
-      : locale === "es"
-        ? "Herramientas PDF"
-        : "PDF Tools";
-  const prefix = locale === "en" ? "" : `/${locale}`;
-
-  const resetLabel =
-    locale === "pt"
-      ? "Dividir outro arquivo"
-      : locale === "es"
-        ? "Dividir otro archivo"
-        : "Split another file";
+  const resetLabel = t("button.reset");
 
   const validation = useMemo(() => {
-    return validateAndParsePageRanges(rangeInput, pageCount);
+    return validateAndParsePageRanges(rangeInput, pageCount ?? 0);
   }, [rangeInput, pageCount]);
 
   const rangeError = useMemo(() => {
     if (validation.valid) return null;
-    return t(`errors.${validation.errorKey}`, validation.errorParams ?? {});
+    return t(`errors.${validation.errorKey}`);
   }, [validation, t]);
 
   const extractionSummary = useMemo(() => {
-    if (!validation.valid || !validation.ranges || validation.ranges.length === 0) {
-      return null;
-    }
+    if (!validation.valid || validation.ranges.length === 0) return null;
     return formatExtractionSummary(validation.ranges, locale);
   }, [validation, locale]);
 
@@ -119,7 +114,11 @@ export default function SplitTool({
       return;
     }
 
-    if (f.type !== "application/pdf" && !f.name.toLowerCase().endsWith(".pdf")) {
+    if (
+      f.type !== "application/pdf" &&
+      !f.name.toLowerCase().endsWith(".pdf")
+    ) {
+      setError(t("errors.invalidFileType"));
       return;
     }
 
@@ -129,12 +128,12 @@ export default function SplitTool({
     setSplitOutput(null);
 
     try {
-      const bytes = await f.arrayBuffer();
-      const doc = await PDFDocument.load(bytes);
+      const buffer = await f.arrayBuffer();
+      const doc = await PDFDocument.load(buffer);
       setPageCount(doc.getPageCount());
     } catch {
+      setError(t("errors.pdfCorrupted"));
       setPageCount(null);
-      setError(t("errors.invalidFile"));
     }
   };
 
@@ -143,7 +142,9 @@ export default function SplitTool({
       setError(t("errors.noFile"));
       return;
     }
+
     if (!validation.valid) {
+      setError(rangeError);
       return;
     }
 
@@ -151,7 +152,21 @@ export default function SplitTool({
     setError(null);
 
     try {
-      const results = await splitPDF(file, validation.ranges);
+      const rangesToExtract: PageRange[] =
+        validation.ranges.length > 0
+          ? validation.ranges
+          : Array.from({ length: pageCount ?? 1 }, (_, i) => ({
+              start: i + 1,
+              end: i + 1,
+            }));
+
+      const results = await splitPDF(file, rangesToExtract);
+
+      const items: SplitResultItem[] = results.map((r) => ({
+        name: r.name,
+        bytes: r.bytes,
+        sizeBytes: r.bytes.byteLength,
+      }));
 
       if (results.length === 1) {
         const blob = new Blob([new Uint8Array(results[0].bytes)], {
@@ -163,6 +178,7 @@ export default function SplitTool({
           isZip: false,
           blob,
           fileName,
+          items,
         });
       } else {
         const zip = new JSZip();
@@ -174,6 +190,7 @@ export default function SplitTool({
           isZip: true,
           blob,
           fileName,
+          items,
         });
       }
       setDone(true);
@@ -189,6 +206,13 @@ export default function SplitTool({
     saveAs(splitOutput.blob, splitOutput.fileName);
   };
 
+  const handleDownloadItem = (item: SplitResultItem) => {
+    const blob = new Blob([new Uint8Array(item.bytes)], {
+      type: "application/pdf",
+    });
+    saveAs(blob, item.name);
+  };
+
   const handleReset = () => {
     setFile(null);
     setPageCount(null);
@@ -199,69 +223,55 @@ export default function SplitTool({
   };
 
   return (
-    <main className="container min-h-[calc(100vh-180px)] bg-background py-8">
+    <main className="container min-h-[calc(100vh-180px)] bg-background py-3 sm:py-6 md:py-8">
       <div className="w-full">
-        <div className="w-full pb-4">
-          <AppBreadcrumb
-            items={[
-              { label: homeLabel, href: prefix || "/" },
-              { label: pdfToolsLabel, href: `${prefix}/tools/pdf` },
-              { label: title, current: true },
-            ]}
-          />
-        </div>
-
-        <header className="mb-10 pt-2 pb-8 border-b border-border/80 relative">
-          <h1 className="font-mono text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-tight text-foreground">
-            {title}
-          </h1>
-          <p className="leading-relaxed text-label mt-3 max-w-3xl font-mono text-xs sm:text-sm">
-            {description}
-          </p>
-
-          <div className="flex flex-wrap items-center gap-2 sm:gap-3 mt-5">
-            <AppBadge
-              bg="bg-primary"
-              text="text-background"
-              icon={<ShieldCheck className="w-3.5 h-3.5 shrink-0" />}
-            >
-              {locale === "pt"
-                ? "Sem upload para servidores"
-                : locale === "es"
-                  ? "Sin subida a servidores"
-                  : "Zero server upload"}
-            </AppBadge>
-            <AppBadge
-              bg="bg-secondary"
-              text="text-background"
-              icon={<Scissors className="w-3.5 h-3.5 shrink-0" />}
-            >
-              {locale === "pt"
-                ? "Extração precisa de páginas"
-                : locale === "es"
-                  ? "Extracción precisa de páginas"
-                  : "Precise page extraction"}
-            </AppBadge>
-            <AppBadge
-              bg="bg-foreground"
-              text="text-background"
-              icon={<Sparkles className="w-3.5 h-3.5 shrink-0" />}
-            >
-              {locale === "pt"
-                ? "Ilimitado & Gratuito"
-                : locale === "es"
-                  ? "Ilimitado y Gratis"
-                  : "Unlimited & Free"}
-            </AppBadge>
-          </div>
-        </header>
+        <PdfToolHeader
+          title={title}
+          description={description}
+          locale={locale}
+          badges={[
+            {
+              text:
+                locale === "pt"
+                  ? "Sem upload para servidores"
+                  : locale === "es"
+                    ? "Sin subida a servidores"
+                    : "Zero server upload",
+              bg: "bg-primary",
+              textColor: "text-background",
+              icon: <ShieldCheck className="w-3.5 h-3.5 shrink-0" />,
+            },
+            {
+              text:
+                locale === "pt"
+                  ? "Extração precisa de páginas"
+                  : locale === "es"
+                    ? "Extracción precisa de páginas"
+                    : "Precise page extraction",
+              bg: "bg-secondary",
+              textColor: "text-background",
+              icon: <Scissors className="w-3.5 h-3.5 shrink-0" />,
+            },
+            {
+              text:
+                locale === "pt"
+                  ? "Ilimitado & Gratuito"
+                  : locale === "es"
+                    ? "Ilimitado y Gratis"
+                    : "Unlimited & Free",
+              bg: "bg-foreground",
+              textColor: "text-background",
+              icon: <Sparkles className="w-3.5 h-3.5 shrink-0" />,
+            },
+          ]}
+        />
 
         <AppCard
           border
           cornerAccents={true}
-          className="p-6 md:p-8 bg-tertiary mb-10 max-w-4xl mx-auto shadow-xs"
+          className="p-1.5 sm:p-4 md:p-6 lg:p-8 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto shadow-xs"
         >
-          <div className="space-y-6">
+          <div className="space-y-3 sm:space-y-5">
             {!done || !splitOutput ? (
               <>
                 <AppDropfile
@@ -277,7 +287,7 @@ export default function SplitTool({
                 />
 
                 {pageCount !== null && (
-                  <div className="flex items-center gap-2 px-3.5 py-2.5 bg-background border border-border rounded-[2px] font-mono text-xs text-label">
+                  <div className="flex items-center gap-2 px-3.5 py-2.5 bg-background border border-border rounded-[2px] text-xs text-label">
                     <span className="text-secondary font-bold uppercase">
                       PDF:
                     </span>
@@ -298,11 +308,10 @@ export default function SplitTool({
                 )}
 
                 <div className="space-y-4 pt-1">
-                  <div className="space-y-2 font-mono">
+                  <div className="space-y-2">
                     <AppInput
                       id="page-ranges-input"
                       variant="background"
-                      containerClassName="font-mono"
                       labelClassName="flex flex-wrap items-center justify-between gap-1 text-xs font-bold uppercase text-foreground"
                       label={
                         <>
@@ -317,20 +326,20 @@ export default function SplitTool({
                       placeholder={t("pageRanges.placeholder")}
                       error={rangeError || undefined}
                       aria-invalid={Boolean(rangeError)}
-                      className="font-mono text-xs sm:text-sm placeholder:normal-case"
+                      className="text-xs sm:text-sm placeholder:normal-case"
                     />
                     {extractionSummary && (
-                      <div className="p-3 bg-secondary/10 border border-secondary/30 rounded-[2px] font-mono text-xs flex items-center gap-2.5 text-foreground animate-fade-in mt-2">
+                      <div className="p-3 bg-secondary/10 border border-secondary/30 rounded-[2px] text-xs flex items-center gap-2.5 text-foreground animate-fade-in mt-2">
                         <CheckCircle2 className="w-4 h-4 text-secondary shrink-0" />
                         <span className="font-medium">{extractionSummary}</span>
                       </div>
                     )}
-                    <p className="font-mono text-[11px] text-label/70 mt-1">
+                    <p className="text-[11px] text-label/70 mt-1">
                       {t("pageRanges.blankHint")}
                     </p>
                   </div>
 
-                  <div className="p-4 bg-background border border-border rounded-[2px] text-xs font-mono">
+                  <div className="p-3.5 sm:p-4 bg-background border border-border rounded-[2px] text-xs">
                     <p className="font-bold text-foreground mb-3 flex items-center gap-2 uppercase tracking-wider text-[11px]">
                       <Info className="w-3.5 h-3.5 text-secondary shrink-0" />
                       {t("examples.title")}
@@ -373,17 +382,19 @@ export default function SplitTool({
                 </div>
 
                 {loading && (
-                  <div className="p-4 bg-background border border-secondary/30 rounded-[2px] space-y-2.5 font-mono">
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="text-secondary font-semibold uppercase flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-secondary animate-ping" />
-                        {locale === "pt"
-                          ? "Separando páginas do PDF..."
-                          : locale === "es"
-                            ? "Dividiendo páginas del PDF..."
-                            : "Splitting PDF pages..."}
-                      </span>
-                      <span className="text-label text-[11px] animate-pulse">
+                  <div className="p-3.5 sm:p-4 bg-background border border-border rounded-[2px] space-y-2.5 sm:space-y-3">
+                    <div className="flex items-center justify-between text-xs gap-2">
+                      <div className="flex items-center gap-2 font-semibold text-foreground min-w-0">
+                        <Loader2 className="w-3.5 h-3.5 animate-spin text-primary shrink-0" />
+                        <span className="truncate">
+                          {locale === "pt"
+                            ? "Separando páginas do PDF..."
+                            : locale === "es"
+                              ? "Dividiendo páginas del PDF..."
+                              : "Splitting PDF pages..."}
+                        </span>
+                      </div>
+                      <span className="text-xs text-label font-medium shrink-0">
                         {locale === "pt"
                           ? "Processando no navegador"
                           : locale === "es"
@@ -391,13 +402,13 @@ export default function SplitTool({
                             : "Processing locally"}
                       </span>
                     </div>
-                    <div className="w-full bg-tertiary h-1.5 rounded-full overflow-hidden border border-border/40">
-                      <div className="bg-gradient-to-r from-secondary to-primary h-full w-full animate-[neon-pulse_1.5s_ease-in-out_infinite]" />
+                    <div className="w-full bg-tertiary h-2 rounded-[2px] overflow-hidden border border-border">
+                      <div className="bg-primary h-full w-full animate-pulse" />
                     </div>
                   </div>
                 )}
 
-                <div className="flex flex-wrap items-center gap-4 pt-2">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-3 border-t border-border">
                   <AppButton
                     onClick={handleSplit}
                     disabled={
@@ -405,6 +416,7 @@ export default function SplitTool({
                     }
                     color="primary"
                     withArrow
+                    className="w-full sm:w-auto"
                   >
                     {loading ? t("button.splitting") : t("button.split")}
                   </AppButton>
@@ -412,7 +424,7 @@ export default function SplitTool({
                     <button
                       type="button"
                       onClick={handleReset}
-                      className="font-mono text-xs text-label hover:text-foreground transition-colors uppercase tracking-wider underline underline-offset-4 cursor-pointer"
+                      className="text-xs text-label hover:text-foreground transition-colors uppercase tracking-wider underline underline-offset-4 cursor-pointer self-center sm:self-auto py-2 sm:py-0"
                     >
                       {locale === "pt"
                         ? "Limpar arquivo"
@@ -429,7 +441,9 @@ export default function SplitTool({
                 totalPages={pageCount}
                 resultsCount={splitOutput.resultsCount}
                 isZip={splitOutput.isZip}
+                items={splitOutput.items}
                 onDownload={handleDownload}
+                onDownloadItem={handleDownloadItem}
                 onReset={handleReset}
                 resetLabel={resetLabel}
                 locale={locale}
@@ -439,11 +453,7 @@ export default function SplitTool({
           </div>
         </AppCard>
 
-        <SplitContent
-          richContent={richContent}
-          faqs={faqs}
-          locale={locale}
-        />
+        <SplitContent richContent={richContent} faqs={faqs} locale={locale} />
       </div>
     </main>
   );

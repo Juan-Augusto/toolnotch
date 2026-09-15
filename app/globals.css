@@ -30,7 +30,7 @@
   --primary-glow: 0 0 10px rgba(232, 98, 152, 0.4);
   --primary-text-glow: 0 0 8px rgba(232, 98, 152, 0.5);
 
-  --secondary: #d83e9d;
+  --secondary: #eb47ac;
   --secondary-shadow: #a32b75;
   --tertiary: #ffffff;
   --tertiary-shadow: #dadde4;
@@ -393,7 +393,7 @@ input[type="number"] {
   max-width: 1270px;
   margin-left: auto;
   margin-right: auto;
-  @apply px-6 md:px-10;
+  @apply px-2.5 sm:px-6 md:px-10;
 }
 
 .container-page {
@@ -401,7 +401,7 @@ input[type="number"] {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  @apply px-10;
+  @apply px-2.5 sm:px-6 md:px-10;
 }
 
 .protip-neon {

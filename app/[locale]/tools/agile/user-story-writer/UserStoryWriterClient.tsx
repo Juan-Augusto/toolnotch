@@ -126,7 +126,7 @@ export default function UserStoryWriterClient({ title, description, faqs, labels
                 {copied ? labels.copiedButton : labels.copyButton}
               </button>
             </div>
-            <pre className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-sm text-gray-800 whitespace-pre-wrap font-mono">
+            <pre className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-sm text-gray-800 whitespace-pre-wrap">
               {output}
             </pre>
           </div>

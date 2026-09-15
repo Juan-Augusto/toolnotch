@@ -46,7 +46,7 @@ export function AppInput({
   id,
   type = "text",
   flat = false,
-  variant = "tertiary",
+  variant = "background",
   ...props
 }: AppInputProps) {
   const generatedId = useId();
@@ -151,7 +151,8 @@ export function AppInput({
               flat
                 ? "bg-transparent border-0 bg-transparent! border-0! focus:bg-transparent!"
                 : `${
-                    variant === "background" || className.includes("bg-background")
+                    variant === "background" ||
+                    className.includes("bg-background")
                       ? "bg-background"
                       : "bg-tertiary"
                   } border focus:bg-secondary/3 ${

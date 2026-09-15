@@ -88,7 +88,7 @@ export default function AppNumberGenerator() {
           </div>
           <div className="flex flex-wrap gap-2">
             {results.map((n, i) => (
-              <span key={i} className="bg-tertiary border border-gray-200 rounded px-2 py-1 text-sm font-mono">{n}</span>
+              <span key={i} className="bg-tertiary border border-gray-200 rounded px-2 py-1 text-sm">{n}</span>
             ))}
           </div>
         </div>

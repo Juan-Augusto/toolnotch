@@ -2,7 +2,9 @@ import React from "react";
 import AppCard from "@/components/ui/AppCard";
 import AppButton from "@/components/ui/AppButton";
 import AppBadge from "@/components/ui/AppBadge";
-import AppTabsChips, { type AppTabsChipItem } from "@/components/ui/AppTabsChips";
+import AppTabsChips, {
+  type AppTabsChipItem,
+} from "@/components/ui/AppTabsChips";
 import type { QuizLevel } from "@/lib/interviewTypes";
 import type { InterviewQuizLabels } from "./interviewQuizLabels";
 
@@ -57,7 +59,7 @@ export function AppInterviewStartScreen({
               {displayCategoryName}
             </AppBadge>
 
-            <span className="text-[11px] text-label uppercase font-semibold">
+            <span className="text-xs text-label uppercase font-medium">
               {labels.questionsSummary(totalQuestions, estimatedMinutes)}
             </span>
           </div>
@@ -69,7 +71,7 @@ export function AppInterviewStartScreen({
           </div>
 
           <div className="space-y-2">
-            <span className="text-xs font-bold uppercase text-label block">
+            <span className="text-xs font-medium tracking-wide uppercase text-label block">
               {labels.selectLevel}
             </span>
             <AppTabsChips
