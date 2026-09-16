@@ -43,8 +43,15 @@ export interface CatalogEntry {
 
 export const TOOL_CATALOG: CatalogEntry[] = [
   // Image
+  { path: '/tools/image/crop-image', labelKey: 'cropImage', category: 'image', kind: 'tool' },
+  { path: '/tools/image/image-resizer', labelKey: 'imageResizer', category: 'image', kind: 'tool' },
+  { path: '/tools/image/censor-image', labelKey: 'censorImage', category: 'image', kind: 'tool' },
+  { path: '/tools/image/favicon-generator', labelKey: 'faviconGenerator', category: 'image', kind: 'tool' },
+  { path: '/tools/image/convert-webp-to-png', labelKey: 'convertWebpToPng', category: 'image', kind: 'tool' },
+  { path: '/tools/image/convert-heic-to-jpg', labelKey: 'convertHeicToJpg', category: 'image', kind: 'tool' },
   { path: '/tools/image/image-compressor', labelKey: 'imageCompressor', category: 'image', kind: 'tool' },
-  { path: '/tools/image/convert-png-to-webp', labelKey: 'imageConverter', category: 'image', kind: 'tool' },
+  { path: '/tools/image/image-converter', labelKey: 'imageConverter', category: 'image', kind: 'tool' },
+  { path: '/tools/image/convert-png-to-webp', labelKey: 'convertPngToWebp', category: 'image', kind: 'tool' },
   // PDF
   { path: '/tools/pdf/merge-pdf', labelKey: 'mergePdf', category: 'pdf', kind: 'tool' },
   { path: '/tools/pdf/split-pdf', labelKey: 'splitPdf', category: 'pdf', kind: 'tool' },

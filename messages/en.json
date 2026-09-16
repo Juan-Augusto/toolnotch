@@ -26,6 +26,676 @@
     "heading": "Frequently Asked Questions"
   },
   "image": {
+    "cropper": {
+      "metaTitle": "Crop Image Online Free — Custom & Fixed Aspect Ratios | ToolNotch",
+      "metaDescription": "Crop photos and images online freely or with 1:1, 16:9, 4:3, and 9:16 ratios. No watermark, no server upload — 100% private and free.",
+      "title": "Crop Image Online",
+      "description": "Trim unwanted edges or fit photos into exact social media and document ratios. 100% private in your browser.",
+      "dropZone": {
+        "label": "Click or drag an image here",
+        "hint": "Supports JPG, PNG, and WebP — processed locally in your browser"
+      },
+      "aspectRatios": {
+        "free": "Freeform",
+        "square": "1:1 Square",
+        "story": "9:16 Stories/Reels",
+        "widescreen": "16:9 Video/Banner",
+        "classic": "4:3 Classic Photo",
+        "photo": "3:2 Photography"
+      },
+      "settings": {
+        "title": "Crop Controls",
+        "aspectLabel": "Aspect Ratio",
+        "cropDimensions": "Crop area: {width} × {height} px",
+        "widthLabel": "Width (px)",
+        "heightLabel": "Height (px)",
+        "maximizeCrop": "Maximize Area",
+        "rotateLeft": "Rotate -90°",
+        "rotateRight": "Rotate +90°",
+        "resetCrop": "Reset Crop Area",
+        "outputFormat": "Export Format",
+        "formatOriginal": "Keep original format"
+      },
+      "button": {
+        "crop": "Crop Image",
+        "cropping": "Cropping...",
+        "clearFile": "Remove image",
+        "download": "Download Cropped Image",
+        "reset": "Crop another image"
+      },
+      "errors": {
+        "noFile": "Please select an image to crop.",
+        "invalidType": "Please select a valid image file (JPG, PNG, or WebP).",
+        "failed": "Failed to crop image. Please try again."
+      },
+      "badges": {
+        "private": "100% Private",
+        "free": "100% Free",
+        "aspect": "Fixed & Free Ratios",
+        "precision": "High Precision"
+      },
+      "result": {
+        "title": "Image Cropped Successfully!",
+        "subtitle": "Your asset was cropped with pixel precision.",
+        "dimensions": "Cropped Dimensions",
+        "originalDimensions": "Initial Dimensions",
+        "fileSize": "File Weight"
+      },
+      "faqs": [
+        {
+          "question": "Does cropping reduce image quality?",
+          "answer": "No. Our tool directly slices the native pixels within your selected boundary without applying lossy compression or resampling artifacts."
+        },
+        {
+          "question": "What is the best aspect ratio for profile pictures?",
+          "answer": "For profile avatars on WhatsApp, Instagram, LinkedIn, and Twitter/X, a 1:1 (Square) ratio is the universal standard."
+        },
+        {
+          "question": "What ratio is required for Reels, TikTok, and Stories?",
+          "answer": "For fullscreen mobile vertical content, 9:16 (1080 × 1920 pixels) is the recommended standard."
+        },
+        {
+          "question": "Is my picture sent to any remote server?",
+          "answer": "No. All cropping and canvas manipulations run 100% client-side inside your own web browser."
+        }
+      ],
+      "richContent": {
+        "whatIs": "Cropping an image isolates a selected rectangular or square area of a visual file to discard distracting backgrounds, highlight the central subject, or comply with strict digital display dimensions.",
+        "howToUse": [
+          "Upload your image by dragging it into the dropzone or clicking to browse your device files.",
+          "Choose an aspect ratio (e.g. 1:1 for profile avatars or 16:9 for banners) or select 'Freeform' for unrestricted framing.",
+          "Drag and resize the crop frame over the focal subject you want to keep.",
+          "Click 'Crop Image' and download your crisp, perfectly composed file immediately."
+        ],
+        "whyItMatters": "Thoughtful cropping emphasizes focal points, eliminates background distractions, and prevents awkward automatic thumbnail cropping across social platforms.",
+        "proTip": "Take advantage of the rule of thirds grid: align subjects of interest or facial features along the intersecting lines for a more balanced and captivating photograph."
+      }
+    },
+    "resizer": {
+      "metaTitle": "Resize Image Online Free — No Quality Loss | ToolNotch",
+      "metaDescription": "Resize photos and images by pixels, percentage, or social media presets. Rotate, flip, and change dimensions in your browser. 100% private and free.",
+      "title": "Resize Image Online",
+      "description": "Change image dimensions, resolution, and aspect ratio for JPG, PNG, or WebP files with precision in your browser. Fast, secure, and no signup.",
+      "dropZone": {
+        "label": "Click or drag an image here",
+        "hint": "Supports JPG, PNG, and WebP — 100% processed locally in your browser"
+      },
+      "tabs": {
+        "dimensions": "Dimensions (px)",
+        "percentage": "Percentage (%)",
+        "social": "Social Media"
+      },
+      "settings": {
+        "title": "Resize Configuration",
+        "width": "Width (px)",
+        "height": "Height (px)",
+        "lockAspect": "Lock aspect ratio",
+        "percentLabel": "Image Scale",
+        "percentMin": "10% (Thumbnail)",
+        "percentOriginal": "100% (Original)",
+        "percentDouble": "200% (Double)",
+        "socialPresetLabel": "Social Media Template",
+        "selectPreset": "Select a preset...",
+        "transformLabel": "Orientation Adjustments",
+        "rotateLeft": "Rotate -90°",
+        "rotateRight": "Rotate +90°",
+        "flipH": "Flip Horizontal",
+        "flipV": "Flip Vertical",
+        "outputFormat": "Output Format",
+        "formatOriginal": "Keep original format",
+        "qualityLabel": "Image Quality",
+        "originalDimensions": "Current size: {width} × {height} px",
+        "previewTitle": "Preview",
+        "previewDimensions": "{width} × {height} px",
+        "scaleBadge": "{pct}% of original",
+        "aspectRatioBadge": "Aspect {ratio}",
+        "fitModeLabel": "Model Framing / Fit",
+        "fitCover": "Fill & Crop (No distortion)",
+        "fitContain": "Fit with Margin",
+        "fitStretch": "Stretch Image",
+        "fitHint": "Fill mode fits the image to the social media size without stretching or distortion."
+      },
+      "presets": {
+        "instaPost": "Instagram Square Post (1080 × 1080)",
+        "instaStory": "Instagram Story / Reels (1080 × 1920)",
+        "youtubeThumb": "YouTube Thumbnail (1280 × 720)",
+        "twitterPost": "Twitter / X Post (1200 × 675)",
+        "linkedinBanner": "LinkedIn Profile Banner (1584 × 396)",
+        "facebookPost": "Facebook Feed Post (1200 × 630)"
+      },
+      "button": {
+        "resize": "Resize Image",
+        "resizing": "Resizing...",
+        "clearFile": "Remove image",
+        "download": "Download Resized Image",
+        "reset": "Resize another image"
+      },
+      "errors": {
+        "noFile": "Please select an image to resize.",
+        "invalidType": "Please select a valid image file (JPG, PNG, or WebP).",
+        "invalidDimensions": "Please enter valid dimensions greater than 0.",
+        "failed": "Failed to resize image. Please try again."
+      },
+      "badges": {
+        "private": "100% Private",
+        "free": "100% Free",
+        "presets": "Social Presets",
+        "quality": "High Fidelity"
+      },
+      "result": {
+        "title": "Image Resized Successfully!",
+        "subtitle": "Processing completed entirely on your device.",
+        "originalDimensions": "Original Dimensions",
+        "newDimensions": "New Dimensions",
+        "fileSize": "New File Size",
+        "originalFileSize": "Previous Size",
+        "changeBadge": "{pct}% of original"
+      },
+      "faqs": [
+        {
+          "question": "How do I resize an image without losing quality?",
+          "answer": "To preserve optimal sharpness, keep the 'Lock aspect ratio' option enabled and avoid upscaling images excessively beyond their native resolution. Our tool uses high-quality bicubic/bilinear interpolation via the browser's Canvas API to retain crisp details."
+        },
+        {
+          "question": "What happens when I uncheck 'Lock aspect ratio'?",
+          "answer": "Unlocking aspect ratio allows you to adjust width and height independently, letting you stretch or fit the image to exact custom dimensions as needed."
+        },
+        {
+          "question": "What are the recommended dimensions for Instagram?",
+          "answer": "For square feed posts, use 1080 × 1080 pixels (1:1 aspect ratio). For Stories and Reels, the recommended standard is 1080 × 1920 pixels (9:16 vertical ratio). Both are available as instant presets in our tool."
+        },
+        {
+          "question": "Is my image uploaded to any server?",
+          "answer": "No. All scaling, rotation, and file generation processes take place 100% client-side in your web browser. Your files never leave your device."
+        },
+        {
+          "question": "Can I rotate or flip my image while resizing?",
+          "answer": "Yes! You can rotate 90 degrees clockwise or counterclockwise and flip horizontally or vertically with one click before downloading your resized image."
+        }
+      ],
+      "richContent": {
+        "whatIs": "Image resizing modifies the pixel dimensions (width and height) of a visual file. It is indispensable for tailoring photography and graphics to strict specifications for websites, social networks, print materials, job applications, or digital forms.",
+        "howToUse": [
+          "Upload your image by dragging it into the dropzone or clicking to browse your computer.",
+          "Select your preferred sizing mode: specify exact pixel values, choose a scaling percentage, or pick a social media preset.",
+          "Optionally adjust orientation with rotate and flip buttons, or choose an output format (JPG, PNG, or WebP).",
+          "Click 'Resize Image' to process and download your perfectly scaled asset immediately."
+        ],
+        "whyItMatters": "Using ill-fitted image sizes leads to distorted aspect ratios, awkward automatic cropping on social platforms, and slow webpage loading speeds. Scaling images to exact platform recommendations ensures visual polish and snappy delivery.",
+        "proTip": "If your goal is minimizing bandwidth and page weight, scale down by percentage (e.g. 50%) or select WebP as the output format to cut file size by up to 80% while retaining pristine visual fidelity."
+      }
+    },
+    "convertPngToWebp": {
+      "metaTitle": "Convert PNG to WebP Online Free — No Signup Required | ToolNotch",
+      "metaDescription": "Convert PNG images to WebP format instantly in your browser. Up to 90% smaller files with transparency support and top visual quality. 100% private.",
+      "title": "Convert PNG to WebP",
+      "description": "Convert PNG images to modern WebP with full transparency and sharp fidelity. Reduce image weight with zero server upload.",
+      "dropZone": {
+        "label": "Click or drag your PNG image here",
+        "hint": "PNG supported — 100% local processing in your browser"
+      },
+      "settings": {
+        "title": "Conversion Settings",
+        "qualityLabel": "WebP Quality",
+        "qualityHint": "85% recommended for the ideal balance between small size and sharpness",
+        "smaller": "Smaller file",
+        "better": "Higher quality",
+        "maxWidthLabel": "Max Width (px)",
+        "maxWidthPlaceholder": "Optional (e.g. 1920)",
+        "preserveTransparency": "Alpha transparency automatically preserved"
+      },
+      "button": {
+        "convert": "Convert to WebP",
+        "converting": "Converting to WebP...",
+        "clearFile": "Remove image",
+        "download": "Download WebP",
+        "reset": "Convert another image"
+      },
+      "errors": {
+        "noFile": "Please select a PNG image to convert.",
+        "invalidType": "Please select a valid PNG image file.",
+        "failed": "Failed to convert image to WebP. Please try again."
+      },
+      "badges": {
+        "private": "100% Private",
+        "free": "100% Free",
+        "format": "PNG → WebP",
+        "transparency": "Supports Transparency"
+      },
+      "result": {
+        "title": "PNG Successfully Converted to WebP!",
+        "subtitle": "Your image was converted locally inside your browser.",
+        "originalSize": "Original Size (PNG)",
+        "convertedSize": "Final Size (WebP)",
+        "reduction": "Reduction Achieved",
+        "smaller": "{savings}% smaller",
+        "noReduction": "Size preserved",
+        "saved": "saved",
+        "dimensions": "Dimensions: {width} × {height} px",
+        "formatTag": "WebP Format"
+      },
+      "faqs": [
+        {
+          "question": "Why convert PNG to WebP?",
+          "answer": "WebP was developed by Google and produces files that are typically 25% to 35% smaller than PNG while preserving equal visual fidelity and full alpha transparency. This speeds up page loading and boosts Core Web Vitals and SEO rankings."
+        },
+        {
+          "question": "Does converting to WebP preserve background transparency?",
+          "answer": "Yes! WebP fully supports alpha channel transparency just like PNG. Any transparent pixels in your original image remain transparent in the generated WebP output."
+        },
+        {
+          "question": "Is my image uploaded to any server?",
+          "answer": "No. The entire conversion process executes client-side in your browser using the HTML5 Canvas API and local device resources. Your files never leave your computer or phone."
+        },
+        {
+          "question": "What quality setting is recommended?",
+          "answer": "A quality setting between 80% and 90% delivers the optimal compromise between byte savings and visual precision. For the vast majority of graphics and photos, 85% is visually indistinguishable from uncompressed output."
+        },
+        {
+          "question": "Is WebP supported across all modern browsers?",
+          "answer": "Yes. All major web browsers — Google Chrome, Mozilla Firefox, Apple Safari (since iOS 14 and macOS Big Sur), Microsoft Edge, and Opera — provide universal native WebP support."
+        }
+      ],
+      "richContent": {
+        "whatIs": "WebP is a modern image format developed by Google that delivers superior lossy and lossless compression for web assets. By converting PNG to WebP, you gain predictive pixel compression techniques that drastically shrink payload weight without forfeiting visual crispness or alpha transparency.",
+        "howToUse": [
+          "Upload your PNG file by dragging it into the dropzone or clicking to browse your device files.",
+          "Tune the WebP quality slider (85% is recommended for most graphics) and enter an optional maximum width.",
+          "Click the 'Convert to WebP' button to trigger instant conversion in your browser.",
+          "Check the file reduction percentage and click 'Download WebP' to save your optimized file."
+        ],
+        "whyItMatters": "Heavy images are the primary cause of sluggish page loading on desktop and mobile. Fast pages lower user bounce rates, increase conversions, and score higher on Google Core Web Vitals (specifically Largest Contentful Paint). Converting unoptimized PNGs to WebP is one of the most effective web performance upgrades you can make.",
+        "proTip": "For UI icons or screenshots containing fine text where every pixel matters, keep quality at 90%–95%. For illustrations and banners, 80%–85% provides massive file reductions with zero visible degradation."
+      }
+    },
+    "imageConverter": {
+      "metaTitle": "Free Online Image Converter — Batch Multiple Formats | ToolNotch",
+      "metaDescription": "Convert images between JPG, PNG, WebP, and AVIF in bulk for free. Convert multiple photos at once in your browser with ZIP download. 100% private.",
+      "title": "Online Image Converter",
+      "description": "Convert single or multiple images between JPG, PNG, WebP, and AVIF with adjustable quality and batch processing. 100% private in your browser.",
+      "dropZone": {
+        "label": "Click or drag your images here to convert",
+        "hint": "Supports PNG, JPG, JPEG, WebP, AVIF, GIF, BMP, and SVG — select multiple files"
+      },
+      "settings": {
+        "title": "Conversion Settings",
+        "targetFormatLabel": "Output Format",
+        "qualityLabel": "Image Quality",
+        "qualityHint": "85% recommended for the optimal balance between small size and sharpness",
+        "smaller": "Smaller size",
+        "better": "Higher quality",
+        "maxWidthLabel": "Max Width (px)",
+        "maxWidthPlaceholder": "Optional (e.g. 1920)",
+        "selectedCount": "{count} images selected"
+      },
+      "button": {
+        "convert": "Convert Images",
+        "converting": "Converting...",
+        "clearFiles": "Clear files",
+        "downloadZip": "Download All (ZIP)",
+        "downloadSingle": "Download Image",
+        "reset": "Convert more images"
+      },
+      "errors": {
+        "noFile": "Please select at least one image to convert.",
+        "invalidType": "Unsupported file format. Please upload valid images.",
+        "failed": "Failed to convert some images. Please try again."
+      },
+      "badges": {
+        "private": "100% Private",
+        "batch": "Batch Conversion",
+        "formats": "JPG, PNG, WebP, AVIF",
+        "free": "100% Free"
+      },
+      "result": {
+        "title": "Conversion Complete!",
+        "subtitle": "{count} files converted successfully to {format}.",
+        "summaryTitle": "Conversion Summary",
+        "totalOriginal": "Original Size",
+        "totalConverted": "Converted Size",
+        "totalSavings": "Space Saved",
+        "fileListTitle": "Converted Files",
+        "downloadAll": "Download Complete Package (.ZIP)",
+        "downloadFile": "Download",
+        "dimensions": "{width} × {height} px",
+        "statusSuccess": "Converted"
+      },
+      "faqs": [
+        {
+          "question": "Can I convert multiple images at once?",
+          "answer": "Yes! You can select or drag dozens of images simultaneously. All of them will be processed locally in your browser and you can download them together in a .ZIP file or individually."
+        },
+        {
+          "question": "Which image formats are supported for conversion?",
+          "answer": "You can upload images in JPG, JPEG, PNG, WebP, AVIF, GIF, BMP, and SVG. As output, you can export to JPG, PNG, WebP, and AVIF with customizable quality and dimensions."
+        },
+        {
+          "question": "Are my images uploaded to any server?",
+          "answer": "No. The entire conversion and ZIP packaging process runs 100% locally in your browser using the Canvas API and Web APIs. Your files never leave your device."
+        },
+        {
+          "question": "Which output format is most recommended?",
+          "answer": "For modern web use, WebP and AVIF offer the best compression ratio and clarity. If you need maximum compatibility with older software, JPG is universal, and PNG is ideal when preserving transparent backgrounds."
+        }
+      ],
+      "richContent": {
+        "whatIs": "The ToolNotch Image Converter is a universal graphic processing tool that transforms image formats at high speed directly in your browser. Easily convert heavy files into lightweight modern formats or transform images into universal formats compatible with any application.",
+        "howToUse": [
+          "Select or drag one or more images of any format into the upload area.",
+          "Choose your desired output format (JPG, PNG, WebP, or AVIF).",
+          "Adjust the quality slider and optionally set a maximum width to resize.",
+          "Click 'Convert Images' and download the converted files individually or as a complete .ZIP package."
+        ],
+        "whyItMatters": "Different platforms, websites, and applications require specific file formats. Converting images intelligently saves storage space, reduces visitor data usage, and ensures your photos open seamlessly on any device.",
+        "proTip": "Convert heavy JPG or PNG photos to WebP at 85% quality to reduce file size by up to 80% while keeping visual fidelity identical to the original."
+      }
+    },
+    "censor": {
+      "metaTitle": "Censor Image Online Free — Blur & Pixelate Photos | ToolNotch",
+      "metaDescription": "Censor sensitive data, hide faces, documents and license plates in photos. Blur, pixelate, and blackout effects 100% in browser.",
+      "title": "Censor & Blur Image Online",
+      "description": "Protect personal information, faces, and sensitive documents with blur, pixelate, or blackout bars. 100% private in your browser.",
+      "dropZone": {
+        "label": "Click or drag an image here",
+        "hint": "Supports JPG, PNG, and WebP — private in-browser processing"
+      },
+      "modes": {
+        "pixelate": "Pixelate",
+        "blur": "Blur",
+        "blackout": "Blackout"
+      },
+      "settings": {
+        "title": "Censor Controls",
+        "modeLabel": "Censor Effect",
+        "strengthLabel": "Effect Strength",
+        "instructions": "Click and drag across the image to draw censor boxes.",
+        "areasTitle": "Marked Areas ({count})",
+        "noAreas": "No areas marked yet. Draw a rectangle over the image.",
+        "removeArea": "Remove",
+        "clearAll": "Clear all areas",
+        "previewClean": "Clean Preview",
+        "showMarkers": "Show Markers",
+        "toggleAreaType": "Click to toggle effect for this area",
+        "outputFormat": "Output Format",
+        "formatOriginal": "Keep original format"
+      },
+      "button": {
+        "censor": "Apply Censor",
+        "censoring": "Applying censor...",
+        "clearFile": "Remove image",
+        "download": "Download Protected Image",
+        "reset": "Censor another image"
+      },
+      "errors": {
+        "noFile": "Please select an image to censor.",
+        "invalidType": "Please select a valid image file (JPG, PNG, or WebP).",
+        "noAreas": "Please draw at least one rectangular area on the image to censor.",
+        "failed": "Failed to apply censor to image. Please try again."
+      },
+      "badges": {
+        "private": "100% Private",
+        "free": "100% Free",
+        "modes": "Blur, Pixelate & Blackout",
+        "local": "Zero Server Upload"
+      },
+      "result": {
+        "title": "Censor Applied Successfully!",
+        "subtitle": "Sensitive data has been permanently overwritten directly within image pixels.",
+        "areasCount": "Censored Areas",
+        "dimensions": "Dimensions",
+        "fileSize": "Final File Size"
+      },
+      "faqs": [
+        {
+          "question": "Is pixelation or blackout censoring reversible?",
+          "answer": "No. When you apply censorship on ToolNotch, original pixel data in selected areas is permanently replaced with solid colors or blurred/pixelated approximations on the Canvas. No hidden original data or layers remain."
+        },
+        {
+          "question": "Which effect is most secure: blur, pixelate, or blackout?",
+          "answer": "Blackout is 100% mathematically secure because it overwrites all underlying pixels with pure solid black (#000000). Pixelation with high block sizes or heavy blur is also effective for concealing text, IDs, and credit cards."
+        },
+        {
+          "question": "Is my sensitive image uploaded to any server?",
+          "answer": "Never. All editing, pixel manipulation, and file rendering happen entirely within your local browser's memory using the Canvas API. Files never leave your device."
+        },
+        {
+          "question": "Can I mark multiple sensitive areas on the same picture?",
+          "answer": "Yes. You can draw as many censor boxes as needed, mixing and matching blur, pixelate, and blackout effects freely."
+        }
+      ],
+      "richContent": {
+        "whatIs": "The image censor tool lets you visually redact and obscure private details in photos — such as human faces, government ID numbers, home addresses, license plates, and credit card details — prior to sharing them online.",
+        "howToUse": [
+          "Upload your photo by dragging it into the upload box or choosing from files.",
+          "Select your desired redaction effect: Pixelate, Blur, or Blackout.",
+          "Click and drag directly over sensitive areas of the photo to create censorship boxes.",
+          "Add as many areas as needed and click 'Apply Censor' to export your protected image."
+        ],
+        "whyItMatters": "Accidental exposure of PII (Personally Identifiable Information) can lead to identity theft, account compromise, and doxxing. Destructive local pixel overwriting guarantees no third party can recover obscured secrets.",
+        "proTip": "For passwords, account numbers, and document codes, choose 'Blackout'. It leaves zero edge contrast or residual glyph shapes."
+      }
+    },
+    "faviconGenerator": {
+      "metaTitle": "Favicon Generator Online Free — Full .ICO & PNG Web Package | ToolNotch",
+      "metaDescription": "Generate complete favicon packages from any logo: multi-size favicon.ico, Apple touch icons, Android chrome PNGs, site.webmanifest, and ready-to-use HTML code. 100% free.",
+      "title": "Favicon Generator Online",
+      "description": "Generate modern browser and mobile favicon packages (.ico, 16x16, 32x32, 180x180, webmanifest, and HTML tags). 100% private in your browser.",
+      "dropZone": {
+        "label": "Click or drag your brand logo here",
+        "hint": "Square PNG, SVG, or JPG recommended (at least 512x512 px)"
+      },
+      "settings": {
+        "title": "Favicon Options",
+        "siteName": "Site / App Name",
+        "siteNamePlaceholder": "e.g. My Awesome Site",
+        "backgroundColor": "Background Color (Manifest)",
+        "includeIco": "Generate classic favicon.ico file",
+        "includeManifest": "Generate site.webmanifest for PWA/Android",
+        "htmlSnippetTitle": "HTML Code to Insert into '<head>':",
+        "copyHtml": "Copy HTML Tags",
+        "copiedHtml": "Tags Copied!"
+      },
+      "button": {
+        "generate": "Generate Favicon Package",
+        "generating": "Generating icons...",
+        "clearFile": "Remove logo",
+        "downloadZip": "Download Favicon Package (.ZIP)",
+        "reset": "Generate another favicon"
+      },
+      "errors": {
+        "noFile": "Please select an image or logo to generate favicons.",
+        "invalidType": "Please select a valid image file (PNG, JPG, SVG, or WebP).",
+        "failed": "Failed to generate favicons. Please try again."
+      },
+      "badges": {
+        "private": "100% Private",
+        "free": "100% Free",
+        "package": "Full Package (.ZIP)",
+        "ready": "Includes HTML Tags"
+      },
+      "result": {
+        "title": "Favicons Generated Successfully!",
+        "subtitle": "All modern browser, iOS, and Android assets have been generated and packaged into a production-ready ZIP archive.",
+        "totalFiles": "Generated Files",
+        "sizesGenerated": "Created Sizes",
+        "icoIncluded": "favicon.ico included",
+        "zipSize": "ZIP File Size"
+      },
+      "faqs": [
+        {
+          "question": "What icon sizes are included in the .ZIP archive?",
+          "answer": "The ZIP package includes multi-resolution favicon.ico (16x16, 32x32, and 48x48), favicon-16x16.png, favicon-32x32.png, apple-touch-icon.png (180x180), android-chrome-192x192.png, android-chrome-512x512.png, and a configured site.webmanifest."
+        },
+        {
+          "question": "How do I install the favicons on my website?",
+          "answer": "Extract all files from the downloaded ZIP archive into the root (or /public) folder of your website, and paste the generated HTML tags into the <head> section of your web pages or layout template."
+        },
+        {
+          "question": "Why is a favicon.ico file still needed?",
+          "answer": "While modern browsers support PNG and SVG favicons, legacy browsers, RSS feed readers, and search engine crawlers automatically request /favicon.ico at your domain root."
+        },
+        {
+          "question": "What is the optimal image upload resolution?",
+          "answer": "A square image of at least 512 × 512 pixels with a transparent background (PNG or SVG) gives the cleanest result across both tiny 16px tabs and large 512px app launcher screens."
+        }
+      ],
+      "richContent": {
+        "whatIs": "A favicon (favorite icon) is the small graphic brand mark displayed in browser tabs, bookmark bars, mobile home screen shortcuts, and mobile search engine result pages next to your site title.",
+        "howToUse": [
+          "Upload your square brand logo or icon (preferably with a transparent background).",
+          "Optionally enter your site name for the included web manifest configuration.",
+          "Click 'Generate Favicon Package' to process all standard device resolutions.",
+          "Download the packaged ZIP file and copy the ready-made HTML snippet into your website."
+        ],
+        "whyItMatters": "Websites with crisp favicons look polished and legitimate, earn higher click-through rates (CTR) in Google mobile search results, and help users quickly spot your tab among dozens of open tabs.",
+        "proTip": "Avoid complex wordmarks or small text. At 16x16 pixels, words become completely illegible. Stick to a simple, bold symbol with solid color contrast."
+      }
+    },
+    "convertWebpToPng": {
+      "metaTitle": "Convert WebP to PNG Online Free — With Transparency | ToolNotch",
+      "metaDescription": "Convert WebP images to high-quality PNG format in your browser. Preserves full transparency, no watermarks, and no server upload.",
+      "title": "Convert WebP to PNG",
+      "description": "Transform WebP images into lossless PNG with full alpha transparency support. Fast, private, and unlimited.",
+      "dropZone": {
+        "label": "Click or drag your WebP image here",
+        "hint": "Supports WebP — 100% local in-browser conversion"
+      },
+      "settings": {
+        "title": "Conversion Settings",
+        "maxWidthLabel": "Max Width (px)",
+        "maxWidthPlaceholder": "Optional (e.g. 1920)",
+        "preserveTransparency": "Alpha transparency automatically preserved in PNG"
+      },
+      "button": {
+        "convert": "Convert to PNG",
+        "converting": "Converting to PNG...",
+        "clearFile": "Remove image",
+        "download": "Download PNG",
+        "reset": "Convert another image"
+      },
+      "errors": {
+        "noFile": "Please select a WebP image to convert.",
+        "invalidType": "Please select a valid WebP image file.",
+        "failed": "Failed to convert image to PNG. Please try again."
+      },
+      "badges": {
+        "private": "100% Private",
+        "free": "100% Free",
+        "format": "WebP → PNG",
+        "transparency": "Preserves Alpha Channel"
+      },
+      "result": {
+        "title": "WebP Converted to PNG Successfully!",
+        "subtitle": "Image rendered in lossless PNG format compatible with all editing software.",
+        "originalSize": "Original Size (WebP)",
+        "convertedSize": "Final Size (PNG)",
+        "dimensions": "Dimensions: {width} × {height} px",
+        "formatTag": "PNG Format"
+      },
+      "faqs": [
+        {
+          "question": "Why convert WebP to PNG?",
+          "answer": "While WebP is ideal for web delivery, legacy desktop graphic editors, older software, and print workflows lack native WebP support. PNG provides universal compatibility and 100% lossless pixel fidelity."
+        },
+        {
+          "question": "Is transparency preserved when converting WebP to PNG?",
+          "answer": "Yes! The output PNG file contains a full 8-bit alpha channel, ensuring all transparent backgrounds and smooth shadows from the original WebP remain intact."
+        },
+        {
+          "question": "Why is the resulting PNG file larger than the WebP?",
+          "answer": "WebP uses modern lossy/lossless predictive algorithms developed by Google, while PNG uses lossless DEFLATE compression. It is completely normal for a lossless PNG to be larger in exchange for universal compatibility."
+        },
+        {
+          "question": "Are my images uploaded to external servers?",
+          "answer": "No. The entire conversion runs client-side inside your browser via the Canvas API. Files never leave your computer or phone."
+        }
+      ],
+      "richContent": {
+        "whatIs": "WebP to PNG conversion takes Google's modern web image format and outputs standardized PNG files compatible with every photo editor, office suite, and graphic design tool on the market.",
+        "howToUse": [
+          "Drag and drop your WebP image into the conversion area or choose from your files.",
+          "Optionally specify a maximum width if you wish to downscale during conversion.",
+          "Click 'Convert to PNG' for instant local processing.",
+          "Download your new PNG file with full transparency preserved."
+        ],
+        "whyItMatters": "WebP is optimized for browser network transfer, but legacy versions of Photoshop, CorelDraw, and document printers often refuse to open .webp files. Converting to PNG eliminates software incompatibility instantly.",
+        "proTip": "If you are sharing images for print or professional graphic design editing, PNG ensures that pixel values won't undergo further lossy artifacting."
+      }
+    },
+    "convertHeicToJpg": {
+      "metaTitle": "Convert HEIC to JPG Online Free — iPhone Photos | ToolNotch",
+      "metaDescription": "Convert iPhone HEIC and HEIF photos to universal JPG format directly in your browser. High quality, no signup, and 100% private.",
+      "title": "Convert HEIC to JPG",
+      "description": "Convert iPhone and iPad HEIC photos into universal JPG compatible with Windows, Android, and web platforms. No server upload.",
+      "dropZone": {
+        "label": "Click or drag iPhone HEIC/HEIF photos here",
+        "hint": "Supports HEIC and HEIF — local browser processing"
+      },
+      "settings": {
+        "title": "Conversion Settings",
+        "qualityLabel": "JPG Quality",
+        "qualityHint": "85%–92% recommended for optimal photographic clarity",
+        "smaller": "Smaller file",
+        "better": "Higher fidelity",
+        "maxWidthLabel": "Max Width (px)",
+        "maxWidthPlaceholder": "Optional (e.g. 1920)"
+      },
+      "button": {
+        "convert": "Convert to JPG",
+        "converting": "Converting to JPG...",
+        "clearFile": "Remove photo",
+        "download": "Download JPG Photo",
+        "reset": "Convert another photo"
+      },
+      "errors": {
+        "noFile": "Please select a HEIC photo to convert.",
+        "invalidType": "Please select a valid HEIC or HEIF file.",
+        "failed": "Failed to convert HEIC photo. Please ensure your browser supports HEIC or try again."
+      },
+      "badges": {
+        "private": "100% Private",
+        "free": "100% Free",
+        "format": "HEIC → JPG",
+        "apple": "iPhone & iPad Ready"
+      },
+      "result": {
+        "title": "HEIC Photo Converted to JPG!",
+        "subtitle": "Your photo can now be opened on any Windows PC, Android device, or website.",
+        "originalSize": "HEIC Size",
+        "convertedSize": "JPG Size",
+        "dimensions": "Dimensions: {width} × {height} px",
+        "formatTag": "JPG Format"
+      },
+      "faqs": [
+        {
+          "question": "What is a HEIC file?",
+          "answer": "HEIC (High Efficiency Image Container) is the default image format used by Apple on iPhones and iPads since iOS 11. It provides great compression but has limited native compatibility on Windows PCs and older applications."
+        },
+        {
+          "question": "Why convert HEIC to JPG?",
+          "answer": "JPG is the universal standard for photos. Converting HEIC to JPG ensures that anyone, on any device or operating system, can view and edit your photos without installing third-party codecs."
+        },
+        {
+          "question": "Will photo quality decrease during conversion?",
+          "answer": "At 85%–92% quality, visual difference from the original camera capture is imperceptible to the human eye. Colors and fine details are meticulously preserved."
+        },
+        {
+          "question": "Are my personal iPhone photos sent to a server?",
+          "answer": "No. All conversion operations happen locally inside your browser. Your private pictures and memories are never uploaded to cloud servers."
+        }
+      ],
+      "richContent": {
+        "whatIs": "HEIC to JPG conversion translates Apple's proprietary iOS camera format into universal JPEG files readable on any PC, Android device, smart TV, or web form.",
+        "howToUse": [
+          "Upload your HEIC photo by dropping it into the box or selecting it on your device.",
+          "Adjust your desired JPG quality (90% default recommended).",
+          "Click 'Convert to JPG' to process the photo immediately.",
+          "Download your compatible JPG photo and share it anywhere."
+        ],
+        "whyItMatters": "Government portals, job applications, and non-Apple devices frequently reject .heic uploads. Converting to standard JPG solves these barriers in seconds.",
+        "proTip": "On your iPhone, you can configure photos to save in JPG directly by navigating to Settings > Camera > Formats and selecting 'Most Compatible'."
+      }
+    },
     "compressor": {
       "metaTitle": "Compress Image Online Free — No Signup Required",
       "metaDescription": "Reduce image file size by up to 90% instantly in your browser. Supports JPG, PNG, WebP, AVIF. No upload to server — 100% private.",
@@ -3364,13 +4034,41 @@
       "utilityTools": "Utilities"
     },
     "tools": {
+      "cropImage": {
+        "label": "Crop Image",
+        "desc": "Crop photos with custom and preset ratios"
+      },
+      "imageResizer": {
+        "label": "Image Resizer",
+        "desc": "Change resolution, size and aspect ratio"
+      },
+      "censorImage": {
+        "label": "Censor Image",
+        "desc": "Blur, pixelate and hide sensitive data"
+      },
+      "faviconGenerator": {
+        "label": "Favicon Generator",
+        "desc": "Create .ico and complete favicon web package"
+      },
+      "convertWebpToPng": {
+        "label": "Convert WebP to PNG",
+        "desc": "Convert WebP files to PNG with transparency"
+      },
+      "convertHeicToJpg": {
+        "label": "Convert HEIC to JPG",
+        "desc": "Convert iPhone HEIC photos to universal JPG"
+      },
       "imageCompressor": {
         "label": "Image Compressor",
         "desc": "Compress JPG, PNG, WebP, AVIF"
       },
       "imageConverter": {
         "label": "Image Converter",
-        "desc": "Convert between formats"
+        "desc": "Convert between JPG, PNG, WebP, AVIF and more"
+      },
+      "convertPngToWebp": {
+        "label": "Convert PNG to WebP",
+        "desc": "Convert PNG images to modern lightweight WebP"
       },
       "mergePdf": {
         "label": "Merge PDF",

@@ -53,6 +53,15 @@ const ALL_ROUTES = [
   '/interview/rabbitmq-concepts',
   '/interview/system-architecture',
   // Legal / info (moved to TRUST_ROUTES above — rendered at priority 0.6)
+  // Image tools
+  '/tools/image/crop-image',
+  '/tools/image/image-resizer',
+  '/tools/image/censor-image',
+  '/tools/image/favicon-generator',
+  '/tools/image/convert-webp-to-png',
+  '/tools/image/convert-heic-to-jpg',
+  '/tools/image/image-converter',
+  '/tools/image/convert-png-to-webp',
   // PDF tools
   '/tools/pdf',
   '/tools/pdf/merge-pdf',

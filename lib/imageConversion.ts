@@ -36,13 +36,15 @@ export async function convertFormat(
   if (!ctx) throw new Error('Canvas 2D context not available')
   ctx.drawImage(img, 0, 0, width, height)
 
+  const mimeType = format === 'jpg' ? 'image/jpeg' : `image/${format}`
+
   return new Promise<Blob>((resolve, reject) => {
     canvas.toBlob(
       (blob) => {
         if (blob) resolve(blob)
         else reject(new Error(`Failed to encode image as ${format}`))
       },
-      `image/${format}`,
+      mimeType,
       quality / 100,
     )
   })

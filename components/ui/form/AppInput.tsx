@@ -46,7 +46,7 @@ export function AppInput({
   id,
   type = "text",
   flat = false,
-  variant = "background",
+  variant = "tertiary",
   ...props
 }: AppInputProps) {
   const generatedId = useId();
