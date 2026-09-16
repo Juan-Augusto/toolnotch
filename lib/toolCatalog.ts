@@ -43,14 +43,25 @@ export interface CatalogEntry {
 
 export const TOOL_CATALOG: CatalogEntry[] = [
   // Image
+  { path: '/tools/image/crop-image', labelKey: 'cropImage', category: 'image', kind: 'tool' },
+  { path: '/tools/image/image-resizer', labelKey: 'imageResizer', category: 'image', kind: 'tool' },
+  { path: '/tools/image/censor-image', labelKey: 'censorImage', category: 'image', kind: 'tool' },
+  { path: '/tools/image/favicon-generator', labelKey: 'faviconGenerator', category: 'image', kind: 'tool' },
+  { path: '/tools/image/convert-webp-to-png', labelKey: 'convertWebpToPng', category: 'image', kind: 'tool' },
+  { path: '/tools/image/convert-heic-to-jpg', labelKey: 'convertHeicToJpg', category: 'image', kind: 'tool' },
   { path: '/tools/image/image-compressor', labelKey: 'imageCompressor', category: 'image', kind: 'tool' },
-  { path: '/tools/image/convert-png-to-webp', labelKey: 'imageConverter', category: 'image', kind: 'tool' },
+  { path: '/tools/image/image-converter', labelKey: 'imageConverter', category: 'image', kind: 'tool' },
+  { path: '/tools/image/convert-png-to-webp', labelKey: 'convertPngToWebp', category: 'image', kind: 'tool' },
   // PDF
   { path: '/tools/pdf/merge-pdf', labelKey: 'mergePdf', category: 'pdf', kind: 'tool' },
   { path: '/tools/pdf/split-pdf', labelKey: 'splitPdf', category: 'pdf', kind: 'tool' },
   { path: '/tools/pdf/compress-pdf', labelKey: 'compressPdf', category: 'pdf', kind: 'tool' },
   { path: '/tools/pdf/pdf-to-jpg', labelKey: 'pdfToJpg', category: 'pdf', kind: 'tool' },
   { path: '/tools/pdf/jpg-to-pdf', labelKey: 'jpgToPdf', category: 'pdf', kind: 'tool' },
+  { path: '/tools/pdf/organize-pdf', labelKey: 'organizePdf', category: 'pdf', kind: 'tool' },
+  { path: '/tools/pdf/delete-pdf-pages', labelKey: 'deletePdfPages', category: 'pdf', kind: 'tool' },
+  { path: '/tools/pdf/pdf-to-text', labelKey: 'pdfToText', category: 'pdf', kind: 'tool' },
+  { path: '/tools/pdf/extract-pdf-images', labelKey: 'extractPdfImages', category: 'pdf', kind: 'tool' },
   // Convert
   { path: '/tools/convert/unit-converter', labelKey: 'unitConverter', category: 'convert', kind: 'tool' },
   { path: '/tools/convert/currency-converter', labelKey: 'currencyConverter', category: 'convert', kind: 'tool' },

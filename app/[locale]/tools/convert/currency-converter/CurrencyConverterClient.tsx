@@ -104,7 +104,7 @@ export default function CurrencyConverterClient() {
             ))}
           </select>
           <div
-            className={`w-full px-4 py-2! input bg-tertiary font-mono font-semibold ${loading ? "bg-gray-50 text-gray-400 border-gray-200" : "bg-blue-50 border-blue-200 text-blue-800"}`}
+            className={`w-full px-4 py-2! input bg-tertiary font-semibold ${loading ? "bg-gray-50 text-gray-400 border-gray-200" : "bg-blue-50 border-blue-200 text-blue-800"}`}
           >
             {loading
               ? tc("loading")
@@ -116,7 +116,7 @@ export default function CurrencyConverterClient() {
       </div>
 
       {result !== null && !loading && (
-        <div className="w-full px-4 py-3 bg-background border border-border rounded-lg font-mono font-semibold text-center">
+        <div className="w-full px-4 py-3 bg-background border border-border rounded-lg font-semibold text-center">
           {amount} {from} ={" "}
           <strong>
             {result.toFixed(4)} {to}

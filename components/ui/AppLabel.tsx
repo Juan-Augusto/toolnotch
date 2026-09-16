@@ -13,7 +13,7 @@ export default function AppLabel({
 }: AppLabelProps) {
   return (
     <label
-      className={`inline-block font-mono text-xs font-semibold uppercase  text-foreground mb-1.5 ${className}`}
+      className={`inline-block text-xs font-semibold uppercase  text-foreground mb-1.5 ${className}`}
       {...props}
     >
       {children}

@@ -45,29 +45,24 @@ export function AppInterviewResultScreen({
 
   return (
     <div className="space-y-6 select-none">
-      <AppCard
-        border
-        hover={false}
-        withCornerAccents={false}
-        className="p-7 sm:p-10"
-      >
+      <AppCard border hover={false} className="p-7 sm:p-10">
         <div className="flex items-center justify-between gap-3 mb-6 pb-4 border-b border-border/50">
           <span className="text-xs font-semibold uppercase">
             {labels.resultBadge}
           </span>
-          <span className="text-[11px] text-label uppercase">
+          <span className="text-xs font-medium text-label uppercase">
             {title} | {levelLabel}
           </span>
         </div>
 
         <div className="mb-6">
-          <div className="text-4xl sm:text-5xl font-bold text-foreground tracking-tight mb-2">
+          <div className="text-4xl sm:text-5xl font-semibold text-foreground tracking-tight mb-2">
             {correctCount}{" "}
             <span className="text-xl sm:text-2xl text-label font-normal">
               / {totalQuestions}
             </span>
           </div>
-          <div className="text-xs text-secondary font-semibold uppercase">
+          <div className="text-xs text-label font-medium uppercase">
             {labels.scoreSummary(scoreRatio, evaluation.title)}
           </div>
         </div>
@@ -97,7 +92,7 @@ export function AppInterviewResultScreen({
               color="tertiary"
               small
               onClick={onChooseLevel}
-              className="w-full sm:w-auto whitespace-nowrap"
+              className="w-full sm:w-auto whitespace-nowrap border border-border"
             >
               {labels.chooseLevel}
             </AppButton>
@@ -126,13 +121,7 @@ export function AppInterviewResultScreen({
             const ans = userAnswers[qIndex];
             const isPassed = ans?.correct;
             return (
-              <AppCard
-                key={q.id}
-                border
-                hover={false}
-                withCornerAccents={false}
-                className="p-5"
-              >
+              <AppCard key={q.id} border hover={false} className="p-5">
                 <div className="flex items-start gap-3.5">
                   <div className="shrink-0 mt-0.5">
                     {isPassed ? (

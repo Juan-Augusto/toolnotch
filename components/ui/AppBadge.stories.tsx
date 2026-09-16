@@ -87,11 +87,11 @@ export const WithIcons: Story = {
 export const ShortcutBadge: Story = {
   render: () => (
     <div className="flex items-center gap-4">
-      <span className="font-mono text-sm text-label">Fechar busca:</span>
+      <span className="text-sm text-label">Fechar busca:</span>
       <AppBadge
         bg="bg-tertiary"
         text="text-label"
-        className="text-[10px] px-1.5 py-0.5 font-mono border border-border/60"
+        className="text-[10px] px-1.5 py-0.5 border border-border/60"
       >
         esc
       </AppBadge>

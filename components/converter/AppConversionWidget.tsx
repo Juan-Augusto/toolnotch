@@ -101,7 +101,7 @@ export default function AppConversionWidget({
               </option>
             ))}
           </select>
-          <div data-testid="conversion-result" className="w-full px-4 py-2! input bg-background font-mono font-semibold">
+          <div data-testid="conversion-result" className="w-full px-4 py-2! input bg-background font-semibold">
             {result || "—"}
           </div>
         </div>

@@ -105,11 +105,11 @@ export function AppRelatedInterviewDrills({
       <div className="mb-6">
         <h2
           id="related-drills-heading"
-          className="font-mono text-lg sm:text-xl font-bold uppercase text-foreground mb-1.5"
+          className="text-lg sm:text-xl font-bold uppercase text-foreground mb-1.5"
         >
           {sectionText.heading}
         </h2>
-        <p className="font-mono text-xs sm:text-sm text-label/90 leading-relaxed">
+        <p className="text-xs sm:text-sm text-label/90 leading-relaxed">
           {sectionText.subtitle}
         </p>
       </div>

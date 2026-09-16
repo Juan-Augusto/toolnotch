@@ -150,7 +150,7 @@ export function AppSegmentedControl<T = string>({
       {label && (
         <label
           id={labelId}
-          className={`font-mono text-xs font-semibold uppercase  text-foreground mb-2 select-none ${
+          className={`text-xs font-semibold uppercase  text-foreground mb-2 select-none ${
             disabled ? "opacity-50" : ""
           } ${labelClassName}`}
         >
@@ -201,7 +201,7 @@ export function AppSegmentedControl<T = string>({
                 inline-flex
                 items-center
                 justify-center
-                font-mono
+               
                 uppercase
                 transition-colors
                 duration-150
@@ -271,7 +271,7 @@ export function AppSegmentedControl<T = string>({
                       px-1.5
                       py-0.2
                       rounded
-                      font-mono
+                     
                       text-[10px]
                       uppercase
                       ${
@@ -291,11 +291,11 @@ export function AppSegmentedControl<T = string>({
       </div>
 
       {error && (
-        <span className="font-mono text-xs text-red-500 mt-1.5 ">{error}</span>
+        <span className="text-xs text-red-500 mt-1.5 ">{error}</span>
       )}
 
       {helperText && !error && (
-        <span className="font-mono text-xs text-label/70 mt-1.5 ">
+        <span className="text-xs text-label/70 mt-1.5 ">
           {helperText}
         </span>
       )}

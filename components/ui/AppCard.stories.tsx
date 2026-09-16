@@ -16,10 +16,10 @@ export const Default: Story = {
     <div className="max-w-xs">
       <AppCard className="flex flex-col justify-between p-6 min-h-[280px]">
         <div>
-          <h2 className="font-mono text-sm  uppercase text-foreground">
+          <h2 className="text-sm  uppercase text-foreground">
             FERRAMENTAS
           </h2>
-          <p className="font-mono text-xs text-label/80 mt-3 leading-relaxed">
+          <p className="text-xs text-label/80 mt-3 leading-relaxed">
             Comprima imagens, manipule PDFs, faça cálculos e utilize utilitários
             rápidos direto no navegador.
           </p>
@@ -42,10 +42,10 @@ export const WithoutCornerAccents: Story = {
         className="flex flex-col justify-between p-6 min-h-[280px]"
       >
         <div>
-          <h2 className="font-mono text-sm  uppercase text-foreground">
+          <h2 className="text-sm  uppercase text-foreground">
             SEM ACCENTS
           </h2>
-          <p className="font-mono text-xs text-label/80 mt-3 leading-relaxed">
+          <p className="text-xs text-label/80 mt-3 leading-relaxed">
             Card limpo com apenas a borda tracejada, sem os acentos de canto.
           </p>
         </div>

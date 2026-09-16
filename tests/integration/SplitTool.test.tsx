@@ -180,4 +180,45 @@ describe("SplitTool Integration", () => {
     expect(saveAs).toHaveBeenCalledTimes(1);
     expect(saveAs).toHaveBeenCalledWith(expect.any(Blob), "sample_page_1.pdf");
   });
+
+  test("renders individual file cards when split yields multiple files and allows downloading single parts", async () => {
+    (splitPDF as jest.Mock).mockResolvedValue([
+      { name: "part_1_pages_1-2.pdf", bytes: new Uint8Array(100) },
+      { name: "part_2_pages_3-5.pdf", bytes: new Uint8Array(150) },
+    ]);
+
+    const { container } = render(<SplitTool {...defaultProps} locale="pt" />);
+
+    const fileInput = container.querySelector('input[type="file"]') as HTMLInputElement;
+    const sampleFile = new File([new ArrayBuffer(500)], "multi.pdf", {
+      type: "application/pdf",
+    });
+    sampleFile.arrayBuffer = jest.fn().mockResolvedValue(new ArrayBuffer(500));
+
+    fireEvent.change(fileInput, { target: { files: [sampleFile] } });
+
+    await waitFor(() => {
+      expect(screen.getByText("PDF:")).toBeInTheDocument();
+    });
+
+    const splitBtn = screen.getByRole("button", { name: /pdf\.split\.button\.split/i });
+    fireEvent.click(splitBtn);
+
+    await waitFor(() => {
+      expect(screen.getByText("Arquivos Extraídos Separados")).toBeInTheDocument();
+      expect(screen.getByText("part_1_pages_1-2.pdf")).toBeInTheDocument();
+      expect(screen.getByText("part_2_pages_3-5.pdf")).toBeInTheDocument();
+      expect(screen.getByRole("button", { name: "Baixar Arquivos (ZIP)" })).toBeInTheDocument();
+    });
+
+    const individualDownloadBtns = screen.getAllByRole("button", { name: "Baixar PDF" });
+    expect(individualDownloadBtns).toHaveLength(2);
+
+    fireEvent.click(individualDownloadBtns[0]);
+    expect(saveAs).toHaveBeenCalledWith(expect.any(Blob), "part_1_pages_1-2.pdf");
+
+    const zipBtn = screen.getByRole("button", { name: "Baixar Arquivos (ZIP)" });
+    fireEvent.click(zipBtn);
+    expect(saveAs).toHaveBeenCalledWith(expect.any(Blob), "multi_split.zip");
+  });
 });

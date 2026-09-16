@@ -60,7 +60,7 @@ export function AppFeaturedQuizCard({
                   </AppBadge>
                 )}
 
-                <span className="text-[11px] text-label/80 uppercase">
+                <span className="text-xs text-label/80 uppercase">
                   {quiz.questionCount > 0
                     ? `${quiz.questionCount} ${labels.questionsLabel} • ~${estimatedMin} ${labels.minLabel}`
                     : `~3 ${labels.minLabel}`}
@@ -81,7 +81,7 @@ export function AppFeaturedQuizCard({
                 color="primary"
                 withArrow
                 small
-                className="w-full sm:w-auto group-hover:scale-[1.02] transition-transform"
+                className="w-full sm:w-auto"
               >
                 {labels.startQuiz}
               </AppButton>

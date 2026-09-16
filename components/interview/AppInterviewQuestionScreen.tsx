@@ -159,12 +159,7 @@ export function AppInterviewQuestionScreen({
         </div>
       </div>
 
-      <AppCard
-        border
-        hover={false}
-        withCornerAccents={false}
-        className="p-6 sm:p-8"
-      >
+      <AppCard border hover={false} className="p-6 sm:p-8">
         <div className="mb-6">
           <span className="text-xs text-label font-semibold tracking-wide uppercase block mb-2">
             {labels.questionNumTopic(currentIndex + 1, currentQuestion.topic)}

@@ -186,7 +186,6 @@ export default async function AboutPage({ params }: Props) {
 
             <AppCard
               border
-              withCornerAccents={false}
               className="p-6 bg-tertiary flex flex-col sm:flex-row sm:items-center justify-between gap-6"
             >
               <div className="space-y-2">

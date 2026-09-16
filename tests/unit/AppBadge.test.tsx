@@ -13,7 +13,7 @@ describe('AppBadge', () => {
     const badge = screen.getByText('Esportes');
     expect(badge).toBeInTheDocument();
     const span = container.firstChild as HTMLElement;
-    expect(span).toHaveClass('bg-green-400', 'text-background', 'inline-flex', 'items-center', 'font-mono');
+    expect(span).toHaveClass('bg-green-400', 'text-background', 'inline-flex', 'items-center', 'font-semibold');
   });
 
   it('renders icon when provided', () => {

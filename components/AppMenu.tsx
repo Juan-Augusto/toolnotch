@@ -247,7 +247,7 @@ export function AppMenu({
       })}
 
       {search && searchQuery.trim() && filteredGroups.length === 0 && (
-        <div className="px-5 py-6 text-xs text-label/60 font-mono uppercase  text-center border-r-dashed-5">
+        <div className="px-5 py-6 text-xs text-label/60 uppercase  text-center border-r-dashed-5">
           Nenhum resultado
         </div>
       )}

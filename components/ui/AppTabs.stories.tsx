@@ -48,7 +48,7 @@ export const WithBadgesAndContent: Story = {
         label: 'TODOS',
         badge: 42,
         content: (
-          <div className="p-4 rounded border border-border/40 bg-surface text-label font-mono text-xs">
+          <div className="p-4 rounded border border-border/40 bg-surface text-label text-xs">
             Exibindo todos os quizzes e ferramentas disponíveis na plataforma.
           </div>
         ),
@@ -58,7 +58,7 @@ export const WithBadgesAndContent: Story = {
         label: 'ESPORTES',
         badge: 12,
         content: (
-          <div className="p-4 rounded border border-border/40 bg-surface text-label font-mono text-xs">
+          <div className="p-4 rounded border border-border/40 bg-surface text-label text-xs">
             Quizzes sobre futebol, basquete, corrida e esportes olímpicos.
           </div>
         ),
@@ -68,7 +68,7 @@ export const WithBadgesAndContent: Story = {
         label: 'PERSONALIDADE',
         badge: 8,
         content: (
-          <div className="p-4 rounded border border-border/40 bg-surface text-label font-mono text-xs">
+          <div className="p-4 rounded border border-border/40 bg-surface text-label text-xs">
             Descubra mais sobre seu estilo de trabalho, raciocínio e perfil.
           </div>
         ),

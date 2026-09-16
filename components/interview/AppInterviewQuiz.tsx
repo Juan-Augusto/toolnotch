@@ -29,7 +29,7 @@ const AppInterviewResultScreen = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="w-full p-12 text-center text-label font-mono animate-pulse">
+      <div className="w-full p-12 text-center text-label animate-pulse">
         Loading results...
       </div>
     ),

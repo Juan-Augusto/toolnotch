@@ -105,6 +105,8 @@ export default async function SplitPDFPage({ params }: Props) {
 
   const homeLabel =
     locale === "pt" ? "Início" : locale === "es" ? "Inicio" : "Home";
+  const toolsLabel =
+    locale === "pt" ? "Ferramentas" : locale === "es" ? "Herramientas" : "Tools";
   const pdfToolsLabel =
     locale === "pt"
       ? "Ferramentas PDF"
@@ -123,6 +125,7 @@ export default async function SplitPDFPage({ params }: Props) {
   const jsonLd = buildJsonLd(
     breadcrumbSchema([
       { name: homeLabel, url: localizedPath("/", locale) },
+      { name: toolsLabel, url: localizedPath("/tools", locale) },
       { name: pdfToolsLabel, url: localizedPath("/tools/pdf", locale) },
       { name: t("title"), url: localizedUrl },
     ]),

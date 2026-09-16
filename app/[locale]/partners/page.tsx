@@ -144,16 +144,12 @@ export default async function PartnersPage({ params }: Props) {
             <p className="leading-relaxed text-label mt-3">
               {t("partners.subtitle")}
             </p>
-            <p className="text-xs text-label/80 mt-2 font-mono">
+            <p className="text-xs text-label/80 mt-2">
               {t("partners.lastUpdated")}
             </p>
           </header>
 
-          <AppCard
-            border
-            withCornerAccents={false}
-            className="p-6 bg-tertiary mb-10"
-          >
+          <AppCard border className="p-6 bg-tertiary mb-10">
             <span className="font-bold text-secondary uppercase tracking-wider text-xs">
               {t("partners.badge")}
             </span>
@@ -205,17 +201,12 @@ export default async function PartnersPage({ params }: Props) {
                     </h3>
                     <div className="grid gap-4">
                       {partners.map((p) => (
-                        <AppCard
-                          key={p.key}
-                          border
-                          withCornerAccents={false}
-                          className="p-5 bg-card"
-                        >
+                        <AppCard key={p.key} border className="p-5 bg-card">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
                             <h4 className="font-bold text-foreground text-base">
                               {t(`offers.${p.key}.name`)}
                             </h4>
-                            <span className="text-[11px] font-mono uppercase px-2 py-0.5 rounded bg-muted text-muted-foreground w-fit">
+                            <span className="text-[11px] uppercase px-2 py-0.5 rounded bg-muted text-muted-foreground w-fit">
                               {p.brand}
                             </span>
                           </div>
@@ -239,7 +230,7 @@ export default async function PartnersPage({ params }: Props) {
               </div>
             </section>
 
-            <p className="text-xs text-label/80 font-mono pt-4 border-t border-border">
+            <p className="text-xs text-label/80 pt-4 border-t border-border">
               {t("partners.disclosure")}
             </p>
 

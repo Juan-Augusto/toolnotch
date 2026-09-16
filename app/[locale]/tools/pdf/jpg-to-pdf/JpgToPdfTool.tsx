@@ -19,14 +19,19 @@ import {
 import { saveAs } from "file-saver";
 import { ShieldCheck, Images, Sparkles, Info } from "lucide-react";
 import { useTranslations } from "next-intl";
-import AppBreadcrumb from "@/components/AppBreadcrumb";
-import AppDropfile from "@/components/AppDropfile";
-import { AppCard, AppButton, AppBadge, AppInput } from "@/components/ui";
+import {
+  AppCard,
+  AppButton,
+  AppInput,
+  AppDropfile,
+} from "@/components/ui";
 import { imagesToPDF, validatePdfFilename } from "@/lib/imageToPdf";
 import type { FaqItem } from "@/components/AppFaqSection";
+import PdfToolHeader from "../components/PdfToolHeader";
 import SortableImageItem from "./components/SortableImageItem";
 import JpgToPdfResult from "./components/JpgToPdfResult";
 import JpgToPdfContent, { type RichContent } from "./components/JpgToPdfContent";
+import { restrictToVerticalAxis } from "@/lib/dndModifiers";
 
 interface ImageEntry {
   id: string;
@@ -66,16 +71,6 @@ export default function JpgToPdfTool({
   const [done, setDone] = useState(false);
   const [pdfOutput, setPdfOutput] = useState<PdfOutput | null>(null);
 
-  const homeLabel =
-    locale === "pt" ? "Início" : locale === "es" ? "Inicio" : "Home";
-  const pdfToolsLabel =
-    locale === "pt"
-      ? "Ferramentas PDF"
-      : locale === "es"
-        ? "Herramientas PDF"
-        : "PDF Tools";
-  const prefix = locale === "en" ? "" : `/${locale}`;
-
   const resetLabel =
     locale === "pt"
       ? "Converter outras imagens"
@@ -99,56 +94,38 @@ export default function JpgToPdfTool({
 
   const addFiles = useCallback((files: FileList | File[] | null) => {
     if (!files) return;
-    const fileArray = Array.from(files);
-    const validFiles = fileArray.filter(
-      (f) =>
-        f.type === "image/jpeg" ||
-        f.type === "image/png" ||
-        f.type === "image/jpg" ||
-        f.name.toLowerCase().endsWith(".jpg") ||
-        f.name.toLowerCase().endsWith(".jpeg") ||
-        f.name.toLowerCase().endsWith(".png")
-    );
-
-    setImages((prev) => {
-      const uniqueNewFiles = validFiles.filter(
-        (f) =>
-          !prev.some(
-            (entry) =>
-              entry.file.name === f.name &&
-              entry.file.size === f.size &&
-              entry.file.lastModified === f.lastModified
-          )
-      );
-
-      if (uniqueNewFiles.length === 0) return prev;
-
-      const newEntries: ImageEntry[] = uniqueNewFiles.map((f) => ({
-        id: `${f.name}-${Date.now()}-${Math.random()}`,
-        file: f,
-        name: f.name,
-        size: f.size,
-        preview: URL.createObjectURL(f),
-      }));
-
-      return [...prev, ...newEntries];
+    const fileList = Array.from(files);
+    const valid = fileList.filter((f) => {
+      const isImg = f.type.startsWith("image/");
+      const hasExt = /\.(jpe?g|png)$/i.test(f.name);
+      return isImg || hasExt;
     });
 
-    setDone(false);
-    setPdfOutput(null);
+    if (valid.length === 0) return;
+
+    setImages((prev) => {
+      const existingMap = new Map(prev.map((item) => [`${item.name}-${item.size}`, item]));
+      return valid.map((f) => {
+        const key = `${f.name}-${f.size}`;
+        const existing = existingMap.get(key);
+        if (existing) return existing;
+        return {
+          id: `${f.name}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+          file: f,
+          name: f.name,
+          size: f.size,
+          preview: URL.createObjectURL(f),
+        };
+      });
+    });
     setError(null);
   }, []);
 
   const removeImage = useCallback((id: string) => {
     setImages((prev) => {
-      const entry = prev.find((e) => e.id === id);
-      if (entry) URL.revokeObjectURL(entry.preview);
-      const remaining = prev.filter((e) => e.id !== id);
-      if (remaining.length === 0) {
-        setDone(false);
-        setPdfOutput(null);
-      }
-      return remaining;
+      const target = prev.find((img) => img.id === id);
+      if (target) URL.revokeObjectURL(target.preview);
+      return prev.filter((img) => img.id !== id);
     });
   }, []);
 
@@ -168,13 +145,19 @@ export default function JpgToPdfTool({
       setError(t("errors.noImages"));
       return;
     }
+
     if (!filenameValidation.valid) {
+      setError(filenameError);
       return;
     }
+
     setLoading(true);
     setError(null);
+
     try {
-      const bytes = await imagesToPDF(images.map((e) => e.file));
+      const files = images.map((img) => img.file);
+      const bytes = await imagesToPDF(files);
+
       const trimmed = filename.trim();
       const finalName = trimmed
         ? trimmed.toLowerCase().endsWith(".pdf")
@@ -214,78 +197,64 @@ export default function JpgToPdfTool({
   };
 
   return (
-    <main className="container min-h-[calc(100vh-180px)] bg-background py-8">
+    <main className="container min-h-[calc(100vh-180px)] bg-background py-3 sm:py-6 md:py-8">
       <div className="w-full">
-        <div className="w-full pb-4">
-          <AppBreadcrumb
-            items={[
-              { label: homeLabel, href: prefix || "/" },
-              { label: pdfToolsLabel, href: `${prefix}/tools/pdf` },
-              { label: title, current: true },
-            ]}
-          />
-        </div>
-
-        <header className="mb-10 pt-2 pb-8 border-b border-border/80 relative">
-          <h1 className="font-mono text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-tight text-foreground">
-            {title}
-          </h1>
-          <p className="leading-relaxed text-label mt-3 max-w-3xl font-mono text-xs sm:text-sm">
-            {description}
-          </p>
-
-          <div className="flex flex-wrap items-center gap-2 sm:gap-3 mt-5">
-            <AppBadge
-              bg="bg-primary"
-              text="text-background"
-              icon={<ShieldCheck className="w-3.5 h-3.5 shrink-0" />}
-            >
-              {locale === "pt"
-                ? "Sem upload para servidores"
-                : locale === "es"
-                  ? "Sin subida a servidores"
-                  : "Zero server upload"}
-            </AppBadge>
-            <AppBadge
-              bg="bg-secondary"
-              text="text-background"
-              icon={<Images className="w-3.5 h-3.5 shrink-0" />}
-            >
-              {locale === "pt"
-                ? "Suporta JPG, PNG & JPEG"
-                : locale === "es"
-                  ? "Soporta JPG, PNG y JPEG"
-                  : "Supports JPG, PNG & JPEG"}
-            </AppBadge>
-            <AppBadge
-              bg="bg-foreground"
-              text="text-background"
-              icon={<Sparkles className="w-3.5 h-3.5 shrink-0" />}
-            >
-              {locale === "pt"
-                ? "Ilimitado & Gratuito"
-                : locale === "es"
-                  ? "Ilimitado y Gratis"
-                  : "Unlimited & Free"}
-            </AppBadge>
-          </div>
-        </header>
+        <PdfToolHeader
+          title={title}
+          description={description}
+          locale={locale}
+          badges={[
+            {
+              text:
+                locale === "pt"
+                  ? "Sem upload para servidores"
+                  : locale === "es"
+                    ? "Sin subida a servidores"
+                    : "Zero server upload",
+              bg: "bg-primary",
+              textColor: "text-background",
+              icon: <ShieldCheck className="w-3.5 h-3.5 shrink-0" />,
+            },
+            {
+              text:
+                locale === "pt"
+                  ? "Suporta JPG, PNG & JPEG"
+                  : locale === "es"
+                    ? "Soporta JPG, PNG y JPEG"
+                    : "Supports JPG, PNG & JPEG",
+              bg: "bg-secondary",
+              textColor: "text-background",
+              icon: <Images className="w-3.5 h-3.5 shrink-0" />,
+            },
+            {
+              text:
+                locale === "pt"
+                  ? "Ilimitado & Gratuito"
+                  : locale === "es"
+                    ? "Ilimitado y Gratis"
+                    : "Unlimited & Free",
+              bg: "bg-foreground",
+              textColor: "text-background",
+              icon: <Sparkles className="w-3.5 h-3.5 shrink-0" />,
+            },
+          ]}
+        />
 
         <AppCard
           border
           cornerAccents={true}
-          className="p-6 md:p-8 bg-tertiary mb-10 max-w-4xl mx-auto shadow-xs"
+          className="p-1.5 sm:p-4 md:p-6 lg:p-8 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto shadow-xs"
         >
-          <div className="space-y-6">
+          <div className="space-y-3 sm:space-y-5">
             {!done || !pdfOutput ? (
               <>
                 <AppDropfile
                   id="imgpdf-file-input"
-                  accept="image/jpeg,image/png,.jpg,.jpeg,.png"
+                  accept="image/jpeg,image/png,image/jpg"
                   multiple={true}
+                  value={images.map((img) => img.file)}
                   title={t("dropZone.label")}
                   description={t("dropZone.hint")}
-                  value={images.map((img) => img.file)}
                   onFilesChange={addFiles}
                   showSelectedFiles={false}
                   disabled={loading}
@@ -296,25 +265,26 @@ export default function JpgToPdfTool({
                   <div className="space-y-4 pt-2">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border/80 pb-3">
                       <div className="flex items-center gap-2">
-                        <span className="font-mono text-xs font-bold uppercase tracking-wider text-foreground">
+                        <span className="text-xs font-bold uppercase tracking-wider text-foreground">
                           {locale === "pt"
                             ? "Imagens Selecionadas"
                             : locale === "es"
                               ? "Imágenes Seleccionadas"
                               : "Selected Images"}
                         </span>
-                        <span className="px-2 py-0.5 text-xs font-mono font-bold bg-primary text-background rounded-[2px]">
+                        <span className="px-2 py-0.5 text-xs font-bold bg-primary text-background rounded-[2px]">
                           {images.length}
                         </span>
                       </div>
-                      <div className="flex items-center gap-1.5 text-label font-mono text-sm">
-                        <Info className="w-4 h-4 shrink-0 text-secondary" />
+
+                      <div className="flex items-center gap-2 text-xs text-label">
+                        <Info className="w-3.5 h-3.5 shrink-0 text-primary" />
                         <span>
                           {locale === "pt"
-                            ? "Arraste as imagens para definir a sequência das páginas"
+                            ? "Arraste para reorganizar a ordem das páginas"
                             : locale === "es"
-                              ? "Arrastra las imágenes para definir el orden de las páginas"
-                              : "Drag images to set the page order"}
+                              ? "Arrastra para reorganizar el orden de las páginas"
+                              : "Drag items to reorder pages"}
                         </span>
                       </div>
                     </div>
@@ -322,13 +292,14 @@ export default function JpgToPdfTool({
                     <DndContext
                       sensors={sensors}
                       collisionDetection={closestCenter}
+                      modifiers={[restrictToVerticalAxis]}
                       onDragEnd={handleDragEnd}
                     >
                       <SortableContext
-                        items={images.map((i) => i.id)}
+                        items={images.map((img) => img.id)}
                         strategy={verticalListSortingStrategy}
                       >
-                        <div className="space-y-2">
+                        <div className="space-y-2 max-h-72 sm:max-h-96 overflow-y-auto overflow-x-hidden p-1">
                           {images.map((img, index) => (
                             <SortableImageItem
                               key={img.id}
@@ -338,7 +309,6 @@ export default function JpgToPdfTool({
                               preview={img.preview}
                               index={index}
                               onRemove={removeImage}
-                              locale={locale}
                             />
                           ))}
                         </div>
@@ -347,8 +317,7 @@ export default function JpgToPdfTool({
 
                     <div className="pt-2">
                       <AppInput
-                        id="custom-pdf-filename"
-                        variant="background"
+                        id="jpg-to-pdf-filename"
                         label={
                           <span>
                             {t("filename.label")}{" "}
@@ -368,12 +337,12 @@ export default function JpgToPdfTool({
                 )}
 
                 {error && (
-                  <div className="p-3 bg-red-500/10 border border-red-500/30 rounded-[2px] font-mono text-xs text-red-500">
+                  <div className="p-3 bg-red-500/10 border border-red-500/30 rounded-[2px] text-xs text-red-500">
                     {error}
                   </div>
                 )}
 
-                <div className="pt-2">
+                <div className="pt-3 border-t border-border">
                   <AppButton
                     onClick={handleConvert}
                     disabled={
@@ -382,6 +351,7 @@ export default function JpgToPdfTool({
                       !filenameValidation.valid
                     }
                     color="primary"
+                    className="w-full sm:w-auto"
                   >
                     {loading
                       ? t("button.converting")

@@ -34,7 +34,9 @@ export default function SortableImageItem({
   } = useSortable({ id });
 
   const style = {
-    transform: CSS.Transform.toString(transform),
+    transform: CSS.Transform.toString(
+      transform ? { ...transform, x: 0 } : null
+    ),
     transition,
     opacity: isDragging ? 0.4 : 1,
     zIndex: isDragging ? 10 : 1,
@@ -65,7 +67,7 @@ export default function SortableImageItem({
     <div
       ref={setNodeRef}
       style={style}
-      className={`flex items-center gap-3 p-3 bg-background border border-border rounded-[2px] font-mono ${
+      className={`flex items-center gap-2 sm:gap-3 p-2 sm:p-3 bg-background border border-border rounded-[2px] font-mono ${
         isDragging ? "border-secondary shadow-md ring-1 ring-secondary/40" : ""
       }`}
     >
@@ -73,7 +75,7 @@ export default function SortableImageItem({
         type="button"
         {...attributes}
         {...listeners}
-        className="text-label hover:text-foreground cursor-grab active:cursor-grabbing p-1 transition-colors"
+        className="text-label hover:text-foreground cursor-grab active:cursor-grabbing p-1 transition-colors touch-none"
         aria-label={dragLabel}
       >
         <GripVertical className="w-4 h-4" />
