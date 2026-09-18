@@ -1,136 +1,378 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { CATEGORY_LABELS } from '@/data/units'
-import { COMMON_PAIRS } from '@/data/conversionPairs'
-import { buildJsonLd, breadcrumbSchema } from '@/lib/schema'
+import type { Metadata } from "next";
+import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import {
+  Scale,
+  Coins,
+  Percent,
+  ArrowRight,
+  CookingPot,
+  Plane,
+  Hammer,
+  GraduationCap,
+} from "lucide-react";
+import { buildAlternatesForLocale, localizedPath } from "@/lib/i18nMeta";
+import {
+  buildJsonLd,
+  breadcrumbSchema,
+  faqSchema,
+  buildLocalizedUrl,
+} from "@/lib/schema";
+import { CATEGORY_LABELS } from "@/data/units";
+import { COMMON_PAIRS } from "@/data/conversionPairs";
+import { getLocalizedPairTitle } from "@/lib/conversionPairHelper";
+import { AppBreadcrumb, AppBadge, AppAccordion } from "@/components/ui";
 
-export const metadata: Metadata = {
-  title: 'Unit & Currency Converter Hub | ToolNotch',
-  description: 'Convert between 200+ units and 150+ currencies. Length, weight, temperature, area, volume, speed, digital storage, pressure, and live exchange rates.',
-  alternates: { canonical: '/tools/convert' },
-  openGraph: { title: 'Unit & Currency Converter — 200+ Units | ToolNotch', url: '/tools/convert' },
+const PATH = "/tools/convert";
+
+interface Props {
+  params: Promise<{ locale: string }>;
 }
 
-const jsonLd = buildJsonLd(
-  breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Converter', url: '/tools/convert' }]),
-)
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "convert.hub" });
+  const localizedUrl = buildLocalizedUrl(PATH, locale);
+  const ogLocale =
+    locale === "pt" ? "pt_BR" : locale === "es" ? "es_ES" : "en_US";
 
-const CATEGORIES = Object.entries(CATEGORY_LABELS).concat([['currency', 'Currency']])
-const FEATURED_PAIRS = COMMON_PAIRS.slice(0, 12)
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    alternates: buildAlternatesForLocale(PATH, locale),
+    openGraph: {
+      title: t("title"),
+      description: t("metaDescription"),
+      url: localizedUrl,
+      locale: ogLocale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("metaDescription"),
+    },
+  };
+}
 
-export default function ConvertHubPage() {
+export default async function ConvertHubPage({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "convert.hub" });
+  const tc = await getTranslations({ locale, namespace: "convert.categories" });
+
+  const homeLabel =
+    locale === "pt" ? "Início" : locale === "es" ? "Inicio" : "Home";
+  const toolsLabel =
+    locale === "pt" ? "Ferramentas" : locale === "es" ? "Herramientas" : "Tools";
+  const prefix = locale === "en" ? "" : `/${locale}`;
+
+  const featuredPairs = COMMON_PAIRS.slice(0, 12);
+  const categories = Object.keys(CATEGORY_LABELS).concat(["currency"]);
+
+  const faqs = [
+    { question: t("faqs.0.question"), answer: t("faqs.0.answer") },
+    { question: t("faqs.1.question"), answer: t("faqs.1.answer") },
+    { question: t("faqs.2.question"), answer: t("faqs.2.answer") },
+    { question: t("faqs.3.question"), answer: t("faqs.3.answer") },
+  ];
+
+  const jsonLd = buildJsonLd(
+    breadcrumbSchema([
+      { name: homeLabel, url: localizedPath("/", locale) },
+      { name: toolsLabel, url: localizedPath("/tools", locale) },
+      { name: t("breadcrumb"), url: buildLocalizedUrl(PATH, locale) },
+    ]),
+    faqSchema(faqs)
+  );
+
+  const coreTools = [
+    {
+      id: "unitConverter",
+      title: t("tools.unitConverter.title"),
+      desc: t("tools.unitConverter.desc"),
+      badge: t("badgeUnits"),
+      href: `${prefix}/tools/convert/unit-converter`,
+      icon: <Scale className="w-5 h-5 text-primary" />,
+    },
+    {
+      id: "currencyConverter",
+      title: t("tools.currencyConverter.title"),
+      desc: t("tools.currencyConverter.desc"),
+      badge: t("badgeCurrencies"),
+      href: `${prefix}/tools/convert/currency-converter`,
+      icon: <Coins className="w-5 h-5 text-primary" />,
+    },
+    {
+      id: "percentageCalculator",
+      title: t("tools.percentageCalculator.title"),
+      desc: t("tools.percentageCalculator.desc"),
+      badge:
+        locale === "pt" ? "3 Modos" : locale === "es" ? "3 Modos" : "3 Modes",
+      href: `${prefix}/tools/convert/percentage-calculator`,
+      icon: <Percent className="w-5 h-5 text-primary" />,
+    },
+  ];
+
+  const useCases = [
+    {
+      title: t("useCases.0.title"),
+      desc: t("useCases.0.desc"),
+      icon: <CookingPot className="w-5 h-5 text-primary shrink-0" />,
+    },
+    {
+      title: t("useCases.1.title"),
+      desc: t("useCases.1.desc"),
+      icon: <Plane className="w-5 h-5 text-primary shrink-0" />,
+    },
+    {
+      title: t("useCases.2.title"),
+      desc: t("useCases.2.desc"),
+      icon: <Hammer className="w-5 h-5 text-primary shrink-0" />,
+    },
+    {
+      title: t("useCases.3.title"),
+      desc: t("useCases.3.desc"),
+      icon: <GraduationCap className="w-5 h-5 text-primary shrink-0" />,
+    },
+  ];
+
+  const currencyCategoryLabel =
+    locale === "pt" ? "Moedas" : locale === "es" ? "Monedas" : "Currency";
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <main className="min-h-screen bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 py-12">
-          <div className="text-center mb-10">
-            <h1 className="text-4xl font-bold text-gray-900 mb-3">Unit & Currency Converter</h1>
-            <p className="text-gray-600 max-w-xl mx-auto">
-              Convert between 200+ units and 150+ currencies. Fast, accurate, and free.
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className="container min-h-[calc(100vh-180px)] bg-background text-foreground py-3 sm:py-6 md:py-8">
+        <div className="w-full">
+          {/* Breadcrumb */}
+          <div className="w-full pb-2 sm:pb-3">
+            <AppBreadcrumb
+              items={[
+                { label: homeLabel, href: prefix || "/" },
+                { label: toolsLabel, href: `${prefix}/tools` },
+                { label: t("breadcrumb"), current: true },
+              ]}
+            />
+          </div>
+
+          {/* Header */}
+          <header className="mb-6 sm:mb-8 pt-1 sm:pt-2 pb-4 sm:pb-6 border-b border-border/80">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground font-mono">
+              {t("title")}
+            </h1>
+            <p className="leading-relaxed text-label mt-1.5 sm:mt-2 max-w-3xl text-xs sm:text-sm">
+              {t("description")}
             </p>
-          </div>
 
-          <div className="prose prose-gray max-w-none mb-10 space-y-4 text-gray-700">
-            <p>
-              Unit conversion is a fundamental skill that touches nearly every aspect of daily life. In the kitchen, a recipe
-              from a foreign cookbook may list ingredients in grams while your scale shows ounces, or call for millilitres
-              when you only have cup measures. In construction and home improvement, blueprints may mix metric and imperial
-              dimensions, requiring accurate conversions between millimetres, inches, and feet to avoid costly measurement
-              errors. Travellers frequently need to convert kilometres to miles on road signs, Celsius to Fahrenheit for
-              weather forecasts, or litres to gallons at the petrol pump. Scientists and students routinely work across unit
-              systems — converting joules to calories, pascals to atmospheres, or metres per second to kilometres per hour.
-              Even everyday fitness tracking involves conversions: kilograms to pounds on a gym scale, or kilometres to miles
-              logged by a running app.
-            </p>
-            <p>
-              The metric system (SI) is used by most of the world and organises measurements in powers of ten, making
-              calculations straightforward. The imperial system — still used in the United States, the United Kingdom for
-              some measurements, and a handful of other countries — uses units like inches, feet, yards, miles, ounces, pounds,
-              and Fahrenheit that have irregular conversion factors rooted in historical convention. Converting between these
-              two systems by hand requires memorising dozens of fixed ratios (1 inch = 2.54 cm, 1 mile = 1.60934 km,
-              1 pound = 0.453592 kg) and performing multi-step arithmetic that is error-prone under pressure. A reliable
-              online conversion tool eliminates that friction entirely, delivering accurate results in milliseconds and
-              reducing the risk of expensive or dangerous measurement mistakes.
-            </p>
-            <p>
-              ToolNotch provides a comprehensive set of free conversion tools designed for speed and accuracy. The
-              <strong> Unit Converter</strong> supports over 200 units across 9 categories: length, weight, temperature,
-              area, volume, speed, time, digital storage, and pressure — covering everything from nanometres to light-years
-              and milligrams to metric tonnes. All unit conversions use precise factor-based mathematics with up to 8
-              significant figures of precision and work entirely offline, with no internet connection required. The
-              <strong> Currency Converter</strong> pulls live exchange rates from a public API and supports over 150
-              world currencies, with rates refreshed approximately every hour so you always have a current reference figure.
-              Rounding out the suite, the <strong>Percentage Calculator</strong> handles the three most common percentage
-              problems — finding a percentage of a number, calculating what percentage one number is of another, and
-              computing percentage change — making it useful for discount calculations, grade calculations, and financial
-              analysis.
-            </p>
-          </div>
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-3 sm:mt-4">
+              <AppBadge bg="bg-tertiary" text="text-foreground">
+                {t("badgeUnits")}
+              </AppBadge>
+              <AppBadge bg="bg-tertiary" text="text-foreground">
+                {t("badgeCurrencies")}
+              </AppBadge>
+              <AppBadge bg="bg-tertiary" text="text-foreground">
+                {t("badgeFree")}
+              </AppBadge>
+              <AppBadge bg="bg-tertiary" text="text-foreground">
+                {t("badgePrivate")}
+              </AppBadge>
+            </div>
+          </header>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-10">
-            {CATEGORIES.map(([key, label]) => (
-              <Link
-                key={key}
-                href={key === 'currency' ? '/tools/convert/currency-converter' : `/tools/convert/unit-converter`}
-                className="bg-tertiary border border-gray-200 rounded-xl p-4 text-center hover:shadow-md hover:border-blue-300 transition-all group"
-              >
-                <div className="font-semibold text-gray-800 text-sm group-hover:text-blue-600">{label}</div>
-              </Link>
-            ))}
-          </div>
+          {/* 1. Core Tools Grid */}
+          <section
+            aria-labelledby="core-tools-heading"
+            className="mb-8 sm:mb-10 md:mb-12"
+          >
+            <div className="flex items-center justify-between mb-3 sm:mb-4">
+              <div>
+                <h2
+                  id="core-tools-heading"
+                  className="text-sm sm:text-base md:text-lg font-mono font-bold uppercase text-foreground"
+                >
+                  {t("coreToolsTitle")}
+                </h2>
+                <p className="text-xs text-label font-mono mt-0.5">
+                  {t("coreToolsSubtitle")}
+                </p>
+              </div>
+            </div>
 
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Popular Conversions</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {FEATURED_PAIRS.map(pair => (
-              <Link
-                key={pair.slug}
-                href={`/tools/convert/${pair.slug}`}
-                className="bg-tertiary border border-gray-200 rounded-lg px-4 py-3 hover:border-blue-300 hover:shadow-sm transition-all text-sm text-gray-700 hover:text-blue-600"
-              >
-                {pair.title} →
-              </Link>
-            ))}
-          </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
+              {coreTools.map((tool) => (
+                <Link
+                  key={tool.id}
+                  href={tool.href}
+                  className="group block p-4 sm:p-5 bg-tertiary border border-border rounded-[2px] hover:border-primary transition-colors cursor-pointer"
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="w-9 h-9 rounded-[2px] bg-background border border-border flex items-center justify-center">
+                      {tool.icon}
+                    </div>
+                    <span className="text-[10px] font-mono font-medium px-2 py-0.5 bg-background border border-border rounded-[2px] text-label group-hover:text-primary group-hover:border-primary/40 transition-colors">
+                      {tool.badge}
+                    </span>
+                  </div>
 
-          <div className="mt-8 flex gap-4 justify-center">
-            <Link href="/tools/convert/unit-converter" className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-              Unit Converter
-            </Link>
-            <Link href="/tools/convert/currency-converter" className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors">
-              Currency Converter
-            </Link>
-          </div>
+                  <h3 className="font-bold text-sm sm:text-base text-foreground group-hover:text-primary transition-colors mb-1.5 flex items-center justify-between">
+                    <span>{tool.title}</span>
+                    <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                  </h3>
 
-          <section className="mt-10 bg-tertiary rounded-2xl border border-gray-200 p-6 md:p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">When to Use a Conversion Tool</h2>
-            <ul className="space-y-3 text-gray-700 list-disc list-inside">
-              <li>
-                <strong>Cooking and baking:</strong> Converting recipe quantities between metric (grams, millilitres) and
-                imperial (ounces, cups) measurements when following recipes from different countries.
-              </li>
-              <li>
-                <strong>Travel planning:</strong> Converting local currency exchange rates before a trip, checking
-                temperature forecasts in Celsius or Fahrenheit, and understanding distances shown in kilometres or miles
-                on maps and road signs.
-              </li>
-              <li>
-                <strong>Construction and DIY:</strong> Translating blueprint dimensions between millimetres, centimetres,
-                inches, and feet to ensure materials are cut and ordered to the correct size.
-              </li>
-              <li>
-                <strong>Science and education:</strong> Converting between SI units for physics, chemistry, and engineering
-                assignments — including pressure (Pa to atm), energy (J to cal), and speed (m/s to km/h or mph).
-              </li>
-              <li>
-                <strong>Fitness and health:</strong> Converting body weight between kilograms and pounds, tracking running
-                distances in both kilometres and miles, and calculating caloric values when following nutritional plans
-                from different regions.
-              </li>
-            </ul>
+                  <p className="text-xs text-label leading-relaxed font-mono">
+                    {tool.desc}
+                  </p>
+                </Link>
+              ))}
+            </div>
           </section>
+
+          {/* 2. Browse by Measurement Category */}
+          <section
+            aria-labelledby="categories-heading"
+            className="mb-8 sm:mb-10 md:mb-12"
+          >
+            <h2
+              id="categories-heading"
+              className="text-sm sm:text-base font-mono font-bold uppercase text-foreground mb-3 sm:mb-4"
+            >
+              {t("categoriesTitle")}
+            </h2>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 sm:gap-2.5">
+              {categories.map((cat) => {
+                const label =
+                  cat === "currency" ? currencyCategoryLabel : tc(cat);
+                const href =
+                  cat === "currency"
+                    ? `${prefix}/tools/convert/currency-converter`
+                    : `${prefix}/tools/convert/unit-converter`;
+
+                return (
+                  <Link
+                    key={cat}
+                    href={href}
+                    className="p-3 bg-tertiary border border-border rounded-[2px] text-center hover:border-primary/60 hover:text-primary transition-colors cursor-pointer group"
+                  >
+                    <span className="block text-xs font-mono font-medium text-foreground group-hover:text-primary transition-colors truncate">
+                      {label}
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+
+          {/* 3. Popular Conversions Grid */}
+          <section
+            aria-labelledby="popular-heading"
+            className="mb-8 sm:mb-10 md:mb-12"
+          >
+            <h2
+              id="popular-heading"
+              className="text-sm sm:text-base font-mono font-bold uppercase text-foreground mb-3 sm:mb-4"
+            >
+              {t("popularTitle")}
+            </h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-2.5">
+              {featuredPairs.map((pair) => (
+                <Link
+                  key={pair.slug}
+                  href={`${prefix}/tools/convert/${pair.slug}`}
+                  className="px-3.5 py-2.5 bg-tertiary border border-border rounded-[2px] flex items-center justify-between hover:border-primary transition-colors text-xs font-mono text-foreground hover:text-primary group cursor-pointer"
+                >
+                  <span className="font-medium truncate mr-2">
+                    {getLocalizedPairTitle(pair, locale)}
+                  </span>
+                  <ArrowRight className="w-3.5 h-3.5 text-label/50 group-hover:text-primary group-hover:translate-x-0.5 transition-all shrink-0" />
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          {/* 4. Educational Guide & Common Use Cases */}
+          <section
+            aria-labelledby="guide-heading"
+            className="mb-8 sm:mb-10 md:mb-12"
+          >
+            <div className="p-4 sm:p-6 bg-tertiary border border-border rounded-[2px] space-y-4 text-xs sm:text-sm font-mono text-label leading-relaxed mb-6">
+              <h2
+                id="guide-heading"
+                className="text-sm sm:text-base font-bold uppercase text-foreground font-mono"
+              >
+                {t("guideTitle")}
+              </h2>
+              <p>{t("guideP1")}</p>
+              <p>{t("guideP2")}</p>
+              <p>{t("guideP3")}</p>
+            </div>
+
+            {/* Use Cases Grid */}
+            <div>
+              <h3 className="text-xs sm:text-sm font-mono font-bold uppercase text-foreground mb-3">
+                {t("whenToUseTitle")}
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
+                {useCases.map((uc, idx) => (
+                  <div
+                    key={idx}
+                    className="p-3.5 bg-tertiary border border-border rounded-[2px] flex items-start gap-3"
+                  >
+                    <div className="w-7 h-7 rounded-[2px] bg-background border border-border flex items-center justify-center shrink-0 mt-0.5">
+                      {uc.icon}
+                    </div>
+                    <div>
+                      <h4 className="text-xs font-bold text-foreground mb-1">
+                        {uc.title}
+                      </h4>
+                      <p className="text-[11px] sm:text-xs text-label font-mono leading-relaxed">
+                        {uc.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 5. Frequently Asked Questions (Accordion) */}
+          {faqs.length > 0 && (
+            <section
+              aria-labelledby="faqs-heading"
+              className="mb-8 sm:mb-12 font-mono"
+            >
+              <h2
+                id="faqs-heading"
+                className="text-sm sm:text-base font-mono font-bold uppercase text-foreground mb-3 sm:mb-4"
+              >
+                {locale === "pt"
+                  ? "Perguntas Frequentes"
+                  : locale === "es"
+                    ? "Preguntas Frecuentes"
+                    : "Frequently Asked Questions"}
+              </h2>
+
+              <AppAccordion
+                groups={faqs.map((faq, index) => ({
+                  id: `convert-hub-faq-${index}`,
+                  name: faq.question,
+                  content: (
+                    <p className="leading-relaxed text-label font-mono text-xs sm:text-sm">
+                      {faq.answer}
+                    </p>
+                  ),
+                }))}
+              />
+            </section>
+          )}
         </div>
       </main>
     </>
-  )
+  );
 }
+

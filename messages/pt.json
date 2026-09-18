@@ -1456,11 +1456,91 @@
     }
   },
   "convert": {
+    "hub": {
+      "metaTitle": "Conversores Online Gratuitos — Unidades, Moedas e Porcentagem | ToolNotch",
+      "metaDescription": "Conversores online gratuitos e ilimitados: mais de 200 unidades de medida, cotações ao vivo de 150+ moedas e calculadora de porcentagem. Sem cadastro, 100% privado.",
+      "title": "Conversores e Calculadoras de Medidas",
+      "description": "Converta entre mais de 200 unidades de medida, acompanhe cotações de 150+ moedas em tempo real e resolva cálculos percentuais. Rápido, preciso e sem cadastro.",
+      "breadcrumb": "Conversores",
+      "badgeUnits": "200+ Unidades",
+      "badgeCurrencies": "150+ Moedas",
+      "badgeFree": "100% Grátis",
+      "badgePrivate": "Sem Cadastro",
+      "coreToolsTitle": "Ferramentas Principais",
+      "coreToolsSubtitle": "Escolha a ferramenta ideal para a sua conversão ou cálculo",
+      "tools": {
+        "unitConverter": {
+          "title": "Conversor de Unidades",
+          "desc": "Comprimento, peso, temperatura, área, volume, velocidade, tempo, armazenamento digital e pressão. Mais de 200 medidas com conversão instantânea."
+        },
+        "currencyConverter": {
+          "title": "Conversor de Moedas",
+          "desc": "Cotações de câmbio atualizadas a cada hora para mais de 150 moedas internacionais. Grátis e com valores de referência em tempo real."
+        },
+        "percentageCalculator": {
+          "title": "Calculadora de Porcentagem",
+          "desc": "3 modos de cálculo: porcentagem de um número, que porcentagem um número representa de outro e variação percentual de aumento ou desconto."
+        }
+      },
+      "categoriesTitle": "Navegue por Categoria de Medida",
+      "popularTitle": "Conversões Mais Populares",
+      "guideTitle": "Por que a Precisão nas Conversões é Essencial?",
+      "guideP1": "A conversão de unidades e medidas é uma necessidade diária em áreas como culinária, construção civil, viagens internacionais, comércio e ciências. No preparo de receitas, medidas de peso e volume variam drasticamente entre padrões métricos e imperiais. Em obras e reformas, uma confusão milimétrica entre polegadas e centímetros pode acarretar perdas materiais consideráveis.",
+      "guideP2": "O sistema métrico (SI) organiza-se em potências de dez, tornando cálculos lineares e diretos. Já o sistema imperial emprega relações históricas como 12 polegadas por pé ou 16 onças por libra. Ferramentas digitais com alta precisão matemática garantem cálculos confiáveis em milissegundos, dispensando contas manuais sujeitas a erros.",
+      "guideP3": "O ToolNotch reúne em um único lugar conversores de alta precisão com suporte a mais de 200 unidades offline, taxas cambiais atualizadas para 150+ moedas e cálculos percentuais dinâmicos, sempre com privacidade total e sem necessidade de cadastro.",
+      "whenToUseTitle": "Casos de Uso Comuns",
+      "useCases": [
+        {
+          "title": "Culinária & Gastronomia",
+          "desc": "Adapte receitas estrangeiras convertendo gramas em onças, mililitros em xícaras ou colheres de sopa e Celsius em Fahrenheit."
+        },
+        {
+          "title": "Viagens Internacionais",
+          "desc": "Calcule câmbio de moedas locais, converta limites de bagagem em quilos ou libras e compreenda distâncias em milhas ou quilômetros."
+        },
+        {
+          "title": "Construção & Marcenaria",
+          "desc": "Traduza plantas e projetos entre milímetros, centímetros, polegadas e pés com precisão exata para evitar desperdícios."
+        },
+        {
+          "title": "Estudos & Ciências",
+          "desc": "Converta unidades de pressão, energia, temperatura Kelvin/Celsius e velocidade para física, química e engenharia."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Os conversores de unidades funcionam sem internet?",
+          "answer": "Sim! Todas as conversões de unidades e cálculos percentuais funcionam inteiramente no seu navegador, sem necessidade de conexão com a internet após o carregamento da página."
+        },
+        {
+          "question": "Com que frequência as taxas de câmbio são atualizadas?",
+          "answer": "As cotações das moedas são sincronizadas aproximadamente a cada hora a partir de APIs financeiras públicas e armazenadas em cache para resposta instantânea."
+        },
+        {
+          "question": "Qual é a precisão dos cálculos nos conversores?",
+          "answer": "Utilizamos cálculos de ponto flutuante de alta precisão com até 8 algarismos significativos para garantir fidelidade matemática tanto para uso cotidiano quanto acadêmico."
+        },
+        {
+          "question": "É necessário criar conta ou fazer login para utilizar?",
+          "answer": "Não. Todas as ferramentas do ToolNotch são 100% gratuitas, anônimas e sem limites de uso."
+        }
+      ]
+    },
     "unit": {
       "metaTitle": "Conversor de Unidades — Comprimento, Peso, Temperatura e Mais | ToolNotch",
       "metaDescription": "Conversor de unidades online gratuito. Converta comprimento, peso, temperatura, área, volume, velocidade, tempo, armazenamento digital e pressão. Mais de 200 unidades em 9 categorias.",
       "title": "Conversor de Unidades",
       "description": "Converta entre mais de 200 unidades em 9 categorias. Instantâneo, preciso, sem cadastro.",
+      "badge200": "200+ Unidades",
+      "badge9Cat": "9 Categorias",
+      "badgeInstant": "Cálculo Instantâneo",
+      "copyResult": "Copiar Resultado",
+      "copied": "Copiado!",
+      "popularUnits": "Unidades Rápidas",
+      "categoryLabel": "Categoria",
+      "fromLabel": "De",
+      "toLabel": "Para",
+      "amountLabel": "Valor",
       "faqs": [
         {
           "question": "Quantas unidades são suportadas?",
@@ -1501,6 +1581,19 @@
       "metaDescription": "Conversor de moedas gratuito com cotações ao vivo. Converta entre mais de 150 moedas com taxas de câmbio em tempo real. Taxas atualizadas a cada hora. Sem cadastro.",
       "title": "Conversor de Moedas",
       "description": "Converta entre mais de 150 moedas com cotações em tempo real. Taxas atualizadas a cada hora.",
+      "badge150": "150+ Moedas",
+      "badgeLive": "Cotações em Tempo Real",
+      "badgeFree": "100% Grátis",
+      "quickAmounts": "Valores Rápidos",
+      "popularCurrencies": "Moedas Populares",
+      "copyResult": "Copiar Resultado",
+      "copied": "Copiado!",
+      "exchangeRate": "Taxa de Câmbio",
+      "inverseRate": "Taxa Inversa",
+      "lastUpdated": "Última atualização",
+      "fromLabel": "Moeda de Origem",
+      "toLabel": "Moeda de Destino",
+      "amountLabel": "Valor a Converter",
       "staleWarning": "⚠️ Exibindo taxas em cache — não foi possível buscar as taxas mais recentes. As taxas podem estar desatualizadas.",
       "errorFetching": "Não foi possível buscar as taxas de câmbio. Verifique sua conexão e tente novamente.",
       "amountPlaceholder": "Valor",
@@ -1680,7 +1773,7 @@
   },
   "text": {
     "wordCounter": {
-      "metaTitle": "Contador de Palavras — Conte Palavras, Caracteres e Legibilidade | ToolNotch",
+      "metaTitle": "Contador de Palavras: Conte Palavras, Caracteres e Legibilidade | ToolNotch",
       "metaDescription": "Contador de palavras online gratuito. Conte palavras, caracteres, frases e veja pontuações de legibilidade Flesch em tempo real. Sem cadastro.",
       "title": "Contador de Palavras",
       "description": "Conte palavras, caracteres, frases e verifique a legibilidade em tempo real. Cole seu texto abaixo.",
@@ -1688,14 +1781,14 @@
       "richContent": {
         "whatIs": "Um contador de palavras é uma ferramenta que mede instantaneamente o tamanho e a complexidade de qualquer texto. Ele conta palavras, caracteres, frases e parágrafos, e calcula pontuações de legibilidade em tempo real. Contadores de palavras são usados em redações acadêmicas (onde trabalhos frequentemente têm requisitos mínimos de palavras), na produção de conteúdo para SEO (onde o tamanho do texto influencia o posicionamento nos resultados de busca) e na criação de textos para redes sociais (onde os limites de caracteres das plataformas definem o que pode ser publicado). Blogueiros, estudantes, jornalistas e profissionais de marketing usam contadores de palavras para cumprir escopo, atingir metas e garantir que o texto tenha o tamanho adequado para o público e o canal pretendidos.",
         "howToUse": [
-          "Cole ou digite seu texto na área de entrada — as contagens são atualizadas instantaneamente enquanto você digita.",
+          "Cole ou digite seu texto na área de entrada. As contagens são atualizadas em tempo real enquanto você digita.",
           "Verifique a contagem de palavras, contagem de caracteres (com e sem espaços) e contagem de frases na barra de estatísticas.",
           "Revise a pontuação Flesch Reading Ease para entender o quão acessível seu texto é para o público em geral.",
           "Use o Flesch-Kincaid Grade Level para adequar sua escrita ao nível de escolaridade do seu leitor-alvo.",
           "Clique em 'Texto de Exemplo' para carregar um exemplo, caso queira ver a ferramenta em ação antes de inserir seu próprio conteúdo."
         ],
-        "whyItMatters": "A contagem de palavras influencia tudo, desde notas acadêmicas até posicionamentos no Google. A maioria dos posts de blog otimizados para SEO fica entre 1.500 e 2.500 palavras — longo o suficiente para cobrir um tema com profundidade, mas conciso o bastante para manter a leitura agradável. Trabalhos acadêmicos têm limites mínimos rigorosos, e as plataformas de redes sociais impõem limites fixos de caracteres. As pontuações de legibilidade adicionam outra camada: uma pontuação Flesch Reading Ease acima de 60 indica que o conteúdo é acessível para um público amplo, enquanto uma pontuação abaixo de 30 sugere que o texto é denso demais para leitores em geral. Monitorar tanto a contagem de palavras quanto a legibilidade ajuda a escrever com intencionalidade.",
-        "proTip": "Busque uma pontuação Flesch Reading Ease entre 60 e 70 para conteúdo de blog voltado ao público em geral. Se sua pontuação estiver abaixo de 50, tente dividir frases longas em conjunções (e, mas, porque) e substituir palavras com muitas sílabas por sinônimos mais curtos — essas duas mudanças por si só já elevam significativamente sua pontuação."
+        "whyItMatters": "A contagem de palavras influencia tudo, desde notas acadêmicas até posicionamentos no Google. A maioria dos posts de blog otimizados para SEO fica entre 1.500 e 2.500 palavras (longo o suficiente para cobrir um tema com profundidade, mas conciso o bastante para manter a leitura agradável). Trabalhos acadêmicos têm limites mínimos rigorosos, e as plataformas de redes sociais impõem limites fixos de caracteres. As pontuações de legibilidade adicionam outra camada: uma pontuação Flesch Reading Ease acima de 60 indica que o conteúdo é acessível para um público amplo, enquanto uma pontuação abaixo de 30 sugere que o texto é denso demais para leitores em geral. Monitorar tanto a contagem de palavras quanto a legibilidade ajuda a escrever com intencionalidade.",
+        "proTip": "Busque uma pontuação Flesch Reading Ease entre 60 e 70 para conteúdo de blog voltado ao público em geral. Se sua pontuação estiver abaixo de 50, tente dividir frases longas em conjunções (e, mas, porque) e substituir palavras com muitas sílabas por sinônimos mais curtos: essas duas mudanças por si só já elevam significativamente sua pontuação."
       },
       "faqs": [
         {
@@ -1728,12 +1821,12 @@
         },
         {
           "question": "Posso usar isso para limites de caracteres em redes sociais?",
-          "answer": "Sim — a contagem de caracteres mostra o número exato de caracteres incluindo espaços. Posts no X permitem 280 caracteres, posts no LinkedIn permitem 3.000 caracteres e legendas do Instagram permitem 2.200 caracteres."
+          "answer": "Sim, a contagem de caracteres mostra o número exato de caracteres incluindo espaços. Posts no X permitem 280 caracteres, posts no LinkedIn permitem 3.000 caracteres e legendas do Instagram permitem 2.200 caracteres."
         }
       ]
     },
     "characterCounter": {
-      "metaTitle": "Contador de Caracteres — Com e Sem Espaços | ToolNotch",
+      "metaTitle": "Contador de Caracteres: Com e Sem Espaços | ToolNotch",
       "metaDescription": "Contador de caracteres online gratuito. Conte caracteres com e sem espaços, útil para X, LinkedIn, Instagram e outras plataformas com limite de caracteres.",
       "title": "Contador de Caracteres",
       "description": "Conte caracteres com e sem espaços. Perfeito para posts no X, meta descrições e qualquer texto com limite de caracteres.",
@@ -1744,7 +1837,7 @@
         },
         {
           "question": "O contador de caracteres inclui espaços?",
-          "answer": "Sim — o dado 'Caracteres' inclui espaços. 'Caracteres (sem espaços)' mostra a contagem com todos os espaços removidos."
+          "answer": "Sim, o dado 'Caracteres' inclui espaços. 'Caracteres (sem espaços)' mostra a contagem com todos os espaços removidos."
         },
         {
           "question": "Meu texto fica armazenado em algum lugar?",
@@ -1756,20 +1849,20 @@
         }
       ],
       "richContent": {
-        "whatIs": "Um contador de caracteres diz exatamente quantos caracteres — letras, números, símbolos, espaços e sinais de pontuação — aparecem no seu texto. Ao contrário de um contador de palavras, ele mede o comprimento bruto de uma string, que é a unidade usada pela maioria das plataformas para impor limites de postagem. O Twitter/X permite 280 caracteres. As mensagens SMS são limitadas a 160 caracteres por segmento. Para SEO, um meta título deve ficar entre 50–60 caracteres; meta descrições devem ter 150–160 caracteres. Os emojis complicam a situação — na codificação UTF-16, a maioria dos emojis conta como 2 caracteres.",
+        "whatIs": "Um contador de caracteres diz exatamente quantos caracteres (letras, números, símbolos, espaços e sinais de pontuação) aparecem no seu texto. Ao contrário de um contador de palavras, ele mede o comprimento bruto de uma string, que é a unidade usada pela maioria das plataformas para impor limites de postagem. O Twitter/X permite 280 caracteres. As mensagens SMS são limitadas a 160 caracteres por segmento. Para SEO, um meta título deve ficar entre 50–60 caracteres; meta descrições devem ter 150–160 caracteres. Os emojis complicam a situação: na codificação UTF-16, a maioria dos emojis conta como 2 caracteres.",
         "howToUse": [
-          "Cole ou digite seu texto na área de entrada — a contagem de caracteres é atualizada instantaneamente.",
+          "Cole ou digite seu texto na área de entrada. A contagem de caracteres é atualizada instantaneamente.",
           "Verifique a estatística 'Caracteres' para a contagem total, incluindo espaços.",
           "Verifique 'Caracteres (sem espaços)' se a plataforma excluir espaços do limite.",
           "Compare a contagem com o limite de destino para a sua plataforma.",
           "Edite seu texto diretamente na caixa e observe a contagem diminuir à medida que você o apara para caber."
         ],
-        "whyItMatters": "Exceder o limite de caracteres de uma plataforma trunca a mensagem ou impede a postagem. Para SEO, um meta título com mais de 60 caracteres é cortado nos resultados de pesquisa com reticências. Para campanhas de marketing por SMS, cada segmento acima de 160 caracteres dobra o custo por mensagem enviada — um pequeno excesso em milhares de envios se acumula rapidamente.",
-        "proTip": "Ao escrever para o Twitter/X, lembre-se de que as URLs são sempre contadas como 23 caracteres, independentemente do comprimento real — o encurtador t.co envolve cada link. Portanto, uma URL de 200 caracteres ainda custa apenas 23 caracteres na sua postagem."
+        "whyItMatters": "Exceder o limite de caracteres de uma plataforma trunca a mensagem ou impede a postagem. Para SEO, um meta título com mais de 60 caracteres é cortado nos resultados de pesquisa com reticências. Para campanhas de marketing por SMS, cada segmento acima de 160 caracteres dobra o custo por mensagem enviada: um pequeno excesso em milhares de envios se acumula rapidamente.",
+        "proTip": "Ao escrever para o Twitter/X, lembre-se de que as URLs são sempre contadas como 23 caracteres, independentemente do comprimento real, já que o encurtador t.co envolve cada link. Portanto, uma URL de 200 caracteres ainda custa apenas 23 caracteres na sua postagem."
       }
     },
     "sentenceCounter": {
-      "metaTitle": "Contador de Frases — Contar Frases Online | ToolNotch",
+      "metaTitle": "Contador de Frases: Contar Frases Online | ToolNotch",
       "metaDescription": "Contador de frases online gratuito. Conte instantaneamente o número de frases no seu texto junto com palavras, caracteres e pontuações de legibilidade.",
       "title": "Contador de Frases",
       "description": "Conte frases no seu texto instantaneamente. Também mostra palavras, caracteres e pontuações de legibilidade.",
@@ -1788,33 +1881,33 @@
         }
       ],
       "richContent": {
-        "whatIs": "Um contador de frases conta o número de frases completas no seu texto — cada uma terminando com ponto final, ponto de exclamação ou ponto de interrogação. Além da simples contagem, a análise de frases é uma entrada essencial para fórmulas de legibilidade. Frases muito longas diminuem drasticamente as pontuações de legibilidade e aumentam a carga cognitiva. A contagem de frases também é relevante para a redação acadêmica e edição de conteúdo.",
+        "whatIs": "Um contador de frases conta o número de frases completas no seu texto, cada uma terminando com ponto final, ponto de exclamação ou ponto de interrogação. Além da simples contagem, a análise de frases é uma entrada essencial para fórmulas de legibilidade. Frases muito longas diminuem drasticamente as pontuações de legibilidade e aumentam a carga cognitiva. A contagem de frases também é relevante para a redação acadêmica e edição de conteúdo.",
         "howToUse": [
-          "Cole seu texto na área de entrada — a contagem de frases é atualizada automaticamente.",
+          "Cole seu texto na área de entrada. A contagem de frases é atualizada automaticamente.",
           "Leia a contagem de frases e observe a média de palavras por frase.",
-          "Identifique suas frases mais longas — essas são as melhores candidatas para divisão para melhorar a legibilidade.",
+          "Identifique suas frases mais longas: elas são as melhores candidatas para divisão para melhorar a legibilidade.",
           "Almeje uma média de 15–20 palavras por frase para o público em geral.",
           "Edite frases diretamente na caixa e observe a média ser atualizada em tempo real."
         ],
-        "whyItMatters": "Pesquisas mostram que os leitores online folheiam em vez de ler — em média, lendo apenas 20–28% das palavras. Frases curtas e variadas reduzem a carga cognitiva. O ponto ideal para a maioria do público é uma mistura — em sua maioria, frases de 8 a 15 palavras com toques curtos ocasionais para dar ênfase e frases mais longas para explicação detalhada.",
+        "whyItMatters": "Pesquisas mostram que os leitores online folheiam em vez de ler (em média, leem apenas 20 a 28% das palavras). Frases curtas e variadas reduzem a carga cognitiva. O ponto ideal para a maioria do público é uma mistura: em sua maioria, frases de 8 a 15 palavras com toques curtos ocasionais para dar ênfase e frases mais longas para explicação detalhada.",
         "proTip": "Na redação de negócios, almeje um comprimento médio de frase de 15 a 20 palavras. A redação acadêmica pode chegar a 25–30 palavras, mas deve compensar com uma estrutura clara de parágrafos."
       }
     },
     "readabilityChecker": {
-      "metaTitle": "Verificador de Legibilidade — Pontuação Flesch e Nível de Leitura | ToolNotch",
+      "metaTitle": "Verificador de Legibilidade: Pontuação Flesch e Nível de Leitura | ToolNotch",
       "metaDescription": "Verificador de legibilidade gratuito. Obtenha pontuação Flesch Reading Ease, Flesch-Kincaid Grade Level e Índice Gunning Fog para qualquer texto. Melhore a clareza da sua escrita.",
       "title": "Verificador de Legibilidade",
       "description": "Verifique o nível de leitura do seu texto com as pontuações Flesch Reading Ease, Flesch-Kincaid Grade e Gunning Fog.",
       "richContent": {
-        "whatIs": "Um verificador de legibilidade analisa seu texto e atribui pontuações que indicam o quão fácil ele é de ler e compreender. A métrica mais utilizada é a fórmula de Flesch-Kincaid, que produz dois resultados: a pontuação Flesch Reading Ease (0–100, onde valores mais altos indicam maior facilidade) e o Flesch-Kincaid Grade Level (equivalente ao ano escolar americano necessário para entender o texto). Uma pontuação Flesch Reading Ease de 60–70 representa uma escrita padrão e acessível — adequada ao público em geral. Pontuações em torno de 30–50 indicam texto de nível universitário, enquanto valores abaixo de 30 são considerados muito difíceis. Vale lembrar que as fórmulas de Flesch-Kincaid foram desenvolvidas para o inglês, portanto os valores calculados para textos em português podem variar ligeiramente — use-os como referência comparativa, não como medição absoluta.",
+        "whatIs": "Um verificador de legibilidade analisa seu texto e atribui pontuações que indicam o quão fácil ele é de ler e compreender. A métrica mais utilizada é a fórmula de Flesch-Kincaid, que produz dois resultados: a pontuação Flesch Reading Ease (0–100, onde valores mais altos indicam maior facilidade) e o Flesch-Kincaid Grade Level (equivalente ao ano escolar americano necessário para entender o texto). Uma pontuação Flesch Reading Ease de 60–70 representa uma escrita padrão e acessível, adequada ao público em geral. Pontuações em torno de 30–50 indicam texto de nível universitário, enquanto valores abaixo de 30 são considerados muito difíceis. Vale lembrar que as fórmulas de Flesch-Kincaid foram desenvolvidas para o inglês, portanto os valores calculados para textos em português podem variar ligeiramente: use-os como referência comparativa, não como medição absoluta.",
         "howToUse": [
-          "Cole seu texto na área de entrada — as pontuações de legibilidade são calculadas automaticamente.",
+          "Cole seu texto na área de entrada. As pontuações de legibilidade são calculadas automaticamente.",
           "Verifique a pontuação Flesch Reading Ease: busque 60–70 para públicos em geral, valores mais altos para leitores mais jovens.",
           "Revise o Flesch-Kincaid Grade Level para saber qual nível de escolaridade seu texto exige.",
-          "Verifique o Índice Gunning Fog para uma segunda opinião — uma pontuação de 8–12 é adequada para a maioria dos conteúdos gerais.",
+          "Verifique o Índice Gunning Fog para uma segunda opinião: uma pontuação de 8 a 12 é adequada para a maioria dos conteúdos gerais.",
           "Edite seu texto diretamente na caixa e acompanhe as pontuações se atualizando em tempo real conforme você revisa."
         ],
-        "whyItMatters": "A legibilidade influencia diretamente se os leitores vão terminar de ler seu conteúdo ou abandoná-lo. Na internet, o leitor médio faz uma leitura diagonal — textos densos e complexos o perdem em segundos. Conteúdo escrito no nível 7–9 da escala Flesch-Kincaid supera consistentemente textos mais difíceis em tempo de permanência na página, engajamento e compartilhamento. Para SEO, embora a legibilidade não seja um fator de ranqueamento direto, taxas de rejeição menores e sessões mais longas — consequências naturais de uma escrita legível — são sinais indiretos fortes. Profissionais de marketing, estrategistas de conteúdo, educadores e redatores de UX usam pontuações de legibilidade para garantir que sua escrita corresponda às expectativas do público.",
+        "whyItMatters": "A legibilidade influencia diretamente se os leitores vão terminar de ler seu conteúdo ou abandoná-lo. Na internet, o leitor médio faz uma leitura diagonal: textos densos e complexos o perdem em segundos. Conteúdo escrito no nível 7–9 da escala Flesch-Kincaid supera consistentemente textos mais difíceis em tempo de permanência na página, engajamento e compartilhamento. Para SEO, embora a legibilidade não seja um fator de ranqueamento direto, taxas de rejeição menores e sessões mais longas (consequências naturais de uma escrita legível) são sinais indiretos fortes. Profissionais de marketing, estrategistas de conteúdo, educadores e redatores de UX usam pontuações de legibilidade para garantir que sua escrita corresponda às expectativas do público.",
         "proTip": "Busque um Flesch-Kincaid Grade Level de 7–9 para a maioria dos conteúdos de blog e marketing. Se sua pontuação estiver acima de 12, comece encontrando suas três frases mais longas e dividindo cada uma em um ponto natural de pausa. Reduzir o tamanho das frases é a maneira mais rápida de melhorar a legibilidade sem alterar o significado do seu texto."
       },
       "faqs": [
@@ -1837,10 +1930,37 @@
       ]
     },
     "readingTime": {
-      "metaTitle": "Calculadora de Tempo de Leitura — Estime Tempo de Leitura e Fala | ToolNotch",
+      "metaTitle": "Calculadora de Tempo de Leitura: Estime Tempo de Leitura e Fala | ToolNotch",
       "metaDescription": "Calcule o tempo de leitura de qualquer texto. Estima tanto o tempo de leitura (238 ppm) quanto o tempo de fala (130 ppm). Útil para posts de blog, discursos e apresentações.",
       "title": "Calculadora de Tempo de Leitura",
       "description": "Calcule quanto tempo leva para ler ou falar o seu texto. Cole seu conteúdo abaixo para uma estimativa instantânea.",
+      "placeholder": "Cole ou digite seu texto aqui para calcular o tempo de leitura e fala...",
+      "ui": {
+        "estimatedReadingTime": "Tempo de Leitura Estimado",
+        "estimatedSpeakingTime": "Tempo de Fala Estimado",
+        "readingSpeedLabel": "Velocidade de Leitura",
+        "speakingSpeedLabel": "Velocidade de Fala",
+        "wordsPerMinute": "{wpm} ppm",
+        "speedSlow": "Lento",
+        "speedMedium": "Médio",
+        "speedFast": "Rápido",
+        "speedSuperFast": "Super Rápido",
+        "seconds": "{s}s",
+        "minutesAndSeconds": "{m}m {s}s",
+        "complexityNote": "Nível de Complexidade",
+        "complexityEasy": "Fácil de ler (ritmo normal)",
+        "complexityAverage": "Complexidade média",
+        "complexityHard": "Difícil de ler (+15% tempo)",
+        "complexityVeryHard": "Muito difícil (+30% tempo)",
+        "startSpeedReader": "Iniciar Leitura Dinâmica",
+        "speedReaderTitle": "Leitura Dinâmica (RSVP)",
+        "closeSpeedReader": "Fechar",
+        "done": "Leitura Concluída!",
+        "wordCounter": "{current} de {total} palavras",
+        "play": "Iniciar",
+        "pause": "Pausar",
+        "reset": "Reiniciar"
+      },
       "faqs": [
         {
           "question": "Quanto tempo leva para ler 1000 palavras?",
@@ -1862,27 +1982,27 @@
       "richContent": {
         "whatIs": "Uma calculadora de tempo de leitura estima quanto tempo leva para ler um texto dividindo sua contagem de palavras por uma velocidade média de leitura. A velocidade de leitura silenciosa padrão de um adulto para não-ficção é de 200–250 palavras por minuto (ppm), com pesquisas citando comumente 238 ppm como uma referência confiável. A compreensão cai significativamente acima de 300 ppm, portanto, os números de leitura dinâmica não são usados para estimativas realistas. O tipo de conteúdo afeta a velocidade efetiva de leitura: material técnico denso é lido mais lentamente a 150-180 ppm, enquanto artigos em formato de lista (listicles) são lidos mais rapidamente.",
         "howToUse": [
-          "Cole o seu artigo ou texto na área de entrada — os tempos de leitura e de fala são calculados instantaneamente.",
+          "Cole o seu artigo ou texto na área de entrada. Os tempos de leitura e de fala são calculados instantaneamente.",
           "Leia o tempo de leitura estimado com base na taxa padrão de leitura de adultos de 238 ppm.",
           "Verifique a estimativa do tempo de fala (cerca de 130 ppm) se estiver preparando um roteiro, podcast ou apresentação.",
           "Para conteúdo técnico, adicione mentalmente de 20 a 30% à estimativa do tempo de leitura para levar em conta o processamento mais lento.",
           "Use a contagem de palavras junto com o tempo de leitura para avaliar se o comprimento do seu conteúdo corresponde ao seu canal."
         ],
-        "whyItMatters": "Artigos que exibem o tempo de leitura têm taxas de engajamento maiores porque os leitores se autosselecionam: alguém com 3 minutos disponíveis iniciará um artigo de 3 minutos, mas pulará um de 12 minutos sem nem abri-lo. Para profissionais de marketing de conteúdo, adequar o comprimento do conteúdo ao canal é importante — postagens no LinkedIn abaixo de 2 minutos, newsletters por e-mail de 3–5 minutos, conteúdo longo de SEO de 7–15 minutos. O tempo de leitura também serve como um indicador da profundidade do conteúdo: textos mais longos sinalizam cobertura abrangente, o que tende a se correlacionar com melhores classificações em pesquisas.",
-        "proTip": "Podcasts em áudio e narrações gravadas são entregues a 150-160 ppm — aproximadamente metade da velocidade da leitura silenciosa. Se você estiver adaptando um post de blog para um roteiro de podcast ou locução, duplique a estimativa do tempo de leitura para obter um tempo de execução de áudio preciso. Uma leitura de 5 minutos se torna aproximadamente uma escuta de 10 minutos, o que é fundamental para planejar a duração do episódio."
+        "whyItMatters": "Artigos que exibem o tempo de leitura têm taxas de engajamento maiores porque os leitores se autosselecionam: alguém com 3 minutos disponíveis iniciará um artigo de 3 minutos, mas pulará um de 12 minutos sem nem abri-lo. Para profissionais de marketing de conteúdo, adequar o comprimento do conteúdo ao canal é importante: postagens no LinkedIn abaixo de 2 minutos, newsletters por e-mail de 3–5 minutos e conteúdo longo de SEO de 7–15 minutos. O tempo de leitura também serve como um indicador da profundidade do conteúdo: textos mais longos sinalizam cobertura abrangente, o que tende a se correlacionar com melhores classificações em pesquisas.",
+        "proTip": "Podcasts em áudio e narrações gravadas são entregues a 150-160 ppm, aproximadamente metade da velocidade da leitura silenciosa. Se você estiver adaptando um post de blog para um roteiro de podcast ou locução, duplique a estimativa do tempo de leitura para obter um tempo de execução de áudio preciso. Uma leitura de 5 minutos se torna aproximadamente uma escuta de 10 minutos, o que é fundamental para planejar a duração do episódio."
       }
     },
     "wordFrequency": {
-      "metaTitle": "Contador de Frequência de Palavras — Palavras Mais Repetidas | ToolNotch",
-      "metaDescription": "Contador grátis de frequência de palavras. Veja quantas vezes cada palavra aparece no seu texto, ordenadas por contagem — encontre palavras repetidas e vícios.",
+      "metaTitle": "Contador de Frequência de Palavras: Palavras Mais Repetidas | ToolNotch",
+      "metaDescription": "Contador grátis de frequência de palavras. Veja quantas vezes cada palavra aparece no seu texto, ordenadas por contagem. Encontre palavras repetidas e vícios de linguagem com facilidade.",
       "title": "Contador de Frequência de Palavras",
       "description": "Cole qualquer texto para ver quantas vezes cada palavra aparece, da mais para a menos frequente. Feito para edição, análise de estilo e pesquisa.",
       "richContent": {
-        "whatIs": "Um contador de frequência de palavras soma cada palavra de um trecho e as classifica da mais para a menos comum. Palavras funcionais comuns — \"o\", \"a\", \"de\", \"e\", \"que\" — são filtradas para que a lista mostre as palavras que carregam sentido. A análise de frequência é uma das ferramentas mais antigas da linguística: está por trás de concordâncias, fórmulas de legibilidade, faixas de frequência de dicionários e estudos de autoria que identificam um escritor por seus hábitos inconscientes. Para a escrita do dia a dia o uso é mais simples — ela mostra, em segundos, de quais palavras você depende. Uma repetição invisível durante a redação fica óbvia numa lista ordenada, e esse costuma ser o caminho mais rápido para um texto mais enxuto.",
+        "whatIs": "Um contador de frequência de palavras soma cada palavra de um trecho e as classifica da mais para a menos comum. Palavras funcionais comuns como \"o\", \"a\", \"de\", \"e\", \"que\" são filtradas para que a lista mostre as palavras que carregam sentido. A análise de frequência é uma das ferramentas mais antigas da linguística: está por trás de concordâncias, fórmulas de legibilidade, faixas de frequência de dicionários e estudos de autoria que identificam um escritor por seus hábitos inconscientes. Para a escrita do dia a dia o uso é mais simples: ela mostra, em segundos, de quais palavras você depende. Uma repetição invisível durante a redação fica óbvia numa lista ordenada, e esse costuma ser o caminho mais rápido para um texto mais enxuto.",
         "howToUse": [
-          "Cole seu texto — uma redação, um capítulo, uma transcrição ou um lote de avaliações — na caixa. A tabela de frequência é montada na hora.",
+          "Cole seu texto (uma redação, um capítulo, uma transcrição ou um lote de avaliações) na caixa. A tabela de frequência é montada na hora.",
           "Percorra a lista. As primeiras palavras de conteúdo são o seu assunto; as que surpreendem merecem um olhar mais atento.",
-          "Marque muletas e atenuadores no topo — \"só\", \"muito\", \"realmente\", \"na verdade\", \"meio\", \"basicamente\" — e corte ou varie.",
+          "Marque muletas e atenuadores no topo (\"só\", \"muito\", \"realmente\", \"na verdade\", \"meio\", \"basicamente\") e corte ou varie.",
           "Verifique se algum verbo ou substantivo forte está sendo usado demais e troque por um sinônimo em parte das ocorrências.",
           "Para pesquisa, copie a lista para exportar as contagens, ou compare dois textos rodando um depois do outro."
         ],
@@ -1906,7 +2026,7 @@
         },
         {
           "question": "Por que uma palavra que eu esperava não está nos resultados?",
-          "answer": "Palavras gramaticais comuns — artigos, pronomes, preposições, conjunções e verbos auxiliares como \"o\", \"de\", \"que\" e \"é\" — são filtradas para que a lista mostre palavras de conteúdo. O resto é contado."
+          "answer": "Palavras gramaticais comuns (artigos, pronomes, preposições, conjunções e verbos auxiliares como \"o\", \"de\", \"que\" e \"é\") são filtradas para que a lista mostre palavras de conteúdo. O resto é contado."
         },
         {
           "question": "A contagem diferencia maiúsculas de minúsculas?",
@@ -1925,11 +2045,11 @@
         "heading": "Ferramentas e guias relacionados",
         "items": [
           {
-            "label": "Verificador de Densidade de Palavras-Chave — as mesmas contagens no enquadramento de SEO on-page",
+            "label": "Verificador de Densidade de Palavras-Chave: as mesmas contagens no enquadramento de SEO on-page",
             "path": "/tools/text/keyword-density-checker"
           },
           {
-            "label": "Contador de Palavras — palavras, caracteres, frases e tempo de leitura",
+            "label": "Contador de Palavras: palavras, caracteres, frases e tempo de leitura",
             "path": "/tools/text/word-counter"
           },
           {
@@ -1940,29 +2060,29 @@
       }
     },
     "keywordDensity": {
-      "metaTitle": "Verificador de Densidade de Palavras-Chave — SEO On-Page | ToolNotch",
+      "metaTitle": "Verificador de Densidade de Palavras-Chave: SEO On-Page | ToolNotch",
       "metaDescription": "Verificador grátis de densidade de palavras-chave para SEO. Veja a contagem e a % de cada termo, evite keyword stuffing e ajuste sua palavra-chave alvo.",
       "title": "Verificador de Densidade de Palavras-Chave",
-      "description": "Cole o texto da sua página para ver a densidade de cada palavra como porcentagem do total — feito para SEO on-page e otimização de conteúdo.",
+      "description": "Cole o texto da sua página para ver a densidade de cada palavra como porcentagem do total, ideal para SEO on-page e otimização de conteúdo.",
       "richContent": {
-        "whatIs": "Densidade de palavras-chave é a fração do seu texto ocupada por um termo: (vezes que a palavra-chave aparece ÷ total de palavras) × 100. No SEO on-page ela serve como uma verificação rápida de que a página trata claramente do termo alvo sem repeti-lo tanto que o texto pareça spam. A faixa de trabalho comum é de 1% a 3% para a palavra-chave principal. Abaixo de cerca de 0,5% o termo pode ser incidental demais para a página ser considerada relevante; acima de 3% a 4% o texto começa a soar artificial e corre risco de um filtro de super-otimização. A densidade é um sinal aproximado, não um fator de ranqueamento divulgado pelo Google — use como apoio de edição, não como meta exata.",
+        "whatIs": "Densidade de palavras-chave é a fração do seu texto ocupada por um termo: (vezes que a palavra-chave aparece ÷ total de palavras) × 100. No SEO on-page ela serve como uma verificação rápida de que a página trata claramente do termo alvo sem repeti-lo tanto que o texto pareça spam. A faixa de trabalho comum é de 1% a 3% para a palavra-chave principal. Abaixo de cerca de 0,5% o termo pode ser incidental demais para a página ser considerada relevante; acima de 3% a 4% o texto começa a soar artificial e corre risco de um filtro de super-otimização. A densidade é um sinal aproximado, não um fator de ranqueamento divulgado pelo Google: use como apoio de edição, não como meta exata.",
         "howToUse": [
-          "Cole o rascunho — títulos, introdução, corpo e conclusão — na caixa. A lista de palavras e as porcentagens de densidade se atualizam enquanto você digita.",
+          "Cole o rascunho (títulos, introdução, corpo e conclusão) na caixa. A lista de palavras e as porcentagens de densidade se atualizam enquanto você digita.",
           "Encontre sua palavra-chave alvo principal (ou variações próximas) na lista ordenada e veja a densidade dela.",
           "Busque algo entre 1% e 3%. Se estiver maior, troque alguns usos exatos por pronomes, sinônimos ou frases parciais.",
           "Se estiver abaixo de cerca de 0,5%, encaixe o termo no título, nas primeiras 100 palavras, em um subtítulo e na conclusão, sempre de forma natural.",
           "Percorra o resto da lista em busca de termos de apoio que um buscador esperaria neste tópico e garanta que apareçam ao menos uma vez."
         ],
-        "whyItMatters": "Os buscadores premiam páginas que cobrem um tópico como um especialista faria — o que costuma significar que o termo principal aparece poucas vezes e um vocabulário amplo de termos relacionados preenche o resto. A verificação de densidade pega as duas falhas que prejudicam o ranqueamento: uma página tão pouco otimizada que nenhum termo é claramente o foco, e uma página com repetição tão pesada que aciona heurísticas de spam ou simplesmente lê mal e perde o visitante. Rodar a checagem antes de publicar é mais rápido do que diagnosticar uma página que rende pouco por meses.",
-        "proTip": "Antes de escrever, rode esta checagem nas duas ou três páginas que já ranqueiam para o seu termo alvo. As palavras de conteúdo que elas compartilham — além do termo principal — são os subtópicos que o Google espera ver. Cubra esses pontos no rascunho e depois use o verificador no seu próprio texto para confirmar que o termo principal fica perto de 1% e que nenhum termo de apoio está faltando. Isso é mais confiável do que mirar uma densidade fixa.",
+        "whyItMatters": "Os buscadores premiam páginas que cobrem um tópico como um especialista faria, o que costuma significar que o termo principal aparece poucas vezes e um vocabulário amplo de termos relacionados preenche o resto. A verificação de densidade pega as duas falhas que prejudicam o ranqueamento: uma página tão pouco otimizada que nenhum termo é claramente o foco, e uma página com repetição tão pesada que aciona heurísticas de spam ou simplesmente lê mal e perde o visitante. Rodar a checagem antes de publicar é mais rápido do que diagnosticar uma página que rende pouco por meses.",
+        "proTip": "Antes de escrever, rode esta checagem nas duas ou três páginas que já ranqueiam para o seu termo alvo. As palavras de conteúdo que elas compartilham (além do termo principal) são os subtópicos que o Google espera ver. Cubra esses pontos no rascunho e depois use o verificador no seu próprio texto para confirmar que o termo principal fica perto de 1% e que nenhum termo de apoio está faltando. Isso é mais confiável do que mirar uma densidade fixa.",
         "sections": [
           {
             "heading": "O que é uma boa densidade de palavras-chave?",
-            "body": "Não existe número oficial. Estudos de páginas bem posicionadas costumam encontrar densidades da palavra-chave principal entre 0,5% e 2,5%, com a maioria perto de 1%. Páginas longas diluem a densidade naturalmente, então um artigo de 2.000 palavras pode ranquear bem com o termo principal a 0,7%, enquanto uma página de 300 palavras pode carregá-lo a 2%. Em vez de forçar uma porcentagem, use o verificador para confirmar que o termo está nas posições-chave — título, abertura, um subtítulo, texto alternativo de imagem e a URL — e que nada mais domina a página por acidente. Se um nome de marca, um rótulo de menu ou uma frase repetida de rodapé lidera sua lista, isso vale corrigir antes de se preocupar com a palavra-chave alvo."
+            "body": "Não existe número oficial. Estudos de páginas bem posicionadas costumam encontrar densidades da palavra-chave principal entre 0,5% e 2,5%, com a maioria perto de 1%. Páginas longas diluem a densidade naturalmente, então um artigo de 2.000 palavras pode ranquear bem com o termo principal a 0,7%, enquanto uma página de 300 palavras pode carregá-lo a 2%. Em vez de forçar uma porcentagem, use o verificador para confirmar que o termo está nas posições-chave (título, abertura, um subtítulo, texto alternativo de imagem e a URL) e que nada mais domina a página por acidente. Se um nome de marca, um rótulo de menu ou uma frase repetida de rodapé lidera sua lista, isso vale corrigir antes de se preocupar com a palavra-chave alvo."
           },
           {
             "heading": "Como ler o resultado",
-            "body": "A ferramenta converte o texto para minúsculas, remove palavras vazias comuns como \"o\", \"e\" e \"de\", tira a pontuação e conta o que sobra. Cada linha mostra uma palavra, quantas vezes ela ocorre e essa contagem como porcentagem do total de palavras. Frases de várias palavras não são rastreadas diretamente — verifique as palavras individuais da sua frase e observe se elas sobem juntas. Números, tokens de uma letra e palavras vazias são excluídos para que a lista reflita o conteúdo relevante. Use a ordem de classificação para ver a ênfase real da página, que muitas vezes é diferente do que você pretendia ao redigir."
+            "body": "A ferramenta converte o texto para minúsculas, remove pontuação e conta as frequências. Você pode analisar termos individuais de 1 palavra ou combinações de 2 (Bigrams) e 3 palavras (Trigrams), além de filtrar stopwords gramaticais (como \"de\", \"e\", \"o\"). Cada linha mostra o termo, o número de ocorrências, a densidade percentual e um indicador visual de status SEO (Baixa, Ideal entre 1% e 3%, ou Excesso acima de 3,5%)."
           }
         ]
       },
@@ -1985,18 +2105,18 @@
         },
         {
           "question": "Esta ferramenta analisa frases de duas ou três palavras?",
-          "answer": "Ela analisa palavras isoladas após remover palavras vazias e pontuação. Para avaliar uma frase, veja as palavras individuais na lista e se as contagens sobem juntas."
+          "answer": "Sim! Você pode alternar facilmente entre 1 Palavra, 2 Palavras (Bigrams) e 3 Palavras (Trigrams) nos controles acima da tabela para analisar expressões compostas e termos de cauda longa."
         }
       ],
       "related": {
         "heading": "Ferramentas e guias relacionados",
         "items": [
           {
-            "label": "Contador de Frequência de Palavras — classifica cada palavra pela frequência",
+            "label": "Contador de Frequência de Palavras: classifica cada palavra pela frequência",
             "path": "/tools/text/word-frequency-counter"
           },
           {
-            "label": "Contador de Palavras — palavras, caracteres, frases e tempo de leitura",
+            "label": "Contador de Palavras: palavras, caracteres, frases e tempo de leitura",
             "path": "/tools/text/word-counter"
           },
           {
@@ -2006,10 +2126,12 @@
         ]
       }
     },
-    "sampleText": "The quick brown fox jumps over the lazy dog. This sentence has been used for decades as a pangram — a phrase containing every letter of the alphabet. It is commonly used to demonstrate fonts, test typewriters, and practice typing.\n\nReadability is an important consideration in writing. Clear, concise sentences help readers understand your message quickly. Long, convoluted sentences with complex vocabulary can make text difficult to parse, especially for readers who are not specialists in the subject matter at hand.\n\nGood writing balances clarity with depth. Professional writers aim for a Flesch Reading Ease score between 60 and 70 for most audiences.",
+    "sampleText": "O rápido texugo marrom pula sobre o cão preguiçoso. Esta frase contém todas as letras do alfabeto e tem sido usada há décadas como um pangrama tradicional para testar teclados e tipografias.\n\nA legibilidade é um fator essencial na comunicação escrita. Frases claras, diretas e concisas permitem que seus leitores assimilem sua mensagem com rapidez e eficácia. Textos com construções excessivamente longas e vocabulário prolixo tendem a dispersar a atenção do leitor.\n\nUma boa redação equilibra profundidade analítica com clareza comunicativa. Especialistas recomendam manter um índice Flesch Reading Ease entre 60 e 70 para a maioria dos artigos informativos e postagens de blog.",
     "buttons": {
       "sampleText": "Texto de exemplo",
-      "clear": "Limpar"
+      "clear": "Limpar",
+      "copy": "Copiar Texto",
+      "copied": "Copiado!"
     },
     "stats": {
       "words": "Palavras",
@@ -2019,8 +2141,8 @@
       "paragraphs": "Parágrafos",
       "readingTime": "Tempo de Leitura",
       "speakingTime": "Tempo de Fala",
-      "fleschEase": "Flesch Reading Ease",
-      "fleschGrade": "Flesch-Kincaid Grade",
+      "fleschEase": "Facilidade de Leitura Flesch",
+      "fleschGrade": "Grau Flesch-Kincaid",
       "gunningFog": "Índice Gunning Fog",
       "avgWordsPerSentence": "Média de Palavras/Frase",
       "topWords": "Palavras Mais Usadas",
@@ -2030,7 +2152,15 @@
       "yearsEducation": "Anos de educação",
       "higherEasier": "Maior = mais fácil de ler",
       "lowerAccessible": "Menor = mais acessível",
-      "syllableNote": "A contagem de sílabas é uma aproximação heurística. As pontuações podem variar levemente em relação a outras ferramentas."
+      "syllableNote": "A contagem de sílabas é uma aproximação heurística. As pontuações podem variar levemente em relação a outras ferramentas.",
+      "fleschLabels": {
+        "veryEasy": "Muito Fácil",
+        "easy": "Fácil",
+        "standard": "Padrão da Web",
+        "fairlyDifficult": "Razoavelmente Difícil",
+        "difficult": "Difícil",
+        "veryDifficult": "Muito Difícil"
+      }
     }
   },
   "finance": {
@@ -4258,6 +4388,13 @@
     "metaDescription": "Calculadora de porcentagem gratuita. Calcule qual porcentagem de um número, encontre a variação percentual entre dois valores ou calcule um valor a partir de uma porcentagem.",
     "title": "Calculadora de Porcentagem",
     "description": "Três calculadoras de porcentagem em uma: qual é X% de Y, X é qual % de Y e variação percentual.",
+    "badge3Modes": "3 Modos de Cálculo",
+    "badgeRealtime": "Tempo Real",
+    "badgePrivate": "100% Privado",
+    "copyResult": "Copiar Resultado",
+    "copied": "Copiado!",
+    "quickPercentages": "Porcentagens Rápidas",
+    "formula": "Fórmula",
     "tabs": {
       "percentOf": "% de um Número",
       "whatPercent": "Qual % é",
@@ -5018,10 +5155,30 @@
               "Custo Somente de Juros"
             ],
             "rows": [
-              ["6,0% ao ano", "R$ 1.799 / mês", "R$ 647.500", "R$ 347.500"],
-              ["6,5% ao ano", "R$ 1.896 / mês", "R$ 682.500", "R$ 382.500"],
-              ["7,0% ao ano", "R$ 1.996 / mês", "R$ 718.500", "R$ 418.500"],
-              ["8,0% ao ano", "R$ 2.201 / mês", "R$ 792.400", "R$ 492.400"]
+              [
+                "6,0% ao ano",
+                "R$ 1.799 / mês",
+                "R$ 647.500",
+                "R$ 347.500"
+              ],
+              [
+                "6,5% ao ano",
+                "R$ 1.896 / mês",
+                "R$ 682.500",
+                "R$ 382.500"
+              ],
+              [
+                "7,0% ao ano",
+                "R$ 1.996 / mês",
+                "R$ 718.500",
+                "R$ 418.500"
+              ],
+              [
+                "8,0% ao ano",
+                "R$ 2.201 / mês",
+                "R$ 792.400",
+                "R$ 492.400"
+              ]
             ]
           },
           {
@@ -5167,8 +5324,16 @@
                 "Obesidade Grau I",
                 "Alto risco cardiovascular e metabólico"
               ],
-              ["35,0 a 39,9", "Obesidade Grau II", "Muito alto risco"],
-              ["40,0 ou superior", "Obesidade Grau III (mórbida)", "Gravíssimo"]
+              [
+                "35,0 a 39,9",
+                "Obesidade Grau II",
+                "Muito alto risco"
+              ],
+              [
+                "40,0 ou superior",
+                "Obesidade Grau III (mórbida)",
+                "Gravíssimo"
+              ]
             ]
           },
           {
@@ -5478,10 +5643,30 @@
               "Tempo Médio de Leitura"
             ],
             "rows": [
-              ["250 palavras", "~1 página", "~0,5 página", "~1 minuto"],
-              ["500 palavras", "~2 páginas", "~1 página", "~2 minutos"],
-              ["1.000 palavras", "~4 páginas", "~2 páginas", "~4 a 5 minutos"],
-              ["1.500 palavras", "~6 páginas", "~3 páginas", "~6 a 7 minutos"],
+              [
+                "250 palavras",
+                "~1 página",
+                "~0,5 página",
+                "~1 minuto"
+              ],
+              [
+                "500 palavras",
+                "~2 páginas",
+                "~1 página",
+                "~2 minutos"
+              ],
+              [
+                "1.000 palavras",
+                "~4 páginas",
+                "~2 páginas",
+                "~4 a 5 minutos"
+              ],
+              [
+                "1.500 palavras",
+                "~6 páginas",
+                "~3 páginas",
+                "~6 a 7 minutos"
+              ],
               [
                 "2.500 palavras",
                 "~10 páginas",
@@ -5638,7 +5823,11 @@
           },
           {
             "type": "table",
-            "headers": ["Nível de Habilidade", "Faixa de PPM", "Perfil Típico"],
+            "headers": [
+              "Nível de Habilidade",
+              "Faixa de PPM",
+              "Perfil Típico"
+            ],
             "rows": [
               [
                 "Iniciante",
@@ -6719,11 +6908,35 @@
       "table": {
         "heading": "Todos os Campeões da Copa do Mundo da FIFA (1930–2022)",
         "note": "pro. = prorrogação; pên. = decidida nos pênaltis.",
-        "cols": ["Ano", "Sede", "Campeão", "Vice", "Placar da final"],
+        "cols": [
+          "Ano",
+          "Sede",
+          "Campeão",
+          "Vice",
+          "Placar da final"
+        ],
         "rows": [
-          ["1930", "Uruguai", "Uruguai", "Argentina", "4–2"],
-          ["1934", "Itália", "Itália", "Tchecoslováquia", "2–1 (pro.)"],
-          ["1938", "França", "Itália", "Hungria", "4–2"],
+          [
+            "1930",
+            "Uruguai",
+            "Uruguai",
+            "Argentina",
+            "4–2"
+          ],
+          [
+            "1934",
+            "Itália",
+            "Itália",
+            "Tchecoslováquia",
+            "2–1 (pro.)"
+          ],
+          [
+            "1938",
+            "França",
+            "Itália",
+            "Hungria",
+            "4–2"
+          ],
           [
             "1942",
             "Não realizada",
@@ -6738,10 +6951,34 @@
             "-",
             "Segunda Guerra Mundial"
           ],
-          ["1950", "Brasil", "Uruguai", "Brasil", "2–1 (jogo decisivo)"],
-          ["1954", "Suíça", "Alemanha Ocidental", "Hungria", "3–2"],
-          ["1958", "Suécia", "Brasil", "Suécia", "5–2"],
-          ["1962", "Chile", "Brasil", "Tchecoslováquia", "3–1"],
+          [
+            "1950",
+            "Brasil",
+            "Uruguai",
+            "Brasil",
+            "2–1 (jogo decisivo)"
+          ],
+          [
+            "1954",
+            "Suíça",
+            "Alemanha Ocidental",
+            "Hungria",
+            "3–2"
+          ],
+          [
+            "1958",
+            "Suécia",
+            "Brasil",
+            "Suécia",
+            "5–2"
+          ],
+          [
+            "1962",
+            "Chile",
+            "Brasil",
+            "Tchecoslováquia",
+            "3–1"
+          ],
           [
             "1966",
             "Inglaterra",
@@ -6749,7 +6986,13 @@
             "Alemanha Ocidental",
             "4–2 (pro.)"
           ],
-          ["1970", "México", "Brasil", "Itália", "4–1"],
+          [
+            "1970",
+            "México",
+            "Brasil",
+            "Itália",
+            "4–1"
+          ],
           [
             "1974",
             "Alemanha Ocidental",
@@ -6757,18 +7000,90 @@
             "Países Baixos",
             "2–1"
           ],
-          ["1978", "Argentina", "Argentina", "Países Baixos", "3–1 (pro.)"],
-          ["1982", "Espanha", "Itália", "Alemanha Ocidental", "3–1"],
-          ["1986", "México", "Argentina", "Alemanha Ocidental", "3–2"],
-          ["1990", "Itália", "Alemanha Ocidental", "Argentina", "1–0"],
-          ["1994", "Estados Unidos", "Brasil", "Itália", "0–0 (3–2 pên.)"],
-          ["1998", "França", "França", "Brasil", "3–0"],
-          ["2002", "Coreia do Sul e Japão", "Brasil", "Alemanha", "2–0"],
-          ["2006", "Alemanha", "Itália", "França", "1–1 (5–3 pên.)"],
-          ["2010", "África do Sul", "Espanha", "Países Baixos", "1–0 (pro.)"],
-          ["2014", "Brasil", "Alemanha", "Argentina", "1–0 (pro.)"],
-          ["2018", "Rússia", "França", "Croácia", "4–2"],
-          ["2022", "Catar", "Argentina", "França", "3–3 (4–2 pên.)"]
+          [
+            "1978",
+            "Argentina",
+            "Argentina",
+            "Países Baixos",
+            "3–1 (pro.)"
+          ],
+          [
+            "1982",
+            "Espanha",
+            "Itália",
+            "Alemanha Ocidental",
+            "3–1"
+          ],
+          [
+            "1986",
+            "México",
+            "Argentina",
+            "Alemanha Ocidental",
+            "3–2"
+          ],
+          [
+            "1990",
+            "Itália",
+            "Alemanha Ocidental",
+            "Argentina",
+            "1–0"
+          ],
+          [
+            "1994",
+            "Estados Unidos",
+            "Brasil",
+            "Itália",
+            "0–0 (3–2 pên.)"
+          ],
+          [
+            "1998",
+            "França",
+            "França",
+            "Brasil",
+            "3–0"
+          ],
+          [
+            "2002",
+            "Coreia do Sul e Japão",
+            "Brasil",
+            "Alemanha",
+            "2–0"
+          ],
+          [
+            "2006",
+            "Alemanha",
+            "Itália",
+            "França",
+            "1–1 (5–3 pên.)"
+          ],
+          [
+            "2010",
+            "África do Sul",
+            "Espanha",
+            "Países Baixos",
+            "1–0 (pro.)"
+          ],
+          [
+            "2014",
+            "Brasil",
+            "Alemanha",
+            "Argentina",
+            "1–0 (pro.)"
+          ],
+          [
+            "2018",
+            "Rússia",
+            "França",
+            "Croácia",
+            "4–2"
+          ],
+          [
+            "2022",
+            "Catar",
+            "Argentina",
+            "França",
+            "3–3 (4–2 pên.)"
+          ]
         ]
       },
       "faqHeading": "Campeões da Copa do Mundo: perguntas frequentes",
@@ -6857,14 +7172,49 @@
       "table": {
         "heading": "Mais títulos de Copa dos Campeões da Europa e Liga dos Campeões",
         "note": "Títulos da Copa dos Campeões da Europa / Liga dos Campeões da UEFA, competição masculina. Números até a final de 2024.",
-        "cols": ["Clube", "País", "Títulos", "Mais recente"],
+        "cols": [
+          "Clube",
+          "País",
+          "Títulos",
+          "Mais recente"
+        ],
         "rows": [
-          ["Real Madrid", "Espanha", "15", "2024"],
-          ["Milan", "Itália", "7", "2007"],
-          ["Bayern de Munique", "Alemanha", "6", "2020"],
-          ["Liverpool", "Inglaterra", "6", "2019"],
-          ["Barcelona", "Espanha", "5", "2015"],
-          ["Ajax", "Países Baixos", "4", "1995"]
+          [
+            "Real Madrid",
+            "Espanha",
+            "15",
+            "2024"
+          ],
+          [
+            "Milan",
+            "Itália",
+            "7",
+            "2007"
+          ],
+          [
+            "Bayern de Munique",
+            "Alemanha",
+            "6",
+            "2020"
+          ],
+          [
+            "Liverpool",
+            "Inglaterra",
+            "6",
+            "2019"
+          ],
+          [
+            "Barcelona",
+            "Espanha",
+            "5",
+            "2015"
+          ],
+          [
+            "Ajax",
+            "Países Baixos",
+            "4",
+            "1995"
+          ]
         ]
       },
       "faqHeading": "Qual time de futebol você é? Perguntas frequentes",
@@ -6927,14 +7277,49 @@
       "table": {
         "heading": "Clubes com mais títulos de Copa dos Campeões da Europa / Liga dos Campeões",
         "note": "Competição masculina, títulos até a final de 2024.",
-        "cols": ["Clube", "País", "Títulos", "Anos"],
+        "cols": [
+          "Clube",
+          "País",
+          "Títulos",
+          "Anos"
+        ],
         "rows": [
-          ["Real Madrid", "Espanha", "15", "1956–2024"],
-          ["Milan", "Itália", "7", "1963–2007"],
-          ["Bayern de Munique", "Alemanha", "6", "1974–2020"],
-          ["Liverpool", "Inglaterra", "6", "1977–2019"],
-          ["Barcelona", "Espanha", "5", "1992–2015"],
-          ["Ajax", "Países Baixos", "4", "1971–1995"]
+          [
+            "Real Madrid",
+            "Espanha",
+            "15",
+            "1956–2024"
+          ],
+          [
+            "Milan",
+            "Itália",
+            "7",
+            "1963–2007"
+          ],
+          [
+            "Bayern de Munique",
+            "Alemanha",
+            "6",
+            "1974–2020"
+          ],
+          [
+            "Liverpool",
+            "Inglaterra",
+            "6",
+            "1977–2019"
+          ],
+          [
+            "Barcelona",
+            "Espanha",
+            "5",
+            "1992–2015"
+          ],
+          [
+            "Ajax",
+            "Países Baixos",
+            "4",
+            "1971–1995"
+          ]
         ]
       },
       "faqHeading": "Quiz da Liga dos Campeões: perguntas frequentes",
@@ -6997,14 +7382,49 @@
       "table": {
         "heading": "Pilotos de Fórmula 1 com mais títulos mundiais",
         "note": "Títulos de pilotos conquistados, até o fim da temporada de 2024.",
-        "cols": ["Piloto", "País", "Títulos", "Temporadas"],
+        "cols": [
+          "Piloto",
+          "País",
+          "Títulos",
+          "Temporadas"
+        ],
         "rows": [
-          ["Lewis Hamilton", "Reino Unido", "7", "2008–2020"],
-          ["Michael Schumacher", "Alemanha", "7", "1994–2004"],
-          ["Juan Manuel Fangio", "Argentina", "5", "1951–1957"],
-          ["Alain Prost", "França", "4", "1985–1993"],
-          ["Sebastian Vettel", "Alemanha", "4", "2010–2013"],
-          ["Max Verstappen", "Países Baixos", "4", "2021–2024"]
+          [
+            "Lewis Hamilton",
+            "Reino Unido",
+            "7",
+            "2008–2020"
+          ],
+          [
+            "Michael Schumacher",
+            "Alemanha",
+            "7",
+            "1994–2004"
+          ],
+          [
+            "Juan Manuel Fangio",
+            "Argentina",
+            "5",
+            "1951–1957"
+          ],
+          [
+            "Alain Prost",
+            "França",
+            "4",
+            "1985–1993"
+          ],
+          [
+            "Sebastian Vettel",
+            "Alemanha",
+            "4",
+            "2010–2013"
+          ],
+          [
+            "Max Verstappen",
+            "Países Baixos",
+            "4",
+            "2021–2024"
+          ]
         ]
       },
       "faqHeading": "Quiz de Fórmula 1: perguntas frequentes",
@@ -7067,7 +7487,12 @@
       "table": {
         "heading": "Os oito pilotos com quem você pode ser combinado",
         "note": "Títulos de Campeonato Mundial de Pilotos, até o fim da temporada de 2024.",
-        "cols": ["Piloto", "País", "Títulos na F1", "Conhecido por"],
+        "cols": [
+          "Piloto",
+          "País",
+          "Títulos na F1",
+          "Conhecido por"
+        ],
         "rows": [
           [
             "Max Verstappen",
@@ -7075,7 +7500,12 @@
             "4",
             "Ritmo agressivo e obstinado"
           ],
-          ["Lewis Hamilton", "Reino Unido", "7", "Constância e longevidade"],
+          [
+            "Lewis Hamilton",
+            "Reino Unido",
+            "7",
+            "Constância e longevidade"
+          ],
           [
             "Ayrton Senna",
             "Brasil",
@@ -7088,9 +7518,24 @@
             "7",
             "Preparação implacável e volume de trabalho"
           ],
-          ["Charles Leclerc", "Mônaco", "0", "Velocidade natural e emoção"],
-          ["Fernando Alonso", "Espanha", "2", "Pilotagem e recusa em desistir"],
-          ["Oscar Piastri", "Austrália", "0", "Cabeça fria, aprende rápido"],
+          [
+            "Charles Leclerc",
+            "Mônaco",
+            "0",
+            "Velocidade natural e emoção"
+          ],
+          [
+            "Fernando Alonso",
+            "Espanha",
+            "2",
+            "Pilotagem e recusa em desistir"
+          ],
+          [
+            "Oscar Piastri",
+            "Austrália",
+            "0",
+            "Cabeça fria, aprende rápido"
+          ],
           [
             "Lando Norris",
             "Reino Unido",
@@ -7246,6 +7691,7 @@
     "label": "Ferramenta recomendada",
     "dismiss": "Fechar",
     "disclosure": "Alguns links acima são links de afiliado. Se você se cadastrar por eles, podemos receber uma comissão, sem custo adicional para você.",
+    "alsoRecommended": "Também recomendado",
     "offers": {
       "quillbot-paraphraser": {
         "name": "Ferramenta de Paráfrase da QuillBot",

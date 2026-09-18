@@ -140,4 +140,26 @@ describe('AppInput', () => {
     expect(input).toHaveClass('bg-background');
     expect(input).not.toHaveClass('bg-tertiary');
   });
+
+  it('renders prefix when provided and adjusts padding', () => {
+    render(
+      <AppInput
+        placeholder="Valor"
+        prefix={<span data-testid="prefix-symbol">$</span>}
+      />
+    );
+
+    expect(screen.getByTestId('prefix-symbol')).toBeInTheDocument();
+    const input = screen.getByPlaceholderText('Valor');
+    expect(input).toHaveClass('pl-11');
+  });
+
+  it('applies secondary bg on focus to match AppSelect', () => {
+    render(<AppInput placeholder="Foco estilo AppSelect" />);
+    const input = screen.getByPlaceholderText('Foco estilo AppSelect');
+
+    fireEvent.focus(input);
+    expect(input).toHaveClass('border-secondary', 'bg-secondary/5');
+  });
 });
+

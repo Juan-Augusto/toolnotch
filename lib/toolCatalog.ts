@@ -72,14 +72,9 @@ export const TOOL_CATALOG: CatalogEntry[] = [
   // Text
   { path: '/tools/text/word-counter', labelKey: 'wordCounter', category: 'text', kind: 'tool' },
   { path: '/tools/text/character-counter', labelKey: 'characterCounter', category: 'text', kind: 'tool' },
-  { path: '/tools/text/sentence-counter', labelKey: 'sentenceCounter', category: 'text', kind: 'tool' },
-  { path: '/tools/text/readability-checker', labelKey: 'readabilityChecker', category: 'text', kind: 'tool' },
   { path: '/tools/text/reading-time-calculator', labelKey: 'readingTimeCalculator', category: 'text', kind: 'tool' },
-  { path: '/tools/text/word-frequency-counter', labelKey: 'wordFrequencyCounter', category: 'text', kind: 'tool' },
+  { path: '/tools/text/readability-checker', labelKey: 'readabilityChecker', category: 'text', kind: 'tool' },
   { path: '/tools/text/keyword-density-checker', labelKey: 'keywordDensityChecker', category: 'text', kind: 'tool' },
-  { path: '/tools/text/paraphraser', labelKey: 'paraphraser', category: 'text', kind: 'tool' },
-  { path: '/tools/text/summarizer', labelKey: 'summarizer', category: 'text', kind: 'tool' },
-  { path: '/tools/text/plagiarism-checker', labelKey: 'plagiarismChecker', category: 'text', kind: 'tool' },
   // Finance
   { path: '/tools/finance/loan-calculator', labelKey: 'loanCalculator', category: 'finance', kind: 'tool' },
   { path: '/tools/finance/mortgage-calculator', labelKey: 'mortgageCalculator', category: 'finance', kind: 'tool' },

@@ -1456,11 +1456,91 @@
     }
   },
   "convert": {
+    "hub": {
+      "metaTitle": "Conversores Online Gratis — Unidades, Divisas y Porcentajes | ToolNotch",
+      "metaDescription": "Herramientas de conversión online gratuitas: más de 200 unidades, tasas de cambio en vivo para 150+ divisas y calculadora de porcentajes. Sin registro, 100% privado.",
+      "title": "Conversores y Calculadoras de Medidas",
+      "description": "Convierte entre más de 200 unidades de medida, consulta tasas de cambio en tiempo real para 150+ divisas y resuelve cálculos de porcentajes. Rápido, exacto y sin registro.",
+      "breadcrumb": "Conversores",
+      "badgeUnits": "200+ Unidades",
+      "badgeCurrencies": "150+ Divisas",
+      "badgeFree": "100% Gratis",
+      "badgePrivate": "Sin Registro",
+      "coreToolsTitle": "Herramientas Principales",
+      "coreToolsSubtitle": "Elige la herramienta perfecta para tu cálculo o conversión",
+      "tools": {
+        "unitConverter": {
+          "title": "Conversor de Unidades",
+          "desc": "Longitud, peso, temperatura, área, volumen, velocidad, tiempo, almacenamiento digital y presión. Más de 200 unidades con cálculo instantáneo sin conexión."
+        },
+        "currencyConverter": {
+          "title": "Conversor de Divisas",
+          "desc": "Tasas de cambio actualizadas cada hora para más de 150 monedas del mundo. Referencia de divisas rápida, precisa y gratuita."
+        },
+        "percentageCalculator": {
+          "title": "Calculadora de Porcentaje",
+          "desc": "Tres modos de cálculo: porcentaje de un número, qué porcentaje representa un valor y variación porcentual de incremento o descuento."
+        }
+      },
+      "categoriesTitle": "Explora por Categoría de Medida",
+      "popularTitle": "Conversiones Más Populares",
+      "guideTitle": "¿Por qué es Fundamental la Precisión en las Conversiones?",
+      "guideP1": "La conversión de medidas es indispensable en cocina, construcción, viajes internacionales, comercio y ciencias. Al cocinar, las medidas de peso y volumen varían entre sistemas métricos e imperiales. En bricolaje y construcción, un error milimétrico entre pulgadas y centímetros puede arruinar materiales costosos.",
+      "guideP2": "El sistema métrico se basa en potencias de diez, lo que facilita operaciones directas. El sistema imperial emplea relaciones históricas como 12 pulgadas por pie o 16 onzas por libra. Nuestras herramientas digitales eliminan equivocaciones manuales y entregan cifras exactas en milisegundos.",
+      "guideP3": "ToolNotch reúne conversores de alta precisión con más de 200 unidades sin conexión, tipos de cambio en vivo para 150+ monedas y calculadoras de porcentaje completas, siempre gratis y sin necesidad de registro.",
+      "whenToUseTitle": "Casos de Uso Habituales",
+      "useCases": [
+        {
+          "title": "Cocina y Repostería",
+          "desc": "Adapta recetas internacionales convirtiendo gramos a onzas, mililitros a tazas o cucharadas, y grados Celsius a Fahrenheit."
+        },
+        {
+          "title": "Viajes Internacionales",
+          "desc": "Calcula el valor de monedas extranjeras, verifica el peso de tu equipaje en kilos o libras y comprende límites de velocidad en km/h o mph."
+        },
+        {
+          "title": "Construcción y Carpintería",
+          "desc": "Interpreta planos en milímetros, centímetros, pulgadas y pies con exactitud absoluta para asegurar cortes correctos."
+        },
+        {
+          "title": "Educación y Ciencia",
+          "desc": "Convierte unidades de presión, energía, velocidad y temperatura para asignaturas de física, química e ingeniería."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "¿Los conversores de unidades funcionan sin conexión?",
+          "answer": "¡Sí! Todas las conversiones de unidades y operaciones de porcentaje se ejecutan localmente en tu navegador sin requerir conexión a internet tras cargar la página."
+        },
+        {
+          "question": "¿Con qué frecuencia se actualizan las tasas de cambio?",
+          "answer": "Las tasas de cambio se obtienen aproximadamente cada hora desde APIs financieras públicas y se almacenan en caché para una respuesta instantánea."
+        },
+        {
+          "question": "¿Qué precisión tienen los resultados?",
+          "answer": "Utilizamos cálculos matemáticos de alta precisión con hasta 8 cifras significativas para garantizar exactitud tanto para uso cotidiano como técnico."
+        },
+        {
+          "question": "¿Es necesario registrarse para usar las herramientas?",
+          "answer": "No. Todas las herramientas de ToolNotch son 100% gratuitas, anónimas y no requieren registro de ningún tipo."
+        }
+      ]
+    },
     "unit": {
       "metaTitle": "Conversor de Unidades — Longitud, Peso, Temperatura y Más | ToolNotch",
       "metaDescription": "Conversor de unidades gratuito en línea. Convierte longitud, peso, temperatura, área, volumen, velocidad, tiempo, almacenamiento digital y presión. Más de 200 unidades en 9 categorías.",
       "title": "Conversor de Unidades",
       "description": "Convierte entre más de 200 unidades en 9 categorías. Instantáneo, preciso, sin registro.",
+      "badge200": "200+ Unidades",
+      "badge9Cat": "9 Categorías",
+      "badgeInstant": "Cálculo Instantáneo",
+      "copyResult": "Copiar Resultado",
+      "copied": "¡Copiado!",
+      "popularUnits": "Unidades Rápidas",
+      "categoryLabel": "Categoría",
+      "fromLabel": "De",
+      "toLabel": "A",
+      "amountLabel": "Valor",
       "faqs": [
         {
           "question": "¿Cuántas unidades son compatibles?",
@@ -1501,6 +1581,19 @@
       "metaDescription": "Conversor de divisas gratuito con tasas en tiempo real. Convierte entre más de 150 monedas. Tasas actualizadas cada hora. Sin registro.",
       "title": "Conversor de Divisas",
       "description": "Convierte entre más de 150 monedas con tasas de cambio en tiempo real. Tasas actualizadas cada hora.",
+      "badge150": "150+ Monedas",
+      "badgeLive": "Tasas en Tiempo Real",
+      "badgeFree": "100% Gratis",
+      "quickAmounts": "Montos Rápidos",
+      "popularCurrencies": "Monedas Populares",
+      "copyResult": "Copiar Resultado",
+      "copied": "¡Copiado!",
+      "exchangeRate": "Tipo de Cambio",
+      "inverseRate": "Tasa Inversa",
+      "lastUpdated": "Última actualización",
+      "fromLabel": "Moneda de Origen",
+      "toLabel": "Moneda de Destino",
+      "amountLabel": "Cantidad a Convertir",
       "staleWarning": "⚠️ Mostrando tasas en caché — no se pudieron obtener las tasas más recientes. Las tasas pueden estar desactualizadas.",
       "errorFetching": "No se pudieron obtener las tasas de cambio. Comprueba tu conexión e inténtalo de nuevo.",
       "amountPlaceholder": "Cantidad",
@@ -1680,7 +1773,7 @@
   },
   "text": {
     "wordCounter": {
-      "metaTitle": "Contador de Palabras — Palabras, Caracteres y Legibilidad | ToolNotch",
+      "metaTitle": "Contador de Palabras: Palabras, Caracteres y Legibilidad | ToolNotch",
       "metaDescription": "Contador de palabras gratuito en línea. Cuenta palabras, caracteres, oraciones y obtén puntuaciones de legibilidad Flesch en tiempo real. Sin registro.",
       "title": "Contador de Palabras",
       "description": "Cuenta palabras, caracteres y oraciones, y comprueba la legibilidad en tiempo real. Pega tu texto abajo.",
@@ -1688,14 +1781,14 @@
       "richContent": {
         "whatIs": "Un contador de palabras es una herramienta que mide al instante la longitud y la complejidad de cualquier texto. Cuenta palabras, caracteres, oraciones y párrafos, y calcula puntuaciones de legibilidad en tiempo real. Los contadores de palabras se usan en la escritura académica (donde los trabajos suelen tener requisitos mínimos de palabras), en la creación de contenido SEO (donde la extensión de las publicaciones influye en los rankings de búsqueda) y en la redacción para redes sociales (donde los límites de caracteres de cada plataforma condicionan lo que se puede publicar). Bloggers, estudiantes, periodistas y profesionales del marketing recurren a los contadores de palabras para cumplir con los límites, alcanzar los objetivos y asegurarse de que su escritura tenga la longitud adecuada para su audiencia y canal.",
         "howToUse": [
-          "Pega o escribe tu texto en el área de entrada — los recuentos se actualizan al instante mientras escribes.",
+          "Pega o escribe tu texto en el área de entrada. Los recuentos se actualizan al instante mientras escribes.",
           "Revisa el recuento de palabras, el recuento de caracteres (con y sin espacios) y el recuento de oraciones en la barra de estadísticas.",
           "Revisa la puntuación de Facilidad de Lectura Flesch para entender qué tan accesible es tu texto para el público general.",
           "Usa el Nivel de Grado Flesch-Kincaid para ajustar tu escritura al nivel educativo de tu lector objetivo.",
           "Haz clic en 'Texto de Ejemplo' para cargar un ejemplo si quieres ver la herramienta en acción antes de agregar tu propio contenido."
         ],
-        "whyItMatters": "El recuento de palabras determina todo, desde las calificaciones académicas hasta los rankings de Google. La mayoría de las publicaciones de blog optimizadas para SEO tienen entre 1.500 y 2.500 palabras — lo suficientemente largas para cubrir un tema en profundidad, pero lo suficientemente cortas para seguir siendo legibles. Los ensayos académicos tienen recuentos mínimos estrictos, y las plataformas de redes sociales imponen límites de caracteres fijos. Las puntuaciones de legibilidad añaden otra capa: una puntuación de Facilidad de Lectura Flesch superior a 60 indica que tu contenido es accesible para una audiencia amplia, mientras que una puntuación inferior a 30 sugiere que el texto es demasiado denso para los lectores en general. Hacer seguimiento tanto del recuento de palabras como de la legibilidad te ayuda a escribir con intención.",
-        "proTip": "Apunta a una puntuación de Facilidad de Lectura Flesch entre 60 y 70 para contenido de blog dirigido a una audiencia general. Si tu puntuación está por debajo de 50, prueba dividiendo las oraciones largas en las conjunciones (y, pero, porque) y reemplazando palabras de muchas sílabas por sinónimos más cortos — estos dos cambios por sí solos pueden elevar significativamente tu puntuación."
+        "whyItMatters": "El recuento de palabras determina todo, desde las calificaciones académicas hasta los rankings de Google. La mayoría de las publicaciones de blog optimizadas para SEO tienen entre 1.500 y 2.500 palabras (lo suficientemente largas para cubrir un tema en profundidad, pero lo suficientemente cortas para seguir siendo legibles). Los ensayos académicos tienen recuentos mínimos estrictos, y las plataformas de redes sociales imponen límites de caracteres fijos. Las puntuaciones de legibilidad añaden otra capa: una puntuación de Facilidad de Lectura Flesch superior a 60 indica que tu contenido es accesible para una audiencia amplia, mientras que una puntuación inferior a 30 sugiere que el texto es demasiado denso para los lectores en general. Hacer seguimiento tanto del recuento de palabras como de la legibilidad te ayuda a escribir con intención.",
+        "proTip": "Apunta a una puntuación de Facilidad de Lectura Flesch entre 60 y 70 para contenido de blog dirigido a una audiencia general. Si tu puntuación está por debajo de 50, prueba dividiendo las oraciones largas en las conjunciones (y, pero, porque) y reemplazando palabras de muchas sílabas por sinónimos más cortos: estos dos cambios por sí solos pueden elevar significativamente tu puntuación."
       },
       "faqs": [
         {
@@ -1728,12 +1821,12 @@
         },
         {
           "question": "¿Puedo usar esto para los límites de caracteres en redes sociales?",
-          "answer": "Sí — el recuento de caracteres muestra el número exacto incluyendo espacios. Las publicaciones en X permiten 280 caracteres, las de LinkedIn permiten 3.000 caracteres y los pies de foto de Instagram permiten 2.200 caracteres."
+          "answer": "Sí, el recuento de caracteres muestra el número exacto incluyendo espacios. Las publicaciones en X permiten 280 caracteres, las de LinkedIn permiten 3.000 caracteres y los pies de foto de Instagram permiten 2.200 caracteres."
         }
       ]
     },
     "characterCounter": {
-      "metaTitle": "Contador de Caracteres — Con y Sin Espacios | ToolNotch",
+      "metaTitle": "Contador de Caracteres: Con y Sin Espacios | ToolNotch",
       "metaDescription": "Contador de caracteres gratuito en línea. Cuenta caracteres con y sin espacios, útil para X, LinkedIn, Instagram y otras plataformas con límites de caracteres.",
       "title": "Contador de Caracteres",
       "description": "Cuenta caracteres con y sin espacios. Ideal para publicaciones en X, meta descripciones y cualquier texto con límite de caracteres.",
@@ -1744,7 +1837,7 @@
         },
         {
           "question": "¿El contador incluye los espacios?",
-          "answer": "Sí — el dato 'Caracteres' incluye los espacios. 'Caracteres (sin espacios)' muestra el recuento con todos los espacios eliminados."
+          "answer": "Sí, el dato 'Caracteres' incluye los espacios. 'Caracteres (sin espacios)' muestra el recuento con todos los espacios eliminados."
         },
         {
           "question": "¿Mi texto se guarda en algún lugar?",
@@ -1756,20 +1849,20 @@
         }
       ],
       "richContent": {
-        "whatIs": "Un contador de caracteres te dice exactamente cuántos caracteres — letras, números, símbolos, espacios y signos de puntuación — aparecen en tu texto. A diferencia de un contador de palabras, mide la longitud bruta de una cadena, que es la unidad más común que las plataformas usan para imponer límites de publicación. Twitter/X permite 280 caracteres por publicación. Los mensajes SMS están limitados a 160 caracteres por segmento (mensajes más largos se dividen y cobran separadamente). Para SEO, un título meta debería mantenerse dentro de 50–60 caracteres para que los motores de búsqueda lo muestren completo; las descripciones meta deberían tener 150–160 caracteres. LinkedIn recomienda mantener las publicaciones en 700 caracteres para el mejor alcance, mientras que las subtítulos de Instagram permiten hasta 2,200 caracteres pero solo 125 son visibles antes del corte 'más'. Los emojis complican las cosas — en la codificación UTF-16 (usada por X), la mayoría de los emojis cuentan como 2 caracteres debido a pares de surrogados, incluso aunque aparecen como un solo glifo.",
+        "whatIs": "Un contador de caracteres te dice exactamente cuántos caracteres (letras, números, símbolos, espacios y signos de puntuación) aparecen en tu texto. A diferencia de un contador de palabras, mide la longitud bruta de una cadena, que es la unidad más común que las plataformas usan para imponer límites de publicación. Twitter/X permite 280 caracteres por publicación. Los mensajes SMS están limitados a 160 caracteres por segmento (mensajes más largos se dividen y cobran separadamente). Para SEO, un título meta debería mantenerse dentro de 50–60 caracteres para que los motores de búsqueda lo muestren completo; las descripciones meta deberían tener 150–160 caracteres. LinkedIn recomienda mantener las publicaciones en 700 caracteres para el mejor alcance, mientras que las subtítulos de Instagram permiten hasta 2,200 caracteres pero solo 125 son visibles antes del corte 'más'. Los emojis complican las cosas: en la codificación UTF-16 (usada por X), la mayoría de los emojis cuentan como 2 caracteres debido a pares de surrogados, incluso aunque aparecen como un solo glifo.",
         "howToUse": [
-          "Pega o escribe tu texto en el área de entrada — el conteo de caracteres se actualiza instantáneamente.",
+          "Pega o escribe tu texto en el área de entrada. El conteo de caracteres se actualiza instantáneamente.",
           "Verifica la estadística 'Caracteres' para el recuento total, incluyendo espacios.",
           "Verifica 'Caracteres (sin espacios)' si la plataforma excluye los espacios de su límite.",
           "Compara tu conteo con el límite objetivo para tu plataforma (280 para X, 160 para SMS, 50–60 para títulos meta).",
           "Edita tu texto directamente en la caja y observa cómo el conteo disminuye mientras trunques para ajustarte."
         ],
-        "whyItMatters": "Superar el límite de caracteres de una plataforma puede truncar tu mensaje silenciosamente o impedir publicarlo por completo. Para SEO, un título meta con más de 60 caracteres se corta en los resultados de búsqueda de Google con un punto suspensivo, reduciendo las tasas de clic porque los lectores ven una encabezado incompleto. Las descripciones meta con más de 160 caracteres son truncadas de manera similar, desperdiciando la oportunidad de persuadir. Para campañas de marketing por SMS, cada segmento con más de 160 caracteres duplica el costo por mensaje enviado — un pequeño exceso a lo largo de miles de envíos se acumula rápidamente. Saber tu conteo exacto de caracteres antes de publicar evita estos errores costosos.",
-        "proTip": "Cuando escribas para Twitter/X, recuerda que las URLs siempre se cuentan como 23 caracteres independientemente de la longitud real de la URL — el acortador t.co de Twitter envuelve automáticamente cada enlace. Así que una URL de 200 caracteres aún solo cuesta 23 caracteres en tu publicación. Factora esto en tu presupuesto de caracteres cuando tu tweet contiene un enlace, y usa los caracteres restantes para tu mensaje real."
+        "whyItMatters": "Superar el límite de caracteres de una plataforma puede truncar tu mensaje silenciosamente o impedir publicarlo por completo. Para SEO, un título meta con más de 60 caracteres se corta en los resultados de búsqueda de Google con un punto suspensivo, reduciendo las tasas de clic porque los lectores ven una encabezado incompleto. Las descripciones meta con más de 160 caracteres son truncadas de manera similar, desperdiciando la oportunidad de persuadir. Para campañas de marketing por SMS, cada segmento con más de 160 caracteres duplica el costo por mensaje enviado: un pequeño exceso a lo largo de miles de envios se acumula rápidamente. Saber tu conteo exacto de caracteres antes de publicar evita estos errores costosos.",
+        "proTip": "Cuando escribas para Twitter/X, recuerda que las URLs siempre se cuentan como 23 caracteres independientemente de la longitud real de la URL, ya que el acortador t.co de Twitter envuelve automáticamente cada enlace. Así que una URL de 200 caracteres aún solo cuesta 23 caracteres en tu publicación. Factora esto en tu presupuesto de caracteres cuando tu tweet contiene un enlace, y usa los caracteres restantes para tu mensaje real."
       }
     },
     "sentenceCounter": {
-      "metaTitle": "Contador de Oraciones — Contar Oraciones en Línea | ToolNotch",
+      "metaTitle": "Contador de Oraciones: Contar Oraciones en Línea | ToolNotch",
       "metaDescription": "Contador de oraciones gratuito en línea. Cuenta al instante el número de oraciones en tu texto, junto con palabras, caracteres y puntuaciones de legibilidad.",
       "title": "Contador de Oraciones",
       "description": "Cuenta oraciones en tu texto al instante. También muestra palabras, caracteres y puntuaciones de legibilidad.",
@@ -1788,33 +1881,33 @@
         }
       ],
       "richContent": {
-        "whatIs": "Un contador de oraciones cuenta el número de oraciones completas en tu texto — cada una terminando con un punto, signo de exclamación o interrogación. Más allá del conteo simple, el análisis de oraciones es una entrada clave para fórmulas de legibilidad: tanto la puntuación Flesch Reading Ease como la escala Flesch-Kincaid Grade Level usan la longitud promedio de las oraciones (palabras por oración) como una variable principal. Las oraciones muy largas — aquellas que superan los 30 palabras — reducen drásticamente las puntuaciones de legibilidad y aumentan el esfuerzo cognitivo para los lectores. El conteo de oraciones también es relevante en la escritura académica, donde las asignaciones pueden especificar un número mínimo de oraciones por párrafo, y en la edición del contenido, donde identificar oraciones muy largas o cortas ayuda a mejorar el flujo y el ritmo de una pieza.",
+        "whatIs": "Un contador de oraciones cuenta el número de oraciones completas en tu texto, cada una terminando con un punto, signo de exclamación o interrogación. Más allá del conteo simple, el análisis de oraciones es una entrada clave para fórmulas de legibilidad: tanto la puntuación Flesch Reading Ease como la escala Flesch-Kincaid Grade Level usan la longitud promedio de las oraciones (palabras por oración) como una variable principal. Las oraciones muy largas (aquellas que superan las 30 palabras) reducen drásticamente las puntuaciones de legibilidad y aumentan el esfuerzo cognitivo para los lectores. El conteo de oraciones también es relevante en la escritura académica, donde las asignaciones pueden especificar un número mínimo de oraciones por párrafo, y en la edición del contenido, donde identificar oraciones muy largas o cortas ayuda a mejorar el flujo y el ritmo de una pieza.",
         "howToUse": [
-          "Pega tu texto en el área de entrada — el conteo de oraciones se actualiza automáticamente.",
+          "Pega tu texto en el área de entrada. El conteo de oraciones se actualiza automáticamente.",
           "Lee el conteo de oraciones y nota la figura promedio de palabras por oración.",
-          "Identifica tus oraciones más largas — estas son las mejores candidatas para dividir para mejorar la legibilidad.",
+          "Identifica tus oraciones más largas: estas son las mejores candidatas para dividir para mejorar la legibilidad.",
           "Dirige un promedio de 15–20 palabras por oración para el público general.",
           "Edita las oraciones directamente en el cuadro y observa la figura promedio que se actualiza en tiempo real mientras revisas."
         ],
-        "whyItMatters": "La investigación del Nielsen Norman Group muestra que los lectores en línea rastrean más que leen — promediando solo el 20–28% de las palabras por página. Las oraciones cortas y variadas reducen el esfuerzo cognitivo y mantienen a los lectores interesados durante más tiempo. Variar la longitud de las oraciones también crea un ritmo natural: escribir todo con oraciones cortas se siente desgarrado y robotizado, mientras que todas las oraciones largas se sienten densas y agotadoras. El punto de equilibrio para la mayoría de los públicos es una mezcla — principalmente 8–15 palabras por oración con golpes cortos occasionales para enfatizar y oraciones más largas para explicaciones detalladas. Revisar el conteo de oraciones te ayuda a auditar el ritmo y detectar párrafos que se han vuelto inmanejables durante la edición.",
-        "proTip": "En la escritura empresarial, dirige un promedio de longitud de oración de 15–20 palabras. La escritura académica puede ir hasta 25–30 palabras pero debe compensarse con una estructura de párrafo clara y oraciones temáticas. Si tu promedio de longitud de oración supera los 25 palabras, encuentra las oraciones más largas del 30% de tu texto y divide cada una en un punto natural de conjunción o cláusula — la mayoría de los lectores no notarán el cambio, pero la comprensión se mejora significativamente."
+        "whyItMatters": "La investigación del Nielsen Norman Group muestra que los lectores en línea rastrean más que leen (promediando solo el 20–28% de las palabras por página). Las oraciones cortas y variadas reducen el esfuerzo cognitivo y mantienen a los lectores interesados durante más tiempo. Variar la longitud de las oraciones también crea un ritmo natural: escribir todo con oraciones cortas se siente desgarrado y robotizado, mientras que todas las oraciones largas se sienten densas y agotadoras. El punto de equilibrio para la mayoría de los públicos es una mezcla: principalmente 8–15 palabras por oración con golpes cortos occasionales para enfatizar y oraciones más largas para explicaciones detalladas. Revisar el conteo de oraciones te ayuda a auditar el ritmo y detectar párrafos que se han vuelto inmanejables durante la edición.",
+        "proTip": "En la escritura empresarial, dirige un promedio de longitud de oración de 15–20 palabras. La escritura académica puede ir hasta 25–30 palabras pero debe compensarse con una estructura de párrafo clara y oraciones temáticas. Si tu promedio de longitud de oración supera los 25 palabras, encuentra las oraciones más largas del 30% de tu texto y divide cada una en un punto natural de conjunción o cláusula: la mayoría de los lectores no notarán el cambio, pero la comprensión se mejora significativamente."
       }
     },
     "readabilityChecker": {
-      "metaTitle": "Comprobador de Legibilidad — Puntuación Flesch y Nivel de Lectura | ToolNotch",
+      "metaTitle": "Comprobador de Legibilidad: Puntuación Flesch y Nivel de Lectura | ToolNotch",
       "metaDescription": "Comprobador de legibilidad gratuito. Obtén la puntuación Flesch de Facilidad de Lectura, el Nivel de Grado Flesch-Kincaid y el Índice Niebla de Gunning para cualquier texto.",
       "title": "Comprobador de Legibilidad",
       "description": "Comprueba el nivel de lectura de tu texto con las puntuaciones de Facilidad de Lectura Flesch, Grado Flesch-Kincaid e Índice Niebla de Gunning.",
       "richContent": {
         "whatIs": "Un comprobador de legibilidad analiza tu texto y asigna puntuaciones que indican qué tan fácil es leerlo y comprenderlo. La métrica más utilizada es la fórmula Flesch-Kincaid, que produce dos resultados: la puntuación de Facilidad de Lectura Flesch (de 0 a 100, donde un valor más alto significa más fácil) y el Nivel de Grado Flesch-Kincaid (el equivalente al grado escolar estadounidense del texto). Una puntuación de Facilidad de Lectura Flesch de 60–70 representa una escritura estándar y accesible, adecuada para el público en general. Las puntuaciones en torno a 30–50 indican texto de nivel universitario, mientras que cualquier valor por debajo de 30 se considera muy difícil. El grado 8 en la escala Flesch-Kincaid es un objetivo común para el contenido dirigido al consumidor, ya que resulta cómodo para la gran mayoría de los lectores adultos independientemente de su formación académica.",
         "howToUse": [
-          "Pega tu texto en el área de entrada — las puntuaciones de legibilidad se calculan automáticamente.",
+          "Pega tu texto en el área de entrada. Las puntuaciones de legibilidad se calculan automáticamente.",
           "Revisa la puntuación de Facilidad de Lectura Flesch: apunta a 60–70 para audiencias generales, más alto para lectores más jóvenes.",
           "Revisa el Nivel de Grado Flesch-Kincaid para ver qué nivel educativo requiere tu texto.",
-          "Consulta el Índice Niebla de Gunning como segunda opinión — una puntuación de 8–12 es adecuada para la mayoría del contenido general.",
+          "Consulta el Índice Niebla de Gunning como segunda opinión: una puntuación de 8–12 es adecuada para la mayoría del contenido general.",
           "Edita tu texto directamente en el cuadro y observa cómo las puntuaciones se actualizan en tiempo real mientras revisas."
         ],
-        "whyItMatters": "La legibilidad afecta directamente si los lectores terminan tu contenido o lo abandonan. En internet, el lector promedio escanea el texto — la escritura densa y compleja los pierde en cuestión de segundos. El contenido escrito en un Nivel de Grado Flesch-Kincaid de 7–9 supera consistentemente al texto más difícil en tiempo en página, participación y posibilidad de ser compartido. Para el SEO, aunque la legibilidad no es una señal de posicionamiento directa, las tasas de rebote más bajas y los tiempos de sesión más largos — ambas consecuencias de una escritura legible — son señales indirectas sólidas. Los especialistas en marketing, estrategas de contenido, educadores y escritores de UX usan puntuaciones de legibilidad para asegurarse de que su escritura se ajusta a las expectativas y la carga cognitiva de su audiencia.",
+        "whyItMatters": "La legibilidad afecta directamente si los lectores terminan tu contenido o lo abandonan. En internet, el lector promedio escanea el texto: la escritura densa y compleja los pierde en cuestión de segundos. El contenido escrito en un Nivel de Grado Flesch-Kincaid de 7–9 supera consistentemente al texto más difícil en tiempo en página, participación y posibilidad de ser compartido. Para el SEO, aunque la legibilidad no es una señal de posicionamiento directa, las tasas de rebote más bajas y los tiempos de sesión más largos (ambas consecuencias de una escritura legible) son señales indirectas sólidas. Los especialistas en marketing, estrategas de contenido, educadores y escritores de UX usan puntuaciones de legibilidad para asegurarse de que su escritura se ajusta a las expectativas y la carga cognitiva de su audiencia.",
         "proTip": "Apunta a un Nivel de Grado Flesch-Kincaid de 7–9 para la mayoría del contenido de blog y marketing. Si tu puntuación supera 12, empieza por encontrar tus tres oraciones más largas y divide cada una en un punto natural de pausa. Reducir la longitud de las oraciones es el recurso más rápido para mejorar la legibilidad sin cambiar el significado de tu escritura."
       },
       "faqs": [
@@ -1837,10 +1930,37 @@
       ]
     },
     "readingTime": {
-      "metaTitle": "Calculadora de Tiempo de Lectura — Estima el Tiempo de Lectura y Habla | ToolNotch",
+      "metaTitle": "Calculadora de Tiempo de Lectura: Estima el Tiempo de Lectura y Habla | ToolNotch",
       "metaDescription": "Calcula el tiempo de lectura de cualquier texto. Estima tanto el tiempo de lectura (238 ppm) como el de habla (130 ppm). Útil para artículos de blog, discursos y presentaciones.",
       "title": "Calculadora de Tiempo de Lectura",
       "description": "Calcula cuánto tiempo tardarás en leer o hablar tu texto. Pega tu contenido abajo para una estimación instantánea.",
+      "placeholder": "Pega o escribe tu texto aquí para calcular el tiempo de lectura y habla...",
+      "ui": {
+        "estimatedReadingTime": "Tiempo de Lectura Estimado",
+        "estimatedSpeakingTime": "Tiempo de Discurso Estimado",
+        "readingSpeedLabel": "Velocidad de Lectura",
+        "speakingSpeedLabel": "Velocidad de Discurso",
+        "wordsPerMinute": "{wpm} ppm",
+        "speedSlow": "Lento",
+        "speedMedium": "Medio",
+        "speedFast": "Rápido",
+        "speedSuperFast": "Súper Rápido",
+        "seconds": "{s}s",
+        "minutesAndSeconds": "{m}m {s}s",
+        "complexityNote": "Nivel de Complejidad",
+        "complexityEasy": "Fácil de leer (ritmo normal)",
+        "complexityAverage": "Complejidad media",
+        "complexityHard": "Difícil de leer (+15% tiempo)",
+        "complexityVeryHard": "Muy difícil (+30% tiempo)",
+        "startSpeedReader": "Iniciar Lectura Rápida",
+        "speedReaderTitle": "Lectura Rápida (RSVP)",
+        "closeSpeedReader": "Cerrar",
+        "done": "¡Lectura Completada!",
+        "wordCounter": "{current} de {total} palabras",
+        "play": "Iniciar",
+        "pause": "Pausa",
+        "reset": "Reiniciar"
+      },
       "faqs": [
         {
           "question": "¿Cuánto tarda en leerse 1000 palabras?",
@@ -1860,29 +1980,29 @@
         }
       ],
       "richContent": {
-        "whatIs": "Un calculador de tiempo de lectura estima cuánto tiempo toma leer un texto dividiendo su recuento de palabras por una velocidad promedio de lectura silenciosa. La velocidad estándar adulta de lectura silenciosa para no ficción es de 200–250 palabras por minuto (wpm), con la investigación comúnmente citando 238 wpm como un benchmark confiable. La comprensión disminuye significativamente a partir de 300 wpm, por lo que los cálculos de lectura rápida no se usan para estimaciones realistas. El tipo de contenido afecta la velocidad efectiva de lectura: el material técnico denso lee más lento a 150–180 wpm, mientras que las listas amigables para el desplazamiento leen más rápido. La mayoría de los plataformas de blog — Medium, Substack, Ghost — muestran un estimado de tiempo de lectura prominente al principio de los artículos porque afecta directamente si los lectores hacen clic y comienzan a leer.",
+        "whatIs": "Un calculador de tiempo de lectura estima cuánto tiempo toma leer un texto dividiendo su recuento de palabras por una velocidad promedio de lectura silenciosa. La velocidad estándar adulta de lectura silenciosa para no ficción es de 200–250 palabras por minuto (wpm), con la investigación comúnmente citando 238 wpm como un benchmark confiable. La comprensión disminuye significativamente a partir de 300 wpm, por lo que los cálculos de lectura rápida no se usan para estimaciones realistas. El tipo de contenido afecta la velocidad efectiva de lectura: el material técnico denso lee más lento a 150–180 wpm, mientras que las listas amigables para el desplazamiento leen más rápido. La mayoría de los plataformas de blog (Medium, Substack, Ghost) muestran un estimado de tiempo de lectura prominente al principio de los artículos porque afecta directamente si los lectores hacen clic y comienzan a leer.",
         "howToUse": [
-          "Pega tu artículo o texto en el área de entrada — el tiempo de lectura y el habla se calculan instantáneamente.",
+          "Pega tu artículo o texto en el área de entrada. El tiempo de lectura y el habla se calculan instantáneamente.",
           "Lee el estimado de tiempo de lectura basado en la velocidad estándar de lectura adulta de 238 wpm.",
           "Comprueba el estimado de tiempo de habla (alrededor de 130 wpm) si estás preparando un guion, podcast o presentación.",
           "Para contenido técnico, añade mentalmente del 20–30% al estimado de tiempo de lectura para tener en cuenta el procesamiento más lento.",
           "Usa el recuento de palabras junto con el tiempo de lectura para medir si la longitud de tu contenido coincide con tu canal (publicaciones en LinkedIn de menos de 2 min, contenido SEO de blog de 7–15 min)."
         ],
-        "whyItMatters": "Los artículos con un tiempo de lectura mostrado tienen tasas de participación más altas porque los lectores se seleccionan por sí mismos: alguien con 3 minutos disponibles comenzará un artículo de 3 minutos pero saltará uno de 12 minutos sin siquiera abrirlo. Para los profesionales del contenido, la longitud del contenido debe coincidir con el canal — publicaciones en LinkedIn de menos de 2 minutos, boletines electrónicos de correo electrónico de 3–5 minutos, contenido SEO de larga forma de 7–15 minutos. El tiempo de lectura también sirve como un proxy para la profundidad del contenido: los artículos más largos señalan una cobertura exhaustiva, lo que tiende a correlacionar con mejores clasificaciones en búsquedas, más enlaces entrantes y mayores tasas de compartición social.",
-        "proTip": "Los podcasts audio y las narraciones grabadas se entregan a una velocidad de 150–160 wpm — aproximadamente la mitad de la velocidad de lectura silenciosa. Si está adaptando un artículo de blog a un guion de podcast o voz-over, doble el estimado de tiempo de lectura para obtener una duración precisa del audio. Un artículo de 5 minutos se convierte aproximadamente en un escuchado de 10 minutos, lo cual es crucial para planificar la longitud de los episodios de podcast y la programación."
+        "whyItMatters": "Los artículos con un tiempo de lectura mostrado tienen tasas de participación más altas porque los lectores se seleccionan por sí mismos: alguien con 3 minutos disponibles comenzará un artículo de 3 minutos pero saltará uno de 12 minutos sin siquiera abrirlo. Para los profesionales del contenido, la longitud del contenido debe coincidir con el canal: publicaciones en LinkedIn de menos de 2 minutos, boletines electrónicos de correo electrónico de 3–5 minutos y contenido SEO de larga forma de 7–15 minutos. El tiempo de lectura también sirve como un proxy para la profundidad del contenido: los artículos más largos señalan una cobertura exhaustiva, lo que tiende a correlacionar con mejores clasificaciones en búsquedas, más enlaces entrantes y mayores tasas de compartición social.",
+        "proTip": "Los podcasts audio y las narraciones grabadas se entregan a una velocidad de 150–160 wpm, aproximadamente la mitad de la velocidad de lectura silenciosa. Si está adaptando un artículo de blog a un guion de podcast o voz-over, doble el estimado de tiempo de lectura para obtener una duración precisa del audio. Un artículo de 5 minutos se convierte aproximadamente en un escuchado de 10 minutos, lo cual es crucial para planificar la longitud de los episodios de podcast y la programación."
       }
     },
     "wordFrequency": {
-      "metaTitle": "Contador de Frecuencia de Palabras — Palabras Más Repetidas | ToolNotch",
+      "metaTitle": "Contador de Frecuencia de Palabras: Palabras Más Repetidas | ToolNotch",
       "metaDescription": "Contador gratis de frecuencia de palabras. Mira cuántas veces aparece cada palabra en tu texto, ordenadas por recuento: detecta palabras repetidas y muletillas.",
       "title": "Contador de Frecuencia de Palabras",
       "description": "Pega cualquier texto para ver cuántas veces aparece cada palabra, de la más a la menos frecuente. Pensado para edición, análisis de estilo e investigación.",
       "richContent": {
-        "whatIs": "Un contador de frecuencia de palabras cuenta cada palabra de un pasaje y las ordena de la más a la menos común. Las palabras funcionales habituales — \"el\", \"la\", \"de\", \"y\", \"que\" — se filtran para que la lista muestre las palabras con carga de significado. El análisis de frecuencia es una de las herramientas más antiguas de la lingüística: sostiene las concordancias, las fórmulas de legibilidad, las bandas de frecuencia de los diccionarios y los estudios de autoría que identifican a un escritor por sus hábitos inconscientes. Para la escritura del día a día el uso es más simple: te muestra, en segundos, de qué palabras dependes. Una repetición invisible mientras redactas se vuelve obvia en una lista ordenada, y ese suele ser el camino más rápido hacia una prosa más ajustada.",
+        "whatIs": "Un contador de frecuencia de palabras cuenta cada palabra de un pasaje y las ordena de la más a la menos común. Las palabras funcionales habituales (\"el\", \"la\", \"de\", \"y\", \"que\") se filtran para que la lista muestre las palabras con carga de significado. El análisis de frecuencia es una de las herramientas más antiguas de la lingüística: sostiene las concordancias, las fórmulas de legibilidad, las bandas de frecuencia de los diccionarios y los estudios de autoría que identifican a un escritor por sus hábitos inconscientes. Para la escritura del día a día el uso es más simple: te muestra, en segundos, de qué palabras dependes. Una repetición invisible mientras redactas se vuelve obvia en una lista ordenada, y ese suele ser el camino más rápido hacia una prosa más ajustada.",
         "howToUse": [
-          "Pega tu texto — un ensayo, un capítulo, una transcripción o un lote de reseñas — en el cuadro. La tabla de frecuencia se genera al instante.",
+          "Pega tu texto (un ensayo, un capítulo, una transcripción o un lote de reseñas) en el cuadro. La tabla de frecuencia se genera al instante.",
           "Recorre la lista. Las primeras palabras de contenido son tu tema; las que te sorprendan merecen una mirada más atenta.",
-          "Marca muletillas y atenuantes cerca del principio — \"solo\", \"muy\", \"realmente\", \"en realidad\", \"básicamente\" — y córtalas o varíalas.",
+          "Marca muletillas y atenuantes cerca del principio (\"solo\", \"muy\", \"realmente\", \"en realidad\", \"básicamente\") y córtalas o varíalas.",
           "Comprueba si algún verbo o sustantivo fuerte está haciendo demasiado trabajo y usa un sinónimo en parte de sus apariciones.",
           "Para investigar, copia la lista para exportar los recuentos, o compara dos textos ejecutándolos uno tras otro."
         ],
@@ -1906,7 +2026,7 @@
         },
         {
           "question": "¿Por qué una palabra que esperaba no está en los resultados?",
-          "answer": "Las palabras gramaticales comunes — artículos, pronombres, preposiciones, conjunciones y verbos auxiliares como \"el\", \"de\", \"que\" y \"es\" — se filtran para que la lista muestre palabras de contenido. Todo lo demás se cuenta."
+          "answer": "Las palabras gramaticales comunes (artículos, pronombres, preposiciones, conjunciones y verbos auxiliares como \"el\", \"de\", \"que\" y \"es\") se filtran para que la lista muestre palabras de contenido. Todo lo demás se cuenta."
         },
         {
           "question": "¿El recuento distingue mayúsculas y minúsculas?",
@@ -1925,11 +2045,11 @@
         "heading": "Herramientas y guías relacionadas",
         "items": [
           {
-            "label": "Comprobador de Densidad de Palabras Clave — los mismos recuentos con enfoque de SEO on-page",
+            "label": "Comprobador de Densidad de Palabras Clave: los mismos recuentos con enfoque de SEO on-page",
             "path": "/tools/text/keyword-density-checker"
           },
           {
-            "label": "Contador de Palabras — palabras, caracteres, frases y tiempo de lectura",
+            "label": "Contador de Palabras: palabras, caracteres, frases y tiempo de lectura",
             "path": "/tools/text/word-counter"
           },
           {
@@ -1940,29 +2060,29 @@
       }
     },
     "keywordDensity": {
-      "metaTitle": "Comprobador de Densidad de Palabras Clave — SEO On-Page | ToolNotch",
+      "metaTitle": "Comprobador de Densidad de Palabras Clave: SEO On-Page | ToolNotch",
       "metaDescription": "Comprobador gratis de densidad de palabras clave para SEO. Mira el recuento y el % de cada término, evita el keyword stuffing y ajusta tu palabra clave.",
       "title": "Comprobador de Densidad de Palabras Clave",
       "description": "Pega el texto de tu página para ver la densidad de cada palabra como porcentaje del total: pensado para SEO on-page y optimización de contenido.",
       "richContent": {
         "whatIs": "La densidad de palabras clave es la parte de tu texto que ocupa un término: (veces que aparece la palabra clave ÷ total de palabras) × 100. En el SEO on-page sirve como comprobación rápida de que una página trata claramente su término objetivo sin repetirlo tanto que el texto parezca spam. El rango de trabajo habitual es del 1% al 3% para la palabra clave principal. Por debajo de aproximadamente el 0,5% el término puede ser demasiado incidental para que la página se considere relevante; por encima del 3% al 4% el texto empieza a sonar artificial y se arriesga a un filtro de sobreoptimización. La densidad es una señal aproximada, no un factor de posicionamiento que Google publique: úsala como ayuda de edición, no como una cifra exacta que alcanzar.",
         "howToUse": [
-          "Pega tu borrador — títulos, introducción, cuerpo y conclusión — en el cuadro. La lista de palabras y los porcentajes de densidad se actualizan mientras escribes.",
+          "Pega tu borrador (títulos, introducción, cuerpo y conclusión) en el cuadro. La lista de palabras y los porcentajes de densidad se actualizan mientras escribes.",
           "Busca tu palabra clave objetivo principal (o sus variantes cercanas) en la lista ordenada y lee su densidad.",
           "Apunta a un 1%–3% aproximadamente. Si es mayor, cambia algunos usos exactos por pronombres, sinónimos o frases parciales.",
           "Si está por debajo del 0,5%, incluye el término en el título, en las primeras 100 palabras, en un subtítulo y en la conclusión donde encaje con naturalidad.",
           "Revisa el resto de la lista en busca de términos de apoyo que un buscador esperaría en este tema y asegúrate de que aparezcan al menos una vez."
         ],
         "whyItMatters": "Los buscadores premian las páginas que cubren un tema como lo haría un experto, lo que suele significar que el término principal aparece unas pocas veces y un vocabulario amplio de términos relacionados completa el resto. Comprobar la densidad detecta los dos fallos que perjudican el posicionamiento: una página tan poco optimizada que ningún término es claramente su foco, y una página con tanta repetición que activa heurísticas de spam o simplemente se lee mal y pierde al visitante. Hacer la comprobación antes de publicar es más rápido que diagnosticar una página que rinde poco durante meses.",
-        "proTip": "Antes de escribir, haz esta comprobación en las dos o tres páginas que ya posicionan para tu término objetivo. Las palabras de contenido que comparten — más allá del término principal — son los subtemas que Google espera ver. Cúbrelos en tu borrador y luego usa el comprobador en tu propio texto para confirmar que el término principal ronda el 1% y que no falta ningún término de apoyo. Es más fiable que apuntar a una densidad fija.",
+        "proTip": "Antes de escribir, haz esta comprobación en las dos o tres páginas que ya posicionan para tu término objetivo. Las palabras de contenido que comparten (más allá del término principal) son los subtemas que Google espera ver. Cúbrelos en tu borrador y luego usa el comprobador en tu propio texto para confirmar que el término principal ronda el 1% y que no falta ningún término de apoyo. Es más fiable que apuntar a una densidad fija.",
         "sections": [
           {
             "heading": "¿Qué es una buena densidad de palabras clave?",
-            "body": "No hay una cifra oficial. Los estudios de páginas bien posicionadas suelen encontrar densidades de la palabra clave principal entre el 0,5% y el 2,5%, la mayoría en torno al 1%. Las páginas largas diluyen la densidad de forma natural, así que un artículo de 2.000 palabras puede posicionar bien con su término principal al 0,7%, mientras que una página de 300 palabras puede llevarlo al 2%. En lugar de forzar un porcentaje, usa el comprobador para confirmar que el término está en las posiciones clave — título, primera línea, un subtítulo, el texto alternativo de las imágenes y la URL — y que nada más domina la página por accidente. Si un nombre de marca, una etiqueta de menú o una frase repetida del pie encabezan tu lista, conviene corregir eso antes de preocuparte por la palabra clave objetivo."
+            "body": "No hay una cifra oficial. Los estudios de páginas bien posicionadas suelen encontrar densidades de la palabra clave principal entre el 0,5% y el 2,5%, la mayoría en torno al 1%. Las páginas largas diluyen la densidad de forma natural, así que un artículo de 2.000 palabras puede posicionar bien con su término principal al 0,7%, mientras que una página de 300 palabras puede llevarlo al 2%. En lugar de forzar un porcentaje, usa el comprobador para confirmar que el término está en las posiciones clave (título, primera línea, un subtítulo, el texto alternativo de las imágenes y la URL) y que nada más domina la página por accidente. Si un nombre de marca, una etiqueta de menú o una frase repetida del pie encabezan tu lista, conviene corregir eso antes de preocuparte por la palabra clave objetivo."
           },
           {
             "heading": "Cómo leer el resultado",
-            "body": "La herramienta pasa el texto a minúsculas, elimina palabras vacías comunes como \"el\", \"y\" o \"de\", quita la puntuación y cuenta lo que queda. Cada fila muestra una palabra, cuántas veces aparece y ese recuento como porcentaje del total de palabras. Las frases de varias palabras no se rastrean directamente: revisa las palabras sueltas de tu frase y observa si suben juntas. Los números, los tokens de una sola letra y las palabras vacías se excluyen para que la lista refleje el contenido relevante. Usa el orden de clasificación para ver el énfasis real de la página, que a menudo difiere de lo que pretendías al redactar."
+            "body": "La herramienta convierte el texto a minúsculas, elimina puntuación y cuenta las frecuencias. Puedes analizar palabras individuales (1 palabra) o combinaciones de 2 (Bigrams) y 3 palabras (Trigrams), además de ocultar stopwords comunes. Cada fila muestra el término, número de apariciones, porcentaje de densidad y un indicador de estado SEO (Baja, Ideal entre 1% y 3%, o Exceso por encima del 3.5%)."
           }
         ]
       },
@@ -1985,18 +2105,18 @@
         },
         {
           "question": "¿Esta herramienta analiza frases de dos o tres palabras?",
-          "answer": "Analiza palabras sueltas tras eliminar palabras vacías y puntuación. Para valorar una frase, revisa sus palabras individuales en la lista y si sus recuentos suben juntos."
+          "answer": "¡Sí! Puedes alternar fácilmente entre 1 Palabra, 2 Palabras (Bigrams) y 3 Palabras (Trigrams) en los controles situados sobre la tabla para analizar frases compuestas y términos de cola larga."
         }
       ],
       "related": {
         "heading": "Herramientas y guías relacionadas",
         "items": [
           {
-            "label": "Contador de Frecuencia de Palabras — clasifica cada palabra por su frecuencia",
+            "label": "Contador de Frecuencia de Palabras: clasifica cada palabra por su frecuencia",
             "path": "/tools/text/word-frequency-counter"
           },
           {
-            "label": "Contador de Palabras — palabras, caracteres, frases y tiempo de lectura",
+            "label": "Contador de Palabras: palabras, caracteres, frases y tiempo de lectura",
             "path": "/tools/text/word-counter"
           },
           {
@@ -2006,10 +2126,12 @@
         ]
       }
     },
-    "sampleText": "The quick brown fox jumps over the lazy dog. This sentence has been used for decades as a pangram — a phrase containing every letter of the alphabet. It is commonly used to demonstrate fonts, test typewriters, and practice typing.\n\nReadability is an important consideration in writing. Clear, concise sentences help readers understand your message quickly. Long, convoluted sentences with complex vocabulary can make text difficult to parse, especially for readers who are not specialists in the subject matter at hand.\n\nGood writing balances clarity with depth. Professional writers aim for a Flesch Reading Ease score between 60 and 70 for most audiences.",
+    "sampleText": "El veloz murciélago hindú comía feliz cardillo y kiwi. Esta frase contiene todas las letras del alfabeto y ha sido utilizada durante décadas como un pangrama clásico para probar tipografías y teclados.\n\nLa legibilidad es un aspecto fundamental de la comunicación escrita. Las frases claras y directas permiten que los lectores asimilen el mensaje con rapidez. Textos con oraciones excesivamente largas o vocabulario demasiado denso suelen dificultar la comprensión.\n\nUna buena redacción combina claridad con precisión. La mayoría de los redactores buscan mantener una puntuación Flesch Reading Ease entre 60 y 70 para publicaciones y artículos dirigidos al público general.",
     "buttons": {
       "sampleText": "Texto de ejemplo",
-      "clear": "Limpiar"
+      "clear": "Limpiar",
+      "copy": "Copiar Texto",
+      "copied": "¡Copiado!"
     },
     "stats": {
       "words": "Palabras",
@@ -2030,7 +2152,15 @@
       "yearsEducation": "Años de educación",
       "higherEasier": "Mayor = más fácil de leer",
       "lowerAccessible": "Menor = más accesible",
-      "syllableNote": "El conteo de sílabas es una aproximación heurística. Las puntuaciones pueden variar ligeramente respecto a otras herramientas."
+      "syllableNote": "El conteo de sílabas es una aproximación heurística. Las puntuaciones pueden variar ligeramente respecto a otras herramientas.",
+      "fleschLabels": {
+        "veryEasy": "Muy Fácil",
+        "easy": "Fácil",
+        "standard": "Estándar Web",
+        "fairlyDifficult": "Razonablemente Difícil",
+        "difficult": "Difícil",
+        "veryDifficult": "Muy Difícil"
+      }
     }
   },
   "finance": {
@@ -4260,6 +4390,13 @@
     "metaDescription": "Calculadora de porcentaje gratuita. Calcula qué porcentaje de un número es, encuentra la variación porcentual entre dos valores o calcula un valor a partir de un porcentaje.",
     "title": "Calculadora de Porcentaje",
     "description": "Tres calculadoras de porcentaje en una: qué es X% de Y, X es qué % de Y y variación porcentual.",
+    "badge3Modes": "3 Modos de Cálculo",
+    "badgeRealtime": "En Tiempo Real",
+    "badgePrivate": "100% Privado",
+    "copyResult": "Copiar Resultado",
+    "copied": "¡Copiado!",
+    "quickPercentages": "Porcentajes Rápidos",
+    "formula": "Fórmula",
     "tabs": {
       "percentOf": "% de un Número",
       "whatPercent": "Qué % es",
@@ -7549,6 +7686,7 @@
     "label": "Herramienta recomendada",
     "dismiss": "Cerrar",
     "disclosure": "Algunos enlaces de arriba son enlaces de afiliado. Si te registras a través de ellos, podemos recibir una comisión, sin costo adicional para ti.",
+    "alsoRecommended": "También recomendado",
     "offers": {
       "quillbot-paraphraser": {
         "name": "Herramienta de Parafraseo de QuillBot",

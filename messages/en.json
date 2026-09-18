@@ -1600,11 +1600,91 @@
     }
   },
   "convert": {
+    "hub": {
+      "metaTitle": "Free Online Converters — Units, Currencies & Percentages | ToolNotch",
+      "metaDescription": "Free online conversion tools: 200+ measurement units, live exchange rates for 150+ currencies, and instant percentage calculator. No sign-up, 100% private.",
+      "title": "Unit & Currency Converters",
+      "description": "Convert between 200+ measurement units, track live exchange rates for 150+ currencies, and solve percentage calculations. Fast, accurate, and completely free.",
+      "breadcrumb": "Converters",
+      "badgeUnits": "200+ Units",
+      "badgeCurrencies": "150+ Currencies",
+      "badgeFree": "100% Free",
+      "badgePrivate": "No Sign-Up",
+      "coreToolsTitle": "Featured Converters",
+      "coreToolsSubtitle": "Select a dedicated tool for your conversion or calculation needs",
+      "tools": {
+        "unitConverter": {
+          "title": "Unit Converter",
+          "desc": "Length, weight, temperature, area, volume, speed, time, digital storage, and pressure. Over 200 units with instant offline calculation."
+        },
+        "currencyConverter": {
+          "title": "Currency Converter",
+          "desc": "Live exchange rates updated hourly for over 150 global currencies. Free, reliable, and convenient foreign exchange reference."
+        },
+        "percentageCalculator": {
+          "title": "Percentage Calculator",
+          "desc": "Three calculation modes: percentage of a number, percentage representation between values, and percentage increase or discount."
+        }
+      },
+      "categoriesTitle": "Browse by Measurement Category",
+      "popularTitle": "Popular Conversions",
+      "guideTitle": "Why Accurate Conversions Matter",
+      "guideP1": "Measurement conversion is an essential daily skill across cooking, construction, international travel, trade, and science. In recipe preparation, weight and volume measurements differ significantly between metric and imperial standards. In DIY and architecture, a fraction-of-an-inch discrepancy can cause costly structural errors.",
+      "guideP2": "The metric system (SI) relies on straightforward powers of ten, while the imperial system uses historical fixed ratios such as 12 inches per foot or 16 ounces per pound. Reliable digital conversion tools eliminate human math errors and deliver exact figures in milliseconds.",
+      "guideP3": "ToolNotch provides an all-in-one suite of high-precision calculators with offline capability for 200+ units, live forex updates for 150+ currencies, and comprehensive percentage solvers — always private and registration-free.",
+      "whenToUseTitle": "Common Use Cases",
+      "useCases": [
+        {
+          "title": "Cooking & Baking",
+          "desc": "Convert recipe amounts between grams and ounces, milliliters and cups or tablespoons, and Celsius to Fahrenheit effortlessly."
+        },
+        {
+          "title": "International Travel",
+          "desc": "Calculate live foreign exchange rates, verify airline baggage allowances in kilograms or pounds, and interpret speed limits in km/h or mph."
+        },
+        {
+          "title": "Construction & Woodworking",
+          "desc": "Translate architectural blueprints between millimeters, centimeters, inches, and feet to prevent expensive cutting errors."
+        },
+        {
+          "title": "Education & Science",
+          "desc": "Convert pressure, energy, speed, and thermodynamic temperature units for physics, chemistry, and engineering tasks."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Do the unit converters work without an internet connection?",
+          "answer": "Yes! All unit conversions and percentage calculations run completely inside your browser without needing network requests after the initial page load."
+        },
+        {
+          "question": "How frequently are foreign exchange rates updated?",
+          "answer": "Currency rates are fetched approximately every hour from reputable public exchange rate APIs and cached for instant client response."
+        },
+        {
+          "question": "How accurate are the conversion results?",
+          "answer": "Our calculations use precise factor-based arithmetic with up to 8 significant digits to ensure mathematical rigor for everyday, professional, and academic use."
+        },
+        {
+          "question": "Is registration or login required to use these tools?",
+          "answer": "No. All tools on ToolNotch are completely free, unlimited, and require no user registration or personal information."
+        }
+      ]
+    },
     "unit": {
       "metaTitle": "Unit Converter — Convert Length, Weight, Temperature & More | ToolNotch",
       "metaDescription": "Free online unit converter. Convert length, weight, temperature, area, volume, speed, time, digital storage, and pressure. 200+ units across 9 categories.",
       "title": "Unit Converter",
       "description": "Convert between 200+ units across 9 categories. Instant, accurate, no sign-up.",
+      "badge200": "200+ Units",
+      "badge9Cat": "9 Categories",
+      "badgeInstant": "Instant Calculation",
+      "copyResult": "Copy Result",
+      "copied": "Copied!",
+      "popularUnits": "Quick Units",
+      "categoryLabel": "Category",
+      "fromLabel": "From",
+      "toLabel": "To",
+      "amountLabel": "Value",
       "faqs": [
         {
           "question": "What unit categories are supported?",
@@ -1661,6 +1741,19 @@
       "metaDescription": "Free live currency converter. Convert between 150+ currencies with real-time exchange rates. Rates cached for 1 hour. No sign-up required.",
       "title": "Currency Converter",
       "description": "Convert between 150+ currencies with live exchange rates. Rates updated hourly.",
+      "badge150": "150+ Currencies",
+      "badgeLive": "Live Exchange Rates",
+      "badgeFree": "100% Free",
+      "quickAmounts": "Quick Amounts",
+      "popularCurrencies": "Popular Currencies",
+      "copyResult": "Copy Result",
+      "copied": "Copied!",
+      "exchangeRate": "Exchange Rate",
+      "inverseRate": "Inverse Rate",
+      "lastUpdated": "Last updated",
+      "fromLabel": "From Currency",
+      "toLabel": "To Currency",
+      "amountLabel": "Amount to Convert",
       "staleWarning": "⚠️ Showing cached rates — unable to fetch latest rates. Rates may be stale.",
       "errorFetching": "Unable to fetch exchange rates. Please check your connection and try again.",
       "amountPlaceholder": "Amount",
@@ -1860,22 +1953,22 @@
   },
   "text": {
     "wordCounter": {
-      "metaTitle": "Word Counter — Count Words, Characters & Readability | ToolNotch",
+      "metaTitle": "Word Counter: Count Words, Characters & Readability | ToolNotch",
       "metaDescription": "Free online word counter. Count words, characters, sentences, and get Flesch readability scores in real time. No sign-up required.",
       "title": "Word Counter",
-      "description": "Count words, characters, sentences, and check readability in real time. Paste your text below — results update instantly as you type.",
+      "description": "Count words, characters, sentences, and check readability in real time. Paste your text below; results update instantly as you type.",
       "placeholder": "Paste or type your text here…",
       "richContent": {
         "whatIs": "A word counter is a tool that instantly measures the length and complexity of any piece of writing. It counts words, characters, sentences, and paragraphs, and calculates readability scores in real time. Word counters are used across academic writing (where assignments often carry minimum word requirements), SEO content creation (where post length influences search rankings), and social media copywriting (where platform character limits dictate what you can publish). Bloggers, students, journalists, and marketing professionals rely on word counters to stay within scope, hit targets, and ensure their writing is the right length for its intended audience and channel.",
         "howToUse": [
-          "Paste or type your text into the input area — counts update instantly as you type.",
+          "Paste or type your text into the input area. Counts update instantly as you type.",
           "Check the word count, character count (with and without spaces), and sentence count in the stats bar.",
           "Review the Flesch Reading Ease score to understand how accessible your text is to a general audience.",
           "Use the Flesch-Kincaid Grade Level to match your writing to your target reader's education level.",
           "Click 'Sample Text' to load an example if you want to see the tool in action before adding your own content."
         ],
-        "whyItMatters": "Word count shapes everything from academic grades to Google rankings. Most SEO-optimised blog posts fall between 1,500 and 2,500 words — long enough to cover a topic thoroughly but short enough to remain readable. Academic essays carry strict minimum counts, and social media platforms impose hard character limits. Readability scores add another layer: a Flesch Reading Ease score above 60 signals that your content is accessible to a broad audience, while a score below 30 suggests the writing is too dense for general readers. Tracking both word count and readability together helps you write with intention.",
-        "proTip": "Aim for a Flesch Reading Ease score between 60 and 70 for blog content targeting a general audience. If your score is below 50, try splitting long sentences at conjunctions (and, but, because) and replacing multi-syllable words with shorter synonyms — these two changes alone can raise your score significantly."
+        "whyItMatters": "Word count shapes everything from academic grades to Google rankings. Most SEO-optimised blog posts fall between 1,500 and 2,500 words (long enough to cover a topic thoroughly but short enough to remain readable). Academic essays carry strict minimum counts, and social media platforms impose hard character limits. Readability scores add another layer: a Flesch Reading Ease score above 60 signals that your content is accessible to a broad audience, while a score below 30 suggests the writing is too dense for general readers. Tracking both word count and readability together helps you write with intention.",
+        "proTip": "Aim for a Flesch Reading Ease score between 60 and 70 for blog content targeting a general audience. If your score is below 50, try splitting long sentences at conjunctions (and, but, because) and replacing multi-syllable words with shorter synonyms: these two changes alone can raise your score significantly."
       },
       "faqs": [
         {
@@ -1884,31 +1977,31 @@
         },
         {
           "question": "Does this tool count spaces?",
-          "answer": "The word counter does not count spaces as words — it counts words by splitting on whitespace. The character counter provides two separate counts: one including spaces and one excluding them, so you can use whichever figure is relevant to your use case."
+          "answer": "The word counter does not count spaces as words; it counts words by splitting on whitespace. The character counter provides two separate counts: one including spaces and one excluding them, so you can use whichever figure is relevant to your use case."
         },
         {
           "question": "Can I count words in multiple languages?",
-          "answer": "Yes — the word counter works with any language that uses spaces to separate words, including Spanish, French, German, Portuguese, and most European languages. For languages that do not use spaces (such as Chinese, Japanese, or Thai), word boundaries differ and the count may not reflect traditional word counts for those scripts."
+          "answer": "Yes, the word counter works with any language that uses spaces to separate words, including Spanish, French, German, Portuguese, and most European languages. For languages that do not use spaces (such as Chinese, Japanese, or Thai), word boundaries differ and the count may not reflect traditional word counts for those scripts."
         },
         {
           "question": "What is the ideal word count for a blog post?",
-          "answer": "Most SEO research suggests that long-form blog posts of 1,500–2,500 words tend to rank better in search results because they cover topics in greater depth. However, the right length depends on your topic and audience — a quick how-to guide may only need 600–800 words, while a comprehensive guide might exceed 3,000 words. Quality and relevance matter more than hitting an arbitrary word count target."
+          "answer": "Most SEO research suggests that long-form blog posts of 1,500–2,500 words tend to rank better in search results because they cover topics in greater depth. However, the right length depends on your topic and audience: a quick how-to guide may only need 600–800 words, while a comprehensive guide might exceed 3,000 words. Quality and relevance matter more than hitting an arbitrary word count target."
         },
         {
           "question": "Does the word counter include headings?",
-          "answer": "Yes — the word counter counts all text you paste or type, including headings, subheadings, and titles. If you want to count only the body text, paste just that portion of your content without the headings."
+          "answer": "Yes, the word counter counts all text you paste or type, including headings, subheadings, and titles. If you want to count only the body text, paste just that portion of your content without the headings."
         },
         {
           "question": "How is word count different from character count?",
-          "answer": "Word count measures the number of distinct words separated by spaces or line breaks, treating 'running' and 'run' as two different words of one count each. Character count measures every individual character — letters, numbers, punctuation marks, and spaces — making it the relevant metric for platforms that impose character limits rather than word limits."
+          "answer": "Word count measures the number of distinct words separated by spaces or line breaks, treating 'running' and 'run' as two different words of one count each. Character count measures every individual character (letters, numbers, punctuation marks, and spaces), making it the relevant metric for platforms that impose character limits rather than word limits."
         },
         {
           "question": "Can I paste text directly into the word counter?",
-          "answer": "Yes — simply click inside the text area and paste your content using Ctrl+V (Windows) or Cmd+V (Mac). The counts update instantly as soon as text appears. You can also type directly into the box or use the Sample Text button to load example content."
+          "answer": "Yes, simply click inside the text area and paste your content using Ctrl+V (Windows) or Cmd+V (Mac). The counts update instantly as soon as text appears. You can also type directly into the box or use the Sample Text button to load example content."
         },
         {
           "question": "Does punctuation affect the word count?",
-          "answer": "Punctuation marks attached to words (such as commas, periods, or quotation marks) do not create extra word counts — they are treated as part of the surrounding word. Standalone punctuation characters or symbols separated by spaces would be counted as a token, but this is uncommon in normal writing."
+          "answer": "Punctuation marks attached to words (such as commas, periods, or quotation marks) do not create extra word counts: they are treated as part of the surrounding word. Standalone punctuation characters or symbols separated by spaces would be counted as a token, but this is uncommon in normal writing."
         },
         {
           "question": "What does the Flesch Reading Ease score mean?",
@@ -1936,31 +2029,31 @@
         },
         {
           "question": "Can I use this for social media character limits?",
-          "answer": "Yes — the character count shows the exact number of characters including spaces. X posts allow 280 characters, LinkedIn posts allow 3,000 characters, and Instagram captions allow 2,200 characters."
+          "answer": "Yes, the character count shows the exact number of characters including spaces. X posts allow 280 characters, LinkedIn posts allow 3,000 characters, and Instagram captions allow 2,200 characters."
         }
       ]
     },
     "characterCounter": {
-      "metaTitle": "Character Counter — Count Characters with & without Spaces | ToolNotch",
+      "metaTitle": "Character Counter: Count Characters with & without Spaces | ToolNotch",
       "metaDescription": "Free online character counter. Count characters with and without spaces, useful for X, LinkedIn, Instagram, and other platforms with character limits.",
       "title": "Character Counter",
       "description": "Count characters with and without spaces. Perfect for X posts, meta descriptions, and any text with character limits.",
       "richContent": {
-        "whatIs": "A character counter tells you exactly how many characters — letters, numbers, symbols, spaces, and punctuation marks — appear in your text. Unlike a word counter, it measures the raw length of a string, which is the unit most platforms use to enforce posting limits. Twitter/X allows 280 characters per post. SMS messages are capped at 160 characters per segment (longer messages are split and charged separately). For SEO, a meta title should stay within 50–60 characters so search engines display it in full; meta descriptions should be 150–160 characters. LinkedIn recommends keeping posts to 700 characters for best reach, while Instagram captions allow up to 2,200 characters but only 125 are visible before the 'more' cutoff. Emoji complicate matters — in UTF-16 encoding (used by X), most emoji count as 2 characters due to surrogate pairs, even though they appear as a single glyph.",
+        "whatIs": "A character counter tells you exactly how many characters (letters, numbers, symbols, spaces, and punctuation marks) appear in your text. Unlike a word counter, it measures the raw length of a string, which is the unit most platforms use to enforce posting limits. Twitter/X allows 280 characters per post. SMS messages are capped at 160 characters per segment (longer messages are split and charged separately). For SEO, a meta title should stay within 50–60 characters so search engines display it in full; meta descriptions should be 150–160 characters. LinkedIn recommends keeping posts to 700 characters for best reach, while Instagram captions allow up to 2,200 characters but only 125 are visible before the 'more' cutoff. Emoji complicate matters: in UTF-16 encoding (used by X), most emoji count as 2 characters due to surrogate pairs, even though they appear as a single glyph.",
         "howToUse": [
-          "Paste or type your text into the input area — the character count updates instantly.",
+          "Paste or type your text into the input area. The character count updates instantly.",
           "Check the 'Characters' stat for the total count including spaces.",
           "Check 'Characters (no spaces)' if the platform excludes spaces from its limit.",
           "Compare your count against the target limit for your platform (280 for X, 160 for SMS, 50–60 for meta titles).",
           "Edit your text directly in the box and watch the count decrease as you trim to fit."
         ],
-        "whyItMatters": "Exceeding a platform's character limit either truncates your message silently or prevents posting altogether. For SEO, a meta title over 60 characters gets cut off in Google search results with an ellipsis, reducing click-through rates because readers see an incomplete headline. Meta descriptions over 160 characters are similarly truncated, wasting the persuasion opportunity. For SMS marketing campaigns, every segment over 160 characters doubles the cost per message sent — a small overage across thousands of sends adds up quickly. Knowing your exact character count before publishing prevents these costly mistakes.",
-        "proTip": "When writing for Twitter/X, remember that URLs are always counted as 23 characters regardless of the URL's actual length — Twitter's t.co shortener wraps every link automatically. So a 200-character URL still only costs you 23 characters in your post. Factor this into your character budget when your tweet contains a link, and use the remaining characters for your actual message."
+        "whyItMatters": "Exceeding a platform's character limit either truncates your message silently or prevents posting altogether. For SEO, a meta title over 60 characters gets cut off in Google search results with an ellipsis, reducing click-through rates because readers see an incomplete headline. Meta descriptions over 160 characters are similarly truncated, wasting the persuasion opportunity. For SMS marketing campaigns, every segment over 160 characters doubles the cost per message sent: a small overage across thousands of sends adds up quickly. Knowing your exact character count before publishing prevents these costly mistakes.",
+        "proTip": "When writing for Twitter/X, remember that URLs are always counted as 23 characters regardless of the URL's actual length, as Twitter's t.co shortener wraps every link automatically. So a 200-character URL still only costs you 23 characters in your post. Factor this into your character budget when your tweet contains a link, and use the remaining characters for your actual message."
       },
       "faqs": [
         {
           "question": "Does the character counter include spaces?",
-          "answer": "Yes — the 'Characters' stat includes spaces. 'Characters (no spaces)' shows the count with all spaces removed. Both figures are shown side by side so you can use whichever is relevant to your platform."
+          "answer": "Yes, the 'Characters' stat includes spaces. 'Characters (no spaces)' shows the count with all spaces removed. Both figures are shown side by side so you can use whichever is relevant to your platform."
         },
         {
           "question": "What is the character limit for X?",
@@ -1972,7 +2065,7 @@
         },
         {
           "question": "What is the difference between character count and byte count?",
-          "answer": "Character count measures how many characters (letters, numbers, symbols, spaces) are in a string. Byte count measures how many bytes are needed to store the string in memory, which can differ for multi-byte characters. For standard ASCII English text, one character equals one byte. For characters outside the basic Latin alphabet — such as accented letters, Chinese characters, or emoji — each character may require 2 to 4 bytes in UTF-8 encoding. Most social media platforms and databases enforce byte-based limits, not character-based ones."
+          "answer": "Character count measures how many characters (letters, numbers, symbols, spaces) are in a string. Byte count measures how many bytes are needed to store the string in memory, which can differ for multi-byte characters. For standard ASCII English text, one character equals one byte. For characters outside the basic Latin alphabet (such as accented letters, Chinese characters, or emoji), each character may require 2 to 4 bytes in UTF-8 encoding. Most social media platforms and databases enforce byte-based limits, not character-based ones."
         },
         {
           "question": "How do emojis affect character count?",
@@ -1997,21 +2090,21 @@
       ]
     },
     "sentenceCounter": {
-      "metaTitle": "Sentence Counter — Count Sentences Online | ToolNotch",
+      "metaTitle": "Sentence Counter: Count Sentences Online | ToolNotch",
       "metaDescription": "Free online sentence counter. Instantly count the number of sentences in your text along with words, characters, and readability scores.",
       "title": "Sentence Counter",
       "description": "Count sentences in your text instantly. Also shows words, characters, and readability scores.",
       "richContent": {
-        "whatIs": "A sentence counter counts the number of complete sentences in your text — each ending with a period, exclamation mark, or question mark. Beyond simple counting, sentence analysis is a core input to readability formulas: both the Flesch Reading Ease score and the Flesch-Kincaid Grade Level use average sentence length (words per sentence) as a primary variable. Very long sentences — those exceeding 30 words — dramatically lower readability scores and increase cognitive load for readers. Sentence count is also relevant to academic writing, where assignments may specify a minimum number of sentences per paragraph, and to content editing, where spotting unusually long or short sentences helps improve the flow and pacing of a piece.",
+        "whatIs": "A sentence counter counts the number of complete sentences in your text, each ending with a period, exclamation mark, or question mark. Beyond simple counting, sentence analysis is a core input to readability formulas: both the Flesch Reading Ease score and the Flesch-Kincaid Grade Level use average sentence length (words per sentence) as a primary variable. Very long sentences (those exceeding 30 words) dramatically lower readability scores and increase cognitive load for readers. Sentence count is also relevant to academic writing, where assignments may specify a minimum number of sentences per paragraph, and to content editing, where spotting unusually long or short sentences helps improve the flow and pacing of a piece.",
         "howToUse": [
-          "Paste your text into the input area — sentence count updates automatically.",
+          "Paste your text into the input area. Sentence count updates automatically.",
           "Read the sentence count and note the average words per sentence figure.",
-          "Identify your longest sentences — these are the best candidates for splitting to improve readability.",
+          "Identify your longest sentences: these are the best candidates for splitting to improve readability.",
           "Aim for an average of 15–20 words per sentence for general audiences.",
           "Edit sentences directly in the box and watch the average update in real time as you revise."
         ],
-        "whyItMatters": "Research by Nielsen Norman Group shows that online readers skim rather than read — averaging only 20–28% of words on a page. Short, varied sentences reduce cognitive load and keep readers engaged longer. Varying sentence length also creates natural rhythm: writing composed entirely of short sentences feels choppy and robotic, while all-long sentences feel dense and exhausting. The sweet spot for most audiences is a mix — mostly 8–15 word sentences with occasional short punches for emphasis and longer sentences for detailed explanation. Checking sentence count helps you audit pacing and catch paragraphs that have grown unwieldy during editing.",
-        "proTip": "In business writing, target an average sentence length of 15–20 words. Academic writing can go up to 25–30 words but should compensate with clear paragraph structure and topic sentences. If your average sentence length is above 25 words, find the longest 30% of your sentences and split each at a natural conjunction or clause boundary — most readers will not notice the change, but comprehension measurably improves."
+        "whyItMatters": "Research by Nielsen Norman Group shows that online readers skim rather than read (averaging only 20–28% of words on a page). Short, varied sentences reduce cognitive load and keep readers engaged longer. Varying sentence length also creates natural rhythm: writing composed entirely of short sentences feels choppy and robotic, while all-long sentences feel dense and exhausting. The sweet spot for most audiences is a mix: mostly 8–15 word sentences with occasional short punches for emphasis and longer sentences for detailed explanation. Checking sentence count helps you audit pacing and catch paragraphs that have grown unwieldy during editing.",
+        "proTip": "In business writing, target an average sentence length of 15–20 words. Academic writing can go up to 25–30 words but should compensate with clear paragraph structure and topic sentences. If your average sentence length is above 25 words, find the longest 30% of your sentences and split each at a natural conjunction or clause boundary: most readers will not notice the change, but comprehension measurably improves."
       },
       "faqs": [
         {
@@ -2029,20 +2122,20 @@
       ]
     },
     "readabilityChecker": {
-      "metaTitle": "Readability Checker — Flesch Score & Reading Level | ToolNotch",
+      "metaTitle": "Readability Checker: Flesch Score & Reading Level | ToolNotch",
       "metaDescription": "Free readability checker. Get Flesch Reading Ease score, Flesch-Kincaid Grade Level, and Gunning Fog Index for any text. Improve your writing clarity.",
       "title": "Readability Checker",
       "description": "Check your text's reading level with Flesch Reading Ease, Flesch-Kincaid Grade, and Gunning Fog scores. Paste your text below and get instant readability analysis.",
       "richContent": {
-        "whatIs": "A readability checker analyses your text and assigns scores that indicate how easy it is to read and understand. The most widely used metric is the Flesch-Kincaid formula, which produces two outputs: the Flesch Reading Ease score (0–100, where higher means easier) and the Flesch-Kincaid Grade Level (the US school grade equivalent of the text). A Flesch Reading Ease score of 60–70 represents standard, accessible writing — suitable for the general public. Scores around 30–50 indicate college-level text, while anything below 30 is considered very difficult. Grade 8 on the Flesch-Kincaid scale is a common target for consumer-facing content because it is comfortable for the vast majority of adult readers regardless of educational background.",
+        "whatIs": "A readability checker analyses your text and assigns scores that indicate how easy it is to read and understand. The most widely used metric is the Flesch-Kincaid formula, which produces two outputs: the Flesch Reading Ease score (0–100, where higher means easier) and the Flesch-Kincaid Grade Level (the US school grade equivalent of the text). A Flesch Reading Ease score of 60–70 represents standard, accessible writing, suitable for the general public. Scores around 30–50 indicate college-level text, while anything below 30 is considered very difficult. Grade 8 on the Flesch-Kincaid scale is a common target for consumer-facing content because it is comfortable for the vast majority of adult readers regardless of educational background.",
         "howToUse": [
-          "Paste your text into the input area — readability scores calculate automatically.",
+          "Paste your text into the input area. Readability scores calculate automatically.",
           "Check the Flesch Reading Ease score: aim for 60–70 for general audiences, higher for younger readers.",
           "Review the Flesch-Kincaid Grade Level to see what education level your text requires.",
-          "Check the Gunning Fog Index for a second opinion — a score of 8–12 suits most general content.",
+          "Check the Gunning Fog Index for a second opinion: a score of 8–12 suits most general content.",
           "Edit your text directly in the box and watch the scores update in real time as you revise."
         ],
-        "whyItMatters": "Readability directly affects whether readers finish your content or leave. Online, the average reader skims — dense, complex writing loses them within seconds. Content written at a Flesch-Kincaid Grade Level of 7–9 consistently outperforms harder text in time-on-page, engagement, and shareability. For SEO, while readability is not a direct ranking signal, lower bounce rates and longer session times — both consequences of readable writing — are strong indirect signals. Marketers, content strategists, educators, and UX writers all use readability scores to ensure their writing matches their audience's expectations and cognitive load.",
+        "whyItMatters": "Readability directly affects whether readers finish your content or leave. Online, the average reader skims: dense, complex writing loses them within seconds. Content written at a Flesch-Kincaid Grade Level of 7–9 consistently outperforms harder text in time-on-page, engagement, and shareability. For SEO, while readability is not a direct ranking signal, lower bounce rates and longer session times (both consequences of readable writing) are strong indirect signals. Marketers, content strategists, educators, and UX writers all use readability scores to ensure their writing matches their audience's expectations and cognitive load.",
         "proTip": "Target a Flesch-Kincaid Grade Level of 7–9 for most blog and marketing content. If your score is above 12, start by finding your three longest sentences and splitting each one at a natural pause. Reducing sentence length is the fastest single lever for improving readability without changing the meaning of your writing."
       },
       "faqs": [
@@ -2060,7 +2153,7 @@
         },
         {
           "question": "What reading level should I target for my audience?",
-          "answer": "Match your reading level to your audience's background and expectations. General news and blog content typically targets grade 7–9 (Flesch-Kincaid). Academic papers and technical documentation may sit at grade 12–16. Marketing copy and e-commerce product descriptions benefit from being at grade 6–8 to maximise accessibility. Children's content should target grade 1–5 depending on age group. If in doubt, aim lower — simpler writing is almost always more effective."
+          "answer": "Match your reading level to your audience's background and expectations. General news and blog content typically targets grade 7–9 (Flesch-Kincaid). Academic papers and technical documentation may sit at grade 12–16. Marketing copy and e-commerce product descriptions benefit from being at grade 6–8 to maximise accessibility. Children's content should target grade 1–5 depending on age group. If in doubt, aim lower: simpler writing is almost always more effective."
         },
         {
           "question": "How can I improve my readability score?",
@@ -2072,7 +2165,7 @@
         },
         {
           "question": "Does readability affect SEO?",
-          "answer": "Readability is not a direct Google ranking factor, but it has indirect effects on SEO performance. Content that is easy to read tends to have lower bounce rates, longer time-on-page, and higher engagement — all of which are signals that search engines use to assess content quality. Readable content is also more likely to be shared, linked to, and recommended, which builds the backlink authority that directly influences rankings. Aiming for a Flesch Reading Ease score of 60+ is a good practice for SEO-oriented content."
+          "answer": "Readability is not a direct Google ranking factor, but it has indirect effects on SEO performance. Content that is easy to read tends to have lower bounce rates, longer time-on-page, and higher engagement, all of which are signals that search engines use to assess content quality. Readable content is also more likely to be shared, linked to, and recommended, which builds the backlink authority that directly influences rankings. Aiming for a Flesch Reading Ease score of 60+ is a good practice for SEO-oriented content."
         },
         {
           "question": "What is a good Flesch Reading Ease score?",
@@ -2089,21 +2182,48 @@
       ]
     },
     "readingTime": {
-      "metaTitle": "Reading Time Calculator — Estimate Reading & Speaking Time | ToolNotch",
+      "metaTitle": "Reading Time Calculator: Estimate Reading & Speaking Time | ToolNotch",
       "metaDescription": "Calculate reading time for any text. Estimates both reading time (238 wpm) and speaking time (130 wpm). Useful for blog posts, speeches, and presentations.",
       "title": "Reading Time Calculator",
       "description": "Calculate how long it takes to read or speak your text. Paste your content below for an instant estimate.",
+      "placeholder": "Paste or type your text here to calculate reading and speaking time...",
+      "ui": {
+        "estimatedReadingTime": "Estimated Reading Time",
+        "estimatedSpeakingTime": "Estimated Speaking Time",
+        "readingSpeedLabel": "Reading Speed",
+        "speakingSpeedLabel": "Speaking Speed",
+        "wordsPerMinute": "{wpm} wpm",
+        "speedSlow": "Slow",
+        "speedMedium": "Medium",
+        "speedFast": "Fast",
+        "speedSuperFast": "Super Fast",
+        "seconds": "{s}s",
+        "minutesAndSeconds": "{m}m {s}s",
+        "complexityNote": "Complexity Level",
+        "complexityEasy": "Easy to read (standard pace)",
+        "complexityAverage": "Average complexity",
+        "complexityHard": "Hard to read (+15% time)",
+        "complexityVeryHard": "Very hard (+30% time)",
+        "startSpeedReader": "Start Speed Reader",
+        "speedReaderTitle": "Speed Reader (RSVP)",
+        "closeSpeedReader": "Close",
+        "done": "Reading Complete!",
+        "wordCounter": "{current} of {total} words",
+        "play": "Play",
+        "pause": "Pause",
+        "reset": "Reset"
+      },
       "richContent": {
-        "whatIs": "A reading time calculator estimates how long it takes to read a piece of text by dividing its word count by an average reading speed. The standard adult silent reading speed for non-fiction is 200–250 words per minute (wpm), with research commonly citing 238 wpm as a reliable benchmark. Comprehension drops significantly above 300 wpm, so speed-reading figures are not used for realistic estimates. Content type affects effective reading speed: dense technical material reads slower at 150–180 wpm, while skimming-friendly listicles read faster. Most blog platforms — Medium, Substack, Ghost — display a reading time estimate prominently at the top of articles because it directly affects whether readers click through and start reading.",
+        "whatIs": "A reading time calculator estimates how long it takes to read a piece of text by dividing its word count by an average reading speed. The standard adult silent reading speed for non-fiction is 200–250 words per minute (wpm), with research commonly citing 238 wpm as a reliable benchmark. Comprehension drops significantly above 300 wpm, so speed-reading figures are not used for realistic estimates. Content type affects effective reading speed: dense technical material reads slower at 150–180 wpm, while skimming-friendly listicles read faster. Most blog platforms (Medium, Substack, Ghost) display a reading time estimate prominently at the top of articles because it directly affects whether readers click through and start reading.",
         "howToUse": [
-          "Paste your article or text into the input area — reading and speaking time calculate instantly.",
+          "Paste your article or text into the input area. Reading and speaking time calculate instantly.",
           "Read the estimated reading time based on the standard 238 wpm adult reading rate.",
           "Check the speaking time estimate (around 130 wpm) if you are preparing a script, podcast, or presentation.",
           "For technical content, mentally add 20–30% to the reading time estimate to account for slower processing.",
           "Use the word count alongside reading time to gauge whether your content length matches your channel (LinkedIn posts under 2 min, blog SEO content 7–15 min)."
         ],
-        "whyItMatters": "Articles with a displayed reading time have higher engagement rates because readers self-select: someone with 3 minutes available will start a 3-minute article but skip a 12-minute one without even opening it. For content marketers, matching content length to the channel matters — LinkedIn posts under 2 minutes, email newsletters 3–5 minutes, long-form SEO content 7–15 minutes. Reading time also serves as a proxy for content depth: longer pieces signal comprehensive coverage, which tends to correlate with higher search rankings, more backlinks, and greater social share rates.",
-        "proTip": "Audio podcasts and recorded narration are delivered at 150–160 wpm — roughly half the speed of silent reading. If you are adapting a blog post into a podcast script or voice-over, double the reading time estimate to get an accurate audio runtime. A 5-minute read becomes approximately a 10-minute listen, which is critical for planning podcast episode length and scheduling."
+        "whyItMatters": "Articles with a displayed reading time have higher engagement rates because readers self-select: someone with 3 minutes available will start a 3-minute article but skip a 12-minute one without even opening it. For content marketers, matching content length to the channel matters: LinkedIn posts under 2 minutes, email newsletters 3–5 minutes, and long-form SEO content 7–15 minutes. Reading time also serves as a proxy for content depth: longer pieces signal comprehensive coverage, which tends to correlate with higher search rankings, more backlinks, and greater social share rates.",
+        "proTip": "Audio podcasts and recorded narration are delivered at 150–160 wpm, roughly half the speed of silent reading. If you are adapting a blog post into a podcast script or voice-over, double the reading time estimate to get an accurate audio runtime. A 5-minute read becomes approximately a 10-minute listen, which is critical for planning podcast episode length and scheduling."
       },
       "faqs": [
         {
@@ -2112,7 +2232,7 @@
         },
         {
           "question": "What is the average adult reading speed?",
-          "answer": "Research puts the average adult silent reading speed for non-fiction at approximately 238 words per minute, with comprehension maintained. Reading speed varies with text complexity — technical or unfamiliar content is read more slowly, while light fiction is read faster. Speed readers using skimming techniques can reach 400–700 wpm, but with reduced comprehension at higher rates."
+          "answer": "Research puts the average adult silent reading speed for non-fiction at approximately 238 words per minute, with comprehension maintained. Reading speed varies with text complexity: technical or unfamiliar content is read more slowly, while light fiction is read faster. Speed readers using skimming techniques can reach 400–700 wpm, but with reduced comprehension at higher rates."
         },
         {
           "question": "Does reading time include code blocks?",
@@ -2120,7 +2240,7 @@
         },
         {
           "question": "Why does reading time matter for blog posts?",
-          "answer": "Displaying an estimated reading time at the top of a blog post sets reader expectations and reduces bounce rates — readers are less likely to leave immediately if they know the article is a 3-minute rather than a 15-minute read. Reading time also serves as a proxy for content depth: longer reading times signal comprehensive coverage, which tends to correlate with better search rankings and more social shares."
+          "answer": "Displaying an estimated reading time at the top of a blog post sets reader expectations and reduces bounce rates: readers are less likely to leave immediately if they know the article is a 3-minute rather than a 15-minute read. Reading time also serves as a proxy for content depth: longer reading times signal comprehensive coverage, which tends to correlate with better search rankings and more social shares."
         },
         {
           "question": "How does reading time differ for different age groups?",
@@ -2145,16 +2265,16 @@
       ]
     },
     "wordFrequency": {
-      "metaTitle": "Word Frequency Counter — Find Most Repeated Words | ToolNotch",
-      "metaDescription": "Free word frequency counter. See how many times each word appears in your text, ranked by count — find overused words, verbal tics and vocabulary patterns.",
+      "metaTitle": "Word Frequency Counter: Find Most Repeated Words | ToolNotch",
+      "metaDescription": "Free word frequency counter. See how many times each word appears in your text, ranked by count. Find overused words, verbal tics, and vocabulary patterns.",
       "title": "Word Frequency Counter",
       "description": "Paste any text to see how many times each word appears, ranked from most to least frequent. Built for editing, style analysis and research.",
       "richContent": {
-        "whatIs": "A word frequency counter tallies every word in a passage and ranks them from most to least common. Common function words — \"the\", \"a\", \"is\", \"of\", \"and\" — are filtered out so the list shows the words that carry meaning. Frequency analysis is one of the oldest tools in linguistics: it underpins concordances, readability formulas, dictionary frequency bands, and authorship studies that identify a writer by their unconscious habits. For everyday writing it has a simpler use — it shows you, in seconds, which words you lean on. Repetition that is invisible while drafting becomes obvious in a ranked list, and that is usually the fastest route to tighter prose.",
+        "whatIs": "A word frequency counter tallies every word in a passage and ranks them from most to least common. Common function words (\"the\", \"a\", \"is\", \"of\", \"and\") are filtered out so the list shows the words that carry meaning. Frequency analysis is one of the oldest tools in linguistics: it underpins concordances, readability formulas, dictionary frequency bands, and authorship studies that identify a writer by their unconscious habits. For everyday writing it has a simpler use: it shows you, in seconds, which words you lean on. Repetition that is invisible while drafting becomes obvious in a ranked list, and that is usually the fastest route to tighter prose.",
         "howToUse": [
-          "Paste your text — an essay, chapter, transcript, or a batch of reviews — into the box. The frequency table builds instantly.",
+          "Paste your text (an essay, chapter, transcript, or a batch of reviews) into the box. The frequency table builds instantly.",
           "Read down the list. The top content words are your subject; the ones that surprise you are worth a closer look.",
-          "Flag filler and hedges near the top — \"just\", \"very\", \"really\", \"actually\", \"quite\", \"basically\" — and cut or vary them.",
+          "Flag filler and hedges near the top (\"just\", \"very\", \"really\", \"actually\", \"quite\", \"basically\") and cut or vary them.",
           "Check whether any single strong verb or noun is doing too much work, and reach for a synonym on some of its uses.",
           "For research, copy the list to export the counts, or compare two texts by running them one after another."
         ],
@@ -2178,7 +2298,7 @@
         },
         {
           "question": "Why is a word I expected missing from the results?",
-          "answer": "Common grammatical words — articles, pronouns, prepositions, conjunctions and auxiliary verbs like \"the\", \"it\", \"of\" and \"is\" — are filtered out so the list shows meaningful content words. Everything else is counted."
+          "answer": "Common grammatical words (articles, pronouns, prepositions, conjunctions and auxiliary verbs like \"the\", \"it\", \"of\" and \"is\") are filtered out so the list shows meaningful content words. Everything else is counted."
         },
         {
           "question": "Is the count case-sensitive?",
@@ -2197,11 +2317,11 @@
         "heading": "Related tools and guides",
         "items": [
           {
-            "label": "Keyword Density Checker — the same counts framed for on-page SEO",
+            "label": "Keyword Density Checker: the same counts framed for on-page SEO",
             "path": "/tools/text/keyword-density-checker"
           },
           {
-            "label": "Word Counter — words, characters, sentences and reading time",
+            "label": "Word Counter: words, characters, sentences and reading time",
             "path": "/tools/text/word-counter"
           },
           {
@@ -2212,29 +2332,29 @@
       }
     },
     "keywordDensity": {
-      "metaTitle": "Keyword Density Checker — Free On-Page SEO Tool | ToolNotch",
+      "metaTitle": "Keyword Density Checker: Free On-Page SEO Tool | ToolNotch",
       "metaDescription": "Free keyword density checker for SEO. See each term’s count and percentage in your copy, catch keyword stuffing, and tune your target keyword.",
       "title": "Keyword Density Checker",
-      "description": "Paste your page copy to see each keyword’s density as a percentage of total words — built for on-page SEO and content optimization.",
+      "description": "Paste your page copy to see each keyword’s density as a percentage of total words, built for on-page SEO and content optimization.",
       "richContent": {
-        "whatIs": "Keyword density is the share of your copy taken up by one term: (times the keyword appears ÷ total words) × 100. On-page SEO uses it as a quick sanity check that a page is clearly about its target query without repeating that query so often the text reads like spam. The common working range is 1–3% for a primary keyword. Below roughly 0.5% the term may be too incidental for the page to be judged relevant; above 3–4% the copy starts to sound engineered and risks an over-optimization filter. Density is a rough signal, not a ranking factor Google publishes — treat it as an editing aid, not a target to hit exactly.",
+        "whatIs": "Keyword density is the share of your copy taken up by one term: (times the keyword appears ÷ total words) × 100. On-page SEO uses it as a quick sanity check that a page is clearly about its target query without repeating that query so often the text reads like spam. The common working range is 1–3% for a primary keyword. Below roughly 0.5% the term may be too incidental for the page to be judged relevant; above 3–4% the copy starts to sound engineered and risks an over-optimization filter. Density is a rough signal, not a ranking factor Google publishes: treat it as an editing aid, not a target to hit exactly.",
         "howToUse": [
-          "Paste your draft — headings, intro, body, and conclusion — into the box. The keyword list and density percentages update as you type.",
+          "Paste your draft (headings, intro, body, and conclusion) into the box. The keyword list and density percentages update as you type.",
           "Find your primary target keyword (or its close variants) in the ranked list and read off its density.",
           "Aim for roughly 1–3%. If it is higher, swap some exact-match uses for pronouns, synonyms, or partial phrases.",
           "If it is under about 0.5%, work the term into the title, the first 100 words, one subheading, and the conclusion where it fits naturally.",
           "Scan the rest of the list for supporting terms a search engine would expect on this topic, and make sure they appear at least once."
         ],
-        "whyItMatters": "Search engines reward pages that cover a topic the way an expert would — which usually means the main term appears a handful of times and a wide vocabulary of related terms fills in the rest. Density checking catches the two failure modes that hurt rankings: a page so lightly optimized that no single query is obviously its focus, and a page so heavily repeated that it trips spam heuristics or simply reads badly and loses the visitor. Running the check before you publish is faster than diagnosing a page that quietly underperforms for months.",
-        "proTip": "Before writing, run this check on the two or three pages already ranking for your target query. The content words they share — beyond the main keyword — are the sub-topics Google expects to see. Cover those in your draft, then use the checker on your own text to confirm your primary term sits near 1% and none of the supporting terms are missing. That is more reliable than aiming for a fixed density.",
+        "whyItMatters": "Search engines reward pages that cover a topic the way an expert would, which usually means the main term appears a handful of times and a wide vocabulary of related terms fills in the rest. Density checking catches the two failure modes that hurt rankings: a page so lightly optimized that no single query is obviously its focus, and a page so heavily repeated that it trips spam heuristics or simply reads badly and loses the visitor. Running the check before you publish is faster than diagnosing a page that quietly underperforms for months.",
+        "proTip": "Before writing, run this check on the two or three pages already ranking for your target query. The content words they share (beyond the main keyword) are the sub-topics Google expects to see. Cover those in your draft, then use the checker on your own text to confirm your primary term sits near 1% and none of the supporting terms are missing. That is more reliable than aiming for a fixed density.",
         "sections": [
           {
             "heading": "What counts as a good keyword density?",
-            "body": "There is no official number. Studies of top-ranking pages tend to find primary-keyword densities clustered between 0.5% and 2.5%, with most around 1%. Long pages naturally dilute density, so a 2,000-word article may rank well with its main term at 0.7%, while a 300-word page might carry it at 2%. Rather than forcing a percentage, use the checker to confirm the term is present in the key positions — title, opening, a heading, image alt text, and the URL — and that nothing else is accidentally dominating the page. If a brand name, a navigation label, or a boilerplate phrase tops your list, that is worth fixing before you worry about the target keyword."
+            "body": "There is no official number. Studies of top-ranking pages tend to find primary-keyword densities clustered between 0.5% and 2.5%, with most around 1%. Long pages naturally dilute density, so a 2,000-word article may rank well with its main term at 0.7%, while a 300-word page might carry it at 2%. Rather than forcing a percentage, use the checker to confirm the term is present in the key positions (title, opening, a heading, image alt text, and the URL) and that nothing else is accidentally dominating the page. If a brand name, a navigation label, or a boilerplate phrase tops your list, that is worth fixing before you worry about the target keyword."
           },
           {
             "heading": "How to read the output",
-            "body": "The tool lowercases the text, removes common stop words such as \"the\", \"and\", and \"of\", strips punctuation, then counts what remains. Each row shows a word, how many times it occurs, and that count as a percentage of total words. Multi-word phrases are not tracked directly — check the individual words of your phrase and look at whether they trend together. Numbers, one-letter tokens, and stop words are excluded so the list reflects meaningful content. Use the ranked order to see your page’s actual emphasis, which is often different from what you intended while drafting."
+            "body": "The tool lowercases the text, strips punctuation, and counts phrase frequencies. You can analyze single words (1 Word) or multi-word phrases (2-Word Bigrams and 3-Word Trigrams), with an option to filter common stopwords. Each row displays the term, total occurrences, density percentage, and an SEO status indicator (Low, Optimal between 1% and 3%, or High above 3.5%)."
           }
         ]
       },
@@ -2257,18 +2377,18 @@
         },
         {
           "question": "Does this tool check two- or three-word phrases?",
-          "answer": "It analyzes single words after removing stop words and punctuation. To gauge a phrase, review its individual words in the list and whether their counts rise together."
+          "answer": "Yes! You can easily toggle between 1 Word, 2 Words (Bigrams), and 3 Words (Trigrams) using the controls above the table to analyze compound keywords and long-tail search phrases."
         }
       ],
       "related": {
         "heading": "Related tools and guides",
         "items": [
           {
-            "label": "Word Frequency Counter — rank every word by how often it appears",
+            "label": "Word Frequency Counter: rank every word by how often it appears",
             "path": "/tools/text/word-frequency-counter"
           },
           {
-            "label": "Word Counter — words, characters, sentences and reading time",
+            "label": "Word Counter: words, characters, sentences and reading time",
             "path": "/tools/text/word-counter"
           },
           {
@@ -2278,10 +2398,12 @@
         ]
       }
     },
-    "sampleText": "The quick brown fox jumps over the lazy dog. This sentence has been used for decades as a pangram — a phrase containing every letter of the alphabet. It is commonly used to demonstrate fonts, test typewriters, and practice typing.\n\nReadability is an important consideration in writing. Clear, concise sentences help readers understand your message quickly. Long, convoluted sentences with complex vocabulary can make text difficult to parse, especially for readers who are not specialists in the subject matter at hand.\n\nGood writing balances clarity with depth. Professional writers aim for a Flesch Reading Ease score between 60 and 70 for most audiences.",
+    "sampleText": "The quick brown fox jumps over the lazy dog. This sentence has been used for decades as a pangram (a phrase containing every letter of the alphabet). It is commonly used to demonstrate fonts, test typewriters, and practice typing.\n\nReadability is an important consideration in writing. Clear, concise sentences help readers understand your message quickly. Long, convoluted sentences with complex vocabulary can make text difficult to parse, especially for readers who are not specialists in the subject matter at hand.\n\nGood writing balances clarity with depth. Professional writers aim for a Flesch Reading Ease score between 60 and 70 for most audiences.",
     "buttons": {
       "sampleText": "Sample text",
-      "clear": "Clear"
+      "clear": "Clear",
+      "copy": "Copy Text",
+      "copied": "Copied!"
     },
     "stats": {
       "words": "Words",
@@ -2302,7 +2424,15 @@
       "yearsEducation": "Years of education",
       "higherEasier": "Higher = easier to read",
       "lowerAccessible": "Lower = more accessible",
-      "syllableNote": "Syllable counting is a heuristic approximation. Scores may vary slightly from other tools."
+      "syllableNote": "Syllable counting is a heuristic approximation. Scores may vary slightly from other tools.",
+      "fleschLabels": {
+        "veryEasy": "Very Easy",
+        "easy": "Easy",
+        "standard": "Standard Web",
+        "fairlyDifficult": "Fairly Difficult",
+        "difficult": "Difficult",
+        "veryDifficult": "Very Difficult"
+      }
     }
   },
   "finance": {
@@ -4772,6 +4902,13 @@
     "metaDescription": "Free percentage calculator. Calculate what percent of a number is, find the percentage change between two values, or work out a value from a percentage.",
     "title": "Percentage Calculator",
     "description": "Three percentage calculators in one: what is X% of Y, X is what % of Y, and percentage change.",
+    "badge3Modes": "3 Calculation Modes",
+    "badgeRealtime": "Real-Time",
+    "badgePrivate": "100% Private",
+    "copyResult": "Copy Result",
+    "copied": "Copied!",
+    "quickPercentages": "Quick Percentages",
+    "formula": "Formula",
     "tabs": {
       "percentOf": "% of Number",
       "whatPercent": "What % is",
@@ -8063,6 +8200,7 @@
     "label": "Recommended tool",
     "dismiss": "Dismiss",
     "disclosure": "Some links above are affiliate links. If you sign up through them we may earn a commission, at no extra cost to you.",
+    "alsoRecommended": "Also recommended",
     "offers": {
       "quillbot-paraphraser": {
         "name": "QuillBot Paraphrasing Tool",

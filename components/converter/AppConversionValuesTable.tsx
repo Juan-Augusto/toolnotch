@@ -1,5 +1,12 @@
 import { buildConversionRows } from "@/lib/conversionTable";
 import { UnitCategory } from "@/lib/unitTypes";
+import AppTable, {
+  AppTableHeader,
+  AppTableBody,
+  AppTableRow,
+  AppTableHead,
+  AppTableCell,
+} from "@/components/ui/AppTable";
 
 interface ConversionValuesTableProps {
   fromUnit: string;
@@ -35,61 +42,36 @@ export default function AppConversionValuesTable({
   const rows = buildConversionRows(fromUnit, toUnit, category);
 
   return (
-    <section className="mt-12">
-      <h2 className="text-xl font-bold mb-3 section-heading">{heading}</h2>
-      <p
-        className="leading-relaxed mb-4"
-        style={{ color: "var(--text-secondary)" }}
+    <section aria-labelledby="conversion-table-heading" className="mt-8 sm:mt-10">
+      <h2
+        id="conversion-table-heading"
+        className="text-base sm:text-lg md:text-xl font-bold uppercase text-foreground font-mono mb-2 sm:mb-3"
       >
+        {heading}
+      </h2>
+      <p className="leading-relaxed text-label font-mono text-xs sm:text-sm mb-4">
         {caption}
       </p>
-      <div className=" p-4 overflow-x-auto">
-        <table className="w-full text-sm border-collapse">
-          <thead>
-            <tr>
-              <th
-                scope="col"
-                className="text-left font-semibold pb-2 border-b"
-                style={{
-                  color: "var(--text-primary)",
-                  borderColor: "var(--base-border)",
-                }}
-              >
-                {fromLabel}
-              </th>
-              <th
-                scope="col"
-                className="text-left font-semibold pb-2 border-b"
-                style={{
-                  color: "var(--text-primary)",
-                  borderColor: "var(--base-border)",
-                }}
-              >
-                {toLabel}
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((row) => (
-              <tr key={row.from}>
-                <th
-                  scope="row"
-                  className="text-left font-normal py-2"
-                  style={{ color: "var(--text-secondary)" }}
-                >
-                  {row.from}
-                </th>
-                <td
-                  className="py-2 font-medium"
-                  style={{ color: "var(--text-primary)" }}
-                >
-                  {row.to}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <AppTable hoverable={true}>
+        <AppTableHeader>
+          <AppTableRow hoverable={false}>
+            <AppTableHead>{fromLabel}</AppTableHead>
+            <AppTableHead align="right">{toLabel}</AppTableHead>
+          </AppTableRow>
+        </AppTableHeader>
+        <AppTableBody>
+          {rows.map((row) => (
+            <AppTableRow key={row.from}>
+              <AppTableCell className="text-label font-normal">
+                {row.from}
+              </AppTableCell>
+              <AppTableCell align="right" className="font-bold text-foreground">
+                {row.to}
+              </AppTableCell>
+            </AppTableRow>
+          ))}
+        </AppTableBody>
+      </AppTable>
     </section>
   );
 }

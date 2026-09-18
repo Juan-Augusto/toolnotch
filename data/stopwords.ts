@@ -25,4 +25,23 @@ export const STOPWORDS = new Set([
   'mother','area','money','story','fact','month','lot','right','study','book',
   'eye','job','word','business','issue','side','kind','four','head','far','black',
   'long','both','little','house','yes','since','ever','put','end',
+  // Portuguese Stopwords
+  'de','a','o','que','e','do','da','em','um','para','com','nao','não',
+  'uma','os','no','se','na','por','mais','as','dos','como','mas','foi',
+  'ao','ele','das','tem','à','seu','sua','ou','ser','quando','muito',
+  'ha','há','nos','já','está','eu','também','tambem','só','pelo','pela',
+  'até','isso','ela','entre','era','depois','sem','mesmo','aos','ter',
+  'seus','quem','nas','me','esse','eles','estão','você','voce','tinha',
+  'foram','essa','num','nem','suas','meu','às','minha','têm','numa',
+  'pelos','elas','havia','seja','qual','será','nós','tenho','lhe','deles',
+  'essas','esses','pelas','este','fosse','dele','tu','te','vocês','vos',
+  'esta','estas','estes','sido','todas','todos','todo','toda','sob','sobre',
+  // Spanish Stopwords
+  'el','la','los','las','un','una','unos','unas','y','en','de','que',
+  'es','por','para','con','no','su','al','lo','como','más','pero',
+  'sus','le','ya','o','este','sí','porque','esta','son','entre','está',
+  'cuando','muy','sin','sobre','ser','tiene','también','me','hasta','hay',
+  'donde','quien','desde','todo','nos','durante','todos','uno','les','ni',
+  'contra','otros','ese','eso','ante','ellos','esto','mí','antes',
+  'algunos','qué','yo','otro','otras','otra','él','tanto','esa',
 ])

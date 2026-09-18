@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
-import AppToolWrapper from "@/components/AppToolWrapper";
+import { AppAccordion, AppTip } from "@/components/ui";
+import ConvertToolHeader from "../components/ConvertToolHeader";
 import AppConversionWidget from "@/components/converter/AppConversionWidget";
 import AppConversionValuesTable from "@/components/converter/AppConversionValuesTable";
 import AppRelatedConversions from "@/components/converter/AppRelatedConversions";
+import AppAdUnit from "@/components/AppAdUnit";
 import { COMMON_PAIRS } from "@/data/conversionPairs";
 import {
   getPairContent,
@@ -12,13 +14,15 @@ import {
 } from "@/data/conversionPairContent";
 import { convert, formatResult } from "@/lib/units";
 import { UNIT_LABELS } from "@/data/units";
-import { buildAlternates } from "@/lib/i18nMeta";
+import { getLocalizedPairTitle } from "@/lib/conversionPairHelper";
+import { buildAlternatesForLocale, localizedPath } from "@/lib/i18nMeta";
 import { AD_SLOTS } from "@/lib/adSlots";
 import {
   buildJsonLd,
   webAppSchema,
   faqSchema,
   breadcrumbSchema,
+  buildLocalizedUrl,
 } from "@/lib/schema";
 import { locales } from "@/i18n";
 import type { FaqItem } from "@/components/AppFaqSection";
@@ -40,8 +44,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const content = getPairContent(slug, locale);
 
-  const title = content?.metaTitle ?? `${pair.title} — Free Online Converter`;
+  const localizedPairTitle = getLocalizedPairTitle(pair, locale);
+  const title =
+    content?.metaTitle ?? `${localizedPairTitle} — ToolNotch`;
   const description = content?.metaDescription ?? pair.description;
+  const localizedUrl = buildLocalizedUrl(`/tools/convert/${slug}`, locale);
+  const ogLocale =
+    locale === "pt" ? "pt_BR" : locale === "es" ? "es_ES" : "en_US";
 
   const isPriority = (PRIORITY_PAIR_SLUGS as readonly string[]).includes(slug);
 
@@ -49,11 +58,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     ...(isPriority ? {} : { robots: { index: false, follow: true } }),
-    alternates: buildAlternates(`/tools/convert/${slug}`),
+    alternates: buildAlternatesForLocale(`/tools/convert/${slug}`, locale),
     openGraph: {
-      title: content?.h1 ?? pair.title,
+      title: content?.h1 ?? localizedPairTitle,
       description,
-      url: `/tools/convert/${slug}`,
+      url: localizedUrl,
+      siteName: "ToolNotch",
+      locale: ogLocale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: content?.h1 ?? localizedPairTitle,
+      description,
     },
   };
 }
@@ -73,7 +90,7 @@ export default async function ConversionSlugPage({ params }: Props) {
   );
   const fromLabel = content?.fromLabel ?? UNIT_LABELS[pair.from] ?? pair.from;
   const toLabel = content?.toLabel ?? UNIT_LABELS[pair.to] ?? pair.to;
-  const heading = content?.h1 ?? pair.title;
+  const heading = content?.h1 ?? getLocalizedPairTitle(pair, locale);
   const intro = content?.intro ?? pair.description;
   const formula =
     content?.formula ?? `1 ${fromLabel} = ${featuredValue} ${toLabel}`;
@@ -118,6 +135,13 @@ export default async function ConversionSlugPage({ params }: Props) {
     },
   ];
 
+  const homeLabel =
+    locale === "pt" ? "Início" : locale === "es" ? "Inicio" : "Home";
+  const toolsLabel =
+    locale === "pt" ? "Ferramentas" : locale === "es" ? "Herramientas" : "Tools";
+  const convertLabel =
+    locale === "pt" ? "Conversores" : locale === "es" ? "Conversores" : "Converters";
+
   const jsonLd = buildJsonLd(
     webAppSchema(
       heading,
@@ -127,9 +151,10 @@ export default async function ConversionSlugPage({ params }: Props) {
     ),
     faqSchema(pageFaqs),
     breadcrumbSchema([
-      { name: tw("breadcrumb.home"), url: "/" },
-      { name: t("slugPages.breadcrumbConverter"), url: "/tools/convert" },
-      { name: heading, url: `/tools/convert/${slug}` },
+      { name: homeLabel, url: localizedPath("/", locale) },
+      { name: toolsLabel, url: localizedPath("/tools", locale) },
+      { name: convertLabel, url: localizedPath("/tools/convert", locale) },
+      { name: heading, url: buildLocalizedUrl(`/tools/convert/${slug}`, locale) },
     ]),
   );
 
@@ -139,134 +164,157 @@ export default async function ConversionSlugPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <AppToolWrapper
-        title={heading}
-        description={intro}
-        breadcrumbLabel={heading}
-        faqs={pageFaqs}
-        adSlot={AD_SLOTS.CONVERT_SLUG}
-        noCardWrapper
-      >
-        <div className=" mb-6 text-center">
-          <p
-            className="text-lg font-semibold"
-            style={{ color: "var(--text-primary)" }}
-          >
-            1 {fromLabel} ={" "}
-            <strong>
-              {featuredValue} {toLabel}
-            </strong>
-          </p>
-        </div>
-
-        <div className=" p-6">
-          <AppConversionWidget
-            category={pair.category}
-            defaultFrom={pair.from}
-            defaultTo={pair.to}
+      <main className="container min-h-[calc(100vh-180px)] bg-background text-foreground py-3 sm:py-6 md:py-8">
+        <div className="w-full">
+          <ConvertToolHeader
+            title={heading}
+            description={intro}
+            locale={locale}
+            badges={[{ text: categoryName }]}
           />
-        </div>
 
-        {content && (
-          <>
-            <section className="mt-12">
-              <h2 className="text-xl font-bold mb-3 section-heading">
-                {t("slugPages.aboutHeading", { from: fromLabel, to: toLabel })}
-              </h2>
-              <p
-                className="leading-relaxed"
-                style={{ color: "var(--text-secondary)" }}
-              >
-                {content.about}
-              </p>
-            </section>
+          <section
+            aria-label={heading}
+            className="mb-10 sm:mb-14 w-full"
+          >
+            <AppConversionWidget
+              category={pair.category}
+              defaultFrom={pair.from}
+              defaultTo={pair.to}
+            />
+          </section>
 
-            <section className="mt-12">
-              <h2 className="text-xl font-bold mb-3 section-heading">
-                {t("slugPages.formulaHeading")}
-              </h2>
-              <p
-                className=" p-4 my-4 text-center text-base"
-                style={{ color: "var(--text-primary)" }}
-              >
-                {content.formula}
-              </p>
-              <p
-                className="leading-relaxed"
-                style={{ color: "var(--text-secondary)" }}
-              >
-                {content.formulaNote}
-              </p>
-            </section>
-          </>
-        )}
+          <article className="space-y-6 sm:space-y-8 md:space-y-10 mb-6 sm:mb-8 md:mb-10 w-full font-mono">
+            {content?.about && (
+              <section aria-labelledby="about-heading">
+                <h2
+                  id="about-heading"
+                  className="text-base sm:text-lg md:text-xl font-bold uppercase text-foreground mb-2 sm:mb-3"
+                >
+                  {t("slugPages.aboutHeading", {
+                    from: fromLabel,
+                    to: toLabel,
+                  })}
+                </h2>
+                <p className="leading-relaxed text-label text-xs sm:text-sm">
+                  {content.about}
+                </p>
+              </section>
+            )}
 
-        <AppConversionValuesTable
-          fromUnit={pair.from}
-          toUnit={pair.to}
-          category={pair.category}
-          fromLabel={fromLabel}
-          toLabel={toLabel}
-          heading={t("slugPages.tableHeading", {
-            from: fromLabel,
-            to: toLabel,
-          })}
-          caption={t("slugPages.tableCaption", {
-            from: fromLabel,
-            to: toLabel,
-          })}
-        />
+            {content?.formula && (
+              <section aria-labelledby="formula-heading">
+                <h2
+                  id="formula-heading"
+                  className="text-base sm:text-lg md:text-xl font-bold uppercase text-foreground mb-2 sm:mb-3"
+                >
+                  {t("slugPages.formulaHeading")}
+                </h2>
+                <div className="p-3 sm:p-4 bg-tertiary border border-border rounded-[2px] text-center my-3">
+                  <code className="text-sm sm:text-base font-bold text-foreground">
+                    {content.formula}
+                  </code>
+                </div>
+                {content.formulaNote && (
+                  <p className="leading-relaxed text-label text-xs sm:text-sm">
+                    {content.formulaNote}
+                  </p>
+                )}
+              </section>
+            )}
 
-        {content && (
-          <>
-            <section className="mt-12">
-              <h2 className="text-xl font-bold mb-4 section-heading">
-                {t("slugPages.scenariosHeading")}
-              </h2>
-              <div className="space-y-5">
-                {content.scenarios.map((scenario) => (
-                  <div key={scenario.title}>
-                    <h3
-                      className="font-semibold mb-1"
-                      style={{ color: "var(--text-primary)" }}
+            <AppConversionValuesTable
+              fromUnit={pair.from}
+              toUnit={pair.to}
+              category={pair.category}
+              fromLabel={fromLabel}
+              toLabel={toLabel}
+              heading={t("slugPages.tableHeading", {
+                from: fromLabel,
+                to: toLabel,
+              })}
+              caption={t("slugPages.tableCaption", {
+                from: fromLabel,
+                to: toLabel,
+              })}
+            />
+
+            {content?.scenarios && content.scenarios.length > 0 && (
+              <section aria-labelledby="scenarios-heading">
+                <h2
+                  id="scenarios-heading"
+                  className="text-base sm:text-lg md:text-xl font-bold uppercase text-foreground mb-3 sm:mb-4"
+                >
+                  {t("slugPages.scenariosHeading")}
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3.5">
+                  {content.scenarios.map((scenario) => (
+                    <div
+                      key={scenario.title}
+                      className="p-3 sm:p-4 bg-tertiary border border-border rounded-[2px]"
                     >
-                      {scenario.title}
-                    </h3>
-                    <p
-                      className="leading-relaxed"
-                      style={{ color: "var(--text-secondary)" }}
-                    >
-                      {scenario.text}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </section>
+                      <h3 className="text-xs sm:text-sm font-bold uppercase text-foreground mb-1.5">
+                        {scenario.title}
+                      </h3>
+                      <p className="leading-relaxed text-label text-xs">
+                        {scenario.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
 
-            <div className=" mt-8">
-              <p
-                className="text-xs font-bold mb-1.5 uppercase st"
-                style={{ color: "var(--neon)" }}
-              >
-                {t("slugPages.proTipLabel")}
-              </p>
-              <p
-                className="text-sm leading-relaxed"
-                style={{ color: "var(--text-secondary)" }}
-              >
+            {content?.proTip && (
+              <AppTip title={t("slugPages.proTipLabel")}>
                 {content.proTip}
-              </p>
-            </div>
-          </>
-        )}
+              </AppTip>
+            )}
 
-        <AppRelatedConversions
-          currentSlug={slug}
-          category={pair.category}
-          locale={locale}
-          heading={t("slugPages.relatedHeading", { category: categoryName })}
-        />
-      </AppToolWrapper>
+            {pageFaqs && pageFaqs.length > 0 && (
+              <section
+                aria-labelledby="faqs-heading"
+                className="mb-6 sm:mb-8 md:mb-12"
+              >
+                <h2
+                  id="faqs-heading"
+                  className="text-base sm:text-lg md:text-xl font-bold uppercase text-foreground mb-3 sm:mb-4 md:mb-6"
+                >
+                  {locale === "pt"
+                    ? "Perguntas Frequentes"
+                    : locale === "es"
+                      ? "Preguntas Frecuentes"
+                      : "Frequently Asked Questions"}
+                </h2>
+                <AppAccordion
+                  groups={pageFaqs.map((faq, index) => ({
+                    id: `faq-${index}`,
+                    name: faq.question,
+                    content: (
+                      <p className="leading-relaxed text-label text-xs sm:text-sm">
+                        {faq.answer}
+                      </p>
+                    ),
+                  }))}
+                />
+              </section>
+            )}
+
+            <div className="my-6">
+              <AppAdUnit slot={AD_SLOTS.CONVERT_SLUG} />
+            </div>
+
+            <AppRelatedConversions
+              currentSlug={slug}
+              category={pair.category}
+              locale={locale}
+              heading={t("slugPages.relatedHeading", {
+                category: categoryName,
+              })}
+            />
+          </article>
+        </div>
+      </main>
     </>
   );
 }

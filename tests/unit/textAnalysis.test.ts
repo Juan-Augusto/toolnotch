@@ -194,3 +194,20 @@ describe('analyzeText — Flesch Reading Ease score', () => {
     expect(simpleResult.fleschEase).toBeGreaterThan(complexResult.fleschEase)
   })
 })
+
+// ── multilingual & accented word preservation ────────────────────────────────
+
+describe('analyzeText — multilingual & accented word preservation', () => {
+  test('preserves accented characters in topWords (e.g. rápido, cão, preguiçoso)', () => {
+    const text = 'O rápido texugo marrom pula sobre o cão preguiçoso. Este cão é muito rápido.'
+    const result = analyzeText(text)
+    const words = result.topWords.map(w => w.word)
+
+    expect(words).toContain('rápido')
+    expect(words).toContain('cão')
+    expect(words).toContain('preguiçoso')
+    expect(words).not.toContain('rpido')
+    expect(words).not.toContain('co')
+    expect(words).not.toContain('preguioso')
+  })
+})

@@ -161,12 +161,11 @@ describe('ConversionWidget', () => {
   describe('temperature category', () => {
     it('renders temperature unit options', () => {
       render(<ConversionWidget category="temperature" />)
-      const selects = screen.getAllByRole<HTMLSelectElement>('combobox')
-      // The first select should have celsius as an option
-      const options = Array.from(selects[0].options).map(o => o.value)
-      expect(options).toContain('celsius')
-      expect(options).toContain('fahrenheit')
-      expect(options).toContain('kelvin')
+      const selects = screen.getAllByRole('combobox')
+      fireEvent.click(selects[0])
+      expect(screen.getByRole('option', { name: /celsius/i })).toBeInTheDocument()
+      expect(screen.getByRole('option', { name: /fahrenheit/i })).toBeInTheDocument()
+      expect(screen.getByRole('option', { name: /kelvin/i })).toBeInTheDocument()
     })
 
     it('converts 100 celsius to 212 fahrenheit', () => {
@@ -193,7 +192,8 @@ describe('ConversionWidget', () => {
       const selects = screen.getAllByRole('combobox')
       const resultBefore = screen.getByTestId('conversion-result').textContent
 
-      fireEvent.change(selects[0], { target: { value: 'kilometer' } })
+      fireEvent.click(selects[0])
+      fireEvent.click(screen.getByRole('option', { name: /kilometer/i }))
 
       const resultAfter = screen.getByTestId('conversion-result').textContent
       expect(resultAfter).not.toBe(resultBefore)
@@ -205,7 +205,8 @@ describe('ConversionWidget', () => {
       const selects = screen.getAllByRole('combobox')
       const resultBefore = screen.getByTestId('conversion-result').textContent
 
-      fireEvent.change(selects[1], { target: { value: 'inch' } })
+      fireEvent.click(selects[1])
+      fireEvent.click(screen.getByRole('option', { name: /inch/i }))
 
       const resultAfter = screen.getByTestId('conversion-result').textContent
       expect(resultAfter).not.toBe(resultBefore)
