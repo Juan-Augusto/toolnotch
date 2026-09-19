@@ -77,13 +77,9 @@ const ALL_ROUTES = [
   '/tools/text',
   '/tools/text/word-counter',
   '/tools/text/character-counter',
-  '/tools/text/sentence-counter',
-  '/tools/text/readability-checker',
   '/tools/text/reading-time-calculator',
-  '/tools/text/word-frequency-counter',
+  '/tools/text/readability-checker',
   '/tools/text/keyword-density-checker',
-  // '/tools/text/paraphraser', '/tools/text/summarizer',
-  // '/tools/text/plagiarism-checker' — coming-soon stubs, noindex (WS-5 audit).
   // Finance — calculators
   '/tools/finance',
   '/tools/finance/loan-calculator',

@@ -331,7 +331,7 @@ export default async function PdfToolsHubPage({ params }: Props) {
 
       {/* Hero Header */}
       <header className="mb-6 sm:mb-8 md:mb-10 pt-1 sm:pt-2 pb-3.5 sm:pb-5 border-b border-border/80">
-        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-tight text-foreground">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
           {meta.headerTitle}
         </h1>
         <p className="text-xs sm:text-sm text-label leading-relaxed mt-1.5 sm:mt-2 max-w-3xl">

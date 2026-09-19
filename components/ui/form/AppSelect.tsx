@@ -5,10 +5,11 @@ import {
   useId,
   useMemo,
   useRef,
+  useEffect,
   type ReactNode,
   type KeyboardEvent,
 } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Search, X } from "lucide-react";
 import { useClickOutside } from "@/composables/useClickOutside";
 
 export interface SelectOption<T = string> {
@@ -33,6 +34,9 @@ export interface AppSelectProps<T = string> {
   containerClassName?: string;
   labelClassName?: string;
   dropdownClassName?: string;
+  searchable?: boolean;
+  searchPlaceholder?: string;
+  noResultsText?: string;
 }
 
 export function AppSelect<T = string>({
@@ -40,7 +44,7 @@ export function AppSelect<T = string>({
   value,
   defaultValue,
   onChange,
-  placeholder = "SELECIONE...",
+  placeholder = "Selecione...",
   label,
   error,
   helperText,
@@ -51,6 +55,9 @@ export function AppSelect<T = string>({
   containerClassName = "",
   labelClassName = "",
   dropdownClassName = "",
+  searchable = true,
+  searchPlaceholder = "Buscar...",
+  noResultsText = "Nenhum resultado encontrado",
 }: AppSelectProps<T>) {
   const generatedId = useId();
   const selectId = id ?? generatedId;
@@ -60,8 +67,10 @@ export function AppSelect<T = string>({
     value !== undefined ? value : defaultValue,
   );
   const [isOpen, setIsOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const containerRef = useRef<HTMLDivElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
   useClickOutside(() => setIsOpen(false), isOpen, containerRef);
 
   const isControlled = value !== undefined;
@@ -76,9 +85,40 @@ export function AppSelect<T = string>({
     });
   }, [options]);
 
+  const filteredOptions = useMemo(() => {
+    if (!searchable || !searchQuery.trim()) return normalizedOptions;
+    const query = searchQuery
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+
+    return normalizedOptions.filter((opt) => {
+      const labelNorm = String(opt.label)
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+      const valNorm = String(opt.value)
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+      return labelNorm.includes(query) || valNorm.includes(query);
+    });
+  }, [normalizedOptions, searchQuery, searchable]);
+
   const selectedOption = useMemo(() => {
     return normalizedOptions.find((opt) => opt.value === currentValue);
   }, [normalizedOptions, currentValue]);
+
+  useEffect(() => {
+    if (isOpen && searchable) {
+      const timer = setTimeout(() => {
+        searchInputRef.current?.focus();
+      }, 20);
+      return () => clearTimeout(timer);
+    } else {
+      setSearchQuery("");
+    }
+  }, [isOpen, searchable]);
 
   const handleSelect = (optionValue: T) => {
     if (!isControlled) {
@@ -101,12 +141,12 @@ export function AppSelect<T = string>({
       if (!isOpen) {
         setIsOpen(true);
       } else {
-        const currentIndex = normalizedOptions.findIndex(
+        const currentIndex = filteredOptions.findIndex(
           (opt) => opt.value === currentValue,
         );
         const nextIndex =
-          currentIndex < normalizedOptions.length - 1 ? currentIndex + 1 : 0;
-        const nextOption = normalizedOptions[nextIndex];
+          currentIndex < filteredOptions.length - 1 ? currentIndex + 1 : 0;
+        const nextOption = filteredOptions[nextIndex];
         if (nextOption && !nextOption.disabled) {
           handleSelect(nextOption.value);
         }
@@ -116,12 +156,53 @@ export function AppSelect<T = string>({
       if (!isOpen) {
         setIsOpen(true);
       } else {
-        const currentIndex = normalizedOptions.findIndex(
+        const currentIndex = filteredOptions.findIndex(
           (opt) => opt.value === currentValue,
         );
         const prevIndex =
-          currentIndex > 0 ? currentIndex - 1 : normalizedOptions.length - 1;
-        const prevOption = normalizedOptions[prevIndex];
+          currentIndex > 0 ? currentIndex - 1 : filteredOptions.length - 1;
+        const prevOption = filteredOptions[prevIndex];
+        if (prevOption && !prevOption.disabled) {
+          handleSelect(prevOption.value);
+        }
+      }
+    }
+  };
+
+  const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Escape") {
+      e.preventDefault();
+      setIsOpen(false);
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      if (filteredOptions.length > 0) {
+        const firstValid = filteredOptions.find((opt) => !opt.disabled);
+        if (firstValid) {
+          handleSelect(firstValid.value);
+        }
+      }
+    } else if (e.key === "ArrowDown") {
+      e.preventDefault();
+      if (filteredOptions.length > 0) {
+        const currentIndex = filteredOptions.findIndex(
+          (opt) => opt.value === currentValue,
+        );
+        const nextIndex =
+          currentIndex < filteredOptions.length - 1 ? currentIndex + 1 : 0;
+        const nextOption = filteredOptions[nextIndex];
+        if (nextOption && !nextOption.disabled) {
+          handleSelect(nextOption.value);
+        }
+      }
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      if (filteredOptions.length > 0) {
+        const currentIndex = filteredOptions.findIndex(
+          (opt) => opt.value === currentValue,
+        );
+        const prevIndex =
+          currentIndex > 0 ? currentIndex - 1 : filteredOptions.length - 1;
+        const prevOption = filteredOptions[prevIndex];
         if (prevOption && !prevOption.disabled) {
           handleSelect(prevOption.value);
         }
@@ -138,7 +219,7 @@ export function AppSelect<T = string>({
         <label
           id={labelId}
           htmlFor={selectId}
-          className={`text-xs font-semibold uppercase  text-foreground mb-2 select-none ${
+          className={`text-xs font-semibold text-foreground mb-2 select-none ${
             disabled ? "opacity-50" : ""
           } ${labelClassName}`}
         >
@@ -163,6 +244,8 @@ export function AppSelect<T = string>({
           id={selectId}
           type="button"
           role="combobox"
+          value={currentValue !== undefined ? String(currentValue) : undefined}
+          data-value={currentValue !== undefined ? String(currentValue) : undefined}
           disabled={disabled}
           onClick={() => !disabled && setIsOpen((prev) => !prev)}
           onKeyDown={handleKeyDown}
@@ -173,9 +256,7 @@ export function AppSelect<T = string>({
             h-12
             px-4
             py-3
-           
             text-sm
-            
             text-foreground
             border
             rounded-[2px]
@@ -200,7 +281,7 @@ export function AppSelect<T = string>({
           `}
         >
           <span
-            className={`truncate uppercase ${
+            className={`truncate ${
               selectedOption ? "text-foreground" : "text-label/50"
             }`}
           >
@@ -228,52 +309,92 @@ export function AppSelect<T = string>({
               border
               border-border
               rounded-[2px]
-              max-h-60
-              overflow-y-auto
-              py-1
+              shadow-lg
+              overflow-hidden
+              flex
+              flex-col
               ${dropdownClassName}
             `}
           >
-            {normalizedOptions.map((opt) => {
-              const isSelected = opt.value === currentValue;
-              return (
-                <button
-                  key={String(opt.value)}
-                  type="button"
-                  role="option"
-                  aria-selected={isSelected}
-                  disabled={opt.disabled}
-                  onClick={() => handleSelect(opt.value)}
-                  className={`
-                    w-full
-                    flex
-                    items-center
-                    justify-between
-                    px-4
-                    py-2.5
-                   
-                    text-sm
-                    uppercase
-                    
-                    text-left
-                    transition-colors
-                    select-none
-                    ${
-                      opt.disabled
-                        ? "opacity-40 cursor-not-allowed"
-                        : isSelected
-                          ? "text-primary font-semibold cursor-pointer"
-                          : " hover:bg-border/30 text-label hover:text-foreground cursor-pointer"
-                    }
-                  `}
-                >
-                  <span className="truncate">{opt.label}</span>
-                  {isSelected && (
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 ml-2" />
+            {searchable && (
+              <div
+                className="p-2 border-b border-border/80 bg-tertiary shrink-0"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="relative flex items-center">
+                  <Search className="w-3.5 h-3.5 absolute left-2.5 text-label/60 pointer-events-none" />
+                  <input
+                    ref={searchInputRef}
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onKeyDown={handleSearchKeyDown}
+                    placeholder={searchPlaceholder}
+                    aria-label={searchPlaceholder}
+                    className="w-full h-8 pl-8 pr-7 bg-background border border-border rounded-[2px] text-xs font-mono text-foreground placeholder:text-label/50 outline-none focus:border-primary/60 transition-colors"
+                  />
+                  {searchQuery && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setSearchQuery("");
+                        searchInputRef.current?.focus();
+                      }}
+                      aria-label="Limpar pesquisa"
+                      className="absolute right-2 text-label/60 hover:text-foreground p-0.5 cursor-pointer"
+                    >
+                      <X className="w-3 h-3" />
+                    </button>
                   )}
-                </button>
-              );
-            })}
+                </div>
+              </div>
+            )}
+
+            <div className="max-h-60 overflow-y-auto py-1">
+              {filteredOptions.length > 0 ? (
+                filteredOptions.map((opt) => {
+                  const isSelected = opt.value === currentValue;
+                  return (
+                    <button
+                      key={String(opt.value)}
+                      type="button"
+                      role="option"
+                      aria-selected={isSelected}
+                      disabled={opt.disabled}
+                      onClick={() => handleSelect(opt.value)}
+                      className={`
+                        w-full
+                        flex
+                        items-center
+                        justify-between
+                        px-4
+                        py-2.5
+                        text-sm
+                        text-left
+                        transition-colors
+                        select-none
+                        ${
+                          opt.disabled
+                            ? "opacity-40 cursor-not-allowed"
+                            : isSelected
+                              ? "text-primary font-semibold cursor-pointer bg-primary/5"
+                              : "hover:bg-border/30 text-label hover:text-foreground cursor-pointer"
+                        }
+                      `}
+                    >
+                      <span className="truncate">{opt.label}</span>
+                      {isSelected && (
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 ml-2" />
+                      )}
+                    </button>
+                  );
+                })
+              ) : (
+                <div className="px-4 py-3 text-xs font-mono text-label/60 text-center">
+                  {noResultsText}
+                </div>
+              )}
+            </div>
           </div>
         )}
       </div>

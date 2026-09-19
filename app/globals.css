@@ -29,14 +29,13 @@
   --primary-dim: rgba(232, 98, 152, 0.1);
   --primary-glow: 0 0 10px rgba(232, 98, 152, 0.4);
   --primary-text-glow: 0 0 8px rgba(232, 98, 152, 0.5);
-
   --secondary: #eb47ac;
   --secondary-shadow: #a32b75;
   --tertiary: #ffffff;
   --tertiary-shadow: #dadde4;
   --border: rgb(218, 221, 228);
   --foreground: #2c2c2c;
-  --background: #f8f8f8;
+  --background: #fafafa;
   --panel: #eeeeee;
   --label: #696969;
 
@@ -97,7 +96,7 @@ body {
     system-ui,
     -apple-system,
     sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;

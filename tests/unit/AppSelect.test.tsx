@@ -175,4 +175,99 @@ describe('AppSelect', () => {
 
     expect(screen.getByText('Ajuda do campo')).toBeInTheDocument();
   });
+
+  describe('search functionality', () => {
+    const searchOptions = [
+      { label: 'Dólar Americano', value: 'USD' },
+      { label: 'Euro', value: 'EUR' },
+      { label: 'Real Brasileiro', value: 'BRL' },
+      { label: 'Libra Esterlina', value: 'GBP' },
+    ];
+
+    it('renders search input when dropdown is opened and filters options', () => {
+      render(<AppSelect options={searchOptions} placeholder="Selecione moeda" />);
+
+      const trigger = screen.getByRole('combobox');
+      fireEvent.click(trigger);
+
+      const searchInput = screen.getByPlaceholderText('Buscar...');
+      expect(searchInput).toBeInTheDocument();
+
+      // Type "real" - should match "Real Brasileiro" even case/diacritic insensitive
+      fireEvent.change(searchInput, { target: { value: 'real' } });
+
+      expect(screen.getByRole('option', { name: 'Real Brasileiro' })).toBeInTheDocument();
+      expect(screen.queryByRole('option', { name: 'Dólar Americano' })).not.toBeInTheDocument();
+      expect(screen.queryByRole('option', { name: 'Euro' })).not.toBeInTheDocument();
+    });
+
+    it('filters by value code as well (e.g. searching "USD")', () => {
+      render(<AppSelect options={searchOptions} />);
+
+      const trigger = screen.getByRole('combobox');
+      fireEvent.click(trigger);
+
+      const searchInput = screen.getByPlaceholderText('Buscar...');
+      fireEvent.change(searchInput, { target: { value: 'usd' } });
+
+      expect(screen.getByRole('option', { name: 'Dólar Americano' })).toBeInTheDocument();
+      expect(screen.queryByRole('option', { name: 'Euro' })).not.toBeInTheDocument();
+    });
+
+    it('shows noResultsText when no options match the query', () => {
+      render(<AppSelect options={searchOptions} noResultsText="Nada encontrado" />);
+
+      const trigger = screen.getByRole('combobox');
+      fireEvent.click(trigger);
+
+      const searchInput = screen.getByPlaceholderText('Buscar...');
+      fireEvent.change(searchInput, { target: { value: 'xyz123' } });
+
+      expect(screen.getByText('Nada encontrado')).toBeInTheDocument();
+      expect(screen.queryAllByRole('option')).toHaveLength(0);
+    });
+
+    it('selects first filtered option on Enter in search input', () => {
+      const handleChange = jest.fn();
+      render(<AppSelect options={searchOptions} onChange={handleChange} />);
+
+      const trigger = screen.getByRole('combobox');
+      fireEvent.click(trigger);
+
+      const searchInput = screen.getByPlaceholderText('Buscar...');
+      fireEvent.change(searchInput, { target: { value: 'euro' } });
+      fireEvent.keyDown(searchInput, { key: 'Enter' });
+
+      expect(handleChange).toHaveBeenCalledWith('EUR');
+      expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+    });
+
+    it('clears search query when clear button is clicked', () => {
+      render(<AppSelect options={searchOptions} />);
+
+      const trigger = screen.getByRole('combobox');
+      fireEvent.click(trigger);
+
+      const searchInput = screen.getByPlaceholderText('Buscar...');
+      fireEvent.change(searchInput, { target: { value: 'dolar' } });
+
+      expect(screen.queryByRole('option', { name: 'Euro' })).not.toBeInTheDocument();
+
+      const clearBtn = screen.getByRole('button', { name: 'Limpar pesquisa' });
+      fireEvent.click(clearBtn);
+
+      expect(screen.getByRole('option', { name: 'Euro' })).toBeInTheDocument();
+      expect(screen.getByRole('option', { name: 'Dólar Americano' })).toBeInTheDocument();
+    });
+
+    it('hides search input when searchable=false', () => {
+      render(<AppSelect options={searchOptions} searchable={false} />);
+
+      const trigger = screen.getByRole('combobox');
+      fireEvent.click(trigger);
+
+      expect(screen.queryByPlaceholderText('Buscar...')).not.toBeInTheDocument();
+      expect(screen.getByRole('option', { name: 'Euro' })).toBeInTheDocument();
+    });
+  });
 });

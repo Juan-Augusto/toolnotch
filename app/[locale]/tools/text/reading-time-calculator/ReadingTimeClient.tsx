@@ -16,15 +16,13 @@ import {
   Pause,
   PlayIcon,
   RotateCcwIcon,
-  Trash2,
-  Zap,
 } from "lucide-react";
 import { analyzeText } from "@/lib/textAnalysis";
-import { TextStats, getFleschLabel, getFleschColor } from "@/lib/textTypes";
+import { TextStats, getFleschKey, getFleschColor } from "@/lib/textTypes";
 import AppTopWordsChart from "@/components/text-counter/AppTopWordsChart";
-import AppButton from "@/components/AppButton";
+import { AppButton } from "@/components/ui";
+import TextActionBar from "../components/TextActionBar";
 
-// --- CONSTANTS & HELPERS ---
 const EMPTY_STATS: TextStats = {
   words: 0,
   characters: 0,
@@ -56,46 +54,35 @@ const calculateExactTime = (words: number, wpm: number, multiplier = 1.0) => {
   return { minutes, seconds };
 };
 
-// --- SUB-COMPONENTS ---
-
 function TextInputArea({
   text,
   setText,
   handleSample,
   handleClear,
+  placeholder,
 }: {
   text: string;
   setText: (v: string) => void;
   handleSample: () => void;
   handleClear: () => void;
+  placeholder?: string;
 }) {
-  const t = useTranslations("text");
+  const tr = useTranslations("text.readingTime");
   return (
-    <div className="relative">
+    <div className="bg-tertiary dark:bg-background border border-border rounded-[2px] overflow-hidden focus-within:border-foreground/40 transition-colors">
       <textarea
-        className="w-full h-64 p-4 border border-border rounded-xl text-sm resize-y focus:outline-none focus:ring-2 focus:ring-primary bg-tertiary text-foreground placeholder-gray-400 dark:placeholder-gray-500"
-        placeholder={t("wordCounter.placeholder")}
+        rows={12}
+        className="w-full min-h-[280px] sm:min-h-[340px] h-72 sm:h-84 p-4 sm:p-5 bg-transparent border-none text-foreground placeholder:text-label/50 focus:outline-none transition-all font-sans resize-y leading-relaxed"
+        placeholder={placeholder ?? tr("placeholder")}
         value={text}
         onChange={(e) => setText(e.target.value)}
         spellCheck
       />
-      <div className="flex gap-2">
-        <button
-          onClick={handleSample}
-          className="text-xs bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 hover:text-foreground px-3 py-1.5 rounded-lg transition-colors cursor-pointer"
-        >
-          {t("buttons.sampleText")}
-        </button>
-        {text && (
-          <button
-            onClick={handleClear}
-            className="text-xs hover:bg-red-100 dark:hover:bg-red-900/30 text-red-600 dark:text-red-400 px-3 py-1.5 rounded-lg transition-colors cursor-pointer flex items-center gap-1"
-          >
-            <Trash2 size={12} />
-            {t("buttons.clear")}
-          </button>
-        )}
-      </div>
+      <TextActionBar
+        text={text}
+        onSample={handleSample}
+        onClear={handleClear}
+      />
     </div>
   );
 }
@@ -142,18 +129,18 @@ function SpeedReaderWidget({
     const right = word.substring(orpIndex + 1);
 
     return (
-      <span className="text-3xl sm:text-5xl font-extrabold tracking-tight select-none">
+      <span className="text-3xl sm:text-5xl font-mono font-bold tracking-tight select-none">
         <span className="text-foreground">{left}</span>
-        <span className="text-red-500 dark:text-red-400">{middle}</span>
+        <span className="text-red-500">{middle}</span>
         <span className="text-foreground">{right}</span>
       </span>
     );
   };
 
   return (
-    <div className="bg-tertiary border border-border rounded-xl p-6 relative overflow-hidden flex flex-col items-center space-y-6 animate-fade-in-up">
+    <div className="bg-tertiary dark:bg-background border border-border rounded-[2px] p-5 sm:p-6 flex flex-col items-center space-y-5">
       <div className="w-full flex justify-between items-center pb-3 border-b border-border">
-        <span className="text-xs font-semibold uppercase  text-label flex items-center gap-1.5">
+        <span className="font-mono font-bold uppercase text-foreground">
           {tr("ui.speedReaderTitle")}
         </span>
         <button
@@ -161,27 +148,27 @@ function SpeedReaderWidget({
             setIsPlaying(false);
             setSpeedReaderActive(false);
           }}
-          className="text-xs font-semibold cursor-pointer transition-colors flex items-center gap-2"
+          className="font-mono text-label hover:text-foreground cursor-pointer transition-colors flex items-center gap-1.5"
         >
           {tr("ui.closeSpeedReader")}
-          <Minimize2Icon className="w-4 h-4" />
+          <Minimize2Icon className="w-3.5 h-3.5" />
         </button>
       </div>
 
-      <div className="w-full h-36 flex items-center justify-center bg-gray-50 dark:bg-tertiary border border-border rounded-xl relative">
+      <div className="w-full h-36 flex items-center justify-center bg-tertiary border border-border rounded-[2px]">
         {currentIndex < wordsArray.length ? (
           renderOrpWord(wordsArray[currentIndex])
         ) : (
-          <span className="text-xs text-label italic font-semibold">
+          <span className="font-mono text-label italic">
             {tr("ui.done")}
           </span>
         )}
       </div>
 
-      <div className="w-full">
-        <div className="flex justify-between text-xs text-label">
+      <div className="w-full space-y-1.5">
+        <div className="flex justify-between font-mono text-label">
           <span>{tr("ui.readingSpeedLabel")}</span>
-          <span className="font-semibold text-primary">
+          <span className="font-bold text-foreground">
             {tr("ui.wordsPerMinute", { wpm: speedReaderWpm })} (
             {getReadingSpeedCategory(speedReaderWpm)})
           </span>
@@ -193,19 +180,19 @@ function SpeedReaderWidget({
           step={10}
           value={speedReaderWpm}
           onChange={(e) => setSpeedReaderWpm(parseInt(e.target.value))}
-          className="w-full h-1.5 bg-gray-100 dark:bg-gray-800 rounded-lg appearance-none cursor-pointer accent-neon"
+          className="w-full h-1.5 bg-tertiary border border-border rounded-lg appearance-none cursor-pointer accent-primary"
         />
       </div>
 
-      <div className="w-full space-y-2">
-        <div className="flex justify-between text-xs text-label">
+      <div className="w-full space-y-1.5">
+        <div className="flex justify-between font-mono text-label">
           <span>
             {tr("ui.wordCounter", {
               current: Math.min(currentIndex + 1, wordsArray.length),
               total: wordsArray.length,
             })}
           </span>
-          <span>
+          <span className="font-bold text-foreground">
             {Math.round(
               (Math.min(currentIndex + 1, wordsArray.length) /
                 wordsArray.length) *
@@ -214,9 +201,9 @@ function SpeedReaderWidget({
             %
           </span>
         </div>
-        <div className="w-full bg-gray-100 dark:bg-gray-800 h-1.5 rounded-full overflow-hidden border border-border/10">
+        <div className="w-full bg-tertiary border border-border h-2 rounded-[2px] overflow-hidden">
           <div
-            className="bg-primary h-full rounded-full transition-all duration-300"
+            className="bg-primary h-full transition-all duration-200"
             style={{
               width: `${(Math.min(currentIndex + 1, wordsArray.length) / wordsArray.length) * 100}%`,
             }}
@@ -224,7 +211,7 @@ function SpeedReaderWidget({
         </div>
       </div>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-3">
         <AppButton
           onClick={() => {
             if (currentIndex >= wordsArray.length) {
@@ -233,12 +220,12 @@ function SpeedReaderWidget({
             setIsPlaying(!isPlaying);
           }}
           color="primary"
-          className="flex items-center gap-2 text-sm"
+          className="flex items-center gap-2"
         >
           {isPlaying ? (
-            <Pause className="w-4 h-4" />
+            <Pause className="w-3.5 h-3.5" />
           ) : (
-            <PlayIcon className="w-4 h-4" />
+            <PlayIcon className="w-3.5 h-3.5" />
           )}
           {isPlaying ? tr("ui.pause") : tr("ui.play")}
         </AppButton>
@@ -247,10 +234,10 @@ function SpeedReaderWidget({
             setIsPlaying(false);
             setCurrentIndex(0);
           }}
-          color="grey"
-          className="flex items-center gap-2 text-sm"
+          color="tertiary"
+          className="flex items-center gap-2"
         >
-          <RotateCcwIcon className="w-4 h-4" />
+          <RotateCcwIcon className="w-3.5 h-3.5" />
           {tr("ui.reset")}
         </AppButton>
       </div>
@@ -289,7 +276,7 @@ function HeroStats({
   };
 
   const formatDuration = (time: { minutes: number; seconds: number }) => {
-    if (time.minutes === 0 && time.seconds === 0) return "0s";
+    if (time.minutes === 0 && time.seconds === 0) return tr("ui.seconds", { s: 0 });
     if (time.minutes === 0) {
       return tr("ui.seconds", { s: time.seconds });
     }
@@ -297,23 +284,24 @@ function HeroStats({
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div className=" p-6 bg-tertiary border border-border rounded-xl relative overflow-hidden flex flex-col justify-between">
-        <div className="absolute right-4 top-4 text-primary pointer-events-none">
-          <BookOpen size={48} />
-        </div>
+    <div className="bg-tertiary dark:bg-background border border-border rounded-[2px] grid grid-cols-1 md:grid-cols-2 overflow-hidden">
+      <div className="p-4 sm:p-5 flex flex-col justify-between border-b md:border-b-0 md:border-r border-border">
         <div>
-          <div className="text-xs font-semibold text-label uppercase  mb-1">
-            {tr("ui.estimatedReadingTime")}
+          <div className="flex items-center justify-between mb-1">
+            <span className="text-xs font-mono font-medium uppercase tracking-wider text-foreground">
+              {tr("ui.estimatedReadingTime")}
+            </span>
+            <BookOpen className="w-4 h-4 text-foreground/70" />
           </div>
-          <div className="text-3xl font-black text-primary">
+          <div className="text-3xl sm:text-4xl font-mono font-bold text-foreground tracking-tight">
             {formatDuration(readingTimeObj)}
           </div>
         </div>
-        <div className="mt-6 space-y-2">
-          <div className="flex justify-between text-xs text-label">
+
+        <div className="mt-5 pt-3 border-t border-border/60 space-y-1.5">
+          <div className="flex justify-between font-mono text-foreground font-medium">
             <span>{tr("ui.readingSpeedLabel")}</span>
-            <span className="font-semibold text-primary">
+            <span className="font-bold text-foreground">
               {tr("ui.wordsPerMinute", { wpm: readingWpm })} (
               {getReadingSpeedCategory(readingWpm)})
             </span>
@@ -325,27 +313,28 @@ function HeroStats({
             step={10}
             value={readingWpm}
             onChange={(e) => setReadingWpm(parseInt(e.target.value))}
-            className="w-full h-1 bg-bd-base rounded-lg appearance-none cursor-pointer accent-neon"
+            className="w-full h-1.5 bg-tertiary border border-border rounded-lg appearance-none cursor-pointer accent-foreground"
           />
         </div>
       </div>
 
-      <div className=" p-6 bg-tertiary border border-border rounded-xl relative overflow-hidden flex flex-col justify-between">
-        <div className="absolute right-4 top-4 text-blue-500 pointer-events-none">
-          <Mic size={48} />
-        </div>
+      <div className="p-4 sm:p-5 flex flex-col justify-between">
         <div>
-          <div className="text-xs font-semibold text-label uppercase  mb-1">
-            {tr("ui.estimatedSpeakingTime")}
+          <div className="flex items-center justify-between mb-1">
+            <span className="text-xs font-mono font-medium uppercase tracking-wider text-foreground">
+              {tr("ui.estimatedSpeakingTime")}
+            </span>
+            <Mic className="w-4 h-4 text-foreground/70" />
           </div>
-          <div className="text-3xl font-black text-blue-600 dark:text-blue-400">
+          <div className="text-3xl sm:text-4xl font-mono font-bold text-foreground tracking-tight">
             {formatDuration(speakingTimeObj)}
           </div>
         </div>
-        <div className="mt-6 space-y-2">
-          <div className="flex justify-between text-xs text-label">
+
+        <div className="mt-5 pt-3 border-t border-border/60 space-y-1.5">
+          <div className="flex justify-between font-mono text-foreground font-medium">
             <span>{tr("ui.speakingSpeedLabel")}</span>
-            <span className="font-semibold text-blue-600 dark:text-blue-400">
+            <span className="font-bold text-foreground">
               {tr("ui.wordsPerMinute", { wpm: speakingWpm })} (
               {getSpeakingSpeedCategory(speakingWpm)})
             </span>
@@ -357,7 +346,7 @@ function HeroStats({
             step={5}
             value={speakingWpm}
             onChange={(e) => setSpeakingWpm(parseInt(e.target.value))}
-            className="w-full h-1 bg-bd-base rounded-lg appearance-none cursor-pointer accent-blue-600 dark:accent-blue-400"
+            className="w-full h-1.5 bg-tertiary border border-border rounded-lg appearance-none cursor-pointer accent-foreground"
           />
         </div>
       </div>
@@ -376,22 +365,19 @@ function SecondaryStats({
   const tr = useTranslations("text.readingTime");
 
   const getFleschTranslation = (ease: number) => {
-    const label = getFleschLabel(ease);
-    const key = label
-      .replace(/\s+(.)/g, (_, c) => c.toUpperCase())
-      .replace(/^(.)/, (_, c) => c.toLowerCase());
+    const key = getFleschKey(ease);
     return t(`stats.fleschLabels.${key}`);
   };
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <div className="bg-tertiary border border-border rounded-xl p-5 space-y-3">
-        <p className="text-xs font-semibold text-label uppercase  mb-1">
+    <div className="bg-tertiary dark:bg-background border border-border rounded-[2px] grid grid-cols-1 sm:grid-cols-2 overflow-hidden">
+      <div className="p-4 sm:p-5 space-y-3 border-b sm:border-b-0 sm:border-r border-border">
+        <p className="text-xs font-mono font-medium uppercase tracking-wider text-foreground">
           {t("stats.readabilityScores")}
         </p>
-        <div className="grid grid-cols-2 gap-4 pt-1">
+        <div className="grid grid-cols-2 gap-3 pt-1 font-mono">
           <div>
-            <div className="text-[10px] font-semibold  text-label uppercase">
+            <div className="text-xs uppercase font-medium text-foreground">
               {t("stats.words")}
             </div>
             <div className="text-lg font-bold text-foreground">
@@ -399,7 +385,7 @@ function SecondaryStats({
             </div>
           </div>
           <div>
-            <div className="text-[10px] font-semibold  text-label uppercase">
+            <div className="text-xs uppercase font-medium text-foreground">
               {t("stats.characters")}
             </div>
             <div className="text-lg font-bold text-foreground">
@@ -407,7 +393,7 @@ function SecondaryStats({
             </div>
           </div>
           <div>
-            <div className="text-[10px] font-semibold  text-label uppercase">
+            <div className="text-xs uppercase font-medium text-foreground">
               {t("stats.sentences")}
             </div>
             <div className="text-lg font-bold text-foreground">
@@ -415,7 +401,7 @@ function SecondaryStats({
             </div>
           </div>
           <div>
-            <div className="text-[10px] font-semibold  text-label uppercase">
+            <div className="text-xs uppercase font-medium text-foreground">
               {t("stats.paragraphs")}
             </div>
             <div className="text-lg font-bold text-foreground">
@@ -425,25 +411,25 @@ function SecondaryStats({
         </div>
       </div>
 
-      <div className="bg-tertiary border border-border rounded-xl p-5 flex flex-col justify-between">
+      <div className="p-4 sm:p-5 flex flex-col justify-between">
         <div>
-          <p className="text-xs font-semibold text-label uppercase  mb-1">
+          <p className="text-xs font-mono font-medium uppercase tracking-wider text-foreground mb-1">
             {tr("ui.complexityNote")}
           </p>
-          <div className="flex items-baseline gap-2">
+          <div className="flex items-baseline gap-2 font-mono">
             <span
               className={`text-2xl font-bold ${getFleschColor(stats.fleschEase)}`}
             >
               {stats.fleschEase}
             </span>
             <span
-              className={`text-sm font-medium ${getFleschColor(stats.fleschEase)}`}
+              className={`font-medium ${getFleschColor(stats.fleschEase)}`}
             >
               {getFleschTranslation(stats.fleschEase)}
             </span>
           </div>
         </div>
-        <div className="mt-4 pt-2 border-t border-border text-xs text-label">
+        <div className="mt-4 pt-2 border-t border-border font-mono text-foreground">
           {tr(`ui.${complexity.key}`)}
         </div>
       </div>
@@ -451,9 +437,13 @@ function SecondaryStats({
   );
 }
 
-// --- MAIN COMPONENT ---
-
-export default function ReadingTimeClient() {
+export default function ReadingTimeClient({
+  locale = "pt",
+  placeholder,
+}: {
+  locale?: string;
+  placeholder?: string;
+}) {
   const t = useTranslations("text");
   const tr = useTranslations("text.readingTime");
   const [text, setText] = useState("");
@@ -470,7 +460,7 @@ export default function ReadingTimeClient() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setStats(analyzeText(text));
-    }, 200);
+    }, 150);
     return () => clearTimeout(timer);
   }, [text]);
 
@@ -550,12 +540,16 @@ export default function ReadingTimeClient() {
   const speakingTimeObj = calculateExactTime(stats.words, speakingWpm, 1.0);
 
   return (
-    <div className="space-y-6">
+    <section
+      aria-label={tr("title")}
+      className="mb-10 sm:mb-14 w-full space-y-4 sm:space-y-5"
+    >
       <TextInputArea
         text={text}
         setText={setText}
         handleSample={handleSample}
         handleClear={handleClear}
+        placeholder={placeholder}
       />
 
       {speedReaderActive && wordsArray.length > 0 && (
@@ -580,10 +574,9 @@ export default function ReadingTimeClient() {
               setSpeedReaderActive(true);
             }}
             color="primary"
-            opacity
-            className="flex items-center justify-center gap-2"
+            className="flex items-center justify-center font-mono font-semibold"
           >
-            <Zap className="w-5 h-5" /> {tr("ui.startSpeedReader")}
+            {tr("ui.startSpeedReader")}
           </AppButton>
         </div>
       )}
@@ -600,10 +593,10 @@ export default function ReadingTimeClient() {
       <SecondaryStats stats={stats} complexity={complexity} />
 
       {stats.topWords.length > 0 && (
-        <div className="bg-tertiary border border-border rounded-xl p-5">
+        <div className="bg-background border border-border rounded-[2px] p-4 sm:p-5">
           <AppTopWordsChart topWords={stats.topWords} />
         </div>
       )}
-    </div>
+    </section>
   );
 }

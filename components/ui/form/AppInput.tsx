@@ -13,7 +13,7 @@ import type { Formatter } from "@/utils/formatters/types";
 
 export interface AppInputProps extends Omit<
   InputHTMLAttributes<HTMLInputElement>,
-  "onChange"
+  "onChange" | "prefix"
 > {
   label?: ReactNode;
   error?: string;
@@ -25,6 +25,8 @@ export interface AppInputProps extends Omit<
   labelClassName?: string;
   flat?: boolean;
   variant?: "tertiary" | "background";
+  prefix?: ReactNode;
+  startAdornment?: ReactNode;
 }
 
 export function AppInput({
@@ -47,6 +49,8 @@ export function AppInput({
   type = "text",
   flat = false,
   variant = "tertiary",
+  prefix,
+  startAdornment,
   ...props
 }: AppInputProps) {
   const generatedId = useId();
@@ -113,7 +117,7 @@ export function AppInput({
       {label && (
         <label
           htmlFor={inputId}
-          className={` text-xs font-semibold uppercase  text-foreground mb-2 select-none ${
+          className={`text-xs font-semibold text-foreground mb-2 select-none ${
             disabled ? "opacity-50" : ""
           } ${labelClassName}`}
         >
@@ -121,7 +125,12 @@ export function AppInput({
         </label>
       )}
 
-      <div className="relative w-full">
+      <div className="relative w-full flex items-center">
+        {(prefix || startAdornment) && (
+          <div className="absolute left-3.5 z-10 flex items-center pointer-events-none select-none">
+            {prefix || startAdornment}
+          </div>
+        )}
         <input
           id={inputId}
           type={type}
@@ -134,7 +143,7 @@ export function AppInput({
           className={`
             w-full
             h-12
-            px-4
+            ${prefix || startAdornment ? "pl-11 pr-4" : "px-4"}
             py-3
             text-sm
             text-foreground
@@ -143,24 +152,22 @@ export function AppInput({
             duration-150
             outline-none
             placeholder:text-label/50
-            placeholder:
-            placeholder:uppercase
             disabled:opacity-40
             disabled:cursor-not-allowed
             ${
               flat
                 ? "bg-transparent border-0 bg-transparent! border-0! focus:bg-transparent!"
-                : `${
-                    variant === "background" ||
-                    className.includes("bg-background")
-                      ? "bg-background"
-                      : "bg-tertiary"
-                  } border focus:bg-secondary/3 ${
+                : `border ${
                     error
-                      ? "border-red-500 focus:border-red-500 ring-1 ring-red-500/20"
+                      ? "border-red-500 focus:border-red-500 ring-1 ring-red-500/20 bg-tertiary"
                       : isFocused
-                        ? "border-secondary ring-1 ring-secondary/20"
-                        : "border-border hover:border-foreground/30"
+                        ? "border-secondary bg-secondary/5 ring-1 ring-secondary/20"
+                        : `border-border hover:border-foreground/30 ${
+                            variant === "background" ||
+                            className.includes("bg-background")
+                              ? "bg-background"
+                              : "bg-tertiary"
+                          } focus:border-secondary focus:bg-secondary/5 focus:ring-1 focus:ring-secondary/20`
                   }`
             }
             ${className}
@@ -169,10 +176,10 @@ export function AppInput({
         />
       </div>
 
-      {error && <span className=" text-xs text-red-500 mt-1.5 ">{error}</span>}
+      {error && <span className="text-xs text-red-500 mt-1.5">{error}</span>}
 
       {helperText && !error && (
-        <span className=" text-xs text-label/70 mt-1.5 ">{helperText}</span>
+        <span className="text-xs text-label/70 mt-1.5">{helperText}</span>
       )}
     </div>
   );

@@ -35,6 +35,30 @@ const nextConfig: NextConfig = {
       },
     ]
   },
+  async redirects() {
+    return [
+      {
+        source: '/tools/text/sentence-counter',
+        destination: '/tools/text/word-counter',
+        permanent: true,
+      },
+      {
+        source: '/:locale(pt|es)/tools/text/sentence-counter',
+        destination: '/:locale/tools/text/word-counter',
+        permanent: true,
+      },
+      {
+        source: '/tools/text/word-frequency-counter',
+        destination: '/tools/text/keyword-density-checker',
+        permanent: true,
+      },
+      {
+        source: '/:locale(pt|es)/tools/text/word-frequency-counter',
+        destination: '/:locale/tools/text/keyword-density-checker',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 export default withNextIntl(nextConfig)
