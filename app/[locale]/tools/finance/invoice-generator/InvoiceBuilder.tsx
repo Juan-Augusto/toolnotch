@@ -6,6 +6,7 @@ import { calculateTotals } from "@/lib/invoiceCalc";
 import { saveDraft, loadDraft } from "@/lib/invoiceStorage";
 import { LOCALE_CONFIGS, LocaleKey } from "@/data/invoiceLocales";
 import AppButton from "@/components/AppButton";
+import { AppSegmentedControl } from "@/components/ui";
 import InvoiceForm from "./InvoiceForm";
 import InvoicePreview from "./InvoicePreview";
 
@@ -114,12 +115,38 @@ export default function InvoiceBuilder({ locale }: InvoiceBuilderProps) {
     const file = e.target.files?.[0];
     if (!file) return;
     const reader = new FileReader();
-    reader.onload = () => update("logo", reader.result as string);
+    reader.onload = () => {
+      setInvoice((inv) => {
+        const next = {
+          ...inv,
+          logo: reader.result as string,
+          logoFileName: file.name,
+        };
+        saveDraft(next);
+        return next;
+      });
+    };
     reader.readAsDataURL(file);
   };
 
   const handleLogoClick = () => {
+    if (logoInputRef.current) {
+      logoInputRef.current.value = "";
+    }
     logoInputRef.current?.click();
+  };
+
+  const handleRemoveLogo = () => {
+    setInvoice((inv) => {
+      const next = { ...inv };
+      delete next.logo;
+      delete next.logoFileName;
+      saveDraft(next);
+      return next;
+    });
+    if (logoInputRef.current) {
+      logoInputRef.current.value = "";
+    }
   };
 
   const handlePrint = () => {
@@ -208,31 +235,22 @@ export default function InvoiceBuilder({ locale }: InvoiceBuilderProps) {
           }
         }
       `}</style>
-      <div className="bg-tertiary border border-border rounded-xl p-6 no-print-card">
+      <div className="w-full no-print-card">
         {/* Tab Switcher */}
-        <div className="flex border-b border-border -mx-6 px-6 mb-6 no-print">
-          <button
-            type="button"
-            onClick={() => setActiveTab("form")}
-            className={`flex-1 pb-3 text-center text-sm font-semibold border-b-2 transition-colors cursor-pointer ${
-              activeTab === "form"
-                ? "border-neon text-primary"
-                : "border-transparent text-label hover:text-foreground"
-            }`}
-          >
-            {t("formTab")}
-          </button>
-          <button
-            type="button"
-            onClick={() => setActiveTab("preview")}
-            className={`flex-1 pb-3 text-center text-sm font-semibold border-b-2 transition-colors cursor-pointer ${
-              activeTab === "preview"
-                ? "border-neon text-primary"
-                : "border-transparent text-label hover:text-foreground"
-            }`}
-          >
-            {t("previewTab")}
-          </button>
+        <div className="mb-6 max-w-md mx-auto no-print">
+          <AppSegmentedControl
+            options={[
+              { label: t("formTab"), value: "form" },
+              { label: t("previewTab"), value: "preview" },
+            ]}
+            value={activeTab}
+            onChange={(val) => setActiveTab(val as "form" | "preview")}
+            color="secondary"
+            size="md"
+            withDashedBorder={false}
+            bordered
+            fontWeight="medium"
+          />
         </div>
 
         {/* Form Panel */}
@@ -247,6 +265,7 @@ export default function InvoiceBuilder({ locale }: InvoiceBuilderProps) {
             removeLineItem={removeLineItem}
             handleLogoUpload={handleLogoUpload}
             handleLogoClick={handleLogoClick}
+            handleRemoveLogo={handleRemoveLogo}
             logoInputRef={logoInputRef}
             locale={locale}
             clearInvoice={clearInvoice}
@@ -257,7 +276,7 @@ export default function InvoiceBuilder({ locale }: InvoiceBuilderProps) {
         {/* Preview Panel */}
         <div className={activeTab === "preview" ? "block" : "hidden-print"}>
           <InvoicePreview invoice={invoice} totals={totals} locale={locale} />
-          <div className="mt-6 no-print">
+          <div className="mt-6 max-w-4xl mx-auto no-print">
             <AppButton onClick={handlePrint} className="w-full">
               {t("downloadPrint")}
             </AppButton>

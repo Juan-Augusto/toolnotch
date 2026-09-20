@@ -154,12 +154,39 @@ describe('AppInput', () => {
     expect(input).toHaveClass('pl-11');
   });
 
+  it('renders suffix when provided and adjusts padding', () => {
+    render(
+      <AppInput
+        placeholder="Taxa"
+        suffix={<span data-testid="suffix-symbol">%</span>}
+      />
+    );
+
+    expect(screen.getByTestId('suffix-symbol')).toBeInTheDocument();
+    const input = screen.getByPlaceholderText('Taxa');
+    expect(input).toHaveClass('pr-11');
+  });
+
   it('applies secondary bg on focus to match AppSelect', () => {
     render(<AppInput placeholder="Foco estilo AppSelect" />);
     const input = screen.getByPlaceholderText('Foco estilo AppSelect');
 
     fireEvent.focus(input);
     expect(input).toHaveClass('border-secondary', 'bg-secondary/5');
+  });
+
+  it('respects custom width or flex in containerClassName without forcing w-full', () => {
+    const { container: c1 } = render(
+      <AppInput containerClassName="w-24 shrink-0" />
+    );
+    expect(c1.firstChild).toHaveClass('w-24');
+    expect(c1.firstChild).not.toHaveClass('w-full');
+
+    const { container: c2 } = render(
+      <AppInput containerClassName="flex-1 min-w-0" />
+    );
+    expect(c2.firstChild).toHaveClass('flex-1');
+    expect(c2.firstChild).not.toHaveClass('w-full');
   });
 });
 

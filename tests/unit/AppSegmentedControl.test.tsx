@@ -197,4 +197,32 @@ describe('AppSegmentedControl', () => {
     );
     expect(screen.getByText('Campo obrigatório')).toBeInTheDocument();
   });
+
+  it('supports fontWeight="medium" and bordered prop', () => {
+    const options: SegmentOption<string>[] = [
+      { label: '5yr', value: '60' },
+      { label: '10yr', value: '120' },
+    ];
+
+    render(
+      <AppSegmentedControl
+        options={options}
+        defaultValue="60"
+        withDashedBorder={false}
+        bordered
+        fontWeight="medium"
+      />
+    );
+
+    const radiogroup = screen.getByRole('radiogroup');
+    expect(radiogroup.className).not.toContain('border-border');
+
+    const radioButtons = screen.getAllByRole('radio');
+    expect(radioButtons[0].className).toContain('border');
+    expect(radioButtons[1].className).toContain('border-border');
+
+    const selectedLabel = screen.getByText('5yr');
+    expect(selectedLabel.parentElement?.className).toContain('font-medium');
+  });
 });
+

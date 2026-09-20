@@ -24,7 +24,7 @@ export default function InvoicePreview({
   const fmt = (v: number) => formatAmount(v, invoice.currency);
 
   return (
-    <div className="invoice-preview bg-tertiary border border-border rounded-xl p-8 text-sm">
+    <div className="invoice-preview bg-tertiary border border-border rounded-[2px] p-6 sm:p-8 text-sm max-w-4xl mx-auto">
       {/* Invoice AppHeader */}
       <div className="flex justify-between items-start mb-8">
         <div>
@@ -142,7 +142,7 @@ export default function InvoicePreview({
         </div>
       </div>
 
-      <div className="mt-12 border-t border-t-bd-base pt-6">
+      <div className="mt-12 border-t border-border pt-6">
         {invoice.notes && (
           <div className="mb-4">
             <div className="text-xs font-semibold uppercase mb-1">

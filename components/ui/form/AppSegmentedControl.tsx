@@ -33,6 +33,8 @@ export interface AppSegmentedControlProps<T = string> {
   id?: string;
   color?: AppSegmentedControlColor;
   withDashedBorder?: boolean;
+  bordered?: boolean;
+  fontWeight?: "normal" | "medium" | "semibold" | "bold" | "black";
   fullWidth?: boolean;
   size?: "sm" | "md" | "lg";
   layoutId?: string;
@@ -57,6 +59,8 @@ export function AppSegmentedControl<T = string>({
   id,
   color = "secondary",
   withDashedBorder = true,
+  bordered = false,
+  fontWeight = "bold",
   fullWidth = true,
   size = "md",
   layoutId: customLayoutId,
@@ -145,6 +149,22 @@ export function AppSegmentedControl<T = string>({
 
   const isSecondary = color === "secondary";
 
+  const weightClasses = useMemo(() => {
+    switch (fontWeight) {
+      case "normal":
+        return { active: "font-normal", inactive: "font-normal" };
+      case "medium":
+        return { active: "font-medium", inactive: "font-medium" };
+      case "semibold":
+        return { active: "font-semibold", inactive: "font-semibold" };
+      case "black":
+        return { active: "font-black", inactive: "font-bold" };
+      case "bold":
+      default:
+        return { active: "font-black", inactive: "font-bold" };
+    }
+  }, [fontWeight]);
+
   return (
     <div className={`flex flex-col w-full ${containerClassName}`}>
       {label && (
@@ -175,7 +195,7 @@ export function AppSegmentedControl<T = string>({
         aria-labelledby={label ? labelId : undefined}
         aria-disabled={disabled}
         className={`
-          flex items-center gap-2 select-none overflow-x-auto scrollbar-none
+          flex items-center gap-2.5 sm:gap-3 select-none overflow-x-auto scrollbar-none
           ${withDashedBorder ? "border-dashed-5 p-2 sm:p-2.5" : ""}
           ${disabled ? "opacity-40 cursor-not-allowed pointer-events-none" : ""}
           ${className}
@@ -217,10 +237,11 @@ export function AppSegmentedControl<T = string>({
                 disabled:cursor-not-allowed
                 disabled:opacity-40
                 ${sizeClasses[size].button}
+                ${bordered ? "border" : ""}
                 ${
                   isSelected
-                    ? activeButtonClassName
-                    : `bg-tertiary hover:bg-border/30 text-foreground ${inactiveButtonClassName}`
+                    ? `${bordered ? (isSecondary ? "border-secondary" : "border-primary") : ""} ${activeButtonClassName}`
+                    : `bg-tertiary hover:bg-border/30 text-foreground ${bordered ? "border-border" : ""} ${inactiveButtonClassName}`
                 }
                 ${buttonClassName}
               `}
@@ -255,8 +276,8 @@ export function AppSegmentedControl<T = string>({
                   ${sizeClasses[size].text}
                   ${
                     isSelected
-                      ? "text-background font-black "
-                      : "text-foreground font-bold "
+                      ? `text-background ${weightClasses.active} `
+                      : `text-foreground ${weightClasses.inactive} `
                   }
                 `}
               >

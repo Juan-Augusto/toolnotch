@@ -2177,7 +2177,73 @@
       "payment": "Parcela",
       "principal_col": "Principal",
       "interest": "Juros",
-      "balance": "Saldo"
+      "balance": "Saldo",
+      "yearUnit": "anos",
+      "monthUnit": "meses",
+      "presetYears": "{years} anos",
+      "presetMonths": "{months} meses",
+      "presetMonthsShort": "{months}m",
+      "amortizationChartTitle": "Evolução da Amortização",
+      "showPaged": "Exibir paginado",
+      "showAllPayments": "Exibir todas as {count} parcelas",
+      "principalPaid": "Principal Pago",
+      "interestPaid": "Juros Pagos",
+      "yearPrefix": "Ano {year}",
+      "prev": "← Anterior",
+      "next": "Próximo →"
+    },
+    "affiliate": {
+      "compareRates": "Comparar Taxas Atuais",
+      "disclaimer": "As taxas exibidas são ilustrativas. Compare ofertas reais de instituições para encontrar sua melhor taxa.",
+      "lendingTreeMortgage": "Comparar taxas de financiamento imobiliário no LendingTree →",
+      "bankrateMortgage": "Comparar taxas no Bankrate →",
+      "lendingTreeAuto": "Comparar taxas de financiamento automotivo no LendingTree →",
+      "lendingTreePersonal": "Comparar taxas de empréstimo pessoal no LendingTree →"
+    },
+    "hub": {
+      "metaTitle": "Ferramentas Financeiras Gratuitas — Calculadoras de Empréstimo, Financiamento e Faturas | ToolNotch",
+      "metaDescription": "Calculadoras de empréstimo, financiamento imobiliário e geradores de fatura online e gratuitos. Simule parcelas, juros e amortização instantaneamente.",
+      "title": "Calculadoras e Ferramentas Financeiras",
+      "description": "Simule parcelas mensais, compare juros e amortizações e gere faturas profissionais em PDF. Tudo 100% gratuito, sem cadastro e direto no seu navegador.",
+      "breadcrumb": "Finanças",
+      "badgeFree": "100% Gratuito",
+      "badgePrivate": "Sem Cadastro",
+      "badgeInstant": "Cálculo Instantâneo",
+      "calculatorsTitle": "Calculadoras de Financiamento e Empréstimos",
+      "calculatorsSubtitle": "Simulações precisas de parcelas, juros acumulados e cronogramas de amortização",
+      "invoicesTitle": "Geradores de Faturas e Recibos",
+      "invoicesSubtitle": "Crie e baixe faturas profissionais em PDF prontas para impressão e envio",
+      "guideTitle": "Entendendo os Conceitos de Empréstimos e Financiamentos",
+      "terms": {
+        "principalTitle": "Principal",
+        "principalDesc": "O valor original emprestado ou financiado, sobre o qual incidem as taxas de juros. Ao amortizar, cada parcela reduz essa dívida base.",
+        "rateTitle": "Taxa de Juros vs. Custo Efetivo Total (CET / APR)",
+        "rateDesc": "A taxa nominal reflete apenas o juro base. O Custo Efetivo Total inclui tarifas bancárias, IOF e seguros obrigatórios, representando o gasto real da operação.",
+        "termTitle": "Prazo de Pagamento",
+        "termDesc": "O período de quitação (meses ou anos). Prazos maiores reduzem a prestação mensal, mas aumentam substancialmente o total de juros pagos ao longo do tempo.",
+        "amortizationTitle": "Tabela de Amortização",
+        "amortizationDesc": "O cronograma detalhado de cada pagamento, separando o quanto vai para o pagamento da dívida (principal) e o quanto remunera a instituição (juros).",
+        "downPaymentTitle": "Entrada (Down Payment)",
+        "downPaymentDesc": "Quantia paga à vista no início da operação, reduzindo o principal a ser financiado e garantindo taxas de juros mais vantajosas."
+      },
+      "faqs": [
+        {
+          "question": "As calculadoras financeiras do ToolNotch são gratuitas?",
+          "answer": "Sim, todas as nossas ferramentas e calculadoras de financiamento são 100% gratuitas, ilimitadas e não requerem cadastro ou download."
+        },
+        {
+          "question": "Como funciona o cálculo de amortização de um empréstimo?",
+          "answer": "Utilizamos a fórmula padrão da Tabela Price (amortização francesa), onde a parcela mensal é constante e a composição entre juros e principal evolui mês a mês até a quitação."
+        },
+        {
+          "question": "Qual a diferença entre a taxa de juros nominal e o CET/APR?",
+          "answer": "A taxa nominal é o percentual divulgado de juros. O CET (Custo Efetivo Total) ou APR abrange todos os encargos, taxas administrativas, seguros e impostos embutidos no contrato."
+        },
+        {
+          "question": "Meus dados financeiros ficam salvos em algum servidor?",
+          "answer": "Não. Todos os cálculos ocorrem localmente no seu próprio navegador. Nenhuma informação de valores, prazos ou dados de faturas é enviada ou armazenada."
+        }
+      ]
     },
     "variants": {
       "loan-calculator": {
@@ -2209,7 +2275,7 @@
             "Insira o valor do empréstimo — o total que você deseja tomar, antes de qualquer taxa.",
             "Insira a taxa de juros anual. Use o CET da proposta para o custo total mais preciso.",
             "Selecione o prazo em meses ou anos. Prazos mais curtos significam prestações maiores, mas muito menos juros.",
-            "Clique em Calcular para ver a prestação mensal e o total de juros ao longo do empréstimo.",
+            "Veja instantaneamente a prestação mensal e o total de juros ao longo do empréstimo.",
             "Experimente diferentes valores e prazos para encontrar a combinação que cabe no seu orçamento sem maximizar o custo total."
           ],
           "whyItMatters": "O prazo tem um efeito desproporcional no custo total. Um empréstimo de R$ 10.000 a 3% ao mês por 24 meses custa aproximadamente R$ 8.800 em juros. O mesmo valor em 36 meses reduz a prestação em cerca de R$ 100 por mês, mas os juros totais sobem para mais de R$ 14.000. Para valores maiores, essa diferença é ainda mais expressiva. Conhecer o custo real antes de assinar evita o erro comum de escolher o menor valor de parcela sem ver quanto vai pagar ao total.",
@@ -2246,7 +2312,7 @@
             "Insira o valor da entrada. Uma entrada maior reduz a prestação e o total de juros pagos.",
             "Insira a taxa de juros anual. Use a taxa oferecida pelo banco ou uma taxa de mercado atual.",
             "Escolha o prazo em anos: prazos mais longos reduzem a prestação, mas aumentam o total de juros.",
-            "Clique em Calcular para ver a prestação mensal, total de juros e a tabela completa de amortização.",
+            "Veja instantaneamente a prestação mensal, o total de juros e a tabela completa de amortização.",
             "Some IPTU, seguro e outros encargos ao resultado para obter seu custo mensal real de moradia."
           ],
           "whyItMatters": "Uma diferença de 0,5% na taxa de juros pode custar ou economizar dezenas de milhares de reais ao longo de um financiamento de 30 anos. Simular diferentes cenários — taxas, prazos e valores de entrada — antes de assinar o contrato protege você de comprometer sua renda. Muitos compradores focam apenas na prestação sem considerar o total de juros: um imóvel de R$ 500.000 financiado a 10% ao ano por 30 anos pode resultar em mais de R$ 900.000 em juros. Entender o custo completo ajuda a escolher o produto certo e decidir se vale a pena dar uma entrada maior.",
@@ -2264,7 +2330,7 @@
             "Insira o valor do veículo, incluindo taxas da concessionária, menos a entrada ou o valor do veículo usado dado como parte do pagamento.",
             "Informe a taxa de juros anual — use a taxa pré-aprovada pelo seu banco ou a taxa cotada pela concessionária.",
             "Escolha o prazo do financiamento em meses (36, 48, 60 ou 72 meses são os mais comuns).",
-            "Clique em Calcular para ver sua parcela mensal e o total de juros pagos durante a vida do contrato.",
+            "Veja instantaneamente sua parcela mensal e o total de juros pagos durante a vida do contrato.",
             "Compare cenários: rode o mesmo valor com a taxa do banco vs. a taxa da concessionária para ver a diferença em reais.",
             "Acrescente seguro, IPVA, manutenção e combustível além da parcela para calcular o custo mensal real de transporte."
           ],
@@ -2301,7 +2367,7 @@
             "Insira o valor do empréstimo — para consolidação de dívidas, some todos os saldos que pretende quitar.",
             "Informe a taxa de juros anual (ou mensal) que lhe foi oferecida, ou use sua faixa de score para estimar uma taxa realista.",
             "Escolha o prazo em meses (12, 24, 36, 48 ou 60 meses são os mais comuns em empréstimos pessoais).",
-            "Clique em Calcular para ver sua parcela mensal e o total de juros ao longo do contrato.",
+            "Veja instantaneamente sua parcela mensal e o total de juros ao longo do contrato.",
             "Compare o total de juros deste empréstimo com o que você pagaria mantendo os saldos atuais no cartão de crédito.",
             "Ajuste o prazo para encontrar o equilíbrio ideal entre o tamanho da parcela e o custo total dos juros."
           ],
@@ -2355,7 +2421,7 @@
           "howToUse": [
             "Insira o valor do empréstimo, a taxa de juros anual e o prazo em anos.",
             "Opcionalmente, insira um valor de amortização extra mensal para ver como ele reduz o prazo e os juros.",
-            "Clique em Calcular para gerar a tabela completa de amortização e os totais do financiamento.",
+            "Acompanhe em tempo real a tabela completa de amortização e os totais do financiamento.",
             "Analise o resumo: total de juros pagos, data de quitação e custo total do empréstimo.",
             "Examine a tabela ano a ano para ver como a proporção juros/amortização muda ao longo do tempo.",
             "Experimente diferentes valores de amortização extra para encontrar o equilíbrio ideal entre prestação e economia."
@@ -2430,7 +2496,7 @@
             "Insira o saldo devedor atual, a taxa de juros atual e o prazo restante do financiamento.",
             "Insira a nova taxa de juros oferecida e o novo prazo que você está considerando.",
             "Insira os custos estimados de portabilidade ou refinanciamento — custos de cartório, registro e eventuais taxas bancárias.",
-            "Clique em Calcular para ver a economia mensal, comparativo de juros totais e o ponto de equilíbrio em meses.",
+            "Veja em tempo real a economia mensal, o comparativo de juros totais e o ponto de equilíbrio em meses.",
             "Compare o ponto de equilíbrio com quanto tempo você ainda pretende manter o imóvel. Se o equilíbrio é em 36 meses mas você planeja vender em 24, o refinanciamento provavelmente não compensa.",
             "Simule pagar os custos à vista versus incorporá-los ao saldo devedor para ver o impacto de longo prazo de cada opção."
           ],
@@ -2449,7 +2515,7 @@
             "Insira o saldo total do empréstimo estudantil — inclua todos os créditos federais e privados que deseja modelar.",
             "Informe a taxa de juros média ponderada dos seus empréstimos, ou modele cada empréstimo separadamente para maior precisão.",
             "Escolha o prazo de pagamento: 10 anos para o plano padrão, ou 20–25 anos para simular um plano baseado em renda.",
-            "Clique em Calcular para ver sua parcela mensal e o total de juros pagos durante todo o prazo.",
+            "Veja instantaneamente sua parcela mensal e o total de juros pagos durante todo o prazo.",
             "Compare o plano padrão de 10 anos com um plano IDR de 20 anos para visualizar o equilíbrio entre o valor da parcela e o total de juros.",
             "Se trabalha no setor público nos EUA, considere o PSLF, que cancela o saldo restante após 10 anos de pagamentos qualificados."
           ],
@@ -2505,7 +2571,7 @@
             "Insira a taxa de juros anual como uma porcentagem (por exemplo, 5 para 5%).",
             "Insira o período de tempo em anos (ou meses, se a calculadora oferecer suporte).",
             "Selecione a frequência de capitalização: diária, mensal, trimestral ou anual. Deixe em juros simples para comparar.",
-            "Clique em Calcular para ver o total de juros ganhos ou pagos, além do saldo final.",
+            "Veja em tempo real o total de juros gerados, o saldo final e a evolução patrimonial.",
             "Alterne entre as frequências de composição para ver como a composição diária se compara à mensal com a mesma taxa."
           ],
           "whyItMatters": "A diferença entre juros simples e compostos é enorme ao longo do tempo. Um investimento de US$ 10.000 a 5% de juros simples em 10 anos ganha US$ 5.000 em juros. O mesmo valor a 5% composto mensalmente ganha aproximadamente US$ 6.470 — uma diferença de 29% — sem contribuições adicionais. A frequência composta também é importante ao comparar contas de poupança: duas contas anunciadas a 4,80% de APR podem render APYs significativamente diferentes.",
@@ -2529,7 +2595,7 @@
             "Insira o valor do imóvel ou o montante que pretende financiar após subtrair a entrada.",
             "Informe a taxa de juros anual da proposta do banco ou use as taxas médias atuais de financiamento imobiliário como referência.",
             "O prazo está fixo em 30 anos (360 meses); confirme que corresponde à estrutura do seu crédito.",
-            "Clique em Calcular para ver sua parcela estimada de principal e juros.",
+            "Veja instantaneamente sua parcela estimada de principal e juros atualizada em tempo real.",
             "Analise o valor total de juros pagos — esse é o custo adicional real do financiamento além do preço do imóvel.",
             "Compare esse resultado com a calculadora de financiamento de 15 anos para visualizar o equilíbrio entre parcela mensal e juros totais."
           ],
@@ -2572,7 +2638,7 @@
             "Insira o valor do imóvel ou o montante que pretende financiar após sua entrada.",
             "Informe a taxa de juros anual da proposta do banco — ou use as médias atuais de financiamento de 15 anos como referência.",
             "O prazo está fixo em 15 anos (180 meses); confirme que corresponde à sua proposta de crédito.",
-            "Clique em Calcular para ver sua parcela estimada de principal e juros.",
+            "Veja instantaneamente sua parcela estimada de principal e juros atualizada em tempo real.",
             "Analise o total de juros pagos e compare com a calculadora de 30 anos para quantificar sua economia.",
             "Ajuste o valor do imóvel ou a taxa de juros para simular diferentes cenários de compra antes de se comprometer."
           ],
@@ -2726,6 +2792,8 @@
         "emailPlaceholder": "E-mail",
         "addressPlaceholder": "Endereço",
         "logoButton": "Logo",
+        "changeLogo": "Alterar",
+        "removeLogo": "Remover logotipo",
         "billTo": "Cobrar De",
         "clientNamePlaceholder": "Nome do Cliente",
         "clientEmailPlaceholder": "E-mail do Cliente",
@@ -3003,6 +3071,91 @@
         "whyItMatters": "Faturas profissionais reduzem disputas de pagamento, eliminando ambiguidades sobre o que foi entregue e a que preço. Incluir uma cláusula de taxa por atraso de pagamento — como 1,5% ao mês — incentiva o pagamento em dia. Muitas pequenas empresas perdem receita significativa não por clientes ruins, mas por não acompanharem as faturas pendentes. Uma fatura numerada e datada cria a trilha de papel necessária tanto para cobrança quanto para deduções fiscais.",
         "proTip": "Sempre use um sistema de numeração sequencial (INV-001, INV-002) desde o primeiro dia. Software de contabilidade, auditorias e registros financeiros dependem de numeração consistente para rastrear a receita e combinar pagamentos. Também considere adicionar uma cláusula de taxa por atraso de pagamento."
       }
+    },
+    "affordability": {
+      "incomeLabel": "Renda Mensal Bruta",
+      "debtsLabel": "Dívidas Mensais Fixas",
+      "downPaymentLabel": "Entrada Disponível",
+      "annualRateLabel": "Taxa de Juros Anual (%)",
+      "termLabel": "Prazo do Financiamento",
+      "maxHomePrice": "Preço Máximo do Imóvel",
+      "maxLoan": "Valor Máximo Financiado",
+      "monthlyPayment": "Parcela Mensal Estimada",
+      "rule2836Title": "Análise da Regra 28/36",
+      "rule2836Desc": "Diretriz bancária de qualificação: máximo 28% da renda bruta para moradia e 36% para moradia somada a outras dívidas.",
+      "frontEndLabel": "Limite Moradia (28%)",
+      "backEndLabel": "Limite com Dívidas (36%)",
+      "ltvLabel": "LTV (Empréstimo/Valor)",
+      "debtConstrainedWarning": "Suas dívidas fixas ({amount}) estão limitando sua capacidade de empréstimo. Quitar dívidas aumentará sua capacidade de compra.",
+      "frontEndCalculation": "28% de {income}",
+      "backEndCalculation": "36% de {income} − {debts}"
+    },
+    "refinance": {
+      "currentSection": "Empréstimo Atual",
+      "newSection": "Novo Financiamento",
+      "currentBalance": "Saldo Devedor Atual",
+      "currentRate": "Taxa de Juros Atual (%)",
+      "currentTerm": "Prazo Restante",
+      "currentPayment": "Parcela Atual",
+      "newRate": "Nova Taxa de Juros (%)",
+      "newTerm": "Novo Prazo",
+      "closingCosts": "Custos de Fechamento / Taxas",
+      "monthlySavings": "Economia Mensal",
+      "lifetimeSavings": "Economia Total de Juros",
+      "breakEven": "Ponto de Equilíbrio (Break-Even)",
+      "breakEvenMonths": "{months} meses para recuperar custos",
+      "breakEvenNever": "Sem ponto de equilíbrio",
+      "worthIt": "Refinanciamento Vantajoso!",
+      "notWorthIt": "Atenção: custos superam a economia",
+      "newPayment": "Nova Parcela"
+    },
+    "compound": {
+      "initialDeposit": "Depósito Inicial",
+      "monthlyContribution": "Aporte Mensal",
+      "annualRate": "Taxa Anual Estimada (%)",
+      "years": "Período (Anos)",
+      "endingBalance": "Patrimônio Futuro Acumulado",
+      "totalPrincipal": "Total de Principal Investido",
+      "totalInterest": "Total Ganho em Juros",
+      "breakdownTitle": "Evolução Anual do Patrimônio",
+      "year": "Ano",
+      "principalInvested": "Principal Acumulado",
+      "interestEarned": "Juros Acumulados",
+      "totalBalance": "Saldo Total",
+      "totalContributionsLabel": "Aportes Totais",
+      "yearPrefix": "Ano {year}"
+    },
+    "debtPayoff": {
+      "balance": "Saldo Total da Dívida",
+      "annualRate": "Taxa de Juros Anual / APR (%)",
+      "monthlyPayment": "Pagamento Mensal Atual",
+      "extraPayment": "Pagamento Mensal Extra",
+      "timeSaved": "Tempo Economizado",
+      "interestSaved": "Juros Economizados",
+      "debtFreeIn": "Dívida Quitada em",
+      "standardPlan": "Plano Padrão",
+      "acceleratedPlan": "Plano com Pagamento Extra",
+      "monthsFaster": "{months} meses mais rápido",
+      "yearsMonths": "{years}a {months}m",
+      "totalInterest": "Juros Totais"
+    },
+    "comparison": {
+      "title": "15 Anos vs. 30 Anos",
+      "subtitle": "Compare a parcela e os juros totais entre os dois prazos.",
+      "term15Title": "15 Anos",
+      "term30Title": "30 Anos",
+      "monthlyPayment": "Parcela Mensal",
+      "totalInterest": "Juros Totais",
+      "interestSavings": "Economia em Juros",
+      "savingsBadge": "-{amount} em juros no prazo de 15 anos",
+      "switchTo15": "Ver calculadora de 15 anos →",
+      "switchTo30": "Ver calculadora de 30 anos →",
+      "currentLabel": "Atual"
+    },
+    "car": {
+      "vehiclePrice": "Preço do Veículo",
+      "downPayment": "Entrada / Valor de Troca",
+      "netLoanAmount": "Valor Líquido a Financiar"
     }
   },
   "fun": {
