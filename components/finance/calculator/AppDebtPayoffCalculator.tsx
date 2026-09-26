@@ -89,9 +89,7 @@ export default function AppDebtPayoffCalculator() {
           {deferredResult.monthsSaved > 0 && (
             <div>
               <AppBadge
-                variant="subtle"
-                size="md"
-                className="font-mono text-xs font-bold uppercase flex items-center gap-1.5 text-primary border-primary/40 bg-primary/10"
+                className="font-mono text-xs font-bold uppercase flex items-center gap-1.5 text-primary border border-primary/40 bg-primary/10"
               >
                 <Zap className="w-3.5 h-3.5" />
                 <span>{t('monthsFaster', { months: deferredResult.monthsSaved })}</span>

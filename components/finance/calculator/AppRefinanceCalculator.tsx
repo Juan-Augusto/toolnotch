@@ -124,12 +124,10 @@ export default function AppRefinanceCalculator() {
 
           <div>
             <AppBadge
-              variant="subtle"
-              size="md"
               className={`font-mono text-xs font-bold uppercase flex items-center gap-1.5 ${
                 isWorthIt
-                  ? 'text-primary border-primary/40 bg-primary/10'
-                  : 'text-amber-500 border-amber-500/40 bg-amber-500/10'
+                  ? 'text-primary border border-primary/40 bg-primary/10'
+                  : 'text-amber-500 border border-amber-500/40 bg-amber-500/10'
               }`}
             >
               {isWorthIt ? (
