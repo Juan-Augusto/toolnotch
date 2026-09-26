@@ -2177,7 +2177,73 @@
       "payment": "Pago",
       "principal_col": "Capital",
       "interest": "Interés",
-      "balance": "Saldo"
+      "balance": "Saldo",
+      "yearUnit": "años",
+      "monthUnit": "meses",
+      "presetYears": "{years} años",
+      "presetMonths": "{months} meses",
+      "presetMonthsShort": "{months}m",
+      "amortizationChartTitle": "Evolución de la Amortización",
+      "showPaged": "Mostrar paginado",
+      "showAllPayments": "Mostrar las {count} cuotas",
+      "principalPaid": "Principal Pagado",
+      "interestPaid": "Intereses Pagados",
+      "yearPrefix": "Año {year}",
+      "prev": "← Anterior",
+      "next": "Siguiente →"
+    },
+    "affiliate": {
+      "compareRates": "Comparar Tarifas Actuales",
+      "disclaimer": "Las tarifas mostradas son ilustrativas. Compara ofertas reales de entidades para encontrar tu mejor tasa.",
+      "lendingTreeMortgage": "Comparar tasas hipotecarias en LendingTree →",
+      "bankrateMortgage": "Comparar tasas en Bankrate →",
+      "lendingTreeAuto": "Comparar tasas de préstamos para autos en LendingTree →",
+      "lendingTreePersonal": "Comparar tasas de préstamos personales en LendingTree →"
+    },
+    "hub": {
+      "metaTitle": "Herramientas Financieras Gratuitas — Calculadoras de Préstamos, Hipotecas y Facturas | ToolNotch",
+      "metaDescription": "Calculadoras de préstamos, hipotecas y generadores de facturas en línea y gratuitos. Simula cuotas, intereses y amortización al instante.",
+      "title": "Calculadoras y Herramientas Financieras",
+      "description": "Calcula cuotas mensuales, compara intereses y amortizaciones y genera facturas profesionales en PDF. 100% gratuito, sin registro y en tu navegador.",
+      "breadcrumb": "Finanzas",
+      "badgeFree": "100% Gratis",
+      "badgePrivate": "Sin Registro",
+      "badgeInstant": "Cálculo Instantáneo",
+      "calculatorsTitle": "Calculadoras de Préstamos e Hipotecas",
+      "calculatorsSubtitle": "Estimaciones precisas de cuotas mensuales, desglose de intereses y cronogramas de amortización",
+      "invoicesTitle": "Generadores de Facturas y Recibos",
+      "invoicesSubtitle": "Crea y descarga facturas profesionales en PDF listas para clientes y contabilidad",
+      "guideTitle": "Comprendiendo los Conceptos Clave de Préstamos y Finanzas",
+      "terms": {
+        "principalTitle": "Capital (Principal)",
+        "principalDesc": "El monto original prestado o financiado, sobre el cual se calculan los intereses. Cada pago reduce este saldo pendiente.",
+        "rateTitle": "Tasa de Interés vs. TAE / APR",
+        "rateDesc": "La tasa nominal refleja solo el interés base. La TAE (Tasa Anual Equivalente) incluye comisiones, gastos y seguros para reflejar el coste real total.",
+        "termTitle": "Plazo de Amortización",
+        "termDesc": "El tiempo total para liquidar la deuda. Plazos más largos reducen la cuota mensual pero aumentan notablemente el total de intereses pagados.",
+        "amortizationTitle": "Tabla de Amortización",
+        "amortizationDesc": "El calendario detallado mes a mes que muestra cómo se reparte cada pago entre reducir el capital adeudado y abonar los intereses.",
+        "downPaymentTitle": "Entrada (Enganche)",
+        "downPaymentDesc": "El dinero aportado al contado al inicio, lo que disminuye el capital a financiar y suele permitir mejores condiciones de tasa de interés."
+      },
+      "faqs": [
+        {
+          "question": "¿Las calculadoras financieras de ToolNotch son gratuitas?",
+          "answer": "Sí, todas nuestras herramientas y calculadoras de préstamos son 100% gratuitas, sin límites y sin necesidad de registro ni descargas."
+        },
+        {
+          "question": "¿Cómo se calcula la cuota mensual y la amortización?",
+          "answer": "Utilizamos la fórmula estándar de cuota fija (sistema francés), donde el pago mensual es constante y la proporción entre intereses y capital evoluciona mes a mes."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre la tasa de interés nominal y la TAE?",
+          "answer": "La tasa nominal es el interés básico pactado. La TAE o APR abarca comisiones de apertura, seguros obligatorios y gastos para mostrar el coste efectivo real."
+        },
+        {
+          "question": "¿Mis datos financieros se guardan en algún servidor?",
+          "answer": "No. Todos los cálculos se realizan localmente en tu navegador. Ninguna información introducida se transmite ni almacena externamente."
+        }
+      ]
     },
     "variants": {
       "loan-calculator": {
@@ -2209,7 +2275,7 @@
             "Ingresa el monto del préstamo — el total que planeas solicitar, antes de cualquier comisión.",
             "Ingresa la tasa de interés anual. Usa el CAT o TEA de la oferta para el costo total más preciso.",
             "Selecciona el plazo en meses o años. Plazos más cortos implican cuotas más altas pero mucho menos intereses.",
-            "Haz clic en Calcular para ver tu cuota mensual y el total de intereses durante la vida del préstamo.",
+            "Observa al instante tu cuota mensual y el total de intereses durante la vida del préstamo.",
             "Prueba distintos montos y plazos para encontrar la combinación que se ajuste a tu presupuesto sin maximizar el costo total."
           ],
           "whyItMatters": "El plazo tiene un efecto desproporcionado en el costo total. Un préstamo de $10,000 al 12% anual a 3 años cuesta aproximadamente $1,957 en intereses. El mismo préstamo a 5 años reduce la cuota en unos $100 por mes — pero los intereses totales suben a $3,346. Para montos mayores, esta diferencia se amplifica considerablemente. Conocer el costo real antes de firmar te permite comparar ofertas con precisión y evitar el error común de optimizar por la cuota más baja sin ver lo que pagarás en total.",
@@ -2246,7 +2312,7 @@
             "Ingresa tu pago inicial como monto o porcentaje. Un pago inicial del 20% elimina el seguro hipotecario.",
             "Ingresa la tasa de interés anual. Usa la tasa cotizada por tu banco o una referencia del mercado actual.",
             "Elige el plazo del préstamo: 30 años para cuotas más bajas, 15 años para pagar menos intereses en total.",
-            "Haz clic en Calcular para ver tu cuota mensual de capital e intereses, el total de intereses y la tabla de amortización completa.",
+            "Observa al instante tu cuota mensual de capital e intereses, el total de intereses y la tabla de amortización completa.",
             "Suma impuestos, seguro y otros cargos al resultado para obtener tu costo mensual real de vivienda."
           ],
           "whyItMatters": "Una diferencia del 0.5% en la tasa de interés puede costarte o ahorrarte decenas de miles de dólares a lo largo de un préstamo a 30 años. Simular distintos escenarios — tasas, plazos y pagos iniciales — antes de hacer una oferta te da ventaja en la negociación y te protege de comprometerte más de la cuenta. Muchos compradores se enfocan en la cuota mensual sin ver el total de intereses: una propiedad de $300,000 al 7% a 30 años puede costar más de $400,000 solo en intereses. Entender el panorama completo te ayuda a elegir el producto correcto y a decidir si vale la pena dar un mayor pago inicial.",
@@ -2264,7 +2330,7 @@
             "Ingresa el precio del vehículo, incluyendo cualquier cargo del concesionario, menos tu pago inicial o el valor de intercambio de tu auto actual.",
             "Ingresa la tasa de interés anual — usa tu tasa preaprobada o la tasa cotizada por el concesionario.",
             "Elige el plazo del préstamo en meses (36, 48, 60 o 72 meses son los más comunes).",
-            "Haz clic en Calcular para ver tu cuota mensual y el total de intereses pagados durante la vida del préstamo.",
+            "Observa al instante tu cuota mensual y el total de intereses pagados durante la vida del préstamo.",
             "Compara escenarios: ejecuta el mismo monto con la tasa del banco vs. la del concesionario para ver la diferencia en dinero.",
             "Suma el seguro, el registro y el mantenimiento a la cuota para obtener tu costo mensual real de transporte."
           ],
@@ -2301,7 +2367,7 @@
             "Ingresa el monto del préstamo — para consolidación de deudas, suma todos los saldos que planeas pagar.",
             "Ingresa la tasa de interés anual que te ofrecieron, o usa tu rango de puntaje crediticio para estimar una tasa realista.",
             "Elige el plazo en meses (24, 36, 48 o 60 meses son los más comunes para préstamos personales).",
-            "Haz clic en Calcular para ver tu cuota mensual y el total de intereses durante la vida del préstamo.",
+            "Observa al instante tu cuota mensual y el total de intereses durante la vida del préstamo.",
             "Compara el interés total de este préstamo con lo que pagarías si mantienes tus saldos actuales en tarjetas de crédito.",
             "Ajusta el plazo para encontrar el equilibrio adecuado entre el tamaño de la cuota y el costo total de intereses."
           ],
@@ -2355,7 +2421,7 @@
           "howToUse": [
             "Ingresa el monto del préstamo, la tasa de interés anual y el plazo en años.",
             "Opcionalmente ingresa un pago extra mensual para ver cómo acorta el préstamo y reduce los intereses.",
-            "Haz clic en Calcular para generar el cronograma de amortización completo y los totales del préstamo.",
+            "Genera al instante el cronograma de amortización completo y los totales del préstamo.",
             "Revisa el resumen: total de intereses pagados, fecha de liquidación y costo total del préstamo.",
             "Examina la tabla año por año para ver cómo cambia la proporción intereses/capital con el tiempo.",
             "Experimenta con distintos montos de pago extra para encontrar el equilibrio ideal entre cuota y ahorro a largo plazo."
@@ -2430,7 +2496,7 @@
             "Ingresa tu saldo actual del préstamo, la tasa de interés actual y el plazo restante de tu hipoteca.",
             "Ingresa la nueva tasa de interés cotizada y el nuevo plazo que estás considerando.",
             "Ingresa los costos de cierre estimados — típicamente entre el 2% y el 3% del monto del préstamo.",
-            "Haz clic en Calcular para ver el ahorro mensual, la comparación de intereses totales y el punto de equilibrio en meses.",
+            "Observa en tiempo real el ahorro mensual, la comparación de intereses totales y el punto de equilibrio en meses.",
             "Compara el punto de equilibrio con cuánto tiempo planeas quedarte en la propiedad. Si el equilibrio es a 36 meses pero planeas mudarte en 24, el refinanciamiento probablemente no vale la pena.",
             "Simula pagar los costos de bolsillo versus incorporarlos al préstamo para ver el impacto real a largo plazo."
           ],
@@ -2449,7 +2515,7 @@
             "Ingresa el saldo total del préstamo estudiantil — incluye todos los préstamos federales y privados que quieras modelar.",
             "Ingresa la tasa de interés promedio ponderada de tus préstamos, o modela cada préstamo por separado para mayor precisión.",
             "Elige un plazo de pago: 10 años para el plan estándar, o 20–25 años para modelar un plan de pago basado en ingresos.",
-            "Haz clic en Calcular para ver tu cuota mensual y el interés total pagado durante todo el plazo.",
+            "Observa al instante tu cuota mensual y el interés total pagado durante todo el plazo.",
             "Compara el plan estándar de 10 años con un plan IDR de 20 años para ver el equilibrio entre el tamaño de la cuota y el interés total.",
             "Para préstamos federales de EE. UU., considera el PSLF si trabajas en el sector público — cancela el saldo restante después de 10 años de pagos calificados."
           ],
@@ -2505,7 +2571,7 @@
             "Introduce la tasa anual de interés como porcentaje (por ejemplo, 5 para el 5%).",
             "Ingresa el período de tiempo en años (o meses si el calculador lo admite).",
             "Selecciona la frecuencia de cálculo: diaria, mensual, trimestral o anual. Deja en interés simple para comparar.",
-            "Haz clic en Calcular para ver el interés total ganado o pagado, más el saldo final.",
+            "Observa en tiempo real el interés total generado, el saldo final y la evolución patrimonial.",
             "Conmuta entre las frecuencias de cálculo para ver cómo la comprensión diaria de intereses se compara con la mensual a la misma tasa."
           ],
           "whyItMatters": "La diferencia entre intereses simples e intereses compuestos es enorme con el tiempo. Una inversión de $10,000 a un interés del 5% simple durante 10 años genera $5,000 en intereses. La misma cantidad al 5% compuesto mensualmente genera aproximadamente $6,470 — una diferencia del 29% — sin contribuciones adicionales. La frecuencia de cálculo también importa cuando se comparan cuentas de ahorro: dos cuentas anuncian ambos el 4.80% APR pueden generar rendimientos significativamente diferentes en APY dependiendo de cuán seguido compútense. Este calculador también ayuda a evaluar ofertas de financiación — comparando si un préstamo promocional del 0% realmente vence una descuento por compra efectivo cuando se considera el valor del dinero con el tiempo.",
@@ -2529,7 +2595,7 @@
             "Ingresa el precio de compra del inmueble o el monto del préstamo después de restar tu pago inicial.",
             "Ingresa la tasa de interés anual de la cotización de tu prestamista o usa las tasas promedio actuales a 30 años como referencia.",
             "El plazo está fijado en 30 años (360 meses); confirma que coincide con la estructura de tu préstamo.",
-            "Haz clic en Calcular para ver tu cuota estimada de capital e intereses.",
+            "Observa al instante tu cuota estimada de capital e intereses en tiempo real.",
             "Revisa el total de intereses pagados — este es el costo adicional total del préstamo más allá del precio del inmueble.",
             "Compara este resultado con la calculadora de hipoteca a 15 años para ver el equilibrio entre cuota mensual e interés total."
           ],
@@ -2572,7 +2638,7 @@
             "Ingresa el precio de compra del inmueble o el monto que planeas pedir prestado después de tu pago inicial.",
             "Ingresa la tasa de interés anual que te cotizaron — o usa las tasas promedio actuales a 15 años como referencia.",
             "El plazo está fijado en 15 años (180 meses); confirma que coincide con tu oferta de préstamo.",
-            "Haz clic en Calcular para ver tu cuota estimada de capital e intereses.",
+            "Observa al instante tu cuota estimada de capital e intereses en tiempo real.",
             "Revisa el total de intereses pagados y compáralo con la calculadora de hipoteca a 30 años para cuantificar tu ahorro.",
             "Ajusta el precio del inmueble o la tasa de interés para modelar diferentes escenarios de compra antes de decidir."
           ],
@@ -2726,6 +2792,8 @@
         "emailPlaceholder": "Correo electrónico",
         "addressPlaceholder": "Dirección",
         "logoButton": "Logo",
+        "changeLogo": "Cambiar",
+        "removeLogo": "Eliminar logotipo",
         "billTo": "Facturar a",
         "clientNamePlaceholder": "Nombre del Cliente",
         "clientEmailPlaceholder": "Correo del Cliente",
@@ -3004,6 +3072,91 @@
         "whyItMatters": "Las facturas profesionales reducen las disputas de pago eliminando ambigüedad sobre lo que se entregó, cuándo y a qué precio. Net-30 (pago debido en 30 días) es común en el sector B2B, mientras que los términos due-on-receipt o Net-15 suelen ser mejores para pequeñas empresas y freelancers que necesitan un flujo de efectivo más rápido. Incluir una cláusula de penalización por pago atrasado — como 1.5% al mes después de la fecha de vencimiento — incentiva el pago puntual. Muchas pequeñas empresas pierden significativa ganancia no debido a clientes malos, sino debido a la falta de seguimiento en facturas pendientes. Una factura numerada y con fecha crea el rastro escrito necesario tanto para la cobranza como las deducciones fiscales.",
         "proTip": "Siempre usa un sistema de numeración de facturas secuencial (INV-001, INV-002) desde el primer día. El software contable, los auditorios fiscales y los registros financieros empresariales todos dependen de la numeración de facturas consistente para rastrear las ganancias y coincidir los pagos. También considera agregar una cláusula de penalización por pago atrasado — incluso si nunca la impones, la presencia de un monto declarado acelera significativamente el comportamiento de pago."
       }
+    },
+    "affordability": {
+      "incomeLabel": "Ingresos Mensuales Brutos",
+      "debtsLabel": "Deudas Mensuales Fijas",
+      "downPaymentLabel": "Entrada / Pago Inicial",
+      "annualRateLabel": "Tipo de Interés Anual (%)",
+      "termLabel": "Plazo del Préstamo",
+      "maxHomePrice": "Precio Máximo de la Vivienda",
+      "maxLoan": "Importe Máximo Financiado",
+      "monthlyPayment": "Cuota Mensual Estimada",
+      "rule2836Title": "Análisis de la Regla 28/36",
+      "rule2836Desc": "Criterio bancario estándar: la vivienda no debe superar el 28% de los ingresos brutos, y el total con deudas el 36%.",
+      "frontEndLabel": "Límite Vivienda (28%)",
+      "backEndLabel": "Límite con Deudas (36%)",
+      "ltvLabel": "LTV (Préstamo/Valor)",
+      "debtConstrainedWarning": "Tus deudas mensuales ({amount}) están limitando tu capacidad de préstamo. Reducir deudas aumentará tu capacidad de compra.",
+      "frontEndCalculation": "28% de {income}",
+      "backEndCalculation": "36% de {income} − {debts}"
+    },
+    "refinance": {
+      "currentSection": "Préstamo Actual",
+      "newSection": "Nuevo Préstamo Refinanciado",
+      "currentBalance": "Saldo Pendiente Actual",
+      "currentRate": "Tipo de Interés Actual (%)",
+      "currentTerm": "Plazo Restante",
+      "currentPayment": "Cuota Actual",
+      "newRate": "Nuevo Tipo de Interés (%)",
+      "newTerm": "Nuevo Plazo",
+      "closingCosts": "Gastos de Cierre y Comisiones",
+      "monthlySavings": "Ahorro Mensual",
+      "lifetimeSavings": "Ahorro Total de Intereses",
+      "breakEven": "Punto de Equilibrio (Break-Even)",
+      "breakEvenMonths": "{months} meses para amortizar gastos",
+      "breakEvenNever": "Sin punto de equilibrio",
+      "worthIt": "¡Refinanciación Recomendada!",
+      "notWorthIt": "Atención: los gastos superan el ahorro",
+      "newPayment": "Nueva Cuota"
+    },
+    "compound": {
+      "initialDeposit": "Inversión Inicial",
+      "monthlyContribution": "Aportación Mensual",
+      "annualRate": "Rentabilidad Anual Estimada (%)",
+      "years": "Período (Años)",
+      "endingBalance": "Patrimonio Final Acumulado",
+      "totalPrincipal": "Total Capital Invertido",
+      "totalInterest": "Total Intereses Compuestos",
+      "breakdownTitle": "Evolución Anual del Patrimonio",
+      "year": "Año",
+      "principalInvested": "Capital Acumulado",
+      "interestEarned": "Intereses Ganados",
+      "totalBalance": "Saldo Total",
+      "totalContributionsLabel": "Aportaciones Totales",
+      "yearPrefix": "Año {year}"
+    },
+    "debtPayoff": {
+      "balance": "Saldo Total de la Deuda",
+      "annualRate": "Tipo de Interés / APR (%)",
+      "monthlyPayment": "Pago Mensual Actual",
+      "extraPayment": "Pago Mensual Extra",
+      "timeSaved": "Tiempo Ahorrado",
+      "interestSaved": "Intereses Ahorrados",
+      "debtFreeIn": "Deuda Pagada en",
+      "standardPlan": "Plan Estándar",
+      "acceleratedPlan": "Con Pago Extra",
+      "monthsFaster": "{months} meses más rápido",
+      "yearsMonths": "{years}a {months}m",
+      "totalInterest": "Total Intereses"
+    },
+    "comparison": {
+      "title": "15 Años vs. 30 Años",
+      "subtitle": "Compara la cuota mensual y el coste de intereses entre ambos plazos.",
+      "term15Title": "15 Años",
+      "term30Title": "30 Años",
+      "monthlyPayment": "Cuota Mensual",
+      "totalInterest": "Intereses Totales",
+      "interestSavings": "Ahorro en Intereses",
+      "savingsBadge": "-{amount} en intereses a 15 años",
+      "switchTo15": "Ver calculadora de 15 años →",
+      "switchTo30": "Ver calculadora de 30 años →",
+      "currentLabel": "Actual"
+    },
+    "car": {
+      "vehiclePrice": "Precio del Vehículo",
+      "downPayment": "Entrada / Vehículo a Cambio",
+      "netLoanAmount": "Importe Neto a Financiar"
     }
   },
   "fun": {

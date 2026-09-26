@@ -1,4 +1,11 @@
-import { calculateLoan, calculateAffordability, formatCurrency } from '@/lib/loanMath'
+import {
+  calculateLoan,
+  calculateAffordability,
+  calculateRefinance,
+  calculateCompoundInterest,
+  calculateDebtPayoff,
+  formatCurrency,
+} from '@/lib/loanMath'
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -128,3 +135,148 @@ describe('formatCurrency', () => {
     expect(formatCurrency(300_000)).toBe('$300,000.00')
   })
 })
+
+// ---------------------------------------------------------------------------
+// calculateRefinance
+// ---------------------------------------------------------------------------
+
+describe('calculateRefinance', () => {
+  test('computes savings and break-even accurately', () => {
+    const res = calculateRefinance({
+      currentBalance: 250_000,
+      currentRate: 6.5,
+      currentTermMonths: 300,
+      newRate: 5.0,
+      newTermMonths: 300,
+      closingCosts: 4_000,
+    })
+
+    expect(res.currentMonthlyPayment).toBeGreaterThan(res.newMonthlyPayment)
+    expect(res.monthlySavings).toBeGreaterThan(0)
+    expect(res.breakEvenMonths).toBeGreaterThan(0)
+    expect(res.lifetimeSavings).toBeGreaterThan(0)
+    // breakEvenMonths = ceil(closingCosts / monthlySavings)
+    expect(res.breakEvenMonths).toBe(Math.ceil(4000 / res.monthlySavings))
+  })
+
+  test('returns null break-even when new rate is higher (no savings)', () => {
+    const res = calculateRefinance({
+      currentBalance: 200_000,
+      currentRate: 4.5,
+      currentTermMonths: 240,
+      newRate: 7.0,
+      newTermMonths: 240,
+      closingCosts: 3_000,
+    })
+
+    expect(res.monthlySavings).toBeLessThan(0)
+    expect(res.breakEvenMonths).toBeNull()
+    expect(res.lifetimeSavings).toBeLessThan(0)
+  })
+
+  test('handles edge case inputs gracefully', () => {
+    const res = calculateRefinance({
+      currentBalance: 0,
+      currentRate: 0,
+      currentTermMonths: 0,
+      newRate: 0,
+      newTermMonths: 0,
+      closingCosts: 0,
+    })
+    expect(res.monthlySavings).toBe(0)
+    expect(res.breakEvenMonths).toBeNull()
+  })
+})
+
+// ---------------------------------------------------------------------------
+// calculateCompoundInterest
+// ---------------------------------------------------------------------------
+
+describe('calculateCompoundInterest', () => {
+  test('calculates compound interest without monthly contributions', () => {
+    // $10,000 at 10% annual compounded monthly for 1 year
+    const res = calculateCompoundInterest({
+      initialDeposit: 10_000,
+      monthlyContribution: 0,
+      annualRate: 10,
+      years: 1,
+    })
+
+    expect(res.totalContributions).toBe(0)
+    expect(res.endingBalance).toBeGreaterThan(11_000)
+    expect(res.totalInterest).toBeCloseTo(res.endingBalance - 10_000, 2)
+    expect(res.annualBreakdown).toHaveLength(1)
+    expect(res.annualBreakdown[0].year).toBe(1)
+  })
+
+  test('calculates compound interest with monthly contributions', () => {
+    const res = calculateCompoundInterest({
+      initialDeposit: 5_000,
+      monthlyContribution: 200,
+      annualRate: 7,
+      years: 5,
+    })
+
+    expect(res.totalContributions).toBe(200 * 12 * 5)
+    expect(res.endingBalance).toBeGreaterThan(5_000 + 12_000)
+    expect(res.totalInterest).toBeGreaterThan(0)
+    expect(res.annualBreakdown).toHaveLength(5)
+  })
+
+  test('zero years returns initial deposit', () => {
+    const res = calculateCompoundInterest({
+      initialDeposit: 1_000,
+      monthlyContribution: 50,
+      annualRate: 5,
+      years: 0,
+    })
+    expect(res.endingBalance).toBe(1_000)
+    expect(res.totalInterest).toBe(0)
+    expect(res.annualBreakdown).toHaveLength(0)
+  })
+})
+
+// ---------------------------------------------------------------------------
+// calculateDebtPayoff
+// ---------------------------------------------------------------------------
+
+describe('calculateDebtPayoff', () => {
+  test('calculates time and interest saved with extra monthly payments', () => {
+    const res = calculateDebtPayoff({
+      balance: 10_000,
+      annualRate: 18,
+      monthlyPayment: 250,
+      extraPayment: 100,
+    })
+
+    expect(res.acceleratedMonths).toBeLessThan(res.standardMonths)
+    expect(res.monthsSaved).toBe(res.standardMonths - res.acceleratedMonths)
+    expect(res.acceleratedTotalInterest).toBeLessThan(res.standardTotalInterest)
+    expect(res.interestSaved).toBeGreaterThan(0)
+  })
+
+  test('handles zero extra payment', () => {
+    const res = calculateDebtPayoff({
+      balance: 5_000,
+      annualRate: 12,
+      monthlyPayment: 200,
+      extraPayment: 0,
+    })
+
+    expect(res.monthsSaved).toBe(0)
+    expect(res.interestSaved).toBe(0)
+    expect(res.standardMonths).toBe(res.acceleratedMonths)
+  })
+
+  test('handles zero balance safely', () => {
+    const res = calculateDebtPayoff({
+      balance: 0,
+      annualRate: 10,
+      monthlyPayment: 100,
+      extraPayment: 50,
+    })
+    expect(res.standardMonths).toBe(0)
+    expect(res.monthsSaved).toBe(0)
+  })
+})
+

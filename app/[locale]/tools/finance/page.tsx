@@ -1,7 +1,33 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
-import { buildAlternates } from "@/lib/i18nMeta";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import {
+  Calculator,
+  Landmark,
+  Car,
+  Home,
+  FileText,
+  PieChart,
+  Percent,
+  Receipt,
+  Scale,
+  ArrowRight,
+  TrendingDown,
+  GraduationCap,
+  Briefcase,
+  Ship,
+} from "lucide-react";
+import { buildAlternatesForLocale, localizedPath } from "@/lib/i18nMeta";
+import {
+  buildJsonLd,
+  breadcrumbSchema,
+  webAppSchema,
+  buildLocalizedUrl,
+} from "@/lib/schema";
+import { AppBreadcrumb, AppCard } from "@/components/ui";
+import AppAffiliateStickyBar from "@/components/AppAffiliateStickyBar";
+
+const PATH = "/tools/finance";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -9,279 +35,537 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "site" });
+  const t = await getTranslations({ locale, namespace: "finance.hub" });
+  const localizedUrl = buildLocalizedUrl(PATH, locale);
+  const ogLocale =
+    locale === "pt" ? "pt_BR" : locale === "es" ? "es_ES" : "en_US";
+
   return {
-    title:
-      "Free Finance Tools — Loan Calculator, Invoice Generator & More | ToolNotch",
-    description:
-      "Free online finance tools: loan calculator, mortgage calculator, invoice generator, and more. No signup required. Calculate payments and create invoices instantly.",
-    alternates: buildAlternates("/tools/finance"),
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    alternates: buildAlternatesForLocale(PATH, locale),
+    openGraph: {
+      title: `${t("title")} | ToolNotch`,
+      description: t("metaDescription"),
+      url: localizedUrl,
+      siteName: "ToolNotch",
+      locale: ogLocale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${t("title")} | ToolNotch`,
+      description: t("metaDescription"),
+    },
   };
 }
 
-const CALCULATORS = [
-  {
-    href: "/tools/finance/loan-calculator",
-    label: "Loan Calculator",
-    desc: "Monthly payment & full amortization schedule for any loan.",
-  },
-  {
-    href: "/tools/finance/mortgage-calculator",
-    label: "Mortgage Calculator",
-    desc: "Calculate your mortgage payment, total interest, and payoff timeline.",
-  },
-  {
-    href: "/tools/finance/car-loan-calculator",
-    label: "Car Loan Calculator",
-    desc: "Calculate auto loan monthly payments and total cost.",
-  },
-  {
-    href: "/tools/finance/personal-loan-calculator",
-    label: "Personal Loan Calculator",
-    desc: "Personal loan payments and debt consolidation calculator.",
-  },
-  {
-    href: "/tools/finance/amortization-calculator",
-    label: "Amortization Calculator",
-    desc: "Full payment schedule showing principal, interest, and balance.",
-  },
-  {
-    href: "/tools/finance/home-affordability-calculator",
-    label: "Home Affordability",
-    desc: "How much house can you afford? Uses the 28/36 rule.",
-  },
-  {
-    href: "/tools/finance/30-year-mortgage-calculator",
-    label: "30-Year Mortgage",
-    desc: "Calculate your 30-year fixed-rate mortgage payment.",
-  },
-  {
-    href: "/tools/finance/15-year-mortgage-calculator",
-    label: "15-Year Mortgage",
-    desc: "Compare 15-year vs 30-year mortgage payments.",
-  },
-  {
-    href: "/tools/finance/refinance-calculator",
-    label: "Refinance Calculator",
-    desc: "Calculate if refinancing makes sense and your break-even point.",
-  },
-  {
-    href: "/tools/finance/student-loan-calculator",
-    label: "Student Loan Calculator",
-    desc: "Student loan repayment calculator and payoff timeline.",
-  },
-  {
-    href: "/tools/finance/debt-payoff-calculator",
-    label: "Debt Payoff Calculator",
-    desc: "Calculate how long to pay off debt and total interest paid.",
-  },
-  {
-    href: "/tools/finance/fha-loan-calculator",
-    label: "FHA Loan Calculator",
-    desc: "FHA loan payments including MIP mortgage insurance.",
-  },
-  {
-    href: "/tools/finance/va-loan-calculator",
-    label: "VA Loan Calculator",
-    desc: "VA loan payments for eligible veterans and military.",
-  },
-];
-
-const INVOICES = [
-  {
-    href: "/tools/finance/invoice-generator",
-    label: "Invoice Generator",
-    desc: "Free professional invoices — no watermark, no signup. Download as PDF.",
-  },
-  {
-    href: "/tools/finance/invoice-generator-uk",
-    label: "UK Invoice Generator",
-    desc: "GBP invoices with VAT pre-configured at 20%.",
-  },
-  {
-    href: "/tools/finance/invoice-generator-canada",
-    label: "Canadian Invoice Generator",
-    desc: "CAD invoices with GST pre-configured at 5%.",
-  },
-  {
-    href: "/tools/finance/invoice-generator-australia",
-    label: "Australian Invoice Generator",
-    desc: "AUD invoices with GST pre-configured at 10%.",
-  },
-  {
-    href: "/tools/finance/invoice-generator-for-freelancers",
-    label: "Freelancer Invoice",
-    desc: "Invoice template designed for freelancers and self-employed.",
-  },
-];
-
 export default async function FinanceToolsHubPage({ params }: Props) {
-  // locale is available via params if needed for dynamic content
-  await params;
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "finance.hub" });
+
+  const homeLabel =
+    locale === "pt" ? "Início" : locale === "es" ? "Inicio" : "Home";
+  const toolsLabel =
+    locale === "pt" ? "Ferramentas" : locale === "es" ? "Herramientas" : "Tools";
+  const prefix = locale === "en" ? "" : `/${locale}`;
+
+  const jsonLd = buildJsonLd(
+    breadcrumbSchema([
+      { name: homeLabel, url: localizedPath("/", locale) },
+      { name: toolsLabel, url: localizedPath("/tools", locale) },
+      { name: t("breadcrumb"), url: buildLocalizedUrl(PATH, locale) },
+    ]),
+    webAppSchema(
+      t("title"),
+      PATH,
+      t("metaDescription"),
+      locale,
+      "FinanceApplication",
+    ),
+  );
+
+  const calculators = [
+    {
+      href: `${prefix}/tools/finance/loan-calculator`,
+      title:
+        locale === "pt"
+          ? "Calculadora de Empréstimo"
+          : locale === "es"
+            ? "Calculadora de Préstamos"
+            : "Loan Calculator",
+      desc:
+        locale === "pt"
+          ? "Parcela mensal e cronograma de amortização para qualquer empréstimo"
+          : locale === "es"
+            ? "Cuota mensual y tabla de amortización para cualquier préstamo"
+            : "Monthly payment & full amortization schedule for any loan",
+      icon: <Calculator className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/finance/mortgage-calculator`,
+      title:
+        locale === "pt"
+          ? "Financiamento Imobiliário"
+          : locale === "es"
+            ? "Calculadora de Hipotecas"
+            : "Mortgage Calculator",
+      desc:
+        locale === "pt"
+          ? "Simule parcelas de hipoteca, juros totais e prazo de quitação"
+          : locale === "es"
+            ? "Calcula la cuota de tu hipoteca, intereses y plazo total"
+            : "Calculate mortgage payments, total interest, and payoff timeline",
+      icon: <Home className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/finance/car-loan-calculator`,
+      title:
+        locale === "pt"
+          ? "Financiamento de Veículos"
+          : locale === "es"
+            ? "Préstamo de Coche"
+            : "Car Loan Calculator",
+      desc:
+        locale === "pt"
+          ? "Parcelas do financiamento automotivo, juros e custo final do veículo"
+          : locale === "es"
+            ? "Cuotas de préstamos para autos y coste total del vehículo"
+            : "Calculate auto loan monthly payments and total vehicle cost",
+      icon: <Car className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/finance/personal-loan-calculator`,
+      title:
+        locale === "pt"
+          ? "Empréstimo Pessoal"
+          : locale === "es"
+            ? "Préstamo Personal"
+            : "Personal Loan Calculator",
+      desc:
+        locale === "pt"
+          ? "Cálculo de parcelas para crédito pessoal e consolidação de dívidas"
+          : locale === "es"
+            ? "Cálculo de cuotas para préstamos personales y consolidación"
+            : "Personal loan payments and debt consolidation calculator",
+      icon: <Landmark className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/finance/amortization-calculator`,
+      title:
+        locale === "pt"
+          ? "Tabela de Amortização"
+          : locale === "es"
+            ? "Tabla de Amortización"
+            : "Amortization Calculator",
+      desc:
+        locale === "pt"
+          ? "Cronograma completo mês a mês entre pagamento de principal e juros"
+          : locale === "es"
+            ? "Calendario detallado mes a mes entre capital e intereses"
+            : "Full payment schedule showing principal, interest, and balance",
+      icon: <PieChart className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/finance/home-affordability-calculator`,
+      title:
+        locale === "pt"
+          ? "Capacidade de Compra"
+          : locale === "es"
+            ? "Capacidad de Compra"
+            : "Home Affordability",
+      desc:
+        locale === "pt"
+          ? "Descubra o valor máximo de imóvel que cabe na sua renda (regra 28/36)"
+          : locale === "es"
+            ? "Descubre el valor máximo de inmueble según tus ingresos"
+            : "How much house can you afford using the standard 28/36 rule",
+      icon: <Scale className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/finance/15-year-mortgage-calculator`,
+      title:
+        locale === "pt"
+          ? "Financiamento de 15 Anos"
+          : locale === "es"
+            ? "Hipoteca a 15 Años"
+            : "15-Year Mortgage",
+      desc:
+        locale === "pt"
+          ? "Simule parcelas e veja a economia de juros frente ao prazo de 30 anos"
+          : locale === "es"
+            ? "Compara el ahorro en intereses frente a hipotecas a 30 años"
+            : "Compare 15-year vs. 30-year mortgage payments and interest savings",
+      icon: <Home className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/finance/30-year-mortgage-calculator`,
+      title:
+        locale === "pt"
+          ? "Financiamento de 30 Anos"
+          : locale === "es"
+            ? "Hipoteca a 30 Años"
+            : "30-Year Mortgage",
+      desc:
+        locale === "pt"
+          ? "Simule o financiamento residencial de longo prazo mais popular"
+          : locale === "es"
+            ? "Calcula tu hipoteca a tipo fijo a 30 años"
+            : "Calculate your 30-year fixed-rate residential mortgage payment",
+      icon: <Home className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/finance/refinance-calculator`,
+      title:
+        locale === "pt"
+          ? "Calculadora de Refinanciamento"
+          : locale === "es"
+            ? "Refinanciación de Préstamo"
+            : "Refinance Calculator",
+      desc:
+        locale === "pt"
+          ? "Calcule se vale a pena refinanciar e encontre o ponto de equilíbrio"
+          : locale === "es"
+            ? "Descubre si conviene refinanciar y tu punto de equilibrio"
+            : "Calculate if refinancing makes sense and your break-even point",
+      icon: <TrendingDown className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/finance/student-loan-calculator`,
+      title:
+        locale === "pt"
+          ? "Empréstimo Estudantil"
+          : locale === "es"
+            ? "Préstamo Estudiantil"
+            : "Student Loan Calculator",
+      desc:
+        locale === "pt"
+          ? "Simule o pagamento do financiamento estudantil e plano de quitação"
+          : locale === "es"
+            ? "Calcula la amortización de préstamos estudiantiles y plazos"
+            : "Student loan repayment calculator and payoff timeline",
+      icon: <GraduationCap className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/finance/debt-payoff-calculator`,
+      title:
+        locale === "pt"
+          ? "Quitação de Dívidas"
+          : locale === "es"
+            ? "Liquidación de Deudas"
+            : "Debt Payoff Calculator",
+      desc:
+        locale === "pt"
+          ? "Planeje quanto tempo levará para zerar dívidas e reduzir juros"
+          : locale === "es"
+            ? "Calcula cuánto tardarás en pagar tus deudas y el interés total"
+            : "Calculate how long to pay off debt and total interest saved",
+      icon: <Percent className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/finance/business-loan-calculator`,
+      title:
+        locale === "pt"
+          ? "Empréstimo para Empresas"
+          : locale === "es"
+            ? "Préstamo para Empresas"
+            : "Business Loan Calculator",
+      desc:
+        locale === "pt"
+          ? "Simule financiamentos para capital de giro, expansão ou equipamentos"
+          : locale === "es"
+            ? "Simula préstamos comerciales para capital de trabajo o equipos"
+            : "Commercial financing for working capital, expansion, or equipment",
+      icon: <Briefcase className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/finance/boat-loan-calculator`,
+      title:
+        locale === "pt"
+          ? "Financiamento de Barcos"
+          : locale === "es"
+            ? "Préstamo para Barcos"
+            : "Boat Loan Calculator",
+      desc:
+        locale === "pt"
+          ? "Simule empréstimos náuticos com prazos estendidos de até 20 anos"
+          : locale === "es"
+            ? "Simula préstamos náuticos y costes de embarcaciones"
+            : "Marine loans with extended terms up to 20 years and total cost",
+      icon: <Ship className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/finance/interest-calculator`,
+      title:
+        locale === "pt"
+          ? "Calculadora de Juros"
+          : locale === "es"
+            ? "Calculadora de Intereses"
+            : "Interest Calculator",
+      desc:
+        locale === "pt"
+          ? "Calcule juros simples e compostos sobre poupança ou dívidas"
+          : locale === "es"
+            ? "Calcula interés simple y compuesto para ahorros o préstamos"
+            : "Calculate simple and compound interest on savings or loans",
+      icon: <Percent className="w-5 h-5 text-secondary shrink-0" />,
+    },
+  ];
+
+  const invoices = [
+    {
+      href: `${prefix}/tools/finance/invoice-generator`,
+      title:
+        locale === "pt"
+          ? "Gerador de Faturas Profissional"
+          : locale === "es"
+            ? "Generador de Facturas"
+            : "Invoice Generator",
+      desc:
+        locale === "pt"
+          ? "Faturas completas em PDF, sem marca d’água e prontas para envio imediato"
+          : locale === "es"
+            ? "Facturas gratuitas sin marca de agua y descarga en PDF"
+            : "Free professional invoices — no watermark, no signup, PDF download",
+      icon: <Receipt className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/finance/invoice-generator-for-freelancers`,
+      title:
+        locale === "pt"
+          ? "Fatura para Freelancers"
+          : locale === "es"
+            ? "Factura para Freelancers"
+            : "Freelancer Invoice Generator",
+      desc:
+        locale === "pt"
+          ? "Modelo ideal para autônomos, prestadores de serviço e liberais"
+          : locale === "es"
+            ? "Plantilla diseñada para trabajadores autónomos e independientes"
+            : "Invoice template tailored for freelancers and self-employed professionals",
+      icon: <FileText className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/finance/invoice-generator-uk`,
+      title:
+        locale === "pt"
+          ? "Fatura Reino Unido (VAT)"
+          : locale === "es"
+            ? "Factura Reino Unido (VAT)"
+            : "UK Invoice Generator",
+      desc:
+        locale === "pt"
+          ? "Faturas em Libras (GBP) com alíquota padrão de VAT de 20% pré-configurada"
+          : locale === "es"
+            ? "Facturas en GBP con IVA británico (VAT) al 20% preconfigurado"
+            : "GBP invoices with UK VAT pre-configured at 20%",
+      icon: <Receipt className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/finance/invoice-generator-canada`,
+      title:
+        locale === "pt"
+          ? "Fatura Canadá (GST/PST)"
+          : locale === "es"
+            ? "Factura Canadá (GST/PST)"
+            : "Canadian Invoice Generator",
+      desc:
+        locale === "pt"
+          ? "Faturas em Dólares Canadenses (CAD) com GST de 5% pré-configurado"
+          : locale === "es"
+            ? "Facturas en CAD con GST canadiense preconfigurado al 5%"
+            : "CAD invoices with Canadian GST pre-configured at 5%",
+      icon: <Receipt className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/finance/invoice-generator-australia`,
+      title:
+        locale === "pt"
+          ? "Fatura Austrália (GST)"
+          : locale === "es"
+            ? "Factura Australia (GST)"
+            : "Australian Invoice Generator",
+      desc:
+        locale === "pt"
+          ? "Faturas em Dólares Australianos (AUD) com GST de 10% pré-configurado"
+          : locale === "es"
+            ? "Facturas en AUD con GST australiano preconfigurado al 10%"
+            : "AUD invoices with Australian GST pre-configured at 10%",
+      icon: <Receipt className="w-5 h-5 text-secondary shrink-0" />,
+    },
+  ];
+
   return (
-    <main className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-gray-900 mb-3">
-            Free Finance Tools
-          </h1>
-          <p className="text-gray-600 max-w-xl mx-auto">
-            Loan calculators, mortgage calculators, and invoice generators. All
-            free, no signup required.
-          </p>
-        </div>
+    <main className="container min-h-[calc(100vh-180px)] bg-background text-foreground py-3 sm:py-6 md:py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
-        <div className="bg-tertiary rounded-2xl border border-gray-200 p-8 mb-10 space-y-4 text-gray-700 leading-relaxed">
-          <p>
-            Financial calculators are essential tools for anyone facing a major
-            money decision. Whether you are a homebuyer trying to figure out how
-            much house you can afford, a car shopper comparing loan offers, a
-            student planning to repay debt after graduation, or a small business
-            owner deciding whether to finance new equipment, a good calculator
-            turns confusing numbers into a clear monthly payment and a realistic
-            total cost. These tools put the same math that banks use directly in
-            your hands — for free.
-          </p>
-          <p>
-            Using a calculator before you commit to a loan can save you
-            thousands of dollars and prevent unpleasant surprises. A difference
-            of even one percentage point in interest rate, or an extra two years
-            on a loan term, can add up to hundreds or thousands of dollars in
-            additional interest. Running the numbers first lets you compare
-            scenarios side-by-side, negotiate from an informed position, and
-            choose the option that fits your budget rather than the one a lender
-            happens to offer first.
-          </p>
-          <p>
-            ToolNotch offers a full suite of free finance calculators. The loan
-            and mortgage calculators cover standard personal loans, auto loans,
-            home mortgages, FHA and VA government-backed loans, refinancing,
-            student loans, and debt payoff planning. The invoice tools are built
-            for freelancers and small businesses that need professional,
-            print-ready invoices without paying for accounting software — with
-            variants pre-configured for US, UK, Canadian, and Australian tax
-            rates.
-          </p>
-          <p>
-            To get the most accurate results from any loan calculator, gather a
-            few key numbers before you start: your estimated credit score (which
-            strongly influences your interest rate), the loan amount or home
-            price you have in mind, the down payment you plan to make, and the
-            loan term in years or months. For mortgages, also note whether you
-            will need to pay PMI (required when your down payment is below 20%).
-            Having these details ready lets the calculator give you a payment
-            estimate that closely matches what a real lender will quote you.
-          </p>
-        </div>
+      <div className="w-full pb-2 sm:pb-3">
+        <AppBreadcrumb
+          items={[
+            { label: homeLabel, href: prefix || "/" },
+            { label: toolsLabel, href: `${prefix}/tools` },
+            { label: t("breadcrumb"), current: true },
+          ]}
+        />
+      </div>
 
-        <h2 className="text-xl font-bold text-gray-900 mb-4">
-          Loan & Mortgage Calculators
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
-          {CALCULATORS.map((tool) => (
-            <Link
-              key={tool.href}
-              href={tool.href}
-              className="bg-tertiary rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-green-300 transition-all group"
-            >
-              <h2 className="font-bold text-gray-900 group-hover:text-green-600 mb-1 text-sm">
-                {tool.label}
-              </h2>
-              <p className="text-xs text-gray-500">{tool.desc}</p>
-            </Link>
-          ))}
-        </div>
+      <header className="mb-6 sm:mb-8 md:mb-10 pt-1 sm:pt-2 pb-4 sm:pb-6 border-b border-border/80 relative">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground font-mono break-words">
+          {t("title")}
+        </h1>
+        <p className="leading-relaxed text-label mt-2 max-w-3xl text-xs sm:text-sm md:text-base">
+          {t("description")}
+        </p>
+      </header>
 
-        <h2 className="text-xl font-bold text-gray-900 mb-4">
-          Invoice Generator
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
-          {INVOICES.map((tool) => (
-            <Link
-              key={tool.href}
-              href={tool.href}
-              className="bg-tertiary rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-green-300 transition-all group"
-            >
-              <h2 className="font-bold text-gray-900 group-hover:text-green-600 mb-1 text-sm">
-                {tool.label}
-              </h2>
-              <p className="text-xs text-gray-500">{tool.desc}</p>
-            </Link>
-          ))}
-        </div>
-
-        <div className="bg-tertiary rounded-2xl border border-gray-200 p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Understanding Loan Terminology
+      {/* Calculators Section */}
+      <section className="mb-10 sm:mb-12 md:mb-16">
+        <div className="mb-4 sm:mb-6">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold uppercase text-foreground font-mono">
+            {t("calculatorsTitle")}
           </h2>
-          <div className="space-y-5 text-gray-700 leading-relaxed">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-1">Principal</h3>
-              <p>
-                The principal is the original amount of money you borrow, before
-                any interest is added. For a car loan it is the vehicle price
-                minus your down payment; for a mortgage it is the home price
-                minus your down payment. All interest charges are calculated as
-                a percentage of the outstanding principal balance, so a larger
-                principal means you pay more interest even if the rate stays the
-                same.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-1">
-                Interest Rate vs. APR
+          <p className="text-xs sm:text-sm text-label font-mono mt-1">
+            {t("calculatorsSubtitle")}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+          {calculators.map((calc) => (
+            <Link key={calc.href} href={calc.href} className="group block h-full">
+              <AppCard
+                border
+                cornerAccents={false}
+                className="p-4 sm:p-5 bg-tertiary group-hover:border-secondary/60 transition-colors h-full flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center gap-2.5 mb-2.5">
+                    {calc.icon}
+                    <h3 className="text-sm sm:text-base font-bold text-foreground group-hover:text-secondary transition-colors font-mono">
+                      {calc.title}
+                    </h3>
+                  </div>
+                  <p className="text-xs text-label leading-relaxed font-mono line-clamp-2">
+                    {calc.desc}
+                  </p>
+                </div>
+                <div className="flex items-center gap-1 text-xs text-secondary font-semibold mt-4 pt-3 border-t border-border/50 font-mono">
+                  <span>
+                    {locale === "pt"
+                      ? "Acessar calculadora"
+                      : locale === "es"
+                        ? "Ir a la calculadora"
+                        : "Open calculator"}
+                  </span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </AppCard>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Invoice Generators Section */}
+      <section className="mb-10 sm:mb-12 md:mb-16">
+        <div className="mb-4 sm:mb-6">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold uppercase text-foreground font-mono">
+            {t("invoicesTitle")}
+          </h2>
+          <p className="text-xs sm:text-sm text-label font-mono mt-1">
+            {t("invoicesSubtitle")}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+          {invoices.map((inv) => (
+            <Link key={inv.href} href={inv.href} className="group block h-full">
+              <AppCard
+                border
+                cornerAccents={false}
+                className="p-4 sm:p-5 bg-tertiary group-hover:border-secondary/60 transition-colors h-full flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center gap-2.5 mb-2.5">
+                    {inv.icon}
+                    <h3 className="text-sm sm:text-base font-bold text-foreground group-hover:text-secondary transition-colors font-mono">
+                      {inv.title}
+                    </h3>
+                  </div>
+                  <p className="text-xs text-label leading-relaxed font-mono line-clamp-2">
+                    {inv.desc}
+                  </p>
+                </div>
+                <div className="flex items-center gap-1 text-xs text-secondary font-semibold mt-4 pt-3 border-t border-border/50 font-mono">
+                  <span>
+                    {locale === "pt"
+                      ? "Criar fatura"
+                      : locale === "es"
+                        ? "Crear factura"
+                        : "Create invoice"}
+                  </span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </AppCard>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Educational Guide Section */}
+      <section className="mb-10 sm:mb-12 md:mb-16">
+        <AppCard border cornerAccents className="p-6 sm:p-8 bg-tertiary font-mono">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold uppercase text-foreground mb-4">
+            {t("guideTitle")}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-6">
+            <div className="p-4 bg-background border border-border rounded-[2px]">
+              <h3 className="text-sm font-bold uppercase text-secondary mb-1.5">
+                {t("terms.principalTitle")}
               </h3>
-              <p>
-                The interest rate is the annual cost of borrowing the principal,
-                expressed as a percentage. The Annual Percentage Rate (APR) is a
-                broader measure that includes the interest rate plus most lender
-                fees and closing costs, spread over the loan term. APR gives you
-                a more complete picture of the true cost of a loan, which is why
-                it is the number you should compare when shopping between
-                lenders.
+              <p className="text-xs text-label leading-relaxed">
+                {t("terms.principalDesc")}
               </p>
             </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-1">Loan Term</h3>
-              <p>
-                The loan term is the length of time you have to repay the loan,
-                usually expressed in months or years. A longer term spreads
-                payments out, reducing your monthly obligation but significantly
-                increasing the total interest you pay. A shorter term means
-                higher monthly payments but far less interest overall. For
-                example, a 15-year mortgage typically costs tens of thousands of
-                dollars less in total interest than a 30-year mortgage at the
-                same rate.
+            <div className="p-4 bg-background border border-border rounded-[2px]">
+              <h3 className="text-sm font-bold uppercase text-secondary mb-1.5">
+                {t("terms.rateTitle")}
+              </h3>
+              <p className="text-xs text-label leading-relaxed">
+                {t("terms.rateDesc")}
               </p>
             </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-1">Amortization</h3>
-              <p>
-                Amortization is how a fixed monthly payment is split between
-                interest and principal over the life of a loan. In the early
-                months, the vast majority of each payment goes toward interest
-                because the outstanding balance is high. As you make payments
-                and reduce the balance, the interest portion shrinks and the
-                principal portion grows. By the final payments, almost all of
-                your money goes to principal. An amortization schedule is a
-                table showing this breakdown for every single payment.
+            <div className="p-4 bg-background border border-border rounded-[2px]">
+              <h3 className="text-sm font-bold uppercase text-secondary mb-1.5">
+                {t("terms.termTitle")}
+              </h3>
+              <p className="text-xs text-label leading-relaxed">
+                {t("terms.termDesc")}
               </p>
             </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-1">Down Payment</h3>
-              <p>
-                A down payment is the upfront cash you pay toward a purchase,
-                reducing the amount you need to finance. A larger down payment
-                lowers your principal, which reduces both your monthly payment
-                and the total interest you will pay over the life of the loan.
-                For home loans, putting down 20% or more also lets you avoid
-                Private Mortgage Insurance (PMI), an extra monthly cost that
-                protects the lender — not you — if you default.
+            <div className="p-4 bg-background border border-border rounded-[2px]">
+              <h3 className="text-sm font-bold uppercase text-secondary mb-1.5">
+                {t("terms.amortizationTitle")}
+              </h3>
+              <p className="text-xs text-label leading-relaxed">
+                {t("terms.amortizationDesc")}
+              </p>
+            </div>
+            <div className="p-4 bg-background border border-border rounded-[2px] md:col-span-2">
+              <h3 className="text-sm font-bold uppercase text-secondary mb-1.5">
+                {t("terms.downPaymentTitle")}
+              </h3>
+              <p className="text-xs text-label leading-relaxed">
+                {t("terms.downPaymentDesc")}
               </p>
             </div>
           </div>
-        </div>
-      </div>
+        </AppCard>
+      </section>
+
+
+      <AppAffiliateStickyBar />
     </main>
   );
 }

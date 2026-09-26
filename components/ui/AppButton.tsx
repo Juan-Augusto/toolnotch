@@ -55,7 +55,9 @@ export default function AppButton({
       "border border-border bg-tertiary text-foreground hover:shadow-[0px_4px_0px_var(--color-tertiary-shadow)] active:bg-tertiary-shadow disabled:bg-tertiary/40 disabled:text-label/40",
   };
 
-  const sizeClasses = small ? "px-5 py-3 text-xs" : "px-6 py-3.5 text-sm";
+  const sizeClasses = small
+    ? "px-5 py-3 text-xs"
+    : "px-5 sm:px-6 py-2.5 sm:py-3.5 text-xs sm:text-sm";
   const radiusClasses = rounded ? "rounded-full" : "rounded-[2px]";
 
   return (

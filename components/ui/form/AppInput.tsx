@@ -18,8 +18,8 @@ export interface AppInputProps extends Omit<
   label?: ReactNode;
   error?: string;
   helperText?: string;
-  formatter?: Formatter<any>;
-  onValueChange?: (rawValue: any, formattedValue: string) => void;
+  formatter?: Formatter<unknown>;
+  onValueChange?: (rawValue: unknown, formattedValue: string) => void;
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   containerClassName?: string;
   labelClassName?: string;
@@ -27,6 +27,8 @@ export interface AppInputProps extends Omit<
   variant?: "tertiary" | "background";
   prefix?: ReactNode;
   startAdornment?: ReactNode;
+  suffix?: ReactNode;
+  endAdornment?: ReactNode;
 }
 
 export function AppInput({
@@ -51,6 +53,8 @@ export function AppInput({
   variant = "tertiary",
   prefix,
   startAdornment,
+  suffix,
+  endAdornment,
   ...props
 }: AppInputProps) {
   const generatedId = useId();
@@ -74,6 +78,7 @@ export function AppInput({
           : value !== null
             ? String(value)
             : "";
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setDisplayValue(nextDisplay);
     }
   }, [value, formatter]);
@@ -112,8 +117,14 @@ export function AppInput({
     onBlur?.(e);
   };
 
+  const hasWidthClass = /(?:^|\s)(w-\S+|flex-1|flex-auto|flex-none|flex-initial)(?:\s|$)/.test(
+    containerClassName,
+  );
+
   return (
-    <div className={`flex flex-col w-full ${containerClassName}`}>
+    <div
+      className={`flex flex-col ${hasWidthClass ? "" : "w-full"} ${containerClassName}`}
+    >
       {label && (
         <label
           htmlFor={inputId}
@@ -127,7 +138,7 @@ export function AppInput({
 
       <div className="relative w-full flex items-center">
         {(prefix || startAdornment) && (
-          <div className="absolute left-3.5 z-10 flex items-center pointer-events-none select-none">
+          <div className="absolute left-3.5 z-10 flex items-center pointer-events-none select-none text-xs sm:text-sm">
             {prefix || startAdornment}
           </div>
         )}
@@ -142,10 +153,11 @@ export function AppInput({
           onBlur={handleBlur}
           className={`
             w-full
-            h-12
-            ${prefix || startAdornment ? "pl-11 pr-4" : "px-4"}
-            py-3
-            text-sm
+            h-10 sm:h-12
+            ${prefix || startAdornment ? "pl-11" : "pl-4"}
+            ${suffix || endAdornment ? "pr-11" : "pr-4"}
+            py-2 sm:py-3
+            text-xs sm:text-sm
             text-foreground
             rounded-[2px]
             transition-colors
@@ -174,6 +186,11 @@ export function AppInput({
           `}
           {...props}
         />
+        {(suffix || endAdornment) && (
+          <div className="absolute right-3.5 z-10 flex items-center pointer-events-none select-none text-xs sm:text-sm">
+            {suffix || endAdornment}
+          </div>
+        )}
       </div>
 
       {error && <span className="text-xs text-red-500 mt-1.5">{error}</span>}

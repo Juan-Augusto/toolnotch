@@ -134,4 +134,20 @@ describe('AppTextarea', () => {
     expect(screen.getByText('Custom')).toHaveClass('custom-label');
     expect(screen.getByRole('textbox')).toHaveClass('custom-textarea');
   });
+
+  it('supports variant="background" and matches AppInput styling', () => {
+    render(<AppTextarea placeholder="Observações" variant="background" />);
+    const textarea = screen.getByPlaceholderText('Observações');
+    expect(textarea).toHaveClass('bg-background');
+    expect(textarea).not.toHaveClass('placeholder:uppercase');
+    expect(textarea).toHaveClass('placeholder:text-label/50');
+  });
+
+  it('respects custom width in containerClassName without forcing w-full', () => {
+    const { container } = render(
+      <AppTextarea containerClassName="w-64 shrink-0" />
+    );
+    expect(container.firstChild).toHaveClass('w-64');
+    expect(container.firstChild).not.toHaveClass('w-full');
+  });
 });

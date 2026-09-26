@@ -270,4 +270,32 @@ describe('AppSelect', () => {
       expect(screen.getByRole('option', { name: 'Euro' })).toBeInTheDocument();
     });
   });
+
+  describe('styling & variants', () => {
+    it('supports variant="background" matching AppInput', () => {
+      render(
+        <AppSelect
+          options={['USD', 'EUR', 'BRL']}
+          variant="background"
+          placeholder="Selecione"
+        />
+      );
+
+      const trigger = screen.getByRole('combobox');
+      expect(trigger).toHaveClass('bg-background');
+      expect(trigger).not.toHaveClass('bg-tertiary');
+    });
+
+    it('respects custom width in containerClassName without forcing w-full', () => {
+      const { container } = render(
+        <AppSelect
+          options={['A', 'B']}
+          containerClassName="w-48 shrink-0"
+        />
+      );
+
+      expect(container.firstChild).toHaveClass('w-48');
+      expect(container.firstChild).not.toHaveClass('w-full');
+    });
+  });
 });

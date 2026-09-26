@@ -3,22 +3,23 @@ import path from 'path'
 import type { AnyQuiz } from '@/lib/quizTypes'
 import { isTriviaQuiz } from '@/lib/quizTypes'
 
-const QUIZ_DIR = path.join(process.cwd(), 'data', 'quizzes')
-
 function resolveLocaleKey(locale: string): 'en' | 'pt' | 'es' {
   return locale === 'pt' || locale === 'es' ? locale : 'en'
 }
 
 async function readQuizFile(slug: string, localeKey: string): Promise<AnyQuiz | null> {
-  const candidates = [
-    path.join(QUIZ_DIR, localeKey, `${slug}.json`),
-    path.join(QUIZ_DIR, `${slug}.json`),
+  const relativeCandidates = [
+    path.join(localeKey, `${slug}.json`),
+    `${slug}.json`,
   ]
-  if (localeKey !== 'en') candidates.push(path.join(QUIZ_DIR, 'en', `${slug}.json`))
+  if (localeKey !== 'en') relativeCandidates.push(path.join('en', `${slug}.json`))
 
-  for (const filePath of candidates) {
+  for (const relPath of relativeCandidates) {
     try {
-      const raw = await fs.readFile(filePath, 'utf-8')
+      const raw = await fs.readFile(
+        path.join(process.cwd(), 'data', 'quizzes', relPath),
+        'utf-8'
+      )
       return JSON.parse(raw) as AnyQuiz
     } catch {
       // try next candidate

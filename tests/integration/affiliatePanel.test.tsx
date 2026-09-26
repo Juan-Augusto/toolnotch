@@ -10,6 +10,20 @@ import React from 'react'
 import { render, screen, within } from '@testing-library/react'
 import AffiliatePanel from '@/components/finance/calculator/AppAffiliatePanel'
 
+jest.mock('next-intl', () => ({
+  useTranslations: () => (key: string) => {
+    const messages: Record<string, string> = {
+      compareRates: 'Compare Current Rates',
+      disclaimer: 'Rates shown are for illustration. Compare real offers from lenders to find your best rate.',
+      lendingTreeMortgage: 'Compare mortgage rates at LendingTree →',
+      bankrateMortgage: 'Compare rates at Bankrate →',
+      lendingTreeAuto: 'Compare auto loan rates at LendingTree →',
+      lendingTreePersonal: 'Compare personal loan rates at LendingTree →',
+    }
+    return messages[key] || key
+  },
+}))
+
 // ---------------------------------------------------------------------------
 // Helper — collect all <a> elements inside the rendered panel
 // ---------------------------------------------------------------------------

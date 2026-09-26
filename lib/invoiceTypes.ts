@@ -32,6 +32,7 @@ export interface InvoiceData {
   notes: string
   terms: string
   logo?: string
+  logoFileName?: string
 }
 
 export interface InvoiceTotals {

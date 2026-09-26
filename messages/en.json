@@ -2449,7 +2449,73 @@
       "payment": "Payment",
       "principal_col": "Principal",
       "interest": "Interest",
-      "balance": "Balance"
+      "balance": "Balance",
+      "yearUnit": "years",
+      "monthUnit": "months",
+      "presetYears": "{years} yrs",
+      "presetMonths": "{months} mos",
+      "presetMonthsShort": "{months}m",
+      "amortizationChartTitle": "Amortization Schedule Chart",
+      "showPaged": "Show paginated",
+      "showAllPayments": "Show all {count} payments",
+      "principalPaid": "Principal Paid",
+      "interestPaid": "Interest Paid",
+      "yearPrefix": "Year {year}",
+      "prev": "← Previous",
+      "next": "Next →"
+    },
+    "affiliate": {
+      "compareRates": "Compare Current Rates",
+      "disclaimer": "Rates shown are for illustration. Compare real offers from lenders to find your best rate.",
+      "lendingTreeMortgage": "Compare mortgage rates at LendingTree →",
+      "bankrateMortgage": "Compare rates at Bankrate →",
+      "lendingTreeAuto": "Compare auto loan rates at LendingTree →",
+      "lendingTreePersonal": "Compare personal loan rates at LendingTree →"
+    },
+    "hub": {
+      "metaTitle": "Free Finance Tools — Loan, Mortgage Calculators & Invoice Generator | ToolNotch",
+      "metaDescription": "Free online finance calculators and invoice tools: loan calculator, mortgage payments, auto loans, and PDF invoices. 100% free, private, and instant.",
+      "title": "Finance Calculators & Tools",
+      "description": "Calculate loan payments, compare interest and amortization schedules, and create professional PDF invoices. 100% free, private, and instant in your browser.",
+      "breadcrumb": "Finance",
+      "badgeFree": "100% Free",
+      "badgePrivate": "No Signup",
+      "badgeInstant": "Instant Math",
+      "calculatorsTitle": "Loan & Mortgage Calculators",
+      "calculatorsSubtitle": "Accurate monthly payment estimates, interest breakdowns, and amortization schedules",
+      "invoicesTitle": "Invoice & Receipt Generators",
+      "invoicesSubtitle": "Create and download clean, professional PDF invoices ready for clients and accounting",
+      "guideTitle": "Understanding Key Loan & Finance Concepts",
+      "terms": {
+        "principalTitle": "Principal",
+        "principalDesc": "The initial amount of money borrowed or financed before interest charges are applied. Each payment reduces this outstanding balance.",
+        "rateTitle": "Interest Rate vs. APR",
+        "rateDesc": "The interest rate is the base cost of borrowing. The APR (Annual Percentage Rate) includes additional lender fees and closing costs for the true annual cost.",
+        "termTitle": "Loan Term",
+        "termDesc": "The length of time to repay the loan. Longer terms lower the monthly payment but substantially increase total interest paid over the life of the loan.",
+        "amortizationTitle": "Amortization Schedule",
+        "amortizationDesc": "A detailed month-by-month table showing how each payment is divided between paying down principal balance and paying interest.",
+        "downPaymentTitle": "Down Payment",
+        "downPaymentDesc": "The upfront cash paid toward a purchase, reducing the total amount you need to borrow and often unlocking lower interest rates."
+      },
+      "faqs": [
+        {
+          "question": "Are ToolNotch finance calculators free to use?",
+          "answer": "Yes, all calculators and invoice tools are 100% free with unlimited calculations and no account or signup required."
+        },
+        {
+          "question": "How are monthly payments and amortization calculated?",
+          "answer": "We use the standard fixed-rate amortization formula: M = P * (r(1+r)^n) / ((1+r)^n - 1), where principal reductions and interest charges are tracked every month."
+        },
+        {
+          "question": "What is the difference between interest rate and APR?",
+          "answer": "Interest rate is the baseline annual interest charged on principal. APR includes lender origination fees, closing costs, and points to reflect the true annual borrowing cost."
+        },
+        {
+          "question": "Are my financial inputs stored on any server?",
+          "answer": "No. All calculations run strictly client-side in your web browser. None of your amounts, terms, or invoice contents are sent or stored."
+        }
+      ]
     },
     "variants": {
       "loan-calculator": {
@@ -2505,7 +2571,7 @@
             "Enter the loan amount — the total amount you plan to borrow, before any fees.",
             "Enter the annual interest rate. Use the APR from your loan offer for the most accurate total cost.",
             "Select the loan term in months or years. Shorter terms mean higher payments but significantly less interest.",
-            "Click Calculate to see your monthly payment and total interest cost over the life of the loan.",
+            "Instantly view your monthly payment and total interest cost over the life of the loan.",
             "Try different amounts and terms side by side to find the combination that fits your monthly budget without maximizing interest cost."
           ],
           "whyItMatters": "Loan term has an outsized effect on total cost. A $10,000 personal loan at 12% over 3 years costs about $1,957 in interest. The same loan over 5 years drops the payment by roughly $100 per month — but total interest rises to $3,346. For large loan amounts, this difference compounds significantly. Knowing your true total cost before signing lets you compare offers accurately and avoid the common mistake of optimizing for the lowest monthly payment without considering the total amount you will pay over time.",
@@ -2566,7 +2632,7 @@
             "Enter your down payment as a dollar amount or percentage. A 20% down payment eliminates PMI.",
             "Enter the annual interest rate. Use your lender's quoted rate or a current market benchmark.",
             "Choose your loan term: 30 years for lower payments, 15 years for less total interest.",
-            "Click Calculate to see your monthly P&I payment, total interest, and full amortization schedule.",
+            "Instantly view your monthly P&I payment, total interest, and full amortization schedule.",
             "Add estimated property taxes, insurance, and PMI to the result to get your true monthly housing cost."
           ],
           "whyItMatters": "A 0.5% difference in interest rate can cost or save tens of thousands of dollars over a 30-year loan. Running multiple scenarios — different rates, terms, and down payments — before making an offer gives you negotiating leverage and protects you from overextending. Many buyers focus on the monthly payment without seeing the total interest: a $400,000 home at 7% for 30 years costs over $558,000 in interest alone. Understanding the full picture helps you choose the right loan product, decide whether a larger down payment is worth delaying your purchase, and recognize when a 15-year loan is actually affordable for your budget.",
@@ -2584,7 +2650,7 @@
             "Enter the vehicle price, including any dealer fees, minus your down payment or trade-in value.",
             "Input the annual interest rate — use your pre-approved rate or the dealer's quoted rate.",
             "Choose your loan term in months (36, 48, 60, or 72 months are most common).",
-            "Click Calculate to see your monthly payment and total interest paid over the life of the loan.",
+            "Instantly view your monthly payment and total interest paid over the life of the loan.",
             "Compare scenarios: run the same loan amount at a credit union rate vs. dealer rate to see the dollar difference.",
             "Factor in insurance, registration, and maintenance on top of the payment to get your true monthly transportation cost."
           ],
@@ -2645,7 +2711,7 @@
             "Enter the loan amount — for debt consolidation, total all balances you plan to pay off.",
             "Input the annual interest rate you have been offered, or use your credit score range to estimate a realistic rate.",
             "Choose the loan term in months (24, 36, 48, or 60 months are common for personal loans).",
-            "Click Calculate to see your monthly payment and total interest over the life of the loan.",
+            "Instantly view your monthly payment and total interest over the life of the loan.",
             "Compare the total interest on this loan against what you would pay keeping your current credit card balances.",
             "Adjust the term to find the right balance between monthly payment size and total interest cost."
           ],
@@ -2723,7 +2789,7 @@
           "howToUse": [
             "Enter the loan amount, annual interest rate, and loan term in years.",
             "Optionally enter an extra monthly payment amount to see how it shortens the loan and reduces total interest.",
-            "Click Calculate to generate the complete amortization schedule and summary totals.",
+            "Instantly view the complete amortization schedule and summary totals.",
             "Review the summary: total interest paid, payoff date, and total loan cost.",
             "Examine the year-by-year table to see how the interest-to-principal ratio shifts over time.",
             "Experiment with extra payment amounts to find your ideal balance between payment size and long-term savings."
@@ -2798,7 +2864,7 @@
             "Enter your current loan balance, current interest rate, and the remaining term on your existing mortgage.",
             "Enter the new interest rate you have been quoted and the new loan term you are considering.",
             "Enter estimated closing costs — typically 2–3% of the loan amount for most refinances.",
-            "Click Calculate to see monthly savings, total interest comparison, and break-even point in months.",
+            "Instantly view monthly savings, total interest comparison, and break-even point in months.",
             "Compare the break-even point to how long you plan to stay in the home. If break-even is 36 months but you plan to move in 24, refinancing likely is not worth it.",
             "Run separate scenarios for paying closing costs out of pocket vs. rolling them into the loan to see the true long-term cost of each option."
           ],
@@ -2817,7 +2883,7 @@
             "Enter your total student loan balance — include all federal and private loans you want to model.",
             "Input the weighted average interest rate across your loans, or model each loan separately for precision.",
             "Choose a repayment term: 10 years for the Standard plan, or 20–25 years if modeling income-driven repayment.",
-            "Click Calculate to see your monthly payment and total interest paid over the full repayment term.",
+            "Instantly view your monthly payment and total interest paid over the full repayment term.",
             "Compare the 10-year standard plan to a 20-year IDR plan to see the trade-off between payment size and total interest.",
             "Factor in potential forgiveness if you work in public service — PSLF cancels remaining balances after 10 years of qualifying payments."
           ],
@@ -2873,7 +2939,7 @@
             "Input the annual interest rate as a percentage (e.g., 5 for 5%).",
             "Enter the time period in years (or months if the calculator supports it).",
             "Select the compound frequency: daily, monthly, quarterly, or annually. Leave on simple interest to compare.",
-            "Click Calculate to see total interest earned or paid, plus the ending balance.",
+            "Instantly view total interest earned or paid, plus the ending balance and growth breakdown.",
             "Toggle between compound frequencies to see how daily compounding compares to monthly on the same rate."
           ],
           "whyItMatters": "The difference between simple and compound interest is enormous over time. A $10,000 investment at 5% simple interest over 10 years earns $5,000 in interest. The same amount at 5% compounded monthly earns approximately $6,470 — a 29% difference — with no additional contributions. Compound frequency also matters when comparing savings accounts: two accounts both advertised at 4.80% APR can yield meaningfully different APYs depending on how often they compound. This calculator also helps evaluate financing offers — comparing whether a 0% promotional loan actually beats a cash purchase discount when the time value of money is considered.",
@@ -2897,7 +2963,7 @@
             "Enter the home purchase price or loan amount after subtracting your down payment.",
             "Input the annual interest rate from your lender quote or use current average 30-year fixed rates as a benchmark.",
             "The term is fixed at 30 years (360 months); confirm this matches your loan structure.",
-            "Click Calculate to see your estimated monthly principal-and-interest payment.",
+            "Instantly view your estimated monthly principal-and-interest payment in real time.",
             "Review the total interest paid figure — this is the full additional cost of the loan beyond the home price.",
             "Compare this result against the 15-year mortgage calculator to see the monthly payment vs. lifetime interest trade-off."
           ],
@@ -2940,7 +3006,7 @@
             "Enter the home purchase price or the amount you plan to borrow after your down payment.",
             "Input the annual interest rate you have been quoted — or use current average 15-year rates as a benchmark.",
             "The loan term is fixed at 15 years (180 months); confirm this matches your loan offer.",
-            "Click Calculate to see your estimated monthly principal-and-interest payment.",
+            "Instantly view your estimated monthly principal-and-interest payment in real time.",
             "Review the total interest paid figure and compare it to the 30-year mortgage calculator to quantify your savings.",
             "Adjust the home price or interest rate to model different purchase scenarios before committing."
           ],
@@ -3094,6 +3160,8 @@
         "emailPlaceholder": "Email",
         "addressPlaceholder": "Address",
         "logoButton": "Logo",
+        "changeLogo": "Change",
+        "removeLogo": "Remove logo",
         "billTo": "Bill To",
         "clientNamePlaceholder": "Client Name",
         "clientEmailPlaceholder": "Client Email",
@@ -3372,6 +3440,91 @@
         "whyItMatters": "Professional invoices reduce payment disputes by eliminating ambiguity around what was delivered, when, and at what price. Net-30 (payment due in 30 days) is common in B2B settings, while due-on-receipt or Net-15 terms are often better for small businesses and freelancers who need faster cash flow. Including a late payment fee clause — such as 1.5% per month after the due date — incentivizes timely payment. Many small businesses lose significant revenue not from bad clients, but from failing to follow up on outstanding invoices. A numbered, dated invoice creates the paper trail needed for both collection and tax deductions.",
         "proTip": "Always use a sequential invoice numbering system (INV-001, INV-002) from day one. Accounting software, tax audits, and business financial records all rely on consistent invoice numbering to track revenue and match payments. Also consider adding a late payment fee clause — even if you never enforce it, the presence of a stated fee accelerates payment behavior significantly."
       }
+    },
+    "affordability": {
+      "incomeLabel": "Gross Monthly Income",
+      "debtsLabel": "Monthly Debt Payments",
+      "downPaymentLabel": "Down Payment Saved",
+      "annualRateLabel": "Annual Interest Rate (%)",
+      "termLabel": "Loan Term",
+      "maxHomePrice": "Max Home Purchase Price",
+      "maxLoan": "Maximum Loan Amount",
+      "monthlyPayment": "Estimated Monthly Payment",
+      "rule2836Title": "28/36 Rule Analysis",
+      "rule2836Desc": "Underwriting qualifying guideline: housing costs should not exceed 28% of gross income, and total debts should not exceed 36%.",
+      "frontEndLabel": "Housing Cap (28%)",
+      "backEndLabel": "Debt Cap (36%)",
+      "ltvLabel": "Loan-to-Value (LTV)",
+      "debtConstrainedWarning": "Your monthly debts ({amount}) are limiting your borrowing power. Paying down debts will increase your purchasing budget.",
+      "frontEndCalculation": "28% of {income}",
+      "backEndCalculation": "36% of {income} − {debts}"
+    },
+    "refinance": {
+      "currentSection": "Current Loan",
+      "newSection": "New Refinanced Loan",
+      "currentBalance": "Current Loan Balance",
+      "currentRate": "Current Interest Rate (%)",
+      "currentTerm": "Remaining Term",
+      "currentPayment": "Current Monthly Payment",
+      "newRate": "New Interest Rate (%)",
+      "newTerm": "New Loan Term",
+      "closingCosts": "Closing Costs & Fees",
+      "monthlySavings": "Monthly Savings",
+      "lifetimeSavings": "Lifetime Interest Savings",
+      "breakEven": "Break-Even Point",
+      "breakEvenMonths": "{months} months to recover closing costs",
+      "breakEvenNever": "No break-even point",
+      "worthIt": "Refinance Recommended!",
+      "notWorthIt": "Caution: costs exceed interest savings",
+      "newPayment": "New Payment"
+    },
+    "compound": {
+      "initialDeposit": "Initial Investment",
+      "monthlyContribution": "Monthly Contribution",
+      "annualRate": "Estimated Annual Return (%)",
+      "years": "Investment Period (Years)",
+      "endingBalance": "Total Future Balance",
+      "totalPrincipal": "Total Principal Invested",
+      "totalInterest": "Total Compound Interest Earned",
+      "breakdownTitle": "Annual Growth Breakdown",
+      "year": "Year",
+      "principalInvested": "Principal Invested",
+      "interestEarned": "Interest Earned",
+      "totalBalance": "Total Balance",
+      "totalContributionsLabel": "Total Contributions",
+      "yearPrefix": "Year {year}"
+    },
+    "debtPayoff": {
+      "balance": "Total Debt Balance",
+      "annualRate": "Interest Rate / APR (%)",
+      "monthlyPayment": "Current Monthly Payment",
+      "extraPayment": "Extra Monthly Payment",
+      "timeSaved": "Time Saved",
+      "interestSaved": "Interest Saved",
+      "debtFreeIn": "Debt-Free In",
+      "standardPlan": "Standard Plan",
+      "acceleratedPlan": "With Extra Payment",
+      "monthsFaster": "{months} months faster",
+      "yearsMonths": "{years}y {months}m",
+      "totalInterest": "Total Interest"
+    },
+    "comparison": {
+      "title": "15-Year vs. 30-Year",
+      "subtitle": "Compare monthly payments and total interest between terms.",
+      "term15Title": "15-Year",
+      "term30Title": "30-Year",
+      "monthlyPayment": "Monthly Payment",
+      "totalInterest": "Total Interest",
+      "interestSavings": "Interest Savings",
+      "savingsBadge": "-{amount} interest with 15-year term",
+      "switchTo15": "Open 15-year calculator →",
+      "switchTo30": "Open 30-year calculator →",
+      "currentLabel": "Current"
+    },
+    "car": {
+      "vehiclePrice": "Vehicle Purchase Price",
+      "downPayment": "Down Payment / Trade-in",
+      "netLoanAmount": "Net Loan Amount"
     }
   },
   "fun": {

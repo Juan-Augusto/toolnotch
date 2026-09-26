@@ -37,6 +37,8 @@ export interface AppSelectProps<T = string> {
   searchable?: boolean;
   searchPlaceholder?: string;
   noResultsText?: string;
+  variant?: "tertiary" | "background";
+  flat?: boolean;
 }
 
 export function AppSelect<T = string>({
@@ -58,6 +60,8 @@ export function AppSelect<T = string>({
   searchable = true,
   searchPlaceholder = "Buscar...",
   noResultsText = "Nenhum resultado encontrado",
+  variant = "tertiary",
+  flat = false,
 }: AppSelectProps<T>) {
   const generatedId = useId();
   const selectId = id ?? generatedId;
@@ -71,7 +75,13 @@ export function AppSelect<T = string>({
 
   const containerRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
-  useClickOutside(() => setIsOpen(false), isOpen, containerRef);
+
+  const handleClose = () => {
+    setIsOpen(false);
+    setSearchQuery("");
+  };
+
+  useClickOutside(handleClose, isOpen, containerRef);
 
   const isControlled = value !== undefined;
   const currentValue = isControlled ? value : internalValue;
@@ -115,8 +125,6 @@ export function AppSelect<T = string>({
         searchInputRef.current?.focus();
       }, 20);
       return () => clearTimeout(timer);
-    } else {
-      setSearchQuery("");
     }
   }, [isOpen, searchable]);
 
@@ -125,7 +133,7 @@ export function AppSelect<T = string>({
       setInternalValue(optionValue);
     }
     onChange?.(optionValue);
-    setIsOpen(false);
+    handleClose();
   };
 
   const handleKeyDown = (e: KeyboardEvent<HTMLButtonElement>) => {
@@ -133,9 +141,12 @@ export function AppSelect<T = string>({
 
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
-      setIsOpen((prev) => !prev);
+      setIsOpen((prev) => {
+        if (prev) setSearchQuery("");
+        return !prev;
+      });
     } else if (e.key === "Escape") {
-      setIsOpen(false);
+      handleClose();
     } else if (e.key === "ArrowDown") {
       e.preventDefault();
       if (!isOpen) {
@@ -210,10 +221,14 @@ export function AppSelect<T = string>({
     }
   };
 
+  const hasWidthClass = /(?:^|\s)(w-\S+|flex-1|flex-auto|flex-none|flex-initial)(?:\s|$)/.test(
+    containerClassName,
+  );
+
   return (
     <div
       ref={containerRef}
-      className={`relative flex flex-col w-full ${containerClassName}`}
+      className={`relative flex flex-col ${hasWidthClass ? "" : "w-full"} ${containerClassName}`}
     >
       {label && (
         <label
@@ -251,14 +266,14 @@ export function AppSelect<T = string>({
           onKeyDown={handleKeyDown}
           aria-haspopup="listbox"
           aria-expanded={isOpen}
+          aria-controls={isOpen ? `${selectId}-listbox` : undefined}
           className={`
             w-full
-            h-12
+            h-10 sm:h-12
             px-4
-            py-3
-            text-sm
+            py-2 sm:py-3
+            text-xs sm:text-sm
             text-foreground
-            border
             rounded-[2px]
             transition-colors
             duration-150
@@ -271,11 +286,25 @@ export function AppSelect<T = string>({
             disabled:cursor-not-allowed
             cursor-pointer
             ${
-              error
-                ? "border-red-500 focus:border-red-500 ring-1 ring-red-500/20 bg-tertiary"
-                : isOpen
-                  ? "border-secondary bg-secondary/5 ring-1 ring-secondary/20"
-                  : "border-border hover:border-foreground/30 bg-tertiary"
+              flat
+                ? "bg-transparent border-0 bg-transparent! border-0! focus:bg-transparent!"
+                : `border ${
+                    error
+                      ? `border-red-500 focus:border-red-500 ring-1 ring-red-500/20 ${
+                          variant === "background" ||
+                          className.includes("bg-background")
+                            ? "bg-background"
+                            : "bg-tertiary"
+                        }`
+                      : isOpen
+                        ? "border-secondary bg-secondary/5 ring-1 ring-secondary/20"
+                        : `border-border hover:border-foreground/30 ${
+                            variant === "background" ||
+                            className.includes("bg-background")
+                              ? "bg-background"
+                              : "bg-tertiary"
+                          } focus:border-secondary focus:bg-secondary/5 focus:ring-1 focus:ring-secondary/20`
+                  }`
             }
             ${className}
           `}
@@ -296,6 +325,7 @@ export function AppSelect<T = string>({
 
         {isOpen && (
           <div
+            id={`${selectId}-listbox`}
             role="listbox"
             aria-labelledby={label ? labelId : undefined}
             className={`
@@ -305,7 +335,12 @@ export function AppSelect<T = string>({
               mt-1.5
               w-full
               z-50
-              bg-tertiary
+              ${
+                variant === "background" ||
+                dropdownClassName.includes("bg-background")
+                  ? "bg-background"
+                  : "bg-tertiary"
+              }
               border
               border-border
               rounded-[2px]
@@ -318,11 +353,16 @@ export function AppSelect<T = string>({
           >
             {searchable && (
               <div
-                className="p-2 border-b border-border/80 bg-tertiary shrink-0"
+                className={`p-2.5 sm:p-3 border-b border-border/80 shrink-0 ${
+                  variant === "background" ||
+                  dropdownClassName.includes("bg-background")
+                    ? "bg-background"
+                    : "bg-tertiary"
+                }`}
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="relative flex items-center">
-                  <Search className="w-3.5 h-3.5 absolute left-2.5 text-label/60 pointer-events-none" />
+                  <Search className="w-4 h-4 absolute left-3 text-label/60 pointer-events-none" />
                   <input
                     ref={searchInputRef}
                     type="text"
@@ -331,7 +371,7 @@ export function AppSelect<T = string>({
                     onKeyDown={handleSearchKeyDown}
                     placeholder={searchPlaceholder}
                     aria-label={searchPlaceholder}
-                    className="w-full h-8 pl-8 pr-7 bg-background border border-border rounded-[2px] text-xs font-mono text-foreground placeholder:text-label/50 outline-none focus:border-primary/60 transition-colors"
+                    className="w-full h-9 sm:h-10 pl-9 pr-8 bg-background border border-border rounded-[2px] text-xs sm:text-sm text-foreground placeholder:text-label/50 outline-none focus:border-secondary transition-colors"
                   />
                   {searchQuery && (
                     <button
@@ -341,9 +381,9 @@ export function AppSelect<T = string>({
                         searchInputRef.current?.focus();
                       }}
                       aria-label="Limpar pesquisa"
-                      className="absolute right-2 text-label/60 hover:text-foreground p-0.5 cursor-pointer"
+                      className="absolute right-2.5 text-label/60 hover:text-foreground p-1 cursor-pointer"
                     >
-                      <X className="w-3 h-3" />
+                      <X className="w-4 h-4" />
                     </button>
                   )}
                 </div>
@@ -368,8 +408,8 @@ export function AppSelect<T = string>({
                         items-center
                         justify-between
                         px-4
-                        py-2.5
-                        text-sm
+                        py-2 sm:py-2.5
+                        text-xs sm:text-sm
                         text-left
                         transition-colors
                         select-none
@@ -390,7 +430,7 @@ export function AppSelect<T = string>({
                   );
                 })
               ) : (
-                <div className="px-4 py-3 text-xs font-mono text-label/60 text-center">
+                <div className="px-4 py-3 text-xs sm:text-sm text-label/60 text-center">
                   {noResultsText}
                 </div>
               )}

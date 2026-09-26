@@ -38,6 +38,14 @@ export interface AppTextareaProps extends TextareaHTMLAttributes<HTMLTextAreaEle
    * Classes adicionais para o label.
    */
   labelClassName?: string;
+  /**
+   * Variante de estilo de fundo ("tertiary" | "background").
+   */
+  variant?: "tertiary" | "background";
+  /**
+   * Se true, renderiza sem borda e sem fundo.
+   */
+  flat?: boolean;
 }
 
 export function AppTextarea({
@@ -57,6 +65,8 @@ export function AppTextarea({
   containerClassName = "",
   labelClassName = "",
   id,
+  variant = "tertiary",
+  flat = false,
   ...props
 }: AppTextareaProps) {
   const generatedId = useId();
@@ -79,12 +89,18 @@ export function AppTextarea({
     onBlur?.(e);
   };
 
+  const hasWidthClass = /(?:^|\s)(w-\S+|flex-1|flex-auto|flex-none|flex-initial)(?:\s|$)/.test(
+    containerClassName,
+  );
+
   return (
-    <div className={`flex flex-col w-full ${containerClassName}`}>
+    <div
+      className={`flex flex-col ${hasWidthClass ? "" : "w-full"} ${containerClassName}`}
+    >
       {label && (
         <label
           htmlFor={textareaId}
-          className={`text-xs font-semibold uppercase  text-foreground mb-2 select-none ${
+          className={`text-xs font-semibold text-foreground mb-2 select-none ${
             disabled ? "opacity-50" : ""
           } ${labelClassName}`}
         >
@@ -106,30 +122,32 @@ export function AppTextarea({
           className={`
             w-full
             px-4
-            py-3
-           
-            text-sm
-            
+            py-2.5 sm:py-3
+            text-xs sm:text-sm
             text-foreground
-            bg-tertiary
-            border
             rounded-[2px]
             transition-colors
             duration-150
             outline-none
             placeholder:text-label/50
-            
-            placeholder:uppercase
             disabled:opacity-40
             disabled:cursor-not-allowed
-            focus:bg-secondary/3
             resize-y
             ${
-              error
-                ? "border-red-500 focus:border-red-500 ring-1 ring-red-500/20"
-                : isFocused
-                  ? "border-secondary ring-1 ring-secondary/20"
-                  : "border-border hover:border-foreground/30"
+              flat
+                ? "bg-transparent border-0 bg-transparent! border-0! focus:bg-transparent!"
+                : `border ${
+                    error
+                      ? "border-red-500 focus:border-red-500 ring-1 ring-red-500/20 bg-tertiary"
+                      : isFocused
+                        ? "border-secondary bg-secondary/5 ring-1 ring-secondary/20"
+                        : `border-border hover:border-foreground/30 ${
+                            variant === "background" ||
+                            className.includes("bg-background")
+                              ? "bg-background"
+                              : "bg-tertiary"
+                          } focus:border-secondary focus:bg-secondary/5 focus:ring-1 focus:ring-secondary/20`
+                  }`
             }
             ${className}
           `}

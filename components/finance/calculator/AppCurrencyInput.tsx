@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import { AppInput } from '@/components/ui'
 
 interface CurrencyInputProps {
   value: number
@@ -34,20 +35,18 @@ export default function AppCurrencyInput({ value, onChange, label, min = 0, max,
   }
 
   return (
-    <div>
-      <label htmlFor={id} className="block text-sm font-medium text-gray-700 mb-1">{label}</label>
-      <div className="relative">
-        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 font-medium">$</span>
-        <input
-          id={id}
-          type="text"
-          inputMode="numeric"
-          className="w-full pl-7 pr-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          value={displayValue}
-          onChange={handleChange}
-          placeholder="0"
-        />
-      </div>
-    </div>
+    <AppInput
+      id={id}
+      label={label}
+      labelClassName="font-mono text-xs font-bold uppercase text-foreground mb-1.5"
+      variant="background"
+      prefix={<span className="text-label font-mono font-bold text-xs sm:text-sm">$</span>}
+      type="text"
+      inputMode="numeric"
+      value={displayValue}
+      onChange={handleChange}
+      placeholder="0"
+      className="font-mono text-xs sm:text-sm"
+    />
   )
 }
