@@ -1,13 +1,15 @@
 'use client'
+
 import { useRef, useEffect } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { ContactShadows } from '@react-three/drei'
 import * as THREE from 'three'
 
-function easeOutCubic(t: number) { return 1 - Math.pow(1 - t, 3) }
 function prefersReducedMotion() {
-  return typeof window !== 'undefined' &&
+  return (
+    typeof window !== 'undefined' &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  )
 }
 
 // ─── Coin mesh ───────────────────────────────────────────────────────────────
@@ -21,97 +23,159 @@ interface CoinMeshProps {
 function CoinMesh({ side, flipping, onDone }: CoinMeshProps) {
   const groupRef = useRef<THREE.Group>(null)
   const startTime = useRef(-1)
-  const startQuat = useRef(new THREE.Quaternion())
-  const targetQuat = useRef(new THREE.Quaternion())
-  const startY = useRef(0)
+  const startX = useRef(0)
+  const targetX = useRef(0)
   const done = useRef(false)
-  const DURATION = 900
+  const DURATION = 1100 // Snappy 1100ms duration
 
   useEffect(() => {
-    if (!flipping || !groupRef.current) return
+    if (!flipping) return
+
     done.current = false
     startTime.current = -1
 
     if (prefersReducedMotion()) {
-      if (groupRef.current) {
+      if (groupRef.current?.rotation) {
         groupRef.current.rotation.x = side === 'tails' ? Math.PI : 0
+        groupRef.current.rotation.y = 0
+        groupRef.current.rotation.z = 0
         groupRef.current.position.y = 0
       }
       onDone()
       return
     }
 
-    // Start flat, random Z tumble
-    startQuat.current = new THREE.Quaternion().setFromEuler(
-      new THREE.Euler(0, Math.random() * Math.PI * 2, 0)
-    )
-    // Target: heads = 0 X rotation, tails = π X rotation
-    const extraSpins = (Math.floor(Math.random() * 2) + 3) * Math.PI * 2
-    const faceAngle = side === 'tails' ? Math.PI : 0
-    targetQuat.current = new THREE.Quaternion().setFromEuler(
-      new THREE.Euler(faceAngle + extraSpins, Math.random() * Math.PI, 0)
-    )
-    startY.current = 0
+    const currentRotX = groupRef.current?.rotation?.x ?? 0
+    startX.current = currentRotX
+
+    // 8 full rapid spins for high-energy turnover
+    const numSpins = 8
+    const desiredMod = side === 'tails' ? Math.PI : 0
+    const twoPi = Math.PI * 2
+    let currentMod = currentRotX % twoPi
+    if (currentMod < 0) currentMod += twoPi
+
+    let delta = desiredMod - currentMod
+    if (delta < 0) delta += twoPi
+
+    targetX.current = currentRotX + numSpins * twoPi + delta
   }, [flipping, side, onDone])
 
   useFrame(({ clock }) => {
-    if (!flipping || done.current || !groupRef.current) return
+    if (!flipping || done.current || !groupRef.current?.rotation) return
     const now = clock.getElapsedTime() * 1000
     if (startTime.current < 0) startTime.current = now
 
-    const t = Math.min((now - startTime.current) / DURATION, 1)
-    const e = easeOutCubic(t)
+    const elapsed = now - startTime.current
+    const t = Math.min(elapsed / DURATION, 1)
 
-    // Slerp rotation
-    groupRef.current.quaternion.slerpQuaternions(startQuat.current, targetQuat.current, e)
+    // Ballistic Flight (0 <= t <= 0.84), Settle Bounce (0.84 < t <= 1.0)
+    const FLIGHT_RATIO = 0.84
 
-    // Arc: parabolic Y position peaks at t=0.5
-    const arc = Math.sin(t * Math.PI)
-    groupRef.current.position.y = arc * 1.8
+    if (t <= FLIGHT_RATIO) {
+      const flightT = t / FLIGHT_RATIO
+
+      // Parabolic flight arc
+      const MAX_HEIGHT = 2.6
+      groupRef.current.position.y = 4 * MAX_HEIGHT * flightT * (1 - flightT)
+
+      // Fast continuous spin around X
+      const rotProgress = Math.pow(flightT, 0.95)
+      groupRef.current.rotation.x =
+        startX.current + (targetX.current - startX.current) * rotProgress
+
+      // Natural 3D gyroscopic wobble during flight
+      const wobble = Math.sin(flightT * Math.PI)
+      groupRef.current.rotation.y = Math.sin(flightT * Math.PI * 4) * 0.22 * wobble
+      groupRef.current.rotation.z = Math.cos(flightT * Math.PI * 3) * 0.18 * wobble
+    } else {
+      // Landing impact & micro settle
+      const settleT = (t - FLIGHT_RATIO) / (1 - FLIGHT_RATIO)
+
+      groupRef.current.rotation.x = targetX.current
+
+      // Metallic ringing settle wobble
+      const rattleDamp = Math.pow(1 - settleT, 2)
+      groupRef.current.rotation.y = Math.sin(settleT * Math.PI * 6) * 0.08 * rattleDamp
+      groupRef.current.rotation.z = Math.cos(settleT * Math.PI * 6) * 0.08 * rattleDamp
+
+      // Micro bounce height
+      const bounceHeight = 0.16 * Math.sin(settleT * Math.PI) * Math.pow(1 - settleT, 1.5)
+      groupRef.current.position.y = Math.max(0, bounceHeight)
+    }
 
     if (t >= 1 && !done.current) {
       done.current = true
+      groupRef.current.rotation.x = side === 'tails' ? Math.PI : 0
+      groupRef.current.rotation.y = 0
+      groupRef.current.rotation.z = 0
       groupRef.current.position.y = 0
       onDone()
     }
   })
 
+  const initialRotX = side === 'tails' ? Math.PI : 0
+
   return (
-    <group ref={groupRef}>
-      {/* Coin body */}
+    <group ref={groupRef} rotation={[initialRotX, 0, 0]}>
+      {/* Coin main body / milled edge */}
       <mesh castShadow>
-        <cylinderGeometry args={[0.8, 0.8, 0.08, 64]} />
-        <meshStandardMaterial color="#f8fafc" roughness={0.2} metalness={0.1} />
+        <cylinderGeometry args={[1.2, 1.2, 0.1, 64]} />
+        <meshStandardMaterial color="#fbbf24" roughness={0.2} metalness={0.92} />
       </mesh>
 
-      {/* Heads face (+Y) */}
-      <mesh position={[0, 0.042, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-        <circleGeometry args={[0.78, 64]} />
-        <meshStandardMaterial color="#FFD700" roughness={0.1} metalness={0.9} />
+      {/* ── Heads Face (+Y) — Radiant Minted Gold ── */}
+      {/* Base Gold Plate */}
+      <mesh position={[0, 0.051, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+        <circleGeometry args={[1.16, 64]} />
+        <meshStandardMaterial color="#f59e0b" roughness={0.16} metalness={0.96} />
+      </mesh>
+      {/* Outer Relief Ring */}
+      <mesh position={[0, 0.053, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+        <circleGeometry args={[1.02, 64]} />
+        <meshStandardMaterial color="#fbbf24" roughness={0.18} metalness={0.94} />
+      </mesh>
+      {/* Inner Medallion Plateau */}
+      <mesh position={[0, 0.055, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+        <circleGeometry args={[0.65, 64]} />
+        <meshStandardMaterial color="#fcd34d" roughness={0.18} metalness={0.92} />
+      </mesh>
+      {/* Royal Star Crest */}
+      <mesh position={[0, 0.057, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+        <circleGeometry args={[0.26, 6]} />
+        <meshStandardMaterial color="#fef08a" roughness={0.12} metalness={0.98} />
+      </mesh>
+      {/* Center Crown Accent */}
+      <mesh position={[0, 0.058, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+        <circleGeometry args={[0.09, 32]} />
+        <meshStandardMaterial color="#ffffff" roughness={0.1} metalness={0.99} />
       </mesh>
 
-      {/* Tails face (-Y) */}
-      <mesh position={[0, -0.042, 0]} rotation={[Math.PI / 2, 0, 0]}>
-        <circleGeometry args={[0.78, 64]} />
-        <meshStandardMaterial color="#C0C0C0" roughness={0.15} metalness={0.85} />
+      {/* ── Tails Face (-Y) — Gleaming Minted Silver ── */}
+      {/* Base Silver Plate */}
+      <mesh position={[0, -0.051, 0]} rotation={[Math.PI / 2, 0, 0]}>
+        <circleGeometry args={[1.16, 64]} />
+        <meshStandardMaterial color="#cbd5e1" roughness={0.16} metalness={0.96} />
       </mesh>
-
-      {/* Heads label */}
-      <mesh position={[0, 0.045, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-        <circleGeometry args={[0.3, 32]} />
-        <meshStandardMaterial color="#B8860B" roughness={0.2} metalness={0.8} />
+      {/* Outer Relief Ring */}
+      <mesh position={[0, -0.053, 0]} rotation={[Math.PI / 2, 0, 0]}>
+        <circleGeometry args={[1.02, 64]} />
+        <meshStandardMaterial color="#e2e8f0" roughness={0.18} metalness={0.94} />
       </mesh>
-
-      {/* Tails label */}
-      <mesh position={[0, -0.045, 0]} rotation={[Math.PI / 2, 0, 0]}>
-        <circleGeometry args={[0.3, 32]} />
-        <meshStandardMaterial color="#808080" roughness={0.2} metalness={0.8} />
+      {/* Inner Medallion Plateau */}
+      <mesh position={[0, -0.055, 0]} rotation={[Math.PI / 2, 0, 0]}>
+        <circleGeometry args={[0.65, 64]} />
+        <meshStandardMaterial color="#f1f5f9" roughness={0.18} metalness={0.92} />
       </mesh>
-
-      {/* Rim edge */}
-      <mesh>
-        <cylinderGeometry args={[0.82, 0.82, 0.08, 64, 1, true]} />
-        <meshStandardMaterial color="#e2e8f0" roughness={0.3} metalness={0.7} side={THREE.BackSide} />
+      {/* Imperial Shield Crest */}
+      <mesh position={[0, -0.057, 0]} rotation={[Math.PI / 2, 0, 0]}>
+        <circleGeometry args={[0.26, 8]} />
+        <meshStandardMaterial color="#f8fafc" roughness={0.12} metalness={0.98} />
+      </mesh>
+      {/* Center Shield Accent */}
+      <mesh position={[0, -0.058, 0]} rotation={[Math.PI / 2, 0, 0]}>
+        <circleGeometry args={[0.09, 32]} />
+        <meshStandardMaterial color="#ffffff" roughness={0.1} metalness={0.99} />
       </mesh>
     </group>
   )
@@ -127,14 +191,31 @@ interface CoinFlip3DProps {
 
 export default function AppCoinFlip3D({ side, flipping, onDone }: CoinFlip3DProps) {
   return (
-    <div style={{ width: '100%', height: 220 }} className="rounded-xl overflow-hidden bg-slate-900">
-      <Canvas camera={{ position: [0, 2.2, 3.5], fov: 42 }} shadows gl={{ antialias: true }}>
-        <ambientLight intensity={0.6} />
-        <directionalLight position={[4, 8, 4]} intensity={1.6} castShadow shadow-mapSize={1024} />
-        <directionalLight position={[-4, 4, -4]} intensity={0.6} />
-        <pointLight position={[0, 5, 2]} intensity={0.8} color="#ffffff" />
-        <pointLight position={[2, -2, 3]} intensity={0.4} color="#ffd700" />
-        <ContactShadows position={[0, -0.7, 0]} opacity={0.4} scale={6} blur={2} />
+    <div style={{ width: '100%', height: '100%' }} className="relative select-none">
+      <Canvas
+        camera={{ position: [0, 2.2, 3.4], fov: 40 }}
+        shadows
+        gl={{ antialias: true, alpha: true }}
+      >
+        <ambientLight intensity={1.1} />
+        <directionalLight
+          position={[4, 9, 5]}
+          intensity={2.8}
+          castShadow
+          shadow-mapSize={1024}
+        />
+        <directionalLight position={[-4, 5, 2]} intensity={1.4} color="#ffffff" />
+        <pointLight position={[0, 2, 4]} intensity={1.0} color="#ffffff" />
+
+        <ContactShadows
+          position={[0, -0.055, 0]}
+          opacity={0.32}
+          scale={4.8}
+          blur={2.0}
+          far={3.0}
+          color="#000000"
+        />
+
         <CoinMesh side={side} flipping={flipping} onDone={onDone} />
       </Canvas>
     </div>

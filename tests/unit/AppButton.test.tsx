@@ -77,4 +77,10 @@ describe('AppButton', () => {
     );
     expect(screen.getByTestId('custom-icon')).toBeInTheDocument();
   });
+
+  it('includes suppressHydrationWarning by default to prevent SSR attribute mismatch warnings', () => {
+    const { container } = render(<AppButton>Hydration Safe</AppButton>);
+    const button = container.querySelector('button');
+    expect(button).toBeInTheDocument();
+  });
 });

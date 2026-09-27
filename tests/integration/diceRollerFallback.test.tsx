@@ -25,16 +25,8 @@ import userEvent from '@testing-library/user-event'
 // DiceRoller3D renders.  The factory runs synchronously (no real dynamic
 // loading) so the component is available on first render.
 
-// eslint-disable-next-line no-var
-var diceRoller3DFactory: () => React.FC<{
-  dice: { sides: number; result: number }[]
-  rolling: boolean
-  onAllDone: () => void
-}>
-
 jest.mock('next/dynamic', () => {
-  return (factory: () => Promise<{ default: React.FC<unknown> }>) => {
-    // Store the factory so individual tests can swap the implementation.
+  return () => {
     // Default: a simple stub that renders a canvas placeholder and immediately
     // calls onAllDone when rolling becomes true.
     const DefaultStub: React.FC<{
@@ -105,18 +97,8 @@ describe('DiceRoller — rolling mechanics', () => {
   })
 
   test('button shows "Rolling…" label while animation is in progress', async () => {
-    // Override the stub to NOT call onAllDone so we can inspect the mid-roll state.
-    jest.resetModules()
-
-    // Render a version where animation never completes
-    const BlockingStub: React.FC<{
-      rolling: boolean
-      onAllDone: () => void
-      dice: unknown[]
-    }> = () => React.createElement('div', { 'data-testid': 'dice-3d-blocking' }, 'rolling')
-    ;(jest.requireMock('next/dynamic') as jest.Mock).mockReturnValue
-    // For this specific test we directly control state by rendering a custom
-    // wrapper that sets rolling=true without completing.
+    const BlockingStub: React.FC = () =>
+      React.createElement('div', { 'data-testid': 'dice-3d-blocking' }, 'rolling')
     const ControlledDiceRoller = () => {
       const [rolling, setRolling] = React.useState(false)
       return React.createElement(
@@ -127,11 +109,7 @@ describe('DiceRoller — rolling mechanics', () => {
           { onClick: () => setRolling(true), 'data-testid': 'start-roll' },
           rolling ? 'Rolling…' : 'Roll',
         ),
-        rolling && React.createElement(BlockingStub, {
-          rolling,
-          onAllDone: jest.fn(),
-          dice: [{ sides: 6, result: 3 }],
-        }),
+        rolling && React.createElement(BlockingStub),
       )
     }
 
@@ -154,17 +132,7 @@ describe('DiceRoller — rolling mechanics', () => {
   })
 
   test('Roll button is disabled while isRolling is true', async () => {
-    // Use a stub that holds rolling state open (never calls onAllDone).
-    const NeverDoneStub: React.FC<{
-      dice: unknown[]
-      rolling: boolean
-      onAllDone: () => void
-    }> = () => React.createElement('div', { 'data-testid': 'dice-3d-never-done' }, 'animating')
-
-    // Temporarily swap the dynamic mock to use NeverDoneStub.
-    // We can do this by rendering DiceRoller with a custom context that
-    // replaces DiceRoller3D, but since the component hard-codes dynamic() we
-    // instead verify the button is enabled before roll and trust the isRolling
+    // We verify the button is enabled before roll and trust the isRolling
     // state logic (which is well-tested via result-panel tests).
     const { rollButton } = setup()
     expect(rollButton()).toBeEnabled()
@@ -263,3 +231,39 @@ describe('DiceRoller — 3D component error (gap documentation)', () => {
     await waitFor(() => expect(screen.getByTestId('dice-3d-stub')).toBeInTheDocument())
   })
 })
+
+describe('DiceRoller — Portuguese localization (pt)', () => {
+  test('renders localized placeholders, labels, and buttons for Portuguese', () => {
+    render(React.createElement(DiceRoller, { locale: 'pt' }))
+
+    expect(screen.getByPlaceholderText(/ex\.: 2d6\+3/i)).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /^rolar$/i })).toBeInTheDocument()
+    expect(screen.getByText(/notação dos dados/i)).toBeInTheDocument()
+    expect(screen.getByText(/predefinições:/i)).toBeInTheDocument()
+  })
+
+  test('shows localized error message on invalid notation in Portuguese', async () => {
+    render(React.createElement(DiceRoller, { locale: 'pt' }))
+    const input = screen.getByPlaceholderText(/ex\.: 2d6\+3/i)
+    const rollBtn = screen.getByRole('button', { name: /^rolar$/i })
+
+    await userEvent.clear(input)
+    await userEvent.type(input, 'invalido')
+    fireEvent.click(rollBtn)
+
+    expect(screen.getByText(/notação inválida/i)).toBeInTheDocument()
+  })
+
+  test('clicking roll shows 3D viewport and prompt in Portuguese', async () => {
+    render(React.createElement(DiceRoller, { locale: 'pt' }))
+    const rollBtn = screen.getByRole('button', { name: /^rolar$/i })
+
+    await act(async () => { fireEvent.click(rollBtn) })
+    await waitFor(() => {
+      expect(screen.getByTestId('dice-3d-stub')).toBeInTheDocument()
+      expect(screen.getByText(/clique nos dados para rolar/i)).toBeInTheDocument()
+      expect(screen.getByText(/pressione espaço no teclado/i)).toBeInTheDocument()
+    })
+  })
+})
+
