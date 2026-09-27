@@ -44,10 +44,20 @@ export function webAppSchema(
   }
 }
 
-export function faqSchema(faqs: FaqItem[]) {
+export function faqSchema(faqs?: FaqItem[]) {
+  if (!Array.isArray(faqs) || faqs.length === 0) return null
+  const validFaqs = faqs.filter(
+    (f) =>
+      f &&
+      typeof f.question === 'string' &&
+      typeof f.answer === 'string' &&
+      f.question.trim().length > 0 &&
+      f.answer.trim().length > 0
+  )
+  if (validFaqs.length === 0) return null
   return {
     '@type': 'FAQPage',
-    mainEntity: faqs.map(({ question, answer }) => ({
+    mainEntity: validFaqs.map(({ question, answer }) => ({
       '@type': 'Question',
       name: question,
       acceptedAnswer: { '@type': 'Answer', text: answer },
@@ -206,9 +216,9 @@ export function interviewQuizSchema({
   }
 }
 
-export function buildJsonLd(...schemas: object[]) {
+export function buildJsonLd(...schemas: (object | null | undefined)[]) {
   return {
     '@context': 'https://schema.org',
-    '@graph': schemas,
+    '@graph': schemas.filter(Boolean),
   }
 }

@@ -1,7 +1,28 @@
 'use client'
-import { useRef, useEffect, useState, useCallback } from 'react'
 
-const COLORS = ['#3b82f6','#ef4444','#22c55e','#f59e0b','#8b5cf6','#ec4899','#14b8a6','#f97316','#6366f1','#84cc16']
+import { useRef, useEffect, useState, useCallback } from 'react'
+import { AppButton } from '@/components/ui'
+import confetti from 'canvas-confetti'
+
+export const SPIN_WHEEL_COLORS = [
+  '#2563EB', // Blue
+  '#10B981', // Emerald
+  '#F59E0B', // Amber
+  '#EF4444', // Red
+  '#8B5CF6', // Violet
+  '#06B6D4', // Cyan
+  '#EC4899', // Pink
+  '#F97316', // Orange
+  '#6366F1', // Indigo
+  '#14B8A6', // Teal
+]
+
+export function getWheelItemColor(index: number, total: number): string {
+  if (total > 1 && index === total - 1 && index % SPIN_WHEEL_COLORS.length === 0) {
+    return SPIN_WHEEL_COLORS[1 % SPIN_WHEEL_COLORS.length]
+  }
+  return SPIN_WHEEL_COLORS[index % SPIN_WHEEL_COLORS.length]
+}
 
 const prefersReducedMotion = () =>
   typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -9,76 +30,185 @@ const prefersReducedMotion = () =>
 interface SpinWheelProps {
   items: string[]
   onResult: (item: string) => void
+  spinButtonText?: string
+  spinningButtonText?: string
 }
 
-export default function AppSpinWheel({ items, onResult }: SpinWheelProps) {
+export default function AppSpinWheel({
+  items,
+  onResult,
+  spinButtonText = 'Girar Roleta',
+  spinningButtonText = 'Girando...',
+}: SpinWheelProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const rotationRef = useRef(0)
   const animFrameRef = useRef<number>(0)
   const [isSpinning, setIsSpinning] = useState(false)
-  const [winner, setWinner] = useState<string | null>(null)
 
   const draw = useCallback((rotation: number) => {
     const canvas = canvasRef.current
-    if (!canvas || items.length === 0) return
-    const ctx = canvas.getContext('2d')!
+    if (!canvas) return
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
     const dpr = window.devicePixelRatio || 1
-    const size = canvas.offsetWidth
+    const size = canvas.offsetWidth || 340
     canvas.width = size * dpr
     canvas.height = size * dpr
     ctx.scale(dpr, dpr)
 
     const cx = size / 2
     const cy = size / 2
-    const radius = size / 2 - 8
+    const outerRadius = size / 2 - 14
+    const wheelRadius = outerRadius - 10
+
+    ctx.clearRect(0, 0, size, size)
+
+    if (items.length === 0) {
+      ctx.beginPath()
+      ctx.arc(cx, cy, wheelRadius, 0, Math.PI * 2)
+      ctx.fillStyle = '#e2e8f0'
+      ctx.fill()
+      ctx.strokeStyle = '#cbd5e1'
+      ctx.lineWidth = 2
+      ctx.stroke()
+      return
+    }
+
     const arc = (2 * Math.PI) / items.length
 
+    // 1. Outer Bezel / Rim ring
+    ctx.save()
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.15)'
+    ctx.shadowBlur = 10
+    ctx.shadowOffsetY = 3
+    ctx.beginPath()
+    ctx.arc(cx, cy, outerRadius, 0, Math.PI * 2)
+    ctx.fillStyle = '#1e293b'
+    ctx.fill()
+    ctx.strokeStyle = '#334155'
+    ctx.lineWidth = 2
+    ctx.stroke()
+    ctx.restore()
+
+    // 2. Wheel Slices
     items.forEach((item, i) => {
       const angle = rotation + i * arc
       ctx.beginPath()
       ctx.moveTo(cx, cy)
-      ctx.arc(cx, cy, radius, angle, angle + arc)
-      ctx.fillStyle = COLORS[i % COLORS.length]
+      ctx.arc(cx, cy, wheelRadius, angle, angle + arc)
+      ctx.closePath()
+      ctx.fillStyle = getWheelItemColor(i, items.length)
       ctx.fill()
-      ctx.strokeStyle = '#fff'
+      ctx.strokeStyle = '#ffffff'
       ctx.lineWidth = 2
       ctx.stroke()
 
+      // Slice label
       ctx.save()
       ctx.translate(cx, cy)
       ctx.rotate(angle + arc / 2)
       ctx.textAlign = 'right'
-      ctx.fillStyle = '#fff'
-      ctx.font = `bold ${Math.min(14, Math.floor(180 / items.length))}px sans-serif`
-      ctx.fillText(item.length > 12 ? item.slice(0, 12) + '…' : item, radius - 8, 4)
+      ctx.textBaseline = 'middle'
+      ctx.fillStyle = '#ffffff'
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.5)'
+      ctx.shadowBlur = 3
+      ctx.shadowOffsetX = 1
+      ctx.shadowOffsetY = 1
+
+      const fontSize =
+        items.length <= 4 ? 15 : items.length <= 8 ? 13 : items.length <= 16 ? 12 : 10
+      ctx.font = `bold ${fontSize}px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace`
+
+      const maxChars = items.length <= 4 ? 18 : items.length <= 8 ? 14 : 10
+      const displayText = item.length > maxChars ? item.slice(0, maxChars - 1) + '…' : item
+
+      ctx.fillText(displayText, wheelRadius - 12, 0)
       ctx.restore()
     })
 
-    // Center circle
+    // 3. Metallic brass pegs on outer rim (they rotate with the wheel!)
+    const pegDistance = (wheelRadius + outerRadius) / 2
+    items.forEach((_, i) => {
+      const angle = rotation + i * arc
+      const px = cx + pegDistance * Math.cos(angle)
+      const py = cy + pegDistance * Math.sin(angle)
+
+      ctx.beginPath()
+      ctx.arc(px, py, 2.5, 0, Math.PI * 2)
+      ctx.fillStyle = '#fef08a'
+      ctx.fill()
+      ctx.strokeStyle = '#ca8a04'
+      ctx.lineWidth = 1
+      ctx.stroke()
+    })
+
+    // 4. Center hub assembly (layered mechanical look)
+    // Layer 1: Outer white trim
+    ctx.save()
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.25)'
+    ctx.shadowBlur = 6
     ctx.beginPath()
-    ctx.arc(cx, cy, 16, 0, Math.PI * 2)
-    ctx.fillStyle = '#1e293b'
+    ctx.arc(cx, cy, 22, 0, Math.PI * 2)
+    ctx.fillStyle = '#ffffff'
+    ctx.fill()
+    ctx.restore()
+
+    // Layer 2: Dark hub disc
+    ctx.beginPath()
+    ctx.arc(cx, cy, 18, 0, Math.PI * 2)
+    ctx.fillStyle = '#0f172a'
     ctx.fill()
 
-    // Pointer
+    // Layer 3: Center jewel/accent
     ctx.beginPath()
-    ctx.moveTo(cx + radius + 6, cy)
-    ctx.lineTo(cx + radius - 10, cy - 10)
-    ctx.lineTo(cx + radius - 10, cy + 10)
-    ctx.fillStyle = '#1e293b'
+    ctx.arc(cx, cy, 7, 0, Math.PI * 2)
+    ctx.fillStyle = '#3b82f6'
     ctx.fill()
+    ctx.strokeStyle = '#ffffff'
+    ctx.lineWidth = 1.5
+    ctx.stroke()
+
+    // 5. Inward Needle Pointer (mounted on right rim at angle 0)
+    ctx.save()
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.35)'
+    ctx.shadowBlur = 6
+    ctx.shadowOffsetY = 2
+
+    ctx.beginPath()
+    // Needle tip points into the winning slice
+    ctx.moveTo(cx + wheelRadius - 4, cy)
+    // Base anchors onto the outer rim
+    ctx.lineTo(cx + outerRadius + 12, cy - 10)
+    ctx.lineTo(cx + outerRadius + 12, cy + 10)
+    ctx.closePath()
+    ctx.fillStyle = '#ef4444'
+    ctx.fill()
+    ctx.strokeStyle = '#ffffff'
+    ctx.lineWidth = 2
+    ctx.stroke()
+
+    // Pointer pivot pin
+    ctx.beginPath()
+    ctx.arc(cx + outerRadius + 8, cy, 3.5, 0, Math.PI * 2)
+    ctx.fillStyle = '#ffffff'
+    ctx.fill()
+    ctx.restore()
   }, [items])
 
-  useEffect(() => { draw(rotationRef.current) }, [items, draw])
+  useEffect(() => {
+    draw(rotationRef.current)
+  }, [items, draw])
 
   const spin = () => {
     if (isSpinning || items.length === 0) return
-    setWinner(null)
     setIsSpinning(true)
 
     const targetIndex = Math.floor(Math.random() * items.length)
     const arc = (2 * Math.PI) / items.length
-    const totalSpins = prefersReducedMotion() ? 0 : (Math.floor(Math.random() * 3) + 4) * Math.PI * 2
+    const totalSpins = prefersReducedMotion()
+      ? 0
+      : (Math.floor(Math.random() * 3) + 4) * Math.PI * 2
     const twoPi = Math.PI * 2
     const desiredResting = -(targetIndex * arc + arc / 2)
     let delta = (desiredResting - rotationRef.current) % twoPi
@@ -88,9 +218,13 @@ export default function AppSpinWheel({ items, onResult }: SpinWheelProps) {
     if (prefersReducedMotion()) {
       rotationRef.current = targetAngle
       draw(targetAngle)
-      setWinner(items[targetIndex])
       setIsSpinning(false)
       onResult(items[targetIndex])
+      try {
+        confetti({ particleCount: 75, spread: 60, origin: { y: 0.6 } })
+      } catch {
+        // Confetti optional
+      }
       return
     }
 
@@ -111,8 +245,12 @@ export default function AppSpinWheel({ items, onResult }: SpinWheelProps) {
         animFrameRef.current = requestAnimationFrame(animate)
       } else {
         setIsSpinning(false)
-        setWinner(items[targetIndex])
         onResult(items[targetIndex])
+        try {
+          confetti({ particleCount: 85, spread: 65, origin: { y: 0.6 } })
+        } catch {
+          // Confetti optional
+        }
       }
     }
     animFrameRef.current = requestAnimationFrame(animate)
@@ -121,23 +259,19 @@ export default function AppSpinWheel({ items, onResult }: SpinWheelProps) {
   useEffect(() => () => cancelAnimationFrame(animFrameRef.current), [])
 
   return (
-    <div className="flex flex-col items-center gap-4">
-      <div className="relative w-full max-w-xs">
-        <canvas ref={canvasRef} className="w-full aspect-square" />
+    <div className="flex flex-col items-center gap-5 w-full">
+      <div className="relative w-full max-w-[340px] sm:max-w-[400px] aspect-square flex items-center justify-center select-none">
+        <canvas ref={canvasRef} className="w-full h-full block" />
       </div>
-      {winner && (
-        <div className="text-center">
-          <div className="text-xs text-gray-500 mb-1">Winner!</div>
-          <div className="text-2xl font-bold text-gray-900">{winner}</div>
-        </div>
-      )}
-      <button
+
+      <AppButton
         onClick={spin}
         disabled={isSpinning || items.length < 2}
-        className="px-10 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 disabled:opacity-50 transition-all"
+        color="primary"
+        className="px-8 py-2.5 font-mono text-sm sm:text-base font-bold tracking-wide"
       >
-        {isSpinning ? 'Spinning...' : 'Spin!'}
-      </button>
+        {isSpinning ? spinningButtonText : spinButtonText}
+      </AppButton>
     </div>
   )
 }

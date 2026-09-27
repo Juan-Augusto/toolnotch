@@ -42,7 +42,7 @@ interface ToolWrapperProps {
   title: string;
   description: string;
   breadcrumbLabel: string;
-  faqs: FaqItem[];
+  faqs?: FaqItem[];
   adSlot?: string;
   richContent?: RichContent;
   relatedLinks?: RelatedLinks;
@@ -58,7 +58,7 @@ export default function AppToolWrapper({
   title,
   description,
   breadcrumbLabel,
-  faqs,
+  faqs = [],
   adSlot,
   richContent,
   relatedLinks,
@@ -308,9 +308,11 @@ export default function AppToolWrapper({
 
         <AppRelatedContent />
 
-        <div className="no-print">
-          <AppFaqSection faqs={faqs} />
-        </div>
+        {faqs && Array.isArray(faqs) && faqs.length > 0 && (
+          <div className="no-print">
+            <AppFaqSection faqs={faqs} />
+          </div>
+        )}
       </div>
 
       <AppAffiliateStickyBar />

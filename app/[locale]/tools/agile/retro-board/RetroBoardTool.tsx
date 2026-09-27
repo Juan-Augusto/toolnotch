@@ -1,16 +1,8 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { ThumbsUp, Trash2, Plus, Download, RefreshCw } from "lucide-react";
-import AppToolWrapper from "@/components/AppToolWrapper";
-import type { FaqItem } from "@/components/AppFaqSection";
-
-interface RichContent {
-  whatIs: string;
-  howToUse: string[];
-  whyItMatters: string;
-  proTip: string;
-}
+import { ThumbsUp, Trash2, Plus, Download, RotateCcw, Check, Sparkles } from "lucide-react";
+import { AppButton, AppBadge, AppCard } from "@/components/ui";
 
 interface Note {
   id: string;
@@ -29,18 +21,12 @@ interface Board {
 interface ColumnConfig {
   key: ColumnKey;
   label: string;
-  accent: string;
-  headerBg: string;
-  addBg: string;
-  voteBg: string;
-  cardBg: string;
-  borderColor: string;
+  accentText: string;
+  accentBg: string;
+  accentBorder: string;
 }
 
 interface Props {
-  title: string;
-  description: string;
-  faqs: FaqItem[];
   columns: { wentWell: string; toImprove: string; actionItems: string };
   labels: {
     placeholder: string;
@@ -54,21 +40,13 @@ interface Props {
     exportHeading: string;
     copiedToast: string;
   };
-  richContent?: RichContent;
 }
 
 function makeId() {
   return Math.random().toString(36).slice(2, 10);
 }
 
-export default function RetroBoardTool({
-  title,
-  description,
-  faqs,
-  columns,
-  labels,
-  richContent,
-}: Props) {
+export default function RetroBoardTool({ columns, labels }: Props) {
   const [board, setBoard] = useState<Board>({
     wentWell: [],
     toImprove: [],
@@ -79,69 +57,63 @@ export default function RetroBoardTool({
     toImprove: "",
     actionItems: "",
   });
-  const [toast, setToast] = useState(false);
-  const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [copied, setCopied] = useState(false);
+  const copyTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const COLS: ColumnConfig[] = [
     {
       key: "wentWell",
       label: columns.wentWell,
-      accent: "text-emerald-700",
-      headerBg: "bg-emerald-50 border-emerald-200",
-      addBg: "bg-emerald-600 hover:bg-emerald-700",
-      voteBg: "hover:bg-emerald-100 text-emerald-700",
-      cardBg: "bg-emerald-50 border-emerald-200",
-      borderColor: "border-emerald-300",
+      accentText: "text-emerald-600 dark:text-emerald-400",
+      accentBg: "bg-emerald-500/10",
+      accentBorder: "border-emerald-500/30",
     },
     {
       key: "toImprove",
       label: columns.toImprove,
-      accent: "text-amber-700",
-      headerBg: "bg-amber-50 border-amber-200",
-      addBg: "bg-amber-500 hover:bg-amber-600",
-      voteBg: "hover:bg-amber-100 text-amber-700",
-      cardBg: "bg-amber-50 border-amber-200",
-      borderColor: "border-amber-300",
+      accentText: "text-amber-600 dark:text-amber-400",
+      accentBg: "bg-amber-500/10",
+      accentBorder: "border-amber-500/30",
     },
     {
       key: "actionItems",
       label: columns.actionItems,
-      accent: "text-violet-700",
-      headerBg: "bg-violet-50 border-violet-200",
-      addBg: "bg-violet-600 hover:bg-violet-700",
-      voteBg: "hover:bg-violet-100 text-violet-700",
-      cardBg: "bg-violet-50 border-violet-200",
-      borderColor: "border-violet-300",
+      accentText: "text-primary",
+      accentBg: "bg-primary/10",
+      accentBorder: "border-primary/30",
     },
   ];
 
-  function addNote(col: ColumnKey) {
-    const text = inputs[col].trim();
+  function addNote(colKey: ColumnKey) {
+    const text = inputs[colKey].trim();
     if (!text) return;
-    setBoard((b) => ({
-      ...b,
-      [col]: [...b[col], { id: makeId(), text, votes: 0 }],
+    setBoard((prev) => ({
+      ...prev,
+      [colKey]: [...prev[colKey], { id: makeId(), text, votes: 0 }],
     }));
-    setInputs((i) => ({ ...i, [col]: "" }));
+    setInputs((prev) => ({ ...prev, [colKey]: "" }));
   }
 
-  function deleteNote(col: ColumnKey, id: string) {
-    setBoard((b) => ({ ...b, [col]: b[col].filter((n) => n.id !== id) }));
+  function deleteNote(colKey: ColumnKey, id: string) {
+    setBoard((prev) => ({
+      ...prev,
+      [colKey]: prev[colKey].filter((n) => n.id !== id),
+    }));
   }
 
-  function vote(col: ColumnKey, id: string) {
-    setBoard((b) => ({
-      ...b,
-      [col]: b[col].map((n) =>
-        n.id === id ? { ...n, votes: n.votes + 1 } : n,
+  function vote(colKey: ColumnKey, id: string) {
+    setBoard((prev) => ({
+      ...prev,
+      [colKey]: prev[colKey].map((n) =>
+        n.id === id ? { ...n, votes: n.votes + 1 } : n
       ),
     }));
   }
 
   function clearBoard() {
-    if (!window.confirm(labels.clearConfirm)) return;
-    setBoard({ wentWell: [], toImprove: [], actionItems: [] });
-    setInputs({ wentWell: "", toImprove: "", actionItems: "" });
+    if (window.confirm(labels.clearConfirm)) {
+      setBoard({ wentWell: [], toImprove: [], actionItems: [] });
+    }
   }
 
   function exportMarkdown() {
@@ -150,21 +122,21 @@ export default function RetroBoardTool({
       lines.push(`## ${col.label}`);
       const notes = board[col.key];
       if (notes.length === 0) {
-        lines.push("_No notes_");
+        lines.push("_Sem notas_");
       } else {
         notes
           .slice()
           .sort((a, b) => b.votes - a.votes)
           .forEach((n) => {
-            lines.push(`- ${n.text}${n.votes > 0 ? ` _(👍 ${n.votes})_` : ""}`);
+            lines.push(`- ${n.text}${n.votes > 0 ? ` (👍 ${n.votes})` : ""}`);
           });
       }
       lines.push("");
     });
     navigator.clipboard.writeText(lines.join("\n")).then(() => {
-      setToast(true);
-      if (toastTimer.current) clearTimeout(toastTimer.current);
-      toastTimer.current = setTimeout(() => setToast(false), 2500);
+      setCopied(true);
+      if (copyTimer.current) clearTimeout(copyTimer.current);
+      copyTimer.current = setTimeout(() => setCopied(false), 2200);
     });
   }
 
@@ -172,118 +144,145 @@ export default function RetroBoardTool({
     board.wentWell.length + board.toImprove.length + board.actionItems.length;
 
   return (
-    <AppToolWrapper
-      title={title}
-      description={description}
-      breadcrumbLabel={title}
-      faqs={faqs}
-      richContent={richContent}
-    >
-      <div className="flex flex-wrap gap-2 justify-end mb-5">
-        <button
-          onClick={exportMarkdown}
-          className="flex items-center gap-1.5 text-sm px-3 py-2 rounded-lg border border-gray-300 hover:border-gray-400 bg-tertiary hover:bg-gray-50 text-gray-700 transition-colors"
-        >
-          <Download size={14} />
-          {labels.exportButton}
-        </button>
-        {totalNotes > 0 && (
-          <button
-            onClick={clearBoard}
-            className="flex items-center gap-1.5 text-sm px-3 py-2 rounded-lg border border-red-200 hover:border-red-300 bg-tertiary hover:bg-red-50 text-red-600 transition-colors"
+    <div className="space-y-6 w-full">
+      {/* Action Toolbar */}
+      <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-border/70">
+        <div className="flex items-center gap-2">
+          <AppBadge bg="bg-primary/10" text="text-primary" className="border border-primary/30 font-mono text-sm px-2.5 py-1">
+            {totalNotes} {totalNotes === 1 ? "nota" : "notas"}
+          </AppBadge>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <AppButton
+            type="button"
+            color="secondary"
+            onClick={exportMarkdown}
+            className="font-mono text-sm px-3.5 py-1.5"
           >
-            <RefreshCw size={14} />
-            {labels.clearButton}
-          </button>
-        )}
+            {copied ? (
+              <>
+                <Check className="w-4 h-4 mr-1.5 text-emerald-500" />
+                <span>{labels.copiedToast}</span>
+              </>
+            ) : (
+              <>
+                <Download className="w-4 h-4 mr-1.5" />
+                <span>{labels.exportButton}</span>
+              </>
+            )}
+          </AppButton>
+
+          {totalNotes > 0 && (
+            <AppButton
+              type="button"
+              color="tertiary"
+              onClick={clearBoard}
+              className="font-mono text-sm text-danger hover:text-danger px-3.5 py-1.5"
+            >
+              <RotateCcw className="w-4 h-4 mr-1.5" />
+              <span>{labels.clearButton}</span>
+            </AppButton>
+          )}
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {COLS.map((col) => (
-          <div
-            key={col.key}
-            className={`rounded-xl border ${col.headerBg} flex flex-col overflow-hidden`}
-          >
-            <div className={`px-4 py-3 border-b ${col.headerBg}`}>
-              <h2 className={`font-bold text-sm uppercase  ${col.accent}`}>
-                {col.label}
-                {board[col.key].length > 0 && (
-                  <span className="ml-2 font-normal text-xs opacity-70">
-                    ({board[col.key].length})
-                  </span>
-                )}
-              </h2>
-            </div>
+      {/* 3 Columns Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 items-start w-full">
+        {COLS.map((col) => {
+          const notes = board[col.key];
+          return (
+            <div
+              key={col.key}
+              className={`rounded-[2px] border ${col.accentBorder} bg-background/50 flex flex-col overflow-hidden shadow-2xs`}
+            >
+              {/* Column Header */}
+              <div
+                className={`px-4 py-3.5 border-b ${col.accentBorder} ${col.accentBg} flex items-center justify-between`}
+              >
+                <h3 className={`font-mono font-bold text-base uppercase tracking-wide ${col.accentText}`}>
+                  {col.label}
+                </h3>
+                <span className="font-mono text-sm font-semibold px-2.5 py-0.5 rounded-[2px] bg-background/80 border border-border/60 text-foreground">
+                  {notes.length}
+                </span>
+              </div>
 
-            <div className="flex-1 p-3 space-y-2 min-h-[120px]">
-              {board[col.key].length === 0 ? (
-                <p className="text-xs text-gray-400 text-center pt-6">
-                  {labels.emptyHint}
-                </p>
-              ) : (
-                board[col.key].map((note) => (
-                  <div
-                    key={note.id}
-                    className={`rounded-lg border ${col.cardBg} px-3 py-2.5 flex items-start gap-2 group`}
-                  >
-                    <p className="flex-1 text-sm text-gray-800 leading-snug break-words">
-                      {note.text}
-                    </p>
-                    <div className="flex items-center gap-1 shrink-0 mt-0.5">
-                      <button
-                        onClick={() => vote(col.key, note.id)}
-                        aria-label={labels.voteAriaLabel}
-                        className={`flex items-center gap-0.5 text-xs px-1.5 py-0.5 rounded transition-colors ${col.voteBg}`}
-                      >
-                        <ThumbsUp size={12} />
-                        {note.votes > 0 && <span>{note.votes}</span>}
-                      </button>
-                      <button
-                        onClick={() => deleteNote(col.key, note.id)}
-                        aria-label={labels.deleteAriaLabel}
-                        className="text-gray-300 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all"
-                      >
-                        <Trash2 size={12} />
-                      </button>
-                    </div>
+              {/* Notes List */}
+              <div className="p-3.5 space-y-2.5 min-h-[160px] flex flex-col justify-start">
+                {notes.length === 0 ? (
+                  <div className="py-8 text-center text-sm text-muted-foreground font-mono">
+                    {labels.emptyHint}
                   </div>
-                ))
-              )}
-            </div>
+                ) : (
+                  notes.map((note) => (
+                    <AppCard
+                      key={note.id}
+                      border
+                      cornerAccents={false}
+                      className="p-3.5 bg-tertiary flex flex-col gap-2.5 group transition-all"
+                    >
+                      <p className="text-sm sm:text-base text-foreground leading-relaxed break-words">
+                        {note.text}
+                      </p>
+                      <div className="flex items-center justify-between pt-1.5 border-t border-border/40">
+                        <button
+                          type="button"
+                          onClick={() => vote(col.key, note.id)}
+                          aria-label={labels.voteAriaLabel}
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[2px] bg-muted/60 hover:bg-muted text-foreground transition-colors font-mono text-sm cursor-pointer"
+                        >
+                          <ThumbsUp className="w-3.5 h-3.5 text-primary" />
+                          <span className="font-semibold">{note.votes}</span>
+                        </button>
 
-            <div className="p-3 border-t border-gray-100 bg-tertiary">
-              <div className="flex gap-2">
-                <input
-                  type="text"
-                  value={inputs[col.key]}
-                  onChange={(e) =>
-                    setInputs((i) => ({ ...i, [col.key]: e.target.value }))
-                  }
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") addNote(col.key);
+                        <button
+                          type="button"
+                          onClick={() => deleteNote(col.key, note.id)}
+                          aria-label={labels.deleteAriaLabel}
+                          className="text-muted-foreground/60 hover:text-danger p-1 rounded transition-colors opacity-70 group-hover:opacity-100 cursor-pointer"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </AppCard>
+                  ))
+                )}
+              </div>
+
+              {/* Add Note Input Box */}
+              <div className="p-3.5 border-t border-border/60 bg-tertiary/40">
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    addNote(col.key);
                   }}
-                  placeholder={labels.placeholder}
-                  className="flex-1 text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-violet-300 focus:border-violet-300 min-w-0"
-                />
-                <button
-                  onClick={() => addNote(col.key)}
-                  disabled={!inputs[col.key].trim()}
-                  aria-label={labels.addButton}
-                  className={`${col.addBg} disabled:bg-gray-200 text-white rounded-lg px-3 py-2 transition-colors shrink-0`}
+                  className="flex gap-2 items-center"
                 >
-                  <Plus size={16} />
-                </button>
+                  <input
+                    type="text"
+                    value={inputs[col.key]}
+                    onChange={(e) =>
+                      setInputs((prev) => ({ ...prev, [col.key]: e.target.value }))
+                    }
+                    placeholder={labels.placeholder}
+                    className="flex-1 px-3.5 py-2 text-sm sm:text-base font-mono bg-background border border-border rounded-[2px] text-foreground placeholder:text-muted-foreground/60 outline-none focus:border-primary transition-colors min-w-0"
+                  />
+                  <AppButton
+                    type="submit"
+                    color="primary"
+                    disabled={!inputs[col.key].trim()}
+                    className="font-mono text-sm px-4 h-[42px] shrink-0"
+                  >
+                    <Plus className="w-4 h-4 mr-1" />
+                    <span>{labels.addButton}</span>
+                  </AppButton>
+                </form>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
-
-      {toast && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-sm px-4 py-2 rounded-full shadow-lg z-50 animate-fade-in">
-          {labels.copiedToast}
-        </div>
-      )}
-    </AppToolWrapper>
+    </div>
   );
 }

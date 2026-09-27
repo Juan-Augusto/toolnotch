@@ -170,7 +170,7 @@ export function AppSegmentedControl<T = string>({
       {label && (
         <label
           id={labelId}
-          className={`text-xs font-semibold uppercase  text-foreground mb-2 select-none ${
+          className={`text-xs font-semibold text-foreground mb-2 select-none ${
             disabled ? "opacity-50" : ""
           } ${labelClassName}`}
         >
@@ -212,6 +212,7 @@ export function AppSegmentedControl<T = string>({
               type="button"
               aria-checked={isSelected}
               disabled={isOptionDisabled}
+              suppressHydrationWarning
               onClick={() => handleSelect(opt.value, isOptionDisabled)}
               onKeyDown={handleKeyDown}
               tabIndex={isSelected ? 0 : -1}

@@ -24,6 +24,7 @@ export interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> 
   rounded?: boolean;
   small?: boolean;
   opacity?: boolean;
+  suppressHydrationWarning?: boolean;
 }
 
 export default function AppButton({
@@ -37,6 +38,7 @@ export default function AppButton({
   rounded = false,
   small = false,
   opacity = false,
+  suppressHydrationWarning = true,
   ...props
 }: AppButtonProps) {
   const variant =
@@ -63,6 +65,7 @@ export default function AppButton({
   return (
     <button
       disabled={disabled}
+      suppressHydrationWarning={suppressHydrationWarning}
       className={`inline-flex items-center justify-center hover:-translate-y-1 active:translate-y-0 active:shadow-none disabled:hover:translate-y-0 disabled:hover:shadow-none disabled:active:translate-y-0 gap-2.5 font-semibold uppercase whitespace-nowrap transition-all duration-200 cursor-pointer select-none disabled:cursor-not-allowed ${sizeClasses} ${radiusClasses} ${colorStyles[variant]} ${opacity ? "opacity-80" : ""} ${className}`}
       {...props}
     >

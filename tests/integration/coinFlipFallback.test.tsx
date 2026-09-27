@@ -255,3 +255,145 @@ describe('CoinFlip — 3D component error (gap documentation)', () => {
     })
   })
 })
+
+describe('CoinFlip — Best of 3 mode', () => {
+  test('switches to Best of 3 mode and renders scoreboard with 0-0', () => {
+    render(React.createElement(CoinFlip))
+    const bo3Tab = screen.getByRole('button', { name: /best of 3/i })
+    fireEvent.click(bo3Tab)
+
+    expect(screen.getByText(/heads: 0/i)).toBeInTheDocument()
+    expect(screen.getByText(/tails: 0/i)).toBeInTheDocument()
+    expect(screen.getByText(/round 1 of 3/i)).toBeInTheDocument()
+  })
+
+  test('tracks rounds and declares winner after 3 rounds', async () => {
+    jest.spyOn(Math, 'random').mockReturnValue(0.9) // always tails
+
+    render(React.createElement(CoinFlip))
+    fireEvent.click(screen.getByRole('button', { name: /best of 3/i }))
+
+    // Flip 1
+    await act(async () => { fireEvent.click(flipButton()) })
+    await waitFor(() => expect(screen.getByText(/tails: 1/i)).toBeInTheDocument())
+
+    // Flip 2
+    await act(async () => { fireEvent.click(flipButton()) })
+    await waitFor(() => expect(screen.getByText(/tails: 2/i)).toBeInTheDocument())
+
+    // Flip 3 (final round)
+    const round3Btn = screen.getByRole('button', { name: /round 3/i })
+    await act(async () => { fireEvent.click(round3Btn) })
+    await waitFor(() => expect(screen.getByText(/tails: 3/i)).toBeInTheDocument())
+
+    // Winner banner
+    expect(screen.getByText(/tails won the best of 3!/i)).toBeInTheDocument()
+
+    // Main button now offers New Match
+    expect(screen.getByRole('button', { name: /new match \(best of 3\)/i })).toBeInTheDocument()
+
+    jest.spyOn(Math, 'random').mockRestore()
+  })
+
+  test('resets round count when flipping again after Best of 3 is complete', async () => {
+    jest.spyOn(Math, 'random').mockReturnValue(0.9) // tails for 3 rounds
+
+    render(React.createElement(CoinFlip))
+    fireEvent.click(screen.getByRole('button', { name: /best of 3/i }))
+
+    // Flip 1
+    await act(async () => { fireEvent.click(flipButton()) })
+    await waitFor(() => expect(screen.getByText(/tails: 1/i)).toBeInTheDocument())
+
+    // Flip 2
+    await act(async () => { fireEvent.click(flipButton()) })
+    await waitFor(() => expect(screen.getByText(/tails: 2/i)).toBeInTheDocument())
+
+    // Flip 3 (final round)
+    const r3Btn = screen.getByRole('button', { name: /round 3/i })
+    await act(async () => { fireEvent.click(r3Btn) })
+    await waitFor(() => expect(screen.getByText(/tails: 3/i)).toBeInTheDocument())
+
+    // Now mock heads for the 4th flip (new match)
+    jest.spyOn(Math, 'random').mockReturnValue(0.1)
+
+    const newMatchBtn = screen.getByRole('button', { name: /new match \(best of 3\)/i })
+    await act(async () => { fireEvent.click(newMatchBtn) })
+
+    // The score MUST reset to Heads: 1, Tails: 0 (NOT Heads: 1, Tails: 3!)
+    await waitFor(() => {
+      expect(screen.getByText(/heads: 1/i)).toBeInTheDocument()
+      expect(screen.getByText(/tails: 0/i)).toBeInTheDocument()
+    })
+
+    // Winner banner should no longer be visible
+    expect(screen.queryByText(/tails won the best of 3!/i)).not.toBeInTheDocument()
+
+    jest.spyOn(Math, 'random').mockRestore()
+  })
+
+  test('reset button in scoreboard manually resets the Best of 3 rounds', async () => {
+    jest.spyOn(Math, 'random').mockReturnValue(0.9) // tails
+
+    render(React.createElement(CoinFlip))
+    fireEvent.click(screen.getByRole('button', { name: /best of 3/i }))
+
+    await act(async () => { fireEvent.click(flipButton()) })
+    await waitFor(() => expect(screen.getByText(/tails: 1/i)).toBeInTheDocument())
+
+    // Click Reset button in scoreboard
+    const resetBtn = screen.getByRole('button', { name: /^reset$/i })
+    fireEvent.click(resetBtn)
+
+    expect(screen.getByText(/heads: 0/i)).toBeInTheDocument()
+    expect(screen.getByText(/tails: 0/i)).toBeInTheDocument()
+    expect(screen.getByText(/round 1 of 3/i)).toBeInTheDocument()
+
+    jest.spyOn(Math, 'random').mockRestore()
+  })
+
+  test('Portuguese locale (pt): 3 rounds of Coroa and then reset on continuing to play', async () => {
+    jest.spyOn(Math, 'random').mockReturnValue(0.9) // tails (coroa)
+
+    render(React.createElement(CoinFlip, { locale: 'pt' }))
+    const bo3Tab = screen.getByRole('button', { name: /melhor de 3/i })
+    fireEvent.click(bo3Tab)
+
+    expect(screen.getByText(/cara: 0/i)).toBeInTheDocument()
+    expect(screen.getByText(/coroa: 0/i)).toBeInTheDocument()
+
+    // Flip 1
+    const flipBtnPt = () => screen.getByRole('button', { name: /jogar moeda/i })
+    await act(async () => { fireEvent.click(flipBtnPt()) })
+    await waitFor(() => expect(screen.getByText(/coroa: 1/i)).toBeInTheDocument())
+
+    // Flip 2
+    await act(async () => { fireEvent.click(flipBtnPt()) })
+    await waitFor(() => expect(screen.getByText(/coroa: 2/i)).toBeInTheDocument())
+
+    // Flip 3 (final round)
+    const r3Btn = screen.getByRole('button', { name: /jogar rodada 3/i })
+    await act(async () => { fireEvent.click(r3Btn) })
+    await waitFor(() => expect(screen.getByText(/coroa: 3/i)).toBeInTheDocument())
+
+    // Scoreboard states Coroa won Best of 3
+    expect(screen.getByText(/coroa venceu o melhor de 3!/i)).toBeInTheDocument()
+
+    // Main button invites a new match
+    const newMatchBtn = screen.getByRole('button', { name: /nova partida \(melhor de 3\)/i })
+    expect(newMatchBtn).toBeInTheDocument()
+
+    // Next flip (flip 4) with heads (cara)
+    jest.spyOn(Math, 'random').mockReturnValue(0.1)
+    await act(async () => { fireEvent.click(newMatchBtn) })
+
+    // MUST reset to Cara: 1, Coroa: 0
+    await waitFor(() => {
+      expect(screen.getByText(/cara: 1/i)).toBeInTheDocument()
+      expect(screen.getByText(/coroa: 0/i)).toBeInTheDocument()
+    })
+
+    jest.spyOn(Math, 'random').mockRestore()
+  })
+})
+

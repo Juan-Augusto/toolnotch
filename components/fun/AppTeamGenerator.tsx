@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, type KeyboardEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Plus,
@@ -15,8 +15,16 @@ import {
   ChevronUp,
   AlertCircle,
   Layers,
+  Trophy,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import {
+  AppButton,
+  AppInput,
+  AppTextarea,
+  AppSegmentedControl,
+  AppBadge,
+} from "@/components/ui";
 import {
   splitIntoTeams,
   splitTeamsBySize,
@@ -40,12 +48,11 @@ const SAMPLE_NAMES = [
   "Judy",
 ];
 
-const SAMPLE_TEAM_NAMES = [
-  "Time Backend",
-  "Time Frontend",
-  "Time Infra",
-  "Time QA",
-];
+const SAMPLE_TEAM_NAMES: Record<string, string[]> = {
+  pt: ["Time Backend", "Time Frontend", "Time Infra", "Time QA"],
+  es: ["Equipo Backend", "Equipo Frontend", "Equipo Infra", "Equipo QA"],
+  en: ["Backend Team", "Frontend Team", "Infra Team", "QA Team"],
+};
 
 const TEAM_ACCENTS = [
   {
@@ -120,8 +127,16 @@ const nameVariants = {
   visible: { opacity: 1, x: 0 },
 };
 
-export default function AppTeamGenerator() {
+interface AppTeamGeneratorProps {
+  locale?: string;
+}
+
+export default function AppTeamGenerator({ locale = "pt" }: AppTeamGeneratorProps = {}) {
   const t = useTranslations("fun.teamGenerator");
+  const isPt = locale === "pt";
+  const isEs = locale === "es";
+  const removeAriaLabel = (name: string) =>
+    isPt ? `Remover ${name}` : isEs ? `Eliminar ${name}` : `Remove ${name}`;
 
   const [participants, setParticipants] = useState<string[]>([]);
   const [nameInput, setNameInput] = useState("");
@@ -195,7 +210,7 @@ export default function AppTeamGenerator() {
     setNameInput("");
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       e.preventDefault();
       addParticipant();
@@ -234,7 +249,7 @@ export default function AppTeamGenerator() {
     setTeamNameInput("");
   };
 
-  const handleTeamNameKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleTeamNameKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       e.preventDefault();
       addTeamName();
@@ -261,7 +276,8 @@ export default function AppTeamGenerator() {
   };
 
   const loadSampleTeamNames = () => {
-    setCustomTeamNames(SAMPLE_TEAM_NAMES);
+    const list = SAMPLE_TEAM_NAMES[locale] ?? SAMPLE_TEAM_NAMES.en;
+    setCustomTeamNames(list);
   };
 
   const generate = () => {
@@ -306,105 +322,118 @@ export default function AppTeamGenerator() {
   }, [teams]);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 w-full">
       {/* 1. PARTICIPANTS MANAGEMENT SECTION */}
-      <div className="bg-tertiary border border-border rounded-xl p-5 sm:p-6 shadow-xs space-y-4">
-        <div className="flex flex-wrap items-center justify-between gap-3 pb-3.5 border-b border-border">
-          <div className="flex items-center gap-2.5">
-            <Users className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-            <h3 className="text-base sm:text-lg font-bold text-foreground">
+      <div className="space-y-3">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2.5 border-b border-border/80">
+          <div className="flex items-center gap-2">
+            <Users className="w-5 h-5 text-primary" />
+            <h3 className="text-base sm:text-lg font-bold font-mono tracking-tight text-foreground">
               {t("participants.title")}
             </h3>
-            <span className=" font-semibold px-2.5 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/40">
+            <AppBadge bg="bg-primary/10" text="text-primary" className="border border-primary/40 font-mono">
               {t("participants.count", { count: participants.length })}
-            </span>
+            </AppBadge>
           </div>
 
-          <div className="flex items-center gap-2 text-sm">
-            <button
+          <div className="flex items-center gap-2">
+            <AppButton
               type="button"
+              small
+              color="tertiary"
               onClick={loadSample}
-              className="px-3 py-1.5 text-label hover:text-primary hover:bg-tertiary rounded-md transition-colors flex items-center gap-1.5 font-medium cursor-pointer"
+              className="font-mono text-xs"
             >
-              <Sparkles size={15} />
+              <Sparkles className="w-3.5 h-3.5 mr-1 text-primary" />
               {t("participants.loadSample")}
-            </button>
+            </AppButton>
             {participants.length > 0 && (
-              <button
+              <AppButton
                 type="button"
+                small
+                color="tertiary"
                 onClick={clearAll}
-                className="px-3 py-1.5 text-red-500 hover:text-red-600 hover:bg-red-500/10 rounded-md transition-colors flex items-center gap-1.5 font-medium cursor-pointer"
+                className="font-mono text-xs text-danger hover:text-danger"
               >
-                <Trash2 size={15} />
+                <Trash2 className="w-3.5 h-3.5 mr-1" />
                 {t("participants.clearAll")}
-              </button>
+              </AppButton>
             )}
           </div>
         </div>
 
         {/* Input row */}
-        <div className="flex gap-2.5">
-          <input
-            type="text"
-            value={nameInput}
-            onChange={(e) => setNameInput(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder={t("participants.inputPlaceholder")}
-            className="flex-1 px-4 py-2.5 border border-border bg-background text-foreground placeholder:text-label rounded-lg focus:outline-none focus:border-neon focus:ring-1 focus:ring-primary text-sm sm:text-base"
-          />
-          <button
+        <div className="flex gap-2 items-center">
+          <div className="flex-1">
+            <AppInput
+              value={nameInput}
+              onChange={(e) => setNameInput(e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder={t("participants.inputPlaceholder")}
+              className="font-mono text-xs sm:text-sm"
+            />
+          </div>
+          <AppButton
             type="button"
+            color="primary"
+            small
             onClick={addParticipant}
             disabled={!nameInput.trim()}
-            className="px-5 py-2.5 bg-primary hover:not-disabled:bg-emerald-500 text-white dark:text-black text-sm sm:text-base font-semibold rounded-lg transition-colors flex items-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer shrink-0"
+            className="font-mono text-xs whitespace-nowrap h-[42px] px-4"
           >
-            <Plus size={18} />
-            <span>{t("participants.addButton")}</span>
-          </button>
+            <Plus className="w-3.5 h-3.5 mr-1" />
+            {t("participants.addButton")}
+          </AppButton>
         </div>
 
-        {/* Bulk Toggle AppButton */}
+        {/* Bulk Toggle */}
         <div>
           <button
             type="button"
             onClick={() => setShowBulk(!showBulk)}
-            className="text-sm font-medium text-primary hover:underline flex items-center gap-1.5 cursor-pointer"
+            className="text-xs font-mono font-medium text-primary hover:underline flex items-center gap-1.5 cursor-pointer select-none"
           >
-            {showBulk ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-            {t("participants.bulkToggle")}
+            {showBulk ? (
+              <ChevronUp className="w-3.5 h-3.5" />
+            ) : (
+              <ChevronDown className="w-3.5 h-3.5" />
+            )}
+            <span>{t("participants.bulkToggle")}</span>
           </button>
 
           {showBulk && (
-            <div className="mt-3 p-4 bg-tertiary border border-border rounded-lg space-y-3">
-              <textarea
+            <div className="mt-2.5 p-3.5 border border-border/80 rounded-[2px] bg-secondary/5 space-y-3">
+              <AppTextarea
                 rows={4}
                 value={bulkText}
                 onChange={(e) => setBulkText(e.target.value)}
                 placeholder={t("participants.bulkPlaceholder")}
-                className="w-full px-3.5 py-2.5 border border-border bg-background text-foreground placeholder:text-label rounded-md text-sm sm:text-base focus:outline-none focus:border-neon focus:ring-1 focus:ring-primary"
+                className="font-mono text-xs sm:text-sm"
               />
               <div className="flex justify-end">
-                <button
+                <AppButton
                   type="button"
-                  onClick={addBulkParticipants}
+                  color="primary"
+                  small
                   disabled={!bulkText.trim()}
-                  className="px-4 py-2 bg-primary hover:not-disabled:bg-emerald-500 text-white dark:text-black rounded-md text-sm font-semibold disabled:opacity-40 cursor-pointer"
+                  onClick={addBulkParticipants}
+                  className="font-mono text-xs"
                 >
                   {t("participants.bulkAddButton")}
-                </button>
+                </AppButton>
               </div>
             </div>
           )}
         </div>
 
         {/* Participant Chips List */}
-        <div className="min-h-[80px] p-3.5 bg-tertiary border border-border rounded-lg">
+        <div className="p-3 border border-border/80 rounded-[2px] bg-background/50 min-h-[72px]">
           {participants.length === 0 ? (
-            <p className="text-sm text-label text-center py-5">
+            <p className="text-xs font-mono text-muted-foreground text-center py-4">
               {t("participants.empty")}
             </p>
           ) : (
-            <div className="flex flex-wrap gap-2.5">
+            <div className="flex flex-wrap gap-2">
               <AnimatePresence>
                 {participants.map((name, index) => (
                   <motion.span
@@ -412,16 +441,16 @@ export default function AppTeamGenerator() {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.8 }}
-                    className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-background border border-border text-foreground text-sm sm:text-base rounded-md shadow-xs"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-secondary/15 border border-border/80 text-foreground text-xs sm:text-sm font-mono rounded-[2px] shadow-2xs group"
                   >
-                    <span className="font-medium">{name}</span>
+                    <span className="font-medium truncate max-w-[200px]">{name}</span>
                     <button
                       type="button"
                       onClick={() => removeParticipant(index)}
-                      className="text-label hover:text-red-500 p-0.5 rounded transition-colors cursor-pointer"
-                      aria-label={`Remover ${name}`}
+                      className="text-muted-foreground hover:text-danger p-0.5 rounded transition-colors cursor-pointer"
+                      aria-label={removeAriaLabel(name)}
                     >
-                      <X size={15} />
+                      <X className="w-3.5 h-3.5" />
                     </button>
                   </motion.span>
                 ))}
@@ -432,48 +461,22 @@ export default function AppTeamGenerator() {
       </div>
 
       {/* 2. TEAM CONFIGURATION (MODE SWITCH & INPUTS) */}
-      <div className="bg-tertiary border border-border rounded-xl p-5 sm:p-6 shadow-xs space-y-5">
-        {/* Mode switcher tabs */}
-        <div className="flex flex-col sm:flex-row w-full p-1 bg-tertiary border border-border rounded-lg gap-1">
-          <button
-            type="button"
-            onClick={() => setMode("byTeams")}
-            className={`flex-1 py-2.5 px-3 sm:px-4 text-sm sm:text-base font-semibold rounded-md transition-all text-center cursor-pointer ${
-              mode === "byTeams"
-                ? "bg-blue-600 text-white font-bold shadow-xs"
-                : "text-label hover:text-foreground"
-            }`}
-          >
-            {t("mode.byTeams")}
-          </button>
-          <button
-            type="button"
-            onClick={() => setMode("byTeamSize")}
-            className={`flex-1 py-2.5 px-3 sm:px-4 text-sm sm:text-base font-semibold rounded-md transition-all text-center cursor-pointer ${
-              mode === "byTeamSize"
-                ? "bg-blue-600 text-white font-bold shadow-xs"
-                : "text-label hover:text-foreground"
-            }`}
-          >
-            {t("mode.byTeamSize")}
-          </button>
-          <button
-            type="button"
-            onClick={() => setMode("byTeamNames")}
-            className={`flex-1 py-2.5 px-3 sm:px-4 text-sm sm:text-base font-semibold rounded-md transition-all text-center cursor-pointer ${
-              mode === "byTeamNames"
-                ? "bg-blue-600 text-white font-bold shadow-xs"
-                : "text-label hover:text-foreground"
-            }`}
-          >
-            {t("mode.byTeamNames")}
-          </button>
-        </div>
+      <div className="space-y-4 pt-2">
+        <AppSegmentedControl
+          fullWidth
+          value={mode}
+          onChange={(val) => setMode(val as "byTeams" | "byTeamSize" | "byTeamNames")}
+          options={[
+            { label: t("mode.byTeams"), value: "byTeams" },
+            { label: t("mode.byTeamSize"), value: "byTeamSize" },
+            { label: t("mode.byTeamNames"), value: "byTeamNames" },
+          ]}
+        />
 
         {/* Mode 1: Fixed Team Count */}
         {mode === "byTeams" && (
           <div className="space-y-1.5 w-full">
-            <label className="block text-sm sm:text-base font-medium text-label">
+            <label className="block text-xs sm:text-sm font-mono font-medium text-foreground">
               {t("teamCount.label")}
             </label>
             <input
@@ -482,20 +485,22 @@ export default function AppTeamGenerator() {
               max={participants.length || 2}
               value={teamCount}
               onChange={(e) => setTeamCount(parseInt(e.target.value, 10) || 0)}
-              className={`w-full px-4 py-2.5 border rounded-lg text-sm sm:text-base bg-background text-foreground focus:outline-none focus:ring-1 ${
-                teamCountError && participants.length >= 2
-                  ? "border-red-500 focus:border-red-500 focus:ring-red-500"
-                  : "border-border focus:border-neon focus:ring-primary"
-              }`}
               aria-invalid={Boolean(teamCountError && participants.length >= 2)}
+              className={`w-full px-4 py-2.5 border rounded-[2px] font-mono text-xs sm:text-sm bg-tertiary text-foreground focus:outline-none focus:ring-1 transition-colors ${
+                teamCountError && participants.length >= 2
+                  ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+                  : "border-border hover:border-foreground/30 focus:border-secondary focus:ring-secondary/20"
+              }`}
             />
             {teamCountError && participants.length >= 2 ? (
-              <p className="text-sm text-red-500 mt-1.5 flex items-center gap-1.5 font-medium">
-                <AlertCircle size={15} className="shrink-0" />
+              <p className="text-xs font-mono text-red-500 mt-1 flex items-center gap-1.5">
+                <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                 {teamCountError}
               </p>
             ) : (
-              <p className=" text-label mt-1">{t("teamCount.hint")}</p>
+              <p className="text-[11px] font-mono text-muted-foreground mt-1">
+                {t("teamCount.hint")}
+              </p>
             )}
           </div>
         )}
@@ -503,7 +508,7 @@ export default function AppTeamGenerator() {
         {/* Mode 2: Team Size */}
         {mode === "byTeamSize" && (
           <div className="space-y-1.5 w-full">
-            <label className="block text-sm sm:text-base font-medium text-label">
+            <label className="block text-xs sm:text-sm font-mono font-medium text-foreground">
               {t("teamSize.label")}
             </label>
             <input
@@ -512,79 +517,88 @@ export default function AppTeamGenerator() {
               max={Math.max(1, participants.length - 1)}
               value={teamSize}
               onChange={(e) => setTeamSize(parseInt(e.target.value, 10) || 0)}
-              className={`w-full px-4 py-2.5 border rounded-lg text-sm sm:text-base bg-background text-foreground focus:outline-none focus:ring-1 ${
-                teamSizeError && participants.length >= 2
-                  ? "border-red-500 focus:border-red-500 focus:ring-red-500"
-                  : "border-border focus:border-neon focus:ring-primary"
-              }`}
               aria-invalid={Boolean(teamSizeError && participants.length >= 2)}
+              className={`w-full px-4 py-2.5 border rounded-[2px] font-mono text-xs sm:text-sm bg-tertiary text-foreground focus:outline-none focus:ring-1 transition-colors ${
+                teamSizeError && participants.length >= 2
+                  ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+                  : "border-border hover:border-foreground/30 focus:border-secondary focus:ring-secondary/20"
+              }`}
             />
             {teamSizeError && participants.length >= 2 ? (
-              <p className="text-sm text-red-500 mt-1.5 flex items-center gap-1.5 font-medium">
-                <AlertCircle size={15} className="shrink-0" />
+              <p className="text-xs font-mono text-red-500 mt-1 flex items-center gap-1.5">
+                <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                 {teamSizeError}
               </p>
             ) : (
-              <p className=" text-label mt-1">{t("teamSize.hint")}</p>
+              <p className="text-[11px] font-mono text-muted-foreground mt-1">
+                {t("teamSize.hint")}
+              </p>
             )}
           </div>
         )}
 
         {/* Mode 3: Custom Team Names */}
         {mode === "byTeamNames" && (
-          <div className="space-y-4 w-full">
-            <div className="flex flex-wrap items-center justify-between gap-3 pb-2 border-b border-border">
+          <div className="space-y-3 w-full">
+            <div className="flex flex-wrap items-center justify-between gap-3 pb-2 border-b border-border/80">
               <div className="flex items-center gap-2">
-                <Layers className="w-5 h-5 text-primary" />
-                <h4 className="text-sm sm:text-base font-bold text-foreground">
+                <Layers className="w-4 h-4 text-primary" />
+                <h4 className="text-xs sm:text-sm font-bold font-mono text-foreground">
                   {t("teamNames.title")}
                 </h4>
-                <span className=" font-semibold px-2.5 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/40">
+                <AppBadge bg="bg-primary/10" text="text-primary" className="border border-primary/40 font-mono">
                   {t("teamNames.count", { count: customTeamNames.length })}
-                </span>
+                </AppBadge>
               </div>
 
-              <div className="flex items-center gap-2 text-sm">
-                <button
+              <div className="flex items-center gap-2">
+                <AppButton
                   type="button"
+                  small
+                  color="tertiary"
                   onClick={loadSampleTeamNames}
-                  className="px-3 py-1.5 text-label hover:text-primary hover:bg-tertiary rounded-md transition-colors flex items-center gap-1.5 font-medium cursor-pointer"
+                  className="font-mono text-xs"
                 >
-                  <Sparkles size={15} />
+                  <Sparkles className="w-3.5 h-3.5 mr-1 text-primary" />
                   {t("teamNames.loadSample")}
-                </button>
+                </AppButton>
                 {customTeamNames.length > 0 && (
-                  <button
+                  <AppButton
                     type="button"
+                    small
+                    color="tertiary"
                     onClick={clearTeamNames}
-                    className="px-3 py-1.5 text-red-500 hover:text-red-600 hover:bg-red-500/10 rounded-md transition-colors flex items-center gap-1.5 font-medium cursor-pointer"
+                    className="font-mono text-xs text-danger hover:text-danger"
                   >
-                    <Trash2 size={15} />
+                    <Trash2 className="w-3.5 h-3.5 mr-1" />
                     {t("teamNames.clearAll")}
-                  </button>
+                  </AppButton>
                 )}
               </div>
             </div>
 
             {/* Team Name Input row */}
-            <div className="flex gap-2.5">
-              <input
-                type="text"
-                value={teamNameInput}
-                onChange={(e) => setTeamNameInput(e.target.value)}
-                onKeyDown={handleTeamNameKeyDown}
-                placeholder={t("teamNames.inputPlaceholder")}
-                className="flex-1 px-4 py-2.5 border border-border bg-background text-foreground placeholder:text-label rounded-lg focus:outline-none focus:border-neon focus:ring-1 focus:ring-primary text-sm sm:text-base"
-              />
-              <button
+            <div className="flex gap-2 items-center">
+              <div className="flex-1">
+                <AppInput
+                  value={teamNameInput}
+                  onChange={(e) => setTeamNameInput(e.target.value)}
+                  onKeyDown={handleTeamNameKeyDown}
+                  placeholder={t("teamNames.inputPlaceholder")}
+                  className="font-mono text-xs sm:text-sm"
+                />
+              </div>
+              <AppButton
                 type="button"
+                color="primary"
+                small
                 onClick={addTeamName}
                 disabled={!teamNameInput.trim()}
-                className="px-5 py-2.5 bg-primary hover:not-disabled:bg-emerald-500 text-white dark:text-black text-sm sm:text-base font-semibold rounded-lg transition-colors flex items-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer shrink-0"
+                className="font-mono text-xs whitespace-nowrap h-[42px] px-4"
               >
-                <Plus size={18} />
-                <span>{t("teamNames.addButton")}</span>
-              </button>
+                <Plus className="w-3.5 h-3.5 mr-1" />
+                {t("teamNames.addButton")}
+              </AppButton>
             </div>
 
             {/* Bulk Team Names Toggle */}
@@ -592,47 +606,49 @@ export default function AppTeamGenerator() {
               <button
                 type="button"
                 onClick={() => setShowTeamNameBulk(!showTeamNameBulk)}
-                className="text-sm font-medium text-primary hover:underline flex items-center gap-1.5 cursor-pointer"
+                className="text-xs font-mono font-medium text-primary hover:underline flex items-center gap-1.5 cursor-pointer select-none"
               >
                 {showTeamNameBulk ? (
-                  <ChevronUp size={16} />
+                  <ChevronUp className="w-3.5 h-3.5" />
                 ) : (
-                  <ChevronDown size={16} />
+                  <ChevronDown className="w-3.5 h-3.5" />
                 )}
-                {t("teamNames.bulkToggle")}
+                <span>{t("teamNames.bulkToggle")}</span>
               </button>
 
               {showTeamNameBulk && (
-                <div className="mt-3 p-4 bg-tertiary border border-border rounded-lg space-y-3">
-                  <textarea
+                <div className="mt-2.5 p-3.5 border border-border/80 rounded-[2px] bg-secondary/5 space-y-3">
+                  <AppTextarea
                     rows={4}
                     value={teamNameBulkText}
                     onChange={(e) => setTeamNameBulkText(e.target.value)}
                     placeholder={t("teamNames.bulkPlaceholder")}
-                    className="w-full px-3.5 py-2.5 border border-border bg-background text-foreground placeholder:text-label rounded-md text-sm sm:text-base focus:outline-none focus:border-neon focus:ring-1 focus:ring-primary"
+                    className="font-mono text-xs sm:text-sm"
                   />
                   <div className="flex justify-end">
-                    <button
+                    <AppButton
                       type="button"
-                      onClick={addBulkTeamNames}
+                      color="primary"
+                      small
                       disabled={!teamNameBulkText.trim()}
-                      className="px-4 py-2 bg-primary hover:not-disabled:bg-emerald-500 text-white dark:text-black rounded-md text-sm font-semibold disabled:opacity-40 cursor-pointer"
+                      onClick={addBulkTeamNames}
+                      className="font-mono text-xs"
                     >
                       {t("teamNames.bulkAddButton")}
-                    </button>
+                    </AppButton>
                   </div>
                 </div>
               )}
             </div>
 
             {/* Team Names Chips List */}
-            <div className="min-h-[80px] p-3.5 bg-tertiary border border-border rounded-lg">
+            <div className="p-3 border border-border/80 rounded-[2px] bg-background/50 min-h-[72px]">
               {customTeamNames.length === 0 ? (
-                <p className="text-sm text-label text-center py-5">
+                <p className="text-xs font-mono text-muted-foreground text-center py-4">
                   {t("teamNames.empty")}
                 </p>
               ) : (
-                <div className="flex flex-wrap gap-2.5">
+                <div className="flex flex-wrap gap-2">
                   <AnimatePresence>
                     {customTeamNames.map((name, index) => (
                       <motion.span
@@ -640,16 +656,16 @@ export default function AppTeamGenerator() {
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.8 }}
-                        className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-background border border-border text-foreground text-sm sm:text-base rounded-md shadow-xs"
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-secondary/15 border border-border/80 text-foreground text-xs sm:text-sm font-mono rounded-[2px] shadow-2xs group"
                       >
-                        <span className="font-medium">{name}</span>
+                        <span className="font-medium truncate max-w-[200px]">{name}</span>
                         <button
                           type="button"
                           onClick={() => removeTeamName(index)}
-                          className="text-label hover:text-red-500 p-0.5 rounded transition-colors cursor-pointer"
-                          aria-label={`Remover ${name}`}
+                          className="text-muted-foreground hover:text-danger p-0.5 rounded transition-colors cursor-pointer"
+                          aria-label={removeAriaLabel(name)}
                         >
-                          <X size={15} />
+                          <X className="w-3.5 h-3.5" />
                         </button>
                       </motion.span>
                     ))}
@@ -659,25 +675,26 @@ export default function AppTeamGenerator() {
             </div>
 
             {customTeamNamesError && participants.length >= 2 && (
-              <p className="text-sm text-red-500 mt-1.5 flex items-center gap-1.5 font-medium">
-                <AlertCircle size={15} className="shrink-0" />
+              <p className="text-xs font-mono text-red-500 mt-1 flex items-center gap-1.5">
+                <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                 {customTeamNamesError}
               </p>
             )}
           </div>
         )}
 
-        {/* Generate AppButton */}
+        {/* Generate Button: Standard AppButton */}
         <div className="pt-2">
-          <button
+          <AppButton
             type="button"
             onClick={generate}
             disabled={!isValid || participants.length < 2}
-            className="w-full py-3.5 px-6 bg-blue-600 hover:not-disabled:bg-blue-700 disabled:opacity-40 disabled:cursor-not-allowed text-white text-base sm:text-lg font-bold rounded-lg shadow-sm transition-all flex items-center justify-center gap-2.5 cursor-pointer"
+            color="primary"
+            className="w-full font-mono font-bold text-sm sm:text-base py-3 sm:py-3.5 tracking-wide shadow-xs"
           >
-            <Shuffle size={20} />
-            <span>{t("button.generate")}</span>
-          </button>
+            <Shuffle className="w-4 h-4 mr-2" />
+            {t("button.generate")}
+          </AppButton>
         </div>
       </div>
 
@@ -690,31 +707,36 @@ export default function AppTeamGenerator() {
             animate="visible"
             exit="exit"
             variants={containerVariants}
-            className="space-y-4 pt-2"
+            className="space-y-4 pt-4 border-t border-border/80"
           >
             <div className="flex flex-wrap justify-between items-center gap-3">
-              <h3 className="text-xl sm:text-2xl font-bold text-foreground">
-                {t("results.title")} ({teams.length})
+              <h3 className="text-base sm:text-xl font-bold font-mono tracking-tight text-foreground flex items-center gap-2">
+                <Trophy className="w-5 h-5 text-primary" />
+                <span>
+                  {t("results.title")} ({teams.length})
+                </span>
               </h3>
-              <button
+              <AppButton
                 type="button"
+                color="tertiary"
+                small
                 onClick={copy}
-                className="px-3.5 py-2 text-sm font-semibold text-foreground hover:text-primary bg-tertiary hover:bg-background border border-border hover:border-primary/40 rounded-lg transition-all flex items-center gap-2 cursor-pointer shadow-2xs"
+                className="font-mono text-xs"
               >
                 {copied ? (
-                  <Check size={16} className="text-primary" />
+                  <Check className="w-3.5 h-3.5 text-primary mr-1.5" />
                 ) : (
-                  <Copy size={16} />
+                  <Copy className="w-3.5 h-3.5 mr-1.5" />
                 )}
                 <span>
                   {copied ? t("results.copied") : t("results.copyAll")}
                 </span>
-              </button>
+              </AppButton>
             </div>
 
             {/* Notice when teams have uneven distribution */}
             {hasAnySmallerTeam && (
-              <div className="text-sm font-semibold text-amber-700 dark:text-amber-300 bg-amber-500/15 border border-amber-500/35 rounded-lg p-3.5 flex items-center gap-2.5">
+              <div className="text-xs sm:text-sm font-mono font-medium text-amber-700 dark:text-amber-300 bg-amber-500/15 border border-amber-500/35 rounded-[2px] p-3 flex items-center gap-2">
                 <span className="shrink-0 text-base">⚠️</span>
                 <span>{t("results.balancedNotice")}</span>
               </div>
@@ -733,27 +755,27 @@ export default function AppTeamGenerator() {
                   <motion.div
                     key={i}
                     variants={cardVariants}
-                    className={`rounded-xl bg-background border border-border p-4 sm:p-5 shadow-xs flex flex-col justify-between ${accent.border}`}
+                    className={`rounded-[2px] bg-background/60 border border-border/80 p-4 sm:p-5 shadow-xs flex flex-col justify-between ${accent.border}`}
                   >
                     <div>
-                      <div className="flex items-center justify-between gap-2 mb-3.5 pb-2.5 border-b border-border">
+                      <div className="flex items-center justify-between gap-2 mb-3.5 pb-2.5 border-b border-border/80">
                         <div
                           title={team.name}
-                          className="font-bold text-base sm:text-lg text-foreground truncate max-w-[220px] sm:max-w-[280px]"
+                          className="font-bold font-mono text-sm sm:text-base text-foreground truncate max-w-[220px] sm:max-w-[280px]"
                         >
                           {team.name}
                         </div>
 
                         <div className="flex items-center gap-1.5 shrink-0">
                           {smaller ? (
-                            <span className="inline-flex items-center gap-1  font-semibold px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/35">
+                            <span className="inline-flex items-center gap-1 font-mono text-[11px] font-semibold px-2 py-0.5 rounded-[2px] bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/35">
                               ⚠️{" "}
                               {t("results.fewerMembers", {
                                 count: team.members.length,
                               })}
                             </span>
                           ) : (
-                            <span className=" font-semibold px-2.5 py-1 rounded-md bg-tertiary border border-border text-label">
+                            <span className="font-mono text-[11px] font-medium px-2 py-0.5 rounded-[2px] bg-tertiary border border-border/80 text-muted-foreground">
                               {t("results.memberCount", {
                                 count: team.members.length,
                               })}
@@ -771,15 +793,15 @@ export default function AppTeamGenerator() {
                             },
                           },
                         }}
-                        className="space-y-2"
+                        className="space-y-1.5"
                       >
                         {team.members.map((name, memberIdx) => (
                           <motion.li
                             key={`${name}-${memberIdx}`}
                             variants={nameVariants}
-                            className="text-sm sm:text-base flex items-center gap-2.5 font-medium text-foreground py-0.5"
+                            className="text-xs sm:text-sm font-mono flex items-center gap-2 font-medium text-foreground py-0.5"
                           >
-                            <span className="w-6 h-6 rounded-full bg-tertiary border border-border flex items-center justify-center text-xs font-bold text-label shrink-0">
+                            <span className="w-5 h-5 rounded-[2px] bg-secondary/20 border border-border/80 flex items-center justify-center text-[10px] font-bold text-muted-foreground shrink-0">
                               {memberIdx + 1}
                             </span>
                             <span className="truncate">{name}</span>

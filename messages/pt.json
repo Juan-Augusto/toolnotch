@@ -3160,7 +3160,7 @@
   },
   "fun": {
     "spinWheel": {
-      "metaTitle": "Girar a Roleta — Decisor Aleatório Gratuito | ToolNotch",
+      "metaTitle": "Girar a Roleta: Decisor Aleatório Gratuito | ToolNotch",
       "metaDescription": "Roleta personalizável gratuita. Adicione suas opções e gire para tomar decisões aleatórias. Compartilhável por URL. Ótimo para salas de aula, equipes e jogos.",
       "title": "Girar a Roleta",
       "description": "Adicione suas opções e gire para tomar uma decisão aleatória. Seus itens são salvos na URL para compartilhamento fácil.",
@@ -3174,11 +3174,11 @@
       "faqs": [
         {
           "question": "Posso salvar minha roleta?",
-          "answer": "Sim — seus itens são salvos na URL. Copie e salve nos favoritos para guardar sua roleta ou compartilhá-la com outras pessoas."
+          "answer": "Sim, seus itens são salvos na URL. Copie e salve nos favoritos para guardar sua roleta ou compartilhá-la com outras pessoas."
         },
         {
           "question": "O giro é verdadeiramente aleatório?",
-          "answer": "Sim, o vencedor é determinado pelo Math.random() antes da animação começar. A animação de giro é apenas para diversão — o resultado já está decidido."
+          "answer": "Sim, o vencedor é determinado pelo Math.random() antes da animação começar. A animação de giro é apenas visual, pois o resultado é sorteado previamente."
         },
         {
           "question": "Quantos itens posso adicionar?",
@@ -3194,21 +3194,21 @@
         }
       ],
       "richContent": {
-        "whatIs": "A roleta seletora é um seletor aleatório e visual, apresentado como uma roda giratória com seções personalizáveis. Os casos de uso incluem jogos de sala de aula, decisões de escritório (onde pedir o almoço), jogos de festa e sorteios de prêmios gamificados. A animação de giro é puramente cosmética — o resultado vencedor é determinado pelo gerador de números aleatórios antes do início da animação, garantindo justiça verdadeira.",
+        "whatIs": "A roleta seletora é um seletor aleatório e visual, apresentado como uma roda giratória com seções personalizáveis. Os casos de uso incluem jogos de sala de aula, decisões de escritório (onde pedir o almoço), jogos de festa e sorteios de prêmios gamificados. A animação de giro é puramente cosmética: o resultado vencedor é determinado pelo gerador de números aleatórios antes do início do giro, garantindo total imparcialidade.",
         "howToUse": [
           "Adicione suas opções à roleta digitando-as na caixa de edição, uma por linha.",
           "Clique em Girar para iniciar a animação da roleta.",
           "Observe a roleta desacelerar e parar no resultado selecionado aleatoriamente.",
           "Opcionalmente, remova a opção vencedora antes do próximo giro para evitar repetições."
         ],
-        "whyItMatters": "O formato visual giratório torna a seleção aleatória mais envolvente e dramática do que uma exibição de texto simples. Para uso em sala de aula, os alunos respondem melhor à animação — isso transforma a seleção em um jogo em vez de um julgamento. Para prêmios e sorteios, a expectativa à medida que a roleta desacelera aumenta a emoção e o valor percebido do resultado.",
-        "proTip": "Pesquisas sobre fadiga de decisão mostram que, ao reagir ao resultado da roleta — quer você sinta alívio ou decepção —, obtém informações honestas sobre o que realmente queria. Se a roda cair em uma opção e você sentir um lampejo de decepção, isso indica qual opção você realmente preferia. Use o giro como uma ferramenta reveladora de preferências."
+        "whyItMatters": "O formato visual giratório torna a seleção aleatória mais envolvente e dramática do que uma exibição de texto simples. Para uso em sala de aula, os alunos respondem melhor à animação, o que torna a seleção mais dinâmica e divertida. Para prêmios e sorteios, a expectativa à medida que a roleta desacelera aumenta a emoção e o valor percebido do resultado.",
+        "proTip": "Pesquisas sobre fadiga de decisão mostram que, ao reagir ao resultado da roleta (seja alívio ou decepção), você obtém informações honestas sobre o que realmente queria. Se a roda cair em uma opção e você sentir um lampejo de decepção, isso indica qual opção você realmente preferia. Use o giro como uma ferramenta reveladora de preferências."
       }
     },
     "wheelOfNames": {
-      "metaTitle": "Alternativa ao Wheel of Names — Roleta Online Gratuita | ToolNotch",
+      "metaTitle": "Alternativa ao Wheel of Names: Roleta Online Gratuita | ToolNotch",
       "metaDescription": "Procurando uma alternativa ao Wheel of Names? Nossa roleta gratuita é personalizável, compartilhável por URL e funciona sem cadastro. Adicione nomes e gire instantaneamente.",
-      "title": "Wheel of Names — Roleta Gratuita",
+      "title": "Wheel of Names: Roleta Gratuita",
       "description": "Alternativa gratuita ao Wheel of Names. Adicione seus nomes, gire e compartilhe por URL. Sem cadastro.",
       "faqs": [
         {
@@ -3217,11 +3217,11 @@
         },
         {
           "question": "Posso compartilhar minha roleta com outros?",
-          "answer": "Sim — seus itens são codificados na URL. Copie a URL para compartilhar sua roleta exatamente como está com qualquer pessoa."
+          "answer": "Sim, seus itens são salvos na URL. Copie o endereço para compartilhar sua roleta exatamente como está com qualquer pessoa."
         },
         {
           "question": "Funciona no celular?",
-          "answer": "Sim — totalmente responsivo e compatível com toque em celulares e tablets."
+          "answer": "Sim, é totalmente responsivo e compatível com telas de toque em celulares e tablets."
         },
         {
           "question": "Há um limite de nomes?",
@@ -3229,18 +3229,18 @@
         },
         {
           "question": "O resultado do giro é verdadeiramente aleatório?",
-          "answer": "Sim — o vencedor é selecionado pelo Math.random() antes da animação começar. Cada item tem igual probabilidade de ser escolhido."
+          "answer": "Sim, o vencedor é sorteado pelo Math.random() antes da animação começar. Cada item tem a mesma probabilidade de ser escolhido."
         }
       ],
       "richContent": {
-        "whatIs": "A Roleta de Nomes é um seletor de nomes aleatório exibido como uma roda giratória — combinando o engajamento visual de uma roleta com uma lista de nomes. Os casos de uso incluem a seleção de apresentadores em reuniões, a escolha de quem é a vez e chamadas em sala de aula com um toque visual. A roleta é totalmente personalizável: adicione, remova e reordene os nomes a qualquer momento.",
+        "whatIs": "A Roleta de Nomes é um seletor interativo em formato de roda giratória, combinando o apelo visual de uma roleta com a praticidade de uma lista de nomes. Os casos de uso incluem a seleção de apresentadores em reuniões, a escolha de quem é a vez e chamadas em sala de aula com um toque visual. A roleta é totalmente personalizável: adicione, remova e reordene os nomes a qualquer momento.",
         "howToUse": [
           "Adicione nomes de participantes à roleta usando a caixa de edição.",
           "Clique em Girar para iniciar a animação da roleta.",
           "Leia o nome selecionado quando a roleta parar.",
           "Remova o nome selecionado para alternar entre todos os participantes de forma justa."
         ],
-        "whyItMatters": "O formato visual da roleta cria transparência — todos podem ver quem é elegível para seleção. Isso remove qualquer suspeita de que o seletor esteja manipulando o resultado. Para uso em sala de aula, o formato da roda é significativamente mais atraente do que a seleção em texto simples.",
+        "whyItMatters": "O formato visual da roleta cria transparência, permitindo que todos vejam os nomes participantes. Isso remove qualquer suspeita de que o seletor esteja manipulando o resultado. Para uso em sala de aula, o formato da roda é significativamente mais atraente do que a seleção em texto simples.",
         "proTip": "Para seleções semanais recorrentes, salve a lista de nomes como um arquivo de texto e cole-a novamente a cada sessão. Se alguns participantes estiverem mais frequentemente disponíveis, pondere a roleta adicionando seus nomes mais de uma vez.",
         "comparison": {
           "heading": "Como o ToolNotch se compara ao Wheel of Names",
@@ -3253,7 +3253,7 @@
           "rows": [
             {
               "feature": "Girar sem conta",
-              "ours": "Sempre — nenhum recurso exige login",
+              "ours": "Sempre: nenhum recurso exige login",
               "theirs": "Sim para o giro básico; há login com Google para salvar roletas"
             },
             {
@@ -3268,7 +3268,7 @@
             },
             {
               "feature": "Compartilhar uma roleta específica",
-              "ours": "Copie a URL — os nomes vão no link",
+              "ours": "Copie o link (os nomes são salvos na URL)",
               "theirs": "Compartilhe um link para uma roleta salva"
             },
             {
@@ -3289,11 +3289,11 @@
         "heading": "Mais sorteadores e leitura",
         "items": [
           {
-            "label": "Sorteador de Nomes — o mesmo sorteio sem a animação da roleta",
+            "label": "Sorteador de Nomes: o mesmo sorteio sem animação de roleta",
             "path": "/tools/fun/random-name-picker"
           },
           {
-            "label": "Gerador de Times Aleatórios — divide uma lista em grupos equilibrados",
+            "label": "Gerador de Times Aleatórios: divide uma lista em grupos equilibrados",
             "path": "/tools/fun/random-team-generator"
           },
           {
@@ -3304,7 +3304,7 @@
       }
     },
     "namePicker": {
-      "metaTitle": "Sorteio de Nomes — Sortear um Nome de uma Lista | ToolNotch",
+      "metaTitle": "Sorteio de Nomes: Sortear um Nome de uma Lista | ToolNotch",
       "metaDescription": "Sorteador de nomes gratuito. Cole sua lista de nomes, clique em Sortear e obtenha um vencedor instantaneamente. Suporta sorteio sem repetição para rifas e sorteios.",
       "title": "Sorteador de Nomes",
       "description": "Cole sua lista de nomes e sorteie um vencedor aleatório. Ative 'remover ao sortear' para rifas sem repetição.",
@@ -3344,7 +3344,7 @@
       }
     },
     "teamGenerator": {
-      "metaTitle": "Gerador de Times Aleatórios — Dividir Nomes em Times Equilibrados | ToolNotch",
+      "metaTitle": "Gerador de Times Aleatórios: Dividir Nomes em Times Equilibrados | ToolNotch",
       "metaDescription": "Gerador de times aleatórios gratuito. Cole uma lista de nomes, escolha quantos times e obtenha grupos equilibrados instantaneamente. Perfeito para esportes, salas de aula e trabalho.",
       "title": "Gerador de Times Aleatórios",
       "description": "Cole os nomes, escolha o número de times e obtenha grupos equilibrados instantaneamente.",
@@ -3414,19 +3414,19 @@
         },
         {
           "question": "Posso escolher quantos times?",
-          "answer": "Sim — defina de 2 a 10 times. Você pode gerar quantas vezes quiser para obter agrupamentos diferentes."
+          "answer": "Sim, escolha de 2 a 10 times. Você pode gerar quantas vezes quiser para obter diferentes combinações."
         },
         {
           "question": "É verdadeiramente aleatório?",
-          "answer": "Sim — o embaralhamento é diferente a cada vez que você clica em Gerar. Nenhum nome é favorecido ou excluído."
+          "answer": "Sim, o embaralhamento é recalculado a cada clique. Nenhum nome é favorecido ou excluído."
         },
         {
           "question": "Posso copiar os resultados?",
-          "answer": "Sim — clique em 'Copiar tudo' para copiar as atribuições completas dos times para a área de transferência em formato de texto."
+          "answer": "Sim, clique em 'Copiar tudo' para transferir a divisão completa dos times para a área de transferência."
         }
       ],
       "richContent": {
-        "whatIs": "Um gerador de equipes aleatório recebe uma lista de nomes e os divide em equipes iguais — ou quase iguais — aleatoriamente. Os casos de uso incluem projetos de grupo em sala de aula, seleção de equipes esportivas, agrupamento de hackathon e equipes de eventos de escritório. Um benefício importante é que a composição aleatória remove o viés inconsciente: as pessoas se separam naturalmente por amizade ou nível de habilidade. Esta ferramenta pode dividir uma lista por número de times, por tamanho-alvo de time ou entre um conjunto de nomes de times que você fornece, e sempre mantém os grupos com no máximo um membro de diferença.",
+        "whatIs": "Um gerador de equipes recebe uma lista de participantes e os divide em grupos equilibrados de forma aleatória. Os casos de uso incluem projetos de grupo em sala de aula, seleção de equipes esportivas, agrupamento de hackathon e equipes de eventos de escritório. Um benefício importante é que a composição aleatória remove o viés inconsciente: as pessoas se separam naturalmente por amizade ou nível de habilidade. Esta ferramenta pode dividir uma lista por número de times, por tamanho-alvo de time ou entre um conjunto de nomes de times que você fornece, e sempre mantém os grupos com no máximo um membro de diferença.",
         "howToUse": [
           "Cole sua lista de nomes na caixa de texto, um por linha.",
           "Defina o número de equipes que deseja criar.",
@@ -3437,11 +3437,11 @@
         "sections": [
           {
             "heading": "Como funciona o embaralhamento",
-            "body": "O gerador usa o embaralhamento Fisher-Yates, o algoritmo padrão para produzir uma ordenação aleatória sem viés de uma lista. Ele percorre a lista do fim para o início e, em cada posição, troca o nome atual por um escolhido ao acaso entre os anteriores ou o próprio. Feito corretamente, cada uma das ordenações possíveis é igualmente provável — nenhum nome é favorecido e a posição na sua lista original não influencia onde a pessoa cai. Depois do embaralhamento, os nomes são distribuídos um a um entre os times em rodízio, e é por isso que os times sempre terminam com no máximo um membro de diferença, mesmo quando o total de pessoas não divide de forma exata."
+            "body": "O gerador usa o embaralhamento Fisher-Yates, o algoritmo padrão para produzir uma ordenação aleatória sem viés de uma lista. Ele percorre a lista do fim para o início e, em cada posição, troca o nome atual por um escolhido ao acaso entre os anteriores ou o próprio. Feito corretamente, cada uma das ordenações possíveis é igualmente provável, sem favorecer nenhum nome e sem interferência da posição original da lista. Depois do embaralhamento, os nomes são distribuídos um a um entre os times em rodízio, e é por isso que os times sempre terminam com no máximo um membro de diferença, mesmo quando o total de pessoas não divide de forma exata."
           },
           {
             "heading": "Equilibrar habilidade em vez de puro acaso",
-            "body": "O acaso puro pode, de vez em quando, colocar todos os jogadores fortes, ou todos os alunos mais quietos, no mesmo time. Se o equilíbrio importa, divida sua lista em faixas primeiro — por exemplo forte, médio e em desenvolvimento — depois rode o gerador uma vez por faixa e combine os resultados para que cada time receba uma mistura parecida. Isso mantém a imparcialidade e a transparência de um sorteio aleatório e evita um resultado desequilibrado. Para grupos recorrentes, gere do zero a cada sessão em vez de reaproveitar os times da semana passada, para que as mesmas pessoas não sejam sempre juntadas ou sempre separadas."
+            "body": "O acaso puro pode, de vez em quando, colocar todos os jogadores fortes, ou todos os alunos mais quietos, no mesmo time. Se o equilíbrio importa, divida sua lista em categorias primeiro (por exemplo: iniciante, intermediário e avançado) e gere os times por etapas e combine os resultados para que cada time receba uma mistura parecida. Isso mantém a imparcialidade e a transparência de um sorteio aleatório e evita um resultado desequilibrado. Para grupos recorrentes, gere do zero a cada sessão em vez de reaproveitar os times da semana passada, para que as mesmas pessoas não sejam sempre juntadas ou sempre separadas."
           },
           {
             "heading": "Usos comuns",
@@ -3452,18 +3452,18 @@
       }
     },
     "yesNoWheel": {
-      "metaTitle": "Roleta Sim ou Não — Deixe a Roleta Decidir | ToolNotch",
+      "metaTitle": "Roleta Sim ou Não: Deixe a Roleta Decidir | ToolNotch",
       "metaDescription": "Gire a roleta Sim ou Não para tomar uma decisão aleatória. Inclui segmento opcional 'Talvez'. Grátis, instantâneo, sem cadastro.",
       "title": "Roleta Sim ou Não",
       "description": "Gire para obter uma resposta aleatória de Sim ou Não. Adicione Talvez para uma terceira opção.",
       "faqs": [
         {
           "question": "O resultado é verdadeiramente aleatório?",
-          "answer": "Sim — o resultado é decidido pelo Math.random() antes da animação, dando igual probabilidade a cada segmento."
+          "answer": "Sim, o resultado é sorteado pelo Math.random() antes da animação, oferecendo chances idênticas para cada opção."
         },
         {
           "question": "Posso adicionar a opção 'Talvez'?",
-          "answer": "Sim — ative 'Incluir Talvez' abaixo da roleta para adicionar um terceiro segmento amarelo."
+          "answer": "Sim, ative 'Incluir Talvez' abaixo da roleta para adicionar uma terceira opção amarela."
         },
         {
           "question": "Para que isso é útil?",
@@ -3471,37 +3471,37 @@
         },
         {
           "question": "Posso girar novamente?",
-          "answer": "Sim — basta clicar em Girar novamente para um novo resultado aleatório a cada vez."
+          "answer": "Sim, basta clicar em Girar novamente para obter um novo resultado independente."
         }
       ],
       "richContent": {
-        "whatIs": "Uma roleta de sim/não é uma ferramenta de decisão aleatória binária que retorna Sim ou Não com uma animação giratória. É usada para tomar decisões quando nenhuma escolha domina fortemente, para quebrar a paralisia decisória ou adicionar aleatoriedade aos jogos. Ela difere do lançamento de uma moeda na apresentação — o formato da roleta é mais dramático e envolvente. Como a roleta não guarda memória entre giros, ela também serve para mostrar na prática que cada resultado é independente: uma sequência de um mesmo resultado não muda as chances do giro seguinte.",
+        "whatIs": "Uma roleta de sim/não é uma ferramenta de decisão aleatória binária que retorna Sim ou Não com uma animação giratória. É usada para tomar decisões quando nenhuma escolha domina fortemente, para quebrar a paralisia decisória ou adicionar aleatoriedade aos jogos. A diferença em relação à moeda física está no dinamismo visual: a roleta cria expectativa e engajamento. Como a roleta não guarda memória entre giros, ela também serve para mostrar na prática que cada resultado é independente: uma sequência de um mesmo resultado não muda as chances do giro seguinte.",
         "howToUse": [
           "Pense em uma pergunta de sim/não que deseja decidir.",
           "Se quiser, ative 'Incluir Talvez' para adicionar um terceiro segmento.",
           "Clique em Girar e assista à animação da roleta.",
-          "Aceite o resultado — e preste atenção na sua reação instintiva a ele."
+          "Veja o resultado e observe sua reação intuitiva a ele."
         ],
         "whyItMatters": "A ciência da decisão mostra que os humanos experimentam paralisia de escolha quando as opções são quase iguais. Uma escolha binária aleatória resolve o impasse rapidamente. Mais importante ainda, a sua reação emocional ao resultado revela a sua preferência real: se a roleta diz Sim e sente alívio, queria Sim. O contexto importa: essa técnica só é confiável quando as duas opções são realmente aceitáveis e a escolha é reversível, então trate o giro como um convite à reflexão, não como uma sentença que você é obrigado a seguir.",
         "sections": [
           {
             "heading": "Como funciona a aleatoriedade",
-            "body": "O resultado é decidido no instante em que você clica, não enquanto a roleta gira. A ferramenta chama o gerador de números aleatórios do navegador, mapeia o valor para os segmentos e depois anima a roleta para parar na fatia já escolhida — o giro é apresentação, não o sorteio. Com dois segmentos iguais, Sim e Não têm 50% de chance cada. Adicionar o segmento Talvez divide a roleta em três partes iguais de cerca de 33,3%. Cada giro é independente: a roleta não guarda histórico, então cinco resultados 'Não' seguidos não tornam o 'Sim' mais provável no sexto giro. Isso é a falácia do apostador, e uma roleta física ou digital é uma boa forma de ver por que ela é falsa."
+            "body": "O resultado é decidido no instante em que você clica, não enquanto a roleta gira. A ferramenta chama o gerador de números aleatórios do navegador, mapeia o valor para os segmentos e depois anima a roleta até a fatia correspondente, ou seja, o giro tem função puramente visual. Com dois segmentos iguais, Sim e Não têm 50% de chance cada. Adicionar o segmento Talvez divide a roleta em três partes iguais de cerca de 33,3%. Cada giro é independente: a roleta não guarda histórico, então cinco resultados 'Não' seguidos não tornam o 'Sim' mais provável no sexto giro. Isso é a falácia do apostador, e uma roleta física ou digital é uma boa forma de ver por que ela é falsa."
           },
           {
             "heading": "Quando a roleta de sim/não é a ferramenta certa",
-            "body": "Use-a para escolhas de baixo risco e reversíveis em que você já pesou os dois lados e simplesmente empacou — qual restaurante, ir ou não a um evento, por qual de duas opções igualmente boas começar. Ela é uma péssima escolha para decisões com risco assimétrico relevante: dinheiro, saúde, segurança ou qualquer coisa que afete outras pessoas sem a participação delas. Nesses casos, a roleta serve no máximo para revelar seu instinto — gire, note se você está torcendo por um lado e então decida de forma deliberada. Nunca use um resultado aleatório como desculpa para uma escolha que merece reflexão de verdade."
+            "body": "Use a roleta para decisões cotidianas simples e reversíveis (como escolher um restaurante, filme ou atividade de lazer). Ela é uma péssima escolha para decisões com risco assimétrico relevante: dinheiro, saúde, segurança ou qualquer coisa que afete outras pessoas sem a participação delas. Nesses casos, a roleta serve no máximo para revelar sua intuição: observe para qual lado você estava torcendo e tome a decisão consciente. Nunca use um resultado aleatório como desculpa para uma escolha que merece reflexão de verdade."
           },
           {
             "heading": "Conduzindo uma decisão pública justa",
-            "body": "Se você está usando a roleta para resolver algo entre amigos, em sala de aula ou numa transmissão ao vivo, diga qual é a pergunta e o que cada segmento significa antes de girar. Gire uma vez e aceite o primeiro resultado. Girar de novo até obter a resposta que você queria é evidente para quem está assistindo e derruba o propósito de usar uma ferramenta aleatória. Para qualquer coisa que as pessoas possam contestar depois, tire um print ou grave a tela para que o resultado seja verificável. Manter o ritual consistente — anunciar, girar uma vez, aceitar — é o que faz o grupo confiar nele."
+            "body": "Se você está usando a roleta para resolver algo entre amigos, em sala de aula ou numa transmissão ao vivo, diga qual é a pergunta e o que cada segmento significa antes de girar. Gire uma vez e aceite o primeiro resultado. Girar de novo até obter a resposta que você queria é evidente para quem está assistindo e derruba o propósito de usar uma ferramenta aleatória. Para qualquer coisa que as pessoas possam contestar depois, tire um print ou grave a tela para que o resultado seja verificável. Manter um procedimento claro (anunciar a dúvida, girar uma única vez e aceitar o resultado) garante a confiança de todos."
           }
         ],
         "proTip": "A técnica 'girar e sentir': gire a roleta e, em seguida, anote imediatamente a sua reação instintiva antes que o cérebro racional possa racionalizá-la. Sua resposta emocional a um resultado aleatório é mais confiável do que a deliberação prolongada para decisões baseadas em preferências."
       }
     },
     "coinFlip": {
-      "metaTitle": "Cara ou Coroa — Jogar Moeda Virtual Online | ToolNotch",
+      "metaTitle": "Cara ou Coroa: Jogar Moeda Virtual Online | ToolNotch",
       "metaDescription": "Jogue uma moeda virtual para um resultado aleatório de cara ou coroa. Inclui animação e histórico. Grátis, instantâneo, sem cadastro.",
       "title": "Cara ou Coroa",
       "description": "Clique para jogar uma moeda virtual e obter um resultado aleatório de cara ou coroa.",
@@ -3517,11 +3517,11 @@
         },
         {
           "question": "Posso lançar várias vezes?",
-          "answer": "Sim — basta clicar em Jogar Moeda novamente. Seus últimos 10 lançamentos são mostrados no histórico abaixo da moeda."
+          "answer": "Sim, basta clicar em Jogar Moeda novamente. Os últimos lançamentos ficam registrados no histórico logo abaixo."
         },
         {
           "question": "Qual é a probabilidade de sair cara 10 vezes seguidas?",
-          "answer": "A probabilidade de sair cara 10 vezes seguidas é (0,5)^10 = 1/1024, ou cerca de 0,1%. Cada lançamento é independente — resultados passados não afetam os futuros."
+          "answer": "A probabilidade de sair cara 10 vezes seguidas é (0,5)^10 = 1/1024, ou cerca de 0,1%. Cada lançamento é independente, de modo que giros anteriores não afetam as probabilidades dos próximos."
         },
         {
           "question": "Funciona sem conexão com a internet?",
@@ -3529,19 +3529,19 @@
         }
       ],
       "richContent": {
-        "whatIs": "O cara ou coroa virtual é uma ferramenta digital que replica a randomização binária clássica de jogar uma moeda física — dando a você cara ou coroa com probabilidade justa de 50/50. Casos de uso incluem desempatar decisões, fazer escolhas binárias e gamificação. Curiosamente, as moedas físicas não são perfeitamente justas, tendendo levemente para o lado em que começaram. Um lançamento de moeda digital usa um algoritmo criptograficamente aleatório para chances verdadeiras de 50/50.",
+        "whatIs": "O cara ou coroa virtual é uma ferramenta digital que replica a randomização clássica de jogar uma moeda, oferecendo cara ou coroa com 50% de probabilidade para cada lado. Casos de uso incluem desempatar decisões, fazer escolhas binárias e gamificação. Curiosamente, as moedas físicas não são perfeitamente justas, tendendo levemente para o lado em que começaram. Um lançamento de moeda digital usa um algoritmo criptograficamente aleatório para chances verdadeiras de 50/50.",
         "howToUse": [
           "Clique no botão Jogar Moeda para jogar a moeda virtual.",
-          "Leia o resultado — cara ou coroa — exibido instantaneamente.",
+          "Veja o resultado (cara ou coroa) exibido na tela.",
           "Jogue novamente para uma 'melhor de 3' se a decisão for importante.",
           "Grave ou faça uma captura de tela do resultado se precisar manter um registro."
         ],
-        "whyItMatters": "A randomização remove a pressão social das decisões — ninguém pode acusar uma moeda digital de viés. É amplamente usada nos esportes, nas salas de aula para ensinar probabilidade e em qualquer cenário de desempate em que a justiça seja importante.",
-        "proTip": "Use o formato 'melhor de 3' para decisões importantes, em vez de um único lançamento. Isso preserva a aleatoriedade e dá a ambas as partes a sensação de que o resultado não foi determinado por uma jogada de sorte — fazendo com que o resultado pareça mais legítimo."
+        "whyItMatters": "A randomização remove a pressão das escolhas, garantindo que o resultado seja imparcial. É amplamente usada nos esportes, nas salas de aula para ensinar probabilidade e em qualquer cenário de desempate em que a justiça seja importante.",
+        "proTip": "Use o formato 'melhor de 3' para decisões importantes, em vez de um único lançamento. Isso preserva a aleatoriedade e dá a ambas as partes a sensação de que o resultado não foi determinado por uma simples jogada de sorte, conferindo maior legitimidade à decisão."
       }
     },
     "diceRoller": {
-      "metaTitle": "Rolar Dados — Role Qualquer Dado Online (d6, d20, d100) | ToolNotch",
+      "metaTitle": "Rolar Dados: Role Qualquer Dado Online (d6, d20, d100) | ToolNotch",
       "metaDescription": "Rolador de dados online gratuito. Role d4, d6, d8, d10, d12, d20, d100 ou qualquer dado personalizado com notação como 3d6+5. Perfeito para D&D, RPGs e jogos de tabuleiro.",
       "title": "Rolador de Dados",
       "description": "Role qualquer dado usando notação padrão (1d6, 2d10+5, 3d20). Suporta todos os dados RPG padrão.",
@@ -3560,7 +3560,7 @@
         },
         {
           "question": "Posso rolar vários dados ao mesmo tempo?",
-          "answer": "Sim — use notação como '5d6' para rolar cinco dados de seis faces simultaneamente. O resultado mostra cada dado individual mais o total."
+          "answer": "Sim, você pode digitar notações como '5d6' para rolar cinco dados de seis faces de uma vez. O resultado detalha cada dado e a soma."
         },
         {
           "question": "As rolagens são verdadeiramente aleatórias?",
@@ -3575,7 +3575,7 @@
         "whatIs": "Um rolador de dados virtual simula dados de mesa para jogos, demonstrações de probabilidade e decisões aleatórias. Suporta a notação de dados padrão usada em RPGs de mesa (ex.: 2d6+3). Tipos comuns incluem d4, d6, d8, d10, d12, d20 e d100. Notavelmente, rolar vários dados produz uma distribuição de curva em sino devido ao teorema central do limite.",
         "howToUse": [
           "Selecione o número de dados que deseja lançar.",
-          "Escolha o tipo de dado — d4, d6, d8, d10, d12, d20, ou insira um número personalizado de lados.",
+          "Escolha o tipo de dado (d4, d6, d8, d10, d12, d20) ou defina um número personalizado de faces.",
           "Adicione um modificador (positivo ou negativo) se as regras do jogo exigirem.",
           "Clique em Rolar e leia os resultados individuais dos dados, além do total."
         ],
@@ -3584,7 +3584,7 @@
       }
     },
     "numberGenerator": {
-      "metaTitle": "Gerador de Números Aleatórios — Gerar Números em Qualquer Intervalo | ToolNotch",
+      "metaTitle": "Gerador de Números Aleatórios: Gerar Números em Qualquer Intervalo | ToolNotch",
       "metaDescription": "Gerador de números aleatórios gratuito. Gere um ou vários números aleatórios em qualquer intervalo. Suporta números únicos, ordenação e geração em lote de até 1000.",
       "title": "Gerador de Números Aleatórios",
       "description": "Gere números aleatórios em qualquer intervalo. Suporta geração em lote e números únicos.",
@@ -3595,7 +3595,7 @@
         },
         {
           "question": "Posso gerar vários números ao mesmo tempo?",
-          "answer": "Sim — defina Quantidade para qualquer número entre 1 e 1000 para gerar vários resultados de uma vez."
+          "answer": "Sim, você pode configurar a quantidade desejada de 1 a 1000 para gerar vários números simultaneamente."
         },
         {
           "question": "O que significa 'números únicos'?",
@@ -3607,40 +3607,40 @@
         },
         {
           "question": "Posso gerar números de loteria?",
-          "answer": "Sim — defina Mín: 1, Máx: 60 (ou o intervalo da sua loteria), Quantidade: 6 e desative as duplicatas. Clique em Gerar para obter 6 números únicos aleatórios."
+          "answer": "Sim! Basta definir o valor mínimo e máximo (como 1 a 60), a quantidade de 6 números e desmarcar as duplicatas para obter 6 valores únicos."
         }
       ],
       "richContent": {
-        "whatIs": "Um gerador de números aleatórios produz números imprevisíveis dentro de um intervalo que você define — útil para sorteios, amostragem estatística, pesquisas e jogos. O uso do crypto.getRandomValues() do navegador garante verdadeira aleatoriedade em comparação com Math.random(). O intervalo é inclusivo nas duas pontas, então um intervalo de 1 a 10 pode retornar 1 ou 10, e você pode pedir um único valor ou um lote de até mil de uma vez.",
+        "whatIs": "Um gerador de números aleatórios produz números imprevisíveis dentro do intervalo definido por você, útil para sorteios, amostragens, jogos e pesquisas. O uso do crypto.getRandomValues() do navegador garante verdadeira aleatoriedade em comparação com Math.random(). O intervalo é inclusivo nas duas pontas, então um intervalo de 1 a 10 pode retornar 1 ou 10, e você pode pedir um único valor ou um lote de até mil de uma vez.",
         "howToUse": [
           "Defina o valor mínimo para seu intervalo.",
           "Defina o valor máximo para seu intervalo.",
           "Escolha quantos números deseja gerar.",
           "Decida se as repetições são permitidas, clique em Gerar e leia os resultados instantaneamente."
         ],
-        "whyItMatters": "Os humanos são péssimos na geração manual de números aleatórios — nós evitamos sequências inconscientemente. Para sorteios e concursos, o uso de um gerador verificável adiciona credibilidade e justiça, e o resultado pode ser capturado para provar que a seleção não foi manipulada. Em pesquisa e testes, um intervalo e um método documentados também tornam uma etapa de amostragem reproduzível quando alguém revisa o trabalho depois.",
+        "whyItMatters": "Pessoas costumam seguir padrões involuntários ao tentar escolher números por conta própria. Para sorteios e concursos, o uso de um gerador verificável adiciona credibilidade e justiça, e o resultado pode ser capturado para provar que a seleção não foi manipulada. Em pesquisa e testes, um intervalo e um método documentados também tornam uma etapa de amostragem reproduzível quando alguém revisa o trabalho depois.",
         "sections": [
           {
             "heading": "Aleatoriedade pseudoaleatória vs. criptográfica",
-            "body": "Um gerador pseudoaleatório parte de um valor de semente e roda uma fórmula que produz números que parecem aleatórios, mas são totalmente determinados por essa semente. Dê a ele a mesma semente e você obtém a mesma sequência — útil para simulações reproduzíveis, ruim para qualquer coisa que um adversário possa tentar prever. Um gerador criptográfico, que é o que o crypto.getRandomValues() expõe, extrai entropia que o sistema operacional coleta de eventos de hardware, então a saída não pode ser reproduzida nem prevista. Para um sorteio em sala de aula ou uma promoção, qualquer um serve na prática; para tokens de segurança, senhas ou embaralhar um baralho num jogo a dinheiro real, só o tipo criptográfico é aceitável."
+            "body": "Um gerador pseudoaleatório parte de um valor de semente e roda uma fórmula que produz números que parecem aleatórios, mas são totalmente determinados por essa semente. Dê a ele a mesma semente e você obtém a mesma sequência, o que é ótimo para simulações reproduzíveis, mas inadequado se for necessário sigilo absoluto. Um gerador criptográfico, que é o que o crypto.getRandomValues() expõe, extrai entropia que o sistema operacional coleta de eventos de hardware, então a saída não pode ser reproduzida nem prevista. Para um sorteio em sala de aula ou uma promoção, qualquer um serve na prática; para tokens de segurança, senhas ou embaralhar um baralho num jogo a dinheiro real, só o tipo criptográfico é aceitável."
           },
           {
             "heading": "Sortear sem repetições",
-            "body": "Desative 'permitir duplicatas' quando cada resultado precisar ser distinto — escolher cinco posições de sorteio, atribuir números de camisa únicos ou amostrar linhas sem reposição. O gerador então sorteia do que resta do conjunto a cada vez, então um valor já escolhido não pode voltar a sair. Isso só funciona quando a quantidade pedida não é maior que o tamanho do intervalo: você não pode sortear seis números únicos de um intervalo de quatro. Com duplicatas permitidas, cada sorteio é independente e o mesmo número pode aparecer mais de uma vez, que é o comportamento correto para coisas como dados simulados."
+            "body": "Desmarque a opção de permitir duplicatas quando cada resultado precisar ser único (como na escolha de bilhetes de sorteio ou rifas). O gerador então sorteia do que resta do conjunto a cada vez, então um valor já escolhido não pode voltar a sair. Isso só funciona quando a quantidade pedida não é maior que o tamanho do intervalo: você não pode sortear seis números únicos de um intervalo de quatro. Com duplicatas permitidas, cada sorteio é independente e o mesmo número pode aparecer mais de uma vez, que é o comportamento correto para coisas como dados simulados."
           },
           {
             "heading": "Conduzir um sorteio verificável",
-            "body": "Antes de gerar, anote o intervalo e como ele se liga às inscrições — por exemplo, 'números de 1 a 500, associados à ordem das linhas na planilha de inscrição'. Gere uma vez, tire um print do resultado junto com esse mapeamento e publique os dois. Qualquer pessoa pode então conferir que o número sorteado corresponde à inscrição que você anunciou. Sortear de novo até obter um resultado que você goste, ou mudar o mapeamento depois, é o erro que faz as pessoas desconfiarem de sorteios online."
+            "body": "Antes de gerar, anote o intervalo e como ele se associa aos participantes (por exemplo, números de 1 a 500 correspondentes às linhas da lista). Gere uma vez, tire um print do resultado junto com esse mapeamento e publique os dois. Qualquer pessoa pode então conferir que o número sorteado corresponde à inscrição que você anunciou. Sortear de novo até obter um resultado que você goste, ou mudar o mapeamento depois, é o erro que faz as pessoas desconfiarem de sorteios online."
           }
         ],
-        "proTip": "Para um sorteio com 500 inscrições, gere um número entre 1 e 500. Para vários vencedores, gere números sem repetição — use a opção de números únicos. Tire uma captura de tela do resultado antes de anunciar para provar que o sorteio foi justo."
+        "proTip": "Para um sorteio com 500 inscrições, gere um número entre 1 e 500. Para vários vencedores, gere números sem repetição ativando a opção de números únicos. Tire uma captura de tela do resultado antes de anunciar para provar que o sorteio foi justo."
       }
     },
     "giveawayPicker": {
-      "metaTitle": "Sorteador de Brindes — Sortear um Vencedor Aleatório Online | ToolNotch",
+      "metaTitle": "Sorteador de Brindes: Sortear um Vencedor Aleatório Online | ToolNotch",
       "metaDescription": "Sorteador de vencedor de brindes gratuito. Cole sua lista de participantes, clique em Sortear e obtenha um vencedor aleatório instantaneamente. Sem cadastro. Justo e transparente.",
       "title": "Sorteador de Vencedor de Brinde",
-      "description": "Cole sua lista de participantes e sorteie um vencedor aleatoriamente. Justo, transparente e gratuito — sem cadastro.",
+      "description": "Cole sua lista de participantes e sorteie um vencedor aleatoriamente. Justo, transparente e 100% gratuito, sem necessidade de cadastro.",
       "faqs": [
         {
           "question": "Como sorteio um vencedor aleatório para um brinde?",
@@ -3652,7 +3652,7 @@
         },
         {
           "question": "Posso sortear vários vencedores?",
-          "answer": "Sim — ative 'Remover ao sortear' e clique em Sortear várias vezes. Cada vencedor é removido da lista para não poder ganhar duas vezes."
+          "answer": "Sim, marque 'Remover ao sortear' e clique no botão novamente. Cada vencedor sai da lista para não ser premiado duas vezes."
         },
         {
           "question": "Como provo que o resultado é justo?",
@@ -3660,13 +3660,13 @@
         },
         {
           "question": "Posso usar isso para sorteios no Instagram ou YouTube?",
-          "answer": "Sim — copie manualmente os nomes dos comentaristas na caixa de texto e use o sorteador para selecionar um vencedor aleatório."
+          "answer": "Sim, copie e cole os nomes de usuário dos comentários na caixa de texto para realizar o sorteio."
         }
       ],
       "richContent": {
-        "whatIs": "Um selecionador de sorteios escolhe um ou mais vencedores aleatoriamente em uma lista de entradas. Os casos de uso incluem sorteios de mídia social — escolhendo vencedores das listas de comentários do Instagram ou YouTube. A transparência e a verificabilidade são fundamentais para a imparcialidade do sorteio. Tudo roda no seu navegador, então a lista de inscritos nunca é enviada e você pode fazer o sorteio offline depois que a página carregar.",
+        "whatIs": "Um selecionador de sorteios escolhe um ou mais vencedores aleatoriamente em uma lista de entradas. Os casos de uso incluem sorteios de redes sociais, selecionando ganhadores em postagens do Instagram ou YouTube. A transparência e a verificabilidade são fundamentais para a imparcialidade do sorteio. Tudo roda no seu navegador, então a lista de inscritos nunca é enviada e você pode fazer o sorteio offline depois que a página carregar.",
         "howToUse": [
-          "Cole sua lista de inscrições — nomes de usuário, texto de comentários — na caixa de texto.",
+          "Cole sua lista de participantes (nomes de usuários ou comentários) na caixa de texto.",
           "Defina o número de vencedores necessários.",
           "Clique em Escolher para selecionar aleatoriamente os vencedores da sua lista.",
           "Opcionalmente, role novamente se um vencedor selecionado for inelegível."
@@ -3675,22 +3675,22 @@
         "sections": [
           {
             "heading": "Preparar uma lista de inscrições limpa",
-            "body": "A qualidade do sorteio depende inteiramente da lista que você cola. Antes de escolher, remova duplicatas óbvias a menos que suas regras permitam explicitamente uma inscrição por comentário, tire da lista a conta da própria marca e respostas de bots, e defina como você trata quem participou várias vezes — ou reduza para uma linha por pessoa, ou mantenha as repetições de propósito para que inscrições extras realmente aumentem as chances. Coloque um inscrito por linha. Se suas regras exigem ações que você não vê na lista bruta, como seguir a conta, verifique o vencedor sorteado contra esse requisito antes de anunciar e sorteie de novo se ele não se qualificar."
+            "body": "A qualidade do sorteio depende inteiramente da lista que você cola. Antes de escolher, remova duplicatas óbvias a menos que suas regras permitam explicitamente uma inscrição por comentário, tire da lista a conta da própria marca e respostas de bots, e defina como tratar participações repetidas: mantenha apenas uma linha por pessoa ou deixe as repetições para quem comentou mais ter mais chances. Coloque um inscrito por linha. Se suas regras exigem ações que você não vê na lista bruta, como seguir a conta, verifique o vencedor sorteado contra esse requisito antes de anunciar e sorteie de novo se ele não se qualificar."
           },
           {
             "heading": "Como a seleção funciona",
-            "body": "Cada linha da sua caixa é uma inscrição com chance igual. Quando você clica em Escolher, a ferramenta gera um índice aleatório na lista e retorna aquela inscrição; para vários vencedores com 'Remover ao sortear' ativado, cada nome selecionado sai do conjunto para que ninguém ganhe duas vezes. Os sorteios são independentes e sem peso — a ferramenta não sabe nem se importa com quem se inscreveu primeiro, quem tem mais seguidores ou quem foi escolhido no último sorteio. Se você precisa de chances ponderadas, adicione um nome à lista tantas vezes quanto o peso que quer dar a ele."
+            "body": "Cada linha da sua caixa é uma inscrição com chance igual. Quando você clica em Escolher, a ferramenta gera um índice aleatório na lista e retorna aquela inscrição; para vários vencedores com 'Remover ao sortear' ativado, cada nome selecionado sai do conjunto para que ninguém ganhe duas vezes. Os sorteios são independentes e neutros, sem prioridade por número de seguidores ou horário de inscrição. Se você precisa de chances ponderadas, adicione um nome à lista tantas vezes quanto o peso que quer dar a ele."
           },
           {
             "heading": "Tornar o resultado verificável",
             "body": "Grave a tela no momento em que você aperta Escolher, com a lista completa de inscrições e o vencedor visíveis na gravação, e publique esse vídeo ou um print junto com o anúncio. Diga de antemão quantos vencedores você vai sortear e a regra de desempate ou de novo sorteio para inscrições desqualificadas. Esse registro é o que protege você se um inscrito perdedor alegar que o sorteio foi fraudado, e hoje já é uma expectativa da maioria das diretrizes de sorteio de marcas e plataformas para prêmios de maior valor."
           }
         ],
-        "proTip": "Faça uma captura de tela ou grave a tela do momento da escolha antes de anunciar o vencedor. Compartilhe o resultado publicamente — em uma história, tweet ou postagem — com a lista de inscritos visível para demonstrar total transparência."
+        "proTip": "Faça uma captura de tela ou grave a tela do momento da escolha antes de anunciar o vencedor. Compartilhe o resultado publicamente em seus stories ou postagens, mantendo a lista visível para demonstrar total transparência."
       }
     },
     "classroomNamePicker": {
-      "metaTitle": "Sorteador de Nomes para Sala de Aula — Sortear Aluno Aleatório | ToolNotch",
+      "metaTitle": "Sorteador de Nomes para Sala de Aula: Sortear Aluno Aleatório | ToolNotch",
       "metaDescription": "Sorteador de nomes para sala de aula gratuito para professores. Cole a lista de alunos e sorteie um nome aleatoriamente. Sem cadastro, funciona no iPad e Chromebook.",
       "title": "Sorteador de Nomes para Sala de Aula",
       "description": "Sorteie nomes de alunos aleatoriamente para perguntas, tarefas ou grupos. Funciona no iPad, Chromebook e em qualquer navegador. Sem cadastro.",
@@ -3701,7 +3701,7 @@
         },
         {
           "question": "Funciona no iPad ou Chromebook?",
-          "answer": "Sim — funciona em qualquer dispositivo com navegador web, incluindo iPads, Chromebooks e tablets Android. Não é necessário baixar nenhum aplicativo."
+          "answer": "Sim, funciona em qualquer navegador web (computadores, iPads, celulares e tablets), sem necessidade de instalar aplicativos."
         },
         {
           "question": "Posso salvar minha lista de alunos?",
@@ -3709,7 +3709,7 @@
         },
         {
           "question": "Posso garantir que todos os alunos sejam chamados?",
-          "answer": "Sim — ative 'Remover ao sortear'. Cada aluno sorteado é removido da lista para que a ferramenta percorra toda a turma sem repetições."
+          "answer": "Sim, marque 'Remover ao sortear' para retirar da lista os alunos já chamados e rodar a turma inteira sem repetições."
         },
         {
           "question": "Isso é gratuito para professores?",
@@ -3724,7 +3724,7 @@
           "Leia o nome do aluno selecionado exibido na tela.",
           "Ative 'Remover ao escolher' para garantir que cada aluno seja chamado antes que alguém seja chamado duas vezes."
         ],
-        "whyItMatters": "A seleção aleatória mantém todos os alunos alertas e engajados, pois qualquer um pode ser o próximo. A participação voluntária cria profunda desigualdade — as pesquisas mostram que 20% dos alunos são responsáveis por 80% da participação voluntária. A imprevisibilidade ativa a atenção de forma que os formatos voluntários não conseguem. Isso também tira o professor da decisão, então nenhum aluno pode interpretar favoritismo ou punição em quem é chamado.",
+        "whyItMatters": "A seleção aleatória mantém todos os alunos alertas e engajados, pois qualquer um pode ser o próximo. A participação exclusivamente voluntária costuma fazer com que poucos alunos concentrem a maioria das respostas. A imprevisibilidade ativa a atenção de forma que os formatos voluntários não conseguem. Isso também tira o professor da decisão, então nenhum aluno pode interpretar favoritismo ou punição em quem é chamado.",
         "sections": [
           {
             "heading": "Chamar alunos sem aumentar a ansiedade",
@@ -3743,7 +3743,7 @@
       }
     },
     "typingTest": {
-      "metaTitle": "Teste de Velocidade de Digitação — Verifique seu WPM Online Grátis | ToolNotch",
+      "metaTitle": "Teste de Velocidade de Digitação: Verifique seu WPM Online Grátis | ToolNotch",
       "metaDescription": "Teste de velocidade de digitação gratuito. Meça seu WPM e precisão. Suporta modos de 15s, 30s, 60s e 120s. Acompanhe seus melhores resultados.",
       "title": "Teste de Velocidade de Digitação",
       "description": "Teste sua velocidade e precisão de digitação. Escolha um limite de tempo e comece a digitar.",
@@ -3773,7 +3773,7 @@
           "Leia seu PPM e precisão quando o tempo acabar.",
           "Revise quais teclas causaram lentidão e concentre a prática nelas."
         ],
-        "whyItMatters": "A velocidade de digitação se correlaciona diretamente com a produtividade dos trabalhadores do conhecimento. A 40 PPM versus 80 PPM, uma pessoa que digita o equivalente a 500 horas economiza 250 horas — mais de seis semanas de trabalho. A digitação por toque usando todos os 10 dedos dobra a velocidade média. Além da produção bruta, digitar mais rápido reduz o atrito entre ter uma ideia e colocá-la na tela, o que importa quando você está redigindo, programando ou fazendo anotações numa reunião ao vivo.",
+        "whyItMatters": "A velocidade de digitação se correlaciona diretamente com a produtividade dos trabalhadores do conhecimento. A 40 PPM versus 80 PPM, uma pessoa que digita o equivalente a 500 horas economiza 250 horas (mais de seis semanas de trabalho). A digitação por toque usando todos os 10 dedos dobra a velocidade média. Além da produção bruta, digitar mais rápido reduz o atrito entre ter uma ideia e colocá-la na tela, o que importa quando você está redigindo, programando ou fazendo anotações numa reunião ao vivo.",
         "sections": [
           {
             "heading": "Como o PPM e a precisão são calculados",
@@ -3978,7 +3978,7 @@
       },
       "invoiceGenerator": {
         "label": "Gerador de Notas Fiscais",
-        "desc": "Faturas profissionais gratuitas — pronto para PDF"
+        "desc": "Faturas profissionais gratuitas e prontas para exportar em PDF"
       },
       "invoiceGeneratorUk": {
         "label": "Gerador de Faturas UK",
@@ -3998,7 +3998,7 @@
       },
       "spinTheWheel": {
         "label": "Girar a Roleta",
-        "desc": "Decisor aleatório — adicione suas opções"
+        "desc": "Decisor aleatório: adicione suas opções"
       },
       "randomNamePicker": {
         "label": "Sorteador de Nomes",
@@ -4094,7 +4094,7 @@
       },
       "planningPoker": {
         "label": "Planning Poker",
-        "desc": "Estimativas Fibonacci — revelar tudo ao mesmo tempo"
+        "desc": "Estimativas Fibonacci com revelação simultânea"
       },
       "userStoryWriter": {
         "label": "Escritor de User Story",
@@ -4106,7 +4106,7 @@
       },
       "percentageCalculator": {
         "label": "Calculadora de Porcentagem",
-        "desc": "% de, qual % é e variação % — três calculadoras em uma"
+        "desc": "% de, qual % é e variação %: três calculadoras em uma"
       },
       "typescriptQuiz": {
         "label": "Quiz de TypeScript para Entrevistas",
@@ -4114,7 +4114,7 @@
       },
       "interviewHub": {
         "label": "Hub de Preparação para Entrevistas",
-        "desc": "TypeScript, JS e mais — com explicações e boas práticas"
+        "desc": "TypeScript, JS e mais, com explicações e boas práticas"
       },
       "gpaCalculator": {
         "label": "Calculadora de GPA",
@@ -4249,10 +4249,10 @@
   },
   "agile": {
     "retroBoard": {
-      "metaTitle": "Quadro de Retrospectiva Gratuito — Ferramenta de Sprint Retro | ToolNotch",
+      "metaTitle": "Quadro de Retrospectiva Gratuito: Ferramenta de Sprint Retro | ToolNotch",
       "metaDescription": "Execute sua retrospectiva de sprint online gratuitamente. Adicione notas em Funcionou Bem, A Melhorar e Itens de Ação. Sem login.",
       "title": "Quadro de Retrospectiva de Sprint",
-      "description": "Adicione notas, vote nos itens e exporte sua retro como Markdown. Sem login, sem cadastro — funciona no seu navegador.",
+      "description": "Adicione notas, vote nos itens e exporte sua retro como Markdown. Sem login e sem cadastro, funcionando diretamente no seu navegador.",
       "columns": {
         "wentWell": "Funcionou Bem",
         "toImprove": "A Melhorar",
@@ -4265,7 +4265,7 @@
       "exportButton": "Exportar como Markdown",
       "clearButton": "Limpar Quadro",
       "clearConfirm": "Limpar o quadro inteiro? Esta ação não pode ser desfeita.",
-      "emptyHint": "Sem notas — escreva acima e pressione Enter ou clique em Adicionar",
+      "emptyHint": "Sem notas ainda: escreva acima e pressione Enter ou clique em Adicionar",
       "exportHeading": "Retrospectiva de Sprint",
       "copiedToast": "Copiado para a área de transferência!",
       "faqs": [
@@ -4279,7 +4279,7 @@
         },
         {
           "question": "Posso usar para equipes remotas?",
-          "answer": "Esta ferramenta é projetada para facilitação individual — para anotar durante uma cerimônia. Para colaboração em tempo real, cada pessoa precisaria abrir seu próprio quadro."
+          "answer": "Esta ferramenta é projetada para facilitação individual, permitindo anotar durante a cerimônia. Para colaboração em tempo real, cada pessoa precisaria abrir seu próprio quadro."
         },
         {
           "question": "Para que servem as três colunas?",
@@ -4287,7 +4287,7 @@
         },
         {
           "question": "Posso votar nos itens?",
-          "answer": "Sim — clique no ícone de positivo em qualquer nota para votar. Votar ajuda a equipe a priorizar quais tópicos discutir primeiro."
+          "answer": "Sim, clique no ícone de positivo em qualquer nota para votar. Votar ajuda a equipe a priorizar quais tópicos discutir primeiro."
         }
       ],
       "richContent": {
@@ -4305,26 +4305,47 @@
       }
     },
     "standupGenerator": {
-      "metaTitle": "Gerador de Standup Diário — Formato Ontem/Hoje/Bloqueios | ToolNotch",
-      "metaDescription": "Gerador de standup gratuito. Insira o que fez ontem, o que vai fazer hoje e os bloqueios — obtenha um resumo formatado para colar em qualquer lugar.",
+      "metaTitle": "Gerador de Standup Diário: Formato Ontem, Hoje e Bloqueios | ToolNotch",
+      "metaDescription": "Gerador de standup gratuito. Insira o que fez ontem, o que vai fazer hoje e os bloqueios para obter um resumo formatado para colar em qualquer lugar.",
       "title": "Gerador de Standup Diário",
-      "description": "Formate seu standup diário em segundos. Preencha ontem, hoje e bloqueios — obtenha um resumo pronto para colar.",
+      "description": "Formate seu standup diário em segundos. Preencha ontem, hoje e bloqueios para obter um resumo pronto para colar.",
       "labels": {
         "yesterday": "Ontem",
-        "yesterdayPlaceholder": "O que você completou ontem?",
+        "yesterdayPlaceholder": "O que você completou ontem? (um item por linha)",
         "today": "Hoje",
-        "todayPlaceholder": "No que você está trabalhando hoje?",
+        "todayPlaceholder": "No que você está trabalhando hoje? (um item por linha)",
         "blockers": "Bloqueios",
         "blockersPlaceholder": "Algum bloqueio ou impedimento? (opcional)",
         "noBlockers": "Nenhum",
+        "prsAndTickets": "PRs e Tickets (opcional)",
+        "prsAndTicketsPlaceholder": "ex: #142, PROJ-890 ou links do GitHub/Jira",
+        "status": "Disponibilidade / Status (opcional)",
+        "statusNormal": "Normal (em desenvolvimento)",
+        "statusDeepWork": "Foco total (sem reuniões)",
+        "statusPairing": "Disponível para pareamento",
+        "statusOnCall": "Em plantão / On-call",
+        "statusHalfDay": "Meio período",
+        "formatSlack": "Slack / Discord",
+        "formatTeams": "Microsoft Teams",
+        "formatMarkdown": "Markdown",
+        "formatPlain": "Texto Puro",
+        "autoBullets": "Formatar linhas como tópicos",
+        "saveHistory": "Salvar Hoje para Amanhã",
+        "loadYesterday": "Carregar 'Hoje' de Ontem",
+        "loadExample": "Carregar Exemplo",
+        "historyLoaded": "Ontem carregado do histórico!",
+        "historySaved": "Salvo no navegador para amanhã!",
+        "historyEmpty": "Nenhum histórico anterior encontrado.",
         "generateButton": "Gerar Standup",
-        "copyButton": "Copiar para a Área de Transferência",
+        "copyButton": "Copiar Standup",
         "copiedButton": "Copiado!",
         "clearButton": "Limpar",
-        "outputHeading": "Seu Standup",
+        "outputHeading": "Prévia do Standup",
         "yesterdayHeading": "Ontem",
         "todayHeading": "Hoje",
-        "blockersHeading": "Bloqueios"
+        "blockersHeading": "Bloqueios",
+        "prsHeading": "PRs / Tickets",
+        "statusHeading": "Status"
       },
       "faqs": [
         {
@@ -4333,7 +4354,7 @@
         },
         {
           "question": "Onde posso colar o standup gerado?",
-          "answer": "A saída formatada é texto simples — cole no Slack, Microsoft Teams, Jira, e-mail ou qualquer ferramenta de comunicação que sua equipe use."
+          "answer": "A saída formatada é texto simples. Cole no Slack, Microsoft Teams, Jira, e-mail ou qualquer ferramenta de comunicação que sua equipe use."
         },
         {
           "question": "Os dados do standup são armazenados em algum lugar?",
@@ -4341,11 +4362,11 @@
         },
         {
           "question": "Posso salvar meu standup para depois?",
-          "answer": "Use o botão Copiar para colar em qualquer lugar — um aplicativo de notas, o chat da equipe ou um diário pessoal."
+          "answer": "Use o botão Copiar para colar em qualquer lugar, como um aplicativo de notas, o chat da equipe ou um diário pessoal."
         },
         {
           "question": "O que devo colocar no campo Bloqueios?",
-          "answer": "Qualquer coisa que impeça seu progresso: aguardando revisão de código, uma dependência não pronta, requisitos pouco claros ou uma API externa fora do ar. Se não houver bloqueios, deixe em branco — o gerador escreverá 'Nenhum' automaticamente."
+          "answer": "Qualquer coisa que impeça seu progresso: aguardando revisão de código, uma dependência não pronta, requisitos pouco claros ou uma API externa fora do ar. Se não houver bloqueios, deixe em branco que o gerador escreverá 'Nenhum' automaticamente."
         }
       ],
       "richContent": {
@@ -4354,7 +4375,7 @@
           "Selecione os participantes.",
           "Para cada um, insira o que concluiu ontem.",
           "Insira no que planejam trabalhar hoje.",
-          "Insira bloqueios ou impedimentos — ou deixe em branco.",
+          "Insira bloqueios ou impedimentos (ou deixe em branco).",
           "Clique em Gerar Standup para produzir um resumo formatado.",
           "Copie a saída e cole no Slack, Microsoft Teams, etc."
         ],
@@ -4363,13 +4384,13 @@
       }
     },
     "planningPoker": {
-      "metaTitle": "Planning Poker — Ferramenta Gratuita de Estimativa Ágil | ToolNotch",
+      "metaTitle": "Planning Poker: Ferramenta Gratuita de Estimativa Ágil | ToolNotch",
       "metaDescription": "Planning poker gratuito para equipes ágeis. Escolha os valores Fibonacci, revele as estimativas simultaneamente e construa consenso sobre story points. Sem login.",
       "title": "Planning Poker",
       "description": "Estime histórias de usuário com cartas Fibonacci. Escolha sua carta e revele todas ao mesmo tempo para evitar viés de ancoragem.",
       "labels": {
-        "storyLabel": "História / Tarefa",
-        "storyPlaceholder": "Descreva a história ou tarefa a estimar…",
+        "storyLabel": "História / Tarefa da Rodada",
+        "storyPlaceholder": "Descreva a história ou tarefa a estimar (ex: API de Autenticação)",
         "pickCardHeading": "Escolha sua carta",
         "yourPickLabel": "Sua escolha",
         "notPickedLabel": "Não escolhido",
@@ -4378,7 +4399,37 @@
         "consensusLabel": "Consenso",
         "averageLabel": "Média",
         "spreadLabel": "Variação",
-        "noConsensusLabel": "Discutir"
+        "noConsensusLabel": "Discutir",
+        "tabTeam": "Modo Time / Sessão",
+        "tabCamera": "Carta para Câmera",
+        "tabGuide": "Guia Fibonacci",
+        "participantsTitle": "Participantes da Rodada",
+        "addParticipant": "Adicionar Membro",
+        "addParticipantPlaceholder": "Nome do desenvolvedor...",
+        "votingPrompt": "Selecione o participante e clique na carta:",
+        "voteRecorded": "Voto registrado",
+        "pendingVote": "Aguardando",
+        "revealAll": "Revelar Todos os Votos",
+        "newRound": "Nova Rodada",
+        "divergenceTitle": "Debate Recomendado",
+        "divergenceMessage": "Divergência detectada: peça para quem deu o menor e o maior voto explicarem seus pontos de vista antes do alinhamento final.",
+        "minVote": "Menor voto",
+        "maxVote": "Maior voto",
+        "medianLabel": "Mediana",
+        "saveToBacklog": "Salvar no Backlog da Sprint",
+        "backlogTitle": "Histórias Estimadas na Sessão",
+        "backlogEmpty": "Nenhuma história adicionada ao backlog da sessão ainda.",
+        "totalPoints": "Total de Pontos",
+        "exportBacklog": "Copiar Backlog em Markdown",
+        "backlogCopied": "Backlog copiado!",
+        "clearBacklog": "Limpar Backlog",
+        "flipCardHint": "Clique na carta para virar para a câmera",
+        "countdownButton": "Contagem Regressiva (3s)",
+        "countdownReady": "Revelando em...",
+        "clearAllParticipants": "Excluir todos",
+        "removeParticipant": "Remover participante",
+        "noParticipantsMessage": "Nenhum participante na rodada. Adicione os membros da equipe acima para iniciar a votação.",
+        "addParticipantsPrompt": "Adicione participantes acima para começar a votar"
       },
       "faqs": [
         {
@@ -4387,7 +4438,7 @@
         },
         {
           "question": "Por que números Fibonacci?",
-          "answer": "Os números Fibonacci refletem a incerteza natural na estimativa — quanto maior a tarefa, menos precisa a estimativa. Os intervalos crescentes forçam a equipe a reconhecer essa incerteza."
+          "answer": "Os números Fibonacci refletem a incerteza natural na estimativa: quanto maior a tarefa, menos precisa a estimativa. Os intervalos crescentes forçam a equipe a reconhecer essa incerteza."
         },
         {
           "question": "O que significa a carta ??",
@@ -4399,7 +4450,7 @@
         },
         {
           "question": "Esta ferramenta é multiplayer?",
-          "answer": "Esta versão é single-player — útil para o facilitador coletar votos verbalmente ou em uma sessão de tela compartilhada."
+          "answer": "Esta versão é individual, sendo muito útil para o facilitador coletar votos verbalmente ou em uma sessão de tela compartilhada."
         }
       ],
       "richContent": {
@@ -4416,7 +4467,7 @@
       }
     },
     "userStoryWriter": {
-      "metaTitle": "Escritor de User Story — Como [Papel] Quero [Funcionalidade] | ToolNotch",
+      "metaTitle": "Escritor de User Story: Como [Papel] Quero [Funcionalidade] | ToolNotch",
       "metaDescription": "Gerador gratuito de user stories. Preencha papel, funcionalidade e benefício para gerar uma user story Agile formatada com critérios de aceitação. Sem login.",
       "title": "Escritor de User Story",
       "description": "Gere user stories formatadas com critérios de aceitação em segundos.",
@@ -4435,7 +4486,78 @@
         "clearButton": "Limpar",
         "outputHeading": "User Story",
         "storyLabel": "História",
-        "acceptanceCriteriaLabel": "Critérios de Aceitação"
+        "acceptanceCriteriaLabel": "Critérios de Aceitação",
+        "tabUserStory": "História de Usuário",
+        "tabTechnical": "Enabler Técnico",
+        "tabBug": "Correção de Bug",
+        "tabSpike": "Spike de Investigação",
+        "techRoleLabel": "Componente / Área Técnica",
+        "techRolePlaceholder": "ex: Backend, Infraestrutura, Banco de Dados, DevOps",
+        "techActionLabel": "Necessidade Técnica / Mudança",
+        "techActionPlaceholder": "ex: implementar índices particionados e cache Redis",
+        "techBenefitLabel": "Impacto / Ganho Técnico",
+        "techBenefitPlaceholder": "ex: reduzir latência da API de 800ms para 40ms e suportar 10k RPS",
+        "bugContextLabel": "Contexto / Pré-condição do Erro",
+        "bugContextPlaceholder": "ex: ao salvar avatar com imagem PNG transparente",
+        "bugActualLabel": "Comportamento Atual (Com Falha)",
+        "bugActualPlaceholder": "ex: a imagem fica com fundo preto distorcido e erro 500 no console",
+        "bugExpectedLabel": "Comportamento Esperado",
+        "bugExpectedPlaceholder": "ex: a transparência deve ser preservada e a imagem salva com sucesso",
+        "spikeTeamLabel": "Equipe / Especialista Responsável",
+        "spikeTeamPlaceholder": "ex: equipe de arquitetura e meios de pagamento",
+        "spikeQuestionLabel": "Incerteza ou Hipótese a Investigar",
+        "spikeQuestionPlaceholder": "ex: comparar viabilidade de migração do Stripe Checkout para Elements",
+        "spikeOutcomeLabel": "Entregável / Decisão Esperada",
+        "spikeOutcomePlaceholder": "ex: documento de arquitetura com benchmark de latência e plano de migração",
+        "spikeTimeboxLabel": "Timebox Estimado",
+        "spikeTimeboxPlaceholder": "ex: 2 dias úteis (16 horas)",
+        "criteriaModeGherkin": "Cenários BDD (Dado / Quando / Então)",
+        "criteriaModeChecklist": "Checklist de Regras",
+        "criteriaModeFreeText": "Texto Livre",
+        "scenarioTitleLabel": "Título do Cenário",
+        "scenarioGivenLabel": "Dado (Precondição)",
+        "scenarioWhenLabel": "Quando (Ação do Usuário)",
+        "scenarioThenLabel": "Então (Resultado Esperado)",
+        "addScenarioButton": "Adicionar Cenário BDD",
+        "removeScenarioButton": "Remover",
+        "quickScenariosLabel": "Templates rápidos de cenários:",
+        "quickHappyPath": "+ Caminho Feliz",
+        "quickValidationError": "+ Validação de Erro",
+        "quickAuthError": "+ Não Autorizado",
+        "checklistItemPlaceholder": "Descreva uma regra de negócio ou critério...",
+        "addChecklistItem": "Adicionar Regra",
+        "investHeading": "Avaliação de Qualidade INVEST",
+        "investIndependent": "Independente: entrega valor sem depender rigidamente de outra história",
+        "investNegotiable": "Negociável: foca no objetivo e valor, aberta a alternativas de implementação",
+        "investValuable": "Valiosa: o benefício para o cliente ou negócio está explícito",
+        "investEstimable": "Estimável: escopo claro o suficiente para a equipe técnica pontuar",
+        "investSmall": "Pequena: dimensionada adequadamente para caber em uma única sprint",
+        "investTestable": "Testável: possui critérios de aceitação objetivos e verificáveis",
+        "investScoreExcellent": "INVEST 6/6: Excelente e pronta para refinamento",
+        "investScoreGood": "INVEST Bom: verifique os critérios pendentes antes da planning",
+        "investScoreNeedsWork": "Atenção: complete os detalhes para torná-la pronta para o time",
+        "formatLabel": "Formato de Exportação",
+        "formatMarkdown": "Markdown (GitHub / Notion)",
+        "formatJira": "Jira / Confluence",
+        "formatSlack": "Slack / Teams",
+        "exampleLabel": "Carregar Exemplo Real",
+        "exampleEcommerce": "E-commerce (Cupom)",
+        "exampleAuth": "Segurança (Login 2FA)",
+        "exampleFintech": "Fintech (Extrato CSV)",
+        "exampleTechnical": "DevOps (Fila RabbitMQ)",
+        "exampleBug": "Bug (Upload de Imagem)",
+        "saveToBacklogButton": "Salvar no Backlog da Sessão",
+        "sessionBacklogTitle": "Histórias Criadas no Refinamento",
+        "sessionBacklogEmpty": "Nenhuma história salva na sessão ainda. Gere uma história e clique em salvar.",
+        "copyAllBacklog": "Copiar Todas as Histórias (Markdown)",
+        "allBacklogCopied": "Histórias copiadas!",
+        "clearBacklog": "Limpar Backlog",
+        "badgeInvest": "Critérios INVEST",
+        "scenarioNumber": "Cenário",
+        "givenPrefix": "Dado que",
+        "whenPrefix": "Quando",
+        "thenPrefix": "Então",
+        "definitionOfDoneTitle": "Definition of Ready (DoR)"
       },
       "faqs": [
         {
@@ -4473,10 +4595,10 @@
       }
     },
     "sprintDateCalculator": {
-      "metaTitle": "Calculadora de Datas de Sprint — Planeje Todas as Cerimônias | ToolNotch",
+      "metaTitle": "Calculadora de Datas de Sprint: Planeje Todas as Cerimônias | ToolNotch",
       "metaDescription": "Calculadora gratuita de datas de sprint. Insira a data de início e a duração do sprint para obter todas as datas das cerimônias: planejamento, revisão e retrospectiva.",
       "title": "Calculadora de Datas de Sprint",
-      "description": "Insira a data de início e a duração do sprint — obtenha todas as datas das cerimônias instantaneamente.",
+      "description": "Insira a data de início e a duração do sprint para obter todas as datas das cerimônias instantaneamente.",
       "labels": {
         "startDateLabel": "Data de Início do Sprint",
         "sprintLengthLabel": "Duração do Sprint",
@@ -4505,7 +4627,7 @@
         },
         {
           "question": "Leva em conta feriados?",
-          "answer": "Não — feriados variam por país e região. Revise as datas geradas e ajuste manualmente para a localização da sua equipe."
+          "answer": "Não, pois feriados variam por país e região. Revise as datas geradas e ajuste manualmente para a localização da sua equipe."
         },
         {
           "question": "Posso exportar as datas?",
@@ -4513,26 +4635,26 @@
         },
         {
           "question": "Quais durações de sprint são suportadas?",
-          "answer": "Sprints de 2, 3 e 4 semanas — as três cadências mais comuns em equipes Scrum e Kanban."
+          "answer": "Sprints de 2, 3 e 4 semanas: as três cadências mais comuns em equipes Scrum e Kanban."
         }
       ],
       "richContent": {
-        "whatIs": "Uma calculadora de datas de sprint determina a data de início, a data de término, a data da revisão e a data da retrospectiva de uma ou mais sprints a partir de uma data de início da equipe e da duração da sprint. As cerimônias de sprint dependem de limites previsíveis: a prática da indústria coloca o planejamento nas segundas-feiras e a revisão e a retrospectiva na última sexta-feira. Começar uma sprint numa sexta faz o planejamento invadir o fim de semana; começar no meio da semana desalinha os limites da sprint com a semana de trabalho. Alinhar as sprints com os trimestres fiscais e os feriados conhecidos evita conflitos de cerimônia — ninguém quer uma revisão de sprint marcada na véspera de Natal ou um planejamento num feriado bancário.",
+        "whatIs": "Uma calculadora de datas de sprint determina a data de início, a data de término, a data da revisão e a data da retrospectiva de uma ou mais sprints a partir de uma data de início da equipe e da duração da sprint. As cerimônias de sprint dependem de limites previsíveis: a prática da indústria coloca o planejamento nas segundas-feiras e a revisão e a retrospectiva na última sexta-feira. Começar uma sprint numa sexta faz o planejamento invadir o fim de semana; começar no meio da semana desalinha os limites da sprint com a semana de trabalho. Alinhar as sprints com os trimestres fiscais e os feriados conhecidos evita conflitos de cerimônia, já que ninguém quer uma revisão de sprint marcada na véspera de Natal ou um planejamento num feriado bancário.",
         "howToUse": [
-          "Insira a data de início da sprint — o primeiro dia da sua primeira sprint (idealmente uma segunda-feira).",
+          "Insira a data de início da sprint, ou seja, o primeiro dia da sua primeira sprint (idealmente uma segunda-feira).",
           "Selecione a duração da sprint: 2 semanas (padrão da indústria), 3 semanas ou 4 semanas para programas mais lentos.",
           "Insira o número de sprints consecutivas que deseja planejar.",
           "Opcionalmente, marque datas de feriados conhecidos para sinalizar sprints com conflitos de cerimônia.",
           "Leia a saída do calendário de sprints, mostrando as datas de início, término, revisão e retrospectiva de cada sprint."
         ],
-        "whyItMatters": "Planejar as datas das sprints com um trimestre de antecedência permite que as equipes bloqueiem os calendários antes que reuniões concorrentes apareçam, alinhem as férias em torno dos eventos da sprint e coordenem cronogramas de lançamento com equipes dependentes. Equipes que planejam o calendário de sprints com antecedência sofrem menos cerimônias perdidas e têm velocidade mais previsível, porque a sobrecarga de planejamento nunca compete com o trabalho de entrega em cima da hora. Em escala, as cadências de release train no SAFe e no LeSS exigem alinhamento dos limites de sprint entre várias equipes — uma diferença de um único dia gera caos de coordenação entre times nos limites do program increment.",
+        "whyItMatters": "Planejar as datas das sprints com um trimestre de antecedência permite que as equipes bloqueiem os calendários antes que reuniões concorrentes apareçam, alinhem as férias em torno dos eventos da sprint e coordenem cronogramas de lançamento com equipes dependentes. Equipes que planejam o calendário de sprints com antecedência sofrem menos cerimônias perdidas e têm velocidade mais previsível, porque a sobrecarga de planejamento nunca compete com o trabalho de entrega em cima da hora. Em escala, as cadências de release train no SAFe e no LeSS exigem alinhamento dos limites de sprint entre várias equipes: uma diferença de um único dia gera caos de coordenação entre times nos limites do program increment.",
         "sections": [
           {
             "heading": "Exemplo prático: por que o dia de início importa",
-            "body": "Comece uma sprint de duas semanas na quarta-feira, 4 de junho, e os dez dias úteis vão até terça-feira, 17 de junho — o planejamento cai no meio da semana e a revisão acontece numa terça, atravessando duas semanas de calendário e colidindo com reuniões de segunda-feira que nada têm a ver. Mude o início para segunda-feira, 9 de junho, e a sprint termina na sexta, 20 de junho, com o planejamento logo cedo na segunda e a revisão mais a retrospectiva na tarde de sexta: o ritmo que a maioria das equipes e stakeholders já espera. A calculadora conta apenas dias úteis para as dailies, então pula todo sábado e domingo automaticamente. Ela não conhece os feriados nacionais ou regionais da sua equipe, então confira as datas geradas com o seu calendário local e mova qualquer cerimônia que caia num feriado."
+            "body": "Comece uma sprint de duas semanas na quarta-feira, 4 de junho, e os dez dias úteis vão até terça-feira, 17 de junho: o planejamento cai no meio da semana e a revisão acontece numa terça, atravessando duas semanas de calendário e colidindo com reuniões de segunda-feira que nada têm a ver. Mude o início para segunda-feira, 9 de junho, e a sprint termina na sexta, 20 de junho, com o planejamento logo cedo na segunda e a revisão mais a retrospectiva na tarde de sexta: o ritmo que a maioria das equipes e stakeholders já espera. A calculadora conta apenas dias úteis para as dailies, então pula todo sábado e domingo automaticamente. Ela não conhece os feriados nacionais ou regionais da sua equipe, então confira as datas geradas com o seu calendário local e mova qualquer cerimônia que caia num feriado."
           }
         ],
-        "proTip": "Evite sprints de 4 semanas na maioria dos times de software. Quanto mais longa a sprint, maior o custo de uma suposição errada — um erro de direção descoberto no dia 25 de uma sprint de 28 dias desperdiça quase a sprint inteira. Sprints de duas semanas são o padrão da indústria: permitem ciclos de feedback mais rápidos sem a sobrecarga de cerimônias das sprints de uma semana. Reserve iterações de 4 semanas para programas de hardware ou ambientes muito regulados em que a cadência de duas semanas é inviável na prática."
+        "proTip": "Evite sprints de 4 semanas na maioria dos times de software. Quanto mais longa a sprint, maior o custo de uma suposição errada: um erro de direção descoberto no dia 25 de uma sprint de 28 dias desperdiça quase a sprint inteira. Sprints de duas semanas são o padrão da indústria: permitem ciclos de feedback mais rápidos sem a sobrecarga de cerimônias das sprints de uma semana. Reserve iterações de 4 semanas para programas de hardware ou ambientes muito regulados em que a cadência de duas semanas é inviável na prática."
       }
     }
   },

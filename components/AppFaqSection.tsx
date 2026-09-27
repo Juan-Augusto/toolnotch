@@ -9,9 +9,24 @@ export interface FaqItem {
   answer: string;
 }
 
-export default function AppFaqSection({ faqs }: { faqs: FaqItem[] }) {
+export default function AppFaqSection({ faqs = [] }: { faqs?: FaqItem[] }) {
   const [open, setOpen] = useState<number | null>(null);
   const t = useTranslations("faqSection");
+
+  const validFaqs = Array.isArray(faqs)
+    ? faqs.filter(
+        (faq) =>
+          faq &&
+          typeof faq.question === "string" &&
+          typeof faq.answer === "string" &&
+          faq.question.trim().length > 0 &&
+          faq.answer.trim().length > 0
+      )
+    : [];
+
+  if (validFaqs.length === 0) {
+    return null;
+  }
 
   return (
     <section className="mt-14 max-w-2xl mx-auto">
@@ -23,7 +38,7 @@ export default function AppFaqSection({ faqs }: { faqs: FaqItem[] }) {
       </h2>
 
       <div className="space-y-2">
-        {faqs.map((faq, i) => {
+        {validFaqs.map((faq, i) => {
           const isOpen = open === i;
           return (
             <div
