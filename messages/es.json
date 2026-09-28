@@ -4923,16 +4923,16 @@
     }
   },
   "gpaCalculator": {
-    "metaTitle": "Calculadora de GPA — Calcula tu Promedio Escolar Gratis | ToolNotch",
+    "metaTitle": "Calculadora de GPA: Calcula tu Promedio Escolar Gratis | ToolNotch",
     "metaDescription": "Calcula tu GPA o promedio escolar al instante. Ingresa tus materias, notas y créditos. Compatible con escalas US 4.0, PT 0–20 y ES 0–10. Gratis.",
     "title": "Calculadora de GPA",
-    "description": "Calcula tu promedio semestral o acumulado al instante. Ingresa tus notas y créditos — compatible con escalas de calificación americanas, portuguesas y españolas.",
+    "description": "Calcula tu promedio semestral o acumulado al instante. Ingresa tus notas y horas de crédito; admite escalas de EE. UU., España y Latinoamérica.",
     "cumulativeTitle": "Calculadora de Promedio Acumulado",
-    "cumulativeMetaTitle": "Calculadora de Promedio Acumulado — Agrega un Nuevo Semestre | ToolNotch",
+    "cumulativeMetaTitle": "Calculadora de Promedio Acumulado: Agrega un Nuevo Semestre | ToolNotch",
     "cumulativeMetaDescription": "Calcula tu nuevo promedio acumulado tras un semestre. Ingresa tu promedio actual, créditos completados y resultados del nuevo semestre. Gratis.",
     "cumulativeDescription": "Encuentra tu nuevo promedio acumulado combinando tu historial actual con un nuevo semestre.",
     "gradeTitle": "Calculadora de Nota",
-    "gradeMetaTitle": "Calculadora de Nota — ¿Qué Nota Necesito para Aprobar? | ToolNotch",
+    "gradeMetaTitle": "Calculadora de Nota: ¿Qué Nota Necesito para Aprobar? | ToolNotch",
     "gradeMetaDescription": "Calcula la nota que necesitas en tu examen final o en el trabajo restante para alcanzar tu objetivo. Calculadora gratis e instantánea.",
     "gradeDescription": "Descubre exactamente qué nota necesitas en tu examen final o trabajos restantes para alcanzar tu objetivo.",
     "addCourse": "Agregar Materia",
@@ -4956,10 +4956,10 @@
     "earnedWeight": "Peso Completado (%)",
     "targetGrade": "Nota Objetivo (%)",
     "gradeNeeded": "Nota Necesaria",
-    "impossible": "No alcanzable — el máximo es 100%",
+    "impossible": "No alcanzable: el máximo es 100%",
     "alreadyAchieved": "¡Ya has alcanzado tu objetivo!",
     "richContent": {
-      "whatIs": "Una calculadora de GPA (promedio de calificaciones) convierte tus notas y horas crédito en un promedio ponderado único que representa tu desempeño académico general. En muchos países de América Latina se usan escalas de 0 a 10 o de 0 a 20 según la institución, mientras que el sistema estadounidense de 4.0 asigna un valor numérico a cada letra: A = 4.0, B = 3.0, C = 2.0, D = 1.0, F = 0.0. La nota de cada materia se multiplica por sus horas crédito y la suma se divide entre el total de créditos, dando mayor peso a las materias con más créditos. Esta calculadora también admite la escala portuguesa y brasileña de 0–20 y la escala española y latinoamericana de 0–10, para que los estudiantes internacionales puedan calcular su promedio en el sistema más relevante para su institución.",
+      "whatIs": "Una calculadora de GPA (Grade Point Average) convierte las calificaciones y horas de crédito de tus cursos en un promedio ponderado que representa tu rendimiento académico global. En la escala estadounidense 4.0, cada letra corresponde a un valor numérico: A = 4.0, B = 3.0, C = 2.0, D = 1.0, F = 0.0. Cada calificación se multiplica por sus créditos y la suma se divide entre el total de créditos, otorgando mayor peso a los cursos con más carga horaria.",
       "howToUse": [
         "Selecciona tu escala de calificación (EE.UU. 4.0, Portugal/Brasil 0–20 o España/América Latina 0–10).",
         "Ingresa el nombre de cada materia (opcional), la nota y las horas crédito en las filas de materias.",
@@ -4967,20 +4967,20 @@
         "Haz clic en 'Calcular GPA' para ver tu promedio ponderado y el total de créditos.",
         "Usa la pestaña de Promedio Acumulado para combinar tu historial actual con los resultados de un nuevo semestre."
       ],
-      "whyItMatters": "El GPA o promedio académico es uno de los números más importantes en la vida universitaria de un estudiante. La mayoría de las universidades exigen un promedio mínimo para mantenerse en buena situación académica, y muchos programas requieren promedios más altos para continuar la inscripción. Los comités de becas, los paneles de admisión a posgrados y muchos empleadores usan el GPA como criterio de selección. Entender exactamente dónde estás — y cómo cada materia afecta tu promedio general — te permite tomar decisiones estratégicas sobre tu carga de trabajo y enfoque de estudio.",
-      "proTip": "Dado que el GPA se pondera por créditos, las materias de mayor carga tienen un impacto desproporcionado en tu promedio. Si tienes dificultades en una materia de 4 créditos, esa materia afecta tu GPA el doble que una optativa de 2 créditos. Prioriza tu tiempo de estudio en consecuencia: proteger tu nota en las materias troncales de mayor carga es la forma más eficiente de mantener o subir tu promedio."
+      "whyItMatters": "El GPA o promedio académico es uno de los números más importantes en la vida estudiantil. La mayoría de las universidades exigen un GPA mínimo (generalmente 2.0) para mantenerse en buen estado académico, y muchos programas exigen 3.0 o más. Comprender tu posición exacta (y cómo cada materia influye en tu promedio global) te permite tomar decisiones estratégicas de estudio.",
+      "proTip": "Dado que el GPA es ponderado por créditos, las asignaturas con más créditos tienen un impacto determinante en tu promedio. Prioriza tu tiempo de estudio en consecuencia: proteger tus notas en materias troncales de alta ponderación es la forma más eficaz de mantener o subir tu promedio."
     },
     "gradeRichContent": {
-      "whatIs": "La calculadora de nota te ayuda a trabajar en sentido inverso desde una nota final objetivo para determinar exactamente qué puntaje necesitas en el trabajo restante o en el examen final. En lugar de adivinar, ingresas tu nota actual, el porcentaje de peso del trabajo ya evaluado y tu nota final deseada — y la calculadora te devuelve el puntaje preciso que necesitas en la parte restante. Esto es invaluable al final del semestre cuando los estudiantes deciden cómo distribuir el tiempo de estudio entre varios exámenes finales.",
+      "whatIs": "La calculadora de nota te ayuda a trabajar en sentido inverso desde un objetivo final para determinar qué calificación necesitas en los exámenes o trabajos restantes. Ingresas tu nota actual, el peso porcentual evaluado y la nota que deseas obtener: la calculadora te muestra la calificación exacta requerida.",
       "howToUse": [
         "Ingresa tu nota actual como porcentaje en el campo 'Nota Actual'.",
         "Ingresa cuánto del peso total de la nota ya ha sido evaluado (ej. 70 si el 70% de la calificación ya se completó).",
         "Ingresa tu nota final objetivo como porcentaje.",
         "Haz clic en 'Calcular' para ver el puntaje exacto que necesitas en el trabajo restante.",
-        "Si el resultado muestra 'No alcanzable', tu nota actual hace que el objetivo sea matemáticamente imposible — ajusta tu nota objetivo y vuelve a calcular."
+        "Si el resultado muestra 'No alcanzable', tu nota actual hace que el objetivo sea matemáticamente imposible: ajusta tu meta y recalcula."
       ],
-      "whyItMatters": "Saber exactamente qué nota necesitas elimina la ansiedad y la reemplaza con un objetivo concreto. Los estudiantes a menudo sobreestiman o subestiman lo que se requiere para alcanzar el umbral de aprobación o distinción — esta calculadora te da el número real para que puedas estudiar con intención en lugar de adivinar. También revela cuándo un objetivo ya está asegurado o es matemáticamente inalcanzable, ayudándote a redirigir el esfuerzo hacia las materias donde el tiempo de estudio tendrá mayor impacto.",
-      "proTip": "Si necesitas una nota muy alta en el examen final para alcanzar tu objetivo, habla con tu docente antes del examen — no después. La mayoría de los profesores valoran a los estudiantes proactivos, y puede haber oportunidades de crédito extra, políticas de redondeo o reentregas de trabajos que no conocías. Llegar con tu nota actual y la puntuación que necesitas demuestra seriedad e iniciativa."
+      "whyItMatters": "Saber exactamente qué nota necesitas elimina la ansiedad y la reemplaza por un objetivo concreto. Conocer la cifra exacta te permite estudiar con foco y estrategia en lugar de calcular a ciegas.",
+      "proTip": "Si necesitas una nota muy alta en el examen final para alcanzar tu objetivo, habla con tu profesor antes del examen, nunca después. Muchos docentes valoran la iniciativa y pueden orientarte sobre temas clave de repaso."
     },
     "faqs": [
       {
@@ -5001,7 +5001,7 @@
       },
       {
         "question": "¿Esta calculadora funciona para el sistema latinoamericano?",
-        "answer": "Sí — esta calculadora admite la escala americana 4.0 (letras A–F), la escala portuguesa y brasileña de 0 a 20 y la escala española y latinoamericana de 0 a 10. Selecciona tu escala en el menú."
+        "answer": "Sí, esta calculadora admite la escala americana 4.0 (letras A–F), la escala de 0–20 y la escala de 0–10. Selecciona tu escala en el menú desplegable."
       }
     ],
     "howTo": {
@@ -5009,7 +5009,7 @@
       "steps": [
         "Elige tu escala de notas: EE. UU. 4.0 (A–F), Portugal/Brasil 0–20 o España/América Latina 0–10.",
         "Introduce cada asignatura con su nota y el número de créditos que otorga.",
-        "Convierte cada nota en puntos — en la escala 4.0, A = 4.0, B = 3.0, C = 2.0, D = 1.0 y F = 0.0.",
+        "Convierte cada nota en puntos (en la escala 4.0, A = 4.0, B = 3.0, C = 2.0, D = 1.0 y F = 0.0).",
         "Multiplica los puntos de cada asignatura por sus créditos para obtener los puntos ponderados.",
         "Suma todos los puntos ponderados y divide entre el total de créditos. El resultado es tu GPA.",
         "Usa la pestaña de GPA Acumulado para combinar este semestre con los créditos ya cursados."
@@ -5233,7 +5233,7 @@
     "contactButton": "Contacto"
   },
   "citationGenerator": {
-    "metaTitle": "Generador de Citas — APA, MLA y Chicago Gratis | ToolNotch",
+    "metaTitle": "Generador de Citas: Formato APA, MLA y Chicago Gratis | ToolNotch",
     "metaDescription": "Genera citas en formato APA 7ª ed., MLA 9ª ed. y Chicago 17ª ed. al instante. Compatible con sitios web, libros, artículos, YouTube y periódicos. Gratis, sin registro.",
     "title": "Generador de Citas",
     "description": "Genera citas bibliográficas precisas en formato APA, MLA y Chicago. Compatible con sitios web, libros, artículos, YouTube y periódicos. Gratis e instantáneo.",
@@ -5273,15 +5273,15 @@
     "copied": "¡Copiado!",
     "emptyState": "Completa los campos de arriba para generar tu cita",
     "richContent": {
-      "whatIs": "Un generador de citas formatea las referencias de fuentes de acuerdo con las guías de estilo académicas establecidas — de forma automática y precisa. Las citas tienen dos propósitos fundamentales: la integridad académica (dar el crédito correcto a los autores originales y evitar el plagio) y la credibilidad (permitir que los lectores verifiquen las fuentes y tracen el linaje intelectual de los argumentos). El formato APA (American Psychological Association) es el estándar en ciencias sociales, psicología y educación, y es el más utilizado en las universidades latinoamericanas — usa citas en el texto de tipo autor-fecha. El formato MLA (Modern Language Association) es común en humanidades y literatura. El estilo Chicago es preferido en historia y algunas humanidades. Cada formato tiene reglas precisas sobre puntuación, uso de mayúsculas y el orden de los elementos que difieren entre sí de maneras que importan a los evaluadores académicos.",
+      "whatIs": "Un generador de citas formatea las referencias de fuentes de acuerdo con los manuales de estilo académico más utilizados, de forma automática y precisa.",
       "howToUse": [
         "Selecciona tu formato de cita (APA 7ª ed., MLA 9ª ed. o Chicago 17ª ed.) usando las pestañas de la parte superior.",
-        "Elige el tipo de fuente — sitio web, libro, artículo de revista, video de YouTube o periódico.",
+        "Elige el tipo de fuente: sitio web, libro, artículo de revista, video de YouTube o periódico.",
         "Completa los campos disponibles: nombres de autores, título, año de publicación, URL y cualquier otro dato relevante.",
         "Tu cita formateada aparece al instante en el cuadro de resultado mientras escribes.",
         "Haz clic en 'Copiar Cita' para copiar la referencia formateada al portapapeles, lista para pegar en tu lista de referencias."
       ],
-      "whyItMatters": "Las citas incorrectas son una de las razones más comunes por las que los trabajos académicos pierden puntos o son rechazados. Los diferentes estilos de cita no son intercambiables — presentar un trabajo en formato MLA cuando se requiere APA señala una falta de atención al detalle que los evaluadores notan de inmediato. Más allá del ámbito académico, la atribución correcta es una señal de honestidad intelectual en el periodismo, la investigación y la escritura profesional. Este generador se encarga automáticamente de las reglas de formato — puntuación, cursivas, formato de edición y convenciones de fecha de acceso — para que puedas concentrarte en tu escritura.",
+      "whyItMatters": "Las citas incorrectas son una de las razones más comunes por las que los trabajos académicos pierden puntos o son rechazados. Los diferentes estilos de cita no son intercambiables: presentar un trabajo en formato MLA cuando se requiere APA señala una falta de atención al detalle. Este generador se encarga automáticamente de las reglas de formato (puntuación, cursivas, formato de edición y fechas de acceso) para que puedas concentrarte en la redacción.",
       "proTip": "APA es el formato de cita más utilizado en las universidades de América Latina, especialmente en psicología, ciencias sociales y educación. Si estudias en una institución latinoamericana y no estás seguro del estilo requerido, APA 7ª edición es generalmente la mejor opción por defecto. El formato ABNT (norma académica brasileña NBR 6023) está disponible únicamente en la versión en portugués de esta herramienta, ya que se usa exclusivamente en instituciones académicas de Brasil."
     },
     "faqs": [
@@ -5303,7 +5303,7 @@
       },
       {
         "question": "¿El generador es gratuito?",
-        "answer": "Sí — completamente gratuito, sin registro, sin límites. Las citas se generan en tu navegador."
+        "answer": "Sí, completamente gratuito, sin registro y sin límites. Las citas se generan directamente en tu navegador."
       }
     ]
   },

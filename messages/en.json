@@ -5437,16 +5437,16 @@
     }
   },
   "gpaCalculator": {
-    "metaTitle": "GPA Calculator — Free College GPA Calculator | ToolNotch",
+    "metaTitle": "GPA Calculator: Free College & High School GPA Calculator | ToolNotch",
     "metaDescription": "Calculate your GPA instantly. Enter your courses, grades, and credit hours to find your semester or cumulative GPA. Supports US 4.0, PT 0–20, and ES 0–10 scales. Free.",
     "title": "GPA Calculator",
-    "description": "Calculate your semester or cumulative GPA instantly. Enter your grades and credit hours — supports US, Portuguese, and Spanish grading scales.",
+    "description": "Calculate your semester or cumulative GPA instantly. Enter your grades and credit hours; supports US, Portuguese, and Spanish grading scales.",
     "cumulativeTitle": "Cumulative GPA Calculator",
-    "cumulativeMetaTitle": "Cumulative GPA Calculator — Add a New Semester | ToolNotch",
+    "cumulativeMetaTitle": "Cumulative GPA Calculator: Add a New Semester | ToolNotch",
     "cumulativeMetaDescription": "Calculate your new cumulative GPA after a semester. Enter your current GPA, completed credits, and new semester results. Free and instant.",
     "cumulativeDescription": "Find your new cumulative GPA by combining your existing record with a new semester.",
     "gradeTitle": "Grade Calculator",
-    "gradeMetaTitle": "Grade Calculator — What Grade Do I Need to Pass? | ToolNotch",
+    "gradeMetaTitle": "Grade Calculator: What Grade Do I Need to Pass? | ToolNotch",
     "gradeMetaDescription": "Calculate the grade you need on your final exam or remaining work to reach your target. Free, instant grade needed calculator.",
     "gradeDescription": "Find out exactly what grade you need on your final exam or remaining coursework to hit your target.",
     "addCourse": "Add Course",
@@ -5470,10 +5470,10 @@
     "earnedWeight": "Weight Completed (%)",
     "targetGrade": "Target Grade (%)",
     "gradeNeeded": "Grade Needed",
-    "impossible": "Not achievable — maximum is 100%",
+    "impossible": "Not achievable: maximum is 100%",
     "alreadyAchieved": "You've already achieved your target!",
     "richContent": {
-      "whatIs": "A GPA (Grade Point Average) calculator converts your course grades and credit hours into a single weighted average that represents your overall academic performance. On the US 4.0 scale, each letter grade maps to a numeric value: A = 4.0, B = 3.0, C = 2.0, D = 1.0, F = 0.0. Each course's grade value is multiplied by its credit hours, and the sum is divided by the total credits — giving more weight to courses with more credits. This calculator also supports the Portuguese and Brazilian 0–20 scale and the Spanish and Latin American 0–10 scale, so international students can calculate their GPA in the system that is most relevant to their academic institution.",
+      "whatIs": "A GPA (Grade Point Average) calculator converts your course grades and credit hours into a single weighted average that represents your overall academic performance. On the US 4.0 scale, each letter grade maps to a numeric value: A = 4.0, B = 3.0, C = 2.0, D = 1.0, F = 0.0. Each course's grade value is multiplied by its credit hours, and the sum is divided by total credits, giving greater weight to courses with more credit hours. This calculator also supports the Portuguese and Brazilian 0–20 scale and the Spanish and Latin American 0–10 scale.",
       "howToUse": [
         "Select your grading scale (US 4.0, Portugal/Brazil 0–20, or Spain/Latin America 0–10).",
         "Enter each course name (optional), grade, and credit hours in the course rows.",
@@ -5481,20 +5481,20 @@
         "Click 'Calculate GPA' to see your weighted GPA and total credits.",
         "Use the Cumulative GPA tab to combine your current GPA record with a new semester's results."
       ],
-      "whyItMatters": "GPA is one of the most consequential numbers in a student's academic life. Most universities require a minimum GPA — often 2.0 — to remain in good standing, and many programmes require 3.0 or higher for continued enrollment. Scholarship committees, graduate school admissions panels, and many employers use GPA as a screening criterion. On the US 4.0 scale, a GPA above 3.5 is widely considered excellent and is a common threshold for honours distinctions, Dean's List recognition, and competitive graduate programme applications. Understanding exactly where you stand — and how each course affects your overall average — empowers you to make strategic decisions about your workload and study focus.",
-      "proTip": "Because GPA is credit-weighted, high-credit courses have an outsized impact on your average. If you are struggling in a 4-credit course graded A–F, that course affects your GPA twice as much as a 2-credit elective. Prioritise your study time accordingly — protecting your grade in high-credit core courses is the most efficient way to maintain or raise your GPA."
+      "whyItMatters": "GPA is one of the most consequential numbers in a student's academic career. Most universities require a minimum GPA (often 2.0) to remain in good standing, and many competitive programmes require 3.0 or higher. Scholarship committees, graduate admissions panels, and employers frequently use GPA during candidate reviews. Understanding your exact standing (and how each course affects your cumulative average) empowers you to make strategic study decisions.",
+      "proTip": "Because GPA is credit-weighted, high-credit courses have an outsized impact on your average. If you are balancing coursework, prioritise high-credit core subjects: earning strong grades in 4-credit courses is the most efficient way to protect and raise your cumulative GPA."
     },
     "gradeRichContent": {
-      "whatIs": "The grade calculator helps you work backwards from a target final grade to determine exactly what score you need on your remaining coursework or final exam. Rather than guessing, you enter your current grade, the percentage weight of work already completed, and your desired final grade — and the calculator returns the precise score you need on the remaining portion. This is invaluable at the end of a semester when students are deciding how to allocate study time across multiple finals. It also supports weighted grade scenarios where assignments, midterms, and finals each carry different percentage weights toward the final grade.",
+      "whatIs": "The grade calculator helps you work backwards from a target final grade to determine exactly what score you need on your remaining coursework or final exam. Rather than guessing, you enter your current grade, the percentage weight of work already completed, and your desired final score: the calculator returns the precise score required on the remaining portion.",
       "howToUse": [
         "Enter your current grade as a percentage in the 'Current Grade' field.",
         "Enter how much of the total grade weight has already been assessed (e.g. 70 if 70% of the grade has been completed).",
         "Enter your target final grade as a percentage.",
         "Click 'Calculate' to see the exact score you need on the remaining work.",
-        "If the result shows 'Not achievable', your current grade makes the target mathematically impossible — adjust your target grade and recalculate."
+        "If the result shows 'Not achievable', your current grade makes the target mathematically impossible: adjust your target grade and recalculate."
       ],
-      "whyItMatters": "Knowing exactly what grade you need removes anxiety and replaces it with a concrete goal. Students often overestimate or underestimate what is required to reach a pass or distinction threshold — this calculator gives you the real number so you can study with intention rather than guessing. It also reveals when a target is already secured (you have already achieved it) or is mathematically out of reach, helping you redirect effort to subjects where study time will have the most impact. Having an honest conversation with your teacher or professor about a grade target is far easier when you come prepared with specific numbers.",
-      "proTip": "If you need a very high score on a final exam to reach your target, talk to your instructor before the exam — not after. Most educators appreciate students who are proactive, and there may be extra credit opportunities, grade rounding policies, or assignment resubmissions you were not aware of. Coming with your current grade and the score you need demonstrates seriousness and initiative."
+      "whyItMatters": "Knowing exactly what grade you need removes anxiety and replaces it with a concrete goal. Students often overestimate or underestimate what is required to reach a pass or distinction threshold; this calculator gives you the real number so you can study with focus and intention.",
+      "proTip": "If you need a very high score on a final exam to reach your target, speak with your instructor well before the exam, not after. Most educators appreciate proactive students and can offer guidance on priority review topics."
     },
     "faqs": [
       {
@@ -5515,7 +5515,7 @@
       },
       {
         "question": "Does this GPA calculator work for international students?",
-        "answer": "Yes — this calculator supports the US 4.0 scale (A–F letter grades), the Portuguese and Brazilian 0–20 scale, and the Spanish and Latin American 0–10 scale. Select your scale using the dropdown."
+        "answer": "Yes, this calculator supports the US 4.0 scale (A–F letter grades), the 0–20 scale, and the 0–10 scale. Select your scale using the dropdown."
       }
     ],
     "howTo": {
@@ -5523,7 +5523,7 @@
       "steps": [
         "Choose your grading scale: US 4.0 (A–F), Portugal/Brazil 0–20, or Spain/Latin America 0–10.",
         "Enter each course with its grade and the number of credits it carries.",
-        "Convert every grade to grade points — on the 4.0 scale A = 4.0, B = 3.0, C = 2.0, D = 1.0 and F = 0.0.",
+        "Convert every grade to grade points (on the 4.0 scale A = 4.0, B = 3.0, C = 2.0, D = 1.0 and F = 0.0).",
         "Multiply each course's grade points by its credits to get that course's weighted points.",
         "Add up all the weighted points and divide by the total number of credits. The result is your GPA.",
         "Use the Cumulative GPA tab to combine this semester with the credits already on your transcript."
@@ -5647,7 +5647,7 @@
     }
   },
   "citationGenerator": {
-    "metaTitle": "Citation Generator — Free APA, MLA & Chicago Citations | ToolNotch",
+    "metaTitle": "Citation Generator: Free APA, MLA & Chicago Citations | ToolNotch",
     "metaDescription": "Generate citations in APA 7th, MLA 9th, and Chicago 17th edition format instantly. Supports websites, books, journal articles, YouTube, and newspapers. Free, no sign-up.",
     "title": "Citation Generator",
     "description": "Generate accurate citations in APA, MLA, and Chicago format. Supports websites, books, journal articles, YouTube videos, and newspapers. Free and instant.",
@@ -5687,15 +5687,15 @@
     "copied": "Copied!",
     "emptyState": "Fill in the fields above to generate your citation",
     "richContent": {
-      "whatIs": "A citation generator formats source references according to established academic style guides — automatically and accurately. Citations serve two critical purposes: academic integrity (giving proper credit to original authors and avoiding plagiarism) and credibility (allowing readers to verify your sources and trace the intellectual lineage of your arguments). APA (American Psychological Association) is standard in social sciences and psychology, using author-date in-text citations. MLA (Modern Language Association) is common in humanities and literature, using author-page format. Chicago style is preferred in history and some humanities, offering both footnote and author-date systems. Each format has precise rules governing punctuation, capitalisation, and element order that differ in ways that matter to academic reviewers.",
+      "whatIs": "A citation generator formats source references according to established academic style guides, automatically and accurately. Citations serve two critical purposes: academic integrity (crediting original authors and preventing plagiarism) and scholarly credibility (enabling readers to verify and trace research evidence).",
       "howToUse": [
         "Select your citation format (APA 7th, MLA 9th, or Chicago 17th) using the tabs at the top.",
-        "Choose the source type — website, book, journal article, YouTube video, or newspaper.",
+        "Choose the source type: website, book, journal article, YouTube video, or newspaper.",
         "Fill in the available fields: author names, title, publication year, URL, and any other relevant details.",
         "Your formatted citation appears instantly in the output box as you type.",
         "Click 'Copy Citation' to copy the formatted reference to your clipboard, ready to paste into your reference list."
       ],
-      "whyItMatters": "Incorrect citations are one of the most common reasons academic papers lose marks or are rejected. Different citation styles are not interchangeable — submitting an MLA-formatted paper to an APA-required journal signals a lack of attention to detail that reviewers notice immediately. Beyond academics, proper attribution is a mark of intellectual honesty in journalism, research, and professional writing. This generator handles the formatting rules automatically — comma placement, italics, edition formatting, and access date conventions — so you can focus on your writing rather than memorising style manual rules that change with each edition.",
+      "whyItMatters": "Incorrect citations are one of the most common reasons academic papers lose marks or face submission rejections. Citation styles are not interchangeable: submitting an MLA-formatted paper to an APA-required journal signals a lack of attention to detail. This generator handles formatting rules automatically (punctuation, italics, edition style, and access dates), freeing you to focus on your writing.",
       "proTip": "ABNT citation format (Brazilian academic standard NBR 6023) is available only in the Portuguese locale of this tool, as it is exclusively used in Brazilian academic institutions. If you are writing in Portuguese for a Brazilian university, switch to the Portuguese version of ToolNotch to access ABNT formatting alongside APA, MLA, and Chicago."
     },
     "faqs": [
@@ -5717,7 +5717,7 @@
       },
       {
         "question": "Is this citation generator free?",
-        "answer": "Yes — completely free, no sign-up, no usage limits. All citations are generated instantly in your browser with no data sent to servers."
+        "answer": "Yes, completely free, with no sign-up and no usage limits. All citations are generated instantly inside your browser with no data sent to external servers."
       }
     ]
   },

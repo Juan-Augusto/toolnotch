@@ -133,7 +133,8 @@ const ALL_ROUTES = [
   '/tools/health/bmi-calculator',
   '/tools/health/tdee-calculator',
   '/tools/health/calorie-deficit-calculator',
-  // Education tools (no /tools/education hub page — 404, WS-6 audit §7)
+  // Education tools
+  '/tools/education',
   '/tools/education/gpa-calculator',
   '/tools/education/cumulative-gpa-calculator',
   '/tools/education/grade-calculator',

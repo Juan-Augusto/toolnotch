@@ -4923,16 +4923,16 @@
     }
   },
   "gpaCalculator": {
-    "metaTitle": "Calculadora de GPA — Como Calcular seu GPA (Grátis)",
+    "metaTitle": "Calculadora de GPA: Como Calcular seu GPA Online | ToolNotch",
     "metaDescription": "Calcule seu GPA ou média escolar instantaneamente. Insira suas disciplinas, notas e créditos. Suporta escalas US 4.0, PT 0–20 e ES 0–10. Grátis.",
     "title": "Calculadora de GPA",
-    "description": "Calcule sua média semestral ou acumulada instantaneamente. Insira suas notas e créditos — suporta escalas de notas americanas, portuguesas e espanholas.",
+    "description": "Calcule sua média semestral ou acumulada instantaneamente. Insira suas notas e carga horária; suporta escalas americana, portuguesa e espanhola.",
     "cumulativeTitle": "Calculadora de GPA Acumulado",
-    "cumulativeMetaTitle": "Calculadora de GPA Acumulado — Adicione um Novo Semestre | ToolNotch",
+    "cumulativeMetaTitle": "Calculadora de GPA Acumulado: Adicione um Novo Semestre | ToolNotch",
     "cumulativeMetaDescription": "Calcule seu novo GPA acumulado após um semestre. Insira seu GPA atual, créditos concluídos e resultados do novo semestre. Grátis.",
     "cumulativeDescription": "Encontre seu novo GPA acumulado combinando seu histórico atual com um novo semestre.",
     "gradeTitle": "Calculadora de Nota",
-    "gradeMetaTitle": "Calculadora de Nota — Que Nota Preciso para Passar? | ToolNotch",
+    "gradeMetaTitle": "Calculadora de Nota: Que Nota Preciso para Passar? | ToolNotch",
     "gradeMetaDescription": "Calcule a nota que você precisa na prova final ou no trabalho restante para atingir sua meta. Calculadora grátis e instantânea.",
     "gradeDescription": "Descubra exatamente qual nota você precisa na prova final ou nos trabalhos restantes para atingir sua média.",
     "addCourse": "Adicionar Disciplina",
@@ -4956,10 +4956,10 @@
     "earnedWeight": "Peso Concluído (%)",
     "targetGrade": "Nota Alvo (%)",
     "gradeNeeded": "Nota Necessária",
-    "impossible": "Impossível — o máximo é 100%",
+    "impossible": "Impossível: o máximo é 100%",
     "alreadyAchieved": "Você já atingiu sua meta!",
     "richContent": {
-      "whatIs": "Uma calculadora de GPA (Grade Point Average) converte suas notas e cargas horárias em uma média ponderada única que representa seu desempenho acadêmico geral. No sistema americano de escala 4.0, cada letra corresponde a um valor numérico: A = 4.0, B = 3.0, C = 2.0, D = 1.0, F = 0.0. O valor da nota de cada disciplina é multiplicado pelos seus créditos, e a soma é dividida pelo total de créditos — dando mais peso às disciplinas com mais créditos. Esta calculadora também suporta a escala brasileira e portuguesa de 0–20 e a escala espanhola e latino-americana de 0–10. No Brasil, as universidades geralmente adotam a escala de 0 a 10 (com média mínima de 5 ou 6 para aprovação), enquanto o Vestibular e o ENEM usam sistemas de pontuação próprios — mas converter suas notas em um GPA ponderado ainda é útil para comparações e candidaturas internacionais.",
+      "whatIs": "Uma calculadora de GPA (Grade Point Average) converte suas notas e carga horária em uma média ponderada que representa seu desempenho acadêmico geral. Na escala americana 4.0, cada nota em letra corresponde a um valor numérico: A = 4.0, B = 3.0, C = 2.0, D = 1.0, F = 0.0. O valor de cada disciplina é multiplicado pelos créditos e a soma é dividida pelo total de créditos da instituição de ensino, dando mais peso a matérias com maior carga horária. Esta calculadora também suporta a escala de Portugal e Brasil (0–20) e a escala de Espanha e América Latina (0–10).",
       "howToUse": [
         "Selecione sua escala de notas (EUA 4.0, Portugal/Brasil 0–20 ou Espanha/América Latina 0–10).",
         "Insira o nome da disciplina (opcional), a nota e os créditos em cada linha.",
@@ -4967,20 +4967,20 @@
         "Clique em 'Calcular GPA' para ver sua média ponderada e o total de créditos.",
         "Use a aba GPA Acumulado para combinar seu histórico atual com os resultados de um novo semestre."
       ],
-      "whyItMatters": "O GPA é um dos números mais importantes na vida acadêmica de um estudante. A maioria das universidades exige uma média mínima — frequentemente 2.0 na escala americana — para manter o status de matrícula regular, e muitos programas exigem 3.0 ou mais para continuidade. Comitês de bolsas, bancas de admissão em pós-graduações e muitos empregadores usam o GPA como critério de seleção. Entender exatamente onde você está — e como cada disciplina afeta sua média geral — permite tomar decisões estratégicas sobre sua carga horária e foco de estudos.",
-      "proTip": "Como o GPA é ponderado por créditos, disciplinas com maior carga horária têm um impacto desproporcional na sua média. Se você está com dificuldades em uma disciplina de 4 créditos, ela afeta seu GPA duas vezes mais do que uma optativa de 2 créditos. Priorize seu tempo de estudo de acordo — proteger a nota nas disciplinas obrigatórias de maior carga é a forma mais eficiente de manter ou elevar seu GPA."
+      "whyItMatters": "O GPA é um dos números mais importantes na vida acadêmica de um estudante. A maioria das universidades internacionais exige um GPA mínimo (frequentemente 2.0) para continuar matriculado, e muitos programas de pós-graduação exigem 3.0 ou mais. Comissões de bolsas de estudo e processos seletivos utilizam o GPA como critério de triagem. Entender exatamente sua situação acadêmica (e como cada matéria afeta sua média global) permite planejar melhor seus estudos.",
+      "proTip": "Como o GPA é ponderado por créditos, disciplinas com maior carga horária têm impacto muito maior na sua média. Se você está em dúvida sobre onde focar esforços, priorize matérias com 4 ou mais créditos: garantir uma nota alta nelas é o caminho mais eficiente para elevar sua média geral."
     },
     "gradeRichContent": {
-      "whatIs": "A calculadora de notas ajuda você a trabalhar de forma inversa a partir de uma nota final desejada para determinar exatamente qual pontuação você precisa nas avaliações restantes ou na prova final. Em vez de adivinhar, você insere sua nota atual, o peso percentual do que já foi avaliado e a nota final desejada — e a calculadora retorna a pontuação precisa que você precisa no restante. Isso é muito útil ao final do semestre, quando os estudantes precisam decidir como distribuir o tempo de estudo entre várias provas finais.",
+      "whatIs": "A calculadora de notas ajuda você a trabalhar de forma inversa a partir da nota final desejada para descobrir exatamente quanto precisa tirar na prova final ou trabalhos restantes. Em vez de adivinhar, você insere sua nota atual, o peso percentual das avaliações já concluídas e sua nota desejada. A calculadora retorna a nota exata que você precisa tirar no restante do curso.",
       "howToUse": [
         "Insira sua nota atual em porcentagem no campo 'Nota Atual'.",
         "Insira quanto do peso total da nota já foi avaliado (por exemplo, 70 se 70% da nota já foi concluída).",
         "Insira sua nota final desejada em porcentagem.",
         "Clique em 'Calcular' para ver a pontuação exata que você precisa no trabalho restante.",
-        "Se o resultado mostrar 'Impossível', sua nota atual torna a meta matematicamente inatingível — ajuste a nota alvo e recalcule."
+        "Se o resultado mostrar 'Impossível', sua nota atual torna a meta matematicamente inalcançável: ajuste sua meta e recalcule."
       ],
-      "whyItMatters": "Saber exatamente qual nota você precisa elimina a ansiedade e a substitui por um objetivo concreto. Estudantes frequentemente superestimam ou subestimam o que é necessário para atingir a aprovação ou a distinção — esta calculadora fornece o número real para que você possa estudar com intencionalidade. Ela também revela quando a meta já foi alcançada ou é matematicamente impossível, ajudando a redirecionar o esforço para as matérias onde o tempo de estudo terá maior impacto.",
-      "proTip": "Se você precisa de uma nota muito alta na prova final para atingir sua meta, converse com seu professor antes da prova — não depois. A maioria dos docentes valoriza estudantes proativos, e pode haver oportunidades de trabalho extra, políticas de arredondamento de notas ou reenvios de atividades que você desconhecia. Chegar com sua nota atual e a pontuação que você precisa demonstra seriedade e iniciativa."
+      "whyItMatters": "Saber exatamente qual nota você precisa elimina a ansiedade e a substitui por uma meta clara e objetiva. Os estudantes frequentemente superestimam ou subestimam a nota necessária para passar ou atingir distinção acadêmica; esta calculadora fornece o número real para que você possa estudar com foco e estratégia.",
+      "proTip": "Se você precisa de uma nota muito alta na prova final para atingir sua meta, converse com seu professor antes da prova, nunca depois. A maioria dos professores valoriza estudantes proativos e pode orientar sobre pontos cruciais ou oportunidades de revisão."
     },
     "faqs": [
       {
@@ -5001,7 +5001,7 @@
       },
       {
         "question": "Esta calculadora funciona para o sistema brasileiro?",
-        "answer": "Sim — esta calculadora suporta a escala americana 4.0 (letras A–F), a escala portuguesa e brasileira de 0 a 20 e a escala espanhola e latino-americana de 0 a 10. Selecione sua escala no menu."
+        "answer": "Sim, esta calculadora suporta a escala americana 4.0 (letras A–F), a escala de 0–20 e a escala de 0–10. Selecione a escala desejada no menu suspenso."
       }
     ],
     "howTo": {
@@ -5009,7 +5009,7 @@
       "steps": [
         "Escolha a sua escala de notas: EUA 4.0 (A–F), Portugal/Brasil 0–20 ou Espanha/América Latina 0–10.",
         "Insira cada disciplina com a sua nota e a quantidade de créditos correspondente.",
-        "Converta cada nota em pontos — na escala 4.0, A = 4.0, B = 3.0, C = 2.0, D = 1.0 e F = 0.0.",
+        "Converta cada nota em pontos (na escala 4.0, A = 4.0, B = 3.0, C = 2.0, D = 1.0 e F = 0.0).",
         "Multiplique os pontos de cada disciplina pelos seus créditos para obter os pontos ponderados.",
         "Some todos os pontos ponderados e divida pelo total de créditos. O resultado é o seu GPA.",
         "Use a aba GPA Acumulado para combinar este semestre com os créditos já concluídos no seu histórico."
@@ -5017,7 +5017,7 @@
     },
     "brConversion": {
       "heading": "Converter nota brasileira (0–10 / 0–100) para GPA 4.0",
-      "intro": "O histórico brasileiro traz notas em 0–10, ou em 0–100 no ensino médio, enquanto os formulários americanos pedem um número entre 0.0 e 4.0. Não existe uma conversão oficial única, mas a tabela de bandas abaixo é o mapeamento mais usado para estimar o GPA — e é o que esta calculadora aplica quando você escolhe uma escala de 0–10.",
+      "intro": "O histórico escolar brasileiro traz notas de 0 a 10 (ou de 0 a 100 no ensino médio). Para candidaturas no exterior (bolsas, intercâmbios, pós-graduações e graduações nos EUA ou Europa), as instituições costumam pedir o GPA convertido na escala americana 4.0.",
       "columns": {
         "decimal": "Nota (0–10)",
         "percent": "Nota (0–100)",
@@ -5233,7 +5233,7 @@
     "contactButton": "Fale Conosco"
   },
   "citationGenerator": {
-    "metaTitle": "Gerador de Citação ABNT — APA, MLA e ABNT Grátis | ToolNotch",
+    "metaTitle": "Gerador de Citações ABNT: Formate Referências em ABNT, APA e MLA | ToolNotch",
     "metaDescription": "Gere referências no formato ABNT NBR 6023, APA 7ª ed., MLA 9ª ed. e Chicago. Suporta sites, livros, artigos, YouTube e jornais. Grátis, sem cadastro.",
     "title": "Gerador de Citação",
     "description": "Gere referências bibliográficas precisas nos formatos ABNT, APA, MLA e Chicago. Suporta sites, livros, artigos de periódicos, vídeos do YouTube e jornais. Grátis e instantâneo.",
@@ -5273,16 +5273,16 @@
     "copied": "Copiado!",
     "emptyState": "Preencha os campos acima para gerar sua referência bibliográfica",
     "richContent": {
-      "whatIs": "Um gerador de citações formata referências bibliográficas de acordo com guias de estilo acadêmico estabelecidos — de forma automática e precisa. As citações servem a dois propósitos fundamentais: integridade acadêmica (dar o devido crédito aos autores originais e evitar o plágio) e credibilidade (permitir que os leitores verifiquem suas fontes e rastreiem a origem intelectual dos seus argumentos). A APA (American Psychological Association) é padrão nas ciências sociais e na psicologia, usando citações autor-data no texto. A MLA (Modern Language Association) é comum nas humanidades e na literatura, usando o formato autor-página. O estilo Chicago é preferido em história e algumas humanidades. No Brasil, a norma padrão para trabalhos acadêmicos é a ABNT NBR 6023, adotada pela grande maioria das universidades brasileiras — e esta ferramenta oferece suporte completo ao formato ABNT nesta versão em português.",
+      "whatIs": "Um gerador de citações formata referências bibliográficas de acordo com normas acadêmicas consagradas, de forma automática e precisa. Citações cumprem dois papéis fundamentais: integridade acadêmica (dar o devido crédito aos autores originais e evitar plágio) e credibilidade (permitir que leitores verifiquem suas fontes).",
       "howToUse": [
         "Selecione seu formato de citação (ABNT, APA 7ª ed., MLA 9ª ed. ou Chicago 17ª ed.) usando as abas na parte superior.",
-        "Escolha o tipo de fonte — site, livro, artigo de periódico, vídeo do YouTube ou jornal.",
+        "Escolha o tipo de fonte: site, livro, artigo de periódico, vídeo do YouTube ou jornal.",
         "Preencha os campos disponíveis: nomes dos autores, título, ano de publicação, URL e outros dados relevantes.",
         "Sua referência formatada aparece instantaneamente na caixa de saída conforme você digita.",
         "Clique em 'Copiar Citação' para copiar a referência formatada para sua área de transferência, pronta para colar na sua lista de referências."
       ],
-      "whyItMatters": "Referências incorretas são um dos motivos mais comuns para trabalhos acadêmicos perderem pontos ou serem reprovados. Diferentes estilos de citação não são intercambiáveis — entregar um trabalho formatado em MLA para uma revista que exige ABNT sinaliza falta de atenção aos detalhes que os avaliadores notam imediatamente. Além do ambiente acadêmico, a atribuição correta é uma marca de honestidade intelectual no jornalismo, na pesquisa e na escrita profissional. Este gerador cuida das regras de formatação automaticamente — pontuação, itálico, formatação de edição e convenções de data de acesso — para que você possa se concentrar na sua escrita em vez de memorizar as regras dos manuais de estilo.",
-      "proTip": "A norma ABNT (NBR 6023) é o padrão acadêmico brasileiro obrigatório na maioria das universidades do país. Este gerador suporta ABNT integralmente nesta versão em português — incluindo as regras de maiúsculas no sobrenome dos autores, o formato de data de acesso e a pontuação específica da norma. Ao escrever trabalhos acadêmicos para instituições brasileiras, escolha ABNT para estar em conformidade com as diretrizes da sua universidade."
+      "whyItMatters": "Referências incorretas são um dos motivos mais comuns para trabalhos acadêmicos perderem notas ou serem rejeitados. Os estilos de citação não são intercambiáveis: submeter um trabalho em formato MLA quando se exige APA demonstra falta de atenção aos detalhes. Este gerador cuida das regras de formatação automaticamente (pontuação, itálicos, formato de edição e datas de acesso), permitindo que você foque na escrita.",
+      "proTip": "A norma ABNT (NBR 6023) é o padrão acadêmico brasileiro obrigatório na maioria das universidades, com títulos em negrito e autores em letras maiúsculas."
     },
     "faqs": [
       {
@@ -5303,7 +5303,7 @@
       },
       {
         "question": "O gerador é gratuito?",
-        "answer": "Sim — completamente gratuito, sem cadastro, sem limites. As citações são geradas no seu navegador."
+        "answer": "Sim, completamente gratuito, sem cadastro e sem limites. As citações são geradas no seu próprio navegador."
       }
     ]
   },
