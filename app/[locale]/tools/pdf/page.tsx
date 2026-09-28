@@ -337,29 +337,6 @@ export default async function PdfToolsHubPage({ params }: Props) {
         <p className="text-xs sm:text-sm text-label leading-relaxed mt-1.5 sm:mt-2 max-w-3xl">
           {meta.headerDescription}
         </p>
-        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-2.5 sm:mt-3.5">
-          <AppBadge
-            bg="bg-primary"
-            text="text-background"
-            icon={<ShieldCheck className="w-3.5 h-3.5 shrink-0" />}
-          >
-            {meta.badges.noUpload}
-          </AppBadge>
-          <AppBadge
-            bg="bg-secondary"
-            text="text-background"
-            icon={<Sparkles className="w-3.5 h-3.5 shrink-0" />}
-          >
-            {meta.badges.free}
-          </AppBadge>
-          <AppBadge
-            bg="bg-foreground"
-            text="text-background"
-            icon={<Zap className="w-3.5 h-3.5 shrink-0" />}
-          >
-            {meta.badges.instant}
-          </AppBadge>
-        </div>
       </header>
 
       {/* Grid of 9 PDF Tools */}

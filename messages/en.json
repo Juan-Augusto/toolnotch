@@ -5249,15 +5249,15 @@
     }
   },
   "healthCalculator": {
-    "bmiMetaTitle": "BMI Calculator — Check Your Body Mass Index Free | ToolNotch",
+    "bmiMetaTitle": "BMI Calculator - Check Your Body Mass Index Free | ToolNotch",
     "bmiMetaDescription": "Calculate your Body Mass Index (BMI) instantly. Enter your weight and height to find your BMI and health category. Supports metric and imperial units. Free.",
     "bmiTitle": "BMI Calculator",
     "bmiDescription": "Calculate your Body Mass Index instantly. Enter your weight and height to see your BMI and health category.",
-    "tdeeMetaTitle": "TDEE Calculator — Find Your Daily Calorie Needs | ToolNotch",
+    "tdeeMetaTitle": "TDEE Calculator - Find Your Daily Calorie Needs | ToolNotch",
     "tdeeMetaDescription": "Calculate your Total Daily Energy Expenditure (TDEE) and BMR. Find your daily calorie needs based on your age, weight, height, and activity level. Free.",
     "tdeeTitle": "TDEE Calculator",
     "tdeeDescription": "Find out how many calories you need per day based on your age, weight, height, and activity level.",
-    "deficitMetaTitle": "Calorie Deficit Calculator — How Many Calories to Lose Weight | ToolNotch",
+    "deficitMetaTitle": "Calorie Deficit Calculator - How Many Calories to Lose Weight | ToolNotch",
     "deficitMetaDescription": "Calculate your calorie deficit for weight loss. Find out exactly how many calories to eat per day to lose 0.5kg per week. Free calorie calculator.",
     "deficitTitle": "Calorie Deficit Calculator",
     "deficitDescription": "Calculate how many calories to eat per day to reach your weight goal. Based on your TDEE with a safe calorie deficit.",
@@ -5329,24 +5329,24 @@
       }
     ],
     "bmiRichContent": {
-      "whatIs": "Body Mass Index (BMI) is a number calculated from your weight and height that provides a quick snapshot of whether your body weight falls within a healthy range. It is widely used by clinicians and researchers as a low-cost screening tool to flag potential weight-related health risks. However, BMI has real limitations: it cannot distinguish between muscle mass and fat mass, so a muscular athlete may be classified as \"overweight\" despite having very low body fat. BMI also does not account for where fat is distributed on the body — abdominal fat carries different health risks than fat stored elsewhere. Researchers note that BMI thresholds developed from European populations may not apply equally across all ethnic groups. For a fuller picture of body composition, consider waist circumference, waist-to-hip ratio, or a DEXA scan alongside your BMI.",
+      "whatIs": "Body Mass Index (BMI) is a number calculated from your weight and height that provides a quick snapshot of whether your body weight falls within a healthy range. It is widely used by clinicians and researchers as a low-cost screening tool to flag potential weight-related health risks. However, BMI has real limitations: it cannot distinguish between muscle mass and fat mass, so a muscular athlete may be classified as \"overweight\" despite having very low body fat. BMI also does not account for where fat is distributed on the body - abdominal fat carries different health risks than fat stored elsewhere. Researchers note that BMI thresholds developed from European populations may not apply equally across all ethnic groups. For a fuller picture of body composition, consider waist circumference, waist-to-hip ratio, or a DEXA scan alongside your BMI.",
       "howToUse": [
-        "Select your preferred unit system — Metric (kg, cm) or Imperial (lbs, ft/in).",
+        "Select your preferred unit system - Metric (kg, cm) or Imperial (lbs, ft/in).",
         "Enter your current weight and height in the fields provided.",
         "Click Calculate to instantly see your BMI score.",
         "Review your BMI category (Underweight, Normal, Overweight, or Obese) on the color-coded gauge.",
         "Read the on-screen guidance to understand what your result means for your health.",
         "Consult a healthcare professional if your BMI falls outside the Normal range or if you have concerns about body composition."
       ],
-      "whyItMatters": "Maintaining a healthy BMI reduces the risk of type 2 diabetes, cardiovascular disease, hypertension, sleep apnea, and several cancers. Even modest weight loss of 5–10% of body weight in people who are overweight can meaningfully lower blood pressure, improve insulin sensitivity, and reduce joint strain. Tracking BMI over time gives you an objective reference point for monitoring the effect of lifestyle changes — independent of how you feel day to day.",
+      "whyItMatters": "Maintaining a healthy BMI reduces the risk of type 2 diabetes, cardiovascular disease, hypertension, sleep apnea, and several cancers. Even modest weight loss of 5–10% of body weight in people who are overweight can meaningfully lower blood pressure, improve insulin sensitivity, and reduce joint strain. Tracking BMI over time gives you an objective reference point for monitoring the effect of lifestyle changes - independent of how you feel day to day.",
       "proTip": "If you lift weights or do resistance training regularly, your BMI may overestimate your body fat. Pair your BMI result with a waist circumference measurement (aim for under 94 cm / 37 in for men, under 80 cm / 31.5 in for women) for a more accurate health picture."
     },
     "tdeeRichContent": {
-      "whatIs": "Total Daily Energy Expenditure (TDEE) is the total number of calories your body burns over the course of a day — everything from keeping your heart beating while you sleep (your Basal Metabolic Rate, or BMR) to walking to your car, digesting food, and intentional exercise. Your BMR accounts for roughly 60–75% of your TDEE and is calculated here using the Mifflin-St Jeor equation, the most validated formula for non-athlete adults. The remaining energy expenditure is multiplied by an activity factor ranging from 1.2 (sedentary) to 1.9 (extremely active). Knowing your TDEE means you can set calorie targets with real precision — eat at TDEE to maintain weight, eat below it to lose, or eat above it to gain. One important caveat: TDEE decreases as you lose weight, and adaptive thermogenesis (your metabolism slowing in response to a deficit) means you may need to reassess your numbers every 4–6 weeks.",
+      "whatIs": "Total Daily Energy Expenditure (TDEE) is the total number of calories your body burns over the course of a day - everything from keeping your heart beating while you sleep (your Basal Metabolic Rate, or BMR) to walking to your car, digesting food, and intentional exercise. Your BMR accounts for roughly 60–75% of your TDEE and is calculated here using the Mifflin-St Jeor equation, the most validated formula for non-athlete adults. The remaining energy expenditure is multiplied by an activity factor ranging from 1.2 (sedentary) to 1.9 (extremely active). Knowing your TDEE means you can set calorie targets with real precision - eat at TDEE to maintain weight, eat below it to lose, or eat above it to gain. One important caveat: TDEE decreases as you lose weight, and adaptive thermogenesis (your metabolism slowing in response to a deficit) means you may need to reassess your numbers every 4–6 weeks.",
       "howToUse": [
         "Enter your age, biological sex, weight, and height.",
         "Choose your unit system (Metric or Imperial).",
-        "Select your activity level honestly — most people overestimate theirs, so when in doubt, go one level lower.",
+        "Select your activity level honestly - most people overestimate theirs, so when in doubt, go one level lower.",
         "Click Calculate to see your BMR and TDEE.",
         "Review the calorie goal table to find your daily target for maintaining, losing, or gaining weight.",
         "Reassess your TDEE every 4–6 weeks as your weight changes to keep your targets accurate."
@@ -5355,24 +5355,40 @@
       "proTip": "Activity multipliers in TDEE calculators refer to all movement throughout the day, not just structured workouts. If you have a desk job but hit the gym 4 days a week, \"Lightly active\" is usually more accurate than \"Moderately active.\" Overestimating your activity level is the single most common reason people stall on a diet."
     },
     "deficitRichContent": {
-      "whatIs": "A calorie deficit occurs when you consume fewer calories than your Total Daily Energy Expenditure (TDEE), forcing your body to draw on stored energy — primarily body fat — to make up the shortfall. The widely cited rule that 3,500 calories equals one pound (about 0.45 kg) of fat loss is a useful approximation, but research shows the relationship is not perfectly linear: as you lose weight, your TDEE drops, your body adapts hormonally, and the rate of loss slows over time. For most adults, a moderate deficit of 250–500 kcal per day produces safe, sustainable fat loss of approximately 0.25–0.5 kg (0.5–1 lb) per week without triggering severe hunger or muscle loss. Protein intake becomes especially important during a deficit — eating at least 1.6–2.2 g of protein per kg of body weight helps preserve lean muscle mass while the body sheds fat.",
+      "whatIs": "A calorie deficit occurs when you consume fewer calories than your Total Daily Energy Expenditure (TDEE), forcing your body to draw on stored energy - primarily body fat - to make up the shortfall. The widely cited rule that 3,500 calories equals one pound (about 0.45 kg) of fat loss is a useful approximation, but research shows the relationship is not perfectly linear: as you lose weight, your TDEE drops, your body adapts hormonally, and the rate of loss slows over time. For most adults, a moderate deficit of 250–500 kcal per day produces safe, sustainable fat loss of approximately 0.25–0.5 kg (0.5–1 lb) per week without triggering severe hunger or muscle loss. Protein intake becomes especially important during a deficit - eating at least 1.6–2.2 g of protein per kg of body weight helps preserve lean muscle mass while the body sheds fat.",
       "howToUse": [
         "Enter your age, biological sex, weight, height, and activity level.",
         "Click Calculate to see your TDEE (maintenance calories).",
         "Review the deficit table: the 250 kcal/day deficit targets ~0.25 kg loss per week; the 500 kcal/day deficit targets ~0.5 kg per week.",
-        "Pick the deficit level that fits your timeline and feels sustainable — faster is not always better.",
+        "Pick the deficit level that fits your timeline and feels sustainable - faster is not always better.",
         "Set your daily calorie goal in a food tracking app (MyFitnessPal, Cronometer, etc.) and prioritize protein.",
         "Re-run the calculator every 3–4 weeks as your weight changes to keep the deficit accurate."
       ],
-      "whyItMatters": "A calorie deficit that is too aggressive leads to muscle loss, fatigue, nutrient deficiencies, and rebound weight gain. A deficit that is too small yields frustratingly slow progress. Calculating your personal deficit based on your actual TDEE — rather than using a generic 1,200 kcal diet — protects your metabolic health and makes the process sustainable long-term.",
+      "whyItMatters": "A calorie deficit that is too aggressive leads to muscle loss, fatigue, nutrient deficiencies, and rebound weight gain. A deficit that is too small yields frustratingly slow progress. Calculating your personal deficit based on your actual TDEE - rather than using a generic 1,200 kcal diet - protects your metabolic health and makes the process sustainable long-term.",
       "proTip": "Never let your daily calories drop below your BMR for extended periods. Eating below BMR forces your body to break down muscle for energy, reduces thyroid output, and slows metabolism in ways that can persist long after the diet ends. A 20% deficit below TDEE is generally the safe maximum for most people."
-    }
+    },
+    "healthyWeightRange": "Healthy weight range",
+    "healthyWeightRangeForHeight": "Healthy weight range for your height",
+    "reset": "Reset",
+    "dailyCalorieTarget": "Daily calorie target",
+    "deficitPlan": "Calorie Deficit Plan",
+    "maintenanceTdee": "Maintenance (TDEE)",
+    "recommended": "Recommended",
+    "estWeightChange": "Estimated weight change",
+    "weeklyLossFast": "~1 lb (0.5 kg) / week",
+    "weeklyLossSlow": "~0.5 lb (0.25 kg) / week",
+    "weeklyMaintain": "Weight stable",
+    "weeklyGainSlow": "+0.5 lb (0.25 kg) / week",
+    "weeklyGainFast": "+1 lb (0.5 kg) / week",
+    "bmiSexNoteFemale": "For women, the WHO BMI cutoff is the same (18.5 to 24.9), but female biology naturally carries a higher essential body fat percentage (~21% to 33%) for hormonal and reproductive health.",
+    "bmiSexNoteMale": "For men, the WHO BMI cutoff is the same (18.5 to 24.9), but male physiology naturally has higher muscle mass and bone density (~8% to 20% body fat). For strength trainers, BMI can overestimate body fat.",
+    "bmiSexContext": "Sex Difference"
   },
   "qrGenerator": {
-    "metaTitle": "QR Code Generator — Free, No Sign-Up Required | ToolNotch",
+    "metaTitle": "QR Code Generator: Free, No Sign-Up Required | ToolNotch",
     "metaDescription": "Generate a free QR code for any URL, WiFi network, email, or phone number. Download as PNG or SVG, any size. No sign-up, no watermark, instant.",
     "title": "QR Code Generator",
-    "description": "Create a QR code for any URL, text, WiFi password, email, or phone number. Download as PNG or SVG — free, instant, no sign-up.",
+    "description": "Create a QR code for any URL, text, WiFi password, email, or phone number. Download as PNG or SVG: free, instant, no sign-up.",
     "typeUrl": "URL / Link",
     "typeText": "Plain Text",
     "typeEmail": "Email",
@@ -5393,18 +5409,25 @@
     "wifiWpa": "WPA / WPA2",
     "wifiWep": "WEP",
     "wifiNone": "None (open network)",
+    "hiddenNetwork": "Hidden network",
+    "contentSettings": "Content Settings",
+    "reset": "Reset",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
     "preview": "QR Code Preview",
     "downloadPng": "Download PNG",
     "downloadSvg": "Download SVG",
-    "size": "Size",
-    "size256": "256px (small)",
-    "size512": "512px (medium)",
-    "size1024": "1024px (large)",
-    "emptyState": "Enter content above to generate your QR code",
+    "copySvg": "Copy SVG",
+    "copied": "Copied!",
+    "size": "Output Resolution",
+    "size256": "256px (Small)",
+    "size512": "512px (Medium)",
+    "size1024": "1024px (Large)",
+    "emptyState": "Fill in the fields to generate your QR Code instantly",
     "faqs": [
       {
         "question": "Are these QR codes free?",
-        "answer": "Yes — completely free, no sign-up required, and no watermarks on downloaded images. You can generate unlimited QR codes."
+        "answer": "Yes: completely free, no sign-up required, and no watermarks on downloaded images. You can generate unlimited QR codes."
       },
       {
         "question": "Do QR codes expire?",
@@ -5415,25 +5438,25 @@
         "answer": "For digital use (emails, websites), 256px is sufficient. For print materials like flyers or posters, use 512px or 1024px. For large-format printing like banners, download the SVG for infinite resolution."
       },
       {
-        "question": "What is error correction?",
-        "answer": "This generator uses medium error correction (level M), which allows up to 15% of the QR code to be damaged or obscured while still remaining scannable. This is ideal for logos or decorative uses."
+        "question": "Can I create a WiFi QR code?",
+        "answer": "Yes: select the WiFi tab, enter your network name (SSID) and password, and the QR code will let anyone scan it to join your WiFi instantly without typing the password."
       },
       {
-        "question": "Can I create a WiFi QR code?",
-        "answer": "Yes — select the WiFi tab, enter your network name (SSID) and password, and the QR code will let anyone scan it to join your WiFi instantly without typing the password."
+        "question": "Is my data secure?",
+        "answer": "Yes: all QR code generation happens directly in your browser. No data is sent to our servers."
       }
     ],
     "richContent": {
-      "whatIs": "A QR code generator creates two-dimensional barcodes that smartphone cameras can read directly — no app required on modern iOS and Android. QR codes were invented by Denso Wave in Japan in 1994 for automotive parts tracking and became globally ubiquitous after contactless adoption accelerated in 2020. They store text data: URLs, WiFi credentials, contact information, or plain text. Error correction levels control damage tolerance: Level L (7% of the code can be damaged), M (15%), Q (25%), and H (30% — use H when a logo will overlay part of the code). Maximum data capacity depends on content type: URLs up to roughly 2,500 characters, plain text up to 4,300 characters, and WiFi credentials around 150 characters. Static QR codes encode data directly; dynamic QR codes redirect through a shortener URL that can be changed without reprinting.",
+      "whatIs": "A QR code generator creates two-dimensional barcodes that smartphone cameras can read directly without requiring any extra apps. They store text data: URLs, WiFi credentials, contact information, or plain text. Error correction levels control damage tolerance.",
       "howToUse": [
-        "Select the QR code type: URL, plain text, email address, phone number, or WiFi credentials.",
-        "Enter the content for the selected type — paste a URL, type your text, or fill in the WiFi SSID and password.",
-        "Select the output size: 256 px for screen display, 512 px for standard print, 1024 px for large-format print, or SVG for infinite resolution.",
-        "Preview the generated QR code to confirm it looks correct and scans cleanly.",
-        "Download as PNG for most uses or SVG for print production where resolution flexibility is needed."
+        "Select the content type (Link, Text, Email, Phone, or WiFi).",
+        "Enter your content in the fields provided.",
+        "Choose your desired output resolution.",
+        "Check the real-time preview.",
+        "Download your QR Code as high-definition PNG or vector SVG."
       ],
-      "whyItMatters": "QR codes bridge physical and digital contexts: business cards link to portfolios, restaurant menus go contactless, product packaging links to assembly instructions, and event badges check in attendees. A URL QR code on a business card gets scanned far more often than a URL is manually typed — removing the typing friction directly increases engagement. For WiFi sharing, QR codes eliminate the friction of reading out and typing complex network passwords. Minimum reliable print size for consistent scanning is approximately 2.5 cm × 2.5 cm (about 1 inch square) with good contrast against the background.",
-      "proTip": "Always test a QR code before printing at scale. Print a small test copy and scan it with at least two different phones — one iOS and one Android — to confirm it resolves correctly on both platforms. A typo in a QR code on 1,000 printed flyers cannot be corrected without reprinting the entire run. For WiFi QR codes, verify the password encoding is exact — a single wrong character means the code connects to nothing."
+      "whyItMatters": "QR codes bridge physical and digital contexts: business cards link to portfolios, restaurant menus go contactless, product packaging links to assembly instructions, and event badges check in attendees.",
+      "proTip": "Always test a QR code with a phone camera before printing materials at scale."
     }
   },
   "gpaCalculator": {
@@ -5595,22 +5618,37 @@
     }
   },
   "ageCalculator": {
-    "metaTitle": "Age Calculator — How Old Am I? Calculate Your Exact Age | ToolNotch",
-    "metaDescription": "Calculate your exact age in years, months, and days. Find out how many days until your next birthday, or how old you'll be on any future date. Free age calculator.",
+    "metaTitle": "Age Calculator: How Old Am I? Calculate Your Exact Age | ToolNotch",
+    "metaDescription": "Calculate your exact age in years, months, and days. Find out how many days until your next birthday, or how old you will be on any future date. Free age calculator.",
     "title": "Age Calculator",
-    "description": "Calculate your exact age in years, months, and days. Find out how many days until your next birthday, or how old you'll be on any future date.",
+    "description": "Calculate your exact age in years, months, and days. Find out how many days until your next birthday, or how old you will be on any future date.",
     "birthdate": "Date of Birth",
+    "targetDate": "Calculate age at",
+    "useToday": "Use today's date",
+    "today": "Today",
     "youAre": "You are",
     "yearsOld": "years old",
     "monthsWord": "months",
     "daysWord": "days",
+    "and": "and",
     "totalDays": "{total} total days lived",
-    "nextBirthday": "🎂 Next Birthday",
+    "totalMonths": "total months lived",
+    "totalWeeks": "total weeks lived",
+    "totalHours": "total hours lived",
+    "lifeSummary": "Lifetime Summary",
+    "nextBirthday": "Next Birthday",
     "inDays": "In {n} days",
-    "happyBirthday": "🎂 Happy Birthday! 🎂",
+    "happyBirthday": "🎉 Happy Birthday! Congratulations!",
     "futureAge": "How old will I be on...",
     "futureResult": "On {date}, you will be {years} years old",
-    "errorFutureDate": "Please enter a date in the past",
+    "errorFutureDate": "Date of birth cannot be after the calculation date",
+    "reset": "Reset",
+    "copySummary": "Copy summary",
+    "copied": "Copied!",
+    "emptyPrompt": "Enter your date of birth to calculate your exact age.",
+    "birthParameters": "Birth Details",
+    "exactAge": "Your Exact Age",
+    "onDate": "Calculated on {date}",
     "faqs": [
       {
         "question": "How do I calculate my exact age?",
@@ -5618,32 +5656,31 @@
       },
       {
         "question": "How many days until my birthday?",
-        "answer": "Enter your date of birth and the calculator will automatically show how many days remain until your next birthday. If today is your birthday, a special message will appear."
+        "answer": "Enter your date of birth and the calculator will automatically show how many days remain until your next birthday. If today is your birthday, a special celebration message will appear."
       },
       {
         "question": "How old will I be in a future year?",
-        "answer": "Use the 'How old will I be on...' section. Enter any future date and the calculator will tell you exactly how old you will be on that date, in years."
+        "answer": "Change the 'Calculate age at' field to any future or past date to find out exactly how old you will be or were on that specific day."
       },
       {
         "question": "Does the age calculator account for leap years?",
-        "answer": "Yes — this calculator uses precise date arithmetic that correctly handles leap years, February 29 birthdays, and months with different numbers of days."
+        "answer": "Yes: this calculator uses precise date arithmetic that correctly handles leap years, February 29 birthdays, and months with different numbers of days."
       },
       {
         "question": "What is my age if I was born in 1990?",
-        "answer": "If you were born in 1990, you are currently 35–36 years old depending on your exact birth month and today's date. Enter your full birth date above for a precise result."
+        "answer": "If you were born in 1990, you are currently 35-36 years old depending on your exact birth month and today's date. Enter your full birth date above for a precise result."
       }
     ],
     "richContent": {
-      "whatIs": "An age calculator computes the exact difference between a birth date and today — or any target date — in years, months, and days. Edge cases make this more complex than simple subtraction: leap year birthdays (February 29 exists only in leap years — most countries use February 28 as the legal birthday in non-leap years), the Korean age system (where a person is born at age 1 and everyone gains a year on January 1 rather than on their individual birthday), and legal age milestones that vary by country (18 for voting and contracts in most countries, 21 for alcohol in the United States, 65 for full Social Security retirement in the US, 67 in the UK). The birthday countdown feature shows exact days remaining for planning celebrations and tracking legal transitions.",
+      "whatIs": "An age calculator computes the exact difference between a birth date and today - or any target date - in years, months, and days. Edge cases make this more complex than simple subtraction: leap year birthdays, the Korean age system, and legal age milestones that vary by country.",
       "howToUse": [
-        "Enter your birth date using the date picker or by typing in the day, month, and year.",
-        "Optionally enter a target date to calculate age at a specific point in time — defaults to today if left blank.",
-        "Read your exact age displayed in years, months, and days.",
-        "Check the days-until-next-birthday countdown for celebration planning.",
-        "Use the future age feature to find out how old you will be on any future date."
+        "Enter your birth date in the designated field.",
+        "Optionally adjust the calculation date to find your age at any other point in time.",
+        "Instantly view your exact age in years, months, and days.",
+        "Check your countdown to your next birthday along with detailed lifetime statistics."
       ],
-      "whyItMatters": "Exact age matters in many legal and medical contexts. School enrollment cutoffs use precise age-on-a-specific-date rules that vary by district and country, determining whether a child enters a grade a full year ahead or behind peers. Pediatric medical dosing for children under two years old uses age in months, not years — a 16-month-old and a 23-month-old receive different doses. Insurance premium brackets, Social Security benefit eligibility, and pension calculations all reference specific age thresholds where being a few days short can shift benefit start dates or trigger different rate tiers.",
-      "proTip": "For retirement planning, calculate your exact age on January 1 of each target year. Social Security and many pension systems use age-in-year rules — your benefit amount or eligibility tier is determined by your age on a specific date within the calendar year. Being three days short of a qualifying age cutoff can shift your benefit start date by months or trigger a lower benefit calculation tier, a difference worth knowing well in advance."
+      "whyItMatters": "Exact age matters in many legal and medical contexts. School enrollment cutoffs use precise age-on-a-specific-date rules that vary by district and country, determining whether a child enters a grade a full year ahead or behind peers. Pediatric medical dosing for children under two years old uses age in months, not years.",
+      "proTip": "For retirement planning, calculate your exact age on January 1 of each target year. Social Security and many pension systems use age-in-year rules where your benefit tier is determined by your age on fixed calendar cutoff dates."
     }
   },
   "citationGenerator": {

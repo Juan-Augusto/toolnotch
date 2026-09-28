@@ -58,9 +58,9 @@ export function AppSegmentedControl<T = string>({
   name,
   id,
   color = "secondary",
-  withDashedBorder = true,
-  bordered = false,
-  fontWeight = "bold",
+  withDashedBorder = false,
+  bordered = true,
+  fontWeight = "medium",
   fullWidth = true,
   size = "md",
   layoutId: customLayoutId,
@@ -135,15 +135,15 @@ export function AppSegmentedControl<T = string>({
   > = {
     sm: {
       button: "h-8 px-2.5",
-      text: "text-xs ",
+      text: "text-xs",
     },
     md: {
-      button: "h-11 px-4",
-      text: " ",
+      button: "h-10 px-3.5",
+      text: "text-xs sm:text-sm",
     },
     lg: {
-      button: "h-13 px-5",
-      text: "text-sm sm:text-base st",
+      button: "h-12 px-5",
+      text: "text-sm sm:text-base",
     },
   };
 
@@ -160,8 +160,9 @@ export function AppSegmentedControl<T = string>({
       case "black":
         return { active: "font-black", inactive: "font-bold" };
       case "bold":
+        return { active: "font-bold", inactive: "font-semibold" };
       default:
-        return { active: "font-black", inactive: "font-bold" };
+        return { active: "font-medium", inactive: "font-medium" };
     }
   }, [fontWeight]);
 
@@ -273,7 +274,7 @@ export function AppSegmentedControl<T = string>({
                   items-center
                   justify-center
                   gap-1.5
-                  truncate
+                  whitespace-nowrap
                   ${sizeClasses[size].text}
                   ${
                     isSelected

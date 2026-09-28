@@ -3,36 +3,27 @@
 import React from "react";
 import { AppBreadcrumb } from "@/components/ui";
 
-export interface ToolBadge {
-  text: string;
-  icon?: React.ReactNode;
-  bg?: string;
-  textColor?: string;
-}
-
-export interface PdfToolHeaderProps {
+export interface UtilityToolHeaderProps {
   title: string;
   description: string;
   locale?: string;
-  badges?: ToolBadge[];
 }
 
-export default function PdfToolHeader({
+export default function UtilityToolHeader({
   title,
   description,
   locale = "pt",
-  badges: _badges,
-}: PdfToolHeaderProps) {
+}: UtilityToolHeaderProps) {
   const homeLabel =
     locale === "pt" ? "Início" : locale === "es" ? "Inicio" : "Home";
   const toolsLabel =
     locale === "pt" ? "Ferramentas" : locale === "es" ? "Herramientas" : "Tools";
-  const pdfToolsLabel =
+  const utilitiesLabel =
     locale === "pt"
-      ? "Ferramentas PDF"
+      ? "Utilidades"
       : locale === "es"
-        ? "Herramientas PDF"
-        : "PDF Tools";
+        ? "Utilidades"
+        : "Utilities";
   const prefix = locale === "en" ? "" : `/${locale}`;
 
   return (
@@ -42,17 +33,17 @@ export default function PdfToolHeader({
           items={[
             { label: homeLabel, href: prefix || "/" },
             { label: toolsLabel, href: `${prefix}/tools` },
-            { label: pdfToolsLabel, href: `${prefix}/tools/pdf` },
+            { label: utilitiesLabel, href: `${prefix}/tools` },
             { label: title, current: true },
           ]}
         />
       </div>
 
-      <header className="mb-4 sm:mb-6 md:mb-8 pt-1 sm:pt-2 pb-3.5 sm:pb-5 border-b border-border/80 relative">
-        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground break-words">
+      <header className="mb-4 sm:mb-6 md:mb-8 pt-1 sm:pt-2 pb-1 relative">
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground font-mono break-words">
           {title}
         </h1>
-        <p className="leading-relaxed text-label mt-1.5 sm:mt-2 max-w-3xl text-xs sm:text-sm">
+        <p className="leading-relaxed text-label mt-2 max-w-3xl text-sm">
           {description}
         </p>
       </header>

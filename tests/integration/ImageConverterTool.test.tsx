@@ -79,7 +79,7 @@ describe("ImageConverterTool Integration", () => {
     jest.clearAllMocks();
   });
 
-  test("renders breadcrumbs, title, badges, dropzone", () => {
+  test("renders breadcrumbs, title, dropzone", () => {
     render(<ImageConverterTool {...defaultProps} />);
 
     expect(screen.getByText("Início")).toBeInTheDocument();
@@ -90,11 +90,6 @@ describe("ImageConverterTool Integration", () => {
         name: "Conversor de Imagens Online",
       }),
     ).toBeInTheDocument();
-
-    expect(screen.getByText("image.imageConverter.badges.private")).toBeInTheDocument();
-    expect(screen.getByText("image.imageConverter.badges.batch")).toBeInTheDocument();
-    expect(screen.getByText("image.imageConverter.badges.formats")).toBeInTheDocument();
-    expect(screen.getByText("image.imageConverter.badges.free")).toBeInTheDocument();
   });
 
   test("loads single file, selects target format, converts and downloads", async () => {

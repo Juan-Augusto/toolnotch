@@ -139,13 +139,14 @@ export default function SprintDateCalculatorClient({
           </div>
         </div>
 
-        <div className="flex gap-2 pt-1">
+        <div className="pt-1">
           <AppButton
             onClick={calculate}
             color="primary"
-            className="font-mono text-sm sm:text-base flex-1 h-[44px]"
+            small
+            className="font-mono text-xs sm:text-sm w-full sm:w-auto"
           >
-            <CalendarCheck className="w-4 h-4 mr-2" />
+            <CalendarCheck className="w-3.5 h-3.5 mr-1.5" />
             <span>{labels.calculateButton}</span>
           </AppButton>
         </div>

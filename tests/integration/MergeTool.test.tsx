@@ -57,7 +57,7 @@ describe("MergeTool Integration", () => {
     jest.clearAllMocks();
   });
 
-  test("renders breadcrumb, heading, badges, dropzone, and disabled merge button initially", () => {
+  test("renders breadcrumb, heading, dropzone, and disabled merge button initially", () => {
     render(<MergeTool {...defaultProps} />);
 
     expect(screen.getByText("Início")).toBeInTheDocument();
@@ -65,9 +65,6 @@ describe("MergeTool Integration", () => {
     expect(
       screen.getByRole("heading", { level: 1, name: "Mesclar Arquivos PDF Grátis" })
     ).toBeInTheDocument();
-    expect(screen.getByText("pdf.merge.badges.noUpload")).toBeInTheDocument();
-    expect(screen.getByText("pdf.merge.badges.quality")).toBeInTheDocument();
-    expect(screen.getByText("pdf.merge.badges.free")).toBeInTheDocument();
 
     const mergeButton = screen.getByRole("button", {
       name: /pdf\.merge\.button\.merge/i,

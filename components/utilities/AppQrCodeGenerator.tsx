@@ -1,70 +1,123 @@
 'use client'
 
-import { useState, useEffect, useCallback, useRef } from 'react'
+import React, { useState, useEffect, useCallback, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import QRCode from 'qrcode'
+import {
+  Link as LinkIcon,
+  FileText,
+  Mail,
+  Phone,
+  Wifi,
+  Globe,
+  Eye,
+  EyeOff,
+  RotateCcw,
+  Download,
+  Copy,
+  Check,
+  QrCode,
+} from 'lucide-react'
+import AppButton from '@/components/ui/AppButton'
+import {
+  AppSegmentedControl,
+  type SegmentOption,
+} from '@/components/ui/form/AppSegmentedControl'
+import { AppInput } from '@/components/ui/form/AppInput'
+import { AppTextarea } from '@/components/ui/form/AppTextarea'
+import { AppSelect, type SelectOption } from '@/components/ui/form/AppSelect'
+import { AppCheckbox } from '@/components/ui/form/AppCheckbox'
 
-type QrType = 'url' | 'text' | 'email' | 'phone' | 'wifi'
-type WifiSecurity = 'WPA' | 'WEP' | 'none'
+export type QrType = 'url' | 'text' | 'email' | 'phone' | 'wifi'
+export type WifiSecurity = 'WPA' | 'WEP' | 'none'
+export type QrSize = 256 | 512 | 1024
 
-function buildQrString(type: QrType, data: Record<string, string>): string {
+export interface AppQrCodeGeneratorProps {
+  locale?: string
+}
+
+export function buildQrString(
+  type: QrType,
+  data: Record<string, string>,
+  wifiHidden = false
+): string {
   switch (type) {
     case 'url':
-      return data.url || ''
+      return data.url?.trim() || ''
     case 'text':
-      return data.text || ''
+      return data.text?.trim() || ''
     case 'email': {
-      if (!data.to) return ''
-      let str = `mailto:${data.to}`
+      if (!data.to?.trim()) return ''
+      let str = `mailto:${data.to.trim()}`
       const params: string[] = []
-      if (data.subject) params.push(`subject=${encodeURIComponent(data.subject)}`)
-      if (data.body) params.push(`body=${encodeURIComponent(data.body)}`)
+      if (data.subject?.trim()) params.push(`subject=${encodeURIComponent(data.subject.trim())}`)
+      if (data.body?.trim()) params.push(`body=${encodeURIComponent(data.body.trim())}`)
       if (params.length) str += `?${params.join('&')}`
       return str
     }
     case 'phone':
-      return data.phone ? `tel:${data.phone}` : ''
+      return data.phone?.trim() ? `tel:${data.phone.trim()}` : ''
     case 'wifi':
-      if (!data.ssid) return ''
-      return `WIFI:S:${data.ssid};T:${data.security || 'WPA'};P:${data.password || ''};;`
+      if (!data.ssid?.trim()) return ''
+      return `WIFI:S:${data.ssid.trim()};T:${data.security || 'WPA'};P:${data.password || ''};${wifiHidden ? 'H:true;' : ''};`
     default:
       return ''
   }
 }
 
-async function generateQrDataUrl(text: string, size: number): Promise<string> {
+export async function generateQrDataUrl(text: string, size: number): Promise<string> {
   if (!text) return ''
+  if (typeof document === 'undefined') return ''
   const canvas = document.createElement('canvas')
   await QRCode.toCanvas(canvas, text, {
     width: size,
     errorCorrectionLevel: 'M',
     margin: 2,
+    color: {
+      dark: '#000000',
+      light: '#ffffff',
+    },
   })
   return canvas.toDataURL('image/png')
 }
 
-async function generateSvgString(text: string): Promise<string> {
-  return await QRCode.toString(text, { type: 'svg', errorCorrectionLevel: 'M' })
+export async function generateSvgString(text: string): Promise<string> {
+  if (!text) return ''
+  return await QRCode.toString(text, {
+    type: 'svg',
+    errorCorrectionLevel: 'M',
+    margin: 2,
+    color: {
+      dark: '#000000',
+      light: '#ffffff',
+    },
+  })
 }
 
 function downloadPng(dataUrl: string, size: number) {
+  if (typeof document === 'undefined') return
   const a = document.createElement('a')
   a.href = dataUrl
   a.download = `toolnotch-qr-${size}px.png`
+  document.body.appendChild(a)
   a.click()
+  document.body.removeChild(a)
 }
 
 function downloadSvg(svgString: string) {
+  if (typeof window === 'undefined') return
   const blob = new Blob([svgString], { type: 'image/svg+xml' })
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
   a.href = url
   a.download = 'toolnotch-qr.svg'
+  document.body.appendChild(a)
   a.click()
+  document.body.removeChild(a)
   URL.revokeObjectURL(url)
 }
 
-export default function AppQrCodeGenerator() {
+export default function AppQrCodeGenerator({ locale: _locale }: AppQrCodeGeneratorProps) {
   const t = useTranslations('qrGenerator')
 
   const [activeType, setActiveType] = useState<QrType>('url')
@@ -72,25 +125,39 @@ export default function AppQrCodeGenerator() {
   const [wifiSecurity, setWifiSecurity] = useState<WifiSecurity>('WPA')
   const [wifiHidden, setWifiHidden] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
-  const [selectedSize, setSelectedSize] = useState<256 | 512 | 1024>(256)
+  const [selectedSize, setSelectedSize] = useState<QrSize>(256)
 
   const [previewDataUrl, setPreviewDataUrl] = useState<string>('')
   const [svgString, setSvgString] = useState<string>('')
   const [isGenerating, setIsGenerating] = useState(false)
+  const [isCopied, setIsCopied] = useState(false)
 
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const copyTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  const qrTypes: { key: QrType; label: string }[] = [
-    { key: 'url', label: t('typeUrl') },
-    { key: 'text', label: t('typeText') },
-    { key: 'email', label: t('typeEmail') },
-    { key: 'phone', label: t('typePhone') },
-    { key: 'wifi', label: t('typeWifi') },
+  const typeOptions: SegmentOption<QrType>[] = [
+    { value: 'url', label: t('typeUrl'), icon: <LinkIcon className="w-3.5 h-3.5 shrink-0" /> },
+    { value: 'text', label: t('typeText'), icon: <FileText className="w-3.5 h-3.5 shrink-0" /> },
+    { value: 'email', label: t('typeEmail'), icon: <Mail className="w-3.5 h-3.5 shrink-0" /> },
+    { value: 'phone', label: t('typePhone'), icon: <Phone className="w-3.5 h-3.5 shrink-0" /> },
+    { value: 'wifi', label: t('typeWifi'), icon: <Wifi className="w-3.5 h-3.5 shrink-0" /> },
+  ]
+
+  const sizeOptions: SegmentOption<QrSize>[] = [
+    { value: 256, label: t('size256') },
+    { value: 512, label: t('size512') },
+    { value: 1024, label: t('size1024') },
+  ]
+
+  const securityOptions: SelectOption<WifiSecurity>[] = [
+    { label: t('wifiWpa'), value: 'WPA' },
+    { label: t('wifiWep'), value: 'WEP' },
+    { label: t('wifiNone'), value: 'none' },
   ]
 
   const generateQr = useCallback(async () => {
     const data = { ...formData, security: wifiSecurity }
-    const qrString = buildQrString(activeType, data)
+    const qrString = buildQrString(activeType, data, wifiHidden)
     if (!qrString) {
       setPreviewDataUrl('')
       setSvgString('')
@@ -110,17 +177,23 @@ export default function AppQrCodeGenerator() {
     } finally {
       setIsGenerating(false)
     }
-  }, [formData, activeType, wifiSecurity])
+  }, [formData, activeType, wifiSecurity, wifiHidden])
 
   useEffect(() => {
     if (debounceRef.current) clearTimeout(debounceRef.current)
     debounceRef.current = setTimeout(() => {
       generateQr()
-    }, 300)
+    }, 250)
     return () => {
       if (debounceRef.current) clearTimeout(debounceRef.current)
     }
   }, [generateQr])
+
+  useEffect(() => {
+    return () => {
+      if (copyTimeoutRef.current) clearTimeout(copyTimeoutRef.current)
+    }
+  }, [])
 
   function handleField(key: string, value: string) {
     setFormData((prev) => ({ ...prev, [key]: value }))
@@ -131,9 +204,18 @@ export default function AppQrCodeGenerator() {
     setFormData({})
   }
 
+  function handleReset() {
+    setFormData({})
+    setWifiSecurity('WPA')
+    setWifiHidden(false)
+    setShowPassword(false)
+    setPreviewDataUrl('')
+    setSvgString('')
+  }
+
   async function handleDownloadPng() {
     const data = { ...formData, security: wifiSecurity }
-    const qrString = buildQrString(activeType, data)
+    const qrString = buildQrString(activeType, data, wifiHidden)
     if (!qrString) return
     const dataUrl = await generateQrDataUrl(qrString, selectedSize)
     downloadPng(dataUrl, selectedSize)
@@ -144,240 +226,272 @@ export default function AppQrCodeGenerator() {
     downloadSvg(svgString)
   }
 
-  const inputClass =
-    'w-full rounded-lg border border-neutral-200 dark:border-neutral-700 bg-tertiary dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition'
-  const labelClass = 'block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1'
+  async function handleCopySvg() {
+    if (!svgString) return
+    try {
+      await navigator.clipboard.writeText(svgString)
+      setIsCopied(true)
+      if (copyTimeoutRef.current) clearTimeout(copyTimeoutRef.current)
+      copyTimeoutRef.current = setTimeout(() => setIsCopied(false), 2000)
+    } catch {
+      // ignore
+    }
+  }
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-      {/* Left: Form */}
-      <div className="space-y-5">
-        {/* Type tabs */}
-        <div className="flex flex-wrap gap-2">
-          {qrTypes.map(({ key, label }) => (
-            <button
-              key={key}
-              onClick={() => handleTypeChange(key)}
-              className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                activeType === key
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-700'
-              }`}
-            >
-              {label}
-            </button>
-          ))}
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      {/* Left: Input Form */}
+      <div className="lg:col-span-7 space-y-5">
+        {/* Type selection */}
+        <div>
+          <AppSegmentedControl<QrType>
+            options={typeOptions}
+            value={activeType}
+            onChange={handleTypeChange}
+            bordered
+            fontWeight="medium"
+            fullWidth
+            size="sm"
+          />
         </div>
 
-        {/* URL */}
-        {activeType === 'url' && (
-          <div>
-            <label className={labelClass}>{t('urlLabel')}</label>
-            <input
-              type="url"
-              value={formData.url || ''}
-              onChange={(e) => handleField('url', e.target.value)}
-              placeholder={t('urlPlaceholder')}
-              className={inputClass}
-            />
+        {/* Content Settings */}
+        <div className="space-y-4">
+          <div className="flex items-center justify-between pb-1">
+            <h2 className="text-sm font-bold uppercase font-mono tracking-wider text-foreground">
+              {t('contentSettings')}
+            </h2>
+            <AppButton
+              type="button"
+              color="tertiary"
+              small
+              icon={<RotateCcw className="w-3.5 h-3.5" />}
+              iconPosition="left"
+              onClick={handleReset}
+              className="text-xs"
+            >
+              {t('reset')}
+            </AppButton>
           </div>
-        )}
 
-        {/* Text */}
-        {activeType === 'text' && (
-          <div>
-            <label className={labelClass}>{t('textLabel')}</label>
-            <textarea
-              value={formData.text || ''}
-              onChange={(e) => handleField('text', e.target.value)}
-              placeholder={t('textPlaceholder')}
-              rows={4}
-              className={inputClass}
-            />
-          </div>
-        )}
-
-        {/* Email */}
-        {activeType === 'email' && (
-          <div className="space-y-3">
+          {/* URL */}
+          {activeType === 'url' && (
             <div>
-              <label className={labelClass}>{t('emailTo')}</label>
-              <input
+              <AppInput
+                label={t('urlLabel')}
+                type="url"
+                value={formData.url || ''}
+                onChange={(e) => handleField('url', e.target.value)}
+                placeholder={t('urlPlaceholder')}
+                startAdornment={<Globe className="w-4 h-4 text-label" />}
+                className="h-11 text-sm"
+              />
+            </div>
+          )}
+
+          {/* Text */}
+          {activeType === 'text' && (
+            <div>
+              <AppTextarea
+                label={t('textLabel')}
+                value={formData.text || ''}
+                onChange={(e) => handleField('text', e.target.value)}
+                placeholder={t('textPlaceholder')}
+                rows={4}
+                className="text-sm"
+              />
+            </div>
+          )}
+
+          {/* Email */}
+          {activeType === 'email' && (
+            <div className="space-y-4">
+              <AppInput
+                label={t('emailTo')}
                 type="email"
                 value={formData.to || ''}
                 onChange={(e) => handleField('to', e.target.value)}
                 placeholder="user@example.com"
-                className={inputClass}
+                startAdornment={<Mail className="w-4 h-4 text-label" />}
+                className="h-11 text-sm"
               />
-            </div>
-            <div>
-              <label className={labelClass}>{t('emailSubject')}</label>
-              <input
+              <AppInput
+                label={t('emailSubject')}
                 type="text"
                 value={formData.subject || ''}
                 onChange={(e) => handleField('subject', e.target.value)}
-                className={inputClass}
+                placeholder={t('emailSubject')}
+                className="h-11 text-sm"
               />
-            </div>
-            <div>
-              <label className={labelClass}>{t('emailBody')}</label>
-              <textarea
+              <AppTextarea
+                label={t('emailBody')}
                 value={formData.body || ''}
                 onChange={(e) => handleField('body', e.target.value)}
+                placeholder={t('emailBody')}
                 rows={3}
-                className={inputClass}
+                className="text-sm"
               />
             </div>
-          </div>
-        )}
+          )}
 
-        {/* Phone */}
-        {activeType === 'phone' && (
-          <div>
-            <label className={labelClass}>{t('phoneLabel')}</label>
-            <input
-              type="tel"
-              value={formData.phone || ''}
-              onChange={(e) => handleField('phone', e.target.value)}
-              placeholder={t('phonePlaceholder')}
-              className={inputClass}
-            />
-          </div>
-        )}
-
-        {/* WiFi */}
-        {activeType === 'wifi' && (
-          <div className="space-y-3">
+          {/* Phone */}
+          {activeType === 'phone' && (
             <div>
-              <label className={labelClass}>{t('wifiSsid')}</label>
-              <input
+              <AppInput
+                label={t('phoneLabel')}
+                type="tel"
+                value={formData.phone || ''}
+                onChange={(e) => handleField('phone', e.target.value)}
+                placeholder={t('phonePlaceholder')}
+                startAdornment={<Phone className="w-4 h-4 text-label" />}
+                className="h-11 text-sm"
+              />
+            </div>
+          )}
+
+          {/* WiFi */}
+          {activeType === 'wifi' && (
+            <div className="space-y-4">
+              <AppInput
+                label={t('wifiSsid')}
                 type="text"
                 value={formData.ssid || ''}
                 onChange={(e) => handleField('ssid', e.target.value)}
-                className={inputClass}
+                placeholder="WiFi Network Name"
+                startAdornment={<Wifi className="w-4 h-4 text-label" />}
+                className="h-11 text-sm"
               />
-            </div>
-            <div>
-              <label className={labelClass}>{t('wifiSecurity')}</label>
-              <select
+              <AppSelect<WifiSecurity>
+                label={t('wifiSecurity')}
+                options={securityOptions}
                 value={wifiSecurity}
-                onChange={(e) => setWifiSecurity(e.target.value as WifiSecurity)}
-                className={inputClass}
-              >
-                <option value="WPA">{t('wifiWpa')}</option>
-                <option value="WEP">{t('wifiWep')}</option>
-                <option value="none">{t('wifiNone')}</option>
-              </select>
-            </div>
-            {wifiSecurity !== 'none' && (
-              <div>
-                <label className={labelClass}>{t('wifiPassword')}</label>
-                <div className="relative">
-                  <input
-                    type={showPassword ? 'text' : 'password'}
-                    value={formData.password || ''}
-                    onChange={(e) => handleField('password', e.target.value)}
-                    className={`${inputClass} pr-10`}
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setShowPassword((v) => !v)}
-                    className="absolute inset-y-0 right-0 flex items-center px-3 text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300"
-                    aria-label={showPassword ? 'Hide password' : 'Show password'}
-                  >
-                    {showPassword ? (
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
-                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" />
-                        <line x1="1" y1="1" x2="23" y2="23" />
-                      </svg>
-                    ) : (
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
-                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                        <circle cx="12" cy="12" r="3" />
-                      </svg>
-                    )}
-                  </button>
-                </div>
-              </div>
-            )}
-            <label className="flex items-center gap-2 text-sm text-neutral-700 dark:text-neutral-300 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={wifiHidden}
-                onChange={(e) => setWifiHidden(e.target.checked)}
-                className="rounded"
+                onChange={(val) => setWifiSecurity(val)}
+                searchable={false}
               />
-              Hidden network
-            </label>
-          </div>
-        )}
+              {wifiSecurity !== 'none' && (
+                <AppInput
+                  label={t('wifiPassword')}
+                  type={showPassword ? 'text' : 'password'}
+                  value={formData.password || ''}
+                  onChange={(e) => handleField('password', e.target.value)}
+                  placeholder="••••••••"
+                  className="h-11 text-sm"
+                  endAdornment={
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword((prev) => !prev)}
+                      className="text-label hover:text-foreground transition-colors p-1"
+                      aria-label={showPassword ? t('hidePassword') : t('showPassword')}
+                    >
+                      {showPassword ? (
+                        <EyeOff className="w-4 h-4" />
+                      ) : (
+                        <Eye className="w-4 h-4" />
+                      )}
+                    </button>
+                  }
+                />
+              )}
+              <div className="pt-1">
+                <AppCheckbox
+                  label={t('hiddenNetwork')}
+                  checked={wifiHidden}
+                  onChange={(checked) => setWifiHidden(checked)}
+                />
+              </div>
+            </div>
+          )}
+        </div>
       </div>
 
-      {/* Right: Preview + Download */}
-      <div className="space-y-4">
-        <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">{t('preview')}</p>
-        <div className="flex items-center justify-center rounded-xl border border-neutral-200 dark:border-neutral-700 bg-tertiary dark:bg-neutral-900 p-6 min-h-[280px]">
+      {/* Right: Preview + Actions */}
+      <div className="lg:col-span-5 space-y-4">
+        <h2 className="text-sm font-bold uppercase font-mono tracking-wider text-foreground">
+          {t('preview')}
+        </h2>
+
+        {/* QR Display Container */}
+        <div className="flex flex-col items-center justify-center rounded-[2px] bg-tertiary border border-border p-6 min-h-[300px]">
           {isGenerating ? (
-            <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+            <div className="flex flex-col items-center justify-center gap-3">
+              <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+            </div>
           ) : previewDataUrl ? (
-            <img
-              src={previewDataUrl}
-              alt="QR Code Preview"
-              className="w-[220px] h-[220px] object-contain"
-            />
+            <div className="p-3 bg-white rounded-[2px] shadow-sm flex items-center justify-center">
+              <img
+                src={previewDataUrl}
+                alt="QR Code Preview"
+                className="w-[200px] h-[200px] sm:w-[220px] sm:h-[220px] object-contain"
+              />
+            </div>
           ) : (
-            <p className="text-sm text-neutral-400 dark:text-neutral-500 text-center px-4">
-              {t('emptyState')}
-            </p>
+            <div className="flex flex-col items-center justify-center text-center p-6 text-label">
+              <QrCode className="w-12 h-12 text-label/40 mb-3" />
+              <p className="text-sm max-w-xs">{t('emptyState')}</p>
+            </div>
           )}
         </div>
 
+        {/* Actions when QR is ready */}
         {previewDataUrl && (
-          <div className="space-y-3">
-            {/* Size selector */}
-            <div>
-              <label className={labelClass}>{t('size')}</label>
-              <div className="flex gap-2 flex-wrap">
-                {([256, 512, 1024] as const).map((size) => (
-                  <button
-                    key={size}
-                    onClick={() => setSelectedSize(size)}
-                    className={`px-3 py-1.5 rounded-lg text-sm transition-colors ${
-                      selectedSize === size
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-700'
-                    }`}
-                  >
-                    {t(`size${size}` as 'size256' | 'size512' | 'size1024')}
-                  </button>
-                ))}
-              </div>
+          <div className="space-y-4 pt-1">
+            {/* Size Selector */}
+            <div className="space-y-1.5">
+              <label className="text-xs font-mono font-semibold uppercase text-label">
+                {t('size')}
+              </label>
+              <AppSegmentedControl<QrSize>
+                options={sizeOptions}
+                value={selectedSize}
+                onChange={(val) => setSelectedSize(val)}
+                bordered
+                fontWeight="medium"
+                fullWidth
+                size="sm"
+              />
             </div>
 
-            {/* Download buttons */}
-            <div className="flex gap-2 flex-wrap">
-              <button
+            {/* Action buttons */}
+            <div className="space-y-2">
+              <AppButton
+                type="button"
+                color="primary"
+                icon={<Download className="w-4 h-4" />}
+                iconPosition="left"
                 onClick={handleDownloadPng}
-                className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors"
+                className="w-full text-sm font-semibold justify-center h-11"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                  <polyline points="7 10 12 15 17 10" />
-                  <line x1="12" y1="15" x2="12" y2="3" />
-                </svg>
-                {t('downloadPng')}
-              </button>
-              <button
-                onClick={handleDownloadSvg}
-                className="flex items-center gap-2 px-4 py-2 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 text-neutral-700 dark:text-neutral-300 rounded-lg text-sm font-medium transition-colors"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                  <polyline points="7 10 12 15 17 10" />
-                  <line x1="12" y1="15" x2="12" y2="3" />
-                </svg>
-                {t('downloadSvg')}
-              </button>
+                {t('downloadPng')} ({selectedSize}px)
+              </AppButton>
+
+              <div className="grid grid-cols-2 gap-2">
+                <AppButton
+                  type="button"
+                  color="tertiary"
+                  icon={<Download className="w-4 h-4" />}
+                  iconPosition="left"
+                  onClick={handleDownloadSvg}
+                  className="w-full text-xs font-semibold justify-center h-10"
+                >
+                  {t('downloadSvg')}
+                </AppButton>
+                <AppButton
+                  type="button"
+                  color="tertiary"
+                  icon={
+                    isCopied ? (
+                      <Check className="w-4 h-4 text-emerald-500" />
+                    ) : (
+                      <Copy className="w-4 h-4" />
+                    )
+                  }
+                  iconPosition="left"
+                  onClick={handleCopySvg}
+                  className="w-full text-xs font-semibold justify-center h-10"
+                >
+                  {isCopied ? t('copied') : t('copySvg')}
+                </AppButton>
+              </div>
             </div>
           </div>
         )}

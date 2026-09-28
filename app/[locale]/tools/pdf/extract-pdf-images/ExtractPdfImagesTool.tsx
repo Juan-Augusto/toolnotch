@@ -4,11 +4,6 @@ import React, { useState, useTransition } from "react";
 import { useTranslations } from "next-intl";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
-import {
-  ShieldCheck,
-  Sparkles,
-  Image as ImageIcon,
-} from "lucide-react";
 import { AppCard, AppButton, AppDropfile } from "@/components/ui";
 import type { FaqItem } from "@/components/AppFaqSection";
 import { extractImagesFromPdf, ExtractedPdfImage } from "@/lib/pdfExtractImages";
@@ -103,26 +98,6 @@ export default function ExtractPdfImagesTool({
           title={title}
           description={description}
           locale={locale}
-          badges={[
-            {
-              text: t("badges.noUpload"),
-              bg: "bg-primary",
-              textColor: "text-background",
-              icon: <ShieldCheck className="w-3.5 h-3.5 shrink-0" />,
-            },
-            {
-              text: t("badges.quality"),
-              bg: "bg-secondary",
-              textColor: "text-background",
-              icon: <ImageIcon className="w-3.5 h-3.5 shrink-0" />,
-            },
-            {
-              text: t("badges.free"),
-              bg: "bg-foreground",
-              textColor: "text-background",
-              icon: <Sparkles className="w-3.5 h-3.5 shrink-0" />,
-            },
-          ]}
         />
 
         <AppCard

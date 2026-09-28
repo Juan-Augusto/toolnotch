@@ -4735,10 +4735,10 @@
     }
   },
   "qrGenerator": {
-    "metaTitle": "Gerador de QR Code — Grátis, Sem Cadastro | ToolNotch",
+    "metaTitle": "Gerador de QR Code: Grátis, Sem Cadastro | ToolNotch",
     "metaDescription": "Gere um QR Code grátis para qualquer URL, rede WiFi, e-mail ou número de telefone. Baixe como PNG ou SVG, em qualquer tamanho. Sem cadastro, sem marca d'água, instantâneo.",
     "title": "Gerador de QR Code",
-    "description": "Crie um QR Code para qualquer URL, texto, senha WiFi, e-mail ou telefone. Baixe como PNG ou SVG — grátis, instantâneo, sem cadastro.",
+    "description": "Crie um QR Code para qualquer URL, texto, senha WiFi, e-mail ou telefone. Baixe como PNG ou SVG: grátis, instantâneo e sem cadastro.",
     "typeUrl": "URL / Link",
     "typeText": "Texto Simples",
     "typeEmail": "E-mail",
@@ -4759,18 +4759,25 @@
     "wifiWpa": "WPA / WPA2",
     "wifiWep": "WEP",
     "wifiNone": "Nenhuma (rede aberta)",
+    "hiddenNetwork": "Rede oculta",
+    "contentSettings": "Dados do Conteúdo",
+    "reset": "Limpar",
+    "showPassword": "Ver senha",
+    "hidePassword": "Ocultar senha",
     "preview": "Pré-visualização do QR Code",
     "downloadPng": "Baixar PNG",
     "downloadSvg": "Baixar SVG",
-    "size": "Tamanho",
-    "size256": "256px (pequeno)",
-    "size512": "512px (médio)",
-    "size1024": "1024px (grande)",
-    "emptyState": "Insira o conteúdo acima para gerar seu QR Code",
+    "copySvg": "Copiar SVG",
+    "copied": "Copiado!",
+    "size": "Resolução de Saída",
+    "size256": "256px (Pequeno)",
+    "size512": "512px (Médio)",
+    "size1024": "1024px (Grande)",
+    "emptyState": "Preencha os campos ao lado para gerar seu QR Code instantaneamente",
     "faqs": [
       {
         "question": "Os QR Codes são gratuitos?",
-        "answer": "Sim — completamente gratuitos, sem necessidade de cadastro e sem marcas d'água nas imagens baixadas. Você pode gerar QR Codes ilimitados."
+        "answer": "Sim: completamente gratuitos, sem necessidade de cadastro e sem marcas d'água nas imagens baixadas. Você pode gerar QR Codes ilimitados."
       },
       {
         "question": "Os QR Codes expiram?",
@@ -4782,36 +4789,36 @@
       },
       {
         "question": "Posso criar um QR Code para WiFi?",
-        "answer": "Sim — selecione a aba WiFi, insira o nome da rede (SSID) e a senha, e o QR Code permitirá que qualquer pessoa se conecte ao seu WiFi instantaneamente sem digitar a senha."
+        "answer": "Sim: selecione a aba WiFi, insira o nome da rede (SSID) e a senha, e o QR Code permitirá que qualquer pessoa se conecte ao seu WiFi instantaneamente sem digitar a senha."
       },
       {
         "question": "Os dados são seguros?",
-        "answer": "Sim — toda a geração do QR Code acontece no seu navegador. Nenhuma informação é enviada para nossos servidores."
+        "answer": "Sim: toda a geração do QR Code acontece no seu navegador. Nenhuma informação é enviada para nossos servidores."
       }
     ],
     "richContent": {
-      "whatIs": "Um gerador de código QR cria códigos de barras bidimensionais que as câmeras dos smartphones leem diretamente. Eles armazenam texto, URLs ou Wi-Fi. Os níveis de correção de erros controlam a tolerância a danos.",
+      "whatIs": "Um gerador de código QR cria códigos de barras bidimensionais que as câmeras dos smartphones leem diretamente. Eles armazenam texto, URLs ou credenciais de Wi-Fi. Os níveis de correção de erros controlam a tolerância a danos.",
       "howToUse": [
-        "Selecione o tipo de código QR.",
-        "Insira o conteúdo.",
-        "Selecione o tamanho de saída (PNG ou SVG).",
-        "Visualize o código QR gerado.",
-        "Faça o download."
+        "Selecione o tipo de conteúdo (Link, Texto, E-mail, Telefone ou WiFi).",
+        "Insira as informações desejadas nos campos.",
+        "Escolha a resolução desejada para exportação.",
+        "Confira a pré-visualização em tempo real.",
+        "Baixe seu QR Code em formato PNG de alta definição ou SVG vetorial."
       ],
-      "whyItMatters": "Os códigos QR preenchem a lacuna entre o físico e o digital: os cartões de visita vinculam-se a portfólios, os menus são sem contato, etc.",
-      "proTip": "Teste sempre um código QR antes de imprimi-lo em escala com pelo menos dois telefones diferentes."
+      "whyItMatters": "Os códigos QR preenchem a lacuna entre o físico e o digital: os cartões de visita vinculam-se a portfólios, os menus são sem contato, embalagens levam a manuais e conexões WiFi tornam-se instantâneas.",
+      "proTip": "Teste sempre o código QR com a câmera do celular antes de imprimir materiais em grande escala."
     }
   },
   "healthCalculator": {
-    "bmiMetaTitle": "Calculadora IMC — Verifique seu Índice de Massa Corporal Grátis | ToolNotch",
+    "bmiMetaTitle": "Calculadora IMC - Verifique seu Índice de Massa Corporal Grátis | ToolNotch",
     "bmiMetaDescription": "Calcule seu Índice de Massa Corporal (IMC) instantaneamente. Insira seu peso e altura para encontrar seu IMC e categoria de saúde. Suporta métricas e imperiais. Grátis.",
     "bmiTitle": "Calculadora de IMC",
     "bmiDescription": "Calcule seu Índice de Massa Corporal instantaneamente. Insira seu peso e altura para ver seu IMC e categoria de saúde.",
-    "tdeeMetaTitle": "Calculadora de Calorias — Descubra seu Gasto Calórico Diário | ToolNotch",
+    "tdeeMetaTitle": "Calculadora de Calorias - Descubra seu Gasto Calórico Diário | ToolNotch",
     "tdeeMetaDescription": "Calcule seu Gasto Energético Total Diário (TDEE) e TMB. Descubra quantas calorias você precisa por dia com base em idade, peso, altura e nível de atividade. Grátis.",
     "tdeeTitle": "Calculadora de Calorias",
     "tdeeDescription": "Descubra quantas calorias você precisa por dia com base em sua idade, peso, altura e nível de atividade física.",
-    "deficitMetaTitle": "Calculadora de Déficit Calórico — Quantas Calorias para Emagrecer | ToolNotch",
+    "deficitMetaTitle": "Calculadora de Déficit Calórico - Quantas Calorias para Emagrecer | ToolNotch",
     "deficitMetaDescription": "Calcule seu déficit calórico para perda de peso. Descubra exatamente quantas calorias comer por dia para perder 0,5 kg por semana. Calculadora grátis.",
     "deficitTitle": "Calculadora de Déficit Calórico",
     "deficitDescription": "Calcule quantas calorias comer por dia para atingir sua meta de peso, com base no seu TDEE e um déficit calórico seguro.",
@@ -4883,9 +4890,9 @@
       }
     ],
     "bmiRichContent": {
-      "whatIs": "O Índice de Massa Corporal (IMC) é um número calculado a partir do seu peso e altura que fornece um panorama rápido de se o seu peso corporal está dentro de uma faixa saudável. É amplamente utilizado por clínicos e pesquisadores como ferramenta de triagem de baixo custo para identificar potenciais riscos de saúde relacionados ao peso. No entanto, o IMC tem limitações reais: ele não distingue entre massa muscular e gordura, portanto um atleta musculoso pode ser classificado como \"sobrepeso\" mesmo tendo um percentual de gordura muito baixo. O IMC também não leva em conta a distribuição da gordura no corpo — a gordura abdominal apresenta riscos diferentes da gordura armazenada em outras partes. Para uma visão mais completa da composição corporal, considere combinar o IMC com a medição da circunferência da cintura, a relação cintura-quadril ou uma densitometria (DEXA).",
+      "whatIs": "O Índice de Massa Corporal (IMC) é um número calculado a partir do seu peso e altura que fornece um panorama rápido de se o seu peso corporal está dentro de uma faixa saudável. É amplamente utilizado por clínicos e pesquisadores como ferramenta de triagem de baixo custo para identificar potenciais riscos de saúde relacionados ao peso. No entanto, o IMC tem limitações reais: ele não distingue entre massa muscular e gordura, portanto um atleta musculoso pode ser classificado como \"sobrepeso\" mesmo tendo um percentual de gordura muito baixo. O IMC também não leva em conta a distribuição da gordura no corpo - a gordura abdominal apresenta riscos diferentes da gordura armazenada em outras partes. Para uma visão mais completa da composição corporal, considere combinar o IMC com a medição da circunferência da cintura, a relação cintura-quadril ou uma densitometria (DEXA).",
       "howToUse": [
-        "Selecione o sistema de unidades — Métrico (kg, cm) ou Imperial (lbs, pés/pol).",
+        "Selecione o sistema de unidades - Métrico (kg, cm) ou Imperial (lbs, pés/pol).",
         "Insira seu peso atual e sua altura nos campos disponíveis.",
         "Clique em Calcular para ver instantaneamente sua pontuação de IMC.",
         "Verifique sua categoria de IMC (Abaixo do Peso, Normal, Sobrepeso ou Obesidade) no indicador visual colorido.",
@@ -4896,11 +4903,11 @@
       "proTip": "Se você pratica musculação ou treino de força regularmente, seu IMC pode superestimar seu percentual de gordura. Complemente o resultado do IMC com a medição da circunferência da cintura (busque menos de 94 cm para homens e menos de 80 cm para mulheres) para uma avaliação de saúde mais precisa."
     },
     "tdeeRichContent": {
-      "whatIs": "O Gasto Energético Total Diário (TDEE, na sigla em inglês) é o total de calorias que seu corpo queima ao longo de um dia — desde manter o coração batendo enquanto você dorme (sua Taxa Metabólica Basal, ou TMB) até caminhar, digerir alimentos e fazer exercícios. Sua TMB representa cerca de 60–75% do seu TDEE e é calculada aqui usando a equação de Mifflin-St Jeor, a fórmula mais validada para adultos não atletas. O gasto energético restante é multiplicado por um fator de atividade que varia de 1,2 (sedentário) a 1,9 (extremamente ativo). Conhecer seu TDEE permite definir metas calóricas com precisão real: coma no nível do TDEE para manter o peso, abaixo para perder ou acima para ganhar. Um aviso importante: o TDEE diminui conforme você perde peso, e a termogênese adaptativa (o metabolismo desacelerando em resposta ao déficit) significa que pode ser necessário reavaliar seus números a cada 4–6 semanas.",
+      "whatIs": "O Gasto Energético Total Diário (TDEE, na sigla em inglês) é o total de calorias que seu corpo queima ao longo de um dia - desde manter o coração batendo enquanto você dorme (sua Taxa Metabólica Basal, ou TMB) até caminhar, digerir alimentos e fazer exercícios. Sua TMB representa cerca de 60–75% do seu TDEE e é calculada aqui usando a equação de Mifflin-St Jeor, a fórmula mais validada para adultos não atletas. O gasto energético restante é multiplicado por um fator de atividade que varia de 1,2 (sedentário) a 1,9 (extremamente ativo). Conhecer seu TDEE permite definir metas calóricas com precisão real: coma no nível do TDEE para manter o peso, abaixo para perder ou acima para ganhar. Um aviso importante: o TDEE diminui conforme você perde peso, e a termogênese adaptativa (o metabolismo desacelerando em resposta ao déficit) significa que pode ser necessário reavaliar seus números a cada 4–6 semanas.",
       "howToUse": [
         "Insira sua idade, sexo biológico, peso e altura.",
         "Escolha o sistema de unidades (Métrico ou Imperial).",
-        "Selecione seu nível de atividade com honestidade — a maioria das pessoas o superestima, então na dúvida, escolha um nível abaixo.",
+        "Selecione seu nível de atividade com honestidade - a maioria das pessoas o superestima, então na dúvida, escolha um nível abaixo.",
         "Clique em Calcular para ver sua TMB e seu TDEE.",
         "Revise a tabela de metas calóricas para encontrar sua meta diária para manter, perder ou ganhar peso.",
         "Reavalie seu TDEE a cada 4–6 semanas conforme seu peso muda, para manter suas metas precisas."
@@ -4909,18 +4916,34 @@
       "proTip": "Os multiplicadores de atividade nas calculadoras de TDEE se referem a todo o movimento ao longo do dia, não apenas aos treinos estruturados. Se você tem um trabalho de escritório mas vai à academia 4 dias por semana, 'Levemente ativo' costuma ser mais preciso do que 'Moderadamente ativo'. Superestimar seu nível de atividade é o motivo mais comum pelo qual as pessoas travam na dieta."
     },
     "deficitRichContent": {
-      "whatIs": "Um déficit calórico ocorre quando você consome menos calorias do que seu Gasto Energético Total Diário (TDEE), forçando seu corpo a recorrer à energia armazenada — principalmente gordura corporal — para compensar a diferença. Para a maioria dos adultos, um déficit moderado de 250–500 kcal por dia produz uma perda de gordura segura e sustentável de aproximadamente 0,25–0,5 kg por semana, sem provocar fome intensa ou perda muscular. A ingestão de proteínas torna-se especialmente importante durante um déficit — consumir ao menos 1,6–2,2 g de proteína por kg de peso corporal ajuda a preservar a massa muscular magra enquanto o corpo elimina gordura. Vale lembrar que, conforme você perde peso, seu TDEE diminui e a termogênese adaptativa pode desacelerar a perda ao longo do tempo.",
+      "whatIs": "Um déficit calórico ocorre quando você consome menos calorias do que seu Gasto Energético Total Diário (TDEE), forçando seu corpo a recorrer à energia armazenada - principalmente gordura corporal - para compensar a diferença. Para a maioria dos adultos, um déficit moderado de 250–500 kcal por dia produz uma perda de gordura segura e sustentável de aproximadamente 0,25–0,5 kg por semana, sem provocar fome intensa ou perda muscular. A ingestão de proteínas torna-se especialmente importante durante um déficit - consumir ao menos 1,6–2,2 g de proteína por kg de peso corporal ajuda a preservar a massa muscular magra enquanto o corpo elimina gordura. Vale lembrar que, conforme você perde peso, seu TDEE diminui e a termogênese adaptativa pode desacelerar a perda ao longo do tempo.",
       "howToUse": [
         "Insira sua idade, sexo biológico, peso, altura e nível de atividade.",
         "Clique em Calcular para ver seu TDEE (calorias de manutenção).",
         "Revise a tabela de déficit: o déficit de 250 kcal/dia visa ~0,25 kg de perda por semana; o de 500 kcal/dia visa ~0,5 kg por semana.",
-        "Escolha o nível de déficit que se encaixa na sua agenda e que parece sustentável — mais rápido nem sempre é melhor.",
+        "Escolha o nível de déficit que se encaixa na sua agenda e que parece sustentável - mais rápido nem sempre é melhor.",
         "Defina sua meta diária de calorias em um aplicativo de registro alimentar (MyFitnessPal, Cronometer etc.) e priorize a proteína.",
         "Recalcule a cada 3–4 semanas conforme seu peso muda, para manter o déficit preciso."
       ],
-      "whyItMatters": "Um déficit calórico muito agressivo leva à perda muscular, fadiga, deficiências nutricionais e recuperação de peso. Um déficit pequeno demais gera progresso frustrante e lento. Calcular seu déficit pessoal com base no seu TDEE real — em vez de seguir uma dieta genérica de 1.200 kcal — protege sua saúde metabólica e torna o processo sustentável a longo prazo.",
+      "whyItMatters": "Um déficit calórico muito agressivo leva à perda muscular, fadiga, deficiências nutricionais e recuperação de peso. Um déficit pequeno demais gera progresso frustrante e lento. Calcular seu déficit pessoal com base no seu TDEE real - em vez de seguir uma dieta genérica de 1.200 kcal - protege sua saúde metabólica e torna o processo sustentável a longo prazo.",
       "proTip": "Nunca deixe suas calorias diárias caírem abaixo da sua TMB por períodos prolongados. Comer abaixo da TMB força o corpo a quebrar músculo para obter energia, reduz a função da tireoide e desacelera o metabolismo de formas que podem persistir muito depois de o regime terminar. Um déficit de 20% abaixo do TDEE é geralmente o máximo seguro para a maioria das pessoas."
-    }
+    },
+    "healthyWeightRange": "Faixa de peso saudável",
+    "healthyWeightRangeForHeight": "Faixa de peso saudável para sua altura",
+    "reset": "Limpar",
+    "dailyCalorieTarget": "Meta diária de calorias",
+    "deficitPlan": "Plano de Déficit Calórico",
+    "maintenanceTdee": "Manutenção (TDEE)",
+    "recommended": "Recomendado",
+    "estWeightChange": "Variação estimada de peso",
+    "weeklyLossFast": "~0,5 kg / semana",
+    "weeklyLossSlow": "~0,25 kg / semana",
+    "weeklyMaintain": "Peso estável",
+    "weeklyGainSlow": "+0,25 kg / semana",
+    "weeklyGainFast": "+0,5 kg / semana",
+    "bmiSexNoteFemale": "Para mulheres, a faixa da OMS é a mesma (18,5 a 24,9), mas o corpo feminino possui naturalmente maior percentual de gordura essencial (~21% a 32%) para a saúde hormonal.",
+    "bmiSexNoteMale": "Para homens, a faixa da OMS é a mesma (18,5 a 24,9), mas homens possuem maior massa muscular e densidade óssea (~8% a 20% de gordura corporal). Se você treina força, o IMC pode superestimar gordura.",
+    "bmiSexContext": "Diferença entre sexos"
   },
   "gpaCalculator": {
     "metaTitle": "Calculadora de GPA: Como Calcular seu GPA Online | ToolNotch",
@@ -5081,22 +5104,37 @@
     }
   },
   "ageCalculator": {
-    "metaTitle": "Calculadora de Idade — Quantos Anos Tenho? Calcule sua Idade Exata | ToolNotch",
+    "metaTitle": "Calculadora de Idade: Quantos Anos Tenho? Calcule sua Idade Exata | ToolNotch",
     "metaDescription": "Calcule sua idade exata em anos, meses e dias. Descubra quantos dias faltam para seu aniversário ou quantos anos você terá em qualquer data futura. Grátis.",
     "title": "Calculadora de Idade",
     "description": "Calcule sua idade exata em anos, meses e dias. Descubra quantos dias faltam para seu próximo aniversário ou quantos anos você terá em qualquer data futura.",
     "birthdate": "Data de Nascimento",
+    "targetDate": "Calcular idade em",
+    "useToday": "Usar data de hoje",
+    "today": "Hoje",
     "youAre": "Você tem",
     "yearsOld": "anos de idade",
     "monthsWord": "meses",
     "daysWord": "dias",
+    "and": "e",
     "totalDays": "{total} dias vividos no total",
-    "nextBirthday": "🎂 Próximo Aniversário",
+    "totalMonths": "meses de vida",
+    "totalWeeks": "semanas de vida",
+    "totalHours": "horas de vida",
+    "lifeSummary": "Estatísticas de Vida",
+    "nextBirthday": "Próximo Aniversário",
     "inDays": "Em {n} dias",
-    "happyBirthday": "🎂 Feliz Aniversário! 🎂",
+    "happyBirthday": "🎉 Feliz Aniversário! Parabéns!",
     "futureAge": "Quantos anos terei em...",
     "futureResult": "Em {date}, você terá {years} anos",
-    "errorFutureDate": "Por favor, insira uma data no passado",
+    "errorFutureDate": "A data de nascimento não pode ser posterior à data de cálculo",
+    "reset": "Limpar",
+    "copySummary": "Copiar resumo",
+    "copied": "Copiado!",
+    "emptyPrompt": "Informe sua data de nascimento para calcular sua idade exata.",
+    "birthParameters": "Dados de Nascimento",
+    "exactAge": "Sua Idade Exata",
+    "onDate": "Calculada em {date}",
     "faqs": [
       {
         "question": "Como calcular minha idade exata?",
@@ -5108,11 +5146,11 @@
       },
       {
         "question": "Quantos anos terei em uma data futura?",
-        "answer": "Use a seção 'Quantos anos terei em...'. Insira qualquer data futura e a calculadora dirá exatamente quantos anos você terá naquela data."
+        "answer": "Altere o campo 'Calcular idade em' para qualquer data futura ou passada para descobrir com exatidão a idade que você terá ou tinha naquele dia específico."
       },
       {
         "question": "A calculadora considera anos bissextos?",
-        "answer": "Sim — esta calculadora usa aritmética de datas precisa que considera corretamente anos bissextos, aniversários no dia 29 de fevereiro e meses com diferentes números de dias."
+        "answer": "Sim: esta calculadora usa aritmética de datas precisa que considera corretamente anos bissextos, aniversários no dia 29 de fevereiro e meses com diferentes números de dias."
       },
       {
         "question": "Qual é minha idade se nasci em 1990?",
@@ -5122,11 +5160,10 @@
     "richContent": {
       "whatIs": "Uma calculadora de idade calcula a diferença exata entre uma data de nascimento e o dia de hoje (ou data alvo) em anos, meses e dias. Casos isolados tornam isso complexo: aniversários de ano bissexto, sistema de idade coreano e marcos legais.",
       "howToUse": [
-        "Insira a sua data de nascimento.",
-        "Opcionalmente, insira uma data-alvo.",
-        "Leia a sua idade exata.",
-        "Verifique a contagem regressiva de dias.",
-        "Use o recurso de idade futura para outras datas."
+        "Insira a sua data de nascimento no campo indicado.",
+        "Se desejar, altere a data de referência para calcular sua idade em outro dia.",
+        "Veja imediatamente sua idade exata expressa em anos, meses e dias.",
+        "Acompanhe a contagem regressiva para seu próximo aniversário e suas estatísticas de vida."
       ],
       "whyItMatters": "A idade exata é importante em contextos legais e médicos. Os cortes de matrícula na escola usam regras precisas, dosagens médicas para bebês e benefícios previdenciários.",
       "proTip": "Para planejamento de aposentadoria, calcule a sua idade exata em 1º de janeiro do ano pretendido para garantir os benefícios corretamente."

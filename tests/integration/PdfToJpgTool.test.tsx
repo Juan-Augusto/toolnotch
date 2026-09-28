@@ -57,7 +57,7 @@ describe("PdfToJpgTool Integration", () => {
     jest.clearAllMocks();
   });
 
-  test("renders breadcrumb, heading, badges, dropzone, and disabled convert button initially", () => {
+  test("renders breadcrumb, heading, dropzone, and disabled convert button initially", () => {
     render(<PdfToJpgTool {...defaultProps} />);
 
     expect(screen.getByText("Início")).toBeInTheDocument();
@@ -65,9 +65,6 @@ describe("PdfToJpgTool Integration", () => {
     expect(
       screen.getByRole("heading", { level: 1, name: "PDF para JPG" })
     ).toBeInTheDocument();
-    expect(screen.getByText("pdf.pdfToJpg.badges.noUpload")).toBeInTheDocument();
-    expect(screen.getByText("pdf.pdfToJpg.badges.quality")).toBeInTheDocument();
-    expect(screen.getByText("pdf.pdfToJpg.badges.free")).toBeInTheDocument();
 
     const convertBtn = screen.getByRole("button", {
       name: /pdf\.pdfToJpg\.button\.convert/i,

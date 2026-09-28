@@ -11,7 +11,6 @@ import {
   DragEndEvent,
 } from "@dnd-kit/core";
 import { arrayMove } from "@dnd-kit/sortable";
-import { ShieldCheck, Sparkles, Layers } from "lucide-react";
 import { AppCard, AppDropfile } from "@/components/ui";
 import type { FaqItem } from "@/components/AppFaqSection";
 import { pdfToImages } from "@/lib/pdfToImage";
@@ -233,26 +232,6 @@ export default function OrganizePdfTool({
           title={title}
           description={description}
           locale={locale}
-          badges={[
-            {
-              text: t("badges.noUpload"),
-              bg: "bg-primary",
-              textColor: "text-background",
-              icon: <ShieldCheck className="w-3.5 h-3.5 shrink-0" />,
-            },
-            {
-              text: t("badges.reorder"),
-              bg: "bg-secondary",
-              textColor: "text-background",
-              icon: <Layers className="w-3.5 h-3.5 shrink-0" />,
-            },
-            {
-              text: t("badges.free"),
-              bg: "bg-foreground",
-              textColor: "text-background",
-              icon: <Sparkles className="w-3.5 h-3.5 shrink-0" />,
-            },
-          ]}
         />
 
         <AppCard

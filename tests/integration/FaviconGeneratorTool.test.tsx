@@ -74,7 +74,7 @@ describe("FaviconGeneratorTool Integration", () => {
     jest.clearAllMocks();
   });
 
-  test("renders breadcrumbs, title, badges, and dropzone", () => {
+  test("renders breadcrumbs, title, and dropzone", () => {
     render(<FaviconGeneratorTool {...defaultProps} />);
 
     expect(screen.getByText("Início")).toBeInTheDocument();
@@ -85,10 +85,6 @@ describe("FaviconGeneratorTool Integration", () => {
         name: "Gerador de Favicon Online",
       }),
     ).toBeInTheDocument();
-
-    expect(screen.getByText("image.faviconGenerator.badges.private")).toBeInTheDocument();
-    expect(screen.getByText("image.faviconGenerator.badges.package")).toBeInTheDocument();
-    expect(screen.getByText("image.faviconGenerator.badges.free")).toBeInTheDocument();
   });
 
   test("loads image, generates favicon package, and allows downloading ZIP", async () => {

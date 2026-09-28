@@ -49,15 +49,12 @@ describe("SplitTool Integration", () => {
     jest.clearAllMocks();
   });
 
-  test("renders with breadcrumb, heading, badges, and disabled split button initially", () => {
+  test("renders with breadcrumb, heading, and disabled split button initially", () => {
     render(<SplitTool {...defaultProps} />);
 
     expect(screen.getByText("Início")).toBeInTheDocument();
     expect(screen.getByText("Ferramentas PDF")).toBeInTheDocument();
     expect(screen.getByRole("heading", { level: 1, name: "Split PDF" })).toBeInTheDocument();
-    expect(screen.getByText("Sem upload para servidores")).toBeInTheDocument();
-    expect(screen.getByText("Extração precisa de páginas")).toBeInTheDocument();
-    expect(screen.getByText("Ilimitado & Gratuito")).toBeInTheDocument();
 
     const splitBtn = screen.getByRole("button", { name: /pdf\.split\.button\.split/i });
     expect(splitBtn).toBeDisabled();

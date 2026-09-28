@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { saveAs } from "file-saver";
-import { ShieldCheck, Zap, Sparkles, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { AppCard, AppButton, AppDropfile } from "@/components/ui";
 import { compressPDF } from "@/lib/pdfCompress";
 import type { FaqItem } from "@/components/AppFaqSection";
@@ -93,41 +93,6 @@ export default function CompressTool({
           title={title}
           description={description}
           locale={locale}
-          badges={[
-            {
-              text:
-                locale === "pt"
-                  ? "Sem upload para servidores"
-                  : locale === "es"
-                    ? "Sin subida a servidores"
-                    : "Zero server upload",
-              bg: "bg-primary",
-              textColor: "text-background",
-              icon: <ShieldCheck className="w-3.5 h-3.5 shrink-0" />,
-            },
-            {
-              text:
-                locale === "pt"
-                  ? "Preserva textos e imagens"
-                  : locale === "es"
-                    ? "Preserva textos e imágenes"
-                    : "Preserves text & graphics",
-              bg: "bg-secondary",
-              textColor: "text-background",
-              icon: <Zap className="w-3.5 h-3.5 shrink-0" />,
-            },
-            {
-              text:
-                locale === "pt"
-                  ? "Ilimitado & Gratuito"
-                  : locale === "es"
-                    ? "Ilimitado y Gratis"
-                    : "Unlimited & Free",
-              bg: "bg-foreground",
-              textColor: "text-background",
-              icon: <Sparkles className="w-3.5 h-3.5 shrink-0" />,
-            },
-          ]}
         />
 
         <AppCard

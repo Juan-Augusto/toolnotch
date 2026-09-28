@@ -224,5 +224,37 @@ describe('AppSegmentedControl', () => {
     const selectedLabel = screen.getByText('5yr');
     expect(selectedLabel.parentElement?.className).toContain('font-medium');
   });
+
+  it('defaults to bordered items and allows disabling with bordered=false', () => {
+    const options: SegmentOption<string>[] = [
+      { label: 'Opção 1', value: '1' },
+      { label: 'Opção 2', value: '2' },
+    ];
+
+    const { rerender } = render(
+      <AppSegmentedControl
+        options={options}
+        defaultValue="1"
+      />
+    );
+
+    let radioButtons = screen.getAllByRole('radio');
+    expect(radioButtons[0].className).toContain('border');
+    expect(radioButtons[0].className).toContain('border-secondary');
+    expect(radioButtons[1].className).toContain('border');
+    expect(radioButtons[1].className).toContain('border-border');
+
+    rerender(
+      <AppSegmentedControl
+        options={options}
+        defaultValue="1"
+        bordered={false}
+      />
+    );
+
+    radioButtons = screen.getAllByRole('radio');
+    expect(radioButtons[0].className).not.toContain('border-secondary');
+    expect(radioButtons[1].className).not.toContain('border-border');
+  });
 });
 

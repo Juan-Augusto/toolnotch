@@ -274,7 +274,7 @@ export default function StandupGeneratorClient({ labels, locale = "pt" }: Props)
             onClick={handleLoadHistory}
             className="font-mono text-sm px-3.5 py-1.5"
           >
-            <History className="w-4 h-4 mr-1.5 text-primary" />
+            <History className="w-4 h-4 mr-1.5 text-current" />
             <span>{labels.loadYesterday}</span>
           </AppButton>
 

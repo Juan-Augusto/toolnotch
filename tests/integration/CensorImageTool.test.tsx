@@ -78,7 +78,7 @@ describe("CensorImageTool Integration", () => {
     jest.clearAllMocks();
   });
 
-  test("renders breadcrumbs, title, badges, dropzone", () => {
+  test("renders breadcrumbs, title, dropzone", () => {
     render(<CensorImageTool {...defaultProps} />);
 
     expect(screen.getByText("Início")).toBeInTheDocument();
@@ -89,10 +89,6 @@ describe("CensorImageTool Integration", () => {
         name: "Censurar e Desfocar Imagem Online",
       }),
     ).toBeInTheDocument();
-
-    expect(screen.getByText("image.censor.badges.private")).toBeInTheDocument();
-    expect(screen.getByText("image.censor.badges.modes")).toBeInTheDocument();
-    expect(screen.getByText("image.censor.badges.free")).toBeInTheDocument();
   });
 
   test("loads image, draws censor area, and applies censor successfully", async () => {

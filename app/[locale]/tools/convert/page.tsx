@@ -166,21 +166,6 @@ export default async function ConvertHubPage({ params }: Props) {
             <p className="leading-relaxed text-label mt-1.5 sm:mt-2 max-w-3xl text-xs sm:text-sm">
               {t("description")}
             </p>
-
-            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-3 sm:mt-4">
-              <AppBadge bg="bg-tertiary" text="text-foreground">
-                {t("badgeUnits")}
-              </AppBadge>
-              <AppBadge bg="bg-tertiary" text="text-foreground">
-                {t("badgeCurrencies")}
-              </AppBadge>
-              <AppBadge bg="bg-tertiary" text="text-foreground">
-                {t("badgeFree")}
-              </AppBadge>
-              <AppBadge bg="bg-tertiary" text="text-foreground">
-                {t("badgePrivate")}
-              </AppBadge>
-            </div>
           </header>
 
           {/* 1. Core Tools Grid */}

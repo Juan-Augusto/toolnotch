@@ -78,7 +78,7 @@ describe("CropImageTool Integration", () => {
     jest.clearAllMocks();
   });
 
-  test("renders breadcrumbs, title, badges, dropzone, and initially disabled button", () => {
+  test("renders breadcrumbs, title, dropzone, and initially disabled button", () => {
     render(<CropImageTool {...defaultProps} />);
 
     expect(screen.getByText("Início")).toBeInTheDocument();
@@ -89,10 +89,6 @@ describe("CropImageTool Integration", () => {
         name: "Recortar Imagem Online",
       }),
     ).toBeInTheDocument();
-
-    expect(screen.getByText("image.cropper.badges.private")).toBeInTheDocument();
-    expect(screen.getByText("image.cropper.badges.aspect")).toBeInTheDocument();
-    expect(screen.getByText("image.cropper.badges.free")).toBeInTheDocument();
 
     const cropButton = screen.getByRole("button", {
       name: /image\.cropper\.button\.crop/i,

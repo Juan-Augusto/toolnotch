@@ -54,12 +54,11 @@ describe("OrganizePdfTool Integration", () => {
     jest.clearAllMocks();
   });
 
-  test("renders initial breadcrumbs, badges, and dropzone", () => {
+  test("renders initial breadcrumbs and dropzone", () => {
     render(<OrganizePdfTool {...defaultProps} />);
 
     expect(screen.getByRole("heading", { level: 1, name: /Organizar Páginas do PDF/i })).toBeInTheDocument();
     expect(screen.getByText("Ferramentas PDF")).toBeInTheDocument();
-    expect(screen.getByText("pdf.organize.badges.noUpload")).toBeInTheDocument();
     expect(screen.getByText("pdf.organize.dropZone.label")).toBeInTheDocument();
   });
 
