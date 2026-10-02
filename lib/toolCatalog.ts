@@ -24,6 +24,7 @@ export interface CatalogEntry {
   labelKey: string
   /** Grouping bucket. Tools use their route segment; quizzes use `quizzes`. */
   category:
+    | 'dev'
     | 'image'
     | 'pdf'
     | 'convert'
@@ -42,6 +43,17 @@ export interface CatalogEntry {
 }
 
 export const TOOL_CATALOG: CatalogEntry[] = [
+  // Developer Tools
+  { path: '/tools/dev/cpf-generator', labelKey: 'cpfGenerator', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/cnpj-generator', labelKey: 'cnpjGenerator', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/address-generator', labelKey: 'addressGenerator', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/uuid-generator', labelKey: 'uuidGenerator', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/json-formatter', labelKey: 'jsonFormatter', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/jwt-decoder', labelKey: 'jwtDecoder', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/base64-converter', labelKey: 'base64Converter', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/hash-generator', labelKey: 'hashGenerator', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/url-parser', labelKey: 'urlParser', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/regex-tester', labelKey: 'regexTester', category: 'dev', kind: 'tool' },
   // Image
   { path: '/tools/image/crop-image', labelKey: 'cropImage', category: 'image', kind: 'tool' },
   { path: '/tools/image/image-resizer', labelKey: 'imageResizer', category: 'image', kind: 'tool' },
@@ -150,6 +162,7 @@ export const TOOL_CATALOG: CatalogEntry[] = [
 
 /** Ordered category buckets for the footer nav index. Keys map to `home.categories.*`. */
 export const CATALOG_CATEGORY_ORDER: { category: CatalogEntry['category']; labelKey: string }[] = [
+  { category: 'dev', labelKey: 'devTools' },
   { category: 'image', labelKey: 'imageTools' },
   { category: 'pdf', labelKey: 'pdfTools' },
   { category: 'convert', labelKey: 'converterTools' },

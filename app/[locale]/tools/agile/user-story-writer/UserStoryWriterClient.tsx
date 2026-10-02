@@ -43,8 +43,35 @@ interface ChecklistItem {
 interface BacklogStory {
   id: string;
   title: string;
-  type: string;
+  type: "userStory" | "technical" | "bug" | "spike";
   content: string;
+  data?: {
+    role: string;
+    feature: string;
+    benefit: string;
+    techRole: string;
+    techAction: string;
+    techBenefit: string;
+    bugContext: string;
+    bugActual: string;
+    bugExpected: string;
+    spikeTeam: string;
+    spikeQuestion: string;
+    spikeOutcome: string;
+    spikeTimebox: string;
+    criteriaMode: "gherkin" | "checklist" | "freeText";
+    scenarios: BddScenario[];
+    checklistRules: ChecklistItem[];
+    freeTextCriteria: string;
+    investChecks: {
+      independent: boolean;
+      negotiable: boolean;
+      valuable: boolean;
+      estimable: boolean;
+      small: boolean;
+      testable: boolean;
+    };
+  };
 }
 
 interface Props {
@@ -559,9 +586,60 @@ export default function UserStoryWriterClient({
       title: title.slice(0, 60),
       type: storyType,
       content: output,
+      data: {
+        role,
+        feature,
+        benefit,
+        techRole,
+        techAction,
+        techBenefit,
+        bugContext,
+        bugActual,
+        bugExpected,
+        spikeTeam,
+        spikeQuestion,
+        spikeOutcome,
+        spikeTimebox,
+        criteriaMode,
+        scenarios: JSON.parse(JSON.stringify(scenarios)),
+        checklistRules: JSON.parse(JSON.stringify(checklistRules)),
+        freeTextCriteria,
+        investChecks: { ...investChecks },
+      },
     };
 
     setSessionBacklog((prev) => [...prev, newStory]);
+  }
+
+  function handleLoadStoryFromBacklog(story: BacklogStory) {
+    if (story.data) {
+      setStoryType(story.type);
+      setRole(story.data.role || "");
+      setFeature(story.data.feature || "");
+      setBenefit(story.data.benefit || "");
+      setTechRole(story.data.techRole || "");
+      setTechAction(story.data.techAction || "");
+      setTechBenefit(story.data.techBenefit || "");
+      setBugContext(story.data.bugContext || "");
+      setBugActual(story.data.bugActual || "");
+      setBugExpected(story.data.bugExpected || "");
+      setSpikeTeam(story.data.spikeTeam || "");
+      setSpikeQuestion(story.data.spikeQuestion || "");
+      setSpikeOutcome(story.data.spikeOutcome || "");
+      setSpikeTimebox(story.data.spikeTimebox || "");
+      setCriteriaMode(story.data.criteriaMode || "gherkin");
+      if (story.data.scenarios && story.data.scenarios.length > 0) {
+        setScenarios(JSON.parse(JSON.stringify(story.data.scenarios)));
+      }
+      if (story.data.checklistRules) {
+        setChecklistRules(JSON.parse(JSON.stringify(story.data.checklistRules)));
+      }
+      setFreeTextCriteria(story.data.freeTextCriteria || "");
+      if (story.data.investChecks) {
+        setInvestChecks({ ...story.data.investChecks });
+      }
+    }
+    setOutput(story.content);
   }
 
   function handleRemoveBacklogItem(id: string) {
@@ -617,35 +695,35 @@ export default function UserStoryWriterClient({
           <button
             type="button"
             onClick={() => loadExample("ecommerce")}
-            className="px-2.5 py-1 bg-tertiary hover:bg-primary/20 hover:text-primary rounded-[2px] transition-colors border border-border/60"
+            className="px-2.5 py-1 bg-tertiary hover:bg-primary/20 hover:text-primary hover:border-primary/60 rounded-[2px] transition-colors border border-border/60"
           >
             {labels.exampleEcommerce || "E-commerce"}
           </button>
           <button
             type="button"
             onClick={() => loadExample("auth")}
-            className="px-2.5 py-1 bg-tertiary hover:bg-primary/20 hover:text-primary rounded-[2px] transition-colors border border-border/60"
+            className="px-2.5 py-1 bg-tertiary hover:bg-primary/20 hover:text-primary hover:border-primary/60 rounded-[2px] transition-colors border border-border/60"
           >
             {labels.exampleAuth || "Login 2FA"}
           </button>
           <button
             type="button"
             onClick={() => loadExample("fintech")}
-            className="px-2.5 py-1 bg-tertiary hover:bg-primary/20 hover:text-primary rounded-[2px] transition-colors border border-border/60"
+            className="px-2.5 py-1 bg-tertiary hover:bg-primary/20 hover:text-primary hover:border-primary/60 rounded-[2px] transition-colors border border-border/60"
           >
             {labels.exampleFintech || "Extrato CSV"}
           </button>
           <button
             type="button"
             onClick={() => loadExample("technical")}
-            className="px-2.5 py-1 bg-tertiary hover:bg-primary/20 hover:text-primary rounded-[2px] transition-colors border border-border/60"
+            className="px-2.5 py-1 bg-tertiary hover:bg-primary/20 hover:text-primary hover:border-primary/60 rounded-[2px] transition-colors border border-border/60"
           >
             {labels.exampleTechnical || "DevOps Queue"}
           </button>
           <button
             type="button"
             onClick={() => loadExample("bug")}
-            className="px-2.5 py-1 bg-tertiary hover:bg-primary/20 hover:text-primary rounded-[2px] transition-colors border border-border/60"
+            className="px-2.5 py-1 bg-tertiary hover:bg-primary/20 hover:text-primary hover:border-primary/60 rounded-[2px] transition-colors border border-border/60"
           >
             {labels.exampleBug || "Upload Bug"}
           </button>
@@ -797,13 +875,13 @@ export default function UserStoryWriterClient({
               </h3>
 
               {/* Mode switch */}
-              <div className="flex items-center gap-1 bg-background p-1 border border-border rounded-[2px] text-xs">
+              <div className="flex items-center gap-1 bg-background p-1 border border-border rounded-[2px] text-xs font-semibold">
                 <button
                   type="button"
                   onClick={() => setCriteriaMode("gherkin")}
                   className={`px-2.5 py-1 rounded-[2px] transition-colors ${
                     criteriaMode === "gherkin"
-                      ? "bg-primary text-background font-bold"
+                      ? "bg-primary text-background"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
@@ -814,7 +892,7 @@ export default function UserStoryWriterClient({
                   onClick={() => setCriteriaMode("checklist")}
                   className={`px-2.5 py-1 rounded-[2px] transition-colors ${
                     criteriaMode === "checklist"
-                      ? "bg-primary text-background font-bold"
+                      ? "bg-primary text-background"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
@@ -825,7 +903,7 @@ export default function UserStoryWriterClient({
                   onClick={() => setCriteriaMode("freeText")}
                   className={`px-2.5 py-1 rounded-[2px] transition-colors ${
                     criteriaMode === "freeText"
-                      ? "bg-primary text-background font-bold"
+                      ? "bg-primary text-background"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
@@ -936,19 +1014,20 @@ export default function UserStoryWriterClient({
             {/* Mode 2: Checklist */}
             {criteriaMode === "checklist" && (
               <div className="space-y-3">
-                <div className="flex gap-2">
+                <div className="flex items-center gap-2">
                   <AppInput
                     value={newRuleInput}
                     onChange={(e) => setNewRuleInput(e.target.value)}
                     onKeyDown={(e) => e.key === "Enter" && handleAddRule()}
                     placeholder={labels.checklistItemPlaceholder || "Descreva uma regra de negócio ou critério..."}
-                    className="flex-1 text-xs sm:text-sm"
+                    containerClassName="flex-1"
+                    className="text-xs sm:text-sm"
                   />
                   <AppButton
                     type="button"
                     onClick={handleAddRule}
                     color="secondary"
-                    className="h-[42px] px-4 text-xs sm:text-sm"
+                    className="h-10 sm:h-12 px-4 text-xs sm:text-sm shrink-0"
                   >
                     <Plus className="w-4 h-4 mr-1" />
                     <span>{labels.addChecklistItem || "Adicionar"}</span>
@@ -1123,13 +1202,13 @@ export default function UserStoryWriterClient({
               </div>
 
               {/* Format pills */}
-              <div className="flex items-center gap-1 bg-background p-0.5 border border-border rounded-[2px] text-xs">
+              <div className="flex items-center gap-1 bg-background p-0.5 border border-border rounded-[2px] text-xs font-semibold">
                 <button
                   type="button"
                   onClick={() => handleFormatChange("markdown")}
                   className={`px-2 py-0.5 rounded-[2px] transition-colors ${
                     exportFormat === "markdown"
-                      ? "bg-primary text-background font-bold"
+                      ? "bg-primary text-background"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
@@ -1140,7 +1219,7 @@ export default function UserStoryWriterClient({
                   onClick={() => handleFormatChange("jira")}
                   className={`px-2 py-0.5 rounded-[2px] transition-colors ${
                     exportFormat === "jira"
-                      ? "bg-primary text-background font-bold"
+                      ? "bg-primary text-background"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
@@ -1151,7 +1230,7 @@ export default function UserStoryWriterClient({
                   onClick={() => handleFormatChange("slack")}
                   className={`px-2 py-0.5 rounded-[2px] transition-colors ${
                     exportFormat === "slack"
-                      ? "bg-primary text-background font-bold"
+                      ? "bg-primary text-background"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
@@ -1171,11 +1250,11 @@ export default function UserStoryWriterClient({
                   {output}
                 </AppCard>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-col gap-2">
                   <AppButton
                     onClick={copyToClipboard}
                     color="secondary"
-                    className="flex-1 text-xs sm:text-sm h-[38px]"
+                    className="w-full text-xs sm:text-sm h-[38px]"
                   >
                     {copied ? (
                       <>
@@ -1193,11 +1272,11 @@ export default function UserStoryWriterClient({
                   <AppButton
                     onClick={handleSaveToBacklog}
                     color="tertiary"
-                    className="text-xs sm:text-sm h-[38px] px-3.5"
-                    title={labels.saveToBacklogButton || "Salvar no Backlog"}
+                    className="w-full text-xs sm:text-sm h-[38px]"
+                    title={labels.saveToBacklogButton || "Salvar no Backlog da Sessão"}
                   >
                     <BookmarkPlus className="w-4 h-4 mr-1 text-primary" />
-                    <span>{labels.saveToBacklogButton || "Salvar"}</span>
+                    <span>{labels.saveToBacklogButton || "Salvar no Backlog"}</span>
                   </AppButton>
                 </div>
               </div>
@@ -1231,16 +1310,22 @@ export default function UserStoryWriterClient({
                   {sessionBacklog.map((story, i) => (
                     <div
                       key={story.id}
-                      className="p-2.5 bg-background border border-border rounded-[2px] flex items-center justify-between gap-2 text-xs"
+                      onClick={() => handleLoadStoryFromBacklog(story)}
+                      className="p-2.5 bg-background border border-border hover:border-primary/60 rounded-[2px] flex items-center justify-between gap-2 text-xs cursor-pointer transition-colors group select-none"
+                      title={locale === "es" ? "Haz clic para cargar y ver en los campos" : locale === "en" ? "Click to load and view in fields" : "Clique para carregar e visualizar nos campos"}
                     >
-                      <div className="truncate">
+                      <div className="truncate flex-1">
                         <span className="text-primary font-bold mr-1.5">#{i + 1}</span>
-                        <span className="text-foreground">{story.title}</span>
+                        <span className="text-foreground group-hover:text-primary transition-colors">{story.title}</span>
                       </div>
                       <button
                         type="button"
-                        onClick={() => handleRemoveBacklogItem(story.id)}
-                        className="text-muted-foreground hover:text-red-500 p-1 shrink-0 transition-colors"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleRemoveBacklogItem(story.id);
+                        }}
+                        className="text-muted-foreground hover:text-danger p-1 shrink-0 transition-colors rounded-[2px] hover:bg-danger/10"
+                        title={labels.removeStory || "Remover história"}
                       >
                         <Trash2 className="w-3.5 h-3.5" />
                       </button>
@@ -1248,21 +1333,21 @@ export default function UserStoryWriterClient({
                   ))}
                 </div>
 
-                <div className="flex flex-wrap gap-2 pt-2 border-t border-border/60">
+                <div className="flex items-center gap-2 pt-2 border-t border-border/60 w-full min-w-0">
                   <AppButton
                     onClick={handleCopyAllBacklog}
                     color="secondary"
-                    className="flex-1 text-xs h-[36px]"
+                    className="flex-1 min-w-0 text-xs h-[36px] !px-3 truncate !normal-case font-medium"
                   >
                     {copiedBacklog ? (
                       <>
-                        <Check className="w-3.5 h-3.5 mr-1 text-emerald-500" />
-                        <span>{labels.allBacklogCopied || "Backlog Copiado!"}</span>
+                        <Check className="w-3.5 h-3.5 mr-1 text-emerald-500 shrink-0" />
+                        <span className="truncate">{labels.allBacklogCopied || "Histórias copiadas!"}</span>
                       </>
                     ) : (
                       <>
-                        <Copy className="w-3.5 h-3.5 mr-1" />
-                        <span>{labels.copyAllBacklog || "Copiar Todas (Markdown)"}</span>
+                        <Copy className="w-3.5 h-3.5 mr-1 shrink-0" />
+                        <span className="truncate">{labels.copyAllBacklog || "Copiar todas as histórias"}</span>
                       </>
                     )}
                   </AppButton>
@@ -1270,10 +1355,10 @@ export default function UserStoryWriterClient({
                   <AppButton
                     onClick={() => setSessionBacklog([])}
                     color="tertiary"
-                    className="text-xs h-[36px] px-3"
-                    title={labels.clearBacklog || "Limpar"}
+                    className="text-xs h-[36px] !px-2.5 text-muted-foreground hover:text-danger hover:border-danger/40 transition-colors shrink-0"
+                    title={labels.clearBacklog || "Limpar histórias"}
                   >
-                    <RotateCcw className="w-3.5 h-3.5" />
+                    <Trash2 className="w-3.5 h-3.5" />
                   </AppButton>
                 </div>
               </div>

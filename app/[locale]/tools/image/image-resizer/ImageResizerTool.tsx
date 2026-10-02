@@ -325,7 +325,7 @@ export default function ImageResizerTool({
         <AppCard
           border
           cornerAccents={true}
-          className="p-2.5 sm:p-5 md:p-6 lg:p-7 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto shadow-xs"
+          className="p-2.5 sm:p-5 md:p-6 lg:p-7 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto"
         >
           <div className="space-y-3 sm:space-y-5">
             {!result ? (
@@ -544,7 +544,7 @@ export default function ImageResizerTool({
                                   onClick={() => handleApplyPreset(preset.w, preset.h)}
                                   className={`p-3 text-left border rounded-[2px] text-xs transition-all flex flex-col justify-between cursor-pointer ${
                                     isSelected
-                                      ? "border-primary bg-primary/10 text-foreground font-semibold shadow-xs ring-1 ring-primary/40"
+                                      ? "border-primary bg-primary/10 text-foreground font-semibold ring-1 ring-primary/40"
                                       : "border-border bg-tertiary text-label hover:border-primary/50 hover:text-foreground"
                                   }`}
                                 >
@@ -760,7 +760,7 @@ export default function ImageResizerTool({
                               overflow: "hidden",
                               position: "relative",
                             }}
-                            className={`shadow-md rounded-[3px] border-2 transition-all duration-300 relative ${
+                            className={`rounded-[3px] border-2 transition-all duration-300 relative ${
                               activeSocialPreset
                                 ? "border-primary/60 ring-2 ring-primary/20 bg-card"
                                 : "border-border/80 bg-card/80"
@@ -789,22 +789,22 @@ export default function ImageResizerTool({
                         {/* Badges de Transformações Ativas e Modelo */}
                         <div className="absolute bottom-2 left-2 flex flex-wrap gap-1 pointer-events-none z-10">
                           {activeSocialPreset && (
-                            <span className="text-[10px] bg-primary text-background font-bold px-1.5 py-0.5 rounded-[2px] shadow-xs">
+                            <span className="text-[10px] bg-primary text-background font-bold px-1.5 py-0.5 rounded-[2px]">
                               {activeSocialPreset.label.split("(")[0].trim()}
                             </span>
                           )}
                           {rotation !== 0 && (
-                            <span className="text-[10px] bg-background/90 text-primary font-bold px-1.5 py-0.5 rounded-[2px] border border-border shadow-xs">
+                            <span className="text-[10px] bg-background/90 text-primary font-bold px-1.5 py-0.5 rounded-[2px] border border-border">
                               {rotation}°
                             </span>
                           )}
                           {flipH && (
-                            <span className="text-[10px] bg-background/90 text-foreground font-bold px-1.5 py-0.5 rounded-[2px] border border-border shadow-xs">
+                            <span className="text-[10px] bg-background/90 text-foreground font-bold px-1.5 py-0.5 rounded-[2px] border border-border">
                               Flip H
                             </span>
                           )}
                           {flipV && (
-                            <span className="text-[10px] bg-background/90 text-foreground font-bold px-1.5 py-0.5 rounded-[2px] border border-border shadow-xs">
+                            <span className="text-[10px] bg-background/90 text-foreground font-bold px-1.5 py-0.5 rounded-[2px] border border-border">
                               Flip V
                             </span>
                           )}
@@ -813,7 +813,7 @@ export default function ImageResizerTool({
                         {/* Badges de Escala e Aspect Ratio */}
                         <div className="absolute top-2 right-2 flex flex-col items-end gap-1 pointer-events-none z-10">
                           {origWidth > 0 && (
-                            <span className="text-[10px] bg-background/90 text-foreground px-1.5 py-0.5 rounded-[2px] border border-border font-bold shadow-xs">
+                            <span className="text-[10px] bg-background/90 text-foreground px-1.5 py-0.5 rounded-[2px] border border-border font-bold">
                               {t("settings.scaleBadge", {
                                 pct: Math.round((width / origWidth) * 100),
                               })}

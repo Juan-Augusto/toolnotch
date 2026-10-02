@@ -49,12 +49,11 @@ describe("ExtractPdfImagesTool Integration", () => {
     jest.clearAllMocks();
   });
 
-  test("renders initial breadcrumbs, badges, and dropzone", () => {
+  test("renders initial breadcrumbs and dropzone", () => {
     render(<ExtractPdfImagesTool {...defaultProps} />);
 
     expect(screen.getByRole("heading", { level: 1, name: /Extrair Imagens do PDF/i })).toBeInTheDocument();
     expect(screen.getByText("Ferramentas PDF")).toBeInTheDocument();
-    expect(screen.getByText("pdf.extractImages.badges.noUpload")).toBeInTheDocument();
     expect(screen.getByText("pdf.extractImages.dropZone.label")).toBeInTheDocument();
   });
 

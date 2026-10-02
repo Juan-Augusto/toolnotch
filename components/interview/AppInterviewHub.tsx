@@ -97,8 +97,8 @@ export default function AppInterviewHub({ locale = "pt" }: Props) {
   }, [labels.allCategories, groupedCategories]);
 
   return (
-    <div className="w-full text-foreground pb-12">
-      <div className="w-full pt-4 pb-8">
+    <div className="w-full text-foreground pt-4">
+      <div>
         <header className="mb-10 md:mb-12">
           <h1 className="text-2xl  sm:text-3xl md:text-3xl font-bold text-foreground uppercase mb-2.5">
             {labels.heading}

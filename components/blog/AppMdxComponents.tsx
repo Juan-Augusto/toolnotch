@@ -83,7 +83,7 @@ export const AppMdxComponents: MDXComponents = {
     return (
       <h2
         id={id || undefined}
-        className="text-xl sm:text-2xl font-bold uppercase text-foreground mt-12 mb-4 pt-8 border-t-dashed-5 tracking-tight first:mt-0 first:pt-0 first:border-t-0"
+        className="text-lg sm:text-xl font-bold uppercase text-foreground mt-10 mb-4 pb-2 border-b border-border tracking-tight first:mt-0 first:border-b-0"
         {...props}
       >
         {children}
@@ -170,7 +170,7 @@ export const AppMdxComponents: MDXComponents = {
       {children}
     </blockquote>
   ),
-  hr: () => <div className="border-b-dashed-5 my-8" />,
+  hr: () => <div className="border-b border-border my-8" />,
   pre: ({ children, ...props }) => (
     <pre
       className="bg-tertiary border border-border rounded-[2px] p-4 my-6 overflow-x-auto text-xs sm:text-sm"
@@ -216,7 +216,7 @@ export const AppMdxComponents: MDXComponents = {
   ),
   th: ({ children, ...props }) => (
     <th
-      className="px-4 py-3 font-bold uppercase text-foreground text-xs sm:text-sm tracking-wide"
+      className="px-3.5 py-2.5 font-semibold uppercase text-foreground text-xs tracking-wider"
       {...props}
     >
       {children}
@@ -232,7 +232,7 @@ export const AppMdxComponents: MDXComponents = {
   ),
   td: ({ children, ...props }) => (
     <td
-      className="px-4 py-3 text-foreground/90 text-xs sm:text-sm leading-normal whitespace-nowrap sm:whitespace-normal"
+      className="px-3.5 py-2.5 text-foreground/90 text-xs sm:text-sm leading-normal whitespace-nowrap sm:whitespace-normal"
       {...props}
     >
       {children}

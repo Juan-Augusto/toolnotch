@@ -2,11 +2,6 @@
 
 import React, { useState, useTransition } from "react";
 import { useTranslations } from "next-intl";
-import {
-  ShieldCheck,
-  Sparkles,
-  FileText,
-} from "lucide-react";
 import { AppCard, AppButton, AppDropfile } from "@/components/ui";
 import type { FaqItem } from "@/components/AppFaqSection";
 import { extractTextFromPdf, ExtractedPdfText } from "@/lib/pdfToText";
@@ -89,32 +84,12 @@ export default function PdfToTextTool({
           title={title}
           description={description}
           locale={locale}
-          badges={[
-            {
-              text: t("badges.noUpload"),
-              bg: "bg-primary",
-              textColor: "text-background",
-              icon: <ShieldCheck className="w-3.5 h-3.5 shrink-0" />,
-            },
-            {
-              text: t("badges.accuracy"),
-              bg: "bg-secondary",
-              textColor: "text-background",
-              icon: <FileText className="w-3.5 h-3.5 shrink-0" />,
-            },
-            {
-              text: t("badges.free"),
-              bg: "bg-foreground",
-              textColor: "text-background",
-              icon: <Sparkles className="w-3.5 h-3.5 shrink-0" />,
-            },
-          ]}
         />
 
         <AppCard
           border
           cornerAccents={true}
-          className="p-1.5 sm:p-4 md:p-6 lg:p-8 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto shadow-xs"
+          className="p-1.5 sm:p-4 md:p-6 lg:p-8 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto"
         >
           <div className="space-y-3 sm:space-y-5">
             {!result ? (

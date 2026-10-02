@@ -73,7 +73,7 @@ describe("ConvertPngToWebpTool Integration", () => {
     jest.clearAllMocks();
   });
 
-  test("renders breadcrumbs, title, badges, dropzone, and disabled convert button initially", () => {
+  test("renders breadcrumbs, title, dropzone, and disabled convert button initially", () => {
     render(<ConvertPngToWebpTool {...defaultProps} />);
 
     expect(screen.getByText("Início")).toBeInTheDocument();
@@ -84,11 +84,6 @@ describe("ConvertPngToWebpTool Integration", () => {
         name: "Converter PNG para WebP",
       }),
     ).toBeInTheDocument();
-
-    expect(screen.getByText("image.convertPngToWebp.badges.private")).toBeInTheDocument();
-    expect(screen.getByText("image.convertPngToWebp.badges.free")).toBeInTheDocument();
-    expect(screen.getByText("image.convertPngToWebp.badges.format")).toBeInTheDocument();
-    expect(screen.getByText("image.convertPngToWebp.badges.transparency")).toBeInTheDocument();
 
     const convertButton = screen.getByRole("button", {
       name: /image\.convertPngToWebp\.button\.convert/i,

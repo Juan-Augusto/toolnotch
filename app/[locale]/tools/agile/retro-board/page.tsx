@@ -115,6 +115,7 @@ export default async function RetroBoardPage({ params }: Props) {
                 placeholder: t('placeholder'),
                 addButton: t('addButton'),
                 voteAriaLabel: t('voteAriaLabel'),
+                dislikeAriaLabel: t('dislikeAriaLabel'),
                 deleteAriaLabel: t('deleteAriaLabel'),
                 exportButton: t('exportButton'),
                 clearButton: t('clearButton'),

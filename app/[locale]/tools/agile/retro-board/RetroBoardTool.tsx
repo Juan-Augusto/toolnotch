@@ -1,13 +1,15 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { ThumbsUp, Trash2, Plus, Download, RotateCcw, Check, Sparkles } from "lucide-react";
+import { ThumbsUp, ThumbsDown, Trash2, Plus, Download, RotateCcw, Check, Sparkles } from "lucide-react";
 import { AppButton, AppBadge, AppCard } from "@/components/ui";
 
 interface Note {
   id: string;
   text: string;
-  votes: number;
+  likes: number;
+  dislikes: number;
+  votes?: number;
 }
 
 type ColumnKey = "wentWell" | "toImprove" | "actionItems";
@@ -32,6 +34,7 @@ interface Props {
     placeholder: string;
     addButton: string;
     voteAriaLabel: string;
+    dislikeAriaLabel?: string;
     deleteAriaLabel: string;
     exportButton: string;
     clearButton: string;
@@ -89,7 +92,10 @@ export default function RetroBoardTool({ columns, labels }: Props) {
     if (!text) return;
     setBoard((prev) => ({
       ...prev,
-      [colKey]: [...prev[colKey], { id: makeId(), text, votes: 0 }],
+      [colKey]: [
+        ...prev[colKey],
+        { id: makeId(), text, likes: 0, dislikes: 0, votes: 0 },
+      ],
     }));
     setInputs((prev) => ({ ...prev, [colKey]: "" }));
   }
@@ -101,11 +107,26 @@ export default function RetroBoardTool({ columns, labels }: Props) {
     }));
   }
 
-  function vote(colKey: ColumnKey, id: string) {
+  function likeNote(colKey: ColumnKey, id: string) {
     setBoard((prev) => ({
       ...prev,
       [colKey]: prev[colKey].map((n) =>
-        n.id === id ? { ...n, votes: n.votes + 1 } : n
+        n.id === id
+          ? {
+              ...n,
+              likes: (n.likes ?? n.votes ?? 0) + 1,
+              votes: (n.likes ?? n.votes ?? 0) + 1,
+            }
+          : n
+      ),
+    }));
+  }
+
+  function dislikeNote(colKey: ColumnKey, id: string) {
+    setBoard((prev) => ({
+      ...prev,
+      [colKey]: prev[colKey].map((n) =>
+        n.id === id ? { ...n, dislikes: (n.dislikes ?? 0) + 1 } : n
       ),
     }));
   }
@@ -126,9 +147,19 @@ export default function RetroBoardTool({ columns, labels }: Props) {
       } else {
         notes
           .slice()
-          .sort((a, b) => b.votes - a.votes)
+          .sort((a, b) => {
+            const scoreA = (a.likes ?? a.votes ?? 0) - (a.dislikes ?? 0);
+            const scoreB = (b.likes ?? b.votes ?? 0) - (b.dislikes ?? 0);
+            return scoreB - scoreA;
+          })
           .forEach((n) => {
-            lines.push(`- ${n.text}${n.votes > 0 ? ` (👍 ${n.votes})` : ""}`);
+            const l = n.likes ?? n.votes ?? 0;
+            const d = n.dislikes ?? 0;
+            const reactions =
+              l > 0 || d > 0
+                ? ` (${l > 0 ? `👍 ${l}` : ""}${l > 0 && d > 0 ? " | " : ""}${d > 0 ? `👎 ${d}` : ""})`
+                : "";
+            lines.push(`- ${n.text}${reactions}`);
           });
       }
       lines.push("");
@@ -194,16 +225,16 @@ export default function RetroBoardTool({ columns, labels }: Props) {
           return (
             <div
               key={col.key}
-              className={`rounded-[2px] border ${col.accentBorder} bg-background/50 flex flex-col overflow-hidden shadow-2xs`}
+              className={`rounded-[2px] border ${col.accentBorder} bg-background/50 flex flex-col overflow-hidden`}
             >
               {/* Column Header */}
               <div
-                className={`px-4 py-3.5 border-b ${col.accentBorder} ${col.accentBg} flex items-center justify-between`}
+                className={`px-3.5 py-2.5 sm:px-4 sm:py-3 border-b ${col.accentBorder} ${col.accentBg} flex items-center justify-between`}
               >
-                <h3 className={`font-mono font-bold text-base uppercase tracking-wide ${col.accentText}`}>
+                <h3 className={`font-mono font-bold text-xs sm:text-sm uppercase tracking-wider ${col.accentText}`}>
                   {col.label}
                 </h3>
-                <span className="font-mono text-sm font-semibold px-2.5 py-0.5 rounded-[2px] bg-background/80 border border-border/60 text-foreground">
+                <span className="font-mono text-xs font-semibold px-2 py-0.5 rounded-[2px] bg-background/80 border border-border/60 text-foreground">
                   {notes.length}
                 </span>
               </div>
@@ -226,15 +257,27 @@ export default function RetroBoardTool({ columns, labels }: Props) {
                         {note.text}
                       </p>
                       <div className="flex items-center justify-between pt-1.5 border-t border-border/40">
-                        <button
-                          type="button"
-                          onClick={() => vote(col.key, note.id)}
-                          aria-label={labels.voteAriaLabel}
-                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[2px] bg-muted/60 hover:bg-muted text-foreground transition-colors font-mono text-sm cursor-pointer"
-                        >
-                          <ThumbsUp className="w-3.5 h-3.5 text-primary" />
-                          <span className="font-semibold">{note.votes}</span>
-                        </button>
+                        <div className="flex items-center gap-1.5">
+                          <button
+                            type="button"
+                            onClick={() => likeNote(col.key, note.id)}
+                            aria-label={labels.voteAriaLabel}
+                            className="inline-flex items-center gap-1 px-2 py-0.5 rounded-[2px] bg-muted/60 hover:bg-muted text-foreground hover:text-emerald-500 transition-colors font-mono text-xs cursor-pointer"
+                          >
+                            <ThumbsUp className="w-3.5 h-3.5 text-emerald-500" />
+                            <span className="font-semibold">{note.likes ?? note.votes ?? 0}</span>
+                          </button>
+
+                          <button
+                            type="button"
+                            onClick={() => dislikeNote(col.key, note.id)}
+                            aria-label={labels.dislikeAriaLabel || "Votar contra"}
+                            className="inline-flex items-center gap-1 px-2 py-0.5 rounded-[2px] bg-muted/60 hover:bg-muted text-foreground hover:text-rose-500 transition-colors font-mono text-xs cursor-pointer"
+                          >
+                            <ThumbsDown className="w-3.5 h-3.5 text-rose-500" />
+                            <span className="font-semibold">{note.dislikes ?? 0}</span>
+                          </button>
+                        </div>
 
                         <button
                           type="button"

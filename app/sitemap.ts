@@ -129,11 +129,13 @@ const ALL_ROUTES = [
   // Quizzes hub — individual /quiz/<id> routes are generated from
   // lib/quizRegistry.ts (see QUIZ_ROUTES below), not hand-listed here.
   '/quizzes',
-  // Health tools (no /tools/health hub page — 404, WS-6 audit §7)
+  // Health tools
+  '/tools/health',
   '/tools/health/bmi-calculator',
   '/tools/health/tdee-calculator',
   '/tools/health/calorie-deficit-calculator',
-  // Education tools (no /tools/education hub page — 404, WS-6 audit §7)
+  // Education tools
+  '/tools/education',
   '/tools/education/gpa-calculator',
   '/tools/education/cumulative-gpa-calculator',
   '/tools/education/grade-calculator',

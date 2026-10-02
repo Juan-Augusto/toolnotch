@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { AppBreadcrumb, AppBadge } from "@/components/ui";
+import { AppBreadcrumb } from "@/components/ui";
 
 export interface ToolBadge {
   text: string;
@@ -21,7 +21,7 @@ export default function ConvertToolHeader({
   title,
   description,
   locale = "pt",
-  badges = [],
+  badges: _badges,
 }: ConvertToolHeaderProps) {
   const homeLabel =
     locale === "pt" ? "Início" : locale === "es" ? "Inicio" : "Home";
@@ -51,21 +51,6 @@ export default function ConvertToolHeader({
         <p className="leading-relaxed text-label mt-1.5 sm:mt-2 max-w-3xl text-xs sm:text-sm">
           {description}
         </p>
-
-        {badges.length > 0 && (
-          <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-2.5 sm:mt-3.5">
-            {badges.map((b, i) => (
-              <AppBadge
-                key={i}
-                bg={b.bg || "bg-tertiary"}
-                text={b.textColor || "text-foreground"}
-                icon={b.icon}
-              >
-                {b.text}
-              </AppBadge>
-            ))}
-          </div>
-        )}
       </header>
     </>
   );

@@ -549,7 +549,7 @@ export default function CropImageTool({
         <AppCard
           border
           cornerAccents={true}
-          className="p-1.5 sm:p-4 md:p-6 lg:p-8 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto shadow-xs"
+          className="p-1.5 sm:p-4 md:p-6 lg:p-8 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto"
         >
           <div className="space-y-3 sm:space-y-5">
             {!result ? (
@@ -733,7 +733,7 @@ export default function CropImageTool({
                             </div>
 
                             {/* Marcador de dimensão */}
-                            <div className="absolute -top-6 left-0 bg-primary text-background text-[10px] font-bold px-1.5 py-0.5 rounded-[2px] pointer-events-none whitespace-nowrap shadow-xs">
+                            <div className="absolute -top-6 left-0 bg-primary text-background text-[10px] font-bold px-1.5 py-0.5 rounded-[2px] pointer-events-none whitespace-nowrap">
                               {cropBox.width} × {cropBox.height} px
                             </div>
 
@@ -743,28 +743,28 @@ export default function CropImageTool({
                               data-testid="handle-nw"
                               onPointerDown={(e) => startInteraction(e, "resize", "nw")}
                               onMouseDown={(e) => startInteraction(e, "resize", "nw")}
-                              className="absolute -top-1.5 -left-1.5 w-3.5 h-3.5 bg-primary border-2 border-background rounded-[1px] shadow-sm cursor-nwse-resize hover:scale-125 transition-transform z-10"
+                              className="absolute -top-1.5 -left-1.5 w-3.5 h-3.5 bg-primary border-2 border-background rounded-[1px] cursor-nwse-resize hover:scale-125 transition-transform z-10"
                             />
                             {/* Top-Right (NE) */}
                             <div
                               data-testid="handle-ne"
                               onPointerDown={(e) => startInteraction(e, "resize", "ne")}
                               onMouseDown={(e) => startInteraction(e, "resize", "ne")}
-                              className="absolute -top-1.5 -right-1.5 w-3.5 h-3.5 bg-primary border-2 border-background rounded-[1px] shadow-sm cursor-nesw-resize hover:scale-125 transition-transform z-10"
+                              className="absolute -top-1.5 -right-1.5 w-3.5 h-3.5 bg-primary border-2 border-background rounded-[1px] cursor-nesw-resize hover:scale-125 transition-transform z-10"
                             />
                             {/* Bottom-Right (SE) */}
                             <div
                               data-testid="handle-se"
                               onPointerDown={(e) => startInteraction(e, "resize", "se")}
                               onMouseDown={(e) => startInteraction(e, "resize", "se")}
-                              className="absolute -bottom-1.5 -right-1.5 w-3.5 h-3.5 bg-primary border-2 border-background rounded-[1px] shadow-sm cursor-nwse-resize hover:scale-125 transition-transform z-10"
+                              className="absolute -bottom-1.5 -right-1.5 w-3.5 h-3.5 bg-primary border-2 border-background rounded-[1px] cursor-nwse-resize hover:scale-125 transition-transform z-10"
                             />
                             {/* Bottom-Left (SW) */}
                             <div
                               data-testid="handle-sw"
                               onPointerDown={(e) => startInteraction(e, "resize", "sw")}
                               onMouseDown={(e) => startInteraction(e, "resize", "sw")}
-                              className="absolute -bottom-1.5 -left-1.5 w-3.5 h-3.5 bg-primary border-2 border-background rounded-[1px] shadow-sm cursor-nesw-resize hover:scale-125 transition-transform z-10"
+                              className="absolute -bottom-1.5 -left-1.5 w-3.5 h-3.5 bg-primary border-2 border-background rounded-[1px] cursor-nesw-resize hover:scale-125 transition-transform z-10"
                             />
 
                             {/* Alças de Bordas (disponíveis no modo Livre) */}
@@ -775,28 +775,28 @@ export default function CropImageTool({
                                   data-testid="handle-n"
                                   onPointerDown={(e) => startInteraction(e, "resize", "n")}
                                   onMouseDown={(e) => startInteraction(e, "resize", "n")}
-                                  className="absolute -top-1 left-1/2 -translate-x-1/2 w-6 h-2 bg-primary border border-background rounded-[1px] shadow-sm cursor-ns-resize hover:scale-110 transition-transform z-10"
+                                  className="absolute -top-1 left-1/2 -translate-x-1/2 w-6 h-2 bg-primary border border-background rounded-[1px] cursor-ns-resize hover:scale-110 transition-transform z-10"
                                 />
                                 {/* Bottom Edge (S) */}
                                 <div
                                   data-testid="handle-s"
                                   onPointerDown={(e) => startInteraction(e, "resize", "s")}
                                   onMouseDown={(e) => startInteraction(e, "resize", "s")}
-                                  className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-6 h-2 bg-primary border border-background rounded-[1px] shadow-sm cursor-ns-resize hover:scale-110 transition-transform z-10"
+                                  className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-6 h-2 bg-primary border border-background rounded-[1px] cursor-ns-resize hover:scale-110 transition-transform z-10"
                                 />
                                 {/* Left Edge (W) */}
                                 <div
                                   data-testid="handle-w"
                                   onPointerDown={(e) => startInteraction(e, "resize", "w")}
                                   onMouseDown={(e) => startInteraction(e, "resize", "w")}
-                                  className="absolute top-1/2 -left-1 -translate-y-1/2 w-2 h-6 bg-primary border border-background rounded-[1px] shadow-sm cursor-ew-resize hover:scale-110 transition-transform z-10"
+                                  className="absolute top-1/2 -left-1 -translate-y-1/2 w-2 h-6 bg-primary border border-background rounded-[1px] cursor-ew-resize hover:scale-110 transition-transform z-10"
                                 />
                                 {/* Right Edge (E) */}
                                 <div
                                   data-testid="handle-e"
                                   onPointerDown={(e) => startInteraction(e, "resize", "e")}
                                   onMouseDown={(e) => startInteraction(e, "resize", "e")}
-                                  className="absolute top-1/2 -right-1 -translate-y-1/2 w-2 h-6 bg-primary border border-background rounded-[1px] shadow-sm cursor-ew-resize hover:scale-110 transition-transform z-10"
+                                  className="absolute top-1/2 -right-1 -translate-y-1/2 w-2 h-6 bg-primary border border-background rounded-[1px] cursor-ew-resize hover:scale-110 transition-transform z-10"
                                 />
                               </>
                             )}

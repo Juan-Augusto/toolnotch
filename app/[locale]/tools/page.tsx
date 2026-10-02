@@ -185,7 +185,9 @@ export default async function ToolsHubPage({ params }: Props) {
       : item.labelKey;
     const description = t.has(`tools.${item.labelKey}.desc`)
       ? t(`tools.${item.labelKey}.desc`)
-      : "";
+      : t.has(`tools.${item.labelKey}.description`)
+        ? t(`tools.${item.labelKey}.description`)
+        : "";
 
     return {
       id: item.labelKey,

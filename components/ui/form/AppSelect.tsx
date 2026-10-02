@@ -39,6 +39,7 @@ export interface AppSelectProps<T = string> {
   noResultsText?: string;
   variant?: "tertiary" | "background";
   flat?: boolean;
+  size?: "sm" | "md" | "lg";
 }
 
 export function AppSelect<T = string>({
@@ -62,6 +63,7 @@ export function AppSelect<T = string>({
   noResultsText = "Nenhum resultado encontrado",
   variant = "tertiary",
   flat = false,
+  size = "md",
 }: AppSelectProps<T>) {
   const generatedId = useId();
   const selectId = id ?? generatedId;
@@ -269,10 +271,13 @@ export function AppSelect<T = string>({
           aria-controls={isOpen ? `${selectId}-listbox` : undefined}
           className={`
             w-full
-            h-10 sm:h-12
-            px-4
-            py-2 sm:py-3
-            text-xs sm:text-sm
+            ${
+              size === "sm"
+                ? "h-9 px-3 py-1.5 text-xs"
+                : size === "lg"
+                  ? "h-12 sm:h-14 px-5 py-3 sm:py-4 text-sm sm:text-base"
+                  : "h-10 sm:h-12 px-4 py-2 sm:py-3 text-xs sm:text-sm"
+            }
             text-foreground
             rounded-[2px]
             transition-colors

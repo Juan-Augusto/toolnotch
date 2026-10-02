@@ -54,10 +54,10 @@ export default function SortablePageCard({
     <div
       ref={setNodeRef}
       style={style}
-      className={`group relative bg-background border rounded-[2px] p-1.5 sm:p-2.5 md:p-3 flex flex-col items-center select-none transition-shadow ${
+      className={`group relative bg-background border rounded-[2px] p-1.5 sm:p-2.5 md:p-3 flex flex-col items-center select-none ${
         isDragging
-          ? "border-primary shadow-lg ring-1 ring-primary"
-          : "border-border hover:border-foreground/30 hover:shadow-xs"
+          ? "border-primary ring-1 ring-primary"
+          : "border-border hover:border-foreground/30"
       }`}
     >
       <div className="w-full flex items-center justify-between pb-1.5 sm:pb-2 border-b border-border/60 mb-1.5 sm:mb-2">

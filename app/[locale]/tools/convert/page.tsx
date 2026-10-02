@@ -21,7 +21,7 @@ import {
 import { CATEGORY_LABELS } from "@/data/units";
 import { COMMON_PAIRS } from "@/data/conversionPairs";
 import { getLocalizedPairTitle } from "@/lib/conversionPairHelper";
-import { AppBreadcrumb, AppBadge, AppAccordion } from "@/components/ui";
+import { AppBreadcrumb, AppBadge, AppAccordion, AppCard } from "@/components/ui";
 
 const PATH = "/tools/convert";
 
@@ -92,7 +92,7 @@ export default async function ConvertHubPage({ params }: Props) {
       desc: t("tools.unitConverter.desc"),
       badge: t("badgeUnits"),
       href: `${prefix}/tools/convert/unit-converter`,
-      icon: <Scale className="w-5 h-5 text-primary" />,
+      icon: <Scale className="w-5 h-5 text-secondary shrink-0" />,
     },
     {
       id: "currencyConverter",
@@ -100,7 +100,7 @@ export default async function ConvertHubPage({ params }: Props) {
       desc: t("tools.currencyConverter.desc"),
       badge: t("badgeCurrencies"),
       href: `${prefix}/tools/convert/currency-converter`,
-      icon: <Coins className="w-5 h-5 text-primary" />,
+      icon: <Coins className="w-5 h-5 text-secondary shrink-0" />,
     },
     {
       id: "percentageCalculator",
@@ -109,7 +109,7 @@ export default async function ConvertHubPage({ params }: Props) {
       badge:
         locale === "pt" ? "3 Modos" : locale === "es" ? "3 Modos" : "3 Modes",
       href: `${prefix}/tools/convert/percentage-calculator`,
-      icon: <Percent className="w-5 h-5 text-primary" />,
+      icon: <Percent className="w-5 h-5 text-secondary shrink-0" />,
     },
   ];
 
@@ -166,21 +166,6 @@ export default async function ConvertHubPage({ params }: Props) {
             <p className="leading-relaxed text-label mt-1.5 sm:mt-2 max-w-3xl text-xs sm:text-sm">
               {t("description")}
             </p>
-
-            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-3 sm:mt-4">
-              <AppBadge bg="bg-tertiary" text="text-foreground">
-                {t("badgeUnits")}
-              </AppBadge>
-              <AppBadge bg="bg-tertiary" text="text-foreground">
-                {t("badgeCurrencies")}
-              </AppBadge>
-              <AppBadge bg="bg-tertiary" text="text-foreground">
-                {t("badgeFree")}
-              </AppBadge>
-              <AppBadge bg="bg-tertiary" text="text-foreground">
-                {t("badgePrivate")}
-              </AppBadge>
-            </div>
           </header>
 
           {/* 1. Core Tools Grid */}
@@ -202,30 +187,42 @@ export default async function ConvertHubPage({ params }: Props) {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {coreTools.map((tool) => (
                 <Link
                   key={tool.id}
                   href={tool.href}
-                  className="group block p-4 sm:p-5 bg-tertiary border border-border rounded-[2px] hover:border-primary transition-colors cursor-pointer"
+                  className="group block h-full select-none"
                 >
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="w-9 h-9 rounded-[2px] bg-background border border-border flex items-center justify-center">
-                      {tool.icon}
+                  <AppCard
+                    border
+                    cornerAccents={false}
+                    className="p-4 sm:p-5 bg-tertiary group-hover:border-secondary/60 transition-colors h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div className="flex items-center gap-2.5 mb-2.5">
+                        {tool.icon}
+                        <h3 className="text-sm sm:text-base font-bold font-mono text-foreground group-hover:text-secondary transition-colors">
+                          {tool.title}
+                        </h3>
+                      </div>
+
+                      <p className="text-xs text-label leading-relaxed font-mono line-clamp-2">
+                        {tool.desc}
+                      </p>
                     </div>
-                    <span className="text-[10px] font-mono font-medium px-2 py-0.5 bg-background border border-border rounded-[2px] text-label group-hover:text-primary group-hover:border-primary/40 transition-colors">
-                      {tool.badge}
-                    </span>
-                  </div>
 
-                  <h3 className="font-bold text-sm sm:text-base text-foreground group-hover:text-primary transition-colors mb-1.5 flex items-center justify-between">
-                    <span>{tool.title}</span>
-                    <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
-                  </h3>
-
-                  <p className="text-xs text-label leading-relaxed font-mono">
-                    {tool.desc}
-                  </p>
+                    <div className="flex items-center gap-1 text-xs text-secondary font-semibold mt-4 pt-3 border-t border-border/50 font-mono">
+                      <span>
+                        {locale === "pt"
+                          ? "Acessar ferramenta"
+                          : locale === "es"
+                            ? "Abrir herramienta"
+                            : "Open tool"}
+                      </span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </AppCard>
                 </Link>
               ))}
             </div>

@@ -78,7 +78,7 @@ describe("ConvertWebpToPngTool Integration", () => {
     jest.clearAllMocks();
   });
 
-  test("renders breadcrumbs, title, badges, and dropzone", () => {
+  test("renders breadcrumbs, title, and dropzone", () => {
     render(<ConvertWebpToPngTool {...defaultProps} />);
 
     expect(screen.getByText("Início")).toBeInTheDocument();
@@ -89,10 +89,6 @@ describe("ConvertWebpToPngTool Integration", () => {
         name: "Converter WebP para PNG",
       }),
     ).toBeInTheDocument();
-
-    expect(screen.getByText("image.convertWebpToPng.badges.private")).toBeInTheDocument();
-    expect(screen.getByText("image.convertWebpToPng.badges.format")).toBeInTheDocument();
-    expect(screen.getByText("image.convertWebpToPng.badges.transparency")).toBeInTheDocument();
   });
 
   test("loads WebP file, converts to PNG, and allows download", async () => {

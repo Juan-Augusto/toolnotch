@@ -143,6 +143,7 @@ const TOOL_MAP: Record<string, { tools: string[]; posts: (keyof typeof POST)[] }
 
 /** Default blog post for a category with no bespoke cluster. */
 const CATEGORY_DEFAULT_POST: Record<string, keyof typeof POST> = {
+  dev: 'word-count',
   text: 'word-count',
   finance: 'mortgage-payment',
   health: 'bmi-body-fat',
@@ -194,7 +195,7 @@ export function resolveToolRelated(rawPath: string): ResolvedRelated {
 }
 
 const KNOWN_BUCKETS = [
-  'image', 'pdf', 'convert', 'text', 'finance', 'fun', 'agile',
+  'dev', 'image', 'pdf', 'convert', 'text', 'finance', 'fun', 'agile',
   'education', 'health', 'math', 'utilities', 'interview',
 ] as const
 

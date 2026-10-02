@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import {
+  ArrowRight,
+  FileText,
+  Hash,
+  Clock,
+  BookOpen,
+  Search,
+} from "lucide-react";
 import { buildAlternatesForLocale, localizedPath } from "@/lib/i18nMeta";
 import {
   buildJsonLd,
@@ -9,7 +16,7 @@ import {
   webAppSchema,
   buildLocalizedUrl,
 } from "@/lib/schema";
-import { AppBreadcrumb, AppAccordion } from "@/components/ui";
+import { AppBreadcrumb, AppAccordion, AppCard } from "@/components/ui";
 
 const PATH = "/tools/text";
 
@@ -83,12 +90,7 @@ export default async function TextToolsHubPage({ params }: Props) {
           : locale === "es"
             ? "Conteo analítico de palabras, caracteres, oraciones, párrafos, tiempo de voz, metas de texto y conversiones rápidas."
             : "Analytical count of words, characters, sentences, paragraphs, speaking time, word goals, and fast text transforms.",
-      specs:
-        locale === "pt"
-          ? ["8 Métricas ao vivo", "Metas de palavras", "Flesch Reading Ease"]
-          : locale === "es"
-            ? ["8 Métricas en vivo", "Metas de palabras", "Flesch Reading Ease"]
-            : ["8 Live metrics", "Word goals", "Flesch Reading Ease"],
+      icon: <FileText className="w-5 h-5 text-secondary shrink-0" />,
     },
     {
       href: `${prefix}/tools/text/character-counter`,
@@ -104,12 +106,7 @@ export default async function TextToolsHubPage({ params }: Props) {
           : locale === "es"
             ? "Conteo preciso con barras de progreso y límites en tiempo real para Twitter/X, SMS, Instagram, LinkedIn y Meta Tags SEO."
             : "Precise character count with real-time limits and meters for Twitter/X, SMS, Instagram, LinkedIn, and SEO Meta Tags.",
-      specs:
-        locale === "pt"
-          ? ["Twitter / X (280)", "Meta Tags SEO", "SMS & Redes"]
-          : locale === "es"
-            ? ["Twitter / X (280)", "Meta Tags SEO", "SMS & Redes"]
-            : ["Twitter / X (280)", "SEO Meta Tags", "SMS & Social"],
+      icon: <Hash className="w-5 h-5 text-secondary shrink-0" />,
     },
     {
       href: `${prefix}/tools/text/reading-time-calculator`,
@@ -125,12 +122,7 @@ export default async function TextToolsHubPage({ params }: Props) {
           : locale === "es"
             ? "Cálculo de tiempo de lectura y discurso con sliders WPM ajustables y Speed Reader RSVP integrado."
             : "Estimate silent reading and speaking duration with custom WPM sliders and integrated RSVP Speed Reader.",
-      specs:
-        locale === "pt"
-          ? ["Velocidade WPM", "Tempo de fala", "Leitor RSVP"]
-          : locale === "es"
-            ? ["Velocidad WPM", "Tiempo de voz", "Lector RSVP"]
-            : ["Custom WPM", "Speaking time", "RSVP Reader"],
+      icon: <Clock className="w-5 h-5 text-secondary shrink-0" />,
     },
     {
       href: `${prefix}/tools/text/readability-checker`,
@@ -146,12 +138,7 @@ export default async function TextToolsHubPage({ params }: Props) {
           : locale === "es"
             ? "Evalúa la claridad y complejidad de tu texto con las métricas Flesch Reading Ease, Flesch-Kincaid Grade Level e Índice Gunning Fog."
             : "Assess clarity and lexical complexity with Flesch Reading Ease, Flesch-Kincaid Grade Level, and Gunning Fog Index.",
-      specs:
-        locale === "pt"
-          ? ["Flesch Ease", "Flesch-Kincaid", "Gunning Fog"]
-          : locale === "es"
-            ? ["Flesch Ease", "Flesch-Kincaid", "Gunning Fog"]
-            : ["Flesch Ease", "Flesch-Kincaid", "Gunning Fog"],
+      icon: <BookOpen className="w-5 h-5 text-secondary shrink-0" />,
     },
     {
       href: `${prefix}/tools/text/keyword-density-checker`,
@@ -167,12 +154,7 @@ export default async function TextToolsHubPage({ params }: Props) {
           : locale === "es"
             ? "Identifica repeticiones de términos simples y compuestos (N-grams 1-3), filtra stopwords y evita sobreoptimización."
             : "Analyze single and multi-word phrase frequency (1-3 N-grams), filter stopwords, and avoid keyword stuffing penalties.",
-      specs:
-        locale === "pt"
-          ? ["N-grams (1-3)", "Filtro Stopwords", "Alerta Stuffing"]
-          : locale === "es"
-            ? ["N-grams (1-3)", "Filtro Stopwords", "Alerta Stuffing"]
-            : ["1-3 N-grams", "Stopword filter", "Stuffing alert"],
+      icon: <Search className="w-5 h-5 text-secondary shrink-0" />,
     },
   ];
 
@@ -374,46 +356,44 @@ export default async function TextToolsHubPage({ params }: Props) {
         </header>
 
         <section aria-label="Ferramentas de Texto" className="mb-10 sm:mb-14">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4">
-            {tools.map((tool, idx) => {
-              const isHero = idx === 0;
-              return (
-                <Link
-                  key={idx}
-                  href={tool.href}
-                  className={`group block select-none ${
-                    isHero ? "md:col-span-2 lg:col-span-2" : ""
-                  }`}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+            {tools.map((tool, idx) => (
+              <Link
+                key={idx}
+                href={tool.href}
+                className="group block h-full select-none"
+              >
+                <AppCard
+                  border
+                  cornerAccents={false}
+                  className="p-4 sm:p-5 bg-tertiary group-hover:border-secondary/60 transition-colors h-full flex flex-col justify-between"
                 >
-                  <div className="h-full p-4 sm:p-5 bg-tertiary dark:bg-background border border-border rounded-[2px] group-hover:border-foreground/40 transition-colors flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-start justify-between gap-3 mb-2">
-                        <h2 className="text-sm font-bold uppercase text-foreground font-mono group-hover:text-foreground transition-colors">
-                          {tool.title}
-                        </h2>
-
-                        <ArrowUpRight className="w-4 h-4 text-label/60 group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0 mt-0.5" />
-                      </div>
-
-                      <p className="text-sm text-label leading-relaxed font-mono">
-                        {tool.desc}
-                      </p>
+                  <div>
+                    <div className="flex items-center gap-2.5 mb-2.5">
+                      {tool.icon}
+                      <h2 className="text-sm sm:text-base font-bold text-foreground group-hover:text-secondary transition-colors font-mono">
+                        {tool.title}
+                      </h2>
                     </div>
 
-                    <div className="mt-4 pt-3 border-t border-border/60 flex flex-wrap items-center gap-1.5 font-mono text-xs">
-                      {tool.specs.map((spec, sIdx) => (
-                        <span
-                          key={sIdx}
-                          className="px-2 py-0.5 rounded-[2px] bg-background dark:bg-foreground/[0.04] text-label font-medium"
-                        >
-                          {spec}
-                        </span>
-                      ))}
-                    </div>
+                    <p className="text-xs text-label leading-relaxed font-mono line-clamp-2">
+                      {tool.desc}
+                    </p>
                   </div>
-                </Link>
-              );
-            })}
+
+                  <div className="flex items-center gap-1 text-xs text-secondary font-semibold mt-4 pt-3 border-t border-border/50 font-mono">
+                    <span>
+                      {locale === "pt"
+                        ? "Acessar ferramenta"
+                        : locale === "es"
+                          ? "Abrir herramienta"
+                          : "Open tool"}
+                    </span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </AppCard>
+              </Link>
+            ))}
           </div>
         </section>
 

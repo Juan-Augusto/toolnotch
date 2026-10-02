@@ -78,7 +78,7 @@ describe("ConvertHeicToJpgTool Integration", () => {
     jest.clearAllMocks();
   });
 
-  test("renders breadcrumbs, title, badges, and dropzone", () => {
+  test("renders breadcrumbs, title, and dropzone", () => {
     render(<ConvertHeicToJpgTool {...defaultProps} />);
 
     expect(screen.getByText("Início")).toBeInTheDocument();
@@ -89,10 +89,6 @@ describe("ConvertHeicToJpgTool Integration", () => {
         name: "Converter HEIC para JPG",
       }),
     ).toBeInTheDocument();
-
-    expect(screen.getByText("image.convertHeicToJpg.badges.private")).toBeInTheDocument();
-    expect(screen.getByText("image.convertHeicToJpg.badges.format")).toBeInTheDocument();
-    expect(screen.getByText("image.convertHeicToJpg.badges.apple")).toBeInTheDocument();
   });
 
   test("loads HEIC photo, converts to JPG, and allows download", async () => {

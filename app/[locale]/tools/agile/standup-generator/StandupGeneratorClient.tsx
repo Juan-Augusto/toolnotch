@@ -269,40 +269,43 @@ export default function StandupGeneratorClient({ labels, locale = "pt" }: Props)
       <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-border/70">
         <div className="flex flex-wrap items-center gap-2">
           <AppButton
+            small
             type="button"
             color="secondary"
             onClick={handleLoadHistory}
-            className="font-mono text-sm px-3.5 py-1.5"
+            className="font-mono text-xs !font-medium !normal-case !py-1 !px-2.5"
           >
-            <History className="w-4 h-4 mr-1.5 text-primary" />
+            <History className="w-3.5 h-3.5 mr-1 text-current" />
             <span>{labels.loadYesterday}</span>
           </AppButton>
 
           <AppButton
+            small
             type="button"
             color="tertiary"
             onClick={handleLoadExample}
-            className="font-mono text-sm px-3.5 py-1.5"
+            className="font-mono text-xs !font-medium !normal-case !py-1 !px-2.5"
           >
-            <Sparkles className="w-4 h-4 mr-1.5 text-amber-500" />
+            <Sparkles className="w-3.5 h-3.5 mr-1 text-amber-500" />
             <span>{labels.loadExample}</span>
           </AppButton>
         </div>
 
         <div className="flex items-center gap-2">
           {toast && (
-            <AppBadge bg="bg-primary/10" text="text-primary" className="border border-primary/30 font-mono text-sm px-3 py-1">
+            <AppBadge bg="bg-primary/10" text="text-primary" className="border border-primary/30 font-mono text-xs px-2.5 py-0.5">
               {toast}
             </AppBadge>
           )}
 
           <AppButton
+            small
             type="button"
             color="tertiary"
             onClick={handleClear}
-            className="font-mono text-sm text-danger hover:text-danger px-3.5 py-1.5"
+            className="font-mono text-xs !font-medium !normal-case text-danger hover:text-danger !py-1 !px-2.5"
           >
-            <RotateCcw className="w-4 h-4 mr-1.5" />
+            <RotateCcw className="w-3.5 h-3.5 mr-1" />
             <span>{labels.clearButton}</span>
           </AppButton>
         </div>

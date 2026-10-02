@@ -3,7 +3,6 @@
 import React, { useState, useTransition } from "react";
 import { useTranslations } from "next-intl";
 import { saveAs } from "file-saver";
-import { ShieldCheck, Sparkles, Scissors } from "lucide-react";
 import { AppCard, AppDropfile, AppInput } from "@/components/ui";
 import type { FaqItem } from "@/components/AppFaqSection";
 import { pdfToImages } from "@/lib/pdfToImage";
@@ -237,26 +236,6 @@ export default function DeletePdfPagesTool({
           title={title}
           description={description}
           locale={locale}
-          badges={[
-            {
-              text: t("badges.noUpload"),
-              bg: "bg-primary",
-              textColor: "text-background",
-              icon: <ShieldCheck className="w-3.5 h-3.5 shrink-0" />,
-            },
-            {
-              text: t("badges.visual"),
-              bg: "bg-secondary",
-              textColor: "text-background",
-              icon: <Scissors className="w-3.5 h-3.5 shrink-0" />,
-            },
-            {
-              text: t("badges.free"),
-              bg: "bg-foreground",
-              textColor: "text-background",
-              icon: <Sparkles className="w-3.5 h-3.5 shrink-0" />,
-            },
-          ]}
         />
 
         <AppCard

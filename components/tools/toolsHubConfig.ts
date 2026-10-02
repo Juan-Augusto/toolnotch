@@ -1,5 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 import {
+  Code2,
   FileText,
   Image,
   ArrowLeftRight,
@@ -14,6 +15,7 @@ import {
 } from "lucide-react";
 
 export type ToolCategoryKey =
+  | "dev"
   | "pdf"
   | "image"
   | "convert"
@@ -27,6 +29,7 @@ export type ToolCategoryKey =
   | "utilities";
 
 export const DEFAULT_TOOL_CATEGORY_KEYS: ToolCategoryKey[] = [
+  "dev",
   "pdf",
   "image",
   "convert",
@@ -61,6 +64,16 @@ export const TOOL_CATEGORY_CONFIG: Record<
   ToolCategoryKey,
   ToolCategoryDisplayConfig
 > = {
+  dev: {
+    name: {
+      pt: "DESENVOLVEDOR",
+      es: "DESARROLLADOR",
+      en: "DEVELOPER",
+    },
+    badgeColor: "text-white dark:text-black",
+    badgeBg: "bg-emerald-600 dark:bg-emerald-500",
+    icon: Code2,
+  },
   pdf: {
     name: {
       pt: "PDF",
@@ -193,7 +206,7 @@ export const TOOLS_I18N_LABELS: Record<string, ToolsHubLabels> = {
     subtitle:
       "Calculadoras, utilitários, conversores e processadores de arquivos 100% gratuitos e que rodam direto no navegador.",
     allCategories: "TODOS",
-    searchPlaceholder: "pesquisar...",
+    searchPlaceholder: "Pesquisar...",
     noResults: "Nenhuma ferramenta encontrada para sua busca.",
     clearFilters: "Limpar filtros",
     useTool: "USAR FERRAMENTA",
@@ -207,7 +220,7 @@ export const TOOLS_I18N_LABELS: Record<string, ToolsHubLabels> = {
     subtitle:
       "Calculadoras, utilidades, conversores y procesadores de archivos 100% gratis que funcionan directo en tu navegador.",
     allCategories: "TODOS",
-    searchPlaceholder: "buscar...",
+    searchPlaceholder: "Buscar...",
     noResults: "No se encontraron herramientas para tu búsqueda.",
     clearFilters: "Limpar filtros",
     useTool: "USAR HERRAMIENTA",
@@ -221,7 +234,7 @@ export const TOOLS_I18N_LABELS: Record<string, ToolsHubLabels> = {
     subtitle:
       "Calculators, utilities, converters, and file processors — 100% free and running entirely in your browser.",
     allCategories: "ALL",
-    searchPlaceholder: "search...",
+    searchPlaceholder: "Search...",
     noResults: "No tools found matching your search.",
     clearFilters: "Clear filters",
     useTool: "USE TOOL",

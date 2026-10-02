@@ -78,7 +78,7 @@ describe("ImageResizerTool Integration", () => {
     jest.clearAllMocks();
   });
 
-  test("renders breadcrumbs, title, badges, dropzone, and initially disabled button", () => {
+  test("renders breadcrumbs, title, dropzone, and initially disabled button", () => {
     render(<ImageResizerTool {...defaultProps} />);
 
     expect(screen.getByText("Início")).toBeInTheDocument();
@@ -89,10 +89,6 @@ describe("ImageResizerTool Integration", () => {
         name: "Redimensionar Imagem Online",
       }),
     ).toBeInTheDocument();
-
-    expect(screen.getByText("image.resizer.badges.private")).toBeInTheDocument();
-    expect(screen.getByText("image.resizer.badges.presets")).toBeInTheDocument();
-    expect(screen.getByText("image.resizer.badges.free")).toBeInTheDocument();
 
     const resizeButton = screen.getByRole("button", {
       name: /image\.resizer\.button\.resize/i,

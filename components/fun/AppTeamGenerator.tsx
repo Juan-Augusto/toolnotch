@@ -441,7 +441,7 @@ export default function AppTeamGenerator({ locale = "pt" }: AppTeamGeneratorProp
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.8 }}
-                    className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-secondary/15 border border-border/80 text-foreground text-xs sm:text-sm font-mono rounded-[2px] shadow-2xs group"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-secondary/15 border border-border/80 text-foreground text-xs sm:text-sm font-mono rounded-[2px] group"
                   >
                     <span className="font-medium truncate max-w-[200px]">{name}</span>
                     <button
@@ -656,7 +656,7 @@ export default function AppTeamGenerator({ locale = "pt" }: AppTeamGeneratorProp
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.8 }}
-                        className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-secondary/15 border border-border/80 text-foreground text-xs sm:text-sm font-mono rounded-[2px] shadow-2xs group"
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-secondary/15 border border-border/80 text-foreground text-xs sm:text-sm font-mono rounded-[2px] group"
                       >
                         <span className="font-medium truncate max-w-[200px]">{name}</span>
                         <button
@@ -690,7 +690,7 @@ export default function AppTeamGenerator({ locale = "pt" }: AppTeamGeneratorProp
             onClick={generate}
             disabled={!isValid || participants.length < 2}
             color="primary"
-            className="w-full font-mono font-bold text-sm sm:text-base py-3 sm:py-3.5 tracking-wide shadow-xs"
+            className="w-full font-mono font-bold text-sm sm:text-base py-3 sm:py-3.5 tracking-wide"
           >
             <Shuffle className="w-4 h-4 mr-2" />
             {t("button.generate")}
@@ -755,7 +755,7 @@ export default function AppTeamGenerator({ locale = "pt" }: AppTeamGeneratorProp
                   <motion.div
                     key={i}
                     variants={cardVariants}
-                    className={`rounded-[2px] bg-background/60 border border-border/80 p-4 sm:p-5 shadow-xs flex flex-col justify-between ${accent.border}`}
+                    className={`rounded-[2px] bg-background/60 border border-border/80 p-4 sm:p-5 flex flex-col justify-between ${accent.border}`}
                   >
                     <div>
                       <div className="flex items-center justify-between gap-2 mb-3.5 pb-2.5 border-b border-border/80">

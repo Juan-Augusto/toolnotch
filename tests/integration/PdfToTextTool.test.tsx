@@ -49,12 +49,11 @@ describe("PdfToTextTool Integration", () => {
     jest.clearAllMocks();
   });
 
-  test("renders initial breadcrumbs, badges, and dropzone", () => {
+  test("renders initial breadcrumbs and dropzone", () => {
     render(<PdfToTextTool {...defaultProps} />);
 
     expect(screen.getByRole("heading", { level: 1, name: /PDF para Texto/i })).toBeInTheDocument();
     expect(screen.getByText("Ferramentas PDF")).toBeInTheDocument();
-    expect(screen.getByText("pdf.pdfToText.badges.noUpload")).toBeInTheDocument();
     expect(screen.getByText("pdf.pdfToText.dropZone.label")).toBeInTheDocument();
   });
 

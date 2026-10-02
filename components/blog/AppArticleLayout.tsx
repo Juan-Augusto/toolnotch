@@ -166,7 +166,7 @@ export default async function AppArticleLayout({
             {description}
           </p>
 
-          <div className="border-b-dashed-5 mt-6" />
+          <div className="border-b border-border mt-6" />
         </header>
 
         <article className="w-full max-w-none">{children}</article>
@@ -205,7 +205,7 @@ export default async function AppArticleLayout({
         )}
 
         {displayRelatedTools.length > 0 && (
-          <section className="mt-12 pt-8 border-t-dashed-5 not-prose">
+          <section className="mt-12 pt-8 border-t border-border not-prose">
             <h2 className=" text-base sm:text-lg font-bold uppercase text-foreground mb-4">
               {labels.relatedToolsHeading}
             </h2>
@@ -233,7 +233,7 @@ export default async function AppArticleLayout({
         )}
 
         {relatedPosts && relatedPosts.length > 0 && (
-          <section className="mt-12 pt-8 border-t-dashed-5 not-prose">
+          <section className="mt-12 pt-8 border-t border-border not-prose">
             <h2 className=" text-base sm:text-lg font-bold uppercase text-foreground mb-4">
               {labels.relatedArticlesHeading}
             </h2>
@@ -272,7 +272,7 @@ export default async function AppArticleLayout({
         )}
 
         {showAuthorBio && (
-          <section className="mt-12 pt-8 border-t-dashed-5 not-prose">
+          <section className="mt-12 pt-8 border-t border-border not-prose">
             <AppCard border hover={false} className="p-6 sm:p-8 bg-tertiary/20">
               <div className="flex flex-col sm:flex-row items-start  gap-5">
                 <div className="w-12 h-12 mt-1 rounded-[2px] bg-purple-500 text-background font-semibold text-base flex items-center justify-center shrink-0 select-none">

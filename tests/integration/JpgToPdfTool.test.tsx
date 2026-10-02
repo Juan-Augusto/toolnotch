@@ -46,12 +46,8 @@ describe("JpgToPdfTool Integration", () => {
     jest.clearAllMocks();
   });
 
-  test("renders dropzone, badges, and convert button initially disabled", () => {
+  test("renders dropzone and convert button initially disabled", () => {
     render(<JpgToPdfTool {...defaultProps} />);
-
-    expect(screen.getByText("Sem upload para servidores")).toBeInTheDocument();
-    expect(screen.getByText("Suporta JPG, PNG & JPEG")).toBeInTheDocument();
-    expect(screen.getByText("Ilimitado & Gratuito")).toBeInTheDocument();
 
     expect(screen.getByText("pdf.jpgToPdf.dropZone.label")).toBeInTheDocument();
     expect(screen.getByText("pdf.jpgToPdf.dropZone.hint")).toBeInTheDocument();

@@ -6,11 +6,6 @@ import JSZip from "jszip";
 import { saveAs } from "file-saver";
 import { PDFDocument } from "pdf-lib";
 import {
-  ShieldCheck,
-  FileImage,
-  Sparkles,
-} from "lucide-react";
-import {
   AppCard,
   AppButton,
   AppDropfile,
@@ -164,32 +159,12 @@ export default function PdfToJpgTool({
           title={title}
           description={description}
           locale={locale}
-          badges={[
-            {
-              text: t("badges.noUpload"),
-              bg: "bg-primary",
-              textColor: "text-background",
-              icon: <ShieldCheck className="w-3.5 h-3.5 shrink-0" />,
-            },
-            {
-              text: t("badges.quality"),
-              bg: "bg-secondary",
-              textColor: "text-background",
-              icon: <FileImage className="w-3.5 h-3.5 shrink-0" />,
-            },
-            {
-              text: t("badges.free"),
-              bg: "bg-foreground",
-              textColor: "text-background",
-              icon: <Sparkles className="w-3.5 h-3.5 shrink-0" />,
-            },
-          ]}
         />
 
         <AppCard
           border
           cornerAccents={true}
-          className="p-1.5 sm:p-4 md:p-6 lg:p-8 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto shadow-xs"
+          className="p-1.5 sm:p-4 md:p-6 lg:p-8 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto"
         >
           <div className="space-y-3 sm:space-y-5">
             {!done ? (

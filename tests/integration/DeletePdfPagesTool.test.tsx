@@ -58,12 +58,11 @@ describe("DeletePdfPagesTool Integration", () => {
     jest.clearAllMocks();
   });
 
-  test("renders initial breadcrumbs, badges, and dropzone", () => {
+  test("renders initial breadcrumbs and dropzone", () => {
     render(<DeletePdfPagesTool {...defaultProps} />);
 
     expect(screen.getByRole("heading", { level: 1, name: /Remover Páginas do PDF/i })).toBeInTheDocument();
     expect(screen.getByText("Ferramentas PDF")).toBeInTheDocument();
-    expect(screen.getByText("pdf.deletePages.badges.noUpload")).toBeInTheDocument();
     expect(screen.getByText("pdf.deletePages.dropZone.label")).toBeInTheDocument();
   });
 

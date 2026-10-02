@@ -186,7 +186,7 @@ export default function ConvertWebpToPngTool({
         <AppCard
           border
           cornerAccents={true}
-          className="p-1.5 sm:p-4 md:p-6 lg:p-8 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto shadow-xs"
+          className="p-1.5 sm:p-4 md:p-6 lg:p-8 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto"
         >
           <div className="space-y-3 sm:space-y-5">
             {!result ? (

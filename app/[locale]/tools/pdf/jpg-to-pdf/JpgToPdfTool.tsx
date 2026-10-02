@@ -17,7 +17,7 @@ import {
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import { saveAs } from "file-saver";
-import { ShieldCheck, Images, Sparkles, Info } from "lucide-react";
+import { Info } from "lucide-react";
 import { useTranslations } from "next-intl";
 import {
   AppCard,
@@ -203,47 +203,12 @@ export default function JpgToPdfTool({
           title={title}
           description={description}
           locale={locale}
-          badges={[
-            {
-              text:
-                locale === "pt"
-                  ? "Sem upload para servidores"
-                  : locale === "es"
-                    ? "Sin subida a servidores"
-                    : "Zero server upload",
-              bg: "bg-primary",
-              textColor: "text-background",
-              icon: <ShieldCheck className="w-3.5 h-3.5 shrink-0" />,
-            },
-            {
-              text:
-                locale === "pt"
-                  ? "Suporta JPG, PNG & JPEG"
-                  : locale === "es"
-                    ? "Soporta JPG, PNG y JPEG"
-                    : "Supports JPG, PNG & JPEG",
-              bg: "bg-secondary",
-              textColor: "text-background",
-              icon: <Images className="w-3.5 h-3.5 shrink-0" />,
-            },
-            {
-              text:
-                locale === "pt"
-                  ? "Ilimitado & Gratuito"
-                  : locale === "es"
-                    ? "Ilimitado y Gratis"
-                    : "Unlimited & Free",
-              bg: "bg-foreground",
-              textColor: "text-background",
-              icon: <Sparkles className="w-3.5 h-3.5 shrink-0" />,
-            },
-          ]}
         />
 
         <AppCard
           border
           cornerAccents={true}
-          className="p-1.5 sm:p-4 md:p-6 lg:p-8 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto shadow-xs"
+          className="p-1.5 sm:p-4 md:p-6 lg:p-8 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto"
         >
           <div className="space-y-3 sm:space-y-5">
             {!done || !pdfOutput ? (

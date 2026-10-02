@@ -304,7 +304,7 @@ export default function AppTypingTest({ locale = "en" }: AppTypingTestProps) {
         </div>
       ) : (
         /* Results View */
-        <div className="p-5 sm:p-7 bg-background border-2 border-border rounded-[2px] shadow-xs text-center space-y-6">
+        <div className="p-5 sm:p-7 bg-background border-2 border-border rounded-[2px] text-center space-y-6">
           <div>
             <div className="inline-flex p-3 rounded-full bg-primary/10 text-primary mb-3">
               <Trophy className="w-8 h-8" />

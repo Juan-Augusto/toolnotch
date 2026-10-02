@@ -408,7 +408,7 @@ export default function CensorImageTool({
         <AppCard
           border
           cornerAccents={true}
-          className="p-1.5 sm:p-4 md:p-6 lg:p-8 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto shadow-xs"
+          className="p-1.5 sm:p-4 md:p-6 lg:p-8 bg-tertiary mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto"
         >
           <div className="space-y-3 sm:space-y-5">
             {!result ? (
@@ -507,7 +507,7 @@ export default function CensorImageTool({
                                 className={`absolute overflow-hidden flex items-start justify-between p-1 group pointer-events-auto transition-all ${
                                   cleanPreview
                                     ? "border border-transparent"
-                                    : "border-2 border-primary/90 shadow-sm"
+                                    : "border-2 border-primary/90"
                                 }`}
                                 style={{
                                   left: `${boxLeft}px`,
@@ -548,7 +548,7 @@ export default function CensorImageTool({
                                         e.stopPropagation();
                                         cycleAreaType(area.id);
                                       }}
-                                      className="relative z-10 text-[10px] font-mono font-bold uppercase bg-background text-primary px-1.5 py-0.5 rounded-[2px] border border-primary/30 shadow-sm leading-none hover:bg-primary hover:text-background transition-colors cursor-pointer select-none"
+                                      className="relative z-10 text-[10px] font-mono font-bold uppercase bg-background text-primary px-1.5 py-0.5 rounded-[2px] border border-primary/30 leading-none hover:bg-primary hover:text-background transition-colors cursor-pointer select-none"
                                       title={t("settings.toggleAreaType")}
                                       aria-label={t("settings.toggleAreaType")}
                                     >
@@ -560,7 +560,7 @@ export default function CensorImageTool({
                                         e.stopPropagation();
                                         removeArea(area.id);
                                       }}
-                                      className="relative z-10 w-4 h-4 bg-red-600 text-white rounded-full flex items-center justify-center hover:bg-red-700 transition-colors shadow-sm cursor-pointer"
+                                      className="relative z-10 w-4 h-4 bg-red-600 text-white rounded-full flex items-center justify-center hover:bg-red-700 transition-colors cursor-pointer"
                                       title={t("settings.removeArea")}
                                       aria-label={t("settings.removeArea")}
                                     >

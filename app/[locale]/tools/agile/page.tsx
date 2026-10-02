@@ -470,26 +470,24 @@ export default async function AgileToolsHubPage({ params }: Props) {
                     className="group block h-full select-none"
                   >
                     <AppCard
-                      hover
                       border
-                      cornerAccents
-                      className="h-full flex flex-col justify-between p-3.5 sm:p-5 md:p-6 bg-tertiary transition-all"
+                      cornerAccents={false}
+                      className="p-4 sm:p-5 bg-tertiary group-hover:border-secondary/60 transition-colors h-full flex flex-col justify-between"
                     >
                       <div>
-                        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-[2px] text-primary flex items-center justify-center shrink-0 mb-3 sm:mb-4 group-hover:bg-primary group-hover:text-background transition-colors">
-                          <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
+                        <div className="flex items-center gap-2.5 mb-2.5">
+                          <Icon className="w-5 h-5 text-secondary shrink-0" />
+                          <h3 className="text-sm sm:text-base font-bold font-mono text-foreground group-hover:text-secondary transition-colors">
+                            {tool.title}
+                          </h3>
                         </div>
 
-                        <h3 className="text-sm sm:text-base font-bold font-mono text-foreground group-hover:text-secondary transition-colors leading-snug mb-2">
-                          {tool.title}
-                        </h3>
-
-                        <p className="text-xs sm:text-sm text-label leading-relaxed line-clamp-2 sm:line-clamp-3">
+                        <p className="text-xs text-label leading-relaxed font-mono line-clamp-2">
                           {tool.desc}
                         </p>
                       </div>
 
-                      <div className="pt-3 sm:pt-4 mt-3 sm:mt-4 border-t border-border/60 flex items-center justify-between text-xs font-semibold uppercase font-mono text-label group-hover:text-secondary transition-colors">
+                      <div className="flex items-center gap-1 text-xs text-secondary font-semibold mt-4 pt-3 border-t border-border/50 font-mono">
                         <span>{meta.openTool}</span>
                         <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                       </div>
