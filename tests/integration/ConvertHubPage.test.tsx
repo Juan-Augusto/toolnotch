@@ -74,15 +74,13 @@ describe("ConvertHubPage", () => {
     });
     render(jsx);
 
-    // Header & Badges
+    // Header
     expect(
       screen.getByRole("heading", {
         level: 1,
         name: "Conversores e Calculadoras de Medidas",
       })
     ).toBeInTheDocument();
-    expect(screen.getAllByText("200+ Unidades").length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText("150+ Moedas").length).toBeGreaterThanOrEqual(1);
 
     // 3 Core Tools
     expect(

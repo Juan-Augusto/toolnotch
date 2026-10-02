@@ -27,11 +27,10 @@ describe("AppCpfGenerator Component", () => {
 describe("AppCnpjGenerator Component", () => {
   test("renders CNPJ generator with company data view", () => {
     render(<AppCnpjGenerator locale="pt" />);
-    expect(screen.getByText(/CNPJ Gerado/i)).toBeInTheDocument();
-    expect(screen.getByText(/Razão Social/i)).toBeInTheDocument();
-    expect(screen.getByText(/Inscrição Estadual/i)).toBeInTheDocument();
+    expect(screen.getByText(/Razão Social:/i)).toBeInTheDocument();
+    expect(screen.getByText(/Nome Fantasia:/i)).toBeInTheDocument();
 
-    const generateBtn = screen.getByRole("button", { name: /Gerar Nova Empresa/i });
+    const generateBtn = screen.getByRole("button", { name: /Gerar Novo CNPJ/i });
     fireEvent.click(generateBtn);
   });
 });

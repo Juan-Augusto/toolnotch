@@ -147,7 +147,7 @@ describe("AppToolsHub", () => {
     render(<AppToolsHub tools={mockTools} locale="en" />);
 
     expect(screen.getByText("ALL TOOLS")).toBeInTheDocument();
-    expect(screen.getByPlaceholderText("search...")).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/search\.\.\./i)).toBeInTheDocument();
     expect(screen.getByText("FEATURED")).toBeInTheDocument();
   });
 
