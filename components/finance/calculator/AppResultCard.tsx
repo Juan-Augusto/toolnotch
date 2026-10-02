@@ -19,7 +19,7 @@ export default function AppResultCard({ result }: ResultCardProps) {
   }
 
   return (
-    <div className="bg-background rounded-[2px] border border-border p-5 sm:p-6 font-mono shadow-xs">
+    <div className="bg-background rounded-[2px] border border-border p-5 sm:p-6 font-mono">
       <div className="text-center mb-5 pb-5 border-b border-border/80">
         <div className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">
           {formatCurrency(result.monthlyPayment)}

@@ -521,7 +521,7 @@ export default function PlanningPokerClient({ labels, locale = "pt" }: Props) {
                   value={newMemberName}
                   onChange={(e) => setNewMemberName(e.target.value)}
                   placeholder={labels.addParticipantPlaceholder || "Nome do desenvolvedor..."}
-                  className="px-3 py-2 text-sm sm:text-base font-mono bg-background border border-border rounded-[2px] text-foreground outline-none focus:border-primary"
+                  className="h-[38px] px-3 py-2 text-sm sm:text-base font-mono bg-background border border-border rounded-[2px] text-foreground outline-none focus:border-primary"
                 />
                 <AppButton
                   type="submit"
@@ -557,7 +557,7 @@ export default function PlanningPokerClient({ labels, locale = "pt" }: Props) {
                       }}
                       className={`relative p-3 sm:p-4 rounded-[2px] border transition-all cursor-pointer select-none flex flex-col items-center justify-between min-h-[140px] sm:min-h-[160px] ${
                         isActive
-                          ? "border-primary bg-primary/5 shadow-sm ring-1 ring-primary"
+                          ? "border-primary bg-primary/10"
                           : "border-border bg-tertiary hover:border-primary/50"
                       }`}
                     >
@@ -583,7 +583,7 @@ export default function PlanningPokerClient({ labels, locale = "pt" }: Props) {
                       <div className="my-2 flex items-center justify-center">
                         {!revealed ? (
                           hasVoted ? (
-                            <div className="w-10 sm:w-12 h-14 sm:h-16 rounded-[2px] bg-primary text-background border border-primary flex flex-col items-center justify-center font-mono font-bold shadow-xs">
+                            <div className="w-10 sm:w-12 h-14 sm:h-16 rounded-[2px] bg-primary text-background border border-primary flex flex-col items-center justify-center font-mono font-bold">
                               <CheckCircle2 className="w-5 h-5 mb-0.5" />
                               <span className="text-xs uppercase tracking-tight font-bold">OK</span>
                             </div>
@@ -593,7 +593,7 @@ export default function PlanningPokerClient({ labels, locale = "pt" }: Props) {
                             </div>
                           )
                         ) : (
-                          <div className="w-12 sm:w-14 h-16 sm:h-20 rounded-[2px] border-2 border-primary bg-background text-primary font-mono font-black text-2xl sm:text-3xl flex items-center justify-center shadow-xs animate-in zoom-in-75 duration-200">
+                          <div className="w-12 sm:w-14 h-16 sm:h-20 rounded-[2px] border border-primary bg-background text-primary font-mono font-black text-2xl sm:text-3xl flex items-center justify-center animate-in zoom-in-75 duration-200">
                             {p.vote ?? "-"}
                           </div>
                         )}
@@ -658,12 +658,12 @@ export default function PlanningPokerClient({ labels, locale = "pt" }: Props) {
                       type="button"
                       disabled={!activeParticipant || participants.length === 0}
                       onClick={() => handleVote(card)}
-                      className={`w-14 sm:w-16 h-20 sm:h-24 rounded-[2px] border-2 font-mono font-bold text-lg sm:text-xl flex items-center justify-center transition-all select-none ${
+                      className={`w-14 sm:w-16 h-20 sm:h-24 rounded-[2px] border font-mono font-bold text-lg sm:text-xl flex items-center justify-center transition-all select-none ${
                         !activeParticipant || participants.length === 0
                           ? "opacity-40 cursor-not-allowed border-border bg-background text-muted-foreground"
                           : isSelected
-                            ? "border-primary bg-primary text-background shadow-md scale-105 cursor-pointer"
-                            : "border-border bg-background text-foreground hover:border-primary/80 hover:text-primary hover:shadow-2xs cursor-pointer"
+                            ? "border-primary bg-primary text-background scale-105 cursor-pointer"
+                            : "border-border bg-background text-foreground hover:border-primary/80 hover:text-primary cursor-pointer"
                       }`}
                     >
                       {card}
@@ -879,7 +879,7 @@ export default function PlanningPokerClient({ labels, locale = "pt" }: Props) {
           <div className="flex items-center justify-center py-4">
             <div
               onClick={() => setCameraFlipped(!cameraFlipped)}
-              className={`w-44 sm:w-56 h-64 sm:h-80 rounded-[4px] border-4 transition-all duration-300 transform select-none cursor-pointer flex flex-col items-center justify-center shadow-lg ${
+              className={`w-44 sm:w-56 h-64 sm:h-80 rounded-[4px] border transition-all duration-300 transform select-none cursor-pointer flex flex-col items-center justify-center ${
                 cameraFlipped
                   ? "border-primary bg-background text-primary scale-105"
                   : "border-border bg-tertiary text-muted-foreground"
@@ -921,9 +921,9 @@ export default function PlanningPokerClient({ labels, locale = "pt" }: Props) {
                     setCameraCard(card);
                     setCameraFlipped(true);
                   }}
-                  className={`w-12 sm:w-14 h-16 sm:h-20 rounded-[2px] border-2 font-mono font-bold text-base sm:text-lg flex items-center justify-center transition-all select-none cursor-pointer ${
+                  className={`w-12 sm:w-14 h-16 sm:h-20 rounded-[2px] border font-mono font-bold text-base sm:text-lg flex items-center justify-center transition-all select-none cursor-pointer ${
                     isSelected
-                      ? "border-primary bg-primary text-background shadow-xs"
+                      ? "border-primary bg-primary text-background"
                       : "border-border bg-tertiary text-foreground hover:border-primary/80 hover:text-primary"
                   }`}
                 >
@@ -965,7 +965,7 @@ export default function PlanningPokerClient({ labels, locale = "pt" }: Props) {
             {fibonacciGuideItems.map((item, idx) => (
               <div
                 key={idx}
-                className="p-4 bg-background border border-border rounded-[2px] space-y-1.5 shadow-2xs"
+                className="p-4 bg-background border border-border rounded-[2px] space-y-1.5"
               >
                 <div className={`font-bold text-sm sm:text-base ${item.color}`}>
                   {item.title}

@@ -17,7 +17,7 @@ export default function ExtractedImageCard({
   downloadLabel,
 }: ExtractedImageCardProps) {
   return (
-    <div className="bg-background border border-border rounded-[2px] p-2 sm:p-3 flex flex-col items-center justify-between hover:border-foreground/30 hover:shadow-xs transition-all">
+    <div className="bg-background border border-border rounded-[2px] p-2 sm:p-3 flex flex-col items-center justify-between hover:border-foreground/30 transition-all">
       <div className="w-full flex items-center justify-between pb-1.5 sm:pb-2 border-b border-border/60 mb-1.5 sm:mb-2">
         <span className="text-[11px] font-bold uppercase tracking-wider text-foreground">
           Pág. {image.page}

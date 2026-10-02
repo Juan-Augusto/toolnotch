@@ -156,8 +156,8 @@ export default function SprintDateCalculatorClient({
       {result && (
         <div className="space-y-4 animate-in fade-in zoom-in-95 duration-200">
           <div className="flex items-center justify-between pb-3 border-b border-border/70">
-            <h3 className="font-mono font-bold text-base sm:text-lg uppercase text-foreground flex items-center gap-2">
-              <CalendarDays className="w-5 h-5 text-primary" />
+            <h3 className="font-mono font-semibold text-sm sm:text-base uppercase text-foreground flex items-center gap-2">
+              <CalendarDays className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
               <span>
                 {locale === "es"
                   ? "Cronograma del Sprint"
@@ -171,7 +171,7 @@ export default function SprintDateCalculatorClient({
               onClick={copyToClipboard}
               small
               color="secondary"
-              className="font-mono text-sm px-3.5 h-[36px]"
+              className="font-mono text-xs sm:text-sm px-3.5 h-[36px]"
             >
               {copied ? (
                 <>
@@ -188,57 +188,57 @@ export default function SprintDateCalculatorClient({
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-            <div className="p-4 rounded-[2px] bg-tertiary border border-border flex items-center gap-3.5 shadow-2xs">
-              <div className="w-10 h-10 rounded-[2px] bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                <CalendarCheck className="w-5 h-5" />
+            <div className="p-3.5 sm:p-4 rounded-[2px] bg-tertiary border border-border flex items-center gap-3.5">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-[2px] bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                <CalendarCheck className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div className="min-w-0">
-                <span className="text-sm font-mono uppercase text-muted-foreground block font-semibold">
+                <span className="text-xs sm:text-sm font-mono uppercase text-muted-foreground block font-medium">
                   {labels.planningLabel} {locale === "es" ? "(Inicio)" : locale === "en" ? "(Start)" : "(Início)"}
                 </span>
-                <span className="text-base sm:text-lg font-mono font-bold text-foreground capitalize">
+                <span className="text-sm sm:text-base font-mono font-semibold text-foreground capitalize">
                   {formatDate(result.planning, locale)}
                 </span>
               </div>
             </div>
 
-            <div className="p-4 rounded-[2px] bg-tertiary border border-border flex items-center gap-3.5 shadow-2xs">
-              <div className="w-10 h-10 rounded-[2px] bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
-                <Clock className="w-5 h-5" />
+            <div className="p-3.5 sm:p-4 rounded-[2px] bg-tertiary border border-border flex items-center gap-3.5">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-[2px] bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+                <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div className="min-w-0">
-                <span className="text-sm font-mono uppercase text-muted-foreground block font-semibold">
+                <span className="text-xs sm:text-sm font-mono uppercase text-muted-foreground block font-medium">
                   {labels.sprintEndLabel} {locale === "es" ? "(Cierre)" : locale === "en" ? "(End)" : "(Término)"}
                 </span>
-                <span className="text-base sm:text-lg font-mono font-bold text-foreground capitalize">
+                <span className="text-sm sm:text-base font-mono font-semibold text-foreground capitalize">
                   {formatDate(result.end, locale)}
                 </span>
               </div>
             </div>
 
-            <div className="p-4 rounded-[2px] bg-tertiary border border-border flex items-center gap-3.5 shadow-2xs">
-              <div className="w-10 h-10 rounded-[2px] bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0">
-                <Sparkles className="w-5 h-5" />
+            <div className="p-3.5 sm:p-4 rounded-[2px] bg-tertiary border border-border flex items-center gap-3.5">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-[2px] bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0">
+                <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div className="min-w-0">
-                <span className="text-sm font-mono uppercase text-muted-foreground block font-semibold">
+                <span className="text-xs sm:text-sm font-mono uppercase text-muted-foreground block font-medium">
                   {labels.reviewLabel}
                 </span>
-                <span className="text-base sm:text-lg font-mono font-bold text-foreground capitalize">
+                <span className="text-sm sm:text-base font-mono font-semibold text-foreground capitalize">
                   {formatDate(result.review, locale)}
                 </span>
               </div>
             </div>
 
-            <div className="p-4 rounded-[2px] bg-tertiary border border-border flex items-center gap-3.5 shadow-2xs">
-              <div className="w-10 h-10 rounded-[2px] bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0">
-                <RotateCcw className="w-5 h-5" />
+            <div className="p-3.5 sm:p-4 rounded-[2px] bg-tertiary border border-border flex items-center gap-3.5">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-[2px] bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0">
+                <RotateCcw className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div className="min-w-0">
-                <span className="text-sm font-mono uppercase text-muted-foreground block font-semibold">
+                <span className="text-xs sm:text-sm font-mono uppercase text-muted-foreground block font-medium">
                   {labels.retroLabel}
                 </span>
-                <span className="text-base sm:text-lg font-mono font-bold text-foreground capitalize">
+                <span className="text-sm sm:text-base font-mono font-semibold text-foreground capitalize">
                   {formatDate(result.retro, locale)}
                 </span>
               </div>
@@ -246,24 +246,24 @@ export default function SprintDateCalculatorClient({
           </div>
 
           {/* Standups List */}
-          <AppCard border cornerAccents={false} className="p-4 sm:p-5 bg-tertiary space-y-3.5">
+          <AppCard border cornerAccents={false} className="p-4 sm:p-5 bg-tertiary space-y-3">
             <div className="flex items-center justify-between pb-2.5 border-b border-border/60">
-              <span className="text-sm sm:text-base font-mono font-bold uppercase text-foreground">
+              <span className="text-xs sm:text-sm font-mono font-semibold uppercase text-foreground">
                 {labels.dailyStandupsLabel} ({result.standups.length})
               </span>
-              <span className="text-sm text-muted-foreground font-mono">
+              <span className="text-xs text-muted-foreground font-mono">
                 {labels.weekdaysOnlyNote}
               </span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-h-[260px] overflow-y-auto pr-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-[260px] overflow-y-auto pr-1">
               {result.standups.map((d, idx) => (
                 <div
                   key={idx}
-                  className="px-3 py-2 rounded-[2px] bg-background border border-border/60 text-sm sm:text-base font-mono text-foreground flex items-center justify-between"
+                  className="px-3 py-1.5 rounded-[2px] bg-background border border-border/60 text-xs sm:text-sm font-mono text-foreground flex items-center justify-between"
                 >
-                  <span className="text-muted-foreground font-semibold">{idx + 1}.</span>
-                  <span className="capitalize font-medium">{formatDate(d, locale)}</span>
+                  <span className="text-muted-foreground font-medium">{idx + 1}.</span>
+                  <span className="capitalize font-normal text-foreground">{formatDate(d, locale)}</span>
                 </div>
               ))}
             </div>

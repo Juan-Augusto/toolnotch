@@ -281,7 +281,7 @@ export default function SpinWheelClient({ locale, mode }: SpinWheelClientProps) 
                 >
                   <div className="flex items-center gap-2.5 min-w-0 pr-2">
                     <span
-                      className="w-3 h-3 rounded-full shrink-0 shadow-xs"
+                      className="w-3 h-3 rounded-full shrink-0"
                       style={{ backgroundColor: getWheelItemColor(idx, items.length) }}
                     />
                     <span className="text-xs font-mono text-muted-foreground w-5 shrink-0">

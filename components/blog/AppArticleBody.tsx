@@ -112,7 +112,7 @@ export function AppArticleBody({
               <h2
                 key={idx}
                 id={headingId}
-                className="text-xl sm:text-2xl font-bold uppercase text-foreground pt-8 pb-2 border-b-dashed-5"
+                className="text-lg sm:text-xl font-bold uppercase text-foreground pt-8 pb-2 border-b border-border"
               >
                 {headingText}
               </h2>
@@ -173,7 +173,7 @@ export function AppArticleBody({
                         {block.headers.map((h, hIdx) => (
                           <th
                             key={hIdx}
-                            className="p-3 font-bold uppercase text-foreground"
+                            className="px-3.5 py-2.5 font-semibold uppercase text-foreground text-xs tracking-wider"
                           >
                             {renderFormattedText(h)}
                           </th>
@@ -188,7 +188,7 @@ export function AppArticleBody({
                         className="border-b border-border/50 hover:bg-tertiary/30 transition-colors"
                       >
                         {row.map((cell, cIdx) => (
-                          <td key={cIdx} className="p-3 text-foreground/90 leading-normal">
+                          <td key={cIdx} className="px-3.5 py-2.5 text-foreground/90 leading-normal text-xs sm:text-sm">
                             {renderFormattedText(cell)}
                           </td>
                         ))}

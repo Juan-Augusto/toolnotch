@@ -66,7 +66,7 @@ export default function MergeFileItem({
       style={style}
       className={`flex items-center justify-between gap-2 sm:gap-3 p-2 sm:p-3 bg-background border rounded-[2px] transition-colors select-none ${
         isDragging
-          ? "border-secondary shadow-md ring-1 ring-secondary/30"
+          ? "border-secondary ring-1 ring-secondary/30"
           : "border-border hover:border-foreground/20"
       }`}
     >

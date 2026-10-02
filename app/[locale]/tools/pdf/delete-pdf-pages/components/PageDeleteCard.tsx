@@ -39,7 +39,7 @@ export default function PageDeleteCard({
       className={`group relative bg-background border rounded-[2px] p-1.5 sm:p-2.5 md:p-3 flex flex-col items-center select-none text-left transition-all cursor-pointer ${
         markedForDeletion
           ? "border-red-500 bg-red-500/5 ring-1 ring-red-500/40"
-          : "border-border hover:border-foreground/40 hover:shadow-xs"
+          : "border-border hover:border-foreground/40"
       }`}
     >
       <div className="w-full flex items-center justify-between gap-1 pb-1.5 sm:pb-2 border-b border-border/60 mb-1.5 sm:mb-2">
@@ -104,7 +104,7 @@ export default function PageDeleteCard({
 
         {markedForDeletion && (
           <div className="absolute inset-0 bg-red-950/20 flex items-center justify-center pointer-events-none">
-            <div className="w-10 h-10 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-md">
+            <div className="w-10 h-10 rounded-full bg-red-600/90 text-white flex items-center justify-center">
               <Trash2 className="w-5 h-5" />
             </div>
           </div>

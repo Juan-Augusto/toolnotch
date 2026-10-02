@@ -119,7 +119,7 @@ describe('AppQuizzesHub', () => {
     const { fireEvent } = await import('@testing-library/react');
     render(<AppQuizzesHub quizzes={mockQuizzes} locale="pt" />);
 
-    const searchInput = screen.getByPlaceholderText('pesquisar...');
+    const searchInput = screen.getByPlaceholderText('Pesquisar...');
     expect(searchInput).toBeInTheDocument();
 
     fireEvent.change(searchInput, { target: { value: 'FIFA' } });
@@ -138,7 +138,7 @@ describe('AppQuizzesHub', () => {
     const container = screen.getByTestId('quizzes-search-container');
     expect(container).toHaveClass('w-full', 'sm:w-64', 'md:w-72');
 
-    const searchInput = screen.getByPlaceholderText('pesquisar...');
+    const searchInput = screen.getByPlaceholderText('Pesquisar...');
     fireEvent.change(searchInput, { target: { value: 'FIFA' } });
     expect(searchInput).toHaveValue('FIFA');
 
@@ -151,7 +151,7 @@ describe('AppQuizzesHub', () => {
     const { fireEvent } = await import('@testing-library/react');
     render(<AppQuizzesHub quizzes={mockQuizzes} locale="pt" />);
 
-    const searchInput = screen.getByPlaceholderText('pesquisar...');
+    const searchInput = screen.getByPlaceholderText('Pesquisar...');
     expect(screen.queryByLabelText('Clear search')).not.toBeInTheDocument();
 
     fireEvent.change(searchInput, { target: { value: 'FIFA' } });

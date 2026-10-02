@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight, GraduationCap, Calculator, Award, BookOpen } from "lucide-react";
+import { ArrowRight, GraduationCap, Calculator, Award, BookOpen } from "lucide-react";
 import { buildAlternatesForLocale, localizedPath } from "@/lib/i18nMeta";
 import {
   buildJsonLd,
@@ -99,7 +99,7 @@ export default async function EducationToolsHubPage({ params }: Props) {
           : locale === "es"
             ? ["Escala 4.0 / 20 / 10", "Ponderación por Créditos", "Conversión Internacional"]
             : ["4.0 / 20 / 10 Scales", "Credit Weighted", "Grade Conversion"],
-      icon: <GraduationCap className="w-5 h-5 text-primary" />,
+      icon: <GraduationCap className="w-5 h-5 text-secondary shrink-0" />,
     },
     {
       href: `${prefix}/tools/education/cumulative-gpa-calculator`,
@@ -121,7 +121,7 @@ export default async function EducationToolsHubPage({ params }: Props) {
           : locale === "es"
             ? ["Proyección Futura", "Créditos Previos", "Cálculo Inmediato"]
             : ["Future Projection", "Prior Credits", "Instant Math"],
-      icon: <Calculator className="w-5 h-5 text-primary" />,
+      icon: <Calculator className="w-5 h-5 text-secondary shrink-0" />,
     },
     {
       href: `${prefix}/tools/education/grade-calculator`,
@@ -143,7 +143,7 @@ export default async function EducationToolsHubPage({ params }: Props) {
           : locale === "es"
             ? ["Ponderación Porcentual", "Meta de Aprobación", "Diagnóstico de Estado"]
             : ["Percentage Weighting", "Target Goal", "Status Diagnostic"],
-      icon: <Award className="w-5 h-5 text-primary" />,
+      icon: <Award className="w-5 h-5 text-secondary shrink-0" />,
     },
     {
       href: `${prefix}/tools/education/citation-generator`,
@@ -165,7 +165,7 @@ export default async function EducationToolsHubPage({ params }: Props) {
           : locale === "es"
             ? ["Estilo APA 7", "MLA 9 y Chicago", "Múltiples Autores"]
             : ["APA 7th Edition", "MLA 9th & Chicago", "Multiple Authors"],
-      icon: <BookOpen className="w-5 h-5 text-primary" />,
+      icon: <BookOpen className="w-5 h-5 text-secondary shrink-0" />,
     },
   ];
 
@@ -226,39 +226,36 @@ export default async function EducationToolsHubPage({ params }: Props) {
         </header>
 
         <section aria-label="Education Tools" className="mb-10 sm:mb-14">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {tools.map((tool) => (
               <Link key={tool.href} href={tool.href} className="group block h-full">
                 <AppCard
                   border
-                  cornerAccents
-                  className="p-5 sm:p-6 bg-tertiary group-hover:border-primary/60 transition-colors h-full flex flex-col justify-between"
+                  cornerAccents={false}
+                  className="p-4 sm:p-5 bg-tertiary group-hover:border-secondary/60 transition-colors h-full flex flex-col justify-between"
                 >
                   <div>
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center gap-2.5">
-                        {tool.icon}
-                        <h2 className="text-base sm:text-lg font-bold text-foreground font-mono group-hover:text-primary transition-colors">
-                          {tool.title}
-                        </h2>
-                      </div>
-                      <ArrowUpRight className="w-4 h-4 text-label group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                    <div className="flex items-center gap-2.5 mb-2.5">
+                      {tool.icon}
+                      <h2 className="text-sm sm:text-base font-bold text-foreground font-mono group-hover:text-secondary transition-colors">
+                        {tool.title}
+                      </h2>
                     </div>
 
-                    <p className="text-xs sm:text-sm text-label leading-relaxed mb-4">
+                    <p className="text-xs text-label leading-relaxed font-mono line-clamp-2">
                       {tool.desc}
                     </p>
                   </div>
 
-                  <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/60">
-                    {tool.specs.map((spec, i) => (
-                      <span
-                        key={i}
-                        className="px-2 py-0.5 text-[11px] font-mono bg-background border border-border rounded-[2px] text-label"
-                      >
-                        {spec}
-                      </span>
-                    ))}
+                  <div className="flex items-center gap-1 text-xs text-secondary font-semibold mt-4 pt-3 border-t border-border/50 font-mono">
+                    <span>
+                      {locale === "pt"
+                        ? "Acessar ferramenta"
+                        : locale === "es"
+                          ? "Abrir herramienta"
+                          : "Open tool"}
+                    </span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </AppCard>
               </Link>

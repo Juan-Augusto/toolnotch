@@ -4314,7 +4314,8 @@
       "educationTools": "Education Tools",
       "healthTools": "Health & Fitness",
       "mathTools": "Math Tools",
-      "utilityTools": "Utilities"
+      "utilityTools": "Utilities",
+      "devTools": "Developer Tools"
     },
     "tools": {
       "cropImage": {
@@ -4689,6 +4690,46 @@
       "extractPdfImages": {
         "label": "Extract Images from PDF",
         "desc": "Extract all embedded photos and illustrations from PDFs and download as ZIP."
+      },
+      "cpfGenerator": {
+        "label": "CPF Generator",
+        "desc": "Generate valid Brazilian CPFs with mask, state filter, and bulk mode"
+      },
+      "cnpjGenerator": {
+        "label": "CNPJ Generator",
+        "desc": "Generate valid Brazilian CNPJs and complete mock company data"
+      },
+      "addressGenerator": {
+        "label": "Address Generator",
+        "desc": "Generate realistic Brazilian addresses with CEP postal codes and states"
+      },
+      "uuidGenerator": {
+        "label": "UUID / GUID Generator",
+        "desc": "Generate UUID v4, v7, and v1 in bulk with custom casing and formats"
+      },
+      "jsonFormatter": {
+        "label": "JSON Formatter",
+        "desc": "Format, minify, and validate JSON code with real-time error diagnostics"
+      },
+      "jwtDecoder": {
+        "label": "JWT Decoder",
+        "desc": "Decode Header, Payload and verify JSON Web Token expiration in real time."
+      },
+      "base64Converter": {
+        "label": "Base64 Converter",
+        "desc": "Encode and decode text, hex, and images to Base64/Data URI."
+      },
+      "hashGenerator": {
+        "label": "Hash Generator",
+        "desc": "Generate MD5, SHA-256, SHA-512, CRC-32 and HMAC hashes with checksum verification."
+      },
+      "urlParser": {
+        "label": "URL Parser",
+        "desc": "Decompose URLs, interactively edit query parameters, and strip UTM tags."
+      },
+      "regexTester": {
+        "label": "Regex Tester",
+        "desc": "Test regular expressions with capture groups highlighting, substitution and presets."
       }
     },
     "badge": "Toolnotch | Over 40 essential tools",
@@ -4709,7 +4750,8 @@
       },
       "placeholder": "Add a note…",
       "addButton": "Add",
-      "voteAriaLabel": "Vote for this item",
+      "voteAriaLabel": "Upvote this item",
+      "dislikeAriaLabel": "Downvote this item",
       "deleteAriaLabel": "Delete this note",
       "exportButton": "Export as Markdown",
       "clearButton": "Clear Board",
@@ -5063,7 +5105,7 @@
         "saveToBacklogButton": "Save to Session Backlog",
         "sessionBacklogTitle": "Stories Created in Refinement",
         "sessionBacklogEmpty": "No stories saved in this session yet. Generate a story and click save.",
-        "copyAllBacklog": "Copy All Stories (Markdown)",
+        "copyAllBacklog": "Copy all stories",
         "allBacklogCopied": "Stories copied!",
         "clearBacklog": "Clear Backlog",
         "badgeInvest": "INVEST Criteria",
@@ -8592,5 +8634,309 @@
     "partnersButton": "Our Partners",
     "privacyButton": "Privacy Policy",
     "termsButton": "Terms of Service"
+  },
+  "cpfGenerator": {
+    "metaTitle": "Free Online CPF Generator — Valid Brazilian Tax ID with Mask & State | ToolNotch",
+    "metaDescription": "Generate valid Brazilian CPF numbers for software testing, QA, and form validation. Choose tax region, formatting mask, and bulk generation. 100% in-browser.",
+    "title": "Online CPF Generator",
+    "description": "Generate mathematically valid Brazilian CPF numbers (Modulo 11 algorithm) with optional punctuation, state tax region filtering, and bulk generation for software development and QA.",
+    "faqs": [
+      {
+        "question": "Are the generated CPFs officially registered?",
+        "answer": "The generated CPFs strictly follow the official mathematical checksum algorithm (Modulo 11). They are randomly generated synthetic numbers intended exclusively for software development, QA testing, and form validation."
+      },
+      {
+        "question": "Can I choose the state of origin?",
+        "answer": "Yes! In Brazil, the 9th digit of the CPF identifies the fiscal region of issuance (e.g. 8 for São Paulo, 7 for Rio de Janeiro). You can pick any state in the dropdown menu."
+      },
+      {
+        "question": "Is any generated data stored on servers?",
+        "answer": "No. All generation and validation happens 100% locally in your browser with JavaScript. Zero data leaves your computer."
+      }
+    ],
+    "richContent": {
+      "whatIs": "The CPF (Cadastro de Pessoas Físicas) is the Brazilian individual taxpayer registry number consisting of 11 decimal digits formatted as XXX.XXX.XXX-XX with two check digits calculated via weighted sums.",
+      "howToUse": [
+        "Choose the desired State/Fiscal Region or keep 'Any state'.",
+        "Toggle whether you want punctuation (dots and dash) or unformatted digits.",
+        "Select the quantity (single or bulk up to 50 CPFs).",
+        "Click 'Generate New CPF' and copy in one click."
+      ],
+      "whyItMatters": "Testing Brazilian e-commerce checkouts, banking systems, and registration flows requires valid CPF numbers to pass input mask validation.",
+      "proTip": "You can also test any CPF in the real-time validator box beneath the generator to inspect its mathematical validity."
+    }
+  },
+  "cnpjGenerator": {
+    "metaTitle": "Free Online CNPJ Generator with Realistic Mock Company Data | ToolNotch",
+    "metaDescription": "Generate valid Brazilian CNPJ numbers with complete mock corporate profiles (Company Name, State Tax ID, Address, and CNAE). 100% in-browser.",
+    "title": "CNPJ & Company Data Generator",
+    "description": "Generate mathematically valid Brazilian CNPJ numbers and realistic corporate profiles (Trade Name, Legal Name, State Tax ID, Address, and CNAE) for software testing.",
+    "faqs": [
+      {
+        "question": "How is company mock data generated?",
+        "answer": "The tool pairs business naming conventions, actual Brazilian economic activity sectors (CNAE), realistic State Tax IDs, and capital city addresses to create high-fidelity corporate test fixtures."
+      },
+      {
+        "question": "Can I export the data as JSON?",
+        "answer": "Yes! When generating full company data, you can copy the full object as JSON or clean text with a single click."
+      }
+    ],
+    "richContent": {
+      "whatIs": "The CNPJ (Cadastro Nacional da Pessoa Jurídica) is the official 14-digit tax identification number issued to Brazilian businesses and organizations in the format XX.XXX.XXX/0001-XX.",
+      "howToUse": [
+        "Keep 'Generate full company data' enabled for complete company profiles.",
+        "Toggle formatted or unformatted CNPJ numbers.",
+        "Click 'Generate New Company / CNPJ' to create new test fixtures.",
+        "Use 'Copy JSON' or 'Copy Text' for your mock database or test suites."
+      ],
+      "whyItMatters": "Testing B2B invoicing, simulated invoice issuance (NF-e), and payment integrations requires valid corporate registration data.",
+      "proTip": "Use the 'Copy JSON' button to quickly paste mock objects directly into Jest, Cypress, or Playwright test suites."
+    }
+  },
+  "addressGenerator": {
+    "metaTitle": "Free Brazilian Address & CEP Generator Online | ToolNotch",
+    "metaDescription": "Generate complete, realistic Brazilian addresses with valid postal codes (CEP), street names, neighborhoods, cities, and states for testing. 100% in-browser.",
+    "title": "Brazilian Address & CEP Generator",
+    "description": "Generate realistic Brazilian addresses with valid postal codes (CEP), street names, house numbers, unit details, cities, and state abbreviations for checkout testing.",
+    "faqs": [
+      {
+        "question": "Are the postal codes (CEPs) and street names real?",
+        "answer": "Yes. The generator uses a curated database of real postal codes, neighborhoods, and street names across major Brazilian metropolitan areas."
+      },
+      {
+        "question": "Can I filter by state?",
+        "answer": "Yes. You can select specific states like SP, RJ, MG, RS, PR, SC, BA, PE, CE, DF or select 'All States' for random nationwide generation."
+      }
+    ],
+    "richContent": {
+      "whatIs": "The Brazilian address generator outputs realistic geographical mock data formatted with standard 8-digit postal codes (CEP), street address, number, neighborhood (bairro), city, and state (UF).",
+      "howToUse": [
+        "Select the target State/UF from the dropdown.",
+        "Choose whether to include apartment or suite numbers.",
+        "Select single or bulk generation.",
+        "Copy the address line or export structured JSON."
+      ],
+      "whyItMatters": "E-commerce shipping rate calculations and address verification APIs require valid Brazilian CEPs and street structures.",
+      "proTip": "Copy individual fields like CEP or street name by clicking the copy icon directly on each card."
+    }
+  },
+  "uuidGenerator": {
+    "metaTitle": "Free Online UUID / GUID Generator — v4, v7 & v1 in Bulk | ToolNotch",
+    "metaDescription": "Generate UUID v4 (random), UUID v7 (RFC 9562 time-ordered), and v1 in bulk with uppercase, hyphenation, and format options. 100% in-browser.",
+    "title": "Online UUID / GUID Generator",
+    "description": "Generate Universally Unique Identifiers (UUIDs / GUIDs) in v4 (random), v7 (RFC 9562 time-ordered), and v1 formats. Bulk generate up to 100 IDs with uppercase, no-hyphen, and .TXT export options.",
+    "faqs": [
+      {
+        "question": "What is the difference between UUID v4 and UUID v7?",
+        "answer": "UUID v4 is completely random cryptographic entropy. UUID v7 (the new 2024 RFC 9562 standard) embeds a millisecond Unix timestamp before random bits, making it time-sortable and optimal for database primary keys."
+      },
+      {
+        "question": "Are the generated UUIDs cryptographically secure?",
+        "answer": "Yes. The tool utilizes the browser's native Web Crypto API (crypto.randomUUID and crypto.getRandomValues) for maximum entropy."
+      }
+    ],
+    "richContent": {
+      "whatIs": "A Universally Unique Identifier (UUID), also known as a GUID, is a 128-bit identifier standardized by RFC 4122 and RFC 9562 to guarantee uniqueness across distributed systems without central coordination.",
+      "howToUse": [
+        "Select your desired version: UUID v4 (random), UUID v7 (time-ordered), or UUID v1.",
+        "Configure styling options: UPPERCASE, hyphens, braces { }, URN prefix, or quotes.",
+        "Choose the quantity (1 up to 100 IDs).",
+        "Click 'Generate' and copy or download as a .TXT file."
+      ],
+      "whyItMatters": "UUIDs are the industry standard for primary keys in databases (PostgreSQL, MySQL, MongoDB), API transaction IDs, and distributed tracing.",
+      "proTip": "For SQL database primary keys, switch to UUID v7 for up to 30%–50% better index write performance over random UUID v4."
+    }
+  },
+  "jsonFormatter": {
+    "metaTitle": "Free Online JSON Formatter, Minifier & Validator | ToolNotch",
+    "metaDescription": "Format, beautify, minify, and validate JSON code online with line/column syntax error detection, tree statistics, and auto-fix. 100% in-browser.",
+    "title": "JSON Formatter & Validator",
+    "description": "Beautify messy JSON with custom indentation (2 spaces, 4 spaces, tabs), minify for compact payloads, validate syntax in real time with line/column error detection, and inspect key statistics.",
+    "faqs": [
+      {
+        "question": "Is my JSON payload sent to any server?",
+        "answer": "No. All formatting, minifying, and syntax validation happens 100% locally in your browser. Sensitive credentials and payload data remain completely private."
+      },
+      {
+        "question": "What does 'Auto-Fix' do?",
+        "answer": "It attempts to resolve common developer syntax errors like single quotes instead of double quotes, trailing commas in objects and arrays, and unquoted keys."
+      }
+    ],
+    "richContent": {
+      "whatIs": "JSON (JavaScript Object Notation) is the ubiquitous lightweight, text-based open standard format for structured data exchange across modern APIs, databases, and configuration files.",
+      "howToUse": [
+        "Paste or type your JSON in the code editor, or click 'Sample' to load a demo.",
+        "Click 'Format' to indent (2 or 4 spaces) or 'Minify' to compress into a single line.",
+        "Check the status banner for real-time validation and error line/column coordinates.",
+        "Click 'Copy' or 'Download JSON' to export the result."
+      ],
+      "whyItMatters": "Debugging unformatted API payloads or locating broken commas in large JSON configs is tedious without automated syntax diagnostics.",
+      "proTip": "Check the statistics footer to see exact byte weight, nesting depth, and total key counts for your payload."
+    }
+  },
+  "jwtDecoder": {
+    "metaTitle": "Free Online JWT Decoder & Inspector | ToolNotch",
+    "metaDescription": "Decode JSON Web Tokens (JWT) instantly in your browser. Inspect Header, Payload, expiration claims, readable timestamps, and signature. 100% private.",
+    "title": "JWT Decoder & Inspector",
+    "description": "Parse, debug, and inspect JWT tokens in real time. Check expiration status with live countdown, converted local timestamps, and claims with zero server transmission.",
+    "faqs": [
+      {
+        "question": "Is my JWT token or secret transmitted over the internet?",
+        "answer": "No. All Base64URL decoding and JSON parsing is executed 100% locally in your browser using client-side JavaScript. Your tokens never leave your device."
+      },
+      {
+        "question": "What does an expired JWT mean?",
+        "answer": "The \"exp\" claim in the payload specifies the Unix timestamp at which the token ceases to be accepted by authentication servers. Our tool computes the exact time remaining."
+      },
+      {
+        "question": "Does this tool verify the cryptographic signature?",
+        "answer": "The tool extracts and displays the token signature. Since verifying cryptographic signatures requires private secret keys (which should never be pasted into websites), payload inspection and formatting is the primary focus."
+      }
+    ],
+    "richContent": {
+      "whatIs": "A JSON Web Token (JWT, RFC 7519) is a compact, URL-safe means of representing claims to be transferred between two parties. It is widely used in stateless authentication across REST and GraphQL architectures.",
+      "howToUse": [
+        "Paste the encoded JWT string into the input area or select a sample token.",
+        "Inspect the top banner to check whether the token is currently valid or expired.",
+        "Review formatted Header (algorithm) and Payload (user claims and permissions).",
+        "Copy clean JSON objects with the quick action buttons."
+      ],
+      "whyItMatters": "During OAuth and OpenID Connect development, quickly inspecting token roles, permissions, and lifetime avoids painful debugging cycles.",
+      "proTip": "Always verify \"iat\" (issued at) and \"exp\" (expires at) claims to ensure your application servers are synchronized via NTP."
+    }
+  },
+  "base64Converter": {
+    "metaTitle": "Online Base64 Converter — Encode & Decode Text, Hex and Images | ToolNotch",
+    "metaDescription": "Encode and decode Base64 online with UTF-8 support, URL-Safe mode, Hexadecimal conversion, and Image Data URI generation. 100% private.",
+    "title": "Base64 Converter (Encoder / Decoder)",
+    "description": "Convert text and payloads to Base64 and vice versa instantly. Features full UTF-8 character support, URL-Safe formatting for web parameters, Hexadecimal conversion, and file-to-Data URI encoding.",
+    "faqs": [
+      {
+        "question": "What is Base64 encoding?",
+        "answer": "Base64 is a binary-to-text encoding scheme that represents binary data in an ASCII string format, allowing media and raw bytes to be safely transmitted over text-only protocols."
+      },
+      {
+        "question": "What is URL-Safe Base64?",
+        "answer": "URL-Safe Base64 replaces \"+\" with \"-\" and \"/\" with \"_\", while stripping trailing \"=\" padding characters so the string can be placed inside URLs without extra encoding."
+      },
+      {
+        "question": "Can I convert images to Base64 Data URIs?",
+        "answer": "Yes! In the \"File / Image\" tab, upload any image (PNG, JPG, SVG, WebP) to get a full data:image/... URI ready to paste into HTML or CSS."
+      }
+    ],
+    "richContent": {
+      "whatIs": "Base64 is an encoding method that transforms binary data into 64 printable ASCII characters (A-Z, a-z, 0-9, + and /).",
+      "howToUse": [
+        "Choose the conversion mode: Text ➔ Base64, Base64 ➔ Text, Hex ⇄ Base64 or File/Image.",
+        "Type or paste your data into the input field.",
+        "Enable URL-Safe mode if you intend to use the output in query parameters or links.",
+        "Copy the converted result instantly with the copy button."
+      ],
+      "whyItMatters": "Base64 is essential for embedding inline images in CSS/HTML, sending email attachments (MIME), generating authorization headers, and transmitting API keys without encoding issues.",
+      "proTip": "Base64 encoding increases the raw data size by approximately 33%. For large production files, prefer binary multipart transfers."
+    }
+  },
+  "hashGenerator": {
+    "metaTitle": "Free Online Hash & Checksum Generator (MD5, SHA-256, SHA-512, HMAC) | ToolNotch",
+    "metaDescription": "Generate MD5, SHA-1, SHA-256, SHA-384, SHA-512, CRC-32, and HMAC cryptographic hashes in real time with an integrated checksum verifier. 100% private.",
+    "title": "Hash & Checksum Generator",
+    "description": "Compute multiple cryptographic hashes simultaneously in real time. Validate data integrity with the built-in checksum matcher and generate secure HMAC signatures with custom secret keys.",
+    "faqs": [
+      {
+        "question": "What is a Cryptographic Hash Function?",
+        "answer": "A cryptographic hash is a one-way mathematical algorithm that converts arbitrary input data into a fixed-length string. Altering a single character drastically changes the resulting hash (avalanche effect)."
+      },
+      {
+        "question": "What is the difference between SHA-256 and MD5?",
+        "answer": "SHA-256 generates a 256-bit collision-resistant hash that represents modern industry security. MD5 produces 128-bit hashes and is deprecated for passwords, though still common for quick file checksums."
+      },
+      {
+        "question": "How does the checksum verifier work?",
+        "answer": "Paste an expected hash from a software release or security advisory. The tool automatically detects whether any of the computed hashes matches the expected signature."
+      }
+    ],
+    "richContent": {
+      "whatIs": "A cryptographic hash is a unique digital fingerprint of a dataset. It allows verifying file and message integrity without revealing the original content.",
+      "howToUse": [
+        "Type or paste your text string into the input field.",
+        "MD5, SHA-1, SHA-256, SHA-384, SHA-512, and CRC-32 hashes are computed in real time.",
+        "Paste an expected hash into the verifier box to check integrity.",
+        "Optionally supply a Secret Key to compute HMAC-SHA256."
+      ],
+      "whyItMatters": "Hashing is fundamental to modern information security, software distribution verification, password hashing, and API authentication signatures.",
+      "proTip": "Always choose SHA-256 or SHA-512 for modern API security and database storage."
+    }
+  },
+  "urlParser": {
+    "metaTitle": "Online URL Parser & Parameter Editor — Query String & UTM Stripper | ToolNotch",
+    "metaDescription": "Deconstruct and inspect full URLs into structured components. Interactively edit query string parameters in real time and strip tracking UTM tags with 1 click.",
+    "title": "URL & Query String Parser",
+    "description": "Decompose URLs into protocol, hostname, port, pathname, and query parameters in real time. Interactively toggle, add, and modify search parameters and strip tracking tags effortlessly.",
+    "faqs": [
+      {
+        "question": "What are UTM tracking parameters?",
+        "answer": "UTMs are marketing campaign tags appended to URLs (like utm_source, utm_medium, fbclid). The \"Strip Tracking\" button removes these parameters instantly for clean sharing."
+      },
+      {
+        "question": "Can I edit parameters directly in the table?",
+        "answer": "Yes! Toggle checkboxes to enable/disable parameters, edit keys and values, or add new rows. The main URL updates automatically."
+      },
+      {
+        "question": "Does it support custom ports and URL hash fragments?",
+        "answer": "Yes, the parser detects custom ports (e.g. :8080) and on-page fragment navigation identifiers (#hash)."
+      }
+    ],
+    "richContent": {
+      "whatIs": "A Uniform Resource Locator (URL) is the global address for resources on the World Wide Web, consisting of protocol, hostname, port, pathname, and query parameters.",
+      "howToUse": [
+        "Paste your full URL into the input field or choose a sample.",
+        "Inspect structural components in the visual breakdown cards.",
+        "Modify, add, or toggle parameters in the interactive Query String table.",
+        "Use \"Strip Tracking (UTMs)\" to produce a clean URL before sharing."
+      ],
+      "whyItMatters": "Debugging OAuth authorization redirects, REST API queries with filtering parameters, and tracking links requires granular inspection of query keys.",
+      "proTip": "Always ensure special characters in parameter values are properly encoded with encodeURIComponent to prevent HTTP parsing failures."
+    }
+  },
+  "regexTester": {
+    "metaTitle": "Free Online Regular Expression (RegEx) Tester & Matcher | ToolNotch",
+    "metaDescription": "Test and debug regular expressions (RegEx) in real time with visual match highlighting, capture group inspection ($1, $2), substitution tool, and built-in presets.",
+    "title": "Regular Expression (RegEx) Tester & Matcher",
+    "description": "Build, test, and debug regular expressions with flag toggles (g, i, m, s, u), capture groups inspection, substitution with backreferences, and a curated library of common patterns.",
+    "faqs": [
+      {
+        "question": "What do RegEx flags do?",
+        "answer": "Flags alter search behavior: \"g\" finds all matches (global), \"i\" ignores letter casing, \"m\" treats line breaks as start/end anchors (^ and $), \"s\" allows dot (.) to match newlines, and \"u\" enables full Unicode parsing."
+      },
+      {
+        "question": "How do substitution backreferences like $1 work?",
+        "answer": "Backreferences represent capture groups defined by parentheses () in your pattern. $1 refers to the first captured group, $2 to the second, and $& to the entire matched string."
+      },
+      {
+        "question": "Are there ready-to-use presets available?",
+        "answer": "Yes! We provide 1-click presets for Email, URLs, IPv4/IPv6, UUIDs, Hex Colors, and Brazilian documents (CPF, CNPJ, CEP)."
+      }
+    ],
+    "richContent": {
+      "whatIs": "A Regular Expression (Regex) is a sequence of characters that forms a search pattern for text validation, extraction, and string transformation in software engineering.",
+      "howToUse": [
+        "Enter your regex pattern or select one of the ready presets.",
+        "Toggle active search flags (g, i, m, s, u) using the quick buttons.",
+        "Paste test text to see highlighted matches and capture groups computed in real time.",
+        "Switch to the \"Substitution / Replace\" tab to test pattern replacement."
+      ],
+      "whyItMatters": "Regexes are essential in web development. Testing patterns against sample strings prevents subtle bugs and edge-case errors before deploying to production.",
+      "proTip": "Avoid nested repetitive quantifiers in complex patterns to protect your servers from catastrophic backtracking (ReDoS).",
+      "sections": [
+        {
+          "heading": "How Does the Substitution (Replace) Tab Work?",
+          "body": "The Substitution tab lets you test replacing matches found in your text with a formatted string. Use variables like $1 and $2 to reorder capture groups defined in parentheses (), $& to re-insert the entire matched text, or static text like masks [REDACTED]."
+        },
+        {
+          "heading": "What Are Capture Groups ($1, $2)?",
+          "body": "When you enclose parts of your regex in parentheses (e.g., (\\d{4})-(\\d{2})-(\\d{2})), each pair of parentheses creates a numbered capture group ($1 for year, $2 for month, $3 for day). In the replacement pattern, referencing $3/$2/$1 immediately reformats dates and numbers."
+        }
+      ]
+    }
   }
 }

@@ -177,7 +177,7 @@ export default function FaviconGeneratorResult({
           <button
             type="button"
             onClick={handleCopy}
-            className="flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-[2px] bg-tertiary hover:bg-primary/20 hover:text-primary transition-colors border border-border cursor-pointer text-foreground"
+            className="flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-[2px] bg-tertiary hover:bg-primary/20 hover:text-primary hover:border-primary/60 transition-colors border border-border cursor-pointer text-foreground"
           >
             {copied ? (
               <>

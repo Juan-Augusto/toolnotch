@@ -406,7 +406,7 @@ export default function AppBmiCalculator({ locale }: Props) {
                   </div>
 
                   <div
-                    className="absolute -top-1.5 w-3.5 h-6 bg-foreground border border-background shadow-md rounded-[1px] transition-all duration-300 pointer-events-none transform -translate-x-1/2"
+                    className="absolute -top-1.5 w-3.5 h-6 bg-foreground border border-background rounded-[1px] transition-all duration-300 pointer-events-none transform -translate-x-1/2"
                     style={{
                       left: `${bmiToPercent(result.bmi)}%`,
                     }}

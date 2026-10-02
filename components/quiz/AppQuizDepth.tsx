@@ -118,7 +118,7 @@ export default function AppQuizDepth({ content, currentSlug }: Props) {
             {table.heading}
           </h2>
 
-          <div className="overflow-x-auto rounded-[2px] border border-border/60 bg-card shadow-sm">
+          <div className="overflow-x-auto rounded-[2px] border border-border/60 bg-card">
             <table className="w-full text-left border-collapse  ">
               <thead className="bg-tertiary/80 border-b border-border/60 text-foreground font-bold uppercase ">
                 <tr>

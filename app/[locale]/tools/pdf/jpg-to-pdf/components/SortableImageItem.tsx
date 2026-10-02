@@ -68,7 +68,7 @@ export default function SortableImageItem({
       ref={setNodeRef}
       style={style}
       className={`flex items-center gap-2 sm:gap-3 p-2 sm:p-3 bg-background border border-border rounded-[2px] font-mono ${
-        isDragging ? "border-secondary shadow-md ring-1 ring-secondary/40" : ""
+        isDragging ? "border-secondary ring-1 ring-secondary/40" : ""
       }`}
     >
       <button

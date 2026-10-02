@@ -290,7 +290,7 @@ export default function AppCoinFlip({ locale = 'en' }: AppCoinFlipProps = {}) {
             }}
             className={`px-4 py-1.5 rounded-full font-bold transition-all ${
               mode === 'single'
-                ? 'bg-background text-foreground shadow-xs'
+                ? 'bg-background text-foreground'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
@@ -304,7 +304,7 @@ export default function AppCoinFlip({ locale = 'en' }: AppCoinFlipProps = {}) {
             }}
             className={`px-4 py-1.5 rounded-full font-bold flex items-center gap-1.5 transition-all ${
               mode === 'bestOf3'
-                ? 'bg-background text-foreground shadow-xs'
+                ? 'bg-background text-foreground'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
@@ -318,7 +318,7 @@ export default function AppCoinFlip({ locale = 'en' }: AppCoinFlipProps = {}) {
           type="button"
           onClick={() => setSoundEnabled(!soundEnabled)}
           title={soundEnabled ? 'Mudo' : 'Ativar som'}
-          className="p-2 rounded-full border border-border bg-background hover:bg-muted text-muted-foreground hover:text-foreground transition-all shadow-xs cursor-pointer"
+          className="p-2 rounded-full border border-border bg-background hover:bg-muted text-muted-foreground hover:text-foreground transition-all cursor-pointer"
         >
           {soundEnabled ? (
             <Volume2 className="w-4 h-4 text-amber-500" />
@@ -330,7 +330,7 @@ export default function AppCoinFlip({ locale = 'en' }: AppCoinFlipProps = {}) {
 
       {/* ── Best of 3 Scoreboard (if active) ── */}
       {mode === 'bestOf3' && (
-        <div className="flex flex-col items-center gap-2.5 p-3.5 w-full max-w-sm bg-card border-2 border-border rounded-[2px] shadow-xs">
+        <div className="flex flex-col items-center gap-2.5 p-3.5 w-full max-w-sm bg-card border-2 border-border rounded-[2px]">
           {/* Header with Title and Reset */}
           <div className="flex items-center justify-between w-full text-xs font-mono font-bold text-muted-foreground pb-1.5 border-b border-border/60">
             <span className="flex items-center gap-1.5 text-foreground">
@@ -387,9 +387,9 @@ export default function AppCoinFlip({ locale = 'en' }: AppCoinFlipProps = {}) {
                   key={idx}
                   className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-mono font-black border-2 transition-all ${
                     r === 'heads'
-                      ? 'bg-amber-500 text-white border-amber-600 shadow-xs'
+                      ? 'bg-amber-500 text-white border-amber-600'
                       : r === 'tails'
-                        ? 'bg-slate-500 text-white border-slate-600 shadow-xs'
+                        ? 'bg-slate-500 text-white border-slate-600'
                         : isCurrent
                           ? 'border-primary text-primary bg-primary/10 animate-pulse'
                           : 'border-border/60 text-muted-foreground/40 bg-muted/30'
@@ -411,7 +411,7 @@ export default function AppCoinFlip({ locale = 'en' }: AppCoinFlipProps = {}) {
                 <button
                   type="button"
                   onClick={() => setBestOf3Rounds([])}
-                  className="px-3 py-1 bg-primary text-primary-foreground text-xs font-mono font-bold rounded-[2px] hover:opacity-90 transition-opacity cursor-pointer shadow-xs"
+                  className="px-3 py-1 bg-primary text-primary-foreground text-xs font-mono font-bold rounded-[2px] hover:opacity-90 transition-opacity cursor-pointer"
                 >
                   {isPt ? 'Nova Partida' : isEs ? 'Nueva Partida' : 'New Match'}
                 </button>
@@ -475,7 +475,7 @@ export default function AppCoinFlip({ locale = 'en' }: AppCoinFlipProps = {}) {
       {state.result && !state.isFlipping && (
         <div className="flex flex-col items-center gap-2 animate-in fade-in zoom-in-95 duration-200">
           <div
-            className={`px-8 py-2.5 border-2 rounded-[2px] font-mono font-bold text-2xl sm:text-3xl tracking-wide shadow-xs uppercase flex items-center gap-2.5 ${
+            className={`px-8 py-2.5 border-2 rounded-[2px] font-mono font-bold text-2xl sm:text-3xl tracking-wide uppercase flex items-center gap-2.5 ${
               state.result === 'heads'
                 ? 'bg-amber-500/15 border-amber-500 text-amber-600 dark:text-amber-400'
                 : 'bg-slate-500/15 border-slate-400 text-slate-700 dark:text-slate-300'
@@ -520,7 +520,7 @@ export default function AppCoinFlip({ locale = 'en' }: AppCoinFlipProps = {}) {
 
       {/* ── Stats & History Dashboard ── */}
       {state.history.length > 0 && (
-        <div className="w-full max-w-sm p-4 bg-background border-2 border-border rounded-[2px] shadow-xs space-y-4">
+        <div className="w-full max-w-sm p-4 bg-background border-2 border-border rounded-[2px] space-y-4">
           {/* Dual-color probability bar */}
           <div className="space-y-1.5">
             <div className="flex justify-between text-xs font-mono font-semibold">

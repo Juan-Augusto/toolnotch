@@ -242,7 +242,7 @@ export default function MathToolContent({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {relatedTools.map((tool, idx) => (
               <Link key={idx} href={tool.href} className="group block">
-                <div className="p-4 sm:p-5 bg-tertiary hover:bg-tertiary/80 rounded-[2px] transition-colors h-full flex flex-col justify-between">
+                <div className="p-4 sm:p-5 bg-tertiary border border-border hover:border-foreground/20 hover:bg-tertiary/80 rounded-[2px] transition-colors h-full flex flex-col justify-between">
                   <div>
                     <div className="flex items-center gap-2.5 mb-2">
                       {tool.icon}

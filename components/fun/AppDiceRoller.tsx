@@ -170,7 +170,7 @@ export default function AppDiceRoller({ locale = 'en' }: AppDiceRollerProps = {}
           type="button"
           onClick={() => setSoundEnabled(!soundEnabled)}
           title={soundEnabled ? 'Mudo' : 'Ativar som'}
-          className="p-1.5 rounded-full border border-border bg-background hover:bg-muted text-muted-foreground hover:text-foreground transition-all shadow-xs cursor-pointer"
+          className="p-1.5 rounded-full border border-border bg-background hover:bg-muted text-muted-foreground hover:text-foreground transition-all cursor-pointer"
         >
           {soundEnabled ? (
             <Volume2 className="w-3.5 h-3.5 text-amber-500" />
@@ -189,7 +189,7 @@ export default function AppDiceRoller({ locale = 'en' }: AppDiceRollerProps = {}
             onChange={(e) => setNotation(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && roll()}
             placeholder={placeholderNotation}
-            className="flex-1 px-4 py-2.5 bg-background border border-border rounded-[2px] font-mono text-sm text-foreground placeholder:text-muted-foreground/60 outline-none focus:border-primary transition-colors shadow-xs"
+            className="flex-1 px-4 py-2.5 bg-background border border-border rounded-[2px] font-mono text-sm text-foreground placeholder:text-muted-foreground/60 outline-none focus:border-primary transition-colors"
           />
           <AppButton
             onClick={roll}
@@ -219,7 +219,7 @@ export default function AppDiceRoller({ locale = 'en' }: AppDiceRollerProps = {}
               }}
               className={`px-3 py-1.5 text-xs font-mono font-bold rounded-[2px] border transition-all cursor-pointer ${
                 notation === p
-                  ? 'bg-primary text-primary-foreground border-primary shadow-xs'
+                  ? 'bg-primary text-primary-foreground border-primary'
                   : 'bg-background text-muted-foreground border-border hover:border-primary/50 hover:text-foreground'
               }`}
             >
@@ -274,7 +274,7 @@ export default function AppDiceRoller({ locale = 'en' }: AppDiceRollerProps = {}
 
       {/* ── Result Celebration Display ── */}
       {latest && !isRolling && (
-        <div className="p-4 sm:p-5 bg-background border-2 border-border rounded-[2px] shadow-xs text-center space-y-2 animate-in fade-in zoom-in-95 duration-200">
+        <div className="p-4 sm:p-5 bg-background border-2 border-border rounded-[2px] text-center space-y-2 animate-in fade-in zoom-in-95 duration-200">
           {/* Critical Roll Celebration */}
           {isLatestNat20 && (
             <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/15 border border-amber-500/30 text-amber-600 dark:text-amber-400 font-mono text-xs font-bold rounded-full animate-in fade-in">
@@ -300,7 +300,7 @@ export default function AppDiceRoller({ locale = 'en' }: AppDiceRollerProps = {}
             {latest.rolls.map((r, idx) => (
               <span
                 key={idx}
-                className="px-2.5 py-1 bg-muted border border-border rounded-[2px] font-mono text-xs font-bold text-foreground shadow-xs"
+                className="px-2.5 py-1 bg-muted border border-border rounded-[2px] font-mono text-xs font-bold text-foreground"
               >
                 🎲 {r}
               </span>
@@ -317,7 +317,7 @@ export default function AppDiceRoller({ locale = 'en' }: AppDiceRollerProps = {}
 
       {/* ── Roll History ── */}
       {rolls.length > 1 && (
-        <div className="p-3.5 sm:p-4 bg-background border-2 border-border rounded-[2px] shadow-xs space-y-3">
+        <div className="p-3.5 sm:p-4 bg-background border-2 border-border rounded-[2px] space-y-3">
           <div className="flex items-center justify-between">
             <span className="text-sm sm:text-base font-semibold text-foreground">
               {historyTitle}

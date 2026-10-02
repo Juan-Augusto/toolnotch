@@ -156,7 +156,7 @@ export default function AppNumberGenerator({ locale = 'en' }: AppNumberGenerator
       </AppButton>
 
       {results.length > 0 && (
-        <div className="p-4 sm:p-5 bg-background border-2 border-border rounded-[2px] shadow-xs space-y-3 animate-in fade-in duration-200">
+        <div className="p-4 sm:p-5 bg-background border-2 border-border rounded-[2px] space-y-3 animate-in fade-in duration-200">
           <div className="flex justify-between items-center pb-2 border-b border-border/60">
             <span className="text-sm font-semibold text-foreground">
               {getResultsHeader(results.length)}
@@ -183,7 +183,7 @@ export default function AppNumberGenerator({ locale = 'en' }: AppNumberGenerator
             {results.map((n, i) => (
               <span
                 key={i}
-                className="bg-muted border border-border rounded-[2px] px-3 py-1.5 text-xs sm:text-sm font-mono font-bold text-foreground shadow-xs"
+                className="bg-muted border border-border rounded-[2px] px-3 py-1.5 text-xs sm:text-sm font-mono font-bold text-foreground"
               >
                 {n}
               </span>

@@ -128,7 +128,7 @@ export default function AppDebtPayoffCalculator() {
           </div>
 
           {/* Accelerated Plan */}
-          <div className="p-3.5 sm:p-4 rounded-[2px] bg-background border border-primary/50 shadow-sm space-y-2">
+          <div className="p-3.5 sm:p-4 rounded-[2px] bg-background border border-primary/50 space-y-2">
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold uppercase text-primary block">
                 {t('acceleratedPlan')}

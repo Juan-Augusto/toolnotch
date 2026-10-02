@@ -155,7 +155,7 @@ export default function PagePreviewModal({
       className="fixed inset-0 z-50 flex flex-col bg-background/90 dark:bg-black/90 backdrop-blur-sm animate-in fade-in duration-150"
     >
       {/* Top Header Bar */}
-      <header className="flex items-center justify-between px-2.5 sm:px-4 py-2 sm:py-3 bg-tertiary border-b border-border text-foreground shrink-0 shadow-xs">
+      <header className="flex items-center justify-between px-2.5 sm:px-4 py-2 sm:py-3 bg-tertiary border-b border-border text-foreground shrink-0">
         <div className="flex items-center gap-3">
           <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
             <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-foreground">
@@ -243,7 +243,7 @@ export default function PagePreviewModal({
           type="button"
           onClick={onPrev}
           disabled={!hasPrev}
-          className={`absolute left-1.5 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-tertiary/90 hover:bg-tertiary border border-border shadow-md flex items-center justify-center transition-all ${
+          className={`absolute left-1.5 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-tertiary/90 hover:bg-tertiary border border-border flex items-center justify-center transition-all ${
             hasPrev
               ? "text-foreground hover:scale-105 cursor-pointer"
               : "opacity-30 text-label cursor-not-allowed pointer-events-none"
@@ -259,7 +259,7 @@ export default function PagePreviewModal({
           type="button"
           onClick={onNext}
           disabled={!hasNext}
-          className={`absolute right-1.5 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-tertiary/90 hover:bg-tertiary border border-border shadow-md flex items-center justify-center transition-all ${
+          className={`absolute right-1.5 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-tertiary/90 hover:bg-tertiary border border-border flex items-center justify-center transition-all ${
             hasNext
               ? "text-foreground hover:scale-105 cursor-pointer"
               : "opacity-30 text-label cursor-not-allowed pointer-events-none"
@@ -278,7 +278,7 @@ export default function PagePreviewModal({
             transformOrigin: "center center",
           }}
         >
-          <div className="relative shadow-2xl rounded-[2px] overflow-hidden bg-white border border-border">
+          <div className="relative rounded-[2px] overflow-hidden bg-white border border-border">
             <img
               src={currentDisplayUrl}
               alt={t("card.pageLabel", { number: currentIndex + 1 })}

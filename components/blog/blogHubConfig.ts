@@ -137,7 +137,7 @@ export const BLOG_I18N_LABELS: Record<string, BlogHubLabels> = {
     subtitle:
       "Aprenda a fórmula por trás de cada ferramenta, entenda a matemática e confira dicas práticas sem enrolação.",
     allCategories: "Todos",
-    searchPlaceholder: "pesquisar...",
+    searchPlaceholder: "Pesquisar...",
     noResults: "Nenhum artigo encontrado para sua busca.",
     clearFilters: "Limpar filtros",
     readArticle: "Ler artigo",
@@ -151,7 +151,7 @@ export const BLOG_I18N_LABELS: Record<string, BlogHubLabels> = {
     subtitle:
       "Aprende la fórmula detrás de cada herramienta, entiende las matemáticas y descubre consejos prácticos.",
     allCategories: "Todos",
-    searchPlaceholder: "buscar...",
+    searchPlaceholder: "Buscar...",
     noResults: "No se encontraron artículos para tu búsqueda.",
     clearFilters: "Limpiar filtros",
     readArticle: "Leer artículo",
@@ -165,7 +165,7 @@ export const BLOG_I18N_LABELS: Record<string, BlogHubLabels> = {
     subtitle:
       "Learn the formulas behind each tool, understand the math, and explore practical tips with zero fluff.",
     allCategories: "All",
-    searchPlaceholder: "search...",
+    searchPlaceholder: "Search...",
     noResults: "No articles found matching your search.",
     clearFilters: "Clear filters",
     readArticle: "Read article",

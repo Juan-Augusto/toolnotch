@@ -26,7 +26,7 @@ export default function AppDownloadButton({ blob, originalName, format }: Props)
   return (
     <button
       onClick={handleDownload}
-      className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:shadow-sm"
+      className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
     >
       {t('download.label')}
     </button>

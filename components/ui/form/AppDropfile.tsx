@@ -349,7 +349,7 @@ export function AppDropfile({
         />
 
         <div className="relative mb-4 flex items-center justify-center">
-          <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary shadow-xs">
+          <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary">
             {icon ?? <FileUp className="w-7 h-7 md:w-8 md:h-8 stroke-[1.75]" />}
           </div>
         </div>

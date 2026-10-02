@@ -88,7 +88,7 @@ describe("AppToolsHub", () => {
   it("filters tools by search query in title or description", () => {
     render(<AppToolsHub tools={mockTools} locale="pt" />);
 
-    const searchInput = screen.getByPlaceholderText("pesquisar...");
+    const searchInput = screen.getByPlaceholderText("Pesquisar...");
     expect(searchInput).toBeInTheDocument();
 
     fireEvent.change(searchInput, { target: { value: "Contador" } });
@@ -101,7 +101,7 @@ describe("AppToolsHub", () => {
   it("clears search input when clicking clear button", () => {
     render(<AppToolsHub tools={mockTools} locale="pt" />);
 
-    const searchInput = screen.getByPlaceholderText("pesquisar...");
+    const searchInput = screen.getByPlaceholderText("Pesquisar...");
     expect(screen.queryByLabelText("Clear search")).not.toBeInTheDocument();
 
     fireEvent.change(searchInput, { target: { value: "PDF" } });
@@ -116,7 +116,7 @@ describe("AppToolsHub", () => {
   it("clears search input when pressing Escape key", () => {
     render(<AppToolsHub tools={mockTools} locale="pt" />);
 
-    const searchInput = screen.getByPlaceholderText("pesquisar...");
+    const searchInput = screen.getByPlaceholderText("Pesquisar...");
     fireEvent.change(searchInput, { target: { value: "Empréstimo" } });
     expect(searchInput).toHaveValue("Empréstimo");
 
@@ -128,7 +128,7 @@ describe("AppToolsHub", () => {
   it("shows empty state when no tools match and allows resetting filters", () => {
     render(<AppToolsHub tools={mockTools} locale="pt" />);
 
-    const searchInput = screen.getByPlaceholderText("pesquisar...");
+    const searchInput = screen.getByPlaceholderText("Pesquisar...");
     fireEvent.change(searchInput, { target: { value: "termo-inexistente-xyz" } });
 
     expect(

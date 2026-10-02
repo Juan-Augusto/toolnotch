@@ -250,7 +250,7 @@ export default function AppYesNoWheel({ locale = 'pt' }: AppYesNoWheelProps) {
             {isPt ? 'Resultado:' : isEs ? 'Resultado:' : 'Result:'}
           </span>
           <div
-            className="px-8 py-2.5 border-2 rounded-[2px] font-mono font-black text-3xl sm:text-4xl tracking-wider shadow-xs uppercase"
+            className="px-8 py-2.5 border-2 rounded-[2px] font-mono font-black text-3xl sm:text-4xl tracking-wider uppercase"
             style={{
               backgroundColor:
                 result === yesLabel

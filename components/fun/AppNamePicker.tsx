@@ -411,7 +411,7 @@ export default function AppNamePicker({ locale }: AppNamePickerProps) {
           onClick={pick}
           disabled={isAnimating || pool.length === 0}
           color="primary"
-          className="flex-1 font-mono font-bold text-sm sm:text-base py-3 tracking-wide shadow-xs"
+          className="flex-1 font-mono font-bold text-sm sm:text-base py-3 tracking-wide"
         >
           <Shuffle className="w-4 h-4 mr-2" />
           {pickButtonText}
@@ -432,7 +432,7 @@ export default function AppNamePicker({ locale }: AppNamePickerProps) {
       {/* Slot machine reel animation */}
       {isAnimating && reelNames.length > 0 && (
         <div
-          className="bg-secondary/10 border-2 border-primary rounded-[2px] overflow-hidden flex items-center justify-center shadow-inner"
+          className="bg-secondary/10 border-2 border-primary rounded-[2px] overflow-hidden flex items-center justify-center"
           style={{ height: 68 }}
         >
           <div ref={reelScope} className="will-change-transform">

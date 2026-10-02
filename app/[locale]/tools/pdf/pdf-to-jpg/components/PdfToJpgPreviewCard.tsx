@@ -28,7 +28,7 @@ export default function PdfToJpgPreviewCard({
         <img
           src={dataUrl}
           alt={name}
-          className="max-h-full max-w-full object-contain rounded-[1px] shadow-xs"
+          className="max-h-full max-w-full object-contain rounded-[1px]"
         />
       </div>
 

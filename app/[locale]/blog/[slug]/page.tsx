@@ -169,19 +169,29 @@ export default async function BlogArticlePage({ params }: Props) {
     const description = translatedDesc || fm.description;
     const relatedToolName = translatedToolName || fm.relatedToolName;
 
+    const resolveSiblingTitle = (siblingSlug: string, fallbackTitle?: string) => {
+      if (typeof t.has === "function" && t.has(`posts.${siblingSlug}.title`)) {
+        return t(`posts.${siblingSlug}.title`);
+      }
+      return fallbackTitle || siblingSlug;
+    };
+
     const mdxSiblings = (await getAllMdxBlogPosts(locale))
       .filter((p) => p.slug !== slug && p.category === currentCategory)
-      .map((p) => ({ slug: p.slug, title: p.title ?? p.slug }));
+      .map((p) => ({ slug: p.slug, title: resolveSiblingTitle(p.slug, p.title) }));
     const legacySiblings = BLOG_POSTS.filter(
       (p) => p.slug !== slug && p.category === currentCategory,
-    ).map((p) => {
-      let sibTitle = p.title;
-      if (!sibTitle && typeof t.has === "function" && t.has(`posts.${p.slug}.title`)) {
-        sibTitle = t(`posts.${p.slug}.title`);
+    ).map((p) => ({ slug: p.slug, title: resolveSiblingTitle(p.slug, p.title) }));
+
+    const seenSlugs = new Set<string>();
+    const relatedPosts: Array<{ slug: string; title: string }> = [];
+    for (const p of [...mdxSiblings, ...legacySiblings]) {
+      if (!seenSlugs.has(p.slug)) {
+        seenSlugs.add(p.slug);
+        relatedPosts.push(p);
       }
-      return { slug: p.slug, title: sibTitle || p.slug };
-    });
-    const relatedPosts = [...mdxSiblings, ...legacySiblings].slice(0, 3);
+      if (relatedPosts.length >= 3) break;
+    }
 
     const jsonLd = buildJsonLd(
       {
@@ -286,11 +296,11 @@ export default async function BlogArticlePage({ params }: Props) {
   )
     .slice(0, 3)
     .map((p) => {
-      let sibTitle = p.title;
-      if (!sibTitle && typeof t.has === "function" && t.has(`posts.${p.slug}.title`)) {
+      let sibTitle = "";
+      if (typeof t.has === "function" && t.has(`posts.${p.slug}.title`)) {
         sibTitle = t(`posts.${p.slug}.title`);
       }
-      return { slug: p.slug, title: sibTitle || p.slug };
+      return { slug: p.slug, title: sibTitle || p.title || p.slug };
     });
 
   const jsonLd = buildJsonLd(

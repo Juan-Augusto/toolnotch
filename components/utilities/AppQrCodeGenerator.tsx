@@ -417,7 +417,7 @@ export default function AppQrCodeGenerator({ locale: _locale }: AppQrCodeGenerat
               <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
             </div>
           ) : previewDataUrl ? (
-            <div className="p-3 bg-white rounded-[2px] shadow-sm flex items-center justify-center">
+            <div className="p-3 bg-white rounded-[2px] flex items-center justify-center">
               <img
                 src={previewDataUrl}
                 alt="QR Code Preview"

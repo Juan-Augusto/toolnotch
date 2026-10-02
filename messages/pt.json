@@ -3865,7 +3865,8 @@
       "educationTools": "Ferramentas de Educação",
       "healthTools": "Saúde e Fitness",
       "mathTools": "Ferramentas de Matemática",
-      "utilityTools": "Utilitários"
+      "utilityTools": "Utilitários",
+      "devTools": "Ferramentas para Desenvolvedores"
     },
     "tools": {
       "cropImage": {
@@ -4240,6 +4241,46 @@
       "extractPdfImages": {
         "label": "Extrair Imagens do PDF",
         "desc": "Extraia todas as fotos e ilustrações embutidas em PDFs e baixe em ZIP."
+      },
+      "cpfGenerator": {
+        "label": "Gerador de CPF",
+        "desc": "Gere CPFs válidos com pontuação, filtro por estado e em lote"
+      },
+      "cnpjGenerator": {
+        "label": "Gerador de CNPJ",
+        "desc": "Gere CNPJs válidos e dados completos de empresas fictícias"
+      },
+      "addressGenerator": {
+        "label": "Gerador de Endereço & CEP",
+        "desc": "Gere endereços brasileiros reais e completos com CEP e UF"
+      },
+      "uuidGenerator": {
+        "label": "Gerador de UUID / GUID",
+        "desc": "Gere UUIDs v4, v7 e v1 em lote com opções avançadas"
+      },
+      "jsonFormatter": {
+        "label": "Formatador de JSON",
+        "desc": "Formate, minifique e valide código JSON com diagnóstico de erros"
+      },
+      "jwtDecoder": {
+        "label": "Decodificador de JWT",
+        "desc": "Decodifique Header, Payload e verifique expiração de JSON Web Tokens em tempo real."
+      },
+      "base64Converter": {
+        "label": "Conversor Base64",
+        "desc": "Codifique e decodifique texto, hexadecimal e imagens para Base64/Data URI."
+      },
+      "hashGenerator": {
+        "label": "Gerador de Hashes",
+        "desc": "Gere hashes MD5, SHA-256, SHA-512, CRC-32 e HMAC com verificador de integridade."
+      },
+      "urlParser": {
+        "label": "Parser de URL",
+        "desc": "Decomponha URLs, edite parâmetros de consulta (Query String) e remova UTMs."
+      },
+      "regexTester": {
+        "label": "Testador de Regex",
+        "desc": "Teste expressões regulares com realce de grupos de captura, substituição e biblioteca de presets."
       }
     },
     "badge": "Toolnotch | Mais de 40 ferramentas essenciais",
@@ -4260,7 +4301,8 @@
       },
       "placeholder": "Adicionar nota…",
       "addButton": "Adicionar",
-      "voteAriaLabel": "Votar neste item",
+      "voteAriaLabel": "Votar a favor neste item",
+      "dislikeAriaLabel": "Votar contra neste item",
       "deleteAriaLabel": "Excluir esta nota",
       "exportButton": "Exportar como Markdown",
       "clearButton": "Limpar Quadro",
@@ -4549,7 +4591,7 @@
         "saveToBacklogButton": "Salvar no Backlog da Sessão",
         "sessionBacklogTitle": "Histórias Criadas no Refinamento",
         "sessionBacklogEmpty": "Nenhuma história salva na sessão ainda. Gere uma história e clique em salvar.",
-        "copyAllBacklog": "Copiar Todas as Histórias (Markdown)",
+        "copyAllBacklog": "Copiar todas as histórias",
         "allBacklogCopied": "Histórias copiadas!",
         "clearBacklog": "Limpar Backlog",
         "badgeInvest": "Critérios INVEST",
@@ -8083,5 +8125,329 @@
     "partnersButton": "Nossos Parceiros",
     "privacyButton": "Política de Privacidade",
     "termsButton": "Termos de Uso"
+  },
+  "cpfGenerator": {
+    "metaTitle": "Gerador de CPF Online Grátis — Válido com Pontuação e por Estado | ToolNotch",
+    "metaDescription": "Gere números de CPF válidos para testes de software, escolha a região fiscal/UF de origem, pontuação e gere em lote. 100% no navegador.",
+    "title": "Gerador de CPF Online",
+    "description": "Gere números de CPF matematicamente válidos (algoritmo Módulo 11) com pontuação, filtragem por estado de emissão e opção em lote para testes e desenvolvimento de software.",
+    "faqs": [
+      {
+        "question": "Os CPFs gerados são válidos perante a Receita Federal?",
+        "answer": "Os CPFs gerados seguem a regra matemática oficial de validação dos dígitos verificadores (Módulo 11). Eles são números fictícios gerados aleatoriamente com propósito exclusivo de desenvolvimento, testes de formulários e QA, não possuindo vínculo cadastral com a Receita Federal."
+      },
+      {
+        "question": "Posso escolher o estado de origem do CPF?",
+        "answer": "Sim! No Brasil, o nono dígito do CPF identifica a Região Fiscal onde o documento foi emitido (por exemplo: 8 para São Paulo, 7 para Rio de Janeiro/ES, 6 para Minas Gerais). Basta selecionar a UF desejada no menu."
+      },
+      {
+        "question": "Como funciona a validação em lote?",
+        "answer": "Você pode selecionar a quantidade desejada (1 a 50 CPFs) e copiar a lista inteira de uma só vez ou clicar para copiar individualmente cada item."
+      },
+      {
+        "question": "Esta ferramenta salva algum dado gerado?",
+        "answer": "Não. A geração e a validação ocorrem 100% no seu navegador utilizando JavaScript local. Nenhum número ou informação é gravado ou enviado para servidores externos."
+      }
+    ],
+    "richContent": {
+      "whatIs": "O CPF (Cadastro de Pessoas Físicas) é o documento de identificação fiscal individual no Brasil composto por 11 dígitos decimais, no formato XXX.XXX.XXX-XX, onde os dois últimos dígitos são verificadores de integridade calculados por uma soma ponderada.",
+      "howToUse": [
+        "Escolha o Estado/Região Fiscal desejado ou deixe em 'Qualquer estado'.",
+        "Defina se deseja o CPF formatado com pontuação ou apenas números.",
+        "Escolha a quantidade desejada (individual ou em lote até 50 CPFs).",
+        "Clique em 'Gerar Novo CPF' e copie com um clique."
+      ],
+      "whyItMatters": "Em desenvolvimento de software, e-commerces, sistemas bancários e formulários de cadastro no Brasil, a validação de CPF é um dos testes mais frequentes. Ter um gerador rápido e confiável acelera o processo de QA sem recorrer a dados reais de pessoas.",
+      "proTip": "Você também pode colar qualquer CPF no campo 'Validador em Tempo Real' abaixo do gerador para inspecionar instantaneamente se o número é matematicamente válido."
+    }
+  },
+  "cnpjGenerator": {
+    "metaTitle": "Gerador de CNPJ Online Grátis com Dados de Empresa | ToolNotch",
+    "metaDescription": "Gere CNPJs válidos com ou sem pontuação e gere dados fictícios completos de empresas (Razão Social, Nome Fantasia, IE, Endereço e CNAE). 100% no navegador.",
+    "title": "Gerador de CNPJ & Dados de Empresa",
+    "description": "Gere números de CNPJ matematicamente válidos e dados cadastrais realistas de pessoas jurídicas (Razão Social, Inscrição Estadual, Endereço, CNAE e Regime Tributário) para testes de software.",
+    "faqs": [
+      {
+        "question": "Como os dados da empresa são gerados?",
+        "answer": "A ferramenta combina prefixos empresariais, setores de atividade reais, códigos de CNAE oficiais do IBGE, regras de Inscrição Estadual e endereços de capitais brasileiras para criar perfis fictícios de alta fidelidade para testes de ERPs e sistemas fiscais."
+      },
+      {
+        "question": "O CNPJ gerado é aceito em validadores de sistemas?",
+        "answer": "Sim. O CNPJ gerado respeita o algoritmo oficial de dois dígitos verificadores com os pesos decrescentes regulamentados pela Receita Federal."
+      },
+      {
+        "question": "Posso exportar os dados como JSON?",
+        "answer": "Sim! Ao ativar a opção de gerar com dados da empresa, você pode copiar os dados completos tanto em texto legível quanto em JSON pronto para mocks de API."
+      }
+    ],
+    "richContent": {
+      "whatIs": "O CNPJ (Cadastro Nacional da Pessoa Jurídica) é o registro fiscal emitido pela Receita Federal para empresas e organizações no Brasil, composto por 14 dígitos no formato XX.XXX.XXX/0001-XX.",
+      "howToUse": [
+        "Mantenha a opção 'Gerar dados completos da empresa' ativa para obter Razão Social, IE e Endereço.",
+        "Escolha se deseja o CNPJ formatado ou apenas dígitos.",
+        "Clique em 'Gerar Nova Empresa / CNPJ' para sortear novos dados.",
+        "Utilize os botões 'Copiar JSON' ou 'Copiar Texto' para usar no seu código."
+      ],
+      "whyItMatters": "Testar fluxos B2B, emissão simulada de notas fiscais (NF-e), preenchimento de formulários de faturamento e integrações de pagamentos exige dados empresariais consistentes e completos.",
+      "proTip": "Use o botão 'Copiar JSON' para alimentar diretamente seus testes automatizados em Jest, Cypress, Playwright ou mocks de banco de dados."
+    }
+  },
+  "addressGenerator": {
+    "metaTitle": "Gerador de Endereço e CEP Brasileiro Online Grátis | ToolNotch",
+    "metaDescription": "Gere endereços brasileiros realistas e completos com CEP válido, logradouro, número, bairro, cidade, UF e DDD para testes. 100% no navegador.",
+    "title": "Gerador de Endereço & CEP Brasileiro",
+    "description": "Gere endereços completos e verossímeis de cidades brasileiras com CEPs válidos, logradouros, bairros, números, complementos e DDDs para homologação e testes de cadastro.",
+    "faqs": [
+      {
+        "question": "Os CEPs e logradouros são reais?",
+        "answer": "Sim. O gerador utiliza uma base curada com logradouros, bairros e faixas de CEP reais das principais cidades de diversas regiões do Brasil, proporcionando máxima fidelidade para testes de geolocalização e frete."
+      },
+      {
+        "question": "Posso filtrar por estado específico?",
+        "answer": "Sim. Você pode escolher estados como SP, RJ, MG, RS, PR, SC, BA, PE, CE, DF ou selecionar 'Todos os Estados' para sorteio aleatório nacional."
+      },
+      {
+        "question": "Como usar em lote?",
+        "answer": "Selecione a quantidade no seletor (5, 10 ou 20 endereços) e copie a lista completa de linhas de endereço em um só clique."
+      }
+    ],
+    "richContent": {
+      "whatIs": "O gerador de endereços brasileiros produz dados de localização geográfica contendo CEP (Código de Endereçamento Postal de 8 dígitos), logradouro (rua/avenida), número predial, complemento opcional, bairro, município e unidade federativa (UF).",
+      "howToUse": [
+        "Selecione o Estado/UF desejado no menu suspenso.",
+        "Defina se deseja incluir complementos (como Apto, Sala ou Bloco).",
+        "Escolha a quantidade desejada de endereços.",
+        "Copie a linha de endereço formatada ou exporte os dados como JSON."
+      ],
+      "whyItMatters": "O cálculo de fretes em e-commerce e o preenchimento de cadastros de entrega demandam CEPs válidos e estruturas de endereço compatíveis com os padrões dos Correios e transportadoras.",
+      "proTip": "Ao testar APIs de cálculo de frete, o campo CEP pode ser copiado individualmente clicando no ícone de cópia ao lado dele."
+    }
+  },
+  "uuidGenerator": {
+    "metaTitle": "Gerador de UUID / GUID Online Grátis — v4, v7 e v1 em Lote | ToolNotch",
+    "metaDescription": "Gere identificadores UUID v4 (aleatório), UUID v7 (RFC 9562 ordenado por tempo) e v1 em lote com opções de maiúsculas, hífens e chaves. 100% no navegador.",
+    "title": "Gerador de UUID / GUID Online",
+    "description": "Crie identificadores universalmente exclusivos (UUIDs / GUIDs) nos padrões v4, v7 (RFC 9562 time-ordered) e v1. Gere até 100 IDs por vez com suporte a maiúsculas, remoção de hífens e download em .TXT.",
+    "faqs": [
+      {
+        "question": "Qual a diferença entre UUID v4 e UUID v7?",
+        "answer": "O UUID v4 é 100% aleatório criptográfico (ótimo para IDs não sequenciais). O UUID v7 (novo padrão RFC 9562 de 2024) combina timestamp Unix em milissegundos com entropia aleatória, sendo ideal para chaves primárias de bancos de dados relacionais e NoSQL porque mantém índices ordenados no disco sem fragmentação de B-Tree."
+      },
+      {
+        "question": "O que é UUID v1?",
+        "answer": "O UUID v1 é baseado na data/hora gregoriana de 100 nanossegundos e no endereço de nó (ou valor simulado), garantindo unicidade temporal."
+      },
+      {
+        "question": "Os UUIDs gerados são seguros para produção?",
+        "answer": "Sim. A ferramenta utiliza a Web Crypto API (crypto.randomUUID e crypto.getRandomValues) do seu próprio navegador para garantir entropia criptograficamente forte."
+      }
+    ],
+    "richContent": {
+      "whatIs": "UUID (Universally Unique Identifier) ou GUID (Globally Unique Identifier) é um identificador de 128 bits padronizado pela RFC 4122 e RFC 9562, projetado para permitir que sistemas distribuídos criem identificadores únicos sem coordenação central.",
+      "howToUse": [
+        "Escolha a versão desejada: UUID v4 (aleatório), UUID v7 (ordenado por data) ou UUID v1.",
+        "Configure as preferências: maiúsculas, com/sem hífens, chaves { }, prefixo URN ou aspas.",
+        "Defina a quantidade de identificadores (de 1 até 100).",
+        "Clique em 'Gerar Novo UUID' e copie ou baixe o arquivo .txt."
+      ],
+      "whyItMatters": "UUIDs são o padrão da indústria para chaves primárias em bancos de dados (PostgreSQL, MySQL, MongoDB), IDs de transação de pagamento, tokens de sessão e rastreamento de microsserviços.",
+      "proTip": "Para chaves primárias em bancos de dados SQL (como PostgreSQL UUID), prefira o UUID v7 para obter até 30% a 50% mais desempenho de inserção em tabelas indexadas."
+    }
+  },
+  "jsonFormatter": {
+    "metaTitle": "Formatador e Validador de JSON Online Grátis | ToolNotch",
+    "metaDescription": "Formate, embeleze (beautify), minifique e valide código JSON online com detecção de erros por linha e coluna, estatísticas de árvore e auto-correção. 100% no navegador.",
+    "title": "Formatador e Validador de JSON",
+    "description": "Embeleze código JSON desordenado com recuo configurável (2 espaços, 4 espaços, tab), minifique para payloads compactos, valide sintaxe em tempo real e inspecione estatísticas de nós e tamanho.",
+    "faqs": [
+      {
+        "question": "Meu código JSON é enviado para algum servidor?",
+        "answer": "Não. Toda a formatação, validação e cálculo de estatísticas é executada localmente no seu navegador via JavaScript. Seus dados e payloads confidenciais permanecem 100% privados."
+      },
+      {
+        "question": "O que a função 'Auto-Corrigir' faz?",
+        "answer": "Ela tenta corrigir automaticamente erros comuns de sintaxe cometidos por desenvolvedores, como aspas simples ao invés de duplas, vírgulas sobrando no final de objetos/arrays (trailing commas) e chaves sem aspas."
+      },
+      {
+        "question": "Qual a diferença entre Formatar e Minificar?",
+        "answer": "A formatação (beautify) organiza o código em múltiplas linhas com identação legível para humanos. A minificação remove todas as quebras de linha e espaços desnecessários, reduzindo o tamanho em bytes para tráfego em rede e APIs."
+      }
+    ],
+    "richContent": {
+      "whatIs": "JSON (JavaScript Object Notation) é o formato padrão aberto e independente de linguagem mais utilizado na web para troca de dados estruturados entre clientes, servidores e APIs REST/GraphQL.",
+      "howToUse": [
+        "Cole seu código JSON na área de texto ou clique em 'Exemplo' para carregar um modelo.",
+        "Clique em 'Formatar' para identar o código com 2 ou 4 espaços ou 'Minificar' para comprimir em uma linha.",
+        "Verifique o painel inferior para identificar a validade do JSON e o diagnóstico de eventuais erros de sintaxe.",
+        "Clique em 'Copiar' ou 'Baixar JSON' para salvar o arquivo resultante."
+      ],
+      "whyItMatters": "Trabalhar com respostas de APIs minificadas ou arquivos de configuração complexos sem formatação visual torna o debug demorado. Um bom formatador identifica instantaneamente onde falta uma vírgula ou fecha-chave.",
+      "proTip": "Observe a barra de estatísticas para conferir o tamanho exato em bytes, a profundidade máxima da árvore e a quantidade total de propriedades do payload."
+    }
+  },
+  "jwtDecoder": {
+    "metaTitle": "Decodificador e Inspetor de JWT Online Grátis | ToolNotch",
+    "metaDescription": "Decodifique JSON Web Tokens (JWT) instantaneamente no navegador. Inspecione Header, Payload, claims de expiração, data legível e assinatura. 100% privado.",
+    "title": "Decodificador e Inspetor de JWT",
+    "description": "Analise, depure e inspecione tokens JWT em tempo real. Veja o status de expiração com contagem regressiva, timestamps convertidos para horário local e claims com total privacidade.",
+    "faqs": [
+      {
+        "question": "Meu token JWT ou segredo é enviado para a internet?",
+        "answer": "Não. Todo o processo de decodificação Base64URL e parsing JSON é executado 100% no seu navegador através do JavaScript do cliente. Seus tokens de autenticação nunca saem do seu dispositivo."
+      },
+      {
+        "question": "O que significa um token JWT estar expirado?",
+        "answer": "O campo \"exp\" no payload indica a data e hora em timestamp Unix na qual o token deixa de ser aceito pelos servidores de autenticação. Nossa ferramenta calcula a diferença de tempo e avisa se o token ainda é válido."
+      },
+      {
+        "question": "Esta ferramenta valida a assinatura criptográfica?",
+        "answer": "A ferramenta extrai e exibe a assinatura original do token. Como a validação da assinatura requer a chave secreta privada (que nunca deve ser colada em sites públicos), a validação visual do payload e algoritmo é o foco principal."
+      }
+    ],
+    "richContent": {
+      "whatIs": "JWT (JSON Web Token) é um padrão aberto (RFC 7519) compacto e autocontido para transmitir informações com segurança entre partes como um objeto JSON. É amplamente utilizado em autenticação stateless em APIs REST e GraphQL.",
+      "howToUse": [
+        "Cole a sequência codificada do JWT na caixa de texto ou selecione um dos exemplos de teste.",
+        "Inspecione o banner de expiração superior para verificar se o token ainda é válido ou já expirou.",
+        "Analise os blocos formatados de Header (algoritmo) e Payload (dados do usuário e permissões).",
+        "Copie os objetos JSON formatados com os botões de ação rápida."
+      ],
+      "whyItMatters": "Durante o desenvolvimento de autenticações OAuth, OpenID Connect e sessões de usuários, inspecionar rapidamente as claims de roles, permissões e tempo restante de vida do token acelera a identificação de bugs.",
+      "proTip": "Verifique sempre as claims \"iat\" (emitido em) e \"exp\" (expira em) para garantir que os relógios dos seus servidores estejam sincronizados com o protocolo NTP."
+    }
+  },
+  "base64Converter": {
+    "metaTitle": "Conversor Base64 Online — Codificar e Decodificar Texto, Hex e Imagens | ToolNotch",
+    "metaDescription": "Codifique e decodifique Base64 online com suporte a caracteres especiais UTF-8, modo URL-Safe, conversão Hexadecimal e Data URI para imagens. 100% privado.",
+    "title": "Conversor Base64 (Encoder / Decoder)",
+    "description": "Converta textos e payloads para Base64 e vice-versa instantaneamente. Inclui suporte a caracteres acentuados UTF-8, formato URL-Safe para parâmetros web, conversor Hexadecimal e conversor de arquivos/imagens para Data URI.",
+    "faqs": [
+      {
+        "question": "O que é a codificação Base64?",
+        "answer": "Base64 é um esquema de codificação binário para texto que representa dados binários em uma sequência de caracteres ASCII legíveis, permitindo que mídias e bytes sejam transmitidos com segurança por protocolos que aceitam apenas texto."
+      },
+      {
+        "question": "O que é o modo URL-Safe?",
+        "answer": "O modo URL-Safe substitui os caracteres \"+\" por \"-\" e \"/\" por \"_\", além de omitir o preenchimento \"=\", tornando a string segura para ser passada em URLs e parâmetros sem necessidade de encode adicional."
+      },
+      {
+        "question": "Posso converter imagens em Data URI Base64?",
+        "answer": "Sim! Na aba \"Arquivo / Imagem\", você pode carregar qualquer imagem (PNG, JPG, SVG, WebP) e obter o código completo data:image/... para embutir diretamente em HTML ou CSS."
+      }
+    ],
+    "richContent": {
+      "whatIs": "Base64 é um método de codificação que transforma dados binários em uma sequência de 64 caracteres ASCII imprimíveis (A-Z, a-z, 0-9, + e /).",
+      "howToUse": [
+        "Escolha a operação desejada: Texto ➔ Base64, Base64 ➔ Texto, Hex ⇄ Base64 ou Arquivo/Imagem.",
+        "Digite ou cole seus dados no campo de entrada.",
+        "Ative a opção \"Modo URL-Safe\" caso deseje usar o resultado em query parameters ou links.",
+        "Copie o resultado convertido instantaneamente com o botão de cópia."
+      ],
+      "whyItMatters": "Base64 é essencial para transmitir imagens inline em CSS/HTML, enviar anexos em e-mails (MIME), gerar tokens seguros e trafegar chaves de API sem corrupção de caracteres especiais.",
+      "proTip": "A codificação Base64 aumenta o tamanho original dos dados em aproximadamente 33%. Para grandes volumes de arquivos em produção, prefira transferências binárias multipart."
+    }
+  },
+  "hashGenerator": {
+    "metaTitle": "Gerador de Hashes e Checksum Online Grátis (MD5, SHA-256, SHA-512, HMAC) | ToolNotch",
+    "metaDescription": "Gere hashes criptográficos MD5, SHA-1, SHA-256, SHA-384, SHA-512, CRC-32 e HMAC em tempo real no navegador com comparador e verificador de integridade.",
+    "title": "Gerador de Hashes e Checksums",
+    "description": "Calcule múltiplos hashes criptográficos simultaneamente em tempo real. Verifique a integridade de dados com o comparador de checksums integrado e gere assinaturas HMAC seguras com chave secreta.",
+    "faqs": [
+      {
+        "question": "O que é uma função de Hash Criptográfico?",
+        "answer": "É um algoritmo unidirecional que mapeia uma quantidade arbitrária de dados em uma sequência de comprimento fixo. Qualquer alteração de um único caractere no texto de entrada altera completamente o hash resultante (efeito avalanche)."
+      },
+      {
+        "question": "Qual a diferença entre SHA-256 e MD5?",
+        "answer": "O SHA-256 produz um hash de 256 bits altamente seguro e resistente a colisões, sendo o padrão atual da indústria. O MD5 produz 128 bits e é considerado obsoleto para criptografia de senhas, porém ainda muito usado para checksums rápidos de arquivos."
+      },
+      {
+        "question": "Como funciona o comparador de integridade?",
+        "answer": "Basta colar o hash fornecido pela fonte original (como o checksum de um download de software) no campo de validação. A ferramenta identifica automaticamente se algum dos algoritmos calculados corresponde ao valor esperado."
+      }
+    ],
+    "richContent": {
+      "whatIs": "Um hash criptográfico é uma assinatura digital matemática exclusiva de um conjunto de dados. Ele permite verificar a integridade de arquivos e mensagens sem revelar o conteúdo original.",
+      "howToUse": [
+        "Digite ou cole qualquer string de texto na área de entrada.",
+        "Os hashes MD5, SHA-1, SHA-256, SHA-384, SHA-512 e CRC-32 serão gerados instantaneamente.",
+        "Cole um hash esperado no campo de comparação para validar a integridade com confirmação visual.",
+        "Opcionalmente informe uma Chave Secreta para calcular HMAC-SHA256."
+      ],
+      "whyItMatters": "Gerar e comparar hashes é a base da segurança da informação moderna, fundamental para verificação de downloads seguros, hashing de senhas, validação de integridade de commits git e assinaturas de APIs.",
+      "proTip": "Utilize SHA-256 ou SHA-512 para novas implementações de segurança e integridade de APIs REST e bancos de dados."
+    }
+  },
+  "urlParser": {
+    "metaTitle": "Parser e Editor de URL Online — Query String e Removedor de UTMs | ToolNotch",
+    "metaDescription": "Analise e decomponha URLs completas em partes estruturadas. Edite parâmetros de consulta (Query Params) em tempo real e remova tags de rastreamento (UTMs) com 1 clique.",
+    "title": "Parser e Editor de URL",
+    "description": "Decomponha URLs em protocolo, hostname, porta, caminho e parâmetros de busca em tempo real. Adicione, edite e ative/desative parâmetros da query string interativamente e limpe tags de rastreamento com facilidade.",
+    "faqs": [
+      {
+        "question": "O que são parâmetros UTM?",
+        "answer": "São tags de rastreamento de campanhas adicionadas ao final de links (como utm_source, utm_medium, fbclid). Nosso botão \"Remover Rastreamento\" elimina essas tags instantaneamente, gerando uma URL limpa."
+      },
+      {
+        "question": "Posso testar e editar parâmetros diretamente na tabela?",
+        "answer": "Sim! Você pode marcar/desmarcar o checkbox de cada parâmetro para ativá-lo ou desativá-lo, alterar chaves e valores, ou adicionar novos campos. A barra de URL principal é atualizada em tempo real."
+      },
+      {
+        "question": "A ferramenta suporta portas personalizadas e âncoras (hash)?",
+        "answer": "Sim, o parser identifica portas explicitadas (ex: :8080) e fragmentos de navegação na página iniciados por # (hash)."
+      }
+    ],
+    "richContent": {
+      "whatIs": "Uma URL (Uniform Resource Locator) é o endereço global de documentos e outros recursos na World Wide Web, composto por protocolo, domínio/host, porta opcional, caminho de diretório (pathname) e parâmetros de busca (query string).",
+      "howToUse": [
+        "Cole a URL completa na caixa de entrada ou escolha um dos exemplos pré-carregados.",
+        "Veja o desmembramento automático dos componentes da URL nos cards informativos.",
+        "Edite, adicione ou ative/desative parâmetros na tabela interativa de Query String.",
+        "Use o botão \"Remover Rastreamento (UTMs)\" para limpar a URL antes de compartilhá-la."
+      ],
+      "whyItMatters": "Depurar URLs de autenticação OAuth, chamadas de APIs com múltiplos filtros de paginação e campanhas de marketing complexas exige inspecionar cada parâmetro isoladamente.",
+      "proTip": "Sempre garanta que caracteres especiais e espaços em valores de parâmetros estejam devidamente codificados com encodeURIComponent para evitar quebras em servidores HTTP."
+    }
+  },
+  "regexTester": {
+    "metaTitle": "Testador e Analisador de Regex Online Grátis | ToolNotch",
+    "metaDescription": "Teste e depure expressões regulares (RegEx) em tempo real com realce de correspondências, inspeção de grupos de captura ($1, $2), ferramenta de substituição e presets para Brasil e Web.",
+    "title": "Testador e Analisador de Expressões Regulares (RegEx)",
+    "description": "Crie, teste e depure expressões regulares com suporte a flags (g, i, m, s, u), inspeção de grupos de captura, ferramenta de substituição (replace) com backreferences e biblioteca de padrões comuns prontos.",
+    "faqs": [
+      {
+        "question": "O que são as flags em uma Regex?",
+        "answer": "As flags modificam o comportamento do motor de busca: \"g\" encontra todas as ocorrências (global), \"i\" ignora maiúsculas/minúsculas (case-insensitive), \"m\" trata quebras de linha como início e fim (^ e $), \"s\" faz com que o ponto (.) capture também quebras de linha, e \"u\" ativa o suporte a Unicode completo."
+      },
+      {
+        "question": "Como funcionam as variáveis de substituição como $1 e $2?",
+        "answer": "Elas representam os grupos de captura definidos entre parênteses () na regex. O $1 se refere ao primeiro grupo capturado, $2 ao segundo e assim por diante. O $& representa o match completo."
+      },
+      {
+        "question": "Posso usar os presets brasileiros prontos?",
+        "answer": "Sim! Disponibilizamos atalhos rápidos para validação e extração de CPF, CNPJ, CEP e Telefones com DDD diretamente na barra superior."
+      }
+    ],
+    "richContent": {
+      "whatIs": "Uma Expressão Regular (Regex) é uma sequência de caracteres que define um padrão de busca formal em textos, amplamente empregada para validação de formulários, extração de dados e substituição de strings em programação.",
+      "howToUse": [
+        "Digite sua expressão regular no campo superior ou clique em um dos presets prontos.",
+        "Selecione as flags desejadas (g, i, m, s, u) clicando nos botões de controle.",
+        "Cole o texto de teste na área principal e visualize os matches e grupos de captura calculados em tempo real.",
+        "Acesse a aba \"Substituição / Replace\" para testar trocas de texto com suporte a grupos ($1, $2)."
+      ],
+      "whyItMatters": "Expressões regulares são uma das ferramentas mais poderosas no arsenal de um desenvolvedor. Validar a regex visualmente com múltiplos exemplos garante que casos de borda não quebrem em produção.",
+      "proTip": "Evite regexes com quantificadores aninhados que possam causar retrocesso catastrófico (catastrophic backtracking) em strings longas não correspondentes.",
+      "sections": [
+        {
+          "heading": "Como Funciona a Aba de Substituição (Replace)?",
+          "body": "A aba Substituição permite testar como o texto se comporta ao trocar as ocorrências encontradas pela regex. Use variáveis como $1 e $2 para reposicionar grupos capturados entre parênteses (), $& para reinserir o texto completo encontrado ou textos estáticos como máscaras [OCULTO]."
+        },
+        {
+          "heading": "O Que São Grupos de Captura ($1, $2)?",
+          "body": "Ao envolver partes da sua regex entre parênteses (ex: (\\d{4})-(\\d{2})-(\\d{2})), cada parêntese cria um grupo de captura numerado em sequência ($1 para ano, $2 para mês, $3 para dia). Na substituição, você pode rearranjá-los como $3/$2/$1 para reformatar datas e documentos instantaneamente."
+        }
+      ]
+    }
   }
 }
