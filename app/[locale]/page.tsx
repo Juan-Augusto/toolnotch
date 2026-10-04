@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { localizedPath } from "@/lib/i18nMeta";
 import { buildJsonLd } from "@/lib/schema";
+import WiseBanner from "@/components/WiseBanner";
 import AppHomeSearch from "@/components/home/AppHomeSearch";
 import AppBentoGrid, { type BentoTranslations } from "@/components/home/AppBentoGrid";
 import {
@@ -346,6 +347,8 @@ export default async function HomePage({ params }: Props) {
           })}
         </div>
       </section>
+
+      <WiseBanner placement="homepage-wide" />
     </main>
   );
 }
