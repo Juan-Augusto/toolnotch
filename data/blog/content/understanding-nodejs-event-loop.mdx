@@ -81,7 +81,13 @@ console.log('This runs before the file is read');
 
 Here, `fs.readFile` is an asynchronous function. It initiates the file read operation and immediately returns control to the next line of code. When the file read operation completes, its callback is placed in the event loop's queue, and it gets executed once the current stack is empty.
 
-You can also use [Loupe](http://latentflip.com/loupe/?code=ZnVuY3Rpb24gcHJpbnRIZWxsbygpIHsNCiAgICBjb25zb2xlLmxvZygnSGVsbG8gZnJvbSBiYXonKTsNCn0NCg0KZnVuY3Rpb24gYmF6KCkgew0KICAgIHNldFRpbWVvdXQocHJpbnRIZWxsbywgMzAwMCk7DQp9DQoNCmZ1bmN0aW9uIGJhcigpIHsNCiAgICBiYXooKTsNCn0NCg0KZnVuY3Rpb24gZm9vKCkgew0KICAgIGJhcigpOw0KfQ0KDQpmb28oKTs%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D) — an interactive tool that visualizes how the event loop processes function calls in real time.
+<Callout type="tip">
+**Microtasks vs. Macrotasks in Node.js:**
+- **Microtask Queue:** Handles `process.nextTick()` and resolved Promise callbacks (`.then()`). These execute immediately after the current synchronous operation finishes, before the event loop transitions to the next phase.
+- **Macrotasks:** Timers (`setTimeout`, `setInterval`) and I/O callbacks run inside their designated event loop phases.
+</Callout>
+
+You can also try [Loupe](http://latentflip.com/loupe/?code=ZnVuY3Rpb24gcHJpbnRIZWxsbygpIHsNCiAgICBjb25zb2xlLmxvZygnSGVsbG8gZnJvbSBiYXonKTsNCn0NCg0KZnVuY3Rpb24gYmF6KCkgew0KICAgIHNldFRpbWVvdXQocHJpbnRIZWxsbywgMzAwMCk7DQp9DQoNCmZ1bmN0aW9uIGJhcigpIHsNCiAgICBiYXooKTsNCn0NCg0KZnVuY3Rpb24gZm9vKCkgew0KICAgIGJhcigpOw0KfQ0KDQpmb28oKTs%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D), an interactive visualizer that demonstrates how the event loop processes function calls and asynchronous callbacks in real time.
 
 ---
 

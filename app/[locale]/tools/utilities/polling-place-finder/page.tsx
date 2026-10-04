@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import ToolWrapper from '@/components/ToolWrapper'
+import AppToolWrapper from '@/components/AppToolWrapper'
 import { buildAlternates } from '@/lib/i18nMeta'
 import { buildJsonLd, howToSchema, faqSchema, breadcrumbSchema } from '@/lib/schema'
-import type { FaqItem } from '@/components/FaqSection'
-import PollingPlaceFinderContent, {
+import type { FaqItem } from '@/components/AppFaqSection'
+import AppPollingPlaceFinderContent, {
   type PollingPlaceFinderContentProps,
-} from '@/components/utilities/PollingPlaceFinderContent'
+} from '@/components/utilities/AppPollingPlaceFinderContent'
 
 const PATH = '/tools/utilities/polling-place-finder'
 
@@ -53,15 +53,15 @@ export default async function PollingPlaceFinderPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <ToolWrapper
+      <AppToolWrapper
         title={t('title')}
         description={t('description')}
         breadcrumbLabel={t('title')}
         faqs={faqs}
         noCardWrapper
       >
-        <PollingPlaceFinderContent intro={intro} sections={sections} cta={cta} />
-      </ToolWrapper>
+        <AppPollingPlaceFinderContent intro={intro} sections={sections} cta={cta} />
+      </AppToolWrapper>
     </>
   )
 }

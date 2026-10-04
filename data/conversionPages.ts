@@ -71,36 +71,6 @@ export const conversionPages: ConversionPageConfig[] = [
     ],
   },
   {
-    slug: 'convert-png-to-webp',
-    h1: 'Convert PNG to WebP Online Free',
-    metaTitle: 'Convert PNG to WebP Online Free — No Signup',
-    metaDescription:
-      'Convert PNG images to WebP format instantly in your browser. Up to 90% smaller files with the same visual quality.',
-    defaultFormat: 'webp',
-    faq: [
-      {
-        q: 'Why convert PNG to WebP?',
-        a: 'WebP files are typically 25–35% smaller than PNG with equivalent visual quality. This improves page load speed and Core Web Vitals scores.',
-      },
-      {
-        q: 'Does WebP support transparency?',
-        a: 'Yes. WebP fully supports transparency (alpha channel), making it a direct replacement for PNG in most cases.',
-      },
-      {
-        q: 'Is WebP supported in all browsers?',
-        a: 'WebP is supported in all modern browsers including Chrome, Firefox, Safari (since 2020), and Edge.',
-      },
-      {
-        q: 'Is my PNG uploaded to a server?',
-        a: 'No. Conversion happens entirely in your browser using the Canvas API.',
-      },
-      {
-        q: 'Will I lose quality converting PNG to WebP?',
-        a: 'At 80%+ quality, the visual difference is imperceptible. You can adjust the quality slider and preview before downloading.',
-      },
-    ],
-  },
-  {
     slug: 'convert-jpg-to-png',
     h1: 'Convert JPG to PNG Online Free',
     metaTitle: 'Convert JPG to PNG Online Free — No Signup',
@@ -157,36 +127,6 @@ export const conversionPages: ConversionPageConfig[] = [
       {
         q: 'What file size should I expect?',
         a: 'JPG files are usually similar to or slightly larger than WebP files at equivalent quality settings.',
-      },
-    ],
-  },
-  {
-    slug: 'convert-heic-to-jpg',
-    h1: 'Convert HEIC to JPG Online Free',
-    metaTitle: 'Convert HEIC to JPG Online Free — No Signup',
-    metaDescription:
-      'Convert iPhone HEIC photos to JPG format instantly in your browser. No upload required — 100% private and free.',
-    defaultFormat: 'jpg',
-    faq: [
-      {
-        q: 'What is a HEIC file?',
-        a: 'HEIC is the default photo format on iPhones (iOS 11+). It offers better compression than JPG but has limited compatibility with Windows and older apps.',
-      },
-      {
-        q: 'Why convert HEIC to JPG?',
-        a: 'JPG is universally supported. Converting lets you share, upload, or edit your iPhone photos anywhere.',
-      },
-      {
-        q: 'Is my HEIC file uploaded to a server?',
-        a: 'No. Conversion happens in your browser. Your photos never leave your device.',
-      },
-      {
-        q: "Why isn't my HEIC file loading?",
-        a: 'HEIC decoding requires native browser support, which varies. Safari on Apple devices handles it best. On Windows, try the HEIC Image Extensions from the Microsoft Store.',
-      },
-      {
-        q: 'Will quality be lost?',
-        a: 'At 85%+ quality setting, the visual difference between HEIC and the output JPG is minimal.',
       },
     ],
   },

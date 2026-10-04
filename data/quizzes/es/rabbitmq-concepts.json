@@ -1,0 +1,791 @@
+{
+  "id": "rabbitmq-concepts",
+  "type": "trivia",
+  "category": "backend",
+  "locale": "es",
+  "title": "Quiz de Conceptos de RabbitMQ",
+  "description": "Pon a prueba tu comprensión sobre exchanges, routing keys y colas en RabbitMQ.",
+  "image": "/images/quizzes/rabbitmq-concepts-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "level": "beginner",
+      "text": "¿Qué es RabbitMQ?",
+      "options": [
+        {
+          "id": "q1a",
+          "text": "Un sistema de gestión de bases de datos relacionales"
+        },
+        {
+          "id": "q1b",
+          "text": "Un broker de mensajería AMQP de código abierto"
+        },
+        {
+          "id": "q1c",
+          "text": "Una pasarela de API REST"
+        },
+        {
+          "id": "q1d",
+          "text": "Un almacén clave-valor distribuido"
+        }
+      ],
+      "correctAnswerId": "q1b",
+      "explanation": "RabbitMQ es un broker de mensajería de código abierto que implementa el protocolo AMQP (Advanced Message Queuing Protocol), permitiendo que las aplicaciones se comuniquen enviando y recibiendo mensajes."
+    },
+    {
+      "id": "q2",
+      "level": "beginner",
+      "text": "En un flujo típico de mensajes en RabbitMQ, ¿cuál es el orden correcto de los componentes?",
+      "options": [
+        {
+          "id": "q2a",
+          "text": "Consumidor → Cola → Exchange → Productor"
+        },
+        {
+          "id": "q2b",
+          "text": "Productor → Cola → Exchange → Consumidor"
+        },
+        {
+          "id": "q2c",
+          "text": "Productor → Exchange → Cola → Consumidor"
+        },
+        {
+          "id": "q2d",
+          "text": "Exchange → Productor → Cola → Consumidor"
+        }
+      ],
+      "correctAnswerId": "q2c",
+      "explanation": "Los mensajes viajan del Productor a la Exchange, la Exchange los enruta a una o varias Colas mediante enlaces (bindings), y los Consumidores leen los mensajes de esas Colas."
+    },
+    {
+      "id": "q3",
+      "level": "beginner",
+      "text": "¿Qué es un enlace (binding) en RabbitMQ?",
+      "options": [
+        {
+          "id": "q3a",
+          "text": "Una conexión TCP entre dos brokers"
+        },
+        {
+          "id": "q3b",
+          "text": "Una regla que vincula una exchange con una cola (o con otra exchange)"
+        },
+        {
+          "id": "q3c",
+          "text": "La credencial de autenticación utilizada por un productor"
+        },
+        {
+          "id": "q3d",
+          "text": "Una referencia con nombre a un virtual host"
+        }
+      ],
+      "correctAnswerId": "q3b",
+      "explanation": "Un binding es una relación entre una exchange y una cola que indica a la exchange qué colas deben recibir los mensajes que coincidan con los criterios del enlace."
+    },
+    {
+      "id": "q4",
+      "level": "beginner",
+      "text": "¿Qué es la exchange predeterminada (default exchange) en RabbitMQ?",
+      "options": [
+        {
+          "id": "q4a",
+          "text": "Una exchange fanout llamada 'default'"
+        },
+        {
+          "id": "q4b",
+          "text": "Una exchange direct predeclarada con nombre de cadena vacía"
+        },
+        {
+          "id": "q4c",
+          "text": "Una exchange topic llamada 'amq.default'"
+        },
+        {
+          "id": "q4d",
+          "text": "Una exchange headers que debe declararse antes de usarse"
+        }
+      ],
+      "correctAnswerId": "q4b",
+      "explanation": "La exchange predeterminada es una direct exchange con nombre de cadena vacía; cada cola queda vinculada automáticamente a ella usando el propio nombre de la cola como routing key."
+    },
+    {
+      "id": "q5",
+      "level": "beginner",
+      "text": "¿Cuál es la diferencia entre una cola durable y una cola transitoria (transient)?",
+      "options": [
+        {
+          "id": "q5a",
+          "text": "Las colas durables sobreviven al reinicio del broker; las colas transitorias no"
+        },
+        {
+          "id": "q5b",
+          "text": "Las colas durables son más rápidas; las colas transitorias son más lentas"
+        },
+        {
+          "id": "q5c",
+          "text": "Las colas durables pueden contener más mensajes que las colas transitorias"
+        },
+        {
+          "id": "q5d",
+          "text": "Las colas durables requieren autenticación; las colas transitorias no"
+        }
+      ],
+      "correctAnswerId": "q5a",
+      "explanation": "Marcar una cola como durable hace que RabbitMQ guarde su definición en disco para conservarla tras reiniciar el broker, mientras que una cola transitoria (no durable) se pierde al reiniciar."
+    },
+    {
+      "id": "q6",
+      "level": "beginner",
+      "text": "¿Qué envía un consumidor a RabbitMQ para confirmar que ha procesado un mensaje con éxito?",
+      "options": [
+        {
+          "id": "q6a",
+          "text": "Un NACK"
+        },
+        {
+          "id": "q6b",
+          "text": "Un REJECT"
+        },
+        {
+          "id": "q6c",
+          "text": "Un ACK (acknowledgement)"
+        },
+        {
+          "id": "q6d",
+          "text": "Un CONFIRM"
+        }
+      ],
+      "correctAnswerId": "q6c",
+      "explanation": "Un ACK (basic.ack) notifica a RabbitMQ que el mensaje se procesó con éxito y puede eliminarse de la cola."
+    },
+    {
+      "id": "q7",
+      "level": "beginner",
+      "text": "¿Cuál es la diferencia entre basic.nack y basic.reject en RabbitMQ?",
+      "options": [
+        {
+          "id": "q7a",
+          "text": "basic.nack admite el rechazo por lotes de múltiples mensajes; basic.reject procesa solo un mensaje a la vez"
+        },
+        {
+          "id": "q7b",
+          "text": "basic.reject reencola el mensaje; basic.nack lo descarta permanentemente"
+        },
+        {
+          "id": "q7c",
+          "text": "basic.nack solo está disponible en AMQP 1.0; basic.reject es de AMQP 0-9-1"
+        },
+        {
+          "id": "q7d",
+          "text": "No existe ninguna diferencia funcional"
+        }
+      ],
+      "correctAnswerId": "q7a",
+      "explanation": "basic.nack es una extensión de RabbitMQ que permite rechazar múltiples mensajes simultáneamente, mientras que basic.reject solo puede rechazar un único mensaje."
+    },
+    {
+      "id": "q8",
+      "level": "beginner",
+      "text": "¿Qué plugin nativo de RabbitMQ proporciona un panel de gestión y monitorización accesible desde el navegador?",
+      "options": [
+        {
+          "id": "q8a",
+          "text": "rabbitmq_shovel"
+        },
+        {
+          "id": "q8b",
+          "text": "rabbitmq_management"
+        },
+        {
+          "id": "q8c",
+          "text": "rabbitmq_federation"
+        },
+        {
+          "id": "q8d",
+          "text": "rabbitmq_stomp"
+        }
+      ],
+      "correctAnswerId": "q8b",
+      "explanation": "El plugin rabbitmq_management proporciona una API HTTP y una interfaz web de navegador para gestionar y monitorizar nodos, colas, exchanges y bindings de RabbitMQ."
+    },
+    {
+      "id": "q9",
+      "level": "beginner",
+      "text": "¿Qué controla el ajuste prefetch count (basic.qos) en RabbitMQ?",
+      "options": [
+        {
+          "id": "q9a",
+          "text": "El número máximo de colas a las que un canal puede suscribirse"
+        },
+        {
+          "id": "q9b",
+          "text": "El número máximo de mensajes no confirmados entregados a un consumidor al mismo tiempo"
+        },
+        {
+          "id": "q9c",
+          "text": "El tamaño máximo del mensaje en bytes"
+        },
+        {
+          "id": "q9d",
+          "text": "El número máximo de conexiones por virtual host"
+        }
+      ],
+      "correctAnswerId": "q9b",
+      "explanation": "El prefetch count de basic.qos limita cuántos mensajes pendientes de confirmación pueden permanecer abiertos en un canal, proporcionando control de flujo y evitando sobrecargar a los consumidores."
+    },
+    {
+      "id": "q10",
+      "level": "beginner",
+      "text": "¿Por qué suele preferirse RabbitMQ sobre una base de datos relacional para colas de tareas?",
+      "options": [
+        {
+          "id": "q10a",
+          "text": "RabbitMQ almacena los mensajes en tablas SQL para facilitar consultas"
+        },
+        {
+          "id": "q10b",
+          "text": "RabbitMQ ofrece entrega nativa por push, confirmaciones y back-pressure sin sondeo (polling)"
+        },
+        {
+          "id": "q10c",
+          "text": "Una base de datos no puede persistir datos tras un reinicio"
+        },
+        {
+          "id": "q10d",
+          "text": "RabbitMQ genera esquemas SQL automáticamente para metadados de tareas"
+        }
+      ],
+      "correctAnswerId": "q10b",
+      "explanation": "Un broker de mensajería como RabbitMQ entrega mensajes vía push, administra confirmaciones y reintentos de forma nativa y admite back-pressure, eliminando la necesidad de costosos bucles de sondeo en la base de datos."
+    },
+    {
+      "id": "q11",
+      "level": "intermediate",
+      "text": "¿Cómo enruta mensajes una exchange de tipo direct?",
+      "options": [
+        {
+          "id": "q11a",
+          "text": "Difunde el mensaje a todas las colas vinculadas independientemente de la routing key"
+        },
+        {
+          "id": "q11b",
+          "text": "Enruta el mensaje a las colas cuya binding key coincida con exactitud con la routing key del mensaje"
+        },
+        {
+          "id": "q11c",
+          "text": "Utiliza atributos de las cabeceras del mensaje para decidir el enrutamiento"
+        },
+        {
+          "id": "q11d",
+          "text": "Enruta basándose en patrones de comodines en la binding key"
+        }
+      ],
+      "correctAnswerId": "q11b",
+      "explanation": "Una direct exchange efectúa una comparación exacta entre la routing key del mensaje y la binding key de cada cola, entregando únicamente a las colas que coinciden."
+    },
+    {
+      "id": "q12",
+      "level": "intermediate",
+      "text": "¿Cuál es el comportamiento distintivo de una exchange fanout?",
+      "options": [
+        {
+          "id": "q12a",
+          "text": "Enruta mensajes únicamente a colas cuya binding key coincida con la routing key"
+        },
+        {
+          "id": "q12b",
+          "text": "Difunde cada mensaje a todas las colas vinculadas, ignorando totalmente la routing key"
+        },
+        {
+          "id": "q12c",
+          "text": "Enruta mensajes utilizando patrones con comodines (* y #)"
+        },
+        {
+          "id": "q12d",
+          "text": "Envía mensajes únicamente a colas ubicadas en el mismo nodo"
+        }
+      ],
+      "correctAnswerId": "q12b",
+      "explanation": "Una fanout exchange duplica y distribuye cada mensaje recibido a todas las colas enlazadas a ella, siendo idónea para patrones de difusión o pub/sub."
+    },
+    {
+      "id": "q13",
+      "level": "intermediate",
+      "text": "En la binding key de una exchange topic, ¿con qué coincide el comodín '#'?",
+      "options": [
+        {
+          "id": "q13a",
+          "text": "Exactamente una palabra separada por puntos"
+        },
+        {
+          "id": "q13b",
+          "text": "Cualquier carácter individual"
+        },
+        {
+          "id": "q13c",
+          "text": "Cero o más palabras separadas por puntos"
+        },
+        {
+          "id": "q13d",
+          "text": "Únicamente caracteres numéricos"
+        }
+      ],
+      "correctAnswerId": "q13c",
+      "explanation": "En una exchange topic, '#' coincide con cero o más palabras delimitadas por puntos, mientras que '*' coincide exactamente con una palabra, posibilitando jerarquías de enrutamiento flexibles."
+    },
+    {
+      "id": "q14",
+      "level": "intermediate",
+      "text": "¿Cómo determina una headers exchange qué colas reciben un mensaje?",
+      "options": [
+        {
+          "id": "q14a",
+          "text": "Compara la routing key del mensaje contra los comodines de la binding key"
+        },
+        {
+          "id": "q14b",
+          "text": "Ignora por completo las routing keys y enruta en función de los atributos de cabecera del mensaje que coincidan con los argumentos del binding"
+        },
+        {
+          "id": "q14c",
+          "text": "Distribuye los mensajes en round-robin entre todas las colas vinculadas"
+        },
+        {
+          "id": "q14d",
+          "text": "Enruta basándose en el tipo de contenido (content-type) del cuerpo del mensaje"
+        }
+      ],
+      "correctAnswerId": "q14b",
+      "explanation": "Una headers exchange emplea el argumento de binding x-match ('all' o 'any') para cotejar las cabeceras del mensaje contra los argumentos del enlace, prescindiendo por completo de la routing key."
+    },
+    {
+      "id": "q15",
+      "level": "intermediate",
+      "text": "¿Cuál es la diferencia conceptual entre una routing key y una binding key en RabbitMQ?",
+      "options": [
+        {
+          "id": "q15a",
+          "text": "Son idénticas: ambos términos aluden a la misma cadena configurada por el productor"
+        },
+        {
+          "id": "q15b",
+          "text": "La routing key la establece el productor en el mensaje; la binding key se fija cuando se vincula una cola a una exchange"
+        },
+        {
+          "id": "q15c",
+          "text": "La binding key la fija el productor; la routing key se configura en la cola"
+        },
+        {
+          "id": "q15d",
+          "text": "Las routing keys solo se usan en direct exchanges; las binding keys solo en topic exchanges"
+        }
+      ],
+      "correctAnswerId": "q15b",
+      "explanation": "Los productores marcan cada mensaje publicado con una routing key; de manera independiente, un administrador o el código establece una binding key al enlazar una cola a una exchange, y la exchange las compara para decidir la entrega."
+    },
+    {
+      "id": "q16",
+      "level": "intermediate",
+      "text": "¿Cómo se configura una Dead Letter Exchange (DLX) para una cola?",
+      "options": [
+        {
+          "id": "q16a",
+          "text": "Estableciendo el argumento 'x-dead-letter-exchange' al declarar la cola"
+        },
+        {
+          "id": "q16b",
+          "text": "Publicando directamente hacia una exchange llamada 'dlx'"
+        },
+        {
+          "id": "q16c",
+          "text": "Habilitando el plugin rabbitmq_dlx"
+        },
+        {
+          "id": "q16d",
+          "text": "Configurando la propiedad 'dead-letter' en cada mensaje de forma individual"
+        }
+      ],
+      "correctAnswerId": "q16a",
+      "explanation": "Una DLX se asigna pasando el argumento 'x-dead-letter-exchange' (y opcionalmente 'x-dead-letter-routing-key') al momento de declarar la cola de origen."
+    },
+    {
+      "id": "q17",
+      "level": "intermediate",
+      "text": "¿Cuál es la diferencia entre fijar el TTL de un mensaje por cola o por mensaje?",
+      "options": [
+        {
+          "id": "q17a",
+          "text": "El TTL por cola aplica a todos los mensajes de dicha cola mediante x-message-ttl; el TTL por mensaje se define en la propiedad expiration del mensaje y puede variar entre ellos"
+        },
+        {
+          "id": "q17b",
+          "text": "El TTL por mensaje siempre tiene mayor prioridad y sobrescribe cualquier TTL de cola"
+        },
+        {
+          "id": "q17c",
+          "text": "El TTL por cola requiere un plugin; el TTL por mensaje es una característica nativa"
+        },
+        {
+          "id": "q17d",
+          "text": "No hay diferencia: ambos provocan un comportamiento idéntico en el broker"
+        }
+      ],
+      "correctAnswerId": "q17a",
+      "explanation": "x-message-ttl en una cola establece el tiempo máximo de vida para todos los mensajes de esa cola; la propiedad expiration por mensaje fija el TTL individual, y RabbitMQ aplica el plazo que expire primero."
+    },
+    {
+      "id": "q18",
+      "level": "intermediate",
+      "text": "¿Cuál es la ventaja primordial de los publisher confirms frente a las transacciones AMQP (tx.select/tx.commit) en RabbitMQ?",
+      "options": [
+        {
+          "id": "q18a",
+          "text": "Los publisher confirms son síncronos y bloquean el canal hasta que el broker confirma"
+        },
+        {
+          "id": "q18b",
+          "text": "Los publisher confirms proporcionan confirmaciones asíncronas y ligeras sin la pesada sobrecarga de two-phase commit de las transacciones"
+        },
+        {
+          "id": "q18c",
+          "text": "Las transacciones AMQP admiten confirmaciones por lotes; los publisher confirms no"
+        },
+        {
+          "id": "q18d",
+          "text": "Los publisher confirms solo están disponibles para quorum queues"
+        }
+      ],
+      "correctAnswerId": "q18b",
+      "explanation": "Los publisher confirms son una extensión de RabbitMQ que permite confirmaciones asíncronas mensaje a mensaje desde el broker con un impacto en el rendimiento mucho menor que las transacciones AMQP 0-9-1."
+    },
+    {
+      "id": "q19",
+      "level": "intermediate",
+      "text": "¿Cuál es el propósito primordial del plugin Shovel en RabbitMQ?",
+      "options": [
+        {
+          "id": "q19a",
+          "text": "Replicar colas entre nodos de un cluster para alta disponibilidad"
+        },
+        {
+          "id": "q19b",
+          "text": "Mover o copiar mensajes de forma fiable desde una cola/exchange de origen a una cola/exchange de destino, potencialmente entre brokers distintos"
+        },
+        {
+          "id": "q19c",
+          "text": "Exponer colas mediante una API REST HTTP"
+        },
+        {
+          "id": "q19d",
+          "text": "Comprimir las cargas útiles de los mensajes antes de almacenarlos"
+        }
+      ],
+      "correctAnswerId": "q19b",
+      "explanation": "El plugin Shovel consume mensajes continuamente de un origen (cola o exchange) y los republica en un destino, que puede encontrarse en el mismo broker o en uno remoto."
+    },
+    {
+      "id": "q20",
+      "level": "intermediate",
+      "text": "¿Cuál es la principal diferencia arquitectónica entre las quorum queues y las classic mirrored queues?",
+      "options": [
+        {
+          "id": "q20a",
+          "text": "Las quorum queues emplean el consenso Raft para la replicación; las classic mirrored queues empleaban replicación maestro-espejo asíncrona"
+        },
+        {
+          "id": "q20b",
+          "text": "Las classic mirrored queues son más rápidas porque usan Raft; las quorum queues usan two-phase commit"
+        },
+        {
+          "id": "q20c",
+          "text": "Las quorum queues solo pueden existir en un único nodo; las mirrored queues abarcan todo el cluster"
+        },
+        {
+          "id": "q20d",
+          "text": "No hay diferencia: quorum queues es simplemente la nueva denominación de las mirrored queues"
+        }
+      ],
+      "correctAnswerId": "q20a",
+      "explanation": "Las quorum queues implementan el algoritmo de consenso distribuido Raft para ofrecer sólidas garantías de replicación, mientras que las classic mirrored queues dependían de un modelo asíncrono maestro-espejo expuesto a pérdidas de datos durante fallos."
+    },
+    {
+      "id": "q21",
+      "level": "advanced",
+      "text": "¿Cómo permite AMQP 0-9-1 múltiples flujos lógicos de comunicación sobre una sola conexión TCP en RabbitMQ?",
+      "options": [
+        {
+          "id": "q21a",
+          "text": "Abriendo varios sockets TCP agrupados en un solo objeto de conexión"
+        },
+        {
+          "id": "q21b",
+          "text": "A través de canales: conexiones virtuales ligeras multiplexadas sobre una única conexión TCP"
+        },
+        {
+          "id": "q21c",
+          "text": "Utilizando multiplexación de streams HTTP/2 dentro del encapsulado AMQP"
+        },
+        {
+          "id": "q21d",
+          "text": "Codificando cada flujo lógico como un virtual host independiente"
+        }
+      ],
+      "correctAnswerId": "q21b",
+      "explanation": "AMQP 0-9-1 multiplexa canales sobre una sola conexión TCP; cada canal es un flujo lógico independiente con estado propio, permitiendo operaciones concurrentes sin la sobrecarga de múltiples conexiones TCP."
+    },
+    {
+      "id": "q22",
+      "level": "advanced",
+      "text": "¿Qué función cumple el mecanismo channel.flow de AMQP 0-9-1?",
+      "options": [
+        {
+          "id": "q22a",
+          "text": "Incrementa dinámicamente la ventana de prefetch cuando el consumidor está inactivo"
+        },
+        {
+          "id": "q22b",
+          "text": "Permite al broker o al cliente pausar/reanudar la entrega de mensajes en un canal para aplicar back-pressure"
+        },
+        {
+          "id": "q22c",
+          "text": "Migra un canal de una conexión TCP a otra sin interrupción"
+        },
+        {
+          "id": "q22d",
+          "text": "Vuelca a disco todos los mensajes pendientes del búfer interno de un canal"
+        }
+      ],
+      "correctAnswerId": "q22b",
+      "explanation": "channel.flow es un método AMQP que el broker o el cliente pueden enviar para pausar (active=false) o reanudar (active=true) el flujo de mensajes en un canal, actuando como un mecanismo elemental de contrapresión (back-pressure)."
+    },
+    {
+      "id": "q23",
+      "level": "advanced",
+      "text": "¿Cuál es el beneficio operativo primordial de declarar una cola como lazy queue?",
+      "options": [
+        {
+          "id": "q23a",
+          "text": "Las lazy queues omiten el procesamiento de confirmaciones para incrementar el rendimiento"
+        },
+        {
+          "id": "q23b",
+          "text": "Las lazy queues escriben los mensajes directamente en disco según llegan en lugar de mantenerlos en memoria, reduciendo el consumo de RAM en colas extensas"
+        },
+        {
+          "id": "q23c",
+          "text": "Las lazy queues solo replican a disco cuando el nodo se reinicia"
+        },
+        {
+          "id": "q23d",
+          "text": "Las lazy queues posponen la comprobación de bindings hasta que se conecta un consumidor"
+        }
+      ],
+      "correctAnswerId": "q23b",
+      "explanation": "Las lazy queues trasladan los mensajes a disco tan pronto como llegan en lugar de retenerlos en memoria RAM, reduciendo significativamente la presión sobre la memoria cuando se acumulan grandes colas."
+    },
+    {
+      "id": "q24",
+      "level": "advanced",
+      "text": "¿Cuál es la principal diferencia arquitectónica entre el plugin Federation y el plugin Shovel?",
+      "options": [
+        {
+          "id": "q24a",
+          "text": "Los enlaces de Federation son permanentes; los de Shovel son temporales y se borran tras un solo mensaje"
+        },
+        {
+          "id": "q24b",
+          "text": "Federation ofrece conexión de exchanges/colas débilmente acoplada entre brokers con nodos autónomos; Shovel es un transmisor básico punto a punto que precisa de acoplamiento directo"
+        },
+        {
+          "id": "q24c",
+          "text": "Shovel admite AMQP 1.0; Federation solo soporta AMQP 0-9-1"
+        },
+        {
+          "id": "q24d",
+          "text": "Son funcionalmente idénticos: Federation es solo el nombre renovado de Shovel"
+        }
+      ],
+      "correctAnswerId": "q24b",
+      "explanation": "Federation está diseñado para topologías débilmente acopladas a través de redes WAN en las que cada broker opera de manera autónoma; Shovel es una utilidad de nivel más bajo que simplemente consume de un origen y republica en un destino."
+    },
+    {
+      "id": "q25",
+      "level": "advanced",
+      "text": "¿Qué logra el plugin consistent hash exchange que no puede hacer una direct o topic exchange convencional?",
+      "options": [
+        {
+          "id": "q25a",
+          "text": "Enruta mensajes a exactamente una cola seleccionada por hash consistente de la routing key, balanceando la carga y manteniendo los mensajes con la misma clave en la misma cola"
+        },
+        {
+          "id": "q25b",
+          "text": "Replica mensajes en todas las colas vinculadas utilizando un mecanismo de deduplicación por hash"
+        },
+        {
+          "id": "q25c",
+          "text": "Calcula el hash del cuerpo del mensaje para verificar la integridad antes de enrutar"
+        },
+        {
+          "id": "q25d",
+          "text": "Garantiza la entrega equitativa (round-robin) entre colas sin importar la routing key"
+        }
+      ],
+      "correctAnswerId": "q25a",
+      "explanation": "La exchange de hash consistente emplea el hash de la routing key (o cabecera/propiedad del mensaje) para elegir de forma determinista una cola del conjunto vinculado, permitiendo particionamiento ordenado por clave con balanceo de carga."
+    },
+    {
+      "id": "q26",
+      "level": "advanced",
+      "text": "En un cluster de RabbitMQ, ¿cuál es la diferencia funcional entre nodos de disco (disc nodes) y nodos de memoria (RAM nodes)?",
+      "options": [
+        {
+          "id": "q26a",
+          "text": "Los nodos de disco persisten los metadados del broker (colas, exchanges, bindings, usuarios) en disco; los nodos de RAM guardan los metadatos solo en memoria para escrituras de menor latencia"
+        },
+        {
+          "id": "q26b",
+          "text": "Los nodos de RAM gestionan el enrutamiento de mensajes; los nodos de disco gestionan únicamente el almacenamiento persistente de mensajes"
+        },
+        {
+          "id": "q26c",
+          "text": "Los nodos de disco pueden alojar quorum queues; los nodos de RAM no"
+        },
+        {
+          "id": "q26d",
+          "text": "Son términos obsoletos: todos los nodos modernos de RabbitMQ son idénticos"
+        }
+      ],
+      "correctAnswerId": "q26a",
+      "explanation": "Los nodos de disco guardan los metadatos del cluster en almacenamiento permanente, resultando imprescindibles para el reinicio del cluster; los nodos de RAM guardan metadatos solo en memoria (el contenido de los mensajes siempre va a disco en colas persistentes, sin importar el tipo de nodo)."
+    },
+    {
+      "id": "q27",
+      "level": "advanced",
+      "text": "¿Cómo emplean las quorum queues el algoritmo de consenso Raft para garantizar la seguridad de los datos?",
+      "options": [
+        {
+          "id": "q27a",
+          "text": "Un mensaje se considera confirmado únicamente tras ser escrito por una mayoría (quórum) de réplicas, asegurando que no haya pérdida de datos incluso si falla una minoría de nodos"
+        },
+        {
+          "id": "q27b",
+          "text": "Raft se usa únicamente para la elección de líder; el almacenamiento de mensajes emplea un protocolo independiente de two-phase commit"
+        },
+        {
+          "id": "q27c",
+          "text": "Las quorum queues escriben en todas las réplicas sincrónicamente y exigen confirmación unánime"
+        },
+        {
+          "id": "q27d",
+          "text": "Raft asegura que los mensajes se dedupliquen en todos los nodos del cluster"
+        }
+      ],
+      "correctAnswerId": "q27a",
+      "explanation": "Las quorum queues implementan Raft para replicar cada operación de encolado en la mayoría de nodos miembros antes de confirmarla, garantizando durabilidad siempre que se disponga de un quórum de nodos."
+    },
+    {
+      "id": "q28",
+      "level": "advanced",
+      "text": "Cuando se configuran a la vez una política de cola y un argumento de declaración (ej.: x-message-ttl) para la misma clave, ¿cuál tiene prioridad en RabbitMQ?",
+      "options": [
+        {
+          "id": "q28a",
+          "text": "Las políticas siempre prevalecen sobre los argumentos de declaración"
+        },
+        {
+          "id": "q28b",
+          "text": "Los argumentos de declaración siempre quedan supeditados a las políticas"
+        },
+        {
+          "id": "q28c",
+          "text": "Los argumentos de declaración (fijados al crear la cola) tienen prioridad sobre las políticas para la misma clave"
+        },
+        {
+          "id": "q28d",
+          "text": "Se combinan de forma aditiva: ninguno sobrescribe al otro"
+        }
+      ],
+      "correctAnswerId": "q28c",
+      "explanation": "Para parámetros configurados por el operador como x-message-ttl y x-dead-letter-exchange, los argumentos de declaración de cola prevalecen sobre las políticas para esa clave, dado que se fijan al momento de su creación y resultan inmutables."
+    },
+    {
+      "id": "q29",
+      "level": "advanced",
+      "text": "¿Qué par de métricas de gestión de RabbitMQ indica de forma más directa que los consumidores se están quedando rezagados respecto a los productores?",
+      "options": [
+        {
+          "id": "q29a",
+          "text": "publish_rate y deliver_rate: cuando publish_rate supera sostenidamente a deliver_rate, messages_ready crecerá"
+        },
+        {
+          "id": "q29b",
+          "text": "memory_used y disk_free: un aumento de memory_used con descenso de disk_free refleja desfase del consumidor"
+        },
+        {
+          "id": "q29c",
+          "text": "connection_count y channel_count: demasiados canales indican acumulación de mensajes"
+        },
+        {
+          "id": "q29d",
+          "text": "node_uptime y gc_reclaim_rate: una actividad intensa del recolector de basura confirma desfase del consumidor"
+        }
+      ],
+      "correctAnswerId": "q29a",
+      "explanation": "Cuando publish_rate sobrepasa a deliver_rate, el contador messages_ready aumenta, señalando que los consumidores no dan abasto; un incremento simultáneo de messages_unacknowledged delata mensajes en tránsito todavía no confirmados."
+    },
+    {
+      "id": "q30",
+      "level": "advanced",
+      "text": "¿Cuál es el enfoque recomendado para el apagado ordenado (graceful shutdown) de un consumidor en RabbitMQ para evitar la pérdida de mensajes?",
+      "options": [
+        {
+          "id": "q30a",
+          "text": "Terminar el proceso de inmediato: RabbitMQ reencolará automáticamente los mensajes sin confirmación"
+        },
+        {
+          "id": "q30b",
+          "text": "Cancelar la suscripción del consumidor, finalizar el procesamiento de todos los mensajes en curso, enviar ACKs o NACKs para cada uno y cerrar el canal y la conexión"
+        },
+        {
+          "id": "q30c",
+          "text": "Invocar basic.reject sobre todos los mensajes y cerrar la conexión TCP sin enviar la trama connection.close"
+        },
+        {
+          "id": "q30d",
+          "text": "Ajustar prefetch a 0 y aguardar a que el broker vacíe la cola antes de cerrar"
+        }
+      ],
+      "correctAnswerId": "q30b",
+      "explanation": "El apagado ordenado requiere cancelar el consumidor (basic.cancel), procesar y confirmar todos los mensajes ya recibidos y, finalmente, cerrar de forma limpia el canal y la conexión para que RabbitMQ reencole con seguridad los mensajes pendientes si fuera necesario."
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "Leyenda",
+      "description": "Sobresaliente: posees un dominio profundo y profesional de RabbitMQ. Comprendes toda la pila del protocolo AMQP 0-9-1, desde la multiplexación de canales TCP y control de flujo hasta tipos avanzados de exchanges, quorum queues basadas en Raft y decisiones de topología de cluster. Diseñas arquitecturas de mensajería resilientes que gestionan back-pressure, dead-lettering, políticas de TTL y apagado ordenado de consumidores sin dudar. Sabes exactamente cuándo recurrir a Shovel o Federation, cómo las exchanges de hash consistente permiten particionamiento ordenado y qué métricas vigilar cuando la profundidad de una cola comienza a subir. Ya sea depurando un escenario de split-brain o afinando el prefetch para obtener el máximo rendimiento, operas con la solvencia de quien administra RabbitMQ en producción bajo cargas reales.",
+      "shareText": "¡Obtuve {percent}% en el Quiz de Conceptos de RabbitMQ en ToolNotch! ¿Puedes superarme?"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Experto",
+      "description": "Trabajo impresionante: dominas con solidez los conceptos de RabbitMQ y puedes diseñar y operar sistemas de mensajería en producción con gran confianza. Comprendes los tipos fundamentales de exchange y su semántica de enrutamiento, sabes configurar dead-letter exchanges y TTLs de mensajes, y aprovechas las garantías de fiabilidad de los publisher confirms y quorum queues. Ciertos aspectos internos avanzados, como el consenso Raft, las exchanges de hash consistente o la precedencia exacta entre políticas y argumentos, pueden requerir una consulta puntual, pero cuentas con la base necesaria para resolverlos con rapidez. Continúa experimentando con clustering y plugins avanzados: el nivel Leyenda está muy cerca.",
+      "shareText": "¡Obtuve {percent}% en el Quiz de Conceptos de RabbitMQ en ToolNotch! ¿Puedes superarme?"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Entusiasta",
+      "description": "Buen esfuerzo: comprendes los aspectos fundamentales de RabbitMQ y puedes utilizarlo en el día a día para tareas comunes. Entiendes qué es un broker de mensajería, cómo productores y consumidores interactúan a través de exchanges y colas, y la relevancia de las confirmaciones (ACKs). Temas intermedios y avanzados como los comodines en topic exchanges, configuración de DLX, publisher confirms, replicación de quorum queues o la multiplexación de canales AMQP resultan algo complejos todavía, lo cual es totalmente normal en este punto. Dedica tiempo a la documentación oficial de RabbitMQ, monta un cluster local y experimenta con el panel de administración. La práctica directa con tipos de exchange y argumentos de cola te impulsará al nivel Experto con rapidez.",
+      "shareText": "¡Obtuve {percent}% en el Quiz de Conceptos de RabbitMQ en ToolNotch! ¿Puedes superarme?"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "Novato",
+      "description": "Todo el mundo empieza desde el principio, y RabbitMQ presenta una curva de aprendizaje más pronunciada de lo que parece. La ventaja es que los conceptos centrales son muy coherentes: un productor publica en una exchange, la exchange enruta a colas mediante bindings y los consumidores leen de esas colas. Comienza leyendo la guía de primeros pasos de RabbitMQ, habilita el plugin de administración en local y envía tus primeros mensajes usando la interfaz web. Cuando domines las direct y fanout exchanges, pasa a los comodines de topic exchanges y luego a DLX. Profundiza en los fundamentos de AMQP: canales, confirmaciones y durabilidad, para asentar una base sólida que facilitará asimilar los temas avanzados.",
+      "shareText": "¡Obtuve {percent}% en el Quiz de Conceptos de RabbitMQ en ToolNotch! ¿Puedes superarme?"
+    }
+  ]
+}

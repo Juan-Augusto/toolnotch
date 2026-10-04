@@ -1,0 +1,791 @@
+{
+  "id": "database-design",
+  "type": "trivia",
+  "locale": "pt",
+  "category": "backend",
+  "title": "Quiz de Modelagem de Banco de Dados",
+  "description": "Teste seus conhecimentos sobre normalização, esquemas relacionais e modelagem de dados.",
+  "image": "/images/quizzes/database-design-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Qual é o objetivo principal de uma chave primária em um banco de dados relacional?",
+      "options": [
+        {
+          "id": "q1a",
+          "text": "Ordenar linhas alfabeticamente"
+        },
+        {
+          "id": "q1b",
+          "text": "Identificar de forma única cada registro em uma tabela"
+        },
+        {
+          "id": "q1c",
+          "text": "Vincular duas tabelas entre si"
+        },
+        {
+          "id": "q1d",
+          "text": "Aplicar a restrição NOT NULL em todas as colunas"
+        }
+      ],
+      "correctAnswerId": "q1b",
+      "explanation": "Uma chave primária identifica de forma única cada registro em uma tabela, garantindo que não existam dois registros com o mesmo valor de chave.",
+      "level": "beginner"
+    },
+    {
+      "id": "q2",
+      "text": "O que uma chave estrangeira faz em um banco de dados relacional?",
+      "options": [
+        {
+          "id": "q2a",
+          "text": "Criptografa os valores das colunas para segurança"
+        },
+        {
+          "id": "q2b",
+          "text": "Referencia a chave primária de outra tabela garantindo integridade referencial"
+        },
+        {
+          "id": "q2c",
+          "text": "Acelera as consultas SELECT em tabelas grandes"
+        },
+        {
+          "id": "q2d",
+          "text": "Previne linhas duplicadas dentro de uma única tabela"
+        }
+      ],
+      "correctAnswerId": "q2b",
+      "explanation": "Uma chave estrangeira estabelece uma relação entre duas tabelas ao referenciar a chave primária da tabela pai, garantindo a integridade referencial.",
+      "level": "beginner"
+    },
+    {
+      "id": "q3",
+      "text": "Qual das seguintes opções descreve melhor um banco de dados NoSQL?",
+      "options": [
+        {
+          "id": "q3a",
+          "text": "Um banco de dados que nunca utiliza índices"
+        },
+        {
+          "id": "q3b",
+          "text": "Um banco de dados que armazena apenas números"
+        },
+        {
+          "id": "q3c",
+          "text": "Um banco de dados não relacional que armazena dados em formatos como documentos, chave-valor ou grafos"
+        },
+        {
+          "id": "q3d",
+          "text": "Um banco de dados que proíbe totalmente a sintaxe SQL"
+        }
+      ],
+      "correctAnswerId": "q3c",
+      "explanation": "Bancos de dados NoSQL são não relacionais e suportam modelos de dados flexíveis, como documentos, chave-valor, famílias de colunas e grafos.",
+      "level": "beginner"
+    },
+    {
+      "id": "q4",
+      "text": "O que significa a sigla CRUD no contexto de operações em bancos de dados?",
+      "options": [
+        {
+          "id": "q4a",
+          "text": "Copiar, Substituir, Atualizar, Excluir (Copy, Replace, Update, Delete)"
+        },
+        {
+          "id": "q4b",
+          "text": "Criar, Ler, Atualizar, Excluir (Create, Read, Update, Delete)"
+        },
+        {
+          "id": "q4c",
+          "text": "Conectar, Recuperar, Carregar, Descartar (Connect, Retrieve, Upload, Drop)"
+        },
+        {
+          "id": "q4d",
+          "text": "Criar, Restaurar, Desfazer, Implantar (Create, Restore, Undo, Deploy)"
+        }
+      ],
+      "correctAnswerId": "q4b",
+      "explanation": "CRUD significa Create, Read, Update e Delete (Criar, Ler, Atualizar e Excluir), as quatro operações fundamentais realizadas em registros de bancos de dados.",
+      "level": "beginner"
+    },
+    {
+      "id": "q5",
+      "text": "O que o valor NULL representa no SQL?",
+      "options": [
+        {
+          "id": "q5a",
+          "text": "Zero"
+        },
+        {
+          "id": "q5b",
+          "text": "Uma string vazia"
+        },
+        {
+          "id": "q5c",
+          "text": "A ausência de um valor ou um valor desconhecido"
+        },
+        {
+          "id": "q5d",
+          "text": "Falso"
+        }
+      ],
+      "correctAnswerId": "q5c",
+      "explanation": "O valor NULL no SQL representa a ausência de um valor ou um valor desconhecido, sendo distinto de zero ou de uma string vazia.",
+      "level": "beginner"
+    },
+    {
+      "id": "q6",
+      "text": "Que tipo de relacionamento existe quando um registro na tabela A pode se relacionar com vários registros na tabela B, e um registro na tabela B também pode se relacionar com vários registros na tabela A?",
+      "options": [
+        {
+          "id": "q6a",
+          "text": "Um para Um (1:1)"
+        },
+        {
+          "id": "q6b",
+          "text": "Um para Muitos (1:N)"
+        },
+        {
+          "id": "q6c",
+          "text": "Muitos para Muitos (M:N)"
+        },
+        {
+          "id": "q6d",
+          "text": "Autorrelacionamento"
+        }
+      ],
+      "correctAnswerId": "q6c",
+      "explanation": "Um relacionamento Muitos para Muitos (M:N) significa que registros de ambos os lados podem se relacionar com múltiplos registros do outro lado, sendo tipicamente resolvido por meio de uma tabela de junção (tabela associativa).",
+      "level": "beginner"
+    },
+    {
+      "id": "q7",
+      "text": "O que é normalização de banco de dados?",
+      "options": [
+        {
+          "id": "q7a",
+          "text": "Converter todos os nomes de colunas para letras minúsculas"
+        },
+        {
+          "id": "q7b",
+          "text": "Organizar os dados para reduzir a redundância e melhorar a integridade"
+        },
+        {
+          "id": "q7c",
+          "text": "Mesclar todas as tabelas em uma única tabela plana para ganho de desempenho"
+        },
+        {
+          "id": "q7d",
+          "text": "Fazer backup dos dados em um servidor secundário"
+        }
+      ],
+      "correctAnswerId": "q7b",
+      "explanation": "A normalização é o processo de organização do esquema de um banco de dados para minimizar a redundância e garantir a integridade dos dados por meio de formas normais definidas.",
+      "level": "beginner"
+    },
+    {
+      "id": "q8",
+      "text": "Qual propriedade das transações ACID garante que uma transação seja totalmente concluída ou não produza nenhum efeito?",
+      "options": [
+        {
+          "id": "q8a",
+          "text": "Consistência"
+        },
+        {
+          "id": "q8b",
+          "text": "Isolamento"
+        },
+        {
+          "id": "q8c",
+          "text": "Atomicidade"
+        },
+        {
+          "id": "q8d",
+          "text": "Durabilidade"
+        }
+      ],
+      "correctAnswerId": "q8c",
+      "explanation": "A atomicidade garante que todas as operações dentro de uma transação sejam tratadas como uma única unidade: ou todas são executadas com sucesso, ou todas sofrem rollback.",
+      "level": "beginner"
+    },
+    {
+      "id": "q9",
+      "text": "Qual é a principal diferença entre os modelos de consulta SQL e NoSQL?",
+      "options": [
+        {
+          "id": "q9a",
+          "text": "O SQL usa JSON, enquanto o NoSQL usa XML"
+        },
+        {
+          "id": "q9b",
+          "text": "O SQL usa uma linguagem estruturada de consulta sobre esquemas predefinidos; bancos NoSQL usam modelos flexíveis com consultas baseadas em APIs"
+        },
+        {
+          "id": "q9c",
+          "text": "O SQL só pode ser executado em servidores Windows"
+        },
+        {
+          "id": "q9d",
+          "text": "Bancos de dados NoSQL nunca suportam índices"
+        }
+      ],
+      "correctAnswerId": "q9b",
+      "explanation": "Bancos de dados SQL usam uma linguagem estruturada de consulta em esquemas predefinidos, enquanto bancos NoSQL oferecem modelos de dados flexíveis com diversas APIs de consulta adaptadas às suas estruturas.",
+      "level": "beginner"
+    },
+    {
+      "id": "q10",
+      "text": "Qual é o objetivo de uma migração de banco de dados?",
+      "options": [
+        {
+          "id": "q10a",
+          "text": "Mover o servidor de banco de dados para um data center diferente"
+        },
+        {
+          "id": "q10b",
+          "text": "Exportar dados para um arquivo CSV"
+        },
+        {
+          "id": "q10c",
+          "text": "Aplicar alterações incrementais e versionadas no esquema do banco de dados ao longo do tempo"
+        },
+        {
+          "id": "q10d",
+          "text": "Migrar de SQL para NoSQL"
+        }
+      ],
+      "correctAnswerId": "q10c",
+      "explanation": "Migrações de banco de dados são scripts versionados que aplicam mudanças incrementais no esquema, permitindo que as equipes evoluam a estrutura do banco de forma controlada e reproduzível.",
+      "level": "beginner"
+    },
+    {
+      "id": "q11",
+      "text": "Qual forma normal exige que todo atributo não chave seja totalmente dependente de forma funcional de toda a chave primária (eliminando dependências parciais)?",
+      "options": [
+        {
+          "id": "q11a",
+          "text": "Primeira Forma Normal (1FN)"
+        },
+        {
+          "id": "q11b",
+          "text": "Segunda Forma Normal (2FN)"
+        },
+        {
+          "id": "q11c",
+          "text": "Terceira Forma Normal (3FN)"
+        },
+        {
+          "id": "q11d",
+          "text": "Forma Normal de Boyce-Codd (FNBC)"
+        }
+      ],
+      "correctAnswerId": "q11b",
+      "explanation": "A 2FN se apoia na 1FN exigindo que cada atributo não chave dependa de toda a chave primária composta, e não apenas de parte dela.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q12",
+      "text": "O que a Primeira Forma Normal (1FN) exige?",
+      "options": [
+        {
+          "id": "q12a",
+          "text": "Nenhuma dependência transitiva entre colunas não chave"
+        },
+        {
+          "id": "q12b",
+          "text": "Todas as colunas devem conter valores atômicos (indivisíveis) e cada coluna deve armazenar valores de um único tipo de dado"
+        },
+        {
+          "id": "q12c",
+          "text": "Todas as chaves estrangeiras devem referenciar registros existentes"
+        },
+        {
+          "id": "q12d",
+          "text": "A tabela deve possuir uma chave primária composta"
+        }
+      ],
+      "correctAnswerId": "q12b",
+      "explanation": "A 1FN exige que cada coluna contenha apenas valores atômicos e indivisíveis e que cada coluna armazene valores de um único tipo de dado, sem grupos de repetição.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q13",
+      "text": "Qual das seguintes opções é uma razão válida para desnormalizar intencionalmente um banco de dados?",
+      "options": [
+        {
+          "id": "q13a",
+          "text": "Para satisfazer restrições de chave estrangeira"
+        },
+        {
+          "id": "q13b",
+          "text": "Para melhorar a performance de consultas de leitura, reduzindo a quantidade de joins"
+        },
+        {
+          "id": "q13c",
+          "text": "Para impor regras de integridade de dados mais rigorosas"
+        },
+        {
+          "id": "q13d",
+          "text": "Para garantir que cada tabela esteja na 3FN"
+        }
+      ],
+      "correctAnswerId": "q13b",
+      "explanation": "A desnormalização introduz redundância deliberadamente para reduzir operações de join de alto custo, melhorando a performance de leitura ao custo de maior complexidade na escrita e risco de inconsistência.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q14",
+      "text": "O que é uma chave substituta (surrogate key)?",
+      "options": [
+        {
+          "id": "q14a",
+          "text": "Uma chave derivada de dados de negócio, como um endereço de e-mail"
+        },
+        {
+          "id": "q14b",
+          "text": "Uma chave gerada pelo sistema (como um inteiro autoincrementável ou UUID) sem significado de negócio intrínseco"
+        },
+        {
+          "id": "q14c",
+          "text": "Uma chave que abrange múltiplas colunas"
+        },
+        {
+          "id": "q14d",
+          "text": "Uma chave estrangeira que referencia a si mesma"
+        }
+      ],
+      "correctAnswerId": "q14b",
+      "explanation": "Uma chave substituta (surrogate key) é um identificador artificial gerado pelo sistema (como um ID autoincrementável ou UUID) que não possui significado de negócio intrínseco.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q15",
+      "text": "Em um diagrama entidade-relacionamento (DER), o que indica uma linha dupla (participação total) no lado de uma entidade em um relacionamento?",
+      "options": [
+        {
+          "id": "q15a",
+          "text": "A entidade possui uma chave primária composta"
+        },
+        {
+          "id": "q15b",
+          "text": "Toda instância dessa entidade deve participar do relacionamento"
+        },
+        {
+          "id": "q15c",
+          "text": "O relacionamento é do tipo Muitos para Muitos"
+        },
+        {
+          "id": "q15d",
+          "text": "A entidade é uma entidade fraca"
+        }
+      ],
+      "correctAnswerId": "q15b",
+      "explanation": "Uma linha dupla (participação total) em um diagrama entidade-relacionamento significa que toda instância da entidade deve obrigatoriamente participar do relacionamento, sem participantes opcionais daquele lado.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q16",
+      "text": "De acordo com o teorema CAP, um banco de dados distribuído pode garantir no máximo quantas das três propriedades simultaneamente?",
+      "options": [
+        {
+          "id": "q16a",
+          "text": "Todas as três: Consistência, Disponibilidade e Tolerância a Partições"
+        },
+        {
+          "id": "q16b",
+          "text": "Apenas uma"
+        },
+        {
+          "id": "q16c",
+          "text": "Quaisquer duas"
+        },
+        {
+          "id": "q16d",
+          "text": "Nenhuma: elas estão sempre em conflito"
+        }
+      ],
+      "correctAnswerId": "q16c",
+      "explanation": "O teorema CAP estabelece que um sistema distribuído pode garantir no máximo duas das três propriedades ao mesmo tempo: Consistência, Disponibilidade e Tolerância a Partições.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q17",
+      "text": "Qual é a principal distinção entre cargas de trabalho OLTP e OLAP?",
+      "options": [
+        {
+          "id": "q17a",
+          "text": "OLTP armazena apenas dados estruturados; OLAP armazena apenas dados não estruturados"
+        },
+        {
+          "id": "q17b",
+          "text": "OLTP lida com muitas operações transacionais curtas de leitura/escrita; OLAP processa consultas analíticas complexas sobre grandes volumes de dados históricos"
+        },
+        {
+          "id": "q17c",
+          "text": "OLAP requer transações ACID; OLTP não requer"
+        },
+        {
+          "id": "q17d",
+          "text": "OLTP é exclusivo na nuvem; OLAP é apenas local (on-premises)"
+        }
+      ],
+      "correctAnswerId": "q17b",
+      "explanation": "OLTP é otimizado para operações transacionais frequentes e de baixa latência; OLAP é otimizado para agregações complexas e consultas analíticas em grandes bases de dados históricas.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q18",
+      "text": "Qual nível de isolamento de transação impede leituras sujas (dirty reads), mas ainda permite leituras não repetíveis (non-repeatable reads)?",
+      "options": [
+        {
+          "id": "q18a",
+          "text": "Read Uncommitted"
+        },
+        {
+          "id": "q18b",
+          "text": "Read Committed"
+        },
+        {
+          "id": "q18c",
+          "text": "Repeatable Read"
+        },
+        {
+          "id": "q18d",
+          "text": "Serializable"
+        }
+      ],
+      "correctAnswerId": "q18b",
+      "explanation": "O nível Read Committed impede leituras sujas lendo apenas dados já confirmados (committed), mas uma segunda leitura da mesma linha na mesma transação pode encontrar um valor diferente se outra transação fizer commit no intervalo.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q19",
+      "text": "Qual é a diferença entre uma exclusão lógica (soft delete) e uma exclusão física (hard delete)?",
+      "options": [
+        {
+          "id": "q19a",
+          "text": "A exclusão lógica remove o registro imediatamente; a física adiciona um timestamp"
+        },
+        {
+          "id": "q19b",
+          "text": "A exclusão lógica marca o registro como excluído (por exemplo, com a flag is_deleted) sem removê-lo; a física remove o registro definitivamente da tabela"
+        },
+        {
+          "id": "q19c",
+          "text": "A exclusão lógica aplica-se apenas a índices; a física aplica-se a registros"
+        },
+        {
+          "id": "q19d",
+          "text": "São nomes diferentes para a mesma operação SQL DELETE"
+        }
+      ],
+      "correctAnswerId": "q19b",
+      "explanation": "A exclusão lógica (soft delete) define um indicador (como is_deleted ou deleted_at) para ocultar o registro das consultas normais preservando os dados; a exclusão física (hard delete) remove permanentemente o registro da tabela.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q20",
+      "text": "O que significa 'schema-on-write' em comparação com 'schema-on-read'?",
+      "options": [
+        {
+          "id": "q20a",
+          "text": "Schema-on-write valida o esquema no momento da gravação; schema-on-read aplica o esquema no momento da consulta"
+        },
+        {
+          "id": "q20b",
+          "text": "Schema-on-write é utilizado apenas por bancos de dados NoSQL"
+        },
+        {
+          "id": "q20c",
+          "text": "Schema-on-read exige definições estritas de colunas antes de inserir qualquer dado"
+        },
+        {
+          "id": "q20d",
+          "text": "São equivalentes: ambos impõem o esquema no momento da inserção"
+        }
+      ],
+      "correctAnswerId": "q20a",
+      "explanation": "Schema-on-write (típico de RDBMS tradicionais) valida os dados contra um esquema definido no momento da gravação, enquanto schema-on-read (como em data lakes e MongoDB) interpreta a estrutura no momento da consulta, proporcionando flexibilidade no armazenamento.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q21",
+      "text": "No particionamento baseado em hash (hash-based sharding), qual é a principal vantagem em relação ao particionamento por faixa (range-based sharding)?",
+      "options": [
+        {
+          "id": "q21a",
+          "text": "O sharding por hash torna as consultas por faixa mais rápidas"
+        },
+        {
+          "id": "q21b",
+          "text": "O sharding por hash distribui os dados de forma mais homogênea entre os shards, reduzindo pontos de concentração (hotspots)"
+        },
+        {
+          "id": "q21c",
+          "text": "O sharding por hash permite criar shards ilimitados sem necessidade de rebalanceamento"
+        },
+        {
+          "id": "q21d",
+          "text": "O sharding por hash não requer uma chave de partição (shard key)"
+        }
+      ],
+      "correctAnswerId": "q21b",
+      "explanation": "O particionamento baseado em hash aplica uma função hash à chave de partição para distribuir os dados uniformemente, evitando pontos de concentração (hotspots) de escrita comuns ao usar chaves sequenciais com particionamento por faixa.",
+      "level": "advanced"
+    },
+    {
+      "id": "q22",
+      "text": "Qual é o principal trade-off da replicação síncrona em comparação com a replicação assíncrona?",
+      "options": [
+        {
+          "id": "q22a",
+          "text": "A replicação síncrona é mais rápida, porém perde dados em caso de falha"
+        },
+        {
+          "id": "q22b",
+          "text": "A replicação síncrona garante ausência de perda de dados, mas eleva a latência de escrita porque o nó primário aguarda a confirmação da réplica"
+        },
+        {
+          "id": "q22c",
+          "text": "A replicação assíncrona garante perda zero de dados"
+        },
+        {
+          "id": "q22d",
+          "text": "A replicação síncrona só funciona com bancos de dados orientados a documentos"
+        }
+      ],
+      "correctAnswerId": "q22b",
+      "explanation": "A replicação síncrona garante que a réplica confirme a gravação antes de o primário retornar sucesso, garantindo perda zero de dados ao custo de uma latência de escrita mais alta.",
+      "level": "advanced"
+    },
+    {
+      "id": "q23",
+      "text": "O que distingue o Event Sourcing de um modelo de dados CRUD tradicional?",
+      "options": [
+        {
+          "id": "q23a",
+          "text": "O Event Sourcing armazena apenas o estado mais recente; o CRUD armazena um log completo de eventos"
+        },
+        {
+          "id": "q23b",
+          "text": "O Event Sourcing armazena um log imutável de todos os eventos de alteração de estado; o estado atual é obtido pela reprodução desses eventos"
+        },
+        {
+          "id": "q23c",
+          "text": "O Event Sourcing exige um banco de dados relacional; o CRUD funciona com qualquer banco"
+        },
+        {
+          "id": "q23d",
+          "text": "Eles são funcionalmente idênticos, diferindo apenas na sintaxe SQL"
+        }
+      ],
+      "correctAnswerId": "q23b",
+      "explanation": "No Event Sourcing, o sistema persiste um log append-only imutável de eventos de domínio; o estado atual é reconstituído reproduzindo esses eventos, permitindo auditoria completa e consultas temporais.",
+      "level": "advanced"
+    },
+    {
+      "id": "q24",
+      "text": "Qual problema o padrão CQRS (Command Query Responsibility Segregation) resolve principalmente?",
+      "options": [
+        {
+          "id": "q24a",
+          "text": "Ele elimina a necessidade de índices no banco de dados"
+        },
+        {
+          "id": "q24b",
+          "text": "Ele separa o modelo de escrita (comandos) do modelo de leitura (consultas), permitindo que cada um seja otimizado de forma independente"
+        },
+        {
+          "id": "q24c",
+          "text": "Ele substitui transações por consistência eventual"
+        },
+        {
+          "id": "q24d",
+          "text": "Ele impõe normalização estrita na 3FN em todas as tabelas"
+        }
+      ],
+      "correctAnswerId": "q24b",
+      "explanation": "O CQRS separa o modelo de dados utilizado para escritas (comandos) do modelo utilizado para leituras (consultas), permitindo escalabilidade, caching e otimização independentes para cada lado.",
+      "level": "advanced"
+    },
+    {
+      "id": "q25",
+      "text": "Qual é a diferença fundamental entre bloqueio otimista (optimistic locking) e bloqueio pessimista (pessimistic locking)?",
+      "options": [
+        {
+          "id": "q25a",
+          "text": "O bloqueio otimista impede todas as leituras concorrentes; o bloqueio pessimista as permite"
+        },
+        {
+          "id": "q25b",
+          "text": "O bloqueio otimista assume que conflitos são raros e valida conflitos no momento do commit; o bloqueio pessimista obtém travas antecipadamente para impedir alterações concorrentes"
+        },
+        {
+          "id": "q25c",
+          "text": "O bloqueio pessimista só está disponível em bancos de dados NoSQL"
+        },
+        {
+          "id": "q25d",
+          "text": "Eles diferem apenas na sintaxe, e não no comportamento"
+        }
+      ],
+      "correctAnswerId": "q25b",
+      "explanation": "O bloqueio otimista permite o acesso concorrente e verifica conflitos (por exemplo, via coluna de versão) somente no momento do commit, enquanto o bloqueio pessimista retém a trava durante a transação para barrar atualizações concorrentes.",
+      "level": "advanced"
+    },
+    {
+      "id": "q26",
+      "text": "Qual é a diferença entre particionamento horizontal (sharding) e particionamento vertical?",
+      "options": [
+        {
+          "id": "q26a",
+          "text": "O particionamento horizontal divide as linhas entre múltiplos nós; o particionamento vertical divide as colunas em tabelas ou armazenamentos separados"
+        },
+        {
+          "id": "q26b",
+          "text": "O particionamento horizontal divide as colunas; o particionamento vertical divide as linhas"
+        },
+        {
+          "id": "q26c",
+          "text": "Eles são o mesmo conceito com nomes diferentes"
+        },
+        {
+          "id": "q26d",
+          "text": "O particionamento vertical se aplica exclusivamente a bancos de dados NoSQL"
+        }
+      ],
+      "correctAnswerId": "q26a",
+      "explanation": "O particionamento horizontal (sharding) distribui as linhas por múltiplos nós com base em uma chave de partição; o particionamento vertical divide tabelas largas em tabelas menores agrupando colunas relacionadas.",
+      "level": "advanced"
+    },
+    {
+      "id": "q27",
+      "text": "Qual problema o protocolo Two-Phase Commit (2PC) resolve em bancos de dados distribuídos?",
+      "options": [
+        {
+          "id": "q27a",
+          "text": "Ele acelera consultas de leitura através de múltiplos shards"
+        },
+        {
+          "id": "q27b",
+          "text": "Ele coordena um commit atômico entre múltiplos nós participantes, garantindo que todos façam commit ou todos sofram abort"
+        },
+        {
+          "id": "q27c",
+          "text": "Ele replica dados do nó primário para as réplicas de leitura"
+        },
+        {
+          "id": "q27d",
+          "text": "Ele compacta os logs de transação para economizar espaço em disco"
+        }
+      ],
+      "correctAnswerId": "q27b",
+      "explanation": "O protocolo Two-Phase Commit assegura atomicidade em transações distribuídas: na primeira fase um coordenador solicita a preparação de todos os participantes; na segunda fase ele instrui o commit ou abort com base na resposta unânime.",
+      "level": "advanced"
+    },
+    {
+      "id": "q28",
+      "text": "Qual técnica de modelagem de dados é mais adequada para dados de séries temporais com alta taxa de escrita e consultas por faixa de tempo?",
+      "options": [
+        {
+          "id": "q28a",
+          "text": "Armazenar todos os eventos em uma única linha normalizada por entidade"
+        },
+        {
+          "id": "q28b",
+          "text": "Utilizar uma tabela append-only particionada por intervalo de tempo, com timestamp monotonicamente crescente como parte da chave primária"
+        },
+        {
+          "id": "q28c",
+          "text": "Utilizar uma tabela de junção Muitos para Muitos"
+        },
+        {
+          "id": "q28d",
+          "text": "Aplicar normalização 3FN para eliminar toda e qualquer redundância"
+        }
+      ],
+      "correctAnswerId": "q28b",
+      "explanation": "Dados de séries temporais se beneficiam de escritas append-only e particionamento por faixa de tempo: incluir o timestamp na chave primária possibilita varreduras eficientes por faixa, e o particionamento mantém as partições ativas compactas.",
+      "level": "advanced"
+    },
+    {
+      "id": "q29",
+      "text": "Em uma aplicação SaaS multi-tenant, qual é a principal vantagem da estratégia de isolamento 'banco de dados por cliente' (database-per-tenant) em relação a um esquema compartilhado?",
+      "options": [
+        {
+          "id": "q29a",
+          "text": "Consome menos espaço total de armazenamento do que um esquema compartilhado"
+        },
+        {
+          "id": "q29b",
+          "text": "Garante isolamento de dados mais rigoroso, simplifica backups individuais por cliente e previne disputa de recursos por consultas concorrentes (noisy neighbor)"
+        },
+        {
+          "id": "q29c",
+          "text": "Dispensa migrações de esquema ao adicionar novos clientes"
+        },
+        {
+          "id": "q29d",
+          "text": "É a única abordagem que suporta transações ACID"
+        }
+      ],
+      "correctAnswerId": "q29b",
+      "explanation": "A estratégia de banco por cliente oferece a cada cliente um banco isolado, assegurando que não haja vazamento de dados entre clientes, simplificando backups independentes e impedindo que consultas pesadas de um usuário afetem os demais.",
+      "level": "advanced"
+    },
+    {
+      "id": "q30",
+      "text": "De que maneira o padrão Saga trata a consistência de transações distribuídas sem a necessidade de usar 2PC?",
+      "options": [
+        {
+          "id": "q30a",
+          "text": "Ele bloqueia todos os serviços envolvidos até que a transação termine"
+        },
+        {
+          "id": "q30b",
+          "text": "Ele divide a transação distribuída em uma sequência de transações locais que publicam eventos; transações compensatórias desfazem etapas concluídas em caso de falha"
+        },
+        {
+          "id": "q30c",
+          "text": "Ele depende de um coordenador central para manter um bloqueio global"
+        },
+        {
+          "id": "q30d",
+          "text": "Ele mantém em memória todas as gravações até que a operação inteira tenha sucesso"
+        }
+      ],
+      "correctAnswerId": "q30b",
+      "explanation": "O padrão Saga encadeia transações locais entre serviços via eventos ou orquestração; se uma etapa falha, transações compensatórias revertem as etapas concluídas anteriormente, garantindo consistência eventual sem necessidade de bloqueios distribuídos.",
+      "level": "advanced"
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "Mestre em Banco de Dados",
+      "description": "Excelente desempenho, você domina modelagem relacional, normalização avançada e padrões de bancos distribuídos.",
+      "shareText": "Acertei nível Mestre no Quiz de Modelagem de Banco de Dados do ToolNotch!"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Especialista em Banco de Dados",
+      "description": "Ótimo resultado, você tem sólida compreensão de chaves, relações, normalização e indexação.",
+      "shareText": "Acertei nível Especialista no Quiz de Modelagem de Banco de Dados do ToolNotch!"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Praticante em Banco de Dados",
+      "description": "Bom trabalho, você compreende conceitos essenciais de bancos de dados relacionais e modelagem.",
+      "shareText": "Fiz o Quiz de Modelagem de Banco de Dados no ToolNotch!"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "Iniciante em Banco de Dados",
+      "description": "Você está começando sua jornada em bancos de dados. Continue praticando relações e normalização.",
+      "shareText": "Fiz o Quiz de Modelagem de Banco de Dados no ToolNotch!"
+    }
+  ]
+}

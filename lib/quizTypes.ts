@@ -75,3 +75,9 @@ export type AnyQuiz = Quiz | TriviaQuiz
 export function isTriviaQuiz(quiz: AnyQuiz): quiz is TriviaQuiz {
   return (quiz as TriviaQuiz).type === 'trivia'
 }
+
+export function isTriviaQuestion(
+  question: Question | TriviaQuestion
+): question is TriviaQuestion {
+  return 'correctAnswerId' in question
+}

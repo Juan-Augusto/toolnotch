@@ -2,7 +2,8 @@ import { TextStats } from './textTypes'
 import { STOPWORDS } from '@/data/stopwords'
 
 export function countSyllables(word: string): number {
-  const cleaned = word.toLowerCase().replace(/[^a-z]/g, '')
+  const normalized = word.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+  const cleaned = normalized.toLowerCase().replace(/[^a-z]/g, '')
   if (!cleaned) return 0
   // Special endings
   const cleaned2 = cleaned.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '')
@@ -12,7 +13,8 @@ export function countSyllables(word: string): number {
 }
 
 function isComplexWord(word: string): boolean {
-  const clean = word.replace(/[^a-zA-Z]/g, '')
+  const normalized = word.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+  const clean = normalized.replace(/[^a-zA-Z]/g, '')
   if (clean.length === 0) return false
   // Exclude proper nouns (capitalized mid-sentence)
   if (clean[0] === clean[0].toUpperCase() && clean !== clean.toUpperCase()) return false
@@ -76,7 +78,10 @@ export function analyzeText(text: string): TextStats {
   // Top words (exclude stopwords)
   const freq: Record<string, number> = {}
   for (const word of wordList) {
-    const clean = word.toLowerCase().replace(/[^a-z']/g, '')
+    const clean = word
+      .toLowerCase()
+      .replace(/[^\p{L}'-]/gu, '')
+      .replace(/^[-']+|[-']+$/g, '')
     if (clean.length > 1 && !STOPWORDS.has(clean)) {
       freq[clean] = (freq[clean] ?? 0) + 1
     }

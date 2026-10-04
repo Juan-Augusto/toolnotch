@@ -1,539 +1,351 @@
-import Link from "next/link";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { getTranslations } from "next-intl/server";
-import ToolsSection from "@/components/ToolsSection";
-import { localizedPath, buildAlternates } from "@/lib/i18nMeta";
-import { BLOG_SLUG_GROUPS, type BlogLocale } from "@/data/blog/slugTranslations";
+import { localizedPath } from "@/lib/i18nMeta";
+import { buildJsonLd } from "@/lib/schema";
+import AppHomeSearch from "@/components/home/AppHomeSearch";
+import AppBentoGrid, { type BentoTranslations } from "@/components/home/AppBentoGrid";
+import {
+  ArrowRight,
+  Code2,
+  FileText,
+  ImageIcon,
+  Coins,
+  ArrowLeftRight,
+  Type,
+  Kanban,
+  GraduationCap,
+  HeartPulse,
+  Calculator,
+  Wrench,
+  Dices,
+} from "lucide-react";
 
 interface Props {
   params: Promise<{ locale: string }>;
 }
 
-interface ToolItem {
-  href: string;
-  label: string;
-  desc: string;
-}
-export interface Tool {
-  index: number;
-  category: string;
-  color: string;
-  items: ToolItem[];
-}
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://toolnotch.com";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "site" });
+
+  const title = t("title");
+  const description = t("description");
+  const canonicalUrl = locale === "en" ? BASE_URL : `${BASE_URL}/${locale}`;
+
+  const keywordsByLocale: Record<string, string[]> = {
+    pt: [
+      "ferramentas online gratuitas",
+      "ferramentas pdf",
+      "juntar pdf",
+      "comprimir pdf",
+      "comprimir imagem",
+      "converter webp",
+      "utilitários para desenvolvedores",
+      "formatador json",
+      "gerador uuid",
+      "simulador de empréstimo",
+      "calculadora de financiamento",
+      "preparação técnica ti",
+      "quizzes online",
+      "processamento no navegador",
+      "privacidade",
+    ],
+    es: [
+      "herramientas online gratuitas",
+      "herramientas pdf",
+      "unir pdf",
+      "comprimir pdf",
+      "comprimir imagenes",
+      "convertir a webp",
+      "utilidades para desarrolladores",
+      "formateador json",
+      "generador uuid",
+      "simulador de préstamos",
+      "calculadora de hipoteca",
+      "entrevistas tecnicas it",
+      "quizzes interactivos",
+      "procesamiento en navegador",
+      "privacidad",
+    ],
+    en: [
+      "free online tools",
+      "pdf tools",
+      "merge pdf",
+      "compress pdf",
+      "image compressor",
+      "convert webp",
+      "developer utilities",
+      "json formatter",
+      "uuid generator",
+      "loan calculator",
+      "mortgage calculator",
+      "tech interview prep",
+      "interactive quizzes",
+      "client side tools",
+      "browser based tools",
+      "privacy",
+    ],
+  };
+
   return {
-    title: t("title"),
-    description: t("description"),
-    alternates: buildAlternates("/"),
+    title,
+    description,
+    keywords: keywordsByLocale[locale] ?? keywordsByLocale.en,
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        en: BASE_URL,
+        pt: `${BASE_URL}/pt`,
+        es: `${BASE_URL}/es`,
+        "x-default": BASE_URL,
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      siteName: "ToolNotch",
+      locale: locale === "pt" ? "pt_BR" : locale === "es" ? "es_ES" : "en_US",
+      type: "website",
+      images: [
+        {
+          url: `${BASE_URL}/opengraph-image.png`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [`${BASE_URL}/opengraph-image.png`],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
   };
 }
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home" });
-  const tc = await getTranslations({ locale, namespace: "common" });
-  const freeLabel = tc("free");
+  const tSite = await getTranslations({ locale, namespace: "site" });
 
-  // Blog guides carry a native-language slug per locale.
-  const guideHref = (group: keyof typeof BLOG_SLUG_GROUPS) => {
-    const slugs = BLOG_SLUG_GROUPS[group];
-    return localizedPath(`/blog/${slugs[locale as BlogLocale] ?? slugs.en}`, locale);
-  };
+  const isPt = locale === "pt";
+  const isEs = locale === "es";
 
-  const TOOLS: Tool[] = [
+  const bentoTranslations = t.raw("bento") as unknown as BentoTranslations;
+
+  const categories = [
     {
-      category: t("categories.imageTools"),
-      color: "blue",
-      index: 0,
-      items: [
-        {
-          href: "/tools/image/image-compressor",
-          label: t("tools.imageCompressor.label"),
-          desc: t("tools.imageCompressor.desc"),
-        },
-        {
-          href: "/tools/image/convert-png-to-webp",
-          label: t("tools.imageConverter.label"),
-          desc: t("tools.imageConverter.desc"),
-        },
-      ],
+      title: isEs ? "Desarrollo" : isPt ? "Desenvolvimento" : "Developer",
+      href: "/tools/dev",
+      count: 10,
+      icon: Code2,
     },
     {
-      category: t("categories.pdfTools"),
-      color: "red",
-      index: 1,
-      items: [
-        {
-          href: "/tools/pdf/merge-pdf",
-          label: t("tools.mergePdf.label"),
-          desc: t("tools.mergePdf.desc"),
-        },
-        {
-          href: "/tools/pdf/split-pdf",
-          label: t("tools.splitPdf.label"),
-          desc: t("tools.splitPdf.desc"),
-        },
-        {
-          href: "/tools/pdf/compress-pdf",
-          label: t("tools.compressPdf.label"),
-          desc: t("tools.compressPdf.desc"),
-        },
-        {
-          href: "/tools/pdf/pdf-to-jpg",
-          label: t("tools.pdfToJpg.label"),
-          desc: t("tools.pdfToJpg.desc"),
-        },
-        {
-          href: "/tools/pdf/jpg-to-pdf",
-          label: t("tools.jpgToPdf.label"),
-          desc: t("tools.jpgToPdf.desc"),
-        },
-      ],
+      title: "PDF",
+      href: "/tools/pdf",
+      count: 9,
+      icon: FileText,
     },
     {
-      category: t("categories.converterTools"),
-      color: "indigo",
-      index: 2,
-      items: [
-        {
-          href: "/tools/convert/unit-converter",
-          label: t("tools.unitConverter.label"),
-          desc: t("tools.unitConverter.desc"),
-        },
-        {
-          href: "/tools/convert/currency-converter",
-          label: t("tools.currencyConverter.label"),
-          desc: t("tools.currencyConverter.desc"),
-        },
-        {
-          href: "/tools/convert/percentage-calculator",
-          label: t("tools.percentageCalculator.label"),
-          desc: t("tools.percentageCalculator.desc"),
-        },
-        {
-          href: "/tools/convert/length-converter",
-          label: t("tools.metersToFeet.label"),
-          desc: t("tools.metersToFeet.desc"),
-        },
-        {
-          href: "/tools/convert/temperature-converter",
-          label: t("tools.celsiusToFahrenheit.label"),
-          desc: t("tools.celsiusToFahrenheit.desc"),
-        },
-        {
-          href: "/tools/convert/weight-converter",
-          label: t("tools.kgToPounds.label"),
-          desc: t("tools.kgToPounds.desc"),
-        },
-      ],
+      title: isEs ? "Imágenes" : isPt ? "Imagens" : "Images",
+      href: "/tools/image",
+      count: 9,
+      icon: ImageIcon,
     },
     {
-      category: t("categories.textTools"),
-      color: "purple",
-      index: 3,
-      items: [
-        {
-          href: "/tools/text/word-counter",
-          label: t("tools.wordCounter.label"),
-          desc: t("tools.wordCounter.desc"),
-        },
-        {
-          href: "/tools/text/character-counter",
-          label: t("tools.characterCounter.label"),
-          desc: t("tools.characterCounter.desc"),
-        },
-        {
-          href: "/tools/text/readability-checker",
-          label: t("tools.readabilityChecker.label"),
-          desc: t("tools.readabilityChecker.desc"),
-        },
-        {
-          href: "/tools/text/reading-time-calculator",
-          label: t("tools.readingTimeCalculator.label"),
-          desc: t("tools.readingTimeCalculator.desc"),
-        },
-        {
-          href: "/tools/text/word-frequency-counter",
-          label: t("tools.wordFrequencyCounter.label"),
-          desc: t("tools.wordFrequencyCounter.desc"),
-        },
-      ],
+      title: isEs ? "Finanzas" : isPt ? "Finanças" : "Finance",
+      href: "/tools/finance",
+      count: 14,
+      icon: Coins,
     },
     {
-      category: t("categories.financeTools"),
-      color: "green",
-      index: 4,
-      items: [
-        {
-          href: "/tools/finance/loan-calculator",
-          label: t("tools.loanCalculator.label"),
-          desc: t("tools.loanCalculator.desc"),
-        },
-        {
-          href: "/tools/finance/mortgage-calculator",
-          label: t("tools.mortgageCalculator.label"),
-          desc: t("tools.mortgageCalculator.desc"),
-        },
-        {
-          href: "/tools/finance/car-loan-calculator",
-          label: t("tools.carLoanCalculator.label"),
-          desc: t("tools.carLoanCalculator.desc"),
-        },
-        {
-          href: "/tools/finance/invoice-generator",
-          label: t("tools.invoiceGenerator.label"),
-          desc: t("tools.invoiceGenerator.desc"),
-        },
-        {
-          href: "/tools/finance/invoice-generator-uk",
-          label: t("tools.invoiceGeneratorUk.label"),
-          desc: t("tools.invoiceGeneratorUk.desc"),
-        },
-        {
-          href: "/tools/finance/home-affordability-calculator",
-          label: t("tools.homeAffordability.label"),
-          desc: t("tools.homeAffordability.desc"),
-        },
-        {
-          href: "/tools/finance/amortization-calculator",
-          label: t("tools.amortizationCalculator.label"),
-          desc: t("tools.amortizationCalculator.desc"),
-        },
-        {
-          href: "/tools/finance/student-loan-calculator",
-          label: t("tools.studentLoanCalculator.label"),
-          desc: t("tools.studentLoanCalculator.desc"),
-        },
-      ],
+      title: isEs ? "Conversores" : isPt ? "Conversores" : "Converters",
+      href: "/tools/convert",
+      count: 6,
+      icon: ArrowLeftRight,
     },
     {
-      category: t("categories.funAndRandom"),
-      color: "orange",
-      index: 5,
-      items: [
-        {
-          href: "/tools/fun/spin-the-wheel",
-          label: t("tools.spinTheWheel.label"),
-          desc: t("tools.spinTheWheel.desc"),
-        },
-        {
-          href: "/tools/fun/random-name-picker",
-          label: t("tools.randomNamePicker.label"),
-          desc: t("tools.randomNamePicker.desc"),
-        },
-        {
-          href: "/tools/fun/random-team-generator",
-          label: t("tools.teamGenerator.label"),
-          desc: t("tools.teamGenerator.desc"),
-        },
-        {
-          href: "/tools/fun/coin-flip",
-          label: t("tools.coinFlip.label"),
-          desc: t("tools.coinFlip.desc"),
-        },
-        {
-          href: "/tools/fun/dice-roller",
-          label: t("tools.diceRoller.label"),
-          desc: t("tools.diceRoller.desc"),
-        },
-        {
-          href: "/tools/fun/random-number-generator",
-          label: t("tools.numberGenerator.label"),
-          desc: t("tools.numberGenerator.desc"),
-        },
-        {
-          href: "/tools/fun/yes-or-no-wheel",
-          label: t("tools.yesOrNoWheel.label"),
-          desc: t("tools.yesOrNoWheel.desc"),
-        },
-        {
-          href: "/tools/fun/wheel-of-names",
-          label: t("tools.wheelOfNames.label"),
-          desc: t("tools.wheelOfNames.desc"),
-        },
-      ],
+      title: isEs ? "Texto" : isPt ? "Texto" : "Text",
+      href: "/tools/text",
+      count: 5,
+      icon: Type,
     },
     {
-      category: t("categories.interviewPrep"),
-      color: "blue",
-      index: 7,
-      items: [
-        {
-          href: "/interview",
-          label: t("tools.interviewHub.label"),
-          desc: t("tools.interviewHub.desc"),
-        },
-        {
-          href: "/interview/typescript",
-          label: t("tools.typescriptQuiz.label"),
-          desc: t("tools.typescriptQuiz.desc"),
-        },
-      ],
+      title: isEs ? "Ágil & Scrum" : isPt ? "Ágil & Scrum" : "Agile",
+      href: "/tools/agile",
+      count: 5,
+      icon: Kanban,
     },
     {
-      category: t("categories.agileTools"),
-      color: "violet",
-      index: 6,
-      items: [
-        {
-          href: "/tools/agile/retro-board",
-          label: t("tools.retroBoard.label"),
-          desc: t("tools.retroBoard.desc"),
-        },
-        {
-          href: "/tools/agile/standup-generator",
-          label: t("tools.standupGenerator.label"),
-          desc: t("tools.standupGenerator.desc"),
-        },
-        {
-          href: "/tools/agile/planning-poker",
-          label: t("tools.planningPoker.label"),
-          desc: t("tools.planningPoker.desc"),
-        },
-        {
-          href: "/tools/agile/user-story-writer",
-          label: t("tools.userStoryWriter.label"),
-          desc: t("tools.userStoryWriter.desc"),
-        },
-        {
-          href: "/tools/agile/sprint-date-calculator",
-          label: t("tools.sprintDateCalculator.label"),
-          desc: t("tools.sprintDateCalculator.desc"),
-        },
-      ],
+      title: isEs ? "Educación" : isPt ? "Educação" : "Education",
+      href: "/tools/education",
+      count: 4,
+      icon: GraduationCap,
     },
     {
-      category: t("categories.quizzes"),
-      color: "pink",
-      index: 8,
-      items: [
-        {
-          href: "/quizzes",
-          label: t("tools.allQuizzes.label"),
-          desc: t("tools.allQuizzes.desc"),
-        },
-        {
-          href: "/quiz/which-programming-language-are-you",
-          label: t("tools.programmingLanguageQuiz.label"),
-          desc: t("tools.programmingLanguageQuiz.desc"),
-        },
-        {
-          href: "/quiz/am-i-introverted-or-extroverted",
-          label: t("tools.introvertExtrovertQuiz.label"),
-          desc: t("tools.introvertExtrovertQuiz.desc"),
-        },
-        {
-          href: "/quiz/what-career-suits-you",
-          label: t("tools.careerQuiz.label"),
-          desc: t("tools.careerQuiz.desc"),
-        },
-        {
-          href: "/quiz/what-type-of-traveler-are-you",
-          label: t("tools.travelerQuiz.label"),
-          desc: t("tools.travelerQuiz.desc"),
-        },
-        {
-          href: "/quiz/fifa-world-cup-winners",
-          label: t("tools.worldCupQuiz.label"),
-          desc: t("tools.worldCupQuiz.desc"),
-        },
-        {
-          href: "/quiz/which-football-club-are-you",
-          label: t("tools.footballClubQuiz.label"),
-          desc: t("tools.footballClubQuiz.desc"),
-        },
-        {
-          href: "/quiz/champions-league-trivia",
-          label: t("tools.championsLeagueQuiz.label"),
-          desc: t("tools.championsLeagueQuiz.desc"),
-        },
-        {
-          href: "/quiz/what-is-your-love-language",
-          label: t("tools.loveLangaugeQuiz.label"),
-          desc: t("tools.loveLangaugeQuiz.desc"),
-        },
-        {
-          href: "/quiz/formula-1-trivia",
-          label: t("tools.formula1TriviaQuiz.label"),
-          desc: t("tools.formula1TriviaQuiz.desc"),
-        },
-        {
-          href: "/quiz/what-is-your-political-profile",
-          label: t("tools.politicalProfileQuiz.label"),
-          desc: t("tools.politicalProfileQuiz.desc"),
-        },
-        {
-          href: "/quiz/political-echo-chamber-quiz",
-          label: t("tools.echoChamberQuiz.label"),
-          desc: t("tools.echoChamberQuiz.desc"),
-        },
-        {
-          href: "/quiz/fake-news-or-fact",
-          label: t("tools.fakeNewsQuiz.label"),
-          desc: t("tools.fakeNewsQuiz.desc"),
-        },
-      ],
+      title: isEs ? "Salud" : isPt ? "Saúde" : "Health",
+      href: "/tools/health",
+      count: 3,
+      icon: HeartPulse,
     },
     {
-      category: t("categories.educationTools"),
-      color: "violet",
-      index: 9,
-      items: [
-        {
-          href: localizedPath("/tools/education/gpa-calculator", locale),
-          label: t("tools.gpaCalculator.label"),
-          desc: t("tools.gpaCalculator.desc"),
-        },
-        {
-          href: localizedPath(
-            "/tools/education/cumulative-gpa-calculator",
-            locale,
-          ),
-          label: t("tools.cumulativeGpaCalculator.label"),
-          desc: t("tools.cumulativeGpaCalculator.desc"),
-        },
-        {
-          href: localizedPath("/tools/education/grade-calculator", locale),
-          label: t("tools.gradeCalculator.label"),
-          desc: t("tools.gradeCalculator.desc"),
-        },
-        {
-          href: localizedPath("/tools/education/citation-generator", locale),
-          label: t("tools.citationGenerator.label"),
-          desc: t("tools.citationGenerator.desc"),
-        },
-        {
-          href: guideHref("gpa-how-to"),
-          label: t("tools.gpaGuide.label"),
-          desc: t("tools.gpaGuide.desc"),
-        },
-        {
-          href: guideHref("gpa-brazilian-grades"),
-          label: t("tools.gpaBrazilGuide.label"),
-          desc: t("tools.gpaBrazilGuide.desc"),
-        },
-        {
-          href: guideHref("gpa-us-admissions"),
-          label: t("tools.gpaUsaGuide.label"),
-          desc: t("tools.gpaUsaGuide.desc"),
-        },
-      ],
+      title: isEs ? "Matemática" : isPt ? "Matemática" : "Math",
+      href: "/tools/math",
+      count: 2,
+      icon: Calculator,
+    },
+    {
+      title: isEs ? "Utilitarios" : isPt ? "Utilitários" : "Utilities",
+      href: "/tools/utilities",
+      count: 3,
+      icon: Wrench,
+    },
+    {
+      title: isEs ? "Sorteos" : isPt ? "Sorteios" : "Random",
+      href: "/tools/fun",
+      count: 10,
+      icon: Dices,
     },
   ];
 
+  const canonicalUrl = locale === "en" ? BASE_URL : `${BASE_URL}/${locale}`;
+  const siteTitle = tSite("title");
+  const siteDescription = tSite("description");
+
+  const webSiteSchema = {
+    "@type": "WebSite",
+    name: "ToolNotch",
+    url: BASE_URL,
+    description: siteDescription,
+    inLanguage: locale === "pt" ? "pt-BR" : locale === "es" ? "es" : "en",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${BASE_URL}${localizedPath("/tools", locale)}?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  const organizationSchema = {
+    "@type": "Organization",
+    name: "ToolNotch",
+    url: BASE_URL,
+    logo: `${BASE_URL}/opengraph-image.png`,
+    sameAs: ["https://github.com/Juan-Augusto/toolnotch"],
+  };
+
+  const collectionPageSchema = {
+    "@type": "CollectionPage",
+    name: siteTitle,
+    description: siteDescription,
+    url: canonicalUrl,
+    inLanguage: locale === "pt" ? "pt-BR" : locale === "es" ? "es" : "en",
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: categories.length,
+      itemListElement: categories.map((cat, idx) => ({
+        "@type": "ListItem",
+        position: idx + 1,
+        name: cat.title,
+        url: `${BASE_URL}${localizedPath(cat.href, locale)}`,
+      })),
+    },
+  };
+
+  const jsonLd = buildJsonLd(webSiteSchema, organizationSchema, collectionPageSchema);
+
   return (
-    <main className="min-h-screen bg-background relative isolate">
-      {/* Decorative SVG Grid Pattern (Full Width) */}
-      <svg
-        className="pointer-events-none absolute top-0 inset-x-0 -z-20 h-[800px] w-full stroke-gray-200/70 dark:stroke-gray-700/40 [mask-image:radial-gradient(100%_100%_at_top_center,white,transparent)]"
-        aria-hidden="true"
-      >
-        <defs>
-          <pattern
-            id="hero-grid"
-            width="40"
-            height="40"
-            patternUnits="userSpaceOnUse"
+    <main className="container min-h-[calc(100vh-180px)] bg-background py-6 sm:py-8 space-y-6 sm:space-y-8">
+      {/* Schema.org Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      {/* 1. BENTO GRID with Integrated Search & Flagship Card */}
+      <AppBentoGrid
+        locale={locale}
+        bento={bentoTranslations}
+        searchSlot={
+          <AppHomeSearch
+            locale={locale}
+            toolsTranslations={t.raw("tools") as Record<string, { label?: string; desc?: string }>}
+            categoriesTranslations={t.raw("categories") as Record<string, string>}
+            placeholder={
+              isEs
+                ? "Buscar herramientas, quizzes, artículos..."
+                : isPt
+                  ? "Pesquisar ferramentas, quizzes, artigos..."
+                  : "Search tools, quizzes, articles..."
+            }
+          />
+        }
+      />
+
+      {/* 2. CATEGORIES SECTION */}
+      <section className="pt-2 space-y-3" aria-labelledby="categories-heading">
+        <div className="flex flex-wrap items-center justify-between gap-2 pb-2 text-sm font-mono text-muted-foreground border-b border-border">
+          <h2
+            id="categories-heading"
+            className="uppercase font-semibold text-foreground tracking-wide text-sm font-mono"
           >
-            <path d="M.5 40V.5H40" fill="none"></path>
-          </pattern>
-        </defs>
-        <rect
-          width="100%"
-          height="100%"
-          strokeWidth="0"
-          fill="url(#hero-grid)"
-        ></rect>
-      </svg>
-
-      {/* Vertical Edge Lines */}
-      <div className="hidden xl:block absolute top-0 bottom-0 left-4 xl:left-8 w-[1px] bg-bd-base -z-10"></div>
-      <div className="hidden xl:block absolute top-0 bottom-0 right-4 xl:right-8 w-[1px] bg-bd-base -z-10"></div>
-
-      <div className="max-w-4xl mx-auto px-4 py-8 sm:py-12">
-        <div className="relative isolate text-center mb-10 mt-8 space-y-6">
-          {/* Extra Sparkles (Static) */}
-          <div className="hidden lg:block absolute top-28 -right-20 xl:-right-48">
-            <svg
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
-              fill="none"
-              className="text-gray-800 dark:text-gray-200"
-            >
-              <path
-                d="M12 2C12 2 12.5 9.5 17 12C12.5 14.5 12 22 12 22C12 22 11.5 14.5 7 12C11.5 9.5 12 2 12 2Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-          <div className="hidden lg:block absolute top-48 -left-24 xl:-left-48">
-            <svg
-              width="36"
-              height="36"
-              viewBox="0 0 24 24"
-              fill="none"
-              className="text-gray-800 dark:text-gray-200"
-            >
-              <path
-                d="M12 2C12 2 12.5 9.5 17 12C12.5 14.5 12 22 12 22C12 22 11.5 14.5 7 12C11.5 9.5 12 2 12 2Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-          <div className="hidden lg:block absolute bottom-20 -right-16 xl:-right-40">
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 24 24"
-              fill="none"
-              className="text-gray-800 dark:text-gray-200"
-            >
-              <path
-                d="M12 2C12 2 12.5 9.5 17 12C12.5 14.5 12 22 12 22C12 22 11.5 14.5 7 12C11.5 9.5 12 2 12 2Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-
-          {/* <div className="hidden dark:block absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-40 bg-blue-500/60 blur-[150px] -z-10 rounded-full pointer-events-none"></div> */}
-
-          <div className="flex justify-center">
-            <div className="badge-neon">{t("badge")}</div>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white pb-2 leading-tight">
-            {t.rich("heading", {
-              highlight: (chunks) => (
-                <span className="relative inline-block text-blue-500 whitespace-nowrap z-10">
-                  {chunks}
-                </span>
-              ),
-            })}
-          </h1>
-
-          <p className="text-base sm:text-lg text-tx-secondary max-w-xl mx-auto leading-relaxed font-medium">
-            {t("subheading")}
-          </p>
-        </div>
-        <ToolsSection TOOLS={TOOLS} freeLabel={freeLabel} />
-
-        <p className="text-center text-xs mt-16 text-tx-secondary">
-          {t("moreComingSoon")}
-        </p>
-
-        <div className="text-center mt-6">
+            {bentoTranslations.categorySection?.title ||
+              (isEs ? "Categorías" : isPt ? "Categorias" : "Categories")}
+          </h2>
           <Link
-            href="/privacy"
-            className="text-xs text-tx-secondary hover:text-tx-primary hover:underline dark:text-tx-secondary dark:hover:text-tx-primary"
+            href={localizedPath("/tools", locale)}
+            className="text-primary hover:underline flex items-center gap-1.5 font-semibold text-sm"
           >
-            {t("nav.privacy")}
+            <span>
+              {bentoTranslations.categorySection?.viewAll ||
+                (isEs ? "Ver catálogo completo" : isPt ? "Ver catálogo completo" : "All tools")}
+            </span>
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
-      </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+          {categories.map((cat) => {
+            const Icon = cat.icon;
+            return (
+              <Link
+                key={cat.title}
+                href={localizedPath(cat.href, locale)}
+                className="p-3.5 bg-tertiary border border-border rounded-[2px] flex flex-col justify-between gap-3 group transition-colors hover:bg-background"
+              >
+                <div className="flex items-center justify-between">
+                  <Icon className="w-5 h-5 text-primary shrink-0" />
+                  <span className="text-xs font-mono text-muted-foreground group-hover:text-primary font-medium">
+                    {cat.count}
+                  </span>
+                </div>
+
+                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors leading-snug">
+                  {cat.title}
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
     </main>
   );
 }

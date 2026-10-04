@@ -1,0 +1,791 @@
+{
+  "id": "system-architecture",
+  "type": "trivia",
+  "category": "backend",
+  "locale": "pt",
+  "title": "Quiz de Arquitetura de Sistemas",
+  "description": "Teste seus conhecimentos sobre microsserviços, cache, escalabilidade e resiliência.",
+  "image": "/images/quizzes/system-architecture-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Qual é a principal diferença entre uma arquitetura monolítica e uma de microsserviços?",
+      "options": [
+        {
+          "id": "q1a",
+          "text": "Um monólito usa contêineres; microsserviços não"
+        },
+        {
+          "id": "q1b",
+          "text": "Um monólito é implantado como uma única unidade; microsserviços são implantados como serviços independentes"
+        },
+        {
+          "id": "q1c",
+          "text": "Microsserviços devem compartilhar um único banco de dados; um monólito não pode"
+        },
+        {
+          "id": "q1d",
+          "text": "Um monólito só pode rodar em um servidor; microsserviços rodam em vários"
+        }
+      ],
+      "correctAnswerId": "q1b",
+      "explanation": "Em uma arquitetura monolítica, todas as funcionalidades são agrupadas e implantadas juntas, enquanto os microsserviços decompõem a aplicação em serviços que podem ser implantados de forma independente.",
+      "level": "beginner"
+    },
+    {
+      "id": "q2",
+      "text": "Qual método HTTP é convencionalmente utilizado para ATUALIZAR um recurso existente em uma API REST?",
+      "options": [
+        {
+          "id": "q2a",
+          "text": "POST"
+        },
+        {
+          "id": "q2b",
+          "text": "GET"
+        },
+        {
+          "id": "q2c",
+          "text": "PUT"
+        },
+        {
+          "id": "q2d",
+          "text": "DELETE"
+        }
+      ],
+      "correctAnswerId": "q2c",
+      "explanation": "O método PUT (ou PATCH para atualizações parciais) é a convenção RESTful para atualizar um recurso existente identificado por sua URI.",
+      "level": "beginner"
+    },
+    {
+      "id": "q3",
+      "text": "Em uma frase, o que o Docker faz?",
+      "options": [
+        {
+          "id": "q3a",
+          "text": "Provisiona máquinas virtuais em provedores de nuvem"
+        },
+        {
+          "id": "q3b",
+          "text": "Empacota uma aplicação e suas dependências em um contêiner portátil que roda de forma consistente em qualquer lugar"
+        },
+        {
+          "id": "q3c",
+          "text": "Substitui o kernel do sistema operacional para obter melhor desempenho"
+        },
+        {
+          "id": "q3d",
+          "text": "Orquestra clusters de servidores em vários data centers"
+        }
+      ],
+      "correctAnswerId": "q3b",
+      "explanation": "O Docker utiliza virtualização em nível de sistema operacional para empacotar o código e seu ambiente de execução em contêineres leves e reproduzíveis.",
+      "level": "beginner"
+    },
+    {
+      "id": "q4",
+      "text": "O que significa a sigla CI/CD?",
+      "options": [
+        {
+          "id": "q4a",
+          "text": "Container Integration / Container Delivery"
+        },
+        {
+          "id": "q4b",
+          "text": "Continuous Inspection / Continuous Deployment"
+        },
+        {
+          "id": "q4c",
+          "text": "Continuous Integration / Continuous Delivery (ou Deployment)"
+        },
+        {
+          "id": "q4d",
+          "text": "Code Integration / Code Distribution"
+        }
+      ],
+      "correctAnswerId": "q4c",
+      "explanation": "CI/CD significa Integração Contínua e Entrega Contínua (ou Implantação Contínua), automatizando pipelines de compilação, testes e lançamento.",
+      "level": "beginner"
+    },
+    {
+      "id": "q5",
+      "text": "Por que variáveis de ambiente são preferíveis em relação a valores embutidos no código para segredos de uma aplicação?",
+      "options": [
+        {
+          "id": "q5a",
+          "text": "Fazem a aplicação rodar mais rápido"
+        },
+        {
+          "id": "q5b",
+          "text": "Mantêm informações sensíveis fora do código-fonte e permitem configurações específicas por ambiente"
+        },
+        {
+          "id": "q5c",
+          "text": "São automaticamente criptografadas no nível do sistema operacional"
+        },
+        {
+          "id": "q5d",
+          "text": "São exigidas pelo ambiente de execução do Docker"
+        }
+      ],
+      "correctAnswerId": "q5b",
+      "explanation": "Externalizar segredos como variáveis de ambiente evita que sejam adicionados ao controle de versão e permite que a mesma imagem execute em desenvolvimento, homologação e produção.",
+      "level": "beginner"
+    },
+    {
+      "id": "q6",
+      "text": "Qual é o principal papel de um balanceador de carga?",
+      "options": [
+        {
+          "id": "q6a",
+          "text": "Comprimir respostas HTTP antes que cheguem ao cliente"
+        },
+        {
+          "id": "q6b",
+          "text": "Distribuir o tráfego de rede de entrada entre múltiplos servidores"
+        },
+        {
+          "id": "q6c",
+          "text": "Armazenar em cache os resultados de consultas ao banco de dados"
+        },
+        {
+          "id": "q6d",
+          "text": "Monitorar logs da aplicação em tempo real"
+        }
+      ],
+      "correctAnswerId": "q6b",
+      "explanation": "Um balanceador de carga encaminha as requisições recebidas para um pool de servidores a fim de maximizar a vazão, minimizar a latência e evitar a sobrecarga de qualquer nó individual.",
+      "level": "beginner"
+    },
+    {
+      "id": "q7",
+      "text": "Qual é a diferença entre escalabilidade horizontal e vertical?",
+      "options": [
+        {
+          "id": "q7a",
+          "text": "Escalabilidade horizontal adiciona mais CPU/RAM a um único servidor; escalabilidade vertical adiciona mais servidores"
+        },
+        {
+          "id": "q7b",
+          "text": "Escalabilidade horizontal adiciona mais servidores; escalabilidade vertical adiciona mais CPU/RAM a um servidor existente"
+        },
+        {
+          "id": "q7c",
+          "text": "São o mesmo conceito, mas com nomes diferentes em cada provedor de nuvem"
+        },
+        {
+          "id": "q7d",
+          "text": "Escalabilidade horizontal aplica-se apenas a bancos de dados; escalabilidade vertical aplica-se apenas a servidores web"
+        }
+      ],
+      "correctAnswerId": "q7b",
+      "explanation": "Escalar horizontalmente (scale out) significa adicionar mais instâncias, enquanto escalar verticalmente (scale up) significa aumentar os recursos de uma instância existente.",
+      "level": "beginner"
+    },
+    {
+      "id": "q8",
+      "text": "Quando o Nginx é usado como proxy reverso, qual direção de tráfego ele gerencia principalmente?",
+      "options": [
+        {
+          "id": "q8a",
+          "text": "Requisições de serviços internos para o banco de dados"
+        },
+        {
+          "id": "q8b",
+          "text": "Requisições de saída do servidor para APIs externas"
+        },
+        {
+          "id": "q8c",
+          "text": "Requisições de clientes recebidas que são encaminhadas para servidores de aplicação backend"
+        },
+        {
+          "id": "q8d",
+          "text": "Tráfego entre microsserviços dentro de um cluster Kubernetes"
+        }
+      ],
+      "correctAnswerId": "q8c",
+      "explanation": "Um proxy reverso como o Nginx fica posicionado à frente dos servidores backend, recebendo as requisições dos clientes e encaminhando-as para o serviço upstream apropriado.",
+      "level": "beginner"
+    },
+    {
+      "id": "q9",
+      "text": "Qual é o propósito de um endpoint de health check (por exemplo, GET /health) em um serviço web?",
+      "options": [
+        {
+          "id": "q9a",
+          "text": "Retornar o uso atual de CPU e memória para o usuário final"
+        },
+        {
+          "id": "q9b",
+          "text": "Permitir que balanceadores de carga e orquestradores verifiquem se o serviço está funcionando corretamente"
+        },
+        {
+          "id": "q9c",
+          "text": "Disparar uma reinicialização manual do serviço"
+        },
+        {
+          "id": "q9d",
+          "text": "Expor a documentação interna da API"
+        }
+      ],
+      "correctAnswerId": "q9b",
+      "explanation": "Endpoints de verificação de integridade (health check) fornecem a ferramentas de orquestração como o Kubernetes e balanceadores de carga um sinal confiável para decidir se o tráfego deve ser enviado a uma determinada instância.",
+      "level": "beginner"
+    },
+    {
+      "id": "q10",
+      "text": "Em um pipeline de implantação, o que um rollback realiza?",
+      "options": [
+        {
+          "id": "q10a",
+          "text": "Exclui todos os dados gravados desde o último lançamento"
+        },
+        {
+          "id": "q10b",
+          "text": "Reverte a aplicação em execução para uma versão estável anterior conhecida"
+        },
+        {
+          "id": "q10c",
+          "text": "Reduz o número de instâncias de volta para zero"
+        },
+        {
+          "id": "q10d",
+          "text": "Redefine variáveis de ambiente para seus valores padrão"
+        }
+      ],
+      "correctAnswerId": "q10b",
+      "explanation": "Um rollback implanta novamente um artefato ou imagem estável anterior quando a versão atual apresenta defeitos.",
+      "level": "beginner"
+    },
+    {
+      "id": "q11",
+      "text": "O fator 'Configurações' da metodologia The Twelve-Factor App estabelece que as configurações devem ser armazenadas em:",
+      "options": [
+        {
+          "id": "q11a",
+          "text": "Um arquivo de configuração commitado junto ao código-fonte"
+        },
+        {
+          "id": "q11b",
+          "text": "Variáveis de ambiente"
+        },
+        {
+          "id": "q11c",
+          "text": "Um microsserviço dedicado a configurações"
+        },
+        {
+          "id": "q11d",
+          "text": "Uma tabela de banco de dados relacional"
+        }
+      ],
+      "correctAnswerId": "q11b",
+      "explanation": "O fator III do 12-Factor App determina que qualquer elemento que varie entre implantações (credenciais, handles de recursos) deve ser armazenado em variáveis de ambiente, nunca no código.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q12",
+      "text": "Em uma implantação blue/green, o que acontece com o ambiente 'blue' após a troca bem-sucedida para o 'green'?",
+      "options": [
+        {
+          "id": "q12a",
+          "text": "É excluído permanentemente para reduzir custos"
+        },
+        {
+          "id": "q12b",
+          "text": "Continua recebendo 50% do tráfego de produção"
+        },
+        {
+          "id": "q12c",
+          "text": "Permanece ocioso e pode servir como alvo de rollback"
+        },
+        {
+          "id": "q12d",
+          "text": "É atualizado automaticamente para corresponder ao ambiente green"
+        }
+      ],
+      "correctAnswerId": "q12c",
+      "explanation": "O ambiente blue antigo permanece em espera (standby) para que o tráfego possa ser revertido instantaneamente caso um defeito crítico seja identificado no green.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q13",
+      "text": "O que diferencia uma implantação canário (canary) de uma implantação blue/green?",
+      "options": [
+        {
+          "id": "q13a",
+          "text": "Implantações canário exigem dois ambientes idênticos; blue/green exige apenas um"
+        },
+        {
+          "id": "q13b",
+          "text": "Implantações canário direcionam gradualmente uma pequena porcentagem do tráfego para a nova versão antes de uma implantação completa"
+        },
+        {
+          "id": "q13c",
+          "text": "Implantações canário são usadas apenas para migrações de banco de dados"
+        },
+        {
+          "id": "q13d",
+          "text": "Implantações blue/green são sempre mais rápidas do que implantações canário"
+        }
+      ],
+      "correctAnswerId": "q13b",
+      "explanation": "Uma implantação canário expõe a nova versão a uma pequena parcela de usuários inicialmente, permitindo que a equipe identifique falhas com raio de impacto reduzido antes da liberação total.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q14",
+      "text": "No Kubernetes, qual é o papel de um Pod?",
+      "options": [
+        {
+          "id": "q14a",
+          "text": "É o componente do control plane que agenda contêineres nos nós"
+        },
+        {
+          "id": "q14b",
+          "text": "É a menor unidade implantável, agrupando um ou mais contêineres co-localizados que compartilham rede e armazenamento"
+        },
+        {
+          "id": "q14c",
+          "text": "É o equivalente no Kubernetes a uma máquina virtual"
+        },
+        {
+          "id": "q14d",
+          "text": "É o manifesto de configuração de um cluster Kubernetes"
+        }
+      ],
+      "correctAnswerId": "q14b",
+      "explanation": "Um Pod é a unidade atômica de implantação no Kubernetes: contêineres dentro do mesmo Pod compartilham um endereço IP, rede localhost e volumes montados.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q15",
+      "text": "Qual é a principal diferença entre a descoberta de serviços (service discovery) baseada em DNS e baseada em registro?",
+      "options": [
+        {
+          "id": "q15a",
+          "text": "A descoberta por DNS funciona apenas dentro de um único host; a baseada em registro funciona entre múltiplos hosts"
+        },
+        {
+          "id": "q15b",
+          "text": "A descoberta por DNS resolve nomes de serviços para IPs via DNS padrão; serviços baseados em registro consultam um registro dedicado (como Consul) para obter listas de instâncias ativas"
+        },
+        {
+          "id": "q15c",
+          "text": "A descoberta baseada em registro é mais lenta porque exige uma viagem de ida e volta ao registro a cada requisição"
+        },
+        {
+          "id": "q15d",
+          "text": "Não há diferença prática: ambas alcançam exatamente o mesmo resultado"
+        }
+      ],
+      "correctAnswerId": "q15b",
+      "explanation": "A descoberta por DNS utiliza registros DNS convencionais para roteamento, enquanto a descoberta via registro consulta serviços como Consul ou Eureka para obter uma lista atualizada de instâncias saudáveis.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q16",
+      "text": "Qual problema o padrão API Gateway resolve em uma arquitetura de microsserviços?",
+      "options": [
+        {
+          "id": "q16a",
+          "text": "Substitui a necessidade de um broker de mensagens entre os serviços"
+        },
+        {
+          "id": "q16b",
+          "text": "Fornece um único ponto de entrada para clientes, gerenciando preocupações transversais como autenticação, limitação de taxa e roteamento"
+        },
+        {
+          "id": "q16c",
+          "text": "Sincroniza automaticamente os bancos de dados entre os serviços"
+        },
+        {
+          "id": "q16d",
+          "text": "Elimina a necessidade de verificações de integridade nos serviços"
+        }
+      ],
+      "correctAnswerId": "q16b",
+      "explanation": "Um API Gateway funciona como porta de entrada para todas as requisições de clientes, centralizando aspectos como autenticação, terminação SSL e roteamento de requisições fora dos serviços individuais.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q17",
+      "text": "Por que os microsserviços devem ser projetados para serem sem estado (stateless)?",
+      "options": [
+        {
+          "id": "q17a",
+          "text": "Serviços stateless rodam mais rápido porque nunca gravam no disco"
+        },
+        {
+          "id": "q17b",
+          "text": "Serviços stateless podem ser escalados horizontalmente e substituídos sem necessidade de migrar dados de sessão"
+        },
+        {
+          "id": "q17c",
+          "text": "Serviços stateless não necessitam de balanceador de carga"
+        },
+        {
+          "id": "q17d",
+          "text": "O Kubernetes oferece suporte apenas a cargas de trabalho stateless"
+        }
+      ],
+      "correctAnswerId": "q17b",
+      "explanation": "Quando um serviço não mantém estado local, qualquer instância pode atender a qualquer requisição, tornando a escalabilidade horizontal e a recuperação de falhas muito mais simples.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q18",
+      "text": "No padrão Circuit Breaker, o que o estado 'Half-Open' representa?",
+      "options": [
+        {
+          "id": "q18a",
+          "text": "O circuito fica permanentemente desativado e o tráfego é rejeitado"
+        },
+        {
+          "id": "q18b",
+          "text": "O circuito permite a passagem de um número limitado de requisições de teste para verificar se o serviço downstream se recuperou"
+        },
+        {
+          "id": "q18c",
+          "text": "O circuito está passando todo o tráfego normalmente após uma recuperação bem-sucedida"
+        },
+        {
+          "id": "q18d",
+          "text": "O circuito está bloqueado, mas continua registrando requisições em log para fins de auditoria"
+        }
+      ],
+      "correctAnswerId": "q18b",
+      "explanation": "O estado Half-Open é uma fase de teste: um pequeno volume de requisições é encaminhado; se forem bem-sucedidas, o circuito fecha novamente; caso contrário, reabre.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q19",
+      "text": "Como o algoritmo de balde de tokens (token bucket) se diferencia do algoritmo de balde furado (leaky bucket) no controle de taxa?",
+      "options": [
+        {
+          "id": "q19a",
+          "text": "O token bucket impõe uma taxa de saída rigorosamente constante; o leaky bucket permite picos de tráfego até a capacidade do balde"
+        },
+        {
+          "id": "q19b",
+          "text": "O token bucket permite picos de tráfego até a capacidade do balde; o leaky bucket impõe uma taxa de saída rigorosamente constante"
+        },
+        {
+          "id": "q19c",
+          "text": "Eles são idênticos: apenas nomes distintos utilizados por diferentes fornecedores"
+        },
+        {
+          "id": "q19d",
+          "text": "O leaky bucket é usado apenas para tráfego UDP; o token bucket é para HTTP"
+        }
+      ],
+      "correctAnswerId": "q19b",
+      "explanation": "O token bucket acumula tokens ao longo do tempo e permite rajadas de tráfego ao consumir múltiplos tokens de uma vez, enquanto o leaky bucket esvazia a uma taxa fixa constante, independentemente da taxa de entrada.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q20",
+      "text": "O que significa 'infraestrutura imutável'?",
+      "options": [
+        {
+          "id": "q20a",
+          "text": "Servidores recebem patches diretamente no local e nunca são reiniciados"
+        },
+        {
+          "id": "q20b",
+          "text": "Servidores nunca são modificados após a implantação; alterações são aplicadas substituindo instâncias por novas criadas a partir de imagens atualizadas"
+        },
+        {
+          "id": "q20c",
+          "text": "Arquivos de configuração de infraestrutura são armazenados em um bucket S3 somente leitura"
+        },
+        {
+          "id": "q20d",
+          "text": "Todos os servidores de um cluster devem possuir especificações de hardware idênticas"
+        }
+      ],
+      "correctAnswerId": "q20b",
+      "explanation": "A infraestrutura imutável trata servidores como artefatos descartáveis: em vez de aplicar patches em máquinas ativas, cria-se uma nova imagem e implantam-se instâncias novas, eliminando desvios de configuração.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q21",
+      "text": "Por que uma atualização progressiva (rolling update) no Kubernetes usa readiness probes antes de direcionar tráfego para novos pods?",
+      "options": [
+        {
+          "id": "q21a",
+          "text": "Para verificar se a imagem do contêiner foi assinada por um registro confiável"
+        },
+        {
+          "id": "q21b",
+          "text": "Para garantir que o novo pod esteja totalmente inicializado e pronto para atender requisições antes que os pods antigos sejam removidos"
+        },
+        {
+          "id": "q21c",
+          "text": "Para limitar a velocidade da implantação e evitar sobrecarregar o scheduler"
+        },
+        {
+          "id": "q21d",
+          "text": "Para rodar migrações de banco de dados dentro do novo pod antes do envio de tráfego"
+        }
+      ],
+      "correctAnswerId": "q21b",
+      "explanation": "O Kubernetes condiciona o tráfego às sondas de prontidão (readiness probes) para garantir atualizações contínuas sem indisponibilidade: um pod só entra no rodízio do balanceador após passar na validação da sonda.",
+      "level": "advanced"
+    },
+    {
+      "id": "q22",
+      "text": "O que é o padrão expand-contract (mudança paralela) para migrações de banco de dados?",
+      "options": [
+        {
+          "id": "q22a",
+          "text": "Executar um backup completo do banco de dados antes e depois de cada alteração de esquema"
+        },
+        {
+          "id": "q22b",
+          "text": "Primeiro expandir o esquema para dar suporte a ambas as estruturas (antiga e nova), implantar o código compatível com ambas e depois contrair o esquema removendo a estrutura antiga"
+        },
+        {
+          "id": "q22c",
+          "text": "Escalar o cluster de banco de dados horizontalmente antes de aplicar uma migração e reduzi-lo depois"
+        },
+        {
+          "id": "q22d",
+          "text": "Usar feature flags para ocultar novas colunas dos usuários até que a migração esteja concluída"
+        }
+      ],
+      "correctAnswerId": "q22b",
+      "explanation": "O padrão expand-contract desacopla as alterações de esquema das implantações de código para que tanto a versão antiga quanto a nova da aplicação possam executar simultaneamente, permitindo migrações sem indisponibilidade.",
+      "level": "advanced"
+    },
+    {
+      "id": "q23",
+      "text": "No contexto de sistemas distribuídos, o que a idempotência de uma API garante?",
+      "options": [
+        {
+          "id": "q23a",
+          "text": "Que uma requisição sempre será processada em menos de 100 ms"
+        },
+        {
+          "id": "q23b",
+          "text": "Que fazer a mesma requisição múltiplas vezes produz o mesmo resultado que realizá-la uma única vez"
+        },
+        {
+          "id": "q23c",
+          "text": "Que a API repetirá automaticamente requisições que falharam em nome do cliente"
+        },
+        {
+          "id": "q23d",
+          "text": "Que cada requisição é processada exatamente por uma instância de servidor"
+        }
+      ],
+      "correctAnswerId": "q23b",
+      "explanation": "A idempotência é essencial para tentativas de reenvio seguras em redes instáveis: se o cliente não souber se uma requisição teve sucesso, reenviá-la não deve provocar efeitos colaterais duplicados.",
+      "level": "advanced"
+    },
+    {
+      "id": "q24",
+      "text": "No padrão Saga, qual é a principal diferença entre coreografia e orquestração?",
+      "options": [
+        {
+          "id": "q24a",
+          "text": "A coreografia usa um coordenador central para chamar cada serviço em ordem; a orquestração usa eventos emitidos por cada serviço"
+        },
+        {
+          "id": "q24b",
+          "text": "Na coreografia, cada serviço reage a eventos de domínio e publica novos eventos; na orquestração, um orquestrador central de sagas comanda explicitamente cada etapa"
+        },
+        {
+          "id": "q24c",
+          "text": "A coreografia é usada apenas para operações de leitura; a orquestração é apenas para operações de escrita"
+        },
+        {
+          "id": "q24d",
+          "text": "São implementações equivalentes com apenas convenções de nomes distintas"
+        }
+      ],
+      "correctAnswerId": "q24b",
+      "explanation": "Na coreografia, os serviços se comunicam por meio de eventos sem um controlador central, enquanto na orquestração um processo dedicado conduz explicitamente cada passo e gerencia as transações de compensação.",
+      "level": "advanced"
+    },
+    {
+      "id": "q25",
+      "text": "O padrão Strangler Fig é utilizado para:",
+      "options": [
+        {
+          "id": "q25a",
+          "text": "Substituir gradualmente um monólito legado roteando funcionalidades específicas para novos microsserviços até que o monólito possa ser aposentado"
+        },
+        {
+          "id": "q25b",
+          "text": "Limitar o tráfego de um sistema legado para forçar os usuários a migrarem para a nova plataforma mais rapidamente"
+        },
+        {
+          "id": "q25c",
+          "text": "Injetar falhas em um sistema legado para descobrir dependências ocultas antes da migração"
+        },
+        {
+          "id": "q25d",
+          "text": "Envolver um banco de dados legado com um ORM para desacoplá-lo da camada de aplicação"
+        }
+      ],
+      "correctAnswerId": "q25a",
+      "explanation": "Inspirado na figueira estranguladora, o padrão intercepta chamadas ao sistema antigo e as redireciona incrementalmente para novos serviços até que o sistema legado possa ser completamente desativado.",
+      "level": "advanced"
+    },
+    {
+      "id": "q26",
+      "text": "Qual é o principal objetivo de ferramentas de engenharia do caos como Chaos Monkey e Gremlin?",
+      "options": [
+        {
+          "id": "q26a",
+          "text": "Realizar testes de estresse em bancos de dados gerando milhões de operações aleatórias de escrita"
+        },
+        {
+          "id": "q26b",
+          "text": "Injetar falhas proativamente em sistemas de produção para expor fraquezas antes que provoquem indisponibilidades não planejadas"
+        },
+        {
+          "id": "q26c",
+          "text": "Simular alta latência de rede durante testes de carga exclusivamente em ambientes de homologação"
+        },
+        {
+          "id": "q26d",
+          "text": "Fazer fuzzing de entradas de API e identificar vulnerabilidades de segurança em microsserviços"
+        }
+      ],
+      "correctAnswerId": "q26b",
+      "explanation": "A engenharia do caos introduz turbulências deliberadamente (derrubando instâncias, descartando pacotes de rede, esgotando CPU) para validar se os mecanismos de resiliência do sistema funcionam antes que ocorra um incidente real.",
+      "level": "advanced"
+    },
+    {
+      "id": "q27",
+      "text": "O que uma malha de serviços (service mesh) como Istio ou Linkerd oferece que um API Gateway tradicional não oferece?",
+      "options": [
+        {
+          "id": "q27a",
+          "text": "Um único ponto de entrada externo para todo o tráfego HTTP voltado aos clientes"
+        },
+        {
+          "id": "q27b",
+          "text": "TLS mútuo (mTLS), observabilidade de tráfego e roteamento granular entre todas as chamadas de serviço para serviço dentro do cluster"
+        },
+        {
+          "id": "q27c",
+          "text": "Autoescalabilidade horizontal de pods automática baseada no tráfego de rede"
+        },
+        {
+          "id": "q27d",
+          "text": "Resolução de DNS para serviços que abrangem múltiplos namespaces do Kubernetes"
+        }
+      ],
+      "correctAnswerId": "q27b",
+      "explanation": "Uma service mesh atua na camada leste-oeste (serviço a serviço) por meio de proxies sidecar, fornecendo criptografia mTLS, circuit breaker e telemetria para toda a comunicação interna, além do que um API Gateway norte-sul abrange.",
+      "level": "advanced"
+    },
+    {
+      "id": "q28",
+      "text": "No GitOps (utilizando ArgoCD ou Flux), qual é a fonte única da verdade para o estado desejado do cluster?",
+      "options": [
+        {
+          "id": "q28a",
+          "text": "Os contêineres em execução no cluster Kubernetes"
+        },
+        {
+          "id": "q28b",
+          "text": "Um repositório Git contendo manifestos declarativos de infraestrutura e aplicação"
+        },
+        {
+          "id": "q28c",
+          "text": "O artefato publicado mais recentemente pelo pipeline de CI"
+        },
+        {
+          "id": "q28d",
+          "text": "Um runbook de operações armazenado em uma wiki"
+        }
+      ],
+      "correctAnswerId": "q28b",
+      "explanation": "O GitOps estabelece que um repositório Git é o registro definitivo do estado desejado; o controlador GitOps reconcilia continuamente o cluster em tempo real para corresponder ao que está declarado nesse repositório.",
+      "level": "advanced"
+    },
+    {
+      "id": "q29",
+      "text": "Em uma arquitetura ativo-ativo multirregião, qual desafio de consistência deve ser explicitamente tratado?",
+      "options": [
+        {
+          "id": "q29a",
+          "text": "Garantir que todas as regiões usem o mesmo digest de imagem de contêiner"
+        },
+        {
+          "id": "q29b",
+          "text": "Lidar com conflitos de escrita e atraso de replicação quando o mesmo dado puder ser modificado simultaneamente em regiões distintas"
+        },
+        {
+          "id": "q29c",
+          "text": "Roteamento de todas as escritas através de uma única região primária para evitar latência"
+        },
+        {
+          "id": "q29d",
+          "text": "Sincronizar relógios de nós Kubernetes entre regiões via NTP"
+        }
+      ],
+      "correctAnswerId": "q29b",
+      "explanation": "Configurações ativo-ativo permitem escritas em todas as regiões; portanto, o sistema deve implementar uma estratégia de resolução de conflitos (como last-write-wins, CRDTs ou relógios vetoriais) e tolerar o atraso transitório de replicação.",
+      "level": "advanced"
+    },
+    {
+      "id": "q30",
+      "text": "Quais são os três pilares da observabilidade completa em um sistema distribuído e por que IDs de correlação são importantes?",
+      "options": [
+        {
+          "id": "q30a",
+          "text": "Disponibilidade (uptime), latência e taxa de erros; IDs de correlação associam alertas de SLO a escalas de plantão"
+        },
+        {
+          "id": "q30b",
+          "text": "Logs, métricas e rastreamentos (traces); IDs de correlação permitem rastrear uma única requisição de ponta a ponta por todos os serviços e sua telemetria"
+        },
+        {
+          "id": "q30c",
+          "text": "Painéis (dashboards), alertas e runbooks; IDs de correlação substituem a necessidade de rastreamento distribuído"
+        },
+        {
+          "id": "q30d",
+          "text": "CPU, memória e disco; IDs de correlação mapeiam métricas de infraestrutura para implantações de aplicações"
+        }
+      ],
+      "correctAnswerId": "q30b",
+      "explanation": "Logs, métricas e rastreamentos distribuídos são os três pilares da observabilidade; um ID de correlação propagado em cada chamada de serviço conecta os três sinais, tornando possível reconstituir toda a trajetória de uma requisição em um sistema de microsserviços.",
+      "level": "advanced"
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "Lenda",
+      "description": "Excepcional: você possui o conhecimento de design de sistemas de um engenheiro sênior ou arquiteto de soluções. Você domina todo o conjunto de práticas modernas de implantação: desde os fundamentos de Docker e Kubernetes até padrões avançados como Saga, Strangler Fig e migração expand-contract, indo até consistência ativo-ativo multirregião e GitOps. Você compreende não apenas o que são esses padrões, mas por que eles existem e quais trade-offs envolvem. Você é a referência a quem as equipes recorrem ao projetar para confiabilidade, escalabilidade e observabilidade. Seja arquitetando uma nova plataforma do zero ou decompondo um monólito legado com segurança, suas decisões são fundamentadas em um conhecimento prático e profundo. A indústria precisa de arquitetos como você.",
+      "shareText": "Acertei {percent}% no Quiz de Arquitetura de Sistemas no ToolNotch! Consegue me superar? 🏗️"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Especialista",
+      "description": "Excelente trabalho, você possui um sólido entendimento de arquitetura de sistemas moderna e práticas de implantação. Sente-se à vontade com microsserviços, pipelines de CI/CD, Kubernetes e padrões essenciais de resiliência, como circuit breaker e implantações canário (canary). Alguns tópicos avançados, como consistência multirregião ou as nuances entre orquestração e coreografia na Saga, podem ter sido desafiadores, mas seu conhecimento geral está bem acima da média. Você é o engenheiro que seus colegas consultam ao debater decisões arquiteturais ou revisar runbooks de implantação. Continue se aprofundando em service mesh, engenharia do caos e FinOps para fechar essas lacunas e alcançar o status de Lenda.",
+      "shareText": "Acertei {percent}% no Quiz de Arquitetura de Sistemas no ToolNotch! Consegue me superar? 🏗️"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Praticante",
+      "description": "Você tem uma base sólida em arquitetura de sistemas: conhece as ideias centrais por trás de microsserviços, balanceamento de carga e conteinerização, e compreende por que práticas como CI/CD e verificações de integridade (health checks) são importantes. Alguns conceitos intermediários e avançados, como o 12-Factor App, estados do circuit breaker ou o padrão Saga, ainda estão em desenvolvimento. Isso é perfeitamente normal. O design de sistemas é uma área ampla e todo especialista constrói seu conhecimento passo a passo por meio da prática. Escolha um tópico avançado por semana, construa uma pequena demonstração e refaça este quiz. Você está mais perto de Especialista do que imagina.",
+      "shareText": "Acertei {percent}% no Quiz de Arquitetura de Sistemas no ToolNotch! Consegue me superar? 🏗️"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "Iniciante",
+      "description": "Todo mundo começa de algum lugar, e a arquitetura de sistemas é genuinamente uma das áreas mais complexas da engenharia de software. Este quiz abrange uma ampla variedade de tópicos, desde o básico de Docker e convenções REST até Kubernetes, service mesh, engenharia do caos e sistemas distribuídos multirregião. Se muitos desses conceitos pareceram novos, isso é um ótimo sinal de que você tem uma jornada de aprendizado empolgante pela frente. Comece com Docker e CI/CD básico, avançando depois para Kubernetes e o 12-Factor App. Projetos práticos e experimentos na camada gratuita da nuvem ensinarão mais do que qualquer livro isolado. Volte e tente novamente: sua pontuação vai te surpreender.",
+      "shareText": "Acertei {percent}% no Quiz de Arquitetura de Sistemas no ToolNotch! Consegue me superar? 🏗️"
+    }
+  ]
+}

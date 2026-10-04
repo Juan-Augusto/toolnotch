@@ -2,7 +2,7 @@
  * WS-5 item 1 — contextual internal-linking map.
  *
  * A typed map from a tool/blog path to the related tools + blog posts that
- * belong next to it. `components/RelatedContent.tsx` renders it as real
+ * belong next to it. `components/AppRelatedContent.tsx` renders it as real
  * server-reachable `<a href>` links with descriptive, locale-correct anchor
  * text; `resolveToolRelated()` guarantees the WS-5 minimum (>= 2 related
  * tools + >= 1 blog post) for EVERY tool path, falling back to catalogue
@@ -143,6 +143,7 @@ const TOOL_MAP: Record<string, { tools: string[]; posts: (keyof typeof POST)[] }
 
 /** Default blog post for a category with no bespoke cluster. */
 const CATEGORY_DEFAULT_POST: Record<string, keyof typeof POST> = {
+  dev: 'word-count',
   text: 'word-count',
   finance: 'mortgage-payment',
   health: 'bmi-body-fat',
@@ -194,7 +195,7 @@ export function resolveToolRelated(rawPath: string): ResolvedRelated {
 }
 
 const KNOWN_BUCKETS = [
-  'image', 'pdf', 'convert', 'text', 'finance', 'fun', 'agile',
+  'dev', 'image', 'pdf', 'convert', 'text', 'finance', 'fun', 'agile',
   'education', 'health', 'math', 'utilities', 'interview',
 ] as const
 

@@ -2,7 +2,7 @@
  * Flat, server-renderable catalogue of the indexable tools + quizzes.
  *
  * WS-5 uses it for two things:
- *   1. `components/SiteNavIndex.tsx` — the site-wide crawl-depth floor
+ *   1. `components/AppSiteNavIndex.tsx` — the site-wide crawl-depth floor
  *      (a compact <nav> in the footer linking every entry here).
  *   2. `lib/relatedContent.ts` — the category-sibling fallback so every tool
  *      page can always surface >= 2 contextual related-tool links.
@@ -24,6 +24,7 @@ export interface CatalogEntry {
   labelKey: string
   /** Grouping bucket. Tools use their route segment; quizzes use `quizzes`. */
   category:
+    | 'dev'
     | 'image'
     | 'pdf'
     | 'convert'
@@ -42,15 +43,37 @@ export interface CatalogEntry {
 }
 
 export const TOOL_CATALOG: CatalogEntry[] = [
+  // Developer Tools
+  { path: '/tools/dev/cpf-generator', labelKey: 'cpfGenerator', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/cnpj-generator', labelKey: 'cnpjGenerator', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/address-generator', labelKey: 'addressGenerator', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/uuid-generator', labelKey: 'uuidGenerator', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/json-formatter', labelKey: 'jsonFormatter', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/jwt-decoder', labelKey: 'jwtDecoder', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/base64-converter', labelKey: 'base64Converter', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/hash-generator', labelKey: 'hashGenerator', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/url-parser', labelKey: 'urlParser', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/regex-tester', labelKey: 'regexTester', category: 'dev', kind: 'tool' },
   // Image
+  { path: '/tools/image/crop-image', labelKey: 'cropImage', category: 'image', kind: 'tool' },
+  { path: '/tools/image/image-resizer', labelKey: 'imageResizer', category: 'image', kind: 'tool' },
+  { path: '/tools/image/censor-image', labelKey: 'censorImage', category: 'image', kind: 'tool' },
+  { path: '/tools/image/favicon-generator', labelKey: 'faviconGenerator', category: 'image', kind: 'tool' },
+  { path: '/tools/image/convert-webp-to-png', labelKey: 'convertWebpToPng', category: 'image', kind: 'tool' },
+  { path: '/tools/image/convert-heic-to-jpg', labelKey: 'convertHeicToJpg', category: 'image', kind: 'tool' },
   { path: '/tools/image/image-compressor', labelKey: 'imageCompressor', category: 'image', kind: 'tool' },
-  { path: '/tools/image/convert-png-to-webp', labelKey: 'imageConverter', category: 'image', kind: 'tool' },
+  { path: '/tools/image/image-converter', labelKey: 'imageConverter', category: 'image', kind: 'tool' },
+  { path: '/tools/image/convert-png-to-webp', labelKey: 'convertPngToWebp', category: 'image', kind: 'tool' },
   // PDF
   { path: '/tools/pdf/merge-pdf', labelKey: 'mergePdf', category: 'pdf', kind: 'tool' },
   { path: '/tools/pdf/split-pdf', labelKey: 'splitPdf', category: 'pdf', kind: 'tool' },
   { path: '/tools/pdf/compress-pdf', labelKey: 'compressPdf', category: 'pdf', kind: 'tool' },
   { path: '/tools/pdf/pdf-to-jpg', labelKey: 'pdfToJpg', category: 'pdf', kind: 'tool' },
   { path: '/tools/pdf/jpg-to-pdf', labelKey: 'jpgToPdf', category: 'pdf', kind: 'tool' },
+  { path: '/tools/pdf/organize-pdf', labelKey: 'organizePdf', category: 'pdf', kind: 'tool' },
+  { path: '/tools/pdf/delete-pdf-pages', labelKey: 'deletePdfPages', category: 'pdf', kind: 'tool' },
+  { path: '/tools/pdf/pdf-to-text', labelKey: 'pdfToText', category: 'pdf', kind: 'tool' },
+  { path: '/tools/pdf/extract-pdf-images', labelKey: 'extractPdfImages', category: 'pdf', kind: 'tool' },
   // Convert
   { path: '/tools/convert/unit-converter', labelKey: 'unitConverter', category: 'convert', kind: 'tool' },
   { path: '/tools/convert/currency-converter', labelKey: 'currencyConverter', category: 'convert', kind: 'tool' },
@@ -61,14 +84,9 @@ export const TOOL_CATALOG: CatalogEntry[] = [
   // Text
   { path: '/tools/text/word-counter', labelKey: 'wordCounter', category: 'text', kind: 'tool' },
   { path: '/tools/text/character-counter', labelKey: 'characterCounter', category: 'text', kind: 'tool' },
-  { path: '/tools/text/sentence-counter', labelKey: 'sentenceCounter', category: 'text', kind: 'tool' },
-  { path: '/tools/text/readability-checker', labelKey: 'readabilityChecker', category: 'text', kind: 'tool' },
   { path: '/tools/text/reading-time-calculator', labelKey: 'readingTimeCalculator', category: 'text', kind: 'tool' },
-  { path: '/tools/text/word-frequency-counter', labelKey: 'wordFrequencyCounter', category: 'text', kind: 'tool' },
+  { path: '/tools/text/readability-checker', labelKey: 'readabilityChecker', category: 'text', kind: 'tool' },
   { path: '/tools/text/keyword-density-checker', labelKey: 'keywordDensityChecker', category: 'text', kind: 'tool' },
-  { path: '/tools/text/paraphraser', labelKey: 'paraphraser', category: 'text', kind: 'tool' },
-  { path: '/tools/text/summarizer', labelKey: 'summarizer', category: 'text', kind: 'tool' },
-  { path: '/tools/text/plagiarism-checker', labelKey: 'plagiarismChecker', category: 'text', kind: 'tool' },
   // Finance
   { path: '/tools/finance/loan-calculator', labelKey: 'loanCalculator', category: 'finance', kind: 'tool' },
   { path: '/tools/finance/mortgage-calculator', labelKey: 'mortgageCalculator', category: 'finance', kind: 'tool' },
@@ -144,6 +162,7 @@ export const TOOL_CATALOG: CatalogEntry[] = [
 
 /** Ordered category buckets for the footer nav index. Keys map to `home.categories.*`. */
 export const CATALOG_CATEGORY_ORDER: { category: CatalogEntry['category']; labelKey: string }[] = [
+  { category: 'dev', labelKey: 'devTools' },
   { category: 'image', labelKey: 'imageTools' },
   { category: 'pdf', labelKey: 'pdfTools' },
   { category: 'convert', labelKey: 'converterTools' },

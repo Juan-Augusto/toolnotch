@@ -1,0 +1,791 @@
+{
+  "id": "messaging-sqs-kafka",
+  "type": "trivia",
+  "category": "backend",
+  "locale": "es",
+  "title": "Quiz de Mensajería: SQS y Kafka",
+  "description": "Pon a prueba tus conocimientos sobre mensajería distribuida, colas y streams de eventos.",
+  "image": "/images/quizzes/messaging-sqs-kafka-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "level": "beginner",
+      "text": "¿Cuál es el propósito principal de una cola de mensajes en un sistema distribuido?",
+      "options": [
+        {
+          "id": "q1a",
+          "text": "Almacenar datos permanentemente en una base de datos relacional"
+        },
+        {
+          "id": "q1b",
+          "text": "Desacoplar productores y consumidores para que puedan operar de forma independiente"
+        },
+        {
+          "id": "q1c",
+          "text": "Sincronizar peticiones HTTP entre microservicios"
+        },
+        {
+          "id": "q1d",
+          "text": "Proporcionar una caché compartida en memoria para los servicios"
+        }
+      ],
+      "correctAnswerId": "q1b",
+      "explanation": "Una cola de mensajes desacopla los productores de los consumidores, permitiendo que cada parte trabaje a su propio ritmo sin necesidad de sincronización directa."
+    },
+    {
+      "id": "q2",
+      "level": "beginner",
+      "text": "En el modelo productor/consumidor, ¿cuál es el rol de un productor?",
+      "options": [
+        {
+          "id": "q2a",
+          "text": "Lee y procesa mensajes de la cola"
+        },
+        {
+          "id": "q2b",
+          "text": "Gestiona la infraestructura de la cola y las reglas de enrutamiento"
+        },
+        {
+          "id": "q2c",
+          "text": "Envía mensajes a la cola para su procesamiento posterior"
+        },
+        {
+          "id": "q2d",
+          "text": "Supervisa la profundidad de la cola y activa el autoescalado"
+        }
+      ],
+      "correctAnswerId": "q2c",
+      "explanation": "Un productor publica mensajes en la cola; en el otro extremo, un consumidor lee y procesa dichos mensajes."
+    },
+    {
+      "id": "q3",
+      "level": "beginner",
+      "text": "¿Qué es Amazon SQS?",
+      "options": [
+        {
+          "id": "q3a",
+          "text": "Un servicio de base de datos relacional totalmente administrado de AWS"
+        },
+        {
+          "id": "q3b",
+          "text": "Un servicio de colas de mensajes totalmente administrado de AWS"
+        },
+        {
+          "id": "q3c",
+          "text": "Una plataforma distribuida de streaming de código abierto"
+        },
+        {
+          "id": "q3d",
+          "text": "Un motor de cómputo serverless para tareas por lotes"
+        }
+      ],
+      "correctAnswerId": "q3b",
+      "explanation": "Amazon SQS (Simple Queue Service) es un servicio de colas de mensajes serverless y totalmente administrado que ofrece AWS."
+    },
+    {
+      "id": "q4",
+      "level": "beginner",
+      "text": "¿Cuál es la diferencia clave entre una cola SQS Standard y una cola SQS FIFO?",
+      "options": [
+        {
+          "id": "q4a",
+          "text": "Las colas Standard garantizan orden estricto de los mensajes; las colas FIFO no"
+        },
+        {
+          "id": "q4b",
+          "text": "Las colas FIFO garantizan ordenación y procesamiento exactamente una vez (exactly-once); las colas Standard ofrecen ordenación por mejor esfuerzo y entrega al menos una vez (at-least-once)"
+        },
+        {
+          "id": "q4c",
+          "text": "Las colas Standard admiten cifrado; las colas FIFO no"
+        },
+        {
+          "id": "q4d",
+          "text": "Las colas FIFO son más económicas pero no tienen límites de rendimiento"
+        }
+      ],
+      "correctAnswerId": "q4b",
+      "explanation": "Las colas FIFO preservan de forma estricta el orden de los mensajes y previenen duplicados, mientras que las colas Standard ofrecen un mayor rendimiento con ordenación por mejor esfuerzo y entrega at-least-once."
+    },
+    {
+      "id": "q5",
+      "level": "beginner",
+      "text": "¿Qué significa 'entrega al menos una vez' (at-least-once delivery) en un sistema de mensajería?",
+      "options": [
+        {
+          "id": "q5a",
+          "text": "Un mensaje se entrega exactamente una única vez sin duplicados"
+        },
+        {
+          "id": "q5b",
+          "text": "Un mensaje puede entregarse más de una vez, por lo que los consumidores deben gestionar duplicados"
+        },
+        {
+          "id": "q5c",
+          "text": "Un mensaje solo se entrega si el consumidor está conectado"
+        },
+        {
+          "id": "q5d",
+          "text": "Un mensaje nunca se entrega más de una vez por grupo de consumidores"
+        }
+      ],
+      "correctAnswerId": "q5b",
+      "explanation": "La entrega at-least-once garantiza que el mensaje alcance al consumidor pero admite duplicados, exigiendo que los consumidores sean idempotentes."
+    },
+    {
+      "id": "q6",
+      "level": "beginner",
+      "text": "¿Qué es una Dead Letter Queue (DLQ)?",
+      "options": [
+        {
+          "id": "q6a",
+          "text": "Una cola que elimina mensajes automáticamente después de 1 minuto"
+        },
+        {
+          "id": "q6b",
+          "text": "Una cola secundaria a la que se envían los mensajes tras fallar en su procesamiento un número determinado de veces"
+        },
+        {
+          "id": "q6c",
+          "text": "Una cola de alta prioridad destinada a alertas urgentes del sistema"
+        },
+        {
+          "id": "q6d",
+          "text": "Una cola que almacena únicamente metadatos sobre mensajes procesados"
+        }
+      ],
+      "correctAnswerId": "q6b",
+      "explanation": "Una DLQ captura mensajes que fallan repetidamente en su procesamiento para que puedan ser inspeccionados y reprocesados sin bloquear la cola principal."
+    },
+    {
+      "id": "q7",
+      "level": "beginner",
+      "text": "¿Qué es Apache Kafka?",
+      "options": [
+        {
+          "id": "q7a",
+          "text": "Una base de datos relacional optimizada para datos de series temporales"
+        },
+        {
+          "id": "q7b",
+          "text": "Una plataforma distribuida de streaming de eventos diseñada para mensajería de alto rendimiento y tolerante a fallos"
+        },
+        {
+          "id": "q7c",
+          "text": "Un servicio de caché en memoria administrado por AWS"
+        },
+        {
+          "id": "q7d",
+          "text": "Una pasarela de API REST para comunicación entre microservicios"
+        }
+      ],
+      "correctAnswerId": "q7b",
+      "explanation": "Apache Kafka es una plataforma distribuida de streaming de eventos de código abierto utilizada para mensajería publicar-suscribir (pub/sub) de alto rendimiento, durable y tolerante a fallos."
+    },
+    {
+      "id": "q8",
+      "level": "beginner",
+      "text": "¿En qué se diferencia un topic de Kafka de una cola de mensajes tradicional?",
+      "options": [
+        {
+          "id": "q8a",
+          "text": "Un topic elimina los mensajes de inmediato tras ser leídos por un consumidor"
+        },
+        {
+          "id": "q8b",
+          "text": "Un topic conserva los mensajes en un log para que múltiples grupos de consumidores independientes lean los mismos datos"
+        },
+        {
+          "id": "q8c",
+          "text": "Un topic solo admite un único productor a la vez"
+        },
+        {
+          "id": "q8d",
+          "text": "Un topic garantiza la entrega en menos de 1 segundo"
+        }
+      ],
+      "correctAnswerId": "q8b",
+      "explanation": "A diferencia de una cola tradicional que borra los mensajes una vez consumidos, un topic de Kafka persiste los mensajes en un log de adición continua (append-only), permitiendo lecturas independientes a múltiples grupos de consumidores."
+    },
+    {
+      "id": "q9",
+      "level": "beginner",
+      "text": "¿Qué es un grupo de consumidores (consumer group) en Kafka?",
+      "options": [
+        {
+          "id": "q9a",
+          "text": "Un conjunto de brokers que replican datos de partición"
+        },
+        {
+          "id": "q9b",
+          "text": "Una colección de consumidores que consumen conjuntamente un topic, leyendo cada uno de un subconjunto específico de particiones"
+        },
+        {
+          "id": "q9c",
+          "text": "Un grupo de administración que gestiona la creación y eliminación de topics"
+        },
+        {
+          "id": "q9d",
+          "text": "Un grupo de productores que comparten el mismo ID de cliente"
+        }
+      ],
+      "correctAnswerId": "q9b",
+      "explanation": "Un grupo de consumidores permite el escalado horizontal del procesamiento de mensajes: cada partición se asigna exactamente a un consumidor dentro del grupo en cada momento."
+    },
+    {
+      "id": "q10",
+      "level": "beginner",
+      "text": "¿Por qué es difícil garantizar un orden global estricto de mensajes a escala en sistemas de mensajería distribuida?",
+      "options": [
+        {
+          "id": "q10a",
+          "text": "La latencia de red y el procesamiento en paralelo entre múltiples nodos dificultan imponer una secuencia global única sin generar un cuello de botella"
+        },
+        {
+          "id": "q10b",
+          "text": "El ordenamiento requiere una base de datos relacional, la cual los sistemas de mensajería no pueden usar"
+        },
+        {
+          "id": "q10c",
+          "text": "Las conexiones TCP alteran de manera inherente el orden de los paquetes"
+        },
+        {
+          "id": "q10d",
+          "text": "Los brokers de mensajería desordenan deliberadamente los mensajes para mejorar el rendimiento"
+        }
+      ],
+      "correctAnswerId": "q10a",
+      "explanation": "El ordenamiento global requiere una secuencia ordenada única, lo que fuerza la serialización y crea un cuello de botella de rendimiento; los sistemas particionados sacrifican el orden global en beneficio de la escalabilidad."
+    },
+    {
+      "id": "q11",
+      "level": "intermediate",
+      "text": "¿Qué es el tiempo de espera de visibilidad (visibility timeout) de SQS y por qué es importante?",
+      "options": [
+        {
+          "id": "q11a",
+          "text": "El tiempo máximo que un mensaje puede permanecer en la cola antes de ser eliminado automáticamente"
+        },
+        {
+          "id": "q11b",
+          "text": "El periodo durante el cual un mensaje recibido permanece oculto para otros consumidores, evitando el procesamiento duplicado"
+        },
+        {
+          "id": "q11c",
+          "text": "El retraso antes de que un mensaje recién enviado sea visible para los consumidores"
+        },
+        {
+          "id": "q11d",
+          "text": "La ventana de tiempo permitida para que un consumidor se autentique antes de leer un mensaje"
+        }
+      ],
+      "correctAnswerId": "q11b",
+      "explanation": "El visibility timeout oculta un mensaje de otros consumidores mientras un consumidor lo está procesando; si no se elimina antes de que expire el tiempo, el mensaje vuelve a estar visible para un nuevo intento."
+    },
+    {
+      "id": "q12",
+      "level": "intermediate",
+      "text": "¿Cuál es la ventaja de utilizar long polling frente a short polling en SQS?",
+      "options": [
+        {
+          "id": "q12a",
+          "text": "El long polling comprime los mensajes para reducir el consumo de ancho de banda"
+        },
+        {
+          "id": "q12b",
+          "text": "El long polling mantiene la conexión abierta hasta 20 segundos, reduciendo respuestas vacías y disminuyendo costes"
+        },
+        {
+          "id": "q12c",
+          "text": "El long polling garantiza que los mensajes lleguen en estricto orden FIFO"
+        },
+        {
+          "id": "q12d",
+          "text": "El long polling permite a los consumidores enviar confirmaciones a SQS en tiempo real"
+        }
+      ],
+      "correctAnswerId": "q12b",
+      "explanation": "El long polling espera hasta 20 segundos la llegada de un mensaje antes de responder, eliminando la mayoría de las respuestas ReceiveMessage vacías y reduciendo los costes de llamadas a la API."
+    },
+    {
+      "id": "q13",
+      "level": "intermediate",
+      "text": "¿Cuáles son los periodos de retención por defecto y máximo para una cola SQS?",
+      "options": [
+        {
+          "id": "q13a",
+          "text": "Por defecto 1 día, máximo 7 días"
+        },
+        {
+          "id": "q13b",
+          "text": "Por defecto 4 días, máximo 14 días"
+        },
+        {
+          "id": "q13c",
+          "text": "Por defecto 7 días, máximo 30 días"
+        },
+        {
+          "id": "q13d",
+          "text": "Por defecto 1 hora, máximo 24 horas"
+        }
+      ],
+      "correctAnswerId": "q13b",
+      "explanation": "SQS retiene los mensajes durante 4 días de forma predeterminada y puede configurarse hasta un máximo de 14 días, tras los cuales los mensajes no entregados son eliminados."
+    },
+    {
+      "id": "q14",
+      "level": "intermediate",
+      "text": "¿Cómo habilitan las particiones de Kafka el paralelismo en el consumo de mensajes?",
+      "options": [
+        {
+          "id": "q14a",
+          "text": "Cada partición se ejecuta en una región distinta de AWS para procesar geográficamente"
+        },
+        {
+          "id": "q14b",
+          "text": "A cada consumidor de un grupo se le asigna una o más particiones, permitiendo que varios consumidores lean distintas particiones de forma simultánea"
+        },
+        {
+          "id": "q14c",
+          "text": "Las particiones comprimen los mensajes para que cada consumidor procese el doble por segundo"
+        },
+        {
+          "id": "q14d",
+          "text": "Las particiones permiten a los productores escribir más rápido empaquetando mensajes en lotes"
+        }
+      ],
+      "correctAnswerId": "q14b",
+      "explanation": "Las particiones de Kafka dividen un topic en logs ordenados e independientes; cada partición puede ser leída por un único consumidor por grupo, lo que permite un procesamiento paralelo proporcional al número de particiones."
+    },
+    {
+      "id": "q15",
+      "level": "intermediate",
+      "text": "¿Cuál es la diferencia entre un offset confirmado (committed offset) y el último offset (latest offset) en Kafka?",
+      "options": [
+        {
+          "id": "q15a",
+          "text": "El offset confirmado es el próximo mensaje a producir; el último offset es el último mensaje producido"
+        },
+        {
+          "id": "q15b",
+          "text": "El offset confirmado es la última posición confirmada como procesada por el grupo de consumidores; el último offset es el último mensaje escrito en la partición"
+        },
+        {
+          "id": "q15c",
+          "text": "El offset confirmado se guarda en disco; el último offset se almacena únicamente en memoria"
+        },
+        {
+          "id": "q15d",
+          "text": "Son términos sinónimos usados indistintamente en la documentación de Kafka"
+        }
+      ],
+      "correctAnswerId": "q15b",
+      "explanation": "El retraso del consumidor (consumer lag) es la diferencia entre el último offset (final del log de la partición) y el offset confirmado (última posición confirmada), representando los mensajes pendientes de procesar."
+    },
+    {
+      "id": "q16",
+      "level": "intermediate",
+      "text": "¿Qué provoca un rebalanceo (rebalance) de un grupo de consumidores en Kafka?",
+      "options": [
+        {
+          "id": "q16a",
+          "text": "Que un administrador aumente el factor de replicación de un topic"
+        },
+        {
+          "id": "q16b",
+          "text": "Que un consumidor se una o abandone el grupo, o que expire el timeout de sesión, lo que ocasiona que las particiones se reasignen entre los consumidores activos"
+        },
+        {
+          "id": "q16c",
+          "text": "Que un productor envíe un mensaje que exceda el tamaño de lote configurado"
+        },
+        {
+          "id": "q16d",
+          "text": "Que la elección de líder en ZooKeeper complete una nueva ronda"
+        }
+      ],
+      "correctAnswerId": "q16b",
+      "explanation": "El rebalanceo redistribuye la asignación de particiones entre consumidores cuando cambia la pertenencia al grupo o falla el heartbeat de un consumidor, pausando temporalmente el consumo."
+    },
+    {
+      "id": "q17",
+      "level": "intermediate",
+      "text": "¿Cuál es el propósito del factor de replicación en Kafka y qué significa ISR?",
+      "options": [
+        {
+          "id": "q17a",
+          "text": "El factor de replicación define el TTL del mensaje; ISR significa Retención Sincronizada"
+        },
+        {
+          "id": "q17b",
+          "text": "El factor de replicación define cuántas copias en brokers existen por partición; ISR (In-Sync Replicas) es el conjunto de réplicas que están totalmente al día con el líder"
+        },
+        {
+          "id": "q17c",
+          "text": "El factor de replicación determina el número de grupos de consumidores; ISR monitoriza su retraso"
+        },
+        {
+          "id": "q17d",
+          "text": "El factor de replicación configura la compresión; ISR es el índice de registros almacenados"
+        }
+      ],
+      "correctAnswerId": "q17b",
+      "explanation": "Un factor de replicación más alto mejora la durabilidad; Kafka solo confirma una escritura cuando el número requerido de réplicas ISR la ha confirmado, equilibrando durabilidad y latencia."
+    },
+    {
+      "id": "q18",
+      "level": "intermediate",
+      "text": "¿Qué configuración de Kafka permite lograr semántica de exactamente una vez (exactly-once semantics) de extremo a extremo?",
+      "options": [
+        {
+          "id": "q18a",
+          "text": "Establecer acks=0 en el productor y activar auto-commit en el consumidor"
+        },
+        {
+          "id": "q18b",
+          "text": "Activar productores idempotentes (enable.idempotence=true) combinado con APIs transaccionales en productores y isolation.level=read_committed en consumidores"
+        },
+        {
+          "id": "q18c",
+          "text": "Utilizar un topic FIFO con una sola partición y un único consumidor"
+        },
+        {
+          "id": "q18d",
+          "text": "Desactivar el procesamiento por lotes y definir max.in.flight.requests.per.connection=1"
+        }
+      ],
+      "correctAnswerId": "q18b",
+      "explanation": "La entrega exactly-once de Kafka requiere productores idempotentes para prevenir duplicados y APIs transaccionales para producir y registrar offsets atómicamente, con consumidores leyendo únicamente datos confirmados."
+    },
+    {
+      "id": "q19",
+      "level": "intermediate",
+      "text": "¿Cuál es la diferencia fundamental entre Amazon SQS, Amazon SNS y Amazon EventBridge?",
+      "options": [
+        {
+          "id": "q19a",
+          "text": "SQS es una cola para mensajería punto a punto; SNS es pub/sub para fan-out a múltiples suscriptores; EventBridge es un bus de eventos con reglas de enrutamiento y registro de esquemas"
+        },
+        {
+          "id": "q19b",
+          "text": "SQS es para streaming de datos; SNS es para procesamiento por lotes; EventBridge es exclusivo para IoT"
+        },
+        {
+          "id": "q19c",
+          "text": "Los tres son servicios idénticos con diferentes esquemas de precios"
+        },
+        {
+          "id": "q19d",
+          "text": "SNS almacena mensajes durante 14 días al igual que SQS; EventBridge no retiene eventos"
+        }
+      ],
+      "correctAnswerId": "q19a",
+      "explanation": "SQS desacopla consumidores individuales, SNS distribuye mensajes en abanico a múltiples suscriptores simultáneamente y EventBridge añade reglas de enrutamiento basadas en contenido e integraciones SaaS."
+    },
+    {
+      "id": "q20",
+      "level": "intermediate",
+      "text": "¿Qué es la compactación de logs (log compaction) en Kafka y cuándo debe utilizarse?",
+      "options": [
+        {
+          "id": "q20a",
+          "text": "Un proceso en segundo plano que comprime archivos de log con gzip para ahorrar espacio en disco"
+        },
+        {
+          "id": "q20b",
+          "text": "Una política de retención que conserva únicamente el último valor por cada clave, descartando registros antiguos con la misma clave"
+        },
+        {
+          "id": "q20c",
+          "text": "Una operación de Kafka Streams que combina dos topics en uno solo ordenado"
+        },
+        {
+          "id": "q20d",
+          "text": "Un proceso que borra todos los mensajes anteriores al periodo de retención configurado"
+        }
+      ],
+      "correctAnswerId": "q20b",
+      "explanation": "La compactación de logs retiene el valor más reciente para cada clave, haciendo que el topic funcione como un changelog o almacén clave-valor, permitiendo a los consumidores reconstruir el estado actual."
+    },
+    {
+      "id": "q21",
+      "level": "advanced",
+      "text": "¿Cuáles son los tres archivos que componen un segmento de log en Kafka y qué almacena cada uno?",
+      "options": [
+        {
+          "id": "q21a",
+          "text": ".log almacena los bytes sin procesar del mensaje; .index mapea offsets a posiciones de bytes en .log; .timeindex mapea marcas de tiempo a offsets"
+        },
+        {
+          "id": "q21b",
+          "text": ".log almacena offsets; .index guarda los bytes de mensajes; .timeindex guarda metadatos de la partición"
+        },
+        {
+          "id": "q21c",
+          "text": ".log almacena el estado del grupo de consumidores; .index guarda IDs de productores; .timeindex guarda el lag de replicación"
+        },
+        {
+          "id": "q21d",
+          "text": ".log almacena lotes comprimidos; .index guarda IDs de esquemas; .timeindex guarda tiempos de expiración TTL"
+        }
+      ],
+      "correctAnswerId": "q21a",
+      "explanation": "El archivo .log contiene los datos reales de los mensajes; el .index proporciona una búsqueda dispersa de offset a posición de bytes para búsquedas rápidas; el .timeindex permite búsquedas basadas en tiempo."
+    },
+    {
+      "id": "q22",
+      "level": "advanced",
+      "text": "¿Qué es una partición caliente (hot partition) en Kafka y cómo la causa el particionamiento basado en claves?",
+      "options": [
+        {
+          "id": "q22a",
+          "text": "Una partición caliente es aquella que recibe demasiadas réplicas; el enrutamiento por clave reparte réplicas de forma desigual"
+        },
+        {
+          "id": "q22b",
+          "text": "Una partición caliente recibe de forma desproporcionada más mensajes que otras porque una clave de alta frecuencia (ej.: ID de usuario popular) siempre calcula el hash hacia la misma partición"
+        },
+        {
+          "id": "q22c",
+          "text": "Una partición caliente queda temporalmente fuera de línea; el enrutamiento por clave la evita hasta que se recupera"
+        },
+        {
+          "id": "q22d",
+          "text": "Una partición caliente almacena datos compactados; el particionamiento round-robin evita la compactación"
+        }
+      ],
+      "correctAnswerId": "q22b",
+      "explanation": "Cuando unas pocas claves concentran la mayor parte del tráfico, siempre caen en la misma partición mediante hash, generando una carga desigual que puede saturar a un broker específico y a su consumidor."
+    },
+    {
+      "id": "q23",
+      "level": "advanced",
+      "text": "¿Cómo se manifiesta el back-pressure en una cadena de consumidores de Kafka y cuál es una estrategia habitual de mitigación?",
+      "options": [
+        {
+          "id": "q23a",
+          "text": "El back-pressure aparece como limitación (throttling) en el productor; la mitigación es incrementar la cantidad de topics"
+        },
+        {
+          "id": "q23b",
+          "text": "El back-pressure se manifiesta como un crecimiento del consumer lag cuando el procesamiento es más lento que la tasa de producción; las mitigaciones incluyen añadir consumidores hasta igualar las particiones, incrementar particiones o limitar al productor"
+        },
+        {
+          "id": "q23c",
+          "text": "El back-pressure se manifiesta como saturación de disco en el broker; la mitigación es habilitar la compactación de logs"
+        },
+        {
+          "id": "q23d",
+          "text": "El back-pressure se manifiesta como timeouts de ZooKeeper; la mitigación es actualizar al modo KRaft"
+        }
+      ],
+      "correctAnswerId": "q23b",
+      "explanation": "El aumento del consumer lag es la señal directa de back-pressure; la solución estándar consiste en escalar consumidores hasta el límite de particiones, reparticionar para mayor paralelismo o reducir el tiempo de proceso por mensaje."
+    },
+    {
+      "id": "q24",
+      "level": "advanced",
+      "text": "¿En qué se diferencia Kafka Streams de Apache Flink y Apache Spark Structured Streaming para el procesamiento de streams con estado (stateful)?",
+      "options": [
+        {
+          "id": "q24a",
+          "text": "Kafka Streams es un framework por lotes; Flink y Spark son motores puros de streaming"
+        },
+        {
+          "id": "q24b",
+          "text": "Kafka Streams es una biblioteca cliente que corre dentro de tu aplicación sin un cluster independiente; Flink y Spark son frameworks distribuidos independientes con gestión propia de recursos"
+        },
+        {
+          "id": "q24c",
+          "text": "Kafka Streams requiere Kubernetes; Flink y Spark operan únicamente sobre servidores dedicados"
+        },
+        {
+          "id": "q24d",
+          "text": "Kafka Streams no soporta operaciones con estado; Flink y Spark sí lo hacen"
+        }
+      ],
+      "correctAnswerId": "q24b",
+      "explanation": "Kafka Streams se integra directamente en una aplicación JVM y aprovecha las particiones de Kafka para el paralelismo, mientras que Flink y Spark funcionan como clusters distribuidos independientes con APIs más extensas y gestión autónoma de recursos."
+    },
+    {
+      "id": "q25",
+      "level": "advanced",
+      "text": "¿Cuál es el límite de procesamiento de una cola SQS FIFO y de qué forma influyen los Message Group IDs?",
+      "options": [
+        {
+          "id": "q25a",
+          "text": "Las colas FIFO soportan procesamiento ilimitado; los Message Group IDs no tienen efecto sobre el rendimiento"
+        },
+        {
+          "id": "q25b",
+          "text": "Las colas FIFO soportan hasta 300 mensajes/segundo (o 3.000 con lotes); los mensajes con el mismo Group ID se procesan en serie, por lo que más Group IDs distintos permiten mayor paralelismo"
+        },
+        {
+          "id": "q25c",
+          "text": "Las colas FIFO soportan 10.000 mensajes/segundo; cada Group ID añade 1.000 mensajes/segundo de capacidad"
+        },
+        {
+          "id": "q25d",
+          "text": "Las colas FIFO soportan hasta 1.000 mensajes/segundo sin importar los Group IDs"
+        }
+      ],
+      "correctAnswerId": "q25b",
+      "explanation": "Las colas FIFO de SQS procesan 300 TPS (3.000 con lotes); dentro de un mismo Group ID, el orden estricto serializa el procesamiento, de modo que distribuir el tráfico entre múltiples Group IDs es la clave para maximizar el paralelismo."
+    },
+    {
+      "id": "q26",
+      "level": "advanced",
+      "text": "¿Por qué es importante un registro de esquemas (schema registry) al usar Avro o Protobuf con Kafka y qué problema resuelve?",
+      "options": [
+        {
+          "id": "q26a",
+          "text": "Un schema registry cifra los mensajes en tránsito; sin él, las cargas Avro se transmiten en texto plano"
+        },
+        {
+          "id": "q26b",
+          "text": "Un schema registry centraliza el control de versiones para que productores y consumidores evolucionen de forma independiente manteniendo compatibilidad, e incluye solo el ID del esquema en la carga útil"
+        },
+        {
+          "id": "q26c",
+          "text": "Un schema registry es un plugin del broker Kafka que valida límites de tamaño de mensaje"
+        },
+        {
+          "id": "q26d",
+          "text": "Un schema registry sustituye a ZooKeeper en la gestión de metadatos de cluster en versiones recientes"
+        }
+      ],
+      "correctAnswerId": "q26b",
+      "explanation": "Incluir solo el ID del esquema en lugar del esquema completo en cada mensaje reduce drásticamente el tamaño del payload, mientras el registro impone reglas de compatibilidad para evitar roturas en los consumidores existentes."
+    },
+    {
+      "id": "q27",
+      "level": "advanced",
+      "text": "¿Qué métricas y herramientas se utilizan habitualmente en producción para monitorizar el consumer lag de Kafka?",
+      "options": [
+        {
+          "id": "q27a",
+          "text": "El consumer lag solo puede consultarse en la interfaz web nativa de Kafka"
+        },
+        {
+          "id": "q27b",
+          "text": "El consumer lag se monitoriza con kafka-consumer-groups.sh, métricas JMX de Kafka (records-lag-max), Prometheus con kafka-exporter o el exportador JMX de Confluent, y plataformas como Datadog o Grafana"
+        },
+        {
+          "id": "q27c",
+          "text": "El consumer lag solo se puede ver en AWS CloudWatch cuando se utiliza Amazon MSK"
+        },
+        {
+          "id": "q27d",
+          "text": "El consumer lag se rastrea leyendo el topic __consumer_offsets de forma directa desde el código de la aplicación"
+        }
+      ],
+      "correctAnswerId": "q27b",
+      "explanation": "El comando kafka-consumer-groups.sh brinda una instantánea puntual, mientras que las métricas JMX expuestas con Prometheus y graficadas en Grafana permiten alertar continuamente sobre tendencias de lag en producción."
+    },
+    {
+      "id": "q28",
+      "level": "advanced",
+      "text": "¿Qué es el patrón Transactional Outbox y cómo soluciona el problema de escritura dual (dual-write) entre una base de datos y un broker de mensajería?",
+      "options": [
+        {
+          "id": "q28a",
+          "text": "El patrón outbox almacena mensajes en una cola SQS FIFO antes de escribir en la base de datos, asegurando que la base solo cambie si la cola acepta el mensaje"
+        },
+        {
+          "id": "q28b",
+          "text": "El patrón outbox guarda el cambio de estado de dominio y el mensaje de salida en la misma transacción de base de datos; un proceso repetidor independiente lee la tabla outbox y publica en el broker, garantizando atomicidad sin transacciones distribuidas"
+        },
+        {
+          "id": "q28c",
+          "text": "El patrón outbox utiliza confirmación en dos fases (two-phase commit) entre la base de datos y Kafka para garantizar escrituras simultáneas"
+        },
+        {
+          "id": "q28d",
+          "text": "El patrón outbox almacena mensajes en la memoria de la aplicación y los envía a Kafka después de hacer commit en la base de datos"
+        }
+      ],
+      "correctAnswerId": "q28b",
+      "explanation": "Al escribir el evento en una tabla outbox dentro de la misma transacción ACID de los datos de negocio, el patrón elimina el riesgo de confirmar en la base de datos y fallar en la publicación, mientras el relay garantiza entrega al menos una vez al broker."
+    },
+    {
+      "id": "q29",
+      "level": "advanced",
+      "text": "¿Qué es Kafka Connect y cuáles son sus dos tipos principales de conectores?",
+      "options": [
+        {
+          "id": "q29a",
+          "text": "Kafka Connect es una biblioteca cliente para crear grupos de consumidores personalizados; sus dos tipos son de sondeo (polling) y push"
+        },
+        {
+          "id": "q29b",
+          "text": "Kafka Connect es un framework para transmitir datos de forma escalable entre Kafka y sistemas externos; los conectores Source importan datos a Kafka y los Sink exportan datos desde Kafka a destinos externos"
+        },
+        {
+          "id": "q29c",
+          "text": "Kafka Connect es una herramienta de monitorización; sus tipos de conectores son de métricas y de logs"
+        },
+        {
+          "id": "q29d",
+          "text": "Kafka Connect es una extensión del registro de esquemas; sus conectores son de tipo Avro y Protobuf"
+        }
+      ],
+      "correctAnswerId": "q29b",
+      "explanation": "Kafka Connect ofrece un framework escalable y tolerante a fallos: los conectores Source extraen datos de bases de datos, archivos o APIs hacia topics de Kafka, mientras los conectores Sink envían datos de topics a almacenes de datos, motores de búsqueda o almacenamiento."
+    },
+    {
+      "id": "q30",
+      "level": "advanced",
+      "text": "¿En qué se diferencia la replicación entre regiones mediante fan-out con SQS y Kafka MirrorMaker 2?",
+      "options": [
+        {
+          "id": "q30a",
+          "text": "El fan-out de SQS y MirrorMaker 2 son idénticos funcionalmente; la elección se basa exclusivamente en costes"
+        },
+        {
+          "id": "q30b",
+          "text": "El fan-out de SQS utiliza SNS para distribuir mensajes a colas en múltiples regiones simultáneamente (activo-activo), mientras que MirrorMaker 2 replica asíncronamente topics y offsets de grupos de consumidores entre clusters, admitiendo topologías activo-activo y activo-pasivo"
+        },
+        {
+          "id": "q30c",
+          "text": "El fan-out de SQS replica mensajes con Kafka Connect; MirrorMaker 2 utiliza AWS DataSync"
+        },
+        {
+          "id": "q30d",
+          "text": "MirrorMaker 2 opera únicamente con semántica exactly-once; el fan-out de SQS solo con at-most-once"
+        }
+      ],
+      "correctAnswerId": "q30b",
+      "explanation": "La replicación entre regiones con SQS normalmente emplea el fan-out multirregión de SNS para patrones push simples, mientras que MirrorMaker 2 es una herramienta especializada de replicación en Kafka que también sincroniza offsets, facilitando la conmutación por error entre clusters."
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "Leyenda",
+      "description": "Trabajo sobresaliente: dominas tanto SQS como Apache Kafka a nivel experto. Comprendes no solo los conceptos básicos de colas de mensajes, sino también el funcionamiento interno profundo: archivos de segmentos de log, la mecánica de ISR, APIs transaccionales con exactly-once, registros de esquemas, monitorización de consumer lag y estrategias avanzadas de replicación como MirrorMaker 2. Eres capaz de diseñar arquitecturas de mensajería confiables y de alto rendimiento desde cero, anticipar fallos como particiones calientes y tormentas de rebalanceo, y seleccionar la herramienta idónea: SQS, SNS, EventBridge o Kafka, para cada necesidad. Los ingenieros de tu equipo acuden a ti cuando la mensajería distribuida se vuelve compleja. Eres quien diseña el transactional outbox, calibra los tiempos de visibilidad y redacta los manuales para alertas de retraso de consumidores. Sinceramente impresionante.",
+      "shareText": "¡Obtuve {percent}% en el Quiz de Mensajería: SQS y Kafka en ToolNotch! ¿Puedes superarme?"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Experto",
+      "description": "Gran resultado: tienes un sólido dominio tanto de SQS como de Kafka. Comprendes particiones, offsets, grupos de consumidores, semánticas de entrega y las principales diferencias entre los servicios de mensajería de AWS. Algunos detalles internos avanzados te han puesto a prueba, pero tu conocimiento práctico se sitúa muy por encima de la media. Puedes diseñar sistemas reactivos y robustos orientados a eventos, manejar DLQs y timeouts de visibilidad con seguridad, y defender con solvencia decisiones de arquitectura sobre streaming frente a colas. Si profundizas un poco más en el formato de almacenamiento interno de Kafka, las APIs transaccionales y la replicación entre regiones, alcanzarás el nivel Leyenda. Continúa construyendo y aprendiendo: la distancia es menor de lo que crees.",
+      "shareText": "¡Obtuve {percent}% en el Quiz de Mensajería: SQS y Kafka en ToolNotch! ¿Puedes superarme?"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Entusiasta",
+      "description": "Muy buen esfuerzo: tienes una comprensión adecuada de los conceptos fundamentales de colas de mensajes y streaming distribuido. Sabes qué son SQS y Kafka, entiendes el rol de productores y consumidores, y manejas con soltura los conceptos de topics, particiones y garantías de entrega. Algunas preguntas intermedias y avanzadas sobre timeouts de visibilidad, ISR, semántica exactly-once y estructura interna de logs resultaron complejas, lo cual es totalmente comprensible en esta etapa. El camino ideal para seguir avanzando es la práctica directa: levanta un cluster local de Kafka, procesa mensajes de SQS con AWS Lambda y sigue la pista de un mensaje desde el productor hasta el grupo de consumidores. La experiencia práctica consolidará rápidamente los conceptos avanzados.",
+      "shareText": "¡Obtuve {percent}% en el Quiz de Mensajería: SQS y Kafka en ToolNotch! ¿Puedes superarme?"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "Novato",
+      "description": "Todo el mundo empieza desde cero, y la mensajería distribuida es sin duda una de las áreas más desafiantes de la ingeniería de backend. Conceptos como colas, topics, particiones, offsets y garantías de entrega pueden parecer abstractos hasta que los utilizas directamente. Empieza por las bases: lee la documentación de AWS SQS y sigue la guía de inicio rápido de Kafka para levantar un broker en local. Comprender por qué los sistemas desacoplan productores y consumidores, y qué implica en la práctica la entrega at-least-once, te proporcionará unos cimientos sólidos. Vuelve a realizar el quiz tras experimentar un poco: verás lo rápido que los conceptos intermedios cobran sentido en la práctica.",
+      "shareText": "¡Obtuve {percent}% en el Quiz de Mensajería: SQS y Kafka en ToolNotch! ¿Puedes superarme?"
+    }
+  ]
+}

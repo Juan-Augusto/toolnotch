@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Free Resume Builder — Create a Resume Online',
+  title: 'Free Resume Builder - Create a Resume Online',
   description: 'Build a professional resume online for free. Choose from 3 templates, export to PDF. No sign-up required.',
-  // Coming-soon stub — noindex until it ships real content (WS-5 audit; WS-6 follow-up).
+  // Coming-soon stub - noindex until it ships real content (WS-5 audit; WS-6 follow-up).
   robots: { index: false },
 }
 

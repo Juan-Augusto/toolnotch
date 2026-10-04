@@ -1,0 +1,412 @@
+{
+  "id": "what-type-of-traveler-are-you",
+  "title": "¿Qué Tipo de Viajero Eres?",
+  "description": "Descubre tu estilo de viaje, desde la aventura al aire libre hasta la inmersión cultural.",
+  "image": "/images/quizzes/what-type-of-traveler-are-you-cover.jpg",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "¿Cómo planificas un viaje?",
+      "options": [
+        {
+          "id": "q1a",
+          "text": "Reservo todo con meses de antelación y un itinerario detallado",
+          "scores": {
+            "cultural": 2,
+            "city": 1
+          }
+        },
+        {
+          "id": "q1b",
+          "text": "Compro los billetes y decido el resto al llegar",
+          "scores": {
+            "adventurer": 3,
+            "beach": 1
+          }
+        },
+        {
+          "id": "q1c",
+          "text": "Investigo cada museo, restaurante y monumento histórico",
+          "scores": {
+            "cultural": 3
+          }
+        },
+        {
+          "id": "q1d",
+          "text": "Elijo un gran resort y dejo que se encarguen de todo",
+          "scores": {
+            "beach": 3,
+            "city": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Tu alojamiento soñado:",
+      "options": [
+        {
+          "id": "q2a",
+          "text": "Una tienda de campaña en la naturaleza o un albergue",
+          "scores": {
+            "adventurer": 3
+          }
+        },
+        {
+          "id": "q2b",
+          "text": "Un hotel boutique cerca del centro histórico",
+          "scores": {
+            "cultural": 3,
+            "city": 1
+          }
+        },
+        {
+          "id": "q2c",
+          "text": "Una villa frente al mar o resort todo incluido",
+          "scores": {
+            "beach": 3
+          }
+        },
+        {
+          "id": "q2d",
+          "text": "Un apartamento con encanto en un barrio animado",
+          "scores": {
+            "city": 3,
+            "cultural": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "El mejor recuerdo de un viaje es:",
+      "options": [
+        {
+          "id": "q3a",
+          "text": "Una anécdota sobre algo inesperado e inolvidable",
+          "scores": {
+            "adventurer": 3
+          }
+        },
+        {
+          "id": "q3b",
+          "text": "Un libro o artesanía comprada en un mercado local",
+          "scores": {
+            "cultural": 3
+          }
+        },
+        {
+          "id": "q3c",
+          "text": "El descanso y una semana frente a la playa",
+          "scores": {
+            "beach": 3
+          }
+        },
+        {
+          "id": "q3d",
+          "text": "Una gran fotografía en un lugar emblemático",
+          "scores": {
+            "city": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "Tu lista de música de viaje suena a:",
+      "options": [
+        {
+          "id": "q4a",
+          "text": "Música enérgica para mantener el ritmo",
+          "scores": {
+            "adventurer": 3
+          }
+        },
+        {
+          "id": "q4b",
+          "text": "Artistas y sonidos tradicionales del propio destino",
+          "scores": {
+            "cultural": 3
+          }
+        },
+        {
+          "id": "q4c",
+          "text": "Temas acústicos, tranquilos y relajantes",
+          "scores": {
+            "beach": 3
+          }
+        },
+        {
+          "id": "q4d",
+          "text": "Podcasts sobre la historia y gastronomía de la ciudad",
+          "scores": {
+            "city": 2,
+            "cultural": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "La mejor comida durante un viaje:",
+      "options": [
+        {
+          "id": "q5a",
+          "text": "Cualquier cosa cocinada en una fogata de campamento",
+          "scores": {
+            "adventurer": 3
+          }
+        },
+        {
+          "id": "q5b",
+          "text": "Platos típicos en un restaurante familiar tradicional",
+          "scores": {
+            "cultural": 3,
+            "city": 1
+          }
+        },
+        {
+          "id": "q5c",
+          "text": "Pescado fresco junto a la orilla del mar",
+          "scores": {
+            "beach": 3
+          }
+        },
+        {
+          "id": "q5d",
+          "text": "Un restaurante reconocido con alta cocina de autor",
+          "scores": {
+            "city": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "Un día de viaje perfecto incluye:",
+      "options": [
+        {
+          "id": "q6a",
+          "text": "Senderismo, kayak o una actividad física al aire libre",
+          "scores": {
+            "adventurer": 3
+          }
+        },
+        {
+          "id": "q6b",
+          "text": "Museos, monumentos y rutas culturales guiadas",
+          "scores": {
+            "cultural": 3
+          }
+        },
+        {
+          "id": "q6c",
+          "text": "Playa, piscina, un buen libro y descanso total",
+          "scores": {
+            "beach": 3
+          }
+        },
+        {
+          "id": "q6d",
+          "text": "Recorrer barrios, mercados y terrazas panorámicas",
+          "scores": {
+            "city": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "Lo que más lamentarías no hacer antes de marcharte:",
+      "options": [
+        {
+          "id": "q7a",
+          "text": "Vivir una experiencia intensa o aventurera",
+          "scores": {
+            "adventurer": 3
+          }
+        },
+        {
+          "id": "q7b",
+          "text": "Visitar el monumento histórico más importante",
+          "scores": {
+            "cultural": 3
+          }
+        },
+        {
+          "id": "q7c",
+          "text": "Disfrutar de un atardecer memorable en la playa",
+          "scores": {
+            "beach": 3
+          }
+        },
+        {
+          "id": "q7d",
+          "text": "Descubrir el café o bar con más encanto del lugar",
+          "scores": {
+            "city": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "La peor experiencia de viaje sería:",
+      "options": [
+        {
+          "id": "q8a",
+          "text": "Estar atrapado en un hotel sin opciones para explorar",
+          "scores": {
+            "adventurer": 2,
+            "cultural": 1
+          }
+        },
+        {
+          "id": "q8b",
+          "text": "Perderte un monumento o museo fundamental",
+          "scores": {
+            "cultural": 3
+          }
+        },
+        {
+          "id": "q8c",
+          "text": "Lluvia constante arruinando tus días de playa",
+          "scores": {
+            "beach": 3
+          }
+        },
+        {
+          "id": "q8d",
+          "text": "Alojarse lejos de la vida y el encanto urbano",
+          "scores": {
+            "city": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "Tu estilo de viaje en una palabra:",
+      "options": [
+        {
+          "id": "q9a",
+          "text": "Espontáneo",
+          "scores": {
+            "adventurer": 3
+          }
+        },
+        {
+          "id": "q9b",
+          "text": "Intencional",
+          "scores": {
+            "cultural": 3
+          }
+        },
+        {
+          "id": "q9c",
+          "text": "Relajado",
+          "scores": {
+            "beach": 3
+          }
+        },
+        {
+          "id": "q9d",
+          "text": "Curioso",
+          "scores": {
+            "city": 2,
+            "cultural": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "Tu próximo destino soñado sería:",
+      "options": [
+        {
+          "id": "q10a",
+          "text": "Patagonia o el Himalaya",
+          "scores": {
+            "adventurer": 3
+          }
+        },
+        {
+          "id": "q10b",
+          "text": "Roma, Atenas o Kioto",
+          "scores": {
+            "cultural": 3
+          }
+        },
+        {
+          "id": "q10c",
+          "text": "Maldivas, Baleares o las Islas Griegas",
+          "scores": {
+            "beach": 3
+          }
+        },
+        {
+          "id": "q10d",
+          "text": "Tokio, Nueva York o Londres",
+          "scores": {
+            "city": 3
+          }
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "adventurer",
+      "title": "El Aventurero",
+      "description": "Viajas para desafiar tus límites y vivir experiencias inolvidables en contacto directo con la naturaleza.",
+      "image": "/images/results/adventurer.jpg",
+      "traits": [
+        "Espontáneo",
+        "Valiente",
+        "Activo",
+        "Auténtico"
+      ],
+      "shareText": "¡Mi perfil es El Aventurero! Haz el test en ToolNotch."
+    },
+    {
+      "id": "cultural",
+      "title": "El Explorador Cultural",
+      "description": "Viajas para comprender la historia, el arte y la identidad de cada lugar y de sus gentes.",
+      "image": "/images/results/cultural-explorer.jpg",
+      "traits": [
+        "Curioso",
+        "Intencional",
+        "Histórico",
+        "Respetuoso"
+      ],
+      "shareText": "¡Mi perfil es El Explorador Cultural! Haz el test en ToolNotch."
+    },
+    {
+      "id": "beach",
+      "title": "El Amante del Descanso & Playa",
+      "description": "Viajas para desconectar y recargar energías bajo el sol y frente al mar.",
+      "image": "/images/results/beach-lover.jpg",
+      "traits": [
+        "Relajado",
+        "Restaurador",
+        "Solar",
+        "Tranquilo"
+      ],
+      "shareText": "¡Mi perfil es El Amante de la Playa! Haz el test en ToolNotch."
+    },
+    {
+      "id": "city",
+      "title": "El Explorador Urbano",
+      "description": "Te apasiona la energía de las grandes ciudades, su gastronomía, arte urbano y vida social.",
+      "image": "/images/results/city-hopper.jpg",
+      "traits": [
+        "Urbano",
+        "Curioso",
+        "Gastronómico",
+        "Dinámico"
+      ],
+      "shareText": "¡Mi perfil es El Explorador Urbano! Haz el test en ToolNotch."
+    }
+  ],
+  "locale": "es"
+}

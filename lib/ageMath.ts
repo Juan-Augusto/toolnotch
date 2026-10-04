@@ -3,6 +3,9 @@ export interface AgeResult {
   months: number
   days: number
   totalDays: number
+  totalMonths: number
+  totalWeeks: number
+  totalHours: number
 }
 
 export interface BirthdayCountdown {
@@ -12,13 +15,16 @@ export interface BirthdayCountdown {
 }
 
 export function calculateAge(birthdate: Date, referenceDate: Date = new Date()): AgeResult {
-  let years = referenceDate.getFullYear() - birthdate.getFullYear()
-  let months = referenceDate.getMonth() - birthdate.getMonth()
-  let days = referenceDate.getDate() - birthdate.getDate()
+  const b = new Date(birthdate.getFullYear(), birthdate.getMonth(), birthdate.getDate())
+  const r = new Date(referenceDate.getFullYear(), referenceDate.getMonth(), referenceDate.getDate())
+
+  let years = r.getFullYear() - b.getFullYear()
+  let months = r.getMonth() - b.getMonth()
+  let days = r.getDate() - b.getDate()
 
   if (days < 0) {
     months--
-    const prevMonth = new Date(referenceDate.getFullYear(), referenceDate.getMonth(), 0)
+    const prevMonth = new Date(r.getFullYear(), r.getMonth(), 0)
     days += prevMonth.getDate()
   }
   if (months < 0) {
@@ -26,18 +32,27 @@ export function calculateAge(birthdate: Date, referenceDate: Date = new Date()):
     months += 12
   }
 
-  const totalDays = Math.floor((referenceDate.getTime() - birthdate.getTime()) / (1000 * 60 * 60 * 24))
-  return { years, months, days, totalDays }
+  const totalDays = Math.max(0, Math.floor((r.getTime() - b.getTime()) / (1000 * 60 * 60 * 24)))
+  const totalMonths = Math.max(0, years * 12 + months)
+  const totalWeeks = Math.floor(totalDays / 7)
+  const totalHours = totalDays * 24
+
+  return { years, months, days, totalDays, totalMonths, totalWeeks, totalHours }
 }
 
 export function nextBirthday(birthdate: Date, today: Date = new Date()): BirthdayCountdown {
-  const thisYear = new Date(today.getFullYear(), birthdate.getMonth(), birthdate.getDate())
+  const t = new Date(today.getFullYear(), today.getMonth(), today.getDate())
+  const thisYear = new Date(t.getFullYear(), birthdate.getMonth(), birthdate.getDate())
+
   let next: Date
-  if (thisYear >= today) {
+  if (thisYear.getTime() === t.getTime()) {
+    return { daysUntil: 0, nextBirthdayDate: thisYear, isToday: true }
+  } else if (thisYear > t) {
     next = thisYear
   } else {
-    next = new Date(today.getFullYear() + 1, birthdate.getMonth(), birthdate.getDate())
+    next = new Date(t.getFullYear() + 1, birthdate.getMonth(), birthdate.getDate())
   }
-  const daysUntil = Math.round((next.getTime() - today.getTime()) / (1000 * 60 * 60 * 24))
+
+  const daysUntil = Math.round((next.getTime() - t.getTime()) / (1000 * 60 * 60 * 24))
   return { daysUntil, nextBirthdayDate: next, isToday: daysUntil === 0 }
 }

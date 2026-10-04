@@ -9,7 +9,7 @@
 
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import StatsGrid from '@/components/text-counter/StatsGrid'
+import StatsGrid from '@/components/text-counter/AppStatsGrid'
 import { TextStats } from '@/lib/textTypes'
 
 // ── Mock next-intl ────────────────────────────────────────────────────────────

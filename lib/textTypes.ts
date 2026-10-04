@@ -22,6 +22,23 @@ export type FleschLabel =
   | 'Difficult'
   | 'Very Difficult'
 
+export type FleschKey =
+  | 'veryEasy'
+  | 'easy'
+  | 'standard'
+  | 'fairlyDifficult'
+  | 'difficult'
+  | 'veryDifficult'
+
+export function getFleschKey(score: number): FleschKey {
+  if (score >= 90) return 'veryEasy'
+  if (score >= 70) return 'easy'
+  if (score >= 60) return 'standard'
+  if (score >= 50) return 'fairlyDifficult'
+  if (score >= 30) return 'difficult'
+  return 'veryDifficult'
+}
+
 export function getFleschLabel(score: number): FleschLabel {
   if (score >= 90) return 'Very Easy'
   if (score >= 70) return 'Easy'

@@ -1,3 +1,6 @@
+import { AnyQuiz, isTriviaQuiz, isTriviaQuestion } from '@/lib/quizTypes'
+import type { InterviewQuestion } from '@/lib/interviewTypes'
+
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://toolnotch.com'
 
 export interface FaqItem {
@@ -41,10 +44,20 @@ export function webAppSchema(
   }
 }
 
-export function faqSchema(faqs: FaqItem[]) {
+export function faqSchema(faqs?: FaqItem[]) {
+  if (!Array.isArray(faqs) || faqs.length === 0) return null
+  const validFaqs = faqs.filter(
+    (f) =>
+      f &&
+      typeof f.question === 'string' &&
+      typeof f.answer === 'string' &&
+      f.question.trim().length > 0 &&
+      f.answer.trim().length > 0
+  )
+  if (validFaqs.length === 0) return null
   return {
     '@type': 'FAQPage',
-    mainEntity: faqs.map(({ question, answer }) => ({
+    mainEntity: validFaqs.map(({ question, answer }) => ({
       '@type': 'Question',
       name: question,
       acceptedAnswer: { '@type': 'Answer', text: answer },
@@ -107,9 +120,105 @@ export function authorSchema() {
   }
 }
 
-export function buildJsonLd(...schemas: object[]) {
+export function quizDetailSchema(
+  quiz: AnyQuiz,
+  url: string,
+  locale = 'en',
+  about?: string,
+) {
+  const isTrivia = isTriviaQuiz(quiz)
+  return {
+    '@type': 'Quiz' as const,
+    name: quiz.title,
+    url,
+    description: quiz.description,
+    inLanguage: LANG_MAP[locale] ?? locale,
+    educationalUse: 'Assessment',
+    ...(about ? { about: { '@type': 'Thing', name: about } } : {}),
+    hasPart: quiz.questions.map((q) => {
+      if (isTrivia && isTriviaQuestion(q)) {
+        const correctOpt = q.options.find((o) => o.id === q.correctAnswerId)
+        const otherOpts = q.options.filter((o) => o.id !== q.correctAnswerId)
+        return {
+          '@type': 'Question',
+          name: q.text,
+          ...(correctOpt
+            ? { acceptedAnswer: { '@type': 'Answer', text: correctOpt.text } }
+            : {}),
+          suggestedAnswer: otherOpts.map((o) => ({
+            '@type': 'Answer',
+            text: o.text,
+          })),
+        }
+      }
+      return {
+        '@type': 'Question',
+        name: q.text,
+        suggestedAnswer: q.options.map((o) => ({
+          '@type': 'Answer',
+          text: o.text,
+        })),
+      }
+    }),
+  }
+}
+
+export function interviewQuizSchema({
+  title,
+  description,
+  url,
+  locale = 'en',
+  about,
+  questions = [],
+}: {
+  title: string
+  description: string
+  url: string
+  locale?: string
+  about?: string
+  questions?: InterviewQuestion[]
+}) {
+  return {
+    '@type': 'Quiz' as const,
+    name: title,
+    url,
+    description,
+    inLanguage: LANG_MAP[locale] ?? locale,
+    educationalLevel: ['Beginner', 'Intermediate', 'Advanced'],
+    learningResourceType: 'Practice quiz',
+    ...(about ? { about: { '@type': 'Thing', name: about } } : {}),
+    hasPart: questions.map((q) => {
+      const acceptedText = q.options[q.correctIndex] ?? ''
+      const distractors = q.options.filter((_, idx) => idx !== q.correctIndex)
+      return {
+        '@type': 'Question',
+        eduQuestionType: 'Multiple choice',
+        name: q.question,
+        text: q.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: acceptedText,
+          ...(q.explanation
+            ? {
+                comment: {
+                  '@type': 'Comment',
+                  text: q.explanation,
+                },
+              }
+            : {}),
+        },
+        suggestedAnswer: distractors.map((optText) => ({
+          '@type': 'Answer',
+          text: optText,
+        })),
+      }
+    }),
+  }
+}
+
+export function buildJsonLd(...schemas: (object | null | undefined)[]) {
   return {
     '@context': 'https://schema.org',
-    '@graph': schemas,
+    '@graph': schemas.filter(Boolean),
   }
 }

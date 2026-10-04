@@ -32,10 +32,10 @@ export interface MdxBlogPost {
  * A localized slug therefore resolves only under its own locale: requesting the
  * Portuguese slug under `/en` finds neither file and the caller renders a 404.
  */
-function candidatePaths(slug: string, locale: string): string[] {
+function candidateRelativePaths(slug: string, locale: string): string[] {
   return [
-    path.join(CONTENT_DIR, locale, `${slug}.mdx`),
-    path.join(CONTENT_DIR, `${slug}.mdx`),
+    path.join(locale, `${slug}.mdx`),
+    `${slug}.mdx`,
   ]
 }
 
@@ -44,9 +44,12 @@ export async function getBlogPostSource(
   slug: string,
   locale = 'en',
 ): Promise<MdxBlogPost | null> {
-  for (const filePath of candidatePaths(slug, locale)) {
+  for (const relPath of candidateRelativePaths(slug, locale)) {
     try {
-      const raw = await fs.readFile(filePath, 'utf-8')
+      const raw = await fs.readFile(
+        path.join(process.cwd(), 'data', 'blog', 'content', relPath),
+        'utf-8'
+      )
       const { data, content } = parseFrontmatter(raw)
       const frontmatter = data as unknown as MdxFrontmatter
       frontmatter.readingTimeMinutes = estimateReadingTime(content)

@@ -46,7 +46,7 @@ jest.mock('framer-motion', () => {
 // ── Imports after mocks ───────────────────────────────────────────────────────
 
 import confetti from 'canvas-confetti'
-import ResultCard from '@/components/quiz/ResultCard'
+import ResultCard from '@/components/quiz/AppResultCard'
 import type { Quiz, QuizResult } from '@/lib/quizTypes'
 
 // ── Helpers ───────────────────────────────────────────────────────────────────

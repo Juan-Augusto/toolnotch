@@ -1,4 +1,4 @@
-import { getFleschLabel, getFleschColor, FleschLabel } from '@/lib/textTypes'
+import { getFleschLabel, getFleschKey, getFleschColor, FleschLabel, FleschKey } from '@/lib/textTypes'
 
 // ── getFleschLabel — boundary and typical values ──────────────────────────────
 
@@ -81,6 +81,41 @@ describe('getFleschLabel — full label coverage', () => {
     for (const label of allLabels) {
       expect(reached).toContain(label)
     }
+  })
+})
+
+// ── getFleschKey — i18n translation key correctness ───────────────────────────
+
+describe('getFleschKey — score boundaries', () => {
+  test('score >= 90 returns "veryEasy"', () => {
+    expect(getFleschKey(90)).toBe<FleschKey>('veryEasy')
+    expect(getFleschKey(100)).toBe<FleschKey>('veryEasy')
+  })
+
+  test('score 70–89.9 returns "easy"', () => {
+    expect(getFleschKey(70)).toBe<FleschKey>('easy')
+    expect(getFleschKey(89.9)).toBe<FleschKey>('easy')
+  })
+
+  test('score 60–69.9 returns "standard"', () => {
+    expect(getFleschKey(60)).toBe<FleschKey>('standard')
+    expect(getFleschKey(69.9)).toBe<FleschKey>('standard')
+  })
+
+  test('score 50–59.9 returns "fairlyDifficult"', () => {
+    expect(getFleschKey(50)).toBe<FleschKey>('fairlyDifficult')
+    expect(getFleschKey(59.9)).toBe<FleschKey>('fairlyDifficult')
+  })
+
+  test('score 30–49.9 returns "difficult"', () => {
+    expect(getFleschKey(30)).toBe<FleschKey>('difficult')
+    expect(getFleschKey(49.9)).toBe<FleschKey>('difficult')
+  })
+
+  test('score < 30 returns "veryDifficult"', () => {
+    expect(getFleschKey(29.9)).toBe<FleschKey>('veryDifficult')
+    expect(getFleschKey(0)).toBe<FleschKey>('veryDifficult')
+    expect(getFleschKey(-10)).toBe<FleschKey>('veryDifficult')
   })
 })
 

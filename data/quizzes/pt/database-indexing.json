@@ -1,0 +1,791 @@
+{
+  "id": "database-indexing",
+  "type": "trivia",
+  "category": "backend",
+  "locale": "pt",
+  "title": "Quiz de Indexação de Banco de Dados",
+  "description": "Teste seus conhecimentos sobre árvores B, estratégias de indexação e otimização de consultas.",
+  "image": "/images/quizzes/database-indexing.png",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "O que é um índice de banco de dados?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Uma cópia de backup de toda a tabela armazenada em um disco separado"
+        },
+        {
+          "id": "b",
+          "text": "Uma estrutura de dados separada que mapeia valores de colunas para as localizações dos registros, acelerando a recuperação de dados"
+        },
+        {
+          "id": "c",
+          "text": "Uma restrição (constraint) que garante a unicidade dos registros em uma tabela"
+        },
+        {
+          "id": "d",
+          "text": "Um log de transações que registra cada INSERT, UPDATE e DELETE"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Um índice é uma estrutura de dados auxiliar (geralmente uma árvore B) que armazena um subconjunto ordenado de valores de colunas junto a ponteiros para as linhas correspondentes na heap, permitindo que o mecanismo localize registros sem varrer a tabela inteira.",
+      "level": "beginner"
+    },
+    {
+      "id": "q2",
+      "text": "Qual das seguintes alternativas melhor descreve o trade-off entre leitura e escrita ao adicionar um índice?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Índices aceleram leituras e escritas igualmente"
+        },
+        {
+          "id": "b",
+          "text": "Índices tornam as leituras mais lentas porque o planejador precisa verificar o índice primeiro"
+        },
+        {
+          "id": "c",
+          "text": "Índices aceleram as leituras, mas adicionam sobrecarga às operações de INSERT, UPDATE e DELETE"
+        },
+        {
+          "id": "d",
+          "text": "Índices afetam apenas o desempenho do DELETE, não do SELECT"
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "Cada escrita precisa atualizar os dados da tabela e todos os índices existentes nela; dessa forma, os índices trocam vazão de escrita por consultas de leitura (SELECT) mais rápidas.",
+      "level": "beginner"
+    },
+    {
+      "id": "q3",
+      "text": "O que distingue um índice primário de um índice secundário?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Um índice primário é sempre um índice hash; índices secundários são sempre árvores B"
+        },
+        {
+          "id": "b",
+          "text": "Um índice primário é construído sobre a chave primária e normalmente determina a ordem física dos registros; índices secundários são criados sobre outras colunas"
+        },
+        {
+          "id": "c",
+          "text": "Um índice primário só pode ser definido na criação da tabela; índices secundários podem ser adicionados a qualquer momento"
+        },
+        {
+          "id": "d",
+          "text": "Não há diferença prática: os termos são intercambiáveis"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "O índice primário é associado à chave primária (e em estruturas clusterizadas define a ordenação física), enquanto índices secundários cobrem colunas adicionais para atender a outros padrões de consulta.",
+      "level": "beginner"
+    },
+    {
+      "id": "q4",
+      "text": "O que é uma varredura completa da tabela (full table scan) e quando o banco de dados a utiliza?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A leitura sequencial de todos os registros da tabela; utilizada quando não há índice adequado ou quando o planejador estima que seja mais barata que a busca por índice"
+        },
+        {
+          "id": "b",
+          "text": "A leitura apenas dos primeiros e últimos registros da tabela para estimar seu tamanho"
+        },
+        {
+          "id": "c",
+          "text": "Uma operação especial que reconstrói todos os índices da tabela"
+        },
+        {
+          "id": "d",
+          "text": "Uma varredura que lê apenas registros correspondentes a uma cláusula WHERE"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "A varredura sequencial (full table scan) lê todas as páginas de dados do disco; o planejador a escolhe quando não existe índice utilizável ou quando a seletividade é tão baixa que o custo de I/O aleatório via índice superaria o da leitura sequencial.",
+      "level": "beginner"
+    },
+    {
+      "id": "q5",
+      "text": "Dada a consulta `SELECT * FROM orders WHERE customer_id = 42`, qual condição permite ao banco de dados utilizar um índice em `customer_id`?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A tabela deve ter menos de 1.000 linhas"
+        },
+        {
+          "id": "b",
+          "text": "Deve existir um índice na coluna `customer_id`"
+        },
+        {
+          "id": "c",
+          "text": "`customer_id` deve ser a primeira coluna definida na tabela"
+        },
+        {
+          "id": "d",
+          "text": "A consulta precisa usar `LIMIT 1`"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "O planejador de consultas só pode usar um índice em `customer_id` se esse índice tiver sido criado; caso contrário, recorrerá a uma varredura sequencial.",
+      "level": "beginner"
+    },
+    {
+      "id": "q6",
+      "text": "O que um índice UNIQUE garante?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que a coluna indexada nunca contenha NULL"
+        },
+        {
+          "id": "b",
+          "text": "Que nenhum par de registros compartilhe o mesmo valor na(s) coluna(s) indexada(s)"
+        },
+        {
+          "id": "c",
+          "text": "Que o índice seja armazenado em uma tablespace separada dos dados da tabela"
+        },
+        {
+          "id": "d",
+          "text": "Que consultas SELECT nessa coluna sempre retornem resultados ordenados"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Um índice UNIQUE impõe uma restrição de unicidade: o banco rejeita qualquer INSERT ou UPDATE que resulte em valores duplicados na(s) coluna(s) indexada(s).",
+      "level": "beginner"
+    },
+    {
+      "id": "q7",
+      "text": "No PostgreSQL, o que o comando `EXPLAIN` exibe?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A versão no padrão SQL da sua consulta após a reescrita automática"
+        },
+        {
+          "id": "b",
+          "text": "O plano de execução que o planejador pretende usar, incluindo tipos de nós, custos estimados e contagens de linhas"
+        },
+        {
+          "id": "c",
+          "text": "Uma lista de todos os índices nas tabelas referenciadas na consulta"
+        },
+        {
+          "id": "d",
+          "text": "O tempo real de relógio que a consulta levou para ser executada"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "O comando `EXPLAIN` exibe a árvore do plano de execução escolhida pelo planejador com estimativas de custo; já o `EXPLAIN ANALYZE` também executa a consulta e relata os tempos reais observados.",
+      "level": "beginner"
+    },
+    {
+      "id": "q8",
+      "text": "Qual é a principal diferença entre um índice clusterizado (clustered) e um não clusterizado (non-clustered)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "O índice clusterizado armazena os dados reais das linhas na ordem do índice; o índice não clusterizado armazena apenas ponteiros para as linhas de dados"
+        },
+        {
+          "id": "b",
+          "text": "O índice clusterizado só pode ser criado em uma única coluna; índices não clusterizados suportam múltiplas colunas"
+        },
+        {
+          "id": "c",
+          "text": "Índices não clusterizados são mais rápidos para todos os tipos de consulta"
+        },
+        {
+          "id": "d",
+          "text": "Índices clusterizados exigem mais espaço em disco do que índices não clusterizados"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Um índice clusterizado ordena fisicamente os dados (ou armazena os dados no nível folha do próprio índice), tornando buscas por intervalo muito rápidas; já um índice não clusterizado é uma estrutura separada com valores de chave e ponteiros para as linhas.",
+      "level": "beginner"
+    },
+    {
+      "id": "q9",
+      "text": "Por que índices em colunas de baixa cardinalidade (como um booleano `is_active`) costumam ser ineficazes?",
+      "options": [
+        {
+          "id": "a",
+          "text": "O banco de dados não consegue construir índices em árvore B em colunas booleanas"
+        },
+        {
+          "id": "b",
+          "text": "Quando uma coluna possui pouquíssimos valores distintos, a busca por índice pode acessar grande parte da tabela, tornando a varredura sequencial mais barata"
+        },
+        {
+          "id": "c",
+          "text": "Índices de baixa cardinalidade são descartados automaticamente pelo mecanismo do banco de dados"
+        },
+        {
+          "id": "d",
+          "text": "Índices em booleanos exigem um mecanismo de armazenamento especial não disponível no PostgreSQL padrão"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Com poucos valores distintos, cada valor aparece em uma fração considerável das linhas; o custo de I/O aleatório ao percorrer o índice frequentemente supera o custo de uma varredura sequencial.",
+      "level": "beginner"
+    },
+    {
+      "id": "q10",
+      "text": "O que acontece com um índice quando você atualiza a coluna indexada de um registro?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nada: os índices são atualizados apenas durante o próximo comando VACUUM"
+        },
+        {
+          "id": "b",
+          "text": "A entrada antiga no índice é removida e uma nova entrada é inserida para refletir o valor atualizado"
+        },
+        {
+          "id": "c",
+          "text": "O índice inteiro é reconstruído do zero após cada UPDATE"
+        },
+        {
+          "id": "d",
+          "text": "A entrada do índice é marcada como inválida até a execução do próximo SELECT"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Atualizar uma coluna indexada faz com que o mecanismo remova a entrada da chave antiga e insira uma nova, motivo pelo qual cargas intensas de UPDATE em colunas indexadas geram amplificação de escrita.",
+      "level": "beginner"
+    },
+    {
+      "id": "q11",
+      "text": "Ao percorrer um índice em árvore B para localizar o valor de uma chave, qual é a complexidade de tempo da busca?",
+      "options": [
+        {
+          "id": "a",
+          "text": "O(n): linear em relação ao número de registros"
+        },
+        {
+          "id": "b",
+          "text": "O(log n): logarítmica em relação ao número de registros"
+        },
+        {
+          "id": "c",
+          "text": "O(1): tempo constante independentemente do tamanho da tabela"
+        },
+        {
+          "id": "d",
+          "text": "O(n²): quadrática em relação ao número de registros"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "A árvore B é uma árvore balanceada; cada nível reduz pela metade o espaço de busca, portanto localizar uma chave requer no máximo O(log n) leituras de nós.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q12",
+      "text": "Qual afirmação compara corretamente um índice hash e um índice em árvore B?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Índices hash suportam consultas por intervalo (>, <, BETWEEN); árvores B não"
+        },
+        {
+          "id": "b",
+          "text": "Índices hash oferecem buscas por igualdade em O(1), mas não suportam consultas por intervalo nem ORDER BY; árvores B suportam todos eles"
+        },
+        {
+          "id": "c",
+          "text": "Índices hash armazenam dados de forma ordenada, tornando varreduras por faixa muito rápidas"
+        },
+        {
+          "id": "d",
+          "text": "Índices hash e árvores B possuem características idênticas de desempenho; a escolha é meramente estética"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Índices hash agrupam valores por hash, oferecendo buscas por igualdade em O(1), mas o cálculo de hash elimina a ordenação, impossibilitando consultas por intervalo ou cláusulas de ordenação.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q13",
+      "text": "Dado um índice composto em `(last_name, first_name)`, qual cláusula WHERE pode utilizar o índice de forma eficiente?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`WHERE first_name = 'Alice'` (ignorando `last_name`)"
+        },
+        {
+          "id": "b",
+          "text": "`WHERE last_name = 'Smith'`"
+        },
+        {
+          "id": "c",
+          "text": "`WHERE first_name = 'Alice' AND last_name = 'Smith'`: apenas quando ambas as colunas aparecem"
+        },
+        {
+          "id": "d",
+          "text": "Nenhuma das colunas pode usar o índice a menos que a consulta inclua todas as colunas indexadas"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Um índice composto em árvore B é ordenado primeiramente pela coluna mais à esquerda; consultas que filtram por `last_name` (a coluna inicial) podem navegar no índice, mas filtros apenas em `first_name` não conseguem.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q14",
+      "text": "O que é um índice de cobertura (covering index)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Um índice que abrange todas as colunas da tabela"
+        },
+        {
+          "id": "b",
+          "text": "Um índice que contém todas as colunas necessárias para responder a uma consulta, permitindo que o mecanismo retorne resultados apenas pelo índice, sem acessar a heap da tabela"
+        },
+        {
+          "id": "c",
+          "text": "Um índice que se expande automaticamente para cobrir novas colunas conforme são adicionadas à tabela"
+        },
+        {
+          "id": "d",
+          "text": "Um índice que cobre valores NULL que índices comuns normalmente ignorariam"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Quando um índice inclui todas as colunas referenciadas por uma consulta (na própria chave ou via INCLUDE), o banco de dados responde à consulta exclusivamente pelas páginas do índice, eliminando acessos à heap.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q15",
+      "text": "O que é seletividade de índice e por que ela é importante para o planejador de consultas?",
+      "options": [
+        {
+          "id": "a",
+          "text": "O número de páginas que o índice ocupa no disco; mais páginas significam varreduras mais velozes"
+        },
+        {
+          "id": "b",
+          "text": "A razão entre valores distintos e o total de registros; alta seletividade significa poucas linhas por valor de chave, tornando o índice mais eficiente para buscas"
+        },
+        {
+          "id": "c",
+          "text": "Indica se o índice foi criado ou não na coluna de chave primária"
+        },
+        {
+          "id": "d",
+          "text": "A porcentagem de consultas na carga de trabalho que referenciam a coluna indexada"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Alta seletividade (próxima a 1,0) significa que cada valor de chave identifica pouquíssimos registros, refinando o resultado de forma eficiente; baixa seletividade gera muitos registros por chave e o planejador tende a preferir a varredura sequencial.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q16",
+      "text": "O que é um índice parcial no PostgreSQL?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Um índice construído apenas sobre os primeiros N bytes de uma coluna de texto"
+        },
+        {
+          "id": "b",
+          "text": "Um índice que inclui apenas os registros que atendem a um predicado WHERE, reduzindo seu tamanho e custo de manutenção"
+        },
+        {
+          "id": "c",
+          "text": "Um índice que cobre apenas a metade de uma chave composta"
+        },
+        {
+          "id": "d",
+          "text": "Um índice criado automaticamente pelo planejador para a execução de uma única consulta"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Um índice parcial é criado com uma cláusula WHERE (por exemplo, `CREATE INDEX ... WHERE status = 'active'`), indexando apenas linhas que atendem à condição e gerando uma estrutura menor e mais rápida de manter.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q17",
+      "text": "O que é um índice baseado em função (índice de expressão)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Um índice armazenado como uma procedure que se reconstrói todas as noites"
+        },
+        {
+          "id": "b",
+          "text": "Um índice construído sobre o resultado de uma expressão ou função aplicada a uma ou mais colunas, permitindo buscas indexadas em predicados calculados"
+        },
+        {
+          "id": "c",
+          "text": "Um índice que dispara uma função definida pelo usuário sempre que uma linha é inserida"
+        },
+        {
+          "id": "d",
+          "text": "Um índice cujos valores de chave são criptografados com uma função hash para segurança"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Um índice baseado em função (por exemplo, `CREATE INDEX ON users (lower(email))`) armazena o resultado pré-computado da expressão, permitindo que consultas como `WHERE lower(email) = '...'` utilizem o índice em vez de escanear toda a tabela.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q18",
+      "text": "O que é inchaço de índice (index bloat) e como o comando VACUUM ajuda no PostgreSQL?",
+      "options": [
+        {
+          "id": "a",
+          "text": "O inchaço ocorre quando o índice possui colunas em excesso; o VACUUM remove as colunas adicionais automaticamente"
+        },
+        {
+          "id": "b",
+          "text": "O inchaço é o acúmulo de referências a tuplas mortas nas páginas do índice resultantes de UPDATEs e DELETEs; o VACUUM recupera essas páginas e as marca como reutilizáveis"
+        },
+        {
+          "id": "c",
+          "text": "O inchaço significa que o arquivo de índice ultrapassou o tamanho da tabela; o VACUUM compacta ambos para o mesmo tamanho"
+        },
+        {
+          "id": "d",
+          "text": "O inchaço decorre de leituras concorrentes excessivas; o VACUUM reinicia os contadores de leitura"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "O modelo MVCC do PostgreSQL deixa versões de tuplas mortas na heap e entradas antigas de índice apontando para elas; o VACUUM remove essas entradas mortas, liberando espaço e mantendo o índice enxuto.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q19",
+      "text": "Por que o planejador de consultas do PostgreSQL pode ignorar um índice mesmo quando ele existe na coluna filtrada?",
+      "options": [
+        {
+          "id": "a",
+          "text": "O PostgreSQL nunca ignora um índice depois de criado: ele é sempre utilizado"
+        },
+        {
+          "id": "b",
+          "text": "O modelo de custo do planejador estima que uma varredura sequencial é mais barata, frequentemente porque o filtro corresponde a uma grande parcela dos registros ou as estatísticas estão desatualizadas"
+        },
+        {
+          "id": "c",
+          "text": "O índice só pode ser utilizado se a consulta contiver uma cláusula ORDER BY na coluna indexada"
+        },
+        {
+          "id": "d",
+          "text": "Índices são utilizados apenas para operações de JOIN, nunca para filtragem com cláusula WHERE"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "O planejador compara os custos estimados: se as estatísticas indicarem que a maioria das linhas corresponde ao filtro, o custo de I/O aleatório do índice será superior ao de uma varredura sequencial, fazendo com que o índice seja ignorado.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q20",
+      "text": "Dado um índice em árvore B em uma coluna `name`, qual padrão de busca com LIKE pode utilizar o índice?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`WHERE name LIKE '%smith'` (curinga no início / sufixo)"
+        },
+        {
+          "id": "b",
+          "text": "`WHERE name LIKE '%smith%'` (curingas em ambos os lados)"
+        },
+        {
+          "id": "c",
+          "text": "`WHERE name LIKE 'smith%'` (curinga no final / prefixo)"
+        },
+        {
+          "id": "d",
+          "text": "Nenhum: o operador LIKE nunca utiliza índices em árvore B"
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "O índice em árvore B é ordenado lexicograficamente; buscas por prefixo (`'smith%'`) mapeiam diretamente para uma varredura por intervalo no índice, enquanto curingas no início forçam uma varredura completa porque o prefixo comum é desconhecido.",
+      "level": "intermediate"
+    },
+    {
+      "id": "q21",
+      "text": "Qual tipo de índice do PostgreSQL é projetado para tipos de dados geométricos e espaciais, como pontos, caixas (boxes) e polígonos?",
+      "options": [
+        {
+          "id": "a",
+          "text": "GIN (Generalized Inverted Index)"
+        },
+        {
+          "id": "b",
+          "text": "BRIN (Block Range INdex)"
+        },
+        {
+          "id": "c",
+          "text": "GiST (Generalized Search Tree)"
+        },
+        {
+          "id": "d",
+          "text": "SPGIST (Space-Partitioned GiST)"
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "GiST é uma estrutura de indexação extensível que suporta tipos de dados não escalares, incluindo formas geométricas, busca textual com `tsvector` e tipos de intervalo, permitindo consultas de contenção e sobreposição.",
+      "level": "advanced"
+    },
+    {
+      "id": "q22",
+      "text": "Um índice GIN (Generalized Inverted Index) é mais adequado para qual tipo de coluna?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Uma chave primária inteira de valor único"
+        },
+        {
+          "id": "b",
+          "text": "Uma coluna contendo valores compostos, como arrays, JSONB ou documentos de busca textual `tsvector`"
+        },
+        {
+          "id": "c",
+          "text": "Uma coluna de timestamp monotonicamente crescente em uma tabela append-only"
+        },
+        {
+          "id": "d",
+          "text": "Uma coluna booleana de baixa cardinalidade"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "O índice GIN constrói um índice invertido sobre elementos individuais de valores compostos (elementos de array, chaves JSON, lexemas), sendo ideal para operadores de contenção como `@>` ou busca textual com `@@`.",
+      "level": "advanced"
+    },
+    {
+      "id": "q23",
+      "text": "O que é um índice BRIN e para qual característica de tabela ele é mais indicado?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Um índice de intervalo de blocos que armazena valores mínimos/máximos por intervalo de páginas; ideal para tabelas grandes com colunas correlacionadas à ordem física, como `created_at` em tabelas append-only"
+        },
+        {
+          "id": "b",
+          "text": "Um índice de intervalo balanceado que substitui árvores B em todas as colunas numéricas"
+        },
+        {
+          "id": "c",
+          "text": "Um índice de intervalo por bitmap usado para acelerar varreduras bitmap na heap em dados aleatórios"
+        },
+        {
+          "id": "d",
+          "text": "Um índice de intervalo binário que funciona apenas com chaves primárias UUID"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "O BRIN registra apenas os valores mínimo e máximo de cada conjunto de páginas, tornando-se extremamente compacto e de baixo custo de manutenção; ele funciona perfeitamente quando os valores da coluna estão correlacionados à ordenação física no disco.",
+      "level": "advanced"
+    },
+    {
+      "id": "q24",
+      "text": "O que é 'amplificação de escrita' (write amplification) no contexto de índices LSM-tree (Log-Structured Merge-tree)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cada escrita lógica é gravada fisicamente múltiplas vezes através dos diferentes níveis da LSM-tree durante os processos de compactação"
+        },
+        {
+          "id": "b",
+          "text": "O banco de dados grava uma cópia redundante de cada linha no log de transações"
+        },
+        {
+          "id": "c",
+          "text": "A amplificação de escrita refere-se à sobrecarga de atualizar nós pais de uma árvore B após a divisão de uma folha (leaf split)"
+        },
+        {
+          "id": "d",
+          "text": "É a latência adicional gerada pela persistência do log de escrita prévia (write-ahead log) no disco"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Nas árvores LSM, os dados fluem por múltiplos níveis (L0 para L1 até Ln) através da compactação; uma mesma chave lógica pode ser reescrita várias vezes, sendo a amplificação de escrita a proporção entre bytes físicos gravados e bytes lógicos solicitados.",
+      "level": "advanced"
+    },
+    {
+      "id": "q25",
+      "text": "Qual é a finalidade do comando `CREATE INDEX CONCURRENTLY` no PostgreSQL?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ele constrói o índice em múltiplos núcleos de CPU simultaneamente para acelerar a criação"
+        },
+        {
+          "id": "b",
+          "text": "Ele constrói o índice sem adquirir um bloqueio exclusivo na tabela, permitindo leituras e escritas concorrentes durante a criação ao custo de um tempo de construção maior"
+        },
+        {
+          "id": "c",
+          "text": "Ele cria o índice em uma réplica antes de promovê-la a primária, evitando tempo de inatividade"
+        },
+        {
+          "id": "d",
+          "text": "Ele posterga a aplicação do índice até após o COMMIT, melhorando a taxa de transações"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "O `CREATE INDEX CONCURRENTLY` realiza múltiplas leituras na tabela adquirindo apenas bloqueios curtos, mantendo a tabela totalmente acessível durante a criação, algo fundamental para tabelas em produção que não toleram indisponibilidade.",
+      "level": "advanced"
+    },
+    {
+      "id": "q26",
+      "text": "O que é um 'índice invisível' (suportado no MySQL 8+ e Oracle) e qual é seu principal caso de uso?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Um índice criptografado em repouso para que seu conteúdo não seja lido por usuários não autorizados"
+        },
+        {
+          "id": "b",
+          "text": "Um índice que continua sendo atualizado pelo mecanismo, mas fica oculto para o planejador de consultas, usado para testar com segurança o impacto de remover um índice antes do DROP definitivo"
+        },
+        {
+          "id": "c",
+          "text": "Um índice armazenado exclusivamente na memória, nunca gravado em disco"
+        },
+        {
+          "id": "d",
+          "text": "Um índice em tabelas do catálogo do sistema que não é exibido nas views do information_schema"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Índices invisíveis continuam sendo atualizados em operações de escrita, mas o otimizador os ignora por padrão; isso permite que DBAs simulem a remoção do índice e verifiquem os planos de consulta antes de executar um DROP INDEX definitivo.",
+      "level": "advanced"
+    },
+    {
+      "id": "q27",
+      "text": "De que maneira o modelo MVCC (Multi-Version Concurrency Control) do PostgreSQL contribui para o inchaço de índices (index bloat) ao longo do tempo?",
+      "options": [
+        {
+          "id": "a",
+          "text": "O MVCC compacta versões antigas de linhas, fragmentando os índices ao longo do tempo"
+        },
+        {
+          "id": "b",
+          "text": "Cada UPDATE cria uma nova versão da tupla na heap mantendo a versão anterior; as entradas antigas e novas coexistem no índice até que o VACUUM colete as tuplas mortas"
+        },
+        {
+          "id": "c",
+          "text": "O MVCC força o índice a armazenar o identificador de transação ao lado de cada chave, dobrando seu tamanho"
+        },
+        {
+          "id": "d",
+          "text": "O MVCC não tem efeito em índices: apenas páginas da heap acumulam tuplas mortas"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Como o PostgreSQL nunca atualiza um registro in-place (ele grava uma nova versão), o índice precisa apontar para a nova versão enquanto a entrada antiga permanece até que o VACUUM colete a tupla morta que já não é mais visível.",
+      "level": "advanced"
+    },
+    {
+      "id": "q28",
+      "text": "Quando o planejador do PostgreSQL opta por um Bitmap Index Scan em vez de um Index Scan convencional?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Quando a consulta retorna exatamente um único registro"
+        },
+        {
+          "id": "b",
+          "text": "Quando múltiplos índices precisam ser combinados (AND/OR) ou quando a contagem estimada de linhas é moderada, permitindo ler as páginas da heap em ordem física em vez de fazer buscas aleatórias repetidas"
+        },
+        {
+          "id": "c",
+          "text": "Quando a tabela não possui páginas de heap: os dados ficam no próprio índice"
+        },
+        {
+          "id": "d",
+          "text": "O Bitmap Index Scan é sempre mais rápido e preferido em relação ao Index Scan comum"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "O Bitmap Index Scan reúne todos os TIDs correspondentes em um bitmap em memória, ordena-os pela localização física e lê as páginas da heap de forma sequencial, sendo ideal para resultados moderados e consultas que combinam múltiplos índices que o Index Scan simples não consegue unir.",
+      "level": "advanced"
+    },
+    {
+      "id": "q29",
+      "text": "Em uma tabela particionada, qual é a consideração fundamental ao criar índices para assegurar que todas as partições sejam beneficiadas?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Índices devem ser criados apenas na coluna da chave de partição; outras colunas não podem ser indexadas"
+        },
+        {
+          "id": "b",
+          "text": "Criar um índice na tabela particionada pai no PostgreSQL 11+ propaga o índice automaticamente para todas as partições existentes e futuras"
+        },
+        {
+          "id": "c",
+          "text": "Cada partição exige um índice criado manualmente com nome exclusivo; não existe propagação automática"
+        },
+        {
+          "id": "d",
+          "text": "Tabelas particionadas não suportam índices em árvore B; apenas índices BRIN estão disponíveis"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Desde o PostgreSQL 11, executar `CREATE INDEX` na tabela particionada cria um índice local correspondente em cada partição e gera índices automaticamente em novas partições conforme forem anexadas.",
+      "level": "advanced"
+    },
+    {
+      "id": "q30",
+      "text": "Qual view de sistema do PostgreSQL você consultaria para descobrir o número de varreduras por índice, varreduras sequenciais e tuplas recuperadas para índices criados por usuários?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`pg_indexes`"
+        },
+        {
+          "id": "b",
+          "text": "`information_schema.table_constraints`"
+        },
+        {
+          "id": "c",
+          "text": "`pg_stat_user_indexes`"
+        },
+        {
+          "id": "d",
+          "text": "`pg_index`"
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "A view `pg_stat_user_indexes` expõe estatísticas acumuladas por índice, incluindo `idx_scan` (número de varreduras iniciadas), `idx_tup_read` e `idx_tup_fetch`, sendo a principal view para identificar índices sem uso ou com uso intenso.",
+      "level": "advanced"
+    }
+  ],
+  "tiers": [
+    {
+      "id": "legend",
+      "minPercent": 80,
+      "label": "Lenda",
+      "description": "Resultado excepcional, você possui um conhecimento profundo e de nível especialista sobre indexação de bancos de dados. Você compreende a estrutura interna de árvores B, projeta índices de cobertura e parciais, interpreta planos de execução e trabalha com confiança em tipos de índices específicos do PostgreSQL como GiST, GIN e BRIN. Você entende a sutil interação entre MVCC, VACUUM e inchaço de índices (bloat), além de saber quando usar ferramentas avançadas como CREATE INDEX CONCURRENTLY ou pg_stat_user_indexes para monitorar ambientes de produção. Suas habilidades de indexação se traduzem diretamente em ganhos mensuráveis de performance em bancos de dados de larga escala.",
+      "shareText": "Alcancei o nível Lenda no Quiz de Indexação de Banco de Dados do ToolNotch! 🗂️"
+    },
+    {
+      "id": "expert",
+      "minPercent": 60,
+      "label": "Especialista",
+      "description": "Ótimo desempenho, você possui uma base sólida e prática sobre indexação de bancos de dados que vai muito além do básico. Você domina a ordem das colunas em índices compostos, índices de cobertura, seletividade, índices parciais e as diferenças entre índices hash e árvores B. Para alcançar o nível Lenda, vale aprofundar seu domínio sobre tipos avançados de índices no PostgreSQL (GiST, GIN, BRIN), funcionamento interno de LSM-trees e práticas operacionais como inchaço de índices associado a MVCC e monitoramento via pg_stat_user_indexes.",
+      "shareText": "Alcancei o nível Especialista no Quiz de Indexação de Banco de Dados do ToolNotch! 🗂️"
+    },
+    {
+      "id": "fan",
+      "minPercent": 40,
+      "label": "Praticante",
+      "description": "Bom trabalho, você compreende os fundamentos da indexação de banco de dados, incluindo o que é um índice, o trade-off entre leitura e escrita e a interação de cláusulas WHERE com índices. Para avançar, foque nas regras da coluna inicial em índices compostos, índices de cobertura, seletividade e nas razões pelas quais o planejador por vezes ignora índices disponíveis. Analisar saídas de EXPLAIN no PostgreSQL e praticar com índices parciais e baseados em funções fortalecerá rapidamente suas habilidades práticas.",
+      "shareText": "Alcancei o nível Praticante no Quiz de Indexação de Banco de Dados do ToolNotch! 🗂️"
+    },
+    {
+      "id": "rookie",
+      "minPercent": 0,
+      "label": "Iniciante",
+      "description": "Todo mundo começa de algum lugar! A indexação de banco de dados é um tema rico que recompensa a prática constante. Comece pelo básico: o conceito de índice, como árvores B armazenam dados ordenados e o equilíbrio entre velocidade de leitura e custo de escrita. Em seguida, explore a leitura de saídas EXPLAIN no PostgreSQL, quando aplicar índices compostos e como a seletividade influencia a escolha do planejador. Refaça este quiz após estudar e você verá como seu progresso será rápido.",
+      "shareText": "Acabei de fazer o Quiz de Indexação de Banco de Dados no ToolNotch: hora de estudar! 🗂️"
+    }
+  ]
+}

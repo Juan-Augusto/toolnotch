@@ -37,18 +37,31 @@ const TRUST_ROUTES = [
   '/privacy',
   '/terms',
   // '/contact', '/partners' — robots:noindex (utility / short transparency
-  // pages, WS-6 audit). Footer-linked and crawlable, just not indexed.
+  // pages, WS-6 audit). AppFooter-linked and crawlable, just not indexed.
   '/disclosure',
 ]
 
 const ALL_ROUTES = [
-  // Interview prep — only routes that render without a feature flag.
-  // database-design / database-indexing / messaging-sqs-kafka / rabbitmq-concepts
-  // / nodejs-fundamentals / system-architecture / vue redirect (307) to /interview
-  // until `interview-<name>` flags ship — kept out of the sitemap (WS-6 audit §7).
+  '/tools',
   '/interview',
   '/interview/typescript',
+  '/interview/vue',
+  '/interview/nodejs-fundamentals',
+  '/interview/database-design',
+  '/interview/database-indexing',
+  '/interview/messaging-sqs-kafka',
+  '/interview/rabbitmq-concepts',
+  '/interview/system-architecture',
   // Legal / info (moved to TRUST_ROUTES above — rendered at priority 0.6)
+  // Image tools
+  '/tools/image/crop-image',
+  '/tools/image/image-resizer',
+  '/tools/image/censor-image',
+  '/tools/image/favicon-generator',
+  '/tools/image/convert-webp-to-png',
+  '/tools/image/convert-heic-to-jpg',
+  '/tools/image/image-converter',
+  '/tools/image/convert-png-to-webp',
   // PDF tools
   '/tools/pdf',
   '/tools/pdf/merge-pdf',
@@ -64,13 +77,9 @@ const ALL_ROUTES = [
   '/tools/text',
   '/tools/text/word-counter',
   '/tools/text/character-counter',
-  '/tools/text/sentence-counter',
-  '/tools/text/readability-checker',
   '/tools/text/reading-time-calculator',
-  '/tools/text/word-frequency-counter',
+  '/tools/text/readability-checker',
   '/tools/text/keyword-density-checker',
-  // '/tools/text/paraphraser', '/tools/text/summarizer',
-  // '/tools/text/plagiarism-checker' — coming-soon stubs, noindex (WS-5 audit).
   // Finance — calculators
   '/tools/finance',
   '/tools/finance/loan-calculator',
@@ -120,11 +129,13 @@ const ALL_ROUTES = [
   // Quizzes hub — individual /quiz/<id> routes are generated from
   // lib/quizRegistry.ts (see QUIZ_ROUTES below), not hand-listed here.
   '/quizzes',
-  // Health tools (no /tools/health hub page — 404, WS-6 audit §7)
+  // Health tools
+  '/tools/health',
   '/tools/health/bmi-calculator',
   '/tools/health/tdee-calculator',
   '/tools/health/calorie-deficit-calculator',
-  // Education tools (no /tools/education hub page — 404, WS-6 audit §7)
+  // Education tools
+  '/tools/education',
   '/tools/education/gpa-calculator',
   '/tools/education/cumulative-gpa-calculator',
   '/tools/education/grade-calculator',

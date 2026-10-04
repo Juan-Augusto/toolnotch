@@ -18,7 +18,7 @@ const securityHeaders = [
       `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''} https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.googletagservices.com https://partner.googleadservices.com https://m946j758awk6gaqx.server.usercentrics-sst.io`,
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' blob: data: https://www.google-analytics.com https:",
-      "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://cdn.jsdelivr.net https://latest.currency-api.pages.dev https://m946j758awk6gaqx.server.usercentrics-sst.io",
+      "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://cdn.jsdelivr.net https://latest.currency-api.pages.dev https://m946j758awk6gaqx.server.usercentrics-sst.io https://brasilapi.com.br",
       "worker-src 'self' blob:",
       "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://pagead2.googlesyndication.com https://m946j758awk6gaqx.server.usercentrics-sst.io",
       "font-src 'self' https://fonts.gstatic.com",
@@ -32,6 +32,30 @@ const nextConfig: NextConfig = {
       {
         source: '/(.*)',
         headers: securityHeaders,
+      },
+    ]
+  },
+  async redirects() {
+    return [
+      {
+        source: '/tools/text/sentence-counter',
+        destination: '/tools/text/word-counter',
+        permanent: true,
+      },
+      {
+        source: '/:locale(pt|es)/tools/text/sentence-counter',
+        destination: '/:locale/tools/text/word-counter',
+        permanent: true,
+      },
+      {
+        source: '/tools/text/word-frequency-counter',
+        destination: '/tools/text/keyword-density-checker',
+        permanent: true,
+      },
+      {
+        source: '/:locale(pt|es)/tools/text/word-frequency-counter',
+        destination: '/:locale/tools/text/keyword-density-checker',
+        permanent: true,
       },
     ]
   },

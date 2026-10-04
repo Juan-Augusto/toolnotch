@@ -6,6 +6,7 @@ export interface ImageJob {
   quality: number // 1–100
   maxWidth?: number
   maxHeight?: number
+  adaptiveQuality?: boolean
 }
 
 export interface ConversionResult {
@@ -13,4 +14,5 @@ export interface ConversionResult {
   originalSize: number
   compressedSize: number
   savings: number // percentage saved (can be negative if output is larger)
+  adaptedQuality?: number
 }

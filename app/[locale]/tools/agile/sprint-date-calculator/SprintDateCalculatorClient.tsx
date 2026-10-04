@@ -1,166 +1,275 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import ToolWrapper from '@/components/ToolWrapper'
-import type { FaqItem } from '@/components/FaqSection'
-
-interface RichContent {
-  whatIs: string
-  howToUse: string[]
-  whyItMatters: string
-  proTip: string
-}
+import { useState } from "react";
+import {
+  CalendarDays,
+  CalendarCheck,
+  RotateCcw,
+  Check,
+  Copy,
+  Clock,
+  Sparkles,
+} from "lucide-react";
+import {
+  AppButton,
+  AppInput,
+  AppCard,
+  AppBadge,
+  AppSegmentedControl,
+} from "@/components/ui";
 
 interface Props {
-  title: string
-  description: string
-  faqs: FaqItem[]
-  labels: Record<string, string>
-  richContent?: RichContent
+  labels: Record<string, string>;
+  locale?: string;
 }
 
 function addDays(date: Date, days: number): Date {
-  const d = new Date(date)
-  d.setDate(d.getDate() + days)
-  return d
+  const d = new Date(date);
+  d.setDate(d.getDate() + days);
+  return d;
 }
 
-function formatDate(date: Date): string {
-  return date.toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' })
+function formatDate(date: Date, locale = "pt"): string {
+  const intlLocale =
+    locale === "pt" ? "pt-BR" : locale === "es" ? "es-ES" : "en-US";
+  return new Intl.DateTimeFormat(intlLocale, {
+    weekday: "short",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  }).format(date);
 }
 
 function getWeekdays(start: Date, end: Date): Date[] {
-  const days: Date[] = []
-  const cur = new Date(start)
+  const days: Date[] = [];
+  const cur = new Date(start);
   while (cur <= end) {
-    const dow = cur.getDay()
-    if (dow !== 0 && dow !== 6) days.push(new Date(cur))
-    cur.setDate(cur.getDate() + 1)
+    const dow = cur.getDay();
+    if (dow !== 0 && dow !== 6) {
+      days.push(new Date(cur));
+    }
+    cur.setDate(cur.getDate() + 1);
   }
-  return days
+  return days;
 }
 
-export default function SprintDateCalculatorClient({ title, description, faqs, labels, richContent }: Props) {
-  const today = new Date().toISOString().split('T')[0]
-  const [startDate, setStartDate] = useState(today)
-  const [sprintWeeks, setSprintWeeks] = useState(2)
+export default function SprintDateCalculatorClient({
+  labels,
+  locale = "pt",
+}: Props) {
+  const today = new Date().toISOString().split("T")[0];
+  const [startDate, setStartDate] = useState(today);
+  const [sprintWeeks, setSprintWeeks] = useState("2");
   const [result, setResult] = useState<null | {
-    planning: Date
-    review: Date
-    retro: Date
-    end: Date
-    standups: Date[]
-    copyText: string
-  }>(null)
-  const [copied, setCopied] = useState(false)
+    planning: Date;
+    review: Date;
+    retro: Date;
+    end: Date;
+    standups: Date[];
+    copyText: string;
+  }>(null);
+  const [copied, setCopied] = useState(false);
 
   function calculate() {
-    const start = new Date(startDate + 'T00:00:00')
-    const days = sprintWeeks * 7
-    const end = addDays(start, days - 1)
-    const planning = start
-    const review = end
-    const retro = end
-    const standups = getWeekdays(addDays(start, 1), addDays(end, -1))
+    if (!startDate) return;
+    const start = new Date(startDate + "T00:00:00");
+    const weeksNum = parseInt(sprintWeeks, 10) || 2;
+    const days = weeksNum * 7;
+    const end = addDays(start, days - 1);
+    const planning = start;
+    const review = end;
+    const retro = end;
+    const standups = getWeekdays(addDays(start, 1), addDays(end, -1));
 
-    const standupLines = standups.map(d => `  - ${formatDate(d)}`).join('\n')
+    const standupLines = standups
+      .map((d) => `  • ${formatDate(d, locale)}`)
+      .join("\n");
+
     const copyText = [
-      `${labels.sprintNumber} Dates (${sprintWeeks}-week sprint)`,
-      `${labels.planningLabel}: ${formatDate(planning)}`,
-      `${labels.sprintEndLabel}: ${formatDate(end)}`,
-      `${labels.reviewLabel}: ${formatDate(review)}`,
-      `${labels.retroLabel}: ${formatDate(retro)}`,
-      `${labels.dailyStandupsLabel}:`,
+      `${labels.sprintNumber} (${weeksNum} ${locale === "en" ? "weeks" : "semanas"})`,
+      `• ${labels.planningLabel}: ${formatDate(planning, locale)}`,
+      `• ${labels.sprintEndLabel}: ${formatDate(end, locale)}`,
+      `• ${labels.reviewLabel}: ${formatDate(review, locale)}`,
+      `• ${labels.retroLabel}: ${formatDate(retro, locale)}`,
+      `• ${labels.dailyStandupsLabel} (${standups.length} ${locale === "en" ? "days" : "dias"}):`,
       standupLines,
-    ].join('\n')
+    ].join("\n");
 
-    setResult({ planning, review, retro, end, standups, copyText })
-    setCopied(false)
+    setResult({ planning, review, retro, end, standups, copyText });
+    setCopied(false);
   }
 
-  async function copy() {
-    if (!result) return
-    await navigator.clipboard.writeText(result.copyText)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+  async function copyToClipboard() {
+    if (!result) return;
+    await navigator.clipboard.writeText(result.copyText);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   }
 
   return (
-    <ToolWrapper title={title} description={description} breadcrumbLabel={title} faqs={faqs} richContent={richContent}>
-      <div className="max-w-2xl mx-auto space-y-5">
+    <div className="space-y-6 w-full">
+      {/* Settings Form */}
+      <AppCard border cornerAccents className="p-4 sm:p-6 bg-tertiary space-y-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-1">{labels.startDateLabel}</label>
-            <input
+            <AppInput
+              label={labels.startDateLabel}
               type="date"
               value={startDate}
-              onChange={e => setStartDate(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500"
+              onChange={(e) => setStartDate(e.target.value)}
+              className="font-mono text-sm sm:text-base"
             />
           </div>
+
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-1">{labels.sprintLengthLabel}</label>
-            <select
+            <AppSegmentedControl
+              label={labels.sprintLengthLabel}
+              options={[
+                { label: labels.twoWeeks || "2 semanas", value: "2" },
+                { label: labels.threeWeeks || "3 semanas", value: "3" },
+                { label: labels.fourWeeks || "4 semanas", value: "4" },
+              ]}
               value={sprintWeeks}
-              onChange={e => setSprintWeeks(Number(e.target.value))}
-              className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500 bg-card dark:bg-card text-gray-900 dark:text-gray-100"
-            >
-              <option value={2}>{labels.twoWeeks}</option>
-              <option value={3}>{labels.threeWeeks}</option>
-              <option value={4}>{labels.fourWeeks}</option>
-            </select>
+              onChange={(val) => setSprintWeeks(String(val))}
+              fontWeight="medium"
+              withDashedBorder={false}
+              buttonClassName="normal-case text-sm"
+              size="md"
+            />
           </div>
         </div>
 
-        <button
-          onClick={calculate}
-          className="w-full bg-violet-600 hover:bg-violet-700 text-white font-semibold py-2.5 rounded-lg transition-colors text-sm"
-        >
-          {labels.calculateButton}
-        </button>
+        <div className="pt-1">
+          <AppButton
+            onClick={calculate}
+            color="primary"
+            small
+            className="font-mono text-xs sm:text-sm w-full sm:w-auto"
+          >
+            <CalendarCheck className="w-3.5 h-3.5 mr-1.5" />
+            <span>{labels.calculateButton}</span>
+          </AppButton>
+        </div>
+      </AppCard>
 
-        {result && (
-          <div className="space-y-4">
-            <div className="bg-card border border-gray-200 rounded-xl overflow-hidden">
-              <div className="bg-violet-600 text-white px-4 py-3 flex items-center justify-between">
-                <span className="font-semibold text-sm">{labels.sprintNumber} — {sprintWeeks}w</span>
-                <button
-                  onClick={copy}
-                  className="text-xs bg-card/20 hover:bg-card/30 text-white px-3 py-1 rounded-lg transition-colors"
-                >
-                  {copied ? labels.copiedButton : labels.copyButton}
-                </button>
+      {/* Results Card */}
+      {result && (
+        <div className="space-y-4 animate-in fade-in zoom-in-95 duration-200">
+          <div className="flex items-center justify-between pb-3 border-b border-border/70">
+            <h3 className="font-mono font-semibold text-sm sm:text-base uppercase text-foreground flex items-center gap-2">
+              <CalendarDays className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+              <span>
+                {locale === "es"
+                  ? "Cronograma del Sprint"
+                  : locale === "en"
+                    ? "Sprint Schedule"
+                    : "Cronograma da Sprint"}
+              </span>
+            </h3>
+
+            <AppButton
+              onClick={copyToClipboard}
+              small
+              color="secondary"
+              className="font-mono text-xs sm:text-sm px-3.5 h-[36px]"
+            >
+              {copied ? (
+                <>
+                  <Check className="w-4 h-4 mr-1.5 text-emerald-500" />
+                  <span>{labels.copiedButton}</span>
+                </>
+              ) : (
+                <>
+                  <Copy className="w-4 h-4 mr-1.5" />
+                  <span>{labels.copyButton}</span>
+                </>
+              )}
+            </AppButton>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div className="p-3.5 sm:p-4 rounded-[2px] bg-tertiary border border-border flex items-center gap-3.5">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-[2px] bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                <CalendarCheck className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
-              <div className="divide-y divide-gray-100">
-                {[
-                  { label: labels.planningLabel, date: result.planning },
-                  { label: labels.reviewLabel, date: result.review },
-                  { label: labels.retroLabel, date: result.retro },
-                  { label: labels.sprintEndLabel, date: result.end },
-                ].map(({ label, date }) => (
-                  <div key={label} className="flex items-center justify-between px-4 py-3">
-                    <span className="text-sm font-medium text-gray-700">{label}</span>
-                    <span className="text-sm text-gray-600 font-mono">{formatDate(date)}</span>
-                  </div>
-                ))}
+              <div className="min-w-0">
+                <span className="text-xs sm:text-sm font-mono uppercase text-muted-foreground block font-medium">
+                  {labels.planningLabel} {locale === "es" ? "(Inicio)" : locale === "en" ? "(Start)" : "(Início)"}
+                </span>
+                <span className="text-sm sm:text-base font-mono font-semibold text-foreground capitalize">
+                  {formatDate(result.planning, locale)}
+                </span>
               </div>
             </div>
 
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
-              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                {labels.dailyStandupsLabel} <span className="text-gray-400">({labels.weekdaysOnlyNote})</span>
-              </p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
-                {result.standups.map(d => (
-                  <span key={d.toISOString()} className="text-xs text-gray-600 bg-card border border-gray-200 rounded px-2 py-1 font-mono">
-                    {formatDate(d)}
-                  </span>
-                ))}
+            <div className="p-3.5 sm:p-4 rounded-[2px] bg-tertiary border border-border flex items-center gap-3.5">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-[2px] bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+                <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
+              </div>
+              <div className="min-w-0">
+                <span className="text-xs sm:text-sm font-mono uppercase text-muted-foreground block font-medium">
+                  {labels.sprintEndLabel} {locale === "es" ? "(Cierre)" : locale === "en" ? "(End)" : "(Término)"}
+                </span>
+                <span className="text-sm sm:text-base font-mono font-semibold text-foreground capitalize">
+                  {formatDate(result.end, locale)}
+                </span>
+              </div>
+            </div>
+
+            <div className="p-3.5 sm:p-4 rounded-[2px] bg-tertiary border border-border flex items-center gap-3.5">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-[2px] bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0">
+                <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
+              </div>
+              <div className="min-w-0">
+                <span className="text-xs sm:text-sm font-mono uppercase text-muted-foreground block font-medium">
+                  {labels.reviewLabel}
+                </span>
+                <span className="text-sm sm:text-base font-mono font-semibold text-foreground capitalize">
+                  {formatDate(result.review, locale)}
+                </span>
+              </div>
+            </div>
+
+            <div className="p-3.5 sm:p-4 rounded-[2px] bg-tertiary border border-border flex items-center gap-3.5">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-[2px] bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0">
+                <RotateCcw className="w-4 h-4 sm:w-5 sm:h-5" />
+              </div>
+              <div className="min-w-0">
+                <span className="text-xs sm:text-sm font-mono uppercase text-muted-foreground block font-medium">
+                  {labels.retroLabel}
+                </span>
+                <span className="text-sm sm:text-base font-mono font-semibold text-foreground capitalize">
+                  {formatDate(result.retro, locale)}
+                </span>
               </div>
             </div>
           </div>
-        )}
-      </div>
-    </ToolWrapper>
-  )
+
+          {/* Standups List */}
+          <AppCard border cornerAccents={false} className="p-4 sm:p-5 bg-tertiary space-y-3">
+            <div className="flex items-center justify-between pb-2.5 border-b border-border/60">
+              <span className="text-xs sm:text-sm font-mono font-semibold uppercase text-foreground">
+                {labels.dailyStandupsLabel} ({result.standups.length})
+              </span>
+              <span className="text-xs text-muted-foreground font-mono">
+                {labels.weekdaysOnlyNote}
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-[260px] overflow-y-auto pr-1">
+              {result.standups.map((d, idx) => (
+                <div
+                  key={idx}
+                  className="px-3 py-1.5 rounded-[2px] bg-background border border-border/60 text-xs sm:text-sm font-mono text-foreground flex items-center justify-between"
+                >
+                  <span className="text-muted-foreground font-medium">{idx + 1}.</span>
+                  <span className="capitalize font-normal text-foreground">{formatDate(d, locale)}</span>
+                </div>
+              ))}
+            </div>
+          </AppCard>
+        </div>
+      )}
+    </div>
+  );
 }

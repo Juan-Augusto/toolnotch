@@ -1,114 +1,189 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { getTranslations } from 'next-intl/server'
-import { buildAlternates } from '@/lib/i18nMeta'
-import { buildJsonLd, breadcrumbSchema } from '@/lib/schema'
-import { BLOG_POSTS } from '@/data/blog/index'
-import { getAllMdxBlogPosts } from '@/lib/content/blogRepository'
-import BlogCard from '@/components/blog/BlogCard'
-import AdUnit from '@/components/AdUnit'
-import { AD_SLOTS } from '@/lib/adSlots'
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { buildAlternatesForLocale } from "@/lib/i18nMeta";
+import {
+  buildJsonLd,
+  breadcrumbSchema,
+  buildLocalizedUrl,
+} from "@/lib/schema";
+import { BLOG_POSTS } from "@/data/blog/index";
+import { getAllMdxBlogPosts } from "@/lib/content/blogRepository";
+import { translateSlug, findSlugGroup } from "@/data/blog/slugTranslations";
+import AppBreadcrumb from "@/components/AppBreadcrumb";
+import AppBlogHub from "@/components/blog/AppBlogHub";
+import AppBlogDepth from "@/components/blog/AppBlogDepth";
+import AppAdUnit from "@/components/AppAdUnit";
+import { AD_SLOTS } from "@/lib/adSlots";
+import type { BlogCardData } from "@/components/blog/blogHubConfig";
 
-const PATH = '/blog'
+const PATH = "/blog";
 
 interface Props {
-  params: Promise<{ locale: string }>
+  params: Promise<{ locale: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'blog' })
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "blog" });
+  const localizedUrl = buildLocalizedUrl(PATH, locale);
+  const ogLocale =
+    locale === "pt" ? "pt_BR" : locale === "es" ? "es_ES" : "en_US";
+
+  const keywordsByLocale = {
+    pt: [
+      "blog toolnotch",
+      "guias de calculadoras",
+      "tutoriais de ferramentas",
+      "matemática de financiamento",
+      "dicas de produtividade",
+      "artigos de engenharia de software",
+    ],
+    es: [
+      "blog toolnotch",
+      "guías de calculadoras",
+      "tutoriales de herramientas",
+      "matemáticas financieras",
+      "consejos de productividad",
+      "artículos de ingeniería",
+    ],
+    en: [
+      "toolnotch blog",
+      "calculator guides",
+      "free tool tutorials",
+      "mortgage math explained",
+      "developer guides",
+      "productivity tools tips",
+    ],
+  };
+
+  const title = t("indexTitle");
+  const description = t("indexDescription");
+
   return {
-    title: t('indexTitle'),
-    description: t('indexDescription'),
-    alternates: buildAlternates(PATH),
-  }
+    title,
+    description,
+    keywords: keywordsByLocale[locale as keyof typeof keywordsByLocale] ?? keywordsByLocale.en,
+    alternates: buildAlternatesForLocale(PATH, locale),
+    openGraph: {
+      title,
+      description,
+      url: localizedUrl,
+      siteName: "ToolNotch",
+      locale: ogLocale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
 }
 
 export default async function BlogIndexPage({ params }: Props) {
-  const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'blog' })
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "blog" });
 
-  // Load per current locale so translated posts (data/blog/content/{locale}/)
-  // carry their native slug — a card link built from the English slug under
-  // /pt or /es is a 404 (WS: AdSense link integrity).
-  const mdxPosts = await getAllMdxBlogPosts(locale)
-  // A post registered in BLOG_POSTS may also have an MDX file — keep the first (registered) entry.
-  const seen = new Set<string>()
+  const mdxPosts = await getAllMdxBlogPosts(locale);
+  const seen = new Set<string>();
   const allPosts = [...BLOG_POSTS, ...mdxPosts].filter((p) => {
-    if (seen.has(p.slug)) return false
-    seen.add(p.slug)
-    return true
-  })
-  allPosts.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+    if (seen.has(p.slug)) return false;
+    seen.add(p.slug);
+    return true;
+  });
+  allPosts.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+
+  const blogCards: BlogCardData[] = allPosts.map((post) => {
+    let title = "";
+    let description = "";
+
+    const isLocalizedGroup = Boolean(findSlugGroup(post.slug));
+    if (!isLocalizedGroup && typeof t.has === "function") {
+      if (t.has(`posts.${post.slug}.title`)) {
+        title = t(`posts.${post.slug}.title`);
+      }
+      if (t.has(`posts.${post.slug}.description`)) {
+        description = t(`posts.${post.slug}.description`);
+      }
+    }
+
+    if (!title) {
+      title = post.title || post.slug;
+    }
+
+    if (!description) {
+      description = post.description || "";
+    }
+
+    const translatedSlug = translateSlug(post.slug, locale);
+
+    return {
+      slug: translatedSlug,
+      title,
+      description,
+      category: post.category,
+      publishedAt: post.publishedAt,
+      updatedAt: post.updatedAt,
+      readingTimeMinutes: post.readingTimeMinutes,
+      tags: post.tags,
+      relatedToolPath: post.relatedToolPath,
+    };
+  });
+
+  const localizedUrl = buildLocalizedUrl(PATH, locale);
+  const homeLabel =
+    locale === "pt" ? "Início" : locale === "es" ? "Inicio" : "Home";
+  const prefix = locale === "en" ? "" : `/${locale}`;
 
   const jsonLd = buildJsonLd(
     breadcrumbSchema([
-      { name: 'Home', url: '/' },
-      { name: t('breadcrumbBlog'), url: PATH },
+      { name: homeLabel, url: prefix || "/" },
+      { name: t("breadcrumbBlog"), url: localizedUrl },
     ]),
-  )
+    {
+      "@type": "ItemList",
+      name: t("indexTitle"),
+      description: t("indexDescription"),
+      url: localizedUrl,
+      numberOfItems: blogCards.length,
+      itemListElement: blogCards.map((post, idx) => ({
+        "@type": "ListItem",
+        position: idx + 1,
+        name: post.title,
+        url: buildLocalizedUrl(`/blog/${post.slug}`, locale),
+      })),
+    },
+  );
+
+  const categoryBlurbs = t.raw("indexCategoryBlurbs") as Record<string, string>;
 
   return (
-    <>
+    <main className="container min-h-[calc(100vh-180px)] bg-background text-foreground py-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-4xl mx-auto px-4 py-12">
+      <div className="w-full pb-2">
+        <AppBreadcrumb
+          items={[
+            { label: homeLabel, href: prefix || "/" },
+            { label: t("breadcrumbBlog"), current: true },
+          ]}
+        />
+      </div>
 
-          {/* Header */}
-          <div className="mb-10">
-            <div className="flex items-center gap-2 mb-4">
-              <Link
-                href={locale === 'en' ? '/' : `/${locale}`}
-                className="text-sm text-blue-600 hover:underline dark:text-blue-400"
-              >
-                Home
-              </Link>
-              <span className="text-gray-400">/</span>
-              <span className="text-sm text-gray-600 dark:text-gray-400">
-                {t('breadcrumbBlog')}
-              </span>
-            </div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
-              {t('indexTitle')}
-            </h1>
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
-              {t('indexDescription')}
-            </p>
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mt-4">
-              {t('indexIntro')}
-            </p>
-            <div className="mt-6 max-w-2xl">
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                {t('indexGuideHeading')}
-              </h2>
-              <ul className="list-disc pl-5 space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed">
-                {Object.values(t.raw('indexCategoryBlurbs') as Record<string, string>).map(
-                  (blurb, i) => (
-                    <li key={i}>{blurb}</li>
-                  ),
-                )}
-              </ul>
-            </div>
-          </div>
+      <AppBlogHub posts={blogCards} locale={locale} />
 
-          {/* Ad above grid */}
-          <div className="mb-8">
-            <AdUnit slot={AD_SLOTS.BLOG_INDEX_TOP} />
-          </div>
+      <div className="my-8">
+        <AppAdUnit slot={AD_SLOTS.BLOG_INDEX_TOP} />
+      </div>
 
-          {/* Blog post grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {allPosts.map((post) => (
-              <BlogCard key={post.slug} post={post} locale={locale} />
-            ))}
-          </div>
-
-        </div>
-      </main>
-    </>
-  )
+      <AppBlogDepth
+        guideHeading={t("indexGuideHeading")}
+        categoryBlurbs={categoryBlurbs}
+        introText={t("indexIntro")}
+        locale={locale}
+      />
+    </main>
+  );
 }
