@@ -31,7 +31,7 @@ const siteSchema = {
       name: "ToolNotch",
       url: process.env.NEXT_PUBLIC_BASE_URL ?? "https://toolnotch.com",
       description:
-        "Free online tools — compress images, merge PDFs, convert units, calculate loans, generate invoices, and more.",
+        "Free online tools - compress images, merge PDFs, convert units, calculate loans, generate invoices, and more.",
     },
     {
       "@type": "Organization",

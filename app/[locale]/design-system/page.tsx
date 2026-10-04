@@ -96,7 +96,7 @@ export default function DesignSystemPage() {
             className="text-lg max-w-xl"
             style={{ color: "var(--text-secondary)" }}
           >
-            ToolNotch — Surgical Neon. Dark-first UI with one mint neon accent.
+            ToolNotch | Surgical Neon. Dark-first UI with one mint neon accent.
             Precision, restraint, function.
           </p>
 
@@ -255,7 +255,7 @@ export default function DesignSystemPage() {
           <div className="space-y-8">
             <div className=" p-8 space-y-6">
               <div>
-                <div className=" mb-2">Display — Syne 700/800</div>
+                <div className=" mb-2">Display - Syne 700/800</div>
                 {(
                   [
                     "text-6xl",
@@ -283,7 +283,7 @@ export default function DesignSystemPage() {
               <hr className="" />
 
               <div>
-                <div className=" mb-2">Body — Plus Jakarta Sans</div>
+                <div className=" mb-2">Body - Plus Jakarta Sans</div>
                 <p
                   className="text-base leading-relaxed mb-2"
                   style={{ color: "var(--text-primary)" }}
@@ -312,7 +312,7 @@ export default function DesignSystemPage() {
               <hr className="" />
 
               <div>
-                <div className=" mb-2">Mono — Poppins</div>
+                <div className=" mb-2">Mono - Poppins</div>
                 <code
                   className="text-sm"
                   style={{

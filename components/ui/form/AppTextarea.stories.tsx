@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { AppTextarea } from './AppTextarea';
 
 const meta: Meta<typeof AppTextarea> = {
@@ -12,6 +12,15 @@ const meta: Meta<typeof AppTextarea> = {
     placeholder: { control: 'text' },
     label: { control: 'text' },
     rows: { control: 'number' },
+    variant: {
+      control: 'radio',
+      options: ['tertiary', 'background'],
+      description: 'Variante de fundo',
+    },
+    flat: {
+      control: 'boolean',
+      description: 'Renderiza sem borda e com fundo transparente',
+    },
   },
 };
 
@@ -57,6 +66,24 @@ export const WithHelperText: Story = {
     label: 'COMENTÁRIO',
     placeholder: 'ESCREVA SEU COMENTÁRIO...',
     helperText: 'Máximo de 500 caracteres.',
+    rows: 4,
+  },
+};
+
+export const WithBackgroundVariant: Story = {
+  args: {
+    label: 'OBSERVAÇÕES',
+    placeholder: 'TEXTAREA COM VARIANTE BACKGROUND...',
+    variant: 'background',
+    rows: 4,
+  },
+};
+
+export const Flat: Story = {
+  args: {
+    label: 'MODO FLAT',
+    placeholder: 'TEXTAREA SEM BORDA NEM FUNDO...',
+    flat: true,
     rows: 4,
   },
 };

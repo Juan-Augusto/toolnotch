@@ -232,7 +232,7 @@ export const TOOLS_I18N_LABELS: Record<string, ToolsHubLabels> = {
   en: {
     heading: "ALL TOOLS",
     subtitle:
-      "Calculators, utilities, converters, and file processors — 100% free and running entirely in your browser.",
+      "Calculators, utilities, converters, and file processors - 100% free and running entirely in your browser.",
     allCategories: "ALL",
     searchPlaceholder: "Search...",
     noResults: "No tools found matching your search.",

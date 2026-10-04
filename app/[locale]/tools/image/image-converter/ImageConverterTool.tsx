@@ -5,10 +5,6 @@ import { useTranslations } from "next-intl";
 import { saveAs } from "file-saver";
 import JSZip from "jszip";
 import {
-  ShieldCheck,
-  Sparkles,
-  Layers,
-  Sliders,
   RefreshCw,
   Loader2,
   Trash2,
@@ -199,32 +195,6 @@ export default function ImageConverterTool({
           title={title}
           description={description}
           locale={locale}
-          badges={[
-            {
-              text: t("badges.private"),
-              bg: "bg-tertiary",
-              textColor: "text-foreground",
-              icon: <ShieldCheck className="w-3.5 h-3.5 text-primary shrink-0" />,
-            },
-            {
-              text: t("badges.batch"),
-              bg: "bg-tertiary",
-              textColor: "text-foreground",
-              icon: <Layers className="w-3.5 h-3.5 text-secondary shrink-0" />,
-            },
-            {
-              text: t("badges.formats"),
-              bg: "bg-tertiary",
-              textColor: "text-foreground",
-              icon: <Sliders className="w-3.5 h-3.5 text-primary shrink-0" />,
-            },
-            {
-              text: t("badges.free"),
-              bg: "bg-foreground",
-              textColor: "text-background",
-              icon: <Sparkles className="w-3.5 h-3.5 shrink-0" />,
-            },
-          ]}
         />
 
         <AppCard
@@ -249,8 +219,9 @@ export default function ImageConverterTool({
                 />
 
                 {files.length > 0 && (
-                  <div className="p-4 bg-background border border-border rounded-[2px] space-y-5 font-mono">
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-border text-xs">
+                  <div className="space-y-4 sm:space-y-5">
+                    {/* Card de contagem de imagens selecionadas */}
+                    <div className="p-3.5 sm:p-4 bg-background border border-border rounded-[2px] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-mono">
                       <div className="flex items-center gap-2 uppercase font-bold text-foreground">
                         <FileImage className="w-3.5 h-3.5 text-primary shrink-0" />
                         <span>
@@ -267,8 +238,8 @@ export default function ImageConverterTool({
                       </button>
                     </div>
 
-                    {/* Controles de Conversão */}
-                    <div className="space-y-4">
+                    {/* Controles de Conversão (fora do card) */}
+                    <div className="space-y-4 font-mono">
                       {/* Seletor de Formato de Saída */}
                       <div className="space-y-1.5">
                         <label className="text-xs font-semibold text-foreground">
@@ -328,31 +299,31 @@ export default function ImageConverterTool({
                           }}
                         />
                       </div>
-                    </div>
 
-                    {/* Ações */}
-                    <div className="pt-2 border-t border-border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                      <AppButton
-                        onClick={handleConvert}
-                        disabled={loading || files.length === 0}
-                        color="primary"
-                        withArrow
-                        className="w-full sm:w-auto"
-                      >
-                        {loading ? (
-                          <>
-                            <Loader2 className="w-4 h-4 mr-2 animate-spin shrink-0" />
-                            {progress
-                              ? `${t("button.converting")} (${progress.current}/${progress.total})`
-                              : t("button.converting")}
-                          </>
-                        ) : (
-                          <>
-                            <RefreshCw className="w-4 h-4 mr-2 shrink-0" />
-                            {t("button.convert")}
-                          </>
-                        )}
-                      </AppButton>
+                      {/* Ações */}
+                      <div className="pt-2 border-t border-border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <AppButton
+                          onClick={handleConvert}
+                          disabled={loading || files.length === 0}
+                          color="primary"
+                          withArrow
+                          className="w-full sm:w-auto"
+                        >
+                          {loading ? (
+                            <>
+                              <Loader2 className="w-4 h-4 mr-2 animate-spin shrink-0" />
+                              {progress
+                                ? `${t("button.converting")} (${progress.current}/${progress.total})`
+                                : t("button.converting")}
+                            </>
+                          ) : (
+                            <>
+                              <RefreshCw className="w-4 h-4 mr-2 shrink-0" />
+                              {t("button.convert")}
+                            </>
+                          )}
+                        </AppButton>
+                      </div>
                     </div>
                   </div>
                 )}

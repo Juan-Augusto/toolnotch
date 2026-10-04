@@ -4,8 +4,6 @@ import React, { useState, useCallback, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { saveAs } from "file-saver";
 import {
-  ShieldCheck,
-  Sparkles,
   Eye,
   EyeOff,
   Sliders,
@@ -377,32 +375,6 @@ export default function CensorImageTool({
           title={title}
           description={description}
           locale={locale}
-          badges={[
-            {
-              text: t("badges.private"),
-              bg: "bg-tertiary",
-              textColor: "text-foreground",
-              icon: <ShieldCheck className="w-3.5 h-3.5 text-primary shrink-0" />,
-            },
-            {
-              text: t("badges.modes"),
-              bg: "bg-tertiary",
-              textColor: "text-foreground",
-              icon: <EyeOff className="w-3.5 h-3.5 text-secondary shrink-0" />,
-            },
-            {
-              text: t("badges.local"),
-              bg: "bg-tertiary",
-              textColor: "text-foreground",
-              icon: <Sliders className="w-3.5 h-3.5 text-primary shrink-0" />,
-            },
-            {
-              text: t("badges.free"),
-              bg: "bg-foreground",
-              textColor: "text-background",
-              icon: <Sparkles className="w-3.5 h-3.5 shrink-0" />,
-            },
-          ]}
         />
 
         <AppCard

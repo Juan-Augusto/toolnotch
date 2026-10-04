@@ -1,10 +1,10 @@
 {
   "site": {
-    "title": "ToolNotch — Ferramentas Online Gratuitas",
+    "title": "ToolNotch | Ferramentas Online Gratuitas",
     "description": "Ferramentas online gratuitas: comprima imagens, mescle PDFs, converta unidades, calcule empréstimos e muito mais. Sem cadastro, sem upload, 100% privado."
   },
   "common": {
-    "privacyBadge": "Arquivos processados no seu navegador — nunca enviados para nossos servidores",
+    "privacyBadge": "Arquivos processados no seu navegador - nunca enviados para nossos servidores",
     "free": "Grátis",
     "notFoundTitle": "Página Não Encontrada",
     "notFoundDescription": "A página que você está procurando não existe ou foi movida.",
@@ -27,13 +27,13 @@
   },
   "image": {
     "cropper": {
-      "metaTitle": "Recortar Imagem Online Grátis — Cortar Fotos com Proporção | ToolNotch",
-      "metaDescription": "Recorte fotos e imagens online de forma livre ou em proporções 1:1, 16:9, 4:3 e 9:16. Sem marca d'água, sem upload para servidor — 100% privado e grátis.",
+      "metaTitle": "Recortar Imagem Online Grátis - Cortar Fotos com Proporção | ToolNotch",
+      "metaDescription": "Recorte fotos e imagens online de forma livre ou em proporções 1:1, 16:9, 4:3 e 9:16. Sem marca d'água, sem upload para servidor - 100% privado e grátis.",
       "title": "Recortar Imagem Online",
       "description": "Corte partes indesejadas de fotos ou ajuste para proporções exatas de redes sociais e documentos. 100% privado no seu navegador.",
       "dropZone": {
         "label": "Clique ou arraste uma imagem aqui",
-        "hint": "Suporta JPG, PNG e WebP — processamento local no navegador"
+        "hint": "Suporta JPG, PNG e WebP - processamento local no navegador"
       },
       "aspectRatios": {
         "free": "Livre",
@@ -112,13 +112,13 @@
       }
     },
     "resizer": {
-      "metaTitle": "Redimensionar Imagem Online Grátis — Sem Perder Qualidade | ToolNotch",
+      "metaTitle": "Redimensionar Imagem Online Grátis - Sem Perder Qualidade | ToolNotch",
       "metaDescription": "Redimensione fotos e imagens por pixels, porcentagem ou presets de redes sociais. Gire, espelhe e altere proporções no navegador. 100% privado e grátis.",
       "title": "Redimensionar Imagem Online",
       "description": "Altere as dimensões, resolução e proporção de imagens JPG, PNG ou WebP com precisão no seu navegador. Rápido, seguro e sem cadastro.",
       "dropZone": {
         "label": "Clique ou arraste uma imagem aqui",
-        "hint": "Suporta JPG, PNG e WebP — processamento 100% no seu navegador"
+        "hint": "Suporta JPG, PNG e WebP - processamento 100% no seu navegador"
       },
       "tabs": {
         "dimensions": "Dimensões (px)",
@@ -226,13 +226,13 @@
       }
     },
     "convertPngToWebp": {
-      "metaTitle": "Converter PNG para WebP Online Grátis — Sem Cadastro | ToolNotch",
+      "metaTitle": "Converter PNG para WebP Online Grátis - Sem Cadastro | ToolNotch",
       "metaDescription": "Converta imagens PNG para WebP instantaneamente no seu navegador. Arquivos até 90% menores com fundo transparente e máxima qualidade. 100% privado.",
       "title": "Converter PNG para WebP",
       "description": "Converta imagens PNG para WebP com alta fidelidade e transparência. Reduza o peso das suas imagens sem upload para servidor.",
       "dropZone": {
         "label": "Clique ou arraste sua imagem PNG aqui",
-        "hint": "Suporta PNG — processamento 100% local no seu navegador"
+        "hint": "Suporta PNG - processamento 100% local no seu navegador"
       },
       "settings": {
         "title": "Configurações de Conversão",
@@ -309,13 +309,13 @@
       }
     },
     "imageConverter": {
-      "metaTitle": "Conversor de Imagens Online Grátis — Vários Formatos em Lote | ToolNotch",
+      "metaTitle": "Conversor de Imagens Online Grátis - Vários Formatos em Lote | ToolNotch",
       "metaDescription": "Converta imagens entre JPG, PNG, WebP e AVIF em lote gratuitamente. Converta múltiplas fotos ao mesmo tempo no navegador com download em ZIP. 100% privado.",
       "title": "Conversor de Imagens Online",
       "description": "Converta uma ou várias imagens entre JPG, PNG, WebP e AVIF com qualidade ajustável e processamento em lote. 100% privado no seu navegador.",
       "dropZone": {
         "label": "Clique ou arraste suas imagens aqui para converter",
-        "hint": "Suporta PNG, JPG, JPEG, WebP, AVIF, GIF, BMP e SVG — selecione vários arquivos"
+        "hint": "Suporta PNG, JPG, JPEG, WebP, AVIF, GIF, BMP e SVG - selecione vários arquivos"
       },
       "settings": {
         "title": "Configurações de Conversão",
@@ -391,13 +391,13 @@
       }
     },
     "censor": {
-      "metaTitle": "Censurar Imagem Online Grátis — Desfocar e Pixelar Fotos | ToolNotch",
+      "metaTitle": "Censurar Imagem Online Grátis - Desfocar e Pixelar Fotos | ToolNotch",
       "metaDescription": "Censure dados sensíveis, oculte rostos, documentos e placas de veículos em fotos. Efeitos de desfoque (blur), pixelização e tarja preta 100% no navegador.",
       "title": "Censurar e Desfocar Imagem Online",
       "description": "Proteja informações pessoais, rostos e documentos sensíveis com desfoque, pixelização ou tarja preta. 100% privado, processado no seu navegador.",
       "dropZone": {
         "label": "Clique ou arraste uma imagem aqui",
-        "hint": "Suporta JPG, PNG e WebP — processamento local e confidencial"
+        "hint": "Suporta JPG, PNG e WebP - processamento local e confidencial"
       },
       "modes": {
         "pixelate": "Pixelar",
@@ -464,7 +464,7 @@
         }
       ],
       "richContent": {
-        "whatIs": "A ferramenta de censura de imagem permite ocultar ou mascarar visualmente partes confidenciais de uma foto — como rostos de pessoas, números de documentos, endereços, placas de carros ou dados bancários — antes de compartilhar publicamente ou em redes sociais.",
+        "whatIs": "A ferramenta de censura de imagem permite ocultar ou mascarar visualmente partes confidenciais de uma foto - como rostos de pessoas, números de documentos, endereços, placas de carros ou dados bancários - antes de compartilhar publicamente ou em redes sociais.",
         "howToUse": [
           "Envie a imagem arrastando-a para a área de upload ou selecionando em seus arquivos.",
           "Escolha o tipo de efeito desejado: Pixelar, Desfocar (Blur) ou Tarja Preta.",
@@ -476,7 +476,7 @@
       }
     },
     "faviconGenerator": {
-      "metaTitle": "Gerador de Favicon Online Grátis — Pacote Completo .ICO e PNG | ToolNotch",
+      "metaTitle": "Gerador de Favicon Online Grátis - Pacote Completo .ICO e PNG | ToolNotch",
       "metaDescription": "Gere favicons completos para seu site a partir de qualquer imagem: favicon.ico multi-resolução, PNGs para iOS, Android, manifest.json e tags HTML prontas. 100% grátis.",
       "title": "Gerador de Favicon Online",
       "description": "Crie o pacote completo de ícones para web e navegadores (.ico, 16x16, 32x32, 180x180, manifest e tags HTML). 100% privado no seu navegador.",
@@ -552,13 +552,13 @@
       }
     },
     "convertWebpToPng": {
-      "metaTitle": "Converter WebP para PNG Online Grátis — Com Transparência | ToolNotch",
+      "metaTitle": "Converter WebP para PNG Online Grátis - Com Transparência | ToolNotch",
       "metaDescription": "Converta imagens WebP para PNG de alta qualidade no seu navegador. Preserva transparência total, sem marcas d'água e sem upload para servidor.",
       "title": "Converter WebP para PNG",
       "description": "Transforme imagens WebP em PNG lossless com suporte total a transparência. Rápido, privado e sem limite de uso.",
       "dropZone": {
         "label": "Clique ou arraste sua imagem WebP aqui",
-        "hint": "Suporta WebP — conversão 100% local no seu navegador"
+        "hint": "Suporta WebP - conversão 100% local no seu navegador"
       },
       "settings": {
         "title": "Configurações de Conversão",
@@ -623,13 +623,13 @@
       }
     },
     "convertHeicToJpg": {
-      "metaTitle": "Converter HEIC para JPG Online Grátis — Fotos do iPhone | ToolNotch",
+      "metaTitle": "Converter HEIC para JPG Online Grátis - Fotos do iPhone | ToolNotch",
       "metaDescription": "Converta fotos HEIC e HEIF do iPhone para JPG universal diretamente no seu navegador. Sem perda de qualidade visível, sem cadastro e 100% privado.",
       "title": "Converter HEIC para JPG",
       "description": "Converta fotos HEIC do iPhone ou iPad em JPG universal compatível com Windows, Android e web. Sem upload para servidores.",
       "dropZone": {
         "label": "Clique ou arraste fotos HEIC/HEIF do iPhone aqui",
-        "hint": "Suporta HEIC e HEIF — processamento local no navegador"
+        "hint": "Suporta HEIC e HEIF - processamento local no navegador"
       },
       "settings": {
         "title": "Configurações de Conversão",
@@ -697,10 +697,10 @@
       }
     },
     "compressor": {
-      "metaTitle": "Comprimir Imagem Online Grátis — Sem Cadastro",
-      "metaDescription": "Reduza o tamanho de imagens em até 90% instantaneamente no navegador. Suporta JPG, PNG, WebP, AVIF. Sem envio ao servidor — 100% privado.",
+      "metaTitle": "Comprimir Imagem Online Grátis - Sem Cadastro",
+      "metaDescription": "Reduza o tamanho de imagens em até 90% instantaneamente no navegador. Suporta JPG, PNG, WebP, AVIF. Sem envio ao servidor - 100% privado.",
       "title": "Comprimir Imagem Online Grátis",
-      "description": "Sem upload para servidor. Funciona inteiramente no seu navegador — 100% privado.",
+      "description": "Sem upload para servidor. Funciona inteiramente no seu navegador - 100% privado.",
       "button": {
         "compress": "Comprimir Imagem",
         "compressing": "Comprimindo...",
@@ -709,7 +709,7 @@
       "faqs": [
         {
           "question": "Minha imagem é enviada para algum servidor?",
-          "answer": "Não. Tudo funciona diretamente no seu navegador usando a Canvas API. Suas imagens nunca saem do dispositivo — 100% privado."
+          "answer": "Não. Tudo funciona diretamente no seu navegador usando a Canvas API. Suas imagens nunca saem do dispositivo - 100% privado."
         },
         {
           "question": "Quais formatos de imagem são suportados?",
@@ -725,11 +725,11 @@
         },
         {
           "question": "Posso redimensionar a imagem ao comprimir?",
-          "answer": "Sim — informe uma largura máxima em pixels e a imagem será reduzida proporcionalmente antes da compressão. Deixe em branco para manter as dimensões originais."
+          "answer": "Sim - informe uma largura máxima em pixels e a imagem será reduzida proporcionalmente antes da compressão. Deixe em branco para manter as dimensões originais."
         }
       ],
       "richContent": {
-        "whatIs": "A compressão de imagem reduz o tamanho do arquivo mantendo uma qualidade visual aceitável. Existem três formatos principais para escolher: JPEG (compressão com perdas, melhor para fotografias, não suporta transparência), PNG (compressão sem perdas, melhor para capturas de tela, gráficos e logotipos que exigem transparência ou nitidez perfeita em nível de pixel) e WebP (formato moderno do Google, 25–35% menor que o JPEG com qualidade equivalente, suportado por todos os navegadores modernos desde 2020). A compressão com perdas funciona descartando detalhes da imagem de alta frequência que o olho humano não pode perceber em distâncias normais de visualização — é por isso que uma foto compactada de 50 KB é visualmente indistinguível de um original de 500 KB na maioria dos casos de uso na web.",
+        "whatIs": "A compressão de imagem reduz o tamanho do arquivo mantendo uma qualidade visual aceitável. Existem três formatos principais para escolher: JPEG (compressão com perdas, melhor para fotografias, não suporta transparência), PNG (compressão sem perdas, melhor para capturas de tela, gráficos e logotipos que exigem transparência ou nitidez perfeita em nível de pixel) e WebP (formato moderno do Google, 25–35% menor que o JPEG com qualidade equivalente, suportado por todos os navegadores modernos desde 2020). A compressão com perdas funciona descartando detalhes da imagem de alta frequência que o olho humano não pode perceber em distâncias normais de visualização - é por isso que uma foto compactada de 50 KB é visualmente indistinguível de um original de 500 KB na maioria dos casos de uso na web.",
         "howToUse": [
           "Envie uma imagem arrastando-a para a zona para soltar ou clicando para navegar em seus arquivos.",
           "Selecione o formato de saída desejado (JPG, PNG ou WebP) e ajuste o controle deslizante de qualidade.",
@@ -738,7 +738,7 @@
           "Use o controle deslizante de comparação antes/depois para revisar o resultado e clique em Baixar para salvar."
         ],
         "whyItMatters": "A velocidade de carregamento da página é um fator direto de classificação do Google por meio das Core Web Vitals, especificamente a métrica Largest Contentful Paint. As imagens representam aproximadamente 75% do peso total da página no site médio, tornando-as as maiores contribuidoras para tempos de carregamento lentos. Um atraso de dois segundos no carregamento da página reduz as conversões em 4,42% por segundo, de acordo com pesquisa da Portent. Comprimir imagens antes de enviá-las para qualquer site, blog ou plataforma de comércio eletrônico melhora diretamente tanto as classificações nos motores de busca quanto a experiência do usuário.",
-        "proTip": "Todo o processamento acontece inteiramente no seu navegador — nenhum arquivo é enviado para qualquer servidor. Seus documentos nunca saem do seu dispositivo. Para imagens de sites, use o formato WebP sempre que o seu site suportar — todos os navegadores modernos suportam WebP desde 2020. Para fotografias, JPEG com 80% de qualidade é visualmente indistinguível de 100% de qualidade, sendo 50–70% menor. Reserve o PNG apenas para imagens que exigem transparência ou devem ter nitidez perfeita, como logotipos e capturas de tela contendo texto."
+        "proTip": "Todo o processamento acontece inteiramente no seu navegador - nenhum arquivo é enviado para qualquer servidor. Seus documentos nunca saem do seu dispositivo. Para imagens de sites, use o formato WebP sempre que o seu site suportar - todos os navegadores modernos suportam WebP desde 2020. Para fotografias, JPEG com 80% de qualidade é visualmente indistinguível de 100% de qualidade, sendo 50–70% menor. Reserve o PNG apenas para imagens que exigem transparência ou devem ter nitidez perfeita, como logotipos e capturas de tela contendo texto."
       }
     },
     "shared": {
@@ -765,8 +765,8 @@
         "original": "Original",
         "compressed": "Comprimido",
         "sliderAriaLabel": "Controle deslizante de comparação",
-        "savings": "{pct}% menor — economizou {bytes}",
-        "noSavings": "Tamanho do arquivo não reduzido — tente qualidade menor ou formato diferente",
+        "savings": "{pct}% menor - economizou {bytes}",
+        "noSavings": "Tamanho do arquivo não reduzido - tente qualidade menor ou formato diferente",
         "dragHint": "Arraste o controle para comparar original vs comprimido"
       },
       "download": {
@@ -776,7 +776,7 @@
   },
   "pdf": {
     "merge": {
-      "metaTitle": "Mesclar PDF Grátis — Combinar PDFs Online | ToolNotch",
+      "metaTitle": "Mesclar PDF Grátis - Combinar PDFs Online | ToolNotch",
       "metaDescription": "Mescle vários arquivos PDF em um único documento online. Grátis, sem upload, funciona inteiramente no seu navegador. Arraste para reordenar páginas.",
       "title": "Mesclar Arquivos PDF Grátis",
       "description": "Combine vários PDFs em um só. Arraste para reordenar páginas. Sem upload necessário.",
@@ -839,19 +839,19 @@
         }
       ],
       "richContent": {
-        "whatIs": "Mesclar PDF combina vários arquivos PDF em um único documento com um clique. Casos de uso comuns incluem o envio de vários documentos como um único anexo — candidaturas a empregos, submissões de bolsas e matrículas universitárias geralmente exigem um único arquivo —, a criação de relatórios combinados de seções separadas, o arquivamento de documentos relacionados juntos para armazenamento a longo prazo e a impressão de vários arquivos em sequência sem alternar entre documentos. O PDF mesclado mantém a qualidade original de cada documento de origem: imagens, fontes e formatação são preservadas exatamente. A ordem das páginas no arquivo mesclado segue a ordem de upload, então você pode arrastar e reordenar os arquivos antes de mesclar para controlar exatamente quais páginas aparecem primeiro.",
+        "whatIs": "Mesclar PDF combina vários arquivos PDF em um único documento com um clique. Casos de uso comuns incluem o envio de vários documentos como um único anexo - candidaturas a empregos, submissões de bolsas e matrículas universitárias geralmente exigem um único arquivo -, a criação de relatórios combinados de seções separadas, o arquivamento de documentos relacionados juntos para armazenamento a longo prazo e a impressão de vários arquivos em sequência sem alternar entre documentos. O PDF mesclado mantém a qualidade original de cada documento de origem: imagens, fontes e formatação são preservadas exatamente. A ordem das páginas no arquivo mesclado segue a ordem de upload, então você pode arrastar e reordenar os arquivos antes de mesclar para controlar exatamente quais páginas aparecem primeiro.",
         "howToUse": [
           "Clique na área de upload ou arraste e solte seus arquivos PDF na zona para soltar.",
-          "Arraste os cartões de arquivo para reordená-los — o PDF mesclado seguirá a ordem exata que você definir.",
+          "Arraste os cartões de arquivo para reordená-los - o PDF mesclado seguirá a ordem exata que você definir.",
           "Clique em Mesclar PDFs para combinar todos os arquivos em um único documento.",
           "O PDF mesclado é baixado instantaneamente para o seu dispositivo."
         ],
-        "whyItMatters": "Anexos de e-mail costumam ter limite de tamanho ou de contagem por mensagem. Muitas instituições — departamentos de RH, universidades e agências governamentais — exigem explicitamente envios de 'apenas um arquivo'. Enviar cinco anexos quando o formulário espera um pode resultar em rejeição ou solicitação de reenvio. Mesclar antes também facilita para o destinatário: um arquivo para abrir, um para imprimir e sem confusão sobre qual anexo é qual. Gráficas também preferem fortemente arquivos únicos para trabalhos de impressão de várias páginas para evitar erros na ordem das páginas.",
-        "proTip": "Todo o processamento acontece inteiramente no seu navegador — nenhum arquivo é enviado para qualquer servidor. Seus documentos nunca saem do seu dispositivo. Antes de enviar, abra o PDF mesclado e role por ele para verificar a ordem das páginas. O primeiro arquivo carregado se torna as primeiras páginas, então se você precisar de uma página de rosto ou índice na frente, carregue-o primeiro."
+        "whyItMatters": "Anexos de e-mail costumam ter limite de tamanho ou de contagem por mensagem. Muitas instituições - departamentos de RH, universidades e agências governamentais - exigem explicitamente envios de 'apenas um arquivo'. Enviar cinco anexos quando o formulário espera um pode resultar em rejeição ou solicitação de reenvio. Mesclar antes também facilita para o destinatário: um arquivo para abrir, um para imprimir e sem confusão sobre qual anexo é qual. Gráficas também preferem fortemente arquivos únicos para trabalhos de impressão de várias páginas para evitar erros na ordem das páginas.",
+        "proTip": "Todo o processamento acontece inteiramente no seu navegador - nenhum arquivo é enviado para qualquer servidor. Seus documentos nunca saem do seu dispositivo. Antes de enviar, abra o PDF mesclado e role por ele para verificar a ordem das páginas. O primeiro arquivo carregado se torna as primeiras páginas, então se você precisar de uma página de rosto ou índice na frente, carregue-o primeiro."
       }
     },
     "split": {
-      "metaTitle": "Dividir PDF Online Grátis — Extrair Páginas | ToolNotch",
+      "metaTitle": "Dividir PDF Online Grátis - Extrair Páginas | ToolNotch",
       "metaDescription": "Divida um PDF em vários arquivos por intervalo de páginas. Grátis, sem upload, funciona inteiramente no seu navegador.",
       "title": "Dividir PDF Online",
       "description": "Extraia páginas ou divida um PDF em vários arquivos. Sem upload necessário.",
@@ -907,7 +907,7 @@
         },
         {
           "question": "Posso extrair uma única página?",
-          "answer": "Sim — informe o mesmo número de página para o início e o fim, ex.: 5-5."
+          "answer": "Sim - informe o mesmo número de página para o início e o fim, ex.: 5-5."
         },
         {
           "question": "Meus arquivos são enviados para um servidor?",
@@ -922,18 +922,18 @@
         "whatIs": "A divisão de PDF extrai páginas específicas ou intervalos de páginas de um PDF em arquivos separados. Casos de uso incluem extrair um único capítulo de um ebook grande para compartilhar sem entregar o documento inteiro, compartilhar apenas as seções relevantes de um contrato, dividir um lote de documentos digitalizados em arquivos individuais e remover uma página confidencial antes de compartilhar um relatório. Há uma distinção importante entre os dois modos de divisão: dividir por intervalo de páginas (páginas 1–10 se tornam um arquivo, 11–20 outro) e dividir cada página em arquivos individuais, o que lhe dá o controle mais refinado.",
         "howToUse": [
           "Envie seu PDF clicando na zona para soltar ou arrastando o arquivo para dentro.",
-          "Insira os intervalos de páginas que deseja extrair no campo de intervalos — por exemplo, '1-5, 8, 11-15' para obter três arquivos de saída separados.",
+          "Insira os intervalos de páginas que deseja extrair no campo de intervalos - por exemplo, '1-5, 8, 11-15' para obter três arquivos de saída separados.",
           "Deixe o campo em branco para dividir cada página em seu próprio PDF individual.",
           "Clique em Dividir PDF para processar o arquivo.",
-          "Baixe os arquivos resultantes — múltiplas saídas são empacotadas em um arquivo ZIP."
+          "Baixe os arquivos resultantes - múltiplas saídas são empacotadas em um arquivo ZIP."
         ],
         "whyItMatters": "PDFs grandes são frequentemente compartilhados quando apenas uma pequena parte é relevante, desperdiçando largura de banda e forçando os destinatários a rolar por páginas que não precisam. Dividir torna o compartilhamento preciso e profissional. Para documentos legais e financeiros, compartilhar apenas a seção relevante também reduz a exposição: a contraparte revisando a cláusula 7 não precisa ver cronogramas confidenciais nas páginas 40–60. Dividir antes de compartilhar é uma maneira simples de limitar a divulgação de informações sem rasurar linhas individuais.",
-        "proTip": "Todo o processamento acontece inteiramente no seu navegador — nenhum arquivo é enviado para qualquer servidor. Seus documentos nunca saem do seu dispositivo. Se você precisar reorganizar um documento digitalizado que não foi originalmente criado como arquivos separados, use a opção 'dividir todas as páginas' primeiro para obter arquivos de páginas individuais e, em seguida, mescle páginas específicas juntas usando a ferramenta de mesclagem."
+        "proTip": "Todo o processamento acontece inteiramente no seu navegador - nenhum arquivo é enviado para qualquer servidor. Seus documentos nunca saem do seu dispositivo. Se você precisar reorganizar um documento digitalizado que não foi originalmente criado como arquivos separados, use a opção 'dividir todas as páginas' primeiro para obter arquivos de páginas individuais e, em seguida, mescle páginas específicas juntas usando a ferramenta de mesclagem."
       }
     },
     "compress": {
-      "metaTitle": "Comprimir PDF Online Grátis — Reduzir Tamanho | ToolNotch",
-      "metaDescription": "Reduza o tamanho do arquivo PDF sem perda de qualidade. Funciona inteiramente no seu navegador — sem upload necessário.",
+      "metaTitle": "Comprimir PDF Online Grátis - Reduzir Tamanho | ToolNotch",
+      "metaDescription": "Reduza o tamanho do arquivo PDF sem perda de qualidade. Funciona inteiramente no seu navegador - sem upload necessário.",
       "title": "Comprimir PDF Online",
       "description": "Reduza o tamanho do arquivo PDF sem perda de qualidade. Funciona no seu navegador.",
       "dropZone": {
@@ -966,7 +966,7 @@
           "answer": "Esta ferramenta comprime a estrutura do PDF, não as imagens incorporadas. A qualidade das imagens é preservada."
         },
         {
-          "question": "Meu arquivo não ficou menor — por quê?",
+          "question": "Meu arquivo não ficou menor - por quê?",
           "answer": "Alguns PDFs já estão bem otimizados. Se as imagens forem o principal fator de tamanho, uma redução maior exigiria recompressão de imagens com perda de qualidade."
         },
         {
@@ -975,7 +975,7 @@
         }
       ],
       "richContent": {
-        "whatIs": "A compressão de PDF reduz o tamanho do arquivo preservando o conteúdo. Os PDFs variam enormemente de tamanho dependendo de como foram criados: PDFs digitalizados são essencialmente imagens de bitmap incorporadas e podem ter 10–50 MB por página, enquanto PDFs nativos de texto gerados de um processador de texto são minúsculos — menos de 1 MB para 50 páginas. Existem dois tipos de compressão: com perdas (reduz a qualidade da imagem) e sem perdas (remove metadados redundantes e objetos internos não utilizados sem tocar na qualidade). Para a maioria dos usos na web e e-mail, a compressão de média qualidade é visualmente invisível na tela e pode reduzir o tamanho em 60–80%, fazendo a diferença entre um upload rejeitado e um envio bem-sucedido.",
+        "whatIs": "A compressão de PDF reduz o tamanho do arquivo preservando o conteúdo. Os PDFs variam enormemente de tamanho dependendo de como foram criados: PDFs digitalizados são essencialmente imagens de bitmap incorporadas e podem ter 10–50 MB por página, enquanto PDFs nativos de texto gerados de um processador de texto são minúsculos - menos de 1 MB para 50 páginas. Existem dois tipos de compressão: com perdas (reduz a qualidade da imagem) e sem perdas (remove metadados redundantes e objetos internos não utilizados sem tocar na qualidade). Para a maioria dos usos na web e e-mail, a compressão de média qualidade é visualmente invisível na tela e pode reduzir o tamanho em 60–80%, fazendo a diferença entre um upload rejeitado e um envio bem-sucedido.",
         "howToUse": [
           "Envie seu PDF clicando na zona para soltar ou arrastando o arquivo para dentro.",
           "Clique em Comprimir PDF para reduzir o tamanho do arquivo usando otimização de estrutura.",
@@ -1040,7 +1040,7 @@
           "Baixe uma única imagem diretamente ou baixe todas as páginas como um arquivo ZIP para PDFs de várias páginas."
         ],
         "whyItMatters": "Arquivos PDF não podem ser incorporados diretamente em postagens de mídia social, tags de imagem HTML ou slides de apresentação. Converter para JPG torna o conteúdo do documento universalmente compartilhável em todas as plataformas e aplicativos que aceitam imagens. Para documentos de uma única página, como certificados, diplomas e credenciais, um JPEG é mais portátil.",
-        "proTip": "Todo processamento ocorre no navegador — nenhum arquivo é enviado a servidores. Use 150 DPI para exibição na web e e-mail — boa qualidade com tamanho razoável. Use 300 DPI apenas se a saída for impressa. Para slides de apresentação, 96 DPI corresponde à maioria das resoluções de tela e produz o menor arquivo sem perda de qualidade visível."
+        "proTip": "Todo processamento ocorre no navegador - nenhum arquivo é enviado a servidores. Use 150 DPI para exibição na web e e-mail - boa qualidade com tamanho razoável. Use 300 DPI apenas se a saída for impressa. Para slides de apresentação, 96 DPI corresponde à maioria das resoluções de tela e produz o menor arquivo sem perda de qualidade visível."
       },
       "badges": {
         "noUpload": "Sem upload para servidores",
@@ -1065,13 +1065,13 @@
       "pageCountPlural": "páginas"
     },
     "jpgToPdf": {
-      "metaTitle": "JPG para PDF Online Grátis — Converter Imagens e PNG em PDF | ToolNotch",
+      "metaTitle": "JPG para PDF Online Grátis - Converter Imagens e PNG em PDF | ToolNotch",
       "metaDescription": "Transforme imagens JPG, PNG ou JPEG em um documento PDF de alta qualidade. Arraste para reordenar páginas. Grátis, seguro e 100% no seu navegador.",
       "title": "Converter Imagens para PDF",
       "description": "Transforme imagens JPG, PNG ou JPEG em um documento PDF único. Arraste para reordenar páginas. Sem upload necessário.",
       "dropZone": {
         "label": "Clique ou arraste imagens aqui",
-        "hint": "JPG, PNG ou JPEG — vários arquivos suportados"
+        "hint": "JPG, PNG ou JPEG - vários arquivos suportados"
       },
       "filename": {
         "label": "Nome personalizado do PDF",
@@ -1095,7 +1095,7 @@
         },
         {
           "question": "Posso controlar a ordem das páginas?",
-          "answer": "Sim — arraste as imagens para reordená-las antes de converter."
+          "answer": "Sim - arraste as imagens para reordená-las antes de converter."
         },
         {
           "question": "Meus arquivos são enviados para algum lugar?",
@@ -1107,7 +1107,7 @@
         }
       ],
       "richContent": {
-        "whatIs": "A conversão de JPG para PDF incorpora uma ou mais imagens JPEG em um documento PDF. Casos de uso incluem converter fotos de notas manuscritas ou formulários de papel preenchidos em um documento submetível, combinar várias imagens digitalizadas em um único PDF para que tudo chegue em um arquivo e enviar documentos de identidade em formato PDF, conforme exigido por muitos formulários oficiais. É importante notar que a saída é um PDF baseado em imagem — o texto não é pesquisável ou legível por máquina a menos que você aplique OCR separadamente.",
+        "whatIs": "A conversão de JPG para PDF incorpora uma ou mais imagens JPEG em um documento PDF. Casos de uso incluem converter fotos de notas manuscritas ou formulários de papel preenchidos em um documento submetível, combinar várias imagens digitalizadas em um único PDF para que tudo chegue em um arquivo e enviar documentos de identidade em formato PDF, conforme exigido por muitos formulários oficiais. É importante notar que a saída é um PDF baseado em imagem - o texto não é pesquisável ou legível por máquina a menos que você aplique OCR separadamente.",
         "howToUse": [
           "Envie uma ou mais imagens JPEG ou PNG clicando na zona para soltar ou arrastando os arquivos para dentro.",
           "Arraste as miniaturas das imagens para organizá-las na ordem em que deseja que apareçam no PDF.",
@@ -1115,7 +1115,7 @@
           "O PDF é baixado instantaneamente para o seu dispositivo."
         ],
         "whyItMatters": "Muitos portais de submissão oficiais aceitam PDF, mas não JPEG. Combinar várias imagens em um PDF também satisfaz o requisito de envio de um único arquivo. O contêiner PDF também suporta metadados (título, autor), proteção por senha e assinaturas digitais que arquivos JPEG brutos não têm.",
-        "proTip": "Todo processamento ocorre no navegador. Se suas imagens forem de altíssima resolução — fotos de câmeras de celular costumam ter 4000x3000 pixels e 6–12 MB cada — comprima ou redimensione antes de converter. Um PDF com três fotos não comprimidas de celular pode chegar a 30–40 MB. Procure imagens com menos de 2 MB cada para produzir um PDF de saída com tamanho razoável."
+        "proTip": "Todo processamento ocorre no navegador. Se suas imagens forem de altíssima resolução - fotos de câmeras de celular costumam ter 4000x3000 pixels e 6–12 MB cada - comprima ou redimensione antes de converter. Um PDF com três fotos não comprimidas de celular pode chegar a 30–40 MB. Procure imagens com menos de 2 MB cada para produzir um PDF de saída com tamanho razoável."
       }
     },
     "organize": {
@@ -1313,7 +1313,7 @@
       }
     },
     "pdfToText": {
-      "metaTitle": "PDF para Texto Online Grátis — Extrair Texto de PDF | ToolNotch",
+      "metaTitle": "PDF para Texto Online Grátis - Extrair Texto de PDF | ToolNotch",
       "metaDescription": "Extraia todo o texto de arquivos PDF instantaneamente no navegador. Copie para a área de transferência ou baixe em .txt. 100% privado.",
       "title": "PDF para Texto",
       "description": "Converta documentos PDF em texto puro legível. Copie trechos com um clique ou baixe o arquivo de texto formatado por páginas.",
@@ -1457,7 +1457,7 @@
   },
   "convert": {
     "hub": {
-      "metaTitle": "Conversores Online Gratuitos — Unidades, Moedas e Porcentagem | ToolNotch",
+      "metaTitle": "Conversores Online Gratuitos - Unidades, Moedas e Porcentagem | ToolNotch",
       "metaDescription": "Conversores online gratuitos e ilimitados: mais de 200 unidades de medida, cotações ao vivo de 150+ moedas e calculadora de porcentagem. Sem cadastro, 100% privado.",
       "title": "Conversores e Calculadoras de Medidas",
       "description": "Converta entre mais de 200 unidades de medida, acompanhe cotações de 150+ moedas em tempo real e resolva cálculos percentuais. Rápido, preciso e sem cadastro.",
@@ -1527,7 +1527,7 @@
       ]
     },
     "unit": {
-      "metaTitle": "Conversor de Unidades — Comprimento, Peso, Temperatura e Mais | ToolNotch",
+      "metaTitle": "Conversor de Unidades - Comprimento, Peso, Temperatura e Mais | ToolNotch",
       "metaDescription": "Conversor de unidades online gratuito. Converta comprimento, peso, temperatura, área, volume, velocidade, tempo, armazenamento digital e pressão. Mais de 200 unidades em 9 categorias.",
       "title": "Conversor de Unidades",
       "description": "Converta entre mais de 200 unidades em 9 categorias. Instantâneo, preciso, sem cadastro.",
@@ -1556,7 +1556,7 @@
         },
         {
           "question": "Funciona offline?",
-          "answer": "Sim — todas as conversões de unidades funcionam sem internet. Apenas o conversor de moedas precisa de conexão para buscar cotações em tempo real."
+          "answer": "Sim - todas as conversões de unidades funcionam sem internet. Apenas o conversor de moedas precisa de conexão para buscar cotações em tempo real."
         },
         {
           "question": "Como converto metros para pés?",
@@ -1564,12 +1564,12 @@
         }
       ],
       "richContent": {
-        "whatIs": "Um conversor de unidades traduz medidas entre diferentes sistemas de unidades — SI métrico, imperial e customary dos EUA. As categorias mais comuns incluem comprimento, peso, temperatura, volume (litros, galões — observe que o galão do Reino Unido é 4,546 L, enquanto o dos EUA é 3,785 L), velocidade, área e armazenamento digital. Pontos comuns de confusão: onças fluidas são uma unidade de volume e onças de peso são uma unidade de massa — elas não são intercambiáveis.",
+        "whatIs": "Um conversor de unidades traduz medidas entre diferentes sistemas de unidades - SI métrico, imperial e customary dos EUA. As categorias mais comuns incluem comprimento, peso, temperatura, volume (litros, galões - observe que o galão do Reino Unido é 4,546 L, enquanto o dos EUA é 3,785 L), velocidade, área e armazenamento digital. Pontos comuns de confusão: onças fluidas são uma unidade de volume e onças de peso são uma unidade de massa - elas não são intercambiáveis.",
         "howToUse": [
           "Selecione a categoria de unidade de que você precisa: comprimento, peso, temperatura, volume, velocidade, área ou armazenamento digital.",
           "Insira o valor que deseja converter.",
-          "Selecione a unidade de origem — a unidade em que seu valor está expresso no momento.",
-          "Selecione a unidade de destino — a unidade para a qual deseja converter.",
+          "Selecione a unidade de origem - a unidade em que seu valor está expresso no momento.",
+          "Selecione a unidade de destino - a unidade para a qual deseja converter.",
           "Leia o valor convertido instantaneamente no campo de resultado."
         ],
         "whyItMatters": "Erros de conversão de unidades causam falhas no mundo real. A Mars Climate Orbiter de 1999 foi perdida porque uma equipe de engenharia usou unidades métricas e outra usou unidades imperiais. Para uso diário, a conversão de unidades permite o dimensionamento de receitas culinárias, planejamento de viagens internacionais para distâncias e temperaturas e a compreensão de previsões do tempo estrangeiras.",
@@ -1577,7 +1577,7 @@
       }
     },
     "currency": {
-      "metaTitle": "Conversor de Moedas — Cotações em Tempo Real | ToolNotch",
+      "metaTitle": "Conversor de Moedas - Cotações em Tempo Real | ToolNotch",
       "metaDescription": "Conversor de moedas gratuito com cotações ao vivo. Converta entre mais de 150 moedas com taxas de câmbio em tempo real. Taxas atualizadas a cada hora. Sem cadastro.",
       "title": "Conversor de Moedas",
       "description": "Converta entre mais de 150 moedas com cotações em tempo real. Taxas atualizadas a cada hora.",
@@ -1594,7 +1594,7 @@
       "fromLabel": "Moeda de Origem",
       "toLabel": "Moeda de Destino",
       "amountLabel": "Valor a Converter",
-      "staleWarning": "⚠️ Exibindo taxas em cache — não foi possível buscar as taxas mais recentes. As taxas podem estar desatualizadas.",
+      "staleWarning": "⚠️ Exibindo taxas em cache - não foi possível buscar as taxas mais recentes. As taxas podem estar desatualizadas.",
       "errorFetching": "Não foi possível buscar as taxas de câmbio. Verifique sua conexão e tente novamente.",
       "amountPlaceholder": "Valor",
       "loading": "Carregando...",
@@ -1618,14 +1618,14 @@
         }
       ],
       "richContent": {
-        "whatIs": "Um conversor de moedas traduz quantias entre as moedas mundiais usando taxas de câmbio. Entender o cenário das taxas é importante: a taxa média de mercado (ou taxa interbancária) é a taxa real mostrada pela Reuters, Bloomberg e Google Finance — é o ponto médio entre os preços de compra e venda no mercado atacadista. Bancos geralmente adicionam uma margem de 2–5%. Casas de câmbio em aeroportos costumam aplicar margens de 8–15%. As taxas mostradas aqui são indicativas.",
+        "whatIs": "Um conversor de moedas traduz quantias entre as moedas mundiais usando taxas de câmbio. Entender o cenário das taxas é importante: a taxa média de mercado (ou taxa interbancária) é a taxa real mostrada pela Reuters, Bloomberg e Google Finance - é o ponto médio entre os preços de compra e venda no mercado atacadista. Bancos geralmente adicionam uma margem de 2–5%. Casas de câmbio em aeroportos costumam aplicar margens de 8–15%. As taxas mostradas aqui são indicativas.",
         "howToUse": [
-          "Selecione a moeda de origem — a moeda que você está convertendo.",
+          "Selecione a moeda de origem - a moeda que você está convertendo.",
           "Insira a quantia que deseja converter.",
-          "Selecione a moeda de destino — a moeda para a qual deseja converter.",
+          "Selecione a moeda de destino - a moeda para a qual deseja converter.",
           "Leia o valor convertido e a taxa de câmbio indicativa usada para o cálculo."
         ],
-        "whyItMatters": "Margens de câmbio ocultas custam bilhões a viajantes internacionais e empresas anualmente. A conversão de moeda dinâmica — onde um comerciante estrangeiro ou caixa eletrônico se oferece para cobrar na sua moeda local — normalmente adiciona 3–7% acima do mercado médio. Conhecer a taxa média de mercado real permite que você avalie essas ofertas e recuse quando o custo for irracional.",
+        "whyItMatters": "Margens de câmbio ocultas custam bilhões a viajantes internacionais e empresas anualmente. A conversão de moeda dinâmica - onde um comerciante estrangeiro ou caixa eletrônico se oferece para cobrar na sua moeda local - normalmente adiciona 3–7% acima do mercado médio. Conhecer a taxa média de mercado real permite que você avalie essas ofertas e recuse quando o custo for irracional.",
         "proTip": "Para viagens, compare a taxa anunciada do seu banco com a taxa média de mercado. Cartões da Wise, Revolut e Schwab debit cobram 0–1% sobre a taxa média. Cartões de bancos tradicionais normalmente cobram 2–5%. Em uma viagem de US$ 5.000, essa diferença é de US$ 100–250 em taxas de câmbio evitáveis."
       }
     },
@@ -1745,7 +1745,7 @@
         "accurate": "Qual é a precisão deste conversor?",
         "accurateAnswer": "As conversões usam cálculos baseados em fatores precisos com até 8 algarismos significativos. Os resultados são arredondados apenas para exibição.",
         "offline": "Funciona offline?",
-        "offlineAnswer": "Sim — todas as conversões de unidades funcionam inteiramente no seu navegador, sem necessidade de conexão com a internet.",
+        "offlineAnswer": "Sim - todas as conversões de unidades funcionam inteiramente no seu navegador, sem necessidade de conexão com a internet.",
         "howManyAnswer": "1 {from} = {value} {to}.",
         "howToAnswer": "Digite qualquer valor no campo {from} do conversor acima e o resultado em {to} aparece na hora. A fórmula é {formula}.",
         "formulaQuestion": "Qual é a fórmula para converter {from} em {to}?"
@@ -2201,7 +2201,7 @@
       "lendingTreePersonal": "Comparar taxas de empréstimo pessoal no LendingTree →"
     },
     "hub": {
-      "metaTitle": "Ferramentas Financeiras Gratuitas — Calculadoras de Empréstimo, Financiamento e Faturas | ToolNotch",
+      "metaTitle": "Ferramentas Financeiras Gratuitas - Calculadoras de Empréstimo, Financiamento e Faturas | ToolNotch",
       "metaDescription": "Calculadoras de empréstimo, financiamento imobiliário e geradores de fatura online e gratuitos. Simule parcelas, juros e amortização instantaneamente.",
       "title": "Calculadoras e Ferramentas Financeiras",
       "description": "Simule parcelas mensais, compare juros e amortizações e gere faturas profissionais em PDF. Tudo 100% gratuito, sem cadastro e direto no seu navegador.",
@@ -2247,7 +2247,7 @@
     },
     "variants": {
       "loan-calculator": {
-        "metaTitle": "Calculadora de Empréstimo — Parcela Mensal e Amortização",
+        "metaTitle": "Calculadora de Empréstimo - Parcela Mensal e Amortização",
         "metaDescription": "Calculadora de empréstimo gratuita. Calcule parcelas mensais, juros totais e veja a tabela completa de amortização para qualquer empréstimo.",
         "title": "Calculadora de Empréstimo",
         "description": "Calcule sua parcela mensal, juros totais e tabela completa de amortização para qualquer empréstimo.",
@@ -2270,9 +2270,9 @@
           }
         ],
         "richContent": {
-          "whatIs": "Uma calculadora de empréstimo estima sua prestação mensal para qualquer empréstimo com parcelas fixas — crédito pessoal, empréstimo consignado, financiamento de veículos ou qualquer valor tomado a juros fixos por um prazo determinado. Cada prestação cobre primeiro os juros acumulados, depois reduz o saldo devedor. É fundamental entender a diferença entre a taxa de juros nominal e o CET (Custo Efetivo Total): o CET inclui taxas administrativas, seguros obrigatórios e outros encargos, sendo o valor real do empréstimo. Os bancos são obrigados a informar o CET, e é ele — não a taxa nominal — que deve ser comparado entre diferentes ofertas.",
+          "whatIs": "Uma calculadora de empréstimo estima sua prestação mensal para qualquer empréstimo com parcelas fixas - crédito pessoal, empréstimo consignado, financiamento de veículos ou qualquer valor tomado a juros fixos por um prazo determinado. Cada prestação cobre primeiro os juros acumulados, depois reduz o saldo devedor. É fundamental entender a diferença entre a taxa de juros nominal e o CET (Custo Efetivo Total): o CET inclui taxas administrativas, seguros obrigatórios e outros encargos, sendo o valor real do empréstimo. Os bancos são obrigados a informar o CET, e é ele - não a taxa nominal - que deve ser comparado entre diferentes ofertas.",
           "howToUse": [
-            "Insira o valor do empréstimo — o total que você deseja tomar, antes de qualquer taxa.",
+            "Insira o valor do empréstimo - o total que você deseja tomar, antes de qualquer taxa.",
             "Insira a taxa de juros anual. Use o CET da proposta para o custo total mais preciso.",
             "Selecione o prazo em meses ou anos. Prazos mais curtos significam prestações maiores, mas muito menos juros.",
             "Veja instantaneamente a prestação mensal e o total de juros ao longo do empréstimo.",
@@ -2283,7 +2283,7 @@
         }
       },
       "mortgage-calculator": {
-        "metaTitle": "Calculadora de Financiamento Imobiliário — Parcela e Custo Total",
+        "metaTitle": "Calculadora de Financiamento Imobiliário - Parcela e Custo Total",
         "metaDescription": "Calculadora de financiamento imobiliário gratuita. Descubra sua parcela mensal, veja o custo total de juros e visualize a tabela completa de amortização.",
         "title": "Calculadora de Financiamento Imobiliário",
         "description": "Calcule sua parcela de financiamento, juros totais e tabela completa de amortização.",
@@ -2306,36 +2306,36 @@
           }
         ],
         "richContent": {
-          "whatIs": "Uma calculadora de financiamento imobiliário estima sua prestação mensal de capital e juros com base no valor financiado, taxa de juros e prazo. As prestações são calculadas pela Tabela Price, que mantém o valor fixo enquanto altera a proporção entre juros e amortização ao longo do tempo — nos primeiros anos, a maior parte é juros; no final, é amortização do principal. O que esta calculadora não inclui são os custos totais mensais: IPTU, seguro do imóvel e seguros obrigatórios exigidos pelo banco. Esses extras podem adicionar R$ 500–R$ 1.500 ou mais por mês dependendo do imóvel e da localidade. Sempre calcule o custo total, não apenas a prestação de capital e juros.",
+          "whatIs": "Uma calculadora de financiamento imobiliário estima sua prestação mensal de capital e juros com base no valor financiado, taxa de juros e prazo. As prestações são calculadas pela Tabela Price, que mantém o valor fixo enquanto altera a proporção entre juros e amortização ao longo do tempo - nos primeiros anos, a maior parte é juros; no final, é amortização do principal. O que esta calculadora não inclui são os custos totais mensais: IPTU, seguro do imóvel e seguros obrigatórios exigidos pelo banco. Esses extras podem adicionar R$ 500–R$ 1.500 ou mais por mês dependendo do imóvel e da localidade. Sempre calcule o custo total, não apenas a prestação de capital e juros.",
           "howToUse": [
-            "Insira o valor do imóvel — o preço total de compra, não o valor financiado.",
+            "Insira o valor do imóvel - o preço total de compra, não o valor financiado.",
             "Insira o valor da entrada. Uma entrada maior reduz a prestação e o total de juros pagos.",
             "Insira a taxa de juros anual. Use a taxa oferecida pelo banco ou uma taxa de mercado atual.",
             "Escolha o prazo em anos: prazos mais longos reduzem a prestação, mas aumentam o total de juros.",
             "Veja instantaneamente a prestação mensal, o total de juros e a tabela completa de amortização.",
             "Some IPTU, seguro e outros encargos ao resultado para obter seu custo mensal real de moradia."
           ],
-          "whyItMatters": "Uma diferença de 0,5% na taxa de juros pode custar ou economizar dezenas de milhares de reais ao longo de um financiamento de 30 anos. Simular diferentes cenários — taxas, prazos e valores de entrada — antes de assinar o contrato protege você de comprometer sua renda. Muitos compradores focam apenas na prestação sem considerar o total de juros: um imóvel de R$ 500.000 financiado a 10% ao ano por 30 anos pode resultar em mais de R$ 900.000 em juros. Entender o custo completo ajuda a escolher o produto certo e decidir se vale a pena dar uma entrada maior.",
-          "proTip": "Antes de fechar o financiamento, compare as taxas de pelo menos três bancos — incluindo a Caixa Econômica Federal, que geralmente tem as melhores condições para financiamento habitacional. Verifique também se vale usar o FGTS como entrada ou para abater o saldo devedor, pois isso pode reduzir significativamente os juros totais pagos."
+          "whyItMatters": "Uma diferença de 0,5% na taxa de juros pode custar ou economizar dezenas de milhares de reais ao longo de um financiamento de 30 anos. Simular diferentes cenários - taxas, prazos e valores de entrada - antes de assinar o contrato protege você de comprometer sua renda. Muitos compradores focam apenas na prestação sem considerar o total de juros: um imóvel de R$ 500.000 financiado a 10% ao ano por 30 anos pode resultar em mais de R$ 900.000 em juros. Entender o custo completo ajuda a escolher o produto certo e decidir se vale a pena dar uma entrada maior.",
+          "proTip": "Antes de fechar o financiamento, compare as taxas de pelo menos três bancos - incluindo a Caixa Econômica Federal, que geralmente tem as melhores condições para financiamento habitacional. Verifique também se vale usar o FGTS como entrada ou para abater o saldo devedor, pois isso pode reduzir significativamente os juros totais pagos."
         }
       },
       "car-loan-calculator": {
-        "metaTitle": "Calculadora de Financiamento de Carro — Parcela Mensal",
+        "metaTitle": "Calculadora de Financiamento de Carro - Parcela Mensal",
         "metaDescription": "Calculadora de financiamento de carro gratuita. Calcule a parcela mensal, os juros totais e veja se financiar ou pagar à vista faz mais sentido.",
         "title": "Calculadora de Financiamento de Carro",
         "description": "Calcule a parcela mensal do seu financiamento de carro e o custo total do crédito.",
         "richContent": {
-          "whatIs": "Uma calculadora de financiamento de carro ajuda a estimar a parcela mensal e o custo total real do crédito automotivo. Os veículos se desvalorizam rapidamente — muitos perdem cerca de 20% do valor no primeiro ano — por isso é fundamental entender como o saldo devedor se compara ao valor de mercado do veículo em queda. O financiamento direto com a concessionária pode parecer conveniente, mas muitas vezes embutem uma margem de juros como fonte de lucro. Bancos, cooperativas de crédito e fintechs frequentemente oferecem taxas 1–3% menores para o mesmo crédito. A calculadora permite comparar cenários: taxa de um banco vs. taxa da concessionária, ou prazo mais curto vs. prazo mais longo. O seguro prestamista também vale ser considerado — ele cobre a diferença entre o que você deve e o que o carro vale caso ele seja roubado ou destruído antes da quitação.",
+          "whatIs": "Uma calculadora de financiamento de carro ajuda a estimar a parcela mensal e o custo total real do crédito automotivo. Os veículos se desvalorizam rapidamente - muitos perdem cerca de 20% do valor no primeiro ano - por isso é fundamental entender como o saldo devedor se compara ao valor de mercado do veículo em queda. O financiamento direto com a concessionária pode parecer conveniente, mas muitas vezes embutem uma margem de juros como fonte de lucro. Bancos, cooperativas de crédito e fintechs frequentemente oferecem taxas 1–3% menores para o mesmo crédito. A calculadora permite comparar cenários: taxa de um banco vs. taxa da concessionária, ou prazo mais curto vs. prazo mais longo. O seguro prestamista também vale ser considerado - ele cobre a diferença entre o que você deve e o que o carro vale caso ele seja roubado ou destruído antes da quitação.",
           "howToUse": [
             "Insira o valor do veículo, incluindo taxas da concessionária, menos a entrada ou o valor do veículo usado dado como parte do pagamento.",
-            "Informe a taxa de juros anual — use a taxa pré-aprovada pelo seu banco ou a taxa cotada pela concessionária.",
+            "Informe a taxa de juros anual - use a taxa pré-aprovada pelo seu banco ou a taxa cotada pela concessionária.",
             "Escolha o prazo do financiamento em meses (36, 48, 60 ou 72 meses são os mais comuns).",
             "Veja instantaneamente sua parcela mensal e o total de juros pagos durante a vida do contrato.",
             "Compare cenários: rode o mesmo valor com a taxa do banco vs. a taxa da concessionária para ver a diferença em reais.",
             "Acrescente seguro, IPVA, manutenção e combustível além da parcela para calcular o custo mensal real de transporte."
           ],
-          "whyItMatters": "As taxas e os prazos do financiamento afetam significativamente o custo total do veículo. Um carro de R$ 60.000 financiado a 1,2% ao mês por 48 meses acumula muito menos juros do que o mesmo crédito a 1,8% em 72 meses — e no prazo mais longo você pode ficar devendo mais do que o carro vale por boa parte do período. Prazos longos (72–84 meses) são cada vez mais comuns, mas carregam risco real: você permanece com o saldo devedor acima do valor de mercado durante anos, dificultando a venda ou a troca sem carregar a dívida negativa para o próximo financiamento.",
-          "proTip": "Consulte seu banco ou uma fintech antes de visitar a concessionária. Ter uma taxa pré-aprovada em mãos é o seu melhor instrumento de negociação para avaliar a proposta de financiamento da loja. Negocie o preço do veículo separadamente das condições de financiamento — as concessionárias às vezes usam o valor da parcela para desviar a atenção do preço total e inflar o custo real da compra."
+          "whyItMatters": "As taxas e os prazos do financiamento afetam significativamente o custo total do veículo. Um carro de R$ 60.000 financiado a 1,2% ao mês por 48 meses acumula muito menos juros do que o mesmo crédito a 1,8% em 72 meses - e no prazo mais longo você pode ficar devendo mais do que o carro vale por boa parte do período. Prazos longos (72–84 meses) são cada vez mais comuns, mas carregam risco real: você permanece com o saldo devedor acima do valor de mercado durante anos, dificultando a venda ou a troca sem carregar a dívida negativa para o próximo financiamento.",
+          "proTip": "Consulte seu banco ou uma fintech antes de visitar a concessionária. Ter uma taxa pré-aprovada em mãos é o seu melhor instrumento de negociação para avaliar a proposta de financiamento da loja. Negocie o preço do veículo separadamente das condições de financiamento - as concessionárias às vezes usam o valor da parcela para desviar a atenção do preço total e inflar o custo real da compra."
         },
         "faqs": [
           {
@@ -2357,22 +2357,22 @@
         ]
       },
       "personal-loan-calculator": {
-        "metaTitle": "Calculadora de Empréstimo Pessoal — Calculadora de Parcela Mensal",
+        "metaTitle": "Calculadora de Empréstimo Pessoal - Calculadora de Parcela Mensal",
         "metaDescription": "Calcule parcelas de empréstimo pessoal instantaneamente. Encontre sua parcela mensal, juros totais e compare prazos para encontrar a melhor opção.",
         "title": "Calculadora de Empréstimo Pessoal",
         "description": "Calcule parcelas mensais e custo total para empréstimos pessoais e consolidação de dívidas.",
         "richContent": {
           "whatIs": "Um empréstimo pessoal é um crédito sem garantia real, geralmente com taxa fixa e prazo determinado, utilizado para quitar dívidas, reformar a casa, cobrir despesas médicas ou realizar compras de valor elevado. Ao contrário dos cartões de crédito com taxas variáveis que frequentemente ultrapassam 20–29% ao mês, os empréstimos pessoais costumam ter taxas fixas menores e um prazo definido de pagamento, normalmente de 12 a 60 meses. Essa previsibilidade os torna uma ferramenta eficaz para sair do ciclo do rotativo do cartão. Ao consolidar vários saldos em dívida única com taxa menor, você paga uma única parcela mensal em vez de malabarear vários mínimos, e tem uma data certa de quitação. A calculadora mostra exatamente quanto de juros você economiza e quando estará livre da dívida.",
           "howToUse": [
-            "Insira o valor do empréstimo — para consolidação de dívidas, some todos os saldos que pretende quitar.",
+            "Insira o valor do empréstimo - para consolidação de dívidas, some todos os saldos que pretende quitar.",
             "Informe a taxa de juros anual (ou mensal) que lhe foi oferecida, ou use sua faixa de score para estimar uma taxa realista.",
             "Escolha o prazo em meses (12, 24, 36, 48 ou 60 meses são os mais comuns em empréstimos pessoais).",
             "Veja instantaneamente sua parcela mensal e o total de juros ao longo do contrato.",
             "Compare o total de juros deste empréstimo com o que você pagaria mantendo os saldos atuais no cartão de crédito.",
             "Ajuste o prazo para encontrar o equilíbrio ideal entre o tamanho da parcela e o custo total dos juros."
           ],
-          "whyItMatters": "A dívida no cartão de crédito é cara. A taxa do rotativo no Brasil frequentemente ultrapassa 300% ao ano, e como os pagamentos mínimos cobrem apenas uma fração dos juros, os saldos podem persistir por anos com pouca redução do principal. Um empréstimo pessoal com taxa fixa menor e prazo definido rompe esse ciclo. Consolidar R$ 10.000 em rotativo de cartão num empréstimo pessoal a taxa menor pode economizar milhares de reais em juros e garantir uma data de quitação — desde que você não acumule novos saldos no cartão. A parcela fixa também facilita o planejamento do orçamento mensal.",
-          "proTip": "Fique atento ao Custo Efetivo Total (CET) — alguns bancos e fintechs cobram tarifas de cadastro, seguro prestamista e outras taxas que elevam o custo real acima da taxa de juros anunciada. Compare sempre o CET (não só a taxa de juros) entre as instituições. Inclua essas tarifas no cálculo do custo total antes de escolher a oferta, especialmente se a finalidade for consolidar dívidas, pois a tarifa pode neutralizar parte da economia de juros."
+          "whyItMatters": "A dívida no cartão de crédito é cara. A taxa do rotativo no Brasil frequentemente ultrapassa 300% ao ano, e como os pagamentos mínimos cobrem apenas uma fração dos juros, os saldos podem persistir por anos com pouca redução do principal. Um empréstimo pessoal com taxa fixa menor e prazo definido rompe esse ciclo. Consolidar R$ 10.000 em rotativo de cartão num empréstimo pessoal a taxa menor pode economizar milhares de reais em juros e garantir uma data de quitação - desde que você não acumule novos saldos no cartão. A parcela fixa também facilita o planejamento do orçamento mensal.",
+          "proTip": "Fique atento ao Custo Efetivo Total (CET) - alguns bancos e fintechs cobram tarifas de cadastro, seguro prestamista e outras taxas que elevam o custo real acima da taxa de juros anunciada. Compare sempre o CET (não só a taxa de juros) entre as instituições. Inclua essas tarifas no cálculo do custo total antes de escolher a oferta, especialmente se a finalidade for consolidar dívidas, pois a tarifa pode neutralizar parte da economia de juros."
         },
         "faqs": [
           {
@@ -2394,7 +2394,7 @@
         ]
       },
       "amortization-calculator": {
-        "metaTitle": "Calculadora de Amortização — Tabela Completa de Pagamentos",
+        "metaTitle": "Calculadora de Amortização - Tabela Completa de Pagamentos",
         "metaDescription": "Calculadora de amortização gratuita. Gere uma tabela completa de pagamentos mostrando principal, juros e saldo para cada parcela mensal.",
         "title": "Calculadora de Amortização",
         "description": "Visualize a tabela completa de amortização do seu empréstimo mostrando cada pagamento dividido em principal e juros.",
@@ -2426,12 +2426,12 @@
             "Examine a tabela ano a ano para ver como a proporção juros/amortização muda ao longo do tempo.",
             "Experimente diferentes valores de amortização extra para encontrar o equilíbrio ideal entre prestação e economia."
           ],
-          "whyItMatters": "A maioria dos mutuários se surpreende ao descobrir o quanto suas prestações iniciais reduzem pouco o saldo devedor. No primeiro ano de um financiamento de 30 anos a 10% ao ano, mais de 90% de cada prestação é composta de juros no sistema Price. Pagamentos extras feitos nos primeiros anos têm impacto desproporcional porque reduzem o saldo sobre o qual todos os juros futuros são calculados — a economia se multiplica ao longo dos anos restantes. Amortizar R$ 10.000 adicionais no primeiro ano de um financiamento típico pode economizar R$ 30.000 ou mais em juros ao longo do prazo total. A tabela de amortização torna essa matemática concreta.",
+          "whyItMatters": "A maioria dos mutuários se surpreende ao descobrir o quanto suas prestações iniciais reduzem pouco o saldo devedor. No primeiro ano de um financiamento de 30 anos a 10% ao ano, mais de 90% de cada prestação é composta de juros no sistema Price. Pagamentos extras feitos nos primeiros anos têm impacto desproporcional porque reduzem o saldo sobre o qual todos os juros futuros são calculados - a economia se multiplica ao longo dos anos restantes. Amortizar R$ 10.000 adicionais no primeiro ano de um financiamento típico pode economizar R$ 30.000 ou mais em juros ao longo do prazo total. A tabela de amortização torna essa matemática concreta.",
           "proTip": "Verifique com seu banco se as amortizações extras reduzem o prazo (você continua pagando as mesmas prestações por menos tempo) ou reduzem a prestação (você paga menos por mês pelo mesmo prazo). A redução de prazo geralmente economiza mais juros no total. Você pode usar o FGTS anualmente para amortizações extras, o que pode reduzir significativamente o custo total do financiamento imobiliário."
         }
       },
       "home-affordability-calculator": {
-        "metaTitle": "Calculadora de Capacidade de Compra de Imóvel — Quanto Posso Pagar?",
+        "metaTitle": "Calculadora de Capacidade de Compra de Imóvel - Quanto Posso Pagar?",
         "metaDescription": "Calcule quanto de imóvel você pode pagar com base em sua renda, dívidas mensais e entrada. Usa a regra de endividamento 28/36.",
         "title": "Calculadora de Capacidade de Compra de Imóvel",
         "description": "Descubra quanto de imóvel você pode pagar com base em sua renda, dívidas e entrada.",
@@ -2454,21 +2454,21 @@
           }
         ],
         "richContent": {
-          "whatIs": "Uma calculadora de acessibilidade de moradia estima quanto você pode comprar com base na regra de 28/36 — uma diretriz de empréstimo que diz que seus custos de moradia (principal da hipoteca, juros, impostos sobre a propriedade e seguro) não devem exceder 28% da sua renda mensal bruta, e todos os pagamentos mensais combinados de dívidas (moradia mais empréstimos de carro, empréstimos estudantis e pagamentos mínimos de cartão de crédito) não devem exceder 36%. Os credores usam sua relação dívida/renda para calcular o valor máximo do empréstimo. Mas qualificar-se para um empréstimo e conseguir pagá-lo confortavelmente são duas coisas diferentes.",
+          "whatIs": "Uma calculadora de acessibilidade de moradia estima quanto você pode comprar com base na regra de 28/36 - uma diretriz de empréstimo que diz que seus custos de moradia (principal da hipoteca, juros, impostos sobre a propriedade e seguro) não devem exceder 28% da sua renda mensal bruta, e todos os pagamentos mensais combinados de dívidas (moradia mais empréstimos de carro, empréstimos estudantis e pagamentos mínimos de cartão de crédito) não devem exceder 36%. Os credores usam sua relação dívida/renda para calcular o valor máximo do empréstimo. Mas qualificar-se para um empréstimo e conseguir pagá-lo confortavelmente são duas coisas diferentes.",
           "howToUse": [
-            "Insira sua renda anual bruta — é o seu salário antes dos impostos, não o pagamento líquido.",
+            "Insira sua renda anual bruta - é o seu salário antes dos impostos, não o pagamento líquido.",
             "Adicione os pagamentos mensais totais das dívidas, incluindo empréstimos para automóveis e estudantis. Não inclua serviços públicos ou compras de supermercado.",
             "Insira o valor planejado da entrada. Uma entrada maior reduz o valor do empréstimo e, consequentemente, a mensalidade.",
             "Insira a taxa de juros esperada e o prazo do empréstimo (geralmente 30 anos) para refletir as condições realistas de mercado.",
             "Analise o preço máximo estimado da casa e o pagamento mensal e, em seguida, compare o valor mensal com o seu pagamento líquido para avaliar o conforto.",
             "Ajuste as entradas para simular cenários e ver como cada variável altera a sua faixa de preço acessível."
           ],
-          "whyItMatters": "Muitos compradores são pré-aprovados para o valor máximo que um credor permitirá e, em seguida, constroem sua pesquisa de casa em torno desse teto — um erro que pode levar a um orçamento apertado. Um aumento de 1% nas taxas de hipoteca pode reduzir a acessibilidade em US$ 30.000 a US$ 60.000 no preço de compra com uma renda típica. Usar esta calculadora antes de começar a procurar ajuda a estabelecer um orçamento realista.",
-          "proTip": "Os credores o qualificam com base na renda bruta — seu salário antes dos impostos. Mas os pagamentos da sua hipoteca saem do seu salário líquido. Um salário de US$ 100.000 rende aproximadamente US$ 65.000 a US$ 70.000 em pagamentos líquidos após impostos. Sempre verifique se o seu pagamento mensal estimado é administrável com sua renda líquida mensal."
+          "whyItMatters": "Muitos compradores são pré-aprovados para o valor máximo que um credor permitirá e, em seguida, constroem sua pesquisa de casa em torno desse teto - um erro que pode levar a um orçamento apertado. Um aumento de 1% nas taxas de hipoteca pode reduzir a acessibilidade em US$ 30.000 a US$ 60.000 no preço de compra com uma renda típica. Usar esta calculadora antes de começar a procurar ajuda a estabelecer um orçamento realista.",
+          "proTip": "Os credores o qualificam com base na renda bruta - seu salário antes dos impostos. Mas os pagamentos da sua hipoteca saem do seu salário líquido. Um salário de US$ 100.000 rende aproximadamente US$ 65.000 a US$ 70.000 em pagamentos líquidos após impostos. Sempre verifique se o seu pagamento mensal estimado é administrável com sua renda líquida mensal."
         }
       },
       "refinance-calculator": {
-        "metaTitle": "Calculadora de Refinanciamento — Vale a Pena Refinanciar?",
+        "metaTitle": "Calculadora de Refinanciamento - Vale a Pena Refinanciar?",
         "metaDescription": "Descubra se o refinanciamento do financiamento faz sentido financeiro. Compare seu empréstimo atual com novas taxas e calcule o ponto de equilíbrio.",
         "title": "Calculadora de Refinanciamento",
         "description": "Calcule se refinanciar seu financiamento faz sentido comparando seu empréstimo atual com novas condições.",
@@ -2495,32 +2495,32 @@
           "howToUse": [
             "Insira o saldo devedor atual, a taxa de juros atual e o prazo restante do financiamento.",
             "Insira a nova taxa de juros oferecida e o novo prazo que você está considerando.",
-            "Insira os custos estimados de portabilidade ou refinanciamento — custos de cartório, registro e eventuais taxas bancárias.",
+            "Insira os custos estimados de portabilidade ou refinanciamento - custos de cartório, registro e eventuais taxas bancárias.",
             "Veja em tempo real a economia mensal, o comparativo de juros totais e o ponto de equilíbrio em meses.",
             "Compare o ponto de equilíbrio com quanto tempo você ainda pretende manter o imóvel. Se o equilíbrio é em 36 meses mas você planeja vender em 24, o refinanciamento provavelmente não compensa.",
             "Simule pagar os custos à vista versus incorporá-los ao saldo devedor para ver o impacto de longo prazo de cada opção."
           ],
-          "whyItMatters": "O refinanciamento pode economizar centenas de reais por mês, mas só se o momento for certo. Proprietários que refinanciam sem calcular o ponto de equilíbrio frequentemente pagam custos que jamais recuperam — especialmente quem vende ou refinancia novamente em poucos anos. Por outro lado, esperar muito quando as taxas estão caindo tem custo real a cada mês. Esta calculadora fornece um critério numérico claro: se o ponto de equilíbrio está dentro do seu horizonte de permanência, o refinanciamento é provavelmente uma boa decisão financeira.",
-          "proTip": "Na portabilidade imobiliária, o banco atual tem o direito de igualar a oferta do banco destino. Use a proposta do banco concorrente como alavanca de negociação com seu banco atual — muitas vezes ele reduz a taxa sem você precisar pagar os custos de transferência."
+          "whyItMatters": "O refinanciamento pode economizar centenas de reais por mês, mas só se o momento for certo. Proprietários que refinanciam sem calcular o ponto de equilíbrio frequentemente pagam custos que jamais recuperam - especialmente quem vende ou refinancia novamente em poucos anos. Por outro lado, esperar muito quando as taxas estão caindo tem custo real a cada mês. Esta calculadora fornece um critério numérico claro: se o ponto de equilíbrio está dentro do seu horizonte de permanência, o refinanciamento é provavelmente uma boa decisão financeira.",
+          "proTip": "Na portabilidade imobiliária, o banco atual tem o direito de igualar a oferta do banco destino. Use a proposta do banco concorrente como alavanca de negociação com seu banco atual - muitas vezes ele reduz a taxa sem você precisar pagar os custos de transferência."
         }
       },
       "student-loan-calculator": {
-        "metaTitle": "Calculadora de Empréstimo Estudantil — Parcela e Quitação",
+        "metaTitle": "Calculadora de Empréstimo Estudantil - Parcela e Quitação",
         "metaDescription": "Calcule a parcela mensal do seu empréstimo estudantil, os juros totais e o prazo de quitação. Compare planos de pagamento para encontrar a opção mais acessível.",
         "title": "Calculadora de Empréstimo Estudantil",
         "description": "Calcule parcelas mensais e custo total de quitação de empréstimos estudantis.",
         "richContent": {
-          "whatIs": "Uma calculadora de empréstimo estudantil ajuda o estudante a estimar a parcela mensal e o custo total de pagamento com base no saldo devedor, na taxa de juros e no prazo. No Brasil, o principal programa de financiamento estudantil é o FIES (Fundo de Financiamento Estudantil), que oferece crédito com taxas subsidiadas para cursos de graduação em instituições privadas. No exterior, especialmente para quem estuda nos EUA, os empréstimos federais americanos dividem-se em subsidiados — em que o governo cobre os juros enquanto o estudante está matriculado pelo menos em meio período — e não subsidiados, que acumulam juros desde o desembolso, mesmo durante o período escolar. O plano de pagamento padrão para empréstimos federais dos EUA é de 10 anos, mas planos baseados em renda (IDR) como SAVE, IBR e PAYE limitam a parcela a uma porcentagem da renda e estendem o prazo para 20–25 anos.",
+          "whatIs": "Uma calculadora de empréstimo estudantil ajuda o estudante a estimar a parcela mensal e o custo total de pagamento com base no saldo devedor, na taxa de juros e no prazo. No Brasil, o principal programa de financiamento estudantil é o FIES (Fundo de Financiamento Estudantil), que oferece crédito com taxas subsidiadas para cursos de graduação em instituições privadas. No exterior, especialmente para quem estuda nos EUA, os empréstimos federais americanos dividem-se em subsidiados - em que o governo cobre os juros enquanto o estudante está matriculado pelo menos em meio período - e não subsidiados, que acumulam juros desde o desembolso, mesmo durante o período escolar. O plano de pagamento padrão para empréstimos federais dos EUA é de 10 anos, mas planos baseados em renda (IDR) como SAVE, IBR e PAYE limitam a parcela a uma porcentagem da renda e estendem o prazo para 20–25 anos.",
           "howToUse": [
-            "Insira o saldo total do empréstimo estudantil — inclua todos os créditos federais e privados que deseja modelar.",
+            "Insira o saldo total do empréstimo estudantil - inclua todos os créditos federais e privados que deseja modelar.",
             "Informe a taxa de juros média ponderada dos seus empréstimos, ou modele cada empréstimo separadamente para maior precisão.",
             "Escolha o prazo de pagamento: 10 anos para o plano padrão, ou 20–25 anos para simular um plano baseado em renda.",
             "Veja instantaneamente sua parcela mensal e o total de juros pagos durante todo o prazo.",
             "Compare o plano padrão de 10 anos com um plano IDR de 20 anos para visualizar o equilíbrio entre o valor da parcela e o total de juros.",
             "Se trabalha no setor público nos EUA, considere o PSLF, que cancela o saldo restante após 10 anos de pagamentos qualificados."
           ],
-          "whyItMatters": "A diferença entre os planos de pagamento é substancial. Um empréstimo de R$ 50.000 (ou US$ 35.000) a 5,5% quitado em 10 anos acumula muito menos juros do que o mesmo empréstimo num plano de 25 anos — embora as parcelas sejam muito mais baixas. Para quem se qualifica ao PSLF nos EUA, o saldo perdoado pode tornar o plano IDR a decisão financeiramente correta. Entender o custo real de cada caminho antes de se comprometer é essencial. Mudar de plano depois é possível, mas os juros já acumulados não desaparecem, e o tempo no plano errado pode não contar para o perdão.",
-          "proTip": "Se você tem empréstimos não subsidiados e ainda está estudando ou no período de carência, fazer pequenos pagamentos de juros agora evita a capitalização — em que os juros não pagos são somados ao saldo principal, aumentando a base de cálculo de juros para todo o prazo restante. Mesmo R$ 100–R$ 200 por mês durante o curso pode evitar centenas de reais em juros capitalizados no início do pagamento."
+          "whyItMatters": "A diferença entre os planos de pagamento é substancial. Um empréstimo de R$ 50.000 (ou US$ 35.000) a 5,5% quitado em 10 anos acumula muito menos juros do que o mesmo empréstimo num plano de 25 anos - embora as parcelas sejam muito mais baixas. Para quem se qualifica ao PSLF nos EUA, o saldo perdoado pode tornar o plano IDR a decisão financeiramente correta. Entender o custo real de cada caminho antes de se comprometer é essencial. Mudar de plano depois é possível, mas os juros já acumulados não desaparecem, e o tempo no plano errado pode não contar para o perdão.",
+          "proTip": "Se você tem empréstimos não subsidiados e ainda está estudando ou no período de carência, fazer pequenos pagamentos de juros agora evita a capitalização - em que os juros não pagos são somados ao saldo principal, aumentando a base de cálculo de juros para todo o prazo restante. Mesmo R$ 100–R$ 200 por mês durante o curso pode evitar centenas de reais em juros capitalizados no início do pagamento."
         },
         "faqs": [
           {
@@ -2533,7 +2533,7 @@
           },
           {
             "question": "Devo pagar mais no empréstimo estudantil?",
-            "answer": "Pagamentos extras reduzem seu saldo e os juros totais. Para empréstimos federais, verifique se o perdão por renda se aplica — pagamentos extras nem sempre são a melhor estratégia."
+            "answer": "Pagamentos extras reduzem seu saldo e os juros totais. Para empréstimos federais, verifique se o perdão por renda se aplica - pagamentos extras nem sempre são a melhor estratégia."
           },
           {
             "question": "O que é refinanciamento de empréstimo estudantil?",
@@ -2542,7 +2542,7 @@
         ]
       },
       "interest-calculator": {
-        "metaTitle": "Calculadora de Juros — Simples e Compostos",
+        "metaTitle": "Calculadora de Juros - Simples e Compostos",
         "metaDescription": "Calculadora de juros gratuita. Calcule juros simples ou compostos sobre qualquer valor. Ótima para metas de poupança ou estimativas de custo de empréstimo.",
         "title": "Calculadora de Juros",
         "description": "Calcule juros simples e compostos sobre poupanças ou empréstimos.",
@@ -2565,27 +2565,27 @@
           }
         ],
         "richContent": {
-          "whatIs": "Uma calculadora de juros calcula o total de juros ganhos ou pagos sobre uma quantia em dinheiro, usando juros simples (principal × taxa × tempo) ou juros compostos (onde os juros ganhos são adicionados ao principal e rendem juros em si). A diferença entre os dois é dramática com o tempo. A frequência composta — diária, mensal, trimestral ou anual — determina com que frequência os juros são adicionados ao saldo. O APY (Rendimento Percentual Anual) mede o verdadeiro retorno anual após a composição, enquanto o APR (Taxa Percentual Anual) é a taxa nominal antes da composição.",
+          "whatIs": "Uma calculadora de juros calcula o total de juros ganhos ou pagos sobre uma quantia em dinheiro, usando juros simples (principal × taxa × tempo) ou juros compostos (onde os juros ganhos são adicionados ao principal e rendem juros em si). A diferença entre os dois é dramática com o tempo. A frequência composta - diária, mensal, trimestral ou anual - determina com que frequência os juros são adicionados ao saldo. O APY (Rendimento Percentual Anual) mede o verdadeiro retorno anual após a composição, enquanto o APR (Taxa Percentual Anual) é a taxa nominal antes da composição.",
           "howToUse": [
-            "Insira o valor do principal — o saldo inicial ou o valor do empréstimo.",
+            "Insira o valor do principal - o saldo inicial ou o valor do empréstimo.",
             "Insira a taxa de juros anual como uma porcentagem (por exemplo, 5 para 5%).",
             "Insira o período de tempo em anos (ou meses, se a calculadora oferecer suporte).",
             "Selecione a frequência de capitalização: diária, mensal, trimestral ou anual. Deixe em juros simples para comparar.",
             "Veja em tempo real o total de juros gerados, o saldo final e a evolução patrimonial.",
             "Alterne entre as frequências de composição para ver como a composição diária se compara à mensal com a mesma taxa."
           ],
-          "whyItMatters": "A diferença entre juros simples e compostos é enorme ao longo do tempo. Um investimento de US$ 10.000 a 5% de juros simples em 10 anos ganha US$ 5.000 em juros. O mesmo valor a 5% composto mensalmente ganha aproximadamente US$ 6.470 — uma diferença de 29% — sem contribuições adicionais. A frequência composta também é importante ao comparar contas de poupança: duas contas anunciadas a 4,80% de APR podem render APYs significativamente diferentes.",
+          "whyItMatters": "A diferença entre juros simples e compostos é enorme ao longo do tempo. Um investimento de US$ 10.000 a 5% de juros simples em 10 anos ganha US$ 5.000 em juros. O mesmo valor a 5% composto mensalmente ganha aproximadamente US$ 6.470 - uma diferença de 29% - sem contribuições adicionais. A frequência composta também é importante ao comparar contas de poupança: duas contas anunciadas a 4,80% de APR podem render APYs significativamente diferentes.",
           "sections": [
             {
               "heading": "Exemplo prático: como a frequência de capitalização muda o resultado",
-              "body": "Pegue US$ 10.000 a uma taxa anual de 6% por 5 anos. Com juros simples, a conta é 10.000 x 0,06 x 5 = US$ 3.000, para um saldo final de US$ 13.000. Capitalizado anualmente, o saldo é 10.000 x 1,06^5 ≈ US$ 13.382, então os juros ficam em cerca de US$ 3.382. Capitalizado mensalmente, a taxa por período é 0,06 / 12 = 0,005 ao longo de 60 períodos: 10.000 x 1,005^60 ≈ US$ 13.489, ou cerca de US$ 3.489 em juros. Mesma taxa nominal, cerca de US$ 489 a mais que os juros simples só porque os juros são adicionados com mais frequência. Um erro comum é comparar a taxa de um banco capitalizada mensalmente com o número anual de outro banco — converta as duas para APY primeiro, para comparar coisas equivalentes."
+              "body": "Pegue US$ 10.000 a uma taxa anual de 6% por 5 anos. Com juros simples, a conta é 10.000 x 0,06 x 5 = US$ 3.000, para um saldo final de US$ 13.000. Capitalizado anualmente, o saldo é 10.000 x 1,06^5 ≈ US$ 13.382, então os juros ficam em cerca de US$ 3.382. Capitalizado mensalmente, a taxa por período é 0,06 / 12 = 0,005 ao longo de 60 períodos: 10.000 x 1,005^60 ≈ US$ 13.489, ou cerca de US$ 3.489 em juros. Mesma taxa nominal, cerca de US$ 489 a mais que os juros simples só porque os juros são adicionados com mais frequência. Um erro comum é comparar a taxa de um banco capitalizada mensalmente com o número anual de outro banco - converta as duas para APY primeiro, para comparar coisas equivalentes."
             }
           ],
-          "proTip": "Ao comparar contas de poupança ou CDs, sempre olhe para o APY — não para o APR. O APY é responsável pela capitalização e mostra o seu verdadeiro retorno anual. Uma conta poupança a 5,00% APR composta diariamente rende um APY de aproximadamente 5,13%, enquanto a mesma taxa composta anualmente rende exatamente 5,00%."
+          "proTip": "Ao comparar contas de poupança ou CDs, sempre olhe para o APY - não para o APR. O APY é responsável pela capitalização e mostra o seu verdadeiro retorno anual. Uma conta poupança a 5,00% APR composta diariamente rende um APY de aproximadamente 5,13%, enquanto a mesma taxa composta anualmente rende exatamente 5,00%."
         }
       },
       "30-year-mortgage-calculator": {
-        "metaTitle": "Calculadora de Financiamento de 30 Anos — Parcela Mensal Taxa Fixa",
+        "metaTitle": "Calculadora de Financiamento de 30 Anos - Parcela Mensal Taxa Fixa",
         "metaDescription": "Calcule sua parcela de financiamento imobiliário de 30 anos. Veja a parcela mensal, os juros totais pagos e a tabela completa de amortização.",
         "title": "Calculadora de Financiamento de 30 Anos",
         "description": "Calcule sua parcela mensal em um financiamento imobiliário de 30 anos com taxa fixa.",
@@ -2596,17 +2596,17 @@
             "Informe a taxa de juros anual da proposta do banco ou use as taxas médias atuais de financiamento imobiliário como referência.",
             "O prazo está fixo em 30 anos (360 meses); confirme que corresponde à estrutura do seu crédito.",
             "Veja instantaneamente sua parcela estimada de principal e juros atualizada em tempo real.",
-            "Analise o valor total de juros pagos — esse é o custo adicional real do financiamento além do preço do imóvel.",
+            "Analise o valor total de juros pagos - esse é o custo adicional real do financiamento além do preço do imóvel.",
             "Compare esse resultado com a calculadora de financiamento de 15 anos para visualizar o equilíbrio entre parcela mensal e juros totais."
           ],
-          "whyItMatters": "A parcela mais baixa do financiamento de 30 anos é uma alavanca financeira importante — pode ser a diferença entre se qualificar ou não para o crédito, ou entre um orçamento apertado e uma taxa de poupança saudável. Mas o longo prazo tem um custo oculto: como você paga juros sobre um saldo maior por mais tempo, a conta final de juros é enorme. Muitos compradores também se mudam ou refinanciam antes de concluir os 30 anos — o que significa que pagam principalmente juros nos primeiros anos, quando cada parcela é majoritariamente encargos e pouco amortização.",
+          "whyItMatters": "A parcela mais baixa do financiamento de 30 anos é uma alavanca financeira importante - pode ser a diferença entre se qualificar ou não para o crédito, ou entre um orçamento apertado e uma taxa de poupança saudável. Mas o longo prazo tem um custo oculto: como você paga juros sobre um saldo maior por mais tempo, a conta final de juros é enorme. Muitos compradores também se mudam ou refinanciam antes de concluir os 30 anos - o que significa que pagam principalmente juros nos primeiros anos, quando cada parcela é majoritariamente encargos e pouco amortização.",
           "sections": [
             {
               "heading": "Exemplo prático: 30 anos vs. 15 anos no mesmo empréstimo",
               "body": "Em um empréstimo de US$ 300.000 a 6,5%, a parcela de 30 anos fica em cerca de US$ 1.896 de principal e juros, com aproximadamente US$ 382.600 de juros ao longo de todo o prazo. Um empréstimo de 15 anos sobre o mesmo valor, normalmente a uma taxa um pouco menor, perto de 6,0%, custa cerca de US$ 2.532 por mês, mas apenas cerca de US$ 155.700 em juros totais. O de 15 anos custa cerca de US$ 636 a mais por mês e economiza cerca de US$ 227.000 em juros. O erro comum é tratar isso como um ou-outro permanente: você pode pegar o empréstimo de 30 anos pela parcela obrigatória menor e então, na maioria dos meses, pagar voluntariamente perto do valor de 15 anos. Isso captura a maior parte da economia de juros e mantém a parcela menor como reserva quando o dinheiro aperta."
             }
           ],
-          "proTip": "Você não precisa ficar preso a 30 anos de parcelas só porque tomou um financiamento nesse prazo. Fazer um pagamento extra de principal por ano — equivalente a 13 parcelas em vez de 12 — pode reduzir cerca de 4–5 anos no prazo de quitação e economizar dezenas de milhares em juros, ao mesmo tempo em que preserva a flexibilidade da parcela menor nos meses de menor fluxo de caixa."
+          "proTip": "Você não precisa ficar preso a 30 anos de parcelas só porque tomou um financiamento nesse prazo. Fazer um pagamento extra de principal por ano - equivalente a 13 parcelas em vez de 12 - pode reduzir cerca de 4–5 anos no prazo de quitação e economizar dezenas de milhares em juros, ao mesmo tempo em que preserva a flexibilidade da parcela menor nos meses de menor fluxo de caixa."
         },
         "faqs": [
           {
@@ -2628,22 +2628,22 @@
         ]
       },
       "15-year-mortgage-calculator": {
-        "metaTitle": "Calculadora de Financiamento de 15 Anos — Parcela Mensal Taxa Fixa",
+        "metaTitle": "Calculadora de Financiamento de 15 Anos - Parcela Mensal Taxa Fixa",
         "metaDescription": "Calcule sua parcela de financiamento imobiliário de 15 anos. Compare com o de 30 anos para ver quanto você economiza em juros com um prazo mais curto.",
         "title": "Calculadora de Financiamento de 15 Anos",
         "description": "Calcule sua parcela mensal em um financiamento imobiliário de 15 anos com taxa fixa.",
         "richContent": {
-          "whatIs": "O financiamento imobiliário de 15 anos é um crédito habitacional quitado em metade do tempo de um financiamento tradicional de 30 anos. A escolha é clara: sua parcela mensal será 30–50% mais alta, mas você paga aproximadamente metade do total de juros ao longo do contrato. Os bancos também costumam oferecer taxas 0,5–0,75 ponto percentual menores nos financiamentos de 15 anos em relação aos de 30 anos, amplificando ainda mais a economia. Além da matemática dos juros, o financiamento de 15 anos constrói patrimônio imobiliário quase duas vezes mais rápido — o que significa que você é dono de uma fatia maior do imóvel mais cedo. Esse patrimônio é um ativo financeiro relevante caso precise vender, refinanciar ou contratar um crédito com garantia de imóvel no futuro. Para tomadores com renda estável e elevada, é um dos caminhos mais eficientes para construir riqueza de longo prazo com imóveis.",
+          "whatIs": "O financiamento imobiliário de 15 anos é um crédito habitacional quitado em metade do tempo de um financiamento tradicional de 30 anos. A escolha é clara: sua parcela mensal será 30–50% mais alta, mas você paga aproximadamente metade do total de juros ao longo do contrato. Os bancos também costumam oferecer taxas 0,5–0,75 ponto percentual menores nos financiamentos de 15 anos em relação aos de 30 anos, amplificando ainda mais a economia. Além da matemática dos juros, o financiamento de 15 anos constrói patrimônio imobiliário quase duas vezes mais rápido - o que significa que você é dono de uma fatia maior do imóvel mais cedo. Esse patrimônio é um ativo financeiro relevante caso precise vender, refinanciar ou contratar um crédito com garantia de imóvel no futuro. Para tomadores com renda estável e elevada, é um dos caminhos mais eficientes para construir riqueza de longo prazo com imóveis.",
           "howToUse": [
             "Insira o valor do imóvel ou o montante que pretende financiar após sua entrada.",
-            "Informe a taxa de juros anual da proposta do banco — ou use as médias atuais de financiamento de 15 anos como referência.",
+            "Informe a taxa de juros anual da proposta do banco - ou use as médias atuais de financiamento de 15 anos como referência.",
             "O prazo está fixo em 15 anos (180 meses); confirme que corresponde à sua proposta de crédito.",
             "Veja instantaneamente sua parcela estimada de principal e juros atualizada em tempo real.",
             "Analise o total de juros pagos e compare com a calculadora de 30 anos para quantificar sua economia.",
             "Ajuste o valor do imóvel ou a taxa de juros para simular diferentes cenários de compra antes de se comprometer."
           ],
-          "whyItMatters": "A diferença entre um financiamento de 15 e 30 anos não é apenas sobre quitar antes — é sobre o total de reais que sairão do seu bolso. Num financiamento de R$ 300.000 a 9% ao ano, o prazo de 30 anos gera muito mais juros acumulados do que o de 15 anos — uma diferença que pode chegar a centenas de milhares de reais. Para quem consegue absorver a parcela mais alta, essa diferença é dinheiro que fica na família. O financiamento de 15 anos também elimina a dívida habitacional antes da aposentadoria para muitos compradores, removendo uma despesa fixa relevante exatamente quando a renda tende a diminuir.",
-          "proTip": "Antes de se comprometer com o prazo de 15 anos, teste seu orçamento contra a parcela mais alta e contra um eventual corte de renda. Monte uma reserva de emergência de 3–6 meses primeiro e confirme que a parcela não ultrapassa 28–30% da sua renda bruta mensal. Se o fluxo de caixa for incerto, considere o financiamento de 30 anos e faça amortizações extras voluntárias — você preserva a flexibilidade de pagamento sem abrir mão de toda a economia de juros."
+          "whyItMatters": "A diferença entre um financiamento de 15 e 30 anos não é apenas sobre quitar antes - é sobre o total de reais que sairão do seu bolso. Num financiamento de R$ 300.000 a 9% ao ano, o prazo de 30 anos gera muito mais juros acumulados do que o de 15 anos - uma diferença que pode chegar a centenas de milhares de reais. Para quem consegue absorver a parcela mais alta, essa diferença é dinheiro que fica na família. O financiamento de 15 anos também elimina a dívida habitacional antes da aposentadoria para muitos compradores, removendo uma despesa fixa relevante exatamente quando a renda tende a diminuir.",
+          "proTip": "Antes de se comprometer com o prazo de 15 anos, teste seu orçamento contra a parcela mais alta e contra um eventual corte de renda. Monte uma reserva de emergência de 3–6 meses primeiro e confirme que a parcela não ultrapassa 28–30% da sua renda bruta mensal. Se o fluxo de caixa for incerto, considere o financiamento de 30 anos e faça amortizações extras voluntárias - você preserva a flexibilidade de pagamento sem abrir mão de toda a economia de juros."
         },
         "faqs": [
           {
@@ -2665,22 +2665,22 @@
         ]
       },
       "fha-loan-calculator": {
-        "metaTitle": "Calculadora de Empréstimo FHA — Parcela Mensal com MIP",
+        "metaTitle": "Calculadora de Empréstimo FHA - Parcela Mensal com MIP",
         "metaDescription": "Calcule as parcelas mensais de empréstimos FHA incluindo o prêmio de seguro hipotecário (MIP). Empréstimos FHA permitem entradas a partir de 3,5%.",
         "title": "Calculadora de Empréstimo FHA",
         "description": "Calcule as parcelas de empréstimos FHA incluindo MIP (Prêmio de Seguro Hipotecário).",
         "richContent": {
-          "whatIs": "O empréstimo FHA é um financiamento imobiliário segurado pela Federal Housing Administration (FHA), órgão vinculado ao Departamento de Habitação e Desenvolvimento Urbano dos Estados Unidos (HUD). Trata-se de um programa do governo americano voltado para compradores de primeira casa e tomadores com poupança limitada ou histórico de crédito imperfeito. A entrada mínima é de 3,5% com score de 580 ou mais — ou 10% de entrada com score entre 500 e 579. Ao contrário do PMI convencional (seguro hipotecário privado), que é cancelado automaticamente ao atingir 20% de patrimônio, o MIP (Mortgage Insurance Premium) do FHA funciona de forma diferente. Para empréstimos originados após junho de 2013 com menos de 10% de entrada, o MIP anual é exigido pelo prazo total do contrato. A única forma de eliminá-lo é refinanciar para um empréstimo convencional assim que o tomador construir patrimônio suficiente e se qualificar para melhores condições.",
+          "whatIs": "O empréstimo FHA é um financiamento imobiliário segurado pela Federal Housing Administration (FHA), órgão vinculado ao Departamento de Habitação e Desenvolvimento Urbano dos Estados Unidos (HUD). Trata-se de um programa do governo americano voltado para compradores de primeira casa e tomadores com poupança limitada ou histórico de crédito imperfeito. A entrada mínima é de 3,5% com score de 580 ou mais - ou 10% de entrada com score entre 500 e 579. Ao contrário do PMI convencional (seguro hipotecário privado), que é cancelado automaticamente ao atingir 20% de patrimônio, o MIP (Mortgage Insurance Premium) do FHA funciona de forma diferente. Para empréstimos originados após junho de 2013 com menos de 10% de entrada, o MIP anual é exigido pelo prazo total do contrato. A única forma de eliminá-lo é refinanciar para um empréstimo convencional assim que o tomador construir patrimônio suficiente e se qualificar para melhores condições.",
           "howToUse": [
             "Insira o preço de compra do imóvel e a entrada planejada (mínimo de 3,5% para tomadores com score 580+).",
             "O valor financiado é o preço de compra menos a entrada; o MIP inicial de 1,75% geralmente é incluído no valor financiado.",
             "Informe a taxa de juros anual da proposta do credor ou use as médias atuais de empréstimos FHA.",
             "Confira a parcela mensal estimada, que inclui principal, juros e o MIP anual dividido em 12 parcelas mensais.",
-            "Observe o custo total do MIP ao longo do contrato — esse é o número-chave para comparar com um empréstimo convencional com PMI.",
+            "Observe o custo total do MIP ao longo do contrato - esse é o número-chave para comparar com um empréstimo convencional com PMI.",
             "Compare o custo total do FHA com um empréstimo convencional a 5% de entrada para determinar qual é mais vantajoso para seu perfil de crédito."
           ],
-          "whyItMatters": "Os empréstimos FHA abrem as portas da casa própria para tomadores que não se qualificam para crédito convencional — especialmente aqueles com score abaixo de 680 ou entrada inferior a 10%. No entanto, o MIP acrescenta um custo de longo prazo relevante. O MIP anual num empréstimo FHA de US$ 250.000 gira em torno de US$ 115–175 por mês. Como o MIP persiste pelo prazo total na maioria dos contratos FHA, o custo acumulado pode superar US$ 25.000–40.000 em 30 anos. Entender isso antes de comprar ajuda a planejar uma estratégia de refinanciamento assim que o patrimônio e o crédito melhorem o suficiente para se qualificar para condições convencionais.",
-          "proTip": "Se seu score for 680 ou mais e você conseguir 5% de entrada, compare as propostas FHA e convencional lado a lado. Nesse perfil, o empréstimo convencional com PMI costuma ser mais barato no total — e o PMI convencional é cancelado automaticamente ao atingir 20% de patrimônio, ao contrário do MIP do FHA, que exige um refinanciamento completo para ser removido. O ponto de equilíbrio depende muito das taxas oferecidas e de quanto tempo você planeja ficar no imóvel."
+          "whyItMatters": "Os empréstimos FHA abrem as portas da casa própria para tomadores que não se qualificam para crédito convencional - especialmente aqueles com score abaixo de 680 ou entrada inferior a 10%. No entanto, o MIP acrescenta um custo de longo prazo relevante. O MIP anual num empréstimo FHA de US$ 250.000 gira em torno de US$ 115–175 por mês. Como o MIP persiste pelo prazo total na maioria dos contratos FHA, o custo acumulado pode superar US$ 25.000–40.000 em 30 anos. Entender isso antes de comprar ajuda a planejar uma estratégia de refinanciamento assim que o patrimônio e o crédito melhorem o suficiente para se qualificar para condições convencionais.",
+          "proTip": "Se seu score for 680 ou mais e você conseguir 5% de entrada, compare as propostas FHA e convencional lado a lado. Nesse perfil, o empréstimo convencional com PMI costuma ser mais barato no total - e o PMI convencional é cancelado automaticamente ao atingir 20% de patrimônio, ao contrário do MIP do FHA, que exige um refinanciamento completo para ser removido. O ponto de equilíbrio depende muito das taxas oferecidas e de quanto tempo você planeja ficar no imóvel."
         },
         "faqs": [
           {
@@ -2696,28 +2696,28 @@
             "answer": "Para empréstimos FHA originados após 2013 com menos de 10% de entrada, o MIP é exigido pelo prazo total do empréstimo. Para removê-lo, você precisa refinanciar para um empréstimo convencional."
           },
           {
-            "question": "Empréstimo FHA versus convencional — qual é melhor?",
+            "question": "Empréstimo FHA versus convencional - qual é melhor?",
             "answer": "FHA é melhor para tomadores com pontuações de crédito mais baixas ou entradas menores. Empréstimos convencionais são melhores se você tem 20% de entrada (evita MIP) e pontuação de crédito acima de 680."
           }
         ]
       },
       "va-loan-calculator": {
-        "metaTitle": "Calculadora de Empréstimo VA — Parcela de Financiamento para Veteranos",
+        "metaTitle": "Calculadora de Empréstimo VA - Parcela de Financiamento para Veteranos",
         "metaDescription": "Calcule as parcelas mensais de empréstimos VA. Empréstimos VA oferecem $0 de entrada, sem PMI e taxas competitivas para veteranos e militares ativos elegíveis.",
         "title": "Calculadora de Empréstimo VA",
         "description": "Calcule as parcelas de empréstimos VA sem exigência de PMI para veteranos e militares elegíveis.",
         "richContent": {
-          "whatIs": "O empréstimo VA é um benefício habitacional disponível a veteranos elegíveis, militares em serviço ativo, membros da Guarda Nacional e da Reserva e cônjuges sobreviventes, garantido pelo Departamento de Assuntos de Veteranos dos Estados Unidos (VA). Este é um programa exclusivo do governo americano para quem serviu às Forças Armadas dos EUA. Os benefícios definidores do programa são: zero de entrada, sem seguro hipotecário privado (PMI) e taxas de juros competitivas. Essas vantagens podem representar dezenas de milhares de dólares a menos em comparação com empréstimos convencionais que exigem PMI. Há uma taxa de financiamento VA — uma cobrança única de 1,25% a 3,3% do valor do empréstimo, conforme o tipo de serviço, o percentual de entrada e se é o primeiro ou um uso subsequente do benefício. Veteranos com classificação de incapacidade relacionada ao serviço de 10% ou mais geralmente estão isentos dessa taxa.",
+          "whatIs": "O empréstimo VA é um benefício habitacional disponível a veteranos elegíveis, militares em serviço ativo, membros da Guarda Nacional e da Reserva e cônjuges sobreviventes, garantido pelo Departamento de Assuntos de Veteranos dos Estados Unidos (VA). Este é um programa exclusivo do governo americano para quem serviu às Forças Armadas dos EUA. Os benefícios definidores do programa são: zero de entrada, sem seguro hipotecário privado (PMI) e taxas de juros competitivas. Essas vantagens podem representar dezenas de milhares de dólares a menos em comparação com empréstimos convencionais que exigem PMI. Há uma taxa de financiamento VA - uma cobrança única de 1,25% a 3,3% do valor do empréstimo, conforme o tipo de serviço, o percentual de entrada e se é o primeiro ou um uso subsequente do benefício. Veteranos com classificação de incapacidade relacionada ao serviço de 10% ou mais geralmente estão isentos dessa taxa.",
           "howToUse": [
             "Confirme a elegibilidade: veteranos, militares em serviço ativo (90+ dias em tempo de guerra ou 181+ dias em tempo de paz) e membros qualificados da Guarda Nacional ou da Reserva podem ser elegíveis.",
-            "Obtenha o Certificado de Elegibilidade (COE) junto ao VA ou por meio do seu credor — ele confirma o valor do seu direito ao benefício.",
-            "Insira o preço de compra do imóvel — nenhuma entrada é exigida, embora uma entrada voluntária reduza a taxa de financiamento.",
+            "Obtenha o Certificado de Elegibilidade (COE) junto ao VA ou por meio do seu credor - ele confirma o valor do seu direito ao benefício.",
+            "Insira o preço de compra do imóvel - nenhuma entrada é exigida, embora uma entrada voluntária reduza a taxa de financiamento.",
             "Informe o valor do empréstimo e a taxa de juros VA que lhe foi cotada.",
-            "Confira sua parcela mensal — observe que não há linha de PMI, o que representa uma economia direta em relação a empréstimos convencionais.",
+            "Confira sua parcela mensal - observe que não há linha de PMI, o que representa uma economia direta em relação a empréstimos convencionais.",
             "Considere a taxa de financiamento VA, se aplicável: ela pode ser incluída no financiamento ou paga no fechamento."
           ],
-          "whyItMatters": "A combinação de zero de entrada com ausência de PMI faz do empréstimo VA um dos programas hipotecários mais poderosos disponíveis nos Estados Unidos para quem se qualifica. Num imóvel de US$ 350.000, um comprador convencional que dá 5% de entrada paga PMI até atingir 20% de patrimônio — muitas vezes de 7 a 10 anos de US$ 100–200 por mês em custos extras. Um tomador VA não paga PMI algum, economizando US$ 10.000–20.000 no mesmo período, além de não precisar de US$ 17.500 de entrada. Para tomadores elegíveis, avaliar o financiamento VA antes de qualquer outra modalidade é quase sempre o primeiro passo certo.",
-          "proTip": "Se você tem uma classificação de incapacidade relacionada ao serviço de 10% ou mais, geralmente está isento da taxa de financiamento VA — uma economia de 1,4–3,3% do valor do empréstimo no fechamento. Os credores nem sempre verificam proativamente essa isenção, por isso confirme sua situação antes de assinar o contrato. Num empréstimo de US$ 300.000, a isenção da taxa de financiamento sozinha pode representar uma economia imediata de US$ 4.000–10.000."
+          "whyItMatters": "A combinação de zero de entrada com ausência de PMI faz do empréstimo VA um dos programas hipotecários mais poderosos disponíveis nos Estados Unidos para quem se qualifica. Num imóvel de US$ 350.000, um comprador convencional que dá 5% de entrada paga PMI até atingir 20% de patrimônio - muitas vezes de 7 a 10 anos de US$ 100–200 por mês em custos extras. Um tomador VA não paga PMI algum, economizando US$ 10.000–20.000 no mesmo período, além de não precisar de US$ 17.500 de entrada. Para tomadores elegíveis, avaliar o financiamento VA antes de qualquer outra modalidade é quase sempre o primeiro passo certo.",
+          "proTip": "Se você tem uma classificação de incapacidade relacionada ao serviço de 10% ou mais, geralmente está isento da taxa de financiamento VA - uma economia de 1,4–3,3% do valor do empréstimo no fechamento. Os credores nem sempre verificam proativamente essa isenção, por isso confirme sua situação antes de assinar o contrato. Num empréstimo de US$ 300.000, a isenção da taxa de financiamento sozinha pode representar uma economia imediata de US$ 4.000–10.000."
         },
         "faqs": [
           {
@@ -2739,7 +2739,7 @@
         ]
       },
       "debt-payoff-calculator": {
-        "metaTitle": "Calculadora de Quitação de Dívidas — Quite Dívidas Mais Rápido",
+        "metaTitle": "Calculadora de Quitação de Dívidas - Quite Dívidas Mais Rápido",
         "metaDescription": "Calcule o prazo de quitação das suas dívidas. Veja como pagamentos mensais extras aceleram a quitação e reduzem os juros totais de qualquer empréstimo ou cartão de crédito.",
         "title": "Calculadora de Quitação de Dívidas",
         "description": "Calcule quanto tempo levará para quitar sua dívida e quanto você pagará em juros.",
@@ -2762,7 +2762,7 @@
           }
         ],
         "richContent": {
-          "whatIs": "Uma calculadora de quitação de dívidas mostra quanto tempo levará para eliminar suas dívidas e quanto de juros você pagará com diferentes estratégias de pagamento. Os dois métodos mais comuns são: o método avalanche, que prioriza a dívida com maior taxa de juros (matematicamente ótimo — minimiza o total de juros pagos), e o método bola de neve, que prioriza o menor saldo devedor (psicologicamente motivador — pequenas vitórias criam impulso). O custo real de pagar apenas o mínimo é muitas vezes o resultado mais revelador desta calculadora. Em um cartão de crédito com saldo de R$ 5.000 a 15% ao mês, pagar apenas o mínimo pode levar mais de 10 anos e custar mais em juros do que o saldo original.",
+          "whatIs": "Uma calculadora de quitação de dívidas mostra quanto tempo levará para eliminar suas dívidas e quanto de juros você pagará com diferentes estratégias de pagamento. Os dois métodos mais comuns são: o método avalanche, que prioriza a dívida com maior taxa de juros (matematicamente ótimo - minimiza o total de juros pagos), e o método bola de neve, que prioriza o menor saldo devedor (psicologicamente motivador - pequenas vitórias criam impulso). O custo real de pagar apenas o mínimo é muitas vezes o resultado mais revelador desta calculadora. Em um cartão de crédito com saldo de R$ 5.000 a 15% ao mês, pagar apenas o mínimo pode levar mais de 10 anos e custar mais em juros do que o saldo original.",
           "howToUse": [
             "Liste cada dívida com seu saldo atual, taxa de juros anual e valor atual da prestação mínima.",
             "Insira qualquer valor extra mensal que você pode destinar ao pagamento de dívidas além dos mínimos.",
@@ -2774,15 +2774,15 @@
           "sections": [
             {
               "heading": "Exemplo prático: fixar o valor da parcela",
-              "body": "Pegue um saldo de cartão de R$ 5.000 a 8% ao mês (uma taxa típica de parcelamento de fatura). Se você pagar sempre só o mínimo — que começa perto de R$ 500 e vai encolhendo junto com o saldo — a quitação se arrasta por anos e o total de juros acaba maior que os R$ 5.000 originais, porque a maior parte de cada pagamento vira encargo. Fixe a parcela em cerca de R$ 700 por mês e o saldo zera em cerca de um ano, com aproximadamente R$ 2.700 de juros. Suba para R$ 1.200 por mês e a dívida acaba em cerca de seis meses, com cerca de R$ 1.300 de juros. O erro comum é pagar o mínimo mais o dinheiro que sobrar; um reforço irregular ajuda muito menos do que uma parcela fixa e maior que você agenda e trata como qualquer outra conta."
+              "body": "Pegue um saldo de cartão de R$ 5.000 a 8% ao mês (uma taxa típica de parcelamento de fatura). Se você pagar sempre só o mínimo - que começa perto de R$ 500 e vai encolhendo junto com o saldo - a quitação se arrasta por anos e o total de juros acaba maior que os R$ 5.000 originais, porque a maior parte de cada pagamento vira encargo. Fixe a parcela em cerca de R$ 700 por mês e o saldo zera em cerca de um ano, com aproximadamente R$ 2.700 de juros. Suba para R$ 1.200 por mês e a dívida acaba em cerca de seis meses, com cerca de R$ 1.300 de juros. O erro comum é pagar o mínimo mais o dinheiro que sobrar; um reforço irregular ajuda muito menos do que uma parcela fixa e maior que você agenda e trata como qualquer outra conta."
             }
           ],
-          "proTip": "Após quitar uma dívida, redirecione imediatamente toda a prestação que você pagava para a próxima dívida da lista — o 'efeito bola de neve'. Isso mantém seu desembolso mensal total idêntico enquanto acelera drasticamente a quitação, pois cada dívida eliminada adiciona força à próxima. Priorize primeiro as dívidas com juros de cartão de crédito e cheque especial, que têm as maiores taxas do mercado."
+          "proTip": "Após quitar uma dívida, redirecione imediatamente toda a prestação que você pagava para a próxima dívida da lista - o 'efeito bola de neve'. Isso mantém seu desembolso mensal total idêntico enquanto acelera drasticamente a quitação, pois cada dívida eliminada adiciona força à próxima. Priorize primeiro as dívidas com juros de cartão de crédito e cheque especial, que têm as maiores taxas do mercado."
         }
       }
     },
     "invoiceGenerator": {
-      "metaTitle": "Gerador de Nota Fiscal Gratuito — Crie e Baixe PDF | ToolNotch",
+      "metaTitle": "Gerador de Nota Fiscal Gratuito - Crie e Baixe PDF | ToolNotch",
       "metaDescription": "Crie notas fiscais profissionais gratuitamente. Adicione itens, impostos, logo e baixe como PDF. Suporta mais de 30 moedas. Sem cadastro.",
       "title": "Gerador de Nota Fiscal Gratuito",
       "description": "Crie notas fiscais profissionais instantaneamente. Sem cadastro. Sem marcas d'água. Dados ficam no seu navegador.",
@@ -2839,7 +2839,7 @@
         },
         {
           "question": "Posso adicionar meu logotipo?",
-          "answer": "Sim — clique no botão 'Logo' na seção De para fazer upload de uma imagem. Ela aparecerá no topo da fatura."
+          "answer": "Sim - clique no botão 'Logo' na seção De para fazer upload de uma imagem. Ela aparecerá no topo da fatura."
         },
         {
           "question": "Como altero a moeda?",
@@ -2847,7 +2847,7 @@
         },
         {
           "question": "Minhas faturas são salvas automaticamente?",
-          "answer": "Sim — seu rascunho atual é salvo automaticamente no localStorage do seu navegador enquanto você digita."
+          "answer": "Sim - seu rascunho atual é salvo automaticamente no localStorage do seu navegador enquanto você digita."
         },
         {
           "question": "Quais moedas são suportadas?",
@@ -2855,7 +2855,7 @@
         },
         {
           "question": "Posso usar isso para notas fiscais com impostos?",
-          "answer": "Sim — use o campo de Imposto (%) para qualquer imposto aplicável."
+          "answer": "Sim - use o campo de Imposto (%) para qualquer imposto aplicável."
         },
         {
           "question": "Há marca d'água na fatura?",
@@ -2863,14 +2863,14 @@
         }
       ],
       "invoiceUk": {
-        "metaTitle": "Gerador de Fatura do Reino Unido — Modelo Gratuito com IVA | ToolNotch",
+        "metaTitle": "Gerador de Fatura do Reino Unido - Modelo Gratuito com IVA | ToolNotch",
         "metaDescription": "Gerador de fatura do Reino Unido gratuito com IVA pré-configurado em 20%. Crie faturas profissionais em GBP. Baixe como PDF. Sem cadastro.",
         "title": "Gerador de Fatura do Reino Unido",
         "description": "Gerador de fatura do Reino Unido gratuito com IVA pré-configurado. Moeda GBP, 20% de IVA. Baixe como PDF.",
         "faqs": [
           {
             "question": "O IVA está pré-configurado para faturas do Reino Unido?",
-            "answer": "Sim — o modelo do Reino Unido define automaticamente 20% de IVA e a moeda GBP."
+            "answer": "Sim - o modelo do Reino Unido define automaticamente 20% de IVA e a moeda GBP."
           },
           {
             "question": "Preciso do número de IVA na fatura?",
@@ -2882,7 +2882,7 @@
           },
           {
             "question": "Posso alterar a taxa de IVA?",
-            "answer": "Sim — edite o campo de Imposto (%). A taxa padrão de IVA no Reino Unido é de 20%, mas taxas reduzidas se aplicam a alguns bens e serviços."
+            "answer": "Sim - edite o campo de Imposto (%). A taxa padrão de IVA no Reino Unido é de 20%, mas taxas reduzidas se aplicam a alguns bens e serviços."
           }
         ],
         "richContent": {
@@ -2890,24 +2890,24 @@
           "howToUse": [
             "Insira o nome e o endereço da sua empresa. Se estiver registrado no IVA, adicione seu número de registro no campo de ID de Imposto.",
             "Preencha o nome do seu cliente e o endereço de cobrança. Para clientes B2B, anote o número de IVA se a cobrança reversa se aplicar.",
-            "Adicione os itens de linha com descrições claras, quantidades e preços unitários — os valores excluem o IVA neste estágio.",
+            "Adicione os itens de linha com descrições claras, quantidades e preços unitários - os valores excluem o IVA neste estágio.",
             "Defina a taxa de imposto para 20% para suprimentos de taxa padrão, 5% para taxa reduzida ou 0% para produtos com taxa zero.",
             "Reveja o valor do IVA e o total com IVA incluído na pré-visualização da fatura.",
-            "Faça o download em PDF e envie ao seu cliente — guarde uma cópia para os seus registros."
+            "Faça o download em PDF e envie ao seu cliente - guarde uma cópia para os seus registros."
           ],
-          "whyItMatters": "Uma fatura de IVA deve conter campos obrigatórios específicos — incluindo seu número de IVA, o valor cobrado e a data — para que o HMRC a aceite. Para clientes B2B registrados no IVA, o recebimento de uma fatura de IVA adequada é essencial para recuperar o imposto de entrada. Uma fatura sem os campos exigidos pode resultar na negação da restituição do IVA, criando atritos. O faturamento correto do IVA não é apenas uma boa prática — é um requisito legal.",
-          "proTip": "Se o seu faturamento anual for inferior ao limite de £90.000, não é obrigatório registrar-se para IVA — mas pode fazê-lo voluntariamente. Para empresas que atendem principalmente a outras empresas, o registro voluntário pode aumentar a credibilidade e permitir que você recupere o IVA sobre as despesas de sua própria empresa."
+          "whyItMatters": "Uma fatura de IVA deve conter campos obrigatórios específicos - incluindo seu número de IVA, o valor cobrado e a data - para que o HMRC a aceite. Para clientes B2B registrados no IVA, o recebimento de uma fatura de IVA adequada é essencial para recuperar o imposto de entrada. Uma fatura sem os campos exigidos pode resultar na negação da restituição do IVA, criando atritos. O faturamento correto do IVA não é apenas uma boa prática - é um requisito legal.",
+          "proTip": "Se o seu faturamento anual for inferior ao limite de £90.000, não é obrigatório registrar-se para IVA - mas pode fazê-lo voluntariamente. Para empresas que atendem principalmente a outras empresas, o registro voluntário pode aumentar a credibilidade e permitir que você recupere o IVA sobre as despesas de sua própria empresa."
         }
       },
       "invoiceCanada": {
-        "metaTitle": "Gerador de Fatura Canadense — Modelo Gratuito com GST | ToolNotch",
+        "metaTitle": "Gerador de Fatura Canadense - Modelo Gratuito com GST | ToolNotch",
         "metaDescription": "Gerador de fatura canadense gratuito com GST pré-configurado em 5%. Crie faturas profissionais em CAD. Baixe como PDF. Sem cadastro.",
         "title": "Gerador de Fatura Canadense",
         "description": "Gerador de fatura canadense gratuito com GST pré-configurado. Moeda CAD, 5% de GST. Baixe como PDF.",
         "faqs": [
           {
             "question": "O GST está pré-configurado?",
-            "answer": "Sim — o modelo canadense define automaticamente 5% de GST e a moeda CAD."
+            "answer": "Sim - o modelo canadense define automaticamente 5% de GST e a moeda CAD."
           },
           {
             "question": "Devo cobrar HST ou GST?",
@@ -2919,28 +2919,28 @@
           }
         ],
         "richContent": {
-          "whatIs": "O Canadá opera um sistema de impostos sobre consumo em várias camadas que varia por província. O Imposto sobre Bens e Serviços (GST) federal é de 5% em todo o país. A maioria das províncias adiciona seu próprio imposto: algumas usam uma abordagem harmonizada (HST), enquanto outras cobram GST separadamente ao lado de um Imposto Provincial sobre Vendas (PST). Quebec administra seu próprio Imposto sobre Vendas (QST) em 9,975% juntamente com o GST federal. A taxa de imposto aplicável depende da província — geralmente onde o cliente está localizado.",
+          "whatIs": "O Canadá opera um sistema de impostos sobre consumo em várias camadas que varia por província. O Imposto sobre Bens e Serviços (GST) federal é de 5% em todo o país. A maioria das províncias adiciona seu próprio imposto: algumas usam uma abordagem harmonizada (HST), enquanto outras cobram GST separadamente ao lado de um Imposto Provincial sobre Vendas (PST). Quebec administra seu próprio Imposto sobre Vendas (QST) em 9,975% juntamente com o GST federal. A taxa de imposto aplicável depende da província - geralmente onde o cliente está localizado.",
           "howToUse": [
             "Insira o nome da empresa, o endereço e o número de registro de GST/HST na seção 'De' se você estiver registrado.",
-            "Adicione o nome do cliente, o endereço e a província — a província de fornecimento determina a taxa de imposto aplicável.",
+            "Adicione o nome do cliente, o endereço e a província - a província de fornecimento determina a taxa de imposto aplicável.",
             "Adicione os itens de linha com descrições, quantidades e preços unitários antes dos impostos.",
             "Defina a taxa de imposto com base no GST, HST ou GST+PST/QST aplicável para a província do cliente.",
             "Analise o valor do imposto e o total na pré-visualização da fatura.",
             "Faça o download em formato PDF para os seus registros e para enviar ao cliente."
           ],
-          "whyItMatters": "As empresas canadenses com mais de $30.000 CAD em receita anual tributável são obrigadas a se registrar no GST/HST. Taxas incorretas de impostos aplicadas a faturas — por exemplo, cobrando taxas de Ontário para um cliente da Colúmbia Britânica — podem expor a sua empresa a risco de auditoria. Compreender as suas obrigações fiscais por província é essencial para a conformidade com a CRA.",
-          "proTip": "A CRA determina o imposto com base na regra de 'local de fornecimento'. Para serviços, geralmente é onde o seu cliente está localizado, não onde a sua empresa opera. Se um consultor em Toronto faturar a um cliente em Vancouver, cobrará 5% de GST — não 13% de HST. Em caso de dúvida, consulte um contador."
+          "whyItMatters": "As empresas canadenses com mais de $30.000 CAD em receita anual tributável são obrigadas a se registrar no GST/HST. Taxas incorretas de impostos aplicadas a faturas - por exemplo, cobrando taxas de Ontário para um cliente da Colúmbia Britânica - podem expor a sua empresa a risco de auditoria. Compreender as suas obrigações fiscais por província é essencial para a conformidade com a CRA.",
+          "proTip": "A CRA determina o imposto com base na regra de 'local de fornecimento'. Para serviços, geralmente é onde o seu cliente está localizado, não onde a sua empresa opera. Se um consultor em Toronto faturar a um cliente em Vancouver, cobrará 5% de GST - não 13% de HST. Em caso de dúvida, consulte um contador."
         }
       },
       "invoiceAustralia": {
-        "metaTitle": "Gerador de Fatura Australiana — Modelo Gratuito com GST | ToolNotch",
+        "metaTitle": "Gerador de Fatura Australiana - Modelo Gratuito com GST | ToolNotch",
         "metaDescription": "Gerador de fatura australiana gratuito com GST pré-configurado em 10%. Crie faturas profissionais em AUD. Baixe como PDF. Sem cadastro.",
         "title": "Gerador de Fatura Australiana",
         "description": "Gerador de fatura australiana gratuito com GST pré-configurado. Moeda AUD, 10% de GST. Baixe como PDF.",
         "faqs": [
           {
             "question": "O GST está pré-configurado para a Austrália?",
-            "answer": "Sim — o modelo australiano define automaticamente 10% de GST e a moeda AUD."
+            "answer": "Sim - o modelo australiano define automaticamente 10% de GST e a moeda AUD."
           },
           {
             "question": "Quem precisa se registrar para GST na Austrália?",
@@ -2954,26 +2954,26 @@
         "richContent": {
           "whatIs": "O faturamento australiano é regido pelo Australian Taxation Office (ATO). O Imposto sobre Bens e Serviços (GST) é aplicado a uma taxa de 10% na maioria dos bens e serviços. Empresas com faturamento anual de $75.000 AUD ou mais devem se registrar para GST. Uma vez registradas, devem emitir 'Tax Invoices' (Faturas com Impostos) para qualquer transação superior a $82,50 (incluindo GST). Uma fatura de impostos deve incluir as palavras 'Tax Invoice', o seu Australian Business Number (ABN) e o valor de GST cobrado.",
           "howToUse": [
-            "Insira o nome, o endereço e o ABN da sua empresa na seção 'De' — o ABN é obrigatório para faturas de impostos.",
+            "Insira o nome, o endereço e o ABN da sua empresa na seção 'De' - o ABN é obrigatório para faturas de impostos.",
             "Adicione o nome e o endereço de cobrança do seu cliente na seção 'Para'.",
             "Adicione os itens de linha com descrições claras, quantidades e preços unitários excluindo GST.",
-            "Defina a taxa de imposto para 10% para suprimentos aplicáveis a GST. Alguns bens são isentos — deixe 0% para eles.",
+            "Defina a taxa de imposto para 10% para suprimentos aplicáveis a GST. Alguns bens são isentos - deixe 0% para eles.",
             "Revise se a fatura declara claramente 'Tax Invoice' e mostra o valor do GST separadamente.",
             "Faça o download em PDF e guarde uma cópia por um mínimo de 5 anos."
           ],
           "whyItMatters": "Clientes registrados com GST só podem solicitar créditos usando uma fatura fiscal válida. Uma fatura sem o ABN, o montante de GST ou as palavras 'Tax Invoice' pode ser rejeitada, impedindo o cliente de recuperar o seu crédito. Isso pode causar problemas em relacionamentos B2B.",
-          "proTip": "Se o seu volume de negócios for inferior a $75.000 AUD, não é obrigatório registrar-se no GST — mas se serve essencialmente empresas registradas, isso pode ser vantajoso para reivindicar o GST pago nas suas despesas comerciais. Fale com um contador caso se encontre próximo do limite."
+          "proTip": "Se o seu volume de negócios for inferior a $75.000 AUD, não é obrigatório registrar-se no GST - mas se serve essencialmente empresas registradas, isso pode ser vantajoso para reivindicar o GST pago nas suas despesas comerciais. Fale com um contador caso se encontre próximo do limite."
         }
       },
       "invoiceFreelancers": {
-        "metaTitle": "Gerador de Fatura para Freelancers — Nota Fiscal Gratuita | ToolNotch",
+        "metaTitle": "Gerador de Fatura para Freelancers - Nota Fiscal Gratuita | ToolNotch",
         "metaDescription": "Gerador de fatura gratuito para freelancers. Crie faturas profissionais, baixe como PDF. Sem marcas d'água, sem assinatura.",
         "title": "Gerador de Fatura para Freelancers",
         "description": "Crie faturas freelance profissionais gratuitamente. Sem marcas d'água, sem assinatura. Baixe como PDF instantaneamente.",
         "faqs": [
           {
             "question": "É gratuito para freelancers?",
-            "answer": "Sim — completamente gratuito. Sem assinatura, sem marca d'água, sem conta necessária."
+            "answer": "Sim - completamente gratuito. Sem assinatura, sem marca d'água, sem conta necessária."
           },
           {
             "question": "Como acompanho quais faturas foram pagas?",
@@ -2989,21 +2989,21 @@
           }
         ],
         "richContent": {
-          "whatIs": "O faturamento de freelancers possui características únicas. Os freelancers normalmente cobram com base no projeto (taxa fixa), com base em horas, ou por acordo de retenção. Erros comuns incluem numeração inconsistente, descrições vagas, ausência de termos de pagamento e ausência de cláusula de taxa por atraso. Ao contrário dos funcionários, os freelancers são responsáveis por seus próprios impostos. O faturamento baseado em marcos — cobrar em etapas definidas do projeto em vez de apenas na conclusão — reduz o risco de não pagamento em grandes projetos.",
+          "whatIs": "O faturamento de freelancers possui características únicas. Os freelancers normalmente cobram com base no projeto (taxa fixa), com base em horas, ou por acordo de retenção. Erros comuns incluem numeração inconsistente, descrições vagas, ausência de termos de pagamento e ausência de cláusula de taxa por atraso. Ao contrário dos funcionários, os freelancers são responsáveis por seus próprios impostos. O faturamento baseado em marcos - cobrar em etapas definidas do projeto em vez de apenas na conclusão - reduz o risco de não pagamento em grandes projetos.",
           "howToUse": [
             "Introduza o seu nome ou nome da empresa, detalhes de contato e qualquer ID fiscal aplicável na secção De.",
             "Adicione o nome do seu cliente e a morada de faturação na secção Para.",
             "Crie itens de linha para cada serviço: use um nome descritivo e digite uma taxa fixa ou horas × taxa horária.",
             "Adicione as despesas reembolsáveis como itens separados com os recibos anotados.",
             "Defina as condições de pagamento e liste os métodos aceites.",
-            "Baixe em PDF e envie de imediato — a demora na faturação causa demora no pagamento."
+            "Baixe em PDF e envie de imediato - a demora na faturação causa demora no pagamento."
           ],
           "whyItMatters": "O atraso no pagamento é o principal desafio financeiro para trabalhadores independentes. Uma fatura profissional com data de vencimento e métodos de pagamento claros remove ambiguidades. Incluir uma cláusula de taxa por atraso reduz significativamente o tempo médio para recebimento. Faturar também cria o rastro de auditoria necessário para comprovar os rendimentos da empresa.",
-          "proTip": "Ao cobrar de clientes internacionais, especifique sempre a moeda e indique qual parte assume os custos de conversão. Para novos clientes, considere solicitar um depósito de 25–50% antes do início dos trabalhos — este filtro reduz o risco e atesta a seriedade do cliente."
+          "proTip": "Ao cobrar de clientes internacionais, especifique sempre a moeda e indique qual parte assume os custos de conversão. Para novos clientes, considere solicitar um depósito de 25–50% antes do início dos trabalhos - este filtro reduz o risco e atesta a seriedade do cliente."
         }
       },
       "receiptGenerator": {
-        "metaTitle": "Gerador de Recibo Gratuito — Crie e Baixe Recibos em PDF | ToolNotch",
+        "metaTitle": "Gerador de Recibo Gratuito - Crie e Baixe Recibos em PDF | ToolNotch",
         "metaDescription": "Gere recibos profissionais gratuitamente. Adicione itens, imposto e baixe como PDF. Sem cadastro.",
         "title": "Gerador de Recibo Gratuito",
         "description": "Crie recibos profissionais instantaneamente. Baixe como PDF. Sem cadastro, sem marcas d'água.",
@@ -3022,7 +3022,7 @@
           },
           {
             "question": "Posso adicionar o logotipo da minha empresa?",
-            "answer": "Sim — clique no botão Logo para fazer upload do logotipo. Ele aparecerá no topo do recibo."
+            "answer": "Sim - clique no botão Logo para fazer upload do logotipo. Ele aparecerá no topo do recibo."
           }
         ],
         "richContent": {
@@ -3035,7 +3035,7 @@
             "Revise o total e baixe em PDF, fornecendo uma cópia ao cliente."
           ],
           "whyItMatters": "As autoridades tributárias exigem recibos para despesas comerciais dedutíveis. A organização digital cria um rastro de auditoria fiável e previne o problema comum de recibos perdidos ou apagados. Para transações em dinheiro, o recibo é a documentação necessária para fundamentar o negócio.",
-          "proTip": "Guarde recibos de qualquer despesa comercial superior a um limite relevante ($75 nos EUA). A prática recomendada é fotografar recibos de papel imediatamente e arquivá-los digitalmente por ano e categoria. Os recibos em papel térmico desvanecem rapidamente — a foto digital é o seu registro permanente."
+          "proTip": "Guarde recibos de qualquer despesa comercial superior a um limite relevante ($75 nos EUA). A prática recomendada é fotografar recibos de papel imediatamente e arquivá-los digitalmente por ano e categoria. Os recibos em papel térmico desvanecem rapidamente - a foto digital é o seu registro permanente."
         }
       },
       "fields": {
@@ -3059,16 +3059,16 @@
         "addItem": "Adicionar Item"
       },
       "richContent": {
-        "whatIs": "Uma fatura é um documento formal emitido por um vendedor a um comprador que solicita pagamento por bens ou serviços entregues. Uma fatura legalmente válida deve incluir: número de fatura único, data de emissão, informações de contato, lista detalhada com preços e quantidades, subtotais, impostos, valor total e condições de pagamento. Faturas diferem de recibos — uma fatura é enviada antes do pagamento como um pedido; um recibo é emitido após o pagamento como prova. O faturamento profissional afeta diretamente o fluxo de caixa: faturas claras reduzem disputas e sinalizam credibilidade.",
+        "whatIs": "Uma fatura é um documento formal emitido por um vendedor a um comprador que solicita pagamento por bens ou serviços entregues. Uma fatura legalmente válida deve incluir: número de fatura único, data de emissão, informações de contato, lista detalhada com preços e quantidades, subtotais, impostos, valor total e condições de pagamento. Faturas diferem de recibos - uma fatura é enviada antes do pagamento como um pedido; um recibo é emitido após o pagamento como prova. O faturamento profissional afeta diretamente o fluxo de caixa: faturas claras reduzem disputas e sinalizam credibilidade.",
         "howToUse": [
           "Preencha o nome da empresa, o endereço e os detalhes de contato na seção 'De'.",
           "Adicione o nome e o endereço de cobrança do cliente na seção 'Para'.",
           "Insira itens de linha com descrição, quantidade e taxa unitária. O total é calculado automaticamente.",
           "Defina a taxa de imposto, se aplicável, e ajuste as datas de emissão e vencimento.",
-          "Adicione instruções de pagamento no campo de observações — incluindo métodos aceitos.",
+          "Adicione instruções de pagamento no campo de observações - incluindo métodos aceitos.",
           "Clique em Baixar / Imprimir PDF e selecione Salvar como PDF para gerar a fatura pronta para envio."
         ],
-        "whyItMatters": "Faturas profissionais reduzem disputas de pagamento, eliminando ambiguidades sobre o que foi entregue e a que preço. Incluir uma cláusula de taxa por atraso de pagamento — como 1,5% ao mês — incentiva o pagamento em dia. Muitas pequenas empresas perdem receita significativa não por clientes ruins, mas por não acompanharem as faturas pendentes. Uma fatura numerada e datada cria a trilha de papel necessária tanto para cobrança quanto para deduções fiscais.",
+        "whyItMatters": "Faturas profissionais reduzem disputas de pagamento, eliminando ambiguidades sobre o que foi entregue e a que preço. Incluir uma cláusula de taxa por atraso de pagamento - como 1,5% ao mês - incentiva o pagamento em dia. Muitas pequenas empresas perdem receita significativa não por clientes ruins, mas por não acompanharem as faturas pendentes. Uma fatura numerada e datada cria a trilha de papel necessária tanto para cobrança quanto para deduções fiscais.",
         "proTip": "Sempre use um sistema de numeração sequencial (INV-001, INV-002) desde o primeiro dia. Software de contabilidade, auditorias e registros financeiros dependem de numeração consistente para rastrear a receita e combinar pagamentos. Também considere adicionar uma cláusula de taxa por atraso de pagamento."
       }
     },
@@ -3841,6 +3841,84 @@
         "desc": "Perguntas técnicas reais, conceitos essenciais e simulados de arquitetura e código para acelerar sua carreira."
       },
       "button": "Acessar"
+    },
+    "bento": {
+      "badge": "Central de Ferramentas Web",
+      "slogan": "Simples. Rápido. Seguro.",
+      "allToolsButton": "Explorar Catálogo Completo",
+      "dev": {
+        "tag": "Desenvolvimento & APIs",
+        "title": "Utilitários para Desenvolvedores",
+        "desc": "Formate JSON, decodifique tokens JWT, gere UUIDs e teste expressões regulares com rapidez total no navegador.",
+        "action": "Abrir Ferramentas Dev",
+        "tabs": {
+          "json": "JSON",
+          "jwt": "JWT",
+          "uuid": "UUID",
+          "regex": "Regex"
+        }
+      },
+      "privacy": {
+        "tag": "Privacidade Total",
+        "title": "Processamento 100% no Navegador",
+        "desc": "Seus arquivos e textos nunca saem do seu computador. Zero uploads na nuvem, zero rastreamento, máxima segurança.",
+        "clientBadge": "Execução Local Privada",
+        "zeroUploads": "0 bytes enviados para a nuvem",
+        "stat": "100% Seguro",
+        "action": "Conhecer as Ferramentas"
+      },
+      "pdf": {
+        "tag": "Suíte de Documentos",
+        "title": "Manipulação Completa de PDFs",
+        "desc": "Mescle, divida, comprima e converta documentos PDF sem marcas d'água e sem limites de tamanho.",
+        "action": "Acessar Ferramentas PDF",
+        "merged": "combinado.pdf",
+        "sizeSaved": "-75% tamanho"
+      },
+      "image": {
+        "tag": "Estúdio de Mídia",
+        "title": "Otimizador e Conversor de Imagens",
+        "desc": "Comprima fotos, recorte proporções e converta entre WebP, AVIF, PNG e JPG mantendo a melhor qualidade visual.",
+        "action": "Acessar Ferramentas de Imagens",
+        "savedLabel": "86% economizado",
+        "qualityLabel": "Qualidade Visual"
+      },
+      "interview": {
+        "tag": "Preparação Técnica",
+        "title": "Simulados para Entrevistas de TI",
+        "desc": "Perguntas reais de arquitetura de sistemas, indexação de bancos de dados, TypeScript e mensageria assíncrona.",
+        "action": "Treinar Perguntas",
+        "difficulty": "Nível Sênior"
+      },
+      "quizzes": {
+        "tag": "Desafios & Trivias",
+        "title": "Quizzes Interativos & Conhecimento",
+        "desc": "Trivias de esportes, Fórmula 1, futebol e testes divertidos para desafiar seus amigos e testar seu repertório.",
+        "action": "Jogar Quizzes",
+        "tierLabel": "Nível Lenda • Top 5%"
+      },
+      "finance": {
+        "tag": "Finanças & Matemática",
+        "title": "Calculadoras & Faturamento",
+        "desc": "Simule empréstimos, financiamentos imobiliários, juros compostos e gere faturas em PDF profissionais.",
+        "action": "Acessar Ferramentas Financeiras",
+        "savedMetric": "Economia Estimada"
+      },
+      "quickFilters": {
+        "all": "Todos",
+        "popular": "Mais Buscados:",
+        "json": "JSON Formatter",
+        "pdf": "Juntar PDF",
+        "image": "Comprimir Imagem",
+        "jwt": "JWT Decoder",
+        "loan": "Simulador Empréstimo",
+        "interview": "Entrevista Tech"
+      },
+      "categorySection": {
+        "title": "Categorias de Ferramentas",
+        "viewAll": "Ver catálogo completo",
+        "toolsCount": "{count} ferramentas"
+      }
     },
     "nav": {
       "tools": "Ferramentas",
@@ -4701,7 +4779,7 @@
     }
   },
   "percentage": {
-    "metaTitle": "Calculadora de Porcentagem — Calcule %, Qual % é, Variação % | ToolNotch",
+    "metaTitle": "Calculadora de Porcentagem - Calcule %, Qual % é, Variação % | ToolNotch",
     "metaDescription": "Calculadora de porcentagem gratuita. Calcule qual porcentagem de um número, encontre a variação percentual entre dois valores ou calcule um valor a partir de uma porcentagem.",
     "title": "Calculadora de Porcentagem",
     "description": "Três calculadoras de porcentagem em uma: qual é X% de Y, X é qual % de Y e variação percentual.",
@@ -4755,25 +4833,25 @@
       },
       {
         "question": "Posso usar decimais?",
-        "answer": "Sim — as três calculadoras aceitam entradas decimais como 12,5 ou 0,75."
+        "answer": "Sim - as três calculadoras aceitam entradas decimais como 12,5 ou 0,75."
       }
     ],
     "richContent": {
-      "whatIs": "Uma calculadora de porcentagem resolve os três problemas fundamentais de porcentagem: (1) Quanto é X% de Y — por exemplo, 20% de 350 é igual a 70; (2) X é qual porcentagem de Y — por exemplo, 70 é 20% de 350; (3) Variação percentual de X para Y — por exemplo, uma mudança de 350 para 420 é um aumento de 20%. Usos do dia a dia incluem calcular descontos, gorjetas, impostos, notas escolares e retornos de investimento. Uma distinção crítica: ponto percentual e porcentagem são coisas diferentes. Se a taxa de juros de um empréstimo sobe de 10% para 12%, isso é um aumento de 2 pontos percentuais, mas de 20% em termos relativos. Essas duas leituras são confundidas com frequência em reportagens, publicidade e análises políticas.",
+      "whatIs": "Uma calculadora de porcentagem resolve os três problemas fundamentais de porcentagem: (1) Quanto é X% de Y - por exemplo, 20% de 350 é igual a 70; (2) X é qual porcentagem de Y - por exemplo, 70 é 20% de 350; (3) Variação percentual de X para Y - por exemplo, uma mudança de 350 para 420 é um aumento de 20%. Usos do dia a dia incluem calcular descontos, gorjetas, impostos, notas escolares e retornos de investimento. Uma distinção crítica: ponto percentual e porcentagem são coisas diferentes. Se a taxa de juros de um empréstimo sobe de 10% para 12%, isso é um aumento de 2 pontos percentuais, mas de 20% em termos relativos. Essas duas leituras são confundidas com frequência em reportagens, publicidade e análises políticas.",
       "howToUse": [
         "Selecione o tipo de cálculo: \"X% de Y\" para achar uma parte, \"X é qual % de Y\" para achar a taxa ou \"Variação percentual\" para comparar dois valores.",
         "Insira os valores conhecidos nos campos do modo selecionado.",
         "Clique em Calcular para obter o resultado.",
         "Leia o resultado e a explicação detalhada mostrada abaixo dos campos."
       ],
-      "whyItMatters": "A confusão com porcentagens é explorada rotineiramente em vendas e publicidade. \"50% de desconto e mais 20%\" não é 70% de desconto — é 60% de desconto (você paga 50% do preço original e depois 80% disso, o que equivale a 40% do preço original). Descontos acumulados nunca somam do jeito que parecem. Políticos e profissionais de marketing trocam pontos percentuais e porcentagens para exagerar ou minimizar variações conforme a leitura mais conveniente. Calcular porcentagens com precisão permite verificar por conta própria os descontos anunciados, os valores de imposto e as mudanças de taxa.",
+      "whyItMatters": "A confusão com porcentagens é explorada rotineiramente em vendas e publicidade. \"50% de desconto e mais 20%\" não é 70% de desconto - é 60% de desconto (você paga 50% do preço original e depois 80% disso, o que equivale a 40% do preço original). Descontos acumulados nunca somam do jeito que parecem. Políticos e profissionais de marketing trocam pontos percentuais e porcentagens para exagerar ou minimizar variações conforme a leitura mais conveniente. Calcular porcentagens com precisão permite verificar por conta própria os descontos anunciados, os valores de imposto e as mudanças de taxa.",
       "sections": [
         {
           "heading": "Exemplo prático: reverter uma variação percentual",
-          "body": "Um erro comum é tentar desfazer um aumento percentual subtraindo a mesma porcentagem. Suponha que um item que custava 80 subiu 25% e foi para 100. Tirar 25% de 100 dá 75, e não 80 — porque as duas porcentagens são aplicadas sobre bases diferentes. Para reverter um aumento, divida por 1 mais a taxa: 100 / 1,25 = 80. Para achar o preço antes do desconto de algo que agora custa 90 após 25% de desconto, divida por 1 menos a taxa: 90 / 0,75 = 120. A lição: um aumento e uma redução da mesma porcentagem nunca se cancelam, então sempre divida para voltar atrás em vez de somar a porcentagem de novo."
+          "body": "Um erro comum é tentar desfazer um aumento percentual subtraindo a mesma porcentagem. Suponha que um item que custava 80 subiu 25% e foi para 100. Tirar 25% de 100 dá 75, e não 80 - porque as duas porcentagens são aplicadas sobre bases diferentes. Para reverter um aumento, divida por 1 mais a taxa: 100 / 1,25 = 80. Para achar o preço antes do desconto de algo que agora custa 90 após 25% de desconto, divida por 1 menos a taxa: 90 / 0,75 = 120. A lição: um aumento e uma redução da mesma porcentagem nunca se cancelam, então sempre divida para voltar atrás em vez de somar a porcentagem de novo."
         }
       ],
-      "proTip": "Atalhos de cálculo mental para as porcentagens do dia a dia: 10% é mover a vírgula uma casa para a esquerda. 5% é metade de 10%. 15% é 10% mais 5%. 20% é o dobro do valor de 10%. 25% é dividir por 4. Essas cinco regras cobrem a maioria das estimativas de gorjeta, desconto e imposto sem calculadora nenhuma — rápido o bastante para conferir a conta de um restaurante ou o desconto de uma loja em segundos."
+      "proTip": "Atalhos de cálculo mental para as porcentagens do dia a dia: 10% é mover a vírgula uma casa para a esquerda. 5% é metade de 10%. 15% é 10% mais 5%. 20% é o dobro do valor de 10%. 25% é dividir por 4. Essas cinco regras cobrem a maioria das estimativas de gorjeta, desconto e imposto sem calculadora nenhuma - rápido o bastante para conferir a conta de um restaurante ou o desconto de uma loja em segundos."
     }
   },
   "qrGenerator": {
@@ -5004,18 +5082,18 @@
     "removeCourse": "Remover",
     "courseName": "Disciplina (opcional)",
     "grade": "Nota",
-    "credits": "Créditos",
+    "credits": "Crédito / Peso",
     "calculate": "Calcular",
     "yourGpa": "Sua Média",
-    "totalCredits": "Total de Créditos",
+    "totalCredits": "Total de Créditos / Peso",
     "gradeScale": "Escala de Notas",
     "scaleUs4": "EUA (A–F / escala 4.0)",
     "scalePt20": "Portugal / Brasil (0–20)",
     "scaleEs10": "Espanha / América Latina (0–10)",
     "currentGpa": "GPA Atual",
-    "completedCredits": "Créditos Concluídos",
+    "completedCredits": "Créditos Concluídos (Peso)",
     "newSemesterGpa": "GPA do Novo Semestre",
-    "newSemesterCredits": "Créditos do Novo Semestre",
+    "newSemesterCredits": "Créditos do Novo Semestre (Peso)",
     "newCumulativeGpa": "Novo GPA Acumulado",
     "currentGrade": "Nota Atual (%)",
     "earnedWeight": "Peso Concluído (%)",
@@ -7094,7 +7172,7 @@
     "siteIndexHeading": "Todas as ferramentas e quizzes"
   },
   "electionCountdown": {
-    "metaTitle": "Contagem Regressiva Eleições 2026 — Quantos Dias Faltam? | ToolNotch",
+    "metaTitle": "Contagem Regressiva Eleições 2026 - Quantos Dias Faltam? | ToolNotch",
     "metaDescription": "Veja quantos dias, horas e minutos faltam para as eleições de 2026 no Brasil. Datas oficiais do 1º e 2º turno confirmadas pelo TSE. Sem opinião, sem candidatos.",
     "title": "Contagem Regressiva para as Eleições 2026",
     "description": "Quantos dias faltam para as eleições de 2026? Contagem regressiva ao vivo até o 1º turno (4 de outubro) e o 2º turno (25 de outubro, se necessário), com base em dados oficiais do TSE.",
@@ -7105,7 +7183,7 @@
     "minutes": "Minutos",
     "seconds": "Segundos",
     "electionConcludedRound1": "O primeiro turno foi encerrado. Aguardando confirmação sobre a necessidade de segundo turno.",
-    "electionConcludedRound2": "O período eleitoral de 2026 foi concluído. Esta página não acompanha resultados — consulte o TSE para informações oficiais.",
+    "electionConcludedRound2": "O período eleitoral de 2026 foi concluído. Esta página não acompanha resultados - consulte o TSE para informações oficiais.",
     "faqs": [
       {
         "question": "Quando são as eleições de 2026?",
@@ -7113,7 +7191,7 @@
       },
       {
         "question": "Como funciona o segundo turno?",
-        "answer": "O segundo turno só ocorre para as eleições de Presidente e Governador, e apenas se nenhum candidato alcançar mais de 50% dos votos válidos (excluindo brancos e nulos) no primeiro turno. Caso seja necessário, o segundo turno acontece no último domingo de outubro — 25 de outubro de 2026. As eleições para Senador e para Deputado Federal, Estadual e Distrital são decididas em turno único."
+        "answer": "O segundo turno só ocorre para as eleições de Presidente e Governador, e apenas se nenhum candidato alcançar mais de 50% dos votos válidos (excluindo brancos e nulos) no primeiro turno. Caso seja necessário, o segundo turno acontece no último domingo de outubro - 25 de outubro de 2026. As eleições para Senador e para Deputado Federal, Estadual e Distrital são decididas em turno único."
       },
       {
         "question": "Quem pode votar nas eleições de 2026?",
@@ -7133,40 +7211,40 @@
       }
     ],
     "richContent": {
-      "whatIs": "As eleições de 2026 no Brasil acontecem no domingo, 4 de outubro de 2026, quando são escolhidos o Presidente da República, os Governadores estaduais, os Senadores e os Deputados Federais, Estaduais e Distritais — todos no mesmo dia. Essa data é definida pela Constituição Federal e pela Lei das Eleições (Lei nº 9.504/1997), que fixam o primeiro domingo de outubro como data do primeiro turno em anos de eleição geral. Caso nenhum candidato a Presidente ou a Governador receba mais de 50% dos votos válidos, ocorre um segundo turno marcado para o último domingo de outubro, 25 de outubro de 2026. Essas datas foram confirmadas oficialmente pelo Tribunal Superior Eleitoral (TSE) e não estão sujeitas a alteração discricionária: seguem uma regra fixa prevista em lei, o que já ocorreu nos pleitos de 2018 (7 e 28 de outubro) e 2022 (2 e 30 de outubro).",
+      "whatIs": "As eleições de 2026 no Brasil acontecem no domingo, 4 de outubro de 2026, quando são escolhidos o Presidente da República, os Governadores estaduais, os Senadores e os Deputados Federais, Estaduais e Distritais - todos no mesmo dia. Essa data é definida pela Constituição Federal e pela Lei das Eleições (Lei nº 9.504/1997), que fixam o primeiro domingo de outubro como data do primeiro turno em anos de eleição geral. Caso nenhum candidato a Presidente ou a Governador receba mais de 50% dos votos válidos, ocorre um segundo turno marcado para o último domingo de outubro, 25 de outubro de 2026. Essas datas foram confirmadas oficialmente pelo Tribunal Superior Eleitoral (TSE) e não estão sujeitas a alteração discricionária: seguem uma regra fixa prevista em lei, o que já ocorreu nos pleitos de 2018 (7 e 28 de outubro) e 2022 (2 e 30 de outubro).",
       "howToUse": [
-        "Veja a contagem regressiva ao vivo no topo da página — ela mostra dias, horas, minutos e segundos até o fechamento das urnas do turno atual.",
+        "Veja a contagem regressiva ao vivo no topo da página - ela mostra dias, horas, minutos e segundos até o fechamento das urnas do turno atual.",
         "A contagem alterna automaticamente do 1º turno para o 2º turno assim que o horário de votação de 4 de outubro é encerrado.",
         "Consulte as datas fixas de cada turno na seção abaixo da contagem, sempre visíveis, mesmo depois que o primeiro turno já tiver passado.",
         "Leia as perguntas frequentes para entender como funciona o sistema de dois turnos e quem tem direito a voto."
       ],
-      "whyItMatters": "Saber a data exata das eleições ajuda no planejamento pessoal — como organizar viagens, verificar o local de votação com antecedência e evitar imprevistos no dia da votação, já que o voto é obrigatório para a maior parte dos eleitores brasileiros. A definição sobre a existência ou não de um segundo turno também é relevante: ela só é confirmada depois da apuração do primeiro turno, e apenas as disputas de Presidente e Governador podem chegar a essa segunda etapa. Compreender esse mecanismo evita confusão sobre por que algumas eleições (Senador, Deputado) são decididas em uma única votação enquanto outras (Presidente, Governador) podem se estender até o fim de outubro.",
+      "whyItMatters": "Saber a data exata das eleições ajuda no planejamento pessoal - como organizar viagens, verificar o local de votação com antecedência e evitar imprevistos no dia da votação, já que o voto é obrigatório para a maior parte dos eleitores brasileiros. A definição sobre a existência ou não de um segundo turno também é relevante: ela só é confirmada depois da apuração do primeiro turno, e apenas as disputas de Presidente e Governador podem chegar a essa segunda etapa. Compreender esse mecanismo evita confusão sobre por que algumas eleições (Senador, Deputado) são decididas em uma única votação enquanto outras (Presidente, Governador) podem se estender até o fim de outubro.",
       "sections": [
         {
           "heading": "O que acontece entre os dois turnos",
-          "body": "Assim que as urnas do primeiro turno fecham, em 4 de outubro, o TSE apura os votos válidos em cada disputa de Presidente e de Governador. Um candidato vence direto ao obter mais de 50% dos votos válidos — brancos e nulos ficam de fora dessa base, e é por isso que o limite de vitória é medido sobre os votos válidos, e não sobre todos os votos depositados. Se nenhum candidato passar desse limite, os dois mais votados vão para o segundo turno, no último domingo de outubro, que é 25 de outubro de 2026. As vagas de Senador e as Câmaras Federal, Estaduais e Distritais são todas decididas em 4 de outubro e nunca entram em segundo turno, de modo que apenas as disputas do Executivo podem se estender à segunda etapa."
+          "body": "Assim que as urnas do primeiro turno fecham, em 4 de outubro, o TSE apura os votos válidos em cada disputa de Presidente e de Governador. Um candidato vence direto ao obter mais de 50% dos votos válidos - brancos e nulos ficam de fora dessa base, e é por isso que o limite de vitória é medido sobre os votos válidos, e não sobre todos os votos depositados. Se nenhum candidato passar desse limite, os dois mais votados vão para o segundo turno, no último domingo de outubro, que é 25 de outubro de 2026. As vagas de Senador e as Câmaras Federal, Estaduais e Distritais são todas decididas em 4 de outubro e nunca entram em segundo turno, de modo que apenas as disputas do Executivo podem se estender à segunda etapa."
         }
       ],
-      "proTip": "Marque o dia 4 de outubro de 2026 no seu calendário e verifique com antecedência o seu local de votação e a validade do seu título de eleitor — o TSE recomenda confirmar esses dados semanas antes do pleito para evitar contratempos. Se a disputa para Presidente ou Governador do seu estado for para o segundo turno, volte a esta página: a contagem regressiva alternará automaticamente para o dia 25 de outubro de 2026."
+      "proTip": "Marque o dia 4 de outubro de 2026 no seu calendário e verifique com antecedência o seu local de votação e a validade do seu título de eleitor - o TSE recomenda confirmar esses dados semanas antes do pleito para evitar contratempos. Se a disputa para Presidente ou Governador do seu estado for para o segundo turno, volte a esta página: a contagem regressiva alternará automaticamente para o dia 25 de outubro de 2026."
     }
   },
   "pollingPlaceFinder": {
     "metaTitle": "Onde Vou Votar em 2026? Como Consultar Seu Local de Votação | ToolNotch",
     "metaDescription": "Descubra como consultar seu local de votação para as eleições de 2026 pelo site oficial do TSE. Passo a passo, o que fazer se perdeu o título e o que levar no dia da votação.",
     "title": "Onde Vou Votar em 2026? Como Consultar Seu Local de Votação",
-    "description": "Passo a passo oficial para descobrir sua zona, seção e endereço de votação — direto no site do TSE, sem formulários nem dados pessoais no ToolNotch.",
-    "intro": "Se você não lembra onde vota, mudou de endereço recentemente ou perdeu o título de eleitor, a resposta certa está sempre no site ou aplicativo oficial do TSE — nunca em terceiros. Este guia explica o que é o local de votação, como consultá-lo em menos de dois minutos e o que fazer nos casos mais comuns antes da eleição.",
+    "description": "Passo a passo oficial para descobrir sua zona, seção e endereço de votação - direto no site do TSE, sem formulários nem dados pessoais no ToolNotch.",
+    "intro": "Se você não lembra onde vota, mudou de endereço recentemente ou perdeu o título de eleitor, a resposta certa está sempre no site ou aplicativo oficial do TSE - nunca em terceiros. Este guia explica o que é o local de votação, como consultá-lo em menos de dois minutos e o que fazer nos casos mais comuns antes da eleição.",
     "sections": {
       "whatIsPollingPlace": {
         "heading": "O que é o \"local de votação\"?",
         "body": [
-          "Seu local de votação é o endereço físico — geralmente uma escola ou prédio público — onde você deve comparecer para votar. Ele é definido por dois números que aparecem no seu título de eleitor: a zona eleitoral (a divisão administrativa da Justiça Eleitoral responsável pela sua região) e a seção eleitoral (o grupo específico de eleitores dentro dessa zona, cada um atendido por uma urna). Juntos, zona e seção apontam para um único endereço: o seu local de votação.",
-          "Esses números não são fixos para sempre. A cada eleição, o TSE e os Tribunais Regionais Eleitorais (TREs) podem reorganizar zonas e seções — por causa de mudanças de endereço registradas pelos próprios eleitores, fechamento ou abertura de locais de votação, ou simples redistribuição para equilibrar o número de eleitores por seção. É por isso que, mesmo sem ter feito nenhuma alteração cadastral, seu local pode não ser o mesmo da eleição anterior. A recomendação oficial é sempre reconferir antes de cada eleição."
+          "Seu local de votação é o endereço físico - geralmente uma escola ou prédio público - onde você deve comparecer para votar. Ele é definido por dois números que aparecem no seu título de eleitor: a zona eleitoral (a divisão administrativa da Justiça Eleitoral responsável pela sua região) e a seção eleitoral (o grupo específico de eleitores dentro dessa zona, cada um atendido por uma urna). Juntos, zona e seção apontam para um único endereço: o seu local de votação.",
+          "Esses números não são fixos para sempre. A cada eleição, o TSE e os Tribunais Regionais Eleitorais (TREs) podem reorganizar zonas e seções - por causa de mudanças de endereço registradas pelos próprios eleitores, fechamento ou abertura de locais de votação, ou simples redistribuição para equilibrar o número de eleitores por seção. É por isso que, mesmo sem ter feito nenhuma alteração cadastral, seu local pode não ser o mesmo da eleição anterior. A recomendação oficial é sempre reconferir antes de cada eleição."
         ]
       },
       "howToCheck": {
         "heading": "Como consultar seu local de votação (passo a passo oficial)",
-        "intro": "Existem dois canais oficiais para essa consulta — ambos mantidos pelo TSE e gratuitos. Não é preciso, e não é recomendado, usar qualquer site ou aplicativo que não seja da própria Justiça Eleitoral.",
+        "intro": "Existem dois canais oficiais para essa consulta - ambos mantidos pelo TSE e gratuitos. Não é preciso, e não é recomendado, usar qualquer site ou aplicativo que não seja da própria Justiça Eleitoral.",
         "steps": [
           {
             "title": "Pelo site do TSE (Autoatendimento Eleitoral)",
@@ -7174,7 +7252,7 @@
           },
           {
             "title": "Pelo aplicativo e-Título (Android e iOS)",
-            "body": "Baixe o e-Título na loja de aplicativos do seu celular, faça login com seus dados e seu local de votação aparece diretamente na tela inicial — com endereço completo e, no dia da eleição, um recurso de geolocalização para te ajudar a chegar até lá."
+            "body": "Baixe o e-Título na loja de aplicativos do seu celular, faça login com seus dados e seu local de votação aparece diretamente na tela inicial - com endereço completo e, no dia da eleição, um recurso de geolocalização para te ajudar a chegar até lá."
           },
           {
             "title": "O que você vai precisar informar",
@@ -7183,24 +7261,24 @@
         ]
       },
       "lostTitle": {
-        "heading": "Perdi meu título de eleitor — e agora?",
+        "heading": "Perdi meu título de eleitor - e agora?",
         "body": [
-          "Calma: você não precisa do papel físico do título para votar. No dia da eleição, basta apresentar um documento oficial com foto — o mesário confirma sua seção pelo sistema, não pelo pedaço de papel.",
+          "Calma: você não precisa do papel físico do título para votar. No dia da eleição, basta apresentar um documento oficial com foto - o mesário confirma sua seção pelo sistema, não pelo pedaço de papel.",
           "Se quiser regularizar mesmo assim ou apenas conferir seus dados, o caminho mais rápido é pelo aplicativo e-Título ou pelo Autoatendimento Eleitoral no site do TSE: ambos permitem consultar sua situação eleitoral e, quando necessário, solicitar a emissão de uma segunda via digital do título, sem precisar ir a um cartório eleitoral presencialmente."
         ]
       },
       "movedCity": {
-        "heading": "Mudei de cidade ou estado — isso muda meu local de votação?",
+        "heading": "Mudei de cidade ou estado - isso muda meu local de votação?",
         "body": [
-          "Sim. Se você mudou de endereço para outro município (ou mesmo outro bairro atendido por zona eleitoral diferente), seu local de votação continua vinculado à zona antiga até que você solicite formalmente a transferência de domicílio eleitoral — o simples fato de morar em outro lugar não atualiza isso automaticamente.",
-          "A transferência é feita pelo Autoatendimento Eleitoral ou pelo e-Título, mas precisa ser solicitada dentro do prazo definido pelo calendário eleitoral do TSE para o ano da eleição — e esse prazo costuma se encerrar bem antes da data da votação. Consulte o calendário eleitoral oficial de 2026 para confirmar as datas exatas antes de deixar para a última hora."
+          "Sim. Se você mudou de endereço para outro município (ou mesmo outro bairro atendido por zona eleitoral diferente), seu local de votação continua vinculado à zona antiga até que você solicite formalmente a transferência de domicílio eleitoral - o simples fato de morar em outro lugar não atualiza isso automaticamente.",
+          "A transferência é feita pelo Autoatendimento Eleitoral ou pelo e-Título, mas precisa ser solicitada dentro do prazo definido pelo calendário eleitoral do TSE para o ano da eleição - e esse prazo costuma se encerrar bem antes da data da votação. Consulte o calendário eleitoral oficial de 2026 para confirmar as datas exatas antes de deixar para a última hora."
         ]
       },
       "whatToBring": {
         "heading": "O que levar no dia da eleição",
         "body": [
-          "Leve um documento oficial com foto — não precisa ser o título de eleitor físico. São geralmente aceitos: carteira de identidade (RG ou a nova Carteira de Identidade Nacional/CIN), CNH, passaporte, carteira de trabalho e carteiras de categoria profissional emitidas por conselhos reconhecidos em lei. Confirme a lista completa e atualizada no site ou app oficial do TSE antes do dia da votação.",
-          "Chegue à sua seção dentro do horário de votação definido pelo TSE para a eleição — quem já está na fila no horário de encerramento normalmente ainda consegue votar, mas não vale a pena arriscar deixando para os últimos minutos."
+          "Leve um documento oficial com foto - não precisa ser o título de eleitor físico. São geralmente aceitos: carteira de identidade (RG ou a nova Carteira de Identidade Nacional/CIN), CNH, passaporte, carteira de trabalho e carteiras de categoria profissional emitidas por conselhos reconhecidos em lei. Confirme a lista completa e atualizada no site ou app oficial do TSE antes do dia da votação.",
+          "Chegue à sua seção dentro do horário de votação definido pelo TSE para a eleição - quem já está na fila no horário de encerramento normalmente ainda consegue votar, mas não vale a pena arriscar deixando para os últimos minutos."
         ],
         "documentList": [
           "Carteira de Identidade (RG) ou Carteira de Identidade Nacional (CIN)",
@@ -7213,7 +7291,7 @@
     },
     "cta": {
       "label": "Consultar meu local de votação no site oficial do TSE",
-      "sublabel": "Você será redirecionado para tse.jus.br — o único canal oficial para essa consulta. O ToolNotch não processa, armazena nem tem acesso a nenhum dado do seu título de eleitor."
+      "sublabel": "Você será redirecionado para tse.jus.br - o único canal oficial para essa consulta. O ToolNotch não processa, armazena nem tem acesso a nenhum dado do seu título de eleitor."
     },
     "howToSteps": [
       "Acesse tse.jus.br e abra o Autoatendimento Eleitoral (ou instale o aplicativo e-Título) no seu celular.",
@@ -7224,19 +7302,19 @@
     "faqs": [
       {
         "question": "Posso votar em qualquer local de votação?",
-        "answer": "Não. Você só pode votar na seção eleitoral para a qual está designado — mesmo que outro local fique mais perto de onde você está no dia da eleição. Confirme sempre o endereço correto antes de sair de casa."
+        "answer": "Não. Você só pode votar na seção eleitoral para a qual está designado - mesmo que outro local fique mais perto de onde você está no dia da eleição. Confirme sempre o endereço correto antes de sair de casa."
       },
       {
         "question": "E se eu não tiver mais o título de eleitor?",
-        "answer": "Você não precisa do papel físico para votar — um documento oficial com foto é suficiente. Se quiser regularizar sua situação ou emitir uma segunda via digital, use o e-Título ou o Autoatendimento Eleitoral no site do TSE."
+        "answer": "Você não precisa do papel físico para votar - um documento oficial com foto é suficiente. Se quiser regularizar sua situação ou emitir uma segunda via digital, use o e-Título ou o Autoatendimento Eleitoral no site do TSE."
       },
       {
         "question": "Posso consultar o local de votação de outra pessoa?",
-        "answer": "Pelo e-Título instalado no seu próprio celular, não — o aplicativo mostra apenas os dados de quem fez login. Para consultar o local de outra pessoa (com o consentimento dela), use o Autoatendimento Eleitoral no site do TSE informando os dados dela."
+        "answer": "Pelo e-Título instalado no seu próprio celular, não - o aplicativo mostra apenas os dados de quem fez login. Para consultar o local de outra pessoa (com o consentimento dela), use o Autoatendimento Eleitoral no site do TSE informando os dados dela."
       },
       {
         "question": "O local de votação muda a cada eleição?",
-        "answer": "Pode mudar, sim — o TSE reorganiza zonas e seções periodicamente. Mesmo que você não tenha se mudado, vale a pena reconferir seu local antes de cada eleição em vez de confiar na memória da eleição anterior."
+        "answer": "Pode mudar, sim - o TSE reorganiza zonas e seções periodicamente. Mesmo que você não tenha se mudado, vale a pena reconferir seu local antes de cada eleição em vez de confiar na memória da eleição anterior."
       },
       {
         "question": "Preciso levar o título de eleitor físico no dia da votação?",
@@ -7244,7 +7322,7 @@
       },
       {
         "question": "O que fazer se eu estiver na fila errada no dia da votação?",
-        "answer": "Procure um mesário ou um dos fiscais/orientadores no local — eles têm acesso ao sistema para confirmar sua seção correta e te direcionar para a fila certa, sem que você precise sair do prédio."
+        "answer": "Procure um mesário ou um dos fiscais/orientadores no local - eles têm acesso ao sistema para confirmar sua seção correta e te direcionar para a fila certa, sem que você precise sair do prédio."
       }
     ]
   },
@@ -8127,7 +8205,7 @@
     "termsButton": "Termos de Uso"
   },
   "cpfGenerator": {
-    "metaTitle": "Gerador de CPF Online Grátis — Válido com Pontuação e por Estado | ToolNotch",
+    "metaTitle": "Gerador de CPF Online Grátis - Válido com Pontuação e por Estado | ToolNotch",
     "metaDescription": "Gere números de CPF válidos para testes de software, escolha a região fiscal/UF de origem, pontuação e gere em lote. 100% no navegador.",
     "title": "Gerador de CPF Online",
     "description": "Gere números de CPF matematicamente válidos (algoritmo Módulo 11) com pontuação, filtragem por estado de emissão e opção em lote para testes e desenvolvimento de software.",
@@ -8224,7 +8302,7 @@
     }
   },
   "uuidGenerator": {
-    "metaTitle": "Gerador de UUID / GUID Online Grátis — v4, v7 e v1 em Lote | ToolNotch",
+    "metaTitle": "Gerador de UUID / GUID Online Grátis - v4, v7 e v1 em Lote | ToolNotch",
     "metaDescription": "Gere identificadores UUID v4 (aleatório), UUID v7 (RFC 9562 ordenado por tempo) e v1 em lote com opções de maiúsculas, hífens e chaves. 100% no navegador.",
     "title": "Gerador de UUID / GUID Online",
     "description": "Crie identificadores universalmente exclusivos (UUIDs / GUIDs) nos padrões v4, v7 (RFC 9562 time-ordered) e v1. Gere até 100 IDs por vez com suporte a maiúsculas, remoção de hífens e download em .TXT.",
@@ -8317,7 +8395,7 @@
     }
   },
   "base64Converter": {
-    "metaTitle": "Conversor Base64 Online — Codificar e Decodificar Texto, Hex e Imagens | ToolNotch",
+    "metaTitle": "Conversor Base64 Online - Codificar e Decodificar Texto, Hex e Imagens | ToolNotch",
     "metaDescription": "Codifique e decodifique Base64 online com suporte a caracteres especiais UTF-8, modo URL-Safe, conversão Hexadecimal e Data URI para imagens. 100% privado.",
     "title": "Conversor Base64 (Encoder / Decoder)",
     "description": "Converta textos e payloads para Base64 e vice-versa instantaneamente. Inclui suporte a caracteres acentuados UTF-8, formato URL-Safe para parâmetros web, conversor Hexadecimal e conversor de arquivos/imagens para Data URI.",
@@ -8379,7 +8457,7 @@
     }
   },
   "urlParser": {
-    "metaTitle": "Parser e Editor de URL Online — Query String e Removedor de UTMs | ToolNotch",
+    "metaTitle": "Parser e Editor de URL Online - Query String e Removedor de UTMs | ToolNotch",
     "metaDescription": "Analise e decomponha URLs completas em partes estruturadas. Edite parâmetros de consulta (Query Params) em tempo real e remova tags de rastreamento (UTMs) com 1 clique.",
     "title": "Parser e Editor de URL",
     "description": "Decomponha URLs em protocolo, hostname, porta, caminho e parâmetros de busca em tempo real. Adicione, edite e ative/desative parâmetros da query string interativamente e limpe tags de rastreamento com facilidade.",

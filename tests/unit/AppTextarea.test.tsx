@@ -143,11 +143,32 @@ describe('AppTextarea', () => {
     expect(textarea).toHaveClass('placeholder:text-label/50');
   });
 
+  it('renders without border and background when flat is true matching AppInput', () => {
+    render(<AppTextarea placeholder="Textarea flat" flat />);
+    const textarea = screen.getByPlaceholderText('Textarea flat');
+    expect(textarea).toBeInTheDocument();
+    expect(textarea).toHaveClass('bg-transparent', 'border-0');
+    expect(textarea).not.toHaveClass('bg-tertiary');
+  });
+
   it('respects custom width in containerClassName without forcing w-full', () => {
     const { container } = render(
       <AppTextarea containerClassName="w-64 shrink-0" />
     );
     expect(container.firstChild).toHaveClass('w-64');
     expect(container.firstChild).not.toHaveClass('w-full');
+  });
+
+  it('disables browser spellcheck and autocorrect by default', () => {
+    render(<AppTextarea placeholder="Código sem sublinhado" />);
+    const textarea = screen.getByPlaceholderText('Código sem sublinhado');
+    expect(textarea).toHaveAttribute('spellcheck', 'false');
+    expect(textarea).toHaveAttribute('autocorrect', 'off');
+  });
+
+  it('allows overriding spellCheck when explicitly provided', () => {
+    render(<AppTextarea placeholder="Com corretor" spellCheck={true} />);
+    const textarea = screen.getByPlaceholderText('Com corretor');
+    expect(textarea).toHaveAttribute('spellcheck', 'true');
   });
 });

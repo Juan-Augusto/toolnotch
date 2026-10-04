@@ -146,6 +146,7 @@ export default function AppHashGenerator({ locale = "pt" }: Props) {
           onChange={(e) => setInputText(e.target.value)}
           placeholder={isPt ? "Digite ou cole qualquer texto para gerar hashes em tempo real..." : "Type or paste string to generate hashes in real-time..."}
           rows={3}
+          variant="background"
           className="w-full font-mono text-sm"
         />
 

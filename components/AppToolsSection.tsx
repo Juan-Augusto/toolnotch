@@ -1,6 +1,18 @@
 "use client";
 import Link from "next/link";
-import { Tool } from "@/app/[locale]/page";
+export interface ToolItem {
+  label: string;
+  desc: string;
+  href: string;
+}
+
+export interface Tool {
+  category: string;
+  color: string;
+  index: number;
+  items: ToolItem[];
+}
+
 import AppCategoriesFilter from "./AppCategoriesFilter";
 import AppToolSearch from "./AppToolSearch";
 import { useState } from "react";

@@ -38,7 +38,7 @@ export default function AppAdUnit({ slot, className = "" }: Props) {
         data-ad-network="adsterra"
         data-ad-slot={slot}
       >
-        Ad slot ({slot}) — set Adsterra zones in lib/adSlots.ts to activate
+        Ad slot ({slot}) - set Adsterra zones in lib/adSlots.ts to activate
       </div>
     );
   }
@@ -46,7 +46,7 @@ export default function AppAdUnit({ slot, className = "" }: Props) {
   if (!AD_CLIENT) {
     return (
       <div className={`ad-placeholder ${className}`}>
-        Ad unit — set NEXT_PUBLIC_ADSENSE_CLIENT to activate
+        Ad unit - set NEXT_PUBLIC_ADSENSE_CLIENT to activate
       </div>
     );
   }

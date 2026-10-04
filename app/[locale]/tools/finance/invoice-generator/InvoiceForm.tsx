@@ -53,7 +53,7 @@ export default function InvoiceForm({
     () =>
       INVOICE_CURRENCIES.map((c) => ({
         value: c.code,
-        label: `${c.code} — ${c.name}`,
+        label: `${c.code} - ${c.name}`,
       })),
     [],
   );

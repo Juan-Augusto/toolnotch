@@ -283,7 +283,7 @@ export default async function ImageToolsHubPage({ params }: Props) {
           </h1>
           <p className="leading-relaxed text-label mt-1.5 sm:mt-2 max-w-3xl text-xs sm:text-sm">
             {locale === "pt"
-              ? "Comprima, converta, redimensione e edite imagens com total privacidade. Processamento 100% local no seu navegador — nenhum arquivo é enviado a servidores externos."
+              ? "Comprima, converta, redimensione e edite imagens com total privacidade. Processamento 100% local no seu navegador - nenhum arquivo é enviado a servidores externos."
               : locale === "es"
                 ? "Comprime, convierte, redimensiona y edita imágenes con total privacidad. Procesamiento 100% local en tu navegador sin subida a servidores."
                 : "Compress, convert, resize, and edit images with complete client-side privacy. 100% in-browser processing with zero server uploads."}

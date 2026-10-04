@@ -95,7 +95,7 @@ export default function InvoicePreview({
           {invoice.lineItems.map((item) => (
             <tr key={item.id} className="border-b border-border text-xs">
               <td className="py-2 pr-2 font-medium break-all">
-                {item.description || `—`}
+                {item.description || ` - `}
               </td>
               <td className="py-2 px-2 text-center break-all">
                 {item.quantity}

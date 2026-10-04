@@ -209,19 +209,21 @@ export default function PercentageCalculatorClient({
           ))}
         </div>
 
-        <AppCard
+        <div
           id="percentage-calculator-panel"
           role="tabpanel"
           aria-labelledby={`percentage-tab-${activeTab}`}
-          border
-          cornerAccents={true}
-          className="p-4 sm:p-6 bg-tertiary"
+          className="space-y-4"
         >
           {/* TAB 1: Quanto é X% de Y */}
           {activeTab === "percentOf" && (
             <div className="space-y-3">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                <div className="bg-background border border-border rounded-[2px] p-3.5 sm:p-4.5">
+                <AppCard
+                  border
+                  cornerAccents={true}
+                  className="p-4 sm:p-5 bg-tertiary"
+                >
                   <div className="relative">
                     <AppInput
                       id="po-pct"
@@ -233,7 +235,7 @@ export default function PercentageCalculatorClient({
                       value={poPct}
                       onChange={(e) => setPoPct(e.target.value)}
                       placeholder="0"
-                      variant="tertiary"
+                      variant="background"
                       className="h-12 pr-8 text-2xl sm:text-3xl font-mono font-bold"
                     />
                     <span className="absolute right-3.5 bottom-3.5 font-mono font-bold text-label/60 select-none pointer-events-none">%</span>
@@ -252,16 +254,20 @@ export default function PercentageCalculatorClient({
                         className={`px-2.5 py-0.5 text-xs font-mono font-medium rounded-[2px] border transition-colors cursor-pointer ${
                           poPct === pct
                             ? "bg-secondary text-background border-secondary"
-                            : "bg-tertiary border-border text-foreground hover:border-secondary"
+                            : "bg-background border-border text-foreground hover:border-secondary"
                         }`}
                       >
                         {pct}%
                       </button>
                     ))}
                   </div>
-                </div>
+                </AppCard>
 
-                <div className="bg-background border border-border rounded-[2px] p-3.5 sm:p-4.5">
+                <AppCard
+                  border
+                  cornerAccents={true}
+                  className="p-4 sm:p-5 bg-tertiary"
+                >
                   <AppInput
                     id="po-num"
                     label={t("percentOf.label2")}
@@ -272,23 +278,11 @@ export default function PercentageCalculatorClient({
                     value={poNum}
                     onChange={(e) => setPoNum(e.target.value)}
                     placeholder="0"
-                    variant="tertiary"
+                    variant="background"
                     className="h-12 text-2xl sm:text-3xl font-mono font-bold"
                   />
-                </div>
+                </AppCard>
               </div>
-
-              {/* Fórmula Passo a Passo */}
-              {poResult !== null && (
-                <div className="p-3 bg-background border border-border rounded-[2px] text-xs font-mono text-label flex flex-wrap items-center justify-between gap-2">
-                  <span>
-                    {t("formula")}: <strong className="text-foreground">({poNum} × {poPct}) ÷ 100</strong>
-                  </span>
-                  <span className="text-primary font-bold">
-                    = {poResult}
-                  </span>
-                </div>
-              )}
             </div>
           )}
 
@@ -296,7 +290,11 @@ export default function PercentageCalculatorClient({
           {activeTab === "whatPercent" && (
             <div className="space-y-3">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                <div className="bg-background border border-border rounded-[2px] p-3.5 sm:p-4.5">
+                <AppCard
+                  border
+                  cornerAccents={true}
+                  className="p-4 sm:p-5 bg-tertiary"
+                >
                   <AppInput
                     id="wp-x"
                     label={t("whatPercent.label1")}
@@ -307,12 +305,16 @@ export default function PercentageCalculatorClient({
                     value={wpX}
                     onChange={(e) => setWpX(e.target.value)}
                     placeholder="0"
-                    variant="tertiary"
+                    variant="background"
                     className="h-12 text-2xl sm:text-3xl font-mono font-bold"
                   />
-                </div>
+                </AppCard>
 
-                <div className="bg-background border border-border rounded-[2px] p-3.5 sm:p-4.5">
+                <AppCard
+                  border
+                  cornerAccents={true}
+                  className="p-4 sm:p-5 bg-tertiary"
+                >
                   <AppInput
                     id="wp-y"
                     label={t("whatPercent.label2")}
@@ -323,23 +325,11 @@ export default function PercentageCalculatorClient({
                     value={wpY}
                     onChange={(e) => setWpY(e.target.value)}
                     placeholder="0"
-                    variant="tertiary"
+                    variant="background"
                     className="h-12 text-2xl sm:text-3xl font-mono font-bold"
                   />
-                </div>
+                </AppCard>
               </div>
-
-              {/* Fórmula Passo a Passo */}
-              {wpResult !== null && (
-                <div className="p-3 bg-background border border-border rounded-[2px] text-xs font-mono text-label flex flex-wrap items-center justify-between gap-2">
-                  <span>
-                    {t("formula")}: <strong className="text-foreground">({wpX} ÷ {wpY}) × 100</strong>
-                  </span>
-                  <span className="text-primary font-bold">
-                    = {wpResult}%
-                  </span>
-                </div>
-              )}
             </div>
           )}
 
@@ -347,7 +337,11 @@ export default function PercentageCalculatorClient({
           {activeTab === "percentChange" && (
             <div className="space-y-3">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                <div className="bg-background border border-border rounded-[2px] p-3.5 sm:p-4.5">
+                <AppCard
+                  border
+                  cornerAccents={true}
+                  className="p-4 sm:p-5 bg-tertiary"
+                >
                   <AppInput
                     id="pc-from"
                     label={t("percentChange.label1")}
@@ -358,12 +352,16 @@ export default function PercentageCalculatorClient({
                     value={pcFrom}
                     onChange={(e) => setPcFrom(e.target.value)}
                     placeholder="0"
-                    variant="tertiary"
+                    variant="background"
                     className="h-12 text-2xl sm:text-3xl font-mono font-bold"
                   />
-                </div>
+                </AppCard>
 
-                <div className="bg-background border border-border rounded-[2px] p-3.5 sm:p-4.5">
+                <AppCard
+                  border
+                  cornerAccents={true}
+                  className="p-4 sm:p-5 bg-tertiary"
+                >
                   <AppInput
                     id="pc-to"
                     label={t("percentChange.label2")}
@@ -374,83 +372,112 @@ export default function PercentageCalculatorClient({
                     value={pcTo}
                     onChange={(e) => setPcTo(e.target.value)}
                     placeholder="0"
-                    variant="tertiary"
+                    variant="background"
                     className="h-12 text-2xl sm:text-3xl font-mono font-bold"
                   />
-                </div>
+                </AppCard>
               </div>
-
-              {/* Fórmula Passo a Passo */}
-              {pcData && (
-                <div className="p-3 bg-background border border-border rounded-[2px] text-xs font-mono text-label flex flex-wrap items-center justify-between gap-2">
-                  <span>
-                    {locale === "pt" ? "Diferença" : locale === "es" ? "Diferencia" : "Difference"}: <strong className="text-foreground">{pcData.diff > 0 ? `+${pcData.diff}` : pcData.diff}</strong>
-                    {" · "}{t("formula")}: <strong className="text-foreground">(({pcTo} - {pcFrom}) ÷ {pcFrom}) × 100</strong>
-                  </span>
-                  <span className={`font-bold ${pcData.isIncrease ? "text-emerald-500" : "text-red-500"}`}>
-                    = {pcData.isIncrease ? `+${pcData.value}%` : `-${pcData.value}%`}
-                  </span>
-                </div>
-              )}
             </div>
           )}
 
-          {/* Bloco de Resultado em Destaque */}
-          <div
-            aria-live="polite"
-            aria-atomic="true"
-            className="mt-4 pt-4 border-t border-border/60 flex items-center justify-between gap-4"
+          {/* Card de Resultado em Destaque */}
+          <AppCard
+            border
+            cornerAccents={true}
+            className="p-4 sm:p-5 md:p-6 bg-tertiary space-y-4"
           >
-            <div>
-              <span className="text-xs uppercase font-mono font-semibold text-label tracking-wider block">
-                {activeTab === "percentChange"
-                  ? t("percentChange.resultPrefix")
-                  : t("percentOf.resultPrefix")}
-              </span>
-              <div className="flex items-baseline gap-2 mt-0.5">
-                <span
-                  data-testid="percentage-result"
-                  className="text-2xl sm:text-3xl font-mono font-bold text-primary tracking-tight"
-                >
-                  {currentResultString || "—"}
+            {/* Fórmula Passo a Passo */}
+            {activeTab === "percentOf" && poResult !== null && (
+              <div className="p-3 bg-background border border-border rounded-[2px] text-xs font-mono text-label flex flex-wrap items-center justify-between gap-2">
+                <span>
+                  {t("formula")}: <strong className="text-foreground">({poNum} × {poPct}) ÷ 100</strong>
+                </span>
+                <span className="text-primary font-bold">
+                  = {poResult}
                 </span>
               </div>
-            </div>
+            )}
 
-            {/* Ações: Copiar & Limpar */}
-            <div className="flex items-center gap-2">
-              <AppButton
-                type="button"
-                color={copied ? "primary" : "panel"}
-                onClick={handleCopy}
-                disabled={!currentResultString}
-                className="h-8 px-3 text-xs font-mono uppercase flex items-center gap-1.5"
-              >
-                {copied ? (
-                  <>
-                    <Check className="w-3.5 h-3.5" />
-                    <span>{t("copied")}</span>
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-3.5 h-3.5" />
-                    <span>{t("copyResult")}</span>
-                  </>
-                )}
-              </AppButton>
+            {activeTab === "whatPercent" && wpResult !== null && (
+              <div className="p-3 bg-background border border-border rounded-[2px] text-xs font-mono text-label flex flex-wrap items-center justify-between gap-2">
+                <span>
+                  {t("formula")}: <strong className="text-foreground">({wpX} ÷ {wpY}) × 100</strong>
+                </span>
+                <span className="text-primary font-bold">
+                  = {wpResult}%
+                </span>
+              </div>
+            )}
 
-              <button
-                type="button"
-                onClick={clearCurrentTab}
-                title={t("clear")}
-                aria-label={t("clear")}
-                className="w-8 h-8 rounded-[2px] bg-background border border-border flex items-center justify-center text-label hover:text-foreground hover:border-primary transition-colors cursor-pointer"
-              >
-                <RotateCcw className="w-3.5 h-3.5" />
-              </button>
+            {activeTab === "percentChange" && pcData && (
+              <div className="p-3 bg-background border border-border rounded-[2px] text-xs font-mono text-label flex flex-wrap items-center justify-between gap-2">
+                <span>
+                  {locale === "pt" ? "Diferença" : locale === "es" ? "Diferencia" : "Difference"}: <strong className="text-foreground">{pcData.diff > 0 ? `+${pcData.diff}` : pcData.diff}</strong>
+                  {" · "}{t("formula")}: <strong className="text-foreground">(({pcTo} - {pcFrom}) ÷ {pcFrom}) × 100</strong>
+                </span>
+                <span className={`font-bold ${pcData.isIncrease ? "text-emerald-500" : "text-red-500"}`}>
+                  = {pcData.isIncrease ? `+${pcData.value}%` : `-${pcData.value}%`}
+                </span>
+              </div>
+            )}
+
+            {/* Linha de Resultado em Destaque */}
+            <div
+              aria-live="polite"
+              aria-atomic="true"
+              className="flex items-center justify-between gap-4 pt-1"
+            >
+              <div>
+                <span className="text-xs uppercase font-mono font-semibold text-label tracking-wider block">
+                  {activeTab === "percentChange"
+                    ? t("percentChange.resultPrefix")
+                    : t("percentOf.resultPrefix")}
+                </span>
+                <div className="flex items-baseline gap-2 mt-0.5">
+                  <span
+                    data-testid="percentage-result"
+                    className="text-2xl sm:text-3xl md:text-4xl font-mono font-bold text-primary tracking-tight"
+                  >
+                    {currentResultString || "—"}
+                  </span>
+                </div>
+              </div>
+
+              {/* Ações: Copiar & Limpar */}
+              <div className="flex items-center gap-2">
+                <AppButton
+                  type="button"
+                  color={copied ? "primary" : "panel"}
+                  onClick={handleCopy}
+                  disabled={!currentResultString}
+                  className="h-8 px-3 text-xs font-mono uppercase flex items-center gap-1.5"
+                >
+                  {copied ? (
+                    <>
+                      <Check className="w-3.5 h-3.5" />
+                      <span>{t("copied")}</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-3.5 h-3.5" />
+                      <span>{t("copyResult")}</span>
+                    </>
+                  )}
+                </AppButton>
+
+                <button
+                  type="button"
+                  onClick={clearCurrentTab}
+                  title={t("clear")}
+                  aria-label={t("clear")}
+                  className="w-8 h-8 rounded-[2px] bg-background border border-border flex items-center justify-center text-label hover:text-foreground hover:border-primary transition-colors cursor-pointer"
+                >
+                  <RotateCcw className="w-3.5 h-3.5" />
+                </button>
+              </div>
             </div>
-          </div>
-        </AppCard>
+          </AppCard>
+        </div>
       </section>
 
       {/* Seção Padronizada de Detalhes */}

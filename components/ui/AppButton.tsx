@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export type AppButtonColor =
   | "primary"
+  | "primary-2"
   | "secondary"
   | "tertiary"
   | "panel"
@@ -42,7 +43,7 @@ export default function AppButton({
   ...props
 }: AppButtonProps) {
   const variant =
-    color === "secondary"
+    color === "secondary" || color === "primary-2"
       ? "secondary"
       : color === "tertiary" || color === "panel"
         ? "tertiary"

@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const localizedPairTitle = getLocalizedPairTitle(pair, locale);
   const title =
-    content?.metaTitle ?? `${localizedPairTitle} — ToolNotch`;
+    content?.metaTitle ?? `${localizedPairTitle} | ToolNotch`;
   const description = content?.metaDescription ?? pair.description;
   const localizedUrl = buildLocalizedUrl(`/tools/convert/${slug}`, locale);
   const ogLocale =

@@ -326,7 +326,7 @@ export default async function FinanceToolsHubPage({ params }: Props) {
           ? "Faturas completas em PDF, sem marca d’água e prontas para envio imediato"
           : locale === "es"
             ? "Facturas gratuitas sin marca de agua y descarga en PDF"
-            : "Free professional invoices — no watermark, no signup, PDF download",
+            : "Free professional invoices - no watermark, no signup, PDF download",
       icon: <Receipt className="w-5 h-5 text-secondary shrink-0" />,
     },
     {

@@ -18,6 +18,7 @@ interface Props {
   toolsTranslations: Record<string, { label?: string; desc?: string }>;
   categoriesTranslations: Record<string, string>;
   placeholder?: string;
+  className?: string;
 }
 
 const CATEGORY_NAMES: Record<string, { pt: string; en: string; es: string }> = {
@@ -43,6 +44,7 @@ export default function AppHomeSearch({
   toolsTranslations,
   categoriesTranslations,
   placeholder = "Pesquisar ferramentas...",
+  className = "",
 }: Props) {
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -90,7 +92,7 @@ export default function AppHomeSearch({
   }, []);
 
   return (
-    <div ref={containerRef} className="w-full max-w-xl relative">
+    <div ref={containerRef} className={`w-full relative ${className}`}>
       <div className="relative flex items-center">
         <Search className="w-4 h-4 text-muted-foreground absolute left-3.5 pointer-events-none" />
         <input
@@ -102,7 +104,7 @@ export default function AppHomeSearch({
           }}
           onFocus={() => setIsOpen(true)}
           placeholder={placeholder}
-          className="w-full h-11 pl-10 pr-10 text-sm bg-tertiary border border-border hover:border-primary/50 focus:border-primary rounded-[2px] text-foreground outline-none transition-colors placeholder:text-muted-foreground/70"
+          className="w-full h-11 pl-10 pr-10 text-sm bg-background border border-border hover:border-primary/50 focus:border-primary rounded-[2px] text-foreground outline-none transition-colors placeholder:text-muted-foreground/70"
         />
         {query && (
           <button
@@ -134,21 +136,21 @@ export default function AppHomeSearch({
                     <span className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors">
                       {item.label}
                     </span>
-                    <span className="text-[10px] uppercase px-1.5 py-0.5 rounded-[2px] bg-background border border-border text-muted-foreground">
+                    <span className="text-xs uppercase px-1.5 py-0.5 rounded-[2px] bg-background border border-border text-muted-foreground font-mono">
                       {item.category}
                     </span>
                   </div>
                   {item.desc && (
-                    <p className="text-xs text-muted-foreground truncate mt-0.5">
+                    <p className="text-sm text-muted-foreground truncate mt-0.5">
                       {item.desc}
                     </p>
                   )}
                 </div>
-                <ArrowRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all shrink-0" />
+                <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all shrink-0" />
               </Link>
             ))
           ) : (
-            <div className="p-4 text-center text-xs text-muted-foreground">
+            <div className="p-4 text-center text-sm text-muted-foreground">
               {locale === "es"
                 ? "No se encontraron herramientas."
                 : locale === "en"

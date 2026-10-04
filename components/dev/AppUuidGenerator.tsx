@@ -430,7 +430,7 @@ export default function AppUuidGenerator({ locale = "pt" }: AppUuidGeneratorProp
                 )}
                 <span>
                   {validationResult.isValid
-                    ? `${labels.valid} — Versão identificada: RFC 4122 / 9562 Version ${validationResult.version}`
+                    ? `${labels.valid} - Versão identificada: RFC 4122 / 9562 Version ${validationResult.version}`
                     : labels.invalid}
                 </span>
               </div>

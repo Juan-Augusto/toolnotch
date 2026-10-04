@@ -46,6 +46,10 @@ export interface AppTextareaProps extends TextareaHTMLAttributes<HTMLTextAreaEle
    * Se true, renderiza sem borda e sem fundo.
    */
   flat?: boolean;
+  /**
+   * Se a verificação ortográfica do navegador deve estar ativa (padrão: false).
+   */
+  spellCheck?: boolean;
 }
 
 export function AppTextarea({
@@ -67,6 +71,8 @@ export function AppTextarea({
   id,
   variant = "tertiary",
   flat = false,
+  spellCheck = false,
+  autoCorrect = "off",
   ...props
 }: AppTextareaProps) {
   const generatedId = useId();
@@ -119,6 +125,11 @@ export function AppTextarea({
           onChange={handleChange}
           onFocus={handleFocus}
           onBlur={handleBlur}
+          spellCheck={spellCheck}
+          autoCorrect={autoCorrect}
+          data-gramm="false"
+          data-gramm_editor="false"
+          data-enable-grammarly="false"
           className={`
             w-full
             px-4

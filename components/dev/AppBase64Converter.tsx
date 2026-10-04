@@ -155,6 +155,7 @@ export default function AppBase64Converter({ locale = "pt" }: Props) {
                     : "VGVzdGU..."
                 }
                 rows={7}
+                variant="background"
                 className="w-full font-mono text-sm sm:text-base"
               />
             </div>
@@ -181,6 +182,7 @@ export default function AppBase64Converter({ locale = "pt" }: Props) {
                 readOnly
                 value={error || outputText}
                 rows={7}
+                variant="background"
                 className={`w-full font-mono text-sm sm:text-base ${
                   error ? "border-destructive text-destructive bg-destructive/5" : ""
                 }`}
@@ -196,8 +198,8 @@ export default function AppBase64Converter({ locale = "pt" }: Props) {
               label={isPt ? "Arraste e solte uma imagem ou arquivo aqui" : "Drag and drop an image or file here"}
               helperText={
                 isPt
-                  ? "Suporta imagens (PNG, JPG, SVG, WebP) e arquivos gerais até 10MB — 100% no navegador"
-                  : "Supports images (PNG, JPG, SVG, WebP) and files up to 10MB — 100% in-browser"
+                  ? "Suporta imagens (PNG, JPG, SVG, WebP) e arquivos gerais até 10MB - 100% no navegador"
+                  : "Supports images (PNG, JPG, SVG, WebP) and files up to 10MB - 100% in-browser"
               }
             />
 
@@ -230,6 +232,7 @@ export default function AppBase64Converter({ locale = "pt" }: Props) {
                   readOnly
                   value={fileDataUrl}
                   rows={4}
+                  variant="background"
                   className="w-full font-mono text-sm break-all"
                 />
               </div>

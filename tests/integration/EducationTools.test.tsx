@@ -21,15 +21,15 @@ jest.mock("next-intl", () => ({
         scalePt20: "Portugal / Brasil (0–20)",
         scaleEs10: "Espanha / AL (0–10)",
         grade: "Nota",
-        credits: "Créditos",
+        credits: "Crédito / Peso",
         addCourse: "Adicionar Disciplina",
         removeCourse: "Remover Disciplina",
         yourGpa: "Seu GPA",
-        totalCredits: "Total de Créditos",
+        totalCredits: "Total de Créditos / Peso",
         currentGpa: "GPA Atual",
-        completedCredits: "Créditos Concluídos",
+        completedCredits: "Créditos Concluídos (Peso)",
         newSemesterGpa: "GPA do Novo Semestre",
-        newSemesterCredits: "Créditos do Novo Semestre",
+        newSemesterCredits: "Créditos do Novo Semestre (Peso)",
         newCumulativeGpa: "Novo GPA Acumulado",
         currentGrade: "Nota Atual",
         earnedWeight: "Peso das Avaliações Concluídas (%)",
@@ -140,7 +140,7 @@ describe("Education Tools Components", () => {
       render(<AppGpaCalculator mode="semester" locale="us" />);
 
       const gradeInput = screen.getByPlaceholderText(/Nota/i) as HTMLInputElement;
-      const creditsInput = screen.getByPlaceholderText(/Créditos/i) as HTMLInputElement;
+      const creditsInput = screen.getByPlaceholderText(/Crédito \/ Peso/i) as HTMLInputElement;
 
       expect(gradeInput.value).toBe("");
       expect(creditsInput.value).toBe("1");
@@ -150,14 +150,14 @@ describe("Education Tools Components", () => {
       render(<AppGpaCalculator mode="semester" locale="pt" />);
 
       expect(screen.getByText("Nota")).toBeInTheDocument();
-      expect(screen.getByText("Crédito")).toBeInTheDocument();
+      expect(screen.getByText("Crédito / Peso")).toBeInTheDocument();
     });
 
     it("calculates semester GPA correctly", () => {
       render(<AppGpaCalculator mode="semester" locale="us" />);
 
       const gradeInput = screen.getByPlaceholderText(/Nota/i);
-      const creditsInput = screen.getByPlaceholderText(/Créditos/i);
+      const creditsInput = screen.getByPlaceholderText(/Crédito \/ Peso/i);
 
       fireEvent.change(gradeInput, { target: { value: "3.5" } });
       fireEvent.change(creditsInput, { target: { value: "4" } });

@@ -21,7 +21,6 @@ export default function ImageToolHeader({
   title,
   description,
   locale = "pt",
-  badges: _badges,
 }: ImageToolHeaderProps) {
   const homeLabel =
     locale === "pt" ? "Início" : locale === "es" ? "Inicio" : "Home";
@@ -45,7 +44,7 @@ export default function ImageToolHeader({
         <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground break-words">
           {title}
         </h1>
-        <p className="leading-relaxed text-label mt-1.5 sm:mt-2 max-w-3xl text-xs sm:text-sm">
+        <p className="leading-relaxed text-label mt-2 max-w-3xl text-sm sm:text-base">
           {description}
         </p>
       </header>

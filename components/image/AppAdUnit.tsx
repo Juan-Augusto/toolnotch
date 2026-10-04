@@ -36,7 +36,7 @@ export default function AppAdUnit({ slot, className = '' }: Props) {
       <div
         className={`bg-zinc-100 border-2 border-dashed border-zinc-200 rounded-lg flex items-center justify-center text-zinc-400 text-xs h-20 ${className}`}
       >
-        Ad unit — configure NEXT_PUBLIC_ADSENSE_CLIENT to activate
+        Ad unit - configure NEXT_PUBLIC_ADSENSE_CLIENT to activate
       </div>
     )
   }

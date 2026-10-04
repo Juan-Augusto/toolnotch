@@ -39,6 +39,7 @@ export default function AppLanguageSwitcher() {
   function switchTo(code: string) {
     setOpen(false);
     if (code === locale) return;
+    // eslint-disable-next-line react-hooks/immutability
     document.cookie = `NEXT_LOCALE=${code}; path=/; max-age=31536000; SameSite=Lax`;
     // eslint-disable-next-line react-hooks/immutability
     window.location.href = buildLocalePath(pathname, code);
@@ -49,31 +50,41 @@ export default function AppLanguageSwitcher() {
   return (
     <div ref={ref} className="relative">
       <button
+        type="button"
         onClick={() => setOpen((o) => !o)}
         aria-label="Change language"
         aria-expanded={open}
-        className="flex items-center gap-1.5 text-label hover:text-foreground text-xs font-medium st uppercase transition-colors"
+        className="flex items-center gap-1.5 text-label hover:text-foreground text-xs font-medium uppercase transition-colors cursor-pointer select-none"
       >
-        {current.short}
+        <span>{current.short}</span>
         <Globe size={15} />
       </button>
 
       {open && (
-        <div className="absolute top-full left-0 mt-2 bg-tertiary border border-border rounded-xl shadow-xl overflow-hidden min-w-[130px] z-50">
-          {LANGS.map((lang) => (
-            <button
-              key={lang.code}
-              onClick={() => switchTo(lang.code)}
-              className={`w-full text-left px-4 py-2.5 text-sm transition-colors hover:bg-gray-50 dark:hover:bg-gray-700
-                ${
-                  lang.code === locale
-                    ? "font-semibold text-blue-600 dark:text-blue-400"
-                    : "text-gray-700 dark:text-gray-300"
+        <div
+          role="menu"
+          className="absolute top-full left-0 mt-2 bg-tertiary border border-border rounded-[2px] shadow-lg p-1.5 min-w-[160px] z-50 flex flex-col gap-0.5"
+        >
+          {LANGS.map((lang) => {
+            const isSelected = lang.code === locale;
+            return (
+              <button
+                key={lang.code}
+                type="button"
+                onClick={() => switchTo(lang.code)}
+                className={`w-full flex items-center justify-between px-3.5 py-2.5 text-sm font-medium rounded-[2px] transition-colors cursor-pointer text-left select-none ${
+                  isSelected
+                    ? "text-primary font-semibold bg-primary/10"
+                    : "text-label hover:text-foreground hover:bg-background"
                 }`}
-            >
-              {lang.label}
-            </button>
-          ))}
+              >
+                <span>{lang.label}</span>
+                <span className="text-xs uppercase font-mono tracking-wider opacity-60">
+                  {lang.short}
+                </span>
+              </button>
+            );
+          })}
         </div>
       )}
     </div>

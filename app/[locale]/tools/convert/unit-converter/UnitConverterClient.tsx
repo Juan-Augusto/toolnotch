@@ -265,18 +265,15 @@ export default function UnitConverterClient({
             ))}
           </div>
 
-          {/* Clean, Precision Converter Card with Corner Accents */}
-          <AppCard
+          {/* Unit Converter Panel */}
+          <div
             id="unit-converter-panel"
             role="tabpanel"
             aria-labelledby={`unit-tab-${category}`}
-            border
-            cornerAccents={true}
-            className="p-4 sm:p-6 bg-tertiary"
           >
             {/* Barra de Atalhos de Pares de Unidade */}
             {shortcuts.length > 0 && (
-              <div className="pb-3 mb-3 border-b border-border/70 flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+              <div className="pb-3 mb-4 flex items-center gap-1.5 overflow-x-auto no-scrollbar">
                 <span className="text-sm font-semibold text-foreground shrink-0 mr-1.5 flex items-center gap-1.5">
                   <Sliders className="w-4 h-4 text-primary shrink-0" />
                   <span>
@@ -300,7 +297,7 @@ export default function UnitConverterClient({
                       className={`px-2.5 py-1 text-xs font-mono font-medium rounded-[2px] transition-colors cursor-pointer shrink-0 border ${
                         isCurrent
                           ? "bg-secondary text-background border-secondary"
-                          : "bg-background border-border text-foreground hover:border-secondary"
+                          : "bg-tertiary border-border text-foreground hover:border-secondary"
                       }`}
                     >
                       {sc.label}
@@ -310,158 +307,166 @@ export default function UnitConverterClient({
               </div>
             )}
 
-            <div className="space-y-3">
-              {/* Bloco De / Origem */}
-              <div className="bg-background border border-border rounded-[2px] p-3.5 sm:p-4.5">
-                <div className="grid grid-cols-1 sm:grid-cols-[1fr,260px] md:grid-cols-[1fr,300px] gap-3.5 items-end">
-                  <div>
-                    <AppInput
-                      id="unit-amount"
-                      label={tuMeta("amountLabel")}
-                      labelClassName="block text-xs font-mono font-semibold uppercase text-label tracking-wide mb-2 cursor-pointer"
-                      type="number"
-                      inputMode="decimal"
-                      step="any"
-                      value={inputValue}
-                      onChange={(e) => setInputValue(e.target.value)}
-                      placeholder="0"
-                      variant="tertiary"
-                      className="h-12 text-2xl sm:text-3xl font-mono font-bold"
-                    />
+            {/* Bloco De / Origem - Card independente */}
+            <AppCard
+              border
+              cornerAccents={true}
+              className="p-4 sm:p-5 md:p-6 bg-tertiary"
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-[1fr,260px] md:grid-cols-[1fr,300px] gap-3.5 items-end">
+                <div>
+                  <AppInput
+                    id="unit-amount"
+                    label={tuMeta("amountLabel")}
+                    labelClassName="block text-xs font-mono font-semibold uppercase text-label tracking-wide mb-2 cursor-pointer"
+                    type="number"
+                    inputMode="decimal"
+                    step="any"
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    placeholder="0"
+                    variant="background"
+                    className="h-12 text-2xl sm:text-3xl font-mono font-bold"
+                  />
 
-                    {/* Atalhos de Valores Rápidos */}
-                    <div className="flex flex-wrap items-center gap-1.5 mt-2.5">
-                      <span className="text-xs font-semibold text-foreground shrink-0 mr-1.5">
-                        {locale === "pt"
-                          ? "Atalhos:"
-                          : locale === "es"
-                            ? "Atajos:"
-                            : "Presets:"}
-                      </span>
-                      {QUICK_AMOUNTS.map((amt) => (
-                        <button
-                          key={amt}
-                          type="button"
-                          onClick={() => setInputValue(amt)}
-                          className={`px-2.5 py-0.5 text-xs font-mono font-medium rounded-[2px] border transition-colors cursor-pointer ${
-                            inputValue === amt
-                              ? "bg-secondary text-background border-secondary"
-                              : "bg-tertiary border-border text-foreground hover:border-secondary"
-                          }`}
-                        >
-                          {amt}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <AppSelect
-                      id="unit-from"
-                      name="unit-from"
-                      label={tuMeta("fromLabel")}
-                      labelClassName="block text-xs font-mono font-semibold uppercase text-label tracking-wide mb-2"
-                      options={unitOptions}
-                      value={from}
-                      onChange={(val) => setFrom(val)}
-                      className="h-12 font-mono text-xs sm:text-sm"
-                      dropdownClassName="min-w-[260px] sm:min-w-[300px]"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Botão Inverter (Swap) */}
-              <div className="relative flex items-center justify-center py-1">
-                <div className="absolute inset-0 flex items-center" aria-hidden="true">
-                  <div className="w-full border-t border-border/70" />
-                </div>
-                <button
-                  type="button"
-                  onClick={swap}
-                  aria-label={t("swap")}
-                  title={t("swap")}
-                  className="relative z-10 inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-background hover:bg-tertiary border border-border hover:border-primary/60 text-xs font-mono font-semibold uppercase text-label hover:text-primary rounded-[2px] transition-colors cursor-pointer group"
-                >
-                  <ArrowUpDown className="w-4 h-4 text-primary group-hover:rotate-180 transition-transform duration-300" />
-                  <span>{t("swap")}</span>
-                </button>
-              </div>
-
-              {/* Bloco Para / Destino */}
-              <div className="bg-background border border-border rounded-[2px] p-3.5 sm:p-4.5">
-                <div className="grid grid-cols-1 sm:grid-cols-[1fr,260px] md:grid-cols-[1fr,300px] gap-3.5 items-end">
-                  <div>
-                    <span className="block text-xs font-mono font-semibold uppercase text-label tracking-wide mb-2">
-                      {t("result")}
+                  {/* Atalhos de Valores Rápidos */}
+                  <div className="flex flex-wrap items-center gap-1.5 mt-2.5">
+                    <span className="text-xs font-semibold text-foreground shrink-0 mr-1.5">
+                      {locale === "pt"
+                        ? "Atalhos:"
+                        : locale === "es"
+                          ? "Atajos:"
+                          : "Presets:"}
                     </span>
-                    <div
-                      id="unit-conversion-result-container"
-                      aria-live="polite"
-                      className="w-full h-12 px-3 bg-tertiary border border-border rounded-[2px] flex items-center truncate"
-                    >
-                      <span
-                        data-testid="conversion-result"
-                        className="text-2xl sm:text-3xl font-mono font-bold text-primary tracking-tight truncate"
+                    {QUICK_AMOUNTS.map((amt) => (
+                      <button
+                        key={amt}
+                        type="button"
+                        onClick={() => setInputValue(amt)}
+                        className={`px-2.5 py-0.5 text-xs font-mono font-medium rounded-[2px] border transition-colors cursor-pointer ${
+                          inputValue === amt
+                            ? "bg-secondary text-background border-secondary"
+                            : "bg-background border-border text-foreground hover:border-secondary"
+                        }`}
                       >
-                        {result || "—"}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div>
-                    <AppSelect
-                      id="unit-to"
-                      name="unit-to"
-                      label={tuMeta("toLabel")}
-                      labelClassName="block text-xs font-mono font-semibold uppercase text-label tracking-wide mb-2"
-                      options={unitOptions}
-                      value={to}
-                      onChange={(val) => setTo(val)}
-                      className="h-12 font-mono text-xs sm:text-sm"
-                      dropdownClassName="min-w-[260px] sm:min-w-[300px]"
-                    />
+                        {amt}
+                      </button>
+                    ))}
                   </div>
                 </div>
+
+                <div>
+                  <AppSelect
+                    id="unit-from"
+                    name="unit-from"
+                    label={tuMeta("fromLabel")}
+                    labelClassName="block text-xs font-mono font-semibold uppercase text-label tracking-wide mb-2"
+                    options={unitOptions}
+                    value={from}
+                    onChange={(val) => setFrom(val)}
+                    variant="background"
+                    className="h-12 font-mono text-xs sm:text-sm"
+                    dropdownClassName="min-w-[260px] sm:min-w-[300px]"
+                  />
+                </div>
               </div>
-            </div>
+            </AppCard>
 
-          {/* Equation & Action */}
-          <div className="mt-4 pt-3.5 border-t border-border/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs font-mono text-label">
-            <div className="truncate">
-              {result && result !== "—" && (
-                <p>
-                  {inputValue} {getUnitLabel(from)} ={" "}
-                  <span className="font-semibold text-foreground">
-                    {result} {getUnitLabel(to)}
-                  </span>
-                </p>
-              )}
-            </div>
-
-            <div className="flex items-center gap-2 self-end sm:self-auto">
-              <AppButton
+            {/* Botão Inverter (Swap) */}
+            <div className="relative flex items-center justify-center my-3 sm:my-4">
+              <div className="absolute inset-0 flex items-center" aria-hidden="true">
+                <div className="w-full border-t border-border/70" />
+              </div>
+              <button
                 type="button"
-                color={copied ? "primary" : "panel"}
-                onClick={handleCopy}
-                disabled={!result || result === "—"}
-                className="h-8 px-3 text-xs font-mono uppercase flex items-center gap-1.5"
+                onClick={swap}
+                aria-label={t("swap")}
+                title={t("swap")}
+                className="relative z-10 inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-background hover:bg-tertiary border border-border hover:border-primary/60 text-xs font-mono font-semibold uppercase text-label hover:text-primary rounded-[2px] transition-colors cursor-pointer group shadow-xs"
               >
-                {copied ? (
-                  <>
-                    <Check className="w-3.5 h-3.5" />
-                    <span>{tuMeta("copied")}</span>
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-3.5 h-3.5" />
-                    <span>{tuMeta("copyResult")}</span>
-                  </>
-                )}
-              </AppButton>
+                <ArrowUpDown className="w-4 h-4 text-primary group-hover:rotate-180 transition-transform duration-300" />
+                <span>{t("swap")}</span>
+              </button>
             </div>
+
+            {/* Bloco Para / Destino - Card independente */}
+            <AppCard
+              border
+              cornerAccents={true}
+              className="p-4 sm:p-5 md:p-6 bg-tertiary"
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-[1fr,260px] md:grid-cols-[1fr,300px] gap-3.5 items-end">
+                <div>
+                  <span className="block text-xs font-mono font-semibold uppercase text-label tracking-wide mb-2">
+                    {t("result")}
+                  </span>
+                  <div
+                    id="unit-conversion-result-container"
+                    aria-live="polite"
+                    className="w-full h-12 px-3 bg-background border border-border rounded-[2px] flex items-center truncate"
+                  >
+                    <span
+                      data-testid="conversion-result"
+                      className="text-2xl sm:text-3xl font-mono font-bold text-primary tracking-tight truncate"
+                    >
+                      {result || "—"}
+                    </span>
+                  </div>
+                </div>
+
+                <div>
+                  <AppSelect
+                    id="unit-to"
+                    name="unit-to"
+                    label={tuMeta("toLabel")}
+                    labelClassName="block text-xs font-mono font-semibold uppercase text-label tracking-wide mb-2"
+                    options={unitOptions}
+                    value={to}
+                    onChange={(val) => setTo(val)}
+                    variant="background"
+                    className="h-12 font-mono text-xs sm:text-sm"
+                    dropdownClassName="min-w-[260px] sm:min-w-[300px]"
+                  />
+                </div>
+              </div>
+
+              {/* Equation & Action */}
+              <div className="mt-4 pt-3.5 border-t border-border/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs font-mono text-label">
+                <div className="truncate">
+                  {result && result !== "—" && (
+                    <p>
+                      {inputValue} {getUnitLabel(from)} ={" "}
+                      <span className="font-semibold text-foreground">
+                        {result} {getUnitLabel(to)}
+                      </span>
+                    </p>
+                  )}
+                </div>
+
+                <div className="flex items-center gap-2 self-end sm:self-auto">
+                  <AppButton
+                    type="button"
+                    color={copied ? "primary" : "panel"}
+                    onClick={handleCopy}
+                    disabled={!result || result === "—"}
+                    className="h-8 px-3 text-xs font-mono uppercase flex items-center gap-1.5"
+                  >
+                    {copied ? (
+                      <>
+                        <Check className="w-3.5 h-3.5" />
+                        <span>{tuMeta("copied")}</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-3.5 h-3.5" />
+                        <span>{tuMeta("copyResult")}</span>
+                      </>
+                    )}
+                  </AppButton>
+                </div>
+              </div>
+            </AppCard>
           </div>
-        </AppCard>
 
         {/* Tabela de Referência Rápida Redesenhada */}
         <AppQuickReferenceTable

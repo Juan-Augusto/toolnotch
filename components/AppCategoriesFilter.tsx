@@ -1,5 +1,5 @@
 "use client";
-import { Tool } from "@/app/[locale]/page";
+import { Tool } from "./AppToolsSection";
 
 export default function AppCategoriesFilter({
   TOOLS,

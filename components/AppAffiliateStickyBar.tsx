@@ -60,7 +60,7 @@ export default function AppAffiliateStickyBar() {
                 {t(`offers.${o.key}.name`)}
               </span>
               <span className="hidden md:inline font-mono text-xs text-label ml-2">
-                — {t(`offers.${o.key}.blurb`)}
+                - {t(`offers.${o.key}.blurb`)}
               </span>
             </div>
           </div>

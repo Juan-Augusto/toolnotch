@@ -5,7 +5,7 @@ import AppAffiliateLink from "./AppAffiliateLink";
 import AppLanguageSwitcher from "./AppLanguageSwitcher";
 import AppDarkModeToggle from "./AppDarkModeToggle";
 import AppLogo from "./AppLogo";
-import { Search } from "lucide-react";
+import { Search, ChevronDown } from "lucide-react";
 
 interface NavChild {
   href: string;
@@ -49,20 +49,6 @@ const CloseIcon = () => (
   </svg>
 );
 
-const CaretIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="14"
-    height="14"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    aria-hidden="true"
-  >
-    <path d="m6 9 6 6 6-6" />
-  </svg>
-);
 
 export default function AppHeader({ navItems }: { navItems: NavItem[] }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -239,15 +225,20 @@ const NavDropdown = ({
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-haspopup="menu"
-        className={`${linkClass} flex items-center gap-1`}
+        className={`${linkClass} flex items-center gap-1 cursor-pointer select-none`}
       >
-        {item.label}
-        <CaretIcon />
+        <span>{item.label}</span>
+        <ChevronDown
+          size={13}
+          className={`shrink-0 transition-transform duration-200 ${
+            open ? "rotate-180 text-primary" : "rotate-0 text-muted-foreground"
+          }`}
+        />
       </button>
       {open && (
         <div
           role="menu"
-          className="flex flex-col gap-1 mt-2 w-full min-[1100px]:absolute min-[1100px]:right-0 min-[1100px]:top-full min-[1100px]:mt-2 min-[1100px]:w-64 min-[1100px]:rounded-lg min-[1100px]:border min-[1100px]:border-border min-[1100px]:bg-tertiary min-[1100px]:shadow-lg min-[1100px]:p-2 min-[1100px]:z-50"
+          className="flex flex-col gap-0.5 mt-2 w-full min-[1100px]:absolute min-[1100px]:right-0 min-[1100px]:top-full min-[1100px]:mt-1.5 min-[1100px]:w-72 bg-tertiary border border-border rounded-[2px] shadow-lg p-1.5 z-50"
         >
           {item.children!.map((child) =>
             child.external ? (
@@ -257,19 +248,22 @@ const NavDropdown = ({
                 partnerKey={child.partnerKey ?? "unknown"}
                 placement="nav-dropdown"
                 onClick={close}
-                className="font-medium uppercase  text-label hover:text-foreground transition-colors px-2 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5"
+                className="flex items-center justify-between font-mono text-sm uppercase text-label hover:text-foreground hover:bg-background transition-colors px-3.5 py-2.5 rounded-[2px] cursor-pointer"
               >
-                {child.label}
+                <span>{child.label}</span>
+                <span className="text-xs opacity-40 font-mono">↗</span>
               </AppAffiliateLink>
             ) : (
-              <Link
-                key={child.href}
-                href={child.href}
-                onClick={close}
-                className="font-medium uppercase  text-primary hover:underline px-2 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5"
-              >
-                {child.label}
-              </Link>
+              <div key={child.href} className="border-t border-border/60 mt-1 pt-1">
+                <Link
+                  href={child.href}
+                  onClick={close}
+                  className="flex items-center justify-between font-mono text-sm uppercase text-primary font-semibold hover:bg-background transition-colors px-3.5 py-2.5 rounded-[2px] cursor-pointer"
+                >
+                  <span>{child.label}</span>
+                  <span className="text-sm">→</span>
+                </Link>
+              </div>
             ),
           )}
         </div>

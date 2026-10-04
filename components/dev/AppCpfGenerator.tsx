@@ -371,7 +371,7 @@ export default function AppCpfGenerator({ locale = "pt" }: AppCpfGeneratorProps)
                 )}
                 <span>
                   {validationResult.isValid
-                    ? `${labels.valid} — Formato: ${formatCpf(inputValidationCpf)}`
+                    ? `${labels.valid} - Formato: ${formatCpf(inputValidationCpf)}`
                     : `${labels.invalid}: ${validationResult.message}`}
                 </span>
               </div>

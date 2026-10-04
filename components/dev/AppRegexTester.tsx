@@ -162,6 +162,7 @@ export default function AppRegexTester({ locale = "pt" }: Props) {
             onChange={(e) => setTestText(e.target.value)}
             placeholder={isPt ? "Insira o texto para testar a regex..." : "Insert test string here..."}
             rows={5}
+            variant="background"
             className="w-full font-mono text-sm"
           />
         </div>
@@ -332,6 +333,7 @@ export default function AppRegexTester({ locale = "pt" }: Props) {
                 readOnly
                 value={result.replacedText}
                 rows={5}
+                variant="background"
                 className="w-full font-mono text-sm"
               />
             </div>

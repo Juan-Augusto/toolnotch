@@ -7,6 +7,8 @@
   --color-primary-shadow: var(--primary-shadow);
   --color-secondary: var(--secondary);
   --color-secondary-shadow: var(--secondary-shadow);
+  --color-primary-2: var(--secondary);
+  --color-primary-2-shadow: var(--secondary-shadow);
   --color-tertiary: var(--tertiary);
   --color-tertiary-shadow: var(--tertiary-shadow);
   --color-border: var(--border);
@@ -34,7 +36,7 @@
   --tertiary: #ffffff;
   --tertiary-shadow: #dadde4;
   --border: rgb(218, 221, 228);
-  --foreground: #2c2c2c;
+  --foreground: #2c2c2c; 
   --background: #fafafa;
   --panel: #eeeeee;
   --label: #696969;
@@ -521,4 +523,12 @@ input[type="number"] {
 .scrollbar-none::-webkit-scrollbar,
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+/* Primary-2 compatibility utilities */
+.text-primary-2 {
+  color: var(--secondary);
+}
+.bg-primary-2 {
+  background-color: var(--secondary);
 }

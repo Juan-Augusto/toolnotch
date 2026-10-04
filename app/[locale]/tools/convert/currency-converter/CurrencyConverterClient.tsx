@@ -125,6 +125,7 @@ export default function CurrencyConverterClient({
 
   useEffect(() => {
     let isMounted = true;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLoading(true);
 
     getRates(from).then(({ rates: r, stale: s }) => {
@@ -192,11 +193,6 @@ export default function CurrencyConverterClient({
     });
   }, []);
 
-  const getCurrencyName = useCallback((code: string) => {
-    const item = CURRENCIES.find((c) => c.code === code);
-    return item ? item.name : code;
-  }, []);
-
   const headerBadges = useMemo(() => {
     return [
       {
@@ -245,190 +241,196 @@ export default function CurrencyConverterClient({
         />
 
         <section aria-label={title} className="mb-10 sm:mb-14 w-full">
-          <AppCard border cornerAccents={true} className="p-4 sm:p-6 bg-tertiary">
-            {stale && (
-              <div
-                role="alert"
-                className="mb-4 bg-amber-500/10 border border-amber-500/30 text-amber-600 dark:text-amber-400 text-xs px-3.5 py-2 rounded-[2px] flex items-center gap-2 font-mono"
-              >
-                <AlertTriangle className="w-4 h-4 shrink-0" />
-                <span>{tc("staleWarning")}</span>
-              </div>
-            )}
-
-            {error && (
-              <div
-                role="alert"
-                className="mb-4 bg-red-500/10 border border-red-500/30 text-red-600 dark:text-red-400 text-xs px-3.5 py-2 rounded-[2px] flex items-center gap-2 font-mono"
-              >
-                <AlertTriangle className="w-4 h-4 shrink-0" />
-                <span>{tc("errorFetching")}</span>
-              </div>
-            )}
-
-            {/* Barra de Pares Populares */}
-            <div className="pb-3 mb-3 border-b border-border/70 flex items-center gap-1.5 overflow-x-auto no-scrollbar">
-              <span className="text-sm font-semibold text-foreground shrink-0 mr-1.5">
-                {locale === "pt"
-                  ? "Populares:"
-                  : locale === "es"
-                    ? "Populares:"
-                    : "Popular:"}
-              </span>
-              {POPULAR_PAIRS.map((pair) => {
-                const isCurrent = from === pair.from && to === pair.to;
-                return (
-                  <button
-                    key={pair.label}
-                    type="button"
-                    onClick={() => {
-                      setFrom(pair.from);
-                      setTo(pair.to);
-                    }}
-                    className={`px-2.5 py-1 text-xs font-mono font-medium rounded-[2px] transition-colors cursor-pointer shrink-0 border ${
-                      isCurrent
-                        ? "bg-secondary text-background border-secondary"
-                        : "bg-background border-border text-foreground hover:border-secondary"
-                    }`}
-                  >
-                    {pair.label}
-                  </button>
-                );
-              })}
+          {stale && (
+            <div
+              role="alert"
+              className="mb-4 bg-amber-500/10 border border-amber-500/30 text-amber-600 dark:text-amber-400 text-xs px-3.5 py-2 rounded-[2px] flex items-center gap-2 font-mono"
+            >
+              <AlertTriangle className="w-4 h-4 shrink-0" />
+              <span>{tc("staleWarning")}</span>
             </div>
+          )}
 
-            <div className="space-y-3">
-              {/* Bloco De / Origem */}
-              <div className="bg-background border border-border rounded-[2px] p-3.5 sm:p-4.5">
-                <div className="grid grid-cols-1 sm:grid-cols-[1fr,260px] md:grid-cols-[1fr,300px] gap-3.5 items-end">
-                  <div>
-                    <AppInput
-                      id="currency-amount"
-                      label={tc("amountLabel")}
-                      labelClassName="block text-xs font-mono font-semibold uppercase text-label tracking-wide mb-2 cursor-pointer"
-                      type="number"
-                      inputMode="decimal"
-                      min="0"
-                      step="any"
-                      value={amount}
-                      onChange={(e) => setAmount(e.target.value)}
-                      placeholder="0.00"
-                      variant="tertiary"
-                      prefix={
-                        CURRENCY_SYMBOLS[from] ? (
-                          <span className="font-mono font-bold text-label/50 text-base sm:text-lg select-none">
-                            {CURRENCY_SYMBOLS[from]}
-                          </span>
-                        ) : undefined
-                      }
-                      className="h-12 text-2xl sm:text-3xl font-mono font-bold"
-                    />
+          {error && (
+            <div
+              role="alert"
+              className="mb-4 bg-red-500/10 border border-red-500/30 text-red-600 dark:text-red-400 text-xs px-3.5 py-2 rounded-[2px] flex items-center gap-2 font-mono"
+            >
+              <AlertTriangle className="w-4 h-4 shrink-0" />
+              <span>{tc("errorFetching")}</span>
+            </div>
+          )}
 
-                    {/* Atalhos de Valores Rápidos */}
-                    <div className="flex flex-wrap items-center gap-1.5 mt-2.5">
-                      <span className="text-xs font-semibold text-foreground shrink-0 mr-1.5">
-                        {locale === "pt"
-                          ? "Atalhos:"
-                          : locale === "es"
-                            ? "Atajos:"
-                            : "Presets:"}
-                      </span>
-                      {QUICK_AMOUNTS.map((amt) => (
-                        <button
-                          key={amt}
-                          type="button"
-                          onClick={() => setAmount(amt)}
-                          className={`px-2.5 py-0.5 text-xs font-mono font-medium rounded-[2px] border transition-colors cursor-pointer ${
-                            amount === amt
-                              ? "bg-secondary text-background border-secondary"
-                              : "bg-tertiary border-border text-foreground hover:border-secondary"
-                          }`}
-                        >
-                          {amt}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <AppSelect
-                      id="currency-from"
-                      name="currency-from"
-                      label={tc("fromLabel")}
-                      labelClassName="block text-xs font-mono font-semibold uppercase text-label tracking-wide mb-2"
-                      options={currencyOptions}
-                      value={from}
-                      onChange={(val) => setFrom(val)}
-                      className="h-12 font-mono text-xs sm:text-sm"
-                      dropdownClassName="min-w-[260px] sm:min-w-[300px]"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Botão Inverter (Swap) */}
-              <div className="relative flex items-center justify-center py-1">
-                <div className="absolute inset-0 flex items-center" aria-hidden="true">
-                  <div className="w-full border-t border-border/70" />
-                </div>
+          {/* Barra de Pares Populares */}
+          <div className="pb-3 mb-4 flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+            <span className="text-sm font-semibold text-foreground shrink-0 mr-1.5">
+              {locale === "pt"
+                ? "Populares:"
+                : locale === "es"
+                  ? "Populares:"
+                  : "Popular:"}
+            </span>
+            {POPULAR_PAIRS.map((pair) => {
+              const isCurrent = from === pair.from && to === pair.to;
+              return (
                 <button
+                  key={pair.label}
                   type="button"
-                  onClick={swap}
-                  aria-label={t("swap")}
-                  title={t("swap")}
-                  className="relative z-10 inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-background hover:bg-tertiary border border-border hover:border-primary/60 text-xs font-mono font-semibold uppercase text-label hover:text-primary rounded-[2px] transition-colors cursor-pointer group"
+                  onClick={() => {
+                    setFrom(pair.from);
+                    setTo(pair.to);
+                  }}
+                  className={`px-2.5 py-1 text-xs font-mono font-medium rounded-[2px] transition-colors cursor-pointer shrink-0 border ${
+                    isCurrent
+                      ? "bg-secondary text-background border-secondary"
+                      : "bg-tertiary border-border text-foreground hover:border-secondary"
+                  }`}
                 >
-                  <ArrowUpDown className="w-4 h-4 text-primary group-hover:rotate-180 transition-transform duration-300" />
-                  <span>{t("swap")}</span>
+                  {pair.label}
                 </button>
+              );
+            })}
+          </div>
+
+          {/* Bloco De / Origem - Card independente */}
+          <AppCard
+            border
+            cornerAccents={true}
+            className="p-4 sm:p-5 md:p-6 bg-tertiary"
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-[1fr,260px] md:grid-cols-[1fr,300px] gap-3.5 items-end">
+              <div>
+                <AppInput
+                  id="currency-amount"
+                  label={tc("amountLabel")}
+                  labelClassName="block text-xs font-mono font-semibold uppercase text-label tracking-wide mb-2 cursor-pointer"
+                  type="number"
+                  inputMode="decimal"
+                  min="0"
+                  step="any"
+                  value={amount}
+                  onChange={(e) => setAmount(e.target.value)}
+                  placeholder="0.00"
+                  variant="background"
+                  prefix={
+                    CURRENCY_SYMBOLS[from] ? (
+                      <span className="font-mono font-bold text-label/50 text-base sm:text-lg select-none">
+                        {CURRENCY_SYMBOLS[from]}
+                      </span>
+                    ) : undefined
+                  }
+                  className="h-12 text-2xl sm:text-3xl font-mono font-bold"
+                />
+
+                {/* Atalhos de Valores Rápidos */}
+                <div className="flex flex-wrap items-center gap-1.5 mt-2.5">
+                  <span className="text-xs font-semibold text-foreground shrink-0 mr-1.5">
+                    {locale === "pt"
+                      ? "Atalhos:"
+                      : locale === "es"
+                        ? "Atajos:"
+                        : "Presets:"}
+                  </span>
+                  {QUICK_AMOUNTS.map((amt) => (
+                    <button
+                      key={amt}
+                      type="button"
+                      onClick={() => setAmount(amt)}
+                      className={`px-2.5 py-0.5 text-xs font-mono font-medium rounded-[2px] border transition-colors cursor-pointer ${
+                        amount === amt
+                          ? "bg-secondary text-background border-secondary"
+                          : "bg-background border-border text-foreground hover:border-secondary"
+                      }`}
+                    >
+                      {amt}
+                    </button>
+                  ))}
+                </div>
               </div>
 
-              {/* Bloco Para / Destino */}
-              <div className="bg-background border border-border rounded-[2px] p-3.5 sm:p-4.5">
-                <div className="grid grid-cols-1 sm:grid-cols-[1fr,260px] md:grid-cols-[1fr,300px] gap-3.5 items-end">
-                  <div>
-                    <span className="block text-xs font-mono font-semibold uppercase text-label tracking-wide mb-2">
-                      {t("result")}
-                    </span>
-                    <div
-                      id="currency-conversion-result-container"
-                      aria-live="polite"
-                      className="w-full h-12 px-3 bg-tertiary border border-border rounded-[2px] flex items-center truncate"
-                    >
-                      {CURRENCY_SYMBOLS[to] && (
-                        <span className="font-mono font-bold text-label/50 text-base sm:text-lg mr-2 select-none shrink-0">
-                          {CURRENCY_SYMBOLS[to]}
-                        </span>
-                      )}
-                      <span
-                        data-testid="currency-conversion-result"
-                        className="text-2xl sm:text-3xl font-mono font-bold text-primary tracking-tight truncate"
-                      >
-                        {loading ? (
-                          <span className="text-label text-base font-normal animate-pulse">
-                            {tc("loading")}
-                          </span>
-                        ) : (
-                          formattedResult
-                        )}
-                      </span>
-                    </div>
-                  </div>
+              <div>
+                <AppSelect
+                  id="currency-from"
+                  name="currency-from"
+                  label={tc("fromLabel")}
+                  labelClassName="block text-xs font-mono font-semibold uppercase text-label tracking-wide mb-2"
+                  options={currencyOptions}
+                  value={from}
+                  onChange={(val) => setFrom(val)}
+                  variant="background"
+                  className="h-12 font-mono text-xs sm:text-sm"
+                  dropdownClassName="min-w-[260px] sm:min-w-[300px]"
+                />
+              </div>
+            </div>
+          </AppCard>
 
-                  <div>
-                    <AppSelect
-                      id="currency-to"
-                      name="currency-to"
-                      label={tc("toLabel")}
-                      labelClassName="block text-xs font-mono font-semibold uppercase text-label tracking-wide mb-2"
-                      options={currencyOptions}
-                      value={to}
-                      onChange={(val) => setTo(val)}
-                      className="h-12 font-mono text-xs sm:text-sm"
-                      dropdownClassName="min-w-[260px] sm:min-w-[300px]"
-                    />
-                  </div>
+          {/* Botão Inverter (Swap) */}
+          <div className="relative flex items-center justify-center my-3 sm:my-4">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+              <div className="w-full border-t border-border/70" />
+            </div>
+            <button
+              type="button"
+              onClick={swap}
+              aria-label={t("swap")}
+              title={t("swap")}
+              className="relative z-10 inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-background hover:bg-tertiary border border-border hover:border-primary/60 text-xs font-mono font-semibold uppercase text-label hover:text-primary rounded-[2px] transition-colors cursor-pointer group shadow-xs"
+            >
+              <ArrowUpDown className="w-4 h-4 text-primary group-hover:rotate-180 transition-transform duration-300" />
+              <span>{t("swap")}</span>
+            </button>
+          </div>
+
+          {/* Bloco Para / Destino - Card independente */}
+          <AppCard
+            border
+            cornerAccents={true}
+            className="p-4 sm:p-5 md:p-6 bg-tertiary"
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-[1fr,260px] md:grid-cols-[1fr,300px] gap-3.5 items-end">
+              <div>
+                <span className="block text-xs font-mono font-semibold uppercase text-label tracking-wide mb-2">
+                  {t("result")}
+                </span>
+                <div
+                  id="currency-conversion-result-container"
+                  aria-live="polite"
+                  className="w-full h-12 px-3 bg-background border border-border rounded-[2px] flex items-center truncate"
+                >
+                  {CURRENCY_SYMBOLS[to] && (
+                    <span className="font-mono font-bold text-label/50 text-base sm:text-lg mr-2 select-none shrink-0">
+                      {CURRENCY_SYMBOLS[to]}
+                    </span>
+                  )}
+                  <span
+                    data-testid="currency-conversion-result"
+                    className="text-2xl sm:text-3xl font-mono font-bold text-primary tracking-tight truncate"
+                  >
+                    {loading ? (
+                      <span className="text-label text-base font-normal animate-pulse">
+                        {tc("loading")}
+                      </span>
+                    ) : (
+                      formattedResult
+                    )}
+                  </span>
                 </div>
+              </div>
+
+              <div>
+                <AppSelect
+                  id="currency-to"
+                  name="currency-to"
+                  label={tc("toLabel")}
+                  labelClassName="block text-xs font-mono font-semibold uppercase text-label tracking-wide mb-2"
+                  options={currencyOptions}
+                  value={to}
+                  onChange={(val) => setTo(val)}
+                  variant="background"
+                  className="h-12 font-mono text-xs sm:text-sm"
+                  dropdownClassName="min-w-[260px] sm:min-w-[300px]"
+                />
               </div>
             </div>
 

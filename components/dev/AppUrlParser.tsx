@@ -132,6 +132,7 @@ export default function AppUrlParser({ locale = "pt" }: Props) {
             onChange={(e) => handleUrlInputChange(e.target.value)}
             placeholder="https://exemplo.com.br/api/v1/busca?categoria=dev&ordem=asc#secao"
             rows={3}
+            variant="background"
             className="w-full font-mono text-sm break-all"
           />
 

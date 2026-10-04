@@ -129,7 +129,7 @@ const HUB_META = {
   },
   es: {
     title:
-      'Herramientas de Azar y Sorteos Online Gratis — Ruleta, Moneda, Dados y Nombres | ToolNotch',
+      'Herramientas de Azar y Sorteos Online Gratis - Ruleta, Moneda, Dados y Nombres | ToolNotch',
     description:
       'Colección completa de herramientas de azar y sorteo: ruleta de decisiones, selector de nombres, cara o cruz 3D, lanzador de dados de rol, generador de números y equipos. 100% gratis y seguro.',
     breadcrumb: 'Diversión y Azar',
@@ -217,7 +217,7 @@ const HUB_META = {
   },
   en: {
     title:
-      'Free Fun & Random Tools — Spin Wheel, Coin Flip, Dice Roller & Pickers | ToolNotch',
+      'Free Fun & Random Tools - Spin Wheel, Coin Flip, Dice Roller & Pickers | ToolNotch',
     description:
       'Complete suite of free random selection tools: decision wheels, random name pickers, 3D coin toss, RPG dice roller, team splitters, and number generators. 100% free with no signup.',
     breadcrumb: 'Fun & Random',

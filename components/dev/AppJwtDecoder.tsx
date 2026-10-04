@@ -47,8 +47,8 @@ export default function AppJwtDecoder({ locale = "pt" }: Props) {
           </label>
           <p className="text-sm text-label mt-1">
             {isPt
-              ? "Decodificação segura e instantânea no cliente — sua chave e payload nunca são enviados ao servidor."
-              : "100% client-side decoding — your secret and payload are never sent to any server."}
+              ? "Decodificação segura e instantânea no cliente - sua chave e payload nunca são enviados ao servidor."
+              : "100% client-side decoding - your secret and payload are never sent to any server."}
           </p>
         </div>
 
@@ -104,6 +104,7 @@ export default function AppJwtDecoder({ locale = "pt" }: Props) {
           onChange={(e) => setTokenInput(e.target.value)}
           placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
           rows={4}
+          variant="background"
           className="w-full font-mono text-sm break-all"
         />
 

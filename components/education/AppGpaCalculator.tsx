@@ -402,8 +402,8 @@ export default function AppGpaCalculator({ mode, locale }: Props) {
             <label htmlFor={`course-grade-${courses[0]?.id ?? 1}`} className="flex-1 cursor-default">
               {t("grade")}
             </label>
-            <label htmlFor={`course-credits-${courses[0]?.id ?? 1}`} className="w-24 sm:w-32 cursor-default">
-              {locale === "en" ? t("credits") : "Crédito"}
+            <label htmlFor={`course-credits-${courses[0]?.id ?? 1}`} className="w-28 sm:w-36 cursor-default">
+              {t("credits")}
             </label>
             <span className="w-8 shrink-0" />
           </div>
@@ -433,7 +433,7 @@ export default function AppGpaCalculator({ mode, locale }: Props) {
                   />
                 </div>
 
-                <div className="w-24 sm:w-32">
+                <div className="w-28 sm:w-36">
                   <AppInput
                     id={`course-credits-${course.id}`}
                     type="number"
@@ -443,7 +443,7 @@ export default function AppGpaCalculator({ mode, locale }: Props) {
                     value={course.credits === 0 ? "" : String(course.credits)}
                     onChange={(e) => updateCourse(course.id, "credits", e.target.value)}
                     placeholder={t("credits")}
-                    aria-label={locale === "en" ? t("credits") : "Crédito"}
+                    aria-label={t("credits")}
                     className="font-mono text-xs sm:text-sm h-10"
                   />
                 </div>
@@ -629,7 +629,7 @@ export default function AppGpaCalculator({ mode, locale }: Props) {
                       {cGpa.toFixed(2)}
                     </div>
                     <span className="block text-xs font-mono text-label">
-                      {cCred} {t("credits")}
+                      {cCred} {locale === "en" ? "credits / weight" : "créditos / peso"}
                     </span>
                   </div>
 
@@ -645,7 +645,7 @@ export default function AppGpaCalculator({ mode, locale }: Props) {
                       {nGpa.toFixed(2)}
                     </div>
                     <span className="block text-xs font-mono text-label">
-                      {nCred} {t("credits")}
+                      {nCred} {locale === "en" ? "credits / weight" : "créditos / peso"}
                     </span>
                   </div>
 
@@ -668,12 +668,12 @@ export default function AppGpaCalculator({ mode, locale }: Props) {
                       )}
                     </div>
                     <span className="block text-xs font-mono text-label">
-                      {cCred + nCred} {t("credits")}{" "}
+                      {cCred + nCred}{" "}
                       {locale === "pt"
-                        ? "totais"
+                        ? "créditos / peso totais"
                         : locale === "es"
-                          ? "totales"
-                          : "total"}
+                          ? "créditos / peso totales"
+                          : "total credits / weight"}
                     </span>
                   </div>
                 </div>

@@ -42,13 +42,13 @@ interface Props {
 const HUB_META = {
   pt: {
     title:
-      "Ferramentas PDF Online Grátis — Juntar, Dividir, Comprimir e Organizar | ToolNotch",
+      "Ferramentas PDF Online Grátis - Juntar, Dividir, Comprimir e Organizar | ToolNotch",
     description:
       "Suite completa de ferramentas gratuitas para PDF: juntar, dividir, comprimir, converter para JPG, imagens para PDF, organizar e remover páginas. 100% no navegador e seguro.",
     breadcrumb: "Ferramentas PDF",
     headerTitle: "Ferramentas PDF Online Grátis",
     headerDescription:
-      "Junte, divida, comprima, organize e converta arquivos PDF com total privacidade. Suas páginas são processadas localmente no seu navegador — nenhum arquivo é enviado para servidores externos.",
+      "Junte, divida, comprima, organize e converta arquivos PDF com total privacidade. Suas páginas são processadas localmente no seu navegador - nenhum arquivo é enviado para servidores externos.",
     badges: {
       noUpload: "100% Privado (Sem Upload)",
       free: "100% Gratuito",
@@ -102,13 +102,13 @@ const HUB_META = {
   },
   es: {
     title:
-      "Herramientas PDF Online Gratis — Unir, Dividir, Comprimir y Organizar | ToolNotch",
+      "Herramientas PDF Online Gratis - Unir, Dividir, Comprimir y Organizar | ToolNotch",
     description:
       "Suite completa de herramientas gratuitas para PDF: unir, dividir, comprimir, convertir a JPG, imágenes a PDF, organizar y eliminar páginas. 100% privado en tu navegador.",
     breadcrumb: "Herramientas PDF",
     headerTitle: "Herramientas PDF Online Gratis",
     headerDescription:
-      "Une, divide, comprime, organiza y convierte archivos PDF con total privacidad. Tus documentos se procesan localmente en tu navegador — ningún archivo se sube a servidores externos.",
+      "Une, divide, comprime, organiza y convierte archivos PDF con total privacidad. Tus documentos se procesan localmente en tu navegador - ningún archivo se sube a servidores externos.",
     badges: {
       noUpload: "100% Privado (Sin Subidas)",
       free: "100% Gratis",
@@ -162,13 +162,13 @@ const HUB_META = {
   },
   en: {
     title:
-      "Free PDF Tools Online — Merge, Split, Compress & Organize | ToolNotch",
+      "Free PDF Tools Online - Merge, Split, Compress & Organize | ToolNotch",
     description:
       "Comprehensive suite of free online PDF tools: merge, split, compress, convert PDF to JPG, images to PDF, organize, and delete pages. 100% private, client-side in your browser.",
     breadcrumb: "PDF Tools",
     headerTitle: "Free Online PDF Tools",
     headerDescription:
-      "Merge, split, compress, organize, and convert PDF files with complete privacy. All processing runs client-side in your web browser — your documents never leave your device.",
+      "Merge, split, compress, organize, and convert PDF files with complete privacy. All processing runs client-side in your web browser - your documents never leave your device.",
     badges: {
       noUpload: "100% Private (No Upload)",
       free: "100% Free",
