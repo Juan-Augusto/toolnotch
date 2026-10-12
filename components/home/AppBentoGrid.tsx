@@ -174,7 +174,7 @@ export default function AppBentoGrid({ locale, bento, searchSlot }: Props) {
         <AppCard
           border
           cornerAccents={false}
-          className="col-span-12 p-6 sm:p-8 md:p-9 bg-tertiary relative overflow-hidden"
+          className="col-span-12 p-6 sm:p-8 md:p-9 bg-tertiary relative z-20 overflow-visible"
         >
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
             <div className="space-y-4 flex-1 max-w-2xl">

@@ -122,7 +122,7 @@ export default function AppHomeSearch({
       </div>
 
       {isOpen && query.trim().length > 0 && (
-        <div className="absolute top-full left-0 right-0 mt-1.5 bg-tertiary border border-border rounded-[2px] shadow-lg z-50 overflow-hidden divide-y divide-border/60 max-h-[320px] overflow-y-auto">
+        <div className="absolute top-full left-0 right-0 mt-1.5 bg-tertiary border border-border rounded-[2px] shadow-xl z-50 overflow-hidden divide-y divide-border/60 max-h-[320px] overflow-y-auto">
           {filteredResults.length > 0 ? (
             filteredResults.map((item) => (
               <Link
