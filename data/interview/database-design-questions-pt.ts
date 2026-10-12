@@ -3,7 +3,7 @@ import type { InterviewQuestion } from '@/lib/interviewTypes'
 export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
   {
     "id": "b01",
-    "topic": "Primary Key",
+    "topic": "Chave Primária",
     "question": "Qual é o objetivo principal de uma chave primária em um banco de dados relacional?",
     "code": null,
     "options": [
@@ -13,14 +13,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Aplicar restrições NOT NULL obrigatórias em todas as colunas"
     ],
     "correctIndex": 1,
-    "explanation": "Uma chave primária identifica de forma única cada registro em uma tabela, garantindo que não existam dois registros com o mesmo valor de chave.",
-    "compiledJS": "-- DDL with primary key\nCREATE TABLE users (\n  id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,\n  email TEXT NOT NULL UNIQUE\n);\n\n-- The engine implicitly creates:\n-- UNIQUE INDEX users_pkey ON users(id)",
-    "bestPractice": "Prefer a surrogate integer or UUID as the primary key over a natural key (email, username) — natural keys change and FK relationships break with them. In PostgreSQL use BIGINT GENERATED ALWAYS AS IDENTITY; in MySQL use BIGINT AUTO_INCREMENT. Avoid composite primary keys on large tables unless the relationship table genuinely has no other identity.",
-    "source": "PostgreSQL Docs — Constraints: Primary Keys"
+    "explanation": "Uma chave primária identifica de forma única cada registro em uma tabela: duas linhas não podem ter o mesmo valor de chave e a coluna não aceita valores nulos. O banco de dados cria automaticamente um índice exclusivo nessa chave, agilizando buscas diretas. Em motores como o InnoDB (MySQL), a tabela é organizada fisicamente pela chave primária (índice clusterizado), motivo pelo qual escolher uma chave sequencial como BIGINT favorece a performance de escrita.",
+    "compiledJS": "-- DDL com chave primária\nCREATE TABLE users (\n  id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,\n  email TEXT NOT NULL UNIQUE\n);\n\n-- O banco cria implicitamente:\n-- UNIQUE INDEX users_pkey ON users(id)",
+    "bestPractice": "Prefira um identificador substituto do tipo inteiro ou UUID como chave primária em vez de uma chave natural (como e-mail ou nome de usuário), pois chaves naturais podem sofrer alterações e quebrar relacionamentos de chave estrangeira. No PostgreSQL utilize BIGINT GENERATED ALWAYS AS IDENTITY; no MySQL utilize BIGINT AUTO_INCREMENT. Evite chaves primárias compostas em tabelas volumosas, exceto quando a tabela de relacionamento não tiver nenhuma outra identidade própria.",
+    "source": "PostgreSQL Docs: Constraints: Primary Keys"
   },
   {
     "id": "b02",
-    "topic": "Foreign Key",
+    "topic": "Chave Estrangeira",
     "question": "O que uma chave estrangeira faz em um banco de dados relacional?",
     "code": null,
     "options": [
@@ -30,10 +30,10 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Impede que registros duplicados sejam inseridos em uma única tabela sem exigir restrições de unicidade"
     ],
     "correctIndex": 1,
-    "explanation": "Uma chave estrangeira estabelece uma relação entre duas tabelas ao referenciar a chave primária da tabela pai, garantindo a integridade referencial.",
-    "compiledJS": "CREATE TABLE orders (\n  id BIGINT PRIMARY KEY,\n  user_id BIGINT NOT NULL\n    REFERENCES users(id)\n    ON DELETE CASCADE\n    ON UPDATE CASCADE\n);\n\n-- Attempting to insert an order for a non-existent user:\n-- INSERT INTO orders(id, user_id) VALUES (1, 9999);\n-- ERROR: insert or update on table \"orders\" violates\n-- foreign key constraint \"orders_user_id_fkey\"",
-    "bestPractice": "Always add an index on foreign key columns — the database enforces the constraint via a lookup on the parent table, and without an index every FK check is a sequential scan. In PostgreSQL this index is NOT created automatically (unlike MySQL InnoDB). Use ON DELETE RESTRICT or ON DELETE CASCADE consciously; leaving it as the default (RESTRICT) is safer for audit-sensitive data.",
-    "source": "PostgreSQL Docs — Referential Integrity"
+    "explanation": "Uma chave estrangeira estabelece uma relação entre duas tabelas ao referenciar a chave primária da tabela pai, assegurando a integridade referencial. O banco de dados rejeita inserções ou atualizações que gerem referências órfãs e aplica ações configuradas para ON DELETE e ON UPDATE (como CASCADE, SET NULL ou RESTRICT). Sem chaves estrangeiras, registros órfãos acumulam-se silenciosamente.",
+    "compiledJS": "CREATE TABLE orders (\n  id BIGINT PRIMARY KEY,\n  user_id BIGINT NOT NULL\n    REFERENCES users(id)\n    ON DELETE CASCADE\n    ON UPDATE CASCADE\n);\n\n-- Tentativa de inserir pedido para usuário inexistente:\n-- INSERT INTO orders(id, user_id) VALUES (1, 9999);\n-- ERRO: insert or update on table \"orders\" violates\n-- foreign key constraint \"orders_user_id_fkey\"",
+    "bestPractice": "Sempre crie um índice nas colunas de chave estrangeira, pois o banco valida a restrição fazendo buscas na tabela pai e, sem um índice, cada validação exige uma varredura sequencial completa. No PostgreSQL esse índice não é criado automaticamente (diferente do InnoDB no MySQL). Configure ON DELETE RESTRICT ou ON DELETE CASCADE conscientemente; manter a opção padrão (RESTRICT) é mais seguro para registros sujeitos a auditoria.",
+    "source": "PostgreSQL Docs: Referential Integrity"
   },
   {
     "id": "b03",
@@ -47,10 +47,10 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Um banco relacional tradicional que proíbe comandos e sintaxe SQL padrão"
     ],
     "correctIndex": 2,
-    "explanation": "Bancos de dados NoSQL são não relacionais e suportam modelos de dados flexíveis, como documentos, chave-valor, famílias de colunas e grafos.",
+    "explanation": "Bancos de dados NoSQL (\"Not Only SQL\") são repositórios não relacionais que substituem esquemas rígidos por modelos flexíveis: documentos (MongoDB, Firestore), chave-valor (Redis, DynamoDB), colunas largas (Cassandra) e grafos (Neo4j). Geralmente abrem mão de garantias ACID estritas e junções relacionais em favor de escalabilidade horizontal e padrões de acesso específicos.",
     "compiledJS": null,
-    "bestPractice": "Choose NoSQL when your access pattern is known, simple, and unlikely to require ad-hoc joins — e.g. a user session store (key-value), a product catalog with varying attributes (document), or a social graph (graph DB). Do not reach for NoSQL to avoid schema design — a poorly thought-out document schema becomes just as painful as a badly normalised relational one.",
-    "source": "Martin Fowler — NoSQL Distilled (overview)"
+    "bestPractice": "Adote NoSQL quando o padrão de acesso for previsível, simples e não exigir junções dinâmicas frequentes, como sessões de usuários (chave-valor), catálogos com atributos heterogêneos (documentos) ou conexões sociais (grafos). Evite recorrer ao NoSQL apenas para ignorar a modelagem de esquema, já que documentos mal planejados causam tanta complexidade quanto bancos relacionais mal estruturados.",
+    "source": "Martin Fowler: NoSQL Distilled (visão geral)"
   },
   {
     "id": "b04",
@@ -64,14 +64,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Criar, Restaurar, Desfazer, Implantar (Create, Restore, Undo, Deploy)"
     ],
     "correctIndex": 1,
-    "explanation": "CRUD significa Create, Read, Update e Delete (Criar, Ler, Atualizar e Excluir), as quatro operações fundamentais realizadas em registros de bancos de dados.",
-    "compiledJS": "-- Create\nINSERT INTO users (email) VALUES ('alice@example.com');\n\n-- Read\nSELECT * FROM users WHERE id = 1;\n\n-- Update\nUPDATE users SET email = 'new@example.com' WHERE id = 1;\n\n-- Delete\nDELETE FROM users WHERE id = 1;",
-    "bestPractice": "In production systems, prefer soft deletes (marking a row as deleted with a timestamp) over hard deletes for any entity with audit or compliance requirements. This preserves history without physically removing data, and allows tombstone-based CDC (change data capture) streams to propagate the deletion to downstream consumers.",
-    "source": "PostgreSQL Docs — Data Manipulation"
+    "explanation": "CRUD representa as quatro operações fundamentais em dados persistentes: Create, Read, Update e Delete (Criar, Ler, Atualizar e Excluir). Na linguagem SQL, correspondem respectivamente aos comandos INSERT, SELECT, UPDATE e DELETE. Quase todas as APIs REST e interfaces de usuário operam em torno dessas quatro ações.",
+    "compiledJS": "-- Criar\nINSERT INTO users (email) VALUES ('alice@example.com');\n\n-- Ler\nSELECT * FROM users WHERE id = 1;\n\n-- Atualizar\nUPDATE users SET email = 'new@example.com' WHERE id = 1;\n\n-- Excluir\nDELETE FROM users WHERE id = 1;",
+    "bestPractice": "Em sistemas de produção, priorize a exclusão lógica (soft delete com registro de timestamp no campo deleted_at) sobre a exclusão física para qualquer entidade sujeita a auditoria ou requisitos regulatórios. Isso mantém o histórico intacto e viabiliza fluxos de captura de dados de alteração (CDC) para sincronizar serviços externos.",
+    "source": "PostgreSQL Docs: Data Manipulation"
   },
   {
     "id": "b05",
-    "topic": "NULL Semantics",
+    "topic": "Semântica do NULL",
     "question": "O que o valor NULL representa no SQL?",
     "code": null,
     "options": [
@@ -81,14 +81,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Uma avaliação de condição booleana falsa (`FALSE`)"
     ],
     "correctIndex": 2,
-    "explanation": "O valor NULL no SQL representa a ausência de um valor ou um valor desconhecido, sendo distinto de zero ou de uma string vazia.",
-    "compiledJS": "-- This returns NO rows:\nSELECT * FROM users WHERE deleted_at = NULL;\n\n-- Correct:\nSELECT * FROM users WHERE deleted_at IS NULL;\n\n-- NULL propagates through expressions:\nSELECT NULL + 1;   -- result: NULL\nSELECT NULL = NULL; -- result: NULL (not TRUE)",
-    "bestPractice": "Avoid nullable columns where possible — add NOT NULL constraints at the DB level and use sentinel values (empty string, epoch timestamp, 0) only when they carry genuine semantic meaning. When NULLs are unavoidable, use COALESCE() in queries to supply defaults and document the nullability intent in column comments.",
-    "source": "SQL Standard — Three-Valued Logic"
+    "explanation": "O valor NULL no SQL representa a ausência de valor ou uma informação desconhecida, diferindo de zero, de uma string vazia ou de false. Comparações diretas com NULL retornam UNKNOWN, o que faz com que filtros como `WHERE coluna = NULL` nunca correspondam a registros; a sintaxe correta exige `IS NULL`. Funções agregadas como COUNT, SUM e AVG ignoram valores NULL automaticamente.",
+    "compiledJS": "-- Não retorna registros:\nSELECT * FROM users WHERE deleted_at = NULL;\n\n-- Consulta correta:\nSELECT * FROM users WHERE deleted_at IS NULL;\n\n-- NULL se propaga em expressões:\nSELECT NULL + 1;   -- resultado: NULL\nSELECT NULL = NULL; -- resultado: NULL (e não TRUE)",
+    "bestPractice": "Evite colunas anuláveis sempre que possível: adicione restrições NOT NULL no esquema do banco e use valores sentinela (como texto vazio, timestamp zero ou 0) apenas se carregarem significado semântico autêntico. Quando o uso de NULL for inevitável, aplique COALESCE() em consultas para estipular padrões e documente o papel da coluna.",
+    "source": "SQL Standard: Three-Valued Logic"
   },
   {
     "id": "b06",
-    "topic": "Relationships",
+    "topic": "Relacionamentos",
     "question": "Que tipo de relacionamento existe quando um registro na tabela A pode se relacionar com vários registros na tabela B, e um registro na tabela B também pode se relacionar com vários registros na tabela A?",
     "code": null,
     "options": [
@@ -98,14 +98,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Autorrelacionamento"
     ],
     "correctIndex": 2,
-    "explanation": "Um relacionamento Muitos para Muitos (M:N) significa que registros de ambos os lados podem se relacionar com múltiplos registros do outro lado, sendo tipicamente resolvido por meio de uma tabela de junção (tabela associativa).",
-    "compiledJS": "-- Junction table resolving M:N between students and courses\nCREATE TABLE enrolments (\n  student_id BIGINT REFERENCES students(id) ON DELETE CASCADE,\n  course_id  BIGINT REFERENCES courses(id)  ON DELETE CASCADE,\n  enrolled_at TIMESTAMPTZ DEFAULT NOW(),\n  PRIMARY KEY (student_id, course_id)\n);",
-    "bestPractice": "Add extra columns to the junction table to store relationship metadata (enrolled_at, role, status) — this often turns out to be necessary as requirements grow. Use a composite PK on the two FK columns unless you need to reference the junction row from a third table, in which case add a surrogate PK.",
-    "source": "Database Design for Mere Mortals — Chapter 11"
+    "explanation": "Um relacionamento Muitos para Muitos (M:N) ocorre quando linhas de ambos os lados podem se conectar a múltiplos registros da outra tabela. Como modelos relacionais não suportam listas de chaves em uma coluna única, a solução é utilizar uma tabela de junção (associativa) contendo duas chaves estrangeiras, conectando cada entidade pai.",
+    "compiledJS": "-- Tabela de junção resolvendo relacionamento M:N entre students e courses\nCREATE TABLE enrolments (\n  student_id BIGINT REFERENCES students(id) ON DELETE CASCADE,\n  course_id  BIGINT REFERENCES courses(id)  ON DELETE CASCADE,\n  enrolled_at TIMESTAMPTZ DEFAULT NOW(),\n  PRIMARY KEY (student_id, course_id)\n);",
+    "bestPractice": "Inclua colunas adicionais na tabela associativa para guardar metadados do relacionamento (como enrolled_at, status ou perfil), visto que esses requisitos costumam surgir com a evolução do sistema. Mantenha uma chave primária composta pelas duas chaves estrangeiras, a não ser que precise vincular essa associação a uma terceira tabela, caso em que uma chave substituta própria simplifica a modelagem.",
+    "source": "Database Design for Mere Mortals: Capítulo 11"
   },
   {
     "id": "b07",
-    "topic": "Normalization",
+    "topic": "Normalização",
     "question": "O que é normalização de banco de dados?",
     "code": null,
     "options": [
@@ -115,14 +115,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Fazer backup dos dados em um servidor secundário"
     ],
     "correctIndex": 1,
-    "explanation": "A normalização é o processo de organização do esquema de um banco de dados para minimizar a redundância e garantir a integridade dos dados por meio de formas normais definidas.",
+    "explanation": "A normalização é a organização estruturada de esquemas relacionais para minimizar duplicações de dados e impedir anomalias de inclusão, atualização e remoção. É guiada por formas normais sucessivas (1FN, 2FN, 3FN, FNBC). Um banco bem normalizado guarda cada fato em um único local, garantindo que qualquer alteração precise afetar somente uma linha.",
     "compiledJS": null,
-    "bestPractice": "Normalise to at least 3NF as the default starting point, then consciously denormalize only where profiling shows a specific read bottleneck. Do not skip normalisation in favour of \"just adding more columns to avoid joins\" — the inconsistency bugs that arise from duplicated data are among the hardest to diagnose in production.",
-    "source": "C. J. Date — An Introduction to Database Systems"
+    "bestPractice": "Tenha a 3FN como meta inicial recomendada e desnormalize pontualmente somente quando testes de carga comprovarem um gargalo estrito de leitura. Não ignore a normalização com o intuito de evitar junções, pois divergências causadas por dados duplicados são extremamente trabalhosas de rastrear em ambientes de produção.",
+    "source": "C. J. Date: An Introduction to Database Systems"
   },
   {
     "id": "b08",
-    "topic": "ACID — Atomicity",
+    "topic": "Atomicidade no ACID",
     "question": "Qual propriedade das transações ACID garante que uma transação seja totalmente concluída ou não produza nenhum efeito?",
     "code": null,
     "options": [
@@ -132,10 +132,10 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Durabilidade"
     ],
     "correctIndex": 2,
-    "explanation": "A atomicidade garante que todas as operações dentro de uma transação sejam tratadas como uma única unidade: ou todas são executadas com sucesso, ou todas sofrem rollback.",
-    "compiledJS": "-- Both INSERTs succeed or neither does\nBEGIN;\n  UPDATE accounts SET balance = balance - 100 WHERE id = 1;\n  UPDATE accounts SET balance = balance + 100 WHERE id = 2;\nCOMMIT;\n\n-- If the process crashes after the first UPDATE:\n-- On restart, PostgreSQL replays the WAL and rolls\n-- back the incomplete transaction automatically.",
-    "bestPractice": "Wrap logically related mutations in a single transaction — never rely on application-level retries to compensate for partial writes. In ORMs, be explicit about transaction boundaries rather than using auto-commit mode; it is far too easy to leave a connection in an uncommitted state under ORM defaults.",
-    "source": "PostgreSQL Docs — Transactions"
+    "explanation": "A atomicidade assegura que todas as operações pertencentes a uma transação sejam executadas como uma unidade única e indivisível: todas são confirmadas (COMMIT) ou todas são revertidas (ROLLBACK). Caso ocorra uma queda no servidor durante a execução, o banco consulta o Write-Ahead Log (WAL) na reinicialização e cancela alterações parciais, impedindo desequilíbrios como debitar fundos sem creditá-los no destino.",
+    "compiledJS": "-- Ambas as operações são concluídas ou nenhuma tem efeito\nBEGIN;\n  UPDATE accounts SET balance = balance - 100 WHERE id = 1;\n  UPDATE accounts SET balance = balance + 100 WHERE id = 2;\nCOMMIT;\n\n-- Se o processo falhar após o primeiro UPDATE:\n-- Ao reiniciar, o PostgreSQL processa o WAL e desfaz\n-- a transação incompleta automaticamente.",
+    "bestPractice": "Reúna alterações logicamente interdependentes dentro da mesma transação e nunca delegue à camada de aplicação a tarefa de tentar corrigir gravações incompletas. Em ferramentas ORM, estabeleça explicitamente o escopo das transações em vez de usar o modo auto-commit, reduzindo o perigo de manter conexões abertas em estado indefinido.",
+    "source": "PostgreSQL Docs: Transactions"
   },
   {
     "id": "b09",
@@ -149,14 +149,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "SQL exige índices clusterizados; NoSQL proíbe índices secundários"
     ],
     "correctIndex": 1,
-    "explanation": "Bancos de dados SQL usam uma linguagem estruturada de consulta em esquemas predefinidos, enquanto bancos NoSQL oferecem modelos de dados flexíveis com diversas APIs de consulta adaptadas às suas estruturas.",
+    "explanation": "A linguagem SQL foi criada para operar sobre esquemas relacionais estruturados com tabelas, tipos e colunas predefinidas. Plataformas NoSQL flexibilizam essas definições e utilizam mecanismos alternativos de busca: APIs orientadas a chave-valor (DynamoDB), consultas sobre documentos (MongoDB) ou linguagens específicas focadas em chaves de partição (Cassandra).",
     "compiledJS": null,
-    "bestPractice": "SQL is the right default for most applications because its flexibility for ad-hoc querying and strong consistency are invaluable as requirements change. Adopt NoSQL only when you have identified a specific access pattern that a relational model cannot serve well at your scale — premature adoption of NoSQL to appear modern is a common engineering mistake.",
-    "source": "DDIA — Chapter 2: Data Models and Query Languages"
+    "bestPractice": "Bancos SQL continuam sendo a escolha inicial mais sensata para a grande maioria dos projetos, já que a flexibilidade para consultas dinâmicas e as garantias de consistência são fundamentais ao longo da evolução do software. Adote NoSQL exclusivamente quando encontrar um padrão de acesso claro que o modelo relacional não consiga atender na sua escala de operação.",
+    "source": "DDIA: Capítulo 2: Data Models and Query Languages"
   },
   {
     "id": "b10",
-    "topic": "Migrations",
+    "topic": "Migrações",
     "question": "Qual é o objetivo de uma migração de banco de dados?",
     "code": null,
     "options": [
@@ -166,14 +166,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Converter tabelas relacionais e restrições em coleções NoSQL"
     ],
     "correctIndex": 2,
-    "explanation": "Migrações de banco de dados são scripts versionados que aplicam mudanças incrementais no esquema, permitindo que as equipes evoluam a estrutura do banco de forma controlada e reproduzível.",
-    "compiledJS": "-- Example Flyway migration: V3__add_deleted_at_to_users.sql\nALTER TABLE users\n  ADD COLUMN deleted_at TIMESTAMPTZ DEFAULT NULL;\n\nCREATE INDEX CONCURRENTLY idx_users_deleted_at\n  ON users(deleted_at)\n  WHERE deleted_at IS NOT NULL;",
-    "bestPractice": "Never modify a migration file that has already been applied to any environment — treat migrations as immutable history. For zero-downtime deployments follow the expand-contract pattern: first add the new column as nullable (expand), deploy the new code, then backfill and add constraints (contract) in a subsequent migration.",
-    "source": "Flyway Docs — Versioned Migrations"
+    "explanation": "Migrações de banco de dados consistem em scripts versionados (em SQL ou DSL) que aplicam alterações incrementais na estrutura das tabelas (como criar campos, remover colunas ou gerar índices). Soluções como Flyway, Liquibase e Prisma mantêm o registro das execuções em tabelas dedicadas, sincronizando com segurança o banco com as novas versões do código.",
+    "compiledJS": "-- Exemplo de migração no Flyway: V3__add_deleted_at_to_users.sql\nALTER TABLE users\n  ADD COLUMN deleted_at TIMESTAMPTZ DEFAULT NULL;\n\nCREATE INDEX CONCURRENTLY idx_users_deleted_at\n  ON users(deleted_at)\n  WHERE deleted_at IS NOT NULL;",
+    "bestPractice": "Nunca modifique scripts de migração que já tenham sido executados em qualquer ambiente: considere arquivos de migração como histórico imutável. Para deploys com zero downtime, use a estratégia expand-contract: crie novas colunas permitindo valores nulos (expand), atualize a aplicação e só depois popule os dados e aplique restrições adicionais (contract) em um passo seguinte.",
+    "source": "Flyway Docs: Versioned Migrations"
   },
   {
     "id": "i01",
-    "topic": "2NF",
+    "topic": "Segunda Forma Normal (2FN)",
     "question": "Qual forma normal exige que todo atributo não chave seja totalmente dependente de forma funcional de toda a chave primária (eliminando dependências parciais)?",
     "code": null,
     "options": [
@@ -183,14 +183,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Forma Normal de Boyce-Codd (FNBC)"
     ],
     "correctIndex": 1,
-    "explanation": "A 2FN se apoia na 1FN exigindo que cada atributo não chave dependa de toda a chave primária composta, e não apenas de parte dela.",
-    "compiledJS": "-- Violates 2NF: product_name depends only on product_id, not (order_id, product_id)\nCREATE TABLE order_items_bad (\n  order_id    BIGINT,\n  product_id  BIGINT,\n  product_name TEXT,   -- partial dependency!\n  quantity    INT,\n  PRIMARY KEY (order_id, product_id)\n);\n\n-- 2NF-compliant split:\nCREATE TABLE products (\n  id   BIGINT PRIMARY KEY,\n  name TEXT NOT NULL\n);\nCREATE TABLE order_items (\n  order_id   BIGINT,\n  product_id BIGINT REFERENCES products(id),\n  quantity   INT,\n  PRIMARY KEY (order_id, product_id)\n);",
-    "bestPractice": "Surrogate primary keys (single-column auto-increment or UUID) automatically satisfy 2NF because partial dependencies cannot exist without a composite key. This is one of several reasons senior engineers prefer surrogate keys.",
-    "source": "C. J. Date — An Introduction to Database Systems, Chapter 11"
+    "explanation": "A 2FN se aplica a tabelas com chave primária composta e exige que nenhum atributo não chave dependa apenas de parte dessa chave. Para corrigir dependências parciais, divide-se a tabela: move-se a coluna parcialmente dependente para uma tabela própria, como separar product_name em uma tabela de produtos em vez de mantê-la vinculada à chave composta (order_id, product_id).",
+    "compiledJS": "-- Viola a 2FN: product_name depende apenas de product_id e não de (order_id, product_id)\nCREATE TABLE order_items_bad (\n  order_id    BIGINT,\n  product_id  BIGINT,\n  product_name TEXT,   -- dependência parcial!\n  quantity    INT,\n  PRIMARY KEY (order_id, product_id)\n);\n\n-- Divisão compatível com a 2FN:\nCREATE TABLE products (\n  id   BIGINT PRIMARY KEY,\n  name TEXT NOT NULL\n);\nCREATE TABLE order_items (\n  order_id   BIGINT,\n  product_id BIGINT REFERENCES products(id),\n  quantity   INT,\n  PRIMARY KEY (order_id, product_id)\n);",
+    "bestPractice": "O uso de chaves substitutas de coluna única (autoincremento ou UUID) satisfaz a 2FN por padrão, dado que dependências parciais são impossíveis na ausência de chaves compostas. Essa característica é uma das principais razões pelas quais desenvolvedores experientes adotam chaves substitutas.",
+    "source": "C. J. Date: An Introduction to Database Systems, Capítulo 11"
   },
   {
     "id": "i02",
-    "topic": "1NF",
+    "topic": "Primeira Forma Normal (1FN)",
     "question": "O que a Primeira Forma Normal (1FN) exige?",
     "code": null,
     "options": [
@@ -200,14 +200,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Uma chave primária composta definida por duas ou mais colunas da tabela"
     ],
     "correctIndex": 1,
-    "explanation": "A 1FN exige que cada coluna contenha apenas valores atômicos e indivisíveis e que cada coluna armazene valores de um único tipo de dado, sem grupos de repetição.",
-    "compiledJS": "-- Violates 1NF: tags is a comma-separated list\nCREATE TABLE posts_bad (\n  id   BIGINT PRIMARY KEY,\n  tags TEXT   -- e.g. \"typescript,nodejs,backend\"\n);\n\n-- 1NF-compliant: move repeating group to its own table\nCREATE TABLE post_tags (\n  post_id BIGINT REFERENCES posts(id),\n  tag     TEXT NOT NULL,\n  PRIMARY KEY (post_id, tag)\n);",
-    "bestPractice": "PostgreSQL ARRAY and JSONB columns technically store non-atomic values and can violate 1NF in spirit. Use them only when the data is genuinely schemaless or when you have benchmarked that the flexibility outweighs the query complexity. For structured repeating groups, always normalise into a child table.",
-    "source": "E. F. Codd — A Relational Model of Data for Large Shared Data Banks (1970)"
+    "explanation": "A 1FN exige valores atômicos e indivisíveis em cada coluna, tipos consistentes de dados e ausência de grupos de repetição (como colunas telefone_1, telefone_2). Guardar listas separadas por vírgulas em uma coluna de texto é uma clássica violação da 1FN, prejudicando índices, integridade e a construção de consultas eficientes.",
+    "compiledJS": "-- Viola a 1FN: tags é uma lista separada por vírgula\nCREATE TABLE posts_bad (\n  id   BIGINT PRIMARY KEY,\n  tags TEXT   -- ex: \"typescript,nodejs,backend\"\n);\n\n-- Compatível com a 1FN: move o grupo repetido para uma tabela própria\nCREATE TABLE post_tags (\n  post_id BIGINT REFERENCES posts(id),\n  tag     TEXT NOT NULL,\n  PRIMARY KEY (post_id, tag)\n);",
+    "bestPractice": "Colunas ARRAY e JSONB no PostgreSQL armazenam valores não atômicos e podem violar o princípio da 1FN. Utilize esses tipos apenas quando os dados forem de fato sem esquema definido ou quando testes mostrarem que a flexibilidade supera a complexidade nas consultas. Para grupos de repetição estruturados, normalize sempre em uma tabela filha.",
+    "source": "E. F. Codd: A Relational Model of Data for Large Shared Data Banks (1970)"
   },
   {
     "id": "i03",
-    "topic": "Denormalization",
+    "topic": "Desnormalização",
     "question": "Qual das seguintes opções é uma razão válida para desnormalizar intencionalmente um banco de dados?",
     "code": null,
     "options": [
@@ -217,14 +217,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Para garantir que todas as tabelas atendam estritamente à 3NF"
     ],
     "correctIndex": 1,
-    "explanation": "A desnormalização introduz redundância deliberadamente para reduzir operações de join de alto custo, melhorando a performance de leitura ao custo de maior complexidade na escrita e risco de inconsistência.",
-    "compiledJS": "-- Denormalized: posts stores comment_count to avoid COUNT(*) JOIN on every read\nCREATE TABLE posts (\n  id            BIGINT PRIMARY KEY,\n  title         TEXT NOT NULL,\n  comment_count INT  NOT NULL DEFAULT 0  -- redundant, kept in sync by trigger\n);\n\n-- Trigger that keeps comment_count accurate:\nCREATE FUNCTION inc_comment_count() RETURNS TRIGGER LANGUAGE plpgsql AS $$\nBEGIN\n  UPDATE posts SET comment_count = comment_count + 1\n  WHERE id = NEW.post_id;\n  RETURN NEW;\nEND $$;\n\nCREATE TRIGGER after_comment_insert\n  AFTER INSERT ON comments\n  FOR EACH ROW EXECUTE FUNCTION inc_comment_count();",
-    "bestPractice": "Always measure before denormalizing — most join overhead is eliminated by proper indexing and does not require redundancy. When you do denormalize, enforce consistency with a database trigger or an application-level transactional update, and document the invariant clearly so future engineers do not break it.",
-    "source": "DDIA — Chapter 3: Storage and Retrieval"
+    "explanation": "A desnormalização introduz redundância de forma intencional para evitar operações custosas de junção em fluxos críticos de leitura. Práticas comuns incluem salvar agregadores calculados (como comment_count) ou duplicar colunas muito lidas. O custo dessa abordagem é que cada gravação precisa sincronizar os dados duplicados, exigindo cuidado para evitar inconsistências.",
+    "compiledJS": "-- Desnormalizado: posts armazena comment_count para evitar COUNT(*) com JOIN a cada leitura\nCREATE TABLE posts (\n  id            BIGINT PRIMARY KEY,\n  title         TEXT NOT NULL,\n  comment_count INT  NOT NULL DEFAULT 0  -- redundante, mantido em sincronia por trigger\n);\n\n-- Trigger que mantém comment_count exato:\nCREATE FUNCTION inc_comment_count() RETURNS TRIGGER LANGUAGE plpgsql AS $$\nBEGIN\n  UPDATE posts SET comment_count = comment_count + 1\n  WHERE id = NEW.post_id;\n  RETURN NEW;\nEND $$;\n\nCREATE TRIGGER after_comment_insert\n  AFTER INSERT ON comments\n  FOR EACH ROW EXECUTE FUNCTION inc_comment_count();",
+    "bestPractice": "Sempre faça medições antes de desnormalizar, visto que a maior parte do impacto de junções é resolvida com indexação correta sem exigir redundância. Ao desnormalizar, assegure a consistência por meio de triggers ou transações na aplicação e documente a regra claramente para evitar falhas futuras.",
+    "source": "DDIA: Capítulo 3: Storage and Retrieval"
   },
   {
     "id": "i04",
-    "topic": "Surrogate Keys",
+    "topic": "Chaves Substitutas",
     "question": "O que é uma chave substituta (surrogate key)?",
     "code": null,
     "options": [
@@ -234,14 +234,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Uma chave estrangeira recursiva apontando para a própria tabela"
     ],
     "correctIndex": 1,
-    "explanation": "Uma chave substituta (surrogate key) é um identificador artificial gerado pelo sistema (como um ID autoincrementável ou UUID) que não possui significado de negócio intrínseco.",
-    "compiledJS": "-- Surrogate key (BIGINT IDENTITY)\nCREATE TABLE customers (\n  id    BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,\n  email TEXT NOT NULL UNIQUE  -- natural key demoted to a UNIQUE constraint\n);\n\n-- vs Natural key (fragile: email can change, breaking all FK references)\nCREATE TABLE customers_bad (\n  email TEXT PRIMARY KEY,\n  name  TEXT\n);",
-    "bestPractice": "Use BIGINT surrogate keys as the default. Choose UUID (v7 for sequential inserts) only when you need globally unique identifiers across distributed systems or when you need to generate IDs client-side before inserting. Expose natural keys as UNIQUE constraints rather than PKs so they can be validated and changed without cascading FK updates.",
-    "source": "Database Design for Mere Mortals — Chapter 9"
+    "explanation": "Uma chave substituta (surrogate key) é um identificador artificial gerado pelo sistema (como um BIGINT autoincrementável ou UUID) sem significado no domínio de negócio. Ao contrário de chaves naturais (como e-mail ou documento), chaves substitutas não mudam mesmo se os dados do usuário forem alterados, mantendo as chaves estrangeiras intactas e facilitando a indexação.",
+    "compiledJS": "-- Chave substituta (BIGINT IDENTITY)\nCREATE TABLE customers (\n  id    BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,\n  email TEXT NOT NULL UNIQUE  -- chave natural tratada como restrição UNIQUE\n);\n\n-- vs Chave natural (frágil: email pode mudar, quebrando referências de FK)\nCREATE TABLE customers_bad (\n  email TEXT PRIMARY KEY,\n  name  TEXT\n);",
+    "bestPractice": "Adote chaves substitutas BIGINT como padrão. Escolha UUID (versão 7 para inserções sequenciais) apenas se precisar de identificadores únicos globais entre sistemas distribuídos ou geração de IDs pelo cliente antes da inserção. Exponha chaves naturais como restrições UNIQUE em vez de chaves primárias, permitindo validações e alterações sem propagar atualizações em cascata.",
+    "source": "Database Design for Mere Mortals: Capítulo 9"
   },
   {
     "id": "i05",
-    "topic": "ER Diagrams",
+    "topic": "Diagramas ER",
     "question": "Em um diagrama entidade-relacionamento (DER), o que indica uma linha dupla (participação total) no lado de uma entidade em um relacionamento?",
     "code": null,
     "options": [
@@ -251,14 +251,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "A entidade representa uma entidade fraca com chave identificadora parcial"
     ],
     "correctIndex": 1,
-    "explanation": "Uma linha dupla (participação total) em um diagrama entidade-relacionamento significa que toda instância da entidade deve obrigatoriamente participar do relacionamento, sem participantes opcionais daquele lado.",
-    "compiledJS": "-- Total participation of Employee in \"Works-In\" maps to NOT NULL FK:\nCREATE TABLE employees (\n  id          BIGINT PRIMARY KEY,\n  name        TEXT   NOT NULL,\n  department_id BIGINT NOT NULL  -- NOT NULL enforces total participation\n    REFERENCES departments(id)\n);\n\n-- Partial participation (nullable FK):\nCREATE TABLE employees_optional (\n  id          BIGINT PRIMARY KEY,\n  name        TEXT NOT NULL,\n  department_id BIGINT  -- nullable = partial participation\n    REFERENCES departments(id)\n);",
-    "bestPractice": "Translate total participation directly to NOT NULL foreign key constraints at the DDL level — do not rely on application code to enforce it. Database constraints catch bugs in every code path (migrations, scripts, ORM bypasses) whereas application-level checks only guard the happy path.",
-    "source": "Ramez Elmasri — Fundamentals of Database Systems, Chapter 7"
+    "explanation": "Na notação clássica de diagramas entidade-relacionamento, linhas duplas representam participação total (toda instância da entidade deve participar obrigatoriamente do relacionamento), enquanto linhas simples indicam participação parcial. No modelo físico relacional, a participação total se traduz diretamente em uma coluna de chave estrangeira com restrição NOT NULL.",
+    "compiledJS": "-- Participação total de Employee em \"Works-In\" mapeada como FK NOT NULL:\nCREATE TABLE employees (\n  id          BIGINT PRIMARY KEY,\n  name        TEXT   NOT NULL,\n  department_id BIGINT NOT NULL  -- NOT NULL impõe participação total\n    REFERENCES departments(id)\n);\n\n-- Participação parcial (FK anulável):\nCREATE TABLE employees_optional (\n  id          BIGINT PRIMARY KEY,\n  name        TEXT NOT NULL,\n  department_id BIGINT  -- anulável: participação parcial\n    REFERENCES departments(id)\n);",
+    "bestPractice": "Converta participação total diretamente em restrições de chave estrangeira NOT NULL no DDL, sem depender de validações apenas no código da aplicação. Restrições no banco barram inconsistências em qualquer caminho de execução (migrações, scripts ou consultas manuais), enquanto verificações na aplicação cobrem somente o fluxo padrão.",
+    "source": "Ramez Elmasri: Fundamentals of Database Systems, Capítulo 7"
   },
   {
     "id": "i06",
-    "topic": "CAP Theorem",
+    "topic": "Teorema CAP",
     "question": "De acordo com o teorema CAP, um banco de dados distribuído pode garantir no máximo quantas das três propriedades simultaneamente?",
     "code": null,
     "options": [
@@ -268,10 +268,10 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Nenhuma: elas estão sempre em conflito"
     ],
     "correctIndex": 2,
-    "explanation": "O teorema CAP estabelece que um sistema distribuído pode garantir no máximo duas das três propriedades ao mesmo tempo: Consistência, Disponibilidade e Tolerância a Partições.",
+    "explanation": "O teorema CAP estabelece que sistemas distribuídos só podem garantir simultaneamente duas de três propriedades: Consistência (leituras retornam a gravação mais recente), Disponibilidade (requisições recebem resposta sem erro) e Tolerância a Partições (o sistema segue operando mesmo sob falhas de rede). Como falhas de rede são inevitáveis, arquiteturas reais equilibram entre modelos CP ou AP.",
     "compiledJS": null,
-    "bestPractice": "CAP is a useful mental model but is often oversimplified. In practice, use the PACELC model which also accounts for latency trade-offs in the absence of partitions. Most teams should default to a CP store (PostgreSQL, Spanner) unless they have specific requirements for geographic distribution or always-on availability that justify AP trade-offs.",
-    "source": "Eric Brewer — Towards Robust Distributed Systems (2000)"
+    "bestPractice": "O teorema CAP é um modelo mental útil, mas frequentemente simplificado demais. Na prática, utilize o modelo PACELC, que também considera concessões de latência na ausência de partições de rede. A maioria dos projetos deve adotar sistemas CP (como PostgreSQL ou Spanner) por padrão, a não ser que haja demandas rígidas de distribuição geográfica ou disponibilidade contínua que justifiquem abrir mão de consistência imediata.",
+    "source": "Eric Brewer: Towards Robust Distributed Systems (2000)"
   },
   {
     "id": "i07",
@@ -285,14 +285,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "OLTP roda apenas na nuvem; OLAP opera exclusivamente em servidores locais"
     ],
     "correctIndex": 1,
-    "explanation": "OLTP é otimizado para operações transacionais frequentes e de baixa latência; OLAP é otimizado para agregações complexas e consultas analíticas em grandes bases de dados históricas.",
+    "explanation": "Cargas OLTP são otimizadas para alto volume de transações rápidas e pontuais (inserir pedidos, buscar cadastros) utilizando armazenamento orientado a linhas. Cargas OLAP concentram-se em análises e agregações complexas sobre grandes volumes históricos, utilizando bancos com armazenamento colunar (ClickHouse, BigQuery) para escanear apenas as colunas necessárias.",
     "compiledJS": null,
-    "bestPractice": "Never run OLAP-style analytics queries directly against your production OLTP database — long-running scans hold locks and degrade transaction latency for all users. Route analytics traffic to a read replica, a materialized view, or a separate data warehouse fed via CDC (change data capture) or ETL.",
-    "source": "DDIA — Chapter 3: Storage and Retrieval"
+    "bestPractice": "Nunca execute consultas analíticas do tipo OLAP diretamente no banco OLTP de produção, pois varreduras demoradas retêm bloqueios e degradam a latência transacional para todos os usuários. Encaminhe o tráfego analítico para réplicas de leitura, views materializadas ou um data warehouse alimentado por CDC ou processos de ETL.",
+    "source": "DDIA: Capítulo 3: Storage and Retrieval"
   },
   {
     "id": "i08",
-    "topic": "Isolation Levels",
+    "topic": "Níveis de Isolamento",
     "question": "Qual nível de isolamento de transação impede leituras sujas (dirty reads), mas ainda permite leituras não repetíveis (non-repeatable reads)?",
     "code": null,
     "options": [
@@ -302,14 +302,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Serializable"
     ],
     "correctIndex": 1,
-    "explanation": "O nível Read Committed impede leituras sujas lendo apenas dados já confirmados (committed), mas uma segunda leitura da mesma linha na mesma transação pode encontrar um valor diferente se outra transação fizer commit no intervalo.",
-    "compiledJS": "-- Set isolation for the current transaction:\nBEGIN ISOLATION LEVEL READ COMMITTED;\n-- (this is the PostgreSQL default)\n\n-- Anomalies per level:\n-- Read Uncommitted : dirty reads allowed\n-- Read Committed   : dirty reads prevented, non-repeatable reads allowed  ← default\n-- Repeatable Read  : + non-repeatable reads prevented, phantom reads allowed\n-- Serializable     : all anomalies prevented (highest cost)",
-    "bestPractice": "Use the default Read Committed for most web application workloads. Bump to Serializable only for financial or inventory operations where phantom reads could cause double-spends or race conditions. Be aware that Serializable increases lock contention and can cause transaction aborts that your retry logic must handle.",
-    "source": "PostgreSQL Docs — Transaction Isolation"
+    "explanation": "O nível Read Committed lê apenas dados já confirmados por outras transações, prevenindo leituras sujas, mas permite leituras não repetíveis caso outra transação altere a linha entre duas leituras sucessivas. Para evitar leituras não repetíveis utiliza-se Repeatable Read, enquanto o nível Serializable isola completamente transações contra leituras fantasmas ao custo de maior concorrência.",
+    "compiledJS": "-- Define o isolamento para a transação atual:\nBEGIN ISOLATION LEVEL READ COMMITTED;\n-- (padrão no PostgreSQL)\n\n-- Anomalias por nível:\n-- Read Uncommitted : leituras sujas permitidas\n-- Read Committed   : evita leituras sujas, permite leituras não repetíveis (padrão)\n-- Repeatable Read  : evita leituras não repetíveis, permite leituras fantasmas\n-- Serializable     : evita todas as anomalias (custo mais elevado)",
+    "bestPractice": "Utilize o nível padrão Read Committed para a maioria das aplicações web. Eleve para Serializable somente em operações financeiras ou de controle de estoque em que leituras fantasmas possam causar gastos duplos ou condições de corrida. Lembre-se de que o nível Serializable aumenta a concorrência por bloqueios e pode gerar abortos de transação que sua aplicação precisará tratar com repetições.",
+    "source": "PostgreSQL Docs: Transaction Isolation"
   },
   {
     "id": "i09",
-    "topic": "Soft vs Hard Delete",
+    "topic": "Soft Delete vs Hard Delete",
     "question": "Qual é a diferença entre uma exclusão lógica (soft delete) e uma exclusão física (hard delete)?",
     "code": null,
     "options": [
@@ -319,14 +319,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Ambos são nomes sinônimos para a mesma instrução de exclusão em segundo plano"
     ],
     "correctIndex": 1,
-    "explanation": "A exclusão lógica (soft delete) define um indicador (como is_deleted ou deleted_at) para ocultar o registro das consultas normais preservando os dados; a exclusão física (hard delete) remove permanentemente o registro da tabela.",
-    "compiledJS": "-- Soft delete\nUPDATE users\n  SET deleted_at = NOW()\nWHERE id = 42;\n\n-- Every query must filter:\nSELECT * FROM users WHERE deleted_at IS NULL;\n\n-- Automate with a view:\nCREATE VIEW active_users AS\n  SELECT * FROM users WHERE deleted_at IS NULL;\n\n-- Hard delete\nDELETE FROM users WHERE id = 42;",
-    "bestPractice": "For GDPR/CCPA compliance, prefer a hybrid: soft-delete first (replace PII columns with a tombstone value, set deleted_at), then schedule hard deletion after the required retention window. Use a partial index on deleted_at IS NULL to keep normal queries fast without scanning deleted rows.",
-    "source": "PostgreSQL Docs — Partial Indexes; GDPR Article 17"
+    "explanation": "A exclusão lógica (soft delete) utiliza indicadores como deleted_at para ocultar registros de consultas normais preservando o histórico para auditoria. A exclusão física (hard delete) apaga a linha definitivamente do disco. A desvantagem do soft delete é a necessidade de filtros constantes com WHERE deleted_at IS NULL em todas as consultas da aplicação.",
+    "compiledJS": "-- Exclusão lógica (soft delete)\nUPDATE users\n  SET deleted_at = NOW()\nWHERE id = 42;\n\n-- Toda consulta deve filtrar:\nSELECT * FROM users WHERE deleted_at IS NULL;\n\n-- Automatizado com uma view:\nCREATE VIEW active_users AS\n  SELECT * FROM users WHERE deleted_at IS NULL;\n\n-- Exclusão física (hard delete)\nDELETE FROM users WHERE id = 42;",
+    "bestPractice": "Para conformidade com leis de privacidade (como LGPD e GDPR), prefira um modelo híbrido: aplique primeiro a exclusão lógica (substituindo dados pessoais por marcadores anônimos e definindo deleted_at) e agende a exclusão física definitiva após o período legal de retenção. Crie um índice parcial com filtro deleted_at IS NULL para manter consultas comuns rápidas sem percorrer registros desativados.",
+    "source": "PostgreSQL Docs: Partial Indexes; GDPR Article 17"
   },
   {
     "id": "i10",
-    "topic": "Schema-on-Read vs Write",
+    "topic": "Schema-on-Read vs Schema-on-Write",
     "question": "O que significa 'schema-on-write' em comparação com 'schema-on-read'?",
     "code": null,
     "options": [
@@ -336,10 +336,10 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Ambos os modelos validam tipos com rigor idêntico no momento de inserção"
     ],
     "correctIndex": 0,
-    "explanation": "Schema-on-write (típico de RDBMS tradicionais) valida os dados contra um esquema definido no momento da gravação, enquanto schema-on-read (como em data lakes e MongoDB) interpreta a estrutura no momento da consulta, proporcionando flexibilidade no armazenamento.",
+    "explanation": "O modelo schema-on-write valida os dados no momento da gravação com base em tipos e restrições predefinidas, barrando registros inválidos imediatamente. No modelo schema-on-read (típico de data lakes e bancos documentais flexíveis), qualquer formato pode ser persistido e a estrutura é interpretada apenas na consulta, transferindo a responsabilidade da validação para o momento da leitura.",
     "compiledJS": null,
-    "bestPractice": "Prefer schema-on-write for operational databases — catching schema violations at write time is vastly cheaper than discovering corrupted data weeks later during a reporting query. Use schema-on-read in data lakes and event stores where you don't control the producer's data shape, but validate with tools like Great Expectations or dbt tests before promoting data to reporting models.",
-    "source": "DDIA — Chapter 4: Encoding and Evolution"
+    "bestPractice": "Prefira schema-on-write para bancos operacionais, pois identificar inconsistências no momento da gravação custa muito menos do que descobrir dados corrompidos semanas depois durante relatórios. Utilize schema-on-read em data lakes e repositórios de eventos nos quais o formato de entrada não esteja sob seu controle direto, validando os dados com ferramentas como dbt antes de utilizá-los em modelos consolidados.",
+    "source": "DDIA: Capítulo 4: Encoding and Evolution"
   },
   {
     "id": "a01",
@@ -353,14 +353,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "O sharding por hash dispensa a definição de uma chave de particionamento"
     ],
     "correctIndex": 1,
-    "explanation": "O particionamento baseado em hash aplica uma função hash à chave de partição para distribuir os dados uniformemente, evitando pontos de concentração (hotspots) de escrita comuns ao usar chaves sequenciais com particionamento por faixa.",
+    "explanation": "O sharding baseado em hash utiliza uma função hash aplicada à chave de particionamento para espalhar os dados de forma uniforme entre os fragmentos, eliminando concentrações excessivas de escrita. O particionamento por faixa, em contrapartida, é suscetível a pontos quentes quando novos registros possuem chaves sequenciais, embora permita consultas por intervalo com facilidade.",
     "compiledJS": null,
-    "bestPractice": "Hash sharding is the right default for high-write-throughput systems with random key distributions (UUIDs, hashed user IDs). Use range sharding only when your queries are naturally range-based (time-series, geospatial) and you can tolerate hotspot mitigation strategies like pre-splitting or write throttling on hot shards.",
-    "source": "DDIA — Chapter 6: Partitioning"
+    "bestPractice": "O particionamento por hash é a melhor escolha padrão para sistemas com alta taxa de gravação e distribuição uniforme de chaves (como UUIDs e hashes de identificadores). Utilize particionamento por faixa apenas se suas consultas operarem nativamente por intervalos (séries temporais ou dados geoespaciais) e sua infraestrutura suportar técnicas de mitigação de pontos quentes, como pré-divisão de partições.",
+    "source": "DDIA: Capítulo 6: Partitioning"
   },
   {
     "id": "a02",
-    "topic": "Replication",
+    "topic": "Replicação",
     "question": "Qual é o principal trade-off da replicação síncrona em comparação com a replicação assíncrona?",
     "code": null,
     "options": [
@@ -370,10 +370,10 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "A replicação síncrona opera apenas em bancos documentais como MongoDB"
     ],
     "correctIndex": 1,
-    "explanation": "A replicação síncrona garante que a réplica confirme a gravação antes de o primário retornar sucesso, garantindo perda zero de dados ao custo de uma latência de escrita mais alta.",
-    "compiledJS": "-- PostgreSQL: configure synchronous standby\nALTER SYSTEM SET synchronous_standby_names = 'FIRST 1 (replica1)';\n-- Writes now wait for replica1 to confirm WAL receipt before COMMIT returns.\n\n-- Check current replication lag:\nSELECT\n  client_addr,\n  state,\n  sent_lsn - write_lsn AS write_lag_bytes,\n  sent_lsn - flush_lsn AS flush_lag_bytes\nFROM pg_stat_replication;",
-    "bestPractice": "Use synchronous replication for financial data where data loss is unacceptable. For most web applications, configure semi-synchronous replication or use PostgreSQL's synchronous_commit = remote_write (durability without fsync wait on the replica) to balance safety and latency. Always monitor replication lag — a lagging replica is a ticking clock of potential data loss.",
-    "source": "DDIA — Chapter 5: Replication"
+    "explanation": "Na replicação síncrona, a instância primária aguarda a confirmação de gravação em pelo menos uma réplica antes de responder com sucesso ao cliente, assegurando que não haja perda de dados em falhas ao custo de maior latência de escrita. Na replicação assíncrona, a confirmação é imediata e os dados trafegam em segundo plano, oferecendo maior vazão com possibilidade de perda caso a primária caia antes da sincronização.",
+    "compiledJS": "-- PostgreSQL: configura standby síncrono\nALTER SYSTEM SET synchronous_standby_names = 'FIRST 1 (replica1)';\n-- Gravações agora aguardam a replica1 confirmar o recebimento do WAL antes do retorno do COMMIT.\n\n-- Verifica o atraso de replicação atual:\nSELECT\n  client_addr,\n  state,\n  sent_lsn - write_lsn AS write_lag_bytes,\n  sent_lsn - flush_lsn AS flush_lag_bytes\nFROM pg_stat_replication;",
+    "bestPractice": "Utilize replicação síncrona em dados financeiros nos quais perda de dados seja inaceitável. Para a maioria das aplicações web, configure replicação semissíncrona ou use o parâmetro synchronous_commit = remote_write do PostgreSQL (que garante durabilidade sem esperar pelo fsync na réplica) para equilibrar segurança e latência. Monitore constantemente o atraso de replicação, pois réplicas defasadas representam risco iminente de perda em caso de falha.",
+    "source": "DDIA: Capítulo 5: Replication"
   },
   {
     "id": "a03",
@@ -387,10 +387,10 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Event Sourcing atualiza linhas in-place; CRUD anexa versões sequencialmente"
     ],
     "correctIndex": 1,
-    "explanation": "No Event Sourcing, o sistema persiste um log append-only imutável de eventos de domínio; o estado atual é reconstituído reproduzindo esses eventos, permitindo auditoria completa e consultas temporais.",
-    "compiledJS": "-- Events table (append-only, never updated or deleted)\nCREATE TABLE account_events (\n  id           BIGSERIAL PRIMARY KEY,\n  aggregate_id UUID       NOT NULL,\n  event_type   TEXT       NOT NULL,  -- \"MoneyDeposited\", \"MoneyWithdrawn\"\n  payload      JSONB      NOT NULL,\n  occurred_at  TIMESTAMPTZ DEFAULT NOW()\n);\n\n-- Current balance derived by replaying events:\nSELECT\n  SUM(CASE event_type\n    WHEN 'MoneyDeposited'  THEN (payload->>'amount')::NUMERIC\n    WHEN 'MoneyWithdrawn'  THEN -(payload->>'amount')::NUMERIC\n  END) AS balance\nFROM account_events\nWHERE aggregate_id = '<uuid>';",
-    "bestPractice": "Event Sourcing adds significant complexity — replay performance degrades as the event log grows (use snapshots after N events), and debugging eventual-consistency bugs requires tracing event streams. Apply it only to domains where auditability and temporal querying are first-class requirements (finance, healthcare, compliance). Most CRUD applications do not need it.",
-    "source": "Martin Fowler — Event Sourcing (martinfowler.com)"
+    "explanation": "Diferente de modelos CRUD onde alterações sobrescrevem o estado anterior, o Event Sourcing armazena cada modificação como um evento imutável em um log de eventos. O estado presente da entidade é obtido pela reprodução sequencial desses eventos históricos, viabilizando rastreabilidade total, reconstituição temporal e reconstrução de modelos analíticos.",
+    "compiledJS": "-- Tabela de eventos (append-only, sem atualizações ou exclusões)\nCREATE TABLE account_events (\n  id           BIGSERIAL PRIMARY KEY,\n  aggregate_id UUID       NOT NULL,\n  event_type   TEXT       NOT NULL,  -- \"MoneyDeposited\", \"MoneyWithdrawn\"\n  payload      JSONB      NOT NULL,\n  occurred_at  TIMESTAMPTZ DEFAULT NOW()\n);\n\n-- Saldo atual obtido pela reprodução dos eventos:\nSELECT\n  SUM(CASE event_type\n    WHEN 'MoneyDeposited'  THEN (payload->>'amount')::NUMERIC\n    WHEN 'MoneyWithdrawn'  THEN -(payload->>'amount')::NUMERIC\n  END) AS balance\nFROM account_events\nWHERE aggregate_id = '<uuid>';",
+    "bestPractice": "Event Sourcing acrescenta complexidade considerável: a performance de replay cai conforme o log de eventos cresce (exigindo snapshots a cada N eventos) e depurar inconsistências eventuais demanda rastrear fluxos de eventos. Aplique esse padrão apenas em domínios em que auditoria rigorosa e consultas temporais sejam requisitos fundamentais (finanças, saúde e conformidade legal). A maioria das aplicações CRUD convencionais não precisa dessa abordagem.",
+    "source": "Martin Fowler: Event Sourcing (martinfowler.com)"
   },
   {
     "id": "a04",
@@ -404,14 +404,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Aplica normalização estrita em 3NF em todas as tabelas de microsserviços"
     ],
     "correctIndex": 1,
-    "explanation": "O CQRS separa o modelo de dados utilizado para escritas (comandos) do modelo utilizado para leituras (consultas), permitindo escalabilidade, caching e otimização independentes para cada lado.",
+    "explanation": "O padrão CQRS separa a estrutura utilizada para operações de escrita (comandos) da estrutura utilizada para leituras (consultas). Isso permite que o lado de escrita seja totalmente normalizado e transacional, enquanto o modelo de leitura pode ser desnormalizado, armazenado em cache ou estruturado especificamente para as consultas exigidas pela interface.",
     "compiledJS": null,
-    "bestPractice": "CQRS is most powerful when combined with Event Sourcing — events from the write side rebuild the read-model projections. Without ES, CQRS can be implemented with simple DB triggers or CDC that populate a denormalised read table. Do not apply CQRS to simple CRUD screens — the added infrastructure (separate read store, synchronisation logic, eventual consistency) is pure overhead for most features.",
-    "source": "Martin Fowler — CQRS (martinfowler.com)"
+    "bestPractice": "O padrão CQRS demonstra seu maior potencial quando associado a Event Sourcing, permitindo que eventos da camada de escrita reconstruam as projeções de leitura. Sem Event Sourcing, o CQRS pode ser adotado com triggers ou CDC populando tabelas de leitura desnormalizadas. Não aplique CQRS em telas CRUD simples, pois a infraestrutura adicional (bancos distintos, rotinas de sincronização e consistência eventual) gera complexidade desnecessária para recursos rotineiros.",
+    "source": "Martin Fowler: CQRS (martinfowler.com)"
   },
   {
     "id": "a05",
-    "topic": "Locking",
+    "topic": "Bloqueio Otimista vs Pessimista",
     "question": "Qual é a diferença fundamental entre bloqueio otimista (optimistic locking) e bloqueio pessimista (pessimistic locking)?",
     "code": null,
     "options": [
@@ -421,15 +421,15 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Ambas as abordagens compartilham o mesmo mecanismo de trava no disco, diferenciando-se apenas na sintaxe SQL"
     ],
     "correctIndex": 1,
-    "explanation": "O bloqueio otimista permite o acesso concorrente e verifica conflitos (por exemplo, via coluna de versão) somente no momento do commit, enquanto o bloqueio pessimista retém a trava durante a transação para barrar atualizações concorrentes.",
-    "compiledJS": "-- Pessimistic: lock the row immediately\nBEGIN;\nSELECT * FROM inventory WHERE product_id = 5 FOR UPDATE;\n-- ... business logic ...\nUPDATE inventory SET stock = stock - 1 WHERE product_id = 5;\nCOMMIT;\n\n-- Optimistic: version column checked at update time\nUPDATE inventory\n  SET stock = stock - 1, version = version + 1\nWHERE product_id = 5 AND version = 7;\n-- If 0 rows updated → conflict → retry",
-    "bestPractice": "Use optimistic locking for web forms where conflicts are rare (user profile edits) and pessimistic locking for inventory or financial operations where two concurrent transactions acting on the same row would both succeed naively (double-booking, overselling). Expose the version column as an ETag in your API so clients can detect conflicts without hitting the DB.",
-    "source": "DDIA — Chapter 7: Transactions"
+    "explanation": "O bloqueio pessimista (como SELECT FOR UPDATE) retém travas na linha desde a leitura, impedindo modificações concorrentes até o fim da transação. Já o bloqueio otimista permite leituras livres e valida um número de versão ou timestamp na atualização; se outro processo tiver alterado a linha no intervalo, a transação aborta e é repetida pela aplicação.",
+    "compiledJS": "-- Bloqueio pessimista: trava a linha imediatamente\nBEGIN;\nSELECT * FROM inventory WHERE product_id = 5 FOR UPDATE;\n-- ... regra de negócio ...\nUPDATE inventory SET stock = stock - 1 WHERE product_id = 5;\nCOMMIT;\n\n-- Bloqueio otimista: validação de versão no UPDATE\nUPDATE inventory\n  SET stock = stock - 1, version = version + 1\nWHERE product_id = 5 AND version = 7;\n-- Se retornar 0 linhas afetadas: ocorreu conflito, reiniciar operação",
+    "bestPractice": "Prefira bloqueio otimista em interfaces interativas nas quais disputas simultâneas sejam raras (como atualização de perfil cadastral) e bloqueio pessimista para estoques críticos ou fluxos de caixa em que transações concorrentes na mesma linha gerem problemas sérios de inconsistência (como sobreposição de reservas). Disponibilize o número da versão como ETag na sua API para detectar conflitos cedo.",
+    "source": "DDIA: Capítulo 7: Transactions"
   },
   {
     "id": "a06",
-    "topic": "Partitioning",
-    "question": "Qual é a diferença entre uma exclusão lógica (soft delete) e uma exclusão física (hard delete)?",
+    "topic": "Particionamento",
+    "question": "Qual é a diferença entre o particionamento horizontal (sharding) e o particionamento vertical?",
     "code": null,
     "options": [
       "Horizontal divide linhas entre nós; vertical divide colunas em tabelas distintas",
@@ -438,14 +438,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Ambas as estratégias representam operações físicas idênticas na mesma máquina"
     ],
     "correctIndex": 0,
-    "explanation": "A exclusão lógica (soft delete) define um indicador (como is_deleted ou deleted_at) para ocultar o registro das consultas normais preservando os dados; a exclusão física (hard delete) remove permanentemente o registro da tabela.",
-    "compiledJS": "-- PostgreSQL declarative horizontal partitioning by month:\nCREATE TABLE events (\n  id         BIGINT,\n  created_at TIMESTAMPTZ NOT NULL,\n  payload    JSONB\n) PARTITION BY RANGE (created_at);\n\nCREATE TABLE events_2024_01 PARTITION OF events\n  FOR VALUES FROM ('2024-01-01') TO ('2024-02-01');\n\nCREATE TABLE events_2024_02 PARTITION OF events\n  FOR VALUES FROM ('2024-02-01') TO ('2024-03-01');",
-    "bestPractice": "Use PostgreSQL declarative table partitioning for time-series data with a clear partition key — partition pruning eliminates entire months from scans. Pair with pg_partman for automated partition creation and old-partition dropping. For vertical partitioning, split wide tables when profiling shows that hot queries are needlessly reading large columns (BYTEA, TEXT, JSONB) they do not use.",
-    "source": "PostgreSQL Docs — Table Partitioning; DDIA Chapter 6"
+    "explanation": "O particionamento horizontal (sharding) fragmenta as linhas de uma tabela por múltiplos nós ou arquivos com base em uma chave de partição, mantendo a coleção integral de colunas em cada partição. O particionamento vertical fragmenta tabelas extensas agrupando colunas correlatas em tabelas menores, separando dados pesados pouco consultados (como imagens BLOB ou textos extensos) para manter a rota de busca principal leve e ágil.",
+    "compiledJS": "-- Particionamento horizontal declarativo por mês no PostgreSQL:\nCREATE TABLE events (\n  id         BIGINT,\n  created_at TIMESTAMPTZ NOT NULL,\n  payload    JSONB\n) PARTITION BY RANGE (created_at);\n\nCREATE TABLE events_2024_01 PARTITION OF events\n  FOR VALUES FROM ('2024-01-01') TO ('2024-02-01');\n\nCREATE TABLE events_2024_02 PARTITION OF events\n  FOR VALUES FROM ('2024-02-01') TO ('2024-03-01');",
+    "bestPractice": "Utilize o particionamento declarativo nativo do PostgreSQL em dados de séries temporais com uma chave de partição clara, permitindo que a poda de partições ignore meses desnecessários nas consultas. Combine com extensões como pg_partman para criar e purgar partições automaticamente. Para particionamento vertical, isole tabelas muito largas quando diagnósticos revelarem que leituras frequentes carregam colunas pesadas sem necessidade.",
+    "source": "PostgreSQL Docs: Table Partitioning; DDIA Capítulo 6"
   },
   {
     "id": "a07",
-    "topic": "Two-Phase Commit",
+    "topic": "Two-Phase Commit (2PC)",
     "question": "Qual problema o protocolo Two-Phase Commit (2PC) resolve em bancos de dados distribuídos?",
     "code": null,
     "options": [
@@ -455,14 +455,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Compacta logs de transação para economizar consumo de espaço em disco nos nós"
     ],
     "correctIndex": 1,
-    "explanation": "O protocolo Two-Phase Commit assegura atomicidade em transações distribuídas: na primeira fase um coordenador solicita a preparação de todos os participantes; na segunda fase ele instrui o commit ou abort com base na resposta unânime.",
+    "explanation": "O protocolo Two-Phase Commit assegura atomicidade em transações que abrangem múltiplos nós ou bancos autônomos. Na Fase 1 (Preparação), o coordenador indaga a todos os participantes se estão prontos para efetivar; na Fase 2 (Efetivação), se todos aprovarem, o coordenador comanda o commit em conjunto, ou aborta caso algum discorde. A fragilidade reside no bloqueio: se o coordenador cair antes da fase conclusiva, os nós retêm travas sem poder deliberar sozinhos.",
     "compiledJS": null,
-    "bestPractice": "Avoid 2PC across microservices — it introduces tight coupling, blocking failures, and is unsupported by most cloud databases. Use the Saga pattern instead: decompose the transaction into a sequence of local transactions with compensating actions for rollback. Reserve 2PC for cases where both databases are under your control and support the protocol natively (PostgreSQL PREPARE TRANSACTION).",
-    "source": "DDIA — Chapter 9: Consistency and Consensus"
+    "bestPractice": "Evite empregar 2PC em arquiteturas de microsserviços, dado que o acoplamento severo e o risco de retenção de bloqueios inviabilizam a resiliência global, além de não contar com suporte em serviços em nuvem. Prefira implementar o padrão Saga por meio de transações locais encadeadas com passos compensatórios. Guarde o 2PC exclusivamente para situações onde ambos os bancos estejam sob seu controle direto com suporte nativo.",
+    "source": "DDIA: Capítulo 9: Consistency and Consensus"
   },
   {
     "id": "a08",
-    "topic": "Time-Series Design",
+    "topic": "Modelagem de Séries Temporais",
     "question": "Qual técnica de modelagem de dados é mais adequada para dados de séries temporais com alta taxa de escrita e consultas por faixa de tempo?",
     "code": null,
     "options": [
@@ -472,10 +472,10 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Aplicar normalização 3NF estrita para eliminar atributos temporais redundantes"
     ],
     "correctIndex": 1,
-    "explanation": "Dados de séries temporais se beneficiam de escritas append-only e particionamento por faixa de tempo: incluir o timestamp na chave primária possibilita varreduras eficientes por faixa, e o particionamento mantém as partições ativas compactas.",
-    "compiledJS": "-- Append-only, time-range partitioned metrics table\nCREATE TABLE metrics (\n  metric_name TEXT        NOT NULL,\n  recorded_at TIMESTAMPTZ NOT NULL,\n  value       DOUBLE PRECISION NOT NULL,\n  PRIMARY KEY (metric_name, recorded_at)  -- clustered by time per metric\n) PARTITION BY RANGE (recorded_at);\n\n-- Query: last 24 hours (partition pruning eliminates all other partitions)\nSELECT AVG(value)\nFROM metrics\nWHERE metric_name = 'cpu_usage'\n  AND recorded_at >= NOW() - INTERVAL '24 hours';",
-    "bestPractice": "For production time-series at scale, evaluate TimescaleDB (PostgreSQL extension) or ClickHouse before building your own partitioning scheme. TimescaleDB automates hypertable creation, chunk management, and compression. ClickHouse provides columnar storage that achieves 10–100x better compression and query speed for analytical time-series workloads.",
-    "source": "TimescaleDB Docs — Time-Series Best Practices"
+    "explanation": "Dados de séries temporais possuem três propriedades: adição contínua (append-only), consultas orientadas a períodos temporais e descarte programado de dados antigos. Tabelas append-only particionadas por data preservam partições recentes enxutas, viabilizam descartes velozes (DROP PARTITION em vez de DELETE) e permitem a poda de partições em filtros temporais.",
+    "compiledJS": "-- Tabela de métricas append-only particionada por intervalo de tempo\nCREATE TABLE metrics (\n  metric_name TEXT        NOT NULL,\n  recorded_at TIMESTAMPTZ NOT NULL,\n  value       DOUBLE PRECISION NOT NULL,\n  PRIMARY KEY (metric_name, recorded_at)  -- agrupado por tempo por métrica\n) PARTITION BY RANGE (recorded_at);\n\n-- Consulta: últimas 24 horas (poda de partições elimina as outras partições)\nSELECT AVG(value)\nFROM metrics\nWHERE metric_name = 'cpu_usage'\n  AND recorded_at >= NOW() - INTERVAL '24 hours';",
+    "bestPractice": "Para séries temporais volumosas em produção, avalie o TimescaleDB (extensão do PostgreSQL) ou ClickHouse antes de implementar mecanismos próprios de particionamento. O TimescaleDB automatiza hypertables, gestão de blocos e compressão de dados. O ClickHouse entrega armazenamento colunar com taxas de compressão e velocidade analítica superiores para consultas históricas.",
+    "source": "TimescaleDB Docs: Time-Series Best Practices"
   },
   {
     "id": "a09",
@@ -489,14 +489,14 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "É o único modelo multi-inquilino capaz de oferecer suporte a transações ACID"
     ],
     "correctIndex": 1,
-    "explanation": "A estratégia de banco por cliente oferece a cada cliente um banco isolado, assegurando que não haja vazamento de dados entre clientes, simplificando backups independentes e impedindo que consultas pesadas de um usuário afetem os demais.",
+    "explanation": "A estratégia de banco por cliente destina uma instância ou base exclusiva para cada contratante, impedindo que vulnerabilidades de código exponham dados entre organizações, permitindo políticas individuais de backup e restauração e protegendo o ambiente contra o problema de vizinho barulhento (consultas lentas de um cliente prejudicarem os demais). Em contrapartida, acarreta custos e despesas operacionais superiores.",
     "compiledJS": null,
-    "bestPractice": "For early-stage SaaS, start with shared schema + row-level security (PostgreSQL RLS) — it is operationally simpler and scales well to thousands of small tenants. Offer database-per-tenant as a premium isolation tier for enterprise customers with compliance requirements (HIPAA, SOC 2). Use a connection pooler (PgBouncer, RDS Proxy) to avoid connection exhaustion when managing many tenant databases.",
-    "source": "Citus Data — Multi-Tenant Architecture Patterns"
+    "bestPractice": "Para projetos SaaS em estágio inicial, dê preferência a esquemas compartilhados com segurança ao nível de linha (Row-Level Security / RLS no PostgreSQL), pois essa arquitetura é mais simples de operar e atende milhares de clientes com baixo custo. Disponibilize instâncias dedicadas como oferta corporativa de maior valor agregado. Adote multiplexadores de conexão (como PgBouncer) para evitar a sobrecarga de conexões.",
+    "source": "Citus Data: Multi-Tenant Architecture Patterns"
   },
   {
     "id": "a10",
-    "topic": "Saga Pattern",
+    "topic": "Padrão Saga",
     "question": "De que maneira o padrão Saga trata a consistência de transações distribuídas sem a necessidade de usar 2PC?",
     "code": null,
     "options": [
@@ -506,9 +506,9 @@ export const DATABASE_DESIGN_QUESTIONS_PT: InterviewQuestion[] = [
       "Enfileira mutações em memória temporária aguardando que um worker execute uma única transação ACID unificada"
     ],
     "correctIndex": 1,
-    "explanation": "O padrão Saga encadeia transações locais entre serviços via eventos ou orquestração; se uma etapa falha, transações compensatórias revertem as etapas concluídas anteriormente, garantindo consistência eventual sem necessidade de bloqueios distribuídos.",
+    "explanation": "O padrão Saga fragmenta transações distribuídas longas em uma sequência de transações locais confinadas a serviços individuais. Caso ocorra uma falha em qualquer elo da cadeia, o sistema dispara transações de compensação que revertem semanticamente as etapas já concluídas para restaurar um estado estável e consistente. Diferente do 2PC, Sagas dispensam bloqueios distribuídos globais, facilitando a escalabilidade.",
     "compiledJS": null,
-    "bestPractice": "Use orchestration-based Sagas (a central workflow engine like Temporal or AWS Step Functions) over choreography for complex business flows — the explicit workflow definition makes debugging, monitoring, and adding new steps far easier than tracing event chains across services. Always design compensating transactions before implementing forward steps: if you cannot undo a step, you cannot safely include it in a Saga.",
-    "source": "Chris Richardson — Microservices Patterns, Chapter 4"
+    "bestPractice": "Prefira abordagens baseadas em orquestração (utilizando ferramentas dedicadas como Temporal ou AWS Step Functions) para coreografias em fluxos de negócios elaborados, pois a visão unificada do processo agiliza diagnósticos e observabilidade. Projete sempre as transações compensatórias previamente: se um passo não puder ser revertido com segurança, ele não deve ser inserido em uma Saga.",
+    "source": "Chris Richardson: Microservices Patterns, Capítulo 4"
   }
 ]

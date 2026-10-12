@@ -835,7 +835,27 @@
         },
         {
           "question": "¿Puedo combinar PDFs protegidos con contraseña?",
-          "answer": "Los PDFs protegidos con contraseña no se pueden combinar. Primero elimina la protección con tu visor de PDF."
+          "answer": "Los PDFs protegidos con contraseña no se pueden combinar. Quita primero la protección en tu visor de PDF y combina el archivo desbloqueado."
+        },
+        {
+          "question": "¿Combinar PDFs reduce la calidad?",
+          "answer": "No. La herramienta combina los PDFs a nivel de estructura del archivo, así que las imágenes, las fuentes y el formato se mantienen tal como estaban en los originales. No hay recompresión ni pérdida."
+        },
+        {
+          "question": "¿Puedo reordenar las páginas antes de combinar?",
+          "answer": "Sí. Arrastra las tarjetas de los archivos al orden que quieras antes de hacer clic en Combinar. El PDF final sigue exactamente ese orden, así que pon la portada o el índice como primer archivo."
+        },
+        {
+          "question": "¿Cuántos archivos puedo combinar a la vez?",
+          "answer": "No hay un límite fijo de cantidad. Puedes combinar dos archivos o veinte; solo las combinaciones muy grandes pueden ir más lentas según la memoria de tu equipo."
+        },
+        {
+          "question": "¿Funciona en cualquier navegador y en el celular?",
+          "answer": "Sí. La herramienta funciona en todos los navegadores modernos — Chrome, Firefox, Safari y Edge — tanto en computadora como en celular, sin instalar nada."
+        },
+        {
+          "question": "¿Mis datos quedan privados al usar la herramienta?",
+          "answer": "Sí. Toda la combinación ocurre en tu navegador con JavaScript. Los archivos PDF no se envían a ningún servidor y se borran de la memoria en cuanto cierras o recargas la página."
         }
       ],
       "richContent": {
@@ -1103,16 +1123,36 @@
         },
         {
           "question": "¿Qué tamaño tendrán las páginas del PDF?",
-          "answer": "Cada página tiene las dimensiones de la imagen correspondiente, por lo que tus imágenes nunca se escalan ni se recortan."
+          "answer": "Cada página tiene las dimensiones de la imagen correspondiente, así que tus imágenes nunca se escalan, se estiran ni se recortan: se conserva cada píxel del original."
+        },
+        {
+          "question": "¿Se mantiene la calidad de las imágenes?",
+          "answer": "Sí. La herramienta incrusta los datos originales de la imagen directamente en el PDF, sin recodificar, por lo que no hay pérdida de calidad en la conversión."
+        },
+        {
+          "question": "¿Puedo juntar varias imágenes en un mismo PDF?",
+          "answer": "Sí, y es el uso principal. Agrega tantas imágenes como quieras y cada una se convierte en una página del PDF final, en el orden que definas."
+        },
+        {
+          "question": "¿Cómo reordeno las imágenes antes de convertir?",
+          "answer": "Arrastra las miniaturas al orden que quieras antes de hacer clic en Convertir. Las páginas del PDF siguen exactamente esa secuencia."
+        },
+        {
+          "question": "¿Hay un límite de cantidad de imágenes?",
+          "answer": "No hay un límite fijo. Puedes combinar dos imágenes o cincuenta en un solo PDF. Los lotes muy grandes pueden tardar unos segundos más según tu equipo."
+        },
+        {
+          "question": "¿El texto de las fotos queda buscable en el PDF?",
+          "answer": "No. La salida es un PDF basado en imágenes, así que el texto dentro de las fotos no se puede seleccionar ni buscar; para eso habría que aplicar OCR (reconocimiento de texto) aparte."
         }
       ],
       "richContent": {
         "whatIs": "La conversión de JPG a PDF inserta una o más imágenes JPEG en un documento PDF. Los casos de uso incluyen convertir fotos de notas escritas a mano o formularios llenos de papel en un documento sumitábel, combinar varias imágenes escaneadas en un solo PDF para que todo llegue en un solo archivo, crear un portafolio PDF a partir de una colección de archivos de imagen y enviar documentos de identificación fotográfica en formato PDF según lo requieren muchas formas oficiales, solicitudes de visa y procesos de incorporación de RRHH. Es importante notar que la salida es un PDF basado en imágenes - el texto en cualquier imagen no es legible o searchable por máquina a menos que apliques OCR (recognition óptica de caracteres) por separado.",
         "howToUse": [
-          "Sube una o más imágenes JPEG o PNG haciendo clic en el área de soltar o arrastrando los archivos dentro.",
-          "Arrastra las miniaturas de las imágenes para ordenarlas según el orden que deseas que aparezcan en el PDF.",
+          "Sube una o más imágenes JPEG o PNG haciendo clic en el área de soltar o arrastrando los archivos.",
+          "Arrastra las miniaturas para ordenarlas según el orden en que quieres que aparezcan en el PDF.",
           "Haz clic en Convertir a PDF para generar el documento.",
-          "El PDF se descarga instantáneamente a tu dispositivo."
+          "El PDF se descarga al instante a tu dispositivo."
         ],
         "whyItMatters": "Muchas plataformas de presentación oficial, sistemas de solicitud universitaria y plataformas de RRHH aceptan PDF pero no JPEG. Combinar varias imágenes en un solo PDF también satisface los requisitos de envío de archivos individuales - evitando el problema de una forma que acepta solo una anexión cuando tienes tres páginas escaneadas. El contenedor PDF también soporta metadatos (título, autor), protección con contraseña y firmas digitales que los archivos JPEG raw no tienen, dándote más control sobre cómo se usa el documento después de la entrega.",
         "proTip": "Todo el procesamiento ocurre completamente en tu navegador - ningún archivo se carga a ningún servidor. Tus documentos nunca salen de tu dispositivo. Si tus imágenes son muy de alta resolución - las fotos del teléfono generalmente son de 4000×3000 píxeles y 6–12 MB cada una - comprime o redimensiona las imágenes antes de convertirlas. Un PDF que contiene tres imágenes no comprimidas de fotos del teléfono puede alcanzar hasta 30–40 MB. Busca imágenes con menos de 2 MB cada una para producir un PDF de salida razonablemente pequeño que pase la mayoría de los límites de tamaño de carga."
@@ -3183,24 +3223,36 @@
         },
         {
           "question": "¿Cuántos elementos puedo agregar?",
-          "answer": "Puedes agregar tantos elementos como quieras, aunque la ruleta se vuelve difícil de leer con más de 20 elementos."
+          "answer": "Los que quieras. En la práctica, por encima de unos 20 elementos las porciones quedan finas y difíciles de leer. Para listas largas conviene usar el Selector de Nombres, que maneja mejor a muchos participantes."
         },
         {
           "question": "¿Puedo usarla en el aula?",
-          "answer": "¡Claro que sí! Los docentes adoran la ruleta para elegir estudiantes, asignar temas y tomar decisiones aleatorias de forma justa."
+          "answer": "Sí, es uno de los usos favoritos. Pega los nombres del curso y gira para llamar a los alumnos al azar. La animación convierte la selección en un juego y elimina cualquier apariencia de que el docente está 'eligiendo' a alguien a propósito."
         },
         {
           "question": "¿En qué se diferencia de Wheel of Names?",
-          "answer": "Nuestra ruleta es completamente gratuita, no requiere cuenta, guarda tus elementos en la URL para compartirlos fácilmente y funciona en cualquier dispositivo, incluso sin conexión."
+          "answer": "La nuestra es totalmente gratuita, no pide registro, guarda los elementos en la URL para que los compartas con un enlace y funciona en cualquier dispositivo, incluso sin conexión una vez que la página carga."
+        },
+        {
+          "question": "¿Puedo poner cualquier tipo de opción en la ruleta?",
+          "answer": "Sí. Escribe una opción por línea en el cuadro de edición: nombres, tareas, temas de trabajo, restaurantes, premios, castigos de un juego. La ruleta se actualiza al instante mientras editas la lista."
+        },
+        {
+          "question": "¿Y si la ruleta cae en el mismo resultado dos veces seguidas?",
+          "answer": "Cada giro es independiente, así que repetir es posible por azar. Si quieres asegurarte de que cada opción salga una sola vez, usa el Selector de Nombres con la opción 'eliminar al elegir', que trabaja sin reemplazo."
+        },
+        {
+          "question": "¿Sirve para sorteos en vivo?",
+          "answer": "Sí. Carga los nombres de los participantes y gira frente a la audiencia para revelar al ganador al momento. Para listas muy grandes, el Selector de Nombres es más cómodo; la ruleta luce mejor cuando todas las opciones caben en la pantalla."
         }
       ],
       "richContent": {
         "whatIs": "Un selector de rueda giratoria es un visualizador, seleccionador aleatorio presentado como una rueda quegazón con secciones personalizables. Los casos de uso incluyen juegos en clase, toma de decisiones en el trabajo (donde ordenar almorzar), juegos de fiesta, elegir entre opciones cuando estés paralizado por la indecisión y sorteos de premios gamificados. La animación que gira es puramente cosmológica - el resultado ganador se determina por el generador de números aleatorios antes de que comience la animación, asegurando una verdadera justicia independientemente de cómo vea la rueda mientras se desacelera.",
         "howToUse": [
-          "Añade tus opciones a la rueda escribiéndolas en el cuadro de edición, una por línea.",
-          "Haz clic en Spin para iniciar la animación de la rueda.",
-          "Observa cómo la rueda se desacelera y cae en el resultado seleccionado aleatoriamente.",
-          "Opcionalmente, elimina la opción ganadora antes del siguiente giro para evitar repetir."
+          "Agrega las opciones en el cuadro de edición, una por línea.",
+          "Haz clic en Girar para iniciar la animación de la rueda.",
+          "Observa cómo la ruleta frena y se detiene en el resultado sorteado.",
+          "Si quieres, borra la opción ganadora antes del siguiente giro para no repetir."
         ],
         "whyItMatters": "El formato visual de quegazón hace que la selección aleatoria sea más atractiva y dramática que un texto plano. Para el uso en clase, los estudiantes responden mejor a la animación - lo convierte en un juego en lugar de una evaluación. Para premios y sorteos, la construcción mientras la rueda se desacelera aumenta la emoción y el valor percibido del resultado, haciendo que la experiencia sea más memorable para los participantes.",
         "proTip": "La investigación sobre la fatiga en las decisiones muestra que cuando reaccionas al resultado de la rueda - ya sea que te sientas aliviado o decepcionado - obtienes información honesta sobre lo que realmente querías. Si la rueda cae en una opción y te das un flash de decepción, eso te dice cuál fue la opción que realmente preferiste. Usa la rueda como una herramienta reveladora de preferencias, no solo como un randomizador."
@@ -3317,28 +3369,44 @@
       "faqs": [
         {
           "question": "¿Qué es 'elegir sin reemplazo'?",
-          "answer": "Cuando está activado, cada nombre elegido se elimina del grupo para que no pueda seleccionarse de nuevo. Ideal para rifas donde cada participante tiene una oportunidad única e igual."
+          "answer": "Cuando esta opción está activada, cada nombre elegido sale de la lista y no puede volver a salir. Es el modo ideal para rifas y sorteos, donde cada participante tiene una sola oportunidad, igual a la de los demás."
         },
         {
-          "question": "¿La selección es verdaderamente aleatoria?",
-          "answer": "Sí. Los nombres se seleccionan con Math.random(), que produce un resultado impredecible cada vez."
+          "question": "¿La selección es realmente aleatoria?",
+          "answer": "Sí. Los nombres se eligen con la función Math.random() de JavaScript, que da un resultado impredecible en cada clic. Ni el orden de carga, ni el largo del nombre, ni la posición en la lista influyen en quién sale elegido."
         },
         {
-          "question": "¿Puedo usar esto para actividades en el aula?",
-          "answer": "Por supuesto. Pega tu lista de estudiantes, activa 'eliminar al elegir' para que ningún alumno sea llamado dos veces y úsalo para preguntas o asignación de tareas al azar."
+          "question": "¿Puedo usarlo para actividades en el aula?",
+          "answer": "Sí, es uno de los usos más comunes. Pega la lista del curso, activa 'eliminar al elegir' y ve llamando a los alumnos sin repetir a nadie. El método mantiene la participación pareja y a la clase atenta, porque cualquiera puede ser el siguiente."
         },
         {
           "question": "¿Cuántos nombres puedo agregar?",
-          "answer": "No hay un límite estricto. La herramienta funciona con listas de cualquier tamaño, desde 2 hasta cientos de nombres."
+          "answer": "No hay un límite fijo. La herramienta funciona con listas de cualquier tamaño, desde 2 nombres hasta varios cientos. Las listas largas se sortean igual de rápido."
+        },
+        {
+          "question": "¿Puedo poner nombres completos, apodos o números?",
+          "answer": "Sí. Escribe lo que quieras, un elemento por línea: nombres de pila, nombres completos, apodos, correos, números de matrícula o números de boleto de rifa. El selector trata cada línea como una opción."
+        },
+        {
+          "question": "¿Puedo elegir más de un ganador de una vez?",
+          "answer": "Sí. Elige el primer nombre, activa 'eliminar al elegir' y vuelve a hacer clic para el segundo, el tercero y así sucesivamente. Cada nombre sale de la lista al ser elegido, por lo que nadie puede ganar dos veces."
+        },
+        {
+          "question": "¿Sirve para rifas y sorteos con premio?",
+          "answer": "Sí. Numera los boletos vendidos, pega el rango de números en la lista, desactiva la repetición y sortea frente a los participantes. Como el resultado se genera al momento y en el propio navegador, puedes mostrar la pantalla durante una transmisión en vivo."
+        },
+        {
+          "question": "¿Mi lista de nombres queda guardada?",
+          "answer": "La lista no se guarda automáticamente entre una visita y otra. Si necesitas una lista fija para reutilizar y compartir, la herramienta Girar la Ruleta guarda los elementos dentro de la propia URL de la página."
         }
       ],
       "richContent": {
-        "whatIs": "Un generador de nombres aleatorios selecciona uno o más nombres al azar desde una lista que proporciones. Esta herramienta general de propósito funciona para cualquier colección de nombres: elegir los oradores de reuniones, seleccionar ganadores de concursos, randomizar el orden de lectura en una aula, asignar tareas o decidir cuándo es el turno de hacer tareas. A diferencia del generador específico para aulas, esta herramienta está diseñada para cualquier contexto donde necesites una selección aleatoria justa de una lista de personas o opciones.",
+        "whatIs": "El selector de nombres elige al azar uno o más nombres de una lista que tú pegas. Es una herramienta de propósito general: sirve para definir quién presenta primero en una reunión, sacar al ganador de un concurso o una rifa, sortear el orden de exposición de un trabajo, repartir las tareas de un proyecto o decidir a quién le toca lavar los platos. A diferencia de un selector pensado solo para el aula, aquí la idea es que funcione en cualquier contexto donde necesites una elección justa entre personas u opciones.",
         "howToUse": [
-          "Ingresa tus nombres en el cuadro de texto, uno por línea.",
-          "Haz clic en 'Pick' para seleccionar al azar un nombre de tu lista.",
-          "Lee el ganador resaltado mostrado en pantalla.",
-          "Opcionalmente, elimina el nombre seleccionado para evitar repetirlo en las selecciones siguientes."
+          "Escribe o pega los nombres en el cuadro de texto, uno por línea.",
+          "Haz clic en Elegir para sacar un nombre al azar de la lista.",
+          "Mira el ganador resaltado en la pantalla.",
+          "Activa 'eliminar al elegir' y vuelve a hacer clic para sacar los siguientes nombres sin repetir a nadie."
         ],
         "whyItMatters": "La selección aleatoria evita la favoritismo y la percepción de sesgo. En entornos profesionales, asignar al azar quién presenta primero o quién recibe una tarea elimina cualquier apariencia de parcialidad. En entornos sociales, saca el incómodo negociación de decisiones como quién elige el restaurante esta noche. Ambos resultados - la justicia real y la apariencia de justicia - son igualmente importantes en las dinámicas grupales.",
         "proTip": "Para uso continuo como la rotación semanal de tareas o roles recurrentes de reuniones, mantén una lista en curso y elimina los nombres seleccionados hasta que todos hayan sido elegidos una vez, luego restablece la lista. Esto asegura una distribución equitativa entre el grupo en lugar de una selección puramente aleatoria, que puede repetir accidentalmente nombres antes de que todos tengan su turno."
@@ -3513,8 +3581,8 @@
       "tails": "Cruz",
       "faqs": [
         {
-          "question": "¿El lanzamiento de moneda es verdaderamente justo?",
-          "answer": "Sí. Cada lanzamiento se determina con Math.random(), dando a cara y cruz una probabilidad igual del 50%."
+          "question": "¿El lanzamiento de moneda es realmente justo?",
+          "answer": "Sí. Cada lanzamiento lo decide la función Math.random() de JavaScript, que sortea un número antes de que empiece la animación. Cara y cruz tienen exactamente un 50% de probabilidad en cada tiro."
         },
         {
           "question": "¿Puedo lanzar varias veces?",
@@ -3526,7 +3594,27 @@
         },
         {
           "question": "¿Funciona sin conexión a internet?",
-          "answer": "Sí. Una vez que la página está cargada, el lanzamiento de moneda funciona 100% sin conexión."
+          "answer": "Sí. Una vez que la página carga, el lanzamiento funciona 100% sin conexión. Nada se envía a un servidor: el sorteo ocurre por completo en tu navegador."
+        },
+        {
+          "question": "¿Por qué usar una moneda digital en vez de una real?",
+          "answer": "Una moneda física puede tener un pequeño sesgo por su distribución de peso, la forma de lanzarla o la superficie donde cae. Un estudio de Diaconis, Holmes y Montgomery (2007) midió que las monedas lanzadas con la mano caen del mismo lado en que empezaron cerca del 51% de las veces. La moneda digital usa una función aleatoria uniforme, así que es tan justa como puede serlo una herramienta, y siempre está a mano."
+        },
+        {
+          "question": "¿Sirve para tomar decisiones y resolver disputas?",
+          "answer": "Sí. Como ambos resultados tienen un 50% de probabilidad, es una forma imparcial de resolver una elección entre dos opciones. Se usa mucho para decidir quién empieza un juego, quién paga la cuenta o cualquier empate en el que nadie quiere ser quien decide."
+        },
+        {
+          "question": "¿Puedo usarlo para deportes?",
+          "answer": "Sí. Muchos partidos usan el sorteo de moneda para decidir el lado de la cancha o el saque inicial. Para partidos informales, entrenamientos o juegos entre amigos, la moneda digital vale igual que una física."
+        },
+        {
+          "question": "¿Sirve para el aula?",
+          "answer": "Sí. Docentes lo usan para enseñar probabilidad con datos reales: pide a la clase que lance 100 veces y anote los resultados para ver la ley de los grandes números en acción — la proporción de caras se acerca al 50% a medida que aumenta el número de tiros."
+        },
+        {
+          "question": "¿Cómo se genera la aleatoriedad?",
+          "answer": "El sorteo usa la función Math.random() de JavaScript, que devuelve un número decimal pseudoaleatorio entre 0 y 1. Si el número es menor que 0,5, el resultado es cara; si es 0,5 o mayor, es cruz. Así ambos lados tienen la misma probabilidad."
         }
       ],
       "richContent": {

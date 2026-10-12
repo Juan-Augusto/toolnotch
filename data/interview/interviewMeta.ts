@@ -245,7 +245,7 @@ const INTERVIEW_META_BY_SLUG: Record<string, Record<SupportedLocale, InterviewQu
     pt: {
       title: 'Database Design Interview Quiz',
       subtitle: '30 questões sobre modelagem relacional, ACID, teorema CAP, estratégias de sharding, CQRS, Event Sourcing e padrões distribuídos.',
-      secondaryTabTitle: 'Query Plan / DDL',
+      secondaryTabTitle: 'Plano de Consulta / DDL',
       levelCards: [
         {
           level: 'beginner',
@@ -263,7 +263,7 @@ const INTERVIEW_META_BY_SLUG: Record<string, Record<SupportedLocale, InterviewQu
           level: 'advanced',
           title: 'Avançado',
           desc: '10 questões sobre sistemas distribuídos e transações complexas.',
-          topics: ['Event Sourcing', 'CQRS', 'Saga Pattern', 'Optimistic vs Pessimistic Locking', 'Two-Phase Commit'],
+          topics: ['Event Sourcing', 'CQRS', 'Saga Pattern', 'Bloqueio Otimista vs Pessimista', 'Two-Phase Commit (2PC)'],
         },
       ],
     },
