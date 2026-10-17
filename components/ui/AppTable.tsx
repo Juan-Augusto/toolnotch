@@ -43,14 +43,11 @@ export interface AppTableProps<T = any>
   children?: ReactNode;
 }
 
-export interface AppTableHeaderProps
-  extends HTMLAttributes<HTMLTableSectionElement> {}
+export type AppTableHeaderProps = HTMLAttributes<HTMLTableSectionElement>;
 
-export interface AppTableBodyProps
-  extends HTMLAttributes<HTMLTableSectionElement> {}
+export type AppTableBodyProps = HTMLAttributes<HTMLTableSectionElement>;
 
-export interface AppTableFooterProps
-  extends HTMLAttributes<HTMLTableSectionElement> {}
+export type AppTableFooterProps = HTMLAttributes<HTMLTableSectionElement>;
 
 export interface AppTableRowProps
   extends HTMLAttributes<HTMLTableRowElement> {
@@ -71,8 +68,7 @@ export interface AppTableCellProps
   compact?: boolean;
 }
 
-export interface AppTableCaptionProps
-  extends HTMLAttributes<HTMLTableCaptionElement> {}
+export type AppTableCaptionProps = HTMLAttributes<HTMLTableCaptionElement>;
 
 const alignClasses: Record<"left" | "center" | "right", string> = {
   left: "text-left",

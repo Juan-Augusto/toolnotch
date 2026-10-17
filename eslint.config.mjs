@@ -20,8 +20,26 @@ const eslintConfig = defineConfig([
     "public/**/*.js",
     // Agent worktree checkouts — not source to lint
     ".claude/worktrees/**",
+    // Throwaway scripts and the Storybook init template
+    "scratch/**",
+    "stories/**",
   ]),
-  ...storybook.configs["flat/recommended"]
+  {
+    // Generic table/formatter/pdfjs/i18n-mock typings are intentionally loose
+    files: [
+      "components/ui/AppTable.tsx",
+      "lib/pdfExtractImages.ts",
+      "utils/formatters/types.ts",
+      "tests/integration/TextTools.test.tsx",
+    ],
+    rules: { "@typescript-eslint/no-explicit-any": "off" },
+  },
+  ...storybook.configs["flat/recommended"],
+  {
+    // Project uses @storybook/react directly (see .storybook/main.ts)
+    files: ["**/*.stories.@(ts|tsx)"],
+    rules: { "storybook/no-renderer-packages": "off" },
+  },
 ]);
 
 export default eslintConfig;

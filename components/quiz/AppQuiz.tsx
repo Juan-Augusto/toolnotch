@@ -102,6 +102,7 @@ export function AppQuiz({
   }, [quiz.questions]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- shuffle client-only to avoid hydration mismatch
     randomizeAllOptions();
   }, [randomizeAllOptions]);
 
@@ -196,6 +197,7 @@ export function AppQuiz({
       clearTimer();
       const questionId = currentQuestion?.id;
       if (questionId) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- timer expiry marks question as timed out
         setSelectedAnswers((prev) => ({
           ...prev,
           [questionId]: "__timeout__",

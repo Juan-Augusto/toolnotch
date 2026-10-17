@@ -87,9 +87,9 @@ export default async function BlogIndexPage({ params }: Props) {
   // Load per current locale so translated posts (data/blog/content/{locale}/)
   // carry their native slug — a card link built from the English slug under
   // /pt or /es is a 404 (WS: AdSense link integrity).
-  const mdxPosts = await getAllMdxBlogPosts(locale)
+  const mdxPosts = await getAllMdxBlogPosts(locale);
   // A post registered in BLOG_POSTS may also have an MDX file — keep the first (registered) entry.
-  const seen = new Set<string>()
+  const seen = new Set<string>();
   const allPosts = [...BLOG_POSTS, ...mdxPosts].filter((p) => {
     if (seen.has(p.slug)) return false;
     seen.add(p.slug);

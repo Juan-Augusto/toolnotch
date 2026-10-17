@@ -260,7 +260,7 @@ export default async function BlogArticlePage({ params }: Props) {
                 mdxOptions: {
                   remarkPlugins: [remarkGfm],
                   rehypePlugins: [
-                    [rehypePrettyCode as any, rehypePrettyCodeOptions],
+                    [rehypePrettyCode as never, rehypePrettyCodeOptions],
                   ],
                 },
               }}

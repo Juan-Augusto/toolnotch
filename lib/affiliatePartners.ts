@@ -41,6 +41,12 @@ export const AFFILIATE_PARTNERS: AffiliatePartner[] = [
     href: "https://try.quillbot.com/Juan-j7hk690xoig5",
     category: "writing",
   },
+  {
+    key: "wise",
+    brand: "Wise",
+    href: "https://wise.prf.hn/click/camref:1101l6t7M2",
+    category: "finance",
+  },
 ];
 
 /** Category display order on the /partners page and dropdown. */
