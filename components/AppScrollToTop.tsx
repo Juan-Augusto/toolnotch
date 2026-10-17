@@ -14,6 +14,7 @@ export default function AppScrollToTop() {
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- reset on route change
     setIsVisible(false);
   }, [pathname]);
 

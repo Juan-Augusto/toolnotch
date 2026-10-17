@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
 import { getAffiliateOffers } from "@/lib/affiliateOffers";
 import AppAffiliateLink from "./AppAffiliateLink";
+import WiseBanner from "./WiseBanner";
 
 const LOCALE_PREFIX = /^\/(en|pt|es)(?=\/|$)/;
 
@@ -73,6 +74,9 @@ export default function AppAffiliateOffers() {
           {t("disclosure")}
         </p>
       </div>
+      {primary.key === "wise" && (
+        <WiseBanner placement={`tool-wide:${bare}`} className="mt-4" />
+      )}
     </section>
   );
 }

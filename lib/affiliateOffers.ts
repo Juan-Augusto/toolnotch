@@ -22,6 +22,13 @@ const OFFERS_BY_PATH: Record<string, string[]> = {
   "/tools/text/character-counter": ["quillbot-paraphraser"],
   "/tools/text/reading-time-calculator": ["quillbot-paraphraser"],
   "/tools/text/keyword-density-checker": ["quillbot-paraphraser"],
+  // Cross-border money intent
+  "/tools/convert/currency-converter": ["wise"],
+  "/tools/finance/invoice-generator": ["wise"],
+  "/tools/finance/invoice-generator-uk": ["wise"],
+  "/tools/finance/invoice-generator-australia": ["wise"],
+  "/tools/finance/invoice-generator-canada": ["wise"],
+  "/tools/finance/invoice-generator-for-freelancers": ["wise"],
 };
 
 /** Partners to show on a tool page, in order, or `[]` when the path has none. */

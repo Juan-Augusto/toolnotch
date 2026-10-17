@@ -157,6 +157,7 @@ export default function PlanningPokerClient({ labels, locale = "pt" }: Props) {
   // Set consensus suggestion when votes are revealed
   useEffect(() => {
     if (revealed && stats?.consensusValue) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- suggestion derived from revealed votes
       setConsensusInput(stats.consensusValue);
     }
   }, [revealed, stats]);
@@ -286,6 +287,7 @@ export default function PlanningPokerClient({ labels, locale = "pt" }: Props) {
         setCountdown(countdown - 1);
       }, 1000);
     } else {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- countdown finish transition
       setCameraFlipped(true);
       setCountdown(null);
     }

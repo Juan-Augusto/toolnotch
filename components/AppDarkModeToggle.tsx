@@ -8,6 +8,7 @@ export default function AppDarkModeToggle() {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- read DOM theme after mount (hydration-safe)
     setIsDark(document.documentElement.classList.contains("dark"))
     setMounted(true)
   }, [])

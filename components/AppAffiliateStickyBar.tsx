@@ -15,7 +15,9 @@ export default function AppAffiliateStickyBar() {
   const offers = getAffiliateOffers(bare);
   const t = useTranslations("affiliate");
 
-  const [dismissed, setDismissed] = useState(false);
+  // Track which path was dismissed so navigating elsewhere shows the bar again
+  const [dismissedPath, setDismissedPath] = useState<string | null>(null);
+  const dismissed = dismissedPath === pathname;
 
   // Clear legacy sessionStorage flags from previous tests so the bar is not stuck hidden
   useEffect(() => {
@@ -29,16 +31,11 @@ export default function AppAffiliateStickyBar() {
     }
   }, [bare]);
 
-  // Reset dismissed state on navigation
-  useEffect(() => {
-    setDismissed(false);
-  }, [pathname]);
-
   if (offers.length === 0 || dismissed) return null;
   const o = offers[0];
 
   const dismiss = () => {
-    setDismissed(true);
+    setDismissedPath(pathname);
   };
 
   return (

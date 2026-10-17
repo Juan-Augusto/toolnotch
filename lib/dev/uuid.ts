@@ -77,7 +77,7 @@ let lastV1Time = 0;
 let v1ClockSeq = Math.floor(Math.random() * 0x3fff);
 
 export function generateUuidV1(): string {
-  let now = Date.now();
+  const now = Date.now();
   if (now <= lastV1Time) {
     v1ClockSeq = (v1ClockSeq + 1) & 0x3fff;
   }
