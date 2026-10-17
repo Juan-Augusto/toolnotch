@@ -87,7 +87,7 @@
   },
   "overrides": {
     "postcss": "8.5.25",
-    "sharp": "0.35.4",
+    "sharp": "0.35.5",
     "@babel/core": "7.29.7",
     "@tootallnate/once": "2.0.1",
     "dompurify": "3.4.16",
