@@ -5,6 +5,8 @@ import Link from "next/link";
 import { ArrowRight, Scale, Percent, Calculator } from "lucide-react";
 import { AppAccordion, AppTip, AppCard } from "@/components/ui";
 import type { FaqItem } from "@/components/AppFaqSection";
+import AppAffiliateOffers from "@/components/AppAffiliateOffers";
+import AppAffiliateStickyBar from "@/components/AppAffiliateStickyBar";
 
 export interface RichContent {
   whatIs: string;
@@ -79,6 +81,10 @@ export default function CurrencyConverterContent({
 
   return (
     <>
+      <div className="max-w-4xl mx-auto w-full">
+        <AppAffiliateOffers />
+      </div>
+
       {richContent && (
         <article className="space-y-6 sm:space-y-8 md:space-y-10 mb-6 sm:mb-8 md:mb-10 w-full">
           {richContent.howToUse && richContent.howToUse.length > 0 && (
@@ -242,6 +248,8 @@ export default function CurrencyConverterContent({
           ))}
         </div>
       </section>
+
+      <AppAffiliateStickyBar />
     </>
   );
 }
