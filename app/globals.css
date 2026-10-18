@@ -161,9 +161,17 @@ input[type="number"] {
 }
 
 /* ── Selection ── */
+/* Keep each element's own text color so selected text never matches the
+   highlight (the old rule forced --primary text, invisible on primary bgs). */
 ::selection {
-  background: var(--primary-dim);
-  color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 35%, transparent);
+}
+
+/* On primary-filled surfaces (buttons, cards) a primary highlight is
+   invisible — use a neutral one instead. */
+.bg-primary ::selection,
+.bg-primary::selection {
+  background: color-mix(in srgb, var(--foreground) 35%, transparent);
 }
 
 /* ── Dashed border (5px dash, 5px gap) ── */
