@@ -140,6 +140,8 @@ const ALL_ROUTES = [
   '/tools/education/cumulative-gpa-calculator',
   '/tools/education/grade-calculator',
   '/tools/education/citation-generator',
+  // Developer tools (interactive learning)
+  '/tools/dev/node-event-loop',
   // Math tools (no /tools/math hub page — 404, WS-6 audit §7)
   '/tools/math/age-calculator',
   // Utilities (no /tools/utilities hub page — 404, WS-6 audit §7)

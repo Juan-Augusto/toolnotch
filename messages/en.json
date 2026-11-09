@@ -4808,6 +4808,10 @@
       "regexTester": {
         "label": "Regex Tester",
         "desc": "Test regular expressions with capture groups highlighting, substitution and presets."
+      },
+      "eventLoop": {
+        "label": "Node Event Loop Visualizer",
+        "desc": "Animated 7-lesson path through the call stack, nextTick, microtasks and libuv phases."
       }
     },
     "badge": "Toolnotch | Over 40 essential tools",
@@ -9020,6 +9024,189 @@
           "body": "When you enclose parts of your regex in parentheses (e.g., (\\d{4})-(\\d{2})-(\\d{2})), each pair of parentheses creates a numbered capture group ($1 for year, $2 for month, $3 for day). In the replacement pattern, referencing $3/$2/$1 immediately reformats dates and numbers."
         }
       ]
+    }
+  },
+  "eventLoop": {
+    "metaTitle": "Node.js Event Loop Visualizer: Animated Step-by-Step Guide",
+    "metaDescription": "Learn the Node.js event loop with an animated visualizer. 7 guided lessons on the call stack, timers, promises, process.nextTick, the poll and check phases, and microtask starvation. Predict the output, then watch it run.",
+    "title": "Node.js Event Loop Visualizer",
+    "description": "A 7-lesson learning path with step-by-step animation. See the call stack, nextTick queue, microtasks and libuv phases move in real time, and predict the console output before you press play.",
+    "faqs": [
+      {
+        "question": "What is the Node.js event loop?",
+        "answer": "The event loop is the mechanism that lets single-threaded Node.js handle many asynchronous operations. It repeatedly checks queues of pending callbacks (timers, I/O, setImmediate) and runs them on the call stack when the stack is empty."
+      },
+      {
+        "question": "What is the order between process.nextTick, promises, setTimeout and setImmediate?",
+        "answer": "After the current synchronous code finishes, Node drains process.nextTick callbacks first, then promise microtasks. Only then does the loop move through its phases: timers (setTimeout), poll (I/O), and check (setImmediate). Microtasks are also drained after every single callback."
+      },
+      {
+        "question": "Why does setTimeout(fn, 0) not run immediately?",
+        "answer": "setTimeout only registers the callback in the timers queue with a minimum delay of 1ms. The callback can run only after the current script ends, the nextTick and microtask queues are empty, and the loop reaches the timers phase."
+      },
+      {
+        "question": "Can promises or nextTick block the event loop?",
+        "answer": "Yes. The loop does not advance to the next phase until the nextTick and microtask queues are empty, so a callback that keeps scheduling new microtasks starves timers and I/O. Lesson 6 shows this live."
+      },
+      {
+        "question": "Is this visualizer exactly how Node works internally?",
+        "answer": "It is a faithful model of the ordering rules (Node 11 and later), with a virtual clock and the pending, idle and close phases hidden. In real Node, setTimeout versus setImmediate from the main script can swap depending on process load, so we model the typical case."
+      }
+    ],
+    "richContent": {
+      "whatIs": "The Node.js event loop is the scheduler behind every callback, promise and timer in your server. This visualizer turns it into a guided learning path: seven short lessons, each with real code, an animated call stack, nextTick and microtask queues, and the libuv phases (timers, poll, check), so you can see why the console prints in the order it does.",
+      "howToUse": [
+        "Pick a lesson from the learning path. They go from the call stack to a final mixed-queue challenge.",
+        "Read the code, then predict the console output by choosing one of the options.",
+        "Press Play, or step forward one frame at a time, and watch items move between queues.",
+        "Read the narration under the stage. It explains every move the event loop makes.",
+        "Finish all seven lessons, then test yourself with the Node.js Fundamentals interview drill."
+      ],
+      "whyItMatters": "Event loop ordering is one of the most common Node.js interview topics and the root cause of many production bugs: starved timers, surprising log order and blocked requests. Understanding it makes async code predictable.",
+      "proTip": "Predict first, watch second. Guessing the output before you press play builds the mental model far faster than just watching.",
+      "sections": [
+        {
+          "heading": "The four things to remember",
+          "body": "1) Synchronous code always finishes first. 2) process.nextTick runs before promises. 3) Microtasks drain completely between every callback. 4) The loop visits timers, then poll, then check, in that order."
+        },
+        {
+          "heading": "Who is this for?",
+          "body": "Developers learning Node.js, frontend engineers moving to the backend, and anyone preparing for a technical interview. No setup is needed: everything runs in your browser."
+        }
+      ]
+    },
+    "lessonOf": "Lesson {n} of {total}",
+    "takeawayLabel": "Takeaway:",
+    "codeTitle": "Code",
+    "path": {
+      "title": "Learning path",
+      "progress": "{done}/{total} done",
+      "done": "Completed",
+      "prev": "Previous",
+      "next": "Next"
+    },
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "predict": {
+      "title": "Predict the output",
+      "help": "What will the console print, in order?",
+      "right": "Correct! Press Play to see why.",
+      "wrong": "Not quite. Press Play and follow the queues to see the real order."
+    },
+    "controls": {
+      "reset": "Reset",
+      "prev": "Previous step",
+      "next": "Next step",
+      "skip": "Skip to end",
+      "play": "Play",
+      "pause": "Pause",
+      "replay": "Replay",
+      "speed": "Speed",
+      "scrub": "Step position"
+    },
+    "complete": {
+      "title": "Path complete!",
+      "body": "You have seen every queue and phase in action. Lock it in with real interview questions.",
+      "cta": "Take the Node.js quiz"
+    },
+    "where": {
+      "nextTick": "the nextTick queue",
+      "microtask": "the microtask queue",
+      "timers": "the timers queue",
+      "poll": "the poll queue",
+      "check": "the check queue"
+    },
+    "stage": {
+      "callStack": "Call stack",
+      "callStackHint": "runs JS",
+      "nextTick": "nextTick queue",
+      "nextTickHint": "1st priority",
+      "microtasks": "Microtasks",
+      "microtasksHint": "promises",
+      "loopTitle": "Event loop (libuv)",
+      "clock": "t = {ms}ms",
+      "empty": "empty",
+      "console": "Console",
+      "consoleEmpty": "nothing printed yet",
+      "internalPhases": "Pending, idle/prepare and close phases are internal and not animated.",
+      "phase": {
+        "timers": "Timers",
+        "poll": "Poll (I/O)",
+        "check": "Check"
+      },
+      "phaseHint": {
+        "timers": "setTimeout",
+        "poll": "fs, net",
+        "check": "setImmediate"
+      }
+    },
+    "note": {
+      "start": "The script starts. main() is pushed onto the call stack.",
+      "log": "console.log prints \"{text}\".",
+      "callEnter": "{name} is called and pushed onto the call stack.",
+      "callExit": "{name} returns and is popped off the stack.",
+      "schedTimeout": "setTimeout registers {name} in the timers queue (delay {delay}ms, minimum 1ms). Nothing runs yet.",
+      "schedImmediate": "setImmediate queues {name} for the check phase.",
+      "schedTick": "process.nextTick puts {name} in the nextTick queue (highest priority).",
+      "schedThen": "The promise callback {name} goes to the microtask queue.",
+      "schedIo": "The I/O work is handed to the system. {name} is queued when it completes (poll phase).",
+      "run": "The loop takes {name} from {where} and runs it on the call stack.",
+      "stackEmpty": "The call stack is empty.",
+      "drainTicks": "The stack is empty, so Node drains the nextTick queue first.",
+      "drainMicro": "Next it drains the microtask queue (promises) until it is empty.",
+      "phaseTimers": "Timers phase (t={clock}ms): run every timer that is due.",
+      "phasePoll": "Poll phase (t={clock}ms): run completed I/O callbacks.",
+      "phaseCheck": "Check phase (t={clock}ms): run setImmediate callbacks.",
+      "pollWait": "Nothing is ready, so the loop waits in poll until t={clock}ms.",
+      "ioDone": "The I/O finished: {name} is ready to run.",
+      "done": "Nothing is left to run and the event loop exits. The console shows the final order."
+    },
+    "lessons": {
+      "call-stack": {
+        "title": "The call stack",
+        "goal": "Understand how synchronous code runs, one frame at a time.",
+        "body": "JavaScript runs on a single thread with a single call stack. Calling a function pushes a frame, returning pops it, and the last function called is the first to finish (LIFO). Nothing else can run until the stack is empty.",
+        "takeaway": "Synchronous code runs top to bottom, and each call finishes before the caller continues."
+      },
+      "timers": {
+        "title": "Timers defer work",
+        "goal": "See why setTimeout(fn, 0) prints last.",
+        "body": "setTimeout does not run the callback; it only registers it in the timers queue. The event loop picks it up only after the current script finishes and the stack is empty, so even a 0ms timer runs after all synchronous code.",
+        "takeaway": "A 0ms timeout means as soon as possible, but never before the current synchronous code ends."
+      },
+      "microtasks": {
+        "title": "Promises jump the queue",
+        "goal": "Learn why a promise callback beats a 0ms timer.",
+        "body": "Promise callbacks go to the microtask queue, which is drained as soon as the call stack empties and before the event loop moves on to timers. Both were scheduled in the same script, but the promise wins.",
+        "takeaway": "Microtasks (promises, queueMicrotask) always run before the next macrotask such as a timer."
+      },
+      "next-tick": {
+        "title": "process.nextTick goes first",
+        "goal": "Rank nextTick against promises and timers.",
+        "body": "process.nextTick has its own queue that Node drains before the promise microtask queue. The full priority is: synchronous code, then nextTick, then promises, then timers.",
+        "takeaway": "nextTick beats promises, promises beat timers. Prefer queueMicrotask or promises unless you specifically need nextTick."
+      },
+      "poll-check": {
+        "title": "Poll and check phases",
+        "goal": "See why setImmediate beats setTimeout inside an I/O callback.",
+        "body": "When an I/O callback runs in the poll phase, the next phase is check, which runs setImmediate callbacks. The timers phase only comes around on the next lap. So inside an I/O callback, setImmediate always fires before setTimeout(fn, 0).",
+        "takeaway": "Phases run in a fixed order: timers, poll, check. From an I/O callback, check comes before timers."
+      },
+      "starvation": {
+        "title": "Microtask starvation",
+        "goal": "Watch microtasks block a timer that is already due.",
+        "body": "The microtask queue is drained completely, including microtasks added while draining. A callback that keeps scheduling new promise callbacks stops the loop from ever reaching the timers phase. Here the chain is short, but an infinite one would freeze the server.",
+        "takeaway": "Never schedule unbounded microtask or nextTick chains. Use setImmediate to yield to the event loop."
+      },
+      "boss": {
+        "title": "Final challenge",
+        "goal": "Combine every rule in one mixed program.",
+        "body": "Sync code, nextTick, promises, a timer that schedules its own promise, and setImmediate. Work out the order using the rules you learned: drain nextTick, drain microtasks (repeating if they schedule more), then walk timers, poll and check, draining microtasks after each callback. Note that in real Node the timeout versus immediate order from the main script can vary with process load.",
+        "takeaway": "Order = sync, then nextTick, then microtasks, then each phase, with a microtask drain after every callback."
+      }
     }
   }
 }

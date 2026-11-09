@@ -7,6 +7,7 @@ import {
   MapPin,
   Hash,
   FileCode2,
+  Workflow,
 } from "lucide-react";
 import { buildAlternatesForLocale, localizedPath } from "@/lib/i18nMeta";
 import {
@@ -305,6 +306,28 @@ export default async function DevToolsHubPage({ params }: Props) {
             ? ["Grupos de Captura", "Flags g/i/m/s/u", "Sustitución (Replace)", "Presets Brasileños"]
             : ["Capture Groups", "g/i/m/s/u Flags", "Substitution (Replace)", "Ready Presets"],
       icon: <FileCode2 className="w-5 h-5 text-secondary shrink-0" />,
+    },
+    {
+      href: `${prefix}/tools/dev/node-event-loop`,
+      title:
+        locale === "pt"
+          ? "Visualizador do Event Loop Node"
+          : locale === "es"
+            ? "Visualizador del Event Loop Node"
+            : "Node Event Loop Visualizer",
+      desc:
+        locale === "pt"
+          ? "Trilha de aprendizado animada: veja a call stack, nextTick, microtasks e as fases do libuv em ação."
+          : locale === "es"
+            ? "Ruta de aprendizaje animada: mira la call stack, nextTick, microtasks y las fases de libuv en acción."
+            : "Animated learning path: watch the call stack, nextTick, microtasks and libuv phases in action.",
+      specs:
+        locale === "pt"
+          ? ["7 Lições Guiadas", "Preveja a Saída", "Passo a Passo", "nextTick vs Promises"]
+          : locale === "es"
+            ? ["7 Lecciones Guiadas", "Predice la Salida", "Paso a Paso", "nextTick vs Promises"]
+            : ["7 Guided Lessons", "Predict the Output", "Step-by-Step", "nextTick vs Promises"],
+      icon: <Workflow className="w-5 h-5 text-secondary shrink-0" />,
     },
   ];
 
