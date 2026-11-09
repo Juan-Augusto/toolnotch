@@ -4608,6 +4608,10 @@
       "regexTester": {
         "label": "Testador de Regex",
         "desc": "Teste expressões regulares com realce de grupos de captura, substituição e biblioteca de presets."
+      },
+      "eventLoop": {
+        "label": "Visualizador do Event Loop Node",
+        "desc": "Trilha animada de 7 lições: call stack, nextTick, microtasks e fases do libuv."
       }
     },
     "badge": "Toolnotch | Mais de 40 ferramentas essenciais",
@@ -8817,6 +8821,189 @@
           "body": "Ao envolver partes da sua regex entre parênteses (ex: (\\d{4})-(\\d{2})-(\\d{2})), cada parêntese cria um grupo de captura numerado em sequência ($1 para ano, $2 para mês, $3 para dia). Na substituição, você pode rearranjá-los como $3/$2/$1 para reformatar datas e documentos instantaneamente."
         }
       ]
+    }
+  },
+  "eventLoop": {
+    "metaTitle": "Visualizador do Event Loop do Node.js: Guia Animado Passo a Passo",
+    "metaDescription": "Aprenda o event loop do Node.js com um visualizador animado. 7 lições guiadas sobre call stack, timers, promises, process.nextTick, fases poll e check e starvation de microtasks. Preveja a saída e veja rodar.",
+    "title": "Visualizador do Event Loop do Node.js",
+    "description": "Uma trilha de aprendizado com 7 lições e animação passo a passo. Veja a call stack, a fila de nextTick, as microtasks e as fases do libuv se movendo em tempo real e preveja a saída do console antes de dar play.",
+    "faqs": [
+      {
+        "question": "O que é o event loop do Node.js?",
+        "answer": "O event loop é o mecanismo que permite ao Node.js, que tem uma única thread, lidar com muitas operações assíncronas. Ele verifica repetidamente as filas de callbacks pendentes (timers, I/O, setImmediate) e as executa na call stack quando ela está vazia."
+      },
+      {
+        "question": "Qual a ordem entre process.nextTick, promises, setTimeout e setImmediate?",
+        "answer": "Depois que o código síncrono termina, o Node esvazia primeiro os callbacks de process.nextTick e depois as microtasks de promises. Só então o loop percorre suas fases: timers (setTimeout), poll (I/O) e check (setImmediate). As microtasks também são esvaziadas após cada callback."
+      },
+      {
+        "question": "Por que setTimeout(fn, 0) não executa imediatamente?",
+        "answer": "O setTimeout apenas registra o callback na fila de timers com atraso mínimo de 1ms. Ele só roda depois que o script atual termina, as filas de nextTick e microtasks estão vazias e o loop chega à fase de timers."
+      },
+      {
+        "question": "Promises ou nextTick podem bloquear o event loop?",
+        "answer": "Sim. O loop não avança para a próxima fase enquanto as filas de nextTick e microtasks não estiverem vazias. Um callback que agenda microtasks sem parar causa starvation de timers e I/O. A lição 6 mostra isso ao vivo."
+      },
+      {
+        "question": "Este visualizador reproduz exatamente o funcionamento interno do Node?",
+        "answer": "Ele modela fielmente as regras de ordenação (Node 11 ou superior), com relógio virtual e as fases pending, idle e close ocultas. No Node real, setTimeout contra setImmediate no script principal pode inverter conforme a carga do processo, então modelamos o caso típico."
+      }
+    ],
+    "richContent": {
+      "whatIs": "O event loop do Node.js é o agendador por trás de todo callback, promise e timer do seu servidor. Este visualizador o transforma em uma trilha guiada: sete lições curtas, cada uma com código real, call stack animada, filas de nextTick e microtasks e as fases do libuv (timers, poll, check), para você ver por que o console imprime na ordem que imprime.",
+      "howToUse": [
+        "Escolha uma lição na trilha de aprendizado. Elas vão da call stack até um desafio final com todas as filas.",
+        "Leia o código e preveja a saída do console escolhendo uma das opções.",
+        "Clique em Play, ou avance um quadro por vez, e veja os itens se moverem entre as filas.",
+        "Leia a narração abaixo do palco. Ela explica cada movimento do event loop.",
+        "Conclua as sete lições e teste-se com o simulado de entrevista Node.js Fundamentals."
+      ],
+      "whyItMatters": "A ordem do event loop é um dos temas mais cobrados em entrevistas de Node.js e a causa de muitos bugs em produção: timers atrasados, logs em ordem inesperada e requisições travadas. Entendê-la torna o código assíncrono previsível.",
+      "proTip": "Preveja primeiro, assista depois. Chutar a saída antes de dar play constrói o modelo mental muito mais rápido do que apenas assistir.",
+      "sections": [
+        {
+          "heading": "As quatro coisas para lembrar",
+          "body": "1) O código síncrono sempre termina primeiro. 2) process.nextTick roda antes das promises. 3) As microtasks são esvaziadas por completo entre cada callback. 4) O loop visita timers, depois poll, depois check, nessa ordem."
+        },
+        {
+          "heading": "Para quem é?",
+          "body": "Para quem está aprendendo Node.js, desenvolvedores frontend migrando para o backend e quem se prepara para entrevistas técnicas. Não precisa instalar nada: tudo roda no navegador."
+        }
+      ]
+    },
+    "lessonOf": "Lição {n} de {total}",
+    "takeawayLabel": "Resumo:",
+    "codeTitle": "Código",
+    "path": {
+      "title": "Trilha de aprendizado",
+      "progress": "{done}/{total} concluídas",
+      "done": "Concluída",
+      "prev": "Anterior",
+      "next": "Próxima"
+    },
+    "levels": {
+      "beginner": "Iniciante",
+      "intermediate": "Intermediário",
+      "advanced": "Avançado"
+    },
+    "predict": {
+      "title": "Preveja a saída",
+      "help": "O que o console vai imprimir, em ordem?",
+      "right": "Correto! Dê play para ver o porquê.",
+      "wrong": "Não foi dessa vez. Dê play e acompanhe as filas para ver a ordem real."
+    },
+    "controls": {
+      "reset": "Reiniciar",
+      "prev": "Passo anterior",
+      "next": "Próximo passo",
+      "skip": "Ir para o final",
+      "play": "Play",
+      "pause": "Pausar",
+      "replay": "Repetir",
+      "speed": "Velocidade",
+      "scrub": "Posição do passo"
+    },
+    "complete": {
+      "title": "Trilha concluída!",
+      "body": "Você viu todas as filas e fases em ação. Fixe o conteúdo com perguntas reais de entrevista.",
+      "cta": "Fazer o quiz de Node.js"
+    },
+    "where": {
+      "nextTick": "a fila de nextTick",
+      "microtask": "a fila de microtasks",
+      "timers": "a fila de timers",
+      "poll": "a fila de poll",
+      "check": "a fila de check"
+    },
+    "stage": {
+      "callStack": "Call stack",
+      "callStackHint": "executa JS",
+      "nextTick": "Fila nextTick",
+      "nextTickHint": "1ª prioridade",
+      "microtasks": "Microtasks",
+      "microtasksHint": "promises",
+      "loopTitle": "Event loop (libuv)",
+      "clock": "t = {ms}ms",
+      "empty": "vazia",
+      "console": "Console",
+      "consoleEmpty": "nada impresso ainda",
+      "internalPhases": "As fases pending, idle/prepare e close são internas e não são animadas.",
+      "phase": {
+        "timers": "Timers",
+        "poll": "Poll (I/O)",
+        "check": "Check"
+      },
+      "phaseHint": {
+        "timers": "setTimeout",
+        "poll": "fs, net",
+        "check": "setImmediate"
+      }
+    },
+    "note": {
+      "start": "O script começa. main() entra na call stack.",
+      "log": "console.log imprime \"{text}\".",
+      "callEnter": "{name} é chamada e entra na call stack.",
+      "callExit": "{name} retorna e sai da stack.",
+      "schedTimeout": "setTimeout registra {name} na fila de timers (atraso de {delay}ms, mínimo 1ms). Nada executa ainda.",
+      "schedImmediate": "setImmediate coloca {name} na fila da fase check.",
+      "schedTick": "process.nextTick coloca {name} na fila de nextTick (prioridade máxima).",
+      "schedThen": "O callback da promise {name} vai para a fila de microtasks.",
+      "schedIo": "O trabalho de I/O é entregue ao sistema. {name} entra na fila quando terminar (fase poll).",
+      "run": "O loop pega {name} de {where} e executa na call stack.",
+      "stackEmpty": "A call stack está vazia.",
+      "drainTicks": "A stack está vazia, então o Node esvazia primeiro a fila de nextTick.",
+      "drainMicro": "Em seguida esvazia a fila de microtasks (promises) até acabar.",
+      "phaseTimers": "Fase timers (t={clock}ms): executa todos os timers vencidos.",
+      "phasePoll": "Fase poll (t={clock}ms): executa os callbacks de I/O concluídos.",
+      "phaseCheck": "Fase check (t={clock}ms): executa os callbacks de setImmediate.",
+      "pollWait": "Nada está pronto, então o loop espera no poll até t={clock}ms.",
+      "ioDone": "O I/O terminou: {name} está pronto para executar.",
+      "done": "Não há mais nada para executar e o event loop encerra. O console mostra a ordem final."
+    },
+    "lessons": {
+      "call-stack": {
+        "title": "A call stack",
+        "goal": "Entenda como o código síncrono executa, um frame por vez.",
+        "body": "O JavaScript roda em uma única thread com uma única call stack. Chamar uma função empilha um frame, retornar desempilha, e a última função chamada é a primeira a terminar (LIFO). Nada mais executa até a stack esvaziar.",
+        "takeaway": "O código síncrono roda de cima para baixo e cada chamada termina antes de quem a chamou continuar."
+      },
+      "timers": {
+        "title": "Timers adiam o trabalho",
+        "goal": "Veja por que setTimeout(fn, 0) imprime por último.",
+        "body": "O setTimeout não executa o callback; apenas o registra na fila de timers. O event loop só o pega depois que o script atual termina e a stack esvazia, então até um timer de 0ms roda depois de todo o código síncrono.",
+        "takeaway": "Timeout de 0ms significa o mais cedo possível, mas nunca antes do fim do código síncrono atual."
+      },
+      "microtasks": {
+        "title": "Promises furam a fila",
+        "goal": "Descubra por que o callback de uma promise vence um timer de 0ms.",
+        "body": "Callbacks de promises vão para a fila de microtasks, que é esvaziada assim que a call stack fica vazia e antes de o event loop seguir para os timers. Ambos foram agendados no mesmo script, mas a promise ganha.",
+        "takeaway": "Microtasks (promises, queueMicrotask) sempre rodam antes da próxima macrotask, como um timer."
+      },
+      "next-tick": {
+        "title": "process.nextTick vem primeiro",
+        "goal": "Compare nextTick com promises e timers.",
+        "body": "O process.nextTick tem uma fila própria que o Node esvazia antes da fila de microtasks das promises. A prioridade completa é: código síncrono, depois nextTick, depois promises, depois timers.",
+        "takeaway": "nextTick vence promises, promises vencem timers. Prefira queueMicrotask ou promises, a menos que precise especificamente de nextTick."
+      },
+      "poll-check": {
+        "title": "Fases poll e check",
+        "goal": "Veja por que setImmediate vence setTimeout dentro de um callback de I/O.",
+        "body": "Quando um callback de I/O roda na fase poll, a próxima fase é a check, que executa os callbacks de setImmediate. A fase de timers só volta na próxima volta. Por isso, dentro de um callback de I/O, setImmediate sempre dispara antes de setTimeout(fn, 0).",
+        "takeaway": "As fases seguem uma ordem fixa: timers, poll, check. A partir de um callback de I/O, o check vem antes dos timers."
+      },
+      "starvation": {
+        "title": "Starvation de microtasks",
+        "goal": "Veja as microtasks bloqueando um timer que já venceu.",
+        "body": "A fila de microtasks é esvaziada por completo, inclusive as microtasks adicionadas durante o esvaziamento. Um callback que agenda novos callbacks de promise sem parar impede o loop de chegar à fase de timers. Aqui a cadeia é curta, mas uma infinita congelaria o servidor.",
+        "takeaway": "Nunca crie cadeias ilimitadas de microtasks ou nextTick. Use setImmediate para ceder a vez ao event loop."
+      },
+      "boss": {
+        "title": "Desafio final",
+        "goal": "Combine todas as regras em um único programa.",
+        "body": "Código síncrono, nextTick, promises, um timer que agenda a própria promise e um setImmediate. Descubra a ordem com as regras aprendidas: esvazie nextTick, esvazie microtasks (repetindo se agendarem mais), depois percorra timers, poll e check, esvaziando as microtasks após cada callback. No Node real, a ordem entre timeout e immediate no script principal pode variar conforme a carga do processo.",
+        "takeaway": "Ordem = síncrono, depois nextTick, depois microtasks, depois cada fase, com esvaziamento de microtasks após cada callback."
+      }
     }
   }
 }

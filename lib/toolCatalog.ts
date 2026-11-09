@@ -54,6 +54,7 @@ export const TOOL_CATALOG: CatalogEntry[] = [
   { path: '/tools/dev/hash-generator', labelKey: 'hashGenerator', category: 'dev', kind: 'tool' },
   { path: '/tools/dev/url-parser', labelKey: 'urlParser', category: 'dev', kind: 'tool' },
   { path: '/tools/dev/regex-tester', labelKey: 'regexTester', category: 'dev', kind: 'tool' },
+  { path: '/tools/dev/node-event-loop', labelKey: 'eventLoop', category: 'dev', kind: 'tool' },
   // Image
   { path: '/tools/image/crop-image', labelKey: 'cropImage', category: 'image', kind: 'tool' },
   { path: '/tools/image/image-resizer', labelKey: 'imageResizer', category: 'image', kind: 'tool' },

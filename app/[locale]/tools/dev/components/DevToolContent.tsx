@@ -9,6 +9,7 @@ import {
   MapPin,
   Hash,
   FileCode2,
+  Workflow,
 } from "lucide-react";
 import { AppAccordion, AppTip } from "@/components/ui";
 import type { FaqItem } from "@/components/AppFaqSection";
@@ -210,6 +211,23 @@ export default function DevToolContent({
             : "Test regular expressions with visual capture group inspector, replacement tool, and preset library.",
       href: `${prefix}/tools/dev/regex-tester`,
       icon: <FileCode2 className="w-5 h-5 text-primary" />,
+    },
+    {
+      slug: "node-event-loop",
+      title:
+        locale === "pt"
+          ? "Visualizador do Event Loop Node"
+          : locale === "es"
+            ? "Visualizador del Event Loop Node"
+            : "Node Event Loop Visualizer",
+      desc:
+        locale === "pt"
+          ? "Trilha animada de 7 lições: call stack, nextTick, microtasks e fases do libuv."
+          : locale === "es"
+            ? "Ruta animada de 7 lecciones: call stack, nextTick, microtasks y fases de libuv."
+            : "Animated 7-lesson path through the call stack, nextTick, microtasks and libuv phases.",
+      href: `${prefix}/tools/dev/node-event-loop`,
+      icon: <Workflow className="w-5 h-5 text-primary" />,
     },
   ];
 

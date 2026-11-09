@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { buildAlternatesForLocale } from '@/lib/i18nMeta'
 import {
@@ -120,6 +121,29 @@ export default async function NodejsFundamentalsQuizPage({ params }: Props) {
       </div>
 
       <div className="w-full max-w-4xl mx-auto px-4 sm:px-0">
+        <aside className="protip-neon mb-8" data-testid="event-loop-cta">
+          <p className="text-sm text-foreground">
+            <strong>
+              {locale === 'pt'
+                ? 'Event loop ainda confuso?'
+                : locale === 'es'
+                  ? '¿El event loop aún te confunde?'
+                  : 'Event loop still fuzzy?'}
+            </strong>{' '}
+            {locale === 'pt'
+              ? 'Veja nextTick, promises e as fases do libuv animados em uma trilha de 7 lições.'
+              : locale === 'es'
+                ? 'Mira nextTick, promises y las fases de libuv animados en una ruta de 7 lecciones.'
+                : 'Watch nextTick, promises and the libuv phases animated in a 7-lesson path.'}{' '}
+            <Link href={`${prefix}/tools/dev/node-event-loop`} className="link-hover font-semibold underline">
+              {locale === 'pt'
+                ? 'Abrir o visualizador →'
+                : locale === 'es'
+                  ? 'Abrir el visualizador →'
+                  : 'Open the visualizer →'}
+            </Link>
+          </p>
+        </aside>
         <AppInterviewDepth
           sections={depthSections}
           lists={depthLists}
